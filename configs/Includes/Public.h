@@ -164,10 +164,10 @@ class Public
 		class skullMenu_who {};
 	};
 
-	class Zones
+	class dynamicMarkers
 	{
-		file = "core\Game\Zones";
-		class zoneBurn {};
+		file = "core\Game\dynamicMarkers";
+		class dynamicMarkers_destroy {};
 	};
 
 	class Garage
@@ -354,8 +354,6 @@ class Public
 		class adminOwner {};
 		class adminHvStatus {};
 	};
-
-	class 
 
 	class Actions
 	{

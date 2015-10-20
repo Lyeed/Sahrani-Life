@@ -6,6 +6,13 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
+if ((getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "dynamic_markers_shown")) isEqualTo 0) then
+{
+	{
+		_x setMarkerAlphaLocal 0;
+	} forEach (gServer_dynamic_markers);
+};
+
 if (g_arrested) then {
 	[g_arrestMinuts, g_arrestReason] spawn public_fnc_putInJail;
 } else {
@@ -34,8 +41,8 @@ cutText ["", "BLACK IN", 6, false];
 	]
 ] spawn BIS_fnc_typeText;
 
-player setVariable["tf_globalVolume", 1];
-player setVariable["realname", profileName, true];
+player setVariable ["tf_globalVolume", 1];
+player setVariable ["realname", profileName, true];
 
 g_connected = true;
 g_is_alive = true;

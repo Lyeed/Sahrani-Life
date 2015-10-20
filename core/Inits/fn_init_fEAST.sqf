@@ -18,6 +18,4 @@ if ((((call g_GUERLevel) > 0) || ((call g_REBLevel) > 0) || ((call g_WESTLevel) 
 	false;
 };
 
-[] call public_fnc_hideIllegalArea;
-
 true;

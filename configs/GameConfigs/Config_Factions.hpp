@@ -53,13 +53,12 @@ class ALYSIA_FACTIONS
 		*/
 		farming_markers_plant[] = {};
 		farming_markers_gather[] = {};
-		farming_markers_burn[] =
-		{
-			"cocaine_1",
-			"cannabis_1",
-			"meth_1",
-			"heroin_1"
-		};
+
+		/*
+		**			DYNAMIC MARKERS
+		*/
+		dynamic_markers_shown    = 0;
+		dynamic_markers_destroy  = 1;
 		
 		/*
 		**         INTERACTIONS 
@@ -149,8 +148,13 @@ class ALYSIA_FACTIONS
 		house_max = 0;
 
 		farming_markers[] = {};
-		farming_markers_burn[] = {};
 		farming_markers_plant[] = {};
+
+		/*
+		**			DYNAMIC MARKERS
+		*/
+		dynamic_markers_shown    = 0;
+		dynamic_markers_destroy  = 1;
 
 		leader_rank = 5;
 		leader_board_rank_require = 5;
@@ -239,7 +243,6 @@ class ALYSIA_FACTIONS
 			"pillage_2",
 			"platine_1"
 		};
-		farming_markers_burn[] = {};
 		farming_markers_plant[] = 
 		{
 			"corn_1",
@@ -254,6 +257,12 @@ class ALYSIA_FACTIONS
 			"tabac_2", 
 			"tabac_3"
 		};
+
+		/*
+		**			DYNAMIC MARKERS
+		*/
+		dynamic_markers_shown     = 0;
+		dynamic_markers_destroy   = 0;
 
 		/*
 		**         INTERACTIONS 
@@ -313,8 +322,13 @@ class ALYSIA_FACTIONS
 		house_max = 0;
 
 		farming_markers_gather[] = {};
-		farming_markers_burn[] = {};
 		farming_markers_plant[] = {};
+
+		/*
+		**			DYNAMIC MARKERS
+		*/
+		dynamic_markers_shown     = 0;
+		dynamic_markers_destroy   = 0;
 
 		/*
 		**         INTERACTIONS 

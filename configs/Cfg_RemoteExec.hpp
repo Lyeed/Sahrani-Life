@@ -39,6 +39,8 @@ class CfgRemoteExec
 		class TON_fnc_phoneMessageHandler {allowTargets = SERVER;};
 		//- Log
 		class TON_fnc_logDeath {allowTargets = SERVER;};
+		//- dynamicMarkers
+		class TON_fnc_dynamicMarkers_update {allowTargets = SERVER;};
 
 		/*
 		**		CLIENT FUNCTIONS
@@ -71,6 +73,7 @@ class CfgRemoteExec
 		class setHitPointDamage {allowTargets = EVERYONE;};
 		class lock {allowTargets = EVERYONE;};
 		class hintSilent {allowTargets = CLIENT;};
+		class systemChat {allowTargets = CLIENT;};
 	};
 
 	class Commands
