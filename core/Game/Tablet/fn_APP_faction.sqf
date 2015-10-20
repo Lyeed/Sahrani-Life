@@ -1,0 +1,44 @@
+/*
+		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
+	Code written by Lyeed
+	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
+	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
+	More informations : https://www.bistudio.com/community/game-content-usage-rules
+*/
+private["_display", "_list_ranks", "_list_duty"];
+disableSerialization;
+
+if (playerSide isEqualTo civilian) exitWith {closeDialog 0;};
+
+_display = uiNamespace getVariable["tablet", displayNull];
+if (isNull _display) exitWith {};
+
+ctrlSetText[8700, getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "icon")];
+(_display displayCtrl 8701) ctrlSetStructuredText parseText format["<t align='center' size='1.2'>%1</t>", getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "name")];
+
+if ((player getVariable["rank", 0]) < getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "leader_board_rank_require")) then {
+	ctrlEnable[8710, false];
+} else {
+	ctrlEnable[8710, true];
+};
+
+_list_ranks = _display displayCtrl 8704;
+lbClear _list_ranks;
+
+{
+	if (_forEachIndex != 0) then {
+		_list_ranks lbAdd format["%1%2", _x, if (_forEachIndex isEqualTo (player getVariable["rank", 0])) then {" (le votre)"} else {""}];
+	};
+} forEach (getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "Ranks" >> "ranks_complet"));
+_list_ranks lbSetCurSel -1;
+
+_list_duty = _display displayCtrl 8709;
+lbClear _list_duty;
+
+{
+	if ((side _x) isEqualTo playerSide) then
+	{
+		_list_duty lbAdd format["%1 - %2", ([playerSide, (_x getVariable["rank", 0])] call public_fnc_rankToStr), (_x getVariable["realname", (name _x)])];
+	};
+} forEach (allPlayers);
+_list_duty lbSetCurSel -1;
