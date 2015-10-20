@@ -289,10 +289,8 @@ class Public
 	class Bank
 	{
 		file = "core\Game\Bank";
-		class atmDeposit {};
-		class atmMenuOpen {};
-		class atmMenuUpdate {};
-		class atmWithdraw {};
+		class atmAction {};
+		class atmScreen {};
 		class blastingCharge {};
 		class defuseKit {};
 		class demoChargeTimer {};
