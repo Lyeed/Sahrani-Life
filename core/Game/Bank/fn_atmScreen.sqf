@@ -64,10 +64,10 @@ switch (_action) do
 		_balance ctrlSetStructuredText parseText format ["<t align ='left' size='1.2'>Solde </t><t align='center' size='1.2'><t color='#74DF00'>%1</t>$</t>", [g_atm] call public_fnc_numberText];
 
 		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Retrait</t>";
-		_btnL1 buttonSetAction "[""withdraw""] call public_fnc_atmScreen";
+		_btnL1 buttonSetAction "['withdraw'] call public_fnc_atmScreen";
 
 		_txtR1 ctrlSetStructuredText parseText "<t align='right'>Dépôt</t>";
-		_btnR1 buttonSetAction "[""deposit""] call public_fnc_atmScreen";
+		_btnR1 buttonSetAction "['deposit'] call public_fnc_atmScreen";
 
 		_txtR4 ctrlSetStructuredText parseText "<t align='right'>Reprendre Carte</t>";
 		_btnR4 buttonSetAction "closeDialog 0";
@@ -86,10 +86,10 @@ switch (_action) do
 		_balance ctrlSetStructuredText parseText format ["<t align ='left' size='1.2'>Montant $</t>"];
 
 		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Retirer</t>";
-		_btnL1 buttonSetAction "[""withdraw""] call public_fnc_atmAction";
+		_btnL1 buttonSetAction "['withdraw'] call public_fnc_atmAction";
 
 		_txtR1 ctrlSetStructuredText parseText "<t align='right'>Retour</t>";
-		_btnR1 buttonSetAction "[""home""] call public_fnc_atmScreen";
+		_btnR1 buttonSetAction "['home'] call public_fnc_atmScreen";
 
 		_txtR4 ctrlSetStructuredText parseText "<t align='right'>Reprendre Carte</t>";
 		_btnR4 buttonSetAction "closeDialog 0";		
@@ -111,10 +111,10 @@ switch (_action) do
 		_balance ctrlSetStructuredText parseText format ["<t align ='left' size='1.2'>Montant $</t>"];
 		
 		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Déposer</t>";
-		_btnL1 buttonSetAction "[""deposit""] call public_fnc_atmAction";
+		_btnL1 buttonSetAction "['deposit'] call public_fnc_atmAction";
 
 		_txtR1 ctrlSetStructuredText parseText "<t align='right'>Retour</t>";
-		_btnR1 buttonSetAction "[""home""] call public_fnc_atmScreen";
+		_btnR1 buttonSetAction "['home'] call public_fnc_atmScreen";
 
 		_txtR4 ctrlSetStructuredText parseText "<t align='right'>Reprendre Carte</t>";
 		_btnR4 buttonSetAction "closeDialog 0";

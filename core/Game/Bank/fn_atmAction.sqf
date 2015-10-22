@@ -20,7 +20,7 @@ switch (_action) do
 {
 	case "withdraw":
 	{
-		if (p_atm < _amount) exitWith {["Solde insuffisant"] call public_fnc_error};
+		if (g_atm < _amount) exitWith {["Solde insuffisant"] call public_fnc_error};
 		g_atm = (g_atm - _amount);
 		g_cash = (g_cash + _amount);
 		["Retrait effectué avec succès"] call public_fnc_info;
@@ -29,7 +29,7 @@ switch (_action) do
 
 	case "deposit":
 	{
-		if (p_cash < _amount) exitWith {["Vous n'avez pas assez de fonds sur vous"] call public_fnc_error};
+		if (g_cash < _amount) exitWith {["Vous n'avez pas assez de fonds sur vous"] call public_fnc_error};
 		g_cash = (g_cash - _amount);
 		g_atm = (g_atm + _amount);
 		["Dépot effectué avec succès"] call public_fnc_info;
