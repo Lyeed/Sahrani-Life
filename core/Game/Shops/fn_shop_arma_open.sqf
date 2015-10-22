@@ -102,8 +102,20 @@ lbClear _list;
 	};
 } forEach (getArray(missionConfigFile >> "ALYSIA_SHOPS_WEAPONS" >> _type >> "stocks"));
 
-if ((lbSize _list) isEqualTo 0) then {
+if ((lbSize _list) isEqualTo 0) then
+{
 	_list lbAdd "Vous n'avez rien à acheter ici";
+	ctrlShow[38402, false];
+	ctrlShow[38403, false];
+	ctrlShow[38404, false];
+	ctrlShow[38406, false];
+	ctrlShow[38407, false];
+	ctrlShow[38408, false];
+	ctrlShow[38409, false];
+	ctrlShow[38410, false];
+	ctrlShow[38412, false];
+	ctrlShow[38413, false];
+	ctrlShow[38415, false];
+} else {
+	_list lbSetCurSel 0;
 };
-
-[-1] call public_fnc_shop_arma_update;

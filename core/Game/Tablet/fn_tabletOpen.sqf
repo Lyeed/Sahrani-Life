@@ -49,3 +49,5 @@ while {!(isNull _display)} do
 	];
 	sleep 0.5;
 };
+
+g_app = "";

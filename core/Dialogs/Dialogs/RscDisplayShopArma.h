@@ -36,8 +36,8 @@ class RscDisplayShopArma: default_base_dialog
 
 			x = 0.335 * safezoneW + safezoneX;
 			y = 0.302 * safezoneH + safezoneY;
-			w = 0.340312 * safezoneW;
-			h = 0.033 * safezoneH;
+			w = 0.335156 * safezoneW;
+			h = 0.044 * safezoneH;
 		};
 
 		class EXIT_IMAGE: RscPicture
@@ -45,10 +45,10 @@ class RscDisplayShopArma: default_base_dialog
 			idc = 38414;
 			text = "\lyeed_IMG\data\shops\action_exit.paa";
 
-			x = 0.645406 * safezoneW + safezoneX;
-			y = 0.33962 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.033 * safezoneH;
+			x = 0.340156 * safezoneW + safezoneX;
+			y = 0.313 * safezoneH + safezoneY;
+			w = 0.0257812 * safezoneW;
+			h = 0.044 * safezoneH;
 		};
 		class EXIT_BUTTON: RscButtonSilent
 		{
@@ -58,10 +58,10 @@ class RscDisplayShopArma: default_base_dialog
 			onMouseExit = "ctrlSetText[38414,""\lyeed_IMG\data\shops\action_exit.paa""];";
 			tooltip = "Fermer";
 
-			x = 0.645406 * safezoneW + safezoneX;
-			y = 0.33962 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.033 * safezoneH;
+			x = 0.340156 * safezoneW + safezoneX;
+			y = 0.313 * safezoneH + safezoneY;
+			w = 0.0257812 * safezoneW;
+			h = 0.044 * safezoneH;
 		};
 
 		class STOCK_FRAME: RscFrame
@@ -89,7 +89,7 @@ class RscDisplayShopArma: default_base_dialog
 		{
 			idc = 38405;
 			colorBackground[] = {0,0,0,0.6};
-			onLBSelChanged = "[_this select 1] call public_fnc_weaponShopSelection;";
+			onLBSelChanged = "[_this select 1] call public_fnc_shop_arma_update;";
 			
 			x = 0.340156 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
@@ -99,7 +99,7 @@ class RscDisplayShopArma: default_base_dialog
 
 		class SELECT_FRAME: RscFrame
 		{
-			idc = -1;
+			idc = 38415;
 			colorText[] = {0,0,0,0.8};
 			
 			x = 0.510312 * safezoneW + safezoneX;
@@ -208,8 +208,8 @@ class RscDisplayShopArma: default_base_dialog
 		{
 			idc = 38404;
 			action = "[] call public_fnc_shop_arma_buy;";
-			onMouseEnter = "ctrlSetText[38414,""\lyeed_IMG\data\shops\action_buy_select.paa""];";
-			onMouseExit = "ctrlSetText[38414,""\lyeed_IMG\data\shops\action_buy.paa""];";
+			onMouseEnter = "ctrlSetText[38403,""\lyeed_IMG\data\shops\action_buy_select.paa""];";
+			onMouseExit = "ctrlSetText[38403,""\lyeed_IMG\data\shops\action_buy.paa""];";
 			tooltip = "Acheter";
 
 			x = 0.561875 * safezoneW + safezoneX;

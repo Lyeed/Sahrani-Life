@@ -26,8 +26,11 @@ if ((vehicle player) isEqualTo player) then
 				{
 					true;
 				} else {
-					[cursorTarget] spawn public_fnc_interactionMenu_open;
-					true;
+					if ((vehicle cursorTarget) isEqualTo cursorTarget) then
+					{
+						[cursorTarget] spawn public_fnc_interactionMenu_open;
+						true;
+					};
 				};
 			} else {
 				if ((cursorTarget isKindOf "Car") || (cursorTarget isKindOf "Ship") || (cursorTarget isKindOf "Air") || (cursorTarget isKindOf "Tank") || (cursorTarget isKindOf "Truck")) then

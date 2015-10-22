@@ -64,18 +64,18 @@ _idc_actual = 5010;
 		_ctrl_btn buttonSetAction (_x select 2);
 		_idc_actual = _idc_actual + 2;
 	};
-} forEach 
+} forEach
 ([
 	["lock", "Verrouiller", "[true] call public_fnc_vehicleMenu_key;", "(g_interaction_target in g_vehicles)"],
 	["unlock", "Déverrouiller", "[false] call public_fnc_vehicleMenu_key;", "(g_interaction_target in g_vehicles)"],
 	["inventory", "Coffre", "[] spawn public_fnc_vehicleMenu_inventory_open;", "((locked g_interaction_target) != 2)"],
-	["repair", "Réparation", "[] spawn public_fnc_vehicleMenu_repair_open;", "true"],
-	["refuel", "Faire le plein", "[] spawn public_fnc_vehicleMenu_refuel;", "(([""fuelF""] call public_fnc_itemCount) > 0)"],
-	["flip", "Retourner", "[] spawn public_fnc_vehicleMenu_flip;", "(!(g_interaction_target isKindOf ""Ship"") && !(g_interaction_target isKindOf ""Air""))"],
-	["lockpick", "Crochetter", "[] spawn public_fnc_vehicleMenu_steal;", "((([""lockpick""] call public_fnc_itemCount) > 0) && !(g_interaction_target in g_vehicles) && !(g_interaction_target isKindOf ""Tank""))"],
-	["pullout", "Sortir", "[] call pubic_fnc_vehicleMenu_pullout;", "(count (crew g_interaction_target) > 0)"],
+	["repair", "Réparation", "[] spawn public_fnc_vehicleMenu_repair_open;", "((vehicle player) isEqualTo player)"],
+	["refuel", "Faire le plein", "[] spawn public_fnc_vehicleMenu_refuel;", "((([""fuelF""] call public_fnc_itemCount) > 0) && ((vehicle player) isEqualTo player))"],
+	["flip", "Retourner", "[] spawn public_fnc_vehicleMenu_flip;", "(!(g_interaction_target isKindOf ""Ship"") && !(g_interaction_target isKindOf ""Air"") && ((vehicle player) isEqualTo player))"],
+	["lockpick", "Crochetter", "[] spawn public_fnc_vehicleMenu_steal;", "((([""lockpick""] call public_fnc_itemCount) > 0) && !(g_interaction_target in g_vehicles) && !(g_interaction_target isKindOf ""Tank"") && ((vehicle player) isEqualTo player))"],
+	["pullout", "Sortir", "[] call public_fnc_vehicleMenu_pullout;", "((count (crew g_interaction_target) > 0) && ((vehicle player) isEqualTo player))"],
 	["owner", "Propriétaire", "[] spawn public_fnc_vehicleMenu_owner;", "((playerSide in [east,west]) || (g_interaction_target in g_vehicles))"],
-	["impound", "Fourrière", "[] spawn public_fnc_vehicleMenu_impound;", "(playerSide in [east,west])"],
+	["impound", "Fourrière", "[] spawn public_fnc_vehicleMenu_impound;", "((playerSide in [east,west]) && ((vehicle player) isEqualTo player))"],
 	["putin", "Transférer", "[] call public_fnc_vehicleMenu_putIn;", "false"]
 ]);
 

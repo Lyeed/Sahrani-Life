@@ -9,19 +9,7 @@ private["_price", "_itemInfo", "_sel", "_display", "_viseurs", "_magazines", "_d
 _sel = [_this, 0, -1, [-1]] call BIS_fnc_param;
 
 _item = lbData[38405, _sel];
-if ((_item isEqualTo "") || (_sel isEqualTo -1)) exitWith
-{
-	ctrlShow[38402, false];
-	ctrlShow[38403, false];
-	ctrlShow[38404, false];
-	ctrlShow[38406, false];
-	ctrlShow[38407, false];
-	ctrlShow[38408, false];
-	ctrlShow[38409, false];
-	ctrlShow[38410, false];
-	ctrlShow[38412, false];
-	ctrlShow[38413, false];
-};
+if ((_item isEqualTo "") || (_sel isEqualTo -1)) exitWith {};
 
 disableSerialization;
 _display = findDisplay 38400;
@@ -60,7 +48,7 @@ if (_magazines isEqualTo []) then
 };
 
 _price = lbValue[38405, _sel];
-(_display displayCtrl 38402) ctrlSetStructuredText parseText format["<t align='center' color='#%2'>%1$</t><br/>", ([_price] call public_fnc_numberText), if (g_cash >= _price) then {"8cff9b"} else {"ff8c8c"}];
+(_display displayCtrl 38402) ctrlSetStructuredText parseText format["<t align='center' color='#%2'>%1</t><t align='right'>$</t>", ([_price] call public_fnc_numberText), if (g_cash >= _price) then {"8cff9b"} else {"ff8c8c"}];
 
 _desc = _itemInfo select 9;
 if (_desc isEqualTo "") then {
@@ -75,8 +63,3 @@ if (g_cash < _price) then {
 	ctrlShow[38403, true];
 	ctrlShow[38404, true];
 };
-
-ctrlShow[38412, true];
-ctrlShow[38402, true];
-ctrlShow[38413, true];
-ctrlShow[38406, true];

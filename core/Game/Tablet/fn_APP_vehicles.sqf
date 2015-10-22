@@ -29,7 +29,6 @@ lbClear _list;
 {
 	if (alive _x) then
 	{
-		private["_marker", "_index"];
 		_marker = format["vehicles_tablet_%1", _forEachIndex];
 		createMarkerLocal [_marker, (getPos _x)];
 		_marker setMarkerShapeLocal "ICON";
@@ -45,21 +44,25 @@ lbClear _list;
 	};
 } forEach (g_vehicles);
 if ((lbSize _list) isEqualTo 0) then {
-	_list lbAdd "Aucune";
+	_list lbAdd "Aucun";
 };
 
 _list lbSetCurSel 0;
 
 {
-	_x setMarkerAlphaLocal 0;
-} count (allMapMarkers);
+	if (!(_x in gServer_dynamic_markers)) then {
+		_x setMarkerAlphaLocal 0;
+	};
+} forEach (allMapMarkers);
 
-waitUntil {(!(ctrlVisible 7705) || (isNull _display))};
+waitUntil {(g_app != "APP_VEHICLES")};
 
 {
 	deleteMarkerLocal _x;
-} count (_markers);
+} forEach (_markers);
 
 {
-	_x setMarkerAlphaLocal 1;
-} count (allMapMarkers);
+	if (!(_x in gServer_dynamic_markers)) then {
+		_x setMarkerAlphaLocal 1;
+	};
+} forEach (allMapMarkers);

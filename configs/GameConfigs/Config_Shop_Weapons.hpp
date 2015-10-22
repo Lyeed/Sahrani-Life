@@ -185,7 +185,7 @@ class ALYSIA_SHOPS_WEAPONS {
 	{
 		name = "Armurerie rebelle";
 		side = "civilian";
-		background = "\lyeed_IMG\data\shop\back_rebel.jpg";
+		background = "\lyeed_IMG\data\shops\backgrounds\back_rebel.jpg";
 		stocks[] = 
 		{
 			{"SkylineItems_Couteau", 2500, "", "license_civ_rebel", -1},
@@ -257,7 +257,7 @@ class ALYSIA_SHOPS_WEAPONS {
 	{
 		name = "Armurerie civile";
 		side = "civilian";
-		background = "\lyeed_IMG\data\shop\back_gun.jpg";
+		background = "\lyeed_IMG\data\shops\backgrounds\back_gun.jpg";
 		stocks[] =
 		{
 			{"hgun_mas_mak_F", 20000, "", "license_civ_gun", "", -1},
@@ -344,7 +344,7 @@ class ALYSIA_SHOPS_WEAPONS {
 	{
 		name = "Garagiste";
 		side = "sideUnknown";
-		background = "\lyeed_IMG\data\shop\back_garagiste.jpg";
+		background = "\lyeed_IMG\data\shops\backgrounds\back_garagiste.jpg";
 		stocks[] =
 		{
 			{"ToolKit", 2500, "", "", "", -1}
@@ -354,7 +354,7 @@ class ALYSIA_SHOPS_WEAPONS {
 	class mairie {
 		name = "Préfecture";
 		side = "civilian";
-		background = "\lyeed_IMG\data\shop\back_mairie.jpg";
+		background = "\lyeed_IMG\data\shops\backgrounds\back_mairie.jpg";
 		stocks[] =
 		{
 			{"SkylineItems_Passeport", 100, "", "", "", -1}
@@ -365,7 +365,7 @@ class ALYSIA_SHOPS_WEAPONS {
 	{
 		name = "Magasin général";
 		side = "sideUnknown";
-		background = "\lyeed_IMG\data\shop\back_genstore.jpg";
+		background = "\lyeed_IMG\data\shops\backgrounds\back_genstore.jpg";
 		stocks[] = 
 		{
 			{"cw_item_notepad", 1500, "", "", "",-1},
@@ -394,7 +394,7 @@ class ALYSIA_SHOPS_WEAPONS {
 	{
 		name = "Magasin télécoms";
 		side = "sideUnknown";
-		background = "\lyeed_IMG\data\shop\back_telecom.jpg";
+		background = "\lyeed_IMG\data\shops\backgrounds\back_telecom.jpg";
 		stocks[] =
 		{
 			{"Skyline_Terminal_Civil", 6500, "", "", "", -1},
@@ -411,7 +411,7 @@ class ALYSIA_SHOPS_WEAPONS {
 	{
 		name = "Destockage";
 		side = "civilian";
-		background = "\lyeed_IMG\data\shop\back_destockage.jpg";
+		background = "\lyeed_IMG\data\shops\backgrounds\back_destockage.jpg";
 		stocks[] = {};
 	};
 };
