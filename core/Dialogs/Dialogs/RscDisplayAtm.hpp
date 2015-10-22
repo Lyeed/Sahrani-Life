@@ -100,7 +100,7 @@
 		
 		class BTN_L1: RscButtonSilent
 		{
-			idc = 150003;
+			idc = 15003;
 
 			x = 0.347375 * safezoneW + safezoneX;
 			y = 0.46238 * safezoneH + safezoneY;

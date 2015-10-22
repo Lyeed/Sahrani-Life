@@ -83,7 +83,7 @@ switch (_action) do
 	case "withdraw":
 	{
 		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Distributeur - Retrait</t>";
-		_balance ctrlSetStructuredText parseText format ["<t align ='left' size='1.2'>Montant $</t>"];
+		_balance ctrlSetStructuredText parseText format ["<t align ='left' size='1.2'>Montant</t>"];
 
 		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Retirer</t>";
 		_btnL1 buttonSetAction "['withdraw'] call public_fnc_atmAction";
@@ -108,7 +108,7 @@ switch (_action) do
 	case "deposit":
 	{
 		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Distributeur - Dépôt</t>";
-		_balance ctrlSetStructuredText parseText format ["<t align ='left' size='1.2'>Montant $</t>"];
+		_balance ctrlSetStructuredText parseText format ["<t align ='left' size='1.2'>Montant</t>"];
 		
 		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Déposer</t>";
 		_btnL1 buttonSetAction "['deposit'] call public_fnc_atmAction";
