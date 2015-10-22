@@ -6,33 +6,33 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private["_price", "_itemInfo", "_sel", "_display", "_viseurs", "_magazines", "_desc", "_item"];
-disableSerialization;
 _sel = [_this, 0, -1, [-1]] call BIS_fnc_param;
 
 _item = lbData[38405, _sel];
 if ((_item isEqualTo "") || (_sel isEqualTo -1)) exitWith
 {
+	ctrlShow[38402, false];
+	ctrlShow[38403, false];
+	ctrlShow[38404, false];
+	ctrlShow[38406, false];
 	ctrlShow[38407, false];
 	ctrlShow[38408, false];
 	ctrlShow[38409, false];
 	ctrlShow[38410, false];
-	ctrlShow[38413, false];
-	ctrlShow[38406, false];
-	ctrlShow[38403, false];
-	ctrlShow[38404, false];
 	ctrlShow[38412, false];
-	ctrlShow[38402, false];
+	ctrlShow[38413, false];
 };
 
-_itemInfo = [_item] call public_fnc_fetchCfgDetails;
+disableSerialization;
 _display = findDisplay 38400;
+if (isNull _display) exitWith {};
 
+_itemInfo = [_item] call public_fnc_fetchCfgDetails;
 _viseurs = _itemInfo select 11;
 if (_viseurs isEqualTo []) then {
 	ctrlShow[38407, false];
 	ctrlShow[38408, false];
 } else {
-	private["_ctrl_viseurs"];
 	_ctrl_viseurs = _display displayCtrl 38408;
 	lbClear _ctrl_viseurs;
 	{
@@ -49,7 +49,6 @@ if (_magazines isEqualTo []) then
 	ctrlShow[38409, false];
 	ctrlShow[38410, false];
 } else {
-	private["_ctrl_magazines"];
 	_ctrl_magazines = _display displayCtrl 38410;
 	lbClear _ctrl_magazines;
 	{

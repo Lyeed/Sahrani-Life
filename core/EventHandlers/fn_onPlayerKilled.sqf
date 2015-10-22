@@ -57,13 +57,20 @@ if (!(isNull g_killer)) then {
 _skull setVariable ["info", [([] call public_fnc_strDate), ([] call public_fnc_strTime), (player getVariable ["realname", profileName]), g_nationality, g_sexe], true];
 /* ************* */
 
+hideBody player;
+{
+	deleteVehicle _x;
+} forEach (nearestObjects [_this, ["WeaponHolderSimulated", "GroundWeaponHolder"], 5]);
+
 /*
 **         SAVE
 */
 [] call public_fnc_stripDownPlayer;
+
 {
 	missionNamespace setVariable [(format["inv_%1", _x]), 0];
 } forEach (g_inv_items);
+
 g_is_alive = false;
 g_cash = 0;
 g_blood = 4000;

@@ -34,53 +34,53 @@
 		{
 			idc = 15001;
 			text = "<t align = 'center' size = '1.5'>Distributeur</t>";
+			colorBackground[] = {0,0,0,0.8};
 			
 			x = 0.389656 * safezoneW + safezoneX;
 			y = 0.34688 * safezoneH + safezoneY;
 			w = 0.228958 * safezoneW;
 			h = 0.0422594 * safezoneH;
-			colorBackground[] = {0,0,0,0.8};
 		};
 		
 		class BALANCE_FRAME: RscFrame
 		{
 			idc = -1;
+			colorText[] = {0,0,0,0.8};
 			
 			x = 0.396875 * safezoneW + safezoneX;
 			y = 0.412 * safezoneH + safezoneY;
 			w = 0.20625 * safezoneW;
 			h = 0.033 * safezoneH;
-			colorText[] = {0,0,0,0.8};
 		};
 		
 		class BALANCE_TXT: RscStructuredText
 		{
 			idc = 15002;
+			colorBackground[] = {0,0,0,0.6};
 			
 			text = "<t align = 'left' size = '1.2'>      Solde </t><t align = 'center' size = '1.2'>... $</t>";
 			x = 0.438022 * safezoneW + safezoneX;
 			y = 0.41288 * safezoneH + safezoneY;
 			w = 0.164115 * safezoneW;
 			h = 0.0302223 * safezoneH;
-			colorBackground[] = {0,0,0,0.6};
 		};
 
 		class BALANCE_BACKGROUND: RscText
 		{
 			idc = -1;
+			colorBackground[] = {0,0,0,0.6};
 			
 			x = 0.396875 * safezoneW + safezoneX;
 			y = 0.41288 * safezoneH + safezoneY;
 			w = 0.04125 * safezoneW;
 			h = 0.0302223 * safezoneH;
-			colorBackground[] = {0,0,0,0.6};
 		};
 		
 		class ICON_BALANCE: RscPicture
 		{
-			idc = -1;
-			
+			idc = -1;			
 			text = "\Devilz80_Images\Data\Menu\ATM\balance_logo.paa";
+
 			x = 0.408116 * safezoneW + safezoneX;
 			y = 0.41662 * safezoneH + safezoneY;
 			w = 0.0154167 * safezoneW;
@@ -90,8 +90,8 @@
 		class ICON_CAMERA: RscPicture
 		{
 			idc = -1;
-			
 			text = "\Devilz80_Images\Data\Menu\ATM\camera_icon.paa";
+
 			x = 0.477828 * safezoneW + safezoneX;
 			y = 0.52948 * safezoneH + safezoneY;
 			w = 0.0360937 * safezoneW;
@@ -181,102 +181,103 @@
 		class TXT_L1: RscStructuredText
 		{
 			idc = 15011;
-			
 			text = "<t align = 'left' size = '1.2'></t>";
+			colorBackground[] = {0,0,0,0};
+			
 			x = 0.393472 * safezoneW + safezoneX;
 			y = 0.4604 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
 			h = 0.033 * safezoneH;
-			colorBackground[] = {0,0,0,0};
 		};
 		
 		class TXT_L2: RscStructuredText
 		{
 			idc = 15012;
-			
 			text = "<t align = 'left' size = '1.2'></t>";
+			colorBackground[] = {0,0,0,0};
+
 			x = 0.393266 * safezoneW + safezoneX;
 			y = 0.51386 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
 			h = 0.033 * safezoneH;
-			colorBackground[] = {0,0,0,0};
 		};
 		
 		class TXT_L3: RscStructuredText
 		{
 			idc = 15013;
-			
 			text = "<t align = 'left' size = '1.2'></t>";
+			colorBackground[] = {0,0,0,0};
+			
 			x = 0.392234 * safezoneW + safezoneX;
 			y = 0.56666 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
 			h = 0.033 * safezoneH;
-			colorBackground[] = {0,0,0,0};
 		};
 		
 		class TXT_L4: RscStructuredText
 		{
 			idc = 15014;
-			
 			text = "<t align = 'left' size = '1.2'></t>";
+			colorBackground[] = {0,0,0,0};
+			
 			x = 0.39275 * safezoneW + safezoneX;
 			y = 0.62034 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
 			h = 0.033 * safezoneH;
-			colorBackground[] = {0,0,0,0};
 		};
 		
 		class TXT_R1: RscStructuredText
 		{
 			idc = 15015;
-			
 			text = "<t align = 'right' size = '1.2'></t>";
+			colorBackground[] = {0,0,0,0};
+
 			x = 0.518562 * safezoneW + safezoneX;
 			y = 0.46062 * safezoneH + safezoneY;
 			w = 0.0876563 * safezoneW;
 			h = 0.033 * safezoneH;
-			colorBackground[] = {0,0,0,0};
 		};
 		
 		class TXT_R2: RscStructuredText
 		{
 			idc = 15016;
-			
 			text = "<t align = 'right' size = '1.2'></t>";
+			colorBackground[] = {0,0,0,0};
+
 			x = 0.518872 * safezoneW + safezoneX;
 			y = 0.51452 * safezoneH + safezoneY;
 			w = 0.0876563 * safezoneW;
 			h = 0.033 * safezoneH;
-			colorBackground[] = {0,0,0,0};
 		};
 		
 		class TXT_R3: RscStructuredText
 		{
 			idc = 15017;
-			
 			text = "<t align = 'right' size = '1.2'></t>";
+			colorBackground[] = {0,0,0,0};
+
 			x = 0.519491 * safezoneW + safezoneX;
 			y = 0.566 * safezoneH + safezoneY;
 			w = 0.0876563 * safezoneW;
 			h = 0.033 * safezoneH;
-			colorBackground[] = {0,0,0,0};
 		};
 		
 		class TXT_R4: RscStructuredText
 		{
 			idc = 15018;
-			
 			text = "<t align = 'right' size = '1.2'></t>";
+			colorBackground[] = {0,0,0,0};
+			
 			x = 0.519491 * safezoneW + safezoneX;
 			y = 0.62012 * safezoneH + safezoneY;
 			w = 0.0876563 * safezoneW;
 			h = 0.033 * safezoneH;
-			colorBackground[] = {0,0,0,0};
 		};
 		
 		class EDIT: RscEdit
 		{
 			idc = 15019;
+
 			x = 0.490719 * safezoneW + safezoneX;
 			y = 0.41816 * safezoneH + safezoneY;
 			w = 0.103125 * safezoneW;

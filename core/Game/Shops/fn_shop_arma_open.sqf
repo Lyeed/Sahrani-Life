@@ -27,12 +27,13 @@ if ((_side != sideUnknown) && {(playerSide != _side)}) exitWith {
 	]] call public_fnc_error;
 };
 
-if (!(createDialog "life_weapon_shop")) exitWith {};
-disableSerialization;
+if (!(createDialog "RscDisplayShopArma")) exitWith {};
 
+disableSerialization;
 _display = findDisplay 38400;
-(_display displayCtrl 38404) ctrlSetTooltip "Acheter";
-(_display displayCtrl 38401) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", (getText(missionConfigFile >> "ALYSIA_SHOPS_WEAPONS" >> _type >> "name"))];
+if (isNull _display) exitWith {};
+
+(_display displayCtrl 38401) ctrlSetStructuredText parseText format["<t align='center' size='1.8'>%1</t>", (getText(missionConfigFile >> "ALYSIA_SHOPS_WEAPONS" >> _type >> "name"))];
 (_display displayCtrl 38411) ctrlSetText (getText(missionConfigFile >> "ALYSIA_SHOPS_WEAPONS" >> _type >> "background"));
 
 _list = _display displayCtrl 38405;
@@ -105,4 +106,4 @@ if ((lbSize _list) isEqualTo 0) then {
 	_list lbAdd "Vous n'avez rien à acheter ici";
 };
 
-[-1] call public_fnc_weaponShopSelection;
+[-1] call public_fnc_shop_arma_update;

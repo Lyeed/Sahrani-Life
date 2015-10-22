@@ -148,9 +148,9 @@ class Public
 		class virt_menu {};
 		class virt_sell {};
 		class virt_update {};
-		class weaponShopBuy {};
-		class weaponShopMenu {};
-		class weaponShopSelection {};
+		class shop_arma_open {};
+		class shop_arma_update {};
+		class shop_arma_buy {};
 	};
 
 	class Skull
