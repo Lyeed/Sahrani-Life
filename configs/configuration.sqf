@@ -177,6 +177,9 @@ g_houses_EAST = compileFinal str(g_houses_EAST);
 g_houses_GUER = compileFinal str(g_houses_GUER);
 g_houses_CIV = compileFinal str(g_houses_CIV);
 g_houses_storages = compileFinal str(g_houses_storages);
+/* =================[Dynamic Markers]=================== */
+g_dynamic_markers = [];
+"g_dynamic_markers pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_DYN_MARKERS");
 /* =================[Lasting Objects]=================== */
 g_lastingObjects = [];
 g_lastingObjects_Buildings = [];

@@ -18,3 +18,4 @@
 #include "GameConfigs\Config_farming_Plant.hpp"
 #include "GameConfigs\Config_Garages.hpp"
 #include "GameConfigs\Config_Repair.hpp"
+#include "GameConfigs\Config_Dynamic_Markers.hpp"

@@ -25,10 +25,26 @@ class RscDisplayShopArma: default_base_dialog
 			w = 0.335156 * safezoneW;
 			h = 0.451 * safezoneH;
 		};
-	};
-	
-	class controls
-	{
+		class SELECT_BACKGROUND_1: RscStructuredText
+		{
+			idc = 38416;
+			colorBackground[] = {0,0,0,0.6};
+
+			x = 0.510312 * safezoneW + safezoneX;
+			y = 0.555 * safezoneH + safezoneY;
+			w = 0.139219 * safezoneW;
+			h = 0.088 * safezoneH;
+		};
+		class SELECT_BACKGROUND_2: RscText
+		{
+			idc = 38417;
+			colorBackground[] = {0,0,0,0.8};
+			
+			x = 0.510312 * safezoneW + safezoneX;
+			y = 0.544 * safezoneH + safezoneY;
+			w = 0.139219 * safezoneW;
+			h = 0.011 * safezoneH;
+		};
 		class TITLE: RscStructuredText
 		{
 			idc = 38401;
@@ -39,7 +55,10 @@ class RscDisplayShopArma: default_base_dialog
 			w = 0.335156 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
-
+	};
+	
+	class controls
+	{
 		class EXIT_IMAGE: RscPicture
 		{
 			idc = 38414;
@@ -68,7 +87,7 @@ class RscDisplayShopArma: default_base_dialog
 		{
 			idc = -1;
 			colorText[] = {0,0,0,0.8};
-			
+
 			x = 0.340156 * safezoneW + safezoneX;
 			y = 0.368 * safezoneH + safezoneY;
 			w = 0.149531 * safezoneW;
@@ -127,7 +146,7 @@ class RscDisplayShopArma: default_base_dialog
 			x = 0.510312 * safezoneW + safezoneX;
 			y = 0.401 * safezoneH + safezoneY;
 			w = 0.139219 * safezoneW;
-			h = 0.088 * safezoneH;
+			h = 0.099 * safezoneH;
 		};
 
 		class SELECT_PRICE_HEADER: RscStructuredText
@@ -136,9 +155,9 @@ class RscDisplayShopArma: default_base_dialog
 			text = "<t align='center'>Prix</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
-			x = 0.546406 * safezoneW + safezoneX;
+			x = 0.510312 * safezoneW + safezoneX;
 			y = 0.5 * safezoneH + safezoneY;
-			w = 0.0670311 * safezoneW;
+			w = 0.139219 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class SELECT_PRICE_INFO: RscStructuredText
@@ -146,9 +165,9 @@ class RscDisplayShopArma: default_base_dialog
 			idc = 38402;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.546406 * safezoneW + safezoneX;
+			x = 0.510312 * safezoneW + safezoneX;
 			y = 0.522 * safezoneH + safezoneY;
-			w = 0.0670311 * safezoneW;
+			w = 0.139219 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 
@@ -158,18 +177,18 @@ class RscDisplayShopArma: default_base_dialog
 			text = "<t align='center'>Viseurs compatibles</t>";
 			colorBackground[] = {0,0,0,0.8};
 
-			x = 0.520625 * safezoneW + safezoneX;
-			y = 0.555 * safezoneH + safezoneY;
-			w = 0.118594 * safezoneW;
+			x = 0.510312 * safezoneW + safezoneX;
+			y = 0.643 * safezoneH + safezoneY;
+			w = 0.139219 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class SELECT_SCOPE_LIST: RscCombo
 		{
 			idc = 38408;
 
-			x = 0.520625 * safezoneW + safezoneX;
-			y = 0.577 * safezoneH + safezoneY;
-			w = 0.118594 * safezoneW;
+			x = 0.510312 * safezoneW + safezoneX;
+			y = 0.665 * safezoneH + safezoneY;
+			w = 0.139219 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 
@@ -179,18 +198,18 @@ class RscDisplayShopArma: default_base_dialog
 			text = "<t align='center'>Chargeurs compatibles</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
-			x = 0.520625 * safezoneW + safezoneX;
-			y = 0.61 * safezoneH + safezoneY;
-			w = 0.118594 * safezoneW;
+			x = 0.510312 * safezoneW + safezoneX;
+			y = 0.687 * safezoneH + safezoneY;
+			w = 0.139219 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class SELECT_MAGAZINE_LIST: RscCombo
 		{
 			idc = 38410;
 
-			x = 0.520625 * safezoneW + safezoneX;
-			y = 0.632 * safezoneH + safezoneY;
-			w = 0.118594 * safezoneW;
+			x = 0.510312 * safezoneW + safezoneX;
+			y = 0.709 * safezoneH + safezoneY;
+			w = 0.139219 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 
@@ -200,8 +219,8 @@ class RscDisplayShopArma: default_base_dialog
 			text = "\lyeed_IMG\data\shops\action_buy.paa";
 
 			x = 0.561875 * safezoneW + safezoneX;
-			y = 0.665 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
+			y = 0.577 * safezoneH + safezoneY;
+			w = 0.0360937 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class SELECT_BUY_BUTTON: RscButtonSilent
@@ -213,8 +232,8 @@ class RscDisplayShopArma: default_base_dialog
 			tooltip = "Acheter";
 
 			x = 0.561875 * safezoneW + safezoneX;
-			y = 0.665 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
+			y = 0.577 * safezoneH + safezoneY;
+			w = 0.0360937 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 	};

@@ -11,7 +11,10 @@ if (!params [
 	]) exitWith {};
 
 if (_marker isEqualTo "") exitWith {};
+if (!g_connected) exitWith {};
 
-[format["La faction [%1] a détruit [%2]", getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "name"), (markerText _marker)]] remoteExecCall ["systemChat", -2];
-[_marker] remoteExecCall ["public_fnc_dynamicMarkers_update", civilian];
-[_marker] remoteExec ["TON_fnc_dynamicMarkers_update", 2];
+if ((markerAlpha _marker) isEqualTo 1) then
+{
+	_marker setMarkerAlphaLocal 0;
+	[format["<t align='center'>Le marqueur<br/><t color='#74DF00'>%1</t><br/>n'est plus d'actualité</t>", markerText _marker]] call public_fnc_info;
+};

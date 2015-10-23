@@ -168,6 +168,12 @@ class Public
 	{
 		file = "core\Game\dynamicMarkers";
 		class dynamicMarkers_destroy {};
+		class dynamicMarkers_update {};
+		class dynamicMarkers_reveal {};
+		class dynamicMarkers_menu_open {};
+		class dynamicMarkers_menu_update_list {};
+		class dynamicMarkers_menu_update_info {};
+		class dynamicMarkers_menu_buy {};
 	};
 
 	class Garage

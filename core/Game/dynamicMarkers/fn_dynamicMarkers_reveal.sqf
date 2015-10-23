@@ -11,7 +11,6 @@ if (!params [
 	]) exitWith {};
 
 if (_marker isEqualTo "") exitWith {};
+if (playerSide != civilian) exitWith {};
 
-[format["La faction [%1] a détruit [%2]", getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "name"), (markerText _marker)]] remoteExecCall ["systemChat", -2];
-[_marker] remoteExecCall ["public_fnc_dynamicMarkers_update", civilian];
-[_marker] remoteExec ["TON_fnc_dynamicMarkers_update", 2];
+_marker setMarkerAlphaLocal 1;
