@@ -13,8 +13,7 @@ if (!params [
 disableSerialization;
 _display = findDisplay 15000;
 if (isNull _display) then {};
-_edit = _display displayCtrl 15019;
-_amount = ctrlText _edit;
+_amount = ctrlText 15019;
 
 switch (_action) do
 {
