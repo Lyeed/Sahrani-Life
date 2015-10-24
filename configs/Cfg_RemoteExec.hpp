@@ -41,6 +41,8 @@ class CfgRemoteExec
 		class TON_fnc_logDeath {allowTargets = SERVER;};
 		//- dynamicMarkers
 		class TON_fnc_dynamicMarkers_update {allowTargets = SERVER;};
+		//- housing
+		class TON_fnc_house_add {allowTargets = SERVER;};
 
 		/*
 		**		CLIENT FUNCTIONS

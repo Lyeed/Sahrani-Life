@@ -34,7 +34,6 @@ class ALYSIA_FACTIONS
 		**         HOUSING
 		*/
 		house_can_search = 1;
-		house_rank_buy = 8;
 		house_max = 1;
 		
 		/*
@@ -127,7 +126,7 @@ class ALYSIA_FACTIONS
 	class EAST
 	{
 		name = "Garde";
-		icon = "\lyeed\images\phone_messages_east.paa";
+		icon = "\lyeed_IMG\data\faction\EAST_logo.paa";
 		paycheck = 750;
 		
 		identity_item = "SkylineItems_PlaqueMilitaire";
@@ -206,7 +205,7 @@ class ALYSIA_FACTIONS
 	class CIV
 	{
 		name = "Civil";
-		icon = "";
+		icon = "\lyeed_IMG\data\faction\CIV_logo.paa";
 		paycheck = 600;
 		
 		identity_item = "SkylineItems_Passeport";
@@ -302,7 +301,7 @@ class ALYSIA_FACTIONS
 	class GUER
 	{
 		name = "SAMU";
-		icon = "\lyeed\images\phone_messages_guer.paa";
+		icon = "\lyeed_IMG\data\faction\GUER_logo.paa";
 		paycheck = 600;
 
 		identity_item = "SkylineItems_Passeport";

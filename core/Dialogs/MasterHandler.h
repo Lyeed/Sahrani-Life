@@ -25,7 +25,8 @@
 #include "Dialogs\RscDisplayPlayerTicket.hpp"
 #include "Dialogs\RscDisplayPlayerRevokeLicense.hpp"
 #include "Dialogs\RscDisplayAtm.hpp"
-#include "Dialogs\RscDisplayDynMarkers"
+#include "Dialogs\RscDisplayDynMarkers.hpp"
+#include "Dialogs\RscDisplayHousing.hpp"
 class RscTitles // Defines custom UI displays.
 {
 	#include "Hud\HUD_default.hpp"

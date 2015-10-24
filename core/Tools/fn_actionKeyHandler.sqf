@@ -18,34 +18,53 @@ if ((vehicle player) isEqualTo player) then
 	{
 
 	} else {
-		if ((player distance cursorTarget) < ((((boundingBox cursorTarget) select 1) select 0) + 2)) then
+		if ((player distance cursorTarget) < ((((boundingBox cursorTarget) select 1) select 0) + 2.5)) then
 		{
 			if (isPlayer cursorTarget) then
 			{
-				if (player getVariable ["is_coma", false]) then
+				if (!dialog) then
 				{
-					true;
-				} else {
-					if ((vehicle cursorTarget) isEqualTo cursorTarget) then
+					if (player getVariable ["is_coma", false]) then
 					{
-						[cursorTarget] spawn public_fnc_interactionMenu_open;
 						true;
+					} else {
+						if ((vehicle cursorTarget) isEqualTo cursorTarget) then
+						{
+							[cursorTarget] spawn public_fnc_interactionMenu_open;
+							true;
+						};
 					};
 				};
 			} else {
-				if ((cursorTarget isKindOf "Car") || (cursorTarget isKindOf "Ship") || (cursorTarget isKindOf "Air") || (cursorTarget isKindOf "Tank") || (cursorTarget isKindOf "Truck")) then
+				if (!dialog) then
 				{
-					if (alive cursorTarget) then
+					if ((cursorTarget isKindOf "Car") || (cursorTarget isKindOf "Ship") || (cursorTarget isKindOf "Air") || (cursorTarget isKindOf "Tank") || (cursorTarget isKindOf "Truck")) then
 					{
-						[cursorTarget] spawn public_fnc_vehicleMenu_open;
+						if (alive cursorTarget) then
+						{
+							[cursorTarget] spawn public_fnc_vehicleMenu_open;
+							true;
+						};
+					};
+					if (typeof(cursorTarget) isEqualTo "Land_HumanSkull_F") then
+					{
+						[cursorTarget] spawn public_fnc_skullMenu_open;
+						true;
+					};
+					if (typeOf(cursorTarget) in ["Land_Atm_01_F", "Land_Atm_02_F"]) then
+					{
+						["home"] call public_fnc_atmScreen;
 						true;
 					};
 				};
-				if (typeof(cursorTarget) isEqualTo "Land_HumanSkull_F") then
-				{
-					[cursorTarget] spawn public_fnc_skullMenu_open;
-					true;
-				};
+			};
+		};
+		if (((player distance cursorTarget) < 10) && (typeOf(cursorTarget) in (call g_houses_list))) then
+		{
+			if (!dialog) then
+			{
+				[cursorTarget] call public_fnc_house_menu_handler;
+				true;
 			};
 		};
 	};
@@ -56,8 +75,11 @@ if ((vehicle player) isEqualTo player) then
 	{
 		if (alive _vehicle) then
 		{
-			[_vehicle] spawn public_fnc_vehicleMenu_open;
-			true;
+			if (!dialog) then
+			{
+				[_vehicle] spawn public_fnc_vehicleMenu_open;
+				true;
+			};
 		};
 	};
 };

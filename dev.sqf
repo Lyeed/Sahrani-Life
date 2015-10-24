@@ -89,6 +89,7 @@ player addMagazine "30Rnd_65x39_caseless_mag";
 */
 onMapSingleClick "copyToClipboard str(_pos)";
 onMapSingleClick "player setPos _pos";
+copyToClipboard(typeOf cursorTarget);
 
 
 /// g_vehicle_target action ["useWeapon", g_vehicle_target, g_vehicle_target, 0];

@@ -124,13 +124,6 @@ class Public
 		class lastingObjectsSabotage {};
 	};
 
-	class Outpost
-	{
-		file = "core\Game\Outpost";
-		class buyRebelPos {};
-		class outpostDestroy {};
-	};
-
 	class Shops
 	{
 		file = "core\Game\Shops";
@@ -221,6 +214,9 @@ class Public
 	class Housing
 	{
 		file = "core\Game\Housing";
+		class house_menu_handler {};
+		class house_menu_buy_open {};
+		class house_menu_buy_action {};
 		class buyHouse {};
 		class houseMenu {};
 		class houseOwner {};

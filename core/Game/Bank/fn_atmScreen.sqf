@@ -69,7 +69,7 @@ switch (_action) do
 		_txtR1 ctrlSetStructuredText parseText "<t align='right'>Dépôt</t>";
 		_btnR1 buttonSetAction "['deposit'] call public_fnc_atmScreen";
 
-		_txtR4 ctrlSetStructuredText parseText "<t align='right'>Reprendre Carte</t>";
+		_txtR4 ctrlSetStructuredText parseText "<t align='right'>Récupérer Carte</t>";
 		_btnR4 buttonSetAction "closeDialog 0";
 
 		_btnL1 ctrlShow true;

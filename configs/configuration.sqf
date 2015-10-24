@@ -139,44 +139,15 @@ g_plants = [];
 g_plants = compileFinal str(g_plants);
 /* =================[Housing]=================== */
 g_houses = [];
-g_houses_WEST = [];
-g_houses_EAST = [];
-g_houses_GUER = [];
-g_houses_CIV = [];
+
+g_houses_list = [];
+"g_houses_list pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_HOUSES");
+g_houses_list = compileFinal str(g_houses_list);
+
 g_houses_storages = [];
-
-_missionConfigPatches = missionConfigFile >> "ALYSIA_HOUSE";
-for "_i" from 0 to count (_missionConfigPatches) - 1 do 
-{
-	private["_patchEntry"];
-	_patchEntry = _missionConfigPatches select _i;
-	if (isClass _patchEntry) then 
-	{
-		switch (getText(_missionConfigPatches >> str(_patchEntry) >> "side")) do
-		{
-			case "WEST": {g_houses_WEST pushBack _patchEntry};
-			case "EAST": {g_houses_EAST pushBack _patchEntry};
-			case "GUER": {g_houses_GUER pushBack _patchEntry};
-			case "CIV": {g_houses_CIV pushBack _patchEntry};
-		};
-	};
-};
-
-_missionConfigPatches = missionConfigFile >> "ALYSIA_STORAGE";
-for "_i" from 0 to count (_missionConfigPatches) - 1 do 
-{
-	private["_patchEntry"];
-	_patchEntry = _missionConfigPatches select _i;
-	if (isClass _patchEntry) then {
-		g_houses_storages pushBack str(_patchEntry);
-	};
-};
-
-g_houses_WEST = compileFinal str(g_houses_WEST);
-g_houses_EAST = compileFinal str(g_houses_EAST);
-g_houses_GUER = compileFinal str(g_houses_GUER);
-g_houses_CIV = compileFinal str(g_houses_CIV);
+"g_houses_storages pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_STORAGES");
 g_houses_storages = compileFinal str(g_houses_storages);
+
 /* =================[Dynamic Markers]=================== */
 g_dynamic_markers = [];
 "g_dynamic_markers pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_DYN_MARKERS");
