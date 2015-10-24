@@ -7,7 +7,7 @@ More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
 if (!params [
-["_action", "", [""]]
+	["_action", "", [""]]
 ]) exitWith {};
 
 disableSerialization;
