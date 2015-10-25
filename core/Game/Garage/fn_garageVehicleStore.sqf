@@ -59,7 +59,7 @@ _trunk = _vehicle getVariable["Trunk", [[], 0]];
 if ((_trunk select 0) isEqualTo []) then
 {
 	g_garage_store = true;
-	[_vehicle, false, player, (getPos _PNJ)] remoteExec ["TON_fnc_vehicleStore", 2, false];
+	[_vehicle, (getPos _PNJ), false] remoteExec ["TON_fnc_garageVehicleStore", 2];
 } else {
 	private["_illegal", "_price", "_control", "_display"];
 	_illegal = 0;
@@ -82,14 +82,14 @@ if ((_trunk select 0) isEqualTo []) then
 		{
 			g_garage_store = true;
 			_vehicle setVariable["trunk", [[], 0], true];
-			[_vehicle, (getPos _PNJ), false] remoteExec ["TON_fnc_garageVehicleStore", 2, false];
+			[_vehicle, (getPos _PNJ), false] remoteExec ["TON_fnc_garageVehicleStore", 2];
 		} else {
 			if (_price > g_cash) exitWith
 			{
 				["Vous n'avez pas assez d'argent pour ranger votre véhicule avec sa cargaison"] call public_fnc_error;
 			};
 			g_garage_store = true;
-			[_vehicle, (getPos _PNJ), false] remoteExec ["TON_fnc_garageVehicleStore", 2, false];
+			[_vehicle, (getPos _PNJ), false] remoteExec ["TON_fnc_garageVehicleStore", 2];
 		};
 	};
 };

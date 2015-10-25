@@ -222,14 +222,8 @@ class Public
 		class house_menu_owner_action_sell {};
 		class house_menu_owner_action_light {};
 		class house_menu_owner_action_light_update {};
-		/*
-		class buyHouse {};
-		class houseMenu {};
-		class houseOwner {};
-		class lightHouse {};
-		class lightHouseAction {};
-		class sellHouse {};
-		*/
+		class house_menu_owner_action_garage {};
+		class house_menu_owner_action_store {};
 	};
 
 	class Health

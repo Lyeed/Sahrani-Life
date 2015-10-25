@@ -12,6 +12,8 @@ if (!(createDialog "RscDisplayGarage")) exitWith {};
 disableSerialization;
 
 _display = findDisplay 2800;
+if (isNull _display) exitWith {};
+
 (_display displayCtrl 2805) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", (g_garage_info select 0)];
 
 g_garage_vehicles = _vehicles;
@@ -31,5 +33,5 @@ _list = _display displayCtrl 2826;
 		_list lbSetData [_index, _x];
 		_list lbSetPicture [_index, (_data select 1)];
 	};
-} count (g_garage_info select 1);
+} forEach (g_garage_info select 1);
 _list lbSetCurSel 0;

@@ -52,7 +52,8 @@ _idc_actual = 46010;
 ([
 	["sell", "Vendre", "closeDialog 0; [] spawn public_fnc_house_menu_owner_action_sell;", "(((g_interaction_target getVariable [""house_owner"", ["""", """"]]) select 0) isEqualTo (getPlayerUID player))"],
 	["storage", "Coffre", "closeDialog 0; [g_interaction_target,player] remoteExec [""TON_fnc_house_storage_handler"", 2];", "(g_interaction_target getVariable [""containers"", false])"],
-	["garage", "Garage", "", "(getNumber(missionConfigFile >> ""ALYSIA_HOUSES"" >> typeOf(g_interaction_target) >> ""garage"") isEqualTo 1)"],
+	["garage", "Garage", "closeDialog 0; [] call public_fnc_house_menu_owner_action_garage;", "(getNumber(missionConfigFile >> ""ALYSIA_HOUSES"" >> typeOf(g_interaction_target) >> ""garage"") isEqualTo 1)"],
+	["store", "Rentrer", "closeDialog 0; [] spawn public_fnc_house_menu_owner_action_store;", "(getNumber(missionConfigFile >> ""ALYSIA_HOUSES"" >> typeOf(g_interaction_target) >> ""garage"") isEqualTo 1)"],
 	["light", "Lumière", "[] call public_fnc_house_menu_owner_action_light;", "true"]
 ]);
 

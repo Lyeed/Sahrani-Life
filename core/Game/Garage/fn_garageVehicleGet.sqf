@@ -35,11 +35,22 @@ if (g_atm < _price) exitWith
 	] call public_fnc_error;
 };
 
+if ((g_garage_info select 2) isEqualTo []) then
 {
-	if ((nearestObjects[(getMarkerPos _x), ["Car", "Air", "Ship", "Truck"], 10]) isEqualTo []) exitWith {
-		_validSpawn = _x;
+	if (!(isNull g_interaction_target)) then
+	{
+		_position = (position g_interaction_target) findEmptyPosition [0, 35, _vehicleClassname];
+		if ((nearestObjects[_position, ["Car", "Air", "Ship", "Truck"], 10]) isEqualTo []) exitWith {
+			_validSpawn = _x;
+		};
 	};
-} forEach (g_garage_info select 2);
+} else {
+	{
+		if ((nearestObjects[(getMarkerPos _x), ["Car", "Air", "Ship", "Truck"], 10]) isEqualTo []) exitWith {
+			_validSpawn = _x;
+		};
+	} forEach (g_garage_info select 2);	
+};
 if (isNil "_validSpawn") exitWith {
 	["Aucun emplacement de sortie de véhicule n'est libre"] call public_fnc_error;
 };

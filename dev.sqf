@@ -16,6 +16,9 @@ CBA will start itself in any mission anyway, regardless of whether that logic ha
 // picture
 "\A3\soft_f\Offroad_01\Data\UI\Offroad_01_base_CA.paa"
 
+// random near area
+"C_Offroad_01_F" createVehicle ((position cursorTarget) findEmptyPosition [0, 20, "C_Offroad_01_F"]);
+
 // create
 _vehicle = "C_Offroad_01_F" createVehicle (getPos player);
 _vehicle setVariable["Trunk", [[["banane", 5],["mangue", 1]], 6], true];
