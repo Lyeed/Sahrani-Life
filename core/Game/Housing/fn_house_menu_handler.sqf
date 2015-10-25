@@ -14,9 +14,8 @@ if (isNull _target) exitWith {};
 
 g_interaction_target = _target;
 
-if (g_interaction_target in g_houses) then
-{
-
+if (g_interaction_target in g_houses) then {
+	[] call public_fnc_house_menu_owner_open;
 } else {
 	if ((g_interaction_target getVariable ["house_owner", []]) isEqualTo []) then
 	{
@@ -34,13 +33,6 @@ if (g_interaction_target in g_houses) then
 		};
 	};
 };
-
-		/*
-			vendre
-			coffre
-			lumiere
-			garage
-		*/
 
 
 					/*

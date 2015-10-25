@@ -9,7 +9,7 @@ if (isNull _house) exitWith {};
 if (_mode) then 
 {
 	_lightSource = "#lightpoint" createVehicleLocal [0,0,0];
-	_lightSource lightAttachObject [_house, [0, -2, 0]];
+	_lightSource lightAttachObject [_house, [0, 0, 2]];
 	_lightSource setLightColor [250,150,50];
 	_lightSource setLightAmbient [1,1,0.2];
 	_lightSource setLightAttenuation [1,0,0,0];

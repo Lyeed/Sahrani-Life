@@ -43,6 +43,9 @@ class CfgRemoteExec
 		class TON_fnc_dynamicMarkers_update {allowTargets = SERVER;};
 		//- housing
 		class TON_fnc_house_add {allowTargets = SERVER;};
+		class TON_fnc_house_sell {allowTargets = SERVER;};
+		class TON_fnc_house_storage_handler {allowTargets = SERVER;};
+		class TON_fnc_house_storage_install {allowTargets = SERVER;};
 
 		/*
 		**		CLIENT FUNCTIONS
@@ -69,6 +72,7 @@ class CfgRemoteExec
 		class public_fnc_interactionMenu_action_license_return {allowTargets = CLIENT;};
 		class public_fnc_interactionMenu_action_license_revoke {allowTargets = CLIENT;};
 		class public_fnc_dynamicMarkers_update {allowTargets = CLIENT;};
+		class public_fnc_house_menu_owner_action_light_update {allowTargets = CLIENT;};
 
 		//- Arma
 		class setFuel {allowTargets = EVERYONE;};

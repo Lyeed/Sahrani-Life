@@ -110,6 +110,7 @@ class Public
 		class useBaillon {};
 		class useBandeau {};
 		class useItem {};
+		class storageBox {};
 	};
 
 	class LastingObjects
@@ -217,13 +218,18 @@ class Public
 		class house_menu_handler {};
 		class house_menu_buy_open {};
 		class house_menu_buy_action {};
+		class house_menu_owner_open {};
+		class house_menu_owner_action_sell {};
+		class house_menu_owner_action_light {};
+		class house_menu_owner_action_light_update {};
+		/*
 		class buyHouse {};
 		class houseMenu {};
 		class houseOwner {};
 		class lightHouse {};
 		class lightHouseAction {};
 		class sellHouse {};
-		class storageBox {};
+		*/
 	};
 
 	class Health

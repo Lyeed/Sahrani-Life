@@ -66,6 +66,7 @@ if (_action) then
 
 	_marker = createMarkerLocal [format["house_%1", (count g_houses)], (getPosATL g_interaction_target)];
 	_marker setMarkerTextLocal "Chez vous";
-	_marker setMarkerColorLocal "ColorBlue";
-	_marker setMarkerTypeLocal "loc_Lighthouse";
+	_marker setMarkerColorLocal "ColorPink";
+	_marker setMarkerTypeLocal "plp_mark_as_house";
+	_marker setMarkerSizeLocal [0.6, 0.6];
 };

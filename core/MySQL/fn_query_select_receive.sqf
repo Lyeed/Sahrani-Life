@@ -144,9 +144,10 @@ switch (playerSide) do
 g_houses = _houses;
 {
 	_marker = createMarkerLocal [format["house_%1", (_forEachIndex + 1)], (getPosATL _x)];
-	_marker setMarkerTextLocal (getText(configFile >> "CfgVehicles" >> (typeOf _x) >> "displayName"));
-	_marker setMarkerColorLocal "ColorBlue";
-	_marker setMarkerTypeLocal "loc_Lighthouse";
+	_marker setMarkerTextLocal "Chez vous";
+	_marker setMarkerColorLocal "ColorPink";
+	_marker setMarkerTypeLocal "plp_mark_as_house";
+	_marker setMarkerSizeLocal [0.6, 0.6];
 } forEach (g_houses);
 
 //	Keys
