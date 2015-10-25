@@ -82,6 +82,7 @@ class Public
 		class strDate {};
 		class strTime {};
 		class age {};
+		class getRegion {};
 	};
 
 	class Items
