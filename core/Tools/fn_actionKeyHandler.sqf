@@ -1,5 +1,5 @@
 /*
-		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
+	ArmA 3 N'Ziwasogo Life RPG - ALYSIA
 	Code written by Lyeed
 	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
@@ -61,6 +61,16 @@ if ((vehicle player) isEqualTo player) then
 						[cursorTarget] spawn public_fnc_vehicleMenu_inventory_open;
 						true;
 					};
+					/*if (typeOf(cursorTarget) in ["ClassName_Bank"]) then
+					{
+						if (!("lockpick" in items player)) exitWith {["Vous avez besoin d'outils de crochetage pour pouvoir forcer une porte"] call public_fnc_notice};
+						
+						_door = [cursorTarget] call public_fnc_isDoor;
+						if (!(_door)) exitWith {["Vous devez être près d'une porte pour pouvoir la forcer"] call public_fnc_notice};
+		
+						// On ouvre la porte concernée avec la bonne anim
+						if (!bank_robbing) then {[] call public_fnc_robbingStart};
+					};*/
 				};
 			};
 		};
