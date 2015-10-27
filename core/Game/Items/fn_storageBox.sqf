@@ -29,7 +29,7 @@ if ((_houseInfo select 0) != (getPlayerUID player)) exitWith {
 	["Vous n'êtes pas le propriétaire de ce bâtiment"] call public_fnc_error; 
 };
 
-if (_house getVariable["containers", false]) exitWith {
+if (_house getVariable ["containers", false]) exitWith {
 	["Cet bâtiment possède déjà un coffre"] call public_fnc_error;
 };
 
@@ -39,7 +39,7 @@ if (getText(missionConfigFile >> "ALYSIA_HOUSES" >> (typeOf _house) >> "storage"
 
 _action = 
 [
-	"Le coffre sera posé <t color='#DF0101'>définitivement</t> sur votre position actuelle.<br/>Vous pourrez le sortir ou le rentrer via le menu d'actions.",
+	"Le coffre sera posé <t color='#DF0101'>définitivement</t> et ne pourra plus être récupéré.<br/>Vous pourrez le sortir ou le rentrer via le menu d'actions.",
 	"Coffre de maison",
 	"Valider",
 	"Annuler"
@@ -50,6 +50,6 @@ if (_action) then
 	if ([false, "storage", 1] call public_fnc_handleInv) then
 	{
 		["<t align='center'>Vous avez posé<br/><t color='#FF8000'>Coffre</t><br/>"] call public_fnc_info;
-		[_house, (getPosATL player)] remoteExec ["TON_fnc_house_storage_install", 2];
+		[_house] remoteExec ["TON_fnc_house_storage_install", 2];
 	};
 };

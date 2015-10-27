@@ -50,7 +50,7 @@ if ((lbSize _list) isEqualTo 0) then {
 _list lbSetCurSel 0;
 
 {
-	if (!(_x in gServer_dynamic_markers)) then {
+	if (!(_x in g_dynamic_markers)) then {
 		_x setMarkerAlphaLocal 0;
 	};
 } forEach (allMapMarkers);
@@ -62,7 +62,7 @@ waitUntil {(g_app != "APP_VEHICLES")};
 } forEach (_markers);
 
 {
-	if (!(_x in gServer_dynamic_markers)) then {
+	if (!(_x in g_dynamic_markers)) then {
 		_x setMarkerAlphaLocal 1;
 	};
 } forEach (allMapMarkers);

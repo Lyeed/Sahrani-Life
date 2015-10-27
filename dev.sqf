@@ -20,12 +20,15 @@ CBA will start itself in any mission anyway, regardless of whether that logic ha
 "C_Offroad_01_F" createVehicle ((position cursorTarget) findEmptyPosition [0, 20, "C_Offroad_01_F"]);
 
 // create
-_vehicle = "C_Offroad_01_F" createVehicle (getPos player);
+_vehicle = "B_Truck_01_box_F" createVehicle (getPos player);
 _vehicle setVariable["Trunk", [[["banane", 5],["mangue", 1]], 6], true];
 _vehicle setVariable["isInsured", 1, true];
 _vehicle setVariable["vehicle_info_owners", [(getPlayerUID player), (player getVariable["realname", profileName])], true];
-_vehicle setVariable["dbInfo", [(getPlayerUID player), "486547"], true];
+_vehicle setVariable["dbInfo", [(getPlayerUID player), "815903"], true];
+[_vehicle, 20] remoteExecCall ["setFuel", 0];
 g_vehicles pushBack _vehicle;
+
+
 [true, "mangue", 3] call public_fnc_handleInv;
 
 /*
@@ -42,6 +45,34 @@ player addMagazine "30Rnd_65x39_caseless_mag";
 	_video = ["\lyeed\tablette_alysia.ogv", [0.0625,0.22,0.8625,0.62]] spawn BIS_fnc_playVideo;
 	waitUntil {scriptDone _video};
 };
+
+DEV = createTrigger ["EmptyDetector", [13280.647,11.97,8827.7236], true];
+DEV setTriggerArea [350, 350, 0, false];
+DEV setTriggerActivation ["ANY", "PRESENT", false];
+DEV setTriggerStatements ["(vehicle player) in thislist", "hint 'activated';", "hint 'desactivated';"];
+
+
+DEV setTriggerStatements ["this", "[[[""Frontière"", ""<t align='center' size='1'>%1</t><br/>""], ["""", """"], [""5 Decembre 2015"", ""<t align = 'center' size = '0.7'>%1</t><br/>""], ["""", """"], [""20:00"", ""<t align = 'center' size = '0.7'>%1</t>""], ["""", """"], ["""", """"], ["""", """"]]] spawn BIS_fnc_typeText;", "hint 'lol';"];
+	
+
+
+
+		{
+			position[]={8983.6826,78.759819,6553.4883};
+			a=3900;
+			b=3900;
+			angle=50.6343;
+			rectangular=1;
+			activationBy="ANY";
+			interruptable=1;
+			age="UNKNOWN";
+			name="SOUTH";
+			expActiv="hint ""salut"";";
+			class Effects
+			{
+
+
+	[[["Sahrani SUD", "<t align='center' size='1'>%1</t><br/>"], ["", ""],["5 Decembre 2015", "<t align = 'center' size = '0.7'>%1</t><br/>"], ["", ""],["20:00", "<t align = 'center' size = '0.7'>%1</t>"], ["", ""], ["", ""], ["", ""]]] spawn BIS_fnc_typeText;
 
 /*
 **				PLANE ANIMATION

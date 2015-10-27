@@ -193,30 +193,10 @@ class RscDisplayHousingBuy: default_base_dialog
 			idc = 45007;
 			text = "\lyeed_IMG\data\housing\actions\action_buy.paa";
 
-			x = 0.517016 * safezoneW + safezoneX;
-			y = 0.4725 * safezoneH + safezoneY;
+			x = 0.513922 * safezoneW + safezoneX;
+			y = 0.47162 * safezoneH + safezoneY;
 			w = 0.0257812 * safezoneW;
 			h = 0.044 * safezoneH;
-		};
-		class ACTION_BUY_BUTTON: RscButtonSilent
-		{
-			idc = 45008;
-			action = "[] spawn public_fnc_house_menu_buy_action;";
-			onMouseEnter = "\
-			ctrlSetText[45007,""\lyeed_IMG\data\housing\actions\action_buy_select.paa""];\
-			ctrlShow[45002, false];\
-			((findDisplay 45000) displayCtrl 45001) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 46000) displayCtrl 45010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
-			onMouseExit = "\
-			ctrlSetText[45007,""\lyeed_IMG\data\housing\actions\action_buy.paa""];\
-			ctrlShow[45002, true];\
-			((findDisplay 45000) displayCtrl 45001) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 46000) displayCtrl 45010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";
-
-			x = 0.510312 * safezoneW + safezoneX;
-			y = 0.467 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
-			h = 0.055 * safezoneH;
 		};
 		class ACTION_BUY_TEXT: RscStructuredText
 		{
@@ -229,6 +209,26 @@ class RscDisplayHousingBuy: default_base_dialog
 			w = 0.0567187 * safezoneW;
 			h = 0.033 * safezoneH;
 		};
+		class ACTION_BUY_BUTTON: RscButtonSilent
+		{
+			idc = 45008;
+			action = "[] spawn public_fnc_house_menu_action_buy;";
+			onMouseEnter = "\
+			ctrlSetText[45007,""\lyeed_IMG\data\housing\actions\action_buy_select.paa""];\
+			ctrlShow[45002, false];\
+			((findDisplay 45000) displayCtrl 45001) ctrlSetBackgroundColor [1,1,1,1];\
+			((findDisplay 45000) displayCtrl 45010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
+			onMouseExit = "\
+			ctrlSetText[45007,""\lyeed_IMG\data\housing\actions\action_buy.paa""];\
+			ctrlShow[45002, true];\
+			((findDisplay 45000) displayCtrl 45001) ctrlSetBackgroundColor [0,0,0,0.6];\
+			((findDisplay 45000) displayCtrl 45010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";
+
+			x = 0.510312 * safezoneW + safezoneX;
+			y = 0.467 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
 
 		class ACTION_EXIT_BACKGROUND: RscStructuredText
 		{
@@ -236,7 +236,7 @@ class RscDisplayHousingBuy: default_base_dialog
 			colorBackground[] = {0,0,0,0.6};
 
 			x = 0.510312 * safezoneW + safezoneX;
-			y = 0.400074 * safezoneH + safezoneY;
+			y = 0.401 * safezoneH + safezoneY;
 			w = 0.108281 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
@@ -255,30 +255,10 @@ class RscDisplayHousingBuy: default_base_dialog
 			idc = 45011;
 			text = "\lyeed_IMG\data\housing\actions\action_exit.paa";
 
-			x = 0.515469 * safezoneW + safezoneX;
-			y = 0.401 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.055 * safezoneH;
-		};
-		class ACTION_EXIT_BUTTON: RscButtonSilent
-		{
-			idc = -1;
-			action = "closeDialog 0;";
-			onMouseEnter = "\
-			ctrlSetText[45011,""\lyeed_IMG\data\housing\actions\action_exit_select.paa""];\
-			ctrlShow[45013, false];\
-			((findDisplay 45000) displayCtrl 45014) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 46000) displayCtrl 45012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
-			onMouseExit = "\
-			ctrlSetText[45011,""\lyeed_IMG\data\housing\actions\action_exit.paa""];\
-			ctrlShow[45013, true];\
-			((findDisplay 45000) displayCtrl 45014) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 46000) displayCtrl 45012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";
-
-			x = 0.510312 * safezoneW + safezoneX;
-			y = 0.400074 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
-			h = 0.055 * safezoneH;
+			x = 0.514334 * safezoneW + safezoneX;
+			y = 0.40936 * safezoneH + safezoneY;
+			w = 0.0216146 * safezoneW;
+			h = 0.0375186 * safezoneH;
 		};
 		class ACTION_EXIT_TEXT: RscStructuredText
 		{
@@ -290,6 +270,26 @@ class RscDisplayHousingBuy: default_base_dialog
 			y = 0.412 * safezoneH + safezoneY;
 			w = 0.0567187 * safezoneW;
 			h = 0.033 * safezoneH;
+		};
+		class ACTION_EXIT_BUTTON: RscButtonSilent
+		{
+			idc = -1;
+			action = "closeDialog 0;";
+			onMouseEnter = "\
+			ctrlSetText[45011,""\lyeed_IMG\data\housing\actions\action_exit_select.paa""];\
+			ctrlShow[45013, false];\
+			((findDisplay 45000) displayCtrl 45014) ctrlSetBackgroundColor [1,1,1,1];\
+			((findDisplay 45000) displayCtrl 45012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
+			onMouseExit = "\
+			ctrlSetText[45011,""\lyeed_IMG\data\housing\actions\action_exit.paa""];\
+			ctrlShow[45013, true];\
+			((findDisplay 45000) displayCtrl 45014) ctrlSetBackgroundColor [0,0,0,0.6];\
+			((findDisplay 45000) displayCtrl 45012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";
+
+			x = 0.510312 * safezoneW + safezoneX;
+			y = 0.401 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
+			h = 0.055 * safezoneH;
 		};
 	};
 };

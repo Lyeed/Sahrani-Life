@@ -73,6 +73,7 @@ class CfgRemoteExec
 		class public_fnc_interactionMenu_action_license_revoke {allowTargets = CLIENT;};
 		class public_fnc_dynamicMarkers_update {allowTargets = CLIENT;};
 		class public_fnc_house_menu_owner_action_light_update {allowTargets = CLIENT;};
+		class public_fnc_endGame {allowTargets = CLIENT;};
 
 		//- Arma
 		class setFuel {allowTargets = EVERYONE;};

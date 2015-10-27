@@ -6,14 +6,15 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (isDedicated) exitWith {};
-if (missionNamespace getVariable ["g_connected", false]) then
+if (!params [
+		["_side", "", [""]]
+	]) exitWith {};
+
+switch (_side) do
 {
-	playmusic "LeadTrack01_F";
-	sleep 95;
-	[] call MySQL_fnc_query_update_disconnect;
-	sleep 1;
-	"Bye" call BIS_fnc_endMission;
-} else {
-	"Bye" call BIS_fnc_endMission;
+	case "CIV": {civilian};
+	case "EAST": {east};
+	case "WEST": {west};
+	case "GUER": {independent};
+	default {sideUnknown};
 };

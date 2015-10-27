@@ -35,5 +35,5 @@ if (_use isEqualTo "") then {
 } else {
 	g_action_delay = time;
 	call compile format[_use, _item];
-	["inventory"] call public_fnc_tabletApp;
+	["inventory"] spawn public_fnc_tabletApp;
 };

@@ -53,7 +53,7 @@ lbClear _ctrl_vehicle;
 	_item = _x select 0;
 	_amount = _x select 1;
 	
-	_index = _ctrl_vehicle lbAdd format["%1x %2", if (_item isEqualTo "illegal_money") then {[_amount] call public_fnc_numberText} else {_amount}, ([_item] call public_fnc_itemGetName)];
+	_index = _ctrl_vehicle lbAdd format["%1x %2", ([_amount] call public_fnc_numberText), ([_item] call public_fnc_itemGetName)];
 	_ctrl_vehicle lbSetData [_index, _item];
 	_ctrl_vehicle lbSetValue [_index, _amount];
 	_ctrl_vehicle lbSetPicture [_index, ([_item] call public_fnc_itemGetImage)];

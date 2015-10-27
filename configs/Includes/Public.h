@@ -21,6 +21,7 @@ class Public
 	class Tools
 	{
 		file = "core\Tools";
+		class strToSide {};
 		class errorExit {};
 		class getInv {};
 		class hasItem {};
@@ -217,14 +218,16 @@ class Public
 	{
 		file = "core\Game\Housing";
 		class house_menu_handler {};
-		class house_menu_buy_open {};
-		class house_menu_buy_action {};
-		class house_menu_owner_open {};
-		class house_menu_owner_action_sell {};
-		class house_menu_owner_action_light {};
-		class house_menu_owner_action_light_update {};
-		class house_menu_owner_action_garage {};
-		class house_menu_owner_action_store {};
+		class house_menu_open_buy {};
+		class house_menu_open_owner {};
+		class house_menu_open_search {};
+		class house_menu_action_sell {};
+		class house_menu_action_light {};
+		class house_menu_action_light_update {};
+		class house_menu_action_garage {};
+		class house_menu_action_store {};
+		class house_menu_action_owner {};
+		class house_menu_action_buy {};
 	};
 
 	class Health

@@ -10,7 +10,7 @@ if ((getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "dyn
 {
 	{
 		_x setMarkerAlphaLocal 0;
-	} forEach (gServer_dynamic_markers);
+	} forEach (g_dynamic_markers);
 };
 
 if (g_arrested) then {
@@ -31,6 +31,7 @@ if (g_arrested) then {
 	};
 };
 
+setDate [gServer_year, (date select 1), (date select 2), (date select 3), (date select 4)];
 cutText ["", "BLACK IN", 6, false];
 
 [

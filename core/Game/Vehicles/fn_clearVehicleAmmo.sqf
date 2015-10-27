@@ -17,6 +17,7 @@ clearMagazineCargoGlobal _vehicle;
 clearItemCargoGlobal _vehicle;
 clearBackpackCargoGlobal _vehicle;
 _vehicle disableTIEquipment true;
+_vehicle enableRopeAttach false;
 
 switch (typeOf _vehicle) do
 {
@@ -47,7 +48,3 @@ switch (typeOf _vehicle) do
 	};
 };
 
-if (_side isEqualTo civilian) then
-{
-	_vehicle enableRopeAttach false;
-};

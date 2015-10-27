@@ -38,8 +38,8 @@ _idc_actual = 46010;
 
 		_ctrl_btn ctrlAddEventHandler["MouseExit",
 		format
-		["
-			((findDisplay 46000) displayCtrl %4) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>%5</t>"";
+		[
+			"((findDisplay 46000) displayCtrl %4) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>%5</t>"";
 			((findDisplay 46000) displayCtrl %3) ctrlSetBackgroundColor [0,0,0,0.6]; 
 			ctrlSetText[%1, ""\lyeed_IMG\data\housing\actions\action_%2.paa""];
 			ctrlShow[%6, true];",
@@ -50,11 +50,11 @@ _idc_actual = 46010;
 	};
 } forEach 
 ([
-	["sell", "Vendre", "closeDialog 0; [] spawn public_fnc_house_menu_owner_action_sell;", "(((g_interaction_target getVariable [""house_owner"", ["""", """"]]) select 0) isEqualTo (getPlayerUID player))"],
+	["sell", "Vendre", "closeDialog 0; [] spawn public_fnc_house_menu_action_sell;", "(((g_interaction_target getVariable [""house_owner"", ["""", """"]]) select 0) isEqualTo (getPlayerUID player))"],
 	["storage", "Coffre", "closeDialog 0; [g_interaction_target,player] remoteExec [""TON_fnc_house_storage_handler"", 2];", "(g_interaction_target getVariable [""containers"", false])"],
-	["garage", "Garage", "closeDialog 0; [] call public_fnc_house_menu_owner_action_garage;", "(getNumber(missionConfigFile >> ""ALYSIA_HOUSES"" >> typeOf(g_interaction_target) >> ""garage"") isEqualTo 1)"],
-	["store", "Rentrer", "closeDialog 0; [] spawn public_fnc_house_menu_owner_action_store;", "(getNumber(missionConfigFile >> ""ALYSIA_HOUSES"" >> typeOf(g_interaction_target) >> ""garage"") isEqualTo 1)"],
-	["light", "Lumière", "[] call public_fnc_house_menu_owner_action_light;", "true"]
+	["garage", "Garage", "closeDialog 0; [] call public_fnc_house_menu_action_garage;", "(getNumber(missionConfigFile >> ""ALYSIA_HOUSES"" >> typeOf(g_interaction_target) >> ""garage"") isEqualTo 1)"],
+	["store", "Rentrer", "closeDialog 0; [] spawn public_fnc_house_menu_action_store;", "(getNumber(missionConfigFile >> ""ALYSIA_HOUSES"" >> typeOf(g_interaction_target) >> ""garage"") isEqualTo 1)"],
+	["light", "Lumière", "[] call public_fnc_house_menu_action_light;", "true"]
 ]);
 
 for "_i" from _idc_actual to 46039 do

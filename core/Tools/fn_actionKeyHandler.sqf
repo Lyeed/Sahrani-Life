@@ -56,6 +56,11 @@ if ((vehicle player) isEqualTo player) then
 						["home"] call public_fnc_atmScreen;
 						true;
 					};
+					if (typeOf(cursorTarget) in (call g_houses_storages)) then
+					{
+						[cursorTarget] spawn public_fnc_vehicleMenu_inventory_open;
+						true;
+					};
 				};
 			};
 		};
@@ -155,9 +160,6 @@ if ((vehicle player) isEqualTo player) then
 			private["_curType"];
 			_curType = typeOf _curTarget;
 
-			if ((isClass(missionConfigFile >> "ALYSIA_HOUSE" >> _curType)) && (_curDistance < 11)) exitWith {
-				[_curTarget] call public_fnc_houseMenu;
-			};
 
 			if ((_curType in (call g_lastingObjects_Process)) && (_curDistance < 3) && (count(_curTarget getVariable["info", []]) > 0)) exitWith {
 				[_curTarget, (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "LastingObjects_menu"))] call public_fnc_LastingObjectsMenuOpen

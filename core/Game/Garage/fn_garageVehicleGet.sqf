@@ -39,14 +39,14 @@ if ((g_garage_info select 2) isEqualTo []) then
 {
 	if (!(isNull g_interaction_target)) then
 	{
-		_position = (position g_interaction_target) findEmptyPosition [0, 35, _vehicleClassname];
-		if ((nearestObjects[_position, ["Car", "Air", "Ship", "Truck"], 10]) isEqualTo []) exitWith {
+		_position = (position g_interaction_target) findEmptyPosition [((((boundingBox g_interaction_target) select 1) select 0) + 3), ((((boundingBox g_interaction_target) select 1) select 0) + 35), _vehicleClassname];
+		if ((nearestObjects[_position, ["Car", "Air", "Ship", "Truck", "Tank"], 10]) isEqualTo []) exitWith {
 			_validSpawn = _x;
 		};
 	};
 } else {
 	{
-		if ((nearestObjects[(getMarkerPos _x), ["Car", "Air", "Ship", "Truck"], 10]) isEqualTo []) exitWith {
+		if ((nearestObjects[(getMarkerPos _x), ["Car", "Air", "Ship", "Truck", "Tank"], 10]) isEqualTo []) exitWith {
 			_validSpawn = _x;
 		};
 	} forEach (g_garage_info select 2);	

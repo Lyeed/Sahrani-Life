@@ -5,16 +5,13 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_house", "_ownerInfo"];
-_house = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
+private["_ownerInfo"];
 
-if (isNull _house) exitWith { 
-	["Cible invalide"] call public_fnc_error; 
-};
+if (isNull g_interaction_target) exitWith {};
 
-_ownerInfo = _house getVariable["house_owner", []];
+_ownerInfo = g_interaction_target getVariable ["house_owner", []];
 if (_ownerInfo isEqualTo []) then {
 	["Cette batisse n'a pas de propriétaire"] call public_fnc_error;
 } else {
-	[format["Propriétaire<br/><t color='#FF0000'>%1</t>", (_ownerInfo select 1)]] call public_fnc_info;	
+	[format["<t align='center'>Propriétaire<br/><t color='#FF0000'>%1</t></t>", (_ownerInfo select 1)]] call public_fnc_info;
 };
