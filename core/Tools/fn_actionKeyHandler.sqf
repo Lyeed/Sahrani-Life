@@ -102,9 +102,9 @@ if ((vehicle player) isEqualTo player) then
 								[_x] call public_fnc_robberyStart;
 								_door = _x;
 							};
-						} forEach (["Vault_Door","LeftSlideDoor","RightSlideDoor","Door_1","Door_2","Door_3","Door_4","Door_5","Door_6"]);
+						} forEach (["Vault_Door", "LeftSlideDoor", "RightSlideDoor", "Door_1", "Door_2", "Door_3", "Door_4", "Door_5", "Door_6"]);
 						
-						if (isNil "_door") then {["Vous n'êtes pas près d'une porte crochetable"] call public_fnc_notice};
+						if (isNil "_door") then {["Vous n'êtes pas près d'une porte crochetable"] call public_fnc_info};
 					};
 				};
 			};
