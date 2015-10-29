@@ -11,6 +11,5 @@ if (!params [
 	]) exitWith {};
 
 if (_marker isEqualTo "") exitWith {};
-if (playerSide != civilian) exitWith {};
 
 _marker setMarkerAlphaLocal 1;

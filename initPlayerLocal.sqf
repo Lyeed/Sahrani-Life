@@ -37,6 +37,7 @@ if (hasInterface) then
 	0 cutFadeOut 9999999;
 	[] call compile PreprocessFileLineNumbers "core\EventHandlers\handler_keys.sqf";
 	[] call compile PreprocessFileLineNumbers "core\EventHandlers\handler_events.sqf";
+	[] call compile PreprocessFileLineNumbers "core\EventHandlers\handler_triggers.sqf";
 	diag_log "<INIT> Evènements ajoutés";
 
 	diag_log "<INIT> Validation de l'extension TaskForceRadio...";

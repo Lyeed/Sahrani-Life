@@ -11,12 +11,12 @@ if ((time - g_action_delay) < 1) exitWith {
 	["Veuillez ralentir dans vos actions"] call public_fnc_error;
 };
 
-_sel = lbCurSel 2303;
+_sel = lbCurSel 2302;
 if (_sel isEqualTo -1) exitWith {
 	["Vous n'avez pas sélectionné de véhicule à acheter"] call public_fnc_error;
 };
 
-_className = lbData[2304, (lbCurSel 2304)];
+_className = lbData[2303, (lbCurSel 2303)];
 _price = [[_className] call public_fnc_getVehBuyPrice] call public_fnc_getDonatorReductionPrice;
 
 if (_price isEqualTo 0) exitWith {
@@ -43,7 +43,7 @@ closeDialog 0;
 
 _spawnPos = getMarkerPos _validSpawn;
 _vehicle = createVehicle [_className, _spawnPos, [], 0, "NONE"];
-waitUntil {!isNil "_vehicle"};
+waitUntil {!(isNil "_vehicle")};
 _vehicle allowDamage false;
 
 _vehicle lock 2;
@@ -55,10 +55,10 @@ _vehicle setPos _spawnPos;
 g_vehicles pushBack _vehicle;
 
 _plate = round(random(1000000));
-_vehicle setVariable["dbInfo", [(getPlayerUID player), _plate], true];
-_vehicle setVariable["isInsured", 1, true];
-_vehicle setVariable["trunk_in_use", false, true];
-_vehicle setVariable["vehicle_info_owners", [(getPlayerUID player), (player getVariable["realname", profileName])], true];
+_vehicle setVariable ["dbInfo", [(getPlayerUID player), _plate], true];
+_vehicle setVariable ["isInsured", 1, true];
+_vehicle setVariable ["trunk_in_use", false, true];
+_vehicle setVariable ["vehicle_info_owners", [(getPlayerUID player), (player getVariable ["realname", profileName])], true];
 _vehicle allowDamage true;
 
-[player, _vehicle, _plate, g_cash] remoteExec ["TON_fnc_vehicleCreate", 2, false];
+[player, _vehicle, _plate, g_cash] remoteExec ["TON_fnc_vehicleCreate", 2];

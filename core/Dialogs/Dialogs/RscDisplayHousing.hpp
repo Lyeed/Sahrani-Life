@@ -217,12 +217,12 @@ class RscDisplayHousingBuy: default_base_dialog
 			ctrlSetText[45007,""\lyeed_IMG\data\housing\actions\action_buy_select.paa""];\
 			ctrlShow[45002, false];\
 			((findDisplay 45000) displayCtrl 45001) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 45000) displayCtrl 45010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
+			((findDisplay 45000) displayCtrl 45010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
 			onMouseExit = "\
 			ctrlSetText[45007,""\lyeed_IMG\data\housing\actions\action_buy.paa""];\
 			ctrlShow[45002, true];\
 			((findDisplay 45000) displayCtrl 45001) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 45000) displayCtrl 45010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";
+			((findDisplay 45000) displayCtrl 45010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>"";";
 
 			x = 0.510312 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;

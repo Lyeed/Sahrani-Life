@@ -13,6 +13,8 @@ CBA will start itself in any mission anyway, regardless of whether that logic ha
 **				VEHICLES
 */
 
+["","","",["CIV_vehicles_sea", ["cocaine_1"]]] call public_fnc_shop_vehicles_open;
+
 // picture
 "\A3\soft_f\Offroad_01\Data\UI\Offroad_01_base_CA.paa"
 
@@ -53,6 +55,18 @@ DEV setTriggerStatements ["(vehicle player) in thislist", "hint 'activated';", "
 
 
 DEV setTriggerStatements ["this", "[[[""Frontière"", ""<t align='center' size='1'>%1</t><br/>""], ["""", """"], [""5 Decembre 2015"", ""<t align = 'center' size = '0.7'>%1</t><br/>""], ["""", """"], [""20:00"", ""<t align = 'center' size = '0.7'>%1</t>""], ["""", """"], ["""", """"], ["""", """"]]] spawn BIS_fnc_typeText;", "hint 'lol';"];
+
+
+
+
+
+
+
+DEV = createTrigger ["EmptyDetector", (getPos cursorTarget), true];
+DEV setTriggerArea [3, 3, 0, false];
+DEV setTriggerActivation ["ANY", "PRESENT", true];
+DEV setTriggerStatements ["(vehicle player) in thislist", "[[[""Frontière"", ""<t align='center' size='1'>%1</t><br/>""], ["""", """"], [""5 Decembre 2015"", ""<t align = 'center' size = '0.7'>%1</t><br/>""], ["""", """"], [""20:00"", ""<t align = 'center' size = '0.7'>%1</t>""], ["""", """"], ["""", """"], ["""", """"]]] spawn BIS_fnc_typeText;", "hint 'desactivated';"];
+
 	
 
 
@@ -154,6 +168,8 @@ knockout
 AmelPercMstpSlowWrflDnon_StrokeGun = give
 AmelPercMstpSnonWnonDnon_amaterUder3 = give
 AmelPercMstpSnonWnonDnon_zasah2 = receive
+
+player playMove 
 
 sit
 ohara_c0start

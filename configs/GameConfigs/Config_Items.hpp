@@ -8,116 +8,17 @@
 
 class ALYSIA_ITEMS 
 {
-	class murbetonarme
+	class banane
 	{
-		weight = 10;
-		name = "Mur beton armé";
-		price = 500;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[%1] spawn public_fnc_objPut;\
-		";
-	};
-
-	class bunkersable
-	{
-		weight = 25;
-		name = "Tour sacs de sable";
-		price = 2000;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[%1] spawn public_fnc_objPut;\
-		";
-	};
-
-	class mursable
-	{
-		weight = 10;
-		name = "Mur bloc de sable";
-		price = 500;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[%1] spawn public_fnc_objPut;\
-		";
-	};
-
-	class couloirsable
-	{
-		weight = 10;
-		name = "Couloir bloc de sable";
-		price = 500;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[%1] spawn public_fnc_objPut;\
-		";
-	};
-
-	class grandmurescalier
-	{
-		weight = 15;
-		name = "Grand mur avec escalier";
-		price = 2000;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[%1] spawn public_fnc_objPut;\
-		";
-	};
-
-	class gueritesable
-	{
-		weight = 25;
-		name = "Tour bloc de sable";
-		price = 2000;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[%1] spawn public_fnc_objPut;\
-		";
-	};
-
-    class grandmur
-    {
-    	weight = 15;
-    	name = "Grand Mur";
-    	price = 2000;
-    	illegal = 0;
-    	drop = "Land_Suitcase_F";
-    	removable = 1;
-    	use = 
-    	"\
-    		[%1] spawn public_fnc_objPut;\
-    	";
-    };
-
-	class coinsable
-	{
-		weight = 10;
-		name = "Coin bloc de sable";
-		price = 500;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[%1] spawn public_fnc_objPut;\
-		";
+		name        = "Banane";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "[""banane""] call public_fnc_eatFood;";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
 	};
 
 	class illegal_money
@@ -217,48 +118,6 @@ class ALYSIA_ITEMS
 		use = 
 		"\
 			[%1] call public_fnc_eatFood;\
-		";
-	};
-
-	class turtlesoup
-	{
-		weight = 2;
-		name = "Soupe de tortue";
-		price = 500;
-		illegal = 1;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[%1] call public_fnc_eatFood;\
-		";
-	};
-
-	class fuelF
-	{
-		weight = 4;
-		name = "Jerrycan (plein)";
-		price = 2500;
-		illegal = 0;
-		drop = "Land_CanisterFuel_F";
-		removable = 1;
-		use = 
-		"\
-			[] spawn public_fnc_jerryRefuel;\
-		";
-	};
-
-	class fuelE
-	{
-		weight = 2;
-		name = "Jerrycan (vide)";
-		price = 0;
-		illegal = 0;
-		drop = "Land_CanisterFuel_F";
-		removable = 1;
-		use = 
-		"\
-		\
 		";
 	};
 
@@ -389,62 +248,6 @@ class ALYSIA_ITEMS
 		";
 	};
 
-	class lab_cigare
-	{
-		weight = 20;
-		name = "Usine à cigares";
-		price = 0;
-		illegal = 1;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-		\
-		";
-	};
-
-	class lab_small
-	{
-		weight = 17;
-		name = "Laboratoire de cocaïne";
-		price = 350000;
-		illegal = 1;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[%1] spawn public_fnc_lastingObjectsCreate;\
-		";
-	};
-
-	class lab_medium
-	{
-		weight = 25;
-		name = "Laboratoire d'héroïne";
-		price = 850000;
-		illegal = 1;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[%1] spawn public_fnc_lastingObjectsCreate;\
-		";
-	};
-
-	class lab_large
-	{
-		weight = 42;
-		name = "Laboratoire de meth";
-		price = 1500000;
-		illegal = 1;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[%1] spawn public_fnc_lastingObjectsCreate;\
-		";
-	};
-
 	class barriere
 	{
 		weight = 6;
@@ -473,34 +276,6 @@ class ALYSIA_ITEMS
 		";
 	};
 
-	class kit_destru
-	{
-		weight = 4;
-		name = "Kit de destruction";
-		price = 6000;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-		\
-		";
-	};
-
-	class salive
-	{
-		weight = 1;
-		name = "Analyse salivaire";
-		price = 2000;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-		\
-		";
-	};
-
 	class bip
 	{
 		weight = 1;
@@ -510,20 +285,6 @@ class ALYSIA_ITEMS
 		drop = "Land_Suitcase_F";
 		removable = 1;
 		use = "[] call public_fnc_copOpener;";
-	};
-
-	class adn
-	{
-		weight = 1;
-		name = "Kit d'analyse ADN";
-		price = 1500;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-		\
-		";
 	};
 
 	class spikeStrip
@@ -593,34 +354,6 @@ class ALYSIA_ITEMS
 		use = 
 		"\
 		\
-		";
-	};
-
-	class banane
-	{
-		weight = 1;
-		name = "Banane";
-		price = 0;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[""banane""] call public_fnc_eatFood;\
-		";
-	};
-
-	class mangue
-	{
-		weight = 1;
-		name = "Mangue";
-		price = 0;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[""mangue""] call public_fnc_eatFood;\
 		";
 	};
 
@@ -1083,90 +816,6 @@ class ALYSIA_ITEMS
 		use = 
 		"\
 		\
-		";
-	};
-
-	class salema
-	{
-		weight = 2;
-		name = "Salema";
-		price = 0;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[""salema""] call public_fnc_eatFood;\
-		";
-	};
-
-	class ornate
-	{
-		weight = 2;
-		name = "Ornate";
-		price = 0;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[""ornate""] call public_fnc_eatFood;\
-		";
-	};
-
-	class mackerel
-	{
-		weight = 4;
-		name = "Maquereau";
-		price = 0;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[""mackerel""] call public_fnc_eatFood;\
-		";
-	};
-
-	class tuna
-	{
-		weight = 5;
-		name = "Thon";
-		price = 0;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[""tuna""] call public_fnc_eatFood;\
-		";
-	};
-
-	class mullet
-	{
-		weight = 4;
-		name = "Mullet";
-		price = 0;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[""mullet""] call public_fnc_eatFood;\
-		";
-	};
-
-	class catshark
-	{
-		weight = 5;
-		name = "Rousette";
-		price = 0;
-		illegal = 0;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = 
-		"\
-			[""catshark""] call public_fnc_eatFood;\
 		";
 	};
 

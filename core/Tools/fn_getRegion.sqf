@@ -7,7 +7,7 @@
 */
 
 if (!params [
-	["_unit", objNul, [objNul]]
+	["_unit", objNull, [objNull]]
 ]) exitWith {};
 
-if ((_unit distance (getMarkerPos ["civ_spawn_NORTH"])) < (_unit distance (getMarkerPos ["civ_spawn_SOUTH"]))) then {"NORTH"} else {"SOUTH"};
+if ((_unit distance (getMarkerPos "civ_spawn_NORTH")) < (_unit distance (getMarkerPos "civ_spawn_SOUTH"))) then {"NORTH"} else {"SOUTH"};

@@ -16,5 +16,5 @@ if (!g_connected) exitWith {};
 if ((markerAlpha _marker) isEqualTo 1) then
 {
 	_marker setMarkerAlphaLocal 0;
-	[format["<t align='center'>Le marqueur<br/><t color='#74DF00'>%1</t><br/>n'est plus d'actualité</t>", markerText _marker]] call public_fnc_info;
+	[format["<t align='center'>Le marqueur<br/><t color='#74DF00'>%1</t><br/>n'est plus d'actualité</t>", (markerText _marker)]] call public_fnc_info;
 };

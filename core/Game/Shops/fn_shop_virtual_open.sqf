@@ -5,11 +5,10 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_type", "_side", "_display", "_list", "_PNJ"];
-_PNJ = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+private["_type", "_side", "_display"];
 _type = [_this, 3, "", [""]] call BIS_fnc_param;
 
-if ((_type isEqualTo "") || (isNull _PNJ)) exitWith {};
+if (_type isEqualTo "") exitWith {};
 if (!isClass(missionConfigFile >> "ALYSIA_SHOPS_VIRTUAL" >> _type)) exitWith 
 {
 	[format["Impossible de trouver les informations concernant le magasin<br/><t align='center' color='#FF8000'>%1</t>", _type]] call public_fnc_error;
@@ -26,25 +25,23 @@ if ((_side != sideUnknown) && {(_side != playerSide)}) exitWith {
 	]] call public_fnc_error;
 };
 
-if (!(createDialog "shops_menu")) exitWith {};
+if (!(createDialog "RscDisplayShopVirtual")) exitWith {};
 
 disableSerialization;
 _display = findDisplay 2400;
+if (isNull _display) exitWith {};
 
-_list = _display displayCtrl 2412;
-_list lbAdd "Acheter";
-_list lbAdd "Vendre";
-_list lbSetCurSel 0;
-
-(_display displayCtrl 2406) ctrlSetTooltip "Maximum disponible dans votre inventaire";
-(_display displayCtrl 2410) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", (getText(missionConfigFile >> "ALYSIA_SHOPS_VIRTUAL" >> _type >> "name"))];
-(_display displayCtrl 2413) ctrlSetText (getText(missionConfigFile >> "ALYSIA_SHOPS_VIRTUAL" >> _type >> "background"));
+(_display displayCtrl 2401) ctrlSetStructuredText parseText format["<t align='center' size='1.3'>%1</t>", (getText(missionConfigFile >> "ALYSIA_SHOPS_VIRTUAL" >> _type >> "name"))];
 g_shop_list = getArray(missionConfigFile >> "ALYSIA_SHOPS_VIRTUAL" >> _type >> "items");
+g_shop_tmp_buy = [];
+g_shop_tmp_sell = [];
+g_shop_active = false;
+g_shop_weight_actual = g_carryWeight;
 
-[0] call public_fnc_virt_update;
-waitUntil
+[] call public_fnc_shop_virtual_update;
+
+waitUntil {isNull _display};
+
 {
-	([2] call public_fnc_virt_update);
-	sleep 0.5;
-	isNull (findDisplay 2400)
-};
+	[true, (_x select 0), (_x select 1)] call public_fnc_handleInv;
+} forEach (g_shop_tmp_sell);

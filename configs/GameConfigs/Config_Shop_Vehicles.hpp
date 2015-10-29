@@ -21,7 +21,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"DAR_CVPIAux", 
 			"DAR_TahoePoliceDet"
 		};
-		background = "\lyeed_IMG\data\shop\back_WEST_vehicles_land.jpg";
 	};
 	class WEST_vehicles_air
 	{
@@ -30,7 +29,6 @@ class ALYSIA_SHOPS_VEHICLES
 		stock[] = {
 			"EC635_Unarmed"
 		};
-		background = "\lyeed_IMG\data\shop\back_WEST_vehicles_air.jpg";
 	};
 	class WEST_vehicles_sea
 	{
@@ -38,7 +36,6 @@ class ALYSIA_SHOPS_VEHICLES
 		side = "west";
 		stock[] = {
 		};
-		background = "\lyeed_IMG\data\shop\back_WEST_vehicles_sea.jpg";
 	};
 
 	//
@@ -47,21 +44,18 @@ class ALYSIA_SHOPS_VEHICLES
 		name = "";
 		side = "east";
 		stock[] = {};
-		background = "\lyeed_IMG\data\shop\back_EAST_vehicles_land.jpg";	
 	};
 	class EAST_vehicles_air
 	{
 		name = "";
 		side = "east";
 		stock[] = {};
-		background = "\lyeed_IMG\data\shop\back_EAST_vehicles_air.jpg";
 	};
 	class EAST_vehicles_sea
 	{
 		name = "";
 		side = "east";
 		stock[] = {};
-		background = "\lyeed_IMG\data\shop\back_EAST_vehicles_sea.jpg";
 	};
 
 	//
@@ -74,7 +68,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"DAR_TahoeEMS",
 			"DAR_ExplorerMedic"
 		};
-		background = "\lyeed_IMG\data\shop\back_GUER_vehicles_land.jpg";
 	};
 	class GUER_vehicles_air
 	{
@@ -83,14 +76,12 @@ class ALYSIA_SHOPS_VEHICLES
 		stock[] = {
 			"EC635_DAES_Lifeliner"
 		};
-		background = "\lyeed_IMG\data\shop\back_GUER_vehicles_air.jpg";
 	};
 	class GUER_vehicles_sea
 	{
 		name = "Concessionnaire maritime SAMU";
 		side = "independent";
 		stock[] = {};
-		background = "\lyeed_IMG\data\shop\back_GUER_vehicles_sea.jpg";
 	};
 
 	//
@@ -102,7 +93,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"B_Boat_Transport_01_F",
 			"C_Boat_Civil_01_F"
 		};
-		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_sea.jpg";
 	};
 	class CIV_vehicles_air
 	{
@@ -111,7 +101,6 @@ class ALYSIA_SHOPS_VEHICLES
 		stock[] = {
 			"sab_a2"
 		};
-		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_air.jpg";
 	};
 	
 	class CIV_vehicles_land_truck
@@ -138,7 +127,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"Skyline_Bus"
 
 		};
-		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_land_truck.jpg";
 	};
 	class CIV_vehicles_land_occasion
 	{
@@ -152,7 +140,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"RDS_Lada_Civ",
 			"max_CrownVic"
 		};
-		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_land_occasion.jpg";
 	};
 	class CIV_vehicles_land_normal
 	{
@@ -172,7 +159,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"C_Van_01_transport_F",
 			"C_Van_01_box_F"
 		};
-		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_land_normal.jpg";
 	};
 	class CIV_vehicles_land_luxe
 	{
@@ -193,7 +179,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"DAR_MF1",
 			"DAR_M3Civ"
 		};
-		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_land_luxe.jpg";
 	};
 	
 	class CIV_vehicles_rebel
@@ -201,6 +186,5 @@ class ALYSIA_SHOPS_VEHICLES
 		name = "Concessionnaire rebelle";
 		side = "civilian";
 		stock[] = {};
-		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_rebel.jpg";
 	};
 };

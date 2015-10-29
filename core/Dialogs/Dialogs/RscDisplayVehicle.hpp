@@ -511,7 +511,7 @@ class RscDisplayVehicleTrunk: default_base_dialog
 		class VEHICLE_HEADER: RscStructuredText
 		{
 			idc = -1;
-			text = "<t align='center'>Véhicule</t>";
+			text = "<t align='center'>Cible</t>";
 			colorBackground[] = {0.5450980392156863,0.7647058823529412,0.2901960784313725,1};
 			
 			x = 0.329844 * safezoneW + safezoneX;

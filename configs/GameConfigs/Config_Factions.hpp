@@ -58,6 +58,7 @@ class ALYSIA_FACTIONS
 		*/
 		dynamic_markers_shown    = 0;
 		dynamic_markers_destroy  = 1;
+		dynamic_markers_discover = 0;
 		
 		/*
 		**         INTERACTIONS 
@@ -154,6 +155,7 @@ class ALYSIA_FACTIONS
 		*/
 		dynamic_markers_shown    = 0;
 		dynamic_markers_destroy  = 1;
+		dynamic_markers_discover = 0;
 
 		leader_rank = 5;
 		leader_board_rank_require = 5;
@@ -262,6 +264,7 @@ class ALYSIA_FACTIONS
 		*/
 		dynamic_markers_shown     = 0;
 		dynamic_markers_destroy   = 0;
+		dynamic_markers_discover  = 1;
 
 		/*
 		**         INTERACTIONS 
@@ -328,6 +331,7 @@ class ALYSIA_FACTIONS
 		*/
 		dynamic_markers_shown     = 0;
 		dynamic_markers_destroy   = 0;
+		dynamic_markers_discover  = 0;
 
 		/*
 		**         INTERACTIONS 

@@ -29,8 +29,8 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Marché";
 		side = "sideUnknown";
-		items[]= {{"water", "banane", "mangue", "fishingpoles", "storage", "fuelF"}, {"banane", "mangue"}};
-		background = "\lyeed_IMG\data\shop\back_market.jpg";
+		// items[]= {{"water", "banane", "mangue", "fishingpoles", "storage", "fuelF"}, {"banane", "mangue"}};
+		items[]= {{"banane"}, {"banane"}};
 	};
 	
 	class hopital

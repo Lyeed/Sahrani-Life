@@ -8,11 +8,15 @@
 private["_item"];
 _item = [_this, 0, "", [""]] call BIS_fnc_param;
 
-if (_item isEqualTo "") exitWith {"UnknownItem"};
+if (_item isEqualTo "") exitWith {0};
 if (!(isClass(missionConfigFile >> "ALYSIA_ITEMS" >> _item))) exitWith 
 {
 	diag_log format["[ALYSIA:ERROR] Item [%1] not defined", _item];
-	"UnknownItem";
+	0;
 };
 
-getText(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "image");
+if ((getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market")) isEqualTo 0) then {
+	getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "price_buy");
+} else {
+	(missionNamespace getVariable[(format["market_%1", _ressource]), 0]) * 2;
+};

@@ -48,3 +48,7 @@ player setVariable ["realname", profileName, true];
 g_connected = true;
 g_is_alive = true;
 [] call public_fnc_hudSetup;
+
+{
+	player reveal _x;
+} forEach (player nearEntities 25);
