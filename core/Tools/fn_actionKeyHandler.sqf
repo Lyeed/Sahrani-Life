@@ -90,21 +90,22 @@ if ((vehicle player) isEqualTo player) then
 						[cursorTarget] spawn public_fnc_vehicleMenu_inventory_open;
 						true;
 					};
-					/*if (typeOf(cursorTarget) in ["Bank_Sahrani"]) then
-					{
+					if (typeOf(cursorTarget) isEqualTo ["Bank_Sahrani"]) then
+					{	
 						if (!("lockpick" in items player)) exitWith {["Vous avez besoin d'outils de crochetage pour pouvoir forcer une porte"] call public_fnc_notice};
+				
+						private ["_door"];
 						
-						if (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition "Vault_Door")) < 3) exitWith {["Vault_Door"] call public_fnc_robbingStart};
-						if (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition "LeftSlideDoor")) < 3) exitWith {["LeftSlideDoor"] call public_fnc_robbingStart};
-						if (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition "RightSlideDoor")) < 3) exitWith {["RightSlideDoor"] call public_fnc_robbingStart};
-						if (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition "Door_1")) < 3) exitWith {["Door_1"] call public_fnc_robbingStart};
-						if (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition "Door_2")) < 3) exitWith {["Door_2"] call public_fnc_robbingStart};
-						if (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition "Door_3")) < 3) exitWith {["Door_3"] call public_fnc_robbingStart};
-						if (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition "Door_4")) < 3) exitWith {["Door_4"] call public_fnc_robbingStart};
-						if (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition "Door_5")) < 3) exitWith {["Door_5"] call public_fnc_robbingStart};
-						if (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition "Door_6")) < 3) exitWith {["Door_6"] call public_fnc_robbingStart};
-					    ["Vous n'êtes pas près d'une porte crochetable"] call public_fnc_notice;
-					};*/
+						{
+							if (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition _x)) < 3) exitWith
+							{
+								[_x] call public_fnc_robberyStart;
+								_door = _x;
+							};
+						} forEach (["Vault_Door","LeftSlideDoor","RightSlideDoor","Door_1","Door_2","Door_3","Door_4","Door_5","Door_6"]);
+						
+						if (isNil "_door") then {["Vous n'êtes pas près d'une porte crochetable"] call public_fnc_notice};
+					};
 				};
 			};
 		};
