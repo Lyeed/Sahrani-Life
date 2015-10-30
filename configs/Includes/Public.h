@@ -148,6 +148,10 @@ class Public
 		class shop_arma_open {};
 		class shop_arma_update {};
 		class shop_arma_buy {};
+		class shop_dynamicMarkers_open {};
+		class shop_dynamicMarkers_update_list {};
+		class shop_dynamicMarkers_update_info {};
+		class shop_dynamicMarkers_buy {};
 	};
 
 	class Skull
@@ -167,10 +171,6 @@ class Public
 		class dynamicMarkers_destroy {};
 		class dynamicMarkers_update {};
 		class dynamicMarkers_reveal {};
-		class dynamicMarkers_menu_open {};
-		class dynamicMarkers_menu_update_list {};
-		class dynamicMarkers_menu_update_info {};
-		class dynamicMarkers_menu_buy {};
 	};
 
 	class Garage

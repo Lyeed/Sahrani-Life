@@ -11,7 +11,7 @@ disableSerialization;
 _display = findDisplay 21000;
 if (isNull _display) exitWith {};
 
-_list = _display displayCtrl 21002;
+_list = _display displayCtrl 21001;
 lbClear _list;
 
 {
@@ -27,12 +27,14 @@ lbClear _list;
 } forEach (g_dynamic_markers);
 if ((lbSize _list) isEqualTo 0) then {
 	_list lbAdd "Aucune";
+	ctrlShow[21002, false];
 	ctrlShow[21003, false];
 	ctrlShow[21004, false];
 	ctrlShow[21005, false];
 	ctrlShow[21006, false];
 	ctrlShow[21007, false];
 	ctrlShow[21008, false];
+	ctrlShow[21009, false];
 } else {
 	_list lbSetCurSel 0;
 };

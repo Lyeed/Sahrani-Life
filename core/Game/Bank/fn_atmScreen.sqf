@@ -82,7 +82,7 @@ switch (_action) do
 
 	case "withdraw":
 	{
-		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Distributeur - Retrait</t>";
+		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Retrait</t>";
 		_balance ctrlSetStructuredText parseText format ["<t align ='left' size='1.2'>Montant</t>"];
 
 		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Retirer</t>";
@@ -107,7 +107,7 @@ switch (_action) do
 
 	case "deposit":
 	{
-		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Distributeur - Dépôt</t>";
+		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Dépôt</t>";
 		_balance ctrlSetStructuredText parseText format ["<t align ='left' size='1.2'>Montant</t>"];
 		
 		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Déposer</t>";

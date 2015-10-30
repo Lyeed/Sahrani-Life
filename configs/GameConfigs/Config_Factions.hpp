@@ -72,6 +72,7 @@ class ALYSIA_FACTIONS
 		*/
 		leader_rank = 9;
 		leader_board_rank_require = 9;
+		leader_bord_history[] = {};
 
 		/*
 		**           LOADOUT
@@ -159,6 +160,7 @@ class ALYSIA_FACTIONS
 
 		leader_rank = 5;
 		leader_board_rank_require = 5;
+		leader_bord_history[] = {};
 		
 		/*
 		**         INTERACTIONS 
@@ -275,6 +277,7 @@ class ALYSIA_FACTIONS
 
 		leader_rank = -1;// MUST BE -1
 		leader_board_rank_require = -1;// MUST BE -1
+		leader_bord_history[] = {};
 
 		class Loadout
 		{
@@ -342,6 +345,7 @@ class ALYSIA_FACTIONS
 
 		leader_rank = 6;
 		leader_board_rank_require = 6;
+		leader_bord_history[] = {};
 
 		class Loadout
 		{

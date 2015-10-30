@@ -6,6 +6,6 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (!(createDialog "RscDisplayDynMarkers")) exitWith {};
+if (!(createDialog "RscDisplayShopDynMarkers")) exitWith {};
 
-[] call public_fnc_dynamicMarkers_menu_update_list;
+[] call public_fnc_shop_dynamicMarkers_update_list;

@@ -18,7 +18,7 @@ class RscDisplayShopVehicles: default_base_dialog
 		class BACKGROUND: RscPicture
 		{
 			idc = -1;
-			text = "\lyeed_IMG\data\shop_vehicles\background.jpg";
+			text = "\lyeed_IMG\data\shops\background.jpg";
 
 			x = 0.319531 * safezoneW + safezoneX;
 			y = 0.302 * safezoneH + safezoneY;
@@ -205,7 +205,7 @@ class RscDisplayShopVehicles: default_base_dialog
 		class ACTION_BUY_IMAGE: RscPicture
 		{
 			idc = 2314;
-			text = "\lyeed_IMG\data\shop_vehicles\actions\action_buy.paa";
+			text = "\lyeed_IMG\data\shops\actions\action_buy.paa";
 
 			x = 0.480312 * safezoneW + safezoneX;
 			y = 0.645778 * safezoneH + safezoneY;
@@ -217,12 +217,12 @@ class RscDisplayShopVehicles: default_base_dialog
 			idc = 2315;
 			action = "[] call public_fnc_shop_vehicles_buy;";
 			onMouseEnter = "\
-			ctrlSetText[2314,""\lyeed_IMG\data\shop_vehicles\actions\action_buy_select.paa""];\
+			ctrlSetText[2314,""\lyeed_IMG\data\shops\actions\action_buy_select.paa""];\
 			ctrlShow[2312, false];\
 			((findDisplay 2300) displayCtrl 2311) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 2300) displayCtrl 2313) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
 			onMouseExit = "\
-			ctrlSetText[2314,""\lyeed_IMG\data\shop_vehicles\actions\action_buy.paa""];\
+			ctrlSetText[2314,""\lyeed_IMG\data\shops\actions\action_buy.paa""];\
 			if (ctrlVisible 2314) then {\
 				ctrlShow[2312, true];\
 			};\
@@ -269,7 +269,7 @@ class RscDisplayShopVehicles: default_base_dialog
 		class ACTION_EXIT_IMAGE: RscPicture
 		{
 			idc = 2319;
-			text = "\lyeed_IMG\data\shop_vehicles\actions\action_exit.paa";
+			text = "\lyeed_IMG\data\shops\actions\action_exit.paa";
 
 			x = 0.585417 * safezoneW + safezoneX;
 			y = 0.651852 * safezoneH + safezoneY;
@@ -281,12 +281,12 @@ class RscDisplayShopVehicles: default_base_dialog
 			idc = 2320;
 			action = "closeDialog 0;";
 			onMouseEnter = "\
-			ctrlSetText[2319,""\lyeed_IMG\data\shop_vehicles\actions\action_exit_select.paa""];\
+			ctrlSetText[2319,""\lyeed_IMG\data\shops\actions\action_exit_select.paa""];\
 			ctrlShow[2317, false];\
 			((findDisplay 2300) displayCtrl 2316) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 2300) displayCtrl 2318) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
 			onMouseExit = "\
-			ctrlSetText[2319,""\lyeed_IMG\data\shop_vehicles\actions\action_exit.paa""];\
+			ctrlSetText[2319,""\lyeed_IMG\data\shops\actions\action_exit.paa""];\
 			ctrlShow[2317, true];\
 			((findDisplay 2300) displayCtrl 2316) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 2300) displayCtrl 2318) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";

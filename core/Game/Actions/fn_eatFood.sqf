@@ -8,12 +8,12 @@
 private["_item"];
 _item = [_this, 0, "", [""]] call BIS_fnc_param;
 
-if (_item == "") exitWith {};
+if (_item isEqualTo "") exitWith {};
 if ([false, _item, 1] call public_fnc_handleInv) then 
 {
 	if (isClass(missionConfigFile >> "ALYSIA_FOOD" >> _item)) then
 	{
-		[[player, getText(missionConfigFile >> "ALYSIA_FOOD" >> _item >> "sound")], "public_fnc_playSound", nil] spawn life_fnc_MP;
+		[player, getText(missionConfigFile >> "ALYSIA_FOOD" >> _item >> "sound"), 10] call CBA_fnc_globalSay3d;
 		[getNumber(missionConfigFile >> "ALYSIA_FOOD" >> _item >> "thirst")] call public_fnc_handleThirst;
 		[getNumber(missionConfigFile >> "ALYSIA_FOOD" >> _item >> "hunger")] call public_fnc_handleHunger;
 	};

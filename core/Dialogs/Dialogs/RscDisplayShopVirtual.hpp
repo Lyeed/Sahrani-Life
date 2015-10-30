@@ -8,7 +8,7 @@ class RscDisplayShopVirtual: default_base_dialog
 		class BACKGROUND: RscPicture
 		{
 			idc = -1;
-			text = "\lyeed_IMG\data\shop_virtual\background.jpg";
+			text = "\lyeed_IMG\data\shops\background.jpg";
 
 			x = 0.262812 * safezoneW + safezoneX;
 			y = 0.324 * safezoneH + safezoneY;
@@ -77,7 +77,7 @@ class RscDisplayShopVirtual: default_base_dialog
 		class PLAYER_ADD_SINGLE_IMAGE: RscPicture
 		{
 			idc = 2403;
-			text = "\lyeed_IMG\data\shop_virtual\actions\action_player_single.paa";
+			text = "\lyeed_IMG\data\shops\actions\action_player_single.paa";
 
 			x = 0.556719 * safezoneW + safezoneX;
 			y = 0.456 * safezoneH + safezoneY;
@@ -88,8 +88,8 @@ class RscDisplayShopVirtual: default_base_dialog
 		{
 			idc = 2404;
 			action = "[0] call public_fnc_shop_virtual_add;";
-			onMouseEnter = "ctrlSetText[2403,""\lyeed_IMG\data\shop_virtual\actions\action_player_single_select.paa""];";
-			onMouseExit = "ctrlSetText[2403,""\lyeed_IMG\data\shop_virtual\actions\action_player_single.paa""];";
+			onMouseEnter = "ctrlSetText[2403,""\lyeed_IMG\data\shops\actions\action_player_single_select.paa""];";
+			onMouseExit = "ctrlSetText[2403,""\lyeed_IMG\data\shops\actions\action_player_single.paa""];";
 
 			x = 0.556719 * safezoneW + safezoneX;
 			y = 0.456 * safezoneH + safezoneY;
@@ -100,7 +100,7 @@ class RscDisplayShopVirtual: default_base_dialog
 		class PLAYER_ADD_DOUBLE_IMAGE: RscPicture
 		{
 			idc = 2405;
-			text = "\lyeed_IMG\data\shop_virtual\actions\action_player_double.paa";
+			text = "\lyeed_IMG\data\shops\actions\action_player_double.paa";
 
 			x = 0.556719 * safezoneW + safezoneX;
 			y = 0.522 * safezoneH + safezoneY;
@@ -111,8 +111,8 @@ class RscDisplayShopVirtual: default_base_dialog
 		{
 			idc = 2406;
 			action = "[0, true] call public_fnc_shop_virtual_add;";
-			onMouseEnter = "ctrlSetText[2405,""\lyeed_IMG\data\shop_virtual\actions\action_player_double_select.paa""];";
-			onMouseExit = "ctrlSetText[2405,""\lyeed_IMG\data\shop_virtual\actions\action_player_double.paa""];";
+			onMouseEnter = "ctrlSetText[2405,""\lyeed_IMG\data\shops\actions\action_player_double_select.paa""];";
+			onMouseExit = "ctrlSetText[2405,""\lyeed_IMG\data\shops\actions\action_player_double.paa""];";
 
 			x = 0.556719 * safezoneW + safezoneX;
 			y = 0.522 * safezoneH + safezoneY;
@@ -156,7 +156,7 @@ class RscDisplayShopVirtual: default_base_dialog
 		class TARGET_ADD_IMAGE: RscPicture
 		{
 			idc = 2408;
-			text = "\lyeed_IMG\data\shop_virtual\actions\action_target.paa";
+			text = "\lyeed_IMG\data\shops\actions\action_target.paa";
 
 			x = 0.412344 * safezoneW + safezoneX;
 			y = 0.489 * safezoneH + safezoneY;
@@ -167,8 +167,8 @@ class RscDisplayShopVirtual: default_base_dialog
 		{
 			idc = 2409;
 			action = "[1] call public_fnc_shop_virtual_add;";
-			onMouseEnter = "ctrlSetText[2408,""\lyeed_IMG\data\shop_virtual\actions\action_target_select.paa""];";
-			onMouseExit = "ctrlSetText[2408,""\lyeed_IMG\data\shop_virtual\actions\action_target.paa""];";
+			onMouseEnter = "ctrlSetText[2408,""\lyeed_IMG\data\shops\actions\action_target_select.paa""];";
+			onMouseExit = "ctrlSetText[2408,""\lyeed_IMG\data\shops\actions\action_target.paa""];";
 
 			x = 0.412344 * safezoneW + safezoneX;
 			y = 0.489 * safezoneH + safezoneY;
@@ -265,7 +265,7 @@ class RscDisplayShopVirtual: default_base_dialog
 		class ACTION_VALIDATE_IMAGE: RscPicture
 		{
 			idc = 2415;
-			text = "\lyeed_IMG\data\shop_virtual\actions\action_buy.paa";
+			text = "\lyeed_IMG\data\shops\actions\action_buy.paa";
 			
 			x = 0.413385 * safezoneW + safezoneX;
 			y = 0.648222 * safezoneH + safezoneY;
@@ -277,12 +277,12 @@ class RscDisplayShopVirtual: default_base_dialog
 			idc = 2416;
 			action = "[] call public_fnc_shop_virtual_buysell;";
 			onMouseEnter = "\
-			ctrlSetText[2415,""\lyeed_IMG\data\shop_virtual\actions\action_buy_select.paa""];\
+			ctrlSetText[2415,""\lyeed_IMG\data\shops\actions\action_buy_select.paa""];\
 			ctrlShow[2413, false];\
 			((findDisplay 2400) displayCtrl 2412) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 2400) displayCtrl 2414) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Valider</t>"";";
 			onMouseExit = "\
-			ctrlSetText[2415,""\lyeed_IMG\data\shop_virtual\actions\action_buy.paa""];\
+			ctrlSetText[2415,""\lyeed_IMG\data\shops\actions\action_buy.paa""];\
 			if (ctrlVisible 2415) then {\
 				ctrlShow[2413, true];\
 			};\
@@ -329,7 +329,7 @@ class RscDisplayShopVirtual: default_base_dialog
 		class ACTION_EXIT_IMAGE: RscPicture
 		{
 			idc = 2420;
-			text = "\lyeed_IMG\data\shop_virtual\actions\action_exit.paa";
+			text = "\lyeed_IMG\data\shops\actions\action_exit.paa";
 			
 			x = 0.505156 * safezoneW + safezoneX;
 			y = 0.654 * safezoneH + safezoneY;
@@ -341,12 +341,12 @@ class RscDisplayShopVirtual: default_base_dialog
 			idc = 2421;
 			action = "closeDialog 0;";
 			onMouseEnter = "\
-			ctrlSetText[2420,""\lyeed_IMG\data\shop_virtual\actions\action_exit_select.paa""];\
+			ctrlSetText[2420,""\lyeed_IMG\data\shops\actions\action_exit_select.paa""];\
 			ctrlShow[2418, false];\
 			((findDisplay 2400) displayCtrl 2417) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 2400) displayCtrl 2419) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
 			onMouseExit = "\
-			ctrlSetText[2420,""\lyeed_IMG\data\shop_virtual\actions\action_exit.paa""];\
+			ctrlSetText[2420,""\lyeed_IMG\data\shops\actions\action_exit.paa""];\
 			ctrlShow[2418, true];\
 			((findDisplay 2400) displayCtrl 2417) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 2400) displayCtrl 2419) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";

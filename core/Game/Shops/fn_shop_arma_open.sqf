@@ -5,11 +5,10 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_type", "_side", "_display", "_list", "_PNJ"];
-_PNJ = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+private["_type", "_side", "_display", "_list"];
 _type = [_this, 3, "", [""]] call BIS_fnc_param;
 
-if ((_type isEqualTo "") || (isNull _PNJ)) exitWith {};
+if (_type isEqualTo "") exitWith {};
 
 if (!isClass(missionConfigFile >> "ALYSIA_SHOPS_WEAPONS" >> _type)) exitWith 
 {
@@ -34,9 +33,8 @@ _display = findDisplay 38400;
 if (isNull _display) exitWith {};
 
 (_display displayCtrl 38401) ctrlSetStructuredText parseText format["<t align='center' size='1.8'>%1</t>", (getText(missionConfigFile >> "ALYSIA_SHOPS_WEAPONS" >> _type >> "name"))];
-(_display displayCtrl 38411) ctrlSetText (getText(missionConfigFile >> "ALYSIA_SHOPS_WEAPONS" >> _type >> "background"));
 
-_list = _display displayCtrl 38405;
+_list = _display displayCtrl 38402;
 lbClear _list;
 
 {
@@ -105,17 +103,22 @@ lbClear _list;
 if ((lbSize _list) isEqualTo 0) then
 {
 	_list lbAdd "Vous n'avez rien à acheter ici";
-	ctrlShow[38402, false];
 	ctrlShow[38403, false];
 	ctrlShow[38404, false];
+	ctrlShow[38405, false];
 	ctrlShow[38406, false];
 	ctrlShow[38407, false];
+	ctrlShow[38421, false];
 	ctrlShow[38408, false];
 	ctrlShow[38409, false];
+	ctrlShow[38422, false];
 	ctrlShow[38410, false];
+	ctrlShow[38411, false];
 	ctrlShow[38412, false];
 	ctrlShow[38413, false];
+	ctrlShow[38414, false];
 	ctrlShow[38415, false];
+	ctrlShow[38416, false];
 } else {
 	_list lbSetCurSel 0;
 };

@@ -36,9 +36,9 @@
 			text = "<t align = 'center' size = '1.5'>Distributeur</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
-			x = 0.389656 * safezoneW + safezoneX;
-			y = 0.34688 * safezoneH + safezoneY;
-			w = 0.228958 * safezoneW;
+			x = 0.389062 * safezoneW + safezoneX;
+			y = 0.346815 * safezoneH + safezoneY;
+			w = 0.224531 * safezoneW;
 			h = 0.0422594 * safezoneH;
 		};
 		
@@ -57,8 +57,8 @@
 		{
 			idc = 15002;
 			colorBackground[] = {0,0,0,0.6};
-			
 			text = "<t align = 'left' size = '1.2'>      Solde </t><t align = 'center' size = '1.2'>... $</t>";
+			
 			x = 0.438022 * safezoneW + safezoneX;
 			y = 0.41288 * safezoneH + safezoneY;
 			w = 0.164115 * safezoneW;
@@ -181,7 +181,7 @@
 		class TXT_L1: RscStructuredText
 		{
 			idc = 15011;
-			text = "<t align = 'left' size = '1.2'></t>";
+			text = "";
 			colorBackground[] = {0,0,0,0};
 			
 			x = 0.393472 * safezoneW + safezoneX;
@@ -193,7 +193,7 @@
 		class TXT_L2: RscStructuredText
 		{
 			idc = 15012;
-			text = "<t align = 'left' size = '1.2'></t>";
+			text = "";
 			colorBackground[] = {0,0,0,0};
 
 			x = 0.393266 * safezoneW + safezoneX;
@@ -205,7 +205,7 @@
 		class TXT_L3: RscStructuredText
 		{
 			idc = 15013;
-			text = "<t align = 'left' size = '1.2'></t>";
+			text = "";
 			colorBackground[] = {0,0,0,0};
 			
 			x = 0.392234 * safezoneW + safezoneX;
@@ -217,7 +217,7 @@
 		class TXT_L4: RscStructuredText
 		{
 			idc = 15014;
-			text = "<t align = 'left' size = '1.2'></t>";
+			text = "";
 			colorBackground[] = {0,0,0,0};
 			
 			x = 0.39275 * safezoneW + safezoneX;
@@ -229,7 +229,7 @@
 		class TXT_R1: RscStructuredText
 		{
 			idc = 15015;
-			text = "<t align = 'right' size = '1.2'></t>";
+			text = "";
 			colorBackground[] = {0,0,0,0};
 
 			x = 0.518562 * safezoneW + safezoneX;
@@ -241,7 +241,7 @@
 		class TXT_R2: RscStructuredText
 		{
 			idc = 15016;
-			text = "<t align = 'right' size = '1.2'></t>";
+			text = "";
 			colorBackground[] = {0,0,0,0};
 
 			x = 0.518872 * safezoneW + safezoneX;
@@ -253,7 +253,7 @@
 		class TXT_R3: RscStructuredText
 		{
 			idc = 15017;
-			text = "<t align = 'right' size = '1.2'></t>";
+			text = "";
 			colorBackground[] = {0,0,0,0};
 
 			x = 0.519491 * safezoneW + safezoneX;
@@ -265,7 +265,7 @@
 		class TXT_R4: RscStructuredText
 		{
 			idc = 15018;
-			text = "<t align = 'right' size = '1.2'></t>";
+			text = "";
 			colorBackground[] = {0,0,0,0};
 			
 			x = 0.519491 * safezoneW + safezoneX;

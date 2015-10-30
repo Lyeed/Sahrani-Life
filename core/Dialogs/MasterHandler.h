@@ -13,6 +13,7 @@
 #include "Dialogs\RscDisplayShopArma.h"
 #include "Dialogs\RscDisplayShopVirtual.hpp"
 #include "Dialogs\RscDisplayShopVehicles.h"
+#include "Dialogs\RscDisplayShopDynMarkers.hpp"
 #include "Dialogs\RscDisplayGarage.hpp"
 #include "Dialogs\RscDisplayWelcome.hpp"
 #include "Dialogs\RscDisplayTablet.hpp"
@@ -25,7 +26,6 @@
 #include "Dialogs\RscDisplayPlayerTicket.hpp"
 #include "Dialogs\RscDisplayPlayerRevokeLicense.hpp"
 #include "Dialogs\RscDisplayAtm.hpp"
-#include "Dialogs\RscDisplayDynMarkers.hpp"
 #include "Dialogs\RscDisplayHousing.hpp"
 class RscTitles // Defines custom UI displays.
 {

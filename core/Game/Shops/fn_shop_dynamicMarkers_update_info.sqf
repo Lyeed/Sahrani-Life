@@ -17,13 +17,19 @@ disableSerialization;
 _display = findDisplay 21000;
 if (isNull _display) exitWith {};
 
-_price = lbValue[21002, _sel];
-(_display displayCtrl 21005) ctrlSetStructuredText parseText format["<t align='center' color='#%2'>%1</t><t align='right'>$</t>", ([_price] call public_fnc_numberText), if (g_cash >= _price) then {"8cff9b"} else {"ff8c8c"}];
+_price = lbValue[21001, _sel];
+(_display displayCtrl 21004) ctrlSetStructuredText parseText format["<t align='center' color='#%2'>%1</t><t align='right'>$</t>", ([_price] call public_fnc_numberText), if (g_cash >= _price) then {"8cff9b"} else {"ff8c8c"}];
 
 if (g_cash < _price) then {
+	ctrlShow[21005, false];
+	ctrlShow[21006, false];
 	ctrlShow[21007, false];
 	ctrlShow[21008, false];
+	ctrlShow[21009, false];
 } else {
+	ctrlShow[21005, true];
+	ctrlShow[21006, true];
 	ctrlShow[21007, true];
 	ctrlShow[21008, true];
+	ctrlShow[21009, true];
 };
