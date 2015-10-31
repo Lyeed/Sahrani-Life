@@ -8,10 +8,6 @@ with missionNamespace do
 	g_objPut = ObjNull;
 	g_killer = ObjNull;
 	g_curWep_h = "";
-	/* ===================[Clothing system]======================= */
-	g_clothing_filter = 0;
-	g_clothing_uniform = -1;
-	g_clothing_purchase = [-1,-1,-1,-1,-1]; //Uniform price (0),Hat Price (1),Glasses Price (2),Vest Price (3),Backpack Price (4)
 	/* ===================[inUse/delay variables]======================= */
 	g_firstSpawn = true;
 	g_session_completed = false;

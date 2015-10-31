@@ -6,16 +6,12 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (isDedicated) exitWith {};
-if (missionNamespace getVariable ["g_connected", false]) then
+class ALYSIA_SHOPS_ARMA
 {
-	playmusic "LeadTrack01_F";
-	sleep 94;
-	closeDialog 0;
-	sleep 1;
-	[] call MySQL_fnc_query_update_disconnect;
-	sleep 1;
-	"Bye" call BIS_fnc_endMission;
-} else {
-	"Bye" call BIS_fnc_endMission;
+	class garagiste
+	{
+		name = "Garagiste";
+		side = "sideUnknown";
+		stocks[] = {"ToolKit"};
+	};
 };

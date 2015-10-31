@@ -130,13 +130,13 @@ class Public
 	class Shops
 	{
 		file = "core\Game\Shops";
-		class buyClothes {};
-		class changeClothes {};
 		class chopShopMenu {};
 		class chopShopSelection {};
 		class chopShopSell {};
-		class clothingFilter {};
-		class clothingMenu {};
+		class shop_clothing_update_list {};
+		class shop_clothing_open {};
+		class shop_clothing_buy {};
+		class shop_clothing_update_clothe {};
 		class shop_vehicles_open {};
 		class shop_vehicles_buy {};
 		class shop_vehicles_update {};
