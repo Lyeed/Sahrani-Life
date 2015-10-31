@@ -20,3 +20,4 @@
 #include "GameConfigs\Config_Garages.hpp"
 #include "GameConfigs\Config_Repair.hpp"
 #include "GameConfigs\Config_Dynamic_Markers.hpp"
+#include "GameConfigs\Config_Bank.hpp"

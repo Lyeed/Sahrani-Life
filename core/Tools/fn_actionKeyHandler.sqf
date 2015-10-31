@@ -91,20 +91,18 @@ if ((vehicle player) isEqualTo player) then
 						true;
 					};
 					if (typeOf(cursorTarget) isEqualTo ["Bank_Sahrani"]) then
-					{	
-						if (!("lockpick" in items player)) exitWith {["Vous avez besoin d'outils de crochetage pour pouvoir forcer une porte"] call public_fnc_notice};
-				
+					{
 						private ["_door"];
 						
 						{
 							if (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition _x)) < 3) exitWith
 							{
-								[_x] call public_fnc_robberyStart;
+								[cursorTarget, _x] call public_fnc_robberyStart;
 								_door = _x;
 							};
 						} forEach (["Vault_Door", "LeftSlideDoor", "RightSlideDoor", "Door_1", "Door_2", "Door_3", "Door_4", "Door_5", "Door_6"]);
 						
-						if (isNil "_door") then {["Vous n'êtes pas près d'une porte crochetable"] call public_fnc_info};
+						if (isNil "_door") then {["Vous n'êtes pas près d'une porte"] call public_fnc_info};
 					};
 				};
 			};
