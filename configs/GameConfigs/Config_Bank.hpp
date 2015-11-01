@@ -6,7 +6,6 @@ class ALYSIA_BANK
 		{
 			name = "Porte d'entrée Gauche";
 			item = "Alysia_Lockpick";
-			itemName = "Lockpick";
 			time = 15;
 			open = "SlidingL";
 		};
@@ -15,7 +14,6 @@ class ALYSIA_BANK
 		{
 			name = "Porte d'entrée Droite";
 			item = "Alysia_Lockpick";
-			itemName = "Lockpick";
 			time = 15;
 			open = "SlidingR";
 		};
@@ -24,7 +22,6 @@ class ALYSIA_BANK
 		{
 			name = "Porte Comptoirs";
 			item = "Alysia_Lockpick";
-			itemName = "Lockpick";
 			time = 15;
 			open = "Simple";
 		};
@@ -33,7 +30,6 @@ class ALYSIA_BANK
 		{
 			name = "Porte Partie Interne";
 			item = "Alysia_Hacker";
-			itemName = "Outils de piratage";
 			time = 60;
 			open = "Simple";
 		};
@@ -42,7 +38,6 @@ class ALYSIA_BANK
 		{
 			name = "Porte Bureau Directeur";
 			item = "Alysia_Lockpick";
-			itemName = "Lockpick";
 			time = 30;
 			open = "Simple";
 		};
@@ -51,7 +46,6 @@ class ALYSIA_BANK
 		{
 			name = "Porte Interne Coffre";
 			item = "Alysia_Foreuse";
-			itemName = "Foreuse";
 			time = 120;
 			open = "Simple";
 		};
@@ -60,7 +54,6 @@ class ALYSIA_BANK
 		{
 			name = "Porte Poste Surveillance";
 			item = "Alysia_Hacker";
-			itemName = "Outils de piratage";
 			time = 60;
 			open = "Simple";
 		};
@@ -69,7 +62,6 @@ class ALYSIA_BANK
 		{
 			name = "Porte Toit Gauche";
 			item = "Alysia_Lockpick";
-			itemName = "Lockpick";
 			time = 15;
 			open = "Simple";
 		};
@@ -78,7 +70,6 @@ class ALYSIA_BANK
 		{
 			name = "Porte Toit Droite";
 			item = "Alysia_Lockpick";
-			itemName = "Lockpick";
 			time = 15;
 			open = "Simple";
 		};			
@@ -87,9 +78,16 @@ class ALYSIA_BANK
 		{
 			name = "Porte Coffre Fort";
 			item = "Alysia_Bombe";
-			itemName = "Bombe";
 			time = 10;
 			open = "Vault";			
+		};
+
+		class Security
+		{
+			name = "Système de sécurité";
+			item = "Alysia_Hacker";
+			time = 60;
+			open = "Security";
 		};
 	};
 };
