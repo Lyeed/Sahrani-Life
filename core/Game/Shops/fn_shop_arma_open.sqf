@@ -41,12 +41,12 @@ lbClear _list;
 	{
 		_passed = false;
 		if (playerSide isEqualTo civilian) then {
-			_license = getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "conditions" >> "CIV");
+			_license = getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_condition_CIV");
 			if ((_license isEqualTo "") || (missionNamespace getVariable [format["license_%1", _license], false])) then {
 				_passed = true;
 			};
 		} else {
-			_rank = getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "conditions" >> str(playerSide));
+			_rank = getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> format["buy_condition_%1", str(playerSide)]);
 			if (((player getVariable ["rank", 0]) >= _rank) && (_rank != -1)) then {
 				_passed = true;
 			};
@@ -56,7 +56,7 @@ lbClear _list;
 		{
 			_details = [_x] call public_fnc_fetchCfgDetails;
 			_displayName = getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "name");
-			_price = getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "price");
+			_price = getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_price");
 			if (_displayName isEqualTo "") then {
 				_displayName = _details select 1;
 			};

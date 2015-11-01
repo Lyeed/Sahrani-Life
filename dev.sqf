@@ -1,3 +1,63 @@
+/*
+================INIT======================
+this enableSimulation false; (pas de dégat et enléve les interraction)
+this allowDamage false; (pas de dégat)
+this addAction[""Dealer"",life_fnc_virt_menu,""dealer"",0,false,false,"""",' vehicle player == player && player distance _target < 4 && playerSide == civilian '];
+==========================================
+
+
+this addAction["Nom de l'action dans le menu",nom_de_la_fonction,"Argument de la fonction",0,false,false,"",'vehicle player == player && player distance _target < 4 && playerSide == independent'];
+Explication:
+- "NOM_DE_LA_CLASSE"
+- ou ["NOM_DE_LA_CLASSE", ["NOM_DE_LA_CLASSE_1","NOM_DE_LA_CLASSE_2"]]
+
+
+Nom des fonctions :
+public_fnc_shop_dynamicMarkers_open; (position des lieux illégaux dynamique)
+-pas d'argument ("")
+
+
+this addAction["Supérette",public_fnc_shop_virtual_open,"market",0,false,false,"",'vehicle player == player && player distance _target < 4'];
+public_fnc_shop_virtual_open (shop d'items virtuels)
+-Argument : nom de la classe défini dans config ALYSIA_SHOPS_VIRTUAL
+-Fichier : Config_Shop_Virtual.hpp
+
+
+this addAction["Armurerie",public_fnc_shop_virtual_open,"gun",0,false,false,"",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];
+public_fnc_shop_arma_open (shop item arma)
+-Argument : nom de la classe défini dans config ALYSIA_SHOPS_ARMA
+-Fichier : Config_Shop_Arma.hpp
+
+
+this addAction["Friperie de luxe",public_fnc_shop_virtual_open,"CIV_luxe",0,false,false,"",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];
+public_fnc_shop_clothing_open (shop vêtement)
+-Argument : nom de la classe défini dans config ALYSIA_SHOPS_CLOTHING
+-Fichier : Config_Shop_Clothing.hpp
+
+
+this addAction["Concessionnaire de luxe",public_fnc_shop_vehicles_open,["CIV_land_luxe", ["CIV_land_luxe_marker_1", "CIV_land_luxe_marker_2"]],0,false,false,"",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];
+public_fnc_shop_vehicles_open (concessionnaire)
+-Argument : nom de la classe défini dans config ALYSIA_SHOPS_VEHICLES
+-Fichier : Config_Shop_Vehicles.hpp
+
+
+this addAction["Garage",public_fnc_garageGet,"NORD_prefecture",0,false,false,"",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];
+public_fnc_garageGet (garage)
+-Argument : nom de la classe défini dans config Cfg_Garages
+-Fichier : Config_Garages.hpp
+
+
+this addAction["Ranger son véhicule",public_fnc_garageVehicleStore,["Car"],0,false,false,"",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];
+public_fnc_garageVehicleStore (ranger son véhicule)
+-Argument : types de véhicule pouvant être ranger dans ce garage
+Types :
+- "Car"
+- "Truck"
+- "Air"
+- "Tank"
+- "Ship"
+*/
+
 a3\characters_f\common\coveralls.p3d
 a3\air_f\heli_light_01\heli_light_01_f.p3d
 
