@@ -13,7 +13,7 @@ if (!params [
 
 private ["_item"];
 
-if (!(isNull _door)) then 
+if (!(_door isEqualTo "none")) then 
 {
 	player removeItems (getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item"));
 	_item = ((getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")) createVehicle [0,0,0]);
