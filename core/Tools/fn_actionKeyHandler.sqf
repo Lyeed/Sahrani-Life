@@ -110,6 +110,11 @@ if ((vehicle player) isEqualTo player) then
 							[cursorTarget, "Security"] call public_fnc_robberyStart;
 						};
 					};
+					if (typeOf(cursorTarget) in ["Bank_Drill","Bank_Bomb"]) then
+					{
+						// Réactiver/Defuse Bomb/Drill
+						[(cursorTarget getVariable ["bank", ObjNull])] call public_fnc_robberyProcess;
+					};
 				};
 			};
 		};

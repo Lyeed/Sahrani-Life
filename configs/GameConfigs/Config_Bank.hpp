@@ -6,7 +6,7 @@ class ALYSIA_BANK
 		{
 			name = "Porte d'entrée Gauche";
 			item = "Alysia_Lockpick";
-			time = 15;
+			time = 10;
 			open = "SlidingL";
 		};
 		
@@ -14,7 +14,7 @@ class ALYSIA_BANK
 		{
 			name = "Porte d'entrée Droite";
 			item = "Alysia_Lockpick";
-			time = 15;
+			time = 10;
 			open = "SlidingR";
 		};
 		
@@ -29,8 +29,8 @@ class ALYSIA_BANK
 		class Door_2
 		{
 			name = "Porte Partie Interne";
-			item = "Alysia_Hacker";
-			time = 60;
+			item = "Bank_Hacker";
+			time = 45;
 			open = "Simple";
 		};
 		
@@ -38,23 +38,23 @@ class ALYSIA_BANK
 		{
 			name = "Porte Bureau Directeur";
 			item = "Alysia_Lockpick";
-			time = 30;
+			time = 10;
 			open = "Simple";
 		};
 		
 		class Door_4
 		{
 			name = "Porte Interne Coffre";
-			item = "Alysia_Foreuse";
-			time = 120;
-			open = "Simple";
+			item = "Bank_Drill";
+			time = 60;
+			open = "Drill";
 		};
 
 		class Door_5
 		{
 			name = "Porte Poste Surveillance";
-			item = "Alysia_Hacker";
-			time = 60;
+			item = "Bank_Hacker";
+			time = 45;
 			open = "Simple";
 		};
 		
@@ -62,7 +62,7 @@ class ALYSIA_BANK
 		{
 			name = "Porte Toit Gauche";
 			item = "Alysia_Lockpick";
-			time = 15;
+			time = 30;
 			open = "Simple";
 		};
 
@@ -70,14 +70,14 @@ class ALYSIA_BANK
 		{
 			name = "Porte Toit Droite";
 			item = "Alysia_Lockpick";
-			time = 15;
+			time = 30;
 			open = "Simple";
 		};			
 		
 		class Vault_Door
 		{
 			name = "Porte Coffre Fort";
-			item = "Alysia_Bombe";
+			item = "Bank_Bomb";
 			time = 10;
 			open = "Vault";			
 		};
@@ -85,10 +85,28 @@ class ALYSIA_BANK
 		class Security
 		{
 			name = "Système de sécurité";
-			item = "Alysia_Hacker";
-			time = 60;
+			item = "Bank_Hacker";
+			time = 45;
 			open = "Security";
 		};
+	};
+
+	class Bank_Bomb
+	{
+		display = "Charge de C4";
+		item = "Bank_Bomb";
+		time = 60;
+		pos = "[0,0,0]";
+		explosion = true;
+	};
+
+	class Bank_Drill
+	{
+		display = "Foreuse";
+		item = "Bank_Drill";
+		time = 300;
+		pos = "[0,0,0]";
+		explosion = true;
 	};
 
 	class Bank_Sahrani_N

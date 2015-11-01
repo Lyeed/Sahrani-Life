@@ -33,15 +33,15 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 		case "SlidingL": {_bank animate [_door, -1.7]};
 		case "SlidingR": {_bank animate [_door, 1.7]};
 		case "Security": {_bank setVariable ["hacked", true, true]};
-		case "Vault": {
-			_bank animate ["Vault_Combination", 1];
-			_bank animate ["Vault_RotateUp", 1];
-			_bank animate ["Vault_RotateDown", 1];
-			_bank animate ["Vault_RotateDown", 1];
-			_bank animate ["Vault_TransitionUp", -0.1];
-			_bank animate ["Vault_TransitionDown", 0.1];
-			_bank animate ["Vault_TransitionLeft", -0.1];
-			_bank animate ["Vault_TransitionRight", 0.1];
+		case "Drill":
+		{
+			_bank setVariable ["drillplaced", player, true];
+			[_bank, _door] call public_fnc_robberyProcess;
+		};
+		case "Vault":
+		{
+			_bank setVariable ["bombplaced", player, true];
+			[_bank, _door] call public_fnc_robberyProcess;
 		};
 	};
 

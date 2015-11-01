@@ -299,6 +299,7 @@ class Public
 		class atmAction {};
 		class atmScreen {};
 		class robberyStart {};
+		class robberyProcess {};
 	};
 
 	class AuctionHouse
