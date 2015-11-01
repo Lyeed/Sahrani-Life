@@ -13,7 +13,7 @@ if (!params [
 
 if (!(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item") in items player)) exitWith
 {
-	[(format ["Vous devez avoir un(e) %1 pour pouvoir forcer cette porte", getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "itemName" )])] call public_fnc_info;
+	[(format ["Vous avez besoin de <br/>%1<br/>", ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")] call public_fnc_fetchCfgDetails) select 1])] call public_fnc_info;
 }; 
 
 if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), getNumber(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "time"), 0, 0, "animation"] call public_fnc_showProgress) then
@@ -23,6 +23,7 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 		case "Simple": {_bank animate [_door, 1]};
 		case "SlidingL": {_bank animate [_door, -1.7]};
 		case "SlidingR": {_bank animate [_door, 1.7]};
+		case "Security": {_bank setVariable ["hacked", true, true]};
 		case "Vault": {
 			_bank animate ["Vault_Combination", 1];
 			_bank animate ["Vault_RotateUp", 1];
@@ -34,29 +35,30 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 			_bank animate ["Vault_TransitionRight", 0.1];
 		};
 	};
-	
-	private ["_alarm","_bankRegion"];
-	_bankRegion = [_bank] call public_fnc_getRegion;
-	
-	if (isNil (_alarm)) then {
-		_alarm = "Intel_File1_F" createVehicle [0,0,0];
-		_alarm attachTo [_bank, [0, -2, 6.65]];
-		[_alarm, "bankalarm"] call CBA_fnc_globalSay3d;		
-	};
-	
-	switch (_bankRegion) do
+
+	if (!(_bank getVariable ["hacked", false])) then
 	{
-		case "NORTH":
+		private ["_alarm","_bankRegion"];
+		_bankRegion = [_bank] call public_fnc_getRegion;
+		
+		if (isNull (_bank getVariable ["alarm", objNull])) then
 		{
-			/* Envoi du message suivant aux keufs du nord
-			Une faille de sécurité a été détectée dans la banque du Nord. La getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name") a été forcée.
-			*/
+			_alarm = "Intel_File1_F" createVehicle [0,0,0];
+			_alarm attachTo [_bank, [0, -2, 6.65]];
+			[_alarm, "bankalarm"] call CBA_fnc_globalSay3d;
+			_bank setVariable ["alarm", _alarm, true];	
 		};
-		case "SOUTH":
+		
+		switch (_bankRegion) do
 		{
-			/* Envoi du message suivant aux keufs du sud
-			Une faille de sécurité a été détectée dans la banque du Nord. La getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name") a été forcée.
-			*/
+			case "NORTH":
+			{
+				[format["Une faille de sécurité a été détectée dans la banque du Nord. %1 a été forcée.", getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name")], "NORTH"] remoteExecCall ["public_fnc_APP_phone_messages_receive", west];
+			};
+			case "SOUTH":
+			{
+				[format["Une faille de sécurité a été détectée dans la banque du Sud. %1 a été forcée.", getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name")], "SOUTH"] remoteExecCall ["public_fnc_APP_phone_messages_receive", east];
+			};
 		};
 	};
 };

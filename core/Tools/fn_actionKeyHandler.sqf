@@ -90,7 +90,7 @@ if ((vehicle player) isEqualTo player) then
 						[cursorTarget] spawn public_fnc_vehicleMenu_inventory_open;
 						true;
 					};
-					if (typeOf(cursorTarget) isEqualTo ["Bank_Sahrani"]) then
+					if (typeOf(cursorTarget) in ["Bank_Sahrani_N","Bank_Sahrani_S"]) then
 					{
 						private ["_door"];
 						
