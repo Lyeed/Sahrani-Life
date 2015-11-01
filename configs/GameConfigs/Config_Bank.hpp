@@ -90,4 +90,16 @@ class ALYSIA_BANK
 			open = "Security";
 		};
 	};
+
+	class Bank_Sahrani_N
+	{
+		owner = "WEST";
+		required = 5;
+	};
+
+	class Bank_Sahrani_S
+	{
+		owner = "EAST";
+		required = 5;
+	};
 };

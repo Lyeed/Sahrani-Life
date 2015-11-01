@@ -93,7 +93,6 @@ if ((vehicle player) isEqualTo player) then
 					if (typeOf(cursorTarget) in ["Bank_Sahrani_N","Bank_Sahrani_S"]) then
 					{
 						private ["_door"];
-						
 						{
 							if (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition _x)) < 3) exitWith
 							{
@@ -103,6 +102,13 @@ if ((vehicle player) isEqualTo player) then
 						} forEach (["Vault_Door", "LeftSlideDoor", "RightSlideDoor", "Door_1", "Door_2", "Door_3", "Door_4", "Door_5", "Door_6"]);
 						
 						if (isNil "_door") then {["Vous n'êtes pas près d'une porte"] call public_fnc_info};
+					};
+					if (typeOf(cursorTarget) isEqualTo "xcam_Laptop_unfolded_F") then
+					{
+						if (((player distance (bank_n)) < 10) || ((player distance (bank_s) < 10))) then
+						{
+							[cursorTarget, "Security"] call public_fnc_robberyStart;
+						};
 					};
 				};
 			};

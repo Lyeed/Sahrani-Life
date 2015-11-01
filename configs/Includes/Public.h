@@ -298,14 +298,7 @@ class Public
 		file = "core\Game\Bank";
 		class atmAction {};
 		class atmScreen {};
-		class blastingCharge {};
-		class defuseKit {};
-		class demoChargeTimer {};
-		class safeFix {};
-		class safeInventory {};
-		class safeOpen {};
-		class safeStore {};
-		class safeTake {};
+		class robberyStart {};
 	};
 
 	class AuctionHouse
