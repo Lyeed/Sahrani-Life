@@ -300,6 +300,7 @@ class Public
 		class atmScreen {};
 		class robberyStart {};
 		class robberyProcess {};
+		class robberyTools {};
 	};
 
 	class AuctionHouse
