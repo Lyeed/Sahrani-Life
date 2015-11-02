@@ -113,7 +113,7 @@ if ((vehicle player) isEqualTo player) then
 					if (typeOf(cursorTarget) in ["Bank_Drill","Bank_Bomb"]) then
 					{
 						// Réactiver/Defuse Bomb/Drill
-						[(cursorTarget getVariable ["bank", ObjNull])] call public_fnc_robberyProcess;
+						[(cursorTarget getVariable ["bank", ObjNull]), "", cursorTarget] call public_fnc_robberyProcess;
 					};
 				};
 			};

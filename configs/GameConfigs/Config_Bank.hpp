@@ -93,20 +93,22 @@ class ALYSIA_BANK
 
 	class Bank_Bomb
 	{
-		display = "Charge de C4";
 		item = "Bank_Bomb";
+		defuse = "Bank_DefuseKit";
 		time = 60;
+		defuseTime = 15;
 		pos = "[0,0,0]";
 		explosion = true;
 	};
 
 	class Bank_Drill
 	{
-		display = "Foreuse";
 		item = "Bank_Drill";
+		defuse = "Bank_Hacker";
 		time = 300;
+		defuseTime = 30;
 		pos = "[0,0,0]";
-		explosion = true;
+		explosion = false;
 	};
 
 	class Bank_Sahrani_N

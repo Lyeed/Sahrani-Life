@@ -33,22 +33,13 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 		case "SlidingL": {_bank animate [_door, -1.7]};
 		case "SlidingR": {_bank animate [_door, 1.7]};
 		case "Security": {_bank setVariable ["hacked", true, true]};
-		case "Drill":
-		{
-			_bank setVariable ["drillplaced", player, true];
-			[_bank, _door] call public_fnc_robberyProcess;
-		};
-		case "Vault":
-		{
-			_bank setVariable ["bombplaced", player, true];
-			[_bank, _door] call public_fnc_robberyProcess;
-		};
+		case "Drill": {[_bank, _door] call public_fnc_robberyProcess};
+		case "Vault": {[_bank, _door] call public_fnc_robberyProcess};
 	};
 
 	if (!(_bank getVariable ["hacked", false])) then
 	{
 		private ["_alarm","_bankRegion"];
-		_bankRegion = [_bank] call public_fnc_getRegion;
 		
 		if (isNull (_bank getVariable ["alarm", objNull])) then
 		{
@@ -58,13 +49,13 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 			_bank setVariable ["alarm", _alarm, true];	
 		};
 		
-		switch (_bankRegion) do
+		switch (([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "owner" )] call public_fnc_strToSide)) do
 		{
-			case "NORTH":
+			case west:
 			{
 				[format["Une faille de sécurité a été détectée dans la banque du Nord. %1 a été forcée.", getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name")], "NORTH"] remoteExecCall ["public_fnc_APP_phone_messages_receive", west];
 			};
-			case "SOUTH":
+			case east:
 			{
 				[format["Une faille de sécurité a été détectée dans la banque du Sud. %1 a été forcée.", getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name")], "SOUTH"] remoteExecCall ["public_fnc_APP_phone_messages_receive", east];
 			};
