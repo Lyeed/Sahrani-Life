@@ -25,6 +25,7 @@ if (hasInterface) then
 	if (!(isNil "gServer_soonReboot")) exitWith {
 		["Le serveur redémarre dans moins de 4 minutes, veuillez vous reconnecter après."] spawn public_fnc_errorExit;
 	};
+	setDate [gServer_year, (date select 1), (date select 2), (date select 3), (date select 4)];
 
 	diag_log "<INIT> Initialisation des variables ...";
 	cutText ["Initialisation des variables", "BLACK FADED"];

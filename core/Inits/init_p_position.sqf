@@ -31,7 +31,6 @@ if (g_arrested) then {
 	};
 };
 
-setDate [gServer_year, (date select 1), (date select 2), (date select 3), (date select 4)];
 cutText ["", "BLACK IN", 6, false];
 
 [

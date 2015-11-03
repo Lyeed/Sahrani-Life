@@ -8,14 +8,12 @@
 
 class Cfg_Garages
 {
-	class garage_centre
+	class garage_paraiso
 	{
-		name = "Garage du Centre Ville";
+		name = "Garage du Paraiso";
 		spawns[] = 
 		{
-			"garage_centre_1",
-			"garage_centre_2",
-			"garage_centre_3"
+			"garage_paraiso_1"
 		};
 		types[] =
 		{
@@ -121,8 +119,8 @@ class Cfg_Garages
 		name = "Garage Samu";
 		spawns[] = 
 		{
-			"garage_guer_1",
-			"garage_guer_2"
+			"GUER_vehicles_marker_1",
+			"GUER_vehicles_marker_1"
 		};
 		types[] =
 		{
@@ -132,17 +130,18 @@ class Cfg_Garages
 		};
 	};
 
-	class garage_air
+	class garage_air_nord
 	{
 		name = "Garage Aerien";
 		spawns[] = 
 		{
-			"CIV_vehicles_air_marker_1",
-			"CIV_vehicles_air_marker_2"
+			"CIV_vehicles_air_marker_1"
 		};
 		types[] =
 		{
-			"Air"
+			"Air",
+			"Truck",
+			"Car"
 		};
 	};
 

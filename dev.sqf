@@ -196,7 +196,7 @@ DEV setTriggerStatements ["(vehicle player) in thislist", "[[[""Frontière"", ""
 **				POSITION
 */
 onMapSingleClick "copyToClipboard str(_pos)";
-onMapSingleClick "player setPos _pos";
+onMapSingleClick "player setPos _pos";²&
 copyToClipboard(typeOf cursorTarget);
 
 

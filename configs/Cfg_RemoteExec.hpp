@@ -82,6 +82,7 @@ class CfgRemoteExec
 		class lock {allowTargets = EVERYONE;};
 		class hintSilent {allowTargets = CLIENT;};
 		class systemChat {allowTargets = CLIENT;};
+		class BIS_fnc_endMission {allowTargets = CLIENT;};
 	};
 
 	class Commands

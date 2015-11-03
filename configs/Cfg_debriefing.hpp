@@ -27,4 +27,11 @@ class CfgDebriefing // Define custom mission endings or override the default end
 		description = "A bientôt !";
 		pictureColor[] = {0, 0.3, 0.6, 1};
 	};
+
+	class Whitelist
+	{
+		title = "Whiteliste";
+		description = "Vous n'êtes pas whitelisté";
+		pictureColor[] = {0, 0.3, 0.6, 1};
+	};
 };

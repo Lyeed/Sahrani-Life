@@ -18,7 +18,7 @@ if (g_interaction_target in g_houses) then {
 	[] call public_fnc_house_menu_open_owner;
 } else {
 	if ((g_interaction_target getVariable ["house_owner", []]) isEqualTo []) then {
-		if (str(playerSide) isEqualTo getText(missionConfigFile >> "ALYSIA_HOUSES" >> (typeOf g_interaction_target) >> "side")) then {
+		if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_HOUSES" >> (typeOf g_interaction_target) >> "sides")) then {
 			[] call public_fnc_house_menu_open_buy;
 		} else {
 			["Vous n'êtes pas autorisé à acheter ce type de bâtiment"] call public_fnc_info;
