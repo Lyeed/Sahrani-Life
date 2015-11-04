@@ -147,7 +147,8 @@ if ((lbSize _list) isEqualTo 0) then
 	ctrlShow[3111, false];
 	ctrlShow[3112, false];
 } else {
-	_list lbSetCurSel 0;	
+	_list lbSetCurSel 0;
+	lbSortByValue _list;
 	ctrlShow[3108, true];
 	ctrlShow[3109, true];
 	ctrlShow[3110, true];

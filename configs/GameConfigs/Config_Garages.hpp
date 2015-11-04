@@ -145,6 +145,22 @@ class Cfg_Garages
 		};
 	};
 
+	class garage_air_sud
+	{
+		name = "Garage Aerien";
+		spawns[] = 
+		{
+			"CIV_vehicles_air_marker_2",
+			"CIV_vehicles_air_marker_3"
+		};
+		types[] =
+		{
+			"Air",
+			"Truck",
+			"Car"
+		};
+	};
+
 	class garage_sea_1
 	{
 		name = "Garage Maritime";

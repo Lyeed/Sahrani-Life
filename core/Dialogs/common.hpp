@@ -507,7 +507,7 @@ class Life_RscShortcutButtonMain : Life_RscShortcutButton {
 	};
 };
 
-class Life_RscProgress 
+class RscProgress
 {
 	type = 8;
 	style = 0;
@@ -521,6 +521,7 @@ class Life_RscProgress
 	colorBackground[] = {0,0,0,0.7};
 	colorBar[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 };
+class Life_RscProgress : RscProgress {};
 
 class RscListBox
 {

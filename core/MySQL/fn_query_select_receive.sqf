@@ -170,5 +170,5 @@ g_lastingObjects = _lastingObjects;
 */
 
 g_paycheck = compileFinal str(g_paycheck * 3);
-g_nextPay = time + ((call g_paycheck_period) * 60);
+g_nextPay = time + (5 * 60);
 g_session_completed = true;

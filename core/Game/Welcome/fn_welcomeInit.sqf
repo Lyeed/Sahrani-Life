@@ -55,6 +55,7 @@ if (_action) then
 	camDestroy _camera;
 	player addItem "ItemGPS";
 	player assignItem "ItemGPS";
+	player forceAddUniform "U_C_Alysia_01";
 	player addMagazine getText(missionConfigFile >> "ALYSIA_FACTIONS" >> "CIV" >> "identity_item");
 	cutText ["", "BLACK FADED"];
 } else {

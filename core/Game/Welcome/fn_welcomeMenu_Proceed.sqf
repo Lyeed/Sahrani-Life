@@ -17,9 +17,10 @@ _firstname = ctrlText 1501;
 if (_firstname isEqualTo "") exitWith {
 	"Vous n'avez pas entré de prénom pour votre personnage" call _displayError;
 };
-_bad = [_firstname, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzéè-"] call public_fnc_TextAllowed;
-if (!(_bad isEqualTo "")) exitWith {
-	"Vous utilisez un caractère interdit dans votre prénom de votre personnage<br/>(ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzéè-)" call _displayError;
+
+_bad = [_firstname, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzéè- "] call public_fnc_TextAllowed;
+if (_bad != "") exitWith {
+	["Vous utilisez un caractère interdit dans le prénom de votre personnage (%1)", _bad] call _displayError;
 };
 if (((toArray(_firstname) select 0) < 65) || ((toArray(_firstname) select 0) > 90)) exitWith {
 	"Le prénom de votre personnage doit commencer par une majuscule" call _displayError;
@@ -28,16 +29,17 @@ if (((toArray(_firstname) select 0) < 65) || ((toArray(_firstname) select 0) > 9
 // lastName
 _lastName = ctrlText 1502;
 if (_lastName isEqualTo "") exitWith {
-	"Vous n'avez pas entré de nom pour votre personnage" call _displayError;
+	"Vous n'avez pas entré de nom de famille pour votre personnage" call _displayError;
 };
-_bad = [_lastName, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzéè-"] call public_fnc_TextAllowed;
-if (!(_bad isEqualTo "")) exitWith {
-	"Vous utilisez un caractère interdit dans votre nom de famille<br/>(ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzéè-)" call _displayError;
+
+_bad = [_lastName, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzéè- "] call public_fnc_TextAllowed;
+if (_bad != "") exitWith {
+	format["Vous utilisez un caractère interdit dans le nom de famille de votre personnage (%1)", _bad] call _displayError;
 };
 if (((toArray(_lastName) select 0) < 65) || ((toArray(_lastName) select 0) > 90)) exitWith {
-	"Le nom de votre personnage doit commencer par une majuscule" call _displayError;
+	"Le nom de famille de votre personnage doit commencer par une majuscule" call _displayError;
 };
-if ((([_firstname] call CBA_fnc_strLen) + ([_lastName] call CBA_fnc_strLen)) != (([profileName] call CBA_fnc_strLen) - 1)) exitWith {
+if (format["%1 %2", _firstname, _lastName] != profileName) exitWith {
 	"Le prénom et le nom entrés ne correspondent pas à votre nom de profil ArmA 3" call _displayError;
 };
 
@@ -46,10 +48,12 @@ _birth = ctrlText 1503;
 if ((_birth isEqualTo "00/00/0000") || (_birth isEqualTo "")) exitWith {
 	"Vous n'avez pas entré de date de naissance pour votre personnage" call _displayError;
 };
+
 _bad = [_birth, "0123456789/"] call public_fnc_TextAllowed;
-if (!(_bad isEqualTo "")) exitWith {
-	"Vous utilisez un caractère interdit dans votre date de naissance<br/>(0123456789/)" call _displayError;
+if (_bad != "") exitWith {
+	format["Vous utilisez un caractère interdit dans votre date de naissance (%1)", _bad] call _displayError;
 };
+
 _age = [_birth] call public_fnc_age;
 if ((_age < 18) || (_age > 100)) exitWith {
 	"Votre personnage doit avoir plus de 18 ans et moins de 90 ans" call _displayError;

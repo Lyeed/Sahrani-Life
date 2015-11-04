@@ -9,12 +9,15 @@ private["_unit", "_speaking"];
 _unit = _this select 0;
 _speaking = _this select 1;
 
-if (!(alive _unit) || (_unit getVariable["is_coma", false])) exitWith {
+if (!(alive _unit) || (_unit getVariable ["is_coma", false])) exitWith 
+{
+	g_speaking = false;
 	true; 
 };
 
 if (_unit getVariable["baillon", false]) exitWith
 {
+	g_speaking = false;
 	if (!g_yielding) then
 	{
 		[_unit] spawn
@@ -27,3 +30,5 @@ if (_unit getVariable["baillon", false]) exitWith
 	};
 	true;
 };
+
+g_speaking = _speaking;

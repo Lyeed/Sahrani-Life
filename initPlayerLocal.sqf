@@ -179,7 +179,7 @@ if (hasInterface) then
 		};
 
 		_totalSession = 0;
-		systemChat format["Vous recevez votre prochain salaire dans %1 minutes.", (call g_paycheck_period)];
+		systemChat format["Vous recevez votre prochain salaire dans %1 minutes.", 5];
 		while {true} do
 		{
 			sleep (60 * 1);
@@ -196,13 +196,13 @@ if (hasInterface) then
 				[(random(8) * -1)] call public_fnc_handleHunger;
 			};
 			
-			if ((_totalSession % (call g_paycheck_period)) isEqualTo 0) then
+			if ((_totalSession % 5) isEqualTo 0) then
 			{
 				if (g_arrested) then {
 					systemChat "Vous n'avez pas reçu votre salaire car vous êtes en prison.";
 				} else {
 		       		g_atm = g_atm + (call g_paycheck);
-		       		g_nextPay = time + ((call g_paycheck_period) * 60);
+		       		g_nextPay = time + (5 * 60);
 		       		systemChat format["Vous avez reçu votre salaire : %1$.", ([(call g_paycheck)] call public_fnc_numberText)];
 				};
 			};

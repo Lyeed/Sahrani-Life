@@ -15,4 +15,4 @@ _bad = "";
 		_bad = _x;
 	};
 } foreach (toArray(_data));
-_bad;
+toString([_bad]);

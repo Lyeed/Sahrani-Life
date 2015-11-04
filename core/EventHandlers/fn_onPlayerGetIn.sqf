@@ -11,10 +11,10 @@ _type = [_this, 1, "", [""]] call BIS_fnc_param;
 _unit = [_this, 2, objNull, [objNull]] call BIS_fnc_param;
 
 if ((isNull _veh) || (isNull _unit) || (_type isEqualTo "")) exitWith {};
-if (!(_type isEqualTo "driver")) exitWith {};
+if (_type != "driver") exitWith {};
 if (_veh isKindOf "Air") exitWith {};
 
-while {(((vehicle _unit) == _veh) && ((driver _veh) == _unit))} do
+while {(((vehicle _unit) isEqualTo _veh) && ((driver _veh) isEqualTo _unit))} do
 {
 	private["_speed", "_fuelConsumption"];
 	_speed = speed _veh;

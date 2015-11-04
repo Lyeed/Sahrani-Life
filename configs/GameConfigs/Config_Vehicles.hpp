@@ -127,6 +127,407 @@ class ALYSIA_VEHICLES
   	class DAR_TaurusCivBlack : DAR_TaurusCiv {};
   	class DAR_TaurusCivBlue : DAR_TaurusCiv {};
 
+  	class A3L_Renault_Magnum
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "truck";
+		rank = 0;
+		colors[] = {};
+		realname = "Renault Magnum";
+	};
+
+	class A3L_Alfa_Romeo_White
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "drive";
+		rank = 0;
+		colors[] = {};
+		realname = "Alfa Romeo";
+	};
+
+	class Peugeot_207
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"Peugeot_207_Red",
+			"Peugeot_207_Black",
+			"Peugeot_207_DarkBlue",
+			"Peugeot_207_Yellow",
+			"Peugeot_207_Pink",
+			"Peugeot_207_Grey",
+			"Peugeot_207_Purple",
+			"Peugeot_207_Orange"
+		};
+		realname = "Peugeot 207";
+	};
+  	class Peugeot_207_Red : Peugeot_207 {};
+  	class Peugeot_207_Black : Peugeot_207 {};
+  	class Peugeot_207_DarkBlue : Peugeot_207 {};
+  	class Peugeot_207_Yellow : Peugeot_207 {};
+  	class Peugeot_207_Pink : Peugeot_207 {};
+  	class Peugeot_207_Grey : Peugeot_207 {};
+  	class Peugeot_207_Purple : Peugeot_207 {};
+  	class Peugeot_207_Orange : Peugeot_207 {};
+
+	class A3L_Audi_RS4
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"A3L_Audi_RS4_White",
+			"A3L_Audi_RS4_Black",
+			"A3L_Audi_RS4_DarkBlue",
+			"A3L_Audi_RS4_Red",
+			"A3L_Audi_RS4_Yellow",
+			"A3L_Audi_RS4_Pink",
+			"A3L_Audi_RS4_Grey",
+			"A3L_Audi_RS4_Purple",
+			"A3L_Audi_RS4_orange"
+		};
+		realname = "Audi RSA4";
+	};
+
+	class A3L_Audi_RS4_White : A3L_Audi_RS4 {};
+	class A3L_Audi_RS4_Black : A3L_Audi_RS4 {};
+	class A3L_Audi_RS4_DarkBlue : A3L_Audi_RS4 {};
+	class A3L_Audi_RS4_Red : A3L_Audi_RS4 {};
+	class A3L_Audi_RS4_Yellow : A3L_Audi_RS4 {};
+	class A3L_Audi_RS4_Pink : A3L_Audi_RS4 {};
+	class A3L_Audi_RS4_Grey : A3L_Audi_RS4 {};
+	class A3L_Audi_RS4_Purple : A3L_Audi_RS4 {};
+	class A3L_Audi_RS4_orange : A3L_Audi_RS4 {};
+
+	class A3L_BMW_M6
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"A3L_BMW_M6_Red",
+			"A3L_BMW_M6_Black",
+			"A3L_BMW_M6_Darkblue",
+			"A3L_BMW_M6_Yellow",
+			"A3L_BMW_M6_Pink",
+			"A3L_BMW_M6_Grey",
+			"A3L_BMW_M6_Purple",
+			"A3L_BMW_M6_Orange",
+			"A3L_BMW_M6_White",
+			"A3L_BMW_M6_Linus"
+		};
+		realname = "BMW M6";
+	};
+
+	class A3L_BMW_M6_Red : A3L_BMW_M6 {};
+	class A3L_BMW_M6_Black : A3L_BMW_M6 {};
+	class A3L_BMW_M6_Darkblue : A3L_BMW_M6 {};
+	class A3L_BMW_M6_Yellow : A3L_BMW_M6 {};
+	class A3L_BMW_M6_Pink : A3L_BMW_M6 {};
+	class A3L_BMW_M6_Grey : A3L_BMW_M6 {};
+	class A3L_BMW_M6_Purple : A3L_BMW_M6 {};
+	class A3L_BMW_M6_Orange : A3L_BMW_M6 {};
+	class A3L_BMW_M6_White : A3L_BMW_M6 {};
+	class A3L_BMW_M6_Linus : A3L_BMW_M6 {};
+
+	class A3L_Citreon_DS3
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"A3L_Citreon_DS3_White",
+			"A3L_Citreon_DS3_Black",
+			"A3L_Citreon_DS3_DarkBlue",
+			"A3L_Citreon_DS3_Red",
+			"A3L_Citreon_DS3_Yellow",
+			"A3L_Citreon_DS3_Pink",
+			"A3L_Citreon_DS3_Grey",
+			"A3L_Citreon_DS3_Purple",
+			"A3L_Citreon_DS3_Orange"
+		};
+		realname = "Citroen DS3";
+	};
+
+	class A3L_Citreon_DS3_White : A3L_Citreon_DS3 {};
+	class A3L_Citreon_DS3_Black : A3L_Citreon_DS3 {};
+	class A3L_Citreon_DS3_DarkBlue : A3L_Citreon_DS3 {};
+	class A3L_Citreon_DS3_Red : A3L_Citreon_DS3 {};
+	class A3L_Citreon_DS3_Yellow : A3L_Citreon_DS3 {};
+	class A3L_Citreon_DS3_Pink : A3L_Citreon_DS3 {};
+	class A3L_Citreon_DS3_Grey : A3L_Citreon_DS3 {};
+	class A3L_Citreon_DS3_Purple : A3L_Citreon_DS3 {};
+	class A3L_Citreon_DS3_Orange : A3L_Citreon_DS3 {};
+
+	class A3L_Citreon_C4
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"A3L_Citreon_C4_Black",
+			"A3L_Citreon_C4_DarkBlue",
+			"A3L_Citreon_C4_Grey",
+			"A3L_Citreon_C4_Orange",
+			"A3L_Citreon_C4_Pink",
+			"A3L_Citreon_C4_Purple",
+			"A3L_Citreon_C4_Red",
+			"A3L_Citreon_C4_White",
+			"A3L_Citreon_C4_Yellow"
+		};
+		realname = "Citroen C4";
+	};
+
+	class A3L_Citreon_C4_Black : A3L_Citreon_C4 {};
+	class A3L_Citreon_C4_DarkBlue : A3L_Citreon_C4 {};
+	class A3L_Citreon_C4_Grey : A3L_Citreon_C4 {};
+	class A3L_Citreon_C4_Orange : A3L_Citreon_C4 {};
+	class A3L_Citreon_C4_Pink : A3L_Citreon_C4 {};
+	class A3L_Citreon_C4_Purple : A3L_Citreon_C4 {};
+	class A3L_Citreon_C4_Red : A3L_Citreon_C4 {};
+	class A3L_Citreon_C4_White : A3L_Citreon_C4 {};
+	class A3L_Citreon_C4_Yellow : A3L_Citreon_C4 {};
+
+	class A3L_Ford_Raptor
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"A3L_Ford_Raptor_White",
+			"A3L_Ford_Raptor_Black",
+			"A3L_Ford_Raptor_DarkBlue",
+			"A3L_Ford_Raptor_Red",
+			"A3L_Ford_Raptor_Yellow",
+			"A3L_Ford_Raptor_Pink",
+			"A3L_Ford_Raptor_Grey",
+			"A3L_Ford_Raptor_Purple",
+			"A3L_Ford_Raptor_Orange"
+		};
+		realname = "Ford Raptor";
+	};
+
+	class A3L_Ford_Raptor_White : A3L_Ford_Raptor {};
+	class A3L_Ford_Raptor_Black : A3L_Ford_Raptor {};
+	class A3L_Ford_Raptor_DarkBlue : A3L_Ford_Raptor {};
+	class A3L_Ford_Raptor_Red : A3L_Ford_Raptor {};
+	class A3L_Ford_Raptor_Yellow : A3L_Ford_Raptor {};
+	class A3L_Ford_Raptor_Pink : A3L_Ford_Raptor {};
+	class A3L_Ford_Raptor_Grey : A3L_Ford_Raptor {};
+	class A3L_Ford_Raptor_Purple : A3L_Ford_Raptor {};
+	class A3L_Ford_Raptor_Orange : A3L_Ford_Raptor {};
+
+	class A3L_GolfVI
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"A3L_GolfVI_Red",
+			"A3L_GolfVI_Black",
+			"A3L_GolfVI_DarkBlue",
+			"A3L_GolfVI_Yellow",
+			"A3L_GolfVI_Pink",
+			"A3L_GolfVI_Grey",
+			"A3L_GolfVI_Purple",
+			"A3L_GolfVI_Orange"
+		};
+		realname = "Golf VI";
+	};
+
+	class A3L_GolfVI_Red : A3L_GolfVI {};
+	class A3L_GolfVI_Black : A3L_GolfVI {};
+	class A3L_GolfVI_DarkBlue : A3L_GolfVI {};
+	class A3L_GolfVI_Yellow : A3L_GolfVI {};
+	class A3L_GolfVI_Pink : A3L_GolfVI {};
+	class A3L_GolfVI_Grey : A3L_GolfVI {};
+	class A3L_GolfVI_Purple : A3L_GolfVI {};
+	class A3L_GolfVI_Orange : A3L_GolfVI {};
+
+	class A3L_Jeep_Cherokee
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"A3L_Jeep_Cherokee_Black",
+			"A3L_Jeep_Cherokeee_BlackMatte",
+			"A3L_Jeep_Cherokee_DarkBlue",
+			"A3L_Jeep_Cherokee_DarkBlueMatte",
+			"A3L_Jeep_Cherokee_White",
+			"A3L_Jeep_Cherokee_WhiteMatte",
+			"A3L_Jeep_Cherokee_Purple",
+			"A3L_Jeep_Cherokee_PurpleMatte",
+			"A3L_Jeep_Cherokee_Red",
+			"A3L_Jeep_Cherokee_RedMatte"
+		};
+		realname = "Jeep Cherokee";
+	};
+
+	class A3L_Jeep_Cherokee_Black : A3L_Jeep_Cherokee {};
+	class A3L_Jeep_Cherokeee_BlackMatte : A3L_Jeep_Cherokee {};
+	class A3L_Jeep_Cherokee_DarkBlue : A3L_Jeep_Cherokee {};
+	class A3L_Jeep_Cherokee_DarkBlueMatte : A3L_Jeep_Cherokee {};
+	class A3L_Jeep_Cherokee_White : A3L_Jeep_Cherokee {};
+	class A3L_Jeep_Cherokee_WhiteMatte : A3L_Jeep_Cherokee {};
+	class A3L_Jeep_Cherokee_Purple : A3L_Jeep_Cherokee {};
+	class A3L_Jeep_Cherokee_PurpleMatte : A3L_Jeep_Cherokee {};
+	class A3L_Jeep_Cherokee_Red : A3L_Jeep_Cherokee {};
+	class A3L_Jeep_Cherokee_RedMatte : A3L_Jeep_Cherokee {};
+
+	class A3L_Mercedes_ML63
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"A3L_Mercedes_ML63_White",
+			"A3L_Mercedes_ML63_Red",
+			"A3L_Mercedes_ML63_Pink",
+			"A3L_Mercedes_ML63_DarkBlue",
+			"A3L_Mercedes_ML63_Black",
+			"A3L_Mercedes_ML63_Yellow",
+			"A3L_Mercedes_ML63_Orange"
+		};
+		realname = "Mercedes ML63";
+	};
+
+	class A3L_Mercedes_ML63_White : A3L_Mercedes_ML63 {};
+	class A3L_Mercedes_ML63_Red : A3L_Mercedes_ML63 {};
+	class A3L_Mercedes_ML63_Pink : A3L_Mercedes_ML63 {};
+	class A3L_Mercedes_ML63_DarkBlue : A3L_Mercedes_ML63 {};
+	class A3L_Mercedes_ML63_Black : A3L_Mercedes_ML63 {};
+	class A3L_Mercedes_ML63_Yellow : A3L_Mercedes_ML63 {};
+	class A3L_Mercedes_ML63_Orange : A3L_Mercedes_ML63 {};
+
+	class A3L_Smartcar
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"A3L_Smartcar_Red",
+			"A3L_Smartcar_Black",
+			"A3L_Smartcar_Blue"
+		};
+		realname = "Smart";
+	};
+
+	class A3L_Smartcar_Red : A3L_Smartcar {};
+	class A3L_Smartcar_Black : A3L_Smartcar {};
+	class A3L_Smartcar_Blue : A3L_Smartcar {};
+
+	class A3L_Subaru_WRX
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"A3L_Subaru_WRX_Red",
+			"A3L_Subaru_WRX_Black",
+			"A3L_Subaru_WRX_DarkBlue",
+			"A3L_Subaru_WRX_Yellow",
+			"A3L_Subaru_WRX_Pink",
+			"A3L_Subaru_WRX_Grey",
+			"A3L_Subaru_WRX_Purple",
+			"A3L_Subaru_WRX_Orange"
+		};
+		realname = "Smart";
+	};
+
+	class A3L_Subaru_WRX_Red : A3L_Subaru_WRX {};
+	class A3L_Subaru_WRX_Black : A3L_Subaru_WRX {};
+	class A3L_Subaru_WRX_DarkBlue : A3L_Subaru_WRX {};
+	class A3L_Subaru_WRX_Yellow : A3L_Subaru_WRX {};
+	class A3L_Subaru_WRX_Pink : A3L_Subaru_WRX {};
+	class A3L_Subaru_WRX_Grey : A3L_Subaru_WRX {};
+	class A3L_Subaru_WRX_Purple : A3L_Subaru_WRX {};
+	class A3L_Subaru_WRX_Orange : A3L_Subaru_WRX {};
+
+  	class A3L_Peugeot_308_RCZ
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"A3L_Peugeot_308_RCZ_Red",
+			"A3L_Peugeot_308_RCZ_Black",
+			"AA3L_Peugeot_308_RCZ_DarkBlue",
+			"A3L_Peugeot_308_RCZ_Yellow",
+			"A3L_Peugeot_308_RCZ_Pink",
+			"A3L_Peugeot_308_RCZ_Grey",
+			"A3L_Peugeot_308_RCZ_Purple",
+			"A3L_Peugeot_308_RCZ_Orange"
+		};
+		realname = "Peugeot 308";
+	};
+
+	class A3L_Peugeot_308_RCZ_Red : A3L_Peugeot_308_RCZ {};
+	class A3L_Peugeot_308_RCZ_Black : A3L_Peugeot_308_RCZ {};
+	class AA3L_Peugeot_308_RCZ_DarkBlue : A3L_Peugeot_308_RCZ {};
+	class A3L_Peugeot_308_RCZ_Yellow : A3L_Peugeot_308_RCZ {};
+	class A3L_Peugeot_308_RCZ_Pink : A3L_Peugeot_308_RCZ {};
+	class A3L_Peugeot_308_RCZ_Grey : A3L_Peugeot_308_RCZ {};
+	class A3L_Peugeot_308_RCZ_Purple : A3L_Peugeot_308_RCZ {};
+	class A3L_Peugeot_308_RCZ_Orange : A3L_Peugeot_308_RCZ {};
+
   	class SAL_77TRANSAMCiv
 	{
 		buyPrice = 25000;
@@ -506,9 +907,7 @@ class ALYSIA_VEHICLES
 		donator = 0;
 		license = "driver";
 		rank = 0;
-		colors[] = {
-			"Skyline_G65_01_F"
-		};
+		colors[] = {};
 		realname = "Mercedes G65 AMG";
 	};
 
@@ -599,7 +998,7 @@ class ALYSIA_VEHICLES
 		realname = "MK 23";
 	};
 
-	class DDAR_MK27
+	class DAR_MK27
 	{
 		buyPrice = 25000;
 		inventory = 150;
@@ -824,7 +1223,7 @@ class ALYSIA_VEHICLES
 		side = "CIV";
 		insurance = 1;
 		donator = 0;
-		license = "driver";
+		license = "taxi";
 		rank = 0;
 		colors[] = {};
 		realname = "Crown Victoria Taxi";
@@ -909,13 +1308,9 @@ class ALYSIA_VEHICLES
 		donator = 0;
 		license = "driver";
 		rank = 0;
-		colors[] = {
-			"C_Van_01_transport_F",
-			"RDS_Van_01_transport_F"
-		};
+		colors[] = {};
 		realname = "Camionnette";
 	};
-  	class RDS_Van_01_transport_F : C_Van_01_transport_F {};
 
     class C_Van_01_box_F
 	{
@@ -926,13 +1321,10 @@ class ALYSIA_VEHICLES
 		donator = 0;
 		license = "driver";
 		rank = 0;
-		colors[] = {
-			"C_Van_01_box_F",
-			"RDS_Van_01_box_F"
-		};
+		colors[] = {};
 		realname = "Camionnette Caisse";
 	};
-  	class RDS_Van_01_box_F : C_Van_01_box_F {};
+
 
     class RDS_Gaz24_Civ
 	{
@@ -963,9 +1355,7 @@ class ALYSIA_VEHICLES
 		donator = 0;
 		license = "driver";
 		rank = 0;
-		colors[] = {
-			"RDS_Golf4_Civ_01"
-		};
+		colors[] = {};
 		realname = "Golf IV";
 	};
 
@@ -994,13 +1384,20 @@ class ALYSIA_VEHICLES
 		side = "CIV";
 		insurance = 1;
 		donator = 0;
-		license = "driver";
+		license = "";
 		rank = 0;
 		colors[] = {
-			"C_Quadbike_01_F"
+			"C_Quadbike_01_black_F",
+			"C_Quadbike_01_blue_F",
+			"C_Quadbike_01_red_F",
+			"C_Quadbike_01_white_F"
 		};
 		realname = "Quad";
 	};
+	class C_Quadbike_01_black_F : C_Quadbike_01_F {};
+	class C_Quadbike_01_blue_F : C_Quadbike_01_F {};
+	class C_Quadbike_01_red_F : C_Quadbike_01_F {};
+	class C_Quadbike_01_white_F : C_Quadbike_01_F {};
 
 	class RDS_S1203_Civ_01
 	{
@@ -1011,9 +1408,7 @@ class ALYSIA_VEHICLES
 		donator = 0;
 		license = "driver";
 		rank = 0;
-		colors[] = {
-			"RDS_S1203_Civ_01"
-		};
+		colors[] = {};
 		realname = "Skoda 1203";
 	};
 
@@ -1026,9 +1421,7 @@ class ALYSIA_VEHICLES
 		donator = 0;
 		license = "driver";
 		rank = 0;
-		colors[] = {
-			"RDS_Octavia_Civ_01"
-		};
+		colors[] = {};
 		realname = "Skoda Octavia";
 	};
 
@@ -1042,10 +1435,25 @@ class ALYSIA_VEHICLES
 		license = "driver";
 		rank = 0;
 		colors[] = {
-			"C_Offroad_01_F"
+			"C_Offroad_01_red_F",
+			"C_Offroad_01_sand_F",
+			"C_Offroad_01_white_F",
+			"C_Offroad_01_blue_F",
+			"C_Offroad_01_darkred_F",
+			"C_Offroad_luxe_F",
+			"C_Offroad_default_F",
+			"C_Offroad_stripped_F"
 		};
 		realname = "Pick Up";
 	};
+  	class C_Offroad_01_red_F : C_Offroad_01_F {};
+  	class C_Offroad_01_sand_F : C_Offroad_01_F {};
+  	class C_Offroad_01_white_F : C_Offroad_01_F {};
+  	class C_Offroad_01_blue_F : C_Offroad_01_F {};
+  	class C_Offroad_01_darkred_F : C_Offroad_01_F {};
+  	class C_Offroad_luxe_F : C_Offroad_01_F {};
+  	class C_Offroad_default_F : C_Offroad_01_F {};
+  	class C_Offroad_stripped_F : C_Offroad_01_F {};
 
 	class RDS_Lada_Civ
 	{
@@ -1173,11 +1581,153 @@ class ALYSIA_VEHICLES
 		donator = 0;
 		license = "boat";
 		rank = 0;
-		colors[] = {
-			"C_Boat_Civil_01_F"
-		};
+		colors[] = {};
 		realname = "Bateau à moteur civil";
 	};
+
+  	class C_Heli_light
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "pilot";
+		rank = 0;
+		colors[] = {
+			"C_Heli_light_01_blue_F",
+			"C_Heli_light_01_red_F",
+			"C_Heli_light_01_ion_F",
+			"C_Heli_light_01_blueLine_F",
+			"C_Heli_light_01_digital_F",
+			"C_Heli_light_01_elliptical_F",
+			"C_Heli_light_01_furious_F",
+			"C_Heli_light_01_graywatcher_F",
+			"C_Heli_light_01_jeans_F",
+			"C_Heli_light_01_light_F",
+			"C_Heli_light_01_shadow_F",
+			"C_Heli_light_01_sheriff_F",
+			"C_Heli_light_01_speedy_F",
+			"C_Heli_light_01_sunset_F",
+			"C_Heli_light_01_vrana_F",
+			"C_Heli_light_01_wasp_F",
+			"C_Heli_light_01_wave_F",
+			"C_Heli_light_01_stripped_F",
+			"C_Heli_light_01_luxe_F"
+			};
+		realname = "Little BIrd";
+	};
+  	class C_Heli_light_01_blue_F : C_Heli_light {};
+  	class C_Heli_light_01_red_F : C_Heli_light {};
+  	class C_Heli_light_01_ion_F : C_Heli_light {};
+  	class C_Heli_light_01_blueLine_F : C_Heli_light {};
+  	class C_Heli_light_01_digital_F : C_Heli_light {};
+  	class C_Heli_light_01_elliptical_F : C_Heli_light {};
+  	class C_Heli_light_01_furious_F : C_Heli_light {};
+  	class C_Heli_light_01_graywatcher_F : C_Heli_light {};
+  	class C_Heli_light_01_jeans_F : C_Heli_light {};
+  	class C_Heli_light_01_light_F : C_Heli_light {};
+  	class C_Heli_light_01_shadow_F : C_Heli_light {};
+  	class C_Heli_light_01_sheriff_F : C_Heli_light {};
+  	class C_Heli_light_01_speedy_F : C_Heli_light {};
+  	class C_Heli_light_01_sunset_F : C_Heli_light {};
+  	class C_Heli_light_01_vrana_F : C_Heli_light {};
+  	class C_Heli_light_01_wasp_F : C_Heli_light {};
+  	class C_Heli_light_01_wave_F : C_Heli_light {};
+  	class C_Heli_light_01_stripped_F : C_Heli_light {};
+  	class C_Heli_light_01_luxe_F : C_Heli_light {};	
+
+  	class Fett_orca
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "pilot";
+		rank = 0;
+		colors[] = {
+			"Fett_orca_white",
+			"Fett_orca_blue",
+			"Fett_orca_bloodice",
+			"Fett_orca_dpm6",
+			"Fett_orca_DPU",
+			"Fett_orca_frostbite",
+			"Fett_orca_jungle",
+			"Fett_orca_matrix",
+			"Fett_orca_tiger",
+			"Fett_orca_tiger_jungle",
+			"Fett_orca_red"
+			};
+		realname = "Orca";
+	};
+  	class Fett_orca_white : Fett_orca {};
+  	class Fett_orca_blue : Fett_orca {};
+  	class Fett_orca_bloodice : Fett_orca {};
+  	class Fett_orca_dpm6 : Fett_orca {};
+  	class Fett_orca_DPU : Fett_orca {};
+  	class Fett_orca_frostbite : Fett_orca {};
+  	class Fett_orca_jungle : Fett_orca {};
+  	class Fett_orca_matrix : Fett_orca {};
+  	class Fett_orca_tiger : Fett_orca {};
+  	class Fett_orca_tiger_jungle : Fett_orca {};
+  	class Fett_orca_red : Fett_orca {};
+
+  	class Fett_mohawk
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "pilot";
+		rank = 0;
+		colors[] = {
+			"Fett_mohawk_matrix",
+			"Fett_mohawk_jungle",
+			"Fett_mohawk_frostbite",
+			"Fett_mohawk_blue",
+			"Fett_mohawk_DPU",
+			"Fett_mohawk_dpm6",
+			"Fett_mohawk_bloodice",
+			"Fett_mohawk_tiger_jungle",
+			"Fett_mohawk_orange",
+			"Fett_mohawk_green",
+			"Fett_mohawk_red",
+			"Fett_mohawk_tiger"
+			};
+		realname = "Mohawk";
+	};
+  	class Fett_mohawk_matrix : Fett_mohawk {};
+  	class Fett_mohawk_jungle : Fett_mohawk {};
+  	class Fett_mohawk_frostbite : Fett_mohawk {};
+  	class Fett_mohawk_blue : Fett_mohawk {};
+  	class Fett_mohawk_DPU : Fett_mohawk {};
+  	class Fett_mohawk_dpm6 : Fett_mohawk {};
+  	class Fett_mohawk_bloodice : Fett_mohawk {};
+  	class Fett_mohawk_tiger_jungle : Fett_mohawk {};
+  	class Fett_mohawk_orange : Fett_mohawk {};
+  	class Fett_mohawk_green : Fett_mohawk {};
+  	class Fett_mohawk_red : Fett_mohawk {};
+  	class Fett_mohawk_tiger : Fett_mohawk {};
+
+  	class dezkit_b206
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "pilot";
+		rank = 0;
+		colors[] = {
+			"dezkit_b206_ls",
+			"dezkit_b206_hs"
+			};
+		realname = "B206";
+	};
+  	class dezkit_b206_ls : dezkit_b206 {};
+  	class dezkit_b206_hs : dezkit_b206 {};
 
   /*
 	**				WEST VEHICLES
@@ -1193,6 +1743,32 @@ class ALYSIA_VEHICLES
 		rank = 3;
 		colors[] = {};
 		realname = "Chevrolet Tahoe Milice";
+	};
+
+	class Fett_boat_milice
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "WEST";
+		insurance = 1;
+		donator = 0;
+		license = "";
+		rank = 3;
+		colors[] = {};
+		realname = "Bateau à moteur";
+	};
+
+	class DAR_ImpalaPolice
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "WEST";
+		insurance = 1;
+		donator = 0;
+		license = "";
+		rank = 3;
+		colors[] = {};
+		realname = "Impala Milice";
 	};
 
 	class DAR_ChargerPoliceState
@@ -1273,6 +1849,23 @@ class ALYSIA_VEHICLES
 		realname = "EC635 Milice";
 	};
 
+	class dezkit_b206mi
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "WEST";
+		insurance = 1;
+		donator = 0;
+		license = "";
+		rank = 3;
+		colors[] = {
+			"dezkit_b206_police",
+			"dezkit_b206_fbi"
+		};
+		realname = "B206 Milice";
+	};
+	class dezkit_b206_police : dezkit_b206mi {};
+	class dezkit_b206_fbi : dezkit_b206mi {};
   
   /*
 	**				EAST VEHICLES
@@ -1292,6 +1885,58 @@ class ALYSIA_VEHICLES
 		rank = 1;
 		colors[] = {};
 		realname = "Ambulance";
+	};
+
+	class Fett_boat_samu
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "GUER";
+		insurance = 1;
+		donator = 0;
+		license = "";
+		rank = 1;
+		colors[] = {};
+		realname = "Bateau à moteur";
+	};
+
+	class DAR_TaurusPoliceState
+	{
+		buyPrice = 25000;
+		inventory = 70;
+		side = "GUER";
+		insurance = 1;
+		donator = 0;
+		license = "";
+		rank = 5;
+		colors[] = {};
+		realname = "Ford Taurus SAMU";
+	};
+
+	class Fett_zamak_repair_samu
+	{
+		buyPrice = 25000;
+		inventory = 450;
+		side = "GUER";
+		insurance = 1;
+		donator = 0;
+		license = "";
+		rank = 2;
+		colors[] = {};
+		realname = "Zamak Transport de médicament";
+	};
+
+	class Fett_zamak_covered_samu
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "GUER";
+		insurance = 1;
+		donator = 0;
+		license = "";
+		rank = 3;
+		colors[] = {};
+		realname = "Zamak Stand SAMU";
 	};
 
 	class DAR_TahoeEMS
@@ -1332,4 +1977,23 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		realname = "EC635 SAMU";
 	};
+
+	class dezkit_b206ems
+	{
+		buyPrice = 250000;
+		inventory = 70;
+		side = "GUER";
+		insurance = 1;
+		donator = 0;
+		license = "";
+		rank = 3;
+		colors[] = {
+			"dezkit_b206_ems",
+			"dezkit_b206_rescue"
+		};
+		realname = "EC635 SAMU";
+	};
+	class dezkit_b206_ems : dezkit_b206ems {};
+	class dezkit_b206_rescue : dezkit_b206ems {};
 };
+	

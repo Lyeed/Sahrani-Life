@@ -15,6 +15,8 @@ if (true) then
 	[["+100.000$ (porte-feuille)", {g_cash = g_cash + 100000;}]] call CBA_fnc_addPlayerAction;
 	[["+100.000$ (compte)", {g_atm = g_atm + 100000;}]] call CBA_fnc_addPlayerAction;
 	[["Réparer cursorTarget", {cursorTarget setDamage 0;}]] call CBA_fnc_addPlayerAction;
+	[["+ 1 GPS", {player addItem "ItemGPS";}]] call CBA_fnc_addPlayerAction;
+	[["+ 1 Tenue (Alysia)", {player forceAddUniform "U_C_Alysia_01";}]] call CBA_fnc_addPlayerAction;
 };
 
 /* ==================[CONFIG]===================*/
@@ -25,9 +27,9 @@ if ((getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "can
 /* ==================[MEDICAL]===================*/
 //[["Se faire une <t color='#FF802B'>piqure de morphine</t>", public_fnc_morphine, "self", 0, false, true, "", '("SkylineItems_Adrenaline" in (magazines player)) && !g_coma && (vehicle player == player) && !g_action_inUse']] call CBA_fnc_addPlayerAction;
 //---------------
-[["Se transferer du <t color='#FF802B'>sang</t>", public_fnc_bloodBagUse, "self", 0, false, true, "", '(g_blood < 3500) && ("SkylineItems_PocheSang" in (magazines player)) && !g_coma && (vehicle player == player) && !g_action_inUse']] call CBA_fnc_addPlayerAction;
+// [["Se transferer du <t color='#FF802B'>sang</t>", public_fnc_bloodBagUse, "self", 0, false, true, "", '(g_blood < 3500) && ("SkylineItems_PocheSang" in (magazines player)) && !g_coma && (vehicle player == player) && !g_action_inUse']] call CBA_fnc_addPlayerAction;
 //---------------
-[["Se faire un <t color='#FF802B'>bandage</t>", public_fnc_bandageUse, "self", 0, true, true, "", '(g_bleed > 0) && ("SkylineItems_Bandage" in (magazines player)) && !g_coma && !g_action_inUse']] call CBA_fnc_addPlayerAction;
+// [["Se faire un <t color='#FF802B'>bandage</t>", public_fnc_bandageUse, "self", 0, true, true, "", '(g_bleed > 0) && ("SkylineItems_Bandage" in (magazines player)) && !g_coma && !g_action_inUse']] call CBA_fnc_addPlayerAction;
 //---------------
 
 /* ==================[PLAYER INTERACTION]===================
