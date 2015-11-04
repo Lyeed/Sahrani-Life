@@ -7,7 +7,7 @@ More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
 if (!params [
-	["_item", ObjNull, [ObjNull]],
+	["_item", ObjNull, [ObjNull]]
 ]) exitWith {};
 
 private ["_time"];

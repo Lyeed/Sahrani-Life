@@ -9,7 +9,7 @@ More informations : https://www.bistudio.com/community/game-content-usage-rules
 if (!params [
 	["_bank", ObjNull, [ObjNull]],
 	["_door", "", [""]],
-	["_tool", ObjNull, [ObjNull]
+	["_tool", ObjNull, [ObjNull]]
 ]) exitWith {};
 
 private ["_item"];
