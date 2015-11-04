@@ -36,10 +36,10 @@
 			text = "<t align = 'center' size = '1.5'>Distributeur</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
-			x = 0.389062 * safezoneW + safezoneX;
-			y = 0.346815 * safezoneH + safezoneY;
-			w = 0.224531 * safezoneW;
-			h = 0.0422594 * safezoneH;
+			x = 0.389656 * safezoneW + safezoneX;
+			y = 0.34688 * safezoneH + safezoneY;
+			w = 0.223749 * safezoneW;
+			h = 0.047815 * safezoneH;
 		};
 		
 		class BALANCE_FRAME: RscFrame
