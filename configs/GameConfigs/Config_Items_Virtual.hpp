@@ -66,7 +66,7 @@ class ALYSIA_ITEMS
 		illegal = 0;
 		market      = 0;
 		removable = 1;
-		use         = "[""water""] call public_fnc_eatFood;";;
+		use         = "[""water""] call public_fnc_eatFood;";
 		image       = "Alysia_textures\data\life_inv_banane.paa";
 	};
 
