@@ -831,4 +831,30 @@ class ALYSIA_ITEMS
 		use = "";
 		image       = "Alysia_textures\data\life_inv_banane.paa";
 	};
+
+	class cerealbar
+	{
+		name        = "Barre de céréale";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "[""cerealbar""] call public_fnc_eatFood;";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class sparklingwater
+	{
+		name        = "Eau gazeuse";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "[""sparklingwater""] call public_fnc_eatFood;";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
 };
