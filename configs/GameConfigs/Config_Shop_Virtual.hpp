@@ -37,7 +37,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Hopital";
 		side = "sideUnknown";
-		items[] = {{"patch", "seringue"}, {}};
+		items[] = {{"patch", "seringue", "cerealbar", "sparklingwater"}, {}};
 		background = "\lyeed_IMG\data\shop\back_hopital.jpg";
 	};
 
