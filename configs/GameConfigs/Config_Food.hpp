@@ -9,56 +9,14 @@
 class ALYSIA_FOOD 
 {
 
-	class mackerel
-	{
-		hunger = 30;
-		thirst = 0;
-		sound = "eat";
-	};
-
-	class salema
-	{
-		hunger = 30;
-		thirst = 0;
-		sound = "eat";
-	};
-
-	class ornate
-	{
-		hunger = 20;
-		thirst = 0;
-		sound = "eat";
-	};
-
-	class tuna
-	{
-		hunger = 100;
-		thirst = 0;
-		sound = "eat";
-	};
-
-	class mullet
-	{
-		hunger = 80;
-		thirst = 0;
-		sound = "eat";
-	};
-
-	class catshark
-	{
-		hunger = 100;
-		thirst = 0;
-		sound = "eat";
-	};
-
-	class banane
+	class prune
 	{
 		hunger = 40;
 		thirst = -10;
 		sound = "eat";
 	};
 
-	class mangue
+	class raisin
 	{
 		hunger = 30;
 		thirst = 10;
@@ -77,5 +35,54 @@ class ALYSIA_FOOD
 		thirst = 50;
 		hunger = 0;
 		sound = "drink";
+	};
+
+	class cerealbar
+	{
+		thirst = 0;
+		hunger = 50;
+		sound = "eat";
+	};
+
+	class sparklingwater
+	{
+		thirst = 50;
+		hunger = 0;
+		sound = "eat";
+	};
+
+	class donut
+	{
+		thirst = 0;
+		hunger = 50;
+		sound = "eat";
+	};
+
+	class soda
+	{
+		thirst = 50;
+		hunger = 0;
+		sound = "drink";
+	};
+
+	class ragout
+	{
+		thirst = 0;
+		hunger = 50;
+		sound = "eat";
+	};
+
+	class kefir
+	{
+		thirst = 50;
+		hunger = 0;
+		sound = "drink";
+	};
+
+	class sandwich
+	{
+		thirst = 0;
+		hunger = 50;
+		sound = "eat";
 	};
 };
