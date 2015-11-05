@@ -30,7 +30,7 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Marché";
 		side = "sideUnknown";
 		// items[]= {{"water", "banane", "mangue", "fishingpoles", "storage", "fuelF"}, {"banane", "mangue"}};
-		items[]= {{"banane"}, {"banane"}};
+		items[]= {{"raisin", "prune", "water", "sandwich"}, {"raisin", "prune"}};
 	};
 	
 	class hopital
@@ -60,19 +60,19 @@ class ALYSIA_SHOPS_VIRTUAL
 
 	class west 
 	{
-		name = "Armée";
+		name = "Milice";
 		side = "west";
-		items[] = {{"water", "defusekit", "salive", "cone", "barriere", "murbetonarme", "bunkersable", "mursable", "couloirsable", 
-			"grandmurescalier", "gueritesable", "grandmur", "coinsable", "adn", "banane", "mangue", "handcuffkeys", "handcuffs", 
+		items[] = {{"defusekit", "salive", "cone", "barriere", "murbetonarme", "bunkersable", "mursable", "couloirsable", 
+			"grandmurescalier", "gueritesable", "grandmur", "coinsable", "adn", "donut", "soda", "handcuffkeys", "handcuffs", 
 			"kit_destru", "spikeStrip", "bip", "storage"}, {}};
 		background = "\lyeed_IMG\data\shop\back_west.jpg";
 	};
 
 	class east
 	{
-		name = "Gouvernement";
+		name = "Garde";
 		side = "east";
-		items[] = {{}, {}};
+		items[] = {{"ragout", "kefir"}, {}};
 		background = "\lyeed_IMG\data\shop\back_east.jpg";
 	};
 

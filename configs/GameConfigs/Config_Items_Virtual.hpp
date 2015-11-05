@@ -857,4 +857,82 @@ class ALYSIA_ITEMS
 		use         = "[""sparklingwater""] call public_fnc_eatFood;";
 		image       = "Alysia_textures\data\life_inv_banane.paa";
 	};
+
+	class prune
+	{
+		name        = "Prune";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "[""prune""] call public_fnc_eatFood;";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class sandwich
+	{
+		name        = "Sandwich au jambon";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "[""sandwich""] call public_fnc_eatFood;";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class donut
+	{
+		name        = "Beignet";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "[""donut""] call public_fnc_eatFood;";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class soda
+	{
+		name        = "Soda";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "[""soda""] call public_fnc_eatFood;";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class ragout
+	{
+		name        = "Boite de ragout";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "[""ragout""] call public_fnc_eatFood;";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class kefir
+	{
+		name        = "Kéfir";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "[""kefir""] call public_fnc_eatFood;";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
 };
