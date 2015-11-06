@@ -304,6 +304,83 @@ class RscHudPlayer
 			w = 0.108281 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
+
+		class WEAPON_BACKGROUND: RscText
+		{
+			idc = 23530;
+			colorBackground[] = {0,0,0,0.6};
+
+			x = 0.783594 * safezoneW + safezoneX;
+			y = 0.049 * safezoneH + safezoneY;
+			w = 0.175313 * safezoneW;
+			h = 0.099 * safezoneH;
+		};
+		class WEAPON_FRAME: RscFrame
+		{
+			idc = 23531;
+			colorText[] = {0,0,0,0.8};
+
+			x = 0.783594 * safezoneW + safezoneX;
+			y = 0.016 * safezoneH + safezoneY;
+			w = 0.175313 * safezoneW;
+			h = 0.132 * safezoneH;
+		};
+
+		class WEAPON_NAME: RscStructuredText
+		{
+			idc = 23532;
+			text = "";
+			colorBackground[] = {0,0,0,0.8};
+
+			x = 0.783594 * safezoneW + safezoneX;
+			y = 0.016 * safezoneH + safezoneY;
+			w = 0.175313 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+
+		class AMMO_NAME_IMAGE: RscPicture
+		{
+			idc = 23533;
+			text = "\lyeed_IMG\data\player_hud\weapon_bullet_name.paa";
+			
+			x = 0.78875 * safezoneW + safezoneX;
+			y = 0.06 * safezoneH + safezoneY;
+			w = 0.020625 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+		class AMMO_NAME_INFO: RscStructuredText
+		{
+			idc = 23534;
+			text = "";
+			colorBackground[] = {-1,-1,-1,0};
+			
+			x = 0.813438 * safezoneW + safezoneX;
+			y = 0.0646296 * safezoneH + safezoneY;
+			w = 0.103125 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+
+		class WEAPON_MOD_IMAGE: RscPicture
+		{
+			idc = 23535;
+			text = "\lyeed_IMG\data\player_hud\weapon_mod.paa";
+
+			x = 0.78875 * safezoneW + safezoneX;
+			y = 0.104 * safezoneH + safezoneY;
+			w = 0.020625 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+		class WEAPON_MOD_INFO: RscStructuredText
+		{
+			idc = 23536;
+			text = "";
+			colorBackground[] = {-1,-1,-1,0};
+
+			x = 0.8125 * safezoneW + safezoneX;
+			y = 0.110185 * safezoneH + safezoneY;
+			w = 0.103125 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
 	};
 
 	class controls {};

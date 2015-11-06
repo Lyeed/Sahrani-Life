@@ -46,6 +46,18 @@ if ((vehicle player) isEqualTo player) then
 				};
 			};
 		};
+
+		{
+			if (player distance (getMarkerPos _x) < 40) exitWith {
+				_marker = _x;
+			};
+		} forEach (getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "farming_markers_plant"));
+		if (!(isNil "_marker")) then
+		{
+			[_marker] spawn public_fnc_plantSeed;
+			true;
+		};
+
 	} else {
 		if ((player distance cursorTarget) < ((((boundingBox cursorTarget) select 1) select 0) + 2.5)) then
 		{
@@ -114,6 +126,12 @@ if ((vehicle player) isEqualTo player) then
 					{
 						// Réactiver/Defuse Bomb/Drill
 						[(cursorTarget getVariable ["bank", ObjNull]), "", cursorTarget] call public_fnc_robberyProcess;
+						true;
+					};
+					if (typeOf(cursorTarget) in (call g_plants)) exitWith then
+					{
+						[cursorTarget] call public_fnc_plantHarvest;
+						true;
 					};
 				};
 			};
@@ -172,14 +190,7 @@ if ((vehicle player) isEqualTo player) then
 				[_marker] spawn public_fnc_pickGather; 
 			};
 
-			{
-				if (player distance (getMarkerPos _x) < 40) exitWith {
-					_marker = _x;
-				};
-			} forEach (getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "farming_markers_plant"));
-			if (!(isNil "_marker")) exitWith {
-				[_marker] spawn public_fnc_plantSeed;
-			};
+
 
 			_plant = (nearestObjects [player, [call g_plants], 3]) select 0;
 			if (!(isNil "_plant")) exitWith {
@@ -213,9 +224,7 @@ if ((vehicle player) isEqualTo player) then
 			if (_curDistance < 4) then
 			{
 
-				if (_curType in (call g_plants)) exitWith {
-					[_curTarget] call public_fnc_plantHarvest;
-				};
+
 
 				if (_curType in ["Salema_F", "Ornate_random_F", "Mackerel_F", "Tuna_F", "Mullet_F", "CatShark_F"]) exitWith {
 					[_curTarget] spawn public_fnc_catchFish; 

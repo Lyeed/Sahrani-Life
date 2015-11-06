@@ -57,6 +57,7 @@ with missionNamespace do
 	g_cash = 0;
 	g_atm = 0;
 	g_paycheck = 0;
+	g_paycheck_period = compileFinal "5";
 	/* ===================[Levels]======================= */
 	g_WESTLevel = 0;
 	g_EASTLevel = 0;
