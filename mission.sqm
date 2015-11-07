@@ -5139,7 +5139,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=120;
+		items=123;
 		class Item0
 		{
 			position[]={10548.405,122.985,9604.9873};
@@ -5636,7 +5636,7 @@ class Mission
 		};
 		class Item51
 		{
-			position[]={8132.2979,176.985,7792.2373};
+			position[]={8129.6738,176.985,7778.248};
 			name="Stand";
 			text="Stand";
 			type="plp_mark_as_quad";
@@ -5774,14 +5774,14 @@ class Mission
 		};
 		class Item66
 		{
-			position[]={10559.543,122.985,9568.3838};
+			position[]={9528.2266,139.995,9824.9453};
 			name="west_spawn";
 			text="west_spawn";
 			type="Empty";
 		};
 		class Item67
 		{
-			position[]={14266.991,39.959999,12546.721};
+			position[]={11918.279,153,15340.142};
 			name="east_spawn";
 			text="east_spawn";
 			type="Empty";
@@ -6152,7 +6152,7 @@ class Mission
 			name="Base de la garde";
 			text="Base de la garde";
 			type="plp_mark_civ_campingsite";
-			colorName="ColorBlue";
+			colorName="ColorGrey";
 			a=0.5;
 			b=0.5;
 		};
@@ -6233,6 +6233,36 @@ class Mission
 			position[]={12514.357,179.88547,14939.543};
 			name="CIV_vehicles_land_luxe_marker_1";
 			type="Empty";
+		};
+		class Item120
+		{
+			position[]={11918.127,153,15357.602};
+			name="Base de la Milice";
+			text="Base de la Milice";
+			type="plp_mark_as_camp";
+			colorName="ColorBlue";
+			a=0.60000002;
+			b=0.60000002;
+		};
+		class Item121
+		{
+			position[]={14624.875,44.217304,10575.736};
+			name="Base relais de la milice";
+			text="Base relais de la milice";
+			type="plp_mark_as_camp";
+			colorName="ColorBlue";
+			a=0.5;
+			b=0.5;
+		};
+		class Item122
+		{
+			position[]={12365.904,31.995001,8476.6396};
+			name="Base relais de la garde";
+			text="Base relais de la garde";
+			type="plp_mark_civ_campingsite";
+			colorName="ColorGrey";
+			a=0.5;
+			b=0.5;
 		};
 	};
 };
