@@ -20,6 +20,7 @@ _action =
 		(_from getVariable["realname", (name _from)]),
 		_faction
 	],
+	"Recrutement",
 	"Accepter",
 	"Refuser"
 ] call BIS_fnc_guiMessage;

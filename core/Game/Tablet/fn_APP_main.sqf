@@ -48,24 +48,31 @@ _apps_more = false;
 	["\lyeed\images\app_licenses.paa","[""market""] spawn public_fnc_tabletApp;","Bourse","""MARKET"" in g_apps"]
 ]);
 
-if (_status isEqualTo 0) then
+(_display displayCtrl 7544) ctrlSetStructuredText parseText format["<t align='center' size='1.2' font='PuristaSemiBold'>%1</t>", (_status + 1)];
+
+for "_i" from _actual_idc to 7533 do
 {
-	if (_apps_more) then
-	{
-		(_display displayCtrl 7508) ctrlSetText "\lyeed\images\apps_next.paa";
-		(_display displayCtrl 7509) buttonSetAction "uiNamespace setVariable[""main_status"", 1]; [""MAIN""] spawn public_fnc_tabletApp;";
-	} else {
-		[[7508, 7509], false] call public_fnc_tabletShow;
-	};
-} else {
-	(_display displayCtrl 7508) ctrlSetText "\lyeed\images\apps_prev.paa";
-	(_display displayCtrl 7509) buttonSetAction "uiNamespace setVariable[""main_status"", 0]; [""MAIN""] spawn public_fnc_tabletApp;";
-	if (_actual_idc < 7534) then {
-		[[_actual_idc, 7533], false] call public_fnc_tabletShow;
-	};
+	[_i, false] call public_fnc_tabletShow;
 };
 
-private "_newSMS";
+if (_apps_more) then
+{
+	[7540, true] call public_fnc_tabletShow;
+	[7541, true] call public_fnc_tabletShow;
+} else {
+	[7540, false] call public_fnc_tabletShow;
+	[7541, false] call public_fnc_tabletShow;
+};
+
+if (_status > 0) then
+{
+	[7542, true] call public_fnc_tabletShow;
+	[7543, true] call public_fnc_tabletShow;
+} else {
+	[7542, false] call public_fnc_tabletShow;
+	[7543, false] call public_fnc_tabletShow;	
+};
+
 _newSMS = 0;
 {
 	if ((_x select 2) isEqualTo 0) then {
@@ -76,6 +83,8 @@ _newSMS = 0;
 if (_newSMS isEqualTo 0) then {
 	[[7503, 7504, 7505], false] call public_fnc_tabletShow;
 } else {
-	(_display displayCtrl 7505) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", _newSMS];
-	[[7503, 7504, 7505], true] call public_fnc_tabletShow;
+	(_display displayCtrl 7505) ctrlSetStructuredText parseText format["<t align='center' size='1.2' font='PuristaSemiBold'>%1</t>", _newSMS];
+	[7503, true] call public_fnc_tabletShow;
+	[7504, true] call public_fnc_tabletShow;
+	[7505, true] call public_fnc_tabletShow;
 };

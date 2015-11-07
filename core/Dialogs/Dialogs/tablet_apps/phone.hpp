@@ -1113,7 +1113,7 @@ class PHONE_CATEGORY_APP_1_BUTTON: RscButtonSilent
 class PHONE_CATEGORY_APP_1_TITLE: RscStructuredText
 {
 	idc = PHONE_CATEGORY_APP_1_TITLE_IDC;
-	text = "<t align='center' size='0.7'>Vos messages</t>";
+	text = "<t align='center' font='PuristaSemiBold' size='0.7'>Vos messages</t>";
 	colorBackground[] = {-1,-1,-1,0};
 
 	x = 0.329844 * safezoneW + safezoneX;
@@ -1148,7 +1148,7 @@ class PHONE_CATEGORY_APP_2_BUTTON: RscButtonSilent
 class PHONE_CATEGORY_APP_2_TITLE: RscStructuredText
 {
 	idc = PHONE_CATEGORY_APP_2_TITLE_IDC;
-	text = "<t align='center' size='0.7'>Contacts</t>";
+	text = "<t align='center' font='PuristaSemiBold' size='0.7'>Contacts</t>";
 	colorBackground[] = {-1,-1,-1,0};
 
 	x = 0.4175 * safezoneW + safezoneX;
@@ -1183,7 +1183,7 @@ class PHONE_CATEGORY_APP_3_BUTTON: RscButtonSilent
 class PHONE_CATEGORY_APP_3_TITLE: RscStructuredText
 {
 	idc = PHONE_CATEGORY_APP_3_TITLE_IDC;
-	text = "<t align='center' size='0.7'>Envoyer un message</t>";
+	text = "<t align='center' font='PuristaSemiBold' size='0.7'>Envoyer un message</t>";
 	colorBackground[] = {-1,-1,-1,0};
 
 	x = 0.494844 * safezoneW + safezoneX;
@@ -1218,7 +1218,7 @@ class PHONE_CATEGORY_APP_4_BUTTON: RscButtonSilent
 class PHONE_CATEGORY_APP_4_TITLE: RscStructuredText
 {
 	idc = PHONE_CATEGORY_APP_4_TITLE_IDC;
-	text = "<t align='center' size='0.7'>Changer de forfait</t>";
+	text = "<t align='center' font='PuristaSemiBold' size='0.7'>Changer de forfait</t>";
 	colorBackground[] = {-1,-1,-1,0};
 
 	x = 0.572187 * safezoneW + safezoneX;
@@ -1253,7 +1253,7 @@ class PHONE_CATEGORY_APP_5_BUTTON: RscButtonSilent
 class PHONE_CATEGORY_APP_5_TITLE: RscStructuredText
 {
 	idc = PHONE_CATEGORY_APP_5_TITLE_IDC;
-	text = "<t align='center' size='0.7'>Changer de numéro</t>";
+	text = "<t align='center' font='PuristaSemiBold' size='0.7'>Changer de numéro</t>";
 	colorBackground[] = {-1,-1,-1,0};
 
 	x = 0.329844 * safezoneW + safezoneX;
@@ -1288,7 +1288,7 @@ class PHONE_CATEGORY_APP_6_BUTTON: RscButtonSilent
 class PHONE_CATEGORY_APP_6_TITLE: RscStructuredText
 {
 	idc = PHONE_CATEGORY_APP_6_TITLE_IDC;
-	text = "<t align='center' size='0.7'>Bloquer un numéro</t>";
+	text = "<t align='center' font='PuristaSemiBold' size='0.7'>Bloquer un numéro</t>";
 	colorBackground[] = {-1,-1,-1,0};
 
 	x = 0.4175 * safezoneW + safezoneX;
@@ -1323,7 +1323,7 @@ class PHONE_CATEGORY_APP_7_BUTTON: RscButtonSilent
 class PHONE_CATEGORY_APP_7_TITLE: RscStructuredText
 {
 	idc = PHONE_CATEGORY_APP_7_TITLE_IDC;
-	text = "<t align='center' size='0.7'>Réglages</t>";
+	text = "<t align='center' font='PuristaSemiBold' size='0.7'>Réglages</t>";
 	colorBackground[] = {-1,-1,-1,0};
 
 	x = 0.494844 * safezoneW + safezoneX;

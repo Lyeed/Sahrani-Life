@@ -128,7 +128,7 @@ if ((vehicle player) isEqualTo player) then
 						[(cursorTarget getVariable ["bank", ObjNull]), "", cursorTarget] call public_fnc_robberyProcess;
 						true;
 					};
-					if (typeOf(cursorTarget) in (call g_plants)) exitWith then
+					if (typeOf(cursorTarget) in (call g_plants)) then
 					{
 						[cursorTarget] call public_fnc_plantHarvest;
 						true;

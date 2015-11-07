@@ -1,4 +1,4 @@
-class RscDisplayTablet : default_base_dialog
+class RscDisplayTablet: default_base_dialog
 {
 	idd = 7500;
 	name = "RscDisplayTablet";

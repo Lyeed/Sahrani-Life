@@ -68,7 +68,7 @@ _idc_actual = 5010;
 ([
 	["lock", "Verrouiller", "[true] call public_fnc_vehicleMenu_key;", "(g_interaction_target in g_vehicles)"],
 	["unlock", "Déverrouiller", "[false] call public_fnc_vehicleMenu_key;", "(g_interaction_target in g_vehicles)"],
-	["inventory", "Coffre", "[] spawn public_fnc_vehicleMenu_inventory_open;", "((locked g_interaction_target) != 2)"],
+	["inventory", "Coffre", "[] spawn public_fnc_vehicleMenu_inventory_open;", "(((locked g_interaction_target) != 2) || (g_interaction_target in g_vehicles))"],
 	["repair", "Réparation", "[] spawn public_fnc_vehicleMenu_repair_open;", "((vehicle player) isEqualTo player)"],
 	["refuel", "Faire le plein", "[] spawn public_fnc_vehicleMenu_refuel;", "((([""fuelF""] call public_fnc_itemCount) > 0) && ((vehicle player) isEqualTo player))"],
 	["flip", "Retourner", "[] spawn public_fnc_vehicleMenu_flip;", "(!(g_interaction_target isKindOf ""Ship"") && !(g_interaction_target isKindOf ""Air"") && ((vehicle player) isEqualTo player))"],

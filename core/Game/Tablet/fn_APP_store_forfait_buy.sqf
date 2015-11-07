@@ -32,8 +32,9 @@ if (g_phone_number isEqualTo "") then
 		_newNumber = format["%1%2%3%4%5%6", floor(random 10), floor(random 10), floor(random 10), floor(random 10), floor(random 10), floor(random 10)];
 	};
 	_numbers deleteAt (_numbers find g_phone_number);
+	_numbers pushBack _newNumber;
 	g_phone_number = _newNumber;
-	player setVariable["number", _newNumber, true];
+	player setVariable ["number", _newNumber, true];
 	["gServer_phone_numbers", _numbers] call CBA_fnc_publicVariable;
 	[format["Vous avez changé de forfait<br/><br/><t align='left'>Nouveau</t><t align='right' color='#FF4000'>%1</t>", g_phone_forfait]] call public_fnc_info;
 	["PHONE"] spawn public_fnc_tabletApp;
