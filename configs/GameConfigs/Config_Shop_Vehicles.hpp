@@ -131,16 +131,11 @@ class ALYSIA_SHOPS_VEHICLES
 	{
 		name = "Concessionnaire poids lourds civil";
 		side = "civilian";
-		stock[] = {
-			"DAR_4X4",
-			"DAR_MK23", 
+		stock[] = { 
 			"O_Truck_02_transport_F",
 			"B_Truck_01_transport_F", 
 			"O_Truck_02_covered_F",
 			"B_Truck_01_covered_F",  
-			"DAR_MK27T", 
-			"DAR_MK27", 
-			"DAR_LHS_16", 
 			"B_Truck_01_box_F",
 			"ALFR_GeK_Scania_420",
 			"ALFR_GeK_Volvo_FH16_2012",
