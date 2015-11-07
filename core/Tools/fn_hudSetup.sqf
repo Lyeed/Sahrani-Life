@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_hud", "_ctrl_hunger", "_ctrl_thirst", "_ctrl_fatigue", "_ctrl_blood", "_idc", "_ico_1", "_ico_2", "_ico_3", "_ico_4", "_ico_5", "_ico_6", "_ico_7", "_ctrl_speed", "_ctrl_fuel", "_list_fuel", "_ctrl_vehicle"];
+private["_hud", "_ctrl_hunger", "_ctrl_thirst", "_ctrl_fatigue", "_ctrl_blood", "_idc", "_ico_1", "_ico_2", "_ico_3", "_ico_4", "_ico_5", "_ico_6", "_ico_7", "_ctrl_speed", "_list_vehicle", "_list_weapon"];
 
 if (!(isNull (uiNameSpace getVariable ["RscHudPlayer", displayNull]))) exitWith {};
 
@@ -21,16 +21,25 @@ _ctrl_thirst = _hud displayCtrl 23503;
 _ctrl_fatigue = _hud displayCtrl 23504;
 _ctrl_blood = _hud displayCtrl 23505;
 _ctrl_speed = _hud displayCtrl 23506;
-_ctrl_vehicle = _hud displayCtrl 23520;
-_ctrl_fuel = _hud displayCtrl 23524;
 
-_list_fuel =
+_list_vehicle =
 [
-	_ctrl_vehicle,
+	(_hud displayCtrl 23520),
 	(_hud displayCtrl 23521),
 	(_hud displayCtrl 23522),
 	(_hud displayCtrl 23523),
-	_ctrl_fuel
+	(_hud displayCtrl 23524)
+];
+
+_list_weapon =
+[
+	(_hud displayCtrl 23530),
+	(_hud displayCtrl 23531),
+	(_hud displayCtrl 23532),
+	(_hud displayCtrl 23533),
+	(_hud displayCtrl 23534),
+	(_hud displayCtrl 23535),
+	(_hud displayCtrl 23536)
 ];
 
 _ico_1 = _hud displayCtrl 23510;
@@ -77,17 +86,45 @@ while {true} do
 
 	if (((vehicle player) != player) && (driver (vehicle player) isEqualTo player)) then
 	{
-		_ctrl_fuel progressSetPosition ((fuel (vehicle player)) / 1);
-		_ctrl_vehicle ctrlSetStructuredText parseText format["<t align='center'>%1</t>", getText(configFile >> "CfgVehicles" >> typeOf(vehicle player) >> "displayName")];
+		(_list_vehicle select 4) progressSetPosition ((fuel (vehicle player)) / 1);
+		(_list_vehicle select 0) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", getText(configFile >> "CfgVehicles" >> typeOf(vehicle player) >> "displayName")];
 
 		{
 			_x ctrlShow true;
-		} forEach (_list_fuel);
+		} forEach (_list_vehicle);
 	} else {
 		{
 			_x ctrlShow false;
-		} forEach (_list_fuel);
+		} forEach (_list_vehicle);
 	};
 
-	sleep 0.5;
+	if (((weaponState player) select 0) isEqualTo "") then
+	{
+		{
+			_x ctrlShow false;
+		} forEach (_list_weapon);
+	} else {
+		(_list_weapon select 2) ctrlSetStructuredText parseText format["<t align='center' size='1.2'>%1</t>", getText(configFile >> "CfgWeapons" >> ((weaponState player) select 0) >> "displayName")];
+		if ((((weaponState player) select 3)) isEqualTo "") then {
+			(_list_weapon select 4) ctrlSetStructuredText parseText "<t align='left'>Aucune</t>";
+		} else {
+			(_list_weapon select 4) ctrlSetStructuredText parseText format["<t align='left'>%1</t>", getText(configFile >> "CfgMagazines" >> ((weaponState player) select 3) >> "displayName")];
+		};
+		
+		_mod = switch (currentWeaponMode player) do
+		{
+			case "Single": {"Coup par coup"};
+			case "Burst": {"Rafale"};
+			case "FullAuto": {"Automatique"};
+			case "manual": {"Manuel"};
+			default {"Inconnu"};
+		};
+		(_list_weapon select 6) ctrlSetStructuredText parseText format["<t align='left'>%1</t>", _mod];
+
+		{
+			_x ctrlShow true;
+		} forEach (_list_weapon);
+	};
+
+	sleep 0.4;
 };

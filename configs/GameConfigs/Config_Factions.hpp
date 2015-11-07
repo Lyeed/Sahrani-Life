@@ -27,8 +27,6 @@ class ALYSIA_FACTIONS
 		**			IDENTITY
 		*/
 		identity_item = "SkylineItems_PlaqueMilitaire";
-		identity_image_path = "alysia_textures\data\dogtag.paa";
-		identity_image_size = 10;
 
 		/*
 		**         HOUSING
@@ -132,8 +130,6 @@ class ALYSIA_FACTIONS
 		paycheck = 750;
 		
 		identity_item = "SkylineItems_PlaqueMilitaire";
-		identity_image_path = "alysia_textures\data\dogtag.paa";
-		identity_image_size = 10;
 
 		LastingObjects_menu = 2;
 		LastingObjects_max_per_player = 0;
@@ -213,8 +209,6 @@ class ALYSIA_FACTIONS
 		paycheck = 600;
 		
 		identity_item = "SkylineItems_Passeport";
-		identity_image_path = "alysia_textures\data\passeport.paa";
-		identity_image_size = 2.5;
 
 		LastingObjects_menu = 1;
 		LastingObjects_max_per_player = 1;
@@ -311,8 +305,6 @@ class ALYSIA_FACTIONS
 		paycheck = 600;
 
 		identity_item = "SkylineItems_Passeport";
-		identity_image_path = "alysia_textures\data\passeport.paa";
-		identity_image_size = 2.5;
 
 		LastingObjects_menu = -1;
 		LastingObjects_max_per_player = 0;
