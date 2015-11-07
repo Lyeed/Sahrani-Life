@@ -19,7 +19,7 @@ class ALYSIA_SHOPS_VIRTUAL
 
 	class farmingmarket
 	{
-		name = "Commerçant agricole";
+		name = "Commerçant agricol";
 		side = "civilian";
 		items[] = {{"corn_seed", "bean_seed", "cotton_seed", "engrais"}, {"cotton", "bean", "corn"}};
 		background = "\lyeed_IMG\data\shop\back_farmingmarket.jpg";
@@ -63,7 +63,7 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Milice";
 		side = "west";
 		items[] = {{"defusekit", "salive", "cone", "barriere", "murbetonarme", "bunkersable", "mursable", "couloirsable", 
-			"grandmurescalier", "gueritesable", "grandmur", "coinsable", "donut", "soda", "handcuffkeys", "handcuffs", 
+			"grandmurescalier", "gueritesable", "grandmur", "coinsable", "adn", "donut", "soda", "handcuffkeys", "handcuffs", 
 			"kit_destru", "spikeStrip", "bip", "storage"}, {}};
 		background = "\lyeed_IMG\data\shop\back_west.jpg";
 	};

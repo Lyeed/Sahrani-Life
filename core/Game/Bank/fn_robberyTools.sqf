@@ -16,7 +16,7 @@ _time = (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "time
 
 if ((typeOf _item) isEqualTo "Bank_Bomb") then
 {
-	[_item, "bankPlanted"] call CBA_fnc_globalSay3d;	
+	[_item, "bankPlanted"] call CBA_fnc_globalSay3d;
 };
 
 while ((getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "time"))) do
@@ -28,13 +28,20 @@ while ((getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "time"
 
 if ((typeOf _item) isEqualTo "Bank_Drill") then
 {
-	_explose = round(random 2);
-	if (_explose isEqualTo "1") then {_explosion = "Bo_GBU12_LGB_MI10" createVehicle [(getPosATL _item)]} else {player addItem (typeOf _item)};
+	if (round(random 2) isEqualTo 1) then
+	{
+		_bank setVariable [(typeOf _item), ObjNull, true];
+		"M_PG_AT" createVehicle (getPosATL _item);
+		deleteVehicle _item;
+
+		(_item getVariable ["bank", ObjNull]) animate [Door_4, 1];
+	};
 }
 else
 {
-	_explosion = "Bo_GBU12_LGB_MI10" createVehicle [(getPosATL _item)];
+	_bank setVariable [(typeOf _item), ObjNull, true];
+	"M_PG_AT" createVehicle (getPosATL _item);
+	deleteVehicle _item;
+	
+	(_item getVariable ["bank", ObjNull]) animate [Vault_Door, 1];
 };
-
-_bank setVariable [(typeOf _item), ObjNull, true];
-deleteVehicle _item;
