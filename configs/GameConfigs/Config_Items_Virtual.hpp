@@ -386,6 +386,19 @@ class ALYSIA_ITEMS
 		image       = "Alysia_textures\data\life_inv_banane.paa";
 	};
 
+	class furniture
+	{
+		weight = 4;
+		name = "Meuble";
+		price_buy   = 60;
+		price_sell  = 30;
+		illegal = 0;
+		market      = 0;
+		removable = 1;
+		use = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
 	class iron
 	{
 		weight = 5;
@@ -933,6 +946,253 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""kefir""] call public_fnc_eatFood;";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class copper
+	{
+		name        = "Minerai de cuivre";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class copperp
+	{
+		name        = "Barre de cuivre";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class clay
+	{
+		name        = "Argile";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class copperp
+	{
+		name        = "Barre de cuivre";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class pottery
+	{
+		name        = "Poterie";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class baux
+	{
+		name        = "Minerai de bauxite";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class alu
+	{
+		name        = "Barre d'aliminium";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class moule
+	{
+		name        = "Moule";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class palourde
+	{
+		name        = "Palourde";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class saintjacques
+	{
+		name        = "Coquilles Saint-Jacques";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class bigorneau
+	{
+		name        = "Bigorneau";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class crabe
+	{
+		name        = "Crabe";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class bulot
+	{
+		name        = "Bulot";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class anchois
+	{
+		name        = "Anchois";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class bar
+	{
+		name        = "Bar";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class daurade
+	{
+		name        = "Daurade";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class maquereau
+	{
+		name        = "Maquereau";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class Merlu
+	{
+		name        = "Merlu";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "Alysia_textures\data\life_inv_banane.paa";
+	};
+
+	class sardine
+	{
+		name        = "Sardine";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "Alysia_textures\data\life_inv_banane.paa";
 	};
 };

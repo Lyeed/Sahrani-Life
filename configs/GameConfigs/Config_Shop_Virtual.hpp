@@ -13,7 +13,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Poissonnerie";
 		side = "civilian";
-		items[] = {{"salema", "ornate", "mackerel", "mullet", "tuna", "catshark", "fishingpoles"}, {"salema", "ornate", "mackerel", "mullet", "tuna", "catshark"}};
+		items[] = {{"fishingpoles"}, {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine"}};
 		background = "\lyeed_IMG\data\shop\back_fishmarket.jpg";
 	};
 
@@ -39,14 +39,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		side = "sideUnknown";
 		items[] = {{"patch", "seringue", "cerealbar", "sparklingwater"}, {}};
 		background = "\lyeed_IMG\data\shop\back_hopital.jpg";
-	};
-
-	class destockage
-	{
-		name = "Destockage";
-		side = "sideUnknown";
-		items[] = {{"weapon_paint"}, {}};
-		background = "\lyeed_IMG\data\shop\back_destockage.jpg";
 	};
 
 	/* FACTIONS MARKET */
@@ -154,6 +146,30 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Buraliste";
 		side = "civilian";
 		items[] = {{}, {"cigarette", "tabac_seed"}};
+		background = "\lyeed_IMG\data\shop\back_tabac.jpg";
+	};
+
+	class furniture
+	{
+		name = "Commerçant de meuble";
+		side = "civilian";
+		items[] = {{}, {"furniture"}};
+		background = "\lyeed_IMG\data\shop\back_tabac.jpg";
+	};
+
+	class tabac
+	{
+		name = "Commerçant de cuivre";
+		side = "civilian";
+		items[] = {{}, {"copperp"}};
+		background = "\lyeed_IMG\data\shop\back_tabac.jpg";
+	};
+
+	class textile
+	{
+		name = "Commerçant de cuivre";
+		side = "civilian";
+		items[] = {{}, {"cottonp"}};
 		background = "\lyeed_IMG\data\shop\back_tabac.jpg";
 	};
 };
