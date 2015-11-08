@@ -96,13 +96,29 @@ class Cfg_Garages
 		};
 	};
 
-	class garage_west
+	class garage_west_1
 	{
 		name = "Garage Milice";
 		spawns[] = 
 		{
-			"garage_west_1",
-			"garage_west_2"
+			"west_marker_1",
+			"west_marker_2"
+		};
+		types[] =
+		{
+			"Car",
+			"Truck",
+			"Air"
+		};
+	};
+
+	class garage_west_2
+	{
+		name = "Garage Milice";
+		spawns[] = 
+		{
+			"west_marker_3",
+			"west_marker_4"
 		};
 		types[] =
 		{
