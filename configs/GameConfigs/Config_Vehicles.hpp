@@ -304,26 +304,26 @@ class ALYSIA_VEHICLES
 		license = "driver";
 		rank = 0;
 		colors[] = {
-			"Mrshounka_bmwm6_civ_noir",
-			"Mrshounka_bmwm6_civ_bleufonce",
-			"Mrshounka_bmwm6_civ_rouge",
-			"Mrshounka_bmwm6_civ_jaune",
-			"Mrshounka_bmwm6_civ_rose",
-			"Mrshounka_bmwm6_civ_grise",
-			"Mrshounka_bmwm6_civ_violet",
-			"Mrshounka_bmwm6_civ_orange"
+			"Mrshounka_bmwm6_noir",
+			"Mrshounka_bmwm6_bleufonce",
+			"Mrshounka_bmwm6_rouge",
+			"Mrshounka_bmwm6_jaune",
+			"Mrshounka_bmwm6_rose",
+			"Mrshounka_bmwm6_grise",
+			"Mrshounka_bmwm6_violet",
+			"Mrshounka_bmwm6_orange"
 		};
 		realname = "BMW M6";
 	};
 	
-	class Mrshounka_bmwm6_civ_noir : Mrshounka_bmwm6_civ {};
-	class Mrshounka_bmwm6_civ_bleufonce : Mrshounka_bmwm6_civ {};
-	class Mrshounka_bmwm6_civ_rouge : Mrshounka_bmwm6_civ {};
-	class Mrshounka_bmwm6_civ_jaune : Mrshounka_bmwm6_civ {};
-	class Mrshounka_bmwm6_civ_rose : Mrshounka_bmwm6_civ {};
-	class Mrshounka_bmwm6_civ_grise : Mrshounka_bmwm6_civ {};
-	class Mrshounka_bmwm6_civ_violet : Mrshounka_bmwm6_civ {};
-	class Mrshounka_bmwm6_civ_orange : Mrshounka_bmwm6_civ {};
+	class Mrshounka_bmwm6_noir : Mrshounka_bmwm6_civ {};
+	class Mrshounka_bmwm6_bleufonce : Mrshounka_bmwm6_civ {};
+	class Mrshounka_bmwm6_rouge : Mrshounka_bmwm6_civ {};
+	class Mrshounka_bmwm6_jaune : Mrshounka_bmwm6_civ {};
+	class Mrshounka_bmwm6_rose : Mrshounka_bmwm6_civ {};
+	class Mrshounka_bmwm6_grise : Mrshounka_bmwm6_civ {};
+	class Mrshounka_bmwm6_violet : Mrshounka_bmwm6_civ {};
+	class Mrshounka_bmwm6_orange : Mrshounka_bmwm6_civ {};
 
 	class Mrshounka_Bowler_c
 	{
@@ -1402,7 +1402,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_a3_308_rcz_rouge : Mrshounka_a3_308_rcz {};
 	class Mrshounka_a3_308_rcz_violet : Mrshounka_a3_308_rcz {};
 
-	class shounka_a3_508_civ
+	class shounka_a3_peugeot508_civ
 	{
 		buyPrice = 25000;
 		inventory = 150;
@@ -1412,26 +1412,26 @@ class ALYSIA_VEHICLES
 		license = "driver";
 		rank = 0;
 		colors[] = {
-			"shounka_a3_508_civ_bleufonce",
-			"shounka_a3_508_civ_grise",
-			"shounka_a3_508_civ_jaune",
-			"shounka_a3_508_civ_noir",
-			"shounka_a3_508_civ_orange",
-			"shounka_a3_508_civ_rose",
-			"shounka_a3_508_civ_rouge",
-			"shounka_a3_508_civ_violet"
+			"shounka_a3_peugeot508_civ_bleufonce",
+			"shounka_a3_peugeot508_civ_grise",
+			"shounka_a3_peugeot508_civ_jaune",
+			"shounka_a3_peugeot508_civ_noir",
+			"shounka_a3_peugeot508_civ_orange",
+			"shounka_a3_peugeot508_civ_rose",
+			"shounka_a3_peugeot508_civ_rouge",
+			"shounka_a3_peugeot508_civ_violet"
 		};
 		realname = "Peugeot 508";
 	};
 
-	class shounka_a3_508_civ_bleufonce : shounka_a3_508_civ {};
-	class shounka_a3_508_civ_grise : shounka_a3_508_civ {};
-	class shounka_a3_508_civ_jaune : shounka_a3_508_civ {};
-	class shounka_a3_508_civ_noir : shounka_a3_508_civ {};
-	class shounka_a3_508_civ_orange : shounka_a3_508_civ {};
-	class shounka_a3_508_civ_rose : shounka_a3_508_civ {};
-	class shounka_a3_508_civ_rouge : shounka_a3_508_civ {};
-	class shounka_a3_508_civ_violet : shounka_a3_508_civ {};
+	class shounka_a3_peugeot508_civ_bleufonce : shounka_a3_peugeot508_civ {};
+	class shounka_a3_peugeot508_civ_grise : shounka_a3_peugeot508_civ {};
+	class shounka_a3_peugeot508_civ_jaune : shounka_a3_peugeot508_civ {};
+	class shounka_a3_peugeot508_civ_noir : shounka_a3_peugeot508_civ {};
+	class shounka_a3_peugeot508_civ_orange : shounka_a3_peugeot508_civ {};
+	class shounka_a3_peugeot508_civ_rose : shounka_a3_peugeot508_civ {};
+	class shounka_a3_peugeot508_civ_rouge : shounka_a3_peugeot508_civ {};
+	class shounka_a3_peugeot508_civ_violet : shounka_a3_peugeot508_civ {};
 
 	class shounka_porsche911
 	{
