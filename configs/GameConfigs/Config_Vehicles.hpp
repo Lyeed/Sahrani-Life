@@ -211,26 +211,26 @@ class ALYSIA_VEHICLES
 		license = "driver";
 		rank = 0;
 		colors[] = {
-			"shounka_rs5_civ_noir",
-			"shounka_rs5_civ_bleufonce",
-			"shounka_rs5_civ_rouge",
-			"shounka_rs5_civ_jaune",
-			"shounka_rs5_civ_rose",
-			"shounka_rs5_civ_grise",
-			"shounka_rs5_civ_violet",
-			"shounka_rs5_civ_orange"
+			"shounka_a3_rs5_civ_noir",
+			"shounka_a3_rs5_civ_bleufonce",
+			"shounka_a3_rs5_civ_rouge",
+			"shounka_a3_rs5_civ_jaune",
+			"shounka_a3_rs5_civ_rose",
+			"shounka_a3_rs5_civ_grise",
+			"shounka_a3_rs5_civ_violet",
+			"shounka_a3_rs5_civ_orange"
 		};
 		realname = "Audi RS5";
 	};
 	
-	class shounka_rs5_civ_noir : shounka_rs5_civ {};
-	class shounka_rs5_civ_bleufonce : shounka_rs5_civ {};
-	class shounka_rs5_civ_rouge : shounka_rs5_civ {};
-	class shounka_rs5_civ_jaune : shounka_rs5_civ {};
-	class shounka_rs5_civ_rose : shounka_rs5_civ {};
-	class shounka_rs5_civ_grise : shounka_rs5_civ {};
-	class shounka_rs5_civ_violet : shounka_rs5_civ {};
-	class shounka_rs5_civ_orange : shounka_rs5_civ {};
+	class shounka_a3_rs5_civ_noir : shounka_a3_rs5_civ {};
+	class shounka_a3_rs5_civ_bleufonce : shounka_a3_rs5_civ {};
+	class shounka_a3_rs5_civ_rouge : shounka_a3_rs5_civ {};
+	class shounka_a3_rs5_civ_jaune : shounka_a3_rs5_civ {};
+	class shounka_a3_rs5_civ_rose : shounka_a3_rs5_civ {};
+	class shounka_a3_rs5_civ_grise : shounka_a3_rs5_civ {};
+	class shounka_a3_rs5_civ_violet : shounka_a3_rs5_civ {};
+	class shounka_a3_rs5_civ_orange : shounka_a3_rs5_civ {};
 
 	class shounka_rs6
 	{
