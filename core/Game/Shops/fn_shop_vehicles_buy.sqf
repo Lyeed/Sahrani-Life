@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_sel", "_className", "_price", "_validSpawn", "_spawnPos", "_vehicle", "_plate"];
+private["_sel", "_price", "_validSpawn", "_spawnPos", "_vehicle", "_plate"];
 
 if ((time - g_action_delay) < 1) exitWith {
 	["Veuillez ralentir dans vos actions"] call public_fnc_error;
@@ -16,9 +16,7 @@ if (_sel isEqualTo -1) exitWith {
 	["Vous n'avez pas sélectionné de véhicule à acheter"] call public_fnc_error;
 };
 
-_className = lbData[2303, (lbCurSel 2303)];
-_price = [[_className] call public_fnc_getVehBuyPrice] call public_fnc_getDonatorReductionPrice;
-
+_price = lbValue[2302, _sel];;
 if (_price isEqualTo 0) exitWith {
 	["Ce véhicule n'a pas de prix de vente"] call public_fnc_error;
 };
@@ -28,7 +26,7 @@ if (_price > g_cash) exitWith {
 };
 
 {
-	if ((nearestObjects[(getMarkerPos _x), ["Car", "Air", "Ship", "Tank"], 10]) isEqualTo []) exitWith {
+	if ((nearestObjects[(getMarkerPos _x), ["Car", "Air", "Ship", "Tank", "Truck"], 10]) isEqualTo []) exitWith {
 		_validSpawn = _x;
 	};
 } forEach (g_veh_shop);
@@ -42,7 +40,7 @@ playSound "buy";
 closeDialog 0;
 
 _spawnPos = getMarkerPos _validSpawn;
-_vehicle = createVehicle [_className, _spawnPos, [], 0, "NONE"];
+_vehicle = createVehicle [(lbData[2303, (lbCurSel 2303)]), _spawnPos, [], 0, "NONE"];
 waitUntil {!(isNil "_vehicle")};
 _vehicle allowDamage false;
 

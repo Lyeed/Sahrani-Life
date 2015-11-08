@@ -39,55 +39,50 @@ lbClear _list;
 {
 	if (isClass(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x)) then
 	{
-		_passed = false;
-		if (playerSide isEqualTo civilian) then {
-			_license = getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_condition_CIV");
-			if ((_license isEqualTo "") || (missionNamespace getVariable [format["license_%1", _license], false])) then {
-				_passed = true;
-			};
-		} else {
-			_rank = getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> format["buy_condition_%1", str(playerSide)]);
-			if (((player getVariable ["rank", 0]) >= _rank) && (_rank != -1)) then {
-				_passed = true;
-			};
-		};
-
-		if (_passed) then
+		_details = [_x] call public_fnc_fetchCfgDetails;
+		if (_details isEqualTo []) then
 		{
-			_details = [_x] call public_fnc_fetchCfgDetails;
-			_displayName = getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "name");
-			_price = getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_price");
-			if (_displayName isEqualTo "") then {
-				_displayName = _details select 1;
+			diag_log format["ERROR: %1 does not exist in Arma", _x];
+			systemChat format["ERROR: %1 does not exist in Arma", _x];
+		} else {
+			if (
+					(
+						(playerSide isEqualTo civilian) && 
+							{(
+								(getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_condition_CIV") isEqualTo "") || 
+								(missionNamespace getVariable [format["license_%1", getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_condition_CIV")], false])
+							)}
+					) || (
+						(playerSide in [east, west, independent]) && 
+							{(
+								((player getVariable ["rank", 0]) >= getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> format["buy_condition_%1", str(playerSide)])) && 
+								(getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> format["buy_condition_%1", str(playerSide)]) != -1)
+							)}
+					)
+				) then {
+				_displayName = getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "name");
+				if (_displayName isEqualTo "") then {
+					_displayName = _details select 1;
+				};
+				_price = getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_price");
+				
+				_index = _list lbAdd format["%1 (%2$)", _displayName, ([_price] call public_fnc_numberText)];
+				_list lbSetData [_index, _x];
+				_list lbSetValue [_index, _price];
+				_list lbSetPicture [_index, (_details select 2)];
 			};
-			_index = _list lbAdd format["%1 (%2$)", _displayName, ([_price] call public_fnc_numberText)];
-			_list lbSetData [_index, _x];
-			_list lbSetValue [_index, _price];
-			_list lbSetPicture [_index, (_details select 2)];
 		};
 	} else {
 		diag_log format["ERROR: %1 not defined in ALYSIA_ITEMS_ARMA", _x];
+		systemChat format["ERROR: %1 not defined in ALYSIA_ITEMS_ARMA", _x];
 	};
 } forEach (getArray(missionConfigFile >> "ALYSIA_SHOPS_ARMA" >> _type >> "stocks"));
 if ((lbSize _list) isEqualTo 0) then
 {
 	_list lbAdd "Vous n'avez rien à acheter ici";
-	ctrlShow[38403, false];
-	ctrlShow[38404, false];
-	ctrlShow[38405, false];
-	ctrlShow[38406, false];
-	ctrlShow[38407, false];
-	ctrlShow[38421, false];
-	ctrlShow[38408, false];
-	ctrlShow[38409, false];
-	ctrlShow[38422, false];
-	ctrlShow[38410, false];
-	ctrlShow[38411, false];
-	ctrlShow[38412, false];
-	ctrlShow[38413, false];
-	ctrlShow[38414, false];
-	ctrlShow[38415, false];
-	ctrlShow[38416, false];
+	{
+		ctrlShow[_x, false];
+	} forEach ([38403, 38404, 38405, 38406, 38407, 38408, 38409, 38421, 38422, 38410, 38411, 38412, 38413, 38414, 38415, 38416]);
 } else {
 	_list lbSetCurSel 0;
 };

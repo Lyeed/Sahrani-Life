@@ -39,37 +39,47 @@ _list = _display displayCtrl 2302;
 lbClear _list;
 
 {
-	if (
-		((playerSide isEqualTo civilian) && ((getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "license") isEqualTo "") || {(missionNamespace getVariable[format["license_%1", getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "license")], false])})) || 
-		((playerSide != civilian) && ((player getVariable ["rank", 0]) >= getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "rank")))) then {
-		_index = _list lbAdd getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "realname");
-		
-		_vList = getArray(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "colors");
-		if (_vList isEqualTo []) then {
-			_list lbSetPicture [_index, (getText(configFile >> "CfgVehicles" >> _x >> "picture"))];
-			_list lbSetData [_index, str([_x])];
-		} else {
-			_list lbSetPicture [_index, (getText(configFile >> "CfgVehicles" >> (_vList select 0) >> "picture"))];
-			_list lbSetData [_index, str(_vList)];
+	if (isClass(missionConfigFile >> "ALYSIA_VEHICLES" >> _x)) then
+	{
+		if 
+			(
+				(
+					(playerSide isEqualTo civilian) && 
+					{(
+						(getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "license") isEqualTo "") || 
+						(missionNamespace getVariable[format["license_%1", getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "license")], false])
+					)}
+				) || (
+					(playerSide != civilian) && 
+					{(
+						(player getVariable ["rank", 0]) >= getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "rank")
+					)}
+				)
+			) then {
+			_index = _list lbAdd getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "realname");
+			
+			_vList = getArray(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "colors");
+			if (_vList isEqualTo []) then {
+				_list lbSetPicture [_index, (getText(configFile >> "CfgVehicles" >> _x >> "picture"))];
+				_list lbSetData [_index, str([_x])];
+				_list lbSetValue [_index, ([_x] call public_fnc_getVehBuyPrice)];
+			} else {
+				_list lbSetPicture [_index, (getText(configFile >> "CfgVehicles" >> (_vList select 0) >> "picture"))];
+				_list lbSetData [_index, str(_vList)];
+				_list lbSetValue [_index, ([(_vList select 0)] call public_fnc_getVehBuyPrice)];
+			};
 		};
+	} else {
+		diag_log format["ERROR: %1 not defined in ALYSIA_VEHICLES", _x];
+		systemChat format["ERROR: %1 not defined in ALYSIA_VEHICLES", _x];
 	};
 } forEach (getArray(missionConfigFile >> "ALYSIA_SHOPS_VEHICLES" >> _shop >> "stock"));
 if ((lbSize _list) isEqualTo 0) then {
 	_list lbAdd "Vous n'avez rien à acheter ici";
-	ctrlShow[2304, false];
-	ctrlShow[2305, false];
-	ctrlShow[2306, false];
-	ctrlShow[2307, false];
-	ctrlShow[2308, false];
-	ctrlShow[2309, false];
-	ctrlShow[2310, false];
-	ctrlShow[2311, false];
-	ctrlShow[2312, false];
-	ctrlShow[2313, false];
-	ctrlShow[2314, false];
-	ctrlShow[2315, false];
-	ctrlShow[2321, false];
-	ctrlShow[2303, false];
+	{
+		ctrlShow[_x, false];
+	} forEach ([2304, 2305, 2306, 2307, 2308, 2309, 2310, 2311, 2312, 2313, 2314, 2315, 2321, 2303]);
 } else {
+	lbSortByValue _list;
 	_list lbSetCurSel 0;
 };

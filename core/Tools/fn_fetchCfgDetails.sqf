@@ -25,8 +25,23 @@
 	13: Base (Superclass)
 	14: New compatibleItems Structure
 */
-private["_entity","_cfg","_ret","_type","_acc_p","_acc_o","_slotclasses","_acc_m","_scope","_displayName","_picture","_config","_itemInfo","_muzzles","_magazines","_desc","_base"];
-_entity = [_this,0,"",[""]] call BIS_fnc_param;
+private["_entity","_cfg","_type","_acc_p","_acc_o","_slotclasses","_acc_m","_scope","_displayName","_picture","_config","_itemInfo","_muzzles","_magazines","_desc","_base"];
+_entity = [_this, 0, "", [""]] call BIS_fnc_param;
+
+if (_entity isEqualTo "") exitWith {[]};
+
+_cfg = switch (true) do
+{
+	case (isClass (configFile >> "CfgMagazines" >> _entity)) : {"CfgMagazines"};
+	case (isClass (configFile >> "CfgWeapons" >> _entity)) : {"CfgWeapons"};
+	case (isClass (configFile >> "CfgVehicles" >> _entity)) : {"CfgVehicles"};
+	case (isClass (configFile >> "CfgGlasses" >> _entity)) : {"CfgGlasses"};
+	default {""};
+};
+
+if (_cfg isEqualTo "") exitWith {[]};
+if (!isClass (configFile >> _cfg >> _entity)) exitWith {[]};
+
 _type = -1;
 _acc_p = [];
 _acc_o = [];
@@ -36,33 +51,8 @@ _scope = 0;
 _itemInfo = -1;
 _muzzles = [];
 _magazines = [];
-if(_entity == "") exitWith {[]};
-_cfg = if(isNil {_this select 1}) then
-{
-	switch (true) do
-	{
-		case (isClass (configFile >> "CfgMagazines" >> _entity)) : {"CfgMagazines";};
-		case (isClass (configFile >> "CfgWeapons" >> _entity)) : {"CfgWeapons";};
-		case (isClass (configFile >> "CfgVehicles" >> _entity)) : {"CfgVehicles";};
-		case (isClass (configFile >> "CfgGlasses" >> _entity)) : {"CfgGlasses";};
-	};
-}
-	else
-{
-	_this select 1
-};
-
-//Final Check
-
-_ret = [];
-if(typeName _cfg != "STRING") exitWith {[]}; //Not a config
-if(!isClass (configFile >> _cfg >> _entity)) exitWith {[]};
-if(_cfg == "") exitWith {[]}; //Not a config, who is passing bad data?
 
 _config = configFile >> _cfg >> _entity;
-_displayName = getText(_config >> "displayName");
-_picture = getText(_config >> "picture");
-_desc = getText(_config >> "descriptionshort");
 _base = inheritsFrom _config;
 
 switch (_cfg) do
@@ -77,7 +67,6 @@ switch (_cfg) do
 	{
 		_scope = getNumber(_config >> "scope");
 		_type = getNumber(_config >> "type");
-		_desc = getText(_config >> "descriptionshort");
 		
 		//Compatible attachments
 		if(isClass (_config >> "WeaponSlotsInfo")) then
@@ -134,5 +123,21 @@ if(!isNil "_slotclasses") then
 	_slotclasses = _slotclasses - ["CowsSlot"];
 	_slotclasses = _slotclasses - ["PointerSlot"];
 };
-_ret = [_entity,_displayName,_picture,_scope,_type,_itemInfo,_cfg,_magazines,_muzzles,_desc,_acc_p,_acc_o,_acc_m,_base,_slotclasses];
-_ret;
+
+[
+	_entity,
+	getText(_config >> "displayName"),
+	getText(_config >> "picture"),
+	_scope,
+	_type,
+	_itemInfo,
+	_cfg,
+	_magazines,
+	_muzzles,
+	getText(_config >> "descriptionshort"),
+	_acc_p,
+	_acc_o,
+	_acc_m,
+	_base,
+	_slotclasses
+];
