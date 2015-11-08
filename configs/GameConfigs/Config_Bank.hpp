@@ -80,7 +80,7 @@ class ALYSIA_BANK
 			item = "Alysia_Lockpick";
 			time = 30;
 			open = "Simple";
-		};			
+		};
 		
 		class Vault_Door
 		{
@@ -114,11 +114,12 @@ class ALYSIA_BANK
 	class Bank_Drill
 	{
 		item = "Bank_Drill";
-		defuse = "Bank_Hacker";
-		anim = "";
+		defuse = "Bank_DefuseKit";
+		anim = "Drill_Rotation";
 		sound = "Drill";
 		finalSound = "DrillOff";
-		pos = "[0,0,0]";
+		pos = "[0, 2.5, 5.2]";
+		rot = 180;
 		time = 300;
 		defuseTime = 30;
 	};

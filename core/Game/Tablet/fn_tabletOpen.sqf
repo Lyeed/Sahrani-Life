@@ -5,12 +5,11 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_loading_ctrl", "_display", "_bar"];
+private["_loading_ctrl", "_display", "_bar", "_loading_ctrl_white"];
 disableSerialization;
 
-_display = uiNamespace getVariable["tablet", displayNull];
 if (dialog) exitWith {};
-if (!(isNull _display)) exitWith {};
+if (!(isNull (uiNamespace getVariable ["tablet", displayNull]))) exitWith {};
 if (!(createDialog "RscDisplayTablet")) exitWith {};
 
 if ((vehicle player) isEqualTo player) then { 
@@ -18,10 +17,17 @@ if ((vehicle player) isEqualTo player) then {
 };
 
 _display = uiNamespace getVariable["tablet", displayNull];
+
 _loading_ctrl = _display ctrlCreate ["RscPicture", 7506];
 _loading_ctrl ctrlSetText "\lyeed\images\loading_screen.jpg";
 _loading_ctrl ctrlSetPosition (ctrlPosition (_display displayCtrl 7502));
+_loading_ctrl ctrlSetFade 1;
 _loading_ctrl ctrlCommit 0;
+
+_loading_ctrl_white = _display ctrlCreate ["RscPicture", 7508];
+_loading_ctrl_white ctrlSetText "#(argb,8,8,3)color(1,1,1,1)";
+_loading_ctrl_white ctrlSetPosition (ctrlPosition (_display displayCtrl 7502));
+_loading_ctrl_white ctrlCommit 0;
 
 "
 	private[""_idc""];
@@ -34,20 +40,38 @@ _loading_ctrl ctrlCommit 0;
 " configClasses (missionConfigFile >> "RscDisplayTablet" >> "controls");
 
 g_CTRL_shown = [];
-g_CTRL_inUse = false;
+g_CTRL_inUse = true;
 g_app = "";
+playSound "tablet_startup";
 
-_bar = _display displayCtrl 7501;
-while {!(isNull _display)} do
+while {(!(isNull _display) && ((ctrlFade _loading_ctrl) > 0))} do
 {
-	_bar ctrlSetStructuredText parseText format
-	[
-		"<t align='left'>%1</t><t align='center'>%2</t><t align='right'>%3</t>",
-		if ("ItemGPS" in (assignedItems player)) then {(mapGridPosition player)} else {"noGPS"},
-		([] call public_fnc_strDate),
-		([] call public_fnc_strTime)
-	];
-	sleep 0.5;
+	_loading_ctrl ctrlSetFade ((ctrlFade _loading_ctrl) - 0.05);
+	_loading_ctrl ctrlCommit 0;
+
+	_loading_ctrl_white ctrlSetFade ((ctrlFade _loading_ctrl_white) + 0.05);
+	_loading_ctrl_white ctrlCommit 0;
+
+	sleep 0.05;
 };
 
-g_app = "";
+g_CTRL_inUse = false;
+
+if (!(isNull _display)) then
+{
+	ctrlDelete _loading_ctrl_white;
+	_bar = _display displayCtrl 7501;
+	while {!(isNull _display)} do
+	{
+		_bar ctrlSetStructuredText parseText format
+		[
+			"<t align='left'><img image='%4'/> %1</t><t align='center'>%2</t><t align='right'>%3 <img image='\lyeed\data\infobar\date.paa'/></t>",
+			if ("ItemGPS" in (assignedItems player)) then {(mapGridPosition player)} else {"noGPS"},
+			([] call public_fnc_strTime),
+			([] call public_fnc_strDate),
+			if ("ItemGPS" in (assignedItems player)) then {"\lyeed\data\infobar\gps_yes.paa"} else {"\lyeed\data\infobar\gps_no.paa"}
+		];
+		sleep 0.5;
+	};
+	g_app = "";
+};

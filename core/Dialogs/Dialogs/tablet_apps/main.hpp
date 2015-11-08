@@ -1,9 +1,3 @@
-#define APP_SMS_IMAGE_IDC     7503
-#define APP_SMS_BUTTON_IDC    7504
-#define APP_SMS_NUMBER_IDC    7505
-#define APP_ARROW_IMAGE_IDC   7508
-#define APP_ARROW_BUTTON_IDC  7509
-
 #define APP_1_IMAGE_IDC       7510
 #define APP_1_BUTTON_IDC      7511
 #define APP_1_TITLE_IDC       7512
@@ -28,6 +22,16 @@
 #define APP_8_IMAGE_IDC       7531
 #define APP_8_BUTTON_IDC      7532
 #define APP_8_TITLE_IDC       7533
+
+#define APP_SMS_IMAGE_IDC     7503
+#define APP_SMS_BUTTON_IDC    7504
+#define APP_SMS_NUMBER_IDC    7505
+
+#define APP_NEXT_IMAGE_IDC    7540
+#define APP_NEXT_BUTTON_IDC   7541
+#define APP_PREV_IMAGE_IDC    7542
+#define APP_PREV_BUTTON_IDC   7543
+#define APP_STATUS_IDC        7544
 
 MAIN_BACKGROUND = "\lyeed\images\back.jpg";
 MAIN_IDCS[] = 
@@ -56,8 +60,7 @@ MAIN_IDCS[] =
 	APP_8_IMAGE_IDC,
 	APP_8_BUTTON_IDC,
 	APP_8_TITLE_IDC,
-	APP_ARROW_IMAGE_IDC,
-	APP_ARROW_BUTTON_IDC
+	APP_STATUS_IDC
 };
 
 class APP_1_IMAGE: RscPicture
@@ -319,53 +322,91 @@ class APP_8_TITLE: RscStructuredText
 class APP_SMS_IMAGE: RscPicture
 {
 	idc = APP_SMS_IMAGE_IDC;
-	text = "\lyeed\images\new_sms.paa";
+	text = "\lyeed\data\app_main\new_sms.paa";
 
-	x = 0.656234 * safezoneW + safezoneX;
-	y = 0.6529 * safezoneH + safezoneY;
+	x = 0.660359 * safezoneW + safezoneX;
+	y = 0.34798 * safezoneH + safezoneY;
+	w = 0.0154688 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class APP_SMS_NUMBER: RscStructuredText
+{
+	idc = APP_SMS_NUMBER_IDC;
+	text = "";
+	colorBackground[] = {0,0,0,0};
+	
+	x = 0.641874 * safezoneW + safezoneX;
+	y = 0.343222 * safezoneH + safezoneY;
 	w = 0.020625 * safezoneW;
-	h = 0.033 * safezoneH;
+	h = 0.022 * safezoneH;
 };
 class APP_SMS_BUTTON: RscButtonSilent
 {
 	idc = APP_SMS_BUTTON_IDC;
 	action = "[""phone_messages_read""] spawn public_fnc_tabletApp;";
+	onMouseEnter = "ctrlSetText[7503,""\lyeed\data\app_main\new_sms_select.paa""];";
+	onMouseExit = "ctrlSetText[7503,""\lyeed\data\app_main\new_sms.paa""];";
 
-	x = 0.656234 * safezoneW + safezoneX;
-	y = 0.6529 * safezoneH + safezoneY;
-	w = 0.020625 * safezoneW;
-	h = 0.033 * safezoneH;
+	x = 0.644375 * safezoneW + safezoneX;
+	y = 0.346 * safezoneH + safezoneY;
+	w = 0.0309375 * safezoneW;
+	h = 0.022 * safezoneH;
 };
-class APP_SMS_NUMBER: RscStructuredText
-{
-	idc = APP_SMS_NUMBER_IDC;
-	font = "PuristaSemiBold";
-	colorBackground[] = {0,0,0,0};
-	text = "";
 
-	x = 0.637083 * safezoneW + safezoneX;
-	y = 0.660371 * safezoneH + safezoneY;
+class APP_STATUS: RscStructuredText
+{
+	idc = APP_STATUS_IDC;
+	text = "";
+	colorBackground[] = {0,0,0,0};
+
+	x = 0.489636 * safezoneW + safezoneX;
+	y = 0.343111 * safezoneH + safezoneY;
 	w = 0.020625 * safezoneW;
 	h = 0.022 * safezoneH;
 };
 
-class APP_ARROW_IMAGE: RscPicture
+class APP_NEXT_IMAGE: RscPicture
 {
-	idc = APP_ARROW_IMAGE_IDC;
-	text = "\lyeed\images\apps_next.paa";
+	idc = APP_NEXT_IMAGE_IDC;
+	text = "\lyeed\data\app_main\right_arrow.paa";
 
-	x = 0.654688 * safezoneW + safezoneX;
-	y = 0.489 * safezoneH + safezoneY;
-	w = 0.020625 * safezoneW;
-	h = 0.033 * safezoneH;
+	x = 0.502031 * safezoneW + safezoneX;
+	y = 0.346 * safezoneH + safezoneY;
+	w = 0.0103125 * safezoneW;
+	h = 0.022 * safezoneH;
 };
-class APP_ARROW_BUTTON: RscButtonSilent
+class APP_NEXT_BUTTON: RscButtonSilent
 {
-	idc = APP_ARROW_BUTTON_IDC;
-	action = "";
+	idc = APP_NEXT_BUTTON_IDC;
+	action = "uiNamespace setVariable ['main_status', (uiNamespace getVariable ['main_status', 0]) + 1]; ['MAIN'] spawn public_fnc_tabletApp;";
+	onMouseEnter = "ctrlSetText[7540,""\lyeed\data\app_main\right_arrow_select.paa""];";
+	onMouseExit = "ctrlSetText[7540,""\lyeed\data\app_main\right_arrow.paa""];";
 
-	x = 0.654688 * safezoneW + safezoneX;
-	y = 0.489 * safezoneH + safezoneY;
-	w = 0.020625 * safezoneW;
-	h = 0.033 * safezoneH;
+	x = 0.502031 * safezoneW + safezoneX;
+	y = 0.346 * safezoneH + safezoneY;
+	w = 0.0103125 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+
+class APP_PREV_IMAGE: RscPicture
+{
+	idc = APP_PREV_IMAGE_IDC;
+	text = "\lyeed\data\app_main\left_arrow.paa";
+
+	x = 0.487135 * safezoneW + safezoneX;
+	y = 0.346 * safezoneH + safezoneY;
+	w = 0.0103125 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class APP_PREV_BUTTON: RscButtonSilent
+{
+	idc = APP_PREV_BUTTON_IDC;
+	action = "uiNamespace setVariable ['main_status', (uiNamespace getVariable ['main_status', 0]) - 1]; ['MAIN'] spawn public_fnc_tabletApp;";
+	onMouseEnter = "ctrlSetText[7542,""\lyeed\data\app_main\left_arrow_select.paa""];";
+	onMouseExit = "ctrlSetText[7542,""\lyeed\data\app_main\left_arrow.paa""];";
+
+	x = 0.487135 * safezoneW + safezoneX;
+	y = 0.346 * safezoneH + safezoneY;
+	w = 0.0103125 * safezoneW;
+	h = 0.022 * safezoneH;
 };

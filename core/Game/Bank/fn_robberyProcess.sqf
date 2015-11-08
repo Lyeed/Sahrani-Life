@@ -19,10 +19,12 @@ if (!(_door isEqualTo "")) then
 	player removeItems (getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item"));
 	_item = ((getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")) createVehicle [0,0,0]);
 	_item attachTo [_bank, (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "pos"))];
+	_item setDir (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "rot"));
+	_item animate [(getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "anim")), 1];
 	_item setVariable ["owner", player, true];
 	_item setVariable ["bank", _bank, true];
 	_item setVariable ["active", true, true];
-	_bank setVariable ["(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item"))", _item, true];
+	_bank setVariable [(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")), _item, true];
 	[_item, _bank, _door] spawn public_fnc_robberyTools;
 }
 else
@@ -49,12 +51,12 @@ else
 		{
 			player addItem (typeOf _item);
 			_bank setVariable [(typeOf _item), ObjNull, true];
-			deleteVehicle _item;
-		};
 
 		if (typeOf _item isEqualTo "Bank_Bomb") then
 		{
 			[_item, "bankDefused"] call CBA_fnc_globalSay3d;
 		};
+		
+		deleteVehicle _item;
 	};
 };

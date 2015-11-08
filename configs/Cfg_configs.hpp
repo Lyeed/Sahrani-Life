@@ -22,3 +22,4 @@
 #include "GameConfigs\Config_Dynamic_Markers.hpp"
 #include "GameConfigs\Config_Bank.hpp"
 #include "GameConfigs\Config_Companies.hpp"
+#include "GameConfigs\Config_Fuel.hpp"
