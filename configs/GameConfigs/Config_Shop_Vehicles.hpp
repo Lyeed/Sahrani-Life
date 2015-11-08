@@ -193,7 +193,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_207_civ",
 			"Mrshounka_a3_308_civ",
 			"Mrshounka_a3_308_rcz",
-			"shounka_a3_508_civ",
+			"shounka_a3_peugeot508_civ",
 			"Mrshounka_megane_rs_2015_civ",
 			"Mrshounka_twingo_p",
 			"Mrshounka_a3_smart_civ",
@@ -224,7 +224,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"DAR_M3Civ",
 			"Mrshounka_agera_p",
 			"shounka_a3_rs5_civ",
-			"shounka_rs6",
+			"Mrshounka_rs6",
 			"Mrshounka_bmwm1_civ",
 			"Mrshounka_bmwm6_civ",
 			"Mrshounka_Bowler_c",
@@ -249,7 +249,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_pagani_c",
 			"shounka_porsche911",
 			"mrshounka_92_civ",
-			"Mrshounka_cayenne_p",
+			"Mrshounka_cayenne_p_civ",
 			"shounka_transam"
 		};
 		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_land_luxe.jpg";

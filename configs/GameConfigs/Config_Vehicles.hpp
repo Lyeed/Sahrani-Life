@@ -1814,7 +1814,7 @@ class ALYSIA_VEHICLES
   	class max_impala_black : max_impala {};
   	class max_impala_white : max_impala {};
   	class max_impala_red : max_impala {};
-	class mmax_impala_blue : max_impala {};
+	class max_impala_blue : max_impala {};
 	
 	class DAR_TahoeCiv
 	{
