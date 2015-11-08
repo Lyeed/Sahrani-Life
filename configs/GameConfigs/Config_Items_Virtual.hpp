@@ -988,19 +988,6 @@ class ALYSIA_ITEMS
 		image       = "Alysia_textures\data\life_inv_banane.paa";
 	};
 
-	class copperp
-	{
-		name        = "Barre de cuivre";
-		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
-		market      = 0;
-		illegal     = 0;
-		removable   = 1;
-		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
-	};
-
 	class pottery
 	{
 		name        = "Poterie";
