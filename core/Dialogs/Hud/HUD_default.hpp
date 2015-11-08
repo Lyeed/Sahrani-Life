@@ -23,7 +23,7 @@ class RscHudPlayer
 			h = 0.198 * safezoneH;
 		};
 
-		class BACKGROUND_UPPER: RscText
+		class BACKGROUND: RscText
 		{
 			idc = -1;
 			colorBackground[] = {0,0,0,0.7};
@@ -31,29 +31,7 @@ class RscHudPlayer
 			x = 0.768125 * safezoneW + safezoneX;
 			y = 0.786 * safezoneH + safezoneY;
 			w = 0.221719 * safezoneW;
-			h = 0.099 * safezoneH;
-		};
-		class BACKGROUND_DOWN: RscText
-		{
-			idc = -1;
-
-			x = 0.768125 * safezoneW + safezoneX;
-			y = 0.929 * safezoneH + safezoneY;
-			w = 0.221719 * safezoneW;
-			h = 0.055 * safezoneH;
-			colorBackground[] = {0,0,0,0.7};
-		};
-		
-		class NAME: RscStructuredText
-		{
-			idc = 23501;
-			colorBackground[] = {0,0,0,1};
-			text = "";
-
-			x = 0.768125 * safezoneW + safezoneX;
-			y = 0.885 * safezoneH + safezoneY;
-			w = 0.221719 * safezoneW;
-			h = 0.044 * safezoneH;
+			h = 0.198 * safezoneH;
 		};
 		
 		class HUNGER_IMAGE: RscPicture
@@ -93,6 +71,28 @@ class RscHudPlayer
 			x = 0.882284 * safezoneW + safezoneX;
 			y = 0.848088 * safezoneH + safezoneY;
 			w = 0.103125 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+
+		class SPEAK_IMAGE: RscPicture
+		{
+			idc = -1;
+			text = "\lyeed_IMG\data\player_hud\volume.paa";
+
+			x = 0.860937 * safezoneW + safezoneX;
+			y = 0.885 * safezoneH + safezoneY;
+			w = 0.020625 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+		class SPEAK_INFO: RscStructuredText
+		{
+			idc = 23501;
+			text = "";
+			colorBackground[] = {0,0,0,0};
+			
+			x = 0.886718 * safezoneW + safezoneX;
+			y = 0.885 * safezoneH + safezoneY;
+			w = 0.0928125 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 
@@ -380,6 +380,71 @@ class RscHudPlayer
 			y = 0.110185 * safezoneH + safezoneY;
 			w = 0.103125 * safezoneW;
 			h = 0.022 * safezoneH;
+		};
+
+		class ALYSIA_IMAGE: RscPicture
+		{
+			idc = 23537;
+			text = "\lyeed_IMG\data\alysia.paa";
+
+			x = 0.267969 * safezoneW + safezoneX;
+			y = 0.225 * safezoneH + safezoneY;
+			w = 0.464062 * safezoneW;
+			h = 0.561 * safezoneH;
+		};
+
+		class MAP_FRAME: RscFrame
+		{
+			idc = 23538;
+			colorText[] = {0,0,0,0.8};
+
+			x = 0.866094 * safezoneW + safezoneX;
+			y = 0.555 * safezoneH + safezoneY;
+			w = 0.12375 * safezoneW;
+			h = 0.22 * safezoneH;
+		};
+		class MAP_BACKGROUND: RscText
+		{
+			idc = 23540;
+			colorBackground[] = {0,0,0,0.7};
+			
+			x = 0.866094 * safezoneW + safezoneX;
+			y = 0.555 * safezoneH + safezoneY;
+			w = 0.12375 * safezoneW;
+			h = 0.22 * safezoneH;
+		};
+		class MAP_IMAGE: RscPicture
+		{
+			idc = 23541;
+			text = "\lyeed_IMG\data\player_hud\gps.paa";
+
+			x = 0.867865 * safezoneW + safezoneX;
+			y = 0.559704 * safezoneH + safezoneY;
+			w = 0.0154688 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class MAP_INFO: RscStructuredText
+		{
+			idc = 23542;
+			text = "";
+			colorBackground[] = {0,0,0,0};
+
+			x = 0.881562 * safezoneW + safezoneX;
+			y = 0.558704 * safezoneH + safezoneY;
+			w = 0.0928125 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class MAP: RscMapControl
+		{
+			idc = 23539;
+			maxSatelliteAlpha = 0.75;
+			alphaFadeStartScale = "STRTSCALE";
+			alphaFadeEndScale = 1.29;
+
+			x = 0.87125 * safezoneW + safezoneX;
+			y = 0.588 * safezoneH + safezoneY;
+			w = 0.113437 * safezoneW;
+			h = 0.176 * safezoneH;
 		};
 	};
 

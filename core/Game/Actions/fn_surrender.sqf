@@ -6,22 +6,22 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (player getVariable["surrender", false]) then
+if (player getVariable ["surrender", false]) then
 {
-	player setVariable["surrender", false, true];
+	player setVariable ["surrender", false, true];
 } else {
 	player setVariable ["surrender", true, true];
 	[] spawn
 	{
-		while {(player getVariable["surrender", false]) && !g_coma} do
+		while {(player getVariable ["surrender", false]) && !g_coma} do
 		{
 			player playMove "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon";
 			sleep 0.5;
 		};
 		if (g_coma) then
 		{
-			if (player getVariable["surrender", false]) then {
-				player setVariable["surrender", false, true];
+			if (player getVariable ["surrender", false]) then {
+				player setVariable ["surrender", false, true];
 			};
 		} else {
 			player playMoveNow "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";

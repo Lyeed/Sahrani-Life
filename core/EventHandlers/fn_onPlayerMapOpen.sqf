@@ -5,7 +5,10 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+
+/*
 private["_markers"];
+
 _markers = [];
 
 waitUntil {visibleMap};
@@ -116,4 +119,4 @@ while {visibleMap} do
 
 {
 	deleteMarkerLocal (_x select 0);
-} forEach (_markers);
+} forEach (_markers);*/

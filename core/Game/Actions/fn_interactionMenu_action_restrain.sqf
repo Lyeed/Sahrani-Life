@@ -30,5 +30,5 @@ if (!([false, "handcuffs", 1] call public_fnc_handleInv)) exitWith {
 	["Vous n'avez pas de menotte"] call public_fnc_error;
 };
 
-[] remoteExec ["public_fnc_restrain", g_interaction_target];
+remoteExec ["public_fnc_restrain", g_interaction_target];
 g_action_inUse = false;

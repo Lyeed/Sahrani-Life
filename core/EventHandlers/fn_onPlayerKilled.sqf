@@ -6,6 +6,9 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
+player setVariable ["tf_globalVolume", 0];
+player setVariable ["tf_voiceVolume", 0, true];
+
 playSound "death";
 0 cutText["Vous êtes en soin intensif ! Veuillez patienter pendant l'application du bandage...", "BLACK FADED"];
 0 cutFadeOut 9999999;
@@ -81,6 +84,7 @@ g_thirst = 100;
 /* ************* */
 
 resetCamShake;
+
 {
 	missionNamespace setVariable[_x, 0];
 } forEach (g_drugs);

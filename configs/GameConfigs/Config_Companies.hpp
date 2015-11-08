@@ -32,21 +32,26 @@ class ALYSIA_COMPANIES
 		-> Concesionnaire
 			Batiment : ?
 			Vehicles : Aucun
+			Role     : Vendre des véhicules (gagne un %)
 		-> Taxi
 			Batiment : Land_Hangar_F
 			Vehicles : taxi + bus
+			Role     : transport de personnes
 		-> Transport de fond
 			Vehicles : fourgon blindé
 			Role     : remplir ATM + banque
 		-> Sécurité
 			Batiment : Land_Cargo_HQ_V1_F
 			Vehicles : ?
+			Role     :
 		-> Avocat
 			Batiment : Land_i_House_Small_03_V1_F
 			Vehicles : Aucun
+			Role     :
 		-> Journaliste
 			Batiment : Land_i_House_Small_03_V1_F
 			Vehicles : (hélico + caméra) ?
+			Role     :
 		-> Boutique
 			Batiment : Land_i_Shop_01_V1_F
 			Vehicles : Aucun
