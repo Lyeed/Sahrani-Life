@@ -1517,14 +1517,14 @@ class ALYSIA_VEHICLES
 		realname = "Porshe Cayenne";
 	};
 
-	class Mrshounka_cayenne_p_bleufonce : Mrshounka_cayenne_p {};
-	class Mrshounka_cayenne_p_grise : Mrshounka_cayenne_p {};
-	class Mrshounka_cayenne_p_jaune : Mrshounka_cayenne_p {};
-	class Mrshounka_cayenne_p_noir : Mrshounka_cayenne_p {};
-	class Mrshounka_cayenne_p_orange : Mrshounka_cayenne_p {};
-	class Mrshounka_cayenne_p_rose : Mrshounka_cayenne_p {};
-	class Mrshounka_cayenne_p_rouge : Mrshounka_cayenne_p {};
-	class Mrshounka_cayenne_p_violet : Mrshounka_cayenne_p {};
+	class Mrshounka_cayenne_p_bleufonce : Mrshounka_cayenne_p_civ {};
+	class Mrshounka_cayenne_p_grise : Mrshounka_cayenne_p_civ {};
+	class Mrshounka_cayenne_p_jaune : Mrshounka_cayenne_p_civ {};
+	class Mrshounka_cayenne_p_noir : Mrshounka_cayenne_p_civ {};
+	class Mrshounka_cayenne_p_orange : Mrshounka_cayenne_p_civ {};
+	class Mrshounka_cayenne_p_rose : Mrshounka_cayenne_p_civ {};
+	class Mrshounka_cayenne_p_rouge : Mrshounka_cayenne_p_civ {};
+	class Mrshounka_cayenne_p_violet : Mrshounka_cayenne_p_civ {};
 
 	class Mrshounka_r5_civ
 	{
