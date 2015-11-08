@@ -127,7 +127,7 @@ class ALYSIA_VEHICLES
   	class DAR_TaurusCivBlack : DAR_TaurusCiv {};
   	class DAR_TaurusCivBlue : DAR_TaurusCiv {};
 
-  	class A3L_Renault_Magnum
+  	class shounka_a3_renaultmagnum_f
 	{
 		buyPrice = 25000;
 		inventory = 150;
@@ -169,36 +169,6 @@ class ALYSIA_VEHICLES
 	class Mrshounka_Alfa_Romeo_grise : Mrshounka_Alfa_Romeo_civ {};
 	class Mrshounka_Alfa_Romeo_violet : Mrshounka_Alfa_Romeo_civ {};
 	class Mrshounka_Alfa_Romeo_orange : Mrshounka_Alfa_Romeo_civ {};
-
-	class Peugeot_207
-	{
-		buyPrice = 25000;
-		inventory = 150;
-		side = "CIV";
-		insurance = 1;
-		donator = 0;
-		license = "driver";
-		rank = 0;
-		colors[] = {
-			"Peugeot_207_Red",
-			"Peugeot_207_Black",
-			"Peugeot_207_DarkBlue",
-			"Peugeot_207_Yellow",
-			"Peugeot_207_Pink",
-			"Peugeot_207_Grey",
-			"Peugeot_207_Purple",
-			"Peugeot_207_Orange"
-		};
-		realname = "Peugeot 207";
-	};
-  	class Peugeot_207_Red : Peugeot_207 {};
-  	class Peugeot_207_Black : Peugeot_207 {};
-  	class Peugeot_207_DarkBlue : Peugeot_207 {};
-  	class Peugeot_207_Yellow : Peugeot_207 {};
-  	class Peugeot_207_Pink : Peugeot_207 {};
-  	class Peugeot_207_Grey : Peugeot_207 {};
-  	class Peugeot_207_Purple : Peugeot_207 {};
-  	class Peugeot_207_Orange : Peugeot_207 {};
 
 	class Mrshounka_rs4_civ
 	{
@@ -959,7 +929,7 @@ class ALYSIA_VEHICLES
 		side = "CIV";
 		insurance = 1;
 		donator = 0;
-		license = "truck";
+		license = "driver";
 		rank = 0;
 		colors[] = {
 			"mrshounka_huracan_c_bleufonce",
@@ -990,21 +960,21 @@ class ALYSIA_VEHICLES
 		side = "CIV";
 		insurance = 1;
 		donator = 0;
-		license = "truck";
+		license = "driver";
 		rank = 0;
 		colors[] = {
 			"Mrshounka_veneno_c_noir",
 			"Mrshounka_veneno_c_bleu",
 			"Mrshounka_veneno_c_jaune"
 		};
-		realname = "Lamborgini Huracan";
+		realname = "Lamborgini Veneno";
 	};
 
 	class Mrshounka_veneno_c_noir : Mrshounka_veneno_c {};
 	class Mrshounka_veneno_c_bleu : Mrshounka_veneno_c {};
 	class Mrshounka_veneno_c_jaune : Mrshounka_veneno_c {};
 
-	class shounka_a3_dafxf_euro6_f
+	class Mrshounka_evox_civ
 	{
 		buyPrice = 25000;
 		inventory = 150;
@@ -1013,8 +983,778 @@ class ALYSIA_VEHICLES
 		donator = 0;
 		license = "driver";
 		rank = 0;
+		colors[] = {
+			"Mrshounka_evox_bleufonce",
+			"Mrshounka_evox_grise",
+			"Mrshounka_evox_jaune",
+			"Mrshounka_evox_noir",
+			"Mrshounka_evox_orange",
+			"Mrshounka_evox_rose",
+			"Mrshounka_evox_rouge",
+			"Mrshounka_evox_violet"
+		};
+		realname = "Lancer Evolution";
+	};
+
+	class Mrshounka_evox_bleufonce : Mrshounka_evox_civ {};
+	class Mrshounka_evox_grise : Mrshounka_evox_civ {};
+	class Mrshounka_evox_jaune : Mrshounka_evox_civ {};
+	class Mrshounka_evox_noir : Mrshounka_evox_civ {};
+	class Mrshounka_evox_orange : Mrshounka_evox_civ {};
+	class Mrshounka_evox_rose : Mrshounka_evox_civ {};
+	class Mrshounka_evox_rouge : Mrshounka_evox_civ {};
+	class Mrshounka_evox_violet : Mrshounka_evox_civ {};
+
+	class shounka_limo_civ
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"shounka_limo_civ_bleufonce",
+			"shounka_limo_civ_grise",
+			"shounka_limo_civ_jaune",
+			"shounka_limo_civ_noir",
+			"shounka_limo_civ_orange",
+			"shounka_limo_civ_rose",
+			"shounka_limo_civ_rouge",
+			"shounka_limo_civ_violet"
+		};
+		realname = "Limousine";
+	};
+
+	class shounka_limo_civ_bleufonce : shounka_limo_civ {};
+	class shounka_limo_civ_grise : shounka_limo_civ {};
+	class shounka_limo_civ_jaune : shounka_limo_civ {};
+	class shounka_limo_civ_noir : shounka_limo_civ {};
+	class shounka_limo_civ_orange : shounka_limo_civ {};
+	class shounka_limo_civ_rose : shounka_limo_civ {};
+	class shounka_limo_civ_rouge : shounka_limo_civ {};
+	class shounka_limo_civ_violet : shounka_limo_civ {};
+
+	class Mrshounka_lincoln_civ
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"Mrshounka_lincoln_bleufonce",
+			"Mrshounka_lincoln_grise",
+			"Mrshounka_lincoln_jaune",
+			"Mrshounka_lincoln_noir",
+			"Mrshounka_lincoln_orange",
+			"Mrshounka_lincoln_rose",
+			"Mrshounka_lincoln_rouge",
+			"Mrshounka_lincoln_violet"
+		};
+		realname = "Lincoln";
+	};
+
+	class Mrshounka_lincoln_bleufonce : Mrshounka_lincoln_civ {};
+	class Mrshounka_lincoln_grise : Mrshounka_lincoln_civ {};
+	class Mrshounka_lincoln_jaune : Mrshounka_lincoln_civ {};
+	class Mrshounka_lincoln_noir : Mrshounka_lincoln_civ {};
+	class Mrshounka_lincoln_orange : Mrshounka_lincoln_civ {};
+	class Mrshounka_lincoln_rose : Mrshounka_lincoln_civ {};
+	class Mrshounka_lincoln_rouge : Mrshounka_lincoln_civ {};
+	class Mrshounka_lincoln_violet : Mrshounka_lincoln_civ {};
+
+	class Mrshounka_lykan_c
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"Mrshounka_lykan_c_bleufonce",
+			"Mrshounka_lykan_c_grise",
+			"Mrshounka_lykan_c_jaune",
+			"Mrshounka_lykan_c_noir",
+			"Mrshounka_lykan_c_orange",
+			"Mrshounka_lykan_c_rose",
+			"Mrshounka_lykan_c_rouge",
+			"Mrshounka_lykan_c_violet"
+		};
+		realname = "Lykan Hypersport";
+	};
+
+	class Mrshounka_lykan_c_bleufonce : Mrshounka_lykan_c {};
+	class Mrshounka_lykan_c_grise : Mrshounka_lykan_c {};
+	class Mrshounka_lykan_c_jaune : Mrshounka_lykan_c {};
+	class Mrshounka_lykan_c_noir : Mrshounka_lykan_c {};
+	class Mrshounka_lykan_c_orange : Mrshounka_lykan_c {};
+	class Mrshounka_lykan_c_rose : Mrshounka_lykan_c {};
+	class Mrshounka_lykan_c_rouge : Mrshounka_lykan_c {};
+	class Mrshounka_lykan_c_violet : Mrshounka_lykan_c {};
+
+	class shounka_mp4
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"shounka_mp4_bleufonce",
+			"shounka_mp4_grise",
+			"shounka_mp4_jaune",
+			"shounka_mp4_noir",
+			"shounka_mp4_orange",
+			"shounka_mp4_rose",
+			"shounka_mp4_rouge",
+			"shounka_mp4_violet"
+		};
+		realname = "McLaren MP4";
+	};
+
+	class shounka_mp4_bleufonce : shounka_mp4 {};
+	class shounka_mp4_grise : shounka_mp4 {};
+	class shounka_mp4_jaune : shounka_mp4 {};
+	class shounka_mp4_noir : shounka_mp4 {};
+	class shounka_mp4_orange : shounka_mp4 {};
+	class shounka_mp4_rose : shounka_mp4 {};
+	class shounka_mp4_rouge : shounka_mp4 {};
+	class shounka_mp4_violet : shounka_mp4 {};
+
+	class Mrshounka_mercedes_190_p_civ
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"Mrshounka_mercedes_190_p_bleufonce",
+			"Mrshounka_mercedes_190_p_grise",
+			"Mrshounka_mercedes_190_p_jaune",
+			"Mrshounka_mercedes_190_p_noir",
+			"Mrshounka_mercedes_190_p_orange",
+			"Mrshounka_mercedes_190_p_rose",
+			"Mrshounka_mercedes_190_p_rouge",
+			"Mrshounka_mercedes_190_p_violet"
+		};
+		realname = "Mercedes 190";
+	};
+
+	class Mrshounka_mercedes_190_p_bleufonce : Mrshounka_mercedes_190_p_civ {};
+	class Mrshounka_mercedes_190_p_grise : Mrshounka_mercedes_190_p_civ {};
+	class Mrshounka_mercedes_190_p_jaune : Mrshounka_mercedes_190_p_civ {};
+	class Mrshounka_mercedes_190_p_noir : Mrshounka_mercedes_190_p_civ {};
+	class Mrshounka_mercedes_190_p_orange : Mrshounka_mercedes_190_p_civ {};
+	class Mrshounka_mercedes_190_p_rose : Mrshounka_mercedes_190_p_civ {};
+	class Mrshounka_mercedes_190_p_rouge : Mrshounka_mercedes_190_p_civ {};
+	class Mrshounka_mercedes_190_p_violet : Mrshounka_mercedes_190_p_civ {};
+
+	class Mrshounka_c63_2015_civ
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"Mrshounka_c63_2015_mat",
+			"Mrshounka_c63_2015_noir",
+			"Mrshounka_c63_2015_mat_n",
+			"Mrshounka_c63_2015_bleufonce",
+			"Mrshounka_c63_2015_mat_b",
+			"Mrshounka_c63_2015_rouge",
+			"Mrshounka_c63_2015_jaune",
+			"Mrshounka_c63_2015_rose",
+			"Mrshounka_c63_2015_grise",
+			"Mrshounka_c63_2015_violet",
+			"Mrshounka_c63_2015_orange"
+		};
+		realname = "Mercedes C63";
+	};
+
+	class Mrshounka_c63_2015_mat : Mrshounka_c63_2015_civ {};
+	class Mrshounka_c63_2015_noir : Mrshounka_c63_2015_civ {};
+	class Mrshounka_c63_2015_mat_n : Mrshounka_c63_2015_civ {};
+	class Mrshounka_c63_2015_bleufonce : Mrshounka_c63_2015_civ {};
+	class Mrshounka_c63_2015_mat_b : Mrshounka_c63_2015_civ {};
+	class Mrshounka_c63_2015_rouge : Mrshounka_c63_2015_civ {};
+	class Mrshounka_c63_2015_jaune : Mrshounka_c63_2015_civ {};
+	class Mrshounka_c63_2015_rose : Mrshounka_c63_2015_civ {};
+	class Mrshounka_c63_2015_grise : Mrshounka_c63_2015_civ {};
+	class Mrshounka_c63_2015_violet : Mrshounka_c63_2015_civ {};
+	class Mrshounka_c63_2015_orange : Mrshounka_c63_2015_civ {};
+
+	class shounka_clk
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"shounka_clk_bleufonce",
+			"shounka_clk_grise",
+			"shounka_clk_jaune",
+			"shounka_clk_noir",
+			"shounka_clk_orange",
+			"shounka_clk_rose",
+			"shounka_clk_rouge",
+			"shounka_clk_violet"
+		};
+		realname = "Mercedes CLK";
+	};
+
+	class shounka_clk_bleufonce : shounka_clk {};
+	class shounka_clk_grise : shounka_clk {};
+	class shounka_clk_jaune : shounka_clk {};
+	class shounka_clk_noir : shounka_clk {};
+	class shounka_clk_orange : shounka_clk {};
+	class shounka_clk_rose : shounka_clk {};
+	class shounka_clk_rouge : shounka_clk {};
+	class shounka_clk_violet : shounka_clk {};
+
+	class shounka_a3_spr_civ
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"shounka_a3_spr_civ_bleufonce",
+			"shounka_a3_spr_civ_grise",
+			"shounka_a3_spr_civ_jaune",
+			"shounka_a3_spr_civ_noir",
+			"shounka_a3_spr_civ_orange",
+			"shounka_a3_spr_civ_rose",
+			"shounka_a3_spr_civ_rouge",
+			"shounka_a3_spr_civ_violet"
+		};
+		realname = "Mercedes Sprinter";
+	};
+
+	class shounka_a3_spr_civ_bleufonce : shounka_a3_spr_civ {};
+	class shounka_a3_spr_civ_grise : shounka_a3_spr_civ {};
+	class shounka_a3_spr_civ_jaune : shounka_a3_spr_civ {};
+	class shounka_a3_spr_civ_noir : shounka_a3_spr_civ {};
+	class shounka_a3_spr_civ_orange : shounka_a3_spr_civ {};
+	class shounka_a3_spr_civ_rose : shounka_a3_spr_civ {};
+	class shounka_a3_spr_civ_rouge : shounka_a3_spr_civ {};
+	class shounka_a3_spr_civ_violet : shounka_a3_spr_civ {};
+
+	class Mrshounka_a3_gtr_civ
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"Mrshounka_a3_gtr_civ_noir",
+			"Mrshounka_a3_gtr_civ_bleu"
+		};
+		realname = "Nissan GTR";
+	};
+
+	class Mrshounka_a3_gtr_civ_noir : Mrshounka_a3_gtr_civ {};
+	class Mrshounka_a3_gtr_civ_bleu : Mrshounka_a3_gtr_civ {};
+
+	class Mrshounka_pagani_c
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"Mrshounka_pagani_c_bleufonce",
+			"Mrshounka_pagani_c_grise",
+			"Mrshounka_pagani_c_jaune",
+			"Mrshounka_pagani_c_noir",
+			"Mrshounka_pagani_c_orange",
+			"Mrshounka_pagani_c_rose",
+			"Mrshounka_pagani_c_rouge",
+			"Mrshounka_pagani_c_violet"
+		};
+		realname = "Pagani Huayra";
+	};
+
+	class Mrshounka_pagani_c_bleufonce : Mrshounka_pagani_c {};
+	class Mrshounka_pagani_c_grise : Mrshounka_pagani_c {};
+	class Mrshounka_pagani_c_jaune : Mrshounka_pagani_c {};
+	class Mrshounka_pagani_c_noir : Mrshounka_pagani_c {};
+	class Mrshounka_pagani_c_orange : Mrshounka_pagani_c {};
+	class Mrshounka_pagani_c_rose : Mrshounka_pagani_c {};
+	class Mrshounka_pagani_c_rouge : Mrshounka_pagani_c {};
+	class Mrshounka_pagani_c_violet : Mrshounka_pagani_c {};
+
+	class Mrshounka_207_civ
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"Mrshounka_207_bleufonce",
+			"Mrshounka_207_grise",
+			"Mrshounka_207_jaune",
+			"Mrshounka_207_noir",
+			"Mrshounka_207_orange",
+			"Mrshounka_207_rose",
+			"Mrshounka_207_rouge",
+			"Mrshounka_207_violet"
+		};
+		realname = "Peugeot 207";
+	};
+
+	class Mrshounka_207_bleufonce : Mrshounka_207_civ {};
+	class Mrshounka_207_grise : Mrshounka_207_civ {};
+	class Mrshounka_207_jaune : Mrshounka_207_civ {};
+	class Mrshounka_207_noir : Mrshounka_207_civ {};
+	class Mrshounka_207_orange : Mrshounka_207_civ {};
+	class Mrshounka_207_rose : Mrshounka_207_civ {};
+	class Mrshounka_207_rouge : Mrshounka_207_civ {};
+	class Mrshounka_207_violet : Mrshounka_207_civ {};
+
+	class Mrshounka_a3_308_civ
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"Mrshounka_a3_308_civ_bleufonce",
+			"Mrshounka_a3_308_civ_grise",
+			"Mrshounka_a3_308_civ_jaune",
+			"Mrshounka_a3_308_civ_noir",
+			"Mrshounka_a3_308_civ_orange",
+			"Mrshounka_a3_308_civ_rose",
+			"Mrshounka_a3_308_civ_rouge",
+			"Mrshounka_a3_308_civ_violet"
+		};
+		realname = "Peugeot 308";
+	};
+
+	class Mrshounka_a3_308_civ_bleufonce : Mrshounka_a3_308_civ {};
+	class Mrshounka_a3_308_civ_grise : Mrshounka_a3_308_civ {};
+	class Mrshounka_a3_308_civ_jaune : Mrshounka_a3_308_civ {};
+	class Mrshounka_a3_308_civ_noir : Mrshounka_a3_308_civ {};
+	class Mrshounka_a3_308_civ_orange : Mrshounka_a3_308_civ {};
+	class Mrshounka_a3_308_civ_rose : Mrshounka_a3_308_civ {};
+	class Mrshounka_a3_308_civ_rouge : Mrshounka_a3_308_civ {};
+	class Mrshounka_a3_308_civ_violet : Mrshounka_a3_308_civ {};
+
+	class Mrshounka_a3_308_rcz
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"Mrshounka_a3_308_rcz_bleufonce",
+			"Mrshounka_a3_308_rcz_grise",
+			"Mrshounka_a3_308_rcz_jaune",
+			"Mrshounka_a3_308_rcz_noir",
+			"Mrshounka_a3_308_rcz_orange",
+			"Mrshounka_a3_308_rcz_rose",
+			"Mrshounka_a3_308_rcz_rouge",
+			"Mrshounka_a3_308_rcz_violet"
+		};
+		realname = "Peugeot 308 RCZ";
+	};
+
+	class Mrshounka_a3_308_rcz_bleufonce : Mrshounka_a3_308_rcz {};
+	class Mrshounka_a3_308_rcz_grise : Mrshounka_a3_308_rcz {};
+	class Mrshounka_a3_308_rcz_jaune : Mrshounka_a3_308_rcz {};
+	class Mrshounka_a3_308_rcz_noir : Mrshounka_a3_308_rcz {};
+	class Mrshounka_a3_308_rcz_orange : Mrshounka_a3_308_rcz {};
+	class Mrshounka_a3_308_rcz_rose : Mrshounka_a3_308_rcz {};
+	class Mrshounka_a3_308_rcz_rouge : Mrshounka_a3_308_rcz {};
+	class Mrshounka_a3_308_rcz_violet : Mrshounka_a3_308_rcz {};
+
+	class shounka_a3_508_civ
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"shounka_a3_508_civ_bleufonce",
+			"shounka_a3_508_civ_grise",
+			"shounka_a3_508_civ_jaune",
+			"shounka_a3_508_civ_noir",
+			"shounka_a3_508_civ_orange",
+			"shounka_a3_508_civ_rose",
+			"shounka_a3_508_civ_rouge",
+			"shounka_a3_508_civ_violet"
+		};
+		realname = "Peugeot 508";
+	};
+
+	class shounka_a3_508_civ_bleufonce : shounka_a3_508_civ {};
+	class shounka_a3_508_civ_grise : shounka_a3_508_civ {};
+	class shounka_a3_508_civ_jaune : shounka_a3_508_civ {};
+	class shounka_a3_508_civ_noir : shounka_a3_508_civ {};
+	class shounka_a3_508_civ_orange : shounka_a3_508_civ {};
+	class shounka_a3_508_civ_rose : shounka_a3_508_civ {};
+	class shounka_a3_508_civ_rouge : shounka_a3_508_civ {};
+	class shounka_a3_508_civ_violet : shounka_a3_508_civ {};
+
+	class shounka_porsche911
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"shounka_porsche911_bleufonce",
+			"shounka_porsche911_grise",
+			"shounka_porsche911_jaune",
+			"shounka_porsche911_noir",
+			"shounka_porsche911_orange",
+			"shounka_porsche911_rose",
+			"shounka_porsche911_rouge",
+			"shounka_porsche911_violet"
+		};
+		realname = "Porshe 911";
+	};
+
+	class shounka_porsche911_bleufonce : shounka_porsche911 {};
+	class shounka_porsche911_grise : shounka_porsche911 {};
+	class shounka_porsche911_jaune : shounka_porsche911 {};
+	class shounka_porsche911_noir : shounka_porsche911 {};
+	class shounka_porsche911_orange : shounka_porsche911 {};
+	class shounka_porsche911_rose : shounka_porsche911 {};
+	class shounka_porsche911_rouge : shounka_porsche911 {};
+	class shounka_porsche911_violet : shounka_porsche911 {};
+
+	class mrshounka_92_civ
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"mrshounka_92_civ_bleufonce",
+			"mrshounka_92_civ_grise",
+			"mrshounka_92_civ_jaune",
+			"mrshounka_92_civ_noir",
+			"mrshounka_92_civ_orange",
+			"mrshounka_92_civ_rose",
+			"mrshounka_92_civ_rouge",
+			"mrshounka_92_civ_violet"
+		};
+		realname = "Porshe 92";
+	};
+
+	class mrshounka_92_civ_bleufonce : mrshounka_92_civ {};
+	class mrshounka_92_civ_grise : mrshounka_92_civ {};
+	class mrshounka_92_civ_jaune : mrshounka_92_civ {};
+	class mrshounka_92_civ_noir : mrshounka_92_civ {};
+	class mrshounka_92_civ_orange : mrshounka_92_civ {};
+	class mrshounka_92_civ_rose : mrshounka_92_civ {};
+	class mrshounka_92_civ_rouge : mrshounka_92_civ {};
+	class mrshounka_92_civ_violet : mrshounka_92_civ {};
+
+	class Mrshounka_cayenne_p_civ
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"Mrshounka_cayenne_p_bleufonce",
+			"Mrshounka_cayenne_p_grise",
+			"Mrshounka_cayenne_p_jaune",
+			"Mrshounka_cayenne_p_noir",
+			"Mrshounka_cayenne_p_orange",
+			"Mrshounka_cayenne_p_rose",
+			"Mrshounka_cayenne_p_rouge",
+			"Mrshounka_cayenne_p_violet"
+		};
+		realname = "Porshe Cayenne";
+	};
+
+	class Mrshounka_cayenne_p_bleufonce : Mrshounka_cayenne_p {};
+	class Mrshounka_cayenne_p_grise : Mrshounka_cayenne_p {};
+	class Mrshounka_cayenne_p_jaune : Mrshounka_cayenne_p {};
+	class Mrshounka_cayenne_p_noir : Mrshounka_cayenne_p {};
+	class Mrshounka_cayenne_p_orange : Mrshounka_cayenne_p {};
+	class Mrshounka_cayenne_p_rose : Mrshounka_cayenne_p {};
+	class Mrshounka_cayenne_p_rouge : Mrshounka_cayenne_p {};
+	class Mrshounka_cayenne_p_violet : Mrshounka_cayenne_p {};
+
+	class Mrshounka_r5_civ
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"Mrshounka_r5_bleufonce",
+			"Mrshounka_r5_grise",
+			"Mrshounka_r5_jaune",
+			"Mrshounka_r5_noir",
+			"Mrshounka_r5_orange",
+			"Mrshounka_r5_rose",
+			"Mrshounka_r5_rouge",
+			"Mrshounka_r5_violet"
+		};
+		realname = "Renault 5";
+	};
+
+	class Mrshounka_r5_bleufonce : Mrshounka_r5_civ {};
+	class Mrshounka_r5_grise : Mrshounka_r5_civ {};
+	class Mrshounka_r5_jaune : Mrshounka_r5_civ {};
+	class Mrshounka_r5_noir : Mrshounka_r5_civ {};
+	class Mrshounka_r5_orange : Mrshounka_r5_civ {};
+	class Mrshounka_r5_rose : Mrshounka_r5_civ {};
+	class Mrshounka_r5_rouge : Mrshounka_r5_civ {};
+	class Mrshounka_r5_violet : Mrshounka_r5_civ {};
+
+	class Mrshounka_megane_rs_2015_civ
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"Mrshounka_megane_rs_2015_bleufonce",
+			"Mrshounka_megane_rs_2015_grise",
+			"Mrshounka_megane_rs_2015_jaune",
+			"Mrshounka_megane_rs_2015_noir",
+			"Mrshounka_megane_rs_2015_orange",
+			"Mrshounka_megane_rs_2015_rose",
+			"Mrshounka_megane_rs_2015_rouge",
+			"Mrshounka_megane_rs_2015_violet"
+		};
+		realname = "Renault Megane RS";
+	};
+
+	class Mrshounka_megane_rs_2015_bleufonce : Mrshounka_megane_rs_2015_civ {};
+	class Mrshounka_megane_rs_2015_grise : Mrshounka_megane_rs_2015_civ {};
+	class Mrshounka_megane_rs_2015_jaune : Mrshounka_megane_rs_2015_civ {};
+	class Mrshounka_megane_rs_2015_noir : Mrshounka_megane_rs_2015_civ {};
+	class Mrshounka_megane_rs_2015_orange : Mrshounka_megane_rs_2015_civ {};
+	class Mrshounka_megane_rs_2015_rose : Mrshounka_megane_rs_2015_civ {};
+	class Mrshounka_megane_rs_2015_rouge : Mrshounka_megane_rs_2015_civ {};
+	class Mrshounka_megane_rs_2015_violet : Mrshounka_megane_rs_2015_civ {};
+
+	class Mrshounka_twingo_p
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"Mrshounka_twingo_p_noir",
+			"Mrshounka_twingo_p_bf",
+			"Mrshounka_twingo_p_r",
+			"Mrshounka_twingo_p_j",
+			"Mrshounka_twingo_p_rose",
+			"Mrshounka_twingo_p_g",
+			"Mrshounka_twingo_p_v",
+			"Mrshounka_twingo_p_o"
+		};
+		realname = "Renault Twingo";
+	};
+
+	class Mrshounka_twingo_p_noir : Mrshounka_twingo_p {};
+	class Mrshounka_twingo_p_bf : Mrshounka_twingo_p {};
+	class Mrshounka_twingo_p_r : Mrshounka_twingo_p {};
+	class Mrshounka_twingo_p_j : Mrshounka_twingo_p {};
+	class Mrshounka_twingo_p_rose : Mrshounka_twingo_p {};
+	class Mrshounka_twingo_p_g : Mrshounka_twingo_p {};
+	class Mrshounka_twingo_p_v : Mrshounka_twingo_p {};
+	class Mrshounka_twingo_p_o : Mrshounka_twingo_p {};
+
+	class Mrshounka_a3_smart_civ
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"Mrshounka_a3_smart_civ_noir",
+			"Mrshounka_a3_smart_civ_bleu"
+		};
+		realname = "Smart";
+	};
+
+	class Mrshounka_a3_smart_civ_noir : Mrshounka_a3_smart_civ {};
+	class Mrshounka_a3_smart_civ_bleu : Mrshounka_a3_smart_civ {};
+
+	class Mrshounka_subaru08_civ
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"Mrshounka_subaru08_bleufonce",
+			"Mrshounka_subaru08_grise",
+			"Mrshounka_subaru08_jaune",
+			"Mrshounka_subaru08_noir",
+			"Mrshounka_subaru08_orange",
+			"Mrshounka_subaru08_rose",
+			"Mrshounka_subaru08_rouge",
+			"Mrshounka_subaru08_violet"
+		};
+		realname = "Subaru Impreza";
+	};
+
+	class Mrshounka_subaru08_bleufonce : Mrshounka_subaru08_civ {};
+	class Mrshounka_subaru08_grise : Mrshounka_subaru08_civ {};
+	class Mrshounka_subaru08_jaune : Mrshounka_subaru08_civ {};
+	class Mrshounka_subaru08_noir : Mrshounka_subaru08_civ {};
+	class Mrshounka_subaru08_orange : Mrshounka_subaru08_civ {};
+	class Mrshounka_subaru08_rose : Mrshounka_subaru08_civ {};
+	class Mrshounka_subaru08_rouge : Mrshounka_subaru08_civ {};
+	class Mrshounka_subaru08_violet : Mrshounka_subaru08_civ {};
+
+	class shounka_transam
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"shounka_transam_bleufonce",
+			"shounka_transam_grise",
+			"shounka_transam_jaune",
+			"shounka_transam_noir",
+			"shounka_transam_orange",
+			"shounka_transam_rose",
+			"shounka_transam_rouge",
+			"shounka_transam_violet"
+		};
+		realname = "Transam";
+	};
+
+	class shounka_transam_bleufonce : shounka_transam {};
+	class shounka_transam_grise : shounka_transam {};
+	class shounka_transam_jaune : shounka_transam {};
+	class shounka_transam_noir : shounka_transam {};
+	class shounka_transam_orange : shounka_transam {};
+	class shounka_transam_rose : shounka_transam {};
+	class shounka_transam_rouge : shounka_transam {};
+	class shounka_transam_violet : shounka_transam {};
+
+	class Mrshounka_Volkswagen_Touareg_civ
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "driver";
+		rank = 0;
+		colors[] = {
+			"Mrshounka_Volkswagen_Touareg_bleufonce",
+			"Mrshounka_Volkswagen_Touareg_grise",
+			"Mrshounka_Volkswagen_Touareg_jaune",
+			"Mrshounka_Volkswagen_Touareg_noir",
+			"Mrshounka_Volkswagen_Touareg_orange",
+			"Mrshounka_Volkswagen_Touareg_rose",
+			"Mrshounka_Volkswagen_Touareg_rouge",
+			"Mrshounka_Volkswagen_Touareg_violet"
+		};
+		realname = "Volswagen Touareg";
+	};
+
+	class Mrshounka_Volkswagen_Touareg_bleufonce : Mrshounka_Volkswagen_Touareg_civ {};
+	class Mrshounka_Volkswagen_Touareg_grise : Mrshounka_Volkswagen_Touareg_civ {};
+	class Mrshounka_Volkswagen_Touareg_jaune : Mrshounka_Volkswagen_Touareg_civ {};
+	class Mrshounka_Volkswagen_Touareg_noir : Mrshounka_Volkswagen_Touareg_civ {};
+	class Mrshounka_Volkswagen_Touareg_orange : Mrshounka_Volkswagen_Touareg_civ {};
+	class Mrshounka_Volkswagen_Touareg_rose : Mrshounka_Volkswagen_Touareg_civ {};
+	class Mrshounka_Volkswagen_Touareg_rouge : Mrshounka_Volkswagen_Touareg_civ {};
+	class Mrshounka_Volkswagen_Touareg_violet : Mrshounka_Volkswagen_Touareg_civ {};
+
+	class shounka_a3_dafxf_euro6_f
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "truck";
+		rank = 0;
 		colors[] = {};
 		realname = "Daf euro 6";
+	};
+
+	class shounka_a3_mantgs
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "truck";
+		rank = 0;
+		colors[] = {};
+		realname = "Man TGS dépannage";
 	};
 
   	class SAL_77TRANSAMCiv

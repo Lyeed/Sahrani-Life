@@ -139,7 +139,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"B_Truck_01_box_F",
 			"ALFR_GeK_Scania_420",
 			"ALFR_GeK_Volvo_FH16_2012",
-			"A3L_Renault_Magnum",
+			"shounka_a3_renaultmagnum_f",
 			"shounka_a3_dafxf_euro6_f",
 			"Mrshounka_a3_iveco_f",
 			"B_G_Van_01_fuel_F",  
@@ -158,7 +158,9 @@ class ALYSIA_SHOPS_VEHICLES
 			"RDS_S1203_Civ_01",
 			"RDS_Octavia_Civ_01",
 			"RDS_Lada_Civ",
-			"max_CrownVic"
+			"max_CrownVic",
+			"Mrshounka_mercedes_190_p_civ",
+			"Mrshounka_r5_civ"
 		};
 		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_land_occasion.jpg";
 	};
@@ -186,7 +188,17 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_a3_ds3_civ",
 			"shounka_a3_ds4_civ",
 			"shounka_nemo",
-			"Mrshounka_Vandura_civ"
+			"Mrshounka_Vandura_civ",
+			"shounka_a3_spr_civ",
+			"Mrshounka_207_civ",
+			"Mrshounka_a3_308_civ",
+			"Mrshounka_a3_308_rcz",
+			"shounka_a3_508_civ",
+			"Mrshounka_megane_rs_2015_civ",
+			"Mrshounka_twingo_p",
+			"Mrshounka_a3_smart_civ",
+			"Mrshounka_subaru08_civ",
+			"Mrshounka_Volkswagen_Touareg_civ"
 		};
 		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_land_normal.jpg";
 	};
@@ -225,7 +237,20 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_raptor2_civ",
 			"Mrshounka_hummer_civ",
 			"Mrshounka_cherokee_noir",
-			"mrshounka_huracan_c"
+			"mrshounka_huracan_c",
+			"Mrshounka_veneno_c",
+			"Mrshounka_evox_civ",
+			"Mrshounka_lincoln_civ",
+			"Mrshounka_lykan_c",
+			"shounka_mp4",
+			"Mrshounka_c63_2015_civ",
+			"shounka_clk",
+			"Mrshounka_a3_gtr_civ",
+			"Mrshounka_pagani_c",
+			"shounka_porsche911",
+			"mrshounka_92_civ",
+			"Mrshounka_cayenne_p",
+			"shounka_transam"
 		};
 		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_land_luxe.jpg";
 	};
@@ -247,7 +272,9 @@ class ALYSIA_SHOPS_VEHICLES
 			"max_CrownVic_taxi",
 			"RDS_Ikarus_Civ",
 			"Skyline_Bus",
-			"max_towtruck"
+			"max_towtruck",
+			"shounka_limo_civ",
+			"shounka_a3_mantgs"
 		};
 		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_land_normal.jpg";
 	};
