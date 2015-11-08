@@ -22,6 +22,20 @@ class Cfg_Garages
 		};
 	};
 
+	class garage_bagongo
+	{
+		name = "Garage du Bagongo";
+		spawns[] = 
+		{
+			"garage_bagongo_1"
+		};
+		types[] =
+		{
+			"Car",
+			"Truck"
+		};
+	};
+
 	class garage_est
 	{
 		name = "Garage de l'EST";

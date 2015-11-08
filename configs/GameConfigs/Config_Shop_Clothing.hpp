@@ -386,8 +386,8 @@ class ALYSIA_SHOPS_CLOTHING
 		};
 	};
 
-	class civ_hg {
-		name = "Friperie Haut de gamme";
+	class civ_luxe {
+		name = "Friperie de luxe";
 		side = "civilian";
 		uniforms[] = {
 			"rds_uniform_Functionary1" ,

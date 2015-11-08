@@ -3433,7 +3433,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={17170.361,0,5013.2344};
+					position[]={18545.586,-0.0055477051,3445.0803};
 					id=152;
 					side="LOGIC";
 					vehicle="xCam_Source_Intern";
@@ -3450,7 +3450,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={13158.238,25.965,11274.428};
+					position[]={10626.917,122.985,9534.0625};
 					azimut=196.519;
 					id=153;
 					side="CIV";
@@ -3507,7 +3507,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 178.598;this setposATL [14433.813477,12498.598633,0.304714];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 178.598;this setposATL [14433.813477,12498.598633,0.304714];this setVectorUp [0,0,1];this addAction[""Friperie"",public_fnc_shop_clothing_open,""civ_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item4
 		{
@@ -3539,7 +3539,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 123.776;this setposATL [14405.625977,10791.864258,0.0101013];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 123.776;this setposATL [14405.625977,10791.864258,0.0101013];this setVectorUp [0,0,1];this addAction[""Vendeur de masque"",public_fnc_shop_clothing_open,""civ_masque"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item7
 		{
@@ -3560,7 +3560,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 202.136;this setposATL [12638.885742,14968.726563,-0.00495911];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false; this setdir 202.136;this setposATL [12638.885742,14968.726563,-0.00495911];this setVectorUp [0,0,1];this addAction[""Commerçant de planche"",public_fnc_shop_virtual_open,""woodp"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item9
 		{
@@ -3580,7 +3580,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 263.884;this setposATL [12370.212891,15002.405273,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 263.884;this setposATL [12370.212891,15002.405273,0];this setVectorUp [0,0,1];this addAction[""Commerçant de cuivre"",public_fnc_shop_virtual_open,""copper"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item11
 		{
@@ -3623,7 +3623,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this setdir 149.481;this setposATL [10771.695313,9467.229492,0];this setVectorUp [0,0,1];this addAction[""Concessionnaire de luxe"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_occasion"", [""CIV_vehicles_land_occasion_marker_1""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 149.481;this setposATL [10771.695313,9467.229492,0];this setVectorUp [0,0,1];this addAction[""Concessionnaire de d'occasion"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_occasion"", [""CIV_vehicles_land_occasion_marker_1""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item15
 		{
@@ -3725,7 +3725,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 180.096;this setposATL [13248.982422,9098.222656,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 180.096;this setposATL [13248.982422,9098.222656,0];this setVectorUp [0,0,1];this addAction[""Commerçant de pétrole"",public_fnc_shop_virtual_open,""oil"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item25
 		{
@@ -3785,7 +3785,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 87.9139;this setposATL [13723.96582,8997.666016,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 87.9139;this setposATL [13723.96582,8997.666016,0];this setVectorUp [0,0,1];this addAction[""Commerçant de verre"",public_fnc_shop_virtual_open,""glass"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item31
 		{
@@ -3795,7 +3795,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 23.6149;this setposATL [14436.0615234,8524.621094,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 23.6149;this setposATL [14436.0615234,8524.621094,0];this setVectorUp [0,0,1];this addAction[""Commerçant d'alcool"",public_fnc_shop_virtual_open,""alcool"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item32
 		{
@@ -3825,7 +3825,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 226.577;this setposATL [7720.872559,15800.650391,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 226.577;this setposATL [7720.872559,15800.650391,0];this setVectorUp [0,0,1];this addAction[""Friperie de luxe"",public_fnc_shop_clothing_open,""civ_luxe"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item35
 		{
@@ -3845,7 +3845,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 181.985;this setposATL [12980.668945,9038.359375,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 181.985;this setposATL [12980.668945,9038.359375,0];this setVectorUp [0,0,1];this addAction[""Commerçant de meuble"",public_fnc_shop_virtual_open,""furniture"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item37
 		{
@@ -5022,7 +5022,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 75.5073;this setposATL [14332.210938,12604.59668,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 75.5073;this setposATL [14332.210938,12604.59668,0];this setVectorUp [0,0,1];this addAction[""Garage"",public_fnc_garageGet,""garage_bagongo"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""Ranger son véhicule"",public_fnc_garageVehicleStore,[""Car"", ""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item147
 		{
@@ -5032,7 +5032,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 355.428;this setposATL [14217.644531,12451.855469,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this setdir 355.428;this setposATL [14217.644531,12451.855469,0];this setVectorUp [0,0,1];this addAction[""Concessionnaire de d'occasion"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_occasion"", [""CIV_vehicles_land_occasion_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item148
 		{
@@ -5074,7 +5074,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 353.333;this setposATL [12187.34082,7113.282227,0.638889];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 353.333;this setposATL [12187.34082,7113.282227,0.638889];this setVectorUp [0,0,1];this addAction[""Bijoutier"",public_fnc_shop_virtual_open,""bijoutier"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item152
 		{
@@ -5094,7 +5094,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 273.054;this setposATL [12258.94043,7170.698242,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 273.054;this setposATL [12258.94043,7170.698242,0];this setVectorUp [0,0,1];this addAction[""Commerçant de poterie"",public_fnc_shop_virtual_open,""poterie"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item154
 		{
@@ -5104,7 +5104,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 93.0539;this setposATL [10439.129883,9452.529297,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 93.0539;this setposATL [10439.129883,9452.529297,0];this setVectorUp [0,0,1];this addAction[""Commerçant de sel"",public_fnc_shop_virtual_open,""salt"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item155
 		{
@@ -5114,7 +5114,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 93.0539;this setposATL [16530.505859,9305.435547,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 93.0539;this setposATL [16530.505859,9305.435547,0];this setVectorUp [0,0,1];this addAction[""Usine de textile"",public_fnc_shop_virtual_open,""textile"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item156
 		{
@@ -5134,12 +5134,12 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 318.054;this setposATL [12808.890625,8808.553711,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 318.054;this setposATL [12808.890625,8808.553711,0];this setVectorUp [0,0,1];this addAction[""Commerçant d'aluminium "",public_fnc_shop_virtual_open,""baux"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 	};
 	class Markers
 	{
-		items=123;
+		items=127;
 		class Item0
 		{
 			position[]={10548.405,122.985,9604.9873};
@@ -5310,7 +5310,7 @@ class Mission
 		};
 		class Item18
 		{
-			position[]={13248.108,6.48,9098.6641};
+			position[]={13248.781,6.48,9098.0693};
 			name="Commerçant de pétrole";
 			text="Commerçant de pétrole";
 			type="plp_mark_civ_shoppingcart";
@@ -5738,7 +5738,7 @@ class Mission
 		};
 		class Item62
 		{
-			position[]={7724.063,23.077654,15808.042};
+			position[]={7718.9185,22.819887,15800.008};
 			name="Friperie de luxe";
 			text="Friperie de luxe";
 			type="plp_mark_civ_shoppingcart";
@@ -5852,7 +5852,7 @@ class Mission
 		};
 		class Item76
 		{
-			position[]={10780.971,127.77892,9473.1084};
+			position[]={10779.535,127.63187,9475.0215};
 			name="CIV_vehicles_land_occasion_marker_1";
 			type="Empty";
 		};
@@ -5961,7 +5961,7 @@ class Mission
 		};
 		class Item88
 		{
-			position[]={12183.979,28.440001,7124.5225};
+			position[]={12187.568,28.440001,7113.3115};
 			name="Bijoutier";
 			text="Bijoutier";
 			type="plp_mark_civ_shoppingcart";
@@ -5981,7 +5981,7 @@ class Mission
 		};
 		class Item90
 		{
-			position[]={10427.674,122.985,9460.918};
+			position[]={10438.924,122.985,9452.3877};
 			name="Commerçant de sel";
 			text="Commerçant de sel";
 			type="plp_mark_civ_commercialzone";
@@ -6011,7 +6011,7 @@ class Mission
 		};
 		class Item93
 		{
-			position[]={12255.587,31.049999,7185.7754};
+			position[]={12258.054,18.450001,7171.6494};
 			name="Commerçant de poterie";
 			text="Commerçant de poterie";
 			type="plp_mark_civ_shoppingcart";
@@ -6021,7 +6021,7 @@ class Mission
 		};
 		class Item94
 		{
-			position[]={12146.317,25.965,17762.705};
+			position[]={12141.051,25.965,17735.432};
 			name="Prison";
 			type="plp_mark_as_watchtower";
 			colorName="ColorBlue";
@@ -6063,7 +6063,7 @@ class Mission
 			position[]={459.21823,-0.0016532475,20005.463};
 			name="Légende :";
 			text="Légende :";
-			type="Empty";
+			type="hd_flag";
 			colorName="ColorRed";
 		};
 		class Item99
@@ -6192,7 +6192,7 @@ class Mission
 		};
 		class Item113
 		{
-			position[]={17356.643,13.455,14131.855};
+			position[]={17354.895,13.455,14131.505};
 			name="CIV_vehicles_land_truck_marker_2";
 			type="Empty";
 		};
@@ -6261,6 +6261,38 @@ class Mission
 			text="Base relais de la garde";
 			type="plp_mark_civ_campingsite";
 			colorName="ColorGrey";
+			a=0.5;
+			b=0.5;
+		};
+		class Item123
+		{
+			position[]={14218.192,39.959999,12444.787};
+			name="CIV_vehicles_land_occasion_marker_2";
+			type="Empty";
+		};
+		class Item124
+		{
+			position[]={14329.716,39.959999,12594.963};
+			name="garage_bagongo_1";
+			type="Empty";
+		};
+		class Item125
+		{
+			position[]={10621.388,122.985,9534.3564};
+			name="Poissonerie";
+			text="Poissonerie";
+			type="plp_mark_as_boat";
+			colorName="ColorGreen";
+			a=0.60000002;
+			b=0.60000002;
+		};
+		class Item126
+		{
+			position[]={19140.004,11.97,14021.895};
+			name="Vendeur de parachute et parapente";
+			text="Vendeur de parachute et parapente";
+			type="plp_mark_civ_commercialzone";
+			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
 		};
