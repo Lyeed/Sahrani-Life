@@ -14,7 +14,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Poissonnerie";
 		side = "civilian";
 		items[] = {{"fishingpoles"}, {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine"}};
-		background = "\lyeed_IMG\data\shop\back_fishmarket.jpg";
 	};
 
 	class farmingmarket
@@ -22,7 +21,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Commerçant agricol";
 		side = "civilian";
 		items[] = {{"corn_seed", "bean_seed", "cotton_seed", "engrais"}, {"cotton", "bean", "corn"}};
-		background = "\lyeed_IMG\data\shop\back_farmingmarket.jpg";
 	};
 	
 	class market
@@ -38,7 +36,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Hopital";
 		side = "sideUnknown";
 		items[] = {{"patch", "seringue", "cerealbar", "sparklingwater"}, {}};
-		background = "\lyeed_IMG\data\shop\back_hopital.jpg";
 	};
 
 	/* FACTIONS MARKET */
@@ -47,7 +44,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Marché illégal";
 		side = "civilian";
 		items[]= {{"water", "banane", "mangue", "lockpick", "handcuffs", "handcuffkeys", "baillon", "bandeau", "blastingcharge", "lab_small", "lab_medium", "lab_large"}, {"banane", "mangue"}};
-		background = "\lyeed_IMG\data\shop\back_rebel.jpg";
 	};
 
 	class west 
@@ -57,7 +53,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		items[] = {{"defusekit", "salive", "cone", "barriere", "murbetonarme", "bunkersable", "mursable", "couloirsable", 
 			"grandmurescalier", "gueritesable", "grandmur", "coinsable", "adn", "donut", "soda", "handcuffkeys", "handcuffs", 
 			"kit_destru", "spikeStrip", "bip", "storage"}, {}};
-		background = "\lyeed_IMG\data\shop\back_west.jpg";
 	};
 
 	class east
@@ -65,7 +60,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Garde";
 		side = "east";
 		items[] = {{"ragout", "kefir"}, {}};
-		background = "\lyeed_IMG\data\shop\back_east.jpg";
 	};
 
 	class guer
@@ -73,7 +67,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Hopital";
 		side = "independent";
 		items[] = {{}, {}};
-		background = "\lyeed_IMG\data\shop\back_guer.jpg";
 	};
 
 	/* RESSOURCES */
@@ -82,7 +75,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Dealer";
 		side = "civilian";
 		items[] = {{}, {"cocainep", "heroinps", "marijuana", "cocainepc", "methp"}};
-		background = "\lyeed_IMG\data\shop\back_dealer.jpg";
 	};
 
 	class oil
@@ -90,7 +82,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Commerçant de pétrole";
 		side = "civilian";
 		items[] = {{}, {"oilp", "fuelF"}};
-		background = "\lyeed_IMG\data\shop\back_oil.jpg";
 	};
 
 	class glass
@@ -98,7 +89,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Commerçant de verre";
 		side = "civilian";
 		items[] = {{}, {"glass"}};
-		background = "\lyeed_IMG\data\shop\back_glass.jpg";
 	};
 
 	class iron
@@ -106,7 +96,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Commerçant de fer";
 		side = "civilian";
 		items[] = {{}, {"ironp", "soufre"}};
-		background = "\lyeed_IMG\data\shop\back_iron.jpg";
 	};
 
 	class wood
@@ -114,7 +103,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Commerçant de bois";
 		side = "civilian";
 		items[] = {{}, {"woodp"}};
-		background = "\lyeed_IMG\data\shop\back_wood.jpg";
 	};
 
 	class gold
@@ -122,7 +110,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Commerçant d'or";
 		side = "civilian";
 		items[] = {{}, {"goldbar"}};
-		background = "\lyeed_IMG\data\shop\back_gold.jpg";
 	};
 
 	class black_market
@@ -130,7 +117,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Marché noir";
 		side = "civilian";
 		items[] = {{"cannabis_seed", "heroin_seed", "cocaine_seed", "meth_seed", "nitro"}, {"artefact", "artefact_R", "artefact_exrare", "artefact_rare", "artefact_common", "objvaleur"}};
-		background = "\lyeed_IMG\data\shop\back_black_market.jpg";
 	};
 
 	class platine
@@ -138,7 +124,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Commerçant de platine";
 		side = "civilian";
 		items[] = {{}, {"platinep", "platinepa"}};
-		background = "\lyeed_IMG\data\shop\back_platine.jpg";
 	};
 
 	class tabac
@@ -146,7 +131,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Buraliste";
 		side = "civilian";
 		items[] = {{}, {"cigarette", "tabac_seed"}};
-		background = "\lyeed_IMG\data\shop\back_tabac.jpg";
 	};
 
 	class furniture
@@ -154,7 +138,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Commerçant de meuble";
 		side = "civilian";
 		items[] = {{}, {"furniture"}};
-		background = "\lyeed_IMG\data\shop\back_tabac.jpg";
 	};
 
 	class copper
@@ -162,7 +145,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Commerçant de cuivre";
 		side = "civilian";
 		items[] = {{}, {"copperp"}};
-		background = "\lyeed_IMG\data\shop\back_tabac.jpg";
 	};
 
 	class textile
@@ -170,6 +152,5 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Usine de textile";
 		side = "civilian";
 		items[] = {{}, {"cottonp"}};
-		background = "\lyeed_IMG\data\shop\back_tabac.jpg";
 	};
 };
