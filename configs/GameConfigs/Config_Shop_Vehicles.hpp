@@ -87,7 +87,7 @@ class ALYSIA_SHOPS_VEHICLES
 		name = "Concessionaire aérien SAMU";
 		side = "independent";
 		stock[] = {
-			"EC635_DAES_Lifeliner",
+			"EC635_SAR",
 			"dezkit_b206ems"
 		};
 		background = "\lyeed_IMG\data\shop\back_GUER_vehicles_air.jpg";

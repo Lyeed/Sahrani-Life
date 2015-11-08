@@ -1965,7 +1965,7 @@ class ALYSIA_VEHICLES
 		realname = "Ford Explorer SAMU";
 	};
 
-	class EC635_DAES_Lifeliner
+	class EC635_SAR
 	{
 		buyPrice = 250000;
 		inventory = 70;
@@ -1991,7 +1991,7 @@ class ALYSIA_VEHICLES
 			"dezkit_b206_ems",
 			"dezkit_b206_rescue"
 		};
-		realname = "EC635 SAMU";
+		realname = "B206 SAMU";
 	};
 	class dezkit_b206_ems : dezkit_b206ems {};
 	class dezkit_b206_rescue : dezkit_b206ems {};
