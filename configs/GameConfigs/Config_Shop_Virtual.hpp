@@ -157,7 +157,7 @@ class ALYSIA_SHOPS_VIRTUAL
 		background = "\lyeed_IMG\data\shop\back_tabac.jpg";
 	};
 
-	class tabac
+	class copper
 	{
 		name = "Commerçant de cuivre";
 		side = "civilian";
@@ -167,7 +167,7 @@ class ALYSIA_SHOPS_VIRTUAL
 
 	class textile
 	{
-		name = "Commerçant de cuivre";
+		name = "Usine de textile";
 		side = "civilian";
 		items[] = {{}, {"cottonp"}};
 		background = "\lyeed_IMG\data\shop\back_tabac.jpg";
