@@ -232,7 +232,7 @@ class ALYSIA_VEHICLES
 	class shounka_a3_rs5_civ_violet : shounka_a3_rs5_civ {};
 	class shounka_a3_rs5_civ_orange : shounka_a3_rs5_civ {};
 
-	class shounka_rs6
+	class Mrshounka_rs6
 	{
 		buyPrice = 25000;
 		inventory = 150;
