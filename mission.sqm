@@ -3450,7 +3450,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={12122.693,54.219955,7695.9121};
+					position[]={12554.547,39.404789,7704.0186};
 					azimut=196.519;
 					id=153;
 					side="CIV";
@@ -3655,7 +3655,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this setdir 316.836;this setposATL [10498.485352,9574.319336,0.0286179];this setVectorUp [0,0,1];this addAction[""Quincaillerie"",public_fnc_shop_virtual_open,""genstore"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this setdir 316.836;this setposATL [10498.485352,9574.319336,0.0286179];this setVectorUp [0,0,1];this addAction[""Quincaillerie"",public_fnc_shop_arma_open,""genstore"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item18
 		{
@@ -5135,7 +5135,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir -170;this setposATL [11987.179688,15412.923828,-0.0165344];this setVectorUp [0,0,1];this addAction[""Concessionnaire"",public_fnc_shop_vehicles_open,[""WEST_vehicles_land"", [""west_marker_1"",""west_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""Garage"",public_fnc_garageGet,""garage_west_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Ranger son véhicule"",public_fnc_garageVehicleStore,[""Car"", ""Truck"",""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""WEST_vehicles_air"", [""west_marker_1"",""west_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir -170;this setposATL [11987.179688,15412.923828,-0.0165344];this setVectorUp [0,0,1];this addAction[""Concessionnaire"",public_fnc_shop_vehicles_open,[""WEST_vehicles_land"", [""west_marker_1"",""west_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == WEST'];this addAction[""Garage"",public_fnc_garageGet,""garage_west_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Ranger son véhicule"",public_fnc_garageVehicleStore,[""Car"", ""Truck"",""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""WEST_vehicles_air"", [""west_marker_1"",""west_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item158
 		{
@@ -5217,7 +5217,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir -1045;this setposATL [14630.254883,10575.623047,0];this setVectorUp [0,0,1];this addAction[""Concessionnaire"",public_fnc_shop_vehicles_open,[""WEST_vehicles_land"", [""west_marker_3"",""west_marker_4""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""Garage"",public_fnc_garageGet,""garage_west_2"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Ranger son véhicule"",public_fnc_garageVehicleStore,[""Car"", ""Truck"",""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""WEST_vehicles_air"", [""west_marker_3"",""west_marker_4""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir -1045;this setposATL [14630.254883,10575.623047,0];this setVectorUp [0,0,1];this addAction[""Concessionnaire"",public_fnc_shop_vehicles_open,[""WEST_vehicles_land"", [""west_marker_3"",""west_marker_4""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == WEST'];this addAction[""Garage"",public_fnc_garageGet,""garage_west_2"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Ranger son véhicule"",public_fnc_garageVehicleStore,[""Car"", ""Truck"",""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""WEST_vehicles_air"", [""west_marker_3"",""west_marker_4""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item166
 		{
@@ -5464,7 +5464,7 @@ class Mission
 		class Item16
 		{
 			position[]={16823.605,6.5315208,9461.543};
-			name="Marais salant";
+			name="salt_1";
 			text="Marais salant";
 			type="plp_mark_civ_roadworks";
 			colorName="ColorBrown";
@@ -5730,7 +5730,7 @@ class Mission
 		};
 		class Item43
 		{
-			position[]={14436.193,26.05761,8524.4854};
+			position[]={14435.931,26.046333,8524.6885};
 			name="Commerçant d'alcool";
 			text="Commerçant d'alcool";
 			type="plp_mark_civ_commercialzone";
@@ -5961,7 +5961,7 @@ class Mission
 		};
 		class Item68
 		{
-			position[]={12978.981,3.96,9040.1602};
+			position[]={12980.356,3.96,9038.2715};
 			name="Commerçant de meuble";
 			text="Commerçant de meuble";
 			type="plp_mark_civ_commercialzone";
@@ -6134,7 +6134,7 @@ class Mission
 		};
 		class Item88
 		{
-			position[]={8962.5508,162,8423.1035};
+			position[]={8962.5508,162,8425.1963};
 			name="Traitement du sel";
 			text="Traitement du sel";
 			type="plp_mark_civ_industrial";
@@ -6174,7 +6174,7 @@ class Mission
 		};
 		class Item92
 		{
-			position[]={12258.054,18.450001,7171.6494};
+			position[]={12258.817,18.450001,7170.8872};
 			name="Commerçant de poterie";
 			text="Commerçant de poterie";
 			type="plp_mark_civ_shoppingcart";
@@ -6203,7 +6203,7 @@ class Mission
 		};
 		class Item95
 		{
-			position[]={12432.784,188.87175,13385.658};
+			position[]={12420.233,188.5,13397.545};
 			name="Traitement de l'aluminium";
 			text="Traitement de l'aluminium";
 			type="plp_mark_civ_industrial";
@@ -6213,7 +6213,7 @@ class Mission
 		};
 		class Item96
 		{
-			position[]={12809.729,19.98,8810.2813};
+			position[]={12808.809,19.98,8808.6104};
 			name="Commerçant d'aluminium";
 			text="Commerçant d'aluminium";
 			type="plp_mark_civ_commercialzone";
@@ -6367,7 +6367,7 @@ class Mission
 		};
 		class Item114
 		{
-			position[]={9685.9854,139.995,10023.917};
+			position[]={9681.7861,139.995,10023.917};
 			name="CIV_vehicles_air_marker_2";
 			type="Empty";
 			angle=85.008698;
@@ -6419,7 +6419,7 @@ class Mission
 		};
 		class Item121
 		{
-			position[]={12365.904,31.995001,8476.6396};
+			position[]={12362.661,31.995001,8473.5996};
 			name="Base relais de la garde";
 			text="Base relais de la garde";
 			type="plp_mark_civ_campingsite";
