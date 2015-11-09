@@ -16,7 +16,7 @@ if (player getVariable ["surrender", false]) then
 		while {(player getVariable ["surrender", false]) && !g_coma} do
 		{
 			player playMove "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon";
-			sleep 0.5;
+			sleep 0.7;
 		};
 		if (g_coma) then
 		{

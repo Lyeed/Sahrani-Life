@@ -6,12 +6,12 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private["_value"];
-_value = [_this, 0, 0, [0]] call BIS_fnc_param;
+_value = round([_this, 0, 0, [0]] call BIS_fnc_param);
 
 if (_value isEqualTo 0) exitWith {};
 if (g_coma) exitWith {};
 
-g_blood = g_blood + round(_value);
+g_blood = g_blood + _value;
 if (g_blood > 4000) then {
 	g_blood = 4000;
 };

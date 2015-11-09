@@ -8,7 +8,7 @@
 private ["_code"];
 _code = _this select 1;
 
-if ((player getVariable["restrained", false]) || (player getVariable["knockedOut", false])) exitWith {true};
+if ((player getVariable ["restrained", false]) || (player getVariable ["knockedOut", false])) exitWith {true};
 if ((_code in (actionKeys "SelectAll") || _code in (actionKeys "ForceCommandingMode"))) exitWith {true};
 if ((_code in (actionKeys "PersonView")) && g_firstCombatActive && ((vehicle player) isEqualTo player)) exitWith {true};
 if ((_code in (actionKeys "MiniMap")) || (_code in (actionKeys "MiniMapToggle"))) exitWith {true};

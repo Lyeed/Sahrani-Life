@@ -9,47 +9,41 @@ private["_type", "_value"];
 _value = [_this, 0, 0, [0]] call BIS_fnc_param;
 
 if (_value isEqualTo 0) exitWith {};
-if (_value > 0) then
-{
-	g_thirst = g_thirst + _value;
-	if (g_thirst > 100) then {
-		g_thirst = 100;
-	};
+
+g_thirst = g_thirst + _value;
+if (g_thirst > 100) then {
+	g_thirst = 100;
 } else {
-	if (g_thirst > 0) then
+	if (g_thirst <= 0) then 
 	{
-		g_thirst = g_thirst - _value;
-		if (g_thirst <= 0) then 
+		["Thirst", ["Vous mourrez de soif"]] call BIS_fnc_showNotification;
+		g_thirst = 0;
+		[] spawn
 		{
-			["Thirst",["Vous mourrez de soif"]] call BIS_fnc_showNotification;
-			g_thirst = 0;
-			[] spawn
+			while {(g_thirst <= 0)} do 
 			{
-				while {(g_thirst <= 0)} do 
-				{
-					[-40] call public_fnc_handleBlood;
-					player setFatigue 1;
-					sleep 4;
-				};
+				[-40] call public_fnc_handleBlood;
+				player setFatigue 1;
+				sleep 4;
 			};
-		} else {
-			switch (true) do 
+		};
+	} else {
+		switch (true) do 
+		{
+			case (g_thirst > 20 && g_thirst <= 30): 
+			{ 
+				["Thirst",["Vous avez très soif"]] call BIS_fnc_showNotification;
+				[player, "thirst_1", 7] call CBA_fnc_globalSay3d;				
+			};
+			case (g_thirst > 10 && g_thirst <= 20): 
+			{ 
+				["Thirst",["Vous êtes assoiffé"]] call BIS_fnc_showNotification;
+				[player, "thirst_1", 7] call CBA_fnc_globalSay3d;				
+			};
+			case (g_thirst > 0 && g_thirst <= 10): 
 			{
-				case (g_thirst > 20 && g_thirst <= 30): 
-				{ 
-					["Thirst",["Vous avez très soif"]] call BIS_fnc_showNotification;
-					[player, "thirst_1", 7] call CBA_fnc_globalSay3d;				
-				};
-				case (g_thirst > 10 && g_thirst <= 20): 
-				{ 
-					["Thirst",["Vous êtes assoiffé"]] call BIS_fnc_showNotification;
-					[player, "thirst_1", 7] call CBA_fnc_globalSay3d;				
-				};
-				case (g_thirst > 0 && g_thirst <= 10): 
-				{
-					["Thirst",["Vous êtes sur le point de mourir de déshydratation"]] call BIS_fnc_showNotification;
-					[player, "thirst_1", 7] call CBA_fnc_globalSay3d;				
-				};
+				["Thirst",["Vous êtes sur le point de mourir de déshydratation"]] call BIS_fnc_showNotification;
+				[player, "thirst_1", 7] call CBA_fnc_globalSay3d;
 			};
 		};
 	};

@@ -32,7 +32,10 @@ if ((lbSize _ctrl_player) isEqualTo 0) then
 	ctrlShow[2405, false];
 	ctrlShow[2406, false];
 } else {
-	_ctrl_player lbSetCurSel 0;
+	ctrlShow[2403, true];
+	ctrlShow[2404, true];
+	ctrlShow[2405, true];
+	ctrlShow[2406, true];	
 };
 
 _ctrl_target = _display displayCtrl 2407;
@@ -46,10 +49,9 @@ if ((lbSize _ctrl_target) isEqualTo 0) then
 {
 	_ctrl_target lbAdd "Vous n'avez rien à acheter ici";
 	_ctrl_target lbSetCurSel -1;
-	ctrlShow[2408, true];
-	ctrlShow[2409, true];
+	ctrlShow[2408, false];
+	ctrlShow[2409, false];
 } else {
-	_ctrl_target lbSetCurSel 0;
 	ctrlShow[2408, true];
 	ctrlShow[2409, true];
 };

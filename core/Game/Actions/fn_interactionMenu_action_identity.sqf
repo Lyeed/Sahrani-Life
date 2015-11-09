@@ -11,7 +11,7 @@ if (isNull g_interaction_target) exitWith {};
 _item = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "identity_item");
 if ((_item != "") && !(_item in (magazines player))) exitWith {
 	[format[
-		"Vous n'avez pas l'objet nécessaire pour prouver votre identité<br/><t align='left'>Requis</t><t align='right'>%1</t>",
+		"Vous n'avez pas l'objet nécessaire pour prouver votre identité<br/><br/><t align='left'>Requis</t><t align='right'>%1</t>",
 		(([_item] call public_fnc_fetchCfgDetails) select 1)
 	]] call public_fnc_error;
 };

@@ -21,7 +21,7 @@ if (isNil {["Alysia", "actionTablet"] call CBA_fnc_getKeybind}) then
 
 if (isNil {["Alysia", "actionSurrender"] call CBA_fnc_getKeybind}) then 
 {
-	["Alysia", "actionSurrender", "Mettre les mains sur la tête", { [] call public_fnc_surrender; }, {}, [DIK_H, [false, false, true]], false, 0, false] call cba_fnc_addKeybind;
+	["Alysia", "actionSurrender", "Mettre les mains sur la tête", { [] call public_fnc_surrender; }, {}, [DIK_H, [false, false, true]], false, 0, true] call cba_fnc_addKeybind;
 	diag_log "Warning: Registered keybind 'actionSurrender' was missing. FIXED";
 };
 
@@ -39,7 +39,7 @@ if (isNil {["Alysia", "actionKnock"] call CBA_fnc_getKeybind}) then
 
 if (isNil {["Alysia", "actionHoldster"] call CBA_fnc_getKeybind}) then 
 {
-	["Alysia", "actionHoldster", "Ranger/sortir son arme", { [] call public_fnc_holdsterSwitch; }, {}, [DIK_H, [true, false, false]], false, 0, false] call cba_fnc_addKeybind;
+	["Alysia", "actionHoldster", "Ranger/sortir son arme", { [] call public_fnc_holdsterSwitch; }, {}, [DIK_H, [true, false, false]], false, 0, true] call cba_fnc_addKeybind;
 	diag_log "Warning: Registered keybind 'actionHoldster' was missing. FIXED";
 };
 

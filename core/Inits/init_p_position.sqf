@@ -46,6 +46,7 @@ player setVariable ["realname", profileName, true];
 [] spawn public_fnc_hudSetup;
 
 g_connected = true;
+player allowDamage true;
 g_is_alive = true;
 
 {

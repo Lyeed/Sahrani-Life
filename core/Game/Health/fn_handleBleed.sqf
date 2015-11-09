@@ -6,7 +6,7 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private["_amount"];
-_amount = [_this, 0, 0, [0]] call BIS_fnc_param;
+_amount = round([_this, 0, 0, [0]] call BIS_fnc_param);
 
 if (g_coma) exitWith {};
 if (_amount < 3) exitWith {};
@@ -14,8 +14,8 @@ if (_amount < 3) exitWith {};
 systemChat format["<DEBUG:BLEEDING_INIT> Amount : %1", _amount];
 if (g_bleed isEqualTo 0) then
 {
-	player setVariable["is_bleeding", true, true];
-	g_bleed = round(_amount);
+	player setVariable ["is_bleeding", true, true];
+	g_bleed = _amount;
 	[] spawn
 	{
 		while {(g_bleed > 0)} do
@@ -25,9 +25,9 @@ if (g_bleed isEqualTo 0) then
 			[] call EVENT_fnc_onPlayerFireNear;
 			sleep 2;
 		};
-		player setVariable["is_bleeding", false, true];
-		systemChat format"<DEBUG:BLEEDING_END>";
+		player setVariable ["is_bleeding", false, true];
+		systemChat "<DEBUG:BLEEDING_END>";
 	};
 } else {
-	g_bleed = g_bleed + round(_amount);
+	g_bleed = g_bleed + _amount;
 };

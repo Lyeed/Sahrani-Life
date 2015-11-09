@@ -7,8 +7,8 @@
 */
 
 if (!params [
-		["_target", objNull, [objNull]]
-	]) exitWith {};
+	["_target", objNull, [objNull]]
+]) exitWith {};
 
 if (isNull _target) exitWith {};
 

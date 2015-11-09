@@ -14,7 +14,8 @@ if (!g_firstCombatActive) then
 		g_firstCombatActive = true;
 		while {(g_combatTime > (time - 60))} do
 		{
-			if ((cameraView == "External") && ((vehicle player) == player)) then {
+			if ((cameraView isEqualTo "External") && ((vehicle player) isEqualTo player)) then
+			{
 				player switchCamera "Internal";
 			};
 			sleep 0.2;

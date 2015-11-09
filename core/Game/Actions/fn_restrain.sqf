@@ -6,7 +6,7 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (player getVariable["surrender", false]) exitWith {};
+if (!(player getVariable ["surrender", false])) exitWith {};
 
 [player, "handcuffs", 10] call CBA_fnc_globalSay3d;
 player setVariable ["restrained", true, true];
