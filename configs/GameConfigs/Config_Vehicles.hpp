@@ -255,7 +255,7 @@ class ALYSIA_VEHICLES
 	};
 	
 	class shounka_rs6_noir : shounka_rs6 {};
-	class shounka_rs6_bleufonce : rshounka_rs6 {};
+	class shounka_rs6_bleufonce : shounka_rs6 {};
 	class shounka_rs6_rouge : shounka_rs6 {};
 	class shounka_rs6_jaune : shounka_rs6 {};
 	class shounka_rs6_rose : shounka_rs6 {};
