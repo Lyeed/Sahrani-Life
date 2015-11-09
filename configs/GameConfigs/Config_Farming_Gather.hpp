@@ -15,7 +15,6 @@ class ALYSIA_FARMING_GATHER
 		required = "Skyline_Hache_01";
 		sound = "axe";
 	};
-	class wood_2 : wood_1 {};
 
 	class iron_1
 	{
@@ -48,27 +47,23 @@ class ALYSIA_FARMING_GATHER
 		required = "Skyline_Pioche_01";
 		sound = "mining";
 	};
-	class archeologie_2 : archeologie_1 {};
 
-	class banane_1
+	class prunes_1
 	{
-		receive = "banane";
+		receive = "prune";
+		amount = 3;
+		required = "";
+		sound = "gather1";
+	};
+	class prunes_2 : prunes_1 {};
+
+	class vignes_1
+	{
+		receive = "raisin";
 		amount = 2;
 		required = "";
 		sound = "gather1";
 	};
-	class banane_2 : banane_1 {};
-	class banane_3 : banane_1 {};
-
-	class mangue_1
-	{
-		receive = "mangue";
-		amount = 2;
-		required = "";
-		sound = "gather1";
-	};
-	class mangue_2 : mangue_1 {};
-	class mangue_3 : mangue_1 {};
 
 	class pillage_1
 	{
@@ -79,11 +74,67 @@ class ALYSIA_FARMING_GATHER
 	};
 	class pillage_2 : pillage_1 {};
 
-	class platine_1
+	class plat_1
 	{
 		receive = "platine";
 		amount = 1;
 		required = "Skyline_Merlin_01";
 		sound = "mining";
+	};
+
+	class gold_1
+	{
+		receive = "gold";
+		amount = 1;
+		required = "Skyline_Pioche_01";
+		sound = "mining";
+	};
+
+	class clay_1
+	{
+		receive = "clay";
+		amount = 1;
+		required = "Skyline_Pioche_01";
+		sound = "mining";
+	};
+
+	class coal_1
+	{
+		receive = "coal";
+		amount = 1;
+		required = "Skyline_Pioche_01";
+		sound = "mining";
+	};
+
+	class salt_1
+	{
+		receive = "salt";
+		amount = 1;
+		required = "Skyline_Pelle_01";
+		sound = "shovel";
+	};
+
+	class baux_1
+	{
+		receive = "baux";
+		amount = 1;
+		required = "Skyline_Pioche_01";
+		sound = "mining";
+	};
+
+	class shell_1
+	{
+		receive = "";
+		amount = 1;
+		required = "";
+		sound = "";
+	};
+
+	class fish_1
+	{
+		receive = "";
+		amount = 1;
+		required = "";
+		sound = "";
 	};
 };

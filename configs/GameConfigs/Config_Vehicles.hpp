@@ -232,7 +232,7 @@ class ALYSIA_VEHICLES
 	class shounka_a3_rs5_civ_violet : shounka_a3_rs5_civ {};
 	class shounka_a3_rs5_civ_orange : shounka_a3_rs5_civ {};
 
-	class Mrshounka_rs6
+	class shounka_rs6
 	{
 		buyPrice = 25000;
 		inventory = 150;
@@ -242,26 +242,26 @@ class ALYSIA_VEHICLES
 		license = "driver";
 		rank = 0;
 		colors[] = {
-			"Mrshounka_rs6_noir",
-			"Mrshounka_rs6_bleufonce",
-			"Mrshounka_rs6_rouge",
-			"Mrshounka_rs6_jaune",
-			"Mrshounka_rs6_rose",
-			"Mrshounka_rs6_grise",
-			"Mrshounka_rs6_violet",
-			"Mrshounka_rs6_orange"
+			"shounka_rs6_noir",
+			"shounka_rs6_bleufonce",
+			"shounka_rs6_rouge",
+			"shounka_rs6_jaune",
+			"shounka_rs6_rose",
+			"shounka_rs6_grise",
+			"shounka_rs6_violet",
+			"shounka_rs6_orange"
 		};
 		realname = "Audi RS6";
 	};
 	
-	class Mrshounka_rs6_noir : Mrshounka_rs6 {};
-	class Mrshounka_rs6_bleufonce : Mrshounka_rs6 {};
-	class Mrshounka_rs6_rouge : Mrshounka_rs6 {};
-	class Mrshounka_rs6_jaune : Mrshounka_rs6 {};
-	class Mrshounka_rs6_rose : Mrshounka_rs6 {};
-	class Mrshounka_rs6_grise : Mrshounka_rs6 {};
-	class Mrshounka_rs6_violet : Mrshounka_rs6 {};
-	class Mrshounka_rs6_orange : Mrshounka_rs6 {};
+	class shounka_rs6_noir : shounka_rs6 {};
+	class shounka_rs6_bleufonce : rshounka_rs6 {};
+	class shounka_rs6_rouge : shounka_rs6 {};
+	class shounka_rs6_jaune : shounka_rs6 {};
+	class shounka_rs6_rose : shounka_rs6 {};
+	class shounka_rs6_grise : shounka_rs6 {};
+	class shounka_rs6_violet : shounka_rs6 {};
+	class shounka_rs6_orange : shounka_rs6 {};
 
 	class Mrshounka_bmwm1_civ
 	{
