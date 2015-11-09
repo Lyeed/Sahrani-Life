@@ -5514,7 +5514,7 @@ class Mission
 		class Item21
 		{
 			position[]={13641.244,40.100075,11904.702};
-			name="corn_1";
+			name="champ de blé";
 			text="Champ de blé";
 			type="plp_mark_civ_lake";
 			colorName="ColorYellow";
@@ -5982,7 +5982,7 @@ class Mission
 		class Item70
 		{
 			position[]={13855.685,35.530075,11450.189};
-			name="Champs de mais";
+			name="corn_1";
 			text="Champs de mais";
 			type="plp_mark_civ_lake";
 			colorName="ColorYellow";
