@@ -9,13 +9,17 @@
 /* DEV */
 if (true) then
 {
-	[["Teleport", {onMapSingleClick "player setPos _pos";}]] call CBA_fnc_addPlayerAction;
+	[["Teleport ON", {onMapSingleClick "player setPos _pos";}]] call CBA_fnc_addPlayerAction;
+	[["Teleport OFF", {onMapSingleClick "";}]] call CBA_fnc_addPlayerAction;
+	[["Copier ma position", {copyToClipboard(str(getPos player))}]] call CBA_fnc_addPlayerAction;
 	[["Bandage", {g_bleed = 0;}]] call CBA_fnc_addPlayerAction;
 	[["santé", {[4000] call public_fnc_handleBlood;}]] call CBA_fnc_addPlayerAction;
 	[["+100.000$ (porte-feuille)", {g_cash = g_cash + 100000;}]] call CBA_fnc_addPlayerAction;
 	[["+100.000$ (compte)", {g_atm = g_atm + 100000;}]] call CBA_fnc_addPlayerAction;
-	[["Réparer cursorTarget", {cursorTarget setDamage 0;}]] call CBA_fnc_addPlayerAction;
+	[["Réparer véhicule cursorTarget", {cursorTarget setDamage 0;}]] call CBA_fnc_addPlayerAction;
+	[["Réparer mon véhicule", {(vehicle player) setDamage 0;}]] call CBA_fnc_addPlayerAction;
 	[["+ 1 GPS", {player addItem "ItemGPS";}]] call CBA_fnc_addPlayerAction;
+	[["+ 1 MAP", {player addItem "ItemMap";}]] call CBA_fnc_addPlayerAction;
 	[["+ 1 Tenue (Alysia)", {player forceAddUniform "U_C_Alysia_01";}]] call CBA_fnc_addPlayerAction;
 };
 

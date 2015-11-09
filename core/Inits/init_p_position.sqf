@@ -25,9 +25,9 @@ if (g_arrested) then {
 			_pos = getMarkerPos getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "respawn_marker");
 		};
 		_randPos = [_pos, 6] call CBA_fnc_randPos;
-		player setPos [(_randPos select 0), (_randPos select 1), (_pos select 2)];
+		player setPosATL [(_randPos select 0), (_randPos select 1), (_pos select 2)];
 	} else {
-		player setPos g_position;
+		player setPosATL g_position;
 	};
 };
 
@@ -43,10 +43,10 @@ cutText ["", "BLACK IN", 6, false];
 
 player setVariable ["tf_globalVolume", 1];
 player setVariable ["realname", profileName, true];
+[] spawn public_fnc_hudSetup;
 
 g_connected = true;
 g_is_alive = true;
-[] call public_fnc_hudSetup;
 
 {
 	player reveal _x;

@@ -5,22 +5,68 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_hud", "_ctrl_hunger", "_ctrl_thirst", "_ctrl_fatigue", "_ctrl_blood", "_idc", "_ico_1", "_ico_2", "_ico_3", "_ico_4", "_ico_5", "_ico_6", "_ico_7", "_ctrl_speed", "_list_vehicle", "_list_weapon"];
-
-if (!(isNull (uiNameSpace getVariable ["RscHudPlayer", displayNull]))) exitWith {};
 
 disableSerialization;
 
+private
+[
+	"_hud",
+	"_volume",
+	"_ctrl_hunger",
+	"_ctrl_thirst",
+	"_ctrl_fatigue",
+	"_ctrl_blood",
+	"_idc",
+	"_ico_1",
+	"_ico_2",
+	"_ico_3",
+	"_ico_4",
+	"_ico_5",
+	"_ico_6",
+	"_ico_7",
+	"_ctrl_speed",
+	"_list_vehicle",
+	"_list_weapon",
+	"_list_map",
+	"_ctrl_speak"
+];
+
+if (!(isNull (uiNameSpace getVariable ["RscHudPlayer", displayNull]))) exitWith {};
+
+showGPS false;
+
 8 cutRsc ["RscHudPlayer", "PLAIN"];
+
 _hud = uiNameSpace getVariable ["RscHudPlayer", displayNull];
 
-(_hud displayCtrl 23501) ctrlSetStructuredText parseText format["<t align='center' size='1.8'>%1</t>", profileName];
+[] spawn
+{
+	disableSerialization;
+	_presentation = (uiNameSpace getVariable ["RscHudPlayer", displayNull]) displayCtrl 23537;
+	while {((ctrlFade _presentation) < 1)} do
+	{
+		_presentation ctrlSetFade ((ctrlFade _presentation) + 0.01);
+		_presentation ctrlCommit 0;
+		sleep 0.05;
+	};
+	ctrlDelete _presentation;
+};
 
+_ctrl_speak = _hud displayCtrl 23501;
 _ctrl_hunger = _hud displayCtrl 23502;
 _ctrl_thirst = _hud displayCtrl 23503;
 _ctrl_fatigue = _hud displayCtrl 23504;
 _ctrl_blood = _hud displayCtrl 23505;
 _ctrl_speed = _hud displayCtrl 23506;
+
+_list_map =
+[
+	(_hud displayCtrl 23538),
+	(_hud displayCtrl 23539),
+	(_hud displayCtrl 23540),
+	(_hud displayCtrl 23541),
+	(_hud displayCtrl 23542)
+];
 
 _list_vehicle =
 [
@@ -57,7 +103,16 @@ while {true} do
 	_ctrl_fatigue ctrlSetStructuredText parseText format["<t align='center' size='1.3'>%1%2</t>", round((getFatigue player) * 100), "%"];
 	_ctrl_blood ctrlSetStructuredText parseText format["<t align='center' size='1.3'>%1%2</t>", round((g_blood / 4000) * 100), "%"];
 	_ctrl_speed ctrlSetStructuredText parseText format["<t align='center' size='2.2'>%1</t>", abs(round(speed player))];
-
+	
+	_volume = switch (TF_speak_volume_level) do
+	{
+		case "whispering": {"Chuchote"};
+		case "normal": {"Normal"};
+		case "yelling": {"Crie"};
+		default {"Inconnu"};
+	};
+	_ctrl_speak ctrlSetStructuredText parseText format["<t align='left' size='1.2'>%1</t>", _volume];
+	
 	_idc = 1;
 	{
 		if (call compile format["%1", (_x select 1)]) then
@@ -72,8 +127,8 @@ while {true} do
 		["\lyeed_IMG\data\player_hud\bleed.paa", "(g_bleed > 0)"],
 		["\lyeed_IMG\data\player_hud\regen.paa", "(g_regen_active)"],
 		["\lyeed_IMG\data\player_hud\drugs.paa", "(g_drugs_consuming > 0)"],
-		["\lyeed_IMG\data\player_hud\handcuffs.paa", "(player getVariable[""restrained"", false])"],
-		["\lyeed_IMG\data\player_hud\blind.paa", "(player getVariable[""bandeau"", false])"],
+		["\lyeed_IMG\data\player_hud\handcuffs.paa", "(player getVariable [""restrained"", false])"],
+		["\lyeed_IMG\data\player_hud\blind.paa", "(player getVariable [""bandeau"", false])"],
 		["\lyeed_IMG\data\player_hud\arrested.paa", "(g_arrested)"],
 		["\lyeed_IMG\data\player_hud\fight.paa", "(g_firstCombatActive)"],
 		["\lyeed_IMG\data\player_hud\speak.paa", "(g_speaking)"]
@@ -126,5 +181,25 @@ while {true} do
 		} forEach (_list_weapon);
 	};
 
-	sleep 0.4;
+	if ("ItemGPS" in (assignedItems player)) then
+	{
+		(_list_map select 4) ctrlSetStructuredText parseText format["<t align='center' font='PuristaBold'>%1</t>", (mapGridPosition player)];
+
+		if ((vehicle player) isEqualTo player) then {
+			(_list_map select 1) ctrlMapAnimAdd [0, 0.05, player];
+		} else {
+			(_list_map select 1) ctrlMapAnimAdd [0, 0.09, (vehicle player)];
+		};
+		ctrlMapAnimCommit (_list_map select 1);
+
+		{
+			_x ctrlShow true;
+		} forEach (_list_map);
+	} else {
+		{
+			_x ctrlShow false;
+		} forEach (_list_map);
+	};
+
+	sleep 0.3;
 };

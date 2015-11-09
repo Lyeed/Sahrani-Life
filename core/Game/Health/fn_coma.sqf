@@ -32,7 +32,7 @@ player setVariable ["tf_globalVolume", 0];
 player setVariable ["tf_voiceVolume", 0, true];
 player setVariable ["is_coma", true, true];
 
-while {(_time > 0) && g_coma && (alive player) && (player getVariable["is_coma", false]) } do
+while {(_time > 0) && g_coma && (alive player) && (player getVariable ["is_coma", false])} do
 {
 	if ((vehicle player) != player) then { 
 		player action ["Eject", (vehicle player)]; 
