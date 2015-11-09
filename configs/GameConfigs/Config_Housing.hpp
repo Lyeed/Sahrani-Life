@@ -28,7 +28,7 @@ class ALYSIA_HOUSES
 	**                         BUY
 	**  - price                        : buy price
 	price                              = 150000;
-	**  - side                         : must be this side to buy
+	**  - sides                         : must be this side to buy
 	          -> Possible: "CIV" - "WEST" - "EAST" - "GUER"
 	sides[]                            = {"CIV"};
 	**  - rank                         : Ranked needed to buy (side must be != CIV)
@@ -64,7 +64,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 1;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"CIV", "GUER"};
+		sides[] = {"CIV", "GUER"};
 		rank = 0;
 		license = "home";
 	};
@@ -76,7 +76,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 2;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"CIV", "GUER"};
+		sides[] = {"CIV", "GUER"};
 		rank = 0;
 		license = "home";
 	};
@@ -88,7 +88,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 3;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"CIV", "GUER"};
+		sides[] = {"CIV", "GUER"};
 		rank = 0;
 		license = "home";
 	};	
@@ -100,7 +100,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 3;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"CIV", "GUER"};
+		sides[] = {"CIV", "GUER"};
 		rank = 0;
 		license = "home";
 	};	
@@ -112,7 +112,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 4;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"CIV", "GUER"};
+		sides[] = {"CIV", "GUER"};
 		rank = 0;
 		license = "home";
 	};	
@@ -124,7 +124,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 2;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"CIV", "GUER"};
+		sides[] = {"CIV", "GUER"};
 		rank = 0;
 		license = "home";
 	};	
@@ -136,7 +136,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 4;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"CIV", "GUER"};
+		sides[] = {"CIV", "GUER"};
 		rank = 0;
 		license = "home";
 	};	
@@ -148,7 +148,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 1;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"WEST", "EAST"};
+		sides[] = {"WEST", "EAST"};
 		rank = 0;
 		license = "home";
 	};	
@@ -160,7 +160,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 1;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"WEST", "EAST"};
+		sides[] = {"WEST", "EAST"};
 		rank = 0;
 		license = "home";
 	};	
@@ -172,7 +172,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 5;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"CIV", "GUER"};
+		sides[] = {"CIV", "GUER"};
 		rank = 0;
 		license = "home";
 	};	
@@ -184,7 +184,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 3;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"CIV", "GUER"};
+		sides[] = {"CIV", "GUER"};
 		rank = 0;
 		license = "home";
 	};	
@@ -196,7 +196,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 1;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"CIV", "GUER"};
+		sides[] = {"CIV", "GUER"};
 		rank = 0;
 		license = "home";
 	};	
@@ -208,7 +208,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 3;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"CIV", "GUER"};
+		sides[] = {"CIV", "GUER"};
 		rank = 0;
 		license = "home";
 	};	
@@ -220,7 +220,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 3;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"CIV", "GUER"};
+		sides[] = {"CIV", "GUER"};
 		rank = 0;
 		license = "home";
 	};	
@@ -232,7 +232,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 1;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"CIV", "GUER"};
+		sides[] = {"CIV", "GUER"};
 		rank = 0;
 		license = "home";
 	};	
@@ -244,7 +244,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 1;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"CIV", "GUER"};
+		sides[] = {"CIV", "GUER"};
 		rank = 0;
 		license = "home";
 	};	
@@ -256,7 +256,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 4;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"CIV", "GUER"};
+		sides[] = {"CIV", "GUER"};
 		rank = 0;
 		license = "home";
 	};	
@@ -268,7 +268,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 4;
 		garage = 0;
 		garage_type[] = {};
-		side[] = {"CIV", "GUER"};
+		sides[] = {"CIV", "GUER"};
 		rank = 0;
 		license = "home";
 	};	
