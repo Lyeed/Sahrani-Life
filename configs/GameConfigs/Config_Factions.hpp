@@ -141,8 +141,7 @@ class ALYSIA_FACTIONS
 
 
 		house_can_search = 1;
-		house_rank_buy = 0;
-		house_max = 0;
+		house_max = 1;
 
 		farming_markers[] = {};
 		farming_markers_plant[] = {};
@@ -219,7 +218,6 @@ class ALYSIA_FACTIONS
 		respawn_price = 10000;
 
 		house_can_search = 0;
-		house_rank_buy = 0; /* MUST BE 0 */
 		house_max = 1;
 
 		farming_markers_gather[] = 
@@ -230,12 +228,9 @@ class ALYSIA_FACTIONS
 			"oil_1",
 			"archeologie_1",
 			"archeologie_2",
-			"banane_1",
-			"banane_2",
-			"banane_3",
-			"mangue_1",
-			"mangue_2",
-			"wood_2",
+			"prunes_1",
+			"prunes_2",
+			"vignes_1",
 			"pillage_1",
 			"pillage_2",
 			"platine_1"
@@ -275,7 +270,7 @@ class ALYSIA_FACTIONS
 
 		class Loadout
 		{
-			uniform = "U_C_Poloshirt_blue";
+			uniform = "U_C_Alysia_01";
 			items[] =
 			{
 				"ItemMap",
@@ -315,8 +310,7 @@ class ALYSIA_FACTIONS
 		respawn_price = 0;
 
 		house_can_search = 0;
-		house_rank_buy = 0;
-		house_max = 0;
+		house_max = 1;
 
 		farming_markers_gather[] = {};
 		farming_markers_plant[] = {};

@@ -37,8 +37,7 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 		upLevel = 1.47;
 		extraGrow = 100;
 	};
-
-	/*	
+	
 	class Skyline_Beans
 	{
 		seed = "bean_seed";
@@ -49,17 +48,19 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 		upLevel = 1.23;
 		extraGrow = 100;
 	};
+
 	class Skyline_Cotton
 	{
-		receive[] = {{"cotton"}};
+		receive[] = {{"cotton", 3, 1}};
 		seed = "cotton_seed";
-		amount = 3;
 		distance = 3;
 		growingTime = 350;
 		groundLevel = 0;
 		upLevel = 0.4;
 		extraGrow = 100;
 	};
+
+	/*
 	class Oleander2
 	{
 		receive[] = {{"heroin"}};
@@ -129,7 +130,6 @@ class ALYSIA_FARMING_PLANT_MARKERS
 	{
 		plant = "Skyline_Beans";
 	};
-	class bean_2 : bean_1 {};
 
 	class cotton_1
 	{

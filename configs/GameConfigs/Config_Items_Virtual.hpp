@@ -796,7 +796,7 @@ class ALYSIA_ITEMS
 	class cotton_seed
 	{
 		weight = 1;
-		name = "Graine (cotton)";
+		name = "Graine (coton)";
 		price_buy   = 60;
 		price_sell  = 30;
 		illegal = 0;
@@ -809,7 +809,7 @@ class ALYSIA_ITEMS
 	class cotton
 	{
 		weight = 2;
-		name = "Cotton";
+		name = "Coton";
 		price_buy   = 60;
 		price_sell  = 30;
 		illegal = 0;
