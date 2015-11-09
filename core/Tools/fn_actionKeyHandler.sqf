@@ -9,7 +9,7 @@
 if (g_action_inUse || 
 	g_is_processing || 
 	g_action_gathering || 
-	(player getVariable ["surrender", false])
+	(player getVariable ["surrender", false]),
 	dialog
 ) exitWith {};
 

@@ -18,11 +18,19 @@ if (!(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item") 
 
 if (!(_bank getVariable ["robStarted", false])) then
 {
-	if (([(getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "owner"))] call public_fnc_strToSide) countSide allPlayers < (getNumer (missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "required"))) then
+	if (([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call public_fnc_strToSide) countSide allPlayers < getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "required"))) then
 	{
-		[(format "Il faut au minimum <t color='RED'>%1</t> membres de la <t color='DARKGREEN'>%1</t> en service pour pouvoir braquer la banque", (getNumer(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "required")), getText(missionConfigFile >> "ALYSIA_FACTIONS" >> getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "owner" ) >> "name" ))] call public_fnc_error;
-	}
-	else {_bank setVariable ["robStarted", true, true]};
+		[
+			format
+			[
+				"Il faut au minimum <t color='RED'>%1</t> membres de la <t color='DARKGREEN'>%1</t> en service pour pouvoir braquer la banque",
+				getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "required"),
+				getText(missionConfigFile >> "ALYSIA_FACTIONS" >> getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner") >> "name")
+			]
+		] call public_fnc_error;
+	} else {
+		_bank setVariable ["robStarted", true, true];
+	};
 };
 
 if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), getNumber(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "time"), objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then
@@ -32,18 +40,19 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 		case "Simple": {_bank animate [_door, 1]};
 		case "SlidingL": {_bank animate [_door, -1.7]};
 		case "SlidingR": {_bank animate [_door, 1.7]};
-		case "Security": {
+		case "Drill": {[_bank, _door] call public_fnc_robberyProcess};
+		case "Vault": {[_bank, _door] call public_fnc_robberyProcess};
+		case "Security":
+		{
 			_bank setVariable ["alarm", ObjNull, true];
 			_bank setVariable ["hacked", true, true];
 			deleteVehicle (_bank getVariable ["alarm", ObjNull]); 
 		};
-		case "Drill": {[_bank, _door] call public_fnc_robberyProcess};
-		case "Vault": {[_bank, _door] call public_fnc_robberyProcess};
 	};
 
 	if (!(_bank getVariable ["hacked", false])) then
 	{
-		private ["_alarm","_bankRegion"];
+		private ["_alarm", "_bankRegion"];
 		
 		if (isNull (_bank getVariable ["alarm", objNull])) then
 		{
@@ -53,7 +62,7 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 			_bank setVariable ["alarm", _alarm, true];	
 		};
 		
-		switch (([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "owner" )] call public_fnc_strToSide)) do
+		switch ([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "owner")] call public_fnc_strToSide) do
 		{
 			case west:
 			{

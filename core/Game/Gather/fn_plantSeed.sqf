@@ -64,5 +64,5 @@ publicVariableServer format["%1_PLANTS", (getPlayerUID player)];
 		_object setVariable ["ready", true, true];
 	};
 };
-²
+
 g_action_inUse = false;

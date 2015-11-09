@@ -7,14 +7,17 @@
 */
 private["_handle", "_display", "_targetPos", "_cameraPos", "_camera", "_action"];
 
-if (([profileName] call CBA_fnc_leftTrim) != profileName) exitWith {
-	["Vous avez un ou plusieurs espaces au début de votre pseudo. Veuillez les retirer pour vous connecter"] spawn public_fnc_errorExit;
-};
-if (([profileName] call CBA_fnc_rightTrim) != profileName) exitWith {
-	["Vous avez un ou plusieurs espaces à la fin de votre pseudo. Veuillez les retirer pour vous connecter"] spawn public_fnc_errorExit;
-};
 if (playerSide != civilian) exitWith {
 	["Vous devez être connecté en civil pour votre première connexion"] spawn public_fnc_errorExit;
+};
+if (([profileName] call CBA_fnc_leftTrim) != profileName) exitWith {
+	["Vous avez un ou plusieurs espaces au début de votre pseudo. Veuillez les retirer pour vous connecter."] spawn public_fnc_errorExit;
+};
+if (([profileName] call CBA_fnc_rightTrim) != profileName) exitWith {
+	["Vous avez un ou plusieurs espaces à la fin de votre pseudo. Veuillez les retirer pour vous connecter."] spawn public_fnc_errorExit;
+};
+if (count([profileName, " "] call CBA_fnc_split) < 2) exitWith {
+	["Votre pseudo doit être composé d'un prénom et d'un nom. Exemple: Jean Robert."] spawn public_fnc_errorExit;
 };
 
 _targetPos = [13326.7,8852.53,0.00143814];
