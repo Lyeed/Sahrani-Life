@@ -7,19 +7,22 @@
 */
 
 /* DEV */
-[["Teleport ON", {onMapSingleClick "player setPos _pos";}]] call CBA_fnc_addPlayerAction;
-[["Teleport OFF", {onMapSingleClick "";}]] call CBA_fnc_addPlayerAction;
-[["Copier ma position", {copyToClipboard(str(getPos player))}]] call CBA_fnc_addPlayerAction;
-[["Bandage", {g_bleed = 0;}]] call CBA_fnc_addPlayerAction;
-[["santé", {[4000] call public_fnc_handleBlood;}]] call CBA_fnc_addPlayerAction;
-[["+100.000$ (porte-feuille)", {g_cash = g_cash + 100000;}]] call CBA_fnc_addPlayerAction;
-[["+100.000$ (compte)", {g_atm = g_atm + 100000;}]] call CBA_fnc_addPlayerAction;
-[["Réparer véhicule cursorTarget", {cursorTarget setDamage 0;}]] call CBA_fnc_addPlayerAction;
-[["Réparer mon véhicule", {(vehicle player) setDamage 0;}]] call CBA_fnc_addPlayerAction;
-[["+ 1 GPS", {player addItem "ItemGPS";}]] call CBA_fnc_addPlayerAction;
-[["+ 1 MAP", {player addItem "ItemMap";}]] call CBA_fnc_addPlayerAction;
-[["+ 1 Tenue (Alysia)", {player forceAddUniform "U_C_Alysia_01";}]] call CBA_fnc_addPlayerAction;
-[["+ 1 UZI", {player addMagazine "RH_30Rnd_9x19_UZI"; player addWeapon "RH_muzi";}]] call CBA_fnc_addPlayerAction;
+[["===================", {}]] call CBA_fnc_addPlayerAction;
+[["(DEV) Teleport ON", {onMapSingleClick "player setPos _pos";}]] call CBA_fnc_addPlayerAction;
+[["(DEV) Teleport OFF", {onMapSingleClick "";}]] call CBA_fnc_addPlayerAction;
+[["(DEV) Copier ma position", {copyToClipboard(str(getPos player))}]] call CBA_fnc_addPlayerAction;
+[["(DEV) Bandage", {g_bleed = 0;}]] call CBA_fnc_addPlayerAction;
+[["(DEV) santé", {[4000] call public_fnc_handleBlood;}]] call CBA_fnc_addPlayerAction;
+[["(DEV) +100.000$ (porte-feuille)", {g_cash = g_cash + 100000;}]] call CBA_fnc_addPlayerAction;
+[["(DEV) +100.000$ (compte)", {g_atm = g_atm + 100000;}]] call CBA_fnc_addPlayerAction;
+[["(DEV) Réparer véhicule cursorTarget", {cursorTarget setDamage 0;}]] call CBA_fnc_addPlayerAction;
+[["(DEV) Réparer mon véhicule", {(vehicle player) setDamage 0;}]] call CBA_fnc_addPlayerAction;
+[["(DEV) + 1 GPS", {player addItem "ItemGPS";}]] call CBA_fnc_addPlayerAction;
+[["(DEV) + 1 MAP", {player addItem "ItemMap";}]] call CBA_fnc_addPlayerAction;
+[["(DEV) + 1 Tenue (Alysia)", {player forceAddUniform "U_C_Alysia_01";}]] call CBA_fnc_addPlayerAction;
+[["(DEV) + 1 UZI", {player addMagazine "RH_30Rnd_9x19_UZI"; player addWeapon "RH_muzi";}]] call CBA_fnc_addPlayerAction;
+[["(DEV) Revivre", {cursorTarget setVariable ["is_coma", false, true];}]] call CBA_fnc_addPlayerAction;
+[["===================", {}]] call CBA_fnc_addPlayerAction;
 
 /* ==================[CONFIG]===================*/
 if ((getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "can_seize_gear")) isEqualTo 1) then {

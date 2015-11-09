@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_object"];
+private["_object", "_space"];
 _object = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 if (isNull _object) exitWith {
@@ -20,37 +20,37 @@ if (g_action_inUse) exitWith {
 	["Vous êtes déjà en train de ramasser"] call public_fnc_error; 
 };
 
+g_action_delay = time;
+
 if (_object getVariable ["ready", false]) then
 {
 	g_action_inUse = true;
-	g_action_delay = time;
-
+	
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 	waitUntil {((animationState player) != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon")};
 
+	_space = true;
+
 	{
-		_item = _x select 0;
 		if ((_x select 2) isEqualTo 1) then {
-			_amount = random(_x select 1);
+			_amount = [(_x select 0), random(_x select 1), g_carryWeight, g_maxWeight] call public_fnc_calWeightDiff;
 		} else {
-			_amount = _x select 1;
+			_amount = [(_x select 0), (_x select 1), g_carryWeight, g_maxWeight] call public_fnc_calWeightDiff;
 		};
 
-		if (_amount > 0) then
-		{
-			if ([true, _receive, _amount] call public_fnc_handleInv) then
-			{
-
-			} else {
-				["Votre inventaire est plein"] call public_fnc_error; 
-			};
+		if ((_amount isEqualTo 0) && (_forEachIndex isEqualTo 0)) exitWith {
+			_space = false;
 		};
+
+		[true, (_x select 0), _amount] call public_fnc_handleInv;
 	} forEach (getArray(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> typeOf(_object) >> "receive"));
 
-	missionNamespace setVariable [format["%1_PLANTS", (getPlayerUID player)], missionNamespace getVariable [format["%1_PLANTS", (getPlayerUID player)], []] - [_object]];
-	deleteVehicle _object;
-	titleText[format["Vous avez récolté %1x %2", _amount, ([_receive] call public_fnc_itemGetName)], "PLAIN"];
-
+	if (_space) then {
+		deleteVehicle _object;		
+	} else {
+		["Votre inventaire est plein"] call public_fnc_error;
+	};
+	
 	g_action_inUse = false;
 } else {
 	["Cette pousse n'est pas encore prête à être récoltée"] call public_fnc_error;

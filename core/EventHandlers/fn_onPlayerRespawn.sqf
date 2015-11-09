@@ -11,15 +11,10 @@ if ((player getVariable ["tf_globalVolume", 1]) isEqualTo 0) then {player setVar
 if (player getVariable ["surrender", false]) then {player setVariable ["surrender", false, true];};
 if (player getVariable ["restrained", false]) then {player setVariable ["restrained", false, true];};
 
-g_drugs_patched = 0;
-g_drugs_consuming = 0;
+[4000] call public_fnc_handleBlood;
+
 g_carryWeight = 0;
-g_morphine = 0;
 g_is_alive = true;
-g_is_processing = false;
-g_action_inUse = false;
-g_action_gathering = false;
-g_killer = ObjNull;
 
 if (g_arrested) then {
 

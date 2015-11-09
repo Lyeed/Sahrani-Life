@@ -43,6 +43,8 @@ if (_math) then
 if (_return) then
 {
 	private["_display", "_loop", "_list", "_index"];
+
+	disableSerialization;
 	_display = uiNamespace getVariable ["HUD_inv_message", displayNull];
 	_loop = false;
 

@@ -88,7 +88,6 @@ with missionNamespace do
 	g_morphine = 0;
 	//--------------
 	g_coma = false;
-	g_comaTime = 0;
 	//--------------
 	g_regen_active = false;
 	//--------------

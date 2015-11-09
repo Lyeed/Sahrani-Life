@@ -13,8 +13,8 @@ if ((time - g_action_delay) < 1) exitWith {
 	["Veuillez ralentir dans vos actions"] call public_fnc_error;
 };
 
-_plant = getText(missionConfigFile >> "ALYSIA_FARMING_PLANT_MARKERS" >> _zone > "plant");
-if (count (nearestObjects [player, [_plant], (getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "distance"))]) > 0) exitWith { 
+_plant = getText(missionConfigFile >> "ALYSIA_FARMING_PLANT_MARKERS" >> _zone >> "plant");
+if (count (nearestObjects [player, [_plant], getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "distance")]) > 0) exitWith { 
 	["Vous êtes trop près d'une autre plantation"] call public_fnc_error; 
 };
 
@@ -26,8 +26,9 @@ if (!([false, _seed, 1] call public_fnc_handleInv)) exitWith {
 g_action_delay = time;
 g_action_inUse = true;
 
-player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
+player playMove "AinvPknlMstpSlayWrflDnon_1";
+waitUntil {animationState player isEqualTo "ainvpknlmstpsnonwnondnon_3"};
+player playMove "amovpercmstpsnonwnondnon";
 titleText[format["Vous avez planté : 1x %1", ([_seed] call public_fnc_itemGetName)], "PLAIN"];
 
 _pos = getPos player;
@@ -37,7 +38,7 @@ if ([false, "engrais", 1] call public_fnc_handleInv) then {
 	_plantGrowingtime = round(_plantGrowingtime * 0.7);
 };
 
-missionNamespace setVariable [format["%1_PLANTS", (getPlayerUID player)], missionNamespace getVariable [format["%1_PLANTS", (getPlayerUID player)], []] + [_object]];
+missionNamespace setVariable [format["%1_PLANTS", (getPlayerUID player)], (missionNamespace getVariable [format["%1_PLANTS", (getPlayerUID player)], []]) + [_object] - [objNull]];
 publicVariableServer format["%1_PLANTS", (getPlayerUID player)];
 
 [(_plantGrowingtime / 10), ((getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "upLevel")) / 10), _object] spawn
@@ -60,8 +61,8 @@ publicVariableServer format["%1_PLANTS", (getPlayerUID player)];
 		_growprcnt = _growprcnt + 10;
 	};
 	if (alive _object) then {
-		_object setVariable["ready", true, true];
+		_object setVariable ["ready", true, true];
 	};
 };
-
+²
 g_action_inUse = false;

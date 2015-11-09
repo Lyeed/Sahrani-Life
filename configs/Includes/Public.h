@@ -261,7 +261,6 @@ class Public
 		class catchTurtle {};
 		class dropFishingNet {};
 		class pickGather {};
-		class plantGather {};
 		class plantHarvest {};
 		class plantSeed {};
 		class processAction {};

@@ -10,7 +10,7 @@ player setVariable ["tf_globalVolume", 0];
 player setVariable ["tf_voiceVolume", 0, true];
 
 playSound "death";
-0 cutText["Vous êtes en soin intensif ! Veuillez patienter pendant l'application du bandage...", "BLACK FADED"];
+0 cutText["Vous êtes en soin intensif ...", "BLACK FADED"];
 0 cutFadeOut 9999999;
 
 /*
@@ -63,11 +63,9 @@ _skull setVariable ["info", [([] call public_fnc_strDate), ([] call public_fnc_s
 hideBody player;
 {
 	deleteVehicle _x;
-} forEach (nearestObjects [_this, ["WeaponHolderSimulated", "GroundWeaponHolder"], 5]);
+} forEach (nearestObjects [player, ["WeaponHolderSimulated", "GroundWeaponHolder"], 5]);
 
-/*
-**         SAVE
-*/
+/* SAVE */
 [] call public_fnc_stripDownPlayer;
 
 {
@@ -81,10 +79,21 @@ g_bleed = 0;
 g_hunger = 100;
 g_thirst = 100;
 [] call MySQL_fnc_query_update_usual;
-/* ************* */
+/* **** */
 
+/* DRUGS */
 resetCamShake;
 
+g_drugs_patched = 0;
+g_drugs_consuming = 0;
+
 {
-	missionNamespace setVariable[_x, 0];
+	missionNamespace setVariable [format["drug_consume_%1", _x], 0];
 } forEach (g_drugs);
+/* ****** */
+
+g_morphine = 0;
+g_is_processing = false;
+g_action_inUse = false;
+g_action_gathering = false;
+g_killer = ObjNull;

@@ -9,140 +9,149 @@
 if (g_action_inUse || 
 	g_is_processing || 
 	g_action_gathering || 
-	(player getVariable["surrender", false])
-	) exitWith {};
+	(player getVariable ["surrender", false])
+	dialog
+) exitWith {};
+
+scopeName "main";
 
 if ((vehicle player) isEqualTo player) then
 {
 	if (isNull cursorTarget) then 
 	{
-		private["_marker"];
-
 		if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "dynamic_markers_destroy") isEqualTo 1) then
 		{
 			{
-				if ((player distance (getMarkerPos _x)) < 20) exitWith {
-					_marker = _x;
+				if ((player distance (getMarkerPos _x)) < 20) exitWith
+				{
+					[_x] spawn public_fnc_dynamicMarkers_destroy;
+					breakOut "main";
 				};
 			} forEach (g_dynamic_markers);
-			if (!(isNil "_marker")) then
-			{
-				[_marker] spawn public_fnc_dynamicMarkers_destroy;
-				true;
-			};
 		} else {
 			if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "dynamic_markers_discover") isEqualTo 1) then
 			{
 				{
-					if (((player distance (getMarkerPos _x)) < 20) && ((markerAlpha _x) != 1)) exitWith {
-						_marker = _x;
+					if (((player distance (getMarkerPos _x)) < 20) && ((markerAlpha _x) != 1)) exitWith
+					{
+						[format["<t align='center'>Vous avez découvert<br/><t color='#74DF00'>%1</t>", (markerText _x)]] call public_fnc_info;
+						[_x] call public_fnc_dynamicMarkers_reveal;
+						breakOut "main";
 					};
 				} forEach (g_dynamic_markers);
-				if (!(isNil "_marker")) then
-				{
-					[format["<t align='center'>Vous avez découvert<br/><t color='#74DF00'>%1</t>", (markerText _marker)]] call public_fnc_info;
-					[_marker] call public_fnc_dynamicMarkers_reveal;
-					true;
-				};
 			};
 		};
 
+		_plant = (nearestObjects [player, (call g_plants), 3]) select 0;
+		if (!(isNil "_plant")) then
 		{
-			if (player distance (getMarkerPos _x) < 40) exitWith {
-				_marker = _x;
+			[_plant] call public_fnc_plantHarvest;
+			breakOut "main";
+		};
+
+		{
+			if (player distance (getMarkerPos _x) < 40) exitWith
+			{
+				[_x] spawn public_fnc_plantSeed;
+				breakOut "main";
 			};
 		} forEach (getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "farming_markers_plant"));
-		if (!(isNil "_marker")) then
+
 		{
-			[_marker] spawn public_fnc_plantSeed;
-			true;
-		};
+			if (player distance (getMarkerPos _x) < 40) exitWith
+			{
+				[_x] spawn public_fnc_pickGather;
+				breakOut "main";
+			};
+		} forEach (getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "farming_markers_gather"));
 
 	} else {
 		if ((player distance cursorTarget) < ((((boundingBox cursorTarget) select 1) select 0) + 2.5)) then
 		{
 			if (isPlayer cursorTarget) then
 			{
-				if (!dialog) then
+				if (player getVariable ["is_coma", false]) then
 				{
-					if (player getVariable ["is_coma", false]) then
-					{
-						true;
-					} else {
-						if ((vehicle cursorTarget) isEqualTo cursorTarget) then
-						{
-							[cursorTarget] spawn public_fnc_interactionMenu_open;
-							true;
-						};
-					};
+					breakOut "main";
 				};
+
+				if ((vehicle cursorTarget) isEqualTo cursorTarget) then
+				{
+					[cursorTarget] spawn public_fnc_interactionMenu_open;
+					breakOut "main";
+				};
+
 			} else {
-				if (!dialog) then
+				if ((cursorTarget isKindOf "Car") || (cursorTarget isKindOf "Ship") || (cursorTarget isKindOf "Air") || (cursorTarget isKindOf "Tank") || (cursorTarget isKindOf "Truck")) then
 				{
-					if ((cursorTarget isKindOf "Car") || (cursorTarget isKindOf "Ship") || (cursorTarget isKindOf "Air") || (cursorTarget isKindOf "Tank") || (cursorTarget isKindOf "Truck")) then
+					if (alive cursorTarget) then
 					{
-						if (alive cursorTarget) then
-						{
-							[cursorTarget] spawn public_fnc_vehicleMenu_open;
-							true;
-						};
-					};
-					if (typeof(cursorTarget) isEqualTo "Land_HumanSkull_F") then
-					{
-						[cursorTarget] spawn public_fnc_skullMenu_open;
-						true;
-					};
-					if (typeOf(cursorTarget) in ["Land_Atm_01_F", "Land_Atm_02_F"]) then
-					{
-						["home"] call public_fnc_atmScreen;
-						true;
-					};
-					if (typeOf(cursorTarget) in (call g_houses_storages)) then
-					{
-						[cursorTarget] spawn public_fnc_vehicleMenu_inventory_open;
-						true;
-					};
-					if (typeOf(cursorTarget) in ["Bank_Sahrani_N","Bank_Sahrani_S"]) then
-					{
-						private ["_door"];
-						{
-							if (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition _x)) < 3) exitWith
-							{
-								[cursorTarget, _x] call public_fnc_robberyStart;
-								_door = _x;
-							};
-						} forEach (["Vault_Door", "LeftSlideDoor", "RightSlideDoor", "Door_1", "Door_2", "Door_3", "Door_4", "Door_5", "Door_6"]);
-						
-						if (isNil "_door") then {["Vous n'êtes pas près d'une porte"] call public_fnc_info};
-					};
-					if (typeOf(cursorTarget) isEqualTo "xcam_Laptop_unfolded_F") then
-					{
-						if (((player distance (bank_n)) < 10) || ((player distance (bank_s) < 10))) then
-						{
-							[cursorTarget, "Security"] call public_fnc_robberyStart;
-						};
-					};
-					if (typeOf(cursorTarget) in ["Bank_Drill","Bank_Bomb"]) then
-					{
-						// Réactiver/Defuse Bomb/Drill
-						[(cursorTarget getVariable ["bank", ObjNull]), "", cursorTarget] call public_fnc_robberyProcess;
-						true;
-					};
-					if (typeOf(cursorTarget) in (call g_plants)) then
-					{
-						[cursorTarget] call public_fnc_plantHarvest;
-						true;
+						[cursorTarget] spawn public_fnc_vehicleMenu_open;
+						breakOut "main";
 					};
 				};
+
+				if (typeof(cursorTarget) isEqualTo "Land_HumanSkull_F") then
+				{
+					[cursorTarget] spawn public_fnc_skullMenu_open;
+					breakOut "main";
+				};
+
+				if (typeOf(cursorTarget) in ["Land_Atm_01_F", "Land_Atm_02_F", "xcam_Atm_01_F"]) then
+				{
+					["home"] call public_fnc_atmScreen;
+					breakOut "main";
+				};
+
+				if (typeOf(cursorTarget) in (call g_houses_storages)) then
+				{
+					[cursorTarget] spawn public_fnc_vehicleMenu_inventory_open;
+					breakOut "main";
+				};
+
+				if (typeOf(cursorTarget) in ["Bank_Sahrani_N", "Bank_Sahrani_S"]) then
+				{
+					private ["_door"];
+					{
+						if (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition _x)) < 3) exitWith {
+							_door = _x;
+						};
+					} forEach (["Vault_Door", "LeftSlideDoor", "RightSlideDoor", "Door_1", "Door_2", "Door_3", "Door_4", "Door_5", "Door_6"]);
+					if (isNil "_door") then
+					{
+						[cursorTarget, _door] call public_fnc_robberyStart;
+						breakOut "main";
+					};
+				};
+
+				if (typeOf(cursorTarget) isEqualTo "xcam_Laptop_unfolded_F") then
+				{
+					if (((player distance (bank_n)) < 10) || ((player distance (bank_s) < 10))) then
+					{
+						[cursorTarget, "Security"] call public_fnc_robberyStart;
+						breakOut "main";
+					};
+				};
+
+				if (typeOf(cursorTarget) in ["Bank_Drill", "Bank_Bomb"]) then
+				{
+					// Réactiver/Defuse Bomb/Drill
+					[(cursorTarget getVariable ["bank", ObjNull]), "", cursorTarget] call public_fnc_robberyProcess;
+					breakOut "main";
+				};
+
+				if (typeOf(cursorTarget) in (call g_plants)) then
+				{
+					[cursorTarget] call public_fnc_plantHarvest;
+					breakOut "main";
+				};
+
 			};
 		};
 		if (((player distance cursorTarget) < 10) && (typeOf(cursorTarget) in (call g_houses_list))) then
 		{
-			if (!dialog) then
-			{
-				[cursorTarget] call public_fnc_house_menu_handler;
-				true;
-			};
+			[cursorTarget] call public_fnc_house_menu_handler;
+			breakOut "main";
 		};
 	};
 } else {
@@ -152,11 +161,8 @@ if ((vehicle player) isEqualTo player) then
 	{
 		if (alive _vehicle) then
 		{
-			if (!dialog) then
-			{
-				[_vehicle] spawn public_fnc_vehicleMenu_open;
-				true;
-			};
+			[_vehicle] spawn public_fnc_vehicleMenu_open;
+			breakOut "main";
 		};
 	};
 };
@@ -181,37 +187,12 @@ if ((vehicle player) isEqualTo player) then
 		} else {
 			private["_marker", "_plant"];
 			
-			{
-				if (player distance (getMarkerPos _x) < 40) exitWith {
-					_marker = _x;
-				};
-			} forEach (getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "farming_markers_gather"));
-			if (!(isNil "_marker")) exitWith {
-				[_marker] spawn public_fnc_pickGather; 
-			};
-
-
-
-			_plant = (nearestObjects [player, [call g_plants], 3]) select 0;
-			if (!(isNil "_plant")) exitWith {
-				[_plant] call public_fnc_plantHarvest;
-			};
 		};
 	} else {
 		private["_curDistance"];
 		_curDistance = player distance _curTarget;
 		if (isPlayer _curTarget) then 
 		{
-			if (_curDistance < 4) then
-			{
-				if (_curTarget getVariable["is_coma", false]) then {
-					[_curTarget] call public_fnc_medicalMenu; 
-				} else {
-					if (((_curTarget getVariable["restrained", false]) || (_curTarget getVariable["surrender", false])) && !(_curTarget getVariable["is_coma", false])) then {
-						call compile format["public_fnc_interactionMenu_%1", str(playerSide)];
-					};
-				};
-			};
 		} else {
 			private["_curType"];
 			_curType = typeOf _curTarget;
