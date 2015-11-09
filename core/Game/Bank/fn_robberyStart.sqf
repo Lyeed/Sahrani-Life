@@ -18,7 +18,7 @@ if (!(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item") 
 
 if (!(_bank getVariable ["robStarted", false])) then
 {
-	if (([(getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "owner"))] call public_fnc_strToSide) countSide allPlayers < (getNumer missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "required"))) then
+	if (([(getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "owner"))] call public_fnc_strToSide) countSide allPlayers < (getNumer (missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "required"))) then
 	{
 		[(format "Il faut au minimum <t color='RED'>%1</t> membres de la <t color='DARKGREEN'>%1</t> en service pour pouvoir braquer la banque", (getNumer(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "required")), getText(missionConfigFile >> "ALYSIA_FACTIONS" >> getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "owner" ) >> "name" ))] call public_fnc_error;
 	}
