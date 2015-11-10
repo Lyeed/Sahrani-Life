@@ -21,17 +21,7 @@ _action =
 ] call BIS_fnc_guiMessage;
 if (_action) then
 {
-	private["_newNumber", "_numbers"];
-	_numbers = missionNamespace getVariable["gServer_phone_numbers", []];
-	_newNumber = format["%1%2%3%4%5%6", floor(random 10), floor(random 10), floor(random 10), floor(random 10), floor(random 10), floor(random 10)];
-	while {_newNumber in _numbers} do
-	{
-		_newNumber = format["%1%2%3%4%5%6", floor(random 10), floor(random 10), floor(random 10), floor(random 10), floor(random 10), floor(random 10)];
-	};
-	_numbers deleteAt (_numbers find g_phone_number);
-	g_phone_number = _newNumber;
-	player setVariable["number", _newNumber, true];
-	["gServer_phone_numbers", _numbers] call CBA_fnc_publicVariable;
+	[] call public_fnc_phone_numberChange;
 	[format["Vous avez changé de numéro<br/><br/><t align='left'>Nouveau</t><t align='right' color='#FF4000'>%1</t>", g_phone_number]] call public_fnc_info;
 	playSound "buy";
 	[false, 1, 10000, false] call public_fnc_handleMoney;

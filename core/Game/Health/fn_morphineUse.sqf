@@ -26,7 +26,7 @@ player playAction "medic";
 sleep 2;
 
 if (!("SkylineItems_Morphine" in (magazines player))) exitWith {
-	["Vous n'avez pas de morphine"] call public_fnc_error; 
+	["Vous n'avez pas de morphine"] call public_fnc_error;
 };
 
 player removeMagazine "SkylineItems_Morphine";

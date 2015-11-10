@@ -231,6 +231,12 @@ class Public
 		class house_menu_action_buy {};
 	};
 
+	class Phone
+	{
+		file = "core\Game\Phone";
+		class phone_numberChange;
+	};
+
 	class Health
 	{
 		file = "core\Game\Health";

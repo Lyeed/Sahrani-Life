@@ -16,7 +16,7 @@ if (g_thirst > 100) then {
 } else {
 	if (g_thirst <= 0) then 
 	{
-		["Thirst", ["Vous mourrez de soif"]] call BIS_fnc_showNotification;
+		["Vous mourrez de soif"] call public_fnc_info;
 		g_thirst = 0;
 		[] spawn
 		{
@@ -32,17 +32,17 @@ if (g_thirst > 100) then {
 		{
 			case (g_thirst > 20 && g_thirst <= 30): 
 			{ 
-				["Thirst",["Vous avez très soif"]] call BIS_fnc_showNotification;
+				["Vous avez très soif"] call public_fnc_info;
 				[player, "thirst_1", 7] call CBA_fnc_globalSay3d;				
 			};
 			case (g_thirst > 10 && g_thirst <= 20): 
 			{ 
-				["Thirst",["Vous êtes assoiffé"]] call BIS_fnc_showNotification;
+				["Vous êtes assoiffé"] call public_fnc_info;
 				[player, "thirst_1", 7] call CBA_fnc_globalSay3d;				
 			};
 			case (g_thirst > 0 && g_thirst <= 10): 
 			{
-				["Thirst",["Vous êtes sur le point de mourir de déshydratation"]] call BIS_fnc_showNotification;
+				["Vous êtes sur le point de mourir de déshydratation"] call public_fnc_info;
 				[player, "thirst_1", 7] call CBA_fnc_globalSay3d;
 			};
 		};

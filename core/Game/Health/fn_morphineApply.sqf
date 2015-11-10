@@ -6,4 +6,17 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-g_morphine = g_morphine + 20;
+if (g_morphine isEqualTo 0) then
+{
+	g_morphine = 20;
+	[] spawn
+	{
+		while {g_morphine > 0} do
+		{
+			g_morphine = g_morphine - 1;
+			sleep 1;
+		};
+	};
+} else {
+	g_morphine = g_morphine + 20;
+};

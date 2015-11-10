@@ -75,9 +75,10 @@ _idc_actual = 5010;
 	["lockpick", "Crochetter", "[] spawn public_fnc_interactionMenu_action_lockpick;", "true"],
 	["ticket", "Paiement", "[] spawn public_fnc_interactionMenu_action_ticket;", "true"],
 	["search", "Fouiller", "[] spawn public_fnc_interactionMenu_action_search;", "true"],
+	["license", "Licences", "[] spawn public_fnc_interactionMenu_action_license;", "((side g_interaction_target) isEqualTo civilian)"],
 	["arrest", "Arrêter", "", "false"],
 	["bandage", "Bandage", "[nil,nil,nil,g_interaction_target] spawn public_fnc_bandageUse;", "((g_interaction_target getVariable [""is_bleeding"", false]) && (""SkylineItems_Bandage"" in (magazines player)))"],
-	["license", "Licences", "[] spawn public_fnc_interactionMenu_action_license;", "((side g_interaction_target) isEqualTo civilian)"]
+	["morphine", "Morphine", "[nil,nil,nil,g_interaction_target] spawn public_fnc_morphineUse;", "((""SkylineItems_Morphine"" in (magazines player)) && !(g_interaction_target getVariable [""is_coma"", false]))"]
 ]);
 
 for "_i" from _idc_actual to 5033 do

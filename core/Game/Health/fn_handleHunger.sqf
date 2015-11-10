@@ -18,7 +18,7 @@ if (g_hunger > 100) then
 } else {
 	if (g_hunger <= 0) then 
 	{
-		["Hunger", ["Vous mourrez de faim"]] call BIS_fnc_showNotification;
+		["Vous mourrez de faim"] call public_fnc_info;
 		g_hunger = 0;
 		[] spawn
 		{
@@ -34,17 +34,17 @@ if (g_hunger > 100) then
 		{
 			case (g_hunger > 20 && g_hunger <= 30): 
 			{
-				["Hunger",["Vous avez très faim"]] call BIS_fnc_showNotification;
+				["Vous avez très faim"] call public_fnc_info;
 				[player, "hunger_1", 7] call CBA_fnc_globalSay3d;
 			};
 			case (g_hunger > 10 && g_hunger <= 20): 
 			{
-				["Hunger",["Vous êtes affamé"]] call BIS_fnc_showNotification;
+				["Vous êtes affamé"] call public_fnc_info;
 				[player, "hunger_1", 7] call CBA_fnc_globalSay3d;
 			};
 			case (g_hunger > 0 && g_hunger <= 10): 
 			{ 
-				["Hunger",["Vous êtes sur le point de mourir de faim"]] call BIS_fnc_showNotification;
+				["Vous êtes sur le point de mourir de faim"] call public_fnc_info;
 				[player, "hunger_1", 7] call CBA_fnc_globalSay3d;
 			};
 		};

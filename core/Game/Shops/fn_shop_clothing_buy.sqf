@@ -21,7 +21,7 @@ if (g_shop_clothing_active) exitWith {};
 g_shop_clothing_active = true;
 _type = lbData[3102, (lbCurSel 3102)];
 
-if ((g_shop_clothing_oldItem != "") && (_type != "backpack")) then {
+if ((g_shop_clothing_oldItem != "") && (_type != "backpacks")) then {
 	g_shop_clothing_oldList pushBack g_shop_clothing_oldItem;
 };
 
@@ -39,8 +39,8 @@ switch (_type) do
 	};
 	case "backpacks":
 	{
-		g_shop_clothing_vest = backpack player;
-		g_shop_clothing_oldItem = g_shop_clothing_vest;
+		g_shop_clothing_backpack = backpack player;
+		g_shop_clothing_oldItem = g_shop_clothing_backpack;
 	};
 	case "uniforms":
 	{
@@ -49,12 +49,11 @@ switch (_type) do
 	};
 	case "vests":
 	{
-		g_shop_clothing_backpack = vest player;
-		g_shop_clothing_oldItem = g_shop_clothing_backpack;
+		g_shop_clothing_vest = vest player;
+		g_shop_clothing_oldItem = g_shop_clothing_vest;
 	};
 };
 
 g_cash = g_cash - _price;
-playSound "buy";
 ["<t align='center'>Achat<br/><t color='#3ADF00'>effectué</t></t>", "buy"] call public_fnc_info;
 g_shop_clothing_active = false;

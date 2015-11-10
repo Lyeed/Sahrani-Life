@@ -113,7 +113,7 @@ _error = "";
 									private["_target"];
 									_target = objNull;
 									{
-										if ((_x getVariable["number", "-1"]) isEqualTo _number) exitWith {
+										if ((_x getVariable ["number", "-1"]) isEqualTo _number) exitWith {
 											_target = _x;
 										};
 									} count (allPlayers);
