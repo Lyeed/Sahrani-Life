@@ -234,7 +234,6 @@ class Public
 	class Health
 	{
 		file = "core\Game\Health";
-		class bandageApply {};
 		class bandageUse {};
 		class bloodBagUse {};
 		class bodyDrag {};

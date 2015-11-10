@@ -27,7 +27,7 @@ g_action_delay = time;
 g_action_inUse = true;
 
 player playMove "AinvPknlMstpSlayWrflDnon_1";
-waitUntil {animationState player isEqualTo "ainvpknlmstpsnonwnondnon_3"};
+waitUntil {((animationState player) in ["ainvpknlmstpsnonwnondnon_2", "ainvpknlmstpsnonwnondnon_3"])};
 player playMove "amovpercmstpsnonwnondnon";
 titleText[format["Vous avez planté : 1x %1", ([_seed] call public_fnc_itemGetName)], "PLAIN"];
 
@@ -41,7 +41,7 @@ if ([false, "engrais", 1] call public_fnc_handleInv) then {
 missionNamespace setVariable [format["%1_PLANTS", (getPlayerUID player)], (missionNamespace getVariable [format["%1_PLANTS", (getPlayerUID player)], []]) + [_object] - [objNull]];
 publicVariableServer format["%1_PLANTS", (getPlayerUID player)];
 
-[(_plantGrowingtime / 10), ((getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "upLevel")) / 10), _object] spawn
+[(_plantGrowingtime / 10), (getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "upLevel") / 10), _object] spawn
 {
 	private["_growtime", "_growup", "_growprcnt", "_object"];
 	_growtime = [_this, 0, 0, [0]] call BIS_fnc_param;

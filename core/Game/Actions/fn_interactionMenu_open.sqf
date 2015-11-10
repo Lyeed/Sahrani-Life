@@ -76,8 +76,8 @@ _idc_actual = 5010;
 	["ticket", "Paiement", "[] spawn public_fnc_interactionMenu_action_ticket;", "true"],
 	["search", "Fouiller", "[] spawn public_fnc_interactionMenu_action_search;", "true"],
 	["arrest", "Arrêter", "", "false"],
-	["bandage", "Bandage", "", "false"],
-	["license", "Licences", "[] spawn public_fnc_interactionMenu_action_license;", "true"]
+	["bandage", "Bandage", "[nil,nil,nil,g_interaction_target] spawn public_fnc_bandageUse;", "((g_interaction_target getVariable [""is_bleeding"", false]) && (""SkylineItems_Bandage"" in (magazines player)))"],
+	["license", "Licences", "[] spawn public_fnc_interactionMenu_action_license;", "((side g_interaction_target) isEqualTo civilian)"]
 ]);
 
 for "_i" from _idc_actual to 5033 do

@@ -22,7 +22,7 @@ class RscDisplayComa : default_base_dialog
 		class TITLE: RscStructuredText
 		{
 			idc = -1;
-			text = "<t align='center' size='3'>Vous êtes dans le coma</t>";
+			text = "<t align='center' size='3'>Vous êtes inconscient</t>";
 			colorBackground[] = {0,0,0,0};
 			
 			x = -0.000156274 * safezoneW + safezoneX;
@@ -65,7 +65,7 @@ class RscDisplayComa : default_base_dialog
 		class MEDIC_TEXT: RscText
 		{
 			idc = -1;
-			text = "Contacter le SAMU anonymement";
+			text = "Contacter le SAMU";
 			colorBackground[] = {0,0,0,0};
 			
 			x = 0.0956773 * safezoneW + safezoneX;

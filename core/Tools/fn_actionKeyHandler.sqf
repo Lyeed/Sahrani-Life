@@ -45,7 +45,7 @@ if ((vehicle player) isEqualTo player) then
 		_plant = (nearestObjects [player, (call g_plants), 3]) select 0;
 		if (!(isNil "_plant")) then
 		{
-			[_plant] call public_fnc_plantHarvest;
+			[_plant] spawn public_fnc_plantHarvest;
 			breakOut "main";
 		};
 

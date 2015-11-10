@@ -14,22 +14,10 @@ if ((_code in (actionKeys "PersonView")) && g_firstCombatActive && ((vehicle pla
 if ((_code in (actionKeys "MiniMap")) || (_code in (actionKeys "MiniMapToggle"))) exitWith {true};
 if (g_coma) exitWith {true};
 
-if (g_action_inUse) exitWith
+if (g_action_inUse && (_code in [17, 40, 31, 32]) && !g_interrupted) exitWith
 {
-	if (_code in [17, 40, 31, 32]) then
-	{
-		if (g_action_gathering) then 
-		{
-			g_action_cancel = true;
-			true;
-		};
-		if (!g_interrupted) then 
-		{
-			g_interrupted = true;
-			true;
-		};
-	};
-	false;
+	g_interrupted = true;
+	true;
 };
 
 false;

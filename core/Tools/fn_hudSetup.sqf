@@ -125,7 +125,7 @@ while {true} do
 	} forEach 
 	([
 		["\lyeed_IMG\data\player_hud\bleed.paa", "(g_bleed > 0)"],
-		["\lyeed_IMG\data\player_hud\regen.paa", "(g_regen_active)"],
+		["\lyeed_IMG\data\player_hud\regen.paa", "(g_regen_active && (g_bleed isEqualTo 0))"],
 		["\lyeed_IMG\data\player_hud\drugs.paa", "(g_drugs_consuming > 0)"],
 		["\lyeed_IMG\data\player_hud\handcuffs.paa", "(player getVariable [""restrained"", false])"],
 		["\lyeed_IMG\data\player_hud\blind.paa", "(player getVariable [""bandeau"", false])"],

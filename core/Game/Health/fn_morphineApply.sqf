@@ -6,4 +6,4 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-life_morphine = life_morphine + 20;
+g_morphine = g_morphine + 20;
