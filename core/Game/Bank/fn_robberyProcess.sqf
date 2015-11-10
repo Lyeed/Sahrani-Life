@@ -12,6 +12,8 @@ if (!params [
 	["_tool", ObjNull, [ObjNull]]
 ]) exitWith {};
 
+systemChat format ["< Robbery System - Debug > robberyProcess - OK"];
+
 private ["_item"];
 
 if (!(_door isEqualTo "")) then 

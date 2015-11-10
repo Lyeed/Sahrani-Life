@@ -14,6 +14,7 @@ disableSerialization;
 _display = findDisplay 15000;
 if (isNull _display) then {};
 _amount = ctrlText 15019;
+_amount = parseNumber _amount;
 
 switch (_action) do
 {

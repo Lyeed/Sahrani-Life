@@ -113,13 +113,16 @@ if ((vehicle player) isEqualTo player) then
 				{
 					private ["_door"];
 					{
-						if (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition _x)) < 3) exitWith {
+						systemChat format ["< Robbery System - Debug > Joueur près de la porte %1", _x];
+						if (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition _x)) < 5) exitWith {
+							[cursorTarget, _x] call public_fnc_robberyStart;
 							_door = _x;
 						};
 					} forEach (["Vault_Door", "LeftSlideDoor", "RightSlideDoor", "Door_1", "Door_2", "Door_3", "Door_4", "Door_5", "Door_6"]);
 					if (isNil "_door") then
 					{
-						[cursorTarget, _door] call public_fnc_robberyStart;
+						systemChat format ["< Robbery System - Debug > Joueur non près d'une porte"];
+						["Vous devez être près pour d'une porte pour pouvoir la forcer"] call public_fnc_info;
 						breakOut "main";
 					};
 				};
@@ -128,6 +131,7 @@ if ((vehicle player) isEqualTo player) then
 				{
 					if (((player distance (bank_n)) < 10) || ((player distance (bank_s) < 10))) then
 					{
+						systemChat format ["< Robbery System - Debug > Joueur près d'un ordinateur à Hack"];
 						[cursorTarget, "Security"] call public_fnc_robberyStart;
 						breakOut "main";
 					};
@@ -136,6 +140,7 @@ if ((vehicle player) isEqualTo player) then
 				if (typeOf(cursorTarget) in ["Bank_Drill", "Bank_Bomb"]) then
 				{
 					// Réactiver/Defuse Bomb/Drill
+					systemChat format ["< Robbery System - Debug > Joueur près de la foreuse/bombe"];
 					[(cursorTarget getVariable ["bank", ObjNull]), "", cursorTarget] call public_fnc_robberyProcess;
 					breakOut "main";
 				};

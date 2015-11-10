@@ -10,6 +10,8 @@ if (!params [
 	["_item", ObjNull, [ObjNull]]
 ]) exitWith {};
 
+systemChat format ["< Robbery System - Debug > robberyTools - OK"];
+
 private ["_time"];
 
 _time = (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "time"));

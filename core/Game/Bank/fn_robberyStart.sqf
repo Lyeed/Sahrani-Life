@@ -11,8 +11,12 @@ if (!params [
 	["_door", "", [""]]
 ]) exitWith {};
 
+systemChat format ["< Robbery System - Debug > robberyStart - OK"];
+
 if (!(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item") in magazines player)) exitWith
 {
+	systemChat format ["< Robbery System - Debug > Outil manquant"];
+
 	[(format ["Vous avez besoin de <br/>%1<br/>", ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")] call public_fnc_fetchCfgDetails) select 1])] call public_fnc_error;
 }; 
 
@@ -20,6 +24,8 @@ if (!(_bank getVariable ["robStarted", false])) then
 {
 	if (([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call public_fnc_strToSide) countSide allPlayers < getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "required")) then
 	{
+		systemChat format ["< Robbery System - Debug > Pas assez de flics connectés"];
+		
 		[
 			format
 			[
@@ -37,6 +43,8 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 {
 	switch (getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "open") do
 	{
+		systemChat format ["< Robbery System - Debug > Détection/Ouverture porte ciblée"];
+
 		case "Simple": {_bank animate [_door, 1]};
 		case "SlidingL": {_bank animate [_door, -1.7]};
 		case "SlidingR": {_bank animate [_door, 1.7]};
@@ -52,7 +60,7 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 
 	if (!(_bank getVariable ["hacked", false])) then
 	{
-		private ["_alarm", "_bankRegion"];
+		private ["_alarm"];
 		
 		if (isNull (_bank getVariable ["alarm", objNull])) then
 		{
