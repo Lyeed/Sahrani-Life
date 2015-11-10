@@ -108,7 +108,6 @@ lbClear _list;
 	if (isClass(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x)) then
 	{
 		_details = [_x] call public_fnc_fetchCfgDetails;
-		diag_log format["CLOTHING : %1 - %3:%2", _x, _details select 4, typeName(_details select 4)];
 		if (_details isEqualTo []) then
 		{
 			diag_log format["ERROR: %1 does not exist in Arma", _x];

@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_value"];
+private["_value", "_regen"];
 _value = round([_this, 0, 0, [0]] call BIS_fnc_param);
 
 if (_value isEqualTo 0) exitWith {};
@@ -37,16 +37,24 @@ if (!g_regen_active) then
 		{
 			if ((g_bleed isEqualTo 0) && !g_coma && (g_hunger > 0) && (g_thirst > 0)) then 
 			{
-				systemChat format["<DEBUG:BLOOD_LOOP> Regen blood : %1", g_blood];
+				_regen = 0;
 				if ((g_hunger >= 100) && (g_thirst >= 100)) then {
-					[10] call public_fnc_handleBlood;
+					_regen = 6;
 				} else {
-					[4] call public_fnc_handleBlood;
+					_regen = 2;
+				};
+
+				if (_regen > 0) then
+				{
+					if (g_morphine > 0) then {
+						_regen = _regen * 4;
+					};
+
+					[_regen] call public_fnc_handleBlood;
 				};
 			};
 			sleep 2;
 		};
-		systemChat "<DEBUG:BLOOD_END>";
 		g_regen_active = false;
 	};
 };

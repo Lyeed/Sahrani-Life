@@ -161,11 +161,12 @@ if (!(g_shop_clothing_oldList isEqualTo [])) then
 	_txt = "";
 	{
 		if (player canAdd _x) then {
-			_txt = format["%2%1<br/>", _txt, ([_x] call public_fnc_fetchCfgDetails) select 1];
+			_txt = format["%1%2<br/>", _txt, ([_x] call public_fnc_fetchCfgDetails) select 1];
 		} else {
 			g_shop_clothing_oldList deleteAt _forEachIndex;
 		};
 	} forEach (g_shop_clothing_oldList);
+
 	if (_txt != "") then
 	{
 		_action = 
@@ -180,7 +181,7 @@ if (!(g_shop_clothing_oldList isEqualTo [])) then
 			{
 				player addItem _x;
 			} forEach (g_shop_clothing_oldList);
-		};	
+		};
 	};
 };
 

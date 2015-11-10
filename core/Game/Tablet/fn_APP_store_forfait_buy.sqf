@@ -22,20 +22,8 @@ if (g_atm < (getNumber(missionConfigFile >> "ALYSIA_FORFAITS" >> _forfait >> "bi
 g_action_delay = time;
 playSound "buy";
 g_phone_forfait = _forfait;
-if (g_phone_number isEqualTo "") then
-{
-	private["_newNumber", "_numbers"];
-	_numbers = missionNamespace getVariable["gServer_phone_numbers", []];
-	_newNumber = format["%1%2%3%4%5%6", floor(random 10), floor(random 10), floor(random 10), floor(random 10), floor(random 10), floor(random 10)];
-	while {_newNumber in _numbers} do
-	{
-		_newNumber = format["%1%2%3%4%5%6", floor(random 10), floor(random 10), floor(random 10), floor(random 10), floor(random 10), floor(random 10)];
-	};
-	_numbers deleteAt (_numbers find g_phone_number);
-	_numbers pushBack _newNumber;
-	g_phone_number = _newNumber;
-	player setVariable ["number", _newNumber, true];
-	["gServer_phone_numbers", _numbers] call CBA_fnc_publicVariable;
+if (g_phone_number isEqualTo "") then {
+	[] call public_fnc_phone_numberChange;
 };
 
 [format["Vous avez changé de forfait<br/><br/><t align='left'>Nouveau</t><t align='right' color='#FF4000'>%1</t>", g_phone_forfait]] call public_fnc_info;
