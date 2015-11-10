@@ -122,7 +122,7 @@ if ((vehicle player) isEqualTo player) then
 					if (isNil "_door") then
 					{
 						systemChat format ["< Robbery System - Debug > Joueur non près d'une porte"];
-						["Vous devez être près pour d'une porte pour pouvoir la forcer"] call public_fnc_info;
+						["Vous devez être près pour d'une porte pour pouvoir la forcer"] call public_fnc_error;
 						breakOut "main";
 					};
 				};
