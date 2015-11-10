@@ -25,7 +25,7 @@ if (!(_bank getVariable ["robStarted", false])) then
 	if (([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call public_fnc_strToSide) countSide allPlayers < getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "required")) then
 	{
 		systemChat format ["< Robbery System - Debug > Pas assez de flics connectés"];
-		
+
 		[
 			format
 			[
@@ -52,9 +52,13 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 		case "Vault": {[_bank, _door] call public_fnc_robberyProcess};
 		case "Security":
 		{
-			_bank setVariable ["alarm", ObjNull, true];
+			if (!(isNull (_bank getVariable ["alarm", objNull]))) then
+			{
+				deleteVehicle (_bank getVariable ["alarm", ObjNull]);
+				_bank setVariable ["alarm", ObjNull, true];
+			};
 			_bank setVariable ["hacked", true, true];
-			deleteVehicle (_bank getVariable ["alarm", ObjNull]); 
+			["Vous avez désactivé le système de sécurité de la banque"] call public_fnc_info;
 		};
 	};
 
