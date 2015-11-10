@@ -18,7 +18,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""raisin""] call public_fnc_eatFood;";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\raisin.paa";
 	};
 
 	class illegal_money
@@ -54,7 +54,7 @@ class ALYSIA_ITEMS
 		illegal = 1;
 		removable = 1;
 		use = 	"";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "Alysia_textures\data\lingot_or.paa";
 	};
 
 	class water
@@ -240,7 +240,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\tabac.paa";
 	};
 
 	class tabac_seed
@@ -253,7 +253,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\graine_tabac.paa";
 	};
 
 	class cigare
@@ -266,7 +266,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\cigare.paa";
 	};
 
 	class cigarette
@@ -279,7 +279,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\cigarette.paa";
 	};
 
 	class objvaleur
@@ -370,7 +370,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\tas_bois.paa";
 	};
 
 	class woodp
@@ -383,7 +383,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\planche.paa";
 	};
 
 	class furniture
@@ -396,7 +396,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\meuble.paa";
 	};
 
 	class iron
@@ -467,19 +467,6 @@ class ALYSIA_ITEMS
 		image       = "Alysia_textures\data\life_inv_banane.paa";
 	};
 
-	class platinepa
-	{
-		weight = 4;
-		name = "Barre de platine enrichi";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
-	};
-
 	class cocaine_seed
 	{
 		weight = 1;
@@ -490,7 +477,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\drogue\graines_coca.paa";
 	};
 
 	class cocaine
@@ -503,7 +490,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\drogue\coca.paa";
 	};
 
 	class cocainep
@@ -519,7 +506,7 @@ class ALYSIA_ITEMS
 		"\
 			[""%1""] call public_fnc_drugConsume;\
 		";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\drogue\cocaine.paa";
 	};
 
 	class cocainepc
@@ -548,7 +535,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\drogue\graines_pavot.paa";
 	};
 
 	class heroin
@@ -561,7 +548,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\drogue\pavot.paa";
 	};
 
 	class heroinp
@@ -574,7 +561,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\drogue\heroine.paa";
 	};
 
 	class seringue
@@ -587,7 +574,7 @@ class ALYSIA_ITEMS
 		drop = "Land_Suitcase_F";
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\seringue_vide.paa";
 	};
 
 	class heroinps
@@ -616,13 +603,13 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\drogue\graines_éphedra.paa";
 	};
 
 	class hsoufre
 	{
 		weight = 1;
-		name = "Soufre hydraté";
+		name = "Hydrate de soufre";
 		price_buy   = 60;
 		price_sell  = 30;
 		illegal = 1;
@@ -642,7 +629,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\drogue\ephedra.paa";
 	};
 
 	class methp
@@ -658,7 +645,7 @@ class ALYSIA_ITEMS
 		"\
 			[""%1""] call public_fnc_drugConsume;\
 		";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\drogue\methamphetamine.paa";
 	};
 
 	class cannabis_seed
@@ -671,7 +658,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\drogue\graines_canabis.paa";
 	};
 
 	class cannabis
@@ -684,7 +671,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\drogue\canabis.paa";
 	};
 
 	class marijuana
@@ -700,7 +687,7 @@ class ALYSIA_ITEMS
 		"\
 			[""%1""] call public_fnc_drugConsume;\
 		";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\drogue\marijuana.paa";
 	};
 
 	class oilu
@@ -713,7 +700,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\pétrole.paa";
 	};
 
 	class oilp
@@ -726,7 +713,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\essence.paa";
 	};
 
 	class fishingpoles
@@ -777,7 +764,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\graine_mais.paa";
 	};
 
 	class corn
@@ -790,7 +777,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\mais.paa";
 	};
 
 	class cotton_seed
@@ -803,7 +790,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\graine_coton.paa";
 	};
 
 	class cotton
@@ -816,7 +803,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\coton.paa";
 	};
 
 	class sand
@@ -829,7 +816,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\sable.paa";
 	};
 
 	class glass
@@ -842,7 +829,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\verre.paa";
 	};
 
 	class cerealbar
@@ -855,7 +842,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""cerealbar""] call public_fnc_eatFood;";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\barre_de_céréale.paa";
 	};
 
 	class sparklingwater
@@ -868,7 +855,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""sparklingwater""] call public_fnc_eatFood;";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\bouteille_eau_gazeuse.paa";
 	};
 
 	class prune
@@ -881,7 +868,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""prune""] call public_fnc_eatFood;";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\prune.paa";
 	};
 
 	class sandwich
@@ -959,7 +946,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\minerai_cuivre.paa";
 	};
 
 	class copperp
@@ -972,7 +959,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\lingot_cuivre.paa";
 	};
 
 	class clay
@@ -985,7 +972,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\argile.paa";
 	};
 
 	class pottery
@@ -998,7 +985,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\poterie.paa";
 	};
 
 	class baux
@@ -1011,7 +998,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\minerai_bauxite.paa";
 	};
 
 	class alu
@@ -1024,7 +1011,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\alluminium.paa";
 	};
 
 	class moule
@@ -1037,7 +1024,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\fruit_de_mer\moule.paa";
 	};
 
 	class palourde
@@ -1050,7 +1037,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\fruit_de_mer\palourde.paa";
 	};
 
 	class saintjacques
@@ -1063,7 +1050,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\fruit_de_mer\saint_jacques.paa";
 	};
 
 	class bigorneau
@@ -1076,7 +1063,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\fruit_de_mer\bigorneau.paa";
 	};
 
 	class crabe
@@ -1089,7 +1076,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\fruit_de_mer\crabe.paa";
 	};
 
 	class bulot
@@ -1102,7 +1089,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\fruit_de_mer\bulot.paa";
 	};
 
 	class anchois
@@ -1115,7 +1102,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\fruit_de_mer\anchois.paa";
 	};
 
 	class bar
@@ -1128,7 +1115,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\fruit_de_mer\bar.paa";
 	};
 
 	class daurade
@@ -1141,7 +1128,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\fruit_de_mer\daurade.paa";
 	};
 
 	class maquereau
@@ -1154,7 +1141,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\fruit_de_mer\maquereau.paa";
 	};
 
 	class Merlu
@@ -1167,7 +1154,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\fruit_de_mer\merlu.paa";
 	};
 
 	class sardine
@@ -1180,6 +1167,149 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\fruit_de_mer\sardine.paa";
+	};
+
+	class salt
+	{
+		name        = "Sel";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\1\sel.paa";
+	};
+
+	class saltp
+	{
+		name        = "Sel traité";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\1\sel_traiter.paa";
+	};
+
+	class goldnuggets
+	{
+		name        = "Pépite d'or";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\1\pépite_or.paa";
+	};
+
+	class patate
+	{
+		name        = "Patate";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\1\patate.paa";
+	};
+
+	class wheat
+	{
+		name        = "Blé";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\1\blé.paa";
+	};
+
+	class wheatseed
+	{
+		name        = "Blé (graines)";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\1\graine_blé.paa";
+	};
+
+	class cottonp
+	{
+		name        = "Coton traité";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\1\boule_coton.paa";
+	};
+
+	class grozdova
+	{
+		name        = "Grozdova";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\1\bouteille_eau_de_vie_raisin.paa";
+	};
+
+	class slivovica
+	{
+		name        = "Slivovica";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\1\bouteille_eau_de_vie_prune.paa";
+	};
+
+	class coal
+	{
+		name        = "Charbon";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\1\charbon.paa";
+	};
+
+	class opium
+	{
+		name        = "Opium";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 30;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\drogue\opium.paa";
 	};
 };

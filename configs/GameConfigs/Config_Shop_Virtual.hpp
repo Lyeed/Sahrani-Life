@@ -28,7 +28,14 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Marché";
 		side = "";
 		// items[]= {{"water", "banane", "mangue", "fishingpoles", "storage", "fuelF"}, {"banane", "mangue"}};
-		items[]= {{"raisin", "prune", "water", "sandwich"}, {"raisin", "prune"}};
+		items[]= {{"raisin","illegal_money","engrais","goldbar","water","lockpick","handcuffs","handcuffkeys","patch","nitro","storage","barriere",
+"cone","bip","spikeStrip","tabac","tabac_seed","cigare","cigarette","objvaleur","artefact","artefact_R","artefact_exrare","artefact_rare",
+"artefact_common","wood","woodp","furniture","iron","ironp","soufre","platine","platinep","cocaine_seed","cocaine","cocainep","cocainepc",
+"heroin_seed","heroin","heroinp","seringue","heroinps","meth_seed","hsoufre","meth","methp","cannabis_seed","cannabis","marijuana",
+"oilu","oilp","fishingpoles","bean_seed","bean","corn_seed","corn","cotton_seed","cotton","sand","glass","cerealbar","sparklingwater",
+"prune","sandwich","donut","soda","ragout","kefir","copper","copperp","clay","pottery","baux","alu","moule","palourde","saintjacques",
+"bigorneau","crabe","bulot","anchois","bar","daurade","maquereau","Merlu","sardine","salt","saltp","goldnuggets","patate","wheat",
+"wheatseed","cottonp","grozdova","slivovica","coal","opium"}, {"raisin", "prune"}};
 	};
 	
 	class hopital
