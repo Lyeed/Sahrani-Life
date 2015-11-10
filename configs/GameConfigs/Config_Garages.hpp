@@ -196,8 +196,7 @@ class Cfg_Garages
 		name = "Garage Maritime";
 		spawns[] = 
 		{
-			"CIV_vehicles_sea_marker_3",
-			"CIV_vehicles_sea_marker_4"
+			"CIV_vehicles_sea_marker_1"
 		};
 		types[] =
 		{

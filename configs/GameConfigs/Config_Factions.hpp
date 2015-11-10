@@ -239,7 +239,6 @@ class ALYSIA_FACTIONS
 		{
 			"corn_1",
 			"bean_1",
-			"bean_2",
 			"cotton_1",
 			"heroin_1",
 			"cannabis_1",
