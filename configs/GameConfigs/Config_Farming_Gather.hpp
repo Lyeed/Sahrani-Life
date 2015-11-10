@@ -8,7 +8,6 @@
 
 class ALYSIA_FARMING_GATHER
 {
-
 	class wood_1
 	{
 		receive[] = {{"wood", 1, 0}};
@@ -52,13 +51,6 @@ class ALYSIA_FARMING_GATHER
 		receive[] = {{"oilu", 1, 0}};
 		tool = "Skyline_Pioche_01";
 		sound = "oil";
-	};
-
-	class archeologie_1
-	{
-		receive[] = {{"artefact", 1, 0}};
-		tool = "Skyline_Pioche_01";
-		sound = "mining";
 	};
 
 	class prunes_1
