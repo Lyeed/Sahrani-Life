@@ -12,21 +12,21 @@ class ALYSIA_SHOPS_VIRTUAL
 	class fishmarket
 	{
 		name = "Poissonnerie";
-		side = "civilian";
+		side = "CIV";
 		items[] = {{"fishingpoles"}, {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine"}};
 	};
 
 	class farmingmarket
 	{
 		name = "Commerçant agricol";
-		side = "civilian";
+		side = "CIV";
 		items[] = {{"corn_seed", "bean_seed", "cotton_seed", "engrais"}, {"cotton", "bean", "corn"}};
 	};
 	
 	class market
 	{
 		name = "Marché";
-		side = "sideUnknown";
+		side = "";
 		// items[]= {{"water", "banane", "mangue", "fishingpoles", "storage", "fuelF"}, {"banane", "mangue"}};
 		items[]= {{"raisin", "prune", "water", "sandwich"}, {"raisin", "prune"}};
 	};
@@ -34,7 +34,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	class hopital
 	{
 		name = "Hopital";
-		side = "sideUnknown";
+		side = "";
 		items[] = {{"patch", "seringue", "cerealbar", "sparklingwater"}, {}};
 	};
 
@@ -42,14 +42,14 @@ class ALYSIA_SHOPS_VIRTUAL
 	class rebel
 	{
 		name = "Marché illégal";
-		side = "civilian";
+		side = "CIV";
 		items[]= {{"water", "banane", "mangue", "lockpick", "handcuffs", "handcuffkeys", "baillon", "bandeau", "blastingcharge", "lab_small", "lab_medium", "lab_large"}, {"banane", "mangue"}};
 	};
 
 	class west 
 	{
 		name = "Milice";
-		side = "west";
+		side = "WEST";
 		items[] = {{"defusekit", "salive", "cone", "barriere", "murbetonarme", "bunkersable", "mursable", "couloirsable", 
 			"grandmurescalier", "gueritesable", "grandmur", "coinsable", "adn", "donut", "soda", "handcuffkeys", "handcuffs", 
 			"kit_destru", "spikeStrip", "bip", "storage"}, {}};
@@ -58,14 +58,14 @@ class ALYSIA_SHOPS_VIRTUAL
 	class east
 	{
 		name = "Garde";
-		side = "east";
+		side = "EAST";
 		items[] = {{"ragout", "kefir"}, {}};
 	};
 
 	class guer
 	{
 		name = "Hopital";
-		side = "independent";
+		side = "GUER";
 		items[] = {{}, {}};
 	};
 
@@ -73,84 +73,84 @@ class ALYSIA_SHOPS_VIRTUAL
 	class dealer
 	{
 		name = "Dealer";
-		side = "civilian";
+		side = "CIV";
 		items[] = {{}, {"cocainep", "heroinps", "marijuana", "cocainepc", "methp"}};
 	};
 
 	class oil
 	{
 		name = "Commerçant de pétrole";
-		side = "civilian";
+		side = "CIV";
 		items[] = {{}, {"oilp", "fuelF"}};
 	};
 
 	class glass
 	{
 		name = "Commerçant de verre";
-		side = "civilian";
+		side = "CIV";
 		items[] = {{}, {"glass"}};
 	};
 
 	class iron
 	{
 		name = "Commerçant de fer";
-		side = "civilian";
+		side = "CIV";
 		items[] = {{}, {"ironp", "soufre"}};
 	};
 
 	class wood
 	{
 		name = "Commerçant de bois";
-		side = "civilian";
+		side = "CIV";
 		items[] = {{}, {"woodp"}};
 	};
 
 	class gold
 	{
 		name = "Commerçant d'or";
-		side = "civilian";
+		side = "CIV";
 		items[] = {{}, {"goldbar"}};
 	};
 
 	class black_market
 	{
 		name = "Marché noir";
-		side = "civilian";
+		side = "CIV";
 		items[] = {{"cannabis_seed", "heroin_seed", "cocaine_seed", "meth_seed", "nitro"}, {"artefact", "artefact_R", "artefact_exrare", "artefact_rare", "artefact_common", "objvaleur"}};
 	};
 
 	class platine
 	{
 		name = "Commerçant de platine";
-		side = "civilian";
+		side = "CIV";
 		items[] = {{}, {"platinep", "platinepa"}};
 	};
 
 	class tabac
 	{
 		name = "Buraliste";
-		side = "civilian";
+		side = "CIV";
 		items[] = {{}, {"cigarette", "tabac_seed"}};
 	};
 
 	class furniture
 	{
 		name = "Commerçant de meuble";
-		side = "civilian";
+		side = "CIV";
 		items[] = {{}, {"furniture"}};
 	};
 
 	class copper
 	{
 		name = "Commerçant de cuivre";
-		side = "civilian";
+		side = "CIV";
 		items[] = {{}, {"copperp"}};
 	};
 
 	class textile
 	{
 		name = "Usine de textile";
-		side = "civilian";
+		side = "CIV";
 		items[] = {{}, {"cottonp"}};
 	};
 };

@@ -15,13 +15,12 @@ if (!isClass(missionConfigFile >> "ALYSIA_SHOPS_ARMA" >> _type)) exitWith
 	diag_log format["[ALYSIA:ERROR] Weapon shop %1 not defined in ALYSIA_SHOPS_ARMA (class not found)", _type];
 };
 
-_side = call compile format["%1", (getText(missionConfigFile >> "ALYSIA_SHOPS_ARMA" >> _type >> "side"))];
-if ((_side != sideUnknown) && {(playerSide != _side)}) exitWith {
+_side = getText(missionConfigFile >> "ALYSIA_SHOPS_ARMA" >> _type >> "side");
+if ((_side != "") && (str(playerSide) != _side)) exitWith {
 	[format[
-		"Votre faction<br/><t color='#04B404' align='center'>%1</t><br/>n'est pas autorisé à acheter ici<br/><br/>Ce magasin<br/><t align='center' color='#2EFE9A'>%2</t><br/>est <t color='#FF0000'>réservé</t> à <br/><t align='center' color='#0080FF'>%3</t>",
+		"Votre faction<br/><t color='#04B404' align='center'>%1</t><br/>n'est pas autorisé à acheter ici<br/><br/>Ce magasin<br/><t align='center' color='#2EFE9A'>%2</t><br/>est <t color='#FF0000'>réservé</t>",
 		([playerSide] call public_fnc_sideToStr),
-		(getText(missionConfigFile >> "ALYSIA_SHOPS_ARMA" >> _type >> "name")),
-		([_side] call public_fnc_sideToStr)
+		getText(missionConfigFile >> "ALYSIA_SHOPS_ARMA" >> _type >> "name")
 	]] call public_fnc_error;
 };
 

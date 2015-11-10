@@ -12,8 +12,9 @@ class ALYSIA_SHOPS_VEHICLES
 	class WEST_vehicles_land
 	{
 		name = "Concessionnaire terrestre militaire";
-		side = "west";
-		stock[] = {
+		side = "WEST";
+		stock[] = 
+		{
 			"DAR_TahoePolice",
 			"DAR_ChargerPoliceState", 
 			"DAR_ExplorerPolice",
@@ -22,57 +23,54 @@ class ALYSIA_SHOPS_VEHICLES
 			"DAR_TahoePoliceDet",
 			"DAR_ImpalaPolice"
 		};
-		background = "\lyeed_IMG\data\shop\back_WEST_vehicles_land.jpg";
 	};
 	class WEST_vehicles_air
 	{
 		name = "Concessionnaire aérien militaire";
-		side = "west";
-		stock[] = {
+		side = "WEST";
+		stock[] =
+		{
 			"EC635_Unarmed",
 			"dezkit_b206mi"
 		};
-		background = "\lyeed_IMG\data\shop\back_WEST_vehicles_air.jpg";
 	};
 	class WEST_vehicles_sea
 	{
 		name = "Concessionnaire maritime militaire";
-		side = "west";
-		stock[] = {
+		side = "WEST";
+		stock[] =
+		{
 			"Fett_boat_milice"
 		};
-		background = "\lyeed_IMG\data\shop\back_WEST_vehicles_sea.jpg";
 	};
 
 	//
 	class EAST_vehicles_land
 	{
 		name = "";
-		side = "east";
+		side = "EAST";
 		stock[] = {};
-		background = "\lyeed_IMG\data\shop\back_EAST_vehicles_land.jpg";	
 	};
 	class EAST_vehicles_air
 	{
 		name = "";
-		side = "east";
+		side = "EAST";
 		stock[] = {};
-		background = "\lyeed_IMG\data\shop\back_EAST_vehicles_air.jpg";
 	};
 	class EAST_vehicles_sea
 	{
 		name = "";
-		side = "east";
+		side = "EAST";
 		stock[] = {};
-		background = "\lyeed_IMG\data\shop\back_EAST_vehicles_sea.jpg";
 	};
 
 	//
 	class GUER_vehicles_land
 	{
 		name = "Concessionnaire auto SAMU";
-		side = "independent";
-		stock[] = {
+		side = "GUER";
+		stock[] =
+		{
 			"max_ambulance",
 			"DAR_TahoeEMS",
 			"DAR_ExplorerMedic",
@@ -80,58 +78,58 @@ class ALYSIA_SHOPS_VEHICLES
 			"Fett_zamak_covered_samu",
 			"DAR_TaurusPoliceState"
 		};
-		background = "\lyeed_IMG\data\shop\back_GUER_vehicles_land.jpg";
 	};
 	class GUER_vehicles_air
 	{
 		name = "Concessionaire aérien SAMU";
-		side = "independent";
-		stock[] = {
+		side = "GUER";
+		stock[] =
+		{
 			"EC635_SAR",
 			"dezkit_b206ems"
 		};
-		background = "\lyeed_IMG\data\shop\back_GUER_vehicles_air.jpg";
 	};
 	class GUER_vehicles_sea
 	{
 		name = "Concessionnaire maritime SAMU";
-		side = "independent";
-		stock[] = {
+		side = "GUER";
+		stock[] =
+		{
 			"Fett_boat_samu"
 		};
-		background = "\lyeed_IMG\data\shop\back_GUER_vehicles_sea.jpg";
 	};
 
 	//
 	class CIV_vehicles_sea
 	{
 		name = "Concessionnaire maritime civil";
-		side = "civilian";
-		stock[] = {
+		side = "CIV";
+		stock[] =
+		{
 			"B_Boat_Transport_01_F",
 			"C_Boat_Civil_01_F"
 		};
-		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_sea.jpg";
 	};
 	class CIV_vehicles_air
 	{
 		name = "Concessionnaire aérien civil";
-		side = "civilian";
-		stock[] = {
+		side = "CIV";
+		stock[] =
+		{
 			"C_Heli_light",
 			"dezkit_b206",
 			"Fett_orca",
 			"Fett_mohawk",
 			"sab_a2"
 		};
-		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_air.jpg";
 	};
 	
 	class CIV_vehicles_land_truck
 	{
 		name = "Concessionnaire poids lourds civil";
-		side = "civilian";
-		stock[] = { 
+		side = "CIV";
+		stock[] = 
+		{
 			"O_Truck_02_transport_F",
 			"B_Truck_01_transport_F", 
 			"O_Truck_02_covered_F",
@@ -146,13 +144,13 @@ class ALYSIA_SHOPS_VEHICLES
 			"O_Truck_02_fuel_F",
 			"B_Truck_01_fuel_F"
 		};
-		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_land_truck.jpg";
 	};
 	class CIV_vehicles_land_occasion
 	{
 		name = "Concessionnaire d'occassions civil";
-		side = "civilian";
-		stock[] = {
+		side = "CIV";
+		stock[] =
+		{
 			"RDS_Gaz24_Civ",
 			"RDS_Golf4_Civ_01",
 			"RDS_S1203_Civ_01",
@@ -162,13 +160,13 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_mercedes_190_p_civ",
 			"Mrshounka_r5_civ"
 		};
-		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_land_occasion.jpg";
 	};
 	class CIV_vehicles_land_normal
 	{
 		name = "Concessionnaire automobiles civil";
-		side = "civilian";
-		stock[] = {
+		side = "CIV";
+		stock[] =
+		{
 			"C_Quadbike_01_F",
 			"DAR_TaurusCiv",
 			"max_impala",
@@ -200,13 +198,13 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_subaru08_civ",
 			"Mrshounka_Volkswagen_Touareg_civ"
 		};
-		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_land_normal.jpg";
 	};
 	class CIV_vehicles_land_luxe
 	{
 		name = "Concessionnaire de voiture de luxes civil";
-		side = "civilian";
-		stock[] = {
+		side = "CIV";
+		stock[] =
+		{
 			"madsa_hummer_h2",
 			"SAL_77TRANSAMCiv",
 			"max_H3",
@@ -252,23 +250,22 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_cayenne_p_civ",
 			"shounka_transam"
 		};
-		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_land_luxe.jpg";
 	};
 	
 	class CIV_vehicles_rebel
 	{
 		name = "Concessionnaire rebelle";
-		side = "civilian";
+		side = "CIV";
 		stock[] = {};
-		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_rebel.jpg";
 	};
 
 	// Métier civils
 	class CIV_vehicules_job
 	{
 		name = "Concessionnaire automobiles métier civils";
-		side = "civilian";
-		stock[] = {
+		side = "CIV";
+		stock[] =
+		{
 			"max_CrownVic_taxi",
 			"RDS_Ikarus_Civ",
 			"Skyline_Bus",
@@ -276,6 +273,5 @@ class ALYSIA_SHOPS_VEHICLES
 			"shounka_limo_civ",
 			"shounka_a3_mantgs"
 		};
-		background = "\lyeed_IMG\data\shop\back_CIV_vehicles_land_normal.jpg";
 	};
 };

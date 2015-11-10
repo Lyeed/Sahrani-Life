@@ -8,10 +8,12 @@
 
 class ALYSIA_SHOPS_ARMA
 {
-	class EAST_gun {
+	class EAST_gun
+	{
 		name = "Armurerie de la Garde";
-		side = "east";
-		stocks[] = {
+		side = "EAST";
+		stocks[] =
+		{
 			"SkylineItems_PlaqueMilitaire",
 			"Skyline_tl122_blanche",
 			"Skyline_tl122_rouge",
@@ -37,10 +39,12 @@ class ALYSIA_SHOPS_ARMA
 		};
 	};
 
-	class West_gun {
+	class West_gun
+	{
 		name = "Armurerie de la Milice";
-		side = "west";
-		stocks[] = {
+		side = "WEST";
+		stocks[] =
+		{
 			"SkylineItems_PlaqueMilitaire",
 			"hgun_FlashBall_F",
 			"1Rnd_FlashBall_Mag",
@@ -71,7 +75,7 @@ class ALYSIA_SHOPS_ARMA
 	class civ_gun
 	{
 		name = "Armurerie civile";
-		side = "civilian";
+		side = "CIV";
 		stocks[] =
 		{
 			"Skyline_B95",
@@ -84,7 +88,7 @@ class ALYSIA_SHOPS_ARMA
 	class garagiste
 	{
 		name = "Garagiste";
-		side = "sideUnknown";
+		side = "";
 		stocks[] =
 		{
 			"ToolKit"		
@@ -94,7 +98,7 @@ class ALYSIA_SHOPS_ARMA
 	class genstore
 	{
 		name = "Magasin général";
-		side = "sideUnknown";
+		side = "CIV";
 		stocks[] = 
 		{
 			"Skyline_Hache_01",

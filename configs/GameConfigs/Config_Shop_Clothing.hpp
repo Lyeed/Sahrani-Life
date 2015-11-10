@@ -8,10 +8,12 @@
 
 class ALYSIA_SHOPS_CLOTHING
 {
-	class civ_clothing {
+	class civ_clothing 
+	{
 		name = "Friperie civile";
-		side = "civilian";
-		uniforms[] = {
+		side = "CIV";
+		uniforms[] =
+		{
 			"U_C_Alysia_01",
 			"rds_uniform_citizen1",
 			"rds_uniform_citizen2",
@@ -117,7 +119,8 @@ class ALYSIA_SHOPS_CLOTHING
 			"TRYK_U_B_Denim_T_WH",
 			"mgsr_civ_01_uniform"
 		};
-		headgear[] = {
+		headgear[] =
+		{
 			"TRYK_H_headsetcap_Glasses",
 			"TRYK_H_headsetcap_blk_Glasses",
 			"TRYK_H_headsetcap_od_Glasses",
@@ -202,7 +205,8 @@ class ALYSIA_SHOPS_CLOTHING
 			"rds_worker_cap1",
 			"Casque_Moto"
 		};
-		goggles[] = {
+		goggles[] =
+		{
 			"G_Sport_BlackWhite",
 			"G_Sport_Blackyellow",
 			"G_Shades_Blue",
@@ -227,54 +231,57 @@ class ALYSIA_SHOPS_CLOTHING
 			"Mask_M40"
 		};
 		vests[] = {};
-		backpacks[] = {
-			"B_Carryall_mcamo" ,
-			"B_AssaultPack_cbr" ,
-			"B_AssaultPack_dgtl" ,
-			"B_AssaultPack_ocamo" ,
-			"B_AssaultPack_khk" ,
-			"B_AssaultPack_mcamo" ,
-			"B_AssaultPack_blk" ,
-			"B_AssaultPack_sgg" ,
-			"B_AssaultPack_rgr" ,
-			"B_AssaultPack_Kerry" ,
-			"B_FieldPack_cbr" ,
-			"B_Kitbag_cbr" ,
-			"B_FieldPack_ocamo" ,
-			"B_FieldPack_khk" ,
-			"B_Kitbag_mcamo" ,
-			"B_FieldPack_blk" ,
-			"B_FieldPack_oli" ,
-			"B_Kitbag_sgg" ,
-			"B_Kitbag_rgr" ,
-			"B_FieldPack_oucamo" ,
-			"B_Carryall_ocamo" ,
-			"B_Carryall_oli" ,
-			"B_Carryall_oucamo" ,
-			"B_Carryall_cbr" ,
-			"B_Carryall_khk" ,
-			"B_TacticalPack_ocamo" ,
-			"B_TacticalPack_mcamo" ,
-			"B_TacticalPack_blk" ,
-			"B_TacticalPack_oli" ,
-			"B_TacticalPack_rgr" ,
-			"TRYK_B_Alicepack" ,
-			"TRYK_B_Coyotebackpack_BLK" ,
-			"TRYK_B_Coyotebackpack" ,
-			"TRYK_B_Coyotebackpack_OD" ,
-			"TRYK_B_Coyotebackpack_WH" ,
-			"TRYK_B_Carryall_blk" ,
-			"TRYK_B_Carryall_wh" ,
-			"TRYK_B_Carryall_wood" ,
-			"TRYK_B_FieldPack_Wood" ,
+		backpacks[] =
+		{
+			"B_Carryall_mcamo",
+			"B_AssaultPack_cbr",
+			"B_AssaultPack_dgtl",
+			"B_AssaultPack_ocamo",
+			"B_AssaultPack_khk",
+			"B_AssaultPack_mcamo",
+			"B_AssaultPack_blk",
+			"B_AssaultPack_sgg",
+			"B_AssaultPack_rgr",
+			"B_AssaultPack_Kerry",
+			"B_FieldPack_cbr",
+			"B_Kitbag_cbr",
+			"B_FieldPack_ocamo",
+			"B_FieldPack_khk",
+			"B_Kitbag_mcamo",
+			"B_FieldPack_blk",
+			"B_FieldPack_oli",
+			"B_Kitbag_sgg",
+			"B_Kitbag_rgr",
+			"B_FieldPack_oucamo",
+			"B_Carryall_ocamo",
+			"B_Carryall_oli",
+			"B_Carryall_oucamo",
+			"B_Carryall_cbr",
+			"B_Carryall_khk",
+			"B_TacticalPack_ocamo",
+			"B_TacticalPack_mcamo",
+			"B_TacticalPack_blk",
+			"B_TacticalPack_oli",
+			"B_TacticalPack_rgr",
+			"TRYK_B_Alicepack",
+			"TRYK_B_Coyotebackpack_BLK",
+			"TRYK_B_Coyotebackpack",
+			"TRYK_B_Coyotebackpack_OD",
+			"TRYK_B_Coyotebackpack_WH",
+			"TRYK_B_Carryall_blk",
+			"TRYK_B_Carryall_wh",
+			"TRYK_B_Carryall_wood",
+			"TRYK_B_FieldPack_Wood",
 			"TRYK_B_Kitbag_Base" 
 		};		
 	};
 
-	class WEST_clothing {
+	class WEST_clothing
+	{
 		name = "Friperie de la milice";
-		side = "west";
-		uniforms[] = {
+		side = "WEST";
+		uniforms[] =
+		{
 			"soldier_milice_commandant",
 			"soldier_milice_capitaine",
 			"soldier_milice_lieutenant",
@@ -286,10 +293,12 @@ class ALYSIA_SHOPS_CLOTHING
 			"soldier_milice_cadet",
 			"combi_plonge_milice"
 		};
-		headgear[] = {
+		headgear[] =
+		{
 			"Skyline_Army_PatroopLevel"
 		};
-		goggles[] = {
+		goggles[] =
+		{
 			"G_Sport_BlackWhite",
 			"G_Sport_Blackyellow",
 			"G_Shades_Blue",
@@ -313,29 +322,35 @@ class ALYSIA_SHOPS_CLOTHING
 			"Skyline_NioshFace",
 			"Mask_M40"	
 		};
-		vests[] = {
+		vests[] =
+		{
 			"Skyline_Army_Vest_Tactical",
 			"Respirateur_milice"
 		};
-		backpacks[] = {
+		backpacks[] =
+		{
 			"Skyline_Army_Backpack_Kitbag"
 		};
 	};
 
-	class civ_dive {
+	class civ_dive
+	{
 		name = "Magasin de plongée";
-		side = "civilian";
-		uniforms[] = {
+		side = "CIV";
+		uniforms[] =
+		{
 			"combi_plonge_civ1",
 			"combi_plonge_civ2",
 			"combi_plonge_civ3",
 			"combi_plonge_civ4"
 		};
 		headgear[] = {};
-		goggles[] = {
+		goggles[] =
+		{
 			"G_Diving"
 		};
-		vests[] = {
+		vests[] =
+		{
 			"Respirateur_civ1",
 			"Respirateur_civ2",
 			"Respirateur_civ3",
@@ -344,66 +359,77 @@ class ALYSIA_SHOPS_CLOTHING
 		backpacks[] = {};
 	};
 
-	class EAST_clothing {
+	class EAST_clothing
+	{
 		name = "Friperie de la garde";
 		side = "EAST";
-		uniforms[] = {
+		uniforms[] =
+		{
 			"soldier_garde_commandant",
 			"soldier_garde_lieutenant",
 			"soldier_garde_sergent",
 			"soldier_garde_caporal",
 			"soldier_garde_basique"
 		};
-		headgear[] = {
+		headgear[] =
+		{
 			"casquette_Commandant",
 			"casquette_Lieutenant",
 			"casquette_Sergent",
 			"casquette_Caporal",
 			"casquette_Basique"
 		};
-		goggles[] = {
+		goggles[] =
+		{
 			"G_Diving"
 		};
-		vests[] = {
+		vests[] =
+		{
 			"V_RebreatherB"
 		};
-		backpacks[] = {
+		backpacks[] =
+		{
 			"V_RebreatherB"
 		};
 	};
 
-	class civ_job {
+	class civ_job
+	{
 		name = "Friperie métier civils";
-		side = "civilian";
-		uniforms[] = {
+		side = "CIV";
+		uniforms[] =
+		{
 			"U_C_Depanneur_01"
 		};
 		headgear[] = {};
 		goggles[] = {};
 		vests[] = {};
-		backpacks[] = {
+		backpacks[] =
+		{
 			"B_Kitbag_Depanneur"
 		};
 	};
 
-	class civ_luxe {
+	class civ_luxe
+	{
 		name = "Friperie de luxe";
-		side = "civilian";
-		uniforms[] = {
-			"rds_uniform_Functionary1" ,
-			"rds_uniform_Functionary2" ,
-			"bodyguard_uniform_new" ,
-			"druglord_uniform_new" ,
-			"special_agent_uniform_new" ,
-			"Robber_uniform_new" ,
-			"Killer_uniform_new" ,
-			"mafiaboss_uniform_new" ,
-			"president_uniform_new" ,
-			"agent_uniform_new" ,
-			"vip1_uniform_new" ,
-			"vip2_uniform_new" ,
-			"vip3_uniform_new" ,
-			"TRYK_SUITS_BLK_F" ,
+		side = "CIV";
+		uniforms[] =
+		{
+			"rds_uniform_Functionary1",
+			"rds_uniform_Functionary2",
+			"bodyguard_uniform_new",
+			"druglord_uniform_new",
+			"special_agent_uniform_new",
+			"Robber_uniform_new",
+			"Killer_uniform_new",
+			"mafiaboss_uniform_new",
+			"president_uniform_new",
+			"agent_uniform_new",
+			"vip1_uniform_new",
+			"vip2_uniform_new",
+			"vip3_uniform_new",
+			"TRYK_SUITS_BLK_F",
 			"TRYK_SUITS_BR_F" 
 		};
 		headgear[] = {};
@@ -412,12 +438,14 @@ class ALYSIA_SHOPS_CLOTHING
 		backpacks[] = {};
 	};
 
-	class beard {
+	class beard
+	{
 		name = "Barbier";
-		side = "sideUnknown";
+		side = "";
 		uniforms[] = {};
 		headgear[] = {};
-		goggles[] = {
+		goggles[] =
+		{
 			"TRYK_Beard_BK",
 			"TRYK_Beard",
 			"TRYK_Beard_BW",
@@ -439,60 +467,62 @@ class ALYSIA_SHOPS_CLOTHING
 		backpacks[] = {};
 	};
 
-	class civ_masque {
+	class civ_masque
+	{
 		name = "Magasin de masque";
-		side = "civilian";
+		side = "CIV";
 		uniforms[] = {};
-		headgear[] = {
-			"Kio_Afro_Hat" ,
-			"Kio_Capital_Hat" ,
-			"Kio_No1_Hat" ,
-			"Kio_Pirate_Hat" ,
-			"Kio_Santa_Hat" ,
-			"Kio_Spinning_Hat" ,
-			"Kio_Hat" ,
-			"Masque_Alien1" ,
-			"Masque_Anonymous" ,
-			"Masque_archNemesis" ,
-			"Masque_Arnold" ,
-			"Masque_Aubrey" ,
-			"Masque_Bonnie" ,
-			"Masque_Bush" ,
-			"Masque_Chains" ,
-			"Masque_Chuck" ,
-			"Masque_Clinton" ,
-			"Masque_Clover" ,
-			"Masque_Dallas" ,
-			"Masque_Fish" ,
-			"Masque_forceAlpha" ,
-			"Masque_Gombo" ,
-			"Masque_GdG" ,
-			"Masque_Hockey" ,
-			"Masque_Hoxton" ,
-			"Masque_Incendiaire" ,
-			"Masque_Lincoln" ,
-			"Masque_Lion" ,
-			"Masque_Macrilleuse" ,
-			"Masque_Mark" ,
-			"Masque_Metalhead" ,
-			"Masque_Momie" ,
-			"Masque_Optimiste" ,
-			"Masque_Orc" ,
-			"Masque_Religieuse" ,
-			"Masque_Santa" ,
-			"Masque_Smiley" ,
-			"Masque_Mempo" ,
-			"Masque_speedRunner" ,
-			"Masque_Unic" ,
-			"Masque_Wolfv2" ,
-			"Skyline_Skyrim" ,
-			"Skyline_Anonymous" ,
-			"Skyline_NioshFace" ,
-			"Skyline_Corvo" ,
-			"Skyline_Dallas" ,
-			"Skyline_Hoxton" ,
-			"Masque_Solitaire" ,
-			"Skyline_Wolf" ,
+		headgear[] = 
+		{
+			"Kio_Afro_Hat",
+			"Kio_Capital_Hat",
+			"Kio_No1_Hat",
+			"Kio_Pirate_Hat",
+			"Kio_Santa_Hat",
+			"Kio_Spinning_Hat",
+			"Kio_Hat",
+			"Masque_Alien1",
+			"Masque_Anonymous",
+			"Masque_archNemesis",
+			"Masque_Arnold",
+			"Masque_Aubrey",
+			"Masque_Bonnie",
+			"Masque_Bush",
+			"Masque_Chains",
+			"Masque_Chuck",
+			"Masque_Clinton",
+			"Masque_Clover",
+			"Masque_Dallas",
+			"Masque_Fish",
+			"Masque_forceAlpha",
+			"Masque_Gombo",
+			"Masque_GdG",
+			"Masque_Hockey",
+			"Masque_Hoxton",
+			"Masque_Incendiaire",
+			"Masque_Lincoln",
+			"Masque_Lion",
+			"Masque_Macrilleuse",
+			"Masque_Mark",
+			"Masque_Metalhead",
+			"Masque_Momie",
+			"Masque_Optimiste",
+			"Masque_Orc",
+			"Masque_Religieuse",
+			"Masque_Santa",
+			"Masque_Smiley",
+			"Masque_Mempo",
+			"Masque_speedRunner",
+			"Masque_Unic",
+			"Masque_Wolfv2",
+			"Skyline_Skyrim",
+			"Skyline_Anonymous",
+			"Skyline_NioshFace",
+			"Skyline_Corvo",
+			"Skyline_Dallas",
+			"Skyline_Hoxton",
+			"Masque_Solitaire",
+			"Skyline_Wolf",
 			"mgsr_eyepatch" 
 		};
 		goggles[] = {};
@@ -500,24 +530,28 @@ class ALYSIA_SHOPS_CLOTHING
 		backpacks[] = {};
 	};
 
-	class civ_para {
+	class civ_para
+	{
 		name = "Vendeur de parachute et parapente";
-		side = "civilian";
+		side = "CIV";
 		uniforms[] = {};
 		headgear[] = {};
 		goggles[] = {};
 		vests[] = {};
-		backpacks[] = {
-			"FLAY_HangGliderBlack_Bag" ,
-			"FLAY_HangGlider_Bag" ,
+		backpacks[] =
+		{
+			"FLAY_HangGliderBlack_Bag",
+			"FLAY_HangGlider_Bag",
 			"B_Parachute" 
 		};
 	};
 
-	class GUER_clothing {
+	class GUER_clothing
+	{
 		name = "Friperie Samu";
 		side = "GUER";
-		uniforms[] = {
+		uniforms[] =
+		{
 			"max_paramedic_uniform",
 			"U_C_Secouriste_01",
 			"U_C_Secouriste_02",
@@ -528,7 +562,8 @@ class ALYSIA_SHOPS_CLOTHING
 			"rds_uniform_assistant",
 			"rds_uniform_doctor"
 		};
-		headgear[] = {
+		headgear[] =
+		{
 			"DAES_Lifeliner_Helmet",
 			"H_Cap_blk",
 			"H_Cap_grn",
@@ -537,7 +572,8 @@ class ALYSIA_SHOPS_CLOTHING
 			"max_paramedic_cap",
 			"Masque_Chirurgical"
 		};
-		goggles[] = {
+		goggles[] =
+		{
 			"G_Sport_BlackWhite",
 			"G_Sport_Blackyellow",
 			"G_Shades_Blue",
@@ -561,10 +597,12 @@ class ALYSIA_SHOPS_CLOTHING
 			"Skyline_NioshFace",
 			"Mask_M40"
 		};
-		vests[] = {
+		vests[] =
+		{
 			"Respirateur_samu"
 		};
-		backpacks[] = {
+		backpacks[] = 
+		{
 			"B_AssaultPack_blk",
 			"B_FieldPack_blk",
 			"B_TacticalPack_blk",
@@ -578,10 +616,12 @@ class ALYSIA_SHOPS_CLOTHING
 		};
 	};
 
-	class reb {
+	class reb 
+	{
 		name = "Friperie rebelle";
-		side = "civilian";
-		uniforms[] = {
+		side = "CIV";
+		uniforms[] = 
+		{
 			"TRYK_U_B_ACU",
 			"TRYK_U_B_ACUTshirt",
 			"TRYK_U_B_ARO1_CombatUniform",
@@ -687,18 +727,21 @@ class ALYSIA_SHOPS_CLOTHING
 			"surpat_uniform",
 			"gac_JGSDF_BDU"
 		};
-		headgear[] = {
+		headgear[] =
+		{
 			"H_mas_afr_Bandana_e_civ_rebel"
 		};
-		goggles[] = {
+		goggles[] =
+		{
 			"T_HoodACUBLK"
 		};
-		vests[] = {
+		vests[] =
+		{
 			"V_Chestrig_khk"
 		};
-		backpacks[] = {
+		backpacks[] =
+		{
 			"B_AssaultPack_Kerry"
 		};
 	};
-
 };

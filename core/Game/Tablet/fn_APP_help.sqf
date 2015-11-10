@@ -22,7 +22,7 @@ lbClear _list;
 	["Menotter", "SHIFT+R"],
 	["Ramasser une valise", "Windows+T"],
 	["Interagir", "Windows"],
-	["Assomer", "SHIFT+G"],
+	["Assommer", "SHIFT+G"],
 	["Ranger son arme", "SHIFT+H"],
 	["Dégainer son arme", "CTRL+H"],
 	["Vérouiller/dévérouiller son véhicule", "U"],

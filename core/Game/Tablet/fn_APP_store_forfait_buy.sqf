@@ -36,9 +36,7 @@ if (g_phone_number isEqualTo "") then
 	g_phone_number = _newNumber;
 	player setVariable ["number", _newNumber, true];
 	["gServer_phone_numbers", _numbers] call CBA_fnc_publicVariable;
-	[format["Vous avez changé de forfait<br/><br/><t align='left'>Nouveau</t><t align='right' color='#FF4000'>%1</t>", g_phone_forfait]] call public_fnc_info;
-	["PHONE"] spawn public_fnc_tabletApp;
-} else {
-	[format["Vous avez changé de forfait<br/><br/><t align='left'>Nouveau</t><t align='right' color='#FF4000'>%1</t>", g_phone_forfait]] call public_fnc_info;
-	["STORE_FORFAIT"] spawn public_fnc_tabletApp;
 };
+
+[format["Vous avez changé de forfait<br/><br/><t align='left'>Nouveau</t><t align='right' color='#FF4000'>%1</t>", g_phone_forfait]] call public_fnc_info;
+["STORE_FORFAIT"] spawn public_fnc_tabletApp;
