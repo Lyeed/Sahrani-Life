@@ -54,7 +54,7 @@ class ALYSIA_ITEMS
 		illegal = 1;
 		removable = 1;
 		use = 	"";
-		image       = "Alysia_textures\data\lingot_or.paa";
+		image       = "alysia_items_virtual\data\1\lingot_or.paa";
 	};
 
 	class water
@@ -535,7 +535,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "alysia_items_virtual\data\drogue\graines_pavot.paa";
+		image       = "alysia_items_virtual\data\drogue\graine_pavot.paa";
 	};
 
 	class heroin
@@ -603,7 +603,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "alysia_items_virtual\data\drogue\graines_éphedra.paa";
+		image       = "alysia_items_virtual\data\drogue\graines_ephedra.paa";
 	};
 
 	class hsoufre
@@ -693,14 +693,14 @@ class ALYSIA_ITEMS
 	class oilu
 	{
 		weight = 7;
-		name = "Pétrole brut";
+		name = "Pétrole";
 		price_buy   = 60;
 		price_sell  = 30;
 		illegal = 0;
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "alysia_items_virtual\data\1\pétrole.paa";
+		image       = "alysia_items_virtual\data\1\petrole.paa";
 	};
 
 	class oilp
@@ -842,7 +842,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""cerealbar""] call public_fnc_eatFood;";
-		image       = "alysia_items_virtual\data\1\barre_de_céréale.paa";
+		image       = "alysia_items_virtual\data\1\barre_de_cereale.paa";
 	};
 
 	class sparklingwater
@@ -1206,7 +1206,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "alysia_items_virtual\data\1\pépite_or.paa";
+		image       = "alysia_items_virtual\data\1\pepite_or.paa";
 	};
 
 	class patate
@@ -1232,7 +1232,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "alysia_items_virtual\data\1\blé.paa";
+		image       = "alysia_items_virtual\data\1\ble.paa";
 	};
 
 	class wheatseed
@@ -1245,7 +1245,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "alysia_items_virtual\data\1\graine_blé.paa";
+		image       = "alysia_items_virtual\data\1\graine_ble.paa";
 	};
 
 	class cottonp
