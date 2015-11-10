@@ -22,10 +22,12 @@
 [["(DEV) + 1 Tenue (Alysia)", {player forceAddUniform "U_C_Alysia_01";}]] call CBA_fnc_addPlayerAction;
 [["(DEV) + 1 UZI", {player addMagazine "RH_30Rnd_9x19_UZI"; player addWeapon "RH_muzi";}]] call CBA_fnc_addPlayerAction;
 [["(DEV) Revivre", {cursorTarget setVariable ["is_coma", false, true];}]] call CBA_fnc_addPlayerAction;
+[["(DEV) +100 faim", {[100] call public_fnc_handleHunger;}]] call CBA_fnc_addPlayerAction;
+[["(DEV) +100 soif", {[100] call public_fnc_handleThirst;}]] call CBA_fnc_addPlayerAction;
 [["===================", {}]] call CBA_fnc_addPlayerAction;
 
 /* ==================[CONFIG]===================*/
-if ((getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "can_seize_gear")) isEqualTo 1) then {
+if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "can_seize_gear") isEqualTo 1) then {
 	[["<t color='#6766ff'>Saisir les objets au sol</t>", public_fnc_seizeObjects, cursorTarget, 0, false, false, "", '((count(nearestObjects [player, ["WeaponHolder"], 3]) > 0) || (count(nearestObjects [player, ["GroundWeaponHolder"], 3]) > 0) || (count(nearestObjects [player, ["WeaponHolderSimulated"], 3]) > 0))']] call CBA_fnc_addPlayerAction;
 };
 

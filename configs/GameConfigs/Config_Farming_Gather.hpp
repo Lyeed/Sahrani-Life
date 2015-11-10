@@ -8,14 +8,31 @@
 
 class ALYSIA_FARMING_GATHER
 {
+
 	class wood_1
 	{
-		receive = "wood";
-		amount = 1;
-		required = "Skyline_Hache_01";
+		receive[] = {{"wood", 1, 0}};
+		tool = "Skyline_Hache_01";
 		sound = "axe";
 	};
 
+	class pillage_1
+	{
+		receive[] = {{"objvaleur", 2, 1}};
+		sound = "mining";
+		water = 1;
+		water_depth = 5;
+	};
+
+	class archeologie_1
+	{
+		receive[] = {{"artefact", 1, 0}};
+		extra[] = {{"artefact_exrare", 1}, {"artefact_rare", 4}, {"artefact_common", 1}};
+		tool = "Skyline_Pioche_01";
+		sound = "mining";
+	};
+
+	/*
 	class iron_1
 	{
 		receive = "iron";
@@ -136,5 +153,5 @@ class ALYSIA_FARMING_GATHER
 		amount = 1;
 		required = "";
 		sound = "";
-	};
+	};*/
 };

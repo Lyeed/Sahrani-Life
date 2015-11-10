@@ -32,6 +32,8 @@ if (_object getVariable ["ready", false]) then
 	_space = true;
 
 	{
+		private["_amount"];
+		_amount = 0;
 		if ((_x select 2) isEqualTo 1) then {
 			_amount = [(_x select 0), random(_x select 1), g_carryWeight, g_maxWeight] call public_fnc_calWeightDiff;
 		} else {

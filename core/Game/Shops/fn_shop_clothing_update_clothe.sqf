@@ -27,23 +27,28 @@ switch (lbData[3102, (lbCurSel 3102)]) do
 {
 	case "headgear":
 	{
+		removeHeadgear player;
 		player addHeadgear _item;
 	};
 	case "goggles":
 	{
+		removeGoggles player;
 		player addGoggles _item;
 	};
 	case "backpacks":
 	{
+		removeBackpack player;
 		player addBackpack _item;
 		clearAllItemsFromBackpack player;
 	};
 	case "uniforms":
 	{
+		removeUniform player;
 		player forceAddUniform _item;
 	};
 	case "vests":
 	{
+		removeVest player;
 		player addVest _item;
 	};
 };
@@ -51,17 +56,13 @@ switch (lbData[3102, (lbCurSel 3102)]) do
 _price = _list lbValue _sel;
 if (g_cash >= _price) then
 {
-	ctrlShow[3108, true];
-	ctrlShow[3109, true];
-	ctrlShow[3110, true];
-	ctrlShow[3111, true];
-	ctrlShow[3112, true];
+	{
+		ctrlShow[_x, true];
+	} forEach ([3108,3109,3110,3111,3112]);
 } else {
-	ctrlShow[3108, false];
-	ctrlShow[3109, false];
-	ctrlShow[3110, false];
-	ctrlShow[3111, false];
-	ctrlShow[3112, false];
+	{
+		ctrlShow[_x, false];
+	} forEach ([3108,3109,3110,3111,3112]);
 };
 
 g_shop_clothing_active = false;

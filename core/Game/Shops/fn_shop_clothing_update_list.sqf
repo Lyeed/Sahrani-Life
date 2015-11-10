@@ -81,7 +81,7 @@ switch (_type) do
 	{
 		g_shop_clothing_oldItem = backpack player;
 		g_shop_camera camSetTarget (player modelToWorld [0, -0.15, 1.3]);
-		g_shop_camera camSetPos (player modelToWorld [1, -4, 2]);
+		g_shop_camera camSetPos (player modelToWorld [1, -3, 2]);
 		g_shop_camera camCommit 1;
 	};
 	case "uniforms":
@@ -107,32 +107,38 @@ lbClear _list;
 {
 	if (isClass(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x)) then
 	{
-		_passed = false;
-		if (playerSide isEqualTo civilian) then {
-			_license = getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_condition_CIV");
-			if ((_license isEqualTo "") || (missionNamespace getVariable [format["license_%1", _license], false])) then {
-				_passed = true;
-			};
-		} else {
-			_rank = getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> format["buy_condition_%1", str(playerSide)]);
-			if (((player getVariable ["rank", 0]) >= _rank) && (_rank != -1)) then {
-				_passed = true;
-			};
-		};
-
+		_details = [_x] call public_fnc_fetchCfgDetails;
 		diag_log format["CLOTHING : %1 - %3:%2", _x, _details select 4, typeName(_details select 4)];
-		if (_passed) then
+		if (_details isEqualTo []) then
 		{
-			_details = [_x] call public_fnc_fetchCfgDetails;
-			_displayName = getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "name");
-			_price = getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_price");
-			if (_displayName isEqualTo "") then {
-				_displayName = _details select 1;
+			diag_log format["ERROR: %1 does not exist in Arma", _x];
+			systemChat format["ERROR: %1 does not exist in Arma", _x];
+		} else {
+			if (
+					(
+						(playerSide isEqualTo civilian) && 
+							{(
+								(getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_condition_CIV") isEqualTo "") || 
+								(missionNamespace getVariable [format["license_%1", getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_condition_CIV")], false])
+							)}
+					) || (
+						(playerSide in [east, west, independent]) && 
+							{(
+								((player getVariable ["rank", 0]) >= getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> format["buy_condition_%1", str(playerSide)])) && 
+								(getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> format["buy_condition_%1", str(playerSide)]) != -1)
+							)}
+					)
+				) then {
+				_displayName = getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "name");
+				_price = getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_price");
+				if (_displayName isEqualTo "") then {
+					_displayName = _details select 1;
+				};
+				_index = _list lbAdd format["%1 (%2$)", _displayName, ([_price] call public_fnc_numberText)];
+				_list lbSetData [_index, _x];
+				_list lbSetValue [_index, _price];
+				_list lbSetPicture [_index, (_details select 2)];
 			};
-			_index = _list lbAdd format["%1 (%2$)", _displayName, ([_price] call public_fnc_numberText)];
-			_list lbSetData [_index, _x];
-			_list lbSetValue [_index, _price];
-			_list lbSetPicture [_index, (_details select 2)];
 		};
 	} else {
 		diag_log format["ERROR: %1 not defined in ALYSIA_ITEMS_ARMA", _x];
