@@ -68,13 +68,6 @@ class ALYSIA_FARMING_GATHER
 		sound = "gather1";
 	};
 
-	class pillage_1
-	{
-		receive[] = {{"objvaleur", 1, 0}};
-		tool = "";
-		sound = "mining";
-	};
-
 	class plat_1
 	{
 		receive[] = {{"platine", 1, 0}};
