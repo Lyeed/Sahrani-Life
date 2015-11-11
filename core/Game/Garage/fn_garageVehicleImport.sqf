@@ -15,7 +15,7 @@ _vehicleInfo = lbData[2802, _curSel];
 _vehicleInfo = (call compile format["%1", _vehicleInfo]);
 if (isNil "_vehicleInfo") exitWith { ["Erreur de sélection"] call ALYSIA_fnc_error; };
 
-_importPrice = [(([(_vehicleInfo select 0)] call ALYSIA_fnc_getVehBuyPrice) * (getNumber(missionConfigFile >> "ALYSIA_VEHICLES_INFO" >> "transfert_percentage")))] call ALYSIA_fnc_getDonatorReductionPrice;
+_importPrice = (([(_vehicleInfo select 0)] call ALYSIA_fnc_getVehBuyPrice) * (getNumber(missionConfigFile >> "ALYSIA_VEHICLES_INFO" >> "transfert_percentage")));
 if (_importPrice > life_atmcash) exitWith { 
 	[format["Il vous faut <t color='#ff8c8c'>%1$</t> pour rapatrier ce véhicule", [_importPrice] call life_fnc_numberText]] call ALYSIA_fnc_error; 
 };

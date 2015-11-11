@@ -24,7 +24,7 @@ if (isNull _display) exitWith {};
 _vehicleList = call compile format["%1", _data];
 _className = _vehicleList select 0;
 
-_price = [([_className] call public_fnc_getVehBuyPrice)] call public_fnc_getDonatorReductionPrice;
+_price = [_className] call public_fnc_getVehBuyPrice;
 (_display displayCtrl 2310) ctrlSetStructuredText parseText format
 [
 	"<t align='center' color='#%2'>%1</t><t align='right'>$</t>",
@@ -60,15 +60,15 @@ _vehicleInfo = [_className] call public_fnc_fetchVehInfo;
 	+	"<t align='left'>Capacité du coffre</t><t align='right'>%6</t><br/>"
 	+	"<t align='left'>Autonomie</t><t align='right'>%7</t><br/>"
 	+	"<t align='left'>Solidité</t><t align='right'>%8</t>",
-	[[([_className] call public_fnc_getVehGaragePrice)] call public_fnc_getDonatorReductionPrice] call public_fnc_numberText,
-	[[([_className] call public_fnc_getVehAssurancePrice)] call public_fnc_getDonatorReductionPrice] call public_fnc_numberText,
+	[[_className] call public_fnc_getVehGaragePrice] call public_fnc_numberText,
+	[[_className] call public_fnc_getVehAssurancePrice] call public_fnc_numberText,
 	(_vehicleInfo select 8),
 	(_vehicleInfo select 11),
 	(_vehicleInfo select 10),
 	if (_trunkSpace isEqualTo 0) then {"Aucun"} else {_trunkSpace},
 	(_vehicleInfo select 12),
 	(_vehicleInfo select 9),
-	[[([_className] call public_fnc_getVehSellPrice)] call public_fnc_getDonatorReductionPrice] call public_fnc_numberText
+	[[_className] call public_fnc_getVehSellPrice] call public_fnc_numberText
 ];
 
 _ctrl = _display displayCtrl 2303;

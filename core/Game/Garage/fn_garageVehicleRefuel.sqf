@@ -17,7 +17,7 @@ if (_fuel >= 100) exitWith {
 	["Ce véhicule possède déja tout son carburant"] call public_fnc_error;
 };
 
-_price = [((100 - _fuel) * 15)] call public_fnc_getDonatorReductionPrice;
+_price = (100 - _fuel) * 15;
 if (_price > g_atm) exitWith {
 	[format["Vous n'avez pas assez d'argent, il vous manque <t color='#ff8c8c'>%1$</t>", [(_price - g_atm)] call public_fnc_numberText]] call public_fnc_error;
 };

@@ -28,7 +28,6 @@ if (_assurancePrice isEqualTo 0) exitWith {
 	["Ce véhicule n'a pas de prix d'assurance"] call public_fnc_error;
 };
 
-_assurancePrice = [_assurancePrice] call public_fnc_getDonatorReductionPrice;
 if (_assurancePrice > g_atm) exitWith {
 	[format["Il vous faut <t color='#ff8c8c'>%1$</t> pour assurer ce véhicule", [_assurancePrice] call public_fnc_numberText]] call public_fnc_error;
 };

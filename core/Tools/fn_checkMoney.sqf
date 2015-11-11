@@ -8,11 +8,6 @@
 private["_accountType", "_value"];
 _accountType = [_this, 0, 0, [0]] call BIS_fnc_param;
 _value = [_this, 1, 0, [0]] call BIS_fnc_param;
-_applyDonator = [_this, 2, false, [false]] call BIS_fnc_param;
-
-if (_applyDonator) then {
-	[_value] call public_fnc_getDonatorReductionPrice;
-};
 
 switch (_accountType) do
 {

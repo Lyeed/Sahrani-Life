@@ -26,7 +26,6 @@ closeDialog 0;
 
 _sellPrice = [_vehicleClassname] call ALYSIA_fnc_getVehSellPrice;
 if (_sellPrice != -1) then {
-	_sellPrice = [_sellPrice] call ALYSIA_fnc_getDonatorAugmentationPrice;
 	_vehicleName = getText(configFile >> "CfgVehicles" >> _vehicleClassname >> "displayName");
 	_action = [
 		format["Vous êtes sur le point de <t color='#DF0101'>vendre</t> votre <t color='#FF8000'>%2</t> pour <t color='#8cff9b'>%1$</t>", [_sellPrice] call life_fnc_numberText, _vehicleName], 

@@ -37,8 +37,6 @@ class Public
 		class fetchcfgDetails {};
 		class fetchVehInfo {};
 		class fillUpWithInv {};
-		class getDonatorAugmentationPrice {};
-		class getDonatorReductionPrice {};
 		class getGear {};
 		class getPlayerFromUID {};
 		class handleInv {};

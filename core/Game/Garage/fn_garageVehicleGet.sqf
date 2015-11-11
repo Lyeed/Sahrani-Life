@@ -18,7 +18,7 @@ _data = g_garage_vehicles select _index;
 _vehicleClassname = _data select 1;
 _vehicleGaragePosition = [_data select 7, _data select 8, _data select 9];
 
-_price = [[_vehicleClassname] call public_fnc_getVehGaragePrice] call public_fnc_getDonatorReductionPrice;
+_price = [_vehicleClassname] call public_fnc_getVehGaragePrice;
 if (!(_vehicleGaragePosition isEqualTo [0, 0, 0])) then {
 	if ((_vehicleGaragePosition distance (getMarkerPos "fourriere")) < 10) then {
 		_price = _price + (_price * 0.4);
