@@ -106,6 +106,7 @@ class ALYSIA_SHOPS_ARMA
 			"Skyline_Pelle_01",
 			"Skyline_Merlin_01",
 			"SkylineItems_Bandage",
+			"ItemGPS",
 			"ItemMap",
 			"Binocular",
 			"Skyline_tl122_blanche",
