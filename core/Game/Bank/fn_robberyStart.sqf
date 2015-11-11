@@ -22,7 +22,7 @@ if (!(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item") 
 
 if (!(_bank getVariable ["robStarted", false])) then
 {
-	if ((([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(cursorTarget) >> "owner")] call public_fnc_strToSide) countSide allPlayers) < (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(cursorTarget) >> "required"))) then
+	if ((([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call public_fnc_strToSide) countSide allPlayers) < (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(cursorTarget) >> "required"))) then
 	{
 		systemChat format ["< Robbery System - Debug > Pas assez de flics connectés"];
 
@@ -30,8 +30,8 @@ if (!(_bank getVariable ["robStarted", false])) then
 			format
 			[
 				"Il faut au minimum <t color='#CC0000'>%1</t> membres de la <t color='#336600'>%2</t> en service pour pouvoir braquer la banque",
-				getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(cursorTarget) >> "required"),
-				getText(missionConfigFile >> "ALYSIA_FACTIONS" >> getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(cursorTarget) >> "owner") >> "name")
+				getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "required"),
+				getText(missionConfigFile >> "ALYSIA_FACTIONS" >> getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner") >> "name")
 			]
 		] call public_fnc_error;
 	} else {
