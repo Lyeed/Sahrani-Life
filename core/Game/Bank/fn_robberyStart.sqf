@@ -22,7 +22,7 @@ if (!(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item") 
 
 if (!(_bank getVariable ["robStarted", false])) then
 {
-	if (([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call public_fnc_strToSide) countSide allPlayers < getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "required")) then
+	if (([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call public_fnc_strToSide) countSide allPlayers < getText(missionConfigFile >> "ALYSIA_FACTIONS" >> ([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call public_fnc_strToSide) >> "name")) then
 	{
 		systemChat format ["< Robbery System - Debug > Pas assez de flics connectés"];
 
