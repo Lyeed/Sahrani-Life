@@ -154,4 +154,16 @@ class ALYSIA_SHOPS_ARMA
 			"Chemlight_blue"
 		};
 	};
+
+	class parachute
+	{
+		name = "Magasin de parachute et parapente";
+		side = "";
+		stocks[] = 
+		{
+			"B_Parachute",
+			"FLAY_HangGlider_Bag",
+			"FLAY_HangGliderBlack_Bag"
+		};
+	};
 };

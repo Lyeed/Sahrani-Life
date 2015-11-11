@@ -3089,4 +3089,8 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
+	class B_Parachute
+	{
+		buy_price = 20;
+	};
 };

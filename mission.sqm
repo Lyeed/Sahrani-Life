@@ -3498,7 +3498,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this setdir 54.3826;this setposATL [14245.967773,12663.453125,0.154881];this setVectorUp [0,0,1];this addAction[""Supérette"",public_fnc_shop_virtual_open,""market"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 54.3826;this setposATL [14245.967773,12663.453125,0.154881];this setVectorUp [0,0,1];this addAction[""Supérette"",public_fnc_shop_virtual_open,""market"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item2
 		{
@@ -4726,7 +4726,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 181.883;this setposATL [13544.765625,8683.416992,-0.00290489];this setVectorUp [0,0,1];this addAction[""Ranger son véhicule"",public_fnc_garageVehicleStore,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""Concessionnaire de luxe"",public_fnc_shop_vehicles_open,[""CIV_vehicles_sea"", [""CIV_vehicles_sea_marker_1""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""Garage"",public_fnc_garageGet,""garage_sea_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 181.883;this setposATL [13544.765625,8683.416992,-0.00290489];this setVectorUp [0,0,1];this addAction[""Ranger son véhicule"",public_fnc_garageVehicleStore,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""Concessionnaire de bateau"",public_fnc_shop_vehicles_open,[""CIV_vehicles_sea"", [""CIV_vehicles_sea_marker_1""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""Garage"",public_fnc_garageGet,""garage_sea_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item118
 		{
@@ -5022,7 +5022,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 268.019;this setposATL [10621.75,9533.357422,4.3064];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 268.019;this setposATL [10621.75,9533.357422,4.3064];this setVectorUp [0,0,1];this addAction[""Poisonnerie"",public_fnc_shop_virtual_open,""fishmarket"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item147
 		{
@@ -5032,7 +5032,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 268.019;this setposATL [19123.984375,14006.768555,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 268.019;this setposATL [19123.984375,14006.768555,0];this setVectorUp [0,0,1];this addAction[""Magasin de parachute et parapente"",public_fnc_shop_arma_open,""parachute"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item148
 		{
@@ -6644,7 +6644,7 @@ class Mission
 		};
 		class Item124
 		{
-			position[]={10621.388,122.985,9534.3564};
+			position[]={10621.927,122.985,9533.6367};
 			name="Poissonerie";
 			text="Poissonerie";
 			type="plp_mark_as_boat";
@@ -6654,7 +6654,7 @@ class Mission
 		};
 		class Item125
 		{
-			position[]={19140.004,11.97,14021.895};
+			position[]={19124.277,11.97,14007.115};
 			name="Vendeur de parachute et parapente";
 			text="Vendeur de parachute et parapente";
 			type="plp_mark_civ_commercialzone";
