@@ -27,7 +27,7 @@ class ALYSIA_ITEMS
 		weight = 0;
 		illegal = 1;
 		removable = 0;
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\.paa";
 		use = "";
 	};
 
@@ -41,7 +41,7 @@ class ALYSIA_ITEMS
 		illegal = 0;
 		removable = 1;
 		use = 	"";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\engrais.paa";
 	};
 
 	class goldbar
@@ -67,7 +67,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use         = "[""water""] call public_fnc_eatFood;";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\bouteille_eau.paa";
 	};
 
 	class lockpick
@@ -80,7 +80,7 @@ class ALYSIA_ITEMS
 		illegal = 1;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\kit_crochetage.paa";
 	};
 
 	class handcuffs
@@ -93,7 +93,7 @@ class ALYSIA_ITEMS
 		illegal = 1;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\menottes.paa";
 	};
 
 	class handcuffkeys
@@ -106,7 +106,7 @@ class ALYSIA_ITEMS
 		illegal = 1;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\clee_menottes.paa";
 	};
 
 	class patch
@@ -137,7 +137,7 @@ class ALYSIA_ITEMS
 				};\
 			};\
 		";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\patch_anti_addiction.paa";
 	};
 
 	class nitro
@@ -150,7 +150,7 @@ class ALYSIA_ITEMS
 		illegal = 1;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\nitroboost.paa";
 	};
 
 	class storage
@@ -166,7 +166,7 @@ class ALYSIA_ITEMS
 		"\
 			[] spawn public_fnc_storageBox;\
 		";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\coffre.paa";
 	};
 
 	class barriere
@@ -182,7 +182,7 @@ class ALYSIA_ITEMS
 		"\
 			[%1] spawn public_fnc_objPut;\
 		";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\barriere.paa";
 	};
 
 	class cone
@@ -198,7 +198,7 @@ class ALYSIA_ITEMS
 		"\
 			[%1] spawn public_fnc_objPut;\
 		";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\cone.paa";
 	};
 
 	class bip
@@ -211,7 +211,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "[] call public_fnc_copOpener;";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\telecommande_portail.paa";
 	};
 
 	class spikeStrip
@@ -227,7 +227,7 @@ class ALYSIA_ITEMS
 		"\
 			[%1] spawn public_fnc_objPut;\
 		";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\herse.paa";
 	};
 
 	class tabac
@@ -292,7 +292,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\objet_de_valeur.paa";
 	};
 
 	class artefact
@@ -409,7 +409,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\minerai_fer.paa";
 	};
 
 	class ironp
@@ -422,7 +422,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\lingot_fer.paa";
 	};
 
 	class soufre
@@ -438,7 +438,7 @@ class ALYSIA_ITEMS
 		"\
 			[ObjNull, ""soufre""] spawn public_fnc_processAction;\
 		";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\soufre.paa";
 	};
 
 	class platine
@@ -451,7 +451,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\minerai_platine.paa";
 	};
 
 	class platinep
@@ -464,7 +464,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\lingot_platine.paa";
 	};
 
 	class cocaine_seed
@@ -522,7 +522,7 @@ class ALYSIA_ITEMS
 		"\
 			[""%1""] call public_fnc_drugConsume;\
 		";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\drogue\cocaine_coupe.paa";
 	};
 
 	class heroin_seed
@@ -590,7 +590,7 @@ class ALYSIA_ITEMS
 		"\
 			[""%1""] call public_fnc_drugConsume;\
 		";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\drogue\seringue_heroine.paa";
 	};
 
 	class meth_seed
@@ -881,7 +881,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""sandwich""] call public_fnc_eatFood;";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\sandwich_jambon.paa";
 	};
 
 	class donut
@@ -894,7 +894,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""donut""] call public_fnc_eatFood;";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\beignet.paa";
 	};
 
 	class soda
@@ -907,7 +907,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""soda""] call public_fnc_eatFood;";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\soda.paa";
 	};
 
 	class ragout
@@ -920,7 +920,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""ragout""] call public_fnc_eatFood;";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\ragout.paa";
 	};
 
 	class kefir
@@ -933,7 +933,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""kefir""] call public_fnc_eatFood;";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\kefir.paa";
 	};
 
 	class copper
