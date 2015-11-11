@@ -13,8 +13,8 @@ if (!params [
 disableSerialization;
 _display = findDisplay 15000;
 if (isNull _display) then {};
+if (!([_amount] call public_fnc_isNumber)) exitWith {["Erreur dans le montant"] call public_fnc_error};
 _amount = parseNumber (ctrlText 15019);
-
 if (_amount <= 0) exitWith {["Erreur dans le montant"] call public_fnc_error};
 
 switch (_action) do
