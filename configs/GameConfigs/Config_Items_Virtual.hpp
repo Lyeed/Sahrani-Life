@@ -616,7 +616,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\soufre_hydrate.paa";
 	};
 
 	class meth
@@ -726,7 +726,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\filet_peche.paa";
 	};
 
 	class bean_seed
@@ -739,7 +739,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\haricot.paa";
 	};
 
 	class bean
@@ -751,7 +751,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\1\graine_haricot.paa";
 	};
 
 	class corn_seed
