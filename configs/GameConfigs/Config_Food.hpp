@@ -12,7 +12,7 @@ class ALYSIA_FOOD
 	class prune
 	{
 		hunger = 40;
-		thirst = -10;
+		thirst = 0;
 		sound = "eat";
 	};
 

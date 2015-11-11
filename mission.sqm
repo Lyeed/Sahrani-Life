@@ -3463,7 +3463,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={7588.7056,11.97,6336.0308};
+					position[]={13979.588,47.126621,12298.69};
 					azimut=-6835.9824;
 					id=153;
 					side="CIV";
@@ -5515,7 +5515,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=133;
+		items=135;
 		class Item0
 		{
 			position[]={10548.405,122.985,9604.9873};
@@ -6711,6 +6711,26 @@ class Mission
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
+		};
+		class Item133
+		{
+			position[]={10357.232,157.995,9121.4277};
+			name="fourriere_SOUTH";
+			text="Fourrière";
+			type="plp_mark_as_storage";
+			colorName="ColorBlue";
+			a=0.60000002;
+			b=0.60000002;
+		};
+		class Item134
+		{
+			position[]={13981.523,47.194004,12285.249};
+			name="fourriere_NORTH";
+			text="Fourrière";
+			type="plp_mark_as_storage";
+			colorName="ColorBlue";
+			a=0.60000002;
+			b=0.60000002;
 		};
 	};
 };

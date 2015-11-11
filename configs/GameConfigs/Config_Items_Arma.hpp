@@ -43,107 +43,107 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class B_AssaultPack_blk
 	{
-		buy_price = 20;
+		buy_price = 25;
 	};
 	class B_AssaultPack_cbr
 	{
-		buy_price = 20;
+		buy_price = 25;
 	};
 	class B_AssaultPack_dgtl
 	{
-		buy_price = 20;
+		buy_price = 25;
 	};
 	class B_AssaultPack_Kerry
 	{
-		buy_price = 20;
+		buy_price = 25;
 	};
 	class B_AssaultPack_khk
 	{
-		buy_price = 20;
+		buy_price = 25;
 	};
 	class B_AssaultPack_mcamo
 	{
-		buy_price = 20;
+		buy_price = 25;
 	};
 	class B_AssaultPack_ocamo
 	{
-		buy_price = 20;
+		buy_price = 25;
 	};
 	class B_AssaultPack_rgr
 	{
-		buy_price = 20;
+		buy_price = 25;
 	};
 	class B_AssaultPack_sgg
 	{
-		buy_price = 20;
+		buy_price = 25;
 	};
 	class B_Carryall_cbr
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class B_Carryall_khk
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class B_Carryall_mcamo
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class B_Carryall_ocamo
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class B_Carryall_oli
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class B_Carryall_oucamo
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class B_FieldPack_blk
 	{
-		buy_price = 20;
+		buy_price = 50;
 	};
 	class B_FieldPack_cbr
 	{
-		buy_price = 20;
+		buy_price = 50;
 	};
 	class B_FieldPack_khk
 	{
-		buy_price = 20;
+		buy_price = 50;
 	};
 	class B_FieldPack_ocamo
 	{
-		buy_price = 20;
+		buy_price = 50;
 	};
 	class B_FieldPack_oli
 	{
-		buy_price = 20;
+		buy_price = 50;
 	};
 	class B_FieldPack_oucamo
 	{
-		buy_price = 20;
+		buy_price = 50;
 	};
 	class B_Kitbag_cbr
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class B_Kitbag_Depanneur
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class B_Kitbag_mcamo
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class B_Kitbag_rgr
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class B_Kitbag_sgg
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class B_Secouriste_khk
 	{
@@ -155,23 +155,23 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class B_TacticalPack_blk
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class B_TacticalPack_mcamo
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class B_TacticalPack_ocamo
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class B_TacticalPack_oli
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class B_TacticalPack_rgr
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class B_Defibrilateur_khk
 	{
@@ -2111,15 +2111,15 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class TRYK_B_Carryall_blk
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_B_Carryall_wh
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_B_Carryall_wood
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_B_Coyotebackpack
 	{
@@ -2139,11 +2139,11 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class TRYK_B_FieldPack_Wood
 	{
-		buy_price = 20;
+		buy_price = 50;
 	};
 	class TRYK_B_Kitbag_Base
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class TRYK_B_Medbag
 	{
