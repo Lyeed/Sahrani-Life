@@ -15,5 +15,5 @@ _ret = objNull;
 	if ((getPlayerUID _x) isEqualTo _uid) exitWith {
 		_ret = _x;
 	};
-} forEach (playableUnits);
+} forEach (allPlayers);
 _ret;

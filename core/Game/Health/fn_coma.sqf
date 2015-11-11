@@ -38,7 +38,7 @@ while {(_time > 0) && g_coma && (alive player) && (player getVariable ["is_coma"
 		player action ["Eject", (vehicle player)]; 
 	};
 	if ((animationState player) != "acts_InjuredLookingRifle01") then {
-		[player, "acts_InjuredLookingRifle01"] remoteExecCall ["public_fnc_playAnimation", -2, false];
+		[player, "acts_InjuredLookingRifle01"] remoteExecCall ["public_fnc_playAnimation", -2];
 	};
 	
 	player setOxygenRemaining 1;
