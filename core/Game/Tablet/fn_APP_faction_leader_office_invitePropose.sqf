@@ -9,6 +9,7 @@ private["_from", "_action"];
 _from = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 
 if ((isNull _from) || (playerSide != civilian)) exitWith {};
+if (!g_connected) exitWith {};
 
 _action =
 [

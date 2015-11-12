@@ -8,6 +8,7 @@
 private["_loading_ctrl", "_display", "_bar", "_loading_ctrl_white"];
 disableSerialization;
 
+if (g_action_inUse) exitWith {};
 if (dialog) exitWith {};
 if (!(isNull (uiNamespace getVariable ["tablet", displayNull]))) exitWith {};
 if (!(createDialog "RscDisplayTablet")) exitWith {};

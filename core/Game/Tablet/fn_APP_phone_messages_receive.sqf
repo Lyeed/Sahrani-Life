@@ -29,5 +29,5 @@ if (profileNamespace getVariable["ALYSIA_phone_SILENT", false]) then {
 		profileNamespace setVariable["ALYSIA_phone_recv", 1];
 		_sound = 1;
 	};
-	playSound (format["message_rcv_%1", _sound]); 
+	[player, (format["message_rcv_%1", _sound]), 20] call CBA_fnc_globalSay3d;
 };

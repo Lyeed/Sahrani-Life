@@ -141,6 +141,7 @@ scriptedPlayer = 1; // When scripted player is enabled, game no longer shows "No
 allowFunctionsLog = 1; // Allows functions to log to the RPT file. Set it to 1/true to allow RPT logging
 disableRandomization[] = {"All"}; // Disables randomization on certain objects, object types or object kinds in the mission.
 showHUD = 0;
+allowFunctionsRecompile = 0;
 showGroupIndicator = 0;
 /*
 Enables/Disables the following IGUI elements:

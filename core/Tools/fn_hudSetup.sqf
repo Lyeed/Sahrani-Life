@@ -96,7 +96,7 @@ _ico_5 = _hud displayCtrl 23514;
 _ico_6 = _hud displayCtrl 23515;
 _ico_7 = _hud displayCtrl 23516;
 
-while {true} do
+while {!(isNull _hud)} do
 {
 	_ctrl_hunger progressSetPosition (g_hunger / 100);
 	_ctrl_thirst progressSetPosition (g_thirst / 100);

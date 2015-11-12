@@ -17,7 +17,6 @@ if (g_connected) then
 	if (_damage > 0) then
 	{
 		_damage = _damage * 240;
-		systemChat format["<DEBUG:DAMAGE> Amount : %1 | Part : %2 | Source : %3", _damage, _part, _source];
 		[(_damage * -1)] call public_fnc_handleBlood;
 		[(_damage / 10)] call public_fnc_handleBleed;
 	};

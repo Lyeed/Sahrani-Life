@@ -1,5 +1,4 @@
 enableSaving [false, false];
-[] execVM "core\Tools\KRON_Strings.sqf";
 
 {
 	_x setVariable ["BIS_noCoreConversations", true];

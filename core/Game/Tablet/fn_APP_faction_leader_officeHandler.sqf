@@ -23,7 +23,7 @@ lbClear _list_faction;
 	_index = _list_faction lbAdd format["[%1] - %2. %3", _level, ([playerSide, _level, true] call public_fnc_rankToStr), (_x select 1)];
 	_list_faction lbSetdata [_index, _uid];
 	_list_faction lbSetValue [_index, _level];
-} count _members;
+} forEach (_members);
 _list_faction lbSetCurSel -1;
 
 _list_civ = _display displayCtrl 8732;
@@ -31,10 +31,10 @@ lbClear _list_civ;
 {
 	if ((side _x) isEqualTo civilian) then
 	{
-		_index = _list_civ lbAdd format["%1", (_x getVariable "realname")];
+		_index = _list_civ lbAdd format["%1", (_x getVariable["realname", (name _x)])];
 		_list_civ lbSetdata [_index, str(_x)];
 	};
-} count allPlayers;
+} forEach (allPlayers);
 if ((lbSize _list_civ) isEqualTo 0) then {
 	_list_civ lbAdd "Aucun";
 };
