@@ -34,6 +34,7 @@ if (!(_bank getVariable ["robStarted", false])) then
 				getText(missionConfigFile >> "ALYSIA_FACTIONS" >> getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner") >> "name")
 			]
 		] call public_fnc_error;
+		breakOut "main";
 	};
 };
 
