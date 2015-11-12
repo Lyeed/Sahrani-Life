@@ -8,7 +8,7 @@
 private["_vehicleInfo", "_vid", "_vehicleClassname", "_sellPrice", "_action", "_vehicleName"];
 
 if (!dialog) exitWith {};
-if (lbCurSel 2802 == -1) exitWith {["Vous n'avez pas sélectionné de véhicule"] call ALYSIA_fnc_error;};
+if (lbCurSel 2802 isEqualTo -1) exitWith {["Vous n'avez pas sélectionné de véhicule"] call ALYSIA_fnc_error;};
 
 disableSerialization;
 _vehicleInfo = (call compile format["%1", lbData[2802, (lbCurSel 2802)]]);

@@ -8,14 +8,8 @@
 
 if (isNull g_interaction_target) exitWith {};
 
-if ((_curTarget getVariable["rebootSpawned", false]) && ((_curTarget getVariable["lockpickTime", time]) > time)) exitWith {
-	[
-		format
-		[
-			"Vous <t color='#FF0000'>ne pouvez pas</t> lockpick de véhicule ayant spawn au redémarrage du serveur. Veuillez attendre <t color='#2E64FE'>%1 secondes</t> avant de lockpick ce véhicule",
-			round((_curTarget getVariable "lockpickTime") - time)
-		]
-	] call public_fnc_error;
+if (serverTime < 600) exitWith {
+	[format["Vous <t color='#FF0000'>ne pouvez pas</t> crocheter de véhicule juste après le démarrage du serveur. Veuillez attendre <t color='#2E64FE'>%1 secondes</t>", 600 - serverTime]] call public_fnc_error;
 };
 
 if (dialog) then

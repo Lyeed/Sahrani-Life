@@ -19,4 +19,4 @@ waitUntil {!dialog};
 if (!(createDialog "RscDisplayGarageRename")) exitWith {};
 waitUntil {dialog};
 
-ctrlSetText[555991, ((g_garage_vehicles select _index) select 6)];
+ctrlSetText[555991, ((g_garage_vehicles select _index) select 5)];

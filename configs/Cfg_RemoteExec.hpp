@@ -21,14 +21,15 @@ class CfgRemoteExec
 		class TON_fnc_query_select_connect {allowTargets = SERVER;};
 		//- Vehicle
 		class TON_fnc_vehicleCreate {allowTargets = SERVER;};
+		class TON_fnc_vehicleDelete {allowTargets = SERVER;};
+		class TON_fnc_vehicle_update_fuel {allowTargets = SERVER;};
+		class TON_fnc_vehicle_update_insurrance {allowTargets = SERVER;};
+		class TON_fnc_vehicle_update_name {allowTargets = SERVER;};
+		class TON_fnc_vehicle_update_storePos {allowTargets = SERVER;};
 		//- Garage
 		class TON_fnc_garageVehicles {allowTargets = SERVER;};
 		class TON_fnc_garageVehicleStore {allowTargets = SERVER;};
 		class TON_fnc_garageVehicleSpawn {allowTargets = SERVER;};
-		class TON_fnc_garageVehicleRename {allowTargets = SERVER;};
-		class TON_fnc_garageVehicleRefuel {allowTargets = SERVER;};
-		class TON_fnc_garageVehicleImport {allowTargets = SERVER;};
-		class TON_fnc_garageVehicleAssure {allowTargets = SERVER;};
 		//- Factions
 		class TON_fnc_factionHistoryGet {allowTargets = SERVER;};
 		class TON_fnc_factionHistoryClean {allowTargets = SERVER;};

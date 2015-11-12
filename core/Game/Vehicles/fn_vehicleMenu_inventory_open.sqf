@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display", "_trunk", "_isCar"];
+private["_display", "_isCar"];
 _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 if (!(isNull _target)) then {
@@ -13,7 +13,7 @@ if (!(isNull _target)) then {
 };
 
 if (isNull g_interaction_target) exitWith {};
-if ((g_interaction_target getVariable["trunk_in_use_ID", ""]) != "") exitWith {
+if ((g_interaction_target getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
 	["Le coffre est déjà en cours d'utilisation"] call public_fnc_error;
 };
 
@@ -24,9 +24,8 @@ if (dialog) then
 };
 
 _isCar = true;
-_trunk = g_interaction_target getVariable ["Trunk", [[], 0]];
-g_interaction_target_trunk_stock = _trunk select 0;
-g_interaction_target_trunk_weight_actual = _trunk select 1;
+g_interaction_target_trunk_stock = g_interaction_target getVariable ["Trunk", []];
+g_interaction_target_trunk_weight_actual = [g_interaction_target_trunk_stock] call public_fnc_weightGenerate;
 g_interaction_target_trunk_transfer = false;
 g_interaction_target_trunk_weight_max = [typeOf(g_interaction_target)] call public_fnc_getVehVirtual;
 
@@ -59,13 +58,13 @@ g_interaction_target setVariable ["trunk_in_use_ID", (getPlayerUID player), true
 
 while {!(isNull _display)} do
 {
-	if ((g_interaction_target getVariable["trunk_in_use_ID", ""]) != (getPlayerUID player)) exitWith {
+	if ((g_interaction_target getVariable ["trunk_in_use_ID", ""]) != (getPlayerUID player)) exitWith {
 		closeDialog 0;
 	};
 	if ((player distance g_interaction_target) > ((((boundingBox g_interaction_target) select 1) select 0) + 2)) exitWith {
 		closeDialog 0;
 	};
-	if ((locked g_interaction_target) isEqualTo 2) exitWith {
+	if (((locked g_interaction_target) isEqualTo 2) && !(g_interaction_target in g_vehicles)) exitWith {
 		closeDialog 0;
 	};
 	if (g_coma) exitWith {
@@ -86,8 +85,8 @@ while {!(isNull _display)} do
 	sleep 0.5;
 };
 
-if (((g_interaction_target getVariable ["Trunk", [[], 0]]) select 1) != g_interaction_target_trunk_weight_actual) then {
-	g_interaction_target setVariable ["Trunk", [g_interaction_target_trunk_stock, g_interaction_target_trunk_weight_actual], true];
+if (!(g_interaction_target_trunk_stock isEqualTo (g_interaction_target getVariable ["Trunk", []]))) then {
+	g_interaction_target setVariable ["Trunk", g_interaction_target_trunk_stock, true];
 };
 
 if (_isCar) then {

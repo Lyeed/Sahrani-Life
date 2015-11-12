@@ -38,7 +38,7 @@ if (!g_regen_active) then
 			if ((g_bleed isEqualTo 0) && !g_coma && (g_hunger > 0) && (g_thirst > 0)) then 
 			{
 				_regen = 0;
-				if ((g_hunger >= 100) && (g_thirst >= 100)) then {
+				if ((g_hunger >= 90) && (g_thirst >= 90)) then {
 					_regen = 6;
 				} else {
 					_regen = 2;

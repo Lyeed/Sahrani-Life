@@ -14,7 +14,7 @@ if (_index isEqualTo -1) exitWith {
 	["Vous n'avez pas les clés de cette maison"] call public_fnc_error;
 };
 
-if (((g_interaction_target getVariable["house_owner", ["", ""]]) select 0) != (getPlayerUID player)) exitWith {
+if (((g_interaction_target getVariable ["house_owner", ["", ""]]) select 0) != (getPlayerUID player)) exitWith {
 	["Cette maison ne vous appartient pas"] call public_fnc_error;
 };
 

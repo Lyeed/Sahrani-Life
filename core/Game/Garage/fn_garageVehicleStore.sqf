@@ -17,7 +17,7 @@ if (g_garage_store) exitWith {
 if ("Air" in _types) then {
 	_distance = 95;
 };
-if ("Ship" in _types) then { 
+if ("Ship" in _types) then {
 	_distance = 130;
 };
 if (isNil "_distance") then {
@@ -25,24 +25,17 @@ if (isNil "_distance") then {
 };
 
 {
-	if (alive _x) then
-	{
-		_vehData = _x getVariable["vehicle_info_owners", []];
-		if (!(_vehData isEqualTo [])) then
-		{
-			if ((getPlayerUID player) isEqualTo (_vehData select 0)) exitWith {
-				_vehicle = _x;
-			};
-		};
+	if ((alive _x) && (_x in g_vehicles)) exitWith {
+		_vehicle = _x;
 	};
 } forEach (nearestObjects[_PNJ, _types, _distance]);
 if (isNil "_vehicle") exitWith {
-	["Aucun véhicule stationné près du garage ne vous appartient"] call public_fnc_error;
+	["Vous n'avez les clées d'aucun véhicule stationné près du garage"] call public_fnc_error;
 };
 if (isNull _vehicle) exitWith {
 	["Impossible de récupérer les informations de votre véhicule"] call public_fnc_error;
 };
-if (_vehicle getVariable["trunk_in_use", false]) exitWith {
+if (_vehicle getVariable ["trunk_in_use", false]) exitWith {
 	["Vous ne pouvez pas ranger un véhicule lorsque son coffre est en train d'être fouillé"] call public_fnc_error;
 };
 if (!((crew _vehicle) isEqualTo [])) exitWith {
@@ -55,42 +48,49 @@ if (isEngineOn _vehicle) exitWith {
 	["Vous ne pouvez pas ranger un véhicule ayant le moteur allumé"] call public_fnc_error;
 };
 
-_trunk = _vehicle getVariable["Trunk", [[], 0]];
-if ((_trunk select 0) isEqualTo []) then
+_trunk = _vehicle getVariable ["Trunk", []];
+if (_trunk isEqualTo []) then
 {
 	g_garage_store = true;
 	[_vehicle, (getPos _PNJ), false] remoteExec ["TON_fnc_garageVehicleStore", 2];
 } else {
-	private["_illegal", "_price", "_control", "_display"];
+	private["_illegal", "_price"];
 	_illegal = 0;
 	{
 		if ([(_x select 0)] call public_fnc_itemIsIllegal) then {
 			_illegal = _illegal + 1;
 		};
-	} forEach (_trunk select 0);
-	_price = round(((_trunk select 1) * 75) * (_illegal + 1));
-	createDialog "ALYSIA_trunkStore";
-	((findDisplay 30600) displayCtrl 30601) ctrlSetStructuredText parseText format["<t color='#8cff9b' align='center'>%1</t><t align='right'>$</t>", ([_price] call public_fnc_numberText)];
-	((findDisplay 30600) displayCtrl 30602) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", (getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName"))];
-	waitUntil {isNull (findDisplay 30600)};
-	if (!(isNil "g_storeTrunk")) then
+	} forEach (_trunk);
+	_price = round((([_trunk] call public_fnc_weightGenerate) * 75) * (_illegal + 1));
+	if (_price < g_atm) then
 	{
-		if ((player distance _vehicle) > _distance) exitWith {
-			["Le véhicule est trop loin pour être rangé au garage"] call public_fnc_error;
-		};
-		if (!g_storeTrunk) then
+		_action = 
+		[
+			format
+			[
+				"Le coffre de votre véhicule n'est pas vide, le ranger avec sa cargaison coûte <t color='#8cff9b'>%1</t>$<br/><t color='#FF8000'>Voulez-vous continuer ?</t>", 
+				([_price] call public_fnc_numberText)
+			],
+			getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName"),
+			"Oui",
+			"Non"
+		] call BIS_fnc_guiMessage;
+		if (_action) then
 		{
-			g_garage_store = true;
-			_vehicle setVariable["trunk", [[], 0], true];
-			[_vehicle, (getPos _PNJ), false] remoteExec ["TON_fnc_garageVehicleStore", 2];
-		} else {
-			if (_price > g_cash) exitWith
+			if (!(isNull _vehicle)) then
 			{
-				["Vous n'avez pas assez d'argent pour ranger votre véhicule avec sa cargaison"] call public_fnc_error;
+				if ((player distance _vehicle) < _distance) then
+				{
+					g_atm = g_atm - _price;
+					g_garage_store = true;
+					[_vehicle, (getPos _PNJ), false] remoteExec ["TON_fnc_garageVehicleStore", 2];				
+				} else {
+					["Le véhicule est trop loin pour être rangé au garage"] call public_fnc_error;
+				};
 			};
-			g_garage_store = true;
-			[_vehicle, (getPos _PNJ), false] remoteExec ["TON_fnc_garageVehicleStore", 2];
 		};
+	} else {
+		[format["Vous n'avez pas assez d'argent pour ranger votre véhicule avec sa cargaison<br/><t align='left'>Prix</t><t color='#8cff9b' align='right'></t>"]] call public_fnc_error;
 	};
 };
 
@@ -98,7 +98,5 @@ if (g_garage_store) then
 {
 	waitUntil {(isNull _vehicle)};
 	["Vous avez rangé votre véhicule"] call public_fnc_info;
+	g_garage_store = false;
 };
-
-g_garage_store = false;
-g_storeTrunk = nil;

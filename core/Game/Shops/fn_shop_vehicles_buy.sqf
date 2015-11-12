@@ -53,10 +53,7 @@ _vehicle setPos _spawnPos;
 g_vehicles pushBack _vehicle;
 
 _plate = round(random(1000000));
-_vehicle setVariable ["dbInfo", [(getPlayerUID player), _plate], true];
-_vehicle setVariable ["isInsured", 1, true];
-_vehicle setVariable ["trunk_in_use", false, true];
-_vehicle setVariable ["vehicle_info_owners", [(getPlayerUID player), (player getVariable ["realname", profileName])], true];
+_vehicle setVariable ["info", [(getPlayerUID player), (player getVariable ["realname", profileName]), _plate, 1], true];
 _vehicle allowDamage true;
 
 [player, _vehicle, _plate, g_cash] remoteExec ["TON_fnc_vehicleCreate", 2];

@@ -19,10 +19,10 @@ _vList = _display displayCtrl 2802;
 lbClear _vList;
 
 {
-	if ((_x select 10) isEqualTo _type) then
+	if ((_x select 9) isEqualTo _type) then
 	{
-	    _index = _vList lbAdd (_x select 6);
-		_vList lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> (_x select 1) >> "picture")];
+	    _index = _vList lbAdd (_x select 5);
+		_vList lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> (_x select 0) >> "picture")];
 		_vList lbSetValue [_index, _forEachIndex];
 	};
 } forEach (g_garage_vehicles);
@@ -31,6 +31,8 @@ if ((lbSize _vList) isEqualTo 0) then
 {
 	_vList lbAdd "Aucun véhicule";
 	_vList lbSetValue [0, -1];
+} else {
+	lbSort [_vList, "DESC"];
 };
 
 _vList lbSetCurSel 0;

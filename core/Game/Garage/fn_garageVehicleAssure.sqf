@@ -12,13 +12,13 @@ if (_index isEqualTo -1) exitWith {
 };
 
 _data = g_garage_vehicles select _index;
-_vehicleClassname = _data select 1;
+_vehicleClassname = _data select 0;
 
 if ((getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> _vehicleClassname >> "insurance")) isEqualTo 0) exitWith {
 	["Vous ne pouvez pas assurer ce type de véhicule"] call public_fnc_error;
 };
 
-_vehicleAssurance = _data select 3;
+_vehicleAssurance = _data select 2;
 if (_vehicleAssurance isEqualTo 1) exitWith {
 	["Ce véhicule est déjà assuré"] call public_fnc_error;
 };
@@ -34,7 +34,7 @@ if (_assurancePrice > g_atm) exitWith {
 
 g_atm = g_atm - _assurancePrice;
 [format["Vous avez assuré votre véhicule<br/><t color='#8cff9b' align='center'>%1$</t>", [_assurancePrice] call public_fnc_numberText], "buy"] call public_fnc_info;
-(g_garage_vehicles select _index) set[3, 1];
+(g_garage_vehicles select _index) set [2, 1];
 closeDialog 0;
-[(_data select 0)] remoteExec ["TON_fnc_garageVehicleAssure", 2, false];
+[(_data select 1), 1] remoteExec ["TON_fnc_vehicle_update_insurrance", 2];
 [g_garage_vehicles] call public_fnc_garageOpen;

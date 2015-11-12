@@ -12,7 +12,7 @@ if (_index isEqualTo -1) exitWith {
 	["Vous n'avez pas sélectionné de véhicule"] call public_fnc_error;
 };
 
-_fuel = (g_garage_vehicles select _index) select 4;
+_fuel = (g_garage_vehicles select _index) select 3;
 if (_fuel >= 100) exitWith {
 	["Ce véhicule possède déja tout son carburant"] call public_fnc_error;
 };
@@ -25,6 +25,6 @@ if (_price > g_atm) exitWith {
 closeDialog 0;
 g_atm = g_atm - _price;
 [format["Vous avez fait le plein pour <t color='#8cff9b'>%1$</t>", ([_price] call public_fnc_numberText)], "buy"] call public_fnc_info;
-[(g_garage_vehicles select _index) select 0] remoteExec ["TON_fnc_garageVehicleRefuel", 2, false];
-(g_garage_vehicles select _index) set[4, 100];
+[(g_garage_vehicles select _index) select 1, 100] remoteExec ["TON_fnc_vehicle_update_fuel", 2];
+(g_garage_vehicles select _index) set[3, 100];
 [g_garage_vehicles] call public_fnc_garageOpen;

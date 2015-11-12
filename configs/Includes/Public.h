@@ -21,6 +21,8 @@ class Public
 	class Tools
 	{
 		file = "core\Tools";
+		class weightGenerate {};
+		class posNearFourriere {};
 		class strToSide {};
 		class errorExit {};
 		class getInv {};
