@@ -107,6 +107,7 @@ class ALYSIA_BANK
 		sound = "BombBip";
 		finalsound = "Bomb2Bip";
 		pos = "[0,0,0]";
+		rot = 0;
 		time = 60;
 		defuseTime = 15;
 	};

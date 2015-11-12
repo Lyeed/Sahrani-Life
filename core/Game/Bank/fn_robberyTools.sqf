@@ -21,9 +21,9 @@ if ((typeOf _item) isEqualTo "Bank_Bomb") then
 	[_item, "bankPlanted"] call CBA_fnc_globalSay3d;
 };
 
-while ((getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "time"))) do
+while {(_item getVariable ["active", true])} do
 {
-	if ((!_time <= 5)) then {[_item, (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "sound"))] call CBA_fnc_globalSay3d} else {[_item, (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "finalSound"))] call CBA_fnc_globalSay3d};
+	if (_time > 5) then {[_item, (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "sound"))] call CBA_fnc_globalSay3d} else {[_item, (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "finalSound"))] call CBA_fnc_globalSay3d};
 
 	_time = (_time - 1);
 };

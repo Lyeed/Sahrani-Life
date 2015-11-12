@@ -22,14 +22,14 @@ if (!(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item") 
 
 if (!(_bank getVariable ["robStarted", false])) then
 {
-	if (([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call public_fnc_strToSide) countSide allPlayers < getText(missionConfigFile >> "ALYSIA_FACTIONS" >> ([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call public_fnc_strToSide) >> "name")) then
+	if ((([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call public_fnc_strToSide) countSide allPlayers) < (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(cursorTarget) >> "required"))) then
 	{
 		systemChat format ["< Robbery System - Debug > Pas assez de flics connectés"];
 
 		[
 			format
 			[
-				"Il faut au minimum <t color='RED'>%1</t> membres de la <t color='DARKGREEN'>%1</t> en service pour pouvoir braquer la banque",
+				"Il faut au minimum <t color='#CC0000'>%1</t> membres de la <t color='#336600'>%2</t> en service pour pouvoir braquer la banque",
 				getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "required"),
 				getText(missionConfigFile >> "ALYSIA_FACTIONS" >> getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner") >> "name")
 			]
@@ -41,7 +41,7 @@ if (!(_bank getVariable ["robStarted", false])) then
 
 if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), getNumber(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "time"), objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then
 {
-	switch (getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "open") do
+	switch (getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "open")) do
 	{
 		systemChat format ["< Robbery System - Debug > Détection/Ouverture porte ciblée"];
 
