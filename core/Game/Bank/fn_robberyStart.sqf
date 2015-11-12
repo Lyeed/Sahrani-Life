@@ -46,8 +46,8 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 		case "Simple": {_bank animate [_door, 1]};
 		case "SlidingL": {_bank animate [_door, -1.7]};
 		case "SlidingR": {_bank animate [_door, 1.7]};
-		case "Drill": {[_bank, _door] call public_fnc_robberyProcess};
-		case "Vault": {[_bank, _door] call public_fnc_robberyProcess};
+		case "Drill": {[_bank, _door] spawn public_fnc_robberyProcess};
+		case "Vault": {[_bank, _door] spawn public_fnc_robberyProcess};
 		case "Security":
 		{
 			[false] call TON_fnc_robberyState;
