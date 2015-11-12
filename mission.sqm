@@ -5717,7 +5717,7 @@ class Mission
 		class Item21
 		{
 			position[]={13641.244,40.100075,11904.702};
-			name="champ de blé";
+			name="wheat_1";
 			text="Champ de blé";
 			type="plp_mark_civ_lake";
 			colorName="ColorYellow";

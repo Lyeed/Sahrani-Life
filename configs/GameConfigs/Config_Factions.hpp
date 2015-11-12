@@ -227,13 +227,20 @@ class ALYSIA_FACTIONS
 			"wood_1",
 			"oil_1",
 			"archeologie_1",
-			"archeologie_2",
 			"prunes_1",
 			"prunes_2",
 			"vignes_1",
 			"pillage_1",
 			"pillage_2",
-			"platine_1"
+			"plat_1",
+			"coal_1",
+			"gold_1",
+			"wheat_1",
+			"salt_1",
+			"baux_1",
+			"copper_1",
+			"shell_1",
+			"fish_1"
 		};
 		farming_markers_plant[] = 
 		{
