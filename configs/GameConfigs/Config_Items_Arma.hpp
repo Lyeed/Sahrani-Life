@@ -2107,7 +2107,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class TRYK_B_Alicepack
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class TRYK_B_Carryall_blk
 	{
@@ -2123,19 +2123,19 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class TRYK_B_Coyotebackpack
 	{
-		buy_price = 20;
+		buy_price = 110;
 	};
 	class TRYK_B_Coyotebackpack_BLK
 	{
-		buy_price = 20;
+		buy_price = 110;
 	};
 	class TRYK_B_Coyotebackpack_OD
 	{
-		buy_price = 20;
+		buy_price = 110;
 	};
 	class TRYK_B_Coyotebackpack_WH
 	{
-		buy_price = 20;
+		buy_price = 110;
 	};
 	class TRYK_B_FieldPack_Wood
 	{
