@@ -112,7 +112,8 @@ class ALYSIA_FARMING_GATHER
 
 	class shell_1
 	{
-		receive[] = {{"shell", 1, 0}};
+		receive[] = {{"moule", 3, 1}};
+		extra[] = {{"palourde", 10}, {"saintjacques", 25}, {"bigorneau", 12}, {"crabe", 15}, {"bulot", 8}};
 		tool = "";
 		sound = "";
 	};
@@ -120,6 +121,13 @@ class ALYSIA_FARMING_GATHER
 	class fish_1
 	{
 		receive[] = {{"", 1, 0}};
+		tool = "";
+		sound = "";
+	};
+
+	class copper_1
+	{
+		receive[] = {{"copper", 1, 0}};
 		tool = "";
 		sound = "";
 	};
