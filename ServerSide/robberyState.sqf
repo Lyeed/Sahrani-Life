@@ -19,5 +19,4 @@ switch (typeOf _bank) do {
 if (_state) then
 {
 	[_bank] spawn TON_fnc_robberyAlarm;
-	_bank setVariable ["robbery", ]
 };
