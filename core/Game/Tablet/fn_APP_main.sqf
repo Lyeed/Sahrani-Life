@@ -37,7 +37,6 @@ _apps_more = false;
 ([
 	["\lyeed\images\app_bank.paa", "[""solde""] spawn public_fnc_tabletApp;", "Solde", "true"],
 	["\lyeed\images\app_gps.paa", "[""vehicles""] spawn public_fnc_tabletApp;", "Véhicules", "true"],
-	["\lyeed\images\app_inventory.paa", "[""inventory""] spawn public_fnc_tabletApp;", "Inventaire", "true"],
 	["\lyeed\images\app_setting.paa", "[""settings""] spawn public_fnc_tabletApp;", "Réglages", "true"],
 	["\lyeed\images\app_server.paa", "[""server""] spawn public_fnc_tabletApp;", "Server", "true"],
 	["\lyeed\images\app_store.paa", "[""store""] spawn public_fnc_tabletApp;", "Boutique", "true"],

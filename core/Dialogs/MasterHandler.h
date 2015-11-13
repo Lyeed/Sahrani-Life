@@ -1,6 +1,5 @@
 
 #include "common.hpp"
-#include "macro.hpp"
 
 /* Dialogs  */
 #include "Dialogs\DIALOG_admin.h"
@@ -32,4 +31,5 @@ class RscTitles // Defines custom UI displays.
 	#include "Hud\HUD_default.hpp"
 	#include "Hud\HUD_progressBar.hpp"
 	#include "Hud\HUD_itemVirtual.hpp"
+	#include "Hud\HUD_message.hpp"
 };

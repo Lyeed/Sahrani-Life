@@ -1,28 +1,39 @@
 /*
-	Author: Bryan "Tonic" Boardwine
+		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
+	Code written by Lyeed
+	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
+	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
+	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_container", "_unit"];
 
-if (count _this == 1) exitWith {false};
-_unit = _this select 0;
-_container = _this select 1;
+([_this, 0, objNull, [objNull]] call BIS_fnc_param) spawn
+{
+	private["_display"];
+	disableSerialization;
 
-if (((getNumber(configFile >> "CfgVehicles" >> (typeOf _container) >> "isBackpack")) == 1) && (playerSide == civilian)) then {
-	[(localize "STR_MISC_Backpack")] call public_fnc_error;
-	[] spawn 
+	waitUntil
 	{
-		waitUntil {!isNull (findDisplay 602)};
-		closeDialog 0;
+		_display = uinamespace getvariable ["RscDisplayInventory", displayNull];
+		!(isNull _display)
+	};
+
+	[] call public_fnc_virtual_menu_update_list;
+
+	if (!(isNull _this)) then
+	{
+		while {!(isNull _display)} do
+		{
+			if (!(_this in g_vehicles) && ((locked _this) isEqualTo 2)) then
+			{
+				closeDialog 0;
+				["Vous ne pouvez pas fouiller de véhicule vérouillé"] call public_fnc_error;
+			};
+			if (g_coma || (player getVariable ["restrained", false]) || (player getVariable ["surrender", false])) then {
+				closeDialog 0;
+			};
+			sleep 0.3;
+	 	};
 	};
 };
 
-if ((_container isKindOf "LandVehicle") OR (_container isKindOf "Ship") OR (_container isKindOf "Air")) exitWith {
-	if (!(_container in life_vehicles) && {(locked _container) == 2}) exitWith {
-		[(localize "STR_MISC_VehInventory")] call public_fnc_error;
-		[] spawn 
-		{
-			waitUntil {!isNull (findDisplay 602)};
-			closeDialog 0;
-		};
-	};
-};
+false;

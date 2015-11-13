@@ -18,6 +18,19 @@ class Public
 		class loadout {};
 	};
 
+	class VirtualInventory
+	{
+		file = "core\Game\VirtualInventory";
+		class virtual_menu_exhnage_setup {};
+		class virtual_menu_exhange_open {};
+		class virtual_menu_exhange_update {};
+		class virtual_menu_exhange_store {};
+		class virtual_menu_exhange_take {};
+		class virtual_menu_update_list {};
+		class virtual_menu_update_button {};
+		class virtual_menu_action_use {};
+	};
+
 	class Tools
 	{
 		file = "core\Tools";
@@ -178,10 +191,6 @@ class Public
 		class addVehicle2Chain {};
 		class clearVehicleAmmo {};
 		class vehicleMenu_flip {};
-		class vehicleMenu_inventory_open {};
-		class vehicleMenu_inventory_update {};
-		class vehicleMenu_inventory_store {};
-		class vehicleMenu_inventory_take {};
 		class vehicleMenu_key {};
 		class vehicleMenu_open {};
 		class vehicleMenu_owner {};
@@ -433,8 +442,6 @@ class Public
 		class APP_settings {};
 		class APP_settings_slider {};
 		class APP_server {};
-		class APP_inventory {};
-		class APP_inventory_Update {};
 		class APP_store {};
 		class APP_store_licenses {};
 		class APP_store_licenses_Update {};

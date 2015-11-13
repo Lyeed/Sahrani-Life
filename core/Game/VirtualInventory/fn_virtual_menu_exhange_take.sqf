@@ -42,5 +42,5 @@ if (_res > 0) then
 	["Vous n'avez pas assez de place"] call public_fnc_error;
 };
 
-[] call public_fnc_vehicleMenu_inventory_update;
+[] call public_fnc_virtual_menu_exhange_update;
 g_interaction_target_trunk_transfer = false;

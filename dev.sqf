@@ -343,3 +343,42 @@ soupoudrer Acts_TreatingWounded04 5
 appliquer / retirer qq chose Acts_TreatingWounded05 10
 se lever Acts_TreatingWounded_Out
 
+OFF =
+{
+	{
+		_x setHit ["light_1_hitpoint", 0.97];
+		_x setHit ["light_2_hitpoint", 0.97];
+		_x setHit ["light_3_hitpoint", 0.97];
+		_x setHit ["light_4_hitpoint", 0.97];
+	} forEach nearestObjects [player, [
+		"Lamps_base_F",
+		"PowerLines_base_F",
+		"PowerLines_Small_base_F",
+		"lamphalogen_f",
+		"portablelight_single_f"
+	], 500];
+};
+
+ON =
+{
+	{
+		_x setHit ["light_1_hitpoint", 0];
+		_x setHit ["light_2_hitpoint", 0];
+		_x setHit ["light_3_hitpoint", 0];
+		_x setHit ["light_4_hitpoint", 0];
+	} forEach nearestObjects [player, [
+		"Lamps_base_F",
+		"PowerLines_base_F",
+		"PowerLines_Small_base_F",
+		"lamphalogen_f",
+		"portablelight_single_f"
+	], 500];
+};
+
+publicVariable "ON";
+publicVariable "OFF";
+
+
+
+
+{   _x setHit ["light_1_hitpoint", 0.97];   _x setHit ["light_2_hitpoint", 0];   _x setHit ["light_3_hitpoint", 0];   _x setHit ["light_4_hitpoint", 0];  } forEach nearestObjects [player, [   "Lamps_base_F",   "PowerLines_base_F",   "PowerLines_Small_base_F",  "lamphalogen_f"], 500];

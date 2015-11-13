@@ -6,4 +6,4 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-[([_this, 0, [0], [0]] call BIS_fnc_param), 1, 0, true] call CBA_fnc_formatNumber
+[([_this, 0, [0], [0]] call BIS_fnc_param), 1, 0, true] call CBA_fnc_formatNumber;

@@ -23,7 +23,6 @@ switch (_app) do
 	case "MAIN": {[] call public_fnc_APP_main};
 	case "SERVER": {[] spawn public_fnc_APP_server};
 	case "HELP": {[] call public_fnc_APP_help};
-	case "INVENTORY": {[] call public_fnc_APP_inventory};
 	case "SETTINGS": {[] spawn public_fnc_APP_settings};
 	case "SOLDE": {[] call public_fnc_APP_solde};
 	case "VEHICLES": {[] spawn public_fnc_APP_vehicles};

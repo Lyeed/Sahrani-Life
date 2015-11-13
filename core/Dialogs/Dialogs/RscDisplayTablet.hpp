@@ -73,7 +73,6 @@ class RscDisplayTablet: default_base_dialog
 		#include "tablet_apps\main.hpp"
 		#include "tablet_apps\solde.hpp"
 		#include "tablet_apps\settings.hpp"
-		#include "tablet_apps\inventory.hpp"
 		#include "tablet_apps\vehicles.hpp"
 		#include "tablet_apps\server.hpp"
 		#include "tablet_apps\store.hpp"

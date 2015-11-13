@@ -9,7 +9,7 @@
 player addEventHandler["Fired", "_this call EVENT_fnc_onPlayerFire"];
 player addEventHandler["FiredNear", "_this call EVENT_fnc_onPlayerFireNear"];
 player addEventHandler["handleDamage", "_this call EVENT_fnc_onPlayerHandleDamage"];
-player addEventHandler["InventoryOpened", "_this call EVENT_fnc_onPlayerInventoryOpen"];
+player addEventHandler["InventoryOpened", "[_this select 1] call EVENT_fnc_onPlayerInventoryOpen"];
 // player addEventHandler["InventoryClosed", "_this call EVENT_fnc_onPlayerInventoryClose"];
 player addEventHandler["Killed", "[] call EVENT_fnc_onPlayerKilled"];
 player addEventHandler["Respawn", "[] call EVENT_fnc_onPlayerRespawn"];

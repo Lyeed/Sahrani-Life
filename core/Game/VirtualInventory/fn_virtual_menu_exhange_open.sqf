@@ -54,7 +54,7 @@ g_interaction_target setVariable ["trunk_in_use_ID", (getPlayerUID player), true
 (_display displayCtrl 515) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", g_maxWeight];
 (_display displayCtrl 514) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", g_interaction_target_trunk_weight_max];
 
-[] call public_fnc_vehicleMenu_inventory_update;
+[] call public_fnc_virtual_menu_exhange_update;
 
 while {!(isNull _display)} do
 {

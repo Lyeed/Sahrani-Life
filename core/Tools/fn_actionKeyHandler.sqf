@@ -105,7 +105,7 @@ if ((vehicle player) isEqualTo player) then
 
 				if (typeOf(cursorTarget) in (call g_houses_storages)) then
 				{
-					[cursorTarget] spawn public_fnc_vehicleMenu_inventory_open;
+					[cursorTarget] spawn public_fnc_virtual_menu_exhange_open;
 					breakOut "main";
 				};
 

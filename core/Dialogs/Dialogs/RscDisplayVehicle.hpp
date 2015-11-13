@@ -752,7 +752,7 @@ class RscDisplayVehicleTrunk: default_base_dialog
 		class ACTION_GET_SINGLE_BUTTON: RscButtonSilent
 		{
 			idc = 507;
-			action = "[false] call public_fnc_vehicleMenu_inventory_take;";
+			action = "[false] call public_fnc_virtual_menu_exhange_take;";
 			tooltip = "Récupérer la quantité minimum";
 			onMouseEnter = "ctrlSetText[506,""\lyeed_IMG\data\vehicle\trunk\right_arrow_single_select.paa""];";
 			onMouseExit = "ctrlSetText[506,""\lyeed_IMG\data\vehicle\trunk\right_arrow_single.paa""];";
@@ -776,7 +776,7 @@ class RscDisplayVehicleTrunk: default_base_dialog
 		class ACTION_GET_DOUBLE_BUTTON: RscButtonSilent
 		{
 			idc = 509;
-			action = "[true] call public_fnc_vehicleMenu_inventory_take;";
+			action = "[true] call public_fnc_virtual_menu_exhange_take;";
 			tooltip = "Récupérer la quantité maximum";
 			onMouseEnter = "ctrlSetText[508,""\lyeed_IMG\data\vehicle\trunk\right_arrow_double_select.paa""];";
 			onMouseExit = "ctrlSetText[508,""\lyeed_IMG\data\vehicle\trunk\right_arrow_double.paa""];";
@@ -800,7 +800,7 @@ class RscDisplayVehicleTrunk: default_base_dialog
 		class ACTION_PUT_SINGLE_BUTTON: RscButtonSilent
 		{
 			idc = 511;
-			action = "[false] call public_fnc_vehicleMenu_inventory_store;";
+			action = "[false] call public_fnc_virtual_menu_exhange_store;";
 			tooltip = "Déposer la quantité minimum";
 			onMouseEnter = "ctrlSetText[510,""\lyeed_IMG\data\vehicle\trunk\left_arrow_single_select.paa""];";
 			onMouseExit = "ctrlSetText[510,""\lyeed_IMG\data\vehicle\trunk\left_arrow_single.paa""];";
@@ -824,7 +824,7 @@ class RscDisplayVehicleTrunk: default_base_dialog
 		class ACTION_PUT_DOUBLE_BUTTON: RscButtonSilent
 		{
 			idc = 513;
-			action = "[true] call public_fnc_vehicleMenu_inventory_store;";
+			action = "[true] call public_fnc_virtual_menu_exhange_store;";
 			tooltip = "Déposer la quantité maximum";
 			onMouseEnter = "ctrlSetText[512,""\lyeed_IMG\data\vehicle\trunk\left_arrow_double_select.paa""];";
 			onMouseExit = "ctrlSetText[512,""\lyeed_IMG\data\vehicle\trunk\left_arrow_double.paa""];";
