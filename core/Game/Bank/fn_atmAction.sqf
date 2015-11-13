@@ -1,6 +1,6 @@
 /*
 	ArmA 3 N'Ziwasogo Life RPG - ALYSIA
-		Code written by Devilz80
+	Code written by Devilz80
 	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
@@ -13,7 +13,7 @@ if (!params [
 disableSerialization;
 _display = findDisplay 15000;
 if (isNull _display) then {};
-if (!([_amount] call public_fnc_isNumber)) exitWith {["Erreur dans le montant"] call public_fnc_error};
+if (!([ctrlText 15019] call public_fnc_isNumber)) exitWith {["Erreur dans le montant"] call public_fnc_error};
 _amount = parseNumber (ctrlText 15019);
 if (_amount <= 0) exitWith {["Erreur dans le montant"] call public_fnc_error};
 

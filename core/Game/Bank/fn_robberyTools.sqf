@@ -1,9 +1,9 @@
 /*
-ArmA 3 N'Ziwasogo Life RPG - ALYSIA
-Code written by Devilz80
-@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
-YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
-More informations : https://www.bistudio.com/community/game-content-usage-rules
+	ArmA 3 N'Ziwasogo Life RPG - ALYSIA
+	Code written by Devilz80
+	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
+	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
+	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
 if (!params [
@@ -26,6 +26,8 @@ while {(_item getVariable ["active", true])} do
 	if (_time > 5) then {[_item, (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "sound"))] call CBA_fnc_globalSay3d} else {[_item, (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "finalSound"))] call CBA_fnc_globalSay3d};
 
 	_time = (_time - 1);
+
+	sleep 1;
 };
 
 if ((typeOf _item) isEqualTo "Bank_Drill") then

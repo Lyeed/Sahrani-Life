@@ -1,9 +1,9 @@
 /*
-ArmA 3 N'Ziwasogo Life RPG - ALYSIA
-Code written by Devilz80
-@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
-YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
-More informations : https://www.bistudio.com/community/game-content-usage-rules
+	ArmA 3 N'Ziwasogo Life RPG - ALYSIA
+	Code written by Devilz80
+	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
+	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
+	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
 if (!params [
@@ -22,7 +22,7 @@ if (!(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item") 
 
 if (!(_bank getVariable ["robStarted", false])) then
 {
-	if ((([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call public_fnc_strToSide) countSide allPlayers) < (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(cursorTarget) >> "required"))) then
+	if ((([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call public_fnc_strToSide) countSide allPlayers) < (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(cursorTarget) >> "required"))) exitWith
 	{
 		systemChat format ["< Robbery System - Debug > Pas assez de flics connectés"];
 
@@ -34,8 +34,7 @@ if (!(_bank getVariable ["robStarted", false])) then
 				getText(missionConfigFile >> "ALYSIA_FACTIONS" >> getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner") >> "name")
 			]
 		] call public_fnc_error;
-	} else {
-		_bank setVariable ["robStarted", true, true];
+		breakOut "main";
 	};
 };
 
@@ -48,15 +47,11 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 		case "Simple": {_bank animate [_door, 1]};
 		case "SlidingL": {_bank animate [_door, -1.7]};
 		case "SlidingR": {_bank animate [_door, 1.7]};
-		case "Drill": {[_bank, _door] call public_fnc_robberyProcess};
-		case "Vault": {[_bank, _door] call public_fnc_robberyProcess};
+		case "Drill": {[_bank, _door] spawn public_fnc_robberyProcess};
+		case "Vault": {[_bank, _door] spawn public_fnc_robberyProcess};
 		case "Security":
 		{
-			if (!(isNull (_bank getVariable ["alarm", objNull]))) then
-			{
-				deleteVehicle (_bank getVariable ["alarm", ObjNull]);
-				_bank setVariable ["alarm", ObjNull, true];
-			};
+			[false] call TON_fnc_robberyState;
 			_bank setVariable ["hacked", true, true];
 			["Vous avez désactivé le système de sécurité de la banque"] call public_fnc_info;
 		};
@@ -64,14 +59,10 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 
 	if (!(_bank getVariable ["hacked", false])) then
 	{
-		private ["_alarm"];
-		
-		if (isNull (_bank getVariable ["alarm", objNull])) then
+		if (!(bank getVariable ["robStarted", false]))
 		{
-			_alarm = "Intel_File1_F" createVehicle [0,0,0];
-			_alarm attachTo [_bank, [0, -2, 6.65]];
-			[_alarm, "bankAlarm"] call CBA_fnc_globalSay3d;
-			_bank setVariable ["alarm", _alarm, true];	
+			[true] call TON_fnc_robberyState;
+			_bank setVariable ["robStarted", true, true];
 		};
 		
 		switch ([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "owner")] call public_fnc_strToSide) do
