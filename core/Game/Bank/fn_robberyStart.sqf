@@ -59,7 +59,7 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 
 	if (!(_bank getVariable ["hacked", false])) then
 	{
-		if (!(bank getVariable ["robStarted", false]))
+		if (!(bank getVariable ["robStarted", false])) then
 		{
 			[true] call TON_fnc_robberyState;
 			_bank setVariable ["robStarted", true, true];
