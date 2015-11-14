@@ -25,7 +25,7 @@ if (g_arrested) then {
 	if (g_atm < _price) then {
 		["Vous n'avez pas assez d'argent pour payer vos frais d'hospitalisation<br/>Ces derniers on été payé par l'Etat", "buy"] call public_fnc_info;
 	} else {
-		[format["Vos frais d'<t color='#FE2EF7'>hospitalisation</t> s'élèvent à <t color='#8cff9b'>%1$</t>", _price], "buy"] call public_fnc_info;
+		[format["Vos frais d'<t color='#FE2EF7'>hospitalisation</t> s'élèvent à <t color='#8cff9b'>%1$</t>", ([_price] call public_fnc_numberText)], "buy"] call public_fnc_info;
 		[false, 1, _price] call public_fnc_handleMoney;
 	};
 

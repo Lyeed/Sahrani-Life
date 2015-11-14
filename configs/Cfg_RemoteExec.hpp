@@ -49,6 +49,8 @@ class CfgRemoteExec
 		class TON_fnc_house_storage_install {allowTargets = SERVER;};
 		//- Sheep
 		class TON_fnc_sheepGenerate {allowTargets = SERVER;};
+		//- Bank
+		class TON_fnc_bank_state {allowTargets = SERVER;};
 
 		/*
 		**		CLIENT FUNCTIONS
