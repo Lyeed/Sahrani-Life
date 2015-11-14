@@ -112,7 +112,7 @@ if (hasInterface) then
 				player forceWalk true;
 				player setFatigue 1;
 				if (g_carryWeight > g_maxWeight) then {
-					titleText["Vous êtes surchargé...", "PLAIN"];
+					titleText["Vous êtes surchargé", "PLAIN"];
 				};
 			} else {
 				if (isForcedWalk player) then {
@@ -135,24 +135,53 @@ if (hasInterface) then
 
 	[] spawn
 	{
-		private["_bp","_load","_cfg"];
+		private["_bp", "_default"];
+		_default = 24;
 		while {true} do
 		{
 			waitUntil {backpack player != ""};
 			_bp = backpack player;
-			_cfg = getNumber(configFile >> "CfgVehicles" >> (backpack player) >> "maximumload");
-			_load = round(_cfg / 8);
-			g_maxWeight = g_maxWeightT + _load;
+			g_maxWeight = _default + round(getNumber(configFile >> "CfgVehicles" >> (backpack player) >> "maximumload") / 8);
 			waitUntil {backpack player != _bp};
 			if ((backpack player) isEqualTo "") then {
-				g_maxWeight = g_maxWeightT;
+				g_maxWeight = _default;
+			};
+		};
+	};
+
+	[] spawn
+	{
+		private "_veh";
+		while {true} do
+		{
+			waitUntil {((vehicle player) != player)};
+
+			_veh = vehicle player;
+			g_seatbelt = false;
+
+			while {((vehicle player) isEqualTo _veh)} do
+			{
+				if (((driver _veh) isEqualTo player) && (isEngineOn _veh)) then {
+					_veh setFuel ((fuel _veh) - (((speed _veh) / 10000) + (([_veh getVariable ["Trunk", []]] call public_fnc_weightGenerate) / 100000)));
+				};
+				sleep 2;
+			};
+
+			if (g_curWep_h != "") then {
+				[] call public_fnc_holdsterSwitch;
+			};
+
+			if (g_seatbelt) then
+			{
+				playSound "seatbelt_off";
+				g_seatbelt = false;
 			};
 		};
 	};
 	
 	[] spawn
 	{
-		private["_totalSession", "_fnc_channel", "_fnc_server"];
+		private["_totalSession", "_fnc_channel", "_fnc_server", "_salary_time"];
 
 		_fnc_channel =
 		{
@@ -179,7 +208,7 @@ if (hasInterface) then
 		};
 
 		_totalSession = 0;
-		systemChat format["Vous recevez votre prochain salaire dans %1 minutes.", 5];
+		_salary_time = 5;
 		while {true} do
 		{
 			sleep (60 * 1);
@@ -196,17 +225,19 @@ if (hasInterface) then
 				[(random(8) * -1)] call public_fnc_handleHunger;
 			};
 			
-			if ((_totalSession % 5) isEqualTo 0) then
+			if ((_totalSession % _salary_time) isEqualTo 0) then
 			{
 				if (g_arrested) then {
-					systemChat "Vous n'avez pas reçu votre salaire car vous êtes en prison.";
+					["Vous n'avez pas reçu votre salaire car vous êtes en prison"] call public_fnc_info;
 				} else {
 		       		g_atm = g_atm + (call g_paycheck);
-		       		g_nextPay = time + (5 * 60);
-		       		systemChat format["Vous avez reçu votre salaire : %1$.", ([(call g_paycheck)] call public_fnc_numberText)];
+		       		g_nextPay = time + (_salary_time * 60);
+		       		playSound "buy";
+		       		["Vous avez reçu votre salaire : <t color='#8cff9b'>%1</t>$", ([(call g_paycheck)] call public_fnc_numberText)] call public_fnc_info;
 				};
 			};
 			
+			/*
 			if ((call g_adminlevel) isEqualTo 0) then
 			{
 				if (["Alysia", (call TFAR_fnc_getTeamSpeakServerName)] call BIS_fnc_inString) then
@@ -218,9 +249,10 @@ if (hasInterface) then
 					[] spawn _fnc_server;
 				};
 			};
+			*/
 
 			{
-				if ((local _x) && (count units _x isEqualTo 0)) then {
+				if ((local _x) && ((units _x) isEqualTo [])) then {
 					deleteGroup _x;
 				};
 			} forEach (allGroups);
@@ -230,4 +262,4 @@ if (hasInterface) then
 	diag_log "---------------------------------------------------------------------------------------------------------";
 	diag_log format["                End of Client Init :: Total Execution Time %1 seconds ", (diag_tickTime - _timeStamp)];
 	diag_log "---------------------------------------------------------------------------------------------------------";
-};
+}; 

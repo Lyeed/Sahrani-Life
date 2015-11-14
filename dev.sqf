@@ -382,3 +382,77 @@ publicVariable "OFF";
 
 
 {   _x setHit ["light_1_hitpoint", 0.97];   _x setHit ["light_2_hitpoint", 0];   _x setHit ["light_3_hitpoint", 0];   _x setHit ["light_4_hitpoint", 0];  } forEach nearestObjects [player, [   "Lamps_base_F",   "PowerLines_base_F",   "PowerLines_Small_base_F",  "lamphalogen_f"], 500];
+
+
+"Fin" createUnit [ position player, group player ];moveTo 
+
+
+"Fin" createUnit [(position player), (group player),"", 1.0, "private"];
+cursorTarget domove (position player);
+
+"B_Soldier_02_f" createUnit [(position player), (group player),"", 1.0, "private"];
+
+"Sheep_random_F" createUnit ["Sheep_random_F", (position player), (group player), [], 0, "FORM"];
+
+
+sheep_1 = (group player) createUnit ["Sheep_random_F", (getPos player), [], 100, "FORM"];
+sheep_2 = (group player) createUnit ["Sheep_random_F", (getPos player), [], 100, "FORM"];
+sheep_3 = (group player) createUnit ["Sheep_random_F", (getPos player), [], 100, "FORM"];
+
+sheep_1 doFollow player;
+sheep_2 doFollow player;
+sheep_3 doFollow player;
+
+
+
+g_sheeps = [];
+buy_sheep = 
+{
+	private["_sheep_1", "_sheep_2", "_sheep3"];
+
+	_sheep_1 = 	(group player) createUnit ["Sheep_random_F", (getPos player), [], 3, "FORM"];
+	_sheep_2 = 	(group player) createUnit ["Sheep_random_F", (getPos player), [], 3, "FORM"];
+	_sheep_3 = 	(group player) createUnit ["Sheep_random_F", (getPos player), [], 3, "FORM"];
+
+	g_sheeps pushBack _sheep_1;
+	g_sheeps pushBack _sheep_2;
+	g_sheeps pushBack _sheep_3;
+
+	while {!(g_sheeps isEqualTo [])} do
+	{
+		{
+			if (alive _x) then {
+				_x move (position player);
+			} else {
+				g_sheeps deleteAt _forEachIndex;
+			};
+		} forEach (g_sheeps);
+		sleep 1;
+	};
+};
+
+end_sheep =
+{
+	_error = false;
+	{
+		if ((player distance _x) > 10) then {
+			_error = true;
+		};
+	} forEach (g_sheeps);
+	if (_error) exitWith {
+		hint "Tous vos moutons ne sont pas encore arrivés";
+	};
+
+	hint format["Vous avez rapporté %1 moutons", count g_sheeps];
+	{
+		deleteVehicle _x;
+	} forEach (g_sheeps);
+};
+
+
+sheep_1 move (position player);
+sheep_2 move (position player);
+sheep_3 move (position player);
+
+sheep_2 doFollow player;
+sheep_3 doFollow player;

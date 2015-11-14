@@ -27,15 +27,44 @@
 [["===================", {}]] call CBA_fnc_addPlayerAction;
 
 /* ==================[CONFIG]===================*/
-if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "can_seize_gear") isEqualTo 1) then {
-	[["<img image='\lyeed_IMG\data\actions_menu\seize.paa'/> <t color='#3F51B5'>Saisir</t> les objets proches</t>", public_fnc_seizeObjects, cursorTarget, 0, false, false, "", '((count(nearestObjects [player, ["WeaponHolder"], 3]) > 0) || (count(nearestObjects [player, ["GroundWeaponHolder"], 3]) > 0) || (count(nearestObjects [player, ["WeaponHolderSimulated"], 3]) > 0))']] call CBA_fnc_addPlayerAction;
+if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "can_seize_gear") isEqualTo 1) then
+{
+	[[
+		"<img image='\lyeed_IMG\data\actions_menu\seize.paa'/> <t color='#3F51B5'>Saisir</t> les objets proches</t>",
+		public_fnc_seizeObjects, cursorTarget, 0, false, false, "", '((count(nearestObjects [player, ["WeaponHolder"], 3]) > 0) || (count(nearestObjects [player, ["GroundWeaponHolder"], 3]) > 0) || (count(nearestObjects [player, ["WeaponHolderSimulated"], 3]) > 0))'
+	]] call CBA_fnc_addPlayerAction;
 };
 
 /* ==================[MEDICAL]===================*/
-[["<img image='\lyeed_IMG\data\actions_menu\morphine.paa'/> Se faire une <t color='#FF5722'>piqure de morphine</t>", public_fnc_morphineUse, player, 0, false, true, "", '("SkylineItems_Adrenaline" in (magazines player)) && !g_coma && !g_action_inUse']] call CBA_fnc_addPlayerAction;
+[[
+	"<img image='\lyeed_IMG\data\actions_menu\morphine.paa'/> Se faire une <t color='#FF5722'>piqure de morphine</t>",
+	public_fnc_morphineUse, player, 0, false, true, "", '("SkylineItems_Adrenaline" in (magazines player)) && !g_coma && !g_action_inUse'
+]] call CBA_fnc_addPlayerAction;
+
+[[
+	"<img image='\lyeed_IMG\data\actions_menu\bandage.paa'/> Se faire un <t color='#FF5722'>bandage</t>",
+	public_fnc_bandageUse, player, 0, true, true, "", '(g_bleed > 0) && ("SkylineItems_Bandage" in (magazines player)) && !g_coma && !g_action_inUse'
+]] call CBA_fnc_addPlayerAction;
 //---------------
-[["<img image='\lyeed_IMG\data\actions_menu\bandage.paa'/> Se faire un <t color='#FF5722'>bandage</t>", public_fnc_bandageUse, player, 0, true, true, "", '(g_bleed > 0) && ("SkylineItems_Bandage" in (magazines player)) && !g_coma && !g_action_inUse']] call CBA_fnc_addPlayerAction;
+
+/* ==================[SEATBELT]===================*/
+[[
+	"<img image='\lyeed_IMG\data\actions_menu\seatbelt_on.paa'/> Mettre sa <t color='#74DF00'>ceinture</t>", 
+	{
+		g_seatbelt = true;
+		playSound "seatbelt_on";
+	}, "", 0, false, false, "", '(!g_action_inUse && (vehicle player) != player && !g_seatbelt)'
+]] call CBA_fnc_addPlayerAction;
+
+[[
+	"<img image='\lyeed_IMG\data\actions_menu\seatbelt_off.paa'/> Enlever sa <t color='#FE642E'>ceinture</t>",
+	{
+		g_seatbelt = false;
+		playSound "seatbelt_off";
+	}, "", 0, false, false, "", '!g_action_inUse && (vehicle player) != player && g_seatbelt'
+]] call CBA_fnc_addPlayerAction;
 //---------------
+
 
 /* ==================[PLAYER INTERACTION]===================
 //---------------

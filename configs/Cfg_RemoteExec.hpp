@@ -79,6 +79,8 @@ class CfgRemoteExec
 		class public_fnc_endGame {allowTargets = CLIENT;};
 		class public_fnc_restrain {allowTargets = CLIENT;};
 		class public_fnc_sheepProcess {allowTargets = CLIENT;};
+		class public_fnc_lightOn {allowTargets = CLIENT;};
+		class public_fnc_lightBug {allowTargets = CLIENT;};
 
 		//- Arma
 		class setFuel {allowTargets = EVERYONE;};

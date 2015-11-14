@@ -52,7 +52,6 @@ with missionNamespace do
 	g_firstCombatActive = false;
 	/* ===================[Weight system]======================= */
 	g_maxWeight = 24; // Identifies the max carrying weight (gets adjusted throughout game when wearing different types of clothing).
-	g_maxWeightT = 24; // Static variable representing the players max carrying weight on start.
 	g_carryWeight = 0; // Represents the players current inventory weight (MUST START AT 0).
 	/* ===================[Money]======================= */
 	g_cash = 0;

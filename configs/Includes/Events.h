@@ -13,9 +13,7 @@ class Events
 		class onPlayerRespawn {};
 		class onPlayerSpeak {};
 		class onPlayerSpeakRadio {};
-		class onPlayerGetIn {};
 		class onPlayerESC {};
-		class onPlayerGetOut {};
 		class keyHandler {};
 	};
 };

@@ -34,6 +34,8 @@ class Public
 	class Tools
 	{
 		file = "core\Tools";
+		class lightOn {};
+		class lightBug {};
 		class weightGenerate {};
 		class posNearFourriere {};
 		class strToSide {};

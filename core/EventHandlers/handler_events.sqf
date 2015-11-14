@@ -12,8 +12,6 @@ player addEventHandler["handleDamage", "_this call EVENT_fnc_onPlayerHandleDamag
 player addEventHandler["InventoryOpened", "[_this select 1] call EVENT_fnc_onPlayerInventoryOpen"];
 player addEventHandler["Killed", "[] call EVENT_fnc_onPlayerKilled"];
 player addEventHandler["Respawn", "[] call EVENT_fnc_onPlayerRespawn"];
-player addEventHandler["GetIn", "_this spawn EVENT_fnc_onPlayerGetIn"];
-player addEventHandler["GetOut", "_this call EVENT_fnc_onPlayerGetOut"];
 // onPlayerMapOpen
 
 "gServer_fog" addPublicVariableEventHandler {60 setfog (_this select 1)};

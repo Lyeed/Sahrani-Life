@@ -183,8 +183,3 @@ Group Info Bar
 ***********************************/
 #include "configs\Cfg_debriefing.hpp"
 //---------------------------------
-
-/********************************** 
-********** notifications **********
-***********************************/
-#include "configs\Cfg_notifications.hpp"
