@@ -319,8 +319,7 @@ class ALYSIA_SHOPS_CLOTHING
 			"Bear_RoundGlasses",
 			"Bear_RoundGlasses_blk",
 			"Bear_RoundGlasses_gold",
-			"Skyline_NioshFace",
-			"Mask_M40"	
+			"Skyline_NioshFace"
 		};
 		vests[] =
 		{
@@ -377,19 +376,50 @@ class ALYSIA_SHOPS_CLOTHING
 			"casquette_Lieutenant",
 			"casquette_Sergent",
 			"casquette_Caporal",
-			"casquette_Basique"
+			"casquette_Basique",
+			"rds_Woodlander_cap3",
+			"TRYK_H_Helmet_ACU",
+			"G_Balaclava_blk"
 		};
 		goggles[] =
 		{
-			"G_Diving"
+			"G_Sport_BlackWhite",
+			"G_Sport_Blackyellow",
+			"G_Shades_Blue",
+			"G_Shades_Black",
+			"G_Shades_Red",
+			"G_Shades_Green",
+			"G_Squares_Tinted",
+			"G_Lady_Blue",
+			"G_Sport_Red",
+			"G_Sport_Checkered",
+			"G_Sport_Greenblack",
+			"G_Sport_Blackred",
+			"G_Lowprofile",
+			"G_Squares",
+			"G_Spectacles",
+			"G_Aviator",
+			"G_Spectacles_Tinted",
+			"Bear_RoundGlasses",
+			"Bear_RoundGlasses_blk",
+			"Bear_RoundGlasses_gold"
 		};
 		vests[] =
 		{
-			"V_RebreatherB"
+			"TRYK_V_Sheriff_BA_TB5",
+			"TRYK_V_Sheriff_BA_TB",
+			"police_belt_pistol",
+			"TRYK_SPgear_PHC1_NV",
+			"Garde_Veste",
+			"Garde_VesteCargo",
+			"Garde_Belt"
 		};
 		backpacks[] =
 		{
-			"V_RebreatherB"
+			"TRYK_B_tube_blk",
+			"TRYK_B_Kitbag_blk",
+			"TRYK_B_Carryall_blk",
+			"tf_mr3000_bwmod"
 		};
 	};
 

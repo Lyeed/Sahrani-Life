@@ -35,7 +35,22 @@ class ALYSIA_SHOPS_ARMA
 			"hgun_FlashBall_F",
 			"1Rnd_FlashBall_Mag",
 			"SmokeShellWhite",
-			"Rangefinder"
+			"Rangefinder",
+			"RH_fn57",
+			"RH_20Rnd_57x28_FN",
+			"hlc_rifle_M14_Bipod",
+			"hlc_rifle_M14",
+			"hlc_20Rnd_762x51_B_M14",
+			"hlc_rifle_auga2_b",
+			"optic_ACO_grn_smg",
+			"hlc_rifle_aughbar_B",
+			"hlc_30Rnd_556x45_B_AUG",
+			"Trixie_Enfield_Rail",
+			"Trixie_Enfield_Mag",
+			"optic_LRPS",
+			"RH_m1911",
+			"RH_7Rnd_45cal_m1911",
+			"DemoCharge_Remote_Mag"
 		};
 	};
 

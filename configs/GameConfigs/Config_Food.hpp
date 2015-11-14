@@ -11,15 +11,15 @@ class ALYSIA_FOOD
 
 	class prune
 	{
-		hunger = 40;
-		thirst = 0;
+		hunger = 10;
+		thirst = 5;
 		sound = "eat";
 	};
 
 	class raisin
 	{
-		hunger = 30;
-		thirst = 10;
+		hunger = 15;
+		thirst = 5;
 		sound = "eat";
 	};
 
@@ -32,7 +32,7 @@ class ALYSIA_FOOD
 
 	class water
 	{
-		thirst = 50;
+		thirst = 40;
 		hunger = 0;
 		sound = "drink";
 	};
@@ -54,13 +54,13 @@ class ALYSIA_FOOD
 	class donut
 	{
 		thirst = 0;
-		hunger = 50;
+		hunger = 40;
 		sound = "eat";
 	};
 
 	class soda
 	{
-		thirst = 50;
+		thirst = 40;
 		hunger = 0;
 		sound = "drink";
 	};
@@ -68,13 +68,13 @@ class ALYSIA_FOOD
 	class ragout
 	{
 		thirst = 0;
-		hunger = 50;
+		hunger = 40;
 		sound = "eat";
 	};
 
 	class kefir
 	{
-		thirst = 50;
+		thirst = 40;
 		hunger = 0;
 		sound = "drink";
 	};
@@ -82,7 +82,7 @@ class ALYSIA_FOOD
 	class sandwich
 	{
 		thirst = 0;
-		hunger = 50;
+		hunger = 40;
 		sound = "eat";
 	};
 };
