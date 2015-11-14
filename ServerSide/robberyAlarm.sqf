@@ -10,11 +10,12 @@ if (!params [
 	["_bank", ObjNull, [ObjNull]]
 ]) exitWith {};
 
+private ["_alarm"];
+_alarm = "Intel_File1_F" createVehicle [0,0,0];
+_alarm attachTo [_bank, [0, -2, 6.65]];
+
 while {((bank_rob_N) || (bank_rob_S))} do
 {
-	private ["_alarm"];
-	_alarm = "Intel_File1_F" createVehicle [0,0,0];
-	_alarm attachTo [_bank, [0, -2, 6.65]];
 	[_alarm, "bankAlarm"] call CBA_fnc_globalSay3d;
 	sleep 6;
 };
