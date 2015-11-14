@@ -13,12 +13,6 @@ if (!params [
 
 if (_item isEqualTo "") exitWith {false};
 
-if ((time - g_action_delay) < 2) exitWith
-{
-	["Veuillez ralentir dans vos actions"] call public_fnc_error; 
-	false;
-};
-
 if (g_coma) exitWith
 {
 	["Vous ne pouvez pas utiliser d'objet dans le coma"] call public_fnc_error; 
@@ -38,6 +32,5 @@ if (_use isEqualTo "") exitWith
 	false;
 };
 
-g_action_delay = time;
 call compile format[_use, _item];
 true;

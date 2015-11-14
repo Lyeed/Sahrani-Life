@@ -22,3 +22,4 @@ _numbers pushBack _newNumber;
 g_phone_number = _newNumber;
 player setVariable ["number", _newNumber, true];
 ["gServer_phone_numbers", _numbers] call CBA_fnc_publicVariable;
+true;

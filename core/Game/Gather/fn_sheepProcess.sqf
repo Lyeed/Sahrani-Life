@@ -10,6 +10,7 @@ _sheeps = [_this, 0, [], [[]]] call BIS_fnc_param;
 
 if (_sheeps isEqualTo []) exitWith {};
 
+[format["Vous avez reçu %1 moutons<br/>Vous devez les guider vers une bergerie<br/>Ils vous suivront, cependant soyez patient et ne laissez pas les moutons se perdrent", count _sheeps]] call public_fnc_info;
 g_sheeps = _sheeps;
 while {!(g_sheeps isEqualTo [])} do
 {

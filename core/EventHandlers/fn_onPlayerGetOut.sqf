@@ -16,3 +16,9 @@ if (!(g_curWep_h isEqualTo "")) then
 {
 	[] call public_fnc_holdsterSwitch;
 };
+
+if (g_seatbelt) then
+{
+	playSound "seatbelt_off";
+	g_seatbelt = false;
+};

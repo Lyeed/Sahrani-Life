@@ -29,6 +29,7 @@ with missionNamespace do
 	g_connected = false;
 	g_yielding = false;
 	g_speaking = false;
+	g_seatbelt = false;
 	/* ===================[roleplay info]======================= */
 	g_choice = "";
 	g_firstName = "";

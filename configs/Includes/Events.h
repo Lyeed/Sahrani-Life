@@ -7,7 +7,6 @@ class Events
 		class onPlayerFire {};
 		class onPlayerFireNear {};
 		class onPlayerHandleDamage {};
-		class onPlayerInventoryClose {};
 		class onPlayerInventoryOpen {};
 		class onPlayerKilled {};
 		class onPlayerMapOpen {};

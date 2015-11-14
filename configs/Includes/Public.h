@@ -21,7 +21,6 @@ class Public
 	class VirtualInventory
 	{
 		file = "core\Game\VirtualInventory";
-		class virtual_menu_exhnage_setup {};
 		class virtual_menu_exhange_open {};
 		class virtual_menu_exhange_update {};
 		class virtual_menu_exhange_store {};
@@ -29,6 +28,7 @@ class Public
 		class virtual_menu_update_list {};
 		class virtual_menu_update_button {};
 		class virtual_menu_action_use {};
+		class virtual_menu_action_remove {};
 	};
 
 	class Tools
@@ -225,6 +225,8 @@ class Public
 	{
 		file = "core\Game\Phone";
 		class phone_numberChange;
+		class phone_message_send {};
+		class phone_message_receive {};
 	};
 
 	class Health

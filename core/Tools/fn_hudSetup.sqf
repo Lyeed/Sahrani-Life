@@ -118,20 +118,21 @@ while {!(isNull _hud)} do
 		if (call compile format["%1", (_x select 1)]) then
 		{
 			_ctrl = call compile format["_ico_%1", _idc];
-			_ctrl ctrlSetText (_x select 0);
+			_ctrl ctrlSetText format["\lyeed_IMG\data\player_hud\%1", (_x select 0)];
 			_ctrl ctrlShow true;
 			_idc = _idc + 1;
 		};
 	} forEach 
 	([
-		["\lyeed_IMG\data\player_hud\bleed.paa", "(g_bleed > 0)"],
-		["\lyeed_IMG\data\player_hud\regen.paa", "(g_regen_active && (g_bleed isEqualTo 0) && (g_hunger > 0) && (g_thirst > 0))"],
-		["\lyeed_IMG\data\player_hud\drugs.paa", "(g_drugs_consuming > 0)"],
-		["\lyeed_IMG\data\player_hud\handcuffs.paa", "(player getVariable [""restrained"", false])"],
-		["\lyeed_IMG\data\player_hud\blind.paa", "(player getVariable [""bandeau"", false])"],
-		["\lyeed_IMG\data\player_hud\arrested.paa", "(g_arrested)"],
-		["\lyeed_IMG\data\player_hud\fight.paa", "(g_firstCombatActive)"],
-		["\lyeed_IMG\data\player_hud\speak.paa", "(g_speaking)"]
+		["bleed.paa", "(g_bleed > 0)"],
+		["regen.paa", "(g_regen_active && (g_bleed isEqualTo 0) && (g_hunger > 0) && (g_thirst > 0))"],
+		["drugs.paa", "(g_drugs_consuming > 0)"],
+		["handcuffs.paa", "(player getVariable [""restrained"", false])"],
+		["blind.paa", "(player getVariable [""bandeau"", false])"],
+		["arrested.paa", "(g_arrested)"],
+		["fight.paa", "(g_firstCombatActive)"],
+		["speak.paa", "(g_speaking)"],
+		["seatbelt.paa", "(g_seatbelt)"]
 	]);
 
 	for "_i" from _idc to 7 do

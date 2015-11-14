@@ -5,159 +5,26 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_msg", "_to", "_hide", "_bad", "_sent", "_from", "_error", "_price"];
-_msg = ctrlText 8334;
-_hide = cbChecked ((findDisplay 7500) displayCtrl 8338);
+private["_data", "_display", "_sent", "_info"];
 
-if (_msg isEqualTo "") exitWith {
-	["Vous ne pouvez pas envoyer de message vide"] call public_fnc_error;
-};
-_bad = [_msg, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè "] call public_fnc_TextAllowed;
-if (!(_bad isEqualTo "")) exitWith {
-	["Vous utilisez un caractère interdit dans votre message<br/>Caractères autorisés :<br/>(ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè)"] call public_fnc_error;
-};
-if (([_msg] call CBA_fnc_strLen) > 100) exitWith {
-	["Votre message ne doit pas dépasser 100 caractères"] call public_fnc_error;
-};
-if ((time - g_action_delay) < 2) exitWith {
-	["Veuillez ralentir dans vos actions"] call public_fnc_error;
-};
-
-if (_hide) then {
-	_from = "Numéro Masqué";
-} else {
-	_from = g_phone_number;
-};
-
-_to = [(ctrlText 8336), ","] call CBA_fnc_split;
-if (_to isEqualTo []) exitWith {
-	["Vous n'avez pas entré de destinataire"] call public_fnc_error;
-};
-
-if ((count _to) > 5) exitWith {
-	["Vous ne pouvez pas envoyer de message à plus de cinq numéros"] call public_fnc_error;
-};
-
-g_action_delay = time;
-_sent = 0;
-_price = getNumber(missionConfigFile >> "ALYSIA_FORFAITS" >> g_phone_forfait >> "sms_price");
-_error = "";
-
-{
-	private["_number"];
-	_number = [_x] call CBA_fnc_trim;
-	switch (_number) do
-	{
-		case "GUER":
-		{
-			if ((independent countSide allPlayers) isEqualTo 0) then
-			{
-				_error = _error + format
-				[
-					"<t align='left'>Numéro</t><t align='right'>[%2]</t><br/>Aucune membre de <t color='#FF4000'>%1</t> n'est disponible<br/><t align='center'>----------</t><br/>",
-					(getText(missionConfigFile >> "ALYSIA_FACTIONS" >> "GUER" >> "name")),
-					_number
-				];
-			} else {
-				_sent = _sent + 1;
-				[_msg, _from] remoteExecCall ["public_fnc_APP_phone_messages_receive", independent, false];
-			};
-		};
-
-		case "WEST":
-		{
-			if ((west countSide allPlayers) isEqualTo 0) then
-			{
-				_error = _error + format
-				[
-					"<t align='left'>Numéro</t><t align='right'>[%2]</t><br/>Aucune membre de <t color='#FF4000'>%1</t> n'est disponible<br/><t align='center'>----------</t><br/>",
-					(getText(missionConfigFile >> "ALYSIA_FACTIONS" >> "WEST" >> "name")),
-					_number
-				];
-			} else {
-				_sent = _sent + 1;
-				[_msg, _from] remoteExecCall ["public_fnc_APP_phone_messages_receive", west, false];
-			};
-		};
-
-		case "EAST":
-		{
-			if ((east countSide allPlayers) isEqualTo 0) then
-			{
-				_error = _error + format
-				[
-					"<t align='left'>Numéro</t><t align='right'>[%2]</t><br/>Aucune membre de <t color='#FF4000'>%1</t> n'est disponible<br/><t align='center'>----------</t><br/>",
-					(getText(missionConfigFile >> "ALYSIA_FACTIONS" >> "EAST" >> "name")),
-					_number
-				];
-			} else {
-				_sent = _sent + 1;
-				[_msg, _from] remoteExecCall ["public_fnc_APP_phone_messages_receive", east, false];
-			};
-		};
-
-		default
-		{
-			if ([_number] call public_fnc_isNumber) then
-			{
-				if (([_number] call CBA_fnc_strLen) isEqualTo 6) then
-				{
-					if (!(_number isEqualTo g_phone_number)) then
-					{
-						if (_number in (missionNamespace getVariable["gServer_phone_numbers", []])) then
-						{
-							if (g_atm >= _price) then
-							{
-								if (!(_number in g_phone_blacklist)) then
-								{
-									private["_target"];
-									_target = objNull;
-									{
-										if ((_x getVariable ["number", "-1"]) isEqualTo _number) exitWith {
-											_target = _x;
-										};
-									} count (allPlayers);
-									if (isNull _target) then {
-										[_msg, _from, _number] remoteExecCall ["TON_fnc_phoneMessageHandler", 2, false];
-									} else {
-										[_msg, _from] remoteExecCall ["public_fnc_APP_phone_messages_receive", _target, false];
-									};
-									[false, 1, _price, false] call public_fnc_handleMoney;
-									_sent = _sent + 1;
-								} else {
-									_error = _error + format["<t align='left'>Numéro</t><t align='right'>[%1]</t><br/>Vous ne pouvez pas envoyer de message aux numéros que vous avez bloqués<br/><t align='center'>----------</t><br/>", _number];
-								};
-							} else {
-								_error = _error + format["<t align='left'>Numéro</t><t align='right'>[%1]</t><br/>Vous n'avez pas assez d'argent pour envoyer le SMS<br/><t align='center'>----------</t><br/>", _number];
-							};
-						} else {
-							_error = _error + format["<t align='left'>Numéro</t><t align='right'>[%1]</t><br/>Le numéro demandé n'est pas attribué<br/><t align='center'>----------</t><br/>", _number];
-						};
-					} else {
-						_error = _error + format["<t align='left'>Numéro</t><t align='right'>[%1]</t><br/>Vous ne pouvez pas vous envoyer de message à vous même<br/><t align='center'>----------</t><br/>", _number];
-					};
-				} else {
-					_error = _error + format["<t align='left'>Numéro</t><t align='right'>[%1]</t><br/>Un numéro de téléphone doit être composé de six chiffres<br/><t align='center'>----------</t><br/>", _number];
-				};
-			} else {
-				_error = _error + format["<t align='left'>Numéro</t><t align='right'>[%1]</t><br/>Le numéro de téléphone entré n'est pas valide<br/><t align='center'>----------</t><br/>", _number];
-			};
-		};
-	};
-} forEach (_to);
+_data = [(ctrlText 8334), ([(ctrlText 8336), ","] call CBA_fnc_split), (cbChecked ((findDisplay 7500) displayCtrl 8338))] call public_fnc_phone_message_send;
+_sent = _data select 0;
+_info = _data select 1;
 
 if (_sent > 0) then
 {
-	private["_display"];
 	disableSerialization;
-	_display = findDisplay 7500;
-	(_display displayCtrl 8334) ctrlSetText "";
-	(_display displayCtrl 8336) ctrlSetText "";
-	(_display displayCtrl 8338) ctrlSetChecked false;
-	(_display displayCtrl 8332) lbSetCurSel -1;
-	playSound "message_sent";
-};
+	_display = uiNamespace getVariable["tablet", displayNull];
 
-if (!(_sent isEqualTo count(_to))) then {
-	[format["<t align='center'><t color='#DF3A01'>Erreurs SMS</t><br/>Certains messages n'ont pas pu être envoyés (%2)</t><br/><br/>%1", _error, (count(_to) - _sent)]] call public_fnc_info;
+	if (!(isNull _display)) then
+	{
+		(_display displayCtrl 8334) ctrlSetText "";
+		(_display displayCtrl 8336) ctrlSetText "";
+		(_display displayCtrl 8338) ctrlSetChecked false;
+		(_display displayCtrl 8332) lbSetCurSel -1;
+	};
+	playSound "message_sent";
+	[_info] call public_fnc_info;
+} else {
+	[_info] call public_fnc_error;	
 };

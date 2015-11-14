@@ -47,6 +47,8 @@ class CfgRemoteExec
 		class TON_fnc_house_sell {allowTargets = SERVER;};
 		class TON_fnc_house_storage_handler {allowTargets = SERVER;};
 		class TON_fnc_house_storage_install {allowTargets = SERVER;};
+		//- Sheep
+		class TON_fnc_sheepGenerate {allowTargets = SERVER;};
 
 		/*
 		**		CLIENT FUNCTIONS
@@ -58,7 +60,7 @@ class CfgRemoteExec
 		class public_fnc_leaderMenuHistory {allowTargets = CLIENT;};
 		class public_fnc_leaderInvitePropose {allowTargets = CLIENT;};
 		class public_fnc_info {allowTargets = CLIENT;};
-		class public_fnc_APP_phone_messages_receive {allowTargets = CLIENT;};
+		class public_fnc_phone_message_receive {allowTargets = CLIENT;};
 		class public_fnc_playSound {allowTargets = CLIENT;};
 		class public_fnc_killAction {allowTargets = CLIENT;};
 		class public_fnc_playAnimation {allowTargets = CLIENT;};
@@ -76,6 +78,7 @@ class CfgRemoteExec
 		class public_fnc_house_menu_owner_action_light_update {allowTargets = CLIENT;};
 		class public_fnc_endGame {allowTargets = CLIENT;};
 		class public_fnc_restrain {allowTargets = CLIENT;};
+		class public_fnc_sheepProcess {allowTargets = CLIENT;};
 
 		//- Arma
 		class setFuel {allowTargets = EVERYONE;};

@@ -10,4 +10,4 @@ if (!(g_sheeps isEqualTo [])) exitWith {
 	["Vous possèdez déjà des moutons"] call public_fnc_error;
 };
 
-[[player], "TON_fnc_sheepGenerate", false] call life_fnc_MP;
+[player] remoteExecCall ["TON_fnc_sheepGenerate", 2];
