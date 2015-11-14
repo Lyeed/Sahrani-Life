@@ -21,7 +21,7 @@ if (!(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item") 
 	breakOut "main";
 }; 
 
-if (!(_bank getVariable ["robStarted", false])) then
+/*if (!(_bank getVariable ["robStarted", false])) then
 {
 	if ((getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(cursorTarget) >> "required")) >= (([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call public_fnc_strToSide) countSide allPlayers)) exitWith
 	{
@@ -37,7 +37,7 @@ if (!(_bank getVariable ["robStarted", false])) then
 		] call public_fnc_error;
 		breakOut "main";
 	};
-};
+};*/
 
 if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), getNumber(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "time"), objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then
 {
