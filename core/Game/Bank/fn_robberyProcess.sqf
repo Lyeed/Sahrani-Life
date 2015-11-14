@@ -16,17 +16,6 @@ systemChat format ["< Robbery System - Debug > robberyProcess - OK"];
 
 private ["_item"];
 
-if (_door isEqualTo "Security") exitWith
-{
-	if ([(format ["Détournement du système de sécurité", 60, objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then
-	{
-		[_bank, false] call TON_fnc_bank_state;
-		_bank setVariable ["hacked", true, true];
-		["Vous avez désactivé le système de sécurité de la banque"] call public_fnc_info;
-		breakOut "main";
-	};
-};
-
 if (!(_door isEqualTo "")) then 
 {
 	player removeMagazine (getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item"));

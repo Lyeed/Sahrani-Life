@@ -69,7 +69,6 @@ class ALYSIA_BANK
 		class Door_6
 		{
 			name = "Porte Toit Gauche";
-			item = "Alysia_Lockpick";
 			time = 30;
 			open = "Simple";
 		};
@@ -94,7 +93,7 @@ class ALYSIA_BANK
 		{
 			name = "Système de sécurité";
 			item = "Bank_Hacker";
-			time = 45;
+			time = 60;
 			open = "Security";
 		};
 	};
