@@ -86,7 +86,7 @@ class ALYSIA_BANK
 			name = "Porte Coffre Fort";
 			item = "Bank_Bomb";
 			time = 10;
-			open = "Vault";			
+			open = "Vault";		
 		};
 
 		class Security
@@ -105,7 +105,7 @@ class ALYSIA_BANK
 		anim = "";
 		sound = "BombBip";
 		finalsound = "Bomb2Bip";
-		pos = "[0,0,0]";
+		pos[] = {0,0,0};
 		rot = 0;
 		time = 60;
 		defuseTime = 15;
@@ -118,7 +118,7 @@ class ALYSIA_BANK
 		anim = "Drill_Rotation";
 		sound = "Drill";
 		finalSound = "DrillOff";
-		pos = "[0, 2.5, 5.2]";
+		pos[] = {0, 2.5, 5.2};
 		rot = 180;
 		time = 300;
 		defuseTime = 30;

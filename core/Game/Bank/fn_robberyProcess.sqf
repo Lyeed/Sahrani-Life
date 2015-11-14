@@ -20,7 +20,7 @@ if (!(_door isEqualTo "")) then
 {
 	player removeMagazine (getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item"));
 	_item = ((getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")) createVehicle [0,0,0]);
-	_item attachTo [_bank, (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "pos"))];
+	_item attachTo [_bank, (getArray(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "pos"))];
 	_item setDir (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "rot"));
 	_item animate [(getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "anim")), 1];
 	_item setVariable ["owner", player, true];
