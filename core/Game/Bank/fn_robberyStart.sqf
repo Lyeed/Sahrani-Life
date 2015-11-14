@@ -18,11 +18,12 @@ if (!(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item") 
 	systemChat format ["< Robbery System - Debug > Outil manquant"];
 
 	[(format ["Vous avez besoin de <br/>%1<br/>", ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")] call public_fnc_fetchCfgDetails) select 1])] call public_fnc_error;
+	breakOut "main";
 }; 
 
 if (!(_bank getVariable ["robStarted", false])) then
 {
-	if ((([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call public_fnc_strToSide) countSide allPlayers) < (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(cursorTarget) >> "required"))) exitWith
+	if ((getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(cursorTarget) >> "required")) >= (([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call public_fnc_strToSide) countSide allPlayers)) exitWith
 	{
 		systemChat format ["< Robbery System - Debug > Pas assez de flics connectés"];
 
@@ -51,7 +52,7 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 		case "Vault": {[_bank, _door] spawn public_fnc_robberyProcess};
 		case "Security":
 		{
-			[_bank, false] call TON_fnc_robberyState;
+			[_bank, true] call TON_fnc_bank_state;
 			_bank setVariable ["hacked", true, true];
 			["Vous avez désactivé le système de sécurité de la banque"] call public_fnc_info;
 		};

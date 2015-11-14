@@ -128,12 +128,12 @@ class ALYSIA_BANK
 	class Bank_Sahrani_N
 	{
 		owner = "WEST";
-		required = 5;
+		required = 0;
 	};
 
 	class Bank_Sahrani_S
 	{
 		owner = "EAST";
-		required = 5;
+		required = 0;
 	};
 };
