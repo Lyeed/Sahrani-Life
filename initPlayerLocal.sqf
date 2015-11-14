@@ -233,7 +233,7 @@ if (hasInterface) then
 		       		g_atm = g_atm + (call g_paycheck);
 		       		g_nextPay = time + (_salary_time * 60);
 		       		playSound "buy";
-		       		["Vous avez reçu votre salaire : <t color='#8cff9b'>%1</t>$", ([(call g_paycheck)] call public_fnc_numberText)] call public_fnc_info;
+		       		[format["Vous avez reçu votre salaire : <t color='#8cff9b'>%1</t>$", ([(call g_paycheck)] call public_fnc_numberText)]] call public_fnc_info;
 				};
 			};
 			
