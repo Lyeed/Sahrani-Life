@@ -31,6 +31,6 @@ if (playerSide isEqualTo civilian) then
 	missionNamespace getVariable["g_bleed", 0],
 	missionNamespace getVariable["g_hunger", 100],
 	missionNamespace getVariable["g_thirst", 100],
-	missionNamespace getVariable["g_phone_forfait", ""],
+	missionNamespace getVariable["g_phone_forfait", "none"],
 	_licences
 ] remoteExec ["TON_fnc_query_update_usual", 2, false];

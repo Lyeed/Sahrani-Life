@@ -93,7 +93,5 @@ g_drugs_consuming = 0;
 /* ****** */
 
 g_morphine = 0;
-g_is_processing = false;
 g_action_inUse = false;
-g_action_gathering = false;
 g_killer = ObjNull;

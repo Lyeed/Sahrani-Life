@@ -40,6 +40,7 @@ mapAnimCommit;
 mapAnimAdd [5, 0.07, _vehicleGaragePosition];
 mapAnimCommit;
 waitUntil {mapAnimDone};
+sleep 5;
 forceMap false;
 	
 deleteMarkerLocal "MyCar";

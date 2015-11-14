@@ -157,12 +157,17 @@ if (hasInterface) then
 			waitUntil {((vehicle player) != player)};
 
 			_veh = vehicle player;
+			_inc = switch (true) do
+			{
+				case (_veh isKindOf "Air"): {100000};
+				default {50000};
+			};
 			g_seatbelt = false;
 
 			while {((vehicle player) isEqualTo _veh)} do
 			{
 				if (((driver _veh) isEqualTo player) && (isEngineOn _veh)) then {
-					_veh setFuel ((fuel _veh) - (((speed _veh) / 10000) + (([_veh getVariable ["Trunk", []]] call public_fnc_weightGenerate) / 100000)));
+					_veh setFuel ((fuel _veh) - (((speed _veh) / _inc) + (([_veh getVariable ["Trunk", []]] call public_fnc_weightGenerate) / 100000)));
 				};
 				sleep 2;
 			};
@@ -208,7 +213,7 @@ if (hasInterface) then
 		};
 
 		_totalSession = 0;
-		_salary_time = 5;
+		_salary_time = call g_paycheck_period;
 		while {true} do
 		{
 			sleep (60 * 1);
