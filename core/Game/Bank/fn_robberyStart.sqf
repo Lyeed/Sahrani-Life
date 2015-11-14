@@ -51,7 +51,7 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 		case "Vault": {[_bank, _door] spawn public_fnc_robberyProcess};
 		case "Security":
 		{
-			[false] call TON_fnc_robberyState;
+			[_bank, false] call TON_fnc_robberyState;
 			_bank setVariable ["hacked", true, true];
 			["Vous avez désactivé le système de sécurité de la banque"] call public_fnc_info;
 		};
@@ -61,7 +61,7 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 	{
 		if (!(bank getVariable ["robStarted", false])) then
 		{
-			[true] call TON_fnc_robberyState;
+			[_bank, true] call TON_fnc_bank_state;
 			_bank setVariable ["robStarted", true, true];
 		};
 		
