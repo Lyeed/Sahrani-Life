@@ -55,12 +55,13 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 			[_bank, true] call TON_fnc_bank_state;
 			_bank setVariable ["hacked", true, true];
 			["Vous avez désactivé le système de sécurité de la banque"] call public_fnc_info;
+			breakOut "main";
 		};
 	};
 
 	if (!(_bank getVariable ["hacked", false])) then
 	{
-		if (!(bank getVariable ["robStarted", false])) then
+		if (!(_bank getVariable ["robStarted", false])) then
 		{
 			[_bank, true] call TON_fnc_bank_state;
 			_bank setVariable ["robStarted", true, true];
