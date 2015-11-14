@@ -16,7 +16,7 @@ systemChat format ["< Robbery System - Debug > robberyProcess - OK"];
 
 private ["_item"];
 
-if (_door isEqualTo "Security") then
+if (_door isEqualTo "Security") exitWith
 {
 	if ([(format ["Détournement du système de sécurité", 60, objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then
 	{
