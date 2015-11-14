@@ -3093,4 +3093,52 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
+	class TRYK_B_tube_blk
+	{
+		buy_price = 20;
+	};
+	class TRYK_B_Kitbag_blk
+	{
+		buy_price = 20;
+	};
+	class tf_mr3000_bwmod
+	{
+		buy_price = 20;
+	};
+	class TRYK_H_Helmet_ACU
+	{
+		buy_price = 20;
+	};
+	class DemoCharge_Remote_Mag
+	{
+		buy_price = 20;
+	};
+	class TRYK_V_Sheriff_BA_TB5
+	{
+		buy_price = 20;
+	};
+	class TRYK_V_Sheriff_BA_TB
+	{
+		buy_price = 20;
+	};
+	class police_belt_pistol
+	{
+		buy_price = 20;
+	};
+	class TRYK_SPgear_PHC1_NV
+	{
+		buy_price = 20;
+	};
+	class Garde_Veste
+	{
+		buy_price = 20;
+	};
+	class Garde_VesteCargo
+	{
+		buy_price = 20;
+	};
+	class Garde_Belt
+	{
+		buy_price = 20;
+	};
 };
