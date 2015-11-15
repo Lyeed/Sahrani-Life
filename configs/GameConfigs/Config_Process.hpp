@@ -11,7 +11,7 @@ class ALYSIA_PROCESS
 
 	class wood
 	{
-		name = "Coupe du bois";
+		name = "Scierie";
 		license = "wood";
 		sound = "smelting";
 		requiere_target = 1;
@@ -21,6 +21,19 @@ class ALYSIA_PROCESS
 		time_default = 4;
 		sides[] = {"CIV"};
 		//rank = 0; if sides != CIV; will check if player rank >= rank
+	};
+
+	class furniture
+	{
+		name = "Menuiserie";
+		license = "wood";
+		sound = "smelting";
+		requiere_target = 1;
+		require[] = {["woodp", 10]};
+		receive[] = {["furniture", 1]};
+		time_per_item = 2;
+		time_default = 4;
+		sides[] = {"CIV"};
 	};
 
 	class oil

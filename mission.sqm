@@ -3533,7 +3533,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 295.259;this setposATL [14205.776367,11864.0830078,-0.00168228];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 295.259;this setposATL [14205.776367,11864.0830078,-0.00168228];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de meuble"",public_fnc_processAction,""furniture"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item5
 		{
@@ -3739,7 +3739,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 61.0986;this setposATL [14010.59668,16553.380859,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 61.0986;this setposATL [14010.59668,16553.380859,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du bois"",public_fnc_processAction,""wood"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item25
 		{
