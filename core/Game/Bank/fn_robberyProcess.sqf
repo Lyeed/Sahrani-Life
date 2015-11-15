@@ -6,11 +6,11 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (!params [
+params [
 	["_bank", ObjNull, [ObjNull]],
 	["_door", "", [""]],
 	["_tool", ObjNull, [ObjNull]]
-]) exitWith {};
+];
 
 systemChat format ["< Robbery System - Debug > robberyProcess - OK"];
 
@@ -27,7 +27,7 @@ if (!(_door isEqualTo "")) then
 	_item setVariable ["bank", _bank, true];
 	_item setVariable ["active", true, true];
 	_bank setVariable [(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")), _item, true];
-	[_item, _bank, _door] spawn public_fnc_robberyTools;
+	[_item] spawn public_fnc_robberyTools;
 }
 else
 {
@@ -54,7 +54,7 @@ else
 			player addItem (typeOf _item);
 			_bank setVariable [(typeOf _item), ObjNull, true];
 
-		if (typeOf _item isEqualTo "Bank_Bomb") then
+		if (typeOf _item isEqualTo "Intel_File1_F") then
 		{
 			[_item, "bankDefused"] call CBA_fnc_globalSay3d;
 		};

@@ -16,7 +16,7 @@ private ["_time"];
 
 _time = (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "time"));
 
-if ((typeOf _item) isEqualTo "Bank_Bomb") then
+if ((typeOf _item) isEqualTo "Intel_File1_F") then
 {
 	[_item, "bankPlanted"] call CBA_fnc_globalSay3d;
 };
@@ -26,8 +26,6 @@ while {(_item getVariable ["active", true])} do
 	if (_time > 5) then {[_item, (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "sound"))] call CBA_fnc_globalSay3d} else {[_item, (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "finalSound"))] call CBA_fnc_globalSay3d};
 
 	_time = (_time - 1);
-
-	sleep 1;
 };
 
 if ((typeOf _item) isEqualTo "Bank_Drill") then
@@ -38,7 +36,7 @@ if ((typeOf _item) isEqualTo "Bank_Drill") then
 		"M_PG_AT" createVehicle (getPosATL _item);
 		deleteVehicle _item;
 
-		(_item getVariable ["bank", ObjNull]) animate [Door_4, 1];
+		(_item getVariable ["bank", ObjNull]) animate [Door_5, 1];
 	};
 }
 else

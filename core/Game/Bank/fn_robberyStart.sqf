@@ -43,17 +43,15 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 {
 	switch (getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "open")) do
 	{
-		systemChat format ["< Robbery System - Debug > Détection/Ouverture porte ciblée"];
-
-		case "Simple": {_bank animate [_door, 1]};
-		case "Sliding": {_bank animate [_door, -1.7]; _bank animate [_door, 1.7]};
+		case "Simple": {_bank animate [getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "door"), 1]};
+		case "Sliding": {_bank animate ["LeftSlideDoor", 0]; _bank animate ["RightLeftSlideDoor", 0]};
 		case "Drill": {[_bank, _door] spawn public_fnc_robberyProcess};
 		case "Vault": {[_bank, _door] spawn public_fnc_robberyProcess};
 		case "Security":
 		{
 			[_bank, false] remoteExec ["TON_fnc_bank_state", 2];
-			_bank setVariable ["hacked", true, true];
 			["Vous avez désactivé le système de sécurité de la banque"] call public_fnc_info;
+			_bank setVariable ["hacked", true, true];
 			breakOut "main";
 		};
 	};

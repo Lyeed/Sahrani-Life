@@ -24,6 +24,7 @@ class ALYSIA_BANK
 			item = "Alysia_Lockpick";
 			time = 15;
 			open = "Simple";
+			door = "Door_1";
 		};
 		
 		class Interact2
@@ -32,6 +33,7 @@ class ALYSIA_BANK
 			item = "Bank_Hacker";
 			time = 45;
 			open = "Simple";
+			door = "Door_2";
 		};
 		
 		class Interact3
@@ -40,6 +42,7 @@ class ALYSIA_BANK
 			item = "Alysia_Lockpick";
 			time = 10;
 			open = "Simple";
+			door = "Door_3";
 		};
 
 		class Interact4
@@ -48,6 +51,7 @@ class ALYSIA_BANK
 			item = "Bank_Hacker";
 			time = 45;
 			open = "Simple";
+			door = "Door_4";
 		};
 
 		class Interact5
@@ -56,13 +60,16 @@ class ALYSIA_BANK
 			item = "Bank_Drill";
 			time = 60;
 			open = "Drill";
+			door = "Door_5";
 		};
 		
 		class Interact6
 		{
 			name = "Porte Toit";
+			item = "Alysia_Lockpick";
 			time = 30;
 			open = "Simple";
+			door = "Door_6";
 		};
 
 		class Vault_Door
@@ -70,7 +77,7 @@ class ALYSIA_BANK
 			name = "Porte Coffre Fort";
 			item = "Bank_Bomb";
 			time = 10;
-			open = "Vault";		
+			open = "Vault";
 		};
 
 		class Security
@@ -82,9 +89,9 @@ class ALYSIA_BANK
 		};
 	};
 
-	class Bank_Bomb
+	class Intel_File1_F
 	{
-		item = "Bank_Bomb";
+		item = "Intel_File1_F";
 		defuse = "Bank_DefuseKit";
 		anim = "";
 		sound = "BombBip";
