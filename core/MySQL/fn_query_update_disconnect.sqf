@@ -54,7 +54,7 @@ if (missionNamespace getVariable["g_connected", false]) then
 		missionNamespace getVariable["g_thirst", 100],
 		missionNamespace getVariable["g_phone_contacts", []],
 		missionNamespace getVariable["g_phone_messages", []],
-		missionNamespace getVariable["g_phone_forfait", ""],
+		missionNamespace getVariable["g_phone_forfait", "none"],
 		missionNamespace getVariable["g_phone_blacklist", []],
 		missionNamespace getVariable["g_apps", []],
 		_licences

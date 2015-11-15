@@ -9,20 +9,11 @@ with missionNamespace do
 	g_killer = ObjNull;
 	g_curWep_h = "";
 	/* ===================[inUse/delay variables]======================= */
-	g_firstSpawn = true;
 	g_session_completed = false;
 	g_action_delay = time;
-	g_respawned = false;
 	g_net_dropped = false;
-	g_hit_explosive = false;
 	g_action_inUse = false;
-	g_is_processing = false;
-	g_action_cancel = false;
-	g_action_gathering = false;
-	g_storeTrunk = false;
 	g_garage_store = false;
-	g_net_dropped = false;
-	g_hit_explosive = false;
 	g_knockout = false;
 	g_interrupted = false;
 	g_is_alive = false;

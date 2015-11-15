@@ -12,19 +12,17 @@ _damage = _this select 2;
 _source = _this select 3;
 _projectile = _this select 4;
 
-systemChat format["DMG_1 : part:%1 dmg:%2 source:%3", _part, _damage, _source];
 if (g_connected) then
 {
-	_damage = _damage * 240;
+	_damage = _damage * 200;
 	if ((isNull _source) && ((vehicle player) != player) && !g_seatbelt) then {
-		_damage = _damage * 3;
+		_damage = _damage * 5;
 	};
 
-	systemChat format["DMG_2 : part:%1 dmg:%2 source:%3", _part, _damage, _source];
 	if (_damage > 0) then
 	{
 		[(_damage * -1)] call public_fnc_handleBlood;
-		[(_damage / 10)] call public_fnc_handleBleed;
+		[(_damage / 9)] call public_fnc_handleBleed;
 	};
 };
 

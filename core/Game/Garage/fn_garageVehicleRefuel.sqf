@@ -24,7 +24,7 @@ if (_price > g_atm) exitWith {
 
 closeDialog 0;
 g_atm = g_atm - _price;
-[format["Vous avez fait le plein pour <t color='#8cff9b'>%1$</t>", ([_price] call public_fnc_numberText)], "buy"] call public_fnc_info;
+[format["Vous avez fait le plein pour <t color='#8cff9b'>%1</t>$", ([_price] call public_fnc_numberText)], "buy"] call public_fnc_info;
 [(g_garage_vehicles select _index) select 1, 100] remoteExec ["TON_fnc_vehicle_update_fuel", 2];
 (g_garage_vehicles select _index) set[3, 100];
 [g_garage_vehicles] call public_fnc_garageOpen;
