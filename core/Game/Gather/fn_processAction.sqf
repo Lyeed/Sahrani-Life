@@ -24,7 +24,7 @@ private
 ];
 
 _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-_type = [_this, 1, "", [""]] call BIS_fnc_param;
+_type = [_this, 3, "", [""]] call BIS_fnc_param;
 
 if (g_action_inUse) exitWith {
 	["Vous avez l'air occupé<br>Revenez plus tard"] call public_fnc_error;
@@ -41,7 +41,7 @@ if ((vehicle player) != player) exitWith {
 
 if (!isClass(missionConfigFile >> "ALYSIA_PROCESS" >> _type)) exitWith
 {
-	[format["Impossible de trouver les informations concernant le traitement: <color='#FF8000'>%1</t>", _type]] call public_fnc_error;
+	[format["Impossible de trouver les informations concernant le traitement <color='#FF8000'>%1</t>", _type]] call public_fnc_error;
 	diag_log format["[ALYSIA:ERROR] Process %1 not defined in ALYSIA_PROCESS (class not found)", _type];
 };
 
@@ -54,10 +54,10 @@ if ((_requireTarget isEqualTo 1) && ((player distance _target) > 5)) exitWith {
 };
 
 _sides = getArray(missionConfigFile >> "ALYSIA_PROCESS" >> _type >> "sides");
-if (str(playerSide) in _sides) exitWith {
+if (!(str(playerSide) in _sides)) exitWith {
 	[format[
 		"Votre faction<br/><t color='#04B404'>%1</t> n'est pas autorisé à traiter ici<br/>Ce traitement (<t color='#2EFE9A'>%2</t>) est <t color='#FF0000'>réservé</t>",
-		([playerSide] call public_fnc_sidesToStr),
+		([playerSide] call public_fnc_sideToStr),
 		getText(missionConfigFile >> "ALYSIA_PROCESS" >> _type >> "name")
 	]] call public_fnc_error;
 };
@@ -77,6 +77,7 @@ _enoughText = "";
 _oldItemWeight = 0;
 {
 	private["_varMaxAmount", "_varAmount"];
+	diag_log format["%1", _x];
 	_varAmount = [(_x select 0)] call public_fnc_itemCount;
 	_varMaxAmount = floor(_varAmount / (_x select 1));
 
@@ -89,7 +90,7 @@ _oldItemWeight = 0;
 	};
 	
 	if (_varAmount < (_x select 1)) then {
-		_enoughText = _enoughText + format["%1x %2<br/>", ((_x select 1) - _varAmount), ([(_x select 0)] call public_fnc_licenseGetName)];
+		_enoughText = _enoughText + format["%1x %2<br/>", ((_x select 1) - _varAmount), ([(_x select 0)] call public_fnc_itemGetName)];
 	};
 
 	_oldItemWeight = _oldItemWeight + (([(_x select 0)] call public_fnc_itemGetWeight) * (_x select 1));
@@ -127,7 +128,7 @@ if (!_itemsCheck) exitWith {
 
 _receiveText = "Vous avez reçu<br/>";
 {
-	_receiveText = _receiveText + format["%1x %2<br/>", ((_x select 1) * _maxAmount), [_x select 0] call public_fnc_licenseGetName];
+	_receiveText = _receiveText + format["%1x %2<br/>", ((_x select 1) * _maxAmount), [_x select 0] call public_fnc_itemGetName];
 	[true, (_x select 0), ((_x select 1) * _maxAmount)] call public_fnc_handleInv;
 } forEach (_item_receive);
 [_receiveText] call public_fnc_info;
