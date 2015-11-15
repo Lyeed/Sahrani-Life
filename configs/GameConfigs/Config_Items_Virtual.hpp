@@ -362,7 +362,7 @@ class ALYSIA_ITEMS
 
 	class wood
 	{
-		weight = 8;
+		weight = 2;
 		name = "Bois";
 		price_buy   = 60;
 		price_sell  = 30;
@@ -375,7 +375,7 @@ class ALYSIA_ITEMS
 
 	class woodp
 	{
-		weight = 4;
+		weight = 2;
 		name = "Planche";
 		price_buy   = 60;
 		price_sell  = 30;
@@ -388,7 +388,7 @@ class ALYSIA_ITEMS
 
 	class furniture
 	{
-		weight = 4;
+		weight = 20;
 		name = "Meuble";
 		price_buy   = 60;
 		price_sell  = 30;
