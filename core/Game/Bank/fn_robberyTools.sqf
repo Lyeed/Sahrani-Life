@@ -8,7 +8,7 @@
 
 if (!params [
 	["_item", ObjNull, [ObjNull]]
-]) exitWith {};
+]) exitWith {systemChat format ["< Robbery System - Debug > robberyTools - _item non reçu"]};
 
 systemChat format ["< Robbery System - Debug > robberyTools - OK"];
 
