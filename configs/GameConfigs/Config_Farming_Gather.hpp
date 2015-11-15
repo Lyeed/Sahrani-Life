@@ -77,7 +77,7 @@ class ALYSIA_FARMING_GATHER
 
 	class gold_1
 	{
-		receive[] = {{"gold", 1, 0}};
+		receive[] = {{"goldnuggets", 1, 0}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
 	};
