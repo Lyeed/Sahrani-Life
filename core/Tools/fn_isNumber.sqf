@@ -5,5 +5,9 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+private["_txt"];
+_txt = [_this, 0, "", [""]] call BIS_fnc_param;
 
-(([([_this, 0, "", [""]] call BIS_fnc_param), "123456789"] call public_fnc_TextAllowed) isEqualTo "")
+if (_txt isEqualTo "") exitWith {false};
+
+(([_txt, "0123456789"] call public_fnc_TextAllowed) isEqualTo "")
