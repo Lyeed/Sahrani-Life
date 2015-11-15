@@ -15,14 +15,19 @@ _projectile = _this select 4;
 if (g_connected) then
 {
 	_damage = _damage * 200;
-	if ((isNull _source) && ((vehicle player) != player) && !g_seatbelt) then {
-		_damage = _damage * 5;
+	if ((isNull _source) && ((vehicle player) != player)) then
+	{
+		 if (g_seatbelt) then {
+		 	_damage = _damage * 4;
+		 } else {
+		 	_damage = _damage * 10;
+		};
 	};
 
 	if (_damage > 0) then
 	{
 		[(_damage * -1)] call public_fnc_handleBlood;
-		[(_damage / 9)] call public_fnc_handleBleed;
+		[(_damage / 8)] call public_fnc_handleBleed;
 	};
 };
 
