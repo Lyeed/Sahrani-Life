@@ -143,6 +143,15 @@ class ALYSIA_LICENSES
 		pad_store = 1;
 	};
 
+	class copper
+	{
+		name = "Traitement du cuivre";
+		price = 95000;
+		illegal = 0;
+		required = "";
+		pad_store = 1;
+	};
+
 	class wood
 	{
 		name = "Traitement du bois";
@@ -182,6 +191,42 @@ class ALYSIA_LICENSES
 	class tabac
 	{
 		name = "Traitement du tabac";
+		price = 35000;
+		illegal = 0;
+		required = "";
+		pad_store = 1;
+	};
+
+	class gold
+	{
+		name = "Fonte de l'or";
+		price = 35000;
+		illegal = 0;
+		required = "";
+		pad_store = 1;
+	};
+
+	class salt
+	{
+		name = "Traitement de sel";
+		price = 35000;
+		illegal = 0;
+		required = "";
+		pad_store = 1;
+	};
+
+	class pottery
+	{
+		name = "Traitement de l'argile";
+		price = 35000;
+		illegal = 0;
+		required = "";
+		pad_store = 1;
+	};
+
+	class bauxite
+	{
+		name = "Traitement du bauxite";
 		price = 35000;
 		illegal = 0;
 		required = "";
