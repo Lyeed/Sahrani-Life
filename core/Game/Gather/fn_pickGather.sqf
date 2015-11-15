@@ -13,14 +13,14 @@ if (g_action_inUse) exitWith {};
 if ((vehicle player) != player) exitWith {};
 if (!isClass(missionConfigFile >> "ALYSIA_FARMING_GATHER" >> _marker)) exitWith
 {
-	[format["Impossible de trouver les informations concernant la zone<br/><t align='center' color='#FF8000'>%1</t>", _marker]] call public_fnc_error;
+	[format["Impossible de trouver les informations concernant la zone <t align='center' color='#FF8000'>%1</t>", _marker]] call public_fnc_error;
 	diag_log format["[ALYSIA:ERROR] Marker %1 not defined in ALYSIA_FARMING_GATHER (class not found)", _marker];
 };
 
 _tool = getText(missionConfigFile >> "ALYSIA_FARMING_GATHER" >> _marker >> "tool");
 
 if ((_tool != "") && ((currentWeapon player) != _tool)) exitWith {
-	[format["Vous n'avez pas le bon outil<br/>Vous avez besoin de<br/><t align='center' color='#FF8000'>%1</t>", getText(configFile >> "CfgWeapons" >> _tool >> "displayName")]] call public_fnc_error;
+	[format["Vous n'avez pas le bon outil<br/>Vous avez besoin de <t align='center' color='#FF8000'>%1</t>", getText(configFile >> "CfgWeapons" >> _tool >> "displayName")]] call public_fnc_error;
 };
 
 _water = getNumber(missionConfigFile >> "ALYSIA_FARMING_GATHER" >> _marker >> "water");
