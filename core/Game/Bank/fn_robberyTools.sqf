@@ -12,16 +12,15 @@ if (!params [
 
 systemChat format ["< Robbery System - Debug > robberyTools - OK"];
 
-private ["_time"];
-
-_time = (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "time"));
-
 if ((typeOf _item) isEqualTo "Intel_File1_F") then
 {
 	[_item, "bankPlanted"] call CBA_fnc_globalSay3d;
 };
 
-while {(_item getVariable ["active", true])} do
+private ["_time"];
+_time = (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "time"));
+
+while {(time > 0)} do
 {
 	if (_time > 5) then {[_item, (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "sound"))] call CBA_fnc_globalSay3d} else {[_item, (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "finalSound"))] call CBA_fnc_globalSay3d};
 

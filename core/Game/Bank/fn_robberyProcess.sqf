@@ -34,7 +34,7 @@ else
 	_item = _tool;
 	if ((_item getVariable ["owner", ObjNull]) isEqualTo player) then
 	{
-		if ([(format ["Démontage de %1", [(getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "item"))] call public_fnc_fetchCfgDetails]), (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "defuseTime") / 2), objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then
+		if ([(format ["Démontage de %1", [(getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "item"))] call public_fnc_fetchCfgDetails]), (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "defuseTime")), objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then
 		{
 			player addItem (typeOf _item);
 			_bank setVariable [(typeOf _item), ObjNull, true];
@@ -49,7 +49,7 @@ else
 			[(format ["Vous avez besoin de <br/>%1<br/>", ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")] call public_fnc_fetchCfgDetails) select 1])] call public_fnc_error;
 		};
 
-		if ([(format ["Désamorçage de %1", [(getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "item"))] call public_fnc_fetchCfgDetails]), (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "defuseTime")), objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then
+		if ([(format ["Désamorçage de %1", [(getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "item"))] call public_fnc_fetchCfgDetails]), (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "defuseTime")), objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then
 		{
 			player addItem (typeOf _item);
 			_bank setVariable [(typeOf _item), ObjNull, true];

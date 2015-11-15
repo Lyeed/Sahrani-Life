@@ -12,7 +12,7 @@ class ALYSIA_BANK
 	{
 		class AutoDoor_trigger
 		{
-			name = "Porte coulisante";
+			name = "Porte Coulisante";
 			item = "Alysia_Lockpick";
 			time = 10;
 			open = "Sliding";

@@ -112,7 +112,7 @@ if ((vehicle player) isEqualTo player) then
 					private ["_door", "_pos"];
 					{
 						_pos = cursorTarget modelToWorld (cursorTarget selectionPosition _x);
-						if ((player distance [_pos select 0, _pos select 1, (_pos select 2) - 1]) < 3) exitWith {
+						if ((player distance [_pos select 0, _pos select 1, (_pos select 2) - 1]) < 2) exitWith {
 						systemChat format ["< Robbery System - Debug > Joueur près de la porte %1", _x];
 							[cursorTarget, _x] spawn public_fnc_robberyStart;
 							_door = _x;
