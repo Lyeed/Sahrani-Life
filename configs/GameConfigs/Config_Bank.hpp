@@ -10,23 +10,15 @@ class ALYSIA_BANK
 {
 	class doors
 	{
-		class LeftSlideDoor
+		class AutoDoor_trigger
 		{
-			name = "Porte d'entrée Gauche";
+			name = "Porte coulisante";
 			item = "Alysia_Lockpick";
 			time = 10;
-			open = "SlidingL";
+			open = "Sliding";
 		};
 		
-		class RightSlideDoor
-		{
-			name = "Porte d'entrée Droite";
-			item = "Alysia_Lockpick";
-			time = 10;
-			open = "SlidingR";
-		};
-		
-		class Door_1
+		class Interact1
 		{
 			name = "Porte Comptoirs";
 			item = "Alysia_Lockpick";
@@ -34,7 +26,7 @@ class ALYSIA_BANK
 			open = "Simple";
 		};
 		
-		class Door_2
+		class Interact2
 		{
 			name = "Porte Partie Interne";
 			item = "Bank_Hacker";
@@ -42,45 +34,37 @@ class ALYSIA_BANK
 			open = "Simple";
 		};
 		
-		class Door_3
+		class Interact3
 		{
 			name = "Porte Bureau Directeur";
 			item = "Alysia_Lockpick";
 			time = 10;
 			open = "Simple";
 		};
-		
-		class Door_4
-		{
-			name = "Porte Interne Coffre";
-			item = "Bank_Drill";
-			time = 60;
-			open = "Drill";
-		};
 
-		class Door_5
+		class Interact4
 		{
 			name = "Porte Poste Surveillance";
 			item = "Bank_Hacker";
 			time = 45;
 			open = "Simple";
 		};
-		
-		class Door_6
+
+		class Interact5
 		{
-			name = "Porte Toit Gauche";
+			name = "Porte Interne Coffre";
+			item = "Bank_Drill";
+			time = 60;
+			open = "Drill";
+		};
+		
+		class Interact6
+		{
+			name = "Porte Toit";
 			time = 30;
 			open = "Simple";
 		};
 
-		class Door_7
-		{
-			name = "Porte Toit Droite";
-			item = "Alysia_Lockpick";
-			time = 30;
-			open = "Simple";
-		};
-		
 		class Vault_Door
 		{
 			name = "Porte Coffre Fort";

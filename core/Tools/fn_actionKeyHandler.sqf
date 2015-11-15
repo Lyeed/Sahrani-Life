@@ -118,7 +118,7 @@ if ((vehicle player) isEqualTo player) then
 							[cursorTarget, _x] spawn public_fnc_robberyStart;
 							_door = _x;
 						};
-					} forEach (["Vault_Door", "LeftSlideDoor", "RightSlideDoor", "Door_1", "Door_2", "Door_3", "Door_4", "Door_5", "Door_6"]);
+					} forEach (["AutoDoor_trigger", "Interact1", "Interact2", "Interact3", "Interact4", "Interact5", "Interact6", "Vault_Door"]);
 					if (isNil "_door") then
 					{
 						systemChat format ["< Robbery System - Debug > Joueur non près d'une porte"];
