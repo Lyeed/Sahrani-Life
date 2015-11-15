@@ -105,13 +105,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		items[] = {{}, {"ironp", "soufre"}};
 	};
 
-	class wood
-	{
-		name = "Commerçant de bois";
-		side = "CIV";
-		items[] = {{}, {"woodp"}};
-	};
-
 	class gold
 	{
 		name = "Commerçant d'or";
@@ -159,5 +152,12 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Usine de textile";
 		side = "CIV";
 		items[] = {{}, {"cottonp"}};
+	};
+
+	class woodp
+	{
+		name = "Commerçant de planche";
+		side = "CIV";
+		items[] = {{}, {"woodp"}};
 	};
 };
