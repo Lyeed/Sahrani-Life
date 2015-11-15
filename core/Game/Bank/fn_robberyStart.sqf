@@ -52,7 +52,7 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 			[_bank, false] remoteExec ["TON_fnc_bank_state", 2];
 			["Vous avez désactivé le système de sécurité de la banque"] call public_fnc_info;
 			_bank setVariable ["hacked", true, true];
-			//breakOut "main";
+			breakOut "main";
 		};
 	};
 
