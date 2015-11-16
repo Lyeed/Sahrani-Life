@@ -20,8 +20,6 @@ class ALYSIA_SHOPS_CLOTHING
 			"rds_uniform_citizen3",
 			"rds_uniform_citizen4",
 			"U_C_DolceGabbana_01",
-			"rds_uniform_Functionary1",
-			"rds_uniform_Functionary2",
 			"U_C_HunterBody_grn",
 			"U_C_Poloshirt_blue",
 			"U_C_Poloshirt_burgundy",

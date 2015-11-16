@@ -12,8 +12,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Raisin";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 3;
+		price_sell  = 2;
 		market      = 0;
 		illegal     = 0;
 		removable   = 1;
@@ -61,8 +61,8 @@ class ALYSIA_ITEMS
 	{
 		weight = 1;
 		name = "Bouteille d'eau";
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 1;
+		price_sell  = 1;
 		illegal = 0;
 		market      = 0;
 		removable = 1;
@@ -836,8 +836,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Barre de céréale";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 2;
+		price_sell  = 2;
 		market      = 0;
 		illegal     = 0;
 		removable   = 1;
@@ -849,8 +849,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Eau gazeuse";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 1;
+		price_sell  = 1;
 		market      = 0;
 		illegal     = 0;
 		removable   = 1;
@@ -862,8 +862,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Prune";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 2;
+		price_sell  = 2;
 		market      = 0;
 		illegal     = 0;
 		removable   = 1;
@@ -875,8 +875,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Sandwich au jambon";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 2;
+		price_sell  = 2;
 		market      = 0;
 		illegal     = 0;
 		removable   = 1;
@@ -888,8 +888,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Beignet";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 1;
+		price_sell  = 1;
 		market      = 0;
 		illegal     = 0;
 		removable   = 1;
@@ -901,8 +901,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Soda";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 1;
+		price_sell  = 1;
 		market      = 0;
 		illegal     = 0;
 		removable   = 1;
@@ -914,8 +914,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Boite de ragout";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 2;
+		price_sell  = 2;
 		market      = 0;
 		illegal     = 0;
 		removable   = 1;
@@ -927,8 +927,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Kéfir";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 1;
+		price_sell  = 1;
 		market      = 0;
 		illegal     = 0;
 		removable   = 1;

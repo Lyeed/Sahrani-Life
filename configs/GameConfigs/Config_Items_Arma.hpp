@@ -39,7 +39,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class agent_uniform_new
 	{
-		buy_price = 20;
+		buy_price = 3000;
 	};
 	class B_AssaultPack_blk
 	{
@@ -195,7 +195,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class bodyguard_uniform_new
 	{
-		buy_price = 20;
+		buy_price = 3000;
 	};
 	class Casque_Moto
 	{
@@ -260,14 +260,17 @@ class ALYSIA_ITEMS_ARMA
 	class combi_plonge_samu
 	{
 		buy_price = 20;
+		buy_condition_GUER = 2;
 	};
 	class DAES_Lifeliner_Helmet
 	{
 		buy_price = 20;
+		buy_condition_GUER = 3;
 	};
 	class DAES_Lifeliner_Uniform
 	{
 		buy_price = 20;
+		buy_condition_GUER = 3;
 	};
 	class DDOPP_1Rnd_X26
 	{
@@ -283,7 +286,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class druglord_uniform_new
 	{
-		buy_price = 20;
+		buy_price = 3000;
 	};
 	class fbi_light_uniform
 	{
@@ -971,7 +974,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Killer_uniform_new
 	{
-		buy_price = 20;
+		buy_price = 3000;
 	};
 	class Kio_Afro_Hat
 	{
@@ -1043,7 +1046,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class mafiaboss_uniform_new
 	{
-		buy_price = 20;
+		buy_price = 3000;
 	};
 	class Mask_M40
 	{
@@ -1200,10 +1203,12 @@ class ALYSIA_ITEMS_ARMA
 	class max_paramedic_cap
 	{
 		buy_price = 20;
+		buy_condition_GUER = 1;
 	};
 	class max_paramedic_uniform
 	{
 		buy_price = 20;
+		buy_condition_GUER = 1;
 	};
 	class max_sheriff_Hat
 	{
@@ -1335,7 +1340,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class president_uniform_new
 	{
-		buy_price = 20;
+		buy_price = 3000;
 	};
 	class Rangefinder
 	{
@@ -1360,6 +1365,7 @@ class ALYSIA_ITEMS_ARMA
 	class rds_uniform_assistant
 	{
 		buy_price = 20;
+		buy_condition_GUER = 3;
 	};
 	class rds_uniform_citizen1
 	{
@@ -1380,14 +1386,15 @@ class ALYSIA_ITEMS_ARMA
 	class rds_uniform_doctor
 	{
 		buy_price = 20;
+		buy_condition_GUER = 4;
 	};
 	class rds_uniform_Functionary1
 	{
-		buy_price = 20;
+		buy_price = 3000;
 	};
 	class rds_uniform_Functionary2
 	{
-		buy_price = 20;
+		buy_price = 3000;
 	};
 	class rds_uniform_priest
 	{
@@ -1799,7 +1806,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Robber_uniform_new
 	{
-		buy_price = 20;
+		buy_price = 3000;
 	};
 	class RYK_shirts_DENIM_BK
 	{
@@ -2023,7 +2030,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class special_agent_uniform_new
 	{
-		buy_price = 20;
+		buy_price = 3000;
 	};
 	class surpat_uniform
 	{
@@ -2451,11 +2458,11 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class TRYK_SUITS_BLK_F
 	{
-		buy_price = 20;
+		buy_price = 3000;
 	};
 	class TRYK_SUITS_BR_F
 	{
-		buy_price = 20;
+		buy_price = 3000;
 	};
 	class TRYK_T_BLK_PAD
 	{
@@ -2736,10 +2743,12 @@ class ALYSIA_ITEMS_ARMA
 	class TRYK_U_B_PCUHsW5
 	{
 		buy_price = 20;
+		buy_condition_GUER = 3;
 	};
 	class TRYK_U_B_PCUHsW6
 	{
 		buy_price = 20;
+		buy_condition_GUER = 3;
 	};
 	class TRYK_U_B_PCUODHs
 	{
@@ -3032,10 +3041,12 @@ class ALYSIA_ITEMS_ARMA
 	class U_C_Secouriste_01
 	{
 		buy_price = 20;
+		buy_condition_GUER = 1;
 	};
 	class U_C_Secouriste_02
 	{
 		buy_price = 20;
+		buy_condition_GUER = 1;
 	};
 	class U_C_Securite_01
 	{
@@ -3079,15 +3090,15 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class vip1_uniform_new
 	{
-		buy_price = 20;
+		buy_price = 3000;
 	};
 	class vip2_uniform_new
 	{
-		buy_price = 20;
+		buy_price = 3000;
 	};
 	class vip3_uniform_new
 	{
-		buy_price = 20;
+		buy_price = 3000;
 	};
 	class B_Parachute
 	{
