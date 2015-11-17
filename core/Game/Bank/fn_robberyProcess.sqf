@@ -12,7 +12,7 @@ params [
 	["_tool", ObjNull, [ObjNull]]
 ];
 
-systemChat format ["< Robbery System - Debug > robberyProcess - OK"];
+systemChat format ["< Robbery System - Debug > robberyProcess - Porte: %1", _door];
 
 if (!(_door isEqualTo "")) then 
 {

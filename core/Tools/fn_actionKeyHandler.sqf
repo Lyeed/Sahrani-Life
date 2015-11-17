@@ -126,10 +126,10 @@ if ((vehicle player) isEqualTo player) then
 					};
 				};
 
-				if (!(isNull(nearestObject [player, "xcam_Laptop_unfolded_F"]))) then
+				if (player distance (nearestObject [player, "xcam_Laptop_unfolded_F"]) < 3) then
 				{
 					if (((player distance (bank_n)) < 10) || ((player distance (bank_s) < 10))) then
-					{	
+					{
 						systemChat format ["< Robbery System - Debug > Joueur près d'un ordinateur à Hack"];
 						if ([player] call public_fnc_getRegion isEqualTo "NORTH") then
 						{
@@ -143,14 +143,14 @@ if ((vehicle player) isEqualTo player) then
 					};
 				};
 
-				if ((!(isNull(nearestObject [player, "Bank_Drill"])))) then 
+				if (player distance (nearestObject [player, "Bank_Drill"]) < 3) then
 				{
 					systemChat format ["< Robbery System - Debug > Joueur près de la foreuse"];
 					[((nearestObject [player, "Bank_Bomb"]) getVariable ["bank", ObjNull]), "", nearestObject [player, "Bank_Drill"]] spawn public_fnc_robberyProcess;
 					breakOut "main";
 				};
 
-				if ((!(isNull(nearestObject [player, "Bank_Bomb"])))) then 
+				if (player distance (nearestObject [player, "Bank_Bomb"]) < 3) then
 				{
 					systemChat format ["< Robbery System - Debug > Joueur près de la bombe"];
 					[((nearestObject [player, "Bank_Bomb"]) getVariable ["bank", ObjNull]), "", (nearestObject [player, "Bank_Bomb"])] spawn public_fnc_robberyProcess;
