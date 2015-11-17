@@ -19,14 +19,14 @@ if (!(_door isEqualTo "")) then
 	private ["_item"];
 	systemChat format ["< Robbery System - Debug > robberyProcess - Pose de la bombe/foreuse"];
 	player removeMagazine (getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item"));
-	_item = (getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")) createVehicle [0,0,0];
+	_item = ((getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")) createVehicle [0,0,0]);
 	_item attachTo [_bank, (getArray(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "pos"))];
 	_item setDir (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "rot"));
 	//_item animate [(getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "anim")), 1];
 	_item setVariable ["owner", player, true];
 	_item setVariable ["bank", _bank, true];
 	_item setVariable ["active", true, true];
-	_bank setVariable [(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")), _item, true];
+	//_bank setVariable [(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")), _item, true];
 	[_item] spawn public_fnc_robberyTools;
 }
 else

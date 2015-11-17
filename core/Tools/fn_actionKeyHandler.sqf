@@ -126,6 +126,23 @@ if ((vehicle player) isEqualTo player) then
 					};
 				};
 
+				if (!(isNull(nearestObject [player, "xcam_Laptop_unfolded_F"]))) then
+				{
+					if (((player distance (bank_n)) < 10) || ((player distance (bank_s) < 10))) then
+					{	
+						systemChat format ["< Robbery System - Debug > Joueur près d'un ordinateur à Hack"];
+						if ([player] call public_fnc_getRegion isEqualTo "NORTH") then
+						{
+							[bank_n, "Security"] spawn public_fnc_robberyStart;
+						}
+						else
+						{
+							[bank_s, "Security"] spawn public_fnc_robberyStart;
+						};
+						breakOut "main";
+					};
+				};
+
 				if ((!(isNull(nearestObject [player, "Bank_Drill"])))) then 
 				{
 					systemChat format ["< Robbery System - Debug > Joueur près de la foreuse"];
@@ -138,24 +155,6 @@ if ((vehicle player) isEqualTo player) then
 					systemChat format ["< Robbery System - Debug > Joueur près de la bombe"];
 					[((nearestObject [player, "Bank_Bomb"]) getVariable ["bank", ObjNull]), "", (nearestObject [player, "Bank_Bomb"])] spawn public_fnc_robberyProcess;
 					breakOut "main";
-				};
-
-				if (!(isNull(nearestObject [player, "xcam_Laptop_unfolded_F"]))) then
-				{
-					if (((player distance (bank_n)) < 10) || ((player distance (bank_s) < 10))) then
-					{
-						systemChat format ["< Robbery System - Debug > Joueur près d'un ordinateur à Hack"];
-						
-						if ([player] call public_fnc_getRegion isEqualTo "NORTH") then
-						{
-							[bank_n, "Security"] spawn public_fnc_robberyStart;
-						}
-						else
-						{
-							[bank_s, "Security"] spawn public_fnc_robberyStart;
-						};
-						breakOut "main";
-					};
 				};
 
 				if (typeOf(cursorTarget) in (call g_plants)) then
