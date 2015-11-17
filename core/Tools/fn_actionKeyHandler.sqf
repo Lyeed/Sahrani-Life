@@ -143,14 +143,14 @@ if ((vehicle player) isEqualTo player) then
 					};
 				};
 
-				if (player distance (nearestObject [player, "Bank_Drill"]) < 3) then
+				if (player distance (nearestObject [player, "Bank_Drill"]) < 5) then
 				{
 					systemChat format ["< Robbery System - Debug > Joueur près de la foreuse"];
 					[((nearestObject [player, "Bank_Bomb"]) getVariable ["bank", ObjNull]), "", nearestObject [player, "Bank_Drill"]] spawn public_fnc_robberyProcess;
 					breakOut "main";
 				};
 
-				if (player distance (nearestObject [player, "Bank_Bomb"]) < 3) then
+				if (player distance (nearestObject [player, "Bank_Bomb"]) < 5) then
 				{
 					systemChat format ["< Robbery System - Debug > Joueur près de la bombe"];
 					[((nearestObject [player, "Bank_Bomb"]) getVariable ["bank", ObjNull]), "", (nearestObject [player, "Bank_Bomb"])] spawn public_fnc_robberyProcess;

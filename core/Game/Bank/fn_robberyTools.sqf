@@ -17,16 +17,17 @@ if ((typeOf _item) isEqualTo "Bank_Bomb") then
 	[_item, "bankPlanted"] call CBA_fnc_globalSay3d;
 };
 
-private ["_time"];
-_time = (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "time"));
+private ["_init","_time"];
+_init = (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "time"));
+_time = _init;
 
 while {(_time > 0)} do
-{
-	if (_time > 5) then {[_item, (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "sound"))] call CBA_fnc_globalSay3d} else {[_item, (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "finalSound"))] call CBA_fnc_globalSay3d};
+{ 
+	[_item, (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "sound"))] call CBA_fnc_globalSay3d;
+	if (_time <= 5) then {[_item, (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "finalSound"))] call CBA_fnc_globalSay3d};
 
+	sleep (_time / _init);
 	_time = (_time - 1);
-
-	sleep 1;
 };
 
 if ((typeOf _item) isEqualTo "Bank_Drill") then

@@ -111,8 +111,8 @@ class ALYSIA_BANK
 		finalSound = "DrillOff";
 		pos[] = {0, 2.5, 5.2};
 		rot = 180;
-		time = 300;
-		defuseTime = 30;
+		time = 60;
+		defuseTime = 15;
 	};
 
 	class Bank_Sahrani_N
