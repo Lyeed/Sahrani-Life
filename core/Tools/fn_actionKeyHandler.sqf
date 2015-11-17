@@ -126,7 +126,21 @@ if ((vehicle player) isEqualTo player) then
 					};
 				};
 
-				if (typeOf(cursorTarget) isEqualTo "xcam_Laptop_unfolded_F") then
+				if ((!(isNull(nearestObject [player, "Bank_Drill"])))) then 
+				{
+					systemChat format ["< Robbery System - Debug > Joueur près de la foreuse"];
+					[((nearestObject [player, "Bank_Bomb"]) getVariable ["bank", ObjNull]), "", nearestObject [player, "Bank_Drill"]] spawn public_fnc_robberyProcess;
+					breakOut "main";
+				};
+
+				if ((!(isNull(nearestObject [player, "Bank_Bomb"])))) then 
+				{
+					systemChat format ["< Robbery System - Debug > Joueur près de la bombe"];
+					[((nearestObject [player, "Bank_Bomb"]) getVariable ["bank", ObjNull]), "", (nearestObject [player, "Bank_Bomb"])] spawn public_fnc_robberyProcess;
+					breakOut "main";
+				};
+
+				if (!(isNull(nearestObject [player, "xcam_Laptop_unfolded_F"]))) then
 				{
 					if (((player distance (bank_n)) < 10) || ((player distance (bank_s) < 10))) then
 					{
@@ -142,14 +156,6 @@ if ((vehicle player) isEqualTo player) then
 						};
 						breakOut "main";
 					};
-				};
-
-				if (typeOf(cursorTarget) in ["Bank_Drill", "Bank_Bomb"]) then
-				{
-					// Réactiver/Defuse Bomb/Drill
-					systemChat format ["< Robbery System - Debug > Joueur près de la foreuse/bombe"];
-					[(cursorTarget getVariable ["bank", ObjNull]), "", cursorTarget] spawn public_fnc_robberyProcess;
-					breakOut "main";
 				};
 
 				if (typeOf(cursorTarget) in (call g_plants)) then

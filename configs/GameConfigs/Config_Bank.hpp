@@ -89,9 +89,9 @@ class ALYSIA_BANK
 		};
 	};
 
-	class Intel_File1_F
+	class Bank_Bomb
 	{
-		item = "Intel_File1_F";
+		item = "Bank_Bomb";
 		defuse = "Bank_DefuseKit";
 		anim = "";
 		sound = "BombBip";
