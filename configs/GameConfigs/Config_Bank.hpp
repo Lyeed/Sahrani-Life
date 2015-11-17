@@ -96,8 +96,8 @@ class ALYSIA_BANK
 		anim = "";
 		sound = "BombBip";
 		finalsound = "Bomb2Bip";
-		pos[] = {0,0,0};
-		rot = 0;
+		pos[] = {0, 2.5, 5.2};
+		rot = 180;
 		time = 60;
 		defuseTime = 15;
 	};

@@ -33,7 +33,6 @@ if ((typeOf _item) isEqualTo "Bank_Drill") then
 {
 	if (round(random 2) isEqualTo 1) then
 	{
-		_bank setVariable [(typeOf _item), ObjNull, true];
 		"M_PG_AT" createVehicle (getPosATL _item);
 		deleteVehicle _item;
 
@@ -42,7 +41,6 @@ if ((typeOf _item) isEqualTo "Bank_Drill") then
 }
 else
 {
-	_bank setVariable [(typeOf _item), ObjNull, true];
 	"M_PG_AT" createVehicle (getPosATL _item);
 	deleteVehicle _item;
 	
