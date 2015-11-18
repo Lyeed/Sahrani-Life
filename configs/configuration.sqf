@@ -47,6 +47,7 @@ with missionNamespace do
 	/* ===================[Money]======================= */
 	g_cash = 0;
 	g_atm = 0;
+	g_atm_from = [];
 	g_paycheck = 0;
 	g_paycheck_period = compileFinal "5";
 	/* ===================[Levels]======================= */

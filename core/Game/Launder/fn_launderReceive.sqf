@@ -13,6 +13,6 @@
 		[g_launder] call public_fnc_numberText
 	], "buy"
 ] call public_fnc_info;
-[true, 1, g_launder, false] call public_fnc_handleMoney;
+[true, g_launder, "Argent sale"] call public_fnc_handleATM;
 g_launder = 0;
 [13] call MySQL_fnc_updatePartial;

@@ -34,10 +34,9 @@ _action =
 if (_action) then
 {
 	closeDialog 0;
-	g_atm = g_atm - _importPrice;
-	playSound "buy";
+	[false, _importPrice, format["Import véhicule (%1)", (_data select 5)]] call public_fnc_handleATM;
 	[format["Livraison de %1", _vehicleName], 10] call public_fnc_showProgress;
-	[format["Vous avez rapatrié <t color='#FF8000'>%1</t> pour <t color='#8cff9b'>%2</t>$", _vehicleName, ([_importPrice] call public_fnc_numberText)]] call public_fnc_info;
+	[format["Vous avez rapatrié <t color='#FF8000'>%1</t> pour <t color='#8cff9b'>%2</t>$", _vehicleName, ([_importPrice] call public_fnc_numberText)], "buy"] call public_fnc_info;
 	(g_garage_vehicles select _index) set [6, (getPos player) select 0];
 	(g_garage_vehicles select _index) set [7, (getPos player) select 1];
 	(g_garage_vehicles select _index) set [8, (getPos player) select 2];

@@ -32,7 +32,8 @@ if (_assurancePrice > g_atm) exitWith {
 	[format["Il vous faut <t color='#ff8c8c'>%1$</t> pour assurer ce véhicule", [_assurancePrice] call public_fnc_numberText]] call public_fnc_error;
 };
 
-g_atm = g_atm - _assurancePrice;
+
+[false, _assurancePrice, format["Assurance véhicule (%1)", (_data select 5)]] call public_fnc_handleATM;
 [format["Vous avez assuré votre véhicule<br/><t color='#8cff9b' align='center'>%1$</t>", [_assurancePrice] call public_fnc_numberText], "buy"] call public_fnc_info;
 (g_garage_vehicles select _index) set [2, 1];
 closeDialog 0;

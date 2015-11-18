@@ -252,13 +252,17 @@ if (hasInterface) then
 					["Vous n'avez pas reçu votre salaire car vous êtes en prison"] call public_fnc_info;
 				} else {
 					g_atm = g_atm - round((call g_paycheck) * 0.05);
-		       		if (g_phone_forfait != "") then {
-		       			g_atm = g_atm - getNumber(missionConfigFile >> "ALYSIA_FORFAITS" >> g_phone_forfait >> "bill");
+					
+		       		[true, (call g_paycheck), "Salaire"] call public_fnc_handleATM;
+					[false, (call g_paycheck), "Taxe salariale"] call public_fnc_handleATM;
+		       		
+		       		if (g_phone_forfait != "") then
+		       		{
+		       			[false, getNumber(missionConfigFile >> "ALYSIA_FORFAITS" >> g_phone_forfait >> "bill"), "Forfait téléphonique"] call public_fnc_handleATM;
 		       		};
-		       		g_atm = g_atm + (call g_paycheck);
+
 		       		g_nextPay = time + (_salary_time * 60);
-		       		playSound "buy";
-		       		[format["Vous avez reçu votre salaire : <t color='#8cff9b'>%1</t>$<br/>Pour plus d'informations sur vos éventuelles factures, rendez-vous dans l'application <t color='#00FF80'>solde</t> de votre tablette", ([(call g_paycheck)] call public_fnc_numberText)]] call public_fnc_info;
+		       		[format["Vous avez reçu votre salaire : <t color='#8cff9b'>%1</t>$<br/>Pour plus d'informations sur vos éventuelles factures, rendez-vous dans l'application <t color='#00FF80'>solde</t> de votre tablette", ([(call g_paycheck)] call public_fnc_numberText)], "buy"] call public_fnc_info;
 				};
 			};
 			

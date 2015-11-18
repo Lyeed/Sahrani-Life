@@ -60,7 +60,7 @@ if (_action) then
 	closeDialog 0;
 	[(getPlayerUID player), g_interaction_target, playerSide] remoteExec ["TON_fnc_house_add", 2];
 	g_interaction_target setVariable["house_owner", [(getPlayerUID player), profileName], true];
-	g_atm = g_atm - _price;
+	[false, _price, "Achat maison"] call public_fnc_handleATM;
 	["<t align='center'>Achat<br/><t color='#3ADF00'>effectué</t></t>", "buy"] call public_fnc_info;
 	g_houses pushBack g_interaction_target;
 

@@ -47,9 +47,3 @@ missionNamespace setVariable[_formatLicense, true];
 		[_price] call public_fnc_numberText
 	], "buy"
 ] call public_fnc_info;
-
-if (_license == "rebel2") then {
-	if (!(missionNamespace getVariable["license_civ_rebel", false])) then {
-		missionNamespace setVariable["license_civ_rebel", true];
-	};
-};

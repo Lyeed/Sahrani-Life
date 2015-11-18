@@ -18,5 +18,5 @@ if (g_atm < _price) exitWith {};
 
 g_apps pushBack _app;
 playSound "buy";
-[false, 1, _price, false] call public_fnc_handleMoney;
+[false, _price, "Application"] call public_fnc_handleATM;
 ["STORE_APPLICATIONS"] spawn public_fnc_tabletApp;

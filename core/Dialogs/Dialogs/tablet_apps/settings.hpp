@@ -20,9 +20,6 @@
 #define SETTINGS_TASKFORCE_SLIDER_IDC			7819
 #define SETTINGS_TASKFORCE_HEADER_IDC			7820
 #define SETTINGS_TASKFORCE_INFO_IDC				7821
-#define SETTINGS_SILENCE_FRAME_IDC				7822
-#define SETTINGS_SILENCE_HEADER_IDC				7823
-#define SETTINGS_SILENCE_INFO_IDC				7824
 #define SETTINGS_FPS_FRAME_IDC					7825
 
 SETTINGS_BACKGROUND = "\lyeed\images\back.jpg";
@@ -50,10 +47,7 @@ SETTINGS_IDCS[] =
 	SETTINGS_TASKFORCE_FRAME_IDC,
 	SETTINGS_TASKFORCE_SLIDER_IDC,
 	SETTINGS_TASKFORCE_HEADER_IDC,
-	SETTINGS_TASKFORCE_INFO_IDC,
-	SETTINGS_SILENCE_FRAME_IDC,
-	SETTINGS_SILENCE_HEADER_IDC,
-	SETTINGS_SILENCE_INFO_IDC
+	SETTINGS_TASKFORCE_INFO_IDC
 };
 
 class SETTINGS_FPS_HEADER: RscStructuredText
@@ -307,44 +301,4 @@ class SETTINGS_TASKFORCE_INFO: RscStructuredText
 	y = 0.588 * safezoneH + safezoneY;
 	w = 0.04125 * safezoneW;
 	h = 0.022 * safezoneH;
-};
-
-class SETTINGS_SILENCE_FRAME: RscFrame
-{
-	idc = SETTINGS_SILENCE_FRAME_IDC;
-	colorText[] = {0,0,0,0.8};
-
-	x = 0.335 * safezoneW + safezoneX;
-	y = 0.555 * safezoneH + safezoneY;
-	w = 0.061875 * safezoneW;
-	h = 0.055 * safezoneH;
-};
-class SETTINGS_SILENCE_HEADER: RscStructuredText
-{
-	idc = SETTINGS_SILENCE_HEADER_IDC;
-	font = "PuristaSemiBold";
-	text = "<t align='center'>Boules Quies</t>";
-	colorBackground[] = {0,0,0,0.8};
-
-	x = 0.335 * safezoneW + safezoneX;
-	y = 0.555 * safezoneH + safezoneY;
-	w = 0.061875 * safezoneW;
-	h = 0.022 * safezoneH;
-};
-class SETTINGS_SILENCE_INFO: RscCheckbox
-{
-	idc = SETTINGS_SILENCE_INFO_IDC;
-	onCheckedChanged = "\
-	if ((_this select 1) isEqualTo 0) then {\
-		1 fadeSound 1;\
-		missionNamespace setVariable[""silence"", false];\
-	} else {\
-		1 fadeSound 0.2;\
-		missionNamespace setVariable[""silence"", true];\
-	};";
-
-	x = 0.355625 * safezoneW + safezoneX;
-	y = 0.577 * safezoneH + safezoneY;
-	w = 0.020625 * safezoneW;
-	h = 0.033 * safezoneH;
 };

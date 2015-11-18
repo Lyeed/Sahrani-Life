@@ -17,6 +17,8 @@
 		!(isNull _display)
 	};
 
+	uiNamespace setVariable ["last_inv", nil];
+
 	while {!(isNull _display)} do
 	{
 		[] call public_fnc_virtual_menu_update;

@@ -109,7 +109,7 @@ if (_hide) then {
 									} else {
 										[_msg, _from] remoteExecCall ["public_fnc_phone_message_receive", _target];
 									};
-									g_atm = g_atm - _price;
+									[false, _price, "SMS"] call public_fnc_handleATM;
 									_sent = _sent + 1;
 								} else {
 									_error = _error + format["<t align='left'>Numéro</t><t align='right'>[%1]</t><br/>Vous ne pouvez pas envoyer de message aux numéros que vous avez bloqués<br/><t align='center'>----------</t><br/>", _number];

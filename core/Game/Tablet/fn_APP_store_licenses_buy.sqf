@@ -28,5 +28,6 @@ missionNamespace setVariable[_formatLicense, true];
 		[_price] call public_fnc_numberText
 	], "buy"
 ] call public_fnc_info;
-[false, 1, _price, false] call public_fnc_handleMoney;
+
+[false, _price, format["Licence (%1)", ([_license] call public_fnc_licenseGetName)]] call public_fnc_handleATM;
 ["store_licenses"] spawn public_fnc_tabletApp;

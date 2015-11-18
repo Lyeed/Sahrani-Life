@@ -24,7 +24,7 @@ if (_action) then
 	[] call public_fnc_phone_numberChange;
 	[format["Vous avez changé de numéro<br/><br/><t align='left'>Nouveau</t><t align='right' color='#FF4000'>%1</t>", g_phone_number]] call public_fnc_info;
 	playSound "buy";
-	[false, 1, 10000, false] call public_fnc_handleMoney;
+	[false, 10000, "Changement numéro"] call public_fnc_handleATM;
 };
 
 ["PHONE_CATEGORY"] spawn public_fnc_tabletApp;

@@ -56,7 +56,7 @@ class Public
 		class getGear {};
 		class getPlayerFromUID {};
 		class handleInv {};
-		class handleMoney {};
+		class handleATM {};
 		class holdsterSwitch {};
 		class hudSetup {};
 		class identityChange {};

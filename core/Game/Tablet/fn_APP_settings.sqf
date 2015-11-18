@@ -8,7 +8,7 @@
 private["_display", "_voice"];
 disableSerialization;
 
-_display = uiNamespace getVariable["tablet", displayNull];
+_display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
 
 _voice = round((player getVariable["tf_globalVolume", 1]) * 100);
@@ -28,12 +28,6 @@ _voice = round((player getVariable["tf_globalVolume", 1]) * 100);
 sliderSetRange[7819, 0, 100];
 sliderSetSpeed[7819, 1, 1];
 sliderSetPosition[7819, _voice];
-
-if (missionNamespace setVariable["silence", false]) then {
-	(_display displayCtrl 7824) cbSetChecked true;
-} else {
-	(_display displayCtrl 7824) cbSetChecked false;
-};
 
 while {((ctrlVisible 7813) && !(isNull _display))} do
 {

@@ -13,6 +13,7 @@ if (!params [
 disableSerialization;
 _display = findDisplay 15000;
 if (isNull _display) then {};
+	
 if (!([ctrlText 15019] call public_fnc_isNumber)) exitWith {["Erreur dans le montant"] call public_fnc_error};
 _amount = parseNumber (ctrlText 15019);
 if (_amount <= 0) exitWith {["Erreur dans le montant"] call public_fnc_error};
@@ -22,8 +23,8 @@ switch (_action) do
 	case "withdraw":
 	{
 		if (g_atm < _amount) exitWith {["Solde insuffisant"] call public_fnc_error};
-		g_atm = (g_atm - _amount);
-		g_cash = (g_cash + _amount);
+		[false, _amount, "Retrait DAB"] call public_fnc_handleATM;
+		g_cash = g_cash + _amount;
 		["Retrait effectué avec succès"] call public_fnc_info;
 		["home"] call public_fnc_atmScreen;
 	};
@@ -31,8 +32,8 @@ switch (_action) do
 	case "deposit":
 	{
 		if (g_cash < _amount) exitWith {["Vous n'avez pas assez de fonds sur vous"] call public_fnc_error};
-		g_cash = (g_cash - _amount);
-		g_atm = (g_atm + _amount);
+		[true, _amount, "Dépot DAB"] call public_fnc_handleATM;
+		g_cash = g_cash - _amount;
 		["Dépot effectué avec succès"] call public_fnc_info;
 		["home"] call public_fnc_atmScreen;
 	};

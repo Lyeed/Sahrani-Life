@@ -14,7 +14,7 @@
 [["(DEV) Bandage", {g_bleed = 0;}]] call CBA_fnc_addPlayerAction;
 [["(DEV) santé", {[4000] call public_fnc_handleBlood;}]] call CBA_fnc_addPlayerAction;
 [["(DEV) +100.000$ (porte-feuille)", {g_cash = g_cash + 100000;}]] call CBA_fnc_addPlayerAction;
-[["(DEV) +100.000$ (compte)", {g_atm = g_atm + 100000;}]] call CBA_fnc_addPlayerAction;
+[["(DEV) +100.000$ (compte)", {[true, 100000, "Dev"] call public_fnc_handleATM;}]] call CBA_fnc_addPlayerAction;
 [["(DEV) Réparer véhicule cursorTarget", {cursorTarget setDamage 0;}]] call CBA_fnc_addPlayerAction;
 [["(DEV) Réparer mon véhicule", {(vehicle player) setDamage 0;}]] call CBA_fnc_addPlayerAction;
 [["(DEV) + 1 GPS", {player addItem "ItemGPS";}]] call CBA_fnc_addPlayerAction;

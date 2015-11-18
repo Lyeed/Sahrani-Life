@@ -56,7 +56,7 @@ if (isNil "_validSpawn") exitWith {
 };
 
 closeDialog 0;
-g_atm = g_atm - _price;
+[false, _price, format["Sortie véhicule (%1)", (_data select 5)]] call public_fnc_handleATM;
 
 _spawnPos = getMarkerPos _validSpawn;
 _vehicle = createVehicle [_vehicleClassname, _spawnPos, [], 0, "NONE"];

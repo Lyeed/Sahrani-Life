@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display", "_actual_idc", "_apps_done", "_status"];
+private["_display", "_actual_idc", "_apps_done", "_status", "_apps"];
 disableSerialization;
 
 _display = uiNamespace getVariable["tablet", displayNull];
@@ -16,9 +16,27 @@ _actual_idc = 7510;
 _apps_done = 0;
 _apps_more = false;
 
+_apps = 
+[
+	["\lyeed\images\app_bank.paa", "[""solde""] spawn public_fnc_tabletApp;", "Solde", "true"],
+	["\lyeed\images\app_gps.paa", "[""vehicles""] spawn public_fnc_tabletApp;", "Véhicules", "true"],
+	["\lyeed\images\app_setting.paa", "[""settings""] spawn public_fnc_tabletApp;", "Réglages", "true"],
+	["\lyeed\images\app_server.paa", "[""server""] spawn public_fnc_tabletApp;", "Server", "true"],
+	["\lyeed\images\app_store.paa", "[""store""] spawn public_fnc_tabletApp;", "Boutique", "true"],
+	["\lyeed\images\app_help.paa", "[""help""] spawn public_fnc_tabletApp;", "Aide", "true"],
+	["\lyeed\images\app_phone.paa", "[""PHONE_CATEGORY""] spawn public_fnc_tabletApp;", "Téléphone", "true"],
+	[getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "icon"), "[""faction""] spawn public_fnc_tabletApp;", getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "name"), "playerSide in [east,west,independent]"],
+	["\lyeed\images\app_licenses.paa", "[""licenses""] spawn public_fnc_tabletApp;", "Licenses", "playerSide isEqualTo civilian"],
+	["\lyeed\images\app_licenses.paa","[""market""] spawn public_fnc_tabletApp;","Bourse","""MARKET"" in g_apps"]
+];
+
 {
-	if (_actual_idc >= 7534) exitWith {
-		_apps_more = true;
+	if (_actual_idc >= 7534) exitWith
+	{
+		if (_forEachIndex < (count(_apps) - 1))
+		{
+			_apps_more = true;
+		};
 	};
 
 	if (call compile format["%1", (_x select 3)]) then
@@ -33,19 +51,7 @@ _apps_more = false;
 			_apps_done = _apps_done + 1;
 		};
 	};
-} forEach 
-([
-	["\lyeed\images\app_bank.paa", "[""solde""] spawn public_fnc_tabletApp;", "Solde", "true"],
-	["\lyeed\images\app_gps.paa", "[""vehicles""] spawn public_fnc_tabletApp;", "Véhicules", "true"],
-	["\lyeed\images\app_setting.paa", "[""settings""] spawn public_fnc_tabletApp;", "Réglages", "true"],
-	["\lyeed\images\app_server.paa", "[""server""] spawn public_fnc_tabletApp;", "Server", "true"],
-	["\lyeed\images\app_store.paa", "[""store""] spawn public_fnc_tabletApp;", "Boutique", "true"],
-	["\lyeed\images\app_help.paa", "[""help""] spawn public_fnc_tabletApp;", "Aide", "true"],
-	["\lyeed\images\app_phone.paa", "[""PHONE_CATEGORY""] spawn public_fnc_tabletApp;", "Téléphone", "true"],
-	[getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "icon"), "[""faction""] spawn public_fnc_tabletApp;", getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "name"), "playerSide in [east,west,independent]"],
-	["\lyeed\images\app_licenses.paa", "[""licenses""] spawn public_fnc_tabletApp;", "Licenses", "playerSide isEqualTo civilian"],
-	["\lyeed\images\app_licenses.paa","[""market""] spawn public_fnc_tabletApp;","Bourse","""MARKET"" in g_apps"]
-]);
+} forEach _apps;
 
 (_display displayCtrl 7544) ctrlSetStructuredText parseText format["<t align='center' size='1.2' font='PuristaSemiBold'>%1</t>", (_status + 1)];
 

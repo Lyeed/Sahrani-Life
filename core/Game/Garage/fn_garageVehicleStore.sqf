@@ -81,7 +81,7 @@ if (_trunk isEqualTo []) then
 			{
 				if ((player distance _vehicle) < _distance) then
 				{
-					g_atm = g_atm - _price;
+					[false, _price, format["Inventaire véhicule (%1)", getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")]] call public_fnc_handleATM;
 					g_garage_store = true;
 					[_vehicle, (getPos _PNJ), false] remoteExec ["TON_fnc_garageVehicleStore", 2];				
 				} else {
