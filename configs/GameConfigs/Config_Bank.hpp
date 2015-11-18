@@ -96,23 +96,23 @@ class ALYSIA_BANK
 		anim = "";
 		sound = "BombBip";
 		finalsound = "Bomb2Bip";
-		pos[] = {0, 2.5, 5.2};
-		rot = 180;
-		time = 60;
-		defuseTime = 15;
+		pos[] = {0.87, 2.285, 5.0595};
+		rot = 90;
+		time = 180;
+		defuseTime = 30;
 	};
-
+ 
 	class Bank_Drill
 	{
 		item = "Bank_Drill";
 		defuse = "Bank_DefuseKit";
-		anim = "Drill_Rotation";
-		sound = "Drill";
-		finalSound = "Bomb2Bip";
-		pos[] = {0, 2.5, 5.2};
+		anim = "drill_rot";
+		sound = "DrillSound";
+		finalSound = "DrillSound";
+		pos[] = {4.23, 0.777, 4.875};
 		rot = 180;
-		time = 60;
-		defuseTime = 15;
+		time = 180;
+		defuseTime = 30;
 	};
 
 	class Bank_Sahrani_N

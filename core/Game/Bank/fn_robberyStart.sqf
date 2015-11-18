@@ -13,6 +13,12 @@ if (!params [
 
 systemChat format ["< Robbery System - Debug > robberyStart - OK"];
 
+if (_bank getVariable ["robbed", true, false]) exitWith
+{
+	["La banque a déjà été braquée, vous pourrez la braquer à nouveau au prochain redémarrage du serveur."] call public_fnc_error;
+	breakOut "main";	
+};
+
 if (!(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item") in magazines player)) exitWith
 {
 	systemChat format ["< Robbery System - Debug > Outil manquant"];
@@ -45,8 +51,8 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 	{
 		case "Simple": {_bank animate [getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "door"), 1]};
 		case "Sliding": {_bank animate ["LeftSlideDoor", 0]; _bank animate ["RightLeftSlideDoor", 0]};
-		case "Drill": {[_bank, _door] call public_fnc_robberyProcess};
-		case "Vault": {[_bank, _door] call public_fnc_robberyProcess};
+		case "Drill": {[_bank, _door] spawn public_fnc_robberyProcess};
+		case "Vault": {[_bank, _door] spawn public_fnc_robberyProcess};
 		case "Security":
 		{
 			[_bank, false] remoteExec ["TON_fnc_bank_state", 2];
