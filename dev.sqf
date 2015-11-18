@@ -1,3 +1,5 @@
+profileNamespace setVariable ["cba_keybinding_registry", []]; saveProfileNamespace;
+
 /*
 ================INIT======================
 this enableSimulation false; (pas de dégat et enléve les interraction)

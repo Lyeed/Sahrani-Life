@@ -15,4 +15,3 @@ _item = lbData[85001, _sel];
 if (_item isEqualTo "") exitWith {};
 
 [_item] call public_fnc_useItem;
-[] call public_fnc_virtual_menu_update_list;

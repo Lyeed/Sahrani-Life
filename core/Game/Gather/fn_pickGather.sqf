@@ -91,7 +91,7 @@ while {(g_action_inUse && !g_interrupted)} do
 		[true, (_x select 0), _amount] call public_fnc_handleInv;
 	} forEach (_receive);
 	if (!_space) exitWith {
-		["<t align='center'>Votre inventaire est plein</t>"] call public_fnc_error;
+		["<t align='center'>Votre inventaire est plein</t>"] call public_fnc_info;
 	};
 
 	if (g_interrupted) exitWith {};
