@@ -59,9 +59,10 @@ if (_weaponChecker) exitWith {};
 if ((time - g_action_delay) < 1) exitWith {
 	["Veuillez ralentir dans vos actions"] call public_fnc_error;
 };
+
 g_action_delay = time;
 
-g_cash = g_cash - _price;
+[false, _price] call public_fnc_handleCash;
 playSound "buy";
 [_item, true] call public_fnc_handleItem;
 

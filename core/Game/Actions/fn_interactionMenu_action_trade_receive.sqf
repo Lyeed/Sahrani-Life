@@ -44,8 +44,8 @@ _action =
 ] call BIS_fnc_guiMessage;
 if (_action) then
 {
-	g_cash = g_cash + _money;
-	
+	[true, _money] call public_fnc_handleCash;
+
 	{
 		if ((alive _x) && !(_x in g_vehicles)) then {
 			g_vehicles pushBack _x;

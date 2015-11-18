@@ -38,7 +38,7 @@ if ((_required != "") && !(call compile format["%1", _required])) exitWith {
 	["Vous ne remplissez pas les conditions pour acheter cette licence"] call public_fnc_error;
 };
 
-[false, 0, _price, false] call public_fnc_handleMoney;
+[false, _price] call public_fnc_handleCash;
 missionNamespace setVariable[_formatLicense, true];
 [format[
 		"<t align='center'>Vous avez acheté<br/><t color='#FE9A2E'>%1</t></t><br/><br/>"

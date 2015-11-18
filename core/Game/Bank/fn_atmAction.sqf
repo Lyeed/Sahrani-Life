@@ -24,7 +24,7 @@ switch (_action) do
 	{
 		if (g_atm < _amount) exitWith {["Solde insuffisant"] call public_fnc_error};
 		[false, _amount, "Retrait DAB"] call public_fnc_handleATM;
-		g_cash = g_cash + _amount;
+		[true, _amount] call public_fnc_handleCash;
 		["Retrait effectué avec succès"] call public_fnc_info;
 		["home"] call public_fnc_atmScreen;
 	};
@@ -32,8 +32,8 @@ switch (_action) do
 	case "deposit":
 	{
 		if (g_cash < _amount) exitWith {["Vous n'avez pas assez de fonds sur vous"] call public_fnc_error};
+		[false, _amount] call public_fnc_handleCash;
 		[true, _amount, "Dépot DAB"] call public_fnc_handleATM;
-		g_cash = g_cash - _amount;
 		["Dépot effectué avec succès"] call public_fnc_info;
 		["home"] call public_fnc_atmScreen;
 	};

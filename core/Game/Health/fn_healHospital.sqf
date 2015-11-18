@@ -19,7 +19,7 @@ if (g_cash < _price) exitWith {
 
 if ((independent countSide allPlayers) isEqualTo 0) then
 {
-	[false, 0, _price] call public_fnc_handleMoney;
+	[false, _price] call public_fnc_handleCash;
 	["Veuillez patienter pendant l'administration de vos soins", "buy"] call public_fnc_info;
 
 	sleep 8;

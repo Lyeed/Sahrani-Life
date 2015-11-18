@@ -57,6 +57,7 @@ class Public
 		class getPlayerFromUID {};
 		class handleInv {};
 		class handleATM {};
+		class handleCash {};
 		class holdsterSwitch {};
 		class hudSetup {};
 		class identityChange {};

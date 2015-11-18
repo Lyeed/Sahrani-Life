@@ -22,7 +22,7 @@ _data = g_interaction_target_inv select _sel;
 
 switch (_data select 0) do
 {
-	case "money": {g_cash = g_cash + (_data select 1)};
+	case "money": {[true, (_itemInfo select 1)] call public_fnc_handleCash;};
 	case "virtual": 
 	{
 		_itemInfo = _data select 1;

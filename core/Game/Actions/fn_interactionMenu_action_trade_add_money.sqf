@@ -28,9 +28,7 @@ if (g_cash < _val) exitWith {
 };
 
 g_interaction_trade_active = true;
-
 g_interaction_trade_money = g_interaction_trade_money + _val;
-g_cash = g_cash - _val;
+[false, _val] call public_fnc_handleCash;
 [] call public_fnc_interactionMenu_action_trade_update;
-
 g_interaction_trade_active = false;

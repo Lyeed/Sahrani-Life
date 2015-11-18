@@ -18,7 +18,7 @@ switch (lbData[10011, _sel]) do
 {
 	case "money":
 	{
-		g_cash = g_cash + g_interaction_trade_money;
+		[true, g_interaction_trade_money] call public_fnc_handleCash;
 		g_interaction_trade_money = 0;
 	};
 	case "inventory":

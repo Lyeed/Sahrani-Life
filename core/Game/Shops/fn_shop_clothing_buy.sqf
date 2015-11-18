@@ -54,6 +54,6 @@ switch (_type) do
 	};
 };
 
-g_cash = g_cash - _price;
+[false, _price] call public_fnc_handleCash;
 ["<t align='center'>Achat<br/><t color='#3ADF00'>effectué</t></t>", "buy"] call public_fnc_info;
 g_shop_clothing_active = false;

@@ -13,13 +13,11 @@ _from = [_this, 2, "", [""]] call BIS_fnc_param;
 if (_value isEqualTo 0) exitWith {};
 
 if (_type) then {
-	g_atm = g_atm + _value;
+	g_cash = g_cash + _value;
 } else {
-	g_atm = g_atm - _value;
-	if (g_atm < 0) then
+	g_cash = g_cash - _value;
+	if (g_cash < 0) then
 	{
-		g_atm = 0;
+		g_cash = 0;
 	};
 };
-
-g_atm_from pushBack format["(%1%2) %3/%6/7 à %4 - %5", if (_type) then {"+"} else {"-"}, _value, (date select 2), (call public_fnc_strTime), _from, (date select 1), (date select 0)];

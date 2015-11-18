@@ -35,7 +35,7 @@ if (isNil "_validSpawn") exitWith {
 };
 
 g_action_delay = time;
-g_cash = g_cash - _price;
+[false, _price] call public_fnc_handleCash;
 playSound "buy";
 closeDialog 0;
 

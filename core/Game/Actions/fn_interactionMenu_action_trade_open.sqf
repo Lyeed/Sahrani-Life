@@ -54,4 +54,4 @@ while {!(isNull _display)} do
 {
 	[true, (_x select 0), (_x select 1)] call public_fnc_handleInv;
 } forEach (g_interaction_trade_inventory);
-g_cash = g_cash + g_interaction_trade_money;
+[true, g_interaction_trade_money] call public_fnc_handleCash;

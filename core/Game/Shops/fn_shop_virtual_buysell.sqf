@@ -18,7 +18,7 @@ if ((g_cash + g_shop_bill_dollar) < 0) exitWith {
 
 g_shop_active = true;
 playSound "buy";
-g_cash = g_cash + g_shop_bill_dollar;
+[true, g_shop_bill_dollar] call public_fnc_handleCash;
 if (g_shop_bill_illegal > 0) then
 {
 	[true, "illegal_money", g_shop_bill_illegal] call public_fnc_handleInv;

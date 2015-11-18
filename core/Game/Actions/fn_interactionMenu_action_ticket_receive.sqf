@@ -8,12 +8,16 @@
 private["_action", "_side"];
 
 if (!params [
-		["_price", 0, [0]],
-		["_desc", "", [""]],
-		["_from", objNull, [objNull]]
-	]) exitWith {};
+	["_price", 0, [0]],
+	["_desc", "", [""]],
+	["_from", objNull, [objNull]]
+]) exitWith {};
 
 if (isNull _from) exitWith {};
+
+if (g_atm < _price) exitWith {
+	["La personne n'a pas assez d'argent pour payer"] remoteExecCall ["public_fnc_info", _from];
+};
 
 _side = side _from;
 _action = 
@@ -34,7 +38,7 @@ _action =
 ] call BIS_fnc_guiMessage;
 if (_action) then
 {
-	g_cash = g_cash - _price;
+	[false, _price, "Paiement"] call public_fnc_handleATM;
 	playSound "buy";
 	["<t align='center'>Votre paiement a été <t color='#01DF01'>accepté</t></t>"] remoteExecCall ["public_fnc_info", _from];
 } else {
