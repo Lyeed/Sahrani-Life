@@ -5,44 +5,27 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
 
-if (isNil {["Alysia", "actionHandler"] call CBA_fnc_getKeybind}) then
-{
-	["Alysia", "actionHandler", "Action", { [] call public_fnc_actionKeyHandler; }, {}, [DIK_LWIN, [false, false, false]], false, 0, true] call cba_fnc_addKeybind;
-	diag_log "Warning: Registered keybind 'actionHandler' was missing. FIXED";
-};
+["Alysia", "actionHandler", "Action", {[] call public_fnc_actionKeyHandler}, {true}, [DIK_LWIN, [false, false, false]], false, 0, true] call CBA_fnc_addKeybind;
 
-if (isNil {["Alysia", "actionTablet"] call CBA_fnc_getKeybind}) then
-{
-	["Alysia", "actionTablet", "Ouvrir la tablette", { [] spawn public_fnc_tabletOpen; }, {}, [DIK_Y, [false, false, false]], false, 0, true] call cba_fnc_addKeybind;
-	diag_log "Warning: Registered keybind 'actionTablet' was missing. FIXED";
-};
+["Alysia", "actionSilent", "Boule-quies", {
+	if (missionNamespace getVariable ["silence", false]) then {
+		1 fadeSound 1;
+		missionNamespace setVariable ["silence", false];
+	} else {
+		1 fadeSound 0.2;
+		missionNamespace setVariable ["silence", true];
+	};
+}, {}, [DIK_U, [false, false, false]], false, 0, true] call CBA_fnc_addKeybind;
 
-if (isNil {["Alysia", "actionSurrender"] call CBA_fnc_getKeybind}) then 
-{
-	["Alysia", "actionSurrender", "Mettre les mains sur la tête", { [] call public_fnc_surrender; }, {}, [DIK_H, [false, false, true]], false, 0, true] call cba_fnc_addKeybind;
-	diag_log "Warning: Registered keybind 'actionSurrender' was missing. FIXED";
-};
-
-if (isNil {["Alysia", "actionKnock"] call CBA_fnc_getKeybind}) then 
-{
-	["Alysia", "actionKnock", "Mettre une tatane", { [cursorTarget] spawn public_fnc_knockoutAction; }, {}, [DIK_G, [true, false, false]], false, 0, true] call cba_fnc_addKeybind;
-	diag_log "Warning: Registered keybind 'actionKnock' was missing. FIXED";
-};
-
-if (isNil {["Alysia", "actionKnock"] call CBA_fnc_getKeybind}) then 
-{
-	["Alysia", "actionKnock", "Menotter", { [cursorTarget] spawn public_fnc_restrainAction; }, {}, [DIK_R, [true, false, false]], false, 0, true] call cba_fnc_addKeybind;
-	diag_log "Warning: Registered keybind 'actionKnock' was missing. FIXED";
-};
-
-if (isNil {["Alysia", "actionHoldster"] call CBA_fnc_getKeybind}) then 
-{
-	["Alysia", "actionHoldster", "Ranger/sortir son arme", { [] call public_fnc_holdsterSwitch; }, {}, [DIK_H, [true, false, false]], false, 0, true] call cba_fnc_addKeybind;
-	diag_log "Warning: Registered keybind 'actionHoldster' was missing. FIXED";
-};
+["Alysia", "actionTablet", "Ouvrir la tablette", {[] spawn public_fnc_tabletOpen}, {true}, [DIK_Y, [false, false, false]], false, 0, true] call CBA_fnc_addKeybind;
+["Alysia", "actionSurrender", "Mettre les mains sur la tête", {[] call public_fnc_surrender}, {true}, [DIK_H, [false, false, true]], false, 0, true] call CBA_fnc_addKeybind;
+["Alysia", "actionKnock", "Mettre une tatane", {[cursorTarget] spawn public_fnc_knockoutAction}, {true}, [DIK_G, [true, false, false]], false, 0, true] call CBA_fnc_addKeybind;
+["Alysia", "actionKnock", "Menotter", {[cursorTarget] spawn public_fnc_restrainAction}, {true}, [DIK_R, [true, false, false]], false, 0, true] call CBA_fnc_addKeybind;
+["Alysia", "actionHoldster", "Ranger/sortir son arme", {[] call public_fnc_holdsterSwitch}, {true}, [DIK_H, [true, false, false]], false, 0, true] call CBA_fnc_addKeybind;
 
 {
-	[_x, [true, true, true], { [] spawn public_fnc_onPlayerMapOpen; }, "keydown", "actionMap", false] call CBA_fnc_addKeyHandler;
+	[_x, [true, true, true], {[] spawn public_fnc_onPlayerMapOpen}, "keydown", "actionMap", false] call CBA_fnc_addKeyHandler;
 } forEach (actionKeys "ShowMap");

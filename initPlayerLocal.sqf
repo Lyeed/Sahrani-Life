@@ -14,6 +14,16 @@ if (hasInterface) then
 	diag_log "------------------------------------------------------------------------------------------------------";
 	_timeStamp = diag_tickTime;
 
+	enableSaving [false, false];
+
+	{
+		_x setVariable ["BIS_noCoreConversations", true];
+	} forEach (allUnits);
+
+	0 fadeRadio 0;
+	0 fadeSpeech 0;
+	enableSentences false;
+
 	waitUntil {(!(isNull player) && (player isEqualTo player))};
 	player setVariable ["tf_globalVolume", 0];
 
@@ -21,7 +31,6 @@ if (hasInterface) then
 	cutText ["En attente de réponse du serveur", "BLACK FADED"];
 	0 cutFadeOut 9999999;
 	waitUntil {!(isNil "gServer_server_isReady")};
-	waitUntil {gServer_server_isReady};
 	if (!(isNil "gServer_soonReboot")) exitWith {
 		["Le serveur redémarre dans moins de 4 minutes, veuillez vous reconnecter après."] spawn public_fnc_errorExit;
 	};
@@ -41,6 +50,12 @@ if (hasInterface) then
 	[] call compile PreprocessFileLineNumbers "core\EventHandlers\handler_triggers.sqf";
 	diag_log "<INIT> Evènements ajoutés";
 
+	diag_log "<INIT> Création des objets ...";
+	cutText ["Création des objets", "BLACK FADED"];
+	0 cutFadeOut 9999999;
+	[] call compile PreprocessFileLineNumbers "configs\buildings.sqf";
+	diag_log "<INIT> Objets crées";
+
 	diag_log "<INIT> Validation de l'extension TaskForceRadio...";
 	cutText ["Validation de l'extension TaskForceRadio", "BLACK FADED"];
 	0 cutFadeOut 9999999;
@@ -59,7 +74,6 @@ if (hasInterface) then
 	waitUntil {(["Alysia", (call TFAR_fnc_getTeamSpeakServerName)] call BIS_fnc_inString)};
 	diag_log "<INIT> Présence validé";
 
-	tf_radio_channel_password = gServer_tf_radio_channel_password;
 	diag_log "<INIT> En attente de validation de votre présence dans le channel TaskForceRadio ...";
 	cutText ["En attente de validation de votre présence dans le channel TaskForceRadio", "BLACK FADED"];
 	0 cutFadeOut 9999999;
@@ -90,7 +104,9 @@ if (hasInterface) then
 		case independent: {call public_fnc_init_fGUER};
 		default {false};
 	};
-	if (!_res) exitWith {};
+	if (!_res) exitWith {
+		["Impossible d'initialiser la mission."] spawn public_fnc_errorExit;
+	};
 	diag_log "<INIT> Fonctions factions initialisées";
 
 	waitUntil {!(isNull (findDisplay 46))};

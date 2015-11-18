@@ -5,11 +5,12 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_list", "_completeEmpty", "_isEmpty"];
+private["_list", "_completeEmpty", "_isEmpty", "_select"];
 disableSerialization;
 
 _list = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
 _completeEmpty = [_this, 1, true, [true]] call BIS_fnc_param;
+_select = [_this, 2, true, [true]] call BIS_fnc_param;
 
 if (isNull _list) exitWith {};
 
@@ -38,5 +39,8 @@ if (_completeEmpty) then
 	_isEmpty = true;
 };
 
-_list lbSetCurSel 0;
+if (_select) then {
+	_list lbSetCurSel 0;
+};
+
 _isEmpty;

@@ -17,22 +17,24 @@
 		!(isNull _display)
 	};
 
-	[] call public_fnc_virtual_menu_update_list;
-
-	if (!(isNull _this)) then
+	while {!(isNull _display)} do
 	{
-		while {!(isNull _display)} do
+		[] call public_fnc_virtual_menu_update;
+
+		if (!(isNull _this)) then
 		{
 			if (!(_this in g_vehicles) && ((locked _this) isEqualTo 2)) then
 			{
 				closeDialog 0;
 				["Vous ne pouvez pas fouiller de véhicule vérouillé"] call public_fnc_error;
 			};
-			if (g_coma || (player getVariable ["restrained", false]) || (player getVariable ["surrender", false])) then {
-				closeDialog 0;
-			};
-			sleep 0.3;
 	 	};
+
+		if (g_coma || (player getVariable ["restrained", false]) || (player getVariable ["surrender", false])) then {
+			closeDialog 0;
+		};
+
+		sleep 0.5;
 	};
 };
 

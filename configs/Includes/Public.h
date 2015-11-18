@@ -25,8 +25,7 @@ class Public
 		class virtual_menu_exhange_update {};
 		class virtual_menu_exhange_store {};
 		class virtual_menu_exhange_take {};
-		class virtual_menu_update_list {};
-		class virtual_menu_update_button {};
+		class virtual_menu_update {};
 		class virtual_menu_action_use {};
 		class virtual_menu_action_remove {};
 	};

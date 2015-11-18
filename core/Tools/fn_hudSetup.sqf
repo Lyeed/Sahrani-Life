@@ -127,12 +127,13 @@ while {!(isNull _hud)} do
 		["bleed.paa", "(g_bleed > 0)"],
 		["regen.paa", "(g_regen_active && (g_bleed isEqualTo 0) && (g_hunger > 0) && (g_thirst > 0))"],
 		["drugs.paa", "(g_drugs_consuming > 0)"],
-		["handcuffs.paa", "(player getVariable [""restrained"", false])"],
+		["handcuffs.paa", "(player getVariable [""restrained"",false])"],
 		["blind.paa", "(player getVariable [""bandeau"", false])"],
 		["arrested.paa", "(g_arrested)"],
 		["fight.paa", "(g_firstCombatActive)"],
 		["speak.paa", "(g_speaking)"],
-		["seatbelt.paa", "(g_seatbelt)"]
+		["seatbelt.paa", "(g_seatbelt)"],
+		["silence.paa", "(missionNamespace getVariable[""silence"",false])"]
 	]);
 
 	for "_i" from _idc to 7 do
