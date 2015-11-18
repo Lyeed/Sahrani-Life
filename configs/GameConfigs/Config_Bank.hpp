@@ -108,7 +108,7 @@ class ALYSIA_BANK
 		defuse = "Bank_DefuseKit";
 		anim = "Drill_Rotation";
 		sound = "Drill";
-		finalSound = "DrillOff";
+		finalSound = "Bomb2Bip";
 		pos[] = {0, 2.5, 5.2};
 		rot = 180;
 		time = 60;

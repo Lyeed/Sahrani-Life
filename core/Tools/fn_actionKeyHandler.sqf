@@ -107,25 +107,6 @@ if ((vehicle player) isEqualTo player) then
 					breakOut "main";
 				};
 
-				if (typeOf(cursorTarget) in ["Bank_Sahrani_N", "Bank_Sahrani_S"]) then
-				{
-					private ["_door", "_pos"];
-					{
-						_pos = cursorTarget modelToWorld (cursorTarget selectionPosition _x);
-						if ((player distance [_pos select 0, _pos select 1, (_pos select 2) - 1]) < 2) exitWith {
-							systemChat format ["< Robbery System - Debug > Joueur près de la porte %1", _x];
-							[cursorTarget, _x] spawn public_fnc_robberyStart;
-							_door = _x;
-						};
-					} forEach (["AutoDoor_trigger", "Interact1", "Interact2", "Interact3", "Interact4", "Interact5", "Interact6", "Vault_Door"]);
-					if (isNil "_door") then
-					{
-						systemChat format ["< Robbery System - Debug > Joueur non près d'une porte"];
-						["Vous devez être près pour d'une porte pour pouvoir la forcer"] call public_fnc_error;
-						breakOut "main";
-					};
-				};
-
 				if (player distance (nearestObject [player, "xcam_Laptop_unfolded_F"]) < 3) then
 				{
 					if (((player distance (bank_n)) < 10) || ((player distance (bank_s) < 10))) then
@@ -155,6 +136,25 @@ if ((vehicle player) isEqualTo player) then
 					systemChat format ["< Robbery System - Debug > Joueur près de la bombe"];
 					[((nearestObject [player, "Bank_Bomb"]) getVariable ["bank", ObjNull]), "", (nearestObject [player, "Bank_Bomb"])] spawn public_fnc_robberyProcess;
 					breakOut "main";
+				};
+
+				if (typeOf(cursorTarget) in ["Bank_Sahrani_N", "Bank_Sahrani_S"]) then
+				{
+					private ["_door", "_pos"];
+					{
+						_pos = cursorTarget modelToWorld (cursorTarget selectionPosition _x);
+						if ((player distance [_pos select 0, _pos select 1, (_pos select 2) - 1]) < 2) exitWith {
+							systemChat format ["< Robbery System - Debug > Joueur près de la porte %1", _x];
+							[cursorTarget, _x] spawn public_fnc_robberyStart;
+							_door = _x;
+						};
+					} forEach (["AutoDoor_trigger", "Interact1", "Interact2", "Interact3", "Interact4", "Interact5", "Interact6", "Vault_Door"]);
+					if (isNil "_door") then
+					{
+						systemChat format ["< Robbery System - Debug > Joueur non près d'une porte"];
+						["Vous devez être près pour d'une porte pour pouvoir la forcer"] call public_fnc_error;
+						breakOut "main";
+					};
 				};
 
 				if (typeOf(cursorTarget) in (call g_plants)) then
