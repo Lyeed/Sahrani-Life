@@ -140,15 +140,22 @@ if ((vehicle player) isEqualTo player) then
 
 				if (typeOf(cursorTarget) in ["Bank_Sahrani_N", "Bank_Sahrani_S"]) then
 				{
+					if ((cursorTarget getVariable ["robbed", false]) && (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition "Interact5"))) < 5) exitWith
+					{
+						// Ajouter ligne pour accèder aux lingots
+						hint "Accès aux coffres contenants les lingots";
+					};
+
 					private ["_door", "_pos"];
 					{
 						_pos = cursorTarget modelToWorld (cursorTarget selectionPosition _x);
-						if ((player distance [_pos select 0, _pos select 1, (_pos select 2) - 1]) < 2) exitWith {
+						if ((player distance [_pos select 0, _pos select 1, (_pos select 2) - 1]) < 3) exitWith {
 							systemChat format ["< Robbery System - Debug > Joueur près de la porte %1", _x];
 							[cursorTarget, _x] spawn public_fnc_robberyStart;
 							_door = _x;
 						};
 					} forEach (["AutoDoor_trigger", "Interact1", "Interact2", "Interact3", "Interact4", "Interact5", "Interact6", "Vault_Door"]);
+
 					if (isNil "_door") then
 					{
 						systemChat format ["< Robbery System - Debug > Joueur non près d'une porte"];

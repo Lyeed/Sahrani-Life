@@ -34,14 +34,12 @@ while {(_time > 0)} do
 
 if ((typeOf _item) isEqualTo "Bank_Drill") then
 {
-	if (round(random 2) isEqualTo 1) then
-	{
-		(_item getVariable ["bank", ObjNull]) setVariable ["robbed", true, true];
-		"M_PG_AT" createVehicle (getPosATL _item);
-		deleteVehicle _item;
+	(_item getVariable ["bank", ObjNull]) setVariable ["robbed", true, true];
+	
+	"M_PG_AT" createVehicle (getPosATL _item);
+	deleteVehicle _item;
 
-		(_item getVariable ["bank", ObjNull]) animate ["Door_5", 1];
-	};
+	(_item getVariable ["bank", ObjNull]) animate ["Door_5", 1];
 }
 else
 {

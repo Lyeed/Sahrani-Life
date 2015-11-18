@@ -13,7 +13,7 @@ if (!params [
 
 systemChat format ["< Robbery System - Debug > robberyStart - OK"];
 
-if (_bank getVariable ["robbed", true, false]) exitWith
+if (_bank getVariable ["robbed", false]) exitWith
 {
 	["La banque a déjà été braquée, vous pourrez la braquer à nouveau au prochain redémarrage du serveur."] call public_fnc_error;
 	breakOut "main";	
