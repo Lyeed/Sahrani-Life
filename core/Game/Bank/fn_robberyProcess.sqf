@@ -33,7 +33,7 @@ else
 {
 	if ((_tool getVariable ["owner", ObjNull]) isEqualTo player) then
 	{
-		if ([format ["Démontage de %1", ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")] call public_fnc_fetchCfgDetails)], (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_tool) >> "defuseTime")),objNull,"","AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then
+		if ([format ["Démontage de %1", ([(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item"))] call public_fnc_fetchCfgDetails]), (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_tool) >> "defuseTime") / 2),objNull,"","AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then
 		{
 			if (typeOf _tool isEqualTo "Bank_Bomb") then
 			{
@@ -51,16 +51,14 @@ else
 			[(format ["Vous avez besoin de <br/>%1<br/>", ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")] call public_fnc_fetchCfgDetails) select 1])] call public_fnc_error;
 		};
 
-		if ([format ["Désamorçage de %1", ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")] call public_fnc_fetchCfgDetails)], (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_tool) >> "defuseTime")),objNull,"","AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then
+		if ([format ["Désamorçage de %1", ([(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item"))] call public_fnc_fetchCfgDetails]), (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_tool) >> "defuseTime")),objNull,"","AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then
 		{
 			player addItem (typeOf _tool);
+			if (typeOf _tool isEqualTo "Bank_Bomb") then
+			{
+				[_tool, "bankDefused"] call CBA_fnc_globalSay3d;
+			};
+			deleteVehicle _tool;
 		};
-
-		if (typeOf _tool isEqualTo "Bank_Bomb") then
-		{
-			[_tool, "bankDefused"] call CBA_fnc_globalSay3d;
-		};
-		
-		deleteVehicle _tool;
 	};
 };
