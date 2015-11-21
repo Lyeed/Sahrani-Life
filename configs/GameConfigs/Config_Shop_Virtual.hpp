@@ -20,7 +20,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Commerçant agricol";
 		side = "CIV";
-		items[] = {{"corn_seed", "bean_seed", "cotton_seed", "engrais"}, {"cotton", "bean", "corn"}};
+		items[] = {{"corn_seed", "bean_seed", "cotton_seed", "wheatseed", "patate", "engrais"}, {"cotton", "bean", "corn"}};
 	};
 	
 	class market
