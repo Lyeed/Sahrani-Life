@@ -512,7 +512,7 @@ class ALYSIA_ITEMS
 	class cocainepc
 	{
 		weight = 2;
-		name = "Cocaïne coupé";
+		name = "Cocaïne coupée";
 		price_buy   = 60;
 		price_sell  = 30;
 		illegal = 1;
@@ -739,7 +739,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "alysia_items_virtual\data\1\haricot.paa";
+		image       = "alysia_items_virtual\data\1\graine_haricot.paa";
 	};
 
 	class bean
@@ -751,7 +751,7 @@ class ALYSIA_ITEMS
 		market      = 0;
 		removable = 1;
 		use = "";
-		image       = "alysia_items_virtual\data\1\graine_haricot.paa";
+		image       = "alysia_items_virtual\data\1\haricot.paa";
 	};
 
 	class corn_seed
@@ -1144,7 +1144,7 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\fruit_de_mer\maquereau.paa";
 	};
 
-	class Merlu
+	class merlu
 	{
 		name        = "Merlu";
 		weight      = 1;

@@ -160,4 +160,11 @@ class ALYSIA_SHOPS_VIRTUAL
 		side = "CIV";
 		items[] = {{}, {"woodp"}};
 	};
+
+	class salt
+	{
+		name = "Commerçant de sel";
+		side = "CIV";
+		items[] = {{}, {"saltp"}};
+	};
 };
