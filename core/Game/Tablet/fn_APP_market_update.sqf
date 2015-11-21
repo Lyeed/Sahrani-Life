@@ -41,24 +41,24 @@ _license = getText(missionConfigFile >> "ALYSIA_BOURSE" >> _ressource >> "licens
 
 (_display displayCtrl 8812) ctrlSetStructuredText parseText format
 [
-	"<t align='center' color='#8cff9b'>%1</t><t align='right'>$</t>",
+	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
 	[([_ressource] call public_fnc_marketGetSellPrice)] call public_fnc_numberText
 ];
 
 (_display displayCtrl 8814) ctrlSetStructuredText parseText format
 [
-	"<t align='center' color='#8cff9b'>%1</t><t align='right'>$</t>",
+	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
 	[getNumber(missionConfigFile >> "ALYSIA_BOURSE" >> _ressource >> "max")] call public_fnc_numberText
 ];
 
 (_display displayCtrl 8816) ctrlSetStructuredText parseText format
 [
-	"<t align='center' color='#8cff9b'>%1</t><t align='right'>$</t>",
+	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
 	[getNumber(missionConfigFile >> "ALYSIA_BOURSE" >> _ressource >> "min")] call public_fnc_numberText
 ];
 
 (_display displayCtrl 8818) ctrlSetStructuredText parseText format
 [
-	"<t align='center' color='#8cff9b'>%1</t><t align='right'>$</t>",
+	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
 	[([_ressource] call public_fnc_marketGetBuyPrice)] call public_fnc_numberText
 ];

@@ -53,7 +53,7 @@ if (_magazines isEqualTo []) then {
 _price = lbValue[38402, _sel];
 (_display displayCtrl 38407) ctrlSetStructuredText parseText format
 [
-	"<t align='center' color='#%2'>%1</t><t align='right'>$</t>",
+	"<t align='center' color='#%2'>%1</t><t align='right'>kn</t>",
 	([_price] call public_fnc_numberText),
 	if (g_cash >= _price) then {"8cff9b"} else {"ff8c8c"}
 ];

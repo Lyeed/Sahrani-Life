@@ -68,7 +68,7 @@ if (_trunk isEqualTo []) then
 		[
 			format
 			[
-				"Le coffre de votre véhicule n'est pas vide, le ranger avec sa cargaison coûte <t color='#8cff9b'>%1</t>$<br/><t color='#FF8000'>Voulez-vous continuer ?</t>", 
+				"Le coffre de votre véhicule n'est pas vide, le ranger avec sa cargaison coûte <t color='#8cff9b'>%1</t>kn<br/><t color='#FF8000'>Voulez-vous continuer ?</t>", 
 				([_price] call public_fnc_numberText)
 			],
 			getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName"),

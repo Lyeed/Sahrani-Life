@@ -27,7 +27,7 @@ _className = _vehicleList select 0;
 _price = [_className] call public_fnc_getVehBuyPrice;
 (_display displayCtrl 2310) ctrlSetStructuredText parseText format
 [
-	"<t align='center' color='#%2'>%1</t><t align='right'>$</t>",
+	"<t align='center' color='#%2'>%1</t><t align='right'>kn</t>",
 	([_price] call public_fnc_numberText),
 	if (g_cash >= _price) then {"8cff9b"} else {"ff8c8c"}
 ];
@@ -51,9 +51,9 @@ _trunkSpace = [_className] call public_fnc_getVehVirtual;
 _vehicleInfo = [_className] call public_fnc_fetchVehInfo;
 (_display displayCtrl 2308) ctrlSetStructuredText parseText format
 [
-		"<t align='left'>Prix de garage</t><t align='right' color='#8cff9b'>%1$</t><br/>"
-	+ 	"<t align='left'>Prix de l'assurance</t><t align='right' color='#8cff9b'>%2$</t><br/>"
-	+ 	"<t align='left'>Prix de vente</t><t align='right' color='#8cff9b'>%9$</t><br/>"
+		"<t align='left'>Prix de garage</t><t align='right' color='#8cff9b'>%1kn</t><br/>"
+	+ 	"<t align='left'>Prix de l'assurance</t><t align='right' color='#8cff9b'>%2kn</t><br/>"
+	+ 	"<t align='left'>Prix de vente</t><t align='right' color='#8cff9b'>%9kn</t><br/>"
 	+ 	"<t align='left'>Vitesse max</t><t align='right'>%3 km/h</t><br/>"
 	+ 	"<t align='left'>Puissance en chevaux</t><t align='right'>%4</t><br/>"
 	+	"<t align='left'>Sièges passagers</t><t align='right'>%5</t><br/>"

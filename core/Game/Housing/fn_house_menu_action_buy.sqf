@@ -49,7 +49,7 @@ if (g_atm < _price) exitWith {};
 
 _action = 
 [
-	format["Vous êtes sur le point d'acheter un bâtiment pour <t color='#8cff9b'>%1</t>$", [_price] call public_fnc_numberText],
+	format["Vous êtes sur le point d'acheter un bâtiment pour <t color='#8cff9b'>%1</t>kn", [_price] call public_fnc_numberText],
 	"Achat de propriété",
 	"Acheter",
 	"Annuler"

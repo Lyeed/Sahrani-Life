@@ -29,12 +29,12 @@ if (_assurancePrice isEqualTo 0) exitWith {
 };
 
 if (_assurancePrice > g_atm) exitWith {
-	[format["Il vous faut <t color='#ff8c8c'>%1$</t> pour assurer ce véhicule", [_assurancePrice] call public_fnc_numberText]] call public_fnc_error;
+	[format["Il vous faut <t color='#ff8c8c'>%1kn</t> pour assurer ce véhicule", [_assurancePrice] call public_fnc_numberText]] call public_fnc_error;
 };
 
 
 [false, _assurancePrice, format["Assurance véhicule (%1)", (_data select 5)]] call public_fnc_handleATM;
-[format["Vous avez assuré votre véhicule<br/><t color='#8cff9b' align='center'>%1$</t>", [_assurancePrice] call public_fnc_numberText], "buy"] call public_fnc_info;
+[format["Vous avez assuré votre véhicule<br/><t color='#8cff9b' align='center'>%1kn</t>", [_assurancePrice] call public_fnc_numberText], "buy"] call public_fnc_info;
 (g_garage_vehicles select _index) set [2, 1];
 closeDialog 0;
 [(_data select 1), 1] remoteExec ["TON_fnc_vehicle_update_insurrance", 2];

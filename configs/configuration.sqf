@@ -92,8 +92,8 @@ with missionNamespace do
 	"g_drugs pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_DRUG");
 
 	{
-		missionNamespace setVariable[format["drug_stats_%1", _x], 0];
-		missionNamespace setVariable[format["drug_consume_%1", _x], 0];
+		missionNamespace setVariable [format["drug_stats_%1", _x], 0];
+		missionNamespace setVariable [format["drug_consume_%1", _x], 0];
 	} forEach (g_drugs);
 	/* =================[Plants]=================== */
 	g_plants = [];

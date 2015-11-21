@@ -133,7 +133,7 @@ lbClear _list;
 				if (_displayName isEqualTo "") then {
 					_displayName = _details select 1;
 				};
-				_index = _list lbAdd format["%1 (%2$)", _displayName, ([_price] call public_fnc_numberText)];
+				_index = _list lbAdd format["%1 (%2kn)", _displayName, ([_price] call public_fnc_numberText)];
 				_list lbSetData [_index, _x];
 				_list lbSetValue [_index, _price];
 				_list lbSetPicture [_index, (_details select 2)];

@@ -9,7 +9,7 @@
 [
 	format
 	[
-		"Vous avez reçu l'argent de votre blanchiment sur votre compte<br/><br/><t align='left'>Total</t><t align='right' color='#8cff9b'>%1$</t>", 
+		"Vous avez reçu l'argent de votre blanchiment sur votre compte<br/><br/><t align='left'>Total</t><t align='right' color='#8cff9b'>%1kn</t>", 
 		[g_launder] call public_fnc_numberText
 	], "buy"
 ] call public_fnc_info;

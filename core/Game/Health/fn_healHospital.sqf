@@ -11,7 +11,7 @@ _price = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> 
 if (g_cash < _price) exitWith {
 	[format
 		[
-			"Vous n'avez pas assez d'argent<br/><t align='left'>Prix</t><t color='#FF4000' align='right'>%1$</t>",
+			"Vous n'avez pas assez d'argent<br/><t align='left'>Prix</t><t color='#FF4000' align='right'>%1kn</t>",
 			([_price] call public_fnc_numberText)
 		]
 	] call public_fnc_error;

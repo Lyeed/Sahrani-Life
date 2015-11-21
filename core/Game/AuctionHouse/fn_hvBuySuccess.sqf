@@ -32,6 +32,6 @@ switch (_type) do
 };
 
 closeDialog 0;
-[format["Vous avez acheté<br/><t align='center' color='#FF8000'>%1<br/><br/></t><t align='left'>Prix</t><t align='right' color='#8cff9b'>%2$</t>", _name, [_price] call life_fnc_numberText]] call ALYSIA_fnc_info;
+[format["Vous avez acheté<br/><t align='center' color='#FF8000'>%1<br/><br/></t><t align='left'>Prix</t><t align='right' color='#8cff9b'>%2kn</t>", _name, [_price] call life_fnc_numberText]] call ALYSIA_fnc_info;
 playSound "buy";
 life_cash = life_cash - _price;

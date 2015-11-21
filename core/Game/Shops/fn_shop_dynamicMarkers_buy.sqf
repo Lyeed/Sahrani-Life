@@ -22,6 +22,6 @@ if (g_cash < _price) exitWith {
 
 _marker = lbData[21001, _sel];
 playSound "buy";
-[format["<t align='center'>Vous avez acheté les coordonnées de<br/><t color='#74DF00'>%1</t><br/>pour <t color='#8cff9b'>%2</t>$</t>", (markerText _marker), ([_price] call public_fnc_numberText)]] call public_fnc_info;
+[format["<t align='center'>Vous avez acheté les coordonnées de<br/><t color='#74DF00'>%1</t><br/>pour <t color='#8cff9b'>%2</t>kn</t>", (markerText _marker), ([_price] call public_fnc_numberText)]] call public_fnc_info;
 [_marker] call public_fnc_dynamicMarkers_reveal;
 [] call public_fnc_dynamicMarkers_menu_update_list;

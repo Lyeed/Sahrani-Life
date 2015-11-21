@@ -57,7 +57,7 @@
 		{
 			idc = 15002;
 			colorBackground[] = {0,0,0,0.6};
-			text = "<t align = 'left' size = '1.2'>      Solde </t><t align = 'center' size = '1.2'>... $</t>";
+			text = "<t align = 'left' size = '1.2'>      Solde </t><t align = 'center' size = '1.2'>... kn</t>";
 			
 			x = 0.438022 * safezoneW + safezoneX;
 			y = 0.41288 * safezoneH + safezoneY;

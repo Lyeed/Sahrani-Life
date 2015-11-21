@@ -61,7 +61,7 @@ switch (_action) do
 	case "home": 
 	{
 		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Distributeur</t>";
-		_balance ctrlSetStructuredText parseText format ["<t align ='left' size='1.2'>Solde </t><t align='center' size='1.2'><t color='#74DF00'>%1</t>$</t>", [g_atm] call public_fnc_numberText];
+		_balance ctrlSetStructuredText parseText format ["<t align ='left' size='1.2'>Solde </t><t align='center' size='1.2'><t color='#74DF00'>%1</t>kn</t>", [g_atm] call public_fnc_numberText];
 
 		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Retrait</t>";
 		_btnL1 buttonSetAction "[""withdraw""] call public_fnc_atmScreen";

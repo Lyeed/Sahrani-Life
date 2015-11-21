@@ -17,7 +17,7 @@ lbClear _ctrl_player;
 	_amount = [_x] call public_fnc_itemCount;
 	if (_amount > 0) then
 	{
-		_index = _ctrl_player lbAdd format["%1 x %2 (%3$)", ([_amount] call public_fnc_numberText), ([_x] call public_fnc_itemGetName), ([_x] call public_fnc_itemGetSellPrice)];
+		_index = _ctrl_player lbAdd format["%1 x %2 (%3kn)", ([_amount] call public_fnc_numberText), ([_x] call public_fnc_itemGetName), ([_x] call public_fnc_itemGetSellPrice)];
 		_ctrl_player lbSetData [_index, _x];
 		_ctrl_player lbSetValue [_index, _amount];
 		_ctrl_player lbSetPicture [_index, ([_x] call public_fnc_itemGetImage)];
@@ -41,7 +41,7 @@ if ((lbSize _ctrl_player) isEqualTo 0) then
 _ctrl_target = _display displayCtrl 2407;
 lbClear _ctrl_target;
 {
-	_index = _ctrl_target lbAdd format["%1 (%2$)", ([_x] call public_fnc_itemGetName), ([_x] call public_fnc_itemGetBuyPrice)];
+	_index = _ctrl_target lbAdd format["%1 (%2kn)", ([_x] call public_fnc_itemGetName), ([_x] call public_fnc_itemGetBuyPrice)];
 	_ctrl_target lbSetData [_index, _x];
 	_ctrl_target lbSetPicture [_index, ([_x] call public_fnc_itemGetImage)];
 } forEach (g_shop_list select 0);
@@ -68,7 +68,7 @@ lbClear _ctrl_tmp;
 	_price = ([_item] call public_fnc_itemGetBuyPrice) * _amount;
 	_index = _ctrl_tmp lbAdd format
 	[
-		"%1 x %2 (-%3$)",
+		"%1 x %2 (-%3kn)",
 		([_amount] call public_fnc_numberText),
 		([_item] call public_fnc_itemGetName),
 		([_price] call public_fnc_numberText)
@@ -84,7 +84,7 @@ lbClear _ctrl_tmp;
 	_price = ([_item] call public_fnc_itemGetSellPrice) * _amount;
 	_index = _ctrl_tmp lbAdd format
 	[
-		"%1 x %2 (+%3$)",
+		"%1 x %2 (+%3kn)",
 		([_amount] call public_fnc_numberText),
 		([_item] call public_fnc_itemGetName),
 		([_price] call public_fnc_numberText)
@@ -118,7 +118,7 @@ if ((lbSize _ctrl_tmp) isEqualTo 0) then
 (_display displayCtrl 2422) ctrlSetStructuredText parseText format["<t align='center'>%1/%2</t>", g_shop_weight_actual, g_maxWeight];
 (_display displayCtrl 2411) ctrlSetStructuredText parseText format
 [
-	"<t align='left'>%1</t><t align='center' color='#8cff9b'>%2</t><t align='right'>$</t>",
+	"<t align='left'>%1</t><t align='center' color='#8cff9b'>%2</t><t align='right'>kn</t>",
 	if ((g_shop_bill_dollar + g_shop_bill_illegal) >= 0) then {"+"} else {"-"},
 	([(abs g_shop_bill_dollar) + g_shop_bill_illegal] call public_fnc_numberText)
 ];

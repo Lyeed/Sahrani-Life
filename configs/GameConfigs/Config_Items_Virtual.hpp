@@ -23,7 +23,7 @@ class ALYSIA_ITEMS
 
 	class illegal_money
 	{
-		name = "$ (argent sale)";
+		name = "kn (argent sale)";
 		weight = 0;
 		illegal = 1;
 		removable = 0;

@@ -21,7 +21,7 @@ if (((g_interaction_target getVariable ["house_owner", ["", ""]]) select 0) != (
 _price = round(getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> (typeOf g_interaction_target) >> "price") / 2);
 _action = 
 [
-	format["Vous allez <t color='#DF0101'>vendre</t> votre maison pour <t color='#8cff9b'>%1$</t>", ([_price] call public_fnc_numberText)],
+	format["Vous allez <t color='#DF0101'>vendre</t> votre maison pour <t color='#8cff9b'>%1kn</t>", ([_price] call public_fnc_numberText)],
 	"Vente de propriété",
 	"Valider",
 	"Annuler"

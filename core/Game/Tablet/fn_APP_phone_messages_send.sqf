@@ -13,7 +13,7 @@ if (isNull _display) exitWith {};
 	
 (_display displayCtrl 8345) ctrlSetStructuredText parseText format
 [
-	"<t align='center' color='#8cff9b'>%1</t><t align='right'>$</t>",
+	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
 	getNumber(missionConfigFile >> "ALYSIA_FORFAITS" >> g_phone_forfait >> "sms_price")
 ];
 

@@ -129,7 +129,7 @@ class RscDisplayPlayerSearch: default_base_dialog
 		class MONEY_INFO: RscStructuredText
 		{
 			idc = 16001;
-			text = "<t align='center'>0$</t>";
+			text = "<t align='center'>0kn</t>";
 			colorBackground[] = {0,0,0,0.6};
 
 			x = 0.407187 * safezoneW + safezoneX;

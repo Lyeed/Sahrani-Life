@@ -19,8 +19,8 @@ _text ctrlSetStructuredText parseText format
 [
 		"<t align='left'>Sang</t><t align='right'>%1/4000 (-%2)</t><br/>"
 	+	"<t align='left'>Coma</t><t align='right'>%3</t><br/>"
-	+	"<t align='left'>Cash</t><t align='right' color='#8cff9b'>%4$</t><br/>"
-	+	"<t align='left'>Compte</t><t align='right' color='#8cff9b'>%5$</t><br/>"
+	+	"<t align='left'>Cash</t><t align='right' color='#8cff9b'>%4kn</t><br/>"
+	+	"<t align='left'>Compte</t><t align='right' color='#8cff9b'>%5kn</t><br/>"
 	+	"<t align='right'>Armée[%6/12] ONU[%7/4] Reb[%8/2] Med[%9/1]</t><br/>"
 	+	"<t align='left'>Licences</t><t align='right'>[reb:%10] [reb2:%11] [med:%12]</t><br/>"
 	+	"<t align='left'>Arme principale</t><t align='right'>%13</t><br/>"

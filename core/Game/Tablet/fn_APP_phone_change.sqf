@@ -9,12 +9,12 @@ private["_action", "_numbers"];
 
 if (g_phone_number isEqualTo "") exitWith {};
 if (g_atm < 10000) exitWith {
-	[format["Vous n'avez pas assez d'argent<br/><br/><t align='left'>Prix</t><t align='right'><t color='#8cff9b'>%1</t>$</t>", [10000] call public_fnc_numberText]] call public_fnc_error;
+	[format["Vous n'avez pas assez d'argent<br/><br/><t align='left'>Prix</t><t align='right'><t color='#8cff9b'>%1</t>kn</t>", [10000] call public_fnc_numberText]] call public_fnc_error;
 };
 
 _action = 
 [
-	"Êtes-vous sûr de vouloir changer de numéro ? Une fois validé vos anciens contacts ne pourront plus vous joindre.<br/><br/><t align='left'>Prix</t><t align='right'><t color='#8cff9b'>10.000</t>$</t>",
+	"Êtes-vous sûr de vouloir changer de numéro ? Une fois validé vos anciens contacts ne pourront plus vous joindre.<br/><br/><t align='left'>Prix</t><t align='right'><t color='#8cff9b'>10.000</t>kn</t>",
 	"Changement de numéro",
 	"Valider",
 	"Annuler"

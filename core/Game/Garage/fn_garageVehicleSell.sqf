@@ -28,7 +28,7 @@ _sellPrice = [_vehicleClassname] call ALYSIA_fnc_getVehSellPrice;
 if (_sellPrice != -1) then {
 	_vehicleName = getText(configFile >> "CfgVehicles" >> _vehicleClassname >> "displayName");
 	_action = [
-		format["Vous êtes sur le point de <t color='#DF0101'>vendre</t> votre <t color='#FF8000'>%2</t> pour <t color='#8cff9b'>%1$</t>", [_sellPrice] call life_fnc_numberText, _vehicleName], 
+		format["Vous êtes sur le point de <t color='#DF0101'>vendre</t> votre <t color='#FF8000'>%2</t> pour <t color='#8cff9b'>%1kn</t>", [_sellPrice] call life_fnc_numberText, _vehicleName], 
 		"Vente",
 		"Valider",
 		"Annuler"
@@ -37,7 +37,7 @@ if (_sellPrice != -1) then {
 		life_atmcash = life_atmcash + _sellPrice;
 		playSound "buy";
 		[format[
-			"Vous avez vendu votre<br/><t color='#FF8000'>%2</t><br/><br/><t align='left'>Prix de vente</t><t align='right' color='#8cff9b'>%1$</t>", 
+			"Vous avez vendu votre<br/><t color='#FF8000'>%2</t><br/><br/><t align='left'>Prix de vente</t><t align='right' color='#8cff9b'>%1kn</t>", 
 			[_sellPrice] call life_fnc_numberText, 
 			_vehicleName]
 		] call ALYSIA_fnc_info;

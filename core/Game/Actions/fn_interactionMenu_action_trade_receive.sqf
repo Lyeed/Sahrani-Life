@@ -20,7 +20,7 @@ _text = "";
 
 if (_money > 0) then
 {
-	_text = _text + format["- %1$<br/>", ([_money] call public_fnc_numberText)];
+	_text = _text + format["- %1kn<br/>", ([_money] call public_fnc_numberText)];
 };
 
 {

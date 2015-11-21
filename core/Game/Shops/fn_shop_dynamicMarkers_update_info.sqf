@@ -18,7 +18,7 @@ _display = findDisplay 21000;
 if (isNull _display) exitWith {};
 
 _price = lbValue[21001, _sel];
-(_display displayCtrl 21004) ctrlSetStructuredText parseText format["<t align='center' color='#%2'>%1</t><t align='right'>$</t>", ([_price] call public_fnc_numberText), if (g_cash >= _price) then {"8cff9b"} else {"ff8c8c"}];
+(_display displayCtrl 21004) ctrlSetStructuredText parseText format["<t align='center' color='#%2'>%1</t><t align='right'>kn</t>", ([_price] call public_fnc_numberText), if (g_cash >= _price) then {"8cff9b"} else {"ff8c8c"}];
 
 if (g_cash < _price) then {
 	ctrlShow[21005, false];

@@ -13,5 +13,5 @@ if (isNull _admin) exitWith {};
 if (_amount == -1) exitWith {};
 
 life_atmcash = life_atmcash + _amount;
-[format["<t align='center'>Vous avez reçu un versement sur votre compte de la part de l'équipe d'administration ALYSIA</t><br/><br/><t align='left'>Montant</t><t align='right' color='#8cff9b'>%1$</t>", [_amount] call life_fnc_numberText]] call ALYSIA_fnc_info;
-[[format["<t align='center'>%1<br/> a bien reçu votre remboursement</t><br/><br/><t align='left'>Montant</t><t align='right' color='#8cff9b'>%2$</t", (name player), [_amount] call life_fnc_numberText]], "ALYSIA_fnc_info", _admin, false] spawn life_fnc_MP;
+[format["<t align='center'>Vous avez reçu un versement sur votre compte de la part de l'équipe d'administration ALYSIA</t><br/><br/><t align='left'>Montant</t><t align='right' color='#8cff9b'>%1kn</t>", [_amount] call life_fnc_numberText]] call ALYSIA_fnc_info;
+[[format["<t align='center'>%1<br/> a bien reçu votre remboursement</t><br/><br/><t align='left'>Montant</t><t align='right' color='#8cff9b'>%2kn</t", (name player), [_amount] call life_fnc_numberText]], "ALYSIA_fnc_info", _admin, false] spawn life_fnc_MP;

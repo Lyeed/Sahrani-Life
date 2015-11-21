@@ -18,7 +18,7 @@ if (_illegalMoney == 0) exitWith {
 };
 
 if (_illegalMoney < 10000) exitWith {
-	[format["Vous ne pouvez pas blanchir moins de <t color='#8cff9b'>%1$</t> d'argent sale", ([10000] call public_fnc_numberText)]] call public_fnc_error; 
+	[format["Vous ne pouvez pas blanchir moins de <t color='#8cff9b'>%1kn</t> d'argent sale", ([10000] call public_fnc_numberText)]] call public_fnc_error; 
 };
 
 if (g_launder != 0) exitWith {
@@ -35,7 +35,7 @@ switch ([_this, 0, -1, [-1]] call BIS_fnc_param) do
 		[
 			format
 			[
-				"Vous êtes sur le point de blanchir <t color='#8cff9b'>%1$</t> d'argent sale vers votre <t color='#FF4000'>compte bancaire</t>. Une fois blanchie la somme sera de <t color='#8cff9b'>%2$</t>", 
+				"Vous êtes sur le point de blanchir <t color='#8cff9b'>%1kn</t> d'argent sale vers votre <t color='#FF4000'>compte bancaire</t>. Une fois blanchie la somme sera de <t color='#8cff9b'>%2kn</t>", 
 				([_illegalMoney] call public_fnc_numberText),
 				_value
 			],
@@ -45,7 +45,7 @@ switch ([_this, 0, -1, [-1]] call BIS_fnc_param) do
 		] call BIS_fnc_guiMessage;
 		if (_action) then
 		{
-			[format["Vous recevrez <t color='#8cff9b'>%1$</t> sur votre compte bancaire dans quelques minutes", ([_value] call public_fnc_numberText)]] call public_fnc_info;
+			[format["Vous recevrez <t color='#8cff9b'>%1kn</t> sur votre compte bancaire dans quelques minutes", ([_value] call public_fnc_numberText)]] call public_fnc_info;
 			g_launder = _value;
 			[13] call MySQL_fnc_updatePartial;
 			(60 * (random(7) + 3)) spawn 
@@ -68,7 +68,7 @@ switch ([_this, 0, -1, [-1]] call BIS_fnc_param) do
 		[
 			format
 			[
-				"Vous êtes sur le point de blanchir <t color='#8cff9b'>%1$</t> d'argent sale vers votre <t color='#FF4000'>compte de gang</t>. Une fois blanchie la somme sera de <t color='#8cff9b'>%2$</t>",
+				"Vous êtes sur le point de blanchir <t color='#8cff9b'>%1kn</t> d'argent sale vers votre <t color='#FF4000'>compte de gang</t>. Une fois blanchie la somme sera de <t color='#8cff9b'>%2kn</t>",
 				([_illegalMoney] call public_fnc_numberText),
 				_value
 			],
@@ -80,7 +80,7 @@ switch ([_this, 0, -1, [-1]] call BIS_fnc_param) do
 		{
 			_curAmount = (group player) getVariable ["gang_bank", 0];
 			(group player) setVariable ["gang_bank", (_curAmount + _value), true];
-			[format["Vous avez blanchi <t color='#8cff9b'>%1$</t> pour le compte de votre groupe", [_value] call public_fnc_numberText], "buy"] call public_fnc_info;
+			[format["Vous avez blanchi <t color='#8cff9b'>%1kn</t> pour le compte de votre groupe", [_value] call public_fnc_numberText], "buy"] call public_fnc_info;
 			missionNamespace setVariable["life_inv_illegal_money", 0];
 			[] call MySQL_fnc_updateRequest;
 			[[1, (group player)], "TON_fnc_updateGang", false] spawn life_fnc_MP;

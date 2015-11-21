@@ -65,7 +65,7 @@ lbClear _list;
 				};
 				_price = getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_price");
 				
-				_index = _list lbAdd format["%1 (%2$)", _displayName, ([_price] call public_fnc_numberText)];
+				_index = _list lbAdd format["%1 (%2kn)", _displayName, ([_price] call public_fnc_numberText)];
 				_list lbSetData [_index, _x];
 				_list lbSetValue [_index, _price];
 				_list lbSetPicture [_index, (_details select 2)];

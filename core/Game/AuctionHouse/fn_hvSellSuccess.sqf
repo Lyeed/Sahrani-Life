@@ -19,6 +19,6 @@ _name = switch (_type) do
 };
 
 _price = _price - (_price * 0.05);
-[format["Vous avez vendu<br/><t align='center' color='#FF8000'>%1</t><br/><br/><t color='#8cff9b' align='center'>%2$</t>", _name, [_price] call life_fnc_numberText]] call ALYSIA_fnc_info;
+[format["Vous avez vendu<br/><t align='center' color='#FF8000'>%1</t><br/><br/><t color='#8cff9b' align='center'>%2kn</t>", _name, [_price] call life_fnc_numberText]] call ALYSIA_fnc_info;
 playSound "buy";
 life_atmcash = life_atmcash + _price;

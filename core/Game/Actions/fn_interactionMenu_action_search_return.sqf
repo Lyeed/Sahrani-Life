@@ -19,7 +19,7 @@ disableSerialization;
 _display = findDisplay 16000;
 if (isNull _display) exitWith {};
 
-(_display displayCtrl 16001) ctrlSetStructuredText parseText format["<t align='center' color='#8cff9b'>%1</t><t align='right'>$</t>", _money];
+(_display displayCtrl 16001) ctrlSetStructuredText parseText format["<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>", _money];
 
 _ctrl_virtual = _display displayCtrl 16002;
 lbClear _ctrl_virtual;

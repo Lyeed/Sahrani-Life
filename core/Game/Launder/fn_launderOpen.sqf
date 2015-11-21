@@ -19,7 +19,7 @@ if (_illegalMoney == 0) exitWith {
 };
 
 if (_illegalMoney < 10000) exitWith {
-	[format["Vous ne pouvez pas blanchir moins de <t color='#8cff9b'>%1$</t> d'argent sale", ([10000] call public_fnc_numberText)]] call public_fnc_error; 
+	[format["Vous ne pouvez pas blanchir moins de <t color='#8cff9b'>%1kn</t> d'argent sale", ([10000] call public_fnc_numberText)]] call public_fnc_error; 
 };
 
 if (g_launder != 0) exitWith {
@@ -37,7 +37,7 @@ if (((group player) getVariable["gang_name", ""]) == "") then
 
 ((findDisplay 29600) displayCtrl 29601) ctrlSetStructuredText parseText format
 [
-	"Vous avez <t color='#8cff9b'>%1$</t> d'argent sale<br/><br/><t align='left'>Gains personnels</t><t align='right' color='#8cff9b'>%2$</t><br/><t align='left'>Gains du groupe</t><t align='right' color='#8cff9b'>%3$</t>",
+	"Vous avez <t color='#8cff9b'>%1kn</t> d'argent sale<br/><br/><t align='left'>Gains personnels</t><t align='right' color='#8cff9b'>%2kn</t><br/><t align='left'>Gains du groupe</t><t align='right' color='#8cff9b'>%3kn</t>",
 	([_illegalMoney] call public_fnc_numberText),
 	([(_illegalMoney * (call public_fnc_launderCalc))] call public_fnc_numberText),
 	([(_illegalMoney * 0.97)] call public_fnc_numberText)

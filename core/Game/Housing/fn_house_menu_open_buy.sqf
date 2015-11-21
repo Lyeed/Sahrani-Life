@@ -66,7 +66,7 @@ if (playerSide isEqualTo civilian) then {
 _price = getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >>  "price");
 (_display displayCtrl 45004) ctrlSetStructuredText parseText format
 [
-	"<t align='center' color='#%2'>%1</t><t align='right'>$</t>",
+	"<t align='center' color='#%2'>%1</t><t align='right'>kn</t>",
 	([_price] call public_fnc_numberText),
 	if (g_atm >= _price) then {"8cff9b"} else {"ff8c8c"}
 ];

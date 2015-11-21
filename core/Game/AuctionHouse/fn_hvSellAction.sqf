@@ -32,12 +32,12 @@ _price = ctrlText 45704;
 if (!([_price] call TON_fnc_isnumber)) exitWith { ["Prix de vente invalide"] call ALYSIA_fnc_error; };
 _price = parseNumber(_price);
 if (_price < 0) exitWith { ["Le <t color='#FF8000'>prix de vente</t> doit être positif"] call ALYSIA_fnc_error; };
-if (_price < 1500) exitWith { ["Le <t color='#FF8000'>prix de vente</t> doit être supérieur ou égal à <t color='#8cff9b'>1.500$</t>"] call ALYSIA_fnc_error; };
-if (_price >= 999999) exitWith { [format["Le <t color='#FF8000'>prix de vente</t> doit être inférieur à <t color='#8cff9b'>%1$</t>", [999999] call life_fnc_numberText]] call ALYSIA_fnc_error; };
+if (_price < 1500) exitWith { ["Le <t color='#FF8000'>prix de vente</t> doit être supérieur ou égal à <t color='#8cff9b'>1.500kn</t>"] call ALYSIA_fnc_error; };
+if (_price >= 999999) exitWith { [format["Le <t color='#FF8000'>prix de vente</t> doit être inférieur à <t color='#8cff9b'>%1kn</t>", [999999] call life_fnc_numberText]] call ALYSIA_fnc_error; };
 
 _cost = _price * 0.05;
 if (life_cash < _cost) exitWith {
-	[format["Vous n'avez pas assez d'argent pour mettre cet objet en vente pour <t color='#8cff9b'>%1$</t><br/><br/><t align='left'>Commission</t><t align='right' color='#8cff9b'>%2$</t><br/><t align='left'>Manquant</t><t align='right' color='#ff8c8c'>%3$</t>", [_price] call life_fnc_numberText, [_cost] call life_fnc_numberText, [(_cost - life_cash)] call life_fnc_numberText]] call ALYSIA_fnc_error;
+	[format["Vous n'avez pas assez d'argent pour mettre cet objet en vente pour <t color='#8cff9b'>%1kn</t><br/><br/><t align='left'>Commission</t><t align='right' color='#8cff9b'>%2kn</t><br/><t align='left'>Manquant</t><t align='right' color='#ff8c8c'>%3kn</t>", [_price] call life_fnc_numberText, [_cost] call life_fnc_numberText, [(_cost - life_cash)] call life_fnc_numberText]] call ALYSIA_fnc_error;
 };
 
 _description = ctrlText 45705;
@@ -60,7 +60,7 @@ if (!(isNil "_badChar")) exitWith {
 
 _action = 
 [
-	format["Vous êtes sur le point de démarrer une vente de <t color='#FF8000'>%1</t> pour <t color='#8cff9b'>%2$</t>. Le prix de la commission est de <t color='#0080FF'>%3</t><t color='#8cff9b'>$</t> immédiatement et <t color='#0080FF'>%3</t><t color='#8cff9b'>$</t> lorsque l'objet sera vendu.", (lbText[45703, _sel]), [_price] call life_fnc_numberText, [_cost] call life_fnc_numberText],
+	format["Vous êtes sur le point de démarrer une vente de <t color='#FF8000'>%1</t> pour <t color='#8cff9b'>%2kn</t>. Le prix de la commission est de <t color='#0080FF'>%3</t><t color='#8cff9b'>kn</t> immédiatement et <t color='#0080FF'>%3</t><t color='#8cff9b'>kn</t> lorsque l'objet sera vendu.", (lbText[45703, _sel]), [_price] call life_fnc_numberText, [_cost] call life_fnc_numberText],
 	"Démarrer une vente", 
 	"Valider", 
 	"Annuler"
@@ -114,7 +114,7 @@ if (_action) then
 		[
 			format
 			[
-				"Vous avez mis<br/><t align='center' color='#FF8000'>%1</t><br/>en vente pour <t color='#8cff9b'>%2$</t><br/><br/>Vous avez payé <t color='#8cff9b'>%3$</t> de commission", 
+				"Vous avez mis<br/><t align='center' color='#FF8000'>%1</t><br/>en vente pour <t color='#8cff9b'>%2kn</t><br/><br/>Vous avez payé <t color='#8cff9b'>%3kn</t> de commission", 
 				(lbText[45703, _sel]),
 				[_price] call life_fnc_numberText,
 				[_cost] call life_fnc_numberText

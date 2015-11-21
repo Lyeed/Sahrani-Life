@@ -28,7 +28,7 @@ ctrlShow [45606, true];
 ctrlShow [45607, true];
 ((findDisplay 45600) displayCtrl 45603) ctrlSetStructuredText parseText format
 [
-	"<t align='center' color='#%2'>%1$</t><br/>",
+	"<t align='center' color='#%2'>%1kn</t><br/>",
 	[_price] call life_fnc_numberText,
 	if (life_cash >= _price) then {"8cff9b"} else {"ff8c8c"}
 ];

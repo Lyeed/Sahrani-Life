@@ -20,7 +20,7 @@ if (_val < 0) exitWith {
 };
 
 if (_val > 999999) exitWith {
-	["Vous ne pouvez pas donner plus de <t color='8cff9b'>999.999$</t> d'un coup"] call public_fnc_error;
+	["Vous ne pouvez pas donner plus de <t color='8cff9b'>999.999kn</t> d'un coup"] call public_fnc_error;
 };
 
 if (g_cash < _val) exitWith {

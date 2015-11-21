@@ -32,7 +32,7 @@ if (
 };
 
 if (g_atm < _price) exitWith {
-	[format["<t align='center'>Vous n'avez pas assez d'argent dans votre compte en banque</t><br/><br/><t align='left'>Manquant</t><t align='right' color='#ff8c8c'>%1$</t>", [(_price - g_atm)] call public_fnc_numberText]] call public_fnc_error;
+	[format["<t align='center'>Vous n'avez pas assez d'argent dans votre compte en banque</t><br/><br/><t align='left'>Manquant</t><t align='right' color='#ff8c8c'>%1kn</t>", [(_price - g_atm)] call public_fnc_numberText]] call public_fnc_error;
 };
 
 if ((g_garage_info select 2) isEqualTo []) then

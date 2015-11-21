@@ -13,7 +13,7 @@ if (g_shop_active) exitWith {};
 [] call public_fnc_shop_virtual_update;
 
 if ((g_cash + g_shop_bill_dollar) < 0) exitWith {
-	[format["Vous n'avez pas assez d'argent pour finir la transaction<br/><br/><t align='left'>Manquant</t><t align='right'><t color='#8cff9b'>%1</t>$</t>", ([abs (g_shop_bill_dollar + g_cash)] call public_fnc_numberText)]] call public_fnc_error;
+	[format["Vous n'avez pas assez d'argent pour finir la transaction<br/><br/><t align='left'>Manquant</t><t align='right'><t color='#8cff9b'>%1</t>kn</t>", ([abs (g_shop_bill_dollar + g_cash)] call public_fnc_numberText)]] call public_fnc_error;
 };
 
 g_shop_active = true;

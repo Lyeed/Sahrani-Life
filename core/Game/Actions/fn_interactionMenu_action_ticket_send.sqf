@@ -18,7 +18,7 @@ if (_price < 100) exitWith {
 	["La somme à payer doit être supérieur ou égale à cent"] call public_fnc_error;
 };
 if (_price > 999999) exitWith {
-	["La somme à payer ne doit pas dépasser <t color='8cff9b'>999 999</t>$"] call public_fnc_error;
+	["La somme à payer ne doit pas dépasser <t color='8cff9b'>999 999</t>kn"] call public_fnc_error;
 };
 
 _desc = ctrlText 17002;

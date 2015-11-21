@@ -8,7 +8,7 @@
 private["_action"];
 _action = 
 [
-	format["<t color='#0174DF'>RAPPEL</t> Changer d'identité vous fait oublier <t color='#DF0101'>toutes</t> vos licences et coûte <t color='#8cff9b'>150.000$</t>"],
+	format["<t color='#0174DF'>RAPPEL</t> Changer d'identité vous fait oublier <t color='#DF0101'>toutes</t> vos licences et coûte <t color='#8cff9b'>150.000kn</t>"],
 	"Changement d'identité", 
 	"Valider", 
 	"Annuler"
@@ -16,7 +16,7 @@ _action =
 if (_action) then 
 {
 	if (life_atmCash < 150000) exitWith {
-		[format["Vous n'avez pas assez d'argent<br/>Il vous manque <t color='#DF0101'>%1$</t>", 150000 - life_atmCash]] call ALYSIA_fnc_error;
+		[format["Vous n'avez pas assez d'argent<br/>Il vous manque <t color='#DF0101'>%1kn</t>", 150000 - life_atmCash]] call ALYSIA_fnc_error;
 	};
 	_action = 
 	[
@@ -28,7 +28,7 @@ if (_action) then
 	if (_action) then
 	{
 		if (life_atmCash < 150000) exitWith {
-			[format["Vous n'avez pas assez d'argent<br/>Il vous manque <t color='#DF0101'>%1$</t>", 150000 - life_atmCash]] call ALYSIA_fnc_error;
+			[format["Vous n'avez pas assez d'argent<br/>Il vous manque <t color='#DF0101'>%1kn</t>", 150000 - life_atmCash]] call ALYSIA_fnc_error;
 		};
 		{
 			missionNamespace setVariable[(_x select 0), false];

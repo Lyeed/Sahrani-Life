@@ -12,7 +12,6 @@ class ALYSIA_REPAIR
 		tool = "Alysia_repair_toolbox";
 		use = "Alysia_repair_engine";
 		picture = "engine";
-
 	};
 	class HitEngine1
 	{

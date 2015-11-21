@@ -23,7 +23,7 @@ if (g_atm < _price) exitWith {};
 missionNamespace setVariable[_formatLicense, true];
 [format[
 		"<t align='center'>Vous avez acheté<br/><t color='#FE9A2E'>%1</t></t><br/><br/>"
-	+ 	"<t align='left'>Prix</t><t align='right' color='#8cff9b'>%2$</t>", 
+	+ 	"<t align='left'>Prix</t><t align='right' color='#8cff9b'>%2kn</t>", 
 		[_license] call public_fnc_licenseGetName, 
 		[_price] call public_fnc_numberText
 	], "buy"

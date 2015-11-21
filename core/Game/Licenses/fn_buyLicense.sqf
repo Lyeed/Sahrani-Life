@@ -26,8 +26,8 @@ if (missionNamespace getVariable[_formatLicense, false]) exitWith {
 
 if (!([0, _price, false] call public_fnc_checkMoney)) exitWith {
 	[format[
-			"<t align='center'>Vous n'avez pas <t color='#8cff9b'>%1$</t></t><br/><br/>"
-		+	"<t align='left'>Manquant</t><t align='right' color='#8cff9b'>%2$</t><br/>",
+			"<t align='center'>Vous n'avez pas <t color='#8cff9b'>%1kn</t></t><br/><br/>"
+		+	"<t align='left'>Manquant</t><t align='right' color='#8cff9b'>%2kn</t><br/>",
 		([_price] call public_fnc_numberText),
 		([(_price - g_cash)] call public_fnc_numberText)
 	]] call public_fnc_error;
@@ -42,7 +42,7 @@ if ((_required != "") && !(call compile format["%1", _required])) exitWith {
 missionNamespace setVariable[_formatLicense, true];
 [format[
 		"<t align='center'>Vous avez acheté<br/><t color='#FE9A2E'>%1</t></t><br/><br/>"
-	+ 	"<t align='left'>Prix</t><t align='right' color='#8cff9b'>%2$</t>", 
+	+ 	"<t align='left'>Prix</t><t align='right' color='#8cff9b'>%2kn</t>", 
 		[_license] call public_fnc_licenseGetName, 
 		[_price] call public_fnc_numberText
 	], "buy"

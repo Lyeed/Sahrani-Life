@@ -26,7 +26,7 @@ if (isNull _display) exitWith {};
 _price = [(_list lbData _index)] call public_fnc_licenseGetPrice;
 (_display displayCtrl 8116) ctrlSetStructuredText parseText format
 [
-	"<t align='center' color='#%2'>%1</t><t align='right'>$</t>",
+	"<t align='center' color='#%2'>%1</t><t align='right'>kn</t>",
 	([_price] call public_fnc_numberText),
 	if (g_atm >= _price) then {"8cff9b"} else {"ff8c8c"}
 ];

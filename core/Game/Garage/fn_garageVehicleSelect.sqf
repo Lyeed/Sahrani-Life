@@ -56,9 +56,9 @@ _vehicleInfo = [_className] call public_fnc_fetchVehInfo;
 [
 		"<t align='left'>Immatriculation</t><t align='right'>%1</t><br/>"
     +	"<t align='left'>Assuré</t><t align='right'>%2</t><br/>"
-    +	"<t align='left'>Prix de l'assurance</t><t align='right'><t color='#8cff9b'>%3</t>$</t><br/>"
-    +	"<t align='left'>Prix de sortie</t><t align='right'><t color='#8cff9b'>%4</t>$</t><br/>"
-    +	"<t align='left'>Prix de vente</t><t align='right'><t color='#8cff9b'>%5</t>$</t><br/>"
+    +	"<t align='left'>Prix de l'assurance</t><t align='right'><t color='#8cff9b'>%3</t>kn</t><br/>"
+    +	"<t align='left'>Prix de sortie</t><t align='right'><t color='#8cff9b'>%4</t>kn</t><br/>"
+    +	"<t align='left'>Prix de vente</t><t align='right'><t color='#8cff9b'>%5</t>kn</t><br/>"
     +	"<t align='left'>Vitesse max</t><t align='right'>%6 km/h</t><br/>"
     +	"<t align='left'>Puissance</t><t align='right'>%7 ch</t><br/>"
     +	"<t align='left'>Sièges passagers</t><t align='right'>%8</t><br/>"
