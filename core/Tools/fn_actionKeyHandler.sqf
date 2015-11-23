@@ -164,11 +164,11 @@ if ((vehicle player) isEqualTo player) then
 					};
 				};
 
-				/*if (typeOf(cursorTarget) in ["station_a","station_b","station_c"]) then
+				if (typeOf(cursorTarget) in ["station_a","station_b","station_c"]) then
 				{
 					[cursorTarget] spawn public_fnc_fuelMenu_open;
 					breakOut "main";
-				};*/
+				};
 
 				if (typeOf(cursorTarget) in (call g_plants)) then
 				{

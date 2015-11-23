@@ -80,6 +80,7 @@ class Public
 		class strTime {};
 		class age {};
 		class getRegion {};
+		class nearestVehicle {};
 	};
 
 	class Items

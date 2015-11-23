@@ -1,6 +1,6 @@
 /*
 	ArmA 3 N'Ziwasogo Life RPG - ALYSIA
-	Code written by Devilz80
+	Code written by Lyeed & Devilz80
 	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
@@ -67,7 +67,7 @@ _idc_actual = 5010;
 ([
 	["action_robbery", "Voler", "[_station] spawn public_fnc_fuelMenu_action_robbery;", "((""Alysia_Lockpick"" in magazines player) && (""Fuel_E"" in magazines player))"],
 	["action_prices", "Prix", "[_station] spawn public_fnc_fuelMenu_action_prices;", "((player distance _station) <= 5)"],	
-	["use_refuel_veh", "Remplir", "[_station] spawn public_fnc_fuelMenu_use_refuel_veh;", "({((player distance _x <= 5) && (_x in g_vehicles))} forEach [(allMissionObjects ""Car""), (allMissionObjects ""Air""), (allMissionObjects ""Ship"")])"],
+	["use_refuel_veh", "Remplir", "[_station] spawn public_fnc_fuelMenu_use_refuel_veh;", "()"],
 	["use_refuel_jerry", "Remplir", "[_station] spawn public_fnc_fuelMenu_use_refuel_jerry;", "(""Fuel_E"" in magazines player)"]
 ]);
 
@@ -81,10 +81,10 @@ while {!(isNull _display)} do
 	(_display displayCtrl 5003) ctrlSetStructuredText parseText format
 	[
 		"<t align='left'><img size='2.5' image='%1'/></t><t size='2' align='right'>%2m</t>",
-		getText(configFile >> "CfgVehicles" >> typeOf(({((player distance _x <= 5) && (_x in g_vehicles))} forEach [(allMissionObjects ""Car""), (allMissionObjects ""Air""), (allMissionObjects ""Ship"")])) >> "picture"),
-		round(player distance ({((player distance _x <= 5) && (_x in g_vehicles))} forEach [(allMissionObjects ""Car""), (allMissionObjects ""Air""), (allMissionObjects ""Ship"")]))
+		getText(configFile >> "CfgVehicles" >> typeOf(),
+		round(())
 	];
-	
+
 	if (g_coma) exitWith {
 		closeDialog 0;
 	};
