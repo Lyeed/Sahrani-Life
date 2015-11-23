@@ -9,7 +9,7 @@ More informations : https://www.bistudio.com/community/game-content-usage-rules
 class ALYSIA_FUEL
 {
 	class fuels
-	{	
+	{
 		class Diesel
 		{
 			name = "Diesel";
