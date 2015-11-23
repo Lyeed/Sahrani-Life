@@ -40,10 +40,10 @@ if ((lbSize _ctrl_player) isEqualTo 0) then
 };
 if (g_carryWeight isEqualTo g_maxWeight) then
 {
-	ctrlShow[510, false];
-	ctrlShow[511, false];
-	ctrlShow[512, false];
-	ctrlShow[513, false];
+	ctrlShow[506, false];
+	ctrlShow[507, false];
+	ctrlShow[508, false];
+	ctrlShow[509, false];
 };
 
 (_display displayCtrl 502) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", g_interaction_target_trunk_weight_actual];
@@ -73,10 +73,10 @@ if ((lbSize _ctrl_vehicle) isEqualTo 0) then
 };
 if (g_interaction_target_trunk_weight_actual isEqualTo g_interaction_target_trunk_weight_max) then
 {
-	ctrlShow[506, false];
-	ctrlShow[507, false];
-	ctrlShow[508, false];
-	ctrlShow[509, false];
+	ctrlShow[510, false];
+	ctrlShow[511, false];
+	ctrlShow[512, false];
+	ctrlShow[513, false];
 };
 
 (_display displayCtrl 517) progressSetPosition (g_interaction_target_trunk_weight_actual / g_interaction_target_trunk_weight_max);

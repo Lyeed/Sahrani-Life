@@ -6,8 +6,7 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (player getVariable ["surrender", false]) then
-{
+if (player getVariable ["surrender", false]) then {
 	player setVariable ["surrender", false, true];
 } else {
 	player setVariable ["surrender", true, true];

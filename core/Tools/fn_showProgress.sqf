@@ -41,8 +41,10 @@ if (_sound != "") then {
 
 while {g_action_inUse} do
 {
-	if (_anim != "") then {
-		if ((animationState player) != _anim) then {
+	if ((_anim != "") && ((vehicle player) isEqualTo player)) then
+	{
+		if ((animationState player) != _anim) then
+		{
 			[player, _anim] call public_fnc_playAnimation;
 		};
 	};
@@ -59,8 +61,8 @@ while {g_action_inUse} do
 
 	if (g_coma || !(alive player)) exitWith {_ret_reason = "Vous êtes dans le coma"};
 	if (g_interrupted) exitWith {_ret_reason = "Vous avez interrompu l'action"};
-	if (player getVariable["restrained", false]) exitWith {_ret_reason = "Vous êtes menotté"};
-	if (player getVariable["surrender", false]) exitWith {_ret_reason = "Vous avez les mains sur la tête"};
+	if (player getVariable ["restrained", false]) exitWith {_ret_reason = "Vous êtes menotté"};
+	if (player getVariable ["surrender", false]) exitWith {_ret_reason = "Vous avez les mains sur la tête"};
 	if (!(isNull _object) && ((player distance _object) > 10)) exitWith {_ret_reason = "Vous êtes trop loin"};
 	if (_curVeh != (vehicle player)) exitWith {_ret_reason = "Vous êtes entré ou sorti de votre véhicule"};
 };
