@@ -49,13 +49,23 @@ class ALYSIA_SHOPS_VEHICLES
 	{
 		name = "";
 		side = "EAST";
-		stock[] = {};
+		stock[] = {
+			"Cha_BTR60_Cuba",
+			"gac_JGSDF_BXD10_MG",
+			"gac_JGSDF_V16_Rcn",
+			"gac_JGSDF_BXD10",
+			"gac_JMSDF_SKW475",
+			"gac_jsdf_klx",
+			"gac_JGSDF_V16"
+		};
 	};
 	class EAST_vehicles_air
 	{
 		name = "";
 		side = "EAST";
-		stock[] = {};
+		stock[] = {
+			"sfp_bo105_unarmed"
+		};
 	};
 	class EAST_vehicles_sea
 	{
