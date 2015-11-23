@@ -3101,6 +3101,111 @@ class ALYSIA_VEHICLES
 	**				EAST VEHICLES
 	*/
   
+	class Cha_BTR60_Cuba
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 1;
+		donator = 0;
+		license = "";
+		rank = 5;
+		colors[] = {};
+		realname = "btr";
+	};
+
+	class sfp_bo105_unarmed
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 1;
+		donator = 0;
+		license = "";
+		rank = 4;
+		colors[] = {};
+		realname = "helico";
+	};
+
+	class gac_JGSDF_BXD10_MG
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 1;
+		donator = 0;
+		license = "";
+		rank = 4;
+		colors[] = {};
+		realname = "BXD10_MG";
+	};
+
+	class gac_JGSDF_V16_Rcn
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 1;
+		donator = 0;
+		license = "";
+		rank = 3;
+		colors[] = {};
+		realname = "V16 Rcn";
+	};
+
+	class gac_JGSDF_BXD10
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 1;
+		donator = 0;
+		license = "";
+		rank = 3;
+		colors[] = {};
+		realname = "BXD10";
+	};
+
+	class gac_JMSDF_SKW475
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 1;
+		donator = 0;
+		license = "";
+		rank = 2;
+		colors[] = {};
+		realname = "truck";
+	};
+
+	class gac_jsdf_klx
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 1;
+		donator = 0;
+		license = "";
+		rank = 1;
+		colors[] = {};
+		realname = "moto";
+	};
+
+	class gac_JGSDF_V16
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 1;
+		donator = 0;
+		license = "";
+		rank = 1;
+		colors[] = {};
+		realname = "V16";
+	};
+
+
   /*
 	**				GUER VEHICLES
 	*/  
