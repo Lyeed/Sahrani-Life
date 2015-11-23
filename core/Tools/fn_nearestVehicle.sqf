@@ -7,6 +7,15 @@
 */
 
 if (!params [
-	["_object", ObjNull, [ObjNull]],
 	["_type", "", [""]]
 ]) exitWith {};
+
+_vehicle = nearestObject [player, "Car"];
+
+if (isNull(_vehicle)) exitWith {};
+
+if (_type isEqualTo "OWNER") then {
+	if (_vehicle in g_vehicles) then {_vehicle} else {};
+} else {
+	_vehicle
+};

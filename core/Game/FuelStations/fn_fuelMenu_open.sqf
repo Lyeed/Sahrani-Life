@@ -65,9 +65,9 @@ _idc_actual = 5010;
 	};
 } forEach
 ([
-	["action_robbery", "Voler", "[_station] spawn public_fnc_fuelMenu_action_robbery;", "((""Alysia_Lockpick"" in magazines player) && (""Fuel_E"" in magazines player))"],
+	["action_robbery", "Voler", "[_station] spawn public_fnc_fuelMenu_action_robbery;", "((""Alysia_Lockpick"" in magazines player) && (""Fuel_E"" in magazines player) && (""Fuel_Tube"" in magazines player))"],
 	["action_prices", "Prix", "[_station] spawn public_fnc_fuelMenu_action_prices;", "((player distance _station) <= 5)"],	
-	["use_refuel_veh", "Remplir", "[_station] spawn public_fnc_fuelMenu_use_refuel_veh;", "()"],
+	["use_refuel_veh", "Remplir", "[_station] spawn public_fnc_fuelMenu_use_refuel_veh;", "(!(isNull[""OWNER""] call public_fnc_nearestVehicle))"],
 	["use_refuel_jerry", "Remplir", "[_station] spawn public_fnc_fuelMenu_use_refuel_jerry;", "(""Fuel_E"" in magazines player)"]
 ]);
 
@@ -78,11 +78,9 @@ for "_i" from _idc_actual to 5033 do
 
 while {!(isNull _display)} do
 {
-	(_display displayCtrl 5003) ctrlSetStructuredText parseText format
+	(_display displayCtrl 5003) ctrlSetStructuredText parseText format 
 	[
-		"<t align='left'><img size='2.5' image='%1'/></t><t size='2' align='right'>%2m</t>",
-		getText(configFile >> "CfgVehicles" >> typeOf(),
-		round(())
+		"<t align='left'><img size='2.5' image='\Devilz80_Images\data\fuelStations\Station.paa'/></t>"
 	];
 
 	if (g_coma) exitWith {
