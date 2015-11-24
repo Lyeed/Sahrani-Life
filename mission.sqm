@@ -3489,7 +3489,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 19.3908;this setposATL [14231.393555,12805.147461,0.135521];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Garagiste"",public_fnc_shop_arma_open,""gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 19.3908;this setposATL [14231.393555,12805.147461,0.135521];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Garagiste"",public_fnc_shop_arma_open,""garagiste"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item1
 		{
@@ -4746,9 +4746,9 @@ class Mission
 			azimut=34.640999;
 			id=273;
 			side="EMPTY";
-			vehicle="xcam_InfoStand_V2_F";
+			vehicle="xcam_InfoStand_V2_F";										/*****fonte de l'or*******/
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 34.641;this setposATL [14049.241211,12657.819336,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 34.641;this setposATL [14049.241211,12657.819336,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Fonte de l'or"",public_fnc_processAction,""goldnuggets"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item120
 		{
@@ -5991,7 +5991,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this setdir 90;this setposATL [11761.635742,10229.610352,0.247475];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Garagiste"",public_fnc_shop_arma_open,""gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this setdir 90;this setposATL [11761.635742,10229.610352,0.247475];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Garagiste"",public_fnc_shop_arma_open,""garagiste"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item246
 		{
@@ -6002,7 +6002,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this setdir 315;this setposATL [8468.952148,9426.282227,0.570118];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Garagiste"",public_fnc_shop_arma_open,""gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this setdir 315;this setposATL [8468.952148,9426.282227,0.570118];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Garagiste"",public_fnc_shop_arma_open,""garagiste"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item247
 		{
@@ -6013,7 +6013,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this setdir 270;this setposATL [9220.933594,5841.0371094,0.394779];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Garagiste"",public_fnc_shop_arma_open,""gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this setdir 270;this setposATL [9220.933594,5841.0371094,0.394779];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Garagiste"",public_fnc_shop_arma_open,""garagiste"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item248
 		{
@@ -6024,7 +6024,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this setdir 1.00179e-005;this setposATL [9434.555664,5192.602051,0.341751];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Garagiste"",public_fnc_shop_arma_open,""gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this setdir 1.00179e-005;this setposATL [9434.555664,5192.602051,0.341751];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Garagiste"",public_fnc_shop_arma_open,""garagiste"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item249
 		{
@@ -6035,7 +6035,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this setdir 180;this setposATL [11231.235352,6108.680176,0.387205];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Garagiste"",public_fnc_shop_arma_open,""gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this setdir 180;this setposATL [11231.235352,6108.680176,0.387205];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Garagiste"",public_fnc_shop_arma_open,""garagiste"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item250
 		{
@@ -6046,7 +6046,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this setdir 270;this setposATL [12284.579102,6835.198242,0.401516];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Garagiste"",public_fnc_shop_arma_open,""gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this setdir 270;this setposATL [12284.579102,6835.198242,0.401516];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Garagiste"",public_fnc_shop_arma_open,""garagiste"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item251
 		{
@@ -6056,7 +6056,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this setdir 135;this setposATL [19291.861328,13879.669922,0];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Garagiste"",public_fnc_shop_arma_open,""gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this setdir 135;this setposATL [19291.861328,13879.669922,0];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Garagiste"",public_fnc_shop_arma_open,""garagiste"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 	};
 	class Markers
@@ -6422,7 +6422,7 @@ class Mission
 		class Item37
 		{
 			position[]={9195.5137,17.978632,5390.5029};
-			name="vignes_1";
+			name="Vignes";
 			text="Vignes";
 			type="plp_mark_civ_tree";
 			colorName="ColorYellow";
@@ -6953,8 +6953,8 @@ class Mission
 		class Item95
 		{
 			position[]={12420.233,188.5,13397.545};
-			name="Traitement de l'aluminium";
-			text="Traitement de l'aluminium";
+			name="Traitement du Bauxite";
+			text="Traitement du Bauxite";
 			type="plp_mark_civ_industrial";
 			colorName="ColorOrange";
 			a=0.5;

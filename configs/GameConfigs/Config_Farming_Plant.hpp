@@ -124,7 +124,6 @@ class ALYSIA_FARMING_PLANT_MARKERS
 	class potato_1
 	{
 		plant = "";
-		
 	};
 	class corn_1
 	{
