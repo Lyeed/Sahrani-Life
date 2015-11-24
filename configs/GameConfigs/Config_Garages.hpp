@@ -36,18 +36,18 @@ class Cfg_Garages
 		};
 	};
 
-	class garage_est
+	class EAST_base
 	{
-		name = "Garage de l'EST";
+		name = "Garage de la milice";
 		spawns[] = 
 		{
-			"garage_est_1",
-			"garage_est_2"
+			"EAST_vehicles_land_marker_1"
 		};
 		types[] =
 		{
 			"Car",
-			"Truck"
+			"Truck",
+			"Air"
 		};
 	};
 
