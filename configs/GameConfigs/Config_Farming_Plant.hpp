@@ -121,6 +121,11 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 
 class ALYSIA_FARMING_PLANT_MARKERS
 {
+	class potato_1
+	{
+		plant = "";
+		
+	};
 	class corn_1
 	{
 		plant = "Skyline_Corn";
