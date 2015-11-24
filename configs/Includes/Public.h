@@ -208,16 +208,17 @@ class Public
 		class vehicleMenu_putIn {};
 	};
 
-	/*class FuelStations
+	class FuelStations
 	{
 		file = "core\Game\FuelStations";
+		class refuelVehicle {};
 		class fuelMenu_open {};
 		class fuelMenu_action_refuel {};
 		class fuelMenu_action_robbery {};
 		class fuelMenu_use_prices {};
 		class fuelMenu_use_refuel_veh {};
 		class fuelMenu_use_refuel_jerry {};
-	};*/
+	};
 
 	class Housing
 	{

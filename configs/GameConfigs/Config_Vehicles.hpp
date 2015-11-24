@@ -61,7 +61,7 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		donator = 0;
 		license = "driver";
-		fuel = "Essence";
+		fuel = "SP95";
 		rank = 0;
 		colors[] = {
 			"madsa_hummer_h2_black_F",
@@ -96,6 +96,7 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		donator = 0;
 		license = "driver";
+
 		rank = 0;
 		colors[] = {
 			"DAR_FusionCiv",

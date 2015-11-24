@@ -52,7 +52,7 @@ _idc_actual = 5010;
 			format
 			[
 				"
-					ctrlSetText[%1, ""\Devilz80_Images\data\fuelStations\%2.paa""];
+					ctrlSetText[%1, ""\Devilz80_Images\Data\Menu\fuelStations\%2.paa""];
 					((findDisplay 5000) displayCtrl 5002) ctrlSetStructuredText parseText ""<t align='center' size='1.8'>%3</t>"";
 				",
 				_idc_actual,
@@ -65,10 +65,8 @@ _idc_actual = 5010;
 	};
 } forEach
 ([
-	["action_robbery", "Voler", "[_station] spawn public_fnc_fuelMenu_action_robbery;", "((""Alysia_Lockpick"" in magazines player) && (""Fuel_E"" in magazines player) && (""Fuel_Tube"" in magazines player))"],
-	["action_prices", "Prix", "[_station] spawn public_fnc_fuelMenu_action_prices;", "((player distance _station) <= 5)"],	
-	["use_refuel_veh", "Remplir", "[_station] spawn public_fnc_fuelMenu_use_refuel_veh;", "(!(isNull[""OWNER""] call public_fnc_nearestVehicle))"],
-	["use_refuel_jerry", "Remplir", "[_station] spawn public_fnc_fuelMenu_use_refuel_jerry;", "(""Fuel_E"" in magazines player)"]
+	["use_refuel_veh", "Remplir Voiture", "[_station] spawn public_fnc_fuelMenu_use_refuel_veh;", "(player distance _station < 10)"],
+	["use_refuel_jerry", "Remplir Jerrican", "[_station] spawn public_fnc_fuelMenu_use_refuel_jerry;", "(""Fuel_E"" in magazines player)"]
 ]);
 
 for "_i" from _idc_actual to 5033 do
@@ -80,7 +78,7 @@ while {!(isNull _display)} do
 {
 	(_display displayCtrl 5003) ctrlSetStructuredText parseText format 
 	[
-		"<t align='left'><img size='2.5' image='\Devilz80_Images\data\fuelStations\Station.paa'/></t>"
+		"<t align='left'><img size='2.5' image='\Devilz80_Images\data\fuelStations\logo.paa'/></t>"
 	];
 
 	if (g_coma) exitWith {

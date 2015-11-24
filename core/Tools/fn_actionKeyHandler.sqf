@@ -166,6 +166,11 @@ if ((vehicle player) isEqualTo player) then
 
 				if (typeOf(cursorTarget) in ["station_a","station_b","station_c"]) then
 				{
+					if (isNil (player getVariable ["typeRefuel", nil])) exitWith
+					{
+						player setVariable ["typeRefuel", nil, false];
+					};
+
 					[cursorTarget] spawn public_fnc_fuelMenu_open;
 					breakOut "main";
 				};
@@ -180,7 +185,12 @@ if ((vehicle player) isEqualTo player) then
 		};
 		if (((player distance cursorTarget) < 10) && (typeOf(cursorTarget) in (call g_houses_list))) then
 		{
-			[cursorTarget] call public_fnc_house_menu_handler;
+			if (isNil (player getVariable ["typeRefuel", nil])) exitWith
+			{
+				[cursorTarget] call public_fnc_house_menu_handler;
+			};
+			
+			[(nearestObject [player, ["station_a","station_b","station_c"]])] spawn public_fnc_fuelMenu_use_refuel_veh;
 			breakOut "main";
 		};
 	};
@@ -191,6 +201,7 @@ if ((vehicle player) isEqualTo player) then
 	{
 		if (alive _vehicle) then
 		{
+			if ()
 			[_vehicle] spawn public_fnc_vehicleMenu_open;
 			breakOut "main";
 		};

@@ -10,7 +10,9 @@ if (!params [
 	["_type", "", [""]]
 ]) exitWith {};
 
-_vehicle = nearestObject [player, "Car"];
+{
+	_vehicle = nearestObject [player, "Car"];
+};
 
 if (isNull(_vehicle)) exitWith {};
 
