@@ -105,14 +105,14 @@ _radio allowDamage false;
 {
 	while {true} do
 	{
-		if ((floor(serverTime) % 2) isEqualTo 0) then
+		if ((floor(serverTime) % 7) isEqualTo 0) then
 		{
 			[_this select 0] call public_fnc_lightBug;
 		};
-		if ((floor(serverTime) % 5) isEqualTo 0) then
+		if ((floor(serverTime) % 2) isEqualTo 0) then
 		{
 			(_this select 1) say3D "south_radio_music_1";
 		};
-		sleep 60;
+		sleep 90;
 	};
 };

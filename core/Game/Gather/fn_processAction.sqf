@@ -96,7 +96,7 @@ _oldItemWeight = 0;
 	_oldItemWeight = _oldItemWeight + (([(_x select 0)] call public_fnc_itemGetWeight) * (_x select 1));
 } forEach (_item_require);
 if (_enoughText != "") exitWith {
-	[format["Vous n'avez pas tous les élements requis<br/><br/>Vous avez besoin de<br/>%1<br/>pour commencer à traiter</t>", _enoughText]] call public_fnc_error;
+	[format["Vous n'avez pas tous les élements requis<br/><br/>Vous avez besoin de<br/>%1<br/>en plus pour commencer à traiter</t>", _enoughText]] call public_fnc_error;
 };
 
 _item_receive = getArray(missionConfigFile >> "ALYSIA_PROCESS" >> _type >> "receive");

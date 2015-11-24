@@ -22,21 +22,18 @@ _isEmpty = false;
 	_val = [_x] call public_fnc_itemCount;
 	if (_val > 0) then
 	{
-		if (_x isEqualTo "illegal_money") then {
-			_val = [_val] call public_fnc_numberText;
-		};
-		_list lbAdd format["%1x %2", _val, ([_x] call public_fnc_itemGetName)];
-		_list lbSetData [(lbSize _list) - 1, _x];
-		_list lbSetPicture [(lbSize _list) - 1, ([_x] call public_fnc_itemGetImage)];
+		_index = _list lbAdd format["%1x %2", ([_val] call public_fnc_numberText), ([_x] call public_fnc_itemGetName)];
+		_list lbSetData [_index, _x];
+		_list lbSetPicture [_index, ([_x] call public_fnc_itemGetImage)];
 	};
-} forEach (g_inv_items);
+} forEach g_inv_items;
 
-if (_completeEmpty) then
+if ((lbSize _list) isEqualTo 0) then
 {
-	if ((lbSize _list) isEqualTo 0) then {
+	_isEmpty = true;
+	if (_completeEmpty) then {
 		_list lbAdd "Vide";
 	};
-	_isEmpty = true;
 };
 
 if (_select) then {
