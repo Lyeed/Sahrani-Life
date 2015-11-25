@@ -27,16 +27,22 @@ _isCar = true;
 g_interaction_target_trunk_stock = g_interaction_target getVariable ["Trunk", []];
 g_interaction_target_trunk_weight_actual = [g_interaction_target_trunk_stock] call public_fnc_weightGenerate;
 g_interaction_target_trunk_transfer = false;
-g_interaction_target_trunk_weight_max = [typeOf(g_interaction_target)] call public_fnc_getVehVirtual;
 
-if (g_interaction_target_trunk_weight_max isEqualTo 0) then
+g_interaction_target_trunk_weight_max = switch (true) do
 {
-	if (isClass(missionConfigFile >> "ALYSIA_STORAGES" >> typeOf(g_interaction_target))) then
+	case (typeOf(g_interaction_target) in ["Bank_Sahrani_N", "Bank_Sahrani_S"]):
 	{
-		g_interaction_target_trunk_weight_max = getNumber(missionConfigFile >> "ALYSIA_STORAGES" >> typeOf(g_interaction_target) >> "inventory");
 		_isCar = false;
+		5000
 	};
+	case (isClass(missionConfigFile >> "ALYSIA_STORAGES" >> typeOf(g_interaction_target))):
+	{
+		_isCar = false;
+		getNumber(missionConfigFile >> "ALYSIA_STORAGES" >> typeOf(g_interaction_target) >> "inventory")
+	};
+	default {[typeOf(g_interaction_target)] call public_fnc_getVehVirtual};
 };
+
 if (g_interaction_target_trunk_weight_max isEqualTo 0) exitWith {
 	["Impossible de déterminer l'inventaire du véhicule"] call public_fnc_error;
 };
