@@ -3476,5 +3476,150 @@ class ALYSIA_VEHICLES
 	};
 	class dezkit_b206_ems : dezkit_b206ems {};
 	class dezkit_b206_rescue : dezkit_b206ems {};
+	
+	class Jonzie_Tow_Truck
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "truck";
+		fuel = "Diesel";
+		rank = 0;
+		colors[] = {
+			"Fett_Tow_Truck_red",
+			"Fett_Tow_Truck_yellow",
+			"Fett_Tow_Truck_green",
+			"Fett_Tow_Truck_blue",
+			"Fett_Tow_Truck_pink",
+			"Fett_Tow_Truck_dark",
+			"Fett_Tow_Truck_white"
+		};
+		realname = "Remorqueur";
+	};
+	class Fett_Tow_Truck_red: Jonzie_Tow_Truck {};
+	class Fett_Tow_Truck_yellow: Jonzie_Tow_Truck {};
+	class Fett_Tow_Truck_green: Jonzie_Tow_Truck {};
+	class Fett_Tow_Truck_blue: Jonzie_Tow_Truck {};
+	class Fett_Tow_Truck_pink: Jonzie_Tow_Truck {};
+	class Fett_Tow_Truck_dark: Jonzie_Tow_Truck {};
+	class Fett_Tow_Truck_white: Jonzie_Tow_Truck {};
+	
+	class Jonzie_Flat_Bed
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "truck";
+		fuel = "Diesel";
+		rank = 0;
+		colors[] = {
+			"Fett_Flat_Bed_red",
+			"Fett_Flat_Bed_yellow",
+			"Fett_Flat_Bed_green",
+			"Fett_Flat_Bed_blue",
+			"Fett_Flat_Bed_pink",
+			"Fett_Flat_Bed_dark",
+			"Fett_Flat_Bed_white"
+		};
+		realname = "Man TGX Flat Bed Truck";
+	};
+	class Fett_Flat_Bed_red: Jonzie_Flat_Bed {};
+	class Fett_Flat_Bed_yellow: Jonzie_Flat_Bed {};
+	class Fett_Flat_Bed_green: Jonzie_Flat_Bed {};
+	class Fett_Flat_Bed_blue: Jonzie_Flat_Bed {};
+	class Fett_Flat_Bed_pink: Jonzie_Flat_Bed {};
+	class Fett_Flat_Bed_dark: Jonzie_Flat_Bed {};
+	class Fett_Flat_Bed_white: Jonzie_Flat_Bed {};
+	
+	class Jonzie_Log_Truck
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "truck";
+		fuel = "Diesel";
+		rank = 0;
+		colors[] = {
+			"Fett_Log_Truck_red",
+			"Fett_Log_Truck_yellow",
+			"Fett_Log_Truck_green",
+			"Fett_Log_Truck_blue",
+			"Fett_Log_Truck_pink",
+			"Fett_Log_Truck_dark",
+			"Fett_Log_Truck_white"
+		};
+		realname = "Man TGX Log Truck";
+	};
+	class Fett_Log_Truck_red: Jonzie_Log_Truck {};
+	class Fett_Log_Truck_yellow: Jonzie_Log_Truck {};
+	class Fett_Log_Truck_green: Jonzie_Log_Truck {};
+	class Fett_Log_Truck_blue: Jonzie_Log_Truck {};
+	class Fett_Log_Truck_pink: Jonzie_Log_Truck {};
+	class Fett_Log_Truck_dark: Jonzie_Log_Truck {};
+	class Fett_Log_Truck_white: Jonzie_Log_Truck {};
+	
+	class Jonzie_Tanker_Truck
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "truck";
+		fuel = "Diesel";
+		rank = 0;
+		colors[] = {
+			"Fett_Tanker_Truck_red",
+			"Fett_Tanker_Truck_yellow",
+			"Fett_Tanker_Truck_green",
+			"Fett_Tanker_Truck_blue",
+			"Fett_Tanker_Truck_pink",
+			"Fett_Tanker_Truck_dark",
+			"Fett_Tanker_Truck_white"
+		};
+		realname = "Man TGX Tanker Truck";
+	};
+	class Fett_Tanker_Truck_red: Jonzie_Tanker_Truck {};
+	class Fett_Tanker_Truck_yellow: Jonzie_Tanker_Truck {};
+	class Fett_Tanker_Truck_green: Jonzie_Tanker_Truck {};
+	class Fett_Tanker_Truck_blue: Jonzie_Tanker_Truck {};
+	class Fett_Tanker_Truck_pink: Jonzie_Tanker_Truck {};
+	class Fett_Tanker_Truck_dark: Jonzie_Tanker_Truck {};
+	class Fett_Tanker_Truck_white: Jonzie_Tanker_Truck {};
+	
+	class Jonzie_Box_Truck
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		donator = 0;
+		license = "truck";
+		fuel = "Diesel";
+		rank = 0;
+		colors[] = {
+			"Fett_Box_Truck_red",
+			"Fett_Box_Truck_yellow",
+			"Fett_Box_Truck_green",
+			"Fett_Box_Truck_blue",
+			"Fett_Box_Truck_pink",
+			"Fett_Box_Truck_dark",
+			"Fett_Box_Truck_white"
+		};
+		realname = "Man TGX Box Truck";
+	};
+	class Fett_Box_Truck_red: Jonzie_Box_Truck {};
+	class Fett_Box_Truck_yellow: Jonzie_Box_Truck {};
+	class Fett_Box_Truck_green: Jonzie_Box_Truck {};
+	class Fett_Box_Truck_blue: Jonzie_Box_Truck {};
+	class Fett_Box_Truck_pink: Jonzie_Box_Truck {};
+	class Fett_Box_Truck_dark: Jonzie_Box_Truck {};
+	class Fett_Box_Truck_white: Jonzie_Box_Truck {};
 };
 	
