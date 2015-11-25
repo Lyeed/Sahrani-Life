@@ -152,7 +152,11 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_a3_iveco_f",
 			"B_G_Van_01_fuel_F",  
 			"O_Truck_02_fuel_F",
-			"B_Truck_01_fuel_F"
+			"B_Truck_01_fuel_F",
+			"Jonzie_Flat_Bed",
+			"Jonzie_Log_Truck",
+			"Jonzie_Tanker_Truck",
+			"Jonzie_Box_Truck"
 		};
 	};
 	class CIV_vehicles_land_occasion
@@ -280,6 +284,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"RDS_Ikarus_Civ",
 			"Skyline_Bus",
 			"max_towtruck",
+			"Jonzie_Tow_Truck",
 			"shounka_limo_civ",
 			"shounka_a3_mantgs"
 		};
