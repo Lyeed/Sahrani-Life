@@ -28,7 +28,7 @@ if (isNil (player getVariable ["typeRefuel", nil])) then
 	_combo = (_display displayCtrl 16004);
 	{
 		_index = _combo lbAdd format ["%1", (getText(missionConfigFile) >> "ALYSIA_FUEL" >> "fuels" >> _x >> "name")];
-		_combo lbSetData [_index, (getText(missionConfigFile) >> "ALYSIA_FUEL" >> "fuels" >> _x >> "name")];
+		_combo lbSetData [_index, (getText(missionConfigFile) >> "ALYSIA_FUEL" >> "fuels" >> _x)];
 		_combo lbSetPicture [_index, (getText(missionConfigFile) >> "ALYSIA_FUEL" >> "fuels" >> _x >> "picture")];
 	} forEach (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels"));
 
@@ -43,6 +43,7 @@ if (isNil (player getVariable ["typeRefuel", nil])) then
 	};
 } else {
 	_vehicle = cursorTarget;
+	if (isNil (player getVariable ["typeRefuel", nil])) exitWith {};
 	if ((isNull _station) || ((player distance _station) < 10)) exitWith {["Vous êtes trop loin de la pompe à essence."] call public_fnc_error};
 	if (!(_vehicle in g_vehicles)) exitWith {["Vous n'avez pas les clées de ce véhicule."] call public_fnc_error};
 	if (isEngineOn _vehicle) exitWith {["Veuillez couper le moteur du véhicule avant de faire le plein."] call public_fnc_error};
@@ -50,9 +51,30 @@ if (isNil (player getVariable ["typeRefuel", nil])) then
 
 	if (!(createDialog "RscDisplayRefuel")) exitWith {};
 
+	disableSerialization;
+	_display = findDisplay 17000;
+	if (isNull _display) exitWith {};
+
+	private ["_bill"];
+	_bill = 1;
+
 	while {dialog} do
 	{
+		if (_station getVariable [(player getVariable ["typeRefuel", nil]), 250] < 1) exitWith
+		{
+			[format ["Les réservoirs en %1 de cette station essence sont vides.", ](getText(missionConfigFile) >> "ALYSIA_FUEL" >> "fuels" >> _x >> "name")] call public_fnc_error;
+			closeDialog 0;
+		};
+
+		if ((_bill + [_station, (player getVariable [])] call public_fnc_fuelPrice) > g_cash) exitWith
+		{
+			["Vous n'avez pas assez d'argent sur votre compte pour pouvoir faire le plein."] call public_fnc_error;
+			closeDialog 0;		
+		};
+
 		_vehicle setFuel ((fuel _vehicle) + 0.1);
+		_bill = _bill + [_station, (player getVariable ["typeRefuel", nil])] call public_fnc_fuelPrice;
 		sleep 0.1;
 	};
+	// Paiement
 };
