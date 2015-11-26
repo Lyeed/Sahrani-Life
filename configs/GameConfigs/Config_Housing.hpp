@@ -149,7 +149,7 @@ class ALYSIA_HOUSES
 		garage = 0;
 		garage_type[] = {};
 		sides[] = {"WEST", "EAST"};
-		rank = 0;
+		rank = 1;
 		license = "home";
 	};	
 
@@ -161,7 +161,7 @@ class ALYSIA_HOUSES
 		garage = 0;
 		garage_type[] = {};
 		sides[] = {"WEST", "EAST"};
-		rank = 0;
+		rank = 1;
 		license = "home";
 	};	
 
@@ -278,7 +278,7 @@ class ALYSIA_HOUSES
 		price = 0;
 		storage = "Skyline_Coffre_Large";
 		storage_building_pos_index = 2;
-		garage = 0;
+		garage = 1;
 		garage_type[] = {};
 		sides[] = {"WEST"};
 		rank = 4;
@@ -290,7 +290,7 @@ class ALYSIA_HOUSES
 		price = 0;
 		storage = "Skyline_Coffre_Medium";
 		storage_building_pos_index = 4;
-		garage = 0;
+		garage = 1;
 		garage_type[] = {};
 		sides[] = {"WEST"};
 		rank = 0;
@@ -302,7 +302,7 @@ class ALYSIA_HOUSES
 		price = 0;
 		storage = "Skyline_Coffre_Large";
 		storage_building_pos_index = 6;
-		garage = 0;
+		garage = 1;
 		garage_type[] = {};
 		sides[] = {"EAST"};
 		rank = 4;
@@ -314,7 +314,7 @@ class ALYSIA_HOUSES
 		price = 0;
 		storage = "Skyline_Coffre_Medium";
 		storage_building_pos_index = 5;
-		garage = 0;
+		garage = 1;
 		garage_type[] = {};
 		sides[] = {"EAST"};
 		rank = 0;

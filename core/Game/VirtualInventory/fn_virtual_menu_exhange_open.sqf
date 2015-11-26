@@ -47,7 +47,7 @@ if (g_interaction_target_trunk_weight_max isEqualTo 0) exitWith {
 	["Impossible de déterminer l'inventaire du véhicule"] call public_fnc_error;
 };
 
-if (!(createDialog "RscDisplayVehicleTrunk")) exitWith {};
+if (!(createDialog "RscDisplayVirtualExhange")) exitWith {};
 
 disableSerialization;
 _display = findDisplay 500;
