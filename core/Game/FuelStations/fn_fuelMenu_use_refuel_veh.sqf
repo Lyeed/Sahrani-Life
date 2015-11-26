@@ -56,7 +56,7 @@ if (isNil (player getVariable ["typeRefuel", nil])) then
 	if (isNull _display) exitWith {};
 
 	private ["_bill"];
-	_bill = 1;
+	_bill = 0;
 
 	while {dialog} do
 	{
