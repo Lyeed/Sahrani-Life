@@ -27,11 +27,7 @@ class ALYSIA_VEHICLES
 		insurance 				-NUMBER-	(can be insured)
     possible [0(no),1(yes]
     Ex: insurance = 1;
-    ----------------------------
-		donator 					-NUMBER-	(must be donator to buy vehicle)
-    possible [0(no),1(yes]
-    Ex: donator = 1;
-		----------------------------
+	----------------------------
 		license						-TXT-			(license name/empty if no need : player needs to have license x to buy vehicle. Eg: CONFIG_licenses)
     Ex: license = "truck";
     ----------------------------

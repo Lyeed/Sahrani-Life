@@ -5,12 +5,10 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_cString"];
+private "_cString";
 
 _cString =
 {
-	private["_obj"];
-
 	_obj = createVehicle [(_this select 0), call compile (_this select 1), [], 0, "CAN_COLLIDE"];
 	if((_this select 4) isEqualTo 0) then {
 		_obj enableSimulation false;

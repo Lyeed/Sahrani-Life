@@ -27,3 +27,11 @@ if (player getVariable ["surrender", false]) then {
 		};
 	};
 };
+/*
+amovpercmstpssurwnondnon
+player playMove "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon";
+player playMove "amovpercmstpsnonwnondnon"
+
+amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon
+AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon*/
+

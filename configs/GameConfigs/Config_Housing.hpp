@@ -283,7 +283,6 @@ class ALYSIA_HOUSES
 		sides[] = {"WEST"};
 		rank = 4;
 		license = "";
-		
 	};
 	
 	class Barrack2
@@ -296,7 +295,6 @@ class ALYSIA_HOUSES
 		sides[] = {"WEST"};
 		rank = 0;
 		license = "";
-		
 	};
 	
 	class Land_tent_east
@@ -309,7 +307,6 @@ class ALYSIA_HOUSES
 		sides[] = {"EAST"};
 		rank = 4;
 		license = "";
-		
 	};
 	
 	class Land_Barrack2_EP1
@@ -322,6 +319,5 @@ class ALYSIA_HOUSES
 		sides[] = {"EAST"};
 		rank = 0;
 		license = "";
-		
 	};
 };

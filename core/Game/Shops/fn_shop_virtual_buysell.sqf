@@ -56,6 +56,18 @@ if (!(_market_sell isEqualTo []) || !(_market_buy isEqualTo [])) then
 				_newPrice = _minPrice;
 			};
 			[(format["market_%1", _ressource]), _newPrice] call CBA_fnc_publicVariable;
+
+			_affect = getArray(missionConfigFile >> "ALYSIA_BOURSE" >> _ressource >> "affect");
+			if (!(_affect isEqualTo [])) then
+			{
+				_affect = _affect call BIS_fnc_selectRandom;
+				_newPrice = ([_affect] call public_fnc_itemGetBuyPrice) + ((random(_x select 1)) * (getNumber(missionConfigFile >> "ALYSIA_BOURSE" >> _affect >> "mult")));
+				_maxPrice = getNumber(missionConfigFile >> "ALYSIA_BOURSE" >> _affect >> "max");
+				if (_newPrice < _maxPrice) then {
+					_newPrice = _maxPrice;
+				};
+				[(format["market_%1", _affect]), _newPrice] call CBA_fnc_publicVariable;
+			};
 		} forEach (_this select 0);
 
 		{

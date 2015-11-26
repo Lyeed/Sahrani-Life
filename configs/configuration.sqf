@@ -89,6 +89,13 @@ with missionNamespace do
 	g_drugs_consuming = 0; // time before all drugs effects and after effects stop (scale in seconds)
 	g_drugs = [];
 
+	/*
+	_c = 0;
+	{
+		_c = _c + 1;
+	} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_DRUG"));
+	hint format["%1", _c];*/
+
 	"g_drugs pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_DRUG");
 
 	{

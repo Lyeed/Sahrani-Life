@@ -62,7 +62,7 @@ if (isNil (player getVariable ["typeRefuel", nil])) then
 	{
 		if (_station getVariable [(player getVariable ["typeRefuel", nil]), 250] < 1) exitWith
 		{
-			[format ["Les réservoirs en %1 de cette station essence sont vides.", ](getText(missionConfigFile) >> "ALYSIA_FUEL" >> "fuels" >> _x >> "name")] call public_fnc_error;
+			[format["Les réservoirs en %1 de cette station essence sont vides.", (getText(missionConfigFile) >> "ALYSIA_FUEL" >> "fuels" >> _x >> "name")]] call public_fnc_error;
 			closeDialog 0;
 		};
 
