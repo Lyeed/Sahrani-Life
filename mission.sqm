@@ -4972,7 +4972,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir -1170;this setposATL [9546.411133,9870.323242,0];this addAction[""Concessionnaire"",public_fnc_shop_vehicles_open,[""EAST_vehicles_land"", [""EAST_vehicles_land_marker_1""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Ranger son véhicule"",public_fnc_garageVehicleStore,[""Car"", ""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4 &&'];this addAction[""Garage"",public_fnc_garageGet,""EAST_base"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir -1170;this setposATL [9546.411133,9870.323242,0];this addAction[""Concessionnaire"",public_fnc_shop_vehicles_open,[""EAST_vehicles_land"", [""EAST_vehicles_land_marker_1""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Ranger son véhicule"",public_fnc_garageVehicleStore,[""Car"", ""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4 '];this addAction[""Garage"",public_fnc_garageGet,""EAST_base"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item140
 		{
