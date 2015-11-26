@@ -83,6 +83,7 @@ class ALYSIA_SHOPS_VEHICLES
 		stock[] =
 		{
 			"max_ambulance",
+			"Jonzie_Ambulance",
 			"DAR_TahoeEMS",
 			"DAR_ExplorerMedic",
 			"Fett_zamak_repair_samu",

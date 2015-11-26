@@ -3188,4 +3188,8 @@ class ALYSIA_ITEMS_ARMA
  	{
 		buy_price = 20;
 	};
+	class G_B_Diving
+	{
+		buy_price = 20;
+	};
 };

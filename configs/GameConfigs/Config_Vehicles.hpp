@@ -3038,380 +3038,6 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		realname = "Agera";
 	};
-
-  /*
-	**				WEST VEHICLES
-	*/
-	class DAR_TahoePolice
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "WEST";
-		insurance = 1;
-		license = "";
-		fuel = "SP95";
-		rank = 3;
-		colors[] = {};
-		realname = "Chevrolet Tahoe Milice";
-	};
-
-	class Fett_boat_milice
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "WEST";
-		insurance = 1;
-		license = "";
-		fuel = "SP95";
-		rank = 3;
-		colors[] = {};
-		realname = "Bateau à moteur";
-	};
-
-	class DAR_ImpalaPolice
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "WEST";
-		insurance = 1;
-		license = "";
-		fuel = "SP95";
-		rank = 3;
-		colors[] = {};
-		realname = "Impala Milice";
-	};
-
-	class DAR_ChargerPoliceState
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "WEST";
-		insurance = 1;
-		license = "";
-		fuel = "SP95";
-		rank = 3;
-		colors[] = {};
-		realname = "Dodge Charger Milice";
-	};
-
-	class DAR_ExplorerPolice
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "WEST";
-		insurance = 1;
-		license = "";
-		fuel = "SP95";
-		rank = 3;
-		colors[] = {};
-		realname = "Ford Explorer Milice";
-	};
-
-	class DAR_TaurusPolice
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "WEST";
-		insurance = 1;
-		license = "";
-		fuel = "SP98";
-		rank = 3;
-		colors[] = {};
-		realname = "Ford Taurus Milice";
-	};
-
-	class DAR_CVPIAux
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "WEST";
-		insurance = 1;
-		license = "";
-		fuel = "SP98";
-		rank = 3;
-		colors[] = {};
-		realname = "Crown Victoria Milice";
-	};
-
-	class DDAR_TahoePoliceDet
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "WEST";
-		insurance = 1;
-		license = "";
-		fuel = "Diesel";
-		rank = 3;
-		colors[] = {};
-		realname = "Chevrolet Tahoe noir";
-	};
-
-	class EC635_Unarmed
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "WEST";
-		insurance = 1;
-		license = "";
-		fuel = "Kerosene";
-		rank = 3;
-		colors[] = {};
-		realname = "EC635 Milice";
-	};
-
-	class dezkit_b206mi
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "WEST";
-		insurance = 1;
-		license = "";
-		fuel = "Kerosene";
-		rank = 3;
-		colors[] = 
-		{
-			"dezkit_b206_police",
-			"dezkit_b206_fbi"
-		};
-		realname = "B206 Milice";
-	};
-	class dezkit_b206_police : dezkit_b206mi {};
-	class dezkit_b206_fbi : dezkit_b206mi {};
-  
-  /*
-	**				EAST VEHICLES
-	*/
-  
-	class Cha_BTR60_Cuba
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "EAST";
-		insurance = 1;
-		license = "";
-		fuel = "Diesel";
-		rank = 5;
-		colors[] = {};
-		realname = "btr";
-	};
-
-	class sfp_bo105_unarmed
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "EAST";
-		insurance = 1;
-		license = "";
-		fuel = "Kerosene";
-		rank = 4;
-		colors[] = {};
-		realname = "helico";
-	};
-
-	class gac_JGSDF_BXD10_MG
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "EAST";
-		insurance = 1;
-		license = "";
-		fuel = "Diesel";
-		rank = 4;
-		colors[] = {};
-		realname = "BXD10_MG";
-	};
-
-	class gac_JGSDF_V16_Rcn
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "EAST";
-		insurance = 1;
-		license = "";
-		fuel = "Diesel";
-		rank = 3;
-		colors[] = {};
-		realname = "V16 Rcn";
-	};
-
-	class gac_JGSDF_BXD10
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "EAST";
-		insurance = 1;
-		license = "";
-		fuel = "Diesel";
-		rank = 3;
-		colors[] = {};
-		realname = "BXD10";
-	};
-
-	class gac_JMSDF_SKW475
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "EAST";
-		insurance = 1;
-		license = "";
-		fuel = "Diesel";
-		rank = 2;
-		colors[] = {};
-		realname = "truck";
-	};
-
-	class gac_jsdf_klx
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "EAST";
-		insurance = 1;
-		license = "";
-		fuel = "Diesel";
-		rank = 1;
-		colors[] = {};
-		realname = "moto";
-	};
-
-	class gac_JGSDF_V16
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "EAST";
-		insurance = 1;
-		license = "";
-		fuel = "Diesel";
-		rank = 1;
-		colors[] = {};
-		realname = "V16";
-	};
-
-
-  /*
-	**				GUER VEHICLES
-	*/  
-	class max_ambulance
-	{
-		buyPrice = 25000;
-		inventory = 150;
-		side = "GUER";
-		insurance = 1;
-		license = "";
-		fuel = "SP98";
-		rank = 1;
-		colors[] = {};
-		realname = "Ambulance";
-	};
-
-	class Fett_boat_samu
-	{
-		buyPrice = 25000;
-		inventory = 150;
-		side = "GUER";
-		insurance = 1;
-		license = "";
-		fuel = "Diesel";
-		rank = 1;
-		colors[] = {};
-		realname = "Bateau à moteur";
-	};
-
-	class DAR_TaurusPoliceState
-	{
-		buyPrice = 25000;
-		inventory = 70;
-		side = "GUER";
-		insurance = 1;
-		license = "";
-		fuel = "SP98";
-		rank = 5;
-		colors[] = {};
-		realname = "Ford Taurus SAMU";
-	};
-
-	class Fett_zamak_repair_samu
-	{
-		buyPrice = 25000;
-		inventory = 450;
-		side = "GUER";
-		insurance = 1;
-		license = "";
-		fuel = "Diesel";
-		rank = 2;
-		colors[] = {};
-		realname = "Zamak Transport de médicament";
-	};
-
-	class Fett_zamak_covered_samu
-	{
-		buyPrice = 25000;
-		inventory = 150;
-		side = "GUER";
-		insurance = 1;
-		license = "";
-		fuel = "Diesel";
-		rank = 3;
-		colors[] = {};
-		realname = "Zamak Stand SAMU";
-	};
-
-	class DAR_TahoeEMS
-	{
-		buyPrice = 50000;
-		inventory = 90;
-		side = "GUER";
-		insurance = 1;
-		license = "";
-		fuel = "Diesel";
-		rank = 2;
-		colors[] = {};
-		realname = "Chevrolet Tahoe SAMU";
-	};
-
-	class DAR_ExplorerMedic
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "GUER";
-		insurance = 1;
-		license = "";
-		fuel = "Diesel";
-		rank = 3;
-		colors[] = {};
-		realname = "Ford Explorer SAMU";
-	};
-
-	class EC635_SAR
-	{
-		buyPrice = 250000;
-		inventory = 70;
-		side = "GUER";
-		insurance = 1;
-		license = "";
-		fuel = "Kerosene";
-		rank = 3;
-		colors[] = {};
-		realname = "EC635 SAMU";
-	};
-
-	class dezkit_b206ems
-	{
-		buyPrice = 250000;
-		inventory = 70;
-		side = "GUER";
-		insurance = 1;
-		license = "";
-		fuel = "Kerosene";
-		rank = 3;
-		colors[] = 
-		{
-			"dezkit_b206_ems",
-			"dezkit_b206_rescue"
-		};
-		realname = "B206 SAMU";
-	};
-	class dezkit_b206_ems : dezkit_b206ems {};
-	class dezkit_b206_rescue : dezkit_b206ems {};
 	
 	class Jonzie_Tow_Truck
 	{
@@ -3761,35 +3387,6 @@ class ALYSIA_VEHICLES
 	class Fett_Galant_dark: Jonzie_Galant {};
 	class Fett_Galant_white: Jonzie_Galant d{};
 	
-	class Jonzie_Highway
-	{
-		buyPrice = 25000;
-		inventory = 150;
-		side = "WEST";
-		insurance = 1;
-		license = "";
-		fuel = "SP95";
-		rank = 0;
-		colors[] = 
-		{
-			"Fett_Highway_red",
-			"Fett_Highway_yellow",
-			"Fett_Highway_green",
-			"Fett_Highway_blue",
-			"Fett_Highway_pink",
-			"Fett_Highway_dark",
-			"Fett_Highway_white"
-		};
-		realname = "Holden Commodore Highway Patrol";
-	};
-	class Fett_Highway_red: Jonzie_Highway {};
-	class Fett_Highway_yellow: Jonzie_Highway {};
-	class Fett_Highway_green: Jonzie_Highway {};
-	class Fett_Highway_blue: Jonzie_Highway {};
-	class Fett_Highway_pink: Jonzie_Highway {};
-	class Fett_Highway_dark: Jonzie_Highway {};
-	class Fett_Highway_white: Jonzie_Highway d{};
-	
 	class Jonzie_Mini_Cooper
 	{
 		buyPrice = 25000;
@@ -4022,4 +3619,423 @@ class ALYSIA_VEHICLES
 	class Fett_Viper_dark: Jonzie_Viper {};
 	class Fett_Viper_white: Jonzie_Viper {};
 };
+
+  /*
+	**				WEST VEHICLES
+	*/
+	class DAR_TahoePolice
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "WEST";
+		insurance = 1;
+		license = "";
+		fuel = "SP95";
+		rank = 3;
+		colors[] = {};
+		realname = "Chevrolet Tahoe Milice";
+	};
+
+	class Fett_boat_milice
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "WEST";
+		insurance = 1;
+		license = "";
+		fuel = "SP95";
+		rank = 3;
+		colors[] = {};
+		realname = "Bateau à moteur";
+	};
+
+	class DAR_ImpalaPolice
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "WEST";
+		insurance = 1;
+		license = "";
+		fuel = "SP95";
+		rank = 3;
+		colors[] = {};
+		realname = "Impala Milice";
+	};
+
+	class DAR_ChargerPoliceState
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "WEST";
+		insurance = 1;
+		license = "";
+		fuel = "SP95";
+		rank = 3;
+		colors[] = {};
+		realname = "Dodge Charger Milice";
+	};
+
+	class DAR_ExplorerPolice
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "WEST";
+		insurance = 1;
+		license = "";
+		fuel = "SP95";
+		rank = 3;
+		colors[] = {};
+		realname = "Ford Explorer Milice";
+	};
+
+	class DAR_TaurusPolice
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "WEST";
+		insurance = 1;
+		license = "";
+		fuel = "SP98";
+		rank = 3;
+		colors[] = {};
+		realname = "Ford Taurus Milice";
+	};
+
+	class DAR_CVPIAux
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "WEST";
+		insurance = 1;
+		license = "";
+		fuel = "SP98";
+		rank = 3;
+		colors[] = {};
+		realname = "Crown Victoria Milice";
+	};
+
+	class DDAR_TahoePoliceDet
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "WEST";
+		insurance = 1;
+		license = "";
+		fuel = "Diesel";
+		rank = 3;
+		colors[] = {};
+		realname = "Chevrolet Tahoe noir";
+	};
+
+	class EC635_Unarmed
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "WEST";
+		insurance = 1;
+		license = "";
+		fuel = "Kerosene";
+		rank = 3;
+		colors[] = {};
+		realname = "EC635 Milice";
+	};
+
+	class dezkit_b206mi
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "WEST";
+		insurance = 1;
+		license = "";
+		fuel = "Kerosene";
+		rank = 3;
+		colors[] = 
+		{
+			"dezkit_b206_police",
+			"dezkit_b206_fbi"
+		};
+		realname = "B206 Milice";
+	};
+	class dezkit_b206_police : dezkit_b206mi {};
+	class dezkit_b206_fbi : dezkit_b206mi {};
+	
+	class Jonzie_Highway
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "WEST";
+		insurance = 1;
+		license = "";
+		fuel = "SP95";
+		rank = 0;
+		colors[] = 
+		{
+			"Fett_Highway_red",
+			"Fett_Highway_yellow",
+			"Fett_Highway_green",
+			"Fett_Highway_blue",
+			"Fett_Highway_pink",
+			"Fett_Highway_dark",
+			"Fett_Highway_white"
+		};
+		realname = "Holden Commodore Highway Patrol";
+	};
+	class Fett_Highway_red: Jonzie_Highway {};
+	class Fett_Highway_yellow: Jonzie_Highway {};
+	class Fett_Highway_green: Jonzie_Highway {};
+	class Fett_Highway_blue: Jonzie_Highway {};
+	class Fett_Highway_pink: Jonzie_Highway {};
+	class Fett_Highway_dark: Jonzie_Highway {};
+	class Fett_Highway_white: Jonzie_Highway {};
+  
+  /*
+	**				EAST VEHICLES
+	*/
+  
+	class Cha_BTR60_Cuba
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 1;
+		license = "";
+		fuel = "Diesel";
+		rank = 5;
+		colors[] = {};
+		realname = "btr";
+	};
+
+	class sfp_bo105_unarmed
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 1;
+		license = "";
+		fuel = "Kerosene";
+		rank = 4;
+		colors[] = {};
+		realname = "helico";
+	};
+
+	class gac_JGSDF_BXD10_MG
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 1;
+		license = "";
+		fuel = "Diesel";
+		rank = 4;
+		colors[] = {};
+		realname = "BXD10_MG";
+	};
+
+	class gac_JGSDF_V16_Rcn
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 1;
+		license = "";
+		fuel = "Diesel";
+		rank = 3;
+		colors[] = {};
+		realname = "V16 Rcn";
+	};
+
+	class gac_JGSDF_BXD10
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 1;
+		license = "";
+		fuel = "Diesel";
+		rank = 3;
+		colors[] = {};
+		realname = "BXD10";
+	};
+
+	class gac_JMSDF_SKW475
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 1;
+		license = "";
+		fuel = "Diesel";
+		rank = 2;
+		colors[] = {};
+		realname = "truck";
+	};
+
+	class gac_jsdf_klx
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 1;
+		license = "";
+		fuel = "Diesel";
+		rank = 1;
+		colors[] = {};
+		realname = "moto";
+	};
+
+	class gac_JGSDF_V16
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 1;
+		license = "";
+		fuel = "Diesel";
+		rank = 1;
+		colors[] = {};
+		realname = "V16";
+	};
+
+
+  /*
+	**				GUER VEHICLES
+	*/  
+	class max_ambulance
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "GUER";
+		insurance = 1;
+		license = "";
+		fuel = "SP98";
+		rank = 1;
+		colors[] = {};
+		realname = "Ambulance";
+	};
+
+	class Fett_boat_samu
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "GUER";
+		insurance = 1;
+		license = "";
+		fuel = "Diesel";
+		rank = 1;
+		colors[] = {};
+		realname = "Bateau à moteur";
+	};
+
+	class DAR_TaurusPoliceState
+	{
+		buyPrice = 25000;
+		inventory = 70;
+		side = "GUER";
+		insurance = 1;
+		license = "";
+		fuel = "SP98";
+		rank = 5;
+		colors[] = {};
+		realname = "Ford Taurus SAMU";
+	};
+
+	class Fett_zamak_repair_samu
+	{
+		buyPrice = 25000;
+		inventory = 450;
+		side = "GUER";
+		insurance = 1;
+		license = "";
+		fuel = "Diesel";
+		rank = 2;
+		colors[] = {};
+		realname = "Zamak Transport de médicament";
+	};
+
+	class Fett_zamak_covered_samu
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "GUER";
+		insurance = 1;
+		license = "";
+		fuel = "Diesel";
+		rank = 3;
+		colors[] = {};
+		realname = "Zamak Stand SAMU";
+	};
+
+	class DAR_TahoeEMS
+	{
+		buyPrice = 50000;
+		inventory = 90;
+		side = "GUER";
+		insurance = 1;
+		license = "";
+		fuel = "Diesel";
+		rank = 2;
+		colors[] = {};
+		realname = "Chevrolet Tahoe SAMU";
+	};
+
+	class DAR_ExplorerMedic
+	{
+		buyPrice = 75000;
+		inventory = 90;
+		side = "GUER";
+		insurance = 1;
+		license = "";
+		fuel = "Diesel";
+		rank = 3;
+		colors[] = {};
+		realname = "Ford Explorer SAMU";
+	};
+
+	class EC635_SAR
+	{
+		buyPrice = 250000;
+		inventory = 70;
+		side = "GUER";
+		insurance = 1;
+		license = "";
+		fuel = "Kerosene";
+		rank = 3;
+		colors[] = {};
+		realname = "EC635 SAMU";
+	};
+
+	class dezkit_b206ems
+	{
+		buyPrice = 250000;
+		inventory = 70;
+		side = "GUER";
+		insurance = 1;
+		license = "";
+		fuel = "Kerosene";
+		rank = 3;
+		colors[] = 
+		{
+			"dezkit_b206_ems",
+			"dezkit_b206_rescue"
+		};
+		realname = "B206 SAMU";
+	};
+	class dezkit_b206_ems : dezkit_b206ems {};
+	class dezkit_b206_rescue : dezkit_b206ems {};
+	
+	class Jonzie_Ambulance
+	{
+		buyPrice = 25000;
+		inventory = 100;
+		side = "GUER";
+		insurance = 1;
+		license = "";
+		fuel = "SP98";
+		rank = 3;
+		colors[] = 
+		{};
+		realname = "Ambulance";		
+	};
+	
+	
 	

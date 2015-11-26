@@ -29,11 +29,6 @@ class ALYSIA_SHOPS_CLOTHING
 			"U_C_Poloshirt_tricolour",
 			"U_C_Hello_Kitty_01",
 			"U_C_Kick_Me_01",
-			"pilot_black_uniform",
-			"pilot_blue_uniform",
-			"pilot_green_uniform",
-			"pilot_red_uniform",
-			"pilot_yellow_uniform",
 			"rds_uniform_priest",
 			"rds_uniform_Profiteer1",
 			"rds_uniform_Profiteer2",
@@ -344,7 +339,7 @@ class ALYSIA_SHOPS_CLOTHING
 		headgear[] = {};
 		goggles[] =
 		{
-			"G_Diving"
+			"G_B_Diving"
 		};
 		vests[] =
 		{
