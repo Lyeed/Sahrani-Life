@@ -21,7 +21,8 @@ class ALYSIA_SHOPS_VEHICLES
 			"DAR_TaurusPolice", 
 			"DAR_CVPIAux", 
 			"DAR_TahoePoliceDet",
-			"DAR_ImpalaPolice"
+			"DAR_ImpalaPolice",
+			"Jonzie_Highway"
 		};
 	};
 	class WEST_vehicles_air
@@ -172,7 +173,9 @@ class ALYSIA_SHOPS_VEHICLES
 			"RDS_Lada_Civ",
 			"max_CrownVic",
 			"Mrshounka_mercedes_190_p_civ",
-			"Mrshounka_r5_civ"
+			"Mrshounka_r5_civ",
+			"Jonzie_Datsun_510",
+			"Jonzie_Mini_Cooper"
 		};
 	};
 	class CIV_vehicles_land_normal
@@ -210,7 +213,14 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_twingo_p",
 			"Mrshounka_a3_smart_civ",
 			"Mrshounka_subaru08_civ",
-			"Mrshounka_Volkswagen_Touareg_civ"
+			"Mrshounka_Volkswagen_Touareg_civ",
+			"Jonzie_30CSL",
+			"Jonzie_Ceed",
+			"Jonzie_Corolla",
+			"Jonzie_Galant",
+			"Jonzie_Raptor",
+			"Jonzie_Transit",
+			"Jonzie_Ute"
 		};
 	};
 	class CIV_vehicles_land_luxe
@@ -262,7 +272,13 @@ class ALYSIA_SHOPS_VEHICLES
 			"shounka_porsche911",
 			"mrshounka_92_civ",
 			"Mrshounka_cayenne_p_civ",
-			"shounka_transam"
+			"shounka_transam",
+			"Jonzie_Datsun_Z432",
+			"Jonzie_Escalade",
+			"Jonzie_Quattroporte",
+			"Jonzie_STI",
+			"Jonzie_VE",
+			"Jonzie_Viper"
 		};
 	};
 	

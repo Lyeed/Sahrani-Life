@@ -3557,5 +3557,469 @@ class ALYSIA_VEHICLES
 	class Fett_Box_Truck_pink: Jonzie_Box_Truck {};
 	class Fett_Box_Truck_dark: Jonzie_Box_Truck {};
 	class Fett_Box_Truck_white: Jonzie_Box_Truck {};
+	
+	class Jonzie_30CSL
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "driver";
+		fuel = "SP98";
+		rank = 0;
+		colors[] = 
+		{
+			"Fett_30CSL_red",
+			"Fett_30CSL_yellow",
+			"Fett_30CSL_green",
+			"Fett_30CSL_blue",
+			"Fett_30CSL_pink",
+			"Fett_30CSL_dark",
+			"Fett_30CSL_white"
+		};
+		realname = "BMW 3.0 CSL";
+	};
+	class Fett_30CSL_red: Jonzie_30CSL {};
+	class Fett_30CSL_yellow: Jonzie_30CSL {};
+	class Fett_30CSL_green: Jonzie_30CSL {};
+	class Fett_30CSL_blue: Jonzie_30CSL {};
+	class Fett_30CSL_pink: Jonzie_30CSL {};
+	class Fett_30CSL_dark: Jonzie_30CSL {};
+	class Fett_30CSL_white: Jonzie_30CSL {};
+	
+	class Jonzie_Ceed
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "driver";
+		fuel = "SP98";
+		rank = 0;
+		colors[] = 
+		{
+			"Fett_Ceed_red",
+			"Fett_Ceed_yellow",
+			"Fett_Ceed_green",
+			"Fett_Ceed_blue",
+			"Fett_Ceed_pink",
+			"Fett_Ceed_dark",
+			"Fett_Ceed_white"
+		};
+		realname = "Kia cee'd";
+	};
+	class Fett_Ceed_red: Jonzie_Ceed {};
+	class Fett_Ceed_yellow: Jonzie_Ceed {};
+	class Fett_Ceed_green: Jonzie_Ceed {};
+	class Fett_Ceed_blue: Jonzie_Ceed {};
+	class Fett_Ceed_pink: Jonzie_Ceed {};
+	class Fett_Ceed_dark: Jonzie_Ceed {};
+	class Fett_Ceed_white: Jonzie_Ceed {};
+	
+	class Jonzie_Corolla
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "driver";
+		fuel = "SP98";
+		rank = 0;
+		colors[] = 
+		{
+			"Fett_Corolla_red",
+			"Fett_Corolla_yellow",
+			"Fett_Corolla_green",
+			"Fett_Corolla_blue",
+			"Fett_Corolla_pink",
+			"Fett_Corolla_dark",
+			"Fett_Corolla_white"
+		};
+		realname = "Toyota Sprinter";
+	};
+	class Fett_Corolla_red: Jonzie_Corolla {};
+	class Fett_Corolla_yellow: Jonzie_Corolla {};
+	class Fett_Corolla_green: Jonzie_Corolla {};
+	class Fett_Corolla_blue: Jonzie_Corolla {};
+	class Fett_Corolla_pink: Jonzie_Corolla {};
+	class Fett_Corolla_dark: Jonzie_Corolla {};
+	class Fett_Corolla_white: Jonzie_Corolla {};
+	
+	class Jonzie_Datsun_510
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "";
+		fuel = "SP98";
+		rank = 0;
+		colors[] = 
+		{
+			"Fett_Datsun_510_red",
+			"Fett_Datsun_510_yellow",
+			"Fett_Datsun_510_green",
+			"Fett_Datsun_510_blue",
+			"Fett_Datsun_510_pink",
+			"Fett_Datsun_510_dark",
+			"Fett_Datsun_510_white"
+		};
+		realname = "Datsun Bluebird";
+	};
+	class Fett_Datsun_510_red: Jonzie_Datsun_510 {};
+	class Fett_Datsun_510_yellow: Jonzie_Datsun_510 {};
+	class Fett_Datsun_510_green: Jonzie_Datsun_510 {};
+	class Fett_Datsun_510_blue: Jonzie_Datsun_510 {};
+	class Fett_Datsun_510_pink: Jonzie_Datsun_510 {};
+	class Fett_Datsun_510_dark: Jonzie_Datsun_510 {};
+	class Fett_Datsun_510_white: Jonzie_Datsun_510 {};
+	
+	class Jonzie_Datsun_Z432
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "driver";
+		fuel = "SP95";
+		rank = 0;
+		colors[] = 
+		{
+			"Fett_Datsun_Z432_red",
+			"Fett_Datsun_Z432_yellow",
+			"Fett_Datsun_Z432_green",
+			"Fett_Datsun_Z432_blue",
+			"Fett_Datsun_Z432_pink",
+			"Fett_Datsun_Z432_dark",
+			"Fett_Datsun_Z432_white"
+		};
+		realname = "Datsun Fairlady Z432";
+	};
+	class Fett_Datsun_Z432_red: Jonzie_Datsun_Z432 {};
+	class Fett_Datsun_Z432_yellow: Jonzie_Datsun_Z432 {};
+	class Fett_Datsun_Z432_green: Jonzie_Datsun_Z432 {};
+	class Fett_Datsun_Z432_blue: Jonzie_Datsun_Z432 {};
+	class Fett_Datsun_Z432_pink: Jonzie_Datsun_Z432 {};
+	class Fett_Datsun_Z432_dark: Jonzie_Datsun_Z432 {};
+	class Fett_Datsun_Z432_white: Jonzie_Datsun_Z432 {};
+	
+	class Jonzie_Escalade
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "driver";
+		fuel = "SP95";
+		rank = 0;
+		colors[] = 
+		{
+			"Fett_Escalade_red",
+			"Fett_Escalade_yellow",
+			"Fett_Escalade_green",
+			"Fett_Escalade_blue",
+			"Fett_Escalade_pink",
+			"Fett_Escalade_dark",
+			"Fett_Escalade_white"
+		};
+		realname = "Cadillac Escalade ESV";
+	};
+	class Fett_Escalade_red: Jonzie_Escalade {};
+	class Fett_Escalade_yellow: Jonzie_Escalade {};
+	class Fett_Escalade_green: Jonzie_Escalade {};
+	class Fett_Escalade_blue: Jonzie_Escalade {};
+	class Fett_Escalade_pink: Jonzie_Escalade {};
+	class Fett_Escalade_dark: Jonzie_Escalade {};
+	class Fett_Escalade_white: Jonzie_Escalade {};
+	
+	class Jonzie_Galant
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "driver";
+		fuel = "SP98";
+		rank = 0;
+		colors[] = 
+		{
+			"Fett_Galant_red",
+			"Fett_Galant_yellow",
+			"Fett_Galant_green",
+			"Fett_Galant_blue",
+			"Fett_Galant_pink",
+			"Fett_Galant_dark",
+			"Fett_Galant_white"
+		};
+		realname = "Mitsubishi Galant";
+	};
+	class Fett_Galant_red: Jonzie_Galant {};
+	class Fett_Galant_yellow: Jonzie_Galant {};
+	class Fett_Galant_green: Jonzie_Galant {};
+	class Fett_Galant_blue: Jonzie_Galant {};
+	class Fett_Galant_pink: Jonzie_Galant {};
+	class Fett_Galant_dark: Jonzie_Galant {};
+	class Fett_Galant_white: Jonzie_Galant d{};
+	
+	class Jonzie_Highway
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "WEST";
+		insurance = 1;
+		license = "";
+		fuel = "SP95";
+		rank = 0;
+		colors[] = 
+		{
+			"Fett_Highway_red",
+			"Fett_Highway_yellow",
+			"Fett_Highway_green",
+			"Fett_Highway_blue",
+			"Fett_Highway_pink",
+			"Fett_Highway_dark",
+			"Fett_Highway_white"
+		};
+		realname = "Holden Commodore Highway Patrol";
+	};
+	class Fett_Highway_red: Jonzie_Highway {};
+	class Fett_Highway_yellow: Jonzie_Highway {};
+	class Fett_Highway_green: Jonzie_Highway {};
+	class Fett_Highway_blue: Jonzie_Highway {};
+	class Fett_Highway_pink: Jonzie_Highway {};
+	class Fett_Highway_dark: Jonzie_Highway {};
+	class Fett_Highway_white: Jonzie_Highway d{};
+	
+	class Jonzie_Mini_Cooper
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "";
+		fuel = "SP98";
+		rank = 0;
+		colors[] = 
+		{
+			"Fett_Mini_Cooper_red",
+			"Fett_Mini_Cooper_yellow",
+			"Fett_Mini_Cooper_green",
+			"Fett_Mini_Cooper_blue",
+			"Fett_Mini_Cooper_pink",
+			"Fett_Mini_Cooper_dark",
+			"Fett_Mini_Cooper_white"
+		};
+		realname = "Mini Cooper";
+	};
+	class Fett_Mini_Cooper_red: Jonzie_Mini_Cooper {};
+	class Fett_Mini_Cooper_yellow: Jonzie_Mini_Cooper {};
+	class Fett_Mini_Cooper_green: Jonzie_Mini_Cooper {};
+	class Fett_Mini_Cooper_blue: Jonzie_Mini_Cooper {};
+	class Fett_Mini_Cooper_pink: Jonzie_Mini_Cooper {};
+	class Fett_Mini_Cooper_dark: Jonzie_Mini_Cooper {};
+	class Fett_Mini_Cooper_white: Jonzie_Mini_Cooper {};
+	
+	class Jonzie_Quattroporte
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "driver";
+		fuel = "SP95";
+		rank = 0;
+		colors[] = 
+		{
+			"Fett_Quattroporte_red",
+			"Fett_Quattroporte_yellow",
+			"Fett_Quattroporte_green",
+			"Fett_Quattroporte_blue",
+			"Fett_Quattroporte_pink",
+			"Fett_Quattroporte_dark",
+			"Fett_Quattroporte_white"
+		};
+		realname = "Maserati Quattroporte";
+	};
+	class : Jonzie_Quattroporte {};
+	class : Jonzie_Quattroporte {};
+	class : Jonzie_Quattroporte {};
+	class : Jonzie_Quattroporte {};
+	class : Jonzie_Quattroporte {};
+	class : Jonzie_Quattroporte {};
+	class : Jonzie_Quattroporte {};
+	
+	class Jonzie_Raptor
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "driver";
+		fuel = "SP98";
+		rank = 0;
+		colors[] = 
+		{
+			"Fett_Raptor_red",
+			"Fett_Raptor_yellow",
+			"Fett_Raptor_green",
+			"Fett_Raptor_blue",
+			"Fett_Raptor_pink",
+			"Fett_Raptor_dark",
+			"Fett_Raptor_white"
+		};
+		realname = "Ford F150 Raptor";
+	};
+	class : Jonzie_Raptor {};
+	class : Jonzie_Raptor {};
+	class : Jonzie_Raptor {};
+	class : Jonzie_Raptor {};
+	class : Jonzie_Raptor {};
+	class : Jonzie_Raptor {};
+	class : Jonzie_Raptor {};
+	
+	class Jonzie_STI
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "driver";
+		fuel = "SP95";
+		rank = 0;
+		colors[] = 
+		{
+			"Fett_STI_red",
+			"Fett_STI_yellow",
+			"Fett_STI_green",
+			"Fett_STI_blue",
+			"Fett_STI_pink",
+			"Fett_STI_dark",
+			"Fett_STI_white"
+		};
+		realname = "Subaru WRX STI";
+	};
+	class Fett_STI_red: Jonzie_STI {};
+	class Fett_STI_yellow: Jonzie_STI {};
+	class Fett_STI_green: Jonzie_STI {};
+	class Fett_STI_blue: Jonzie_STI {};
+	class Fett_STI_pink: Jonzie_STI {};
+	class Fett_STI_dark: Jonzie_STI {};
+	class Fett_STI_white: Jonzie_STI {};
+	
+	class Jonzie_Transit
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "driver";
+		fuel = "SP98";
+		rank = 0;
+		colors[] = 
+		{
+			"Fett_Transit_red",
+			"Fett_Transit_yellow",
+			"Fett_Transit_green",
+			"Fett_Transit_blue",
+			"Fett_Transit_pink",
+			"Fett_Transit_dark",
+			"Fett_Transit_white"
+		};
+		realname = "Ford Transit";
+	};
+	class : Jonzie_Transit {};
+	class : Jonzie_Transit {};
+	class : Jonzie_Transit {};
+	class : Jonzie_Transit {};
+	class : Jonzie_Transit {};
+	class : Jonzie_Transit {};
+	class : Jonzie_Transit {};
+	
+	class Jonzie_Ute
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "driver";
+		fuel = "SP98";
+		rank = 0;
+		colors[] = 
+		{
+			"Fett_Ute_red",
+			"Fett_Ute_yellow",
+			"Fett_Ute_green",
+			"Fett_Ute_blue",
+			"Fett_Ute_pink",
+			"Fett_Ute_dark",
+			"Fett_Ute_white"
+		};
+		realname = "Holden Commodore Ute";
+	};
+	class : Jonzie_Ute {};
+	class : Jonzie_Ute {};
+	class : Jonzie_Ute {};
+	class : Jonzie_Ute {};
+	class : Jonzie_Ute {};
+	class : Jonzie_Ute {};
+	class : Jonzie_Ute {};
+	
+	class Jonzie_VE
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "driver";
+		fuel = "SP95";
+		rank = 0;
+		colors[] = 
+		{
+			"Fett_VE_red",
+			"Fett_VE_yellow",
+			"Fett_VE_green",
+			"Fett_VE_blue",
+			"Fett_VE_pink",
+			"Fett_VE_dark",
+			"Fett_VE_white"
+		};
+		realname = "Holden Commodore";
+	};
+	class Fett_VE_red: Jonzie_VE {};
+	class Fett_VE_yellow: Jonzie_VE {};
+	class Fett_VE_green: Jonzie_VE {};
+	class Fett_VE_blue: Jonzie_VE {};
+	class Fett_VE_pink: Jonzie_VE {};
+	class Fett_VE_dark: Jonzie_VE {};
+	class Fett_VE_white: Jonzie_VE {};
+	
+	class Jonzie_Viper
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "driver";
+		fuel = "SP95";
+		rank = 0;
+		colors[] = 
+		{
+			"Fett_Viper_red",
+			"Fett_Viper_yellow",
+			"Fett_Viper_green",
+			"Fett_Viper_blue",
+			"Fett_Viper_pink",
+			"Fett_Viper_dark",
+			"Fett_Viper_white"
+		};
+		realname = "Dodge Viper";
+	};
+	class Fett_Viper_red: Jonzie_Viper {};
+	class Fett_Viper_yellow: Jonzie_Viper {};
+	class Fett_Viper_green: Jonzie_Viper {};
+	class Fett_Viper_blue: Jonzie_Viper {};
+	class Fett_Viper_pink: Jonzie_Viper {};
+	class Fett_Viper_dark: Jonzie_Viper {};
+	class Fett_Viper_white: Jonzie_Viper {};
 };
 	
