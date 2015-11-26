@@ -38,23 +38,9 @@ _txtR3 = _display displayCtrl 15017;
 _txtR4 = _display displayCtrl 15018;
 _edit = _display displayCtrl 15019;
 
-_btnR1 ctrlShow false;
-_btnR2 ctrlShow false;
-_btnR3 ctrlShow false;
-_btnR4 ctrlShow false;
-_btnL1 ctrlShow false;
-_btnL2 ctrlShow false;
-_btnL3 ctrlShow false;
-_btnL4 ctrlShow false;
-_txtR1 ctrlShow false;
-_txtR2 ctrlShow false;
-_txtR3 ctrlShow false;
-_txtR4 ctrlShow false;
-_txtL1 ctrlShow false;
-_txtL2 ctrlShow false;
-_txtL3 ctrlShow false;
-_txtL4 ctrlShow false;
-_edit ctrlShow false;
+{
+	ctrlShow[_x, false];
+} forEach (_btnR1, _btnR2, _btnR3, _btnR4, _btnL1, _btnL2, _btnL3, _btnL4, _txtR1, _txtR2, _txtR3, _txtR4, _txtL1, _txtL2, _txtL3, _txtL4, _edit);
 
 switch (_action) do
 {
@@ -65,19 +51,29 @@ switch (_action) do
 
 		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Retrait</t>";
 		_btnL1 buttonSetAction "[""withdraw""] call public_fnc_atmScreen";
+		_btnL1 ctrlShow true;
+		_txtL1 ctrlShow true;
 
 		_txtR1 ctrlSetStructuredText parseText "<t align='right'>Dépôt</t>";
 		_btnR1 buttonSetAction "[""deposit""] call public_fnc_atmScreen";
+		_btnR1 ctrlShow true;
+		_txtR1 ctrlShow true;
 
 		_txtR4 ctrlSetStructuredText parseText "<t align='right'>Récupérer Carte</t>";
 		_btnR4 buttonSetAction "closeDialog 0";
-
-		_btnL1 ctrlShow true;
-		_btnR1 ctrlShow true;
 		_btnR4 ctrlShow true;
-		_txtL1 ctrlShow true;
-		_txtR1 ctrlShow true;
 		_txtR4 ctrlShow true;
+
+		if (playerSide != civilian) then
+		{
+			if ((player getVariable ["rank", 0]) isEqualTo (count(getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "Ranks" >> "ranks_complet")) - 1)) then
+			{
+				_txtL4 ctrlSetStructuredText parseText "<t align='right'>Faction</t>";
+				_btnL4 buttonSetAction "[""home_faction""] call public_fnc_atmScreen";
+				_btnL4 ctrlShow true;
+				_txtL4 ctrlShow true;
+			};
+		};
 	};
 
 	case "withdraw":
@@ -87,21 +83,20 @@ switch (_action) do
 
 		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Retirer</t>";
 		_btnL1 buttonSetAction "[""withdraw""] call public_fnc_atmAction";
+		_btnL1 ctrlShow true;
+		_txtL1 ctrlShow true;
 
 		_txtR1 ctrlSetStructuredText parseText "<t align='right'>Retour</t>";
 		_btnR1 buttonSetAction "[""home""] call public_fnc_atmScreen";
+		_btnR1 ctrlShow true;
+		_txtR1 ctrlShow true;
 
 		_txtR4 ctrlSetStructuredText parseText "<t align='right'>Récupérer Carte</t>";
 		_btnR4 buttonSetAction "closeDialog 0";		
+		_btnR4 ctrlShow true;
+		_txtR4 ctrlShow true;
 
 		_edit ctrlSetStructuredText parseText "<t align='right'>100</t>";
-
-		_btnL1 ctrlShow true;
-		_btnR1 ctrlShow true;
-		_btnR4 ctrlShow true;
-		_txtL1 ctrlShow true;
-		_txtR1 ctrlShow true;
-		_txtR4 ctrlShow true;
 		_edit ctrlShow true;
 	};
 
@@ -112,22 +107,102 @@ switch (_action) do
 		
 		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Déposer</t>";
 		_btnL1 buttonSetAction "[""deposit""] call public_fnc_atmAction";
+		_btnL1 ctrlShow true;
+		_txtL1 ctrlShow true;
 
 		_txtR1 ctrlSetStructuredText parseText "<t align='right'>Retour</t>";
 		_btnR1 buttonSetAction "[""home""] call public_fnc_atmScreen";
+		_btnR1 ctrlShow true;
+		_txtR1 ctrlShow true;
 
 		_txtR4 ctrlSetStructuredText parseText "<t align='right'>Récupérer Carte</t>";
 		_btnR4 buttonSetAction "closeDialog 0";
+		_btnR4 ctrlShow true;
+		_txtR4 ctrlShow true;
 
 		_edit ctrlSetStructuredText parseText "<t align='right'>100</t>";
-
-		_btnL1 ctrlShow true;
-		_btnR1 ctrlShow true;
-		_btnR4 ctrlShow true;
-		_txtL1 ctrlShow true;
-		_txtR1 ctrlShow true;
-		_txtR4 ctrlShow true;
 		_edit ctrlShow true;
+	};
+
+	case "withdraw_faction":
+	{
+		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Retrait Faction</t>";
+		_balance ctrlSetStructuredText parseText format ["<t align ='left' size='1.2'>Montant</t>"];
+
+		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Retirer</t>";
+		_btnL1 buttonSetAction "[""withdraw_faction""] call public_fnc_atmAction";
+		_btnL1 ctrlShow true;
+		_txtL1 ctrlShow true;
+
+		_txtR1 ctrlSetStructuredText parseText "<t align='right'>Retour</t>";
+		_btnR1 buttonSetAction "[""home_faction""] call public_fnc_atmScreen";
+		_btnR1 ctrlShow true;
+		_txtR1 ctrlShow true;
+
+		_txtR4 ctrlSetStructuredText parseText "<t align='right'>Récupérer Carte</t>";
+		_btnR4 buttonSetAction "closeDialog 0";		
+		_btnR4 ctrlShow true;
+		_txtR4 ctrlShow true;
+
+		_edit ctrlSetStructuredText parseText "<t align='right'>100</t>";
+		_edit ctrlShow true;
+	};
+
+	case "deposit_faction":
+	{
+		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Dépôt Faction</t>";
+		_balance ctrlSetStructuredText parseText format ["<t align ='left' size='1.2'>Montant</t>"];
+		
+		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Déposer</t>";
+		_btnL1 buttonSetAction "[""deposit_faction""] call public_fnc_atmAction";
+		_btnL1 ctrlShow true;
+		_txtL1 ctrlShow true;
+
+		_txtR1 ctrlSetStructuredText parseText "<t align='right'>Retour</t>";
+		_btnR1 buttonSetAction "[""home_faction""] call public_fnc_atmScreen";
+		_btnR1 ctrlShow true;
+		_txtR1 ctrlShow true;
+
+		_txtR4 ctrlSetStructuredText parseText "<t align='right'>Récupérer Carte</t>";
+		_btnR4 buttonSetAction "closeDialog 0";
+		_btnR4 ctrlShow true;
+		_txtR4 ctrlShow true;
+
+		_edit ctrlSetStructuredText parseText "<t align='right'>100</t>";
+		_edit ctrlShow true;
+	};
+
+	case "home_faction":
+	{
+		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Distributeur Faction</t>";
+		
+		_value = switch (playerSide) do
+		{
+			case east: {gServer_faction_EAST_bank};
+			case west: {gServer_faction_WEST_bank};
+			case independent: {gServer_faction_GUER_bank};
+		};
+		_balance ctrlSetStructuredText parseText format ["<t align ='left' size='1.2'>Solde </t><t align='center' size='1.2'><t color='#74DF00'>%1</t>kn</t>", [_value] call public_fnc_numberText];
+
+		_txtL1 ctrlSetStructuredText parseText "<t align='center'>Retrait faction</t>";
+		_btnL1 buttonSetAction "[""withdraw_faction""] call public_fnc_atmScreen";
+		_txtL1 ctrlShow true;
+		_btnL1 ctrlShow true;
+
+		_txtR1 ctrlSetStructuredText parseText "<t align='right'>Dépôt faction</t>";
+		_btnR1 buttonSetAction "[""deposit_faction""] call public_fnc_atmScreen";
+		_btnR1 ctrlShow true;
+		_txtR1 ctrlShow true;
+
+		_txtR4 ctrlSetStructuredText parseText "<t align='right'>Récupérer Carte</t>";
+		_btnR4 buttonSetAction "closeDialog 0";
+		_btnR4 ctrlShow true;
+		_txtR4 ctrlShow true;
+
+		_txtL4 ctrlSetStructuredText parseText "<t align='right'>Retour</t>";
+		_btnL4 buttonSetAction "[""home""] call public_fnc_atmScreen";
+		_btnL4 ctrlShow true;
+		_txtL4 ctrlShow true;
 	};
 	
 	default {["Action non reconnue"] call public_fnc_error};
