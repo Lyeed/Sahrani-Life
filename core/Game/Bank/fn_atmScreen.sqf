@@ -39,8 +39,8 @@ _txtR4 = _display displayCtrl 15018;
 _edit = _display displayCtrl 15019;
 
 {
-	ctrlShow[_x, false];
-} forEach (_btnR1, _btnR2, _btnR3, _btnR4, _btnL1, _btnL2, _btnL3, _btnL4, _txtR1, _txtR2, _txtR3, _txtR4, _txtL1, _txtL2, _txtL3, _txtL4, _edit);
+	_x ctrlShow false;
+} forEach ([_btnR1, _btnR2, _btnR3, _btnR4, _btnL1, _btnL2, _btnL3, _btnL4, _txtR1, _txtR2, _txtR3, _txtR4, _txtL1, _txtL2, _txtL3, _txtL4, _edit]);
 
 switch (_action) do
 {
@@ -96,7 +96,7 @@ switch (_action) do
 		_btnR4 ctrlShow true;
 		_txtR4 ctrlShow true;
 
-		_edit ctrlSetStructuredText parseText "<t align='right'>100</t>";
+		_edit ctrlSetText "100";
 		_edit ctrlShow true;
 	};
 
@@ -120,7 +120,7 @@ switch (_action) do
 		_btnR4 ctrlShow true;
 		_txtR4 ctrlShow true;
 
-		_edit ctrlSetStructuredText parseText "<t align='right'>100</t>";
+		_edit ctrlSetText "100";
 		_edit ctrlShow true;
 	};
 
@@ -144,7 +144,7 @@ switch (_action) do
 		_btnR4 ctrlShow true;
 		_txtR4 ctrlShow true;
 
-		_edit ctrlSetStructuredText parseText "<t align='right'>100</t>";
+		_edit ctrlSetText "100";
 		_edit ctrlShow true;
 	};
 
@@ -168,7 +168,7 @@ switch (_action) do
 		_btnR4 ctrlShow true;
 		_txtR4 ctrlShow true;
 
-		_edit ctrlSetStructuredText parseText "<t align='right'>100</t>";
+		_edit ctrlSetText "100";
 		_edit ctrlShow true;
 	};
 
@@ -184,7 +184,7 @@ switch (_action) do
 		};
 		_balance ctrlSetStructuredText parseText format ["<t align ='left' size='1.2'>Solde </t><t align='center' size='1.2'><t color='#74DF00'>%1</t>kn</t>", [_value] call public_fnc_numberText];
 
-		_txtL1 ctrlSetStructuredText parseText "<t align='center'>Retrait faction</t>";
+		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Retrait faction</t>";
 		_btnL1 buttonSetAction "[""withdraw_faction""] call public_fnc_atmScreen";
 		_txtL1 ctrlShow true;
 		_btnL1 ctrlShow true;
@@ -199,7 +199,7 @@ switch (_action) do
 		_btnR4 ctrlShow true;
 		_txtR4 ctrlShow true;
 
-		_txtL4 ctrlSetStructuredText parseText "<t align='right'>Retour</t>";
+		_txtL4 ctrlSetStructuredText parseText "<t align='left'>Retour</t>";
 		_btnL4 buttonSetAction "[""home""] call public_fnc_atmScreen";
 		_btnL4 ctrlShow true;
 		_txtL4 ctrlShow true;

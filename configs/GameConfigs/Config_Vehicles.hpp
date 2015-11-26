@@ -3759,7 +3759,7 @@ class ALYSIA_VEHICLES
 	class Fett_Galant_blue: Jonzie_Galant {};
 	class Fett_Galant_pink: Jonzie_Galant {};
 	class Fett_Galant_dark: Jonzie_Galant {};
-	class Fett_Galant_white: Jonzie_Galant d{};
+	class Fett_Galant_white: Jonzie_Galant {};
 	
 	class Jonzie_Highway
 	{
@@ -3788,7 +3788,7 @@ class ALYSIA_VEHICLES
 	class Fett_Highway_blue: Jonzie_Highway {};
 	class Fett_Highway_pink: Jonzie_Highway {};
 	class Fett_Highway_dark: Jonzie_Highway {};
-	class Fett_Highway_white: Jonzie_Highway d{};
+	class Fett_Highway_white: Jonzie_Highway {};
 	
 	class Jonzie_Mini_Cooper
 	{
@@ -3840,13 +3840,13 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Maserati Quattroporte";
 	};
-	class : Jonzie_Quattroporte {};
-	class : Jonzie_Quattroporte {};
-	class : Jonzie_Quattroporte {};
-	class : Jonzie_Quattroporte {};
-	class : Jonzie_Quattroporte {};
-	class : Jonzie_Quattroporte {};
-	class : Jonzie_Quattroporte {};
+	class Fett_Quattroporte_red: Jonzie_Quattroporte {};
+	class Fett_Quattroporte_yellow: Jonzie_Quattroporte {};
+	class Fett_Quattroporte_green: Jonzie_Quattroporte {};
+	class Fett_Quattroporte_blue: Jonzie_Quattroporte {};
+	class Fett_Quattroporte_pink: Jonzie_Quattroporte {};
+	class Fett_Quattroporte_dark: Jonzie_Quattroporte {};
+	class Fett_Quattroporte_white: Jonzie_Quattroporte {};
 	
 	class Jonzie_Raptor
 	{
@@ -3869,13 +3869,13 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Ford F150 Raptor";
 	};
-	class : Jonzie_Raptor {};
-	class : Jonzie_Raptor {};
-	class : Jonzie_Raptor {};
-	class : Jonzie_Raptor {};
-	class : Jonzie_Raptor {};
-	class : Jonzie_Raptor {};
-	class : Jonzie_Raptor {};
+	class Fett_Raptor_red: Jonzie_Raptor {};
+	class Fett_Raptor_yellow: Jonzie_Raptor {};
+	class Fett_Raptor_green: Jonzie_Raptor {};
+	class Fett_Raptor_blue: Jonzie_Raptor {};
+	class Fett_Raptor_pink: Jonzie_Raptor {};
+	class Fett_Raptor_dark: Jonzie_Raptor {};
+	class Fett_Raptor_white: Jonzie_Raptor {};
 	
 	class Jonzie_STI
 	{
@@ -3927,13 +3927,13 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Ford Transit";
 	};
-	class : Jonzie_Transit {};
-	class : Jonzie_Transit {};
-	class : Jonzie_Transit {};
-	class : Jonzie_Transit {};
-	class : Jonzie_Transit {};
-	class : Jonzie_Transit {};
-	class : Jonzie_Transit {};
+	class Fett_Transit_red: Jonzie_Transit {};
+	class Fett_Transit_yellow: Jonzie_Transit {};
+	class Fett_Transit_green: Jonzie_Transit {};
+	class Fett_Transit_blue: Jonzie_Transit {};
+	class Fett_Transit_pink: Jonzie_Transit {};
+	class Fett_Transit_dark: Jonzie_Transit {};
+	class Fett_Transit_white: Jonzie_Transit {};
 	
 	class Jonzie_Ute
 	{
@@ -3956,13 +3956,13 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Holden Commodore Ute";
 	};
-	class : Jonzie_Ute {};
-	class : Jonzie_Ute {};
-	class : Jonzie_Ute {};
-	class : Jonzie_Ute {};
-	class : Jonzie_Ute {};
-	class : Jonzie_Ute {};
-	class : Jonzie_Ute {};
+	class Fett_Ute_red: Jonzie_Ute {};
+	class Fett_Ute_yellow: Jonzie_Ute {};
+	class Fett_Ute_green: Jonzie_Ute {};
+	class Fett_Ute_blue: Jonzie_Ute {};
+	class Fett_Ute_pink: Jonzie_Ute {};
+	class Fett_Ute_dark: Jonzie_Ute {};
+	class Fett_Ute_white: Jonzie_Ute {};
 	
 	class Jonzie_VE
 	{
@@ -4022,4 +4022,3 @@ class ALYSIA_VEHICLES
 	class Fett_Viper_dark: Jonzie_Viper {};
 	class Fett_Viper_white: Jonzie_Viper {};
 };
-	

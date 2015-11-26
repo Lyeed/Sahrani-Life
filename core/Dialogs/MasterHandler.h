@@ -26,6 +26,7 @@
 #include "Dialogs\RscDisplayPlayerRevokeLicense.hpp"
 #include "Dialogs\RscDisplayAtm.hpp"
 #include "Dialogs\RscDisplayHousing.hpp"
+#include "Dialogs\RscDisplayVirtualExhange.hpp"
 class RscTitles // Defines custom UI displays.
 {
 	#include "Hud\HUD_default.hpp"
