@@ -37,7 +37,8 @@ class Mission
 		"aia_misc_config",
 		"mm_buildings",
 		"aia_misc3_config",
-		"mainsection"
+		"mainsection",
+		"aia_misc_e_config"
 	};
 	addOnsAuto[]=
 	{
@@ -75,6 +76,7 @@ class Mission
 		"mm_buildings",
 		"aia_misc3_config",
 		"mainsection",
+		"aia_misc_e_config",
 		"aia_sara_config"
 	};
 	randomSeed=13763187;
@@ -3497,7 +3499,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=616;
+		items=671;
 		class Item0
 		{
 			position[]={14231.394,0.13552099,12805.147};
@@ -9673,6 +9675,510 @@ class Mission
 			id=769;
 			side="EMPTY";
 			vehicle="Land_MainSection";
+			skill=0.60000002;
+		};
+		class Item616
+		{
+			position[]={12209.388,25.965,17734.402};
+			id=770;
+			side="EMPTY";
+			vehicle="HeliHEmpty";
+			skill=0.60000002;
+			init="bat = (position this nearestobject 175909); this setPos [(getPos bat select 0), (getPos bat select 1), 0]; this setDir (getDir bat); bat hideObjectGlobal true; bat1 = (position this nearestobject 175911); this setPos [(getPos bat1 select 0), (getPos bat1 select 1), 0]; this setDir (getDir bat1); bat1 hideObjectGlobal true; bat2 = (position this nearestobject 175913); this setPos [(getPos bat2 select 0), (getPos bat2 select 1), 0]; this setDir (getDir bat2); bat2 hideObjectGlobal true; bat3 = (position this nearestobject 175946); this setPos [(getPos bat3 select 0), (getPos bat3 select 1), 0]; this setDir (getDir bat3); bat3 hideObjectGlobal true; bat4 = (position this nearestobject 175948); this setPos [(getPos bat4 select 0), (getPos bat4 select 1), 0]; this setDir (getDir bat4); bat4 hideObjectGlobal true; bat5 = (position this nearestobject 175950); this setPos [(getPos bat5 select 0), (getPos bat5 select 1), 0]; this setDir (getDir bat5); bat5 hideObjectGlobal true; bat6 = (position this nearestobject 175952); this setPos [(getPos bat6 select 0), (getPos bat6 select 1), 0]; this setDir (getDir bat6); bat6 hideObjectGlobal true; bat7 = (position this nearestobject 175842); this setPos [(getPos bat7 select 0), (getPos bat7 select 1), 0]; this setDir (getDir bat7); bat7 hideObjectGlobal true; bat8 = (position this nearestobject 175844); this setPos [(getPos bat8 select 0), (getPos bat8 select 1), 0]; this setDir (getDir bat8); bat8 hideObjectGlobal true; bat9 = (position this nearestobject 175834); this setPos [(getPos bat9 select 0), (getPos bat9 select 1), 0]; this setDir (getDir bat9); bat9 hideObjectGlobal true; bat10 = (position this nearestobject 175838); this setPos [(getPos bat10 select 0), (getPos bat10 select 1), 0]; this setDir (getDir bat10); bat10 hideObjectGlobal true; bat11 = (position this nearestobject 175836); this setPos [(getPos bat11 select 0), (getPos bat11 select 1), 0]; this setDir (getDir bat11); bat11 hideObjectGlobal true; bat12 = (position this nearestobject 175982); this setPos [(getPos bat12 select 0), (getPos bat12 select 1), 0]; this setDir (getDir bat12); bat12 hideObjectGlobal true; bat13 = (position this nearestobject 175984); this setPos [(getPos bat13 select 0), (getPos bat13 select 1), 0]; this setDir (getDir bat13); bat13 hideObjectGlobal true; bat14 = (position this nearestobject 175988); this setPos [(getPos bat14 select 0), (getPos bat14 select 1), 0]; this setDir (getDir bat14); bat14 hideObjectGlobal true; bat15 = (position this nearestobject 175986); this setPos [(getPos bat15 select 0), (getPos bat15 select 1), 0]; this setDir (getDir bat15); bat15 hideObjectGlobal true; bat16 = (position this nearestobject 175990); this setPos [(getPos bat16 select 0), (getPos bat16 select 1), 0]; this setDir (getDir bat16); bat16 hideObjectGlobal true; bat17 = (position this nearestobject 175992); this setPos [(getPos bat17 select 0), (getPos bat17 select 1), 0]; this setDir (getDir bat17); bat17 hideObjectGlobal true;";
+		};
+		class Item617
+		{
+			position[]={12172.668,25.965,17759.246};
+			id=771;
+			side="EMPTY";
+			vehicle="CampEast_EP1";
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item618
+		{
+			position[]={12182.563,25.965,17759.08};
+			id=772;
+			side="EMPTY";
+			vehicle="CampEast_EP1";
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item619
+		{
+			position[]={12172.628,25.965,17737.533};
+			id=773;
+			side="EMPTY";
+			vehicle="CampEast_EP1";
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item620
+		{
+			position[]={12182.522,25.965,17737.367};
+			id=774;
+			side="EMPTY";
+			vehicle="CampEast_EP1";
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item621
+		{
+			position[]={12208.371,25.965,17694.215};
+			azimut=89.577003;
+			id=775;
+			side="EMPTY";
+			vehicle="CampEast_EP1";
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item622
+		{
+			position[]={12208.22,25.965,17673.133};
+			azimut=89.577003;
+			id=776;
+			side="EMPTY";
+			vehicle="CampEast_EP1";
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item623
+		{
+			position[]={12179.396,25.965,17694.18};
+			azimut=270;
+			id=777;
+			side="EMPTY";
+			vehicle="Barrack2";
+			skill=0.60000002;
+		};
+		class Item624
+		{
+			position[]={12178.972,25.965,17672.471};
+			azimut=270;
+			id=778;
+			side="EMPTY";
+			vehicle="Barrack2";
+			skill=0.60000002;
+		};
+		class Item625
+		{
+			position[]={12178.549,25.965,17650.869};
+			azimut=270;
+			id=779;
+			side="EMPTY";
+			vehicle="Barrack2";
+			skill=0.60000002;
+		};
+		class Item626
+		{
+			position[]={12178.612,25.965,17629.336};
+			azimut=270;
+			id=780;
+			side="EMPTY";
+			vehicle="Barrack2";
+			skill=0.60000002;
+		};
+		class Item627
+		{
+			position[]={12249.562,25.965,17672.928};
+			azimut=90.0298;
+			id=781;
+			side="EMPTY";
+			vehicle="Barrack2";
+			skill=0.60000002;
+		};
+		class Item628
+		{
+			position[]={12249.911,25.965,17693.758};
+			azimut=90.0298;
+			id=782;
+			side="EMPTY";
+			vehicle="Barrack2";
+			skill=0.60000002;
+		};
+		class Item629
+		{
+			position[]={12249.564,25.965,17714.986};
+			azimut=90.0298;
+			id=783;
+			side="EMPTY";
+			vehicle="Barrack2";
+			skill=0.60000002;
+		};
+		class Item630
+		{
+			position[]={12250.002,25.965,17736.691};
+			azimut=90.0298;
+			id=784;
+			side="EMPTY";
+			vehicle="Barrack2";
+			skill=0.60000002;
+		};
+		class Item631
+		{
+			position[]={12249.385,25.965,17758.555};
+			azimut=90.0298;
+			id=785;
+			side="EMPTY";
+			vehicle="Barrack2";
+			skill=0.60000002;
+		};
+		class Item632
+		{
+			position[]={12249.822,25.965,17780.26};
+			azimut=90.0298;
+			id=786;
+			side="EMPTY";
+			vehicle="Barrack2";
+			skill=0.60000002;
+		};
+		class Item633
+		{
+			position[]={12208.666,25.965,17779.918};
+			id=787;
+			side="EMPTY";
+			vehicle="CampEast_EP1";
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item634
+		{
+			position[]={12218.561,25.965,17779.752};
+			id=788;
+			side="EMPTY";
+			vehicle="CampEast_EP1";
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item635
+		{
+			position[]={12218.758,25.965,17673.332};
+			azimut=269.573;
+			id=789;
+			side="EMPTY";
+			vehicle="CampEast_EP1";
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item636
+		{
+			position[]={12218.899,25.965,17694.414};
+			azimut=269.573;
+			id=790;
+			side="EMPTY";
+			vehicle="CampEast_EP1";
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item637
+		{
+			position[]={12179.14,25.965,17716.064};
+			azimut=270;
+			id=791;
+			side="EMPTY";
+			vehicle="Barrack2";
+			skill=0.60000002;
+		};
+		class Item638
+		{
+			position[]={12247.74,25.965,17651.396};
+			azimut=-0.27543625;
+			id=792;
+			side="EMPTY";
+			vehicle="Barrack2";
+			skill=0.60000002;
+		};
+		class Item639
+		{
+			position[]={12234.338,25.965,17651.477};
+			azimut=-0.27543625;
+			id=793;
+			side="EMPTY";
+			vehicle="Barrack2";
+			skill=0.60000002;
+		};
+		class Item640
+		{
+			position[]={8106.4209,176.985,7758.585};
+			id=794;
+			side="EMPTY";
+			vehicle="HeliHEmpty";
+			skill=0.60000002;
+			init="bateast = (position this nearestobject 9028); this setPos [(getPos bateast select 0), (getPos bateast select 1), 0]; this setDir (getDir bateast); bateast hideObjectGlobal true; bateast1 = (position this nearestobject 9027); this setPos [(getPos bateast1 select 0), (getPos bateast1 select 1), 0]; this setDir (getDir bateast1); bateast1 hideObjectGlobal true; bateast2 = (position this nearestobject 474155); this setPos [(getPos bateast2 select 0), (getPos bateast2 select 1), 0]; this setDir (getDir bateast2); bateast2 hideObjectGlobal true; bateast3 = (position this nearestobject 474121); this setPos [(getPos bateast3 select 0), (getPos bateast3 select 1), 0]; this setDir (getDir bateast3); bateast3 hideObjectGlobal true; bateast4 = (position this nearestobject 8648); this setPos [(getPos bateast4 select 0), (getPos bateast4 select 1), 0]; this setDir (getDir bateast4); bateast4 hideObjectGlobal true; bateast5 = (position this nearestobject 474124); this setPos [(getPos bateast5 select 0), (getPos bateast5 select 1), 0]; this setDir (getDir bateast5); bateast5 hideObjectGlobal true; bateast6 = (position this nearestobject 474163); this setPos [(getPos bateast6 select 0), (getPos bateast6 select 1), 0]; this setDir (getDir bateast6); bateast6 hideObjectGlobal true; bateast7 = (position this nearestobject 474164); this setPos [(getPos bateast7 select 0), (getPos bateast7 select 1), 0]; this setDir (getDir bateast7); bateast7 hideObjectGlobal true; bateast8 = (position this nearestobject 474165); this setPos [(getPos bateast8 select 0), (getPos bateast8 select 1), 0]; this setDir (getDir bateast8); bateast8 hideObjectGlobal true;";
+		};
+		class Item641
+		{
+			position[]={8120.981,176.985,7799.1514};
+			id=795;
+			side="EMPTY";
+			vehicle="Land_tent_east";
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item642
+		{
+			position[]={8120.9717,176.985,7784.8105};
+			id=796;
+			side="EMPTY";
+			vehicle="Land_tent_east";
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item643
+		{
+			position[]={8120.9795,176.985,7770.6865};
+			id=797;
+			side="EMPTY";
+			vehicle="Land_tent_east";
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item644
+		{
+			position[]={8090.4976,176.985,7771.9912};
+			azimut=269.57642;
+			id=798;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item645
+		{
+			position[]={8090.9644,176.985,7785.6362};
+			azimut=269.57642;
+			id=799;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item646
+		{
+			position[]={8090.6523,176.985,7799.0171};
+			azimut=269.57642;
+			id=800;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item647
+		{
+			position[]={8107.0674,176.985,7771.9121};
+			azimut=269.57642;
+			id=801;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item648
+		{
+			position[]={8107.5342,176.985,7785.5571};
+			azimut=269.57642;
+			id=802;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item649
+		{
+			position[]={8107.2222,176.985,7798.938};
+			azimut=269.57642;
+			id=803;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item650
+		{
+			position[]={8152.8921,176.985,7798.4653};
+			azimut=449.59225;
+			id=804;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item651
+		{
+			position[]={8152.4214,176.985,7784.8247};
+			azimut=449.59225;
+			id=805;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item652
+		{
+			position[]={8152.7314,176.985,7771.4409};
+			azimut=449.59225;
+			id=806;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item653
+		{
+			position[]={8137.0444,176.985,7798.8696};
+			azimut=449.59225;
+			id=807;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item654
+		{
+			position[]={8136.5718,176.985,7785.2246};
+			azimut=449.59225;
+			id=808;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item655
+		{
+			position[]={8136.876,176.985,7771.8428};
+			azimut=449.59225;
+			id=809;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item656
+		{
+			position[]={8100.4414,176.985,7830.8096};
+			azimut=359.8725;
+			id=810;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item657
+		{
+			position[]={8114.0845,176.985,7830.2754};
+			azimut=359.8725;
+			id=811;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item658
+		{
+			position[]={8127.4663,176.985,7830.5195};
+			azimut=359.8725;
+			id=812;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item659
+		{
+			position[]={8142.9175,176.985,7830.6943};
+			azimut=359.8725;
+			id=813;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item660
+		{
+			position[]={8156.5605,176.985,7830.1602};
+			azimut=359.8725;
+			id=814;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item661
+		{
+			position[]={8127.7095,176.985,7847.5854};
+			azimut=90.393501;
+			id=815;
+			side="EMPTY";
+			vehicle="Land_tent_east";
+			skill=0.60000002;
+			init="this allowDamage false";
+		};
+		class Item662
+		{
+			position[]={8113.3687,176.985,7847.6914};
+			azimut=90.393501;
+			id=816;
+			side="EMPTY";
+			vehicle="Land_tent_east";
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item663
+		{
+			position[]={8099.2456,176.985,7847.7813};
+			azimut=90.393501;
+			id=817;
+			side="EMPTY";
+			vehicle="Land_tent_east";
+			skill=0.60000002;
+			init="this allowDamage false;";
+		};
+		class Item664
+		{
+			position[]={8156.3013,176.985,7847.6909};
+			azimut=90.393501;
+			id=818;
+			side="EMPTY";
+			vehicle="Land_tent_east";
+			skill=0.60000002;
+			init="this allowDamage false";
+		};
+		class Item665
+		{
+			position[]={8142.1782,176.985,7847.7808};
+			azimut=90.393501;
+			id=819;
+			side="EMPTY";
+			vehicle="Land_tent_east";
+			skill=0.60000002;
+			init="this allowDamage false";
+		};
+		class Item666
+		{
+			position[]={8100.6699,176.985,7863.4673};
+			azimut=359.8725;
+			id=820;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item667
+		{
+			position[]={8114.313,176.985,7862.9331};
+			azimut=359.8725;
+			id=821;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item668
+		{
+			position[]={8127.6948,176.985,7863.1772};
+			azimut=359.8725;
+			id=822;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item669
+		{
+			position[]={8100.5103,176.985,7879.353};
+			azimut=359.8725;
+			id=823;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
+			skill=0.60000002;
+		};
+		class Item670
+		{
+			position[]={8114.1533,176.985,7878.8188};
+			azimut=359.8725;
+			id=824;
+			side="EMPTY";
+			vehicle="Land_Barrack2_EP1";
 			skill=0.60000002;
 		};
 	};
