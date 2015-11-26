@@ -3385,7 +3385,7 @@ class ALYSIA_VEHICLES
 	class Fett_Galant_blue: Jonzie_Galant {};
 	class Fett_Galant_pink: Jonzie_Galant {};
 	class Fett_Galant_dark: Jonzie_Galant {};
-	class Fett_Galant_white: Jonzie_Galant d{};
+	class Fett_Galant_white: Jonzie_Galant {};
 	
 	class Jonzie_Mini_Cooper
 	{
@@ -3437,13 +3437,13 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Maserati Quattroporte";
 	};
-	class : Jonzie_Quattroporte {};
-	class : Jonzie_Quattroporte {};
-	class : Jonzie_Quattroporte {};
-	class : Jonzie_Quattroporte {};
-	class : Jonzie_Quattroporte {};
-	class : Jonzie_Quattroporte {};
-	class : Jonzie_Quattroporte {};
+	class Fett_Quattroporte_red: Jonzie_Quattroporte {};
+	class Fett_Quattroporte_yellow: Jonzie_Quattroporte {};
+	class Fett_Quattroporte_green: Jonzie_Quattroporte {};
+	class Fett_Quattroporte_blue: Jonzie_Quattroporte {};
+	class Fett_Quattroporte_pink: Jonzie_Quattroporte {};
+	class Fett_Quattroporte_dark: Jonzie_Quattroporte {};
+	class Fett_Quattroporte_white: Jonzie_Quattroporte {};
 	
 	class Jonzie_Raptor
 	{
@@ -3466,13 +3466,13 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Ford F150 Raptor";
 	};
-	class : Jonzie_Raptor {};
-	class : Jonzie_Raptor {};
-	class : Jonzie_Raptor {};
-	class : Jonzie_Raptor {};
-	class : Jonzie_Raptor {};
-	class : Jonzie_Raptor {};
-	class : Jonzie_Raptor {};
+	class Fett_Raptor_red: Jonzie_Raptor {};
+	class Fett_Raptor_yellow: Jonzie_Raptor {};
+	class Fett_Raptor_green: Jonzie_Raptor {};
+	class Fett_Raptor_blue: Jonzie_Raptor {};
+	class Fett_Raptor_pink: Jonzie_Raptor {};
+	class Fett_Raptor_dark: Jonzie_Raptor {};
+	class Fett_Raptor_white: Jonzie_Raptor {};
 	
 	class Jonzie_STI
 	{
@@ -3524,13 +3524,13 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Ford Transit";
 	};
-	class : Jonzie_Transit {};
-	class : Jonzie_Transit {};
-	class : Jonzie_Transit {};
-	class : Jonzie_Transit {};
-	class : Jonzie_Transit {};
-	class : Jonzie_Transit {};
-	class : Jonzie_Transit {};
+	class Fett_Transit_red: Jonzie_Transit {};
+	class Fett_Transit_yellow: Jonzie_Transit {};
+	class Fett_Transit_green: Jonzie_Transit {};
+	class Fett_Transit_blue: Jonzie_Transit {};
+	class Fett_Transit_pink: Jonzie_Transit {};
+	class Fett_Transit_dark: Jonzie_Transit {};
+	class Fett_Transit_white: Jonzie_Transit {};
 	
 	class Jonzie_Ute
 	{
@@ -3553,13 +3553,13 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Holden Commodore Ute";
 	};
-	class : Jonzie_Ute {};
-	class : Jonzie_Ute {};
-	class : Jonzie_Ute {};
-	class : Jonzie_Ute {};
-	class : Jonzie_Ute {};
-	class : Jonzie_Ute {};
-	class : Jonzie_Ute {};
+	class Fett_Ute_red: Jonzie_Ute {};
+	class Fett_Ute_yellow: Jonzie_Ute {};
+	class Fett_Ute_green: Jonzie_Ute {};
+	class Fett_Ute_blue: Jonzie_Ute {};
+	class Fett_Ute_pink: Jonzie_Ute {};
+	class Fett_Ute_dark: Jonzie_Ute {};
+	class Fett_Ute_white: Jonzie_Ute {};
 	
 	class Jonzie_VE
 	{
@@ -3619,6 +3619,7 @@ class ALYSIA_VEHICLES
 	class Fett_Viper_dark: Jonzie_Viper {};
 	class Fett_Viper_white: Jonzie_Viper {};
 };
+
 
   /*
 	**				WEST VEHICLES
@@ -3756,18 +3757,8 @@ class ALYSIA_VEHICLES
 		};
 		realname = "B206 Milice";
 	};
-<<<<<<< HEAD
 	class dezkit_b206_police : dezkit_b206mi {};
 	class dezkit_b206_fbi : dezkit_b206mi {};
-=======
-	class Fett_Galant_red: Jonzie_Galant {};
-	class Fett_Galant_yellow: Jonzie_Galant {};
-	class Fett_Galant_green: Jonzie_Galant {};
-	class Fett_Galant_blue: Jonzie_Galant {};
-	class Fett_Galant_pink: Jonzie_Galant {};
-	class Fett_Galant_dark: Jonzie_Galant {};
-	class Fett_Galant_white: Jonzie_Galant {};
->>>>>>> 7e454f11a367bbdae19a047b1dfc549949c4bf4d
 	
 	class Jonzie_Highway
 	{
@@ -3797,17 +3788,12 @@ class ALYSIA_VEHICLES
 	class Fett_Highway_pink: Jonzie_Highway {};
 	class Fett_Highway_dark: Jonzie_Highway {};
 	class Fett_Highway_white: Jonzie_Highway {};
-<<<<<<< HEAD
   
   /*
 	**				EAST VEHICLES
 	*/
   
 	class Cha_BTR60_Cuba
-=======
-	
-	class Jonzie_Mini_Cooper
->>>>>>> 7e454f11a367bbdae19a047b1dfc549949c4bf4d
 	{
 		buyPrice = 75000;
 		inventory = 90;
@@ -3910,24 +3896,12 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		realname = "V16";
 	};
-<<<<<<< HEAD
 
 
   /*
 	**				GUER VEHICLES
 	*/  
 	class max_ambulance
-=======
-	class Fett_Quattroporte_red: Jonzie_Quattroporte {};
-	class Fett_Quattroporte_yellow: Jonzie_Quattroporte {};
-	class Fett_Quattroporte_green: Jonzie_Quattroporte {};
-	class Fett_Quattroporte_blue: Jonzie_Quattroporte {};
-	class Fett_Quattroporte_pink: Jonzie_Quattroporte {};
-	class Fett_Quattroporte_dark: Jonzie_Quattroporte {};
-	class Fett_Quattroporte_white: Jonzie_Quattroporte {};
-	
-	class Jonzie_Raptor
->>>>>>> 7e454f11a367bbdae19a047b1dfc549949c4bf4d
 	{
 		buyPrice = 25000;
 		inventory = 150;
@@ -3939,20 +3913,21 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		realname = "Ambulance";
 	};
-<<<<<<< HEAD
+	
+	class Jonzie_Ambulance
+	{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "GUER";
+		insurance = 1;
+		license = "";
+		fuel = "SP98";
+		rank = 1;
+		colors[] = {};
+		realname = "Ambulance transat";
+	};
 
 	class Fett_boat_samu
-=======
-	class Fett_Raptor_red: Jonzie_Raptor {};
-	class Fett_Raptor_yellow: Jonzie_Raptor {};
-	class Fett_Raptor_green: Jonzie_Raptor {};
-	class Fett_Raptor_blue: Jonzie_Raptor {};
-	class Fett_Raptor_pink: Jonzie_Raptor {};
-	class Fett_Raptor_dark: Jonzie_Raptor {};
-	class Fett_Raptor_white: Jonzie_Raptor {};
-	
-	class Jonzie_STI
->>>>>>> 7e454f11a367bbdae19a047b1dfc549949c4bf4d
 	{
 		buyPrice = 25000;
 		inventory = 150;
@@ -3977,20 +3952,8 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		realname = "Ford Taurus SAMU";
 	};
-<<<<<<< HEAD
 
 	class Fett_zamak_repair_samu
-=======
-	class Fett_Transit_red: Jonzie_Transit {};
-	class Fett_Transit_yellow: Jonzie_Transit {};
-	class Fett_Transit_green: Jonzie_Transit {};
-	class Fett_Transit_blue: Jonzie_Transit {};
-	class Fett_Transit_pink: Jonzie_Transit {};
-	class Fett_Transit_dark: Jonzie_Transit {};
-	class Fett_Transit_white: Jonzie_Transit {};
-	
-	class Jonzie_Ute
->>>>>>> 7e454f11a367bbdae19a047b1dfc549949c4bf4d
 	{
 		buyPrice = 25000;
 		inventory = 450;
@@ -4002,20 +3965,8 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		realname = "Zamak Transport de médicament";
 	};
-<<<<<<< HEAD
 
 	class Fett_zamak_covered_samu
-=======
-	class Fett_Ute_red: Jonzie_Ute {};
-	class Fett_Ute_yellow: Jonzie_Ute {};
-	class Fett_Ute_green: Jonzie_Ute {};
-	class Fett_Ute_blue: Jonzie_Ute {};
-	class Fett_Ute_pink: Jonzie_Ute {};
-	class Fett_Ute_dark: Jonzie_Ute {};
-	class Fett_Ute_white: Jonzie_Ute {};
-	
-	class Jonzie_VE
->>>>>>> 7e454f11a367bbdae19a047b1dfc549949c4bf4d
 	{
 		buyPrice = 25000;
 		inventory = 150;
@@ -4086,30 +4037,4 @@ class ALYSIA_VEHICLES
 	class dezkit_b206_ems : dezkit_b206ems {};
 	class dezkit_b206_rescue : dezkit_b206ems {};
 	
-	class Jonzie_Ambulance
-	{
-		buyPrice = 25000;
-		inventory = 100;
-		side = "GUER";
-		insurance = 1;
-		license = "";
-		fuel = "SP98";
-		rank = 3;
-		colors[] = 
-		{};
-		realname = "Ambulance";		
-	};
-<<<<<<< HEAD
 	
-	
-	
-=======
-	class Fett_Viper_red: Jonzie_Viper {};
-	class Fett_Viper_yellow: Jonzie_Viper {};
-	class Fett_Viper_green: Jonzie_Viper {};
-	class Fett_Viper_blue: Jonzie_Viper {};
-	class Fett_Viper_pink: Jonzie_Viper {};
-	class Fett_Viper_dark: Jonzie_Viper {};
-	class Fett_Viper_white: Jonzie_Viper {};
-};
->>>>>>> 7e454f11a367bbdae19a047b1dfc549949c4bf4d
