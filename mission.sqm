@@ -32,7 +32,12 @@ class Mission
 		"CABuildings_Misc",
 		"CAStructures_Misc_Powerlines",
 		"CAStructures_E_Misc_Misc_Lamp",
-		"A3_Data_F"
+		"A3_Data_F",
+		"CAMisc",
+		"aia_misc_config",
+		"mm_buildings",
+		"aia_misc3_config",
+		"mainsection"
 	};
 	addOnsAuto[]=
 	{
@@ -65,6 +70,11 @@ class Mission
 		"CAStructures_Misc_Powerlines",
 		"CAStructures_E_Misc_Misc_Lamp",
 		"A3_Data_F",
+		"CAMisc",
+		"aia_misc_config",
+		"mm_buildings",
+		"aia_misc3_config",
+		"mainsection",
 		"aia_sara_config"
 	};
 	randomSeed=13763187;
@@ -3487,7 +3497,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=611;
+		items=616;
 		class Item0
 		{
 			position[]={14231.394,0.13552099,12805.147};
@@ -9614,6 +9624,55 @@ class Mission
 			id=764;
 			side="EMPTY";
 			vehicle="Land_LampAirport_F";
+			skill=0.60000002;
+		};
+		class Item611
+		{
+			position[]={12118.524,25.965,17724.641};
+			id=765;
+			side="EMPTY";
+			vehicle="HeliHEmpty";
+			leader=1;
+			skill=0.60000002;
+			init="building2 = (position this nearestobject 195918); this setPos [(getPos building2 select 0), (getPos building2 select 1), 0]; this setDir (getDir building2); building2 hideObjectGlobal true; building3 = (position this nearestobject 195924); this setPos [(getPos building3 select 0), (getPos building3 select 1), 0]; this setDir (getDir building3); building3 hideObjectGlobal true; building4 = (position this nearestobject 195908); this setPos [(getPos building4 select 0), (getPos building4 select 1), 0]; this setDir (getDir building4); building4 hideObjectGlobal true; building5 = (position this nearestobject 195927); this setPos [(getPos building5 select 0), (getPos building5 select 1), 0]; this setDir (getDir building5); building5 hideObjectGlobal true;";
+		};
+		class Item612
+		{
+			position[]={12109.06,25.965,17702.082};
+			azimut=-89.218445;
+			id=766;
+			side="EMPTY";
+			vehicle="Land_Gaol_Main";
+			leader=1;
+			skill=0.60000002;
+			init=" ";
+		};
+		class Item613
+		{
+			position[]={12132.924,25.965,17743.189};
+			id=767;
+			side="EMPTY";
+			vehicle="ZavoraAnim";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item614
+		{
+			position[]={12132.9,25.965,17752.43};
+			azimut=90;
+			id=768;
+			side="EMPTY";
+			vehicle="Misc_concrete_High";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item615
+		{
+			position[]={8161.689,176.985,7889.0938};
+			azimut=-450.49692;
+			id=769;
+			side="EMPTY";
+			vehicle="Land_MainSection";
 			skill=0.60000002;
 		};
 	};
