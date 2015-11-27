@@ -248,17 +248,7 @@ if (hasInterface) then
 			
 			if ((_totalSession % _salary_time) isEqualTo 0) then
 			{
-				if (g_arrested) then {
-					["Vous n'avez pas reçu votre salaire car vous êtes en prison", "buy"] call public_fnc_info;
-				} else {
-		       		[true, (call g_paycheck), "Salaire"] call public_fnc_handleATM;
-					[false, ((call g_paycheck) * 0.05), "Taxe salariale"] call public_fnc_handleATM;
-		       		[format["Vous avez reçu votre salaire : <t color='#8cff9b'>%1</t>kn<br/>Pour plus d'informations sur vos éventuelles factures, rendez-vous dans l'application <t color='#00FF80'>solde</t> de votre tablette", ([(call g_paycheck)] call public_fnc_numberText)], "buy"] call public_fnc_info;
-				};
-	       		if (g_phone_forfait != "") then
-	       		{
-	       			[false, getNumber(missionConfigFile >> "ALYSIA_FORFAITS" >> g_phone_forfait >> "bill"), "Forfait téléphonique"] call public_fnc_handleATM;
-	       		};
+				[] call public_fnc_salaryProcess;
 		       	g_nextPay = time + (_salary_time * 60);
 			};
 			

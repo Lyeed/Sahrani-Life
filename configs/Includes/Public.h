@@ -240,6 +240,7 @@ class Public
 		class phone_numberChange;
 		class phone_message_send {};
 		class phone_message_receive {};
+		class phone_forfait_change {};
 	};
 
 	class Health
@@ -310,6 +311,7 @@ class Public
 		class robberyStart {};
 		class robberyProcess {};
 		class robberyTools {};
+		class salaryProcess {};
 	};
 
 	class AuctionHouse

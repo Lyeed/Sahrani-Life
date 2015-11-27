@@ -54,7 +54,14 @@ _display = findDisplay 500;
 if (isNull _display) exitWith {};
 
 if ((vehicle player) isEqualTo player) then {player playAction "Gear";};
+
 g_interaction_target setVariable ["trunk_in_use_ID", (getPlayerUID player), true];
+
+if (!_isCar) then
+{
+	ctrlShow[516, false];
+	ctrlShow[521, false];
+};
 
 (_display displayCtrl 501) ctrlSetStructuredText parseText format["<t align='center' size='1.8'>%1</t>", getText(configFile >> "CfgVehicles" >> typeOf(g_interaction_target) >> "displayName")];
 (_display displayCtrl 515) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", g_maxWeight];
