@@ -3192,4 +3192,60 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
+	class tenue_de_garde_commandant
+	{
+		buy_price = 20;
+	};
+	class tenue_de_garde_lieutenant
+	{
+		buy_price = 20;
+	};
+	class tenue_de_garde_sergent
+	{
+		buy_price = 20;
+	};
+	class tenue_de_garde_caporal
+	{
+		buy_price = 20;
+	};
+	class tenue_de_garde_basique
+	{
+		buy_price = 20;
+	};
+	class tenue_de_milice_commandant
+	{
+		buy_price = 20;
+	};
+	class tenue_de_milice_capitaine
+	{
+		buy_price = 20;
+	};
+	class tenue_de_milice_lieutenant
+	{
+		buy_price = 20;
+	};
+	class tenue_de_milice_major
+	{
+		buy_price = 20;
+	};
+	class tenue_de_milice_adjudant
+	{
+		buy_price = 20;
+	};
+	class tenue_de_milice_sergent
+	{
+		buy_price = 20;
+	};
+	class tenue_de_milice_caporal
+	{
+		buy_price = 20;
+	};
+	class tenue_de_milice_milicien
+	{
+		buy_price = 20;
+	};
+	class tenue_de_milice_cadet
+	{
+		buy_price = 20;
+	};
 };
