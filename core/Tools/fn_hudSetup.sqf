@@ -38,11 +38,10 @@ showGPS false;
 8 cutRsc ["RscHudPlayer", "PLAIN"];
 
 _hud = uiNameSpace getVariable ["RscHudPlayer", displayNull];
-
-[] spawn
+_hud spawn
 {
 	disableSerialization;
-	_presentation = (uiNameSpace getVariable ["RscHudPlayer", displayNull]) displayCtrl 23537;
+	_presentation = _this displayCtrl 23537;
 	while {((ctrlFade _presentation) < 1)} do
 	{
 		_presentation ctrlSetFade ((ctrlFade _presentation) + 0.01);
