@@ -3924,7 +3924,7 @@ class ALYSIA_VEHICLES
 		fuel = "SP98";
 		rank = 1;
 		colors[] = {};
-		realname = "Ambulance transat";
+		realname = "Ambulance avec civière";
 	};
 
 	class Fett_boat_samu
