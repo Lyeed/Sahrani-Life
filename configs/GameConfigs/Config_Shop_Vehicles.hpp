@@ -20,9 +20,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"DAR_ExplorerPolice",
 			"DAR_TaurusPolice", 
 			"DAR_CVPIAux", 
-			"DAR_TahoePoliceDet",
-			"DAR_ImpalaPolice",
-			"Jonzie_Highway"
+			"DAR_ImpalaPolice"
 		};
 	};
 	class WEST_vehicles_air

@@ -154,7 +154,7 @@ class ALYSIA_SHOPS_ARMA
 			"SkylineItems_PocheSang",
 			"SkylineItems_Defibrilateur",
 			"SkylineItems_Morphine",
-			"SkylineItems_Penicilline",
+			//"SkylineItems_Penicilline",
 			"ItemMap",
 			"ItemGPS",
 			"Binocular",

@@ -262,12 +262,12 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 20;
 		buy_condition_GUER = 2;
 	};
-	class DAES_Lifeliner_Helmet
+	class SAMU_helmet
 	{
 		buy_price = 20;
 		buy_condition_GUER = 3;
 	};
-	class DAES_Lifeliner_Uniform
+	class SAMU_combi
 	{
 		buy_price = 20;
 		buy_condition_GUER = 3;
