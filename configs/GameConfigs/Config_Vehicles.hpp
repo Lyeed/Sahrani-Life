@@ -2244,43 +2244,6 @@ class ALYSIA_VEHICLES
   	class Tal_Wrangler_White : Tal_Wrangler {};
   	class Tal_Wrangler_Yellow : Tal_Wrangler {};
 
-	class ALFR_GeK_Scania_420
-	{
-		buyPrice = 25000;
-		inventory = 150;
-		side = "CIV";
-		insurance = 1;
-		license = "truck";
-		fuel = "Diesel";
-		rank = 0;
-		colors[] = 
-		{
-			"ALFR_GeK_Scania_420",
-			"ALFR_GeK_Scania_420_blanc",
-			"ALFR_GeK_Scania_420_bleu",
-			"ALFR_GeK_Scania_420_noir",
-			"ALFR_GeK_Scania_420_orange"
-		};
-		realname = "Scania 420";
-	};
-  	class ALFR_GeK_Scania_420_blanc : ALFR_GeK_Scania_420 {};
-  	class ALFR_GeK_Scania_420_bleu : ALFR_GeK_Scania_420 {};
-  	class ALFR_GeK_Scania_420_noir : ALFR_GeK_Scania_420 {};
-  	class ALFR_GeK_Scania_420_orange : ALFR_GeK_Scania_420 {};
-
-  	class ALFR_GeK_Volvo_FH16_2012
-	{
-		buyPrice = 25000;
-		inventory = 150;
-		side = "CIV";
-		insurance = 1;
-		license = "truck";
-		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
-		realname = "Volvo FH16";
-	};
-
 	class DAR_MK23
 	{
 		buyPrice = 25000;
