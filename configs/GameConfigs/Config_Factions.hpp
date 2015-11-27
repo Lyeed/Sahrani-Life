@@ -10,71 +10,47 @@ class ALYSIA_FACTIONS
 {
 	class WEST
 	{
-		/*
-		**        GLOBAL
-		*/
+		/*** GLOBAL ***/
 		name = "Milice";
 		icon = "\lyeed_IMG\data\faction\WEST_logo.paa";
 		paycheck = 750;
-
-		/*
-		**			SPAWN/RESPAWN
-		*/
-		respawn_marker = "west_spawn";
-		respawn_price = 0;
-		
-		/*
-		**			IDENTITY
-		*/
 		identity_item = "SkylineItems_PlaqueMilitaire";
 
-		/*
-		**         HOUSING
-		*/
+		/*** SIRENE ***/
+		sirene_sound = "sirene_west";
+		sirene_sleep = 5;
+
+		/*** SPAWN/RESPAWN ***/
+		respawn_marker = "west_spawn";
+		respawn_price = 0;
+
+		/*** HOUSING ***/
 		house_can_search = 1;
 		house_max = 1;
-		
-		/*
-		**         LASTING OBJECTS
-		*/
-		LastingObjects_menu = 2;
-		LastingObjects_max_per_player = 0;
 
-		/*
-		**			HEAL
-		*/
+		/*** HEAL ***/
 		price_heal_hopital = 0;
 
-		/*
-		**			FARM
-		*/
+		/*** FARM ***/
 		farming_markers_plant[] = {};
 		farming_markers_gather[] = {};
 
-		/*
-		**			DYNAMIC MARKERS
-		*/
+		/*** DYNAMIC MARKERS ***/
 		dynamic_markers_shown    = 0;
 		dynamic_markers_destroy  = 1;
 		dynamic_markers_discover = 0;
 		
-		/*
-		**         INTERACTIONS 
-		*/
+		/*** INTERACTIONS ***/
 		skull_who = 0;// can check skull owner's identity
 		skull_take = 0;// can pack-up skull
 		can_seize_gear = 1;// can size near gear
 
-		/*
-		**         LEADER BOARD
-		*/
+		/*** LEADER BOARD ***/
 		leader_rank = 9;
 		leader_board_rank_require = 9;
 		leader_bord_history[] = {};
 
-		/*
-		**           LOADOUT
-		*/
+		/*** LOADOUT ***/
 		class Loadout
 		{
 			uniform = "Skyline_Army_Uniform";
@@ -88,9 +64,7 @@ class ALYSIA_FACTIONS
 			};
 		};
 
-		/*
-		**          RANKS
-		*/
+		/*** RANKS ***/
 		class Ranks
 		{
 			ranks_complet[] =
@@ -125,45 +99,47 @@ class ALYSIA_FACTIONS
 
 	class EAST
 	{
+		/*** GLOBAL ***/
 		name = "Garde";
 		icon = "\lyeed_IMG\data\faction\EAST_logo.paa";
 		paycheck = 750;
-		
 		identity_item = "SkylineItems_PlaqueMilitaire";
 
-		LastingObjects_menu = 2;
-		LastingObjects_max_per_player = 0;
+		/*** SIRENE ***/
+		sirene_sound = "sirene_east";
+		sirene_sleep = 3;
 
-		price_heal_hopital = 0;
-
+		/*** SPAWN/RESPAWN ***/
 		respawn_marker = "east_spawn";
 		respawn_price = 0;
 
-
+		/*** HOUSING ***/
 		house_can_search = 1;
 		house_max = 1;
 
+		/*** HEAL ***/
+		price_heal_hopital = 0;
+
+		/*** FARM ***/
 		farming_markers[] = {};
 		farming_markers_plant[] = {};
 
-		/*
-		**			DYNAMIC MARKERS
-		*/
+		/*** DYNAMIC MARKERS ***/
 		dynamic_markers_shown    = 0;
 		dynamic_markers_destroy  = 1;
 		dynamic_markers_discover = 0;
 
+		/*** INTERACTIONS ***/
+		skull_who = 0;
+		skull_take = 0;
+		can_seize_gear = 1;
+
+		/*** LEADER BOARD ***/
 		leader_rank = 5;
 		leader_board_rank_require = 5;
 		leader_bord_history[] = {};
 		
-		/*
-		**         INTERACTIONS 
-		*/
-		skull_who = 0; // can check skull owner's identity
-		skull_take = 0; // can pack-up skull
-		can_seize_gear = 1; // can size near gear
-
+		/*** LOADOUT ***/
 		class Loadout
 		{
 			uniform = "U_mas_afr_B_uniform_s";
@@ -177,6 +153,7 @@ class ALYSIA_FACTIONS
 			};
 		};
 
+		/*** RANKS ***/
 		class Ranks
 		{
 			ranks_complet[] =
@@ -203,23 +180,28 @@ class ALYSIA_FACTIONS
 
 	class CIV
 	{
+		/*** GLOBAL ***/
 		name = "Civil";
 		icon = "\lyeed_IMG\data\faction\CIV_logo.paa";
 		paycheck = 600;
-		
 		identity_item = "SkylineItems_Passeport";
+		
+		/*** SIRENE ***/
+		sirene_sound = "";
+		sirene_sleep = 0;
 
-		LastingObjects_menu = 1;
-		LastingObjects_max_per_player = 1;
-
-		price_heal_hopital = 500;
-
+		/*** SPAWN/RESPAWN ***/
 		respawn_marker = "civ_spawn";
 		respawn_price = 10000;
 
+		/*** HOUSING ***/
 		house_can_search = 0;
 		house_max = 1;
 
+		/*** HEAL ***/
+		price_heal_hopital = 500;
+
+		/*** FARM ***/
 		farming_markers_gather[] = 
 		{
 			"iron_1",
@@ -257,24 +239,22 @@ class ALYSIA_FACTIONS
 			"tabac_3"
 		};
 
-		/*
-		**			DYNAMIC MARKERS
-		*/
+		/*** DYNAMIC MARKERS ***/
 		dynamic_markers_shown     = 0;
 		dynamic_markers_destroy   = 0;
 		dynamic_markers_discover  = 1;
 
-		/*
-		**         INTERACTIONS 
-		*/
-		skull_who = 0; // can check skull owner's identity
-		skull_take = 0; // can pack-up skull
-		can_seize_gear = 0; // can size near gear
+		/*** INTERACTIONS ***/
+		skull_who = 0;
+		skull_take = 0;
+		can_seize_gear = 0;
 
+		/*** LEADER BOARD ***/
 		leader_rank = -1;// MUST BE -1
 		leader_board_rank_require = -1;// MUST BE -1
 		leader_bord_history[] = {};
 
+		/*** LOADOUT ***/
 		class Loadout
 		{
 			uniform = "U_C_Alysia_01";
@@ -286,60 +266,57 @@ class ALYSIA_FACTIONS
 			};
 		};
 
+		/*** RANKS ***/
 		class Ranks
 		{
-			ranks_complet[] =
-			{
-				"Civil"
-			};
-
-			ranks_short[] =
-			{
-				"Civ"
-			};
+			ranks_complet[] = {"Civil"};
+			ranks_short[] = {"Civ"};
 		};
 	};
 
 	class GUER
 	{
+		/*** GLOBAL ***/
 		name = "SAMU";
 		icon = "\lyeed_IMG\data\faction\GUER_logo.paa";
 		paycheck = 600;
-
 		identity_item = "SkylineItems_Passeport";
 
-		LastingObjects_menu = -1;
-		LastingObjects_max_per_player = 0;
+		/*** SIRENE ***/
+		sirene_sound = "sirene_guer";
+		sirene_sleep = 9;
 
-		price_heal_hopital = 0;
-		
+		/*** SPAWN/RESPAWN ***/
 		respawn_marker = "guer_spawn";
 		respawn_price = 0;
 
+		/*** HOUSING ***/
 		house_can_search = 0;
 		house_max = 1;
 
+		/*** HEAL ***/
+		price_heal_hopital = 0;
+
+		/*** FARM ***/
 		farming_markers_gather[] = {};
 		farming_markers_plant[] = {};
 
-		/*
-		**			DYNAMIC MARKERS
-		*/
+		/*** DYNAMIC MARKERS ***/
 		dynamic_markers_shown     = 0;
 		dynamic_markers_destroy   = 0;
 		dynamic_markers_discover  = 0;
 
-		/*
-		**         INTERACTIONS 
-		*/
-		skull_who = 1; // can check skull owner's identity
-		skull_take = 1; // can pack-up skull
-		can_seize_gear = 0; // can size near gear
+		/*** INTERACTIONS ***/
+		skull_who = 1;
+		skull_take = 1;
+		can_seize_gear = 0;
 
+		/*** LEADER BOARD ***/
 		leader_rank = 6;
 		leader_board_rank_require = 6;
 		leader_bord_history[] = {};
 
+		/*** LOADOUT ***/
 		class Loadout
 		{
 			uniform = "U_C_Poloshirt_blue";
@@ -352,6 +329,7 @@ class ALYSIA_FACTIONS
 			};
 		};
 
+		/*** RANKS ***/
 		class Ranks
 		{
 			ranks_complet[] =

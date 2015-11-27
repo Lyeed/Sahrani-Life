@@ -101,7 +101,7 @@
 		class BTN_L1: RscButtonSilent
 		{
 			idc = 15003;
-			soundClick[] = {"\lyeed_IMG\data\click_atm.ogg",0.09,1};
+			soundClick[] = {"\lyeed_Sounds\data\click_atm.ogg",0.09,1};
 
 			x = 0.347375 * safezoneW + safezoneX;
 			y = 0.46238 * safezoneH + safezoneY;
@@ -112,7 +112,7 @@
 		class BTN_L2: RscButtonSilent
 		{
 			idc = 15004;
-			soundClick[] = {"\lyeed_IMG\data\click_atm.ogg",0.09,1};
+			soundClick[] = {"\lyeed_Sounds\data\click_atm.ogg",0.09,1};
 
 			x = 0.347891 * safezoneW + safezoneX;
 			y = 0.51584 * safezoneH + safezoneY;
@@ -123,7 +123,7 @@
 		class BTN_L3: RscButtonSilent
 		{
 			idc = 15005;
-			soundClick[] = {"\lyeed_IMG\data\click_atm.ogg",0.09,1};
+			soundClick[] = {"\lyeed_Sounds\data\click_atm.ogg",0.09,1};
 
 			x = 0.347891 * safezoneW + safezoneX;
 			y = 0.56842 * safezoneH + safezoneY;
@@ -134,7 +134,7 @@
 		class BTN_L4: RscButtonSilent
 		{
 			idc = 15006;
-			soundClick[] = {"\lyeed_IMG\data\click_atm.ogg",0.09,1};
+			soundClick[] = {"\lyeed_Sounds\data\click_atm.ogg",0.09,1};
 
 			x = 0.347891 * safezoneW + safezoneX;
 			y = 0.62122 * safezoneH + safezoneY;
@@ -145,7 +145,7 @@
 		class BTN_R1: RscButtonSilent
 		{
 			idc = 15007;
-			soundClick[] = {"\lyeed_IMG\data\click_atm.ogg",0.09,1};
+			soundClick[] = {"\lyeed_Sounds\data\click_atm.ogg",0.09,1};
 
 			x = 0.637466 * safezoneW + safezoneX;
 			y = 0.46194 * safezoneH + safezoneY;
@@ -156,7 +156,7 @@
 		class BTN_R2: RscButtonSilent
 		{
 			idc = 15008;
-			soundClick[] = {"\lyeed_IMG\data\click_atm.ogg",0.09,1};
+			soundClick[] = {"\lyeed_Sounds\data\click_atm.ogg",0.09,1};
 
 			x = 0.637466 * safezoneW + safezoneX;
 			y = 0.51474 * safezoneH + safezoneY;
@@ -167,7 +167,7 @@
 		class BTN_R3: RscButtonSilent
 		{
 			idc = 15009;
-			soundClick[] = {"\lyeed_IMG\data\click_atm.ogg",0.09,1};
+			soundClick[] = {"\lyeed_Sounds\data\click_atm.ogg",0.09,1};
 
 			x = 0.637466 * safezoneW + safezoneX;
 			y = 0.56842 * safezoneH + safezoneY;
@@ -178,7 +178,7 @@
 		class BTN_R4: RscButtonSilent
 		{
 			idc = 15010;
-			soundClick[] = {"\lyeed_IMG\data\click_atm.ogg",0.09,1};
+			soundClick[] = {"\lyeed_Sounds\data\click_atm.ogg",0.09,1};
 
 			x = 0.637466 * safezoneW + safezoneX;
 			y = 0.62122 * safezoneH + safezoneY;

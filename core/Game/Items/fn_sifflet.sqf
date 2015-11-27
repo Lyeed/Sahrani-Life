@@ -5,15 +5,14 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_gang", "_count"];
-_gang = [_this, 0, "", [""]] call BIS_fnc_param;
 
-if (_gang == "") exitWith {0};
+if ((time - g_action_delay) < 2) exitWith {};
 
-_count = 0;
+if ((["sifflet"] call public_fnc_itemCount) > 0) then
 {
-	if ((_x select 0) == _gang) then {
-		_count = _count + 1;
-	};
-} forEach (gServer_gangLabo);
-_count;
+	[player, "sifflet", 60] call CBA_fnc_globalSay3d;
+	player setFatigue ((getFatigue player) + 0.15);
+	g_action_delay = time;
+} else {
+	["Vous n'avez pas de sifflet"] call public_fnc_error;
+};

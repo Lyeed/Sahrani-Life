@@ -89,7 +89,8 @@ class Public
 		class activateNitro {};
 		class applyBaillon {};
 		class applyBandeau {};
-		class copOpener {};
+		class telecommande {};
+		class sifflet {};
 		class dropItems {};
 		class getBaillon {};
 		class getBaillonSelf {};
@@ -399,6 +400,7 @@ class Public
 		class interactionMenu_action_license_get {};
 		class interactionMenu_action_license_return {};
 		class interactionMenu_action_license_revoke {};
+		class sirene {};
 		class eatFood {};
 		class knockedOut {};
 		class knockoutAction {};
@@ -416,13 +418,11 @@ class Public
 		class getVehGaragePrice {};
 		class getVehSellPrice {};
 		class getVehVirtual {};
-		class lastingObjectsGang {};
 		class licenseGetName {};
 		class licenseGetPrice {};
 		class licenseIsIllegal {};
 		class marketGetBuyPrice {};
 		class marketGetSellPrice {};
-		class nearestHouse {};
 		class rankToStr {};
 		class sideToStr {};
 		class vehicleIsFaction {};
@@ -434,7 +434,6 @@ class Public
 		class itemGetSellPrice {};
 		class itemGetWeight {};
 		class itemIsIllegal {};
-		class itemIsRemovable {};
 	};
 
 	class Welcome

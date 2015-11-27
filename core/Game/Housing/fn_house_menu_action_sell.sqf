@@ -35,10 +35,10 @@ if (_action) then
 	};
 
 	g_houses deleteAt _index;
-	_house setVariable ["house_sold", true, true];
-	_house setVariable ["house_owner", nil, true];
+	g_interaction_target setVariable ["house_sold", true, true];
+	g_interaction_target setVariable ["house_owner", nil, true];
 	deleteMarkerLocal (format["house_%1", (_index + 1)]);
 	["<t align='center'>Vente<br/><t color='#3ADF00'>effectuée</t></t>", "buy"] call public_fnc_info;
 	[true, _price, "Vente maison"] call public_fnc_handleATM;
-	[_house, (getPlayerUID player), playerSide] remoteExec ["TON_fnc_house_sell", 2];
+	[g_interaction_target, (getPlayerUID player), playerSide] remoteExec ["TON_fnc_house_sell", 2];
 };

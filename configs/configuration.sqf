@@ -49,7 +49,7 @@ with missionNamespace do
 	g_atm = 0;
 	g_atm_from = [];
 	g_paycheck = 0;
-	g_paycheck_period = compileFinal "5";
+	g_paycheck_period = compileFinal "15";
 	/* ===================[Levels]======================= */
 	g_WESTLevel = 0;
 	g_EASTLevel = 0;
@@ -88,13 +88,6 @@ with missionNamespace do
 	g_drugs_patched = 0; // time before anti-addiction patch effect disappears (scale in seconds)
 	g_drugs_consuming = 0; // time before all drugs effects and after effects stop (scale in seconds)
 	g_drugs = [];
-
-	/*
-	_c = 0;
-	{
-		_c = _c + 1;
-	} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_DRUG"));
-	hint format["%1", _c];*/
 
 	"g_drugs pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_DRUG");
 
@@ -157,9 +150,6 @@ with missionNamespace do
 	{
 		missionNamespace setVariable[format["license_%1", _x], false];
 	} forEach (g_licenses);
-	/* =================[Market]=================== */
-	g_market = [];
-	"g_market pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_BOURSE");
 	/* =================[Sheeps]====================*/
 	g_sheeps = [];
 };

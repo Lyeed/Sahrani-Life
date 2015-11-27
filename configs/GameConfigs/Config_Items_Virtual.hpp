@@ -201,19 +201,6 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\1\cone.paa";
 	};
 
-	class bip
-	{
-		weight = 1;
-		name = "Télécommande (barrière)";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "[] call public_fnc_copOpener;";
-		image       = "alysia_items_virtual\data\1\telecommande_portail.paa";
-	};
-
 	class spikeStrip
 	{
 		weight = 5;
@@ -1311,5 +1298,31 @@ class ALYSIA_ITEMS
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\drogue\opium.paa";
+	};
+
+	class sifflet
+	{
+		name        = "Sifflet";
+		weight      = 1;
+		price_buy   = 60;
+		price_sell  = 0;
+		market      = 0;
+		illegal     = 0;
+		removable   = 1;
+		use         = "[""Vous devez utiliser le raccourci clavier pour utiliser cet objet""]";
+		image       = "alysia_items_virtual\data\drogue\opium.paa";// A CHANGER
+	};
+
+	class bip
+	{
+		weight      = 1;
+		name        = "Télécommande (barrière)";
+		price_buy   = 120;
+		price_sell  = 0;
+		illegal     = 0;
+		market      = 0;
+		removable   = 1;
+		use         = "[""Vous devez utiliser le raccourci clavier pour utiliser cet objet""]";
+		image       = "alysia_items_virtual\data\1\telecommande_portail.paa";
 	};
 };

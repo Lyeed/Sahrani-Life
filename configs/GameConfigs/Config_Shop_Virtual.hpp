@@ -57,16 +57,14 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Milice";
 		side = "WEST";
-		items[] = {{"defusekit", "salive", "cone", "barriere", "murbetonarme", "bunkersable", "mursable", "couloirsable", 
-			"grandmurescalier", "gueritesable", "grandmur", "coinsable", "adn", "donut", "soda", "handcuffkeys", "handcuffs", 
-			"kit_destru", "spikeStrip", "bip", "storage"}, {}};
+		items[] = {{"defusekit", "cone", "barriere", "donut", "soda", "handcuffkeys", "handcuffs", "kit_destru", "spikeStrip", "bip", "sifflet"}, {}};
 	};
 
 	class east
 	{
 		name = "Garde";
 		side = "EAST";
-		items[] = {{"ragout", "kefir"}, {}};
+		items[] = {{"ragout", "kefir", "sifflet", "handcuffs", "handcuffkeys", "barriere", "cone", "bip"}, {}};
 	};
 
 	class guer

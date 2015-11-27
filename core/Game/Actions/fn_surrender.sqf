@@ -24,14 +24,7 @@ if (player getVariable ["surrender", false]) then {
 			};
 		} else {
 			player playMoveNow "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
+			player switchMove "";
 		};
 	};
 };
-/*
-amovpercmstpssurwnondnon
-player playMove "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon";
-player playMove "amovpercmstpsnonwnondnon"
-
-amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon
-AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon*/
-
