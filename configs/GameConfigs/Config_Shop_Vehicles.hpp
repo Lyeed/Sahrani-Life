@@ -82,7 +82,7 @@ class ALYSIA_SHOPS_VEHICLES
 		side = "GUER";
 		stock[] =
 		{
-			"max_ambulance",
+			"Mrshounka_corbillard_c",
 			"Jonzie_Ambulance",
 			"DAR_TahoeEMS",
 			"DAR_ExplorerMedic",
