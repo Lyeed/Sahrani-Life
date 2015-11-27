@@ -3618,7 +3618,7 @@ class ALYSIA_VEHICLES
 	class Fett_Viper_pink: Jonzie_Viper {};
 	class Fett_Viper_dark: Jonzie_Viper {};
 	class Fett_Viper_white: Jonzie_Viper {};
-};
+
 
 
   /*
@@ -4036,5 +4036,5 @@ class ALYSIA_VEHICLES
 	};
 	class dezkit_b206_ems : dezkit_b206ems {};
 	class dezkit_b206_rescue : dezkit_b206ems {};
-	
+};	
 	
