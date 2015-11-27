@@ -10986,7 +10986,7 @@ class Mission
 		};
 		class Item86
 		{
-			position[]={14045.202,39.959999,12654.557};
+			position[]={14049.339,39.959999,12657.564};
 			name="Fonte de l'or";
 			text="Fonte de l'or";
 			type="plp_mark_civ_industrial";
@@ -11425,7 +11425,7 @@ class Mission
 		{
 			position[]={13490.318,11.97,8747.9395};
 			name="Boutique de plongé";
-			text="Boutique de plongé";
+			text="Boutique de plongée";
 			type="plp_mark_civ_commercialzone";
 			colorName="ColorGreen";
 			a=0.5;

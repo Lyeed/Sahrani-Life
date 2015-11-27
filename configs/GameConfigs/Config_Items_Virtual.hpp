@@ -1237,7 +1237,7 @@ class ALYSIA_ITEMS
 
 	class wheatseed
 	{
-		name        = "Blé (graines)";
+		name        = "Graine (blé)";
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;

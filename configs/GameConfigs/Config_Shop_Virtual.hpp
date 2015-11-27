@@ -170,7 +170,7 @@ class ALYSIA_SHOPS_VIRTUAL
 
 	class baux
 	{
-		name = "Commerçant de sel";
+		name = "Commerçant d'aluminium";
 		side = "CIV";
 		items[] = {{}, {"alu"}};
 	};

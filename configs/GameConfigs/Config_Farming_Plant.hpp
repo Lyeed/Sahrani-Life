@@ -63,7 +63,7 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 	class Skyline_Wheat
 	{
 		receive[] = {{"wheat", 3, 1}};
-		seed = "wheat_seed";
+		seed = "wheatseed";
 		distance = 3;
 		growingTime = 350;
 		groundLevel = 0;
