@@ -3914,7 +3914,7 @@ class ALYSIA_VEHICLES
 		realname = "Ambulance avec civière";
 	};
 	
-	class Mrshounka_corbillard_c
+	class Mrshounka_corbillard_base_p
 	{
 		buyPrice = 25000;
 		inventory = 150;
@@ -3935,15 +3935,15 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Corbillard";
 	};
-	class Mrshounka_corbillard_c: Mrshounka_corbillard_c {};
-	class Mrshounka_corbillard_c_noir: Mrshounka_corbillard_c {};
-	class Mrshounka_corbillard_c_bleufonce: Mrshounka_corbillard_c {};
-	class Mrshounka_corbillard_c_rouge: Mrshounka_corbillard_c {};
-	class Mrshounka_corbillard_c_jaune: Mrshounka_corbillard_c {};
-	class Mrshounka_corbillard_c_rose: Mrshounka_corbillard_c {};
-	class Mrshounka_corbillard_c_grise: Mrshounka_corbillard_c {};
-	class Mrshounka_corbillard_c_violet: Mrshounka_corbillard_c {};
-	class Mrshounka_corbillard_c_orange: Mrshounka_corbillard_c {};
+	class Mrshounka_corbillard_c: Mrshounka_corbillard_base_p {};
+	class Mrshounka_corbillard_c_noir: Mrshounka_corbillard_base_p {};
+	class Mrshounka_corbillard_c_bleufonce: Mrshounka_corbillard_base_p {};
+	class Mrshounka_corbillard_c_rouge: Mrshounka_corbillard_base_p {};
+	class Mrshounka_corbillard_c_jaune: Mrshounka_corbillard_base_p {};
+	class Mrshounka_corbillard_c_rose: Mrshounka_corbillard_base_p {};
+	class Mrshounka_corbillard_c_grise: Mrshounka_corbillard_base_p {};
+	class Mrshounka_corbillard_c_violet: Mrshounka_corbillard_base_p {};
+	class Mrshounka_corbillard_c_orange: Mrshounka_corbillard_base_p {};
 
 	class Fett_boat_samu
 	{
