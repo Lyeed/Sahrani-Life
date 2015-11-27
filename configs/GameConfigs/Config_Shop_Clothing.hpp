@@ -275,15 +275,15 @@ class ALYSIA_SHOPS_CLOTHING
 		side = "WEST";
 		uniforms[] =
 		{
-			"soldier_milice_commandant",
-			"soldier_milice_capitaine",
-			"soldier_milice_lieutenant",
-			"soldier_milice_major",
-			"soldier_milice_adjudant",
-			"soldier_milice_sergent",
-			"soldier_milice_caporal",
-			"soldier_milice_milicien",
-			"soldier_milice_cadet",
+			"tenue_de_milice_commandant",
+			"tenue_de_milice_capitaine",
+			"tenue_de_milice_lieutenant",
+			"tenue_de_milice_major",
+			"tenue_de_milice_adjudant",
+			"tenue_de_milice_sergent",
+			"tenue_de_milice_caporal",
+			"tenue_de_milice_milicien",
+			"tenue_de_milice_cadet",
 			"combi_plonge_milice"
 		};
 		headgear[] =
@@ -357,11 +357,11 @@ class ALYSIA_SHOPS_CLOTHING
 		side = "EAST";
 		uniforms[] =
 		{
-			"soldier_garde_commandant",
-			"soldier_garde_lieutenant",
-			"soldier_garde_sergent",
-			"soldier_garde_caporal",
-			"soldier_garde_basique"
+			"tenue_de_garde_commandant",
+			"tenue_de_garde_lieutenant",
+			"tenue_de_garde_sergent",
+			"tenue_de_garde_caporal",
+			"tenue_de_garde_basique"
 		};
 		headgear[] =
 		{
