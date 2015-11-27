@@ -4018,4 +4018,3 @@ class ALYSIA_VEHICLES
 	class dezkit_b206_ems : dezkit_b206ems {};
 	class dezkit_b206_rescue : dezkit_b206ems {};
 };	
-	

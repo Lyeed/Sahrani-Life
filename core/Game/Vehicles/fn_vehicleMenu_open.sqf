@@ -66,8 +66,8 @@ _idc_actual = 5010;
 	};
 } forEach
 ([
-	["lock", "Verrouiller", "[true] call public_fnc_vehicleMenu_key;", "(g_interaction_target in g_vehicles)"],
-	["unlock", "Déverrouiller", "[false] call public_fnc_vehicleMenu_key;", "(g_interaction_target in g_vehicles)"],
+	["lock", "Verrouiller", "[true] call public_fnc_vehicleMenu_key;", "((g_interaction_target in g_vehicles) || ((playerSide != civilian) && (str(playerSide) isEqualTo getText(missionConfigFile >> ""ALYSIA_VEHICLES"" >> typeOf(g_interaction_target) >> ""side""))))"],
+	["unlock", "Déverrouiller", "[false] call public_fnc_vehicleMenu_key;", "((g_interaction_target in g_vehicles) || ((playerSide != civilian) && (str(playerSide) isEqualTo getText(missionConfigFile >> ""ALYSIA_VEHICLES"" >> typeOf(g_interaction_target) >> ""side""))))"],
 	["inventory", "Coffre", "[] spawn public_fnc_virtual_menu_exhange_open;", "(((locked g_interaction_target) != 2) || (g_interaction_target in g_vehicles))"],
 	["repair", "Réparation", "[] spawn public_fnc_vehicleMenu_repair_open;", "((vehicle player) isEqualTo player)"],
 	["refuel", "Faire le plein", "[] spawn public_fnc_vehicleMenu_refuel;", "((([""fuelF""] call public_fnc_itemCount) > 0) && ((vehicle player) isEqualTo player))"],

@@ -425,7 +425,6 @@ class Public
 		class marketGetSellPrice {};
 		class rankToStr {};
 		class sideToStr {};
-		class vehicleIsFaction {};
 		class itemCount {};
 		class itemGetDrop {};
 		class itemGetImage {};
