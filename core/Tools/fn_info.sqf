@@ -5,6 +5,9 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+
+if (isDedicated) exitWith {};
+
 private["_msg", "_sound", "_count"];
 _msg = [_this, 0, "", [""]] call BIS_fnc_param;
 _sound = [_this, 1, "", [""]] call BIS_fnc_param;

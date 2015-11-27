@@ -51,5 +51,6 @@ if (_action) then
 	{
 		["<t align='center'>Vous avez posé<br/><t color='#FF8000'>Coffre</t><br/>"] call public_fnc_info;
 		[_house] remoteExec ["TON_fnc_house_storage_install", 2];
+		_house setVariable ["house_storage_out", objNull, true];
 	};
 };

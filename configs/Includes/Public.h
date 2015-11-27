@@ -232,6 +232,7 @@ class Public
 		class house_menu_action_store {};
 		class house_menu_action_owner {};
 		class house_menu_action_buy {};
+		class house_menu_action_storage {};
 	};
 
 	class Phone

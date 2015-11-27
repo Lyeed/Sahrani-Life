@@ -29,6 +29,11 @@ _action =
 
 if (_action) then 
 {
+	_storage = g_interaction_target getVariable ["house_storage_out", objNull];
+	if (!(isNull _storage)) then {
+		deleteVehicle _storage;
+	};
+
 	g_houses deleteAt _index;
 	_house setVariable ["house_sold", true, true];
 	_house setVariable ["house_owner", nil, true];
