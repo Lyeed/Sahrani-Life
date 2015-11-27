@@ -19,7 +19,7 @@ if (!isClass(missionConfigFile >> "ALYSIA_SHOPS_VEHICLES" >> _shop)) exitWith
 _side = getText(missionConfigFile >> "ALYSIA_SHOPS_VEHICLES" >> _shop >> "side");
 if ((_side != "") && (str(playerSide) != _side)) exitWith {
 	[format[
-		"Votre faction<br/><t color='#04B404' align='center'>%1</t><br/>n'est pas autorisé à acheter ici<br/><br/>Ce magasin<br/><t align='center' color='#2EFE9A'>%2</t><br/>est <t color='#FF0000'>réservé</t>",
+		"Votre faction <t color='#04B404'>%1</t> n'est pas autorisé à acheter ici.<br/>Ce magasin <t color='#2EFE9A'>%2</t> est <t color='#FF0000'>réservé</t>.",
 		([playerSide] call public_fnc_sideToStr),
 		getText(missionConfigFile >> "ALYSIA_SHOPS_VEHICLES" >> _shop >> "name")
 	]] call public_fnc_error;

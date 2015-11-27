@@ -59,7 +59,8 @@ _vehicleInfo = [_className] call public_fnc_fetchVehInfo;
 	+	"<t align='left'>Sièges passagers</t><t align='right'>%5</t><br/>"
 	+	"<t align='left'>Capacité du coffre</t><t align='right'>%6</t><br/>"
 	+	"<t align='left'>Autonomie</t><t align='right'>%7</t><br/>"
-	+	"<t align='left'>Solidité</t><t align='right'>%8</t>",
+	+	"<t align='left'>Solidité</t><t align='right'>%8</t>"
+	+	"<t align='left'>Consomme</t><t align='right'>%9</t>",
 	[[_className] call public_fnc_getVehGaragePrice] call public_fnc_numberText,
 	[[_className] call public_fnc_getVehAssurancePrice] call public_fnc_numberText,
 	(_vehicleInfo select 8),
@@ -68,7 +69,8 @@ _vehicleInfo = [_className] call public_fnc_fetchVehInfo;
 	if (_trunkSpace isEqualTo 0) then {"Aucun"} else {_trunkSpace},
 	(_vehicleInfo select 12),
 	(_vehicleInfo select 9),
-	[[_className] call public_fnc_getVehSellPrice] call public_fnc_numberText
+	[[_className] call public_fnc_getVehSellPrice] call public_fnc_numberText,
+	getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")
 ];
 
 _ctrl = _display displayCtrl 2303;

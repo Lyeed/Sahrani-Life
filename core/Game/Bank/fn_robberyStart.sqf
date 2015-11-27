@@ -71,5 +71,5 @@ if (!(_bank getVariable ["hacked", false])) then
 			"Une faille de sécurité a été détectée dans la banque. %1 a été forcée.",
 			getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name")
 		], "BANK"
-	] remoteExecCall ["public_fnc_APP_phone_messages_receive", [getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "owner")] call public_fnc_strToSide];
+	] remoteExecCall ["public_fnc_phone_message_receive", [getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "owner")] call public_fnc_strToSide];
 };
