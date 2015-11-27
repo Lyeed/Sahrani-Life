@@ -147,8 +147,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"O_Truck_02_covered_F",
 			"B_Truck_01_covered_F",  
 			"B_Truck_01_box_F",
-			"ALFR_GeK_Scania_420",
-			"ALFR_GeK_Volvo_FH16_2012",
 			"shounka_a3_renaultmagnum_f",
 			"shounka_a3_dafxf_euro6_f",
 			"Mrshounka_a3_iveco_f",
