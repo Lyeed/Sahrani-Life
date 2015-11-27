@@ -60,6 +60,17 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 		extraGrow = 100;
 	};
 
+	class Skyline_Wheat
+	{
+		receive[] = {{"wheat", 3, 1}};
+		seed = "wheat_seed";
+		distance = 3;
+		growingTime = 350;
+		groundLevel = 0;
+		upLevel = 0.4;
+		extraGrow = 100;
+	};
+
 	/*
 	class Oleander2
 	{
@@ -138,6 +149,11 @@ class ALYSIA_FARMING_PLANT_MARKERS
 	class cotton_1
 	{
 		plant = "Skyline_Cotton";
+	};
+
+	class wheat_1
+	{
+		plant = "Skyline_Wheat";
 	};
 
 	class heroin_1

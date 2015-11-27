@@ -4768,7 +4768,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 34.641;this setposATL [14049.241211,12657.819336,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation false;this allowDamage false;this setdir 34.641;this setposATL [14049.241211,12657.819336,0];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Fonte de l'or"",public_fnc_processAction,""gold"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item120
 		{
@@ -4839,7 +4839,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 318.054;this setposATL [12808.890625,8808.553711,0];this setVectorUp [0,0,1];this addAction[""Commerçant d'aluminium "",public_fnc_shop_virtual_open,""baux"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 318.054;this setposATL [12808.890625,8808.553711,0];this addAction[""Commerçant d'aluminium "",public_fnc_shop_virtual_open,""baux"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item127
 		{

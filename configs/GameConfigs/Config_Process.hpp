@@ -263,7 +263,7 @@ class ALYSIA_PROCESS
 		license = "gold";
 		sound = "salt_process";
 		requiere_target = 1;
-		require[] = {{"gold", 40}};
+		require[] = {{"goldnuggets", 40}};
 		receive[] = {{"goldbar", 1}};
 		time_per_item = 1;
 		time_default = 3;
@@ -286,7 +286,7 @@ class ALYSIA_PROCESS
 	class pottery
 	{
 		name = "Traitement de l'argile";
-		license = "poterie";
+		license = "pottery";
 		sound = "salt_process";
 		requiere_target = 1;
 		require[] = {{"clay", 1}};
