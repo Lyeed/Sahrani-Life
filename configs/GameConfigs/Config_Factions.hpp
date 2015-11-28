@@ -281,7 +281,8 @@ class ALYSIA_FACTIONS
 			{
 				"ItemMap",
 				"ItemCompass",
-				"ItemWatch"
+				"ItemWatch",
+				"tf_anprc152"
 			};
 		};
 
@@ -299,7 +300,7 @@ class ALYSIA_FACTIONS
 		name = "SAMU";
 		icon = "\lyeed_IMG\data\faction\GUER_logo.paa";
 		paycheck = 600;
-		identity_item = "SkylineItems_Passeport";
+		identity_item = "Badge_samu";
 
 		/*** MAP ***/
 		faction_markers_on_map = 1;
@@ -344,7 +345,7 @@ class ALYSIA_FACTIONS
 		/*** LOADOUT ***/
 		class Loadout
 		{
-			uniform = "U_C_Poloshirt_blue";
+			uniform = "max_paramedic_uniform";
 			headgear = "";
 			vest = "";
 			backpack = "";
@@ -353,7 +354,9 @@ class ALYSIA_FACTIONS
 				"ItemMap",
 				"ItemCompass",
 				"ItemWatch",
-				"ItemGPS"
+				"ItemGPS",
+				"Badge_samu",
+				"tf_anprc152"
 			};
 		};
 
