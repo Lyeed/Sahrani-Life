@@ -8,6 +8,12 @@ class ALYSIA_FACTIONS
 		paycheck = 750;
 		identity_item = "SkylineItems_PlaqueMilitaire";
 
+		/*** MAP ***/
+		faction_markers_on_map = 1;
+		faction_markers_color = "ColorBlue";
+		faction_markers_type = "Mil_dot";
+		faction_markers_deaths = 0;
+
 		/*** SIRENE ***/
 		sirene_sound = "sirene_west";
 		sirene_sleep = 5;
@@ -46,6 +52,9 @@ class ALYSIA_FACTIONS
 		class Loadout
 		{
 			uniform = "Skyline_Army_Uniform";
+			headgear = "";
+			vest = "";
+			backpack = "";
 			items[] =
 			{
 				"ItemMap",
@@ -97,6 +106,12 @@ class ALYSIA_FACTIONS
 		paycheck = 750;
 		identity_item = "SkylineItems_PlaqueMilitaire";
 
+		/*** MAP ***/
+		faction_markers_on_map = 1;
+		faction_markers_color = "ColorWhite";
+		faction_markers_type = "Mil_dot";
+		faction_markers_deaths = 0;
+
 		/*** SIRENE ***/
 		sirene_sound = "sirene_east";
 		sirene_sleep = 3;
@@ -135,6 +150,9 @@ class ALYSIA_FACTIONS
 		class Loadout
 		{
 			uniform = "U_mas_afr_B_uniform_s";
+			headgear = "";
+			vest = "";
+			backpack = "";
 			items[] =
 			{
 				"ItemMap",
@@ -178,6 +196,12 @@ class ALYSIA_FACTIONS
 		paycheck = 600;
 		identity_item = "SkylineItems_Passeport";
 		
+		/*** MAP ***/
+		faction_markers_on_map = 0;
+		faction_markers_color = "";
+		faction_markers_type = "";
+		faction_markers_deaths = 0;
+
 		/*** SIRENE ***/
 		sirene_sound = "";
 		sirene_sleep = 0;
@@ -250,6 +274,9 @@ class ALYSIA_FACTIONS
 		class Loadout
 		{
 			uniform = "U_C_Alysia_01";
+			headgear = "";
+			vest = "";
+			backpack = "";
 			items[] =
 			{
 				"ItemMap",
@@ -273,6 +300,12 @@ class ALYSIA_FACTIONS
 		icon = "\lyeed_IMG\data\faction\GUER_logo.paa";
 		paycheck = 600;
 		identity_item = "SkylineItems_Passeport";
+
+		/*** MAP ***/
+		faction_markers_on_map = 1;
+		faction_markers_color = "ColorPink";
+		faction_markers_type = "Mil_dot";
+		faction_markers_deaths = 1;
 
 		/*** SIRENE ***/
 		sirene_sound = "sirene_guer";
@@ -312,6 +345,9 @@ class ALYSIA_FACTIONS
 		class Loadout
 		{
 			uniform = "U_C_Poloshirt_blue";
+			headgear = "";
+			vest = "";
+			backpack = "";
 			items[] =
 			{
 				"ItemMap",

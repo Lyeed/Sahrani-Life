@@ -24,7 +24,7 @@ if (missionNamespace getVariable[_formatLicense, false]) exitWith {
 	[format["Vous possédez déjà la licence<br/>%1", [_license] call public_fnc_licenseGetName]] call public_fnc_error;
 };
 
-if (!([0, _price, false] call public_fnc_checkMoney)) exitWith {
+if (g_cash < _price) exitWith {
 	[format[
 			"<t align='center'>Vous n'avez pas <t color='#8cff9b'>%1kn</t></t><br/><br/>"
 		+	"<t align='left'>Manquant</t><t align='right' color='#8cff9b'>%2kn</t><br/>",

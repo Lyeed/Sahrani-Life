@@ -40,13 +40,10 @@ class Public
 		class strToSide {};
 		class errorExit {};
 		class getInv {};
-		class hasItem {};
 		class accType {};
-		class actionKeyHandler {};
 		class animSync {};
 		class calWeightDiff {};
 		class camShake {};
-		class checkMoney {};
 		class createMarker {};
 		class endGame {};
 		class error {};
@@ -72,7 +69,6 @@ class Public
 		class pushObject {};
 		class saveGear {};
 		class seizeObjects {};
-		class setMapPosition {};
 		class showProgress {};
 		class stripDownPlayer {};
 		class TextAllowed {};
@@ -80,7 +76,6 @@ class Public
 		class strTime {};
 		class age {};
 		class getRegion {};
-		class nearestVehicle {};
 	};
 
 	class Items

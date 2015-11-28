@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_handle"];
+private["_handle", "_uniform", "_headGear", "_vest", "_backpack"];
 _handle = [] spawn public_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 

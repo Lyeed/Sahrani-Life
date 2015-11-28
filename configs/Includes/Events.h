@@ -15,5 +15,6 @@ class Events
 		class onPlayerSpeakRadio {};
 		class onPlayerESC {};
 		class keyHandler {};
+		class actionKeyHandler {};
 	};
 };

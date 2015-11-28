@@ -8,7 +8,7 @@
 
 #include "\a3\editor_f\Data\Scripts\dikCodes.h"
 
-["Alysia", "actionHandler", "Action", {[] call public_fnc_actionKeyHandler}, {true}, [DIK_LWIN, [false, false, false]], false, 0, true] call CBA_fnc_addKeybind;
+["Alysia", "actionHandler", "Action", {[] call EVENT_fnc_actionKeyHandler}, {true}, [DIK_LWIN, [false, false, false]], false, 0, true] call CBA_fnc_addKeybind;
 
 ["Alysia", "actionSilent", "Boule-quies", {
 	if (missionNamespace getVariable ["silence", false]) then {
@@ -32,6 +32,9 @@ if (getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "sirene
 	["Alysia", "actionSirene", "Sirène", {[] call public_fnc_sirene}, {true}, [DIK_F, [true, false, false]], false, 0, true] call CBA_fnc_addKeybind;
 };
 
+if ((getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "faction_markers_on_map") isEqualTo 1) || (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "faction_markers_deaths") isEqualTo 1)) then
 {
-	[_x, [true, true, true], {[] spawn public_fnc_onPlayerMapOpen}, "keydown", "actionMap", false] call CBA_fnc_addKeyHandler;
-} forEach (actionKeys "ShowMap");
+	{
+		[_x, [true, true, true], {[] spawn public_fnc_onPlayerMapOpen}, "keydown", "actionMap", false] call CBA_fnc_addKeyHandler;
+	} forEach (actionKeys "ShowMap");
+};

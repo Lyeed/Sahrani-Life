@@ -81,7 +81,13 @@ if (alive player) then
 };
 
 g_coma = false;
-player setVariable["is_coma", false, true];
+if (player getVariable ["is_coma", false]) then {
+	player setVariable ["is_coma", false, true];
+};
+
+if (player getVariable ["medic_request", false]) then {
+	player getVariable ["medic_request", false, true];
+};
 
 _display displayRemoveEventHandler ["KeyDown", _id];
 closeDialog 0;

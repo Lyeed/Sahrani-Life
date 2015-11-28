@@ -54,7 +54,7 @@ if (getText(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "use") isEqualTo "")
 	ctrlShow[85002, true];
 };
 
-if (getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "removable") isEqualTo 1)
+if (getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "removable") isEqualTo 1) then {
 	ctrlShow[85003, true];
 } else {
 	ctrlShow[85003, false];
