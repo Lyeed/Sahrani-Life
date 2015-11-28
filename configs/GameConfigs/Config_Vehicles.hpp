@@ -3599,6 +3599,7 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		realname = "Chevrolet Tahoe Milice";
 	};
+	
 
 	class Fett_boat_milice
 	{
@@ -3678,18 +3679,6 @@ class ALYSIA_VEHICLES
 		realname = "Crown Victoria Milice";
 	};
 
-	class DDAR_TahoePoliceDet
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "WEST";
-		insurance = 1;
-		license = "";
-		fuel = "Diesel";
-		rank = 3;
-		colors[] = {};
-		realname = "Chevrolet Tahoe noir";
-	};
 
 	class EC635_Unarmed
 	{
@@ -3723,34 +3712,6 @@ class ALYSIA_VEHICLES
 	class dezkit_b206_police : dezkit_b206mi {};
 	class dezkit_b206_fbi : dezkit_b206mi {};
 	
-	class Jonzie_Highway
-	{
-		buyPrice = 25000;
-		inventory = 150;
-		side = "WEST";
-		insurance = 1;
-		license = "";
-		fuel = "SP95";
-		rank = 0;
-		colors[] = 
-		{
-			"Fett_Highway_red",
-			"Fett_Highway_yellow",
-			"Fett_Highway_green",
-			"Fett_Highway_blue",
-			"Fett_Highway_pink",
-			"Fett_Highway_dark",
-			"Fett_Highway_white"
-		};
-		realname = "Holden Commodore Highway Patrol";
-	};
-	class Fett_Highway_red: Jonzie_Highway {};
-	class Fett_Highway_yellow: Jonzie_Highway {};
-	class Fett_Highway_green: Jonzie_Highway {};
-	class Fett_Highway_blue: Jonzie_Highway {};
-	class Fett_Highway_pink: Jonzie_Highway {};
-	class Fett_Highway_dark: Jonzie_Highway {};
-	class Fett_Highway_white: Jonzie_Highway {};
   
   /*
 	**				EAST VEHICLES

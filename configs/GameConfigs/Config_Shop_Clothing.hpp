@@ -530,17 +530,18 @@ class ALYSIA_SHOPS_CLOTHING
 			"Masque_speedRunner",
 			"Masque_Unic",
 			"Masque_Wolfv2",
+			"mgsr_eyepatch" 
+		};
+		goggles[] = {
 			"Skyline_Skyrim",
 			"Skyline_Anonymous",
 			"Skyline_NioshFace",
 			"Skyline_Corvo",
 			"Skyline_Dallas",
 			"Skyline_Hoxton",
-			"Masque_Solitaire",
 			"Skyline_Wolf",
-			"mgsr_eyepatch" 
-		};
-		goggles[] = {};
+			"Masque_Solitaire"
+			};
 		vests[] = {};
 		backpacks[] = {};
 	};
@@ -573,19 +574,18 @@ class ALYSIA_SHOPS_CLOTHING
 			"combi_plonge_samu",
 			"TRYK_U_B_PCUHsW5",
 			"TRYK_U_B_PCUHsW6",
-			"DAES_Lifeliner_Uniform",
+			"SAMU_combi",
 			"rds_uniform_assistant",
 			"rds_uniform_doctor"
 		};
 		headgear[] =
 		{
-			"DAES_Lifeliner_Helmet",
+			"SAMU_helmet",
 			"H_Cap_blk",
 			"H_Cap_grn",
 			"H_Cap_blu",
 			"H_Cap_red",
-			"max_paramedic_cap",
-			"Masque_Chirurgical"
+			"max_paramedic_cap"
 		};
 		goggles[] =
 		{
@@ -610,7 +610,8 @@ class ALYSIA_SHOPS_CLOTHING
 			"Bear_RoundGlasses_blk",
 			"Bear_RoundGlasses_gold",
 			"Skyline_NioshFace",
-			"Mask_M40"
+			"Mask_M40",
+			"Masque_Chirurgical"
 		};
 		vests[] =
 		{
