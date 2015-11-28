@@ -78,7 +78,6 @@ if ((vehicle player) isEqualTo player) then
 					[cursorTarget] spawn public_fnc_interactionMenu_open;
 					breakOut "main";
 				};
-
 			} else {
 				if ((cursorTarget isKindOf "Car") || (cursorTarget isKindOf "Ship") || (cursorTarget isKindOf "Air") || (cursorTarget isKindOf "Tank") || (cursorTarget isKindOf "Truck")) then
 				{
@@ -107,10 +106,11 @@ if ((vehicle player) isEqualTo player) then
 					breakOut "main";
 				};
 
-				if (player distance (nearestObject [player, "xcam_Laptop_unfolded_F"]) < 3) then
+				if (typeOf(cursorTarget) in ["Bank_Sahrani_N", "Bank_Sahrani_S"]) then
 				{
-					if (((player distance (bank_n)) < 10) || ((player distance (bank_s) < 10))) then
+					if (player distance (nearestObject [player, "xcam_Laptop_unfolded_F"]) <= 2) then
 					{
+<<<<<<< HEAD:core/Tools/fn_actionKeyHandler.sqf
 						if ([player] call public_fnc_getRegion isEqualTo "NORTH") then
 						{
 							[bank_n, "Security"] spawn public_fnc_robberyStart;
@@ -119,32 +119,19 @@ if ((vehicle player) isEqualTo player) then
 						{
 							[bank_s, "Security"] spawn public_fnc_robberyStart;
 						};
+=======
+						[cursorTarget, "Security"] spawn public_fnc_robberyStart;
+>>>>>>> ff10031b9ef4ef36ab6215928b9d8a8eaa0a13cf:core/EventHandlers/fn_actionKeyHandler.sqf
 						breakOut "main";
 					};
-				};
 
-				if (player distance (nearestObject [player, "Bank_Drill"]) < 3) then
-				{
-					systemChat format ["< Robbery System - Debug > Joueur près de la foreuse"];
-					[((nearestObject [player, "Bank_Bomb"]) getVariable ["bank", ObjNull]), "", nearestObject [player, "Bank_Drill"]] spawn public_fnc_robberyProcess;
-					breakOut "main";
-				};
-
-				if (player distance (nearestObject [player, "Bank_Bomb"]) < 3) then
-				{
-					systemChat format ["< Robbery System - Debug > Joueur près de la bombe"];
-					[((nearestObject [player, "Bank_Bomb"]) getVariable ["bank", ObjNull]), "", (nearestObject [player, "Bank_Bomb"])] spawn public_fnc_robberyProcess;
-					breakOut "main";
-				};
-
-				if (typeOf(cursorTarget) in ["Bank_Sahrani_N", "Bank_Sahrani_S"]) then
-				{
-					if ((cursorTarget getVariable ["robbed", false]) && (player distance (cursorTarget modelToWorld (cursorTarget selectionPosition "Interact5"))) < 5) exitWith
+					if (player distance (nearestObject [player, "Bank_Drill"]) < 3) then
 					{
-						// Ajouter ligne pour accèder aux lingots
-						hint "Accès aux coffres contenants les lingots";
+						[((nearestObject [player, "Bank_Bomb"]) getVariable ["bank", ObjNull]), "", nearestObject [player, "Bank_Drill"]] spawn public_fnc_robberyProcess;
+						breakOut "main";
 					};
 
+<<<<<<< HEAD:core/Tools/fn_actionKeyHandler.sqf
 					private ["_door", "_pos"];
 					{
 						_pos = cursorTarget modelToWorld (cursorTarget selectionPosition _x);
@@ -157,17 +144,35 @@ if ((vehicle player) isEqualTo player) then
 					if (isNil "_door") then
 					{
 						["Vous devez être près pour d'une porte pour pouvoir la forcer"] call public_fnc_error;
+=======
+					if (player distance (nearestObject [player, "Bank_Bomb"]) < 3) then
+					{
+						[((nearestObject [player, "Bank_Bomb"]) getVariable ["bank", ObjNull]), "", (nearestObject [player, "Bank_Bomb"])] spawn public_fnc_robberyProcess;
+>>>>>>> ff10031b9ef4ef36ab6215928b9d8a8eaa0a13cf:core/EventHandlers/fn_actionKeyHandler.sqf
 						breakOut "main";
+					};
+
+					if (cursorTarget getVariable ["robbed", false]) then
+					{
+						if ((player distance (cursorTarget modelToWorld (cursorTarget selectionPosition "Interact5"))) < 5) then
+						{
+							[cursorTarget] spawn public_fnc_virtuel_menu_exhange_open;
+							breakOut "main";
+						};
+					} else {
+						{
+							_pos = cursorTarget modelToWorld (cursorTarget selectionPosition _x);
+							if ((player distance [_pos select 0, _pos select 1, (_pos select 2) - 1.5]) < 3) exitWith
+							{
+								[cursorTarget, _x] spawn public_fnc_robberyStart;
+								breakOut "main";
+							};
+						} forEach (["AutoDoor_trigger", "Interact1", "Interact2", "Interact3", "Interact4", "Interact5", "Interact6", "Vault_Door"]);
 					};
 				};
 
-				if (typeOf(cursorTarget) in ["station_a","station_b","station_c"]) then
+				if (typeOf(cursorTarget) in ["station_a", "station_b", "station_c"]) then
 				{
-					if (isNil (player getVariable ["typeRefuel", nil])) exitWith
-					{
-						player setVariable ["typeRefuel", nil, false];
-					};
-
 					[cursorTarget] spawn public_fnc_fuelMenu_open;
 					breakOut "main";
 				};
@@ -177,17 +182,11 @@ if ((vehicle player) isEqualTo player) then
 					[cursorTarget] call public_fnc_plantHarvest;
 					breakOut "main";
 				};
-
 			};
 		};
 		if (((player distance cursorTarget) < 10) && (typeOf(cursorTarget) in (call g_houses_list))) then
 		{
-			if (isNil (player getVariable ["typeRefuel", nil])) exitWith
-			{
-				[cursorTarget] call public_fnc_house_menu_handler;
-			};
-			
-			[(nearestObject [player, ["station_a","station_b","station_c"]])] spawn public_fnc_fuelMenu_use_refuel_veh;
+			[cursorTarget] call public_fnc_house_menu_handler;
 			breakOut "main";
 		};
 	};
@@ -196,9 +195,8 @@ if ((vehicle player) isEqualTo player) then
 	
 	if ((_vehicle isKindOf "Car") || (_vehicle isKindOf "Ship") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Truck") || (_vehicle isKindOf "Tank")) then
 	{
-		if (alive _vehicle) then
+		if ((alive _vehicle) && ((damage _vehicle) < 1)) then
 		{
-			if ()
 			[_vehicle] spawn public_fnc_vehicleMenu_open;
 			breakOut "main";
 		};
@@ -207,7 +205,9 @@ if ((vehicle player) isEqualTo player) then
 
 false;
 
-/*
+/*			
+[(nearestObject [player, ["station_a","station_b","station_c"]])] spawn public_fnc_fuelMenu_use_refuel_veh;
+s
 if ((vehicle player) isEqualTo player) then
 {
 	private["_curTarget"];

@@ -24,6 +24,7 @@ if (player getVariable ["surrender", false]) then {
 			};
 		} else {
 			player playMoveNow "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
+			player switchMove "";
 		};
 	};
 };

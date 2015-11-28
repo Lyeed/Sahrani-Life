@@ -1,11 +1,3 @@
-/*
-		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
-	Code written by Lyeed
-	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
-	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
-	More informations : https://www.bistudio.com/community/game-content-usage-rules
-*/
-
 class ALYSIA_SHOPS_VIRTUAL
 {
 	/* GLOBAL MARKET */
@@ -57,16 +49,14 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Milice";
 		side = "WEST";
-		items[] = {{"defusekit", "salive", "cone", "barriere", "murbetonarme", "bunkersable", "mursable", "couloirsable", 
-			"grandmurescalier", "gueritesable", "grandmur", "coinsable", "adn", "donut", "soda", "handcuffkeys", "handcuffs", 
-			"kit_destru", "spikeStrip", "bip", "storage"}, {}};
+		items[] = {{"defusekit", "cone", "barriere", "donut", "soda", "handcuffkeys", "handcuffs", "kit_destru", "spikeStrip", "bip", "sifflet"}, {}};
 	};
 
 	class east
 	{
 		name = "Garde";
 		side = "EAST";
-		items[] = {{"ragout", "kefir"}, {}};
+		items[] = {{"ragout", "kefir", "sifflet", "handcuffs", "handcuffkeys", "barriere", "cone", "bip"}, {}};
 	};
 
 	class guer
@@ -166,5 +156,12 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Commerçant de sel";
 		side = "CIV";
 		items[] = {{}, {"saltp"}};
+	};
+
+	class baux
+	{
+		name = "Commerçant d'aluminium";
+		side = "CIV";
+		items[] = {{}, {"alu"}};
 	};
 };

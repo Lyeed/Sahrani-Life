@@ -1,11 +1,3 @@
-/*
-		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
-	Code written by Lyeed
-	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
-	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
-	More informations : https://www.bistudio.com/community/game-content-usage-rules
-*/
-
 class ALYSIA_BOURSE
 {
 	class artefact
@@ -14,6 +6,7 @@ class ALYSIA_BOURSE
 		min = 900;
 		mult = 2;
 		license = "archeologie";
+		affect[] = {};
 	};
 
 	class artefact_common
@@ -22,6 +15,7 @@ class ALYSIA_BOURSE
 		min = 2500;
 		mult = 3;
 		license = "none";
+		affect[] = {};
 	};
 
 	class artefact_exrare
@@ -30,6 +24,7 @@ class ALYSIA_BOURSE
 		min = 9000;
 		mult = 6;
 		license = "none";
+		affect[] = {};
 	};
 
 	class artefact_R
@@ -38,6 +33,7 @@ class ALYSIA_BOURSE
 		min = 2400;
 		mult = 4;
 		license = "archeologie";
+		affect[] = {};
 	};
 
 	class artefact_rare
@@ -46,6 +42,7 @@ class ALYSIA_BOURSE
 		min = 4000;
 		mult = 5;
 		license = "none";
+		affect[] = {};
 	};
 
 	class banane
@@ -54,6 +51,7 @@ class ALYSIA_BOURSE
 		min = 20;
 		mult = 1;
 		license = "none";
+		affect[] = {};
 	};
 
 	class bean
@@ -62,6 +60,7 @@ class ALYSIA_BOURSE
 		min = 80;
 		mult = 3;
 		license = "none";
+		affect[] = {};
 	};
 
 	class catshark
@@ -70,6 +69,7 @@ class ALYSIA_BOURSE
 		min = 100;
 		mult = 4;
 		license = "none";
+		affect[] = {};
 	};
 
 	class cigarette
@@ -78,6 +78,7 @@ class ALYSIA_BOURSE
 		min = 1400;
 		mult = 2;
 		license = "tabac";
+		affect[] = {};
 	};
 
 	class cocainep
@@ -86,6 +87,7 @@ class ALYSIA_BOURSE
 		min = 3700;
 		mult = 3;
 		license = "none";
+		affect[] = {};
 	};
 
 	class cocainepc
@@ -94,6 +96,7 @@ class ALYSIA_BOURSE
 		min = 2800;
 		mult = 4;
 		license = "none";
+		affect[] = {};
 	};
 
 	class corn
@@ -102,6 +105,7 @@ class ALYSIA_BOURSE
 		min = 60;
 		mult = 3;
 		license = "none";
+		affect[] = {};
 	};
 
 	class cotton
@@ -110,6 +114,7 @@ class ALYSIA_BOURSE
 		min = 60;
 		mult = 2;
 		license = "none";
+		affect[] = {};
 	};
 
 	class glass
@@ -118,6 +123,7 @@ class ALYSIA_BOURSE
 		min = 800;
 		mult = 3;
 		license = "sand";
+		affect[] = {};
 	};
 
 	class goldbar
@@ -126,6 +132,7 @@ class ALYSIA_BOURSE
 		min = 3000;
 		mult = 5;
 		license = "none";
+		affect[] = {};
 	};
 
 	class heroinps
@@ -134,6 +141,7 @@ class ALYSIA_BOURSE
 		min = 4200;
 		mult = 5;
 		license = "none";
+		affect[] = {};
 	};
 
 	class ironp
@@ -142,6 +150,7 @@ class ALYSIA_BOURSE
 		min = 800;
 		mult = 3;
 		license = "iron";
+		affect[] = {};
 	};
 
 	class mackerel
@@ -150,6 +159,7 @@ class ALYSIA_BOURSE
 		min = 50;
 		mult = 2;
 		license = "none";
+		affect[] = {};
 	};
 
 	class mangue
@@ -158,6 +168,7 @@ class ALYSIA_BOURSE
 		min = 20;
 		mult = 1;
 		license = "none";
+		affect[] = {};
 	};
 
 	class marijuana
@@ -166,6 +177,7 @@ class ALYSIA_BOURSE
 		min = 1900;
 		mult = 3;
 		license = "marijuana";
+		affect[] = {};
 	};
 
 	class methp
@@ -174,6 +186,7 @@ class ALYSIA_BOURSE
 		min = 2000;
 		mult = 4;
 		license = "none";
+		affect[] = {};
 	};
 
 	class mullet
@@ -182,6 +195,7 @@ class ALYSIA_BOURSE
 		min = 60;
 		mult = 3;
 		license = "none";
+		affect[] = {};
 	};
 
 	class objvaleur
@@ -190,6 +204,7 @@ class ALYSIA_BOURSE
 		min = 900;
 		mult = 4;
 		license = "none";
+		affect[] = {};
 	};
 
 	class oilp
@@ -198,6 +213,7 @@ class ALYSIA_BOURSE
 		min = 2100;
 		mult = 3;
 		license = "oil";
+		affect[] = {};
 	};
 
 	class ornate
@@ -206,6 +222,7 @@ class ALYSIA_BOURSE
 		min = 25;
 		mult = 2;
 		license = "none";
+		affect[] = {};
 	};
 
 	class platinep
@@ -214,6 +231,7 @@ class ALYSIA_BOURSE
 		min = 1100;
 		mult = 4;
 		license = "platine";
+		affect[] = {};
 	};
 
 	class platinepa
@@ -222,6 +240,7 @@ class ALYSIA_BOURSE
 		min = 4000;
 		mult = 7;
 		license = "platine";
+		affect[] = {};
 	};
 
 	class salema
@@ -230,6 +249,7 @@ class ALYSIA_BOURSE
 		min = 20;
 		mult = 2;
 		license = "none";
+		affect[] = {};
 	};
 
 	class soufre
@@ -238,6 +258,7 @@ class ALYSIA_BOURSE
 		min = 400;
 		mult = 4;
 		license = "none";
+		affect[] = {};
 	};
 
 	class tuna
@@ -246,6 +267,7 @@ class ALYSIA_BOURSE
 		min = 200;
 		mult = 5;
 		license = "none";
+		affect[] = {};
 	};
 
 	class woodp
@@ -254,5 +276,6 @@ class ALYSIA_BOURSE
 		min = 700;
 		mult = 1;
 		license = "wood";
+		affect[] = {};
 	};
 };

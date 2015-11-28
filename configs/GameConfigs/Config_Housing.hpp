@@ -1,11 +1,3 @@
-/*
-		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
-	Code written by Lyeed
-	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
-	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
-	More informations : https://www.bistudio.com/community/game-content-usage-rules
-*/
-
 class ALYSIA_STORAGES
 {
 	class Skyline_Coffre_Small 
@@ -149,7 +141,7 @@ class ALYSIA_HOUSES
 		garage = 0;
 		garage_type[] = {};
 		sides[] = {"WEST", "EAST"};
-		rank = 0;
+		rank = 1;
 		license = "home";
 	};	
 
@@ -161,7 +153,7 @@ class ALYSIA_HOUSES
 		garage = 0;
 		garage_type[] = {};
 		sides[] = {"WEST", "EAST"};
-		rank = 0;
+		rank = 1;
 		license = "home";
 	};	
 
@@ -272,4 +264,52 @@ class ALYSIA_HOUSES
 		rank = 0;
 		license = "home";
 	};	
+	
+	class CampEast_EP1
+	{
+		price = 0;
+		storage = "Skyline_Coffre_Large";
+		storage_building_pos_index = 2;
+		garage = 0;
+		garage_type[] = {};
+		sides[] = {"WEST"};
+		rank = 4;
+		license = "";
+	};
+	
+	class Barrack2
+	{
+		price = 0;
+		storage = "Skyline_Coffre_Medium";
+		storage_building_pos_index = 4;
+		garage = 0;
+		garage_type[] = {};
+		sides[] = {"WEST"};
+		rank = 0;
+		license = "";
+	};
+	
+	class Land_tent_east
+	{
+		price = 0;
+		storage = "Skyline_Coffre_Large";
+		storage_building_pos_index = 6;
+		garage = 0;
+		garage_type[] = {};
+		sides[] = {"EAST"};
+		rank = 4;
+		license = "";
+	};
+	
+	class Land_Barrack2_EP1
+	{
+		price = 0;
+		storage = "Skyline_Coffre_Medium";
+		storage_building_pos_index = 5;
+		garage = 0;
+		garage_type[] = {};
+		sides[] = {"EAST"};
+		rank = 0;
+		license = "";
+	};
 };

@@ -9,6 +9,7 @@
 if (isDedicated) exitWith {};
 if (missionNamespace getVariable ["g_connected", false]) then
 {
+	systemChat "Sauvegarde des véhicules dans 2 minutes. VEUILLEZ DESCENDRE DE VOTRE VEHICULE et DECONNECTER";
 	playmusic "LeadTrack01_F";
 	sleep 94;
 	closeDialog 0;

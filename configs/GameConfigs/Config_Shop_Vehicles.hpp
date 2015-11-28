@@ -1,11 +1,3 @@
-/*
-		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
-	Code written by Lyeed
-	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
-	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
-	More informations : https://www.bistudio.com/community/game-content-usage-rules
-*/
-
 class ALYSIA_SHOPS_VEHICLES
 {
 	//
@@ -20,7 +12,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"DAR_ExplorerPolice",
 			"DAR_TaurusPolice", 
 			"DAR_CVPIAux", 
-			"DAR_TahoePoliceDet",
 			"DAR_ImpalaPolice"
 		};
 	};
@@ -81,7 +72,8 @@ class ALYSIA_SHOPS_VEHICLES
 		side = "GUER";
 		stock[] =
 		{
-			"max_ambulance",
+			"Mrshounka_corbillard_c",
+			"Jonzie_Ambulance",
 			"DAR_TahoeEMS",
 			"DAR_ExplorerMedic",
 			"Fett_zamak_repair_samu",
@@ -145,8 +137,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"O_Truck_02_covered_F",
 			"B_Truck_01_covered_F",  
 			"B_Truck_01_box_F",
-			"ALFR_GeK_Scania_420",
-			"ALFR_GeK_Volvo_FH16_2012",
 			"shounka_a3_renaultmagnum_f",
 			"shounka_a3_dafxf_euro6_f",
 			"Mrshounka_a3_iveco_f",
@@ -172,7 +162,9 @@ class ALYSIA_SHOPS_VEHICLES
 			"RDS_Lada_Civ",
 			"max_CrownVic",
 			"Mrshounka_mercedes_190_p_civ",
-			"Mrshounka_r5_civ"
+			"Mrshounka_r5_civ",
+			"Jonzie_Datsun_510",
+			"Jonzie_Mini_Cooper"
 		};
 	};
 	class CIV_vehicles_land_normal
@@ -210,7 +202,14 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_twingo_p",
 			"Mrshounka_a3_smart_civ",
 			"Mrshounka_subaru08_civ",
-			"Mrshounka_Volkswagen_Touareg_civ"
+			"Mrshounka_Volkswagen_Touareg_civ",
+			"Jonzie_30CSL",
+			"Jonzie_Ceed",
+			"Jonzie_Corolla",
+			"Jonzie_Galant",
+			"Jonzie_Raptor",
+			"Jonzie_Transit",
+			"Jonzie_Ute"
 		};
 	};
 	class CIV_vehicles_land_luxe
@@ -262,7 +261,13 @@ class ALYSIA_SHOPS_VEHICLES
 			"shounka_porsche911",
 			"mrshounka_92_civ",
 			"Mrshounka_cayenne_p_civ",
-			"shounka_transam"
+			"shounka_transam",
+			"Jonzie_Datsun_Z432",
+			"Jonzie_Escalade",
+			"Jonzie_Quattroporte",
+			"Jonzie_STI",
+			"Jonzie_VE",
+			"Jonzie_Viper"
 		};
 	};
 	

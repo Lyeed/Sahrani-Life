@@ -40,13 +40,10 @@ class Public
 		class strToSide {};
 		class errorExit {};
 		class getInv {};
-		class hasItem {};
 		class accType {};
-		class actionKeyHandler {};
 		class animSync {};
 		class calWeightDiff {};
 		class camShake {};
-		class checkMoney {};
 		class createMarker {};
 		class endGame {};
 		class error {};
@@ -72,7 +69,6 @@ class Public
 		class pushObject {};
 		class saveGear {};
 		class seizeObjects {};
-		class setMapPosition {};
 		class showProgress {};
 		class stripDownPlayer {};
 		class TextAllowed {};
@@ -80,7 +76,6 @@ class Public
 		class strTime {};
 		class age {};
 		class getRegion {};
-		class nearestVehicle {};
 	};
 
 	class Items
@@ -89,7 +84,8 @@ class Public
 		class activateNitro {};
 		class applyBaillon {};
 		class applyBandeau {};
-		class copOpener {};
+		class telecommande {};
+		class sifflet {};
 		class dropItems {};
 		class getBaillon {};
 		class getBaillonSelf {};
@@ -232,6 +228,7 @@ class Public
 		class house_menu_action_store {};
 		class house_menu_action_owner {};
 		class house_menu_action_buy {};
+		class house_menu_action_storage {};
 	};
 
 	class Phone
@@ -240,6 +237,7 @@ class Public
 		class phone_numberChange;
 		class phone_message_send {};
 		class phone_message_receive {};
+		class phone_forfait_change {};
 	};
 
 	class Health
@@ -310,6 +308,7 @@ class Public
 		class robberyStart {};
 		class robberyProcess {};
 		class robberyTools {};
+		class salaryProcess {};
 	};
 
 	class AuctionHouse
@@ -396,6 +395,7 @@ class Public
 		class interactionMenu_action_license_get {};
 		class interactionMenu_action_license_return {};
 		class interactionMenu_action_license_revoke {};
+		class sirene {};
 		class eatFood {};
 		class knockedOut {};
 		class knockoutAction {};
@@ -413,16 +413,13 @@ class Public
 		class getVehGaragePrice {};
 		class getVehSellPrice {};
 		class getVehVirtual {};
-		class lastingObjectsGang {};
 		class licenseGetName {};
 		class licenseGetPrice {};
 		class licenseIsIllegal {};
 		class marketGetBuyPrice {};
 		class marketGetSellPrice {};
-		class nearestHouse {};
 		class rankToStr {};
 		class sideToStr {};
-		class vehicleIsFaction {};
 		class itemCount {};
 		class itemGetDrop {};
 		class itemGetImage {};
@@ -431,7 +428,6 @@ class Public
 		class itemGetSellPrice {};
 		class itemGetWeight {};
 		class itemIsIllegal {};
-		class itemIsRemovable {};
 	};
 
 	class Welcome

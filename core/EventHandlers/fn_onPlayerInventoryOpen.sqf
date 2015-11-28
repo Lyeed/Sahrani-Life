@@ -27,8 +27,8 @@
 		{
 			if (!(_this in g_vehicles) && ((locked _this) isEqualTo 2)) then
 			{
+				["Vous ne pouvez pas fouiller de véhicule vérrouillé"] call public_fnc_error;
 				closeDialog 0;
-				["Vous ne pouvez pas fouiller de véhicule vérouillé"] call public_fnc_error;
 			};
 	 	};
 

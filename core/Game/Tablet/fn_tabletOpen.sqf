@@ -10,7 +10,11 @@ disableSerialization;
 
 if (g_action_inUse) exitWith {};
 if (dialog) exitWith {};
-if (!(isNull (uiNamespace getVariable ["tablet", displayNull]))) exitWith {};
+
+if (g_arrested) exitWith {
+	["Vous n'avez pas accès à votre tablette en prison"] call public_fnc_error
+};
+
 if (!(createDialog "RscDisplayTablet")) exitWith {};
 
 if ((vehicle player) isEqualTo player) then { 

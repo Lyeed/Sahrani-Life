@@ -54,7 +54,7 @@ if (getText(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "use") isEqualTo "")
 	ctrlShow[85002, true];
 };
 
-if ([_item] call public_fnc_itemIsRemovable) then {
+if (getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "removable") isEqualTo 1) then {
 	ctrlShow[85003, true];
 } else {
 	ctrlShow[85003, false];

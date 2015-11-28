@@ -49,7 +49,7 @@ with missionNamespace do
 	g_atm = 0;
 	g_atm_from = [];
 	g_paycheck = 0;
-	g_paycheck_period = compileFinal "5";
+	g_paycheck_period = compileFinal "15";
 	/* ===================[Levels]======================= */
 	g_WESTLevel = 0;
 	g_EASTLevel = 0;
@@ -150,9 +150,6 @@ with missionNamespace do
 	{
 		missionNamespace setVariable[format["license_%1", _x], false];
 	} forEach (g_licenses);
-	/* =================[Market]=================== */
-	g_market = [];
-	"g_market pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_BOURSE");
 	/* =================[Sheeps]====================*/
 	g_sheeps = [];
 };

@@ -37,6 +37,81 @@ switch (_action) do
 		["Dépot effectué avec succès"] call public_fnc_info;
 		["home"] call public_fnc_atmScreen;
 	};
+
+	case "deposit_faction":
+	{
+		if (g_cash < _amount) exitWith {["Vous n'avez pas assez de fonds sur vous"] call public_fnc_error};
+		[false, _amount] call public_fnc_handleCash;
+
+		switch (playerSide) do
+		{
+			case east:
+			{
+				gServer_faction_EAST_bank = gServer_faction_EAST_bank + _amount;
+				publicVariable "gServer_faction_EAST_bank";
+			};
+			case west:
+			{
+				gServer_faction_WEST_bank = gServer_faction_WEST_bank + _amount;
+				publicVariable "gServer_faction_WEST_bank";
+			};
+			case independent:
+			{
+				gServer_faction_GUER_bank = gServer_faction_GUER_bank + _amount;
+				publicVariable "gServer_faction_GUER_bank";
+			};
+		};
+		["Dépot effectué avec succès"] call public_fnc_info;
+		["home"] call public_fnc_atmScreen;
+	};
+
+	case "withdraw_faction":
+	{
+		_handle = switch (playerSide) do
+		{
+			case east:
+			{
+				if (gServer_faction_EAST_bank >= _amount) then
+				{
+					gServer_faction_EAST_bank = gServer_faction_EAST_bank - _amount;
+					publicVariable "gServer_faction_EAST_bank";
+					true;
+				} else {
+					false;
+				}
+			};
+			case west:
+			{
+				if (gServer_faction_WEST_bank >= _amount) then
+				{
+					gServer_faction_WEST_bank = gServer_faction_WEST_bank - _amount;
+					publicVariable "gServer_faction_WEST_bank";
+					true;
+				} else {
+					false;
+				}
+			};
+			case independent:
+			{
+				if (gServer_faction_GUER_bank >= _amount) then
+				{
+					gServer_faction_GUER_bank = gServer_faction_GUER_bank - _amount;
+					publicVariable "gServer_faction_GUER_bank";
+					true;
+				} else {
+					false;
+				}
+			};
+		};
+		if (_handle) then
+		{
+			[true, _amount] call public_fnc_handleCash;
+			["Retrait effectué avec succès"] call public_fnc_info;
+			["home"] call public_fnc_atmScreen;
+		} else {
+			["Solde insuffisant"] call public_fnc_error;
+		};
+	};
 	
 	default {["Action non reconnue"] call public_fnc_error};
 };

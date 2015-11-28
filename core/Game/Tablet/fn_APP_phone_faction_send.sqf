@@ -33,6 +33,6 @@ _from = switch (_faction) do
 	case west: {"WEST"};
 };
 
-[_msg, _from] remoteExecCall ["public_fnc_APP_phone_messages_receive", -2, false];
+[_msg, _from] remoteExecCall ["public_fnc_phone_message_receive", -2, false];
 ((findDisplay 7500) displayCtrl 8393) ctrlSetText "";
 playSound "message_sent";

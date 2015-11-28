@@ -8,7 +8,7 @@
 private["_classname"];
 _classname = [_this, 0, "", [""]] call BIS_fnc_param;
 
-if (_classname == "") exitWith {
+if (_classname isEqualTo "") exitWith {
 	0;
 };
 

@@ -45,7 +45,6 @@ class CfgRemoteExec
 		//- housing
 		class TON_fnc_house_add {allowTargets = SERVER;};
 		class TON_fnc_house_sell {allowTargets = SERVER;};
-		class TON_fnc_house_storage_handler {allowTargets = SERVER;};
 		class TON_fnc_house_storage_install {allowTargets = SERVER;};
 		//- Sheep
 		class TON_fnc_sheepGenerate {allowTargets = SERVER;};

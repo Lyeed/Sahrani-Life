@@ -1,11 +1,3 @@
-/*
-		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
-	Code written by Lyeed
-	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
-	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
-	More informations : https://www.bistudio.com/community/game-content-usage-rules
-*/
-
 class ALYSIA_PROCESS
 {
 
@@ -263,7 +255,7 @@ class ALYSIA_PROCESS
 		license = "gold";
 		sound = "salt_process";
 		requiere_target = 1;
-		require[] = {{"gold", 40}};
+		require[] = {{"goldnuggets", 40}};
 		receive[] = {{"goldbar", 1}};
 		time_per_item = 1;
 		time_default = 3;
@@ -286,7 +278,7 @@ class ALYSIA_PROCESS
 	class pottery
 	{
 		name = "Traitement de l'argile";
-		license = "poterie";
+		license = "pottery";
 		sound = "salt_process";
 		requiere_target = 1;
 		require[] = {{"clay", 1}};

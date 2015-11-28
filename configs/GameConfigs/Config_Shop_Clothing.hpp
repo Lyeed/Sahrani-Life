@@ -1,11 +1,3 @@
-/*
-		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
-	Code written by Lyeed
-	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
-	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
-	More informations : https://www.bistudio.com/community/game-content-usage-rules
-*/
-
 class ALYSIA_SHOPS_CLOTHING
 {
 	class civ_clothing 
@@ -29,11 +21,6 @@ class ALYSIA_SHOPS_CLOTHING
 			"U_C_Poloshirt_tricolour",
 			"U_C_Hello_Kitty_01",
 			"U_C_Kick_Me_01",
-			"pilot_black_uniform",
-			"pilot_blue_uniform",
-			"pilot_green_uniform",
-			"pilot_red_uniform",
-			"pilot_yellow_uniform",
 			"rds_uniform_priest",
 			"rds_uniform_Profiteer1",
 			"rds_uniform_Profiteer2",
@@ -280,15 +267,15 @@ class ALYSIA_SHOPS_CLOTHING
 		side = "WEST";
 		uniforms[] =
 		{
-			"soldier_milice_commandant",
-			"soldier_milice_capitaine",
-			"soldier_milice_lieutenant",
-			"soldier_milice_major",
-			"soldier_milice_adjudant",
-			"soldier_milice_sergent",
-			"soldier_milice_caporal",
-			"soldier_milice_milicien",
-			"soldier_milice_cadet",
+			"tenue_de_milice_commandant",
+			"tenue_de_milice_capitaine",
+			"tenue_de_milice_lieutenant",
+			"tenue_de_milice_major",
+			"tenue_de_milice_adjudant",
+			"tenue_de_milice_sergent",
+			"tenue_de_milice_caporal",
+			"tenue_de_milice_milicien",
+			"tenue_de_milice_cadet",
 			"combi_plonge_milice"
 		};
 		headgear[] =
@@ -344,7 +331,7 @@ class ALYSIA_SHOPS_CLOTHING
 		headgear[] = {};
 		goggles[] =
 		{
-			"G_Diving"
+			"G_B_Diving"
 		};
 		vests[] =
 		{
@@ -362,11 +349,11 @@ class ALYSIA_SHOPS_CLOTHING
 		side = "EAST";
 		uniforms[] =
 		{
-			"soldier_garde_commandant",
-			"soldier_garde_lieutenant",
-			"soldier_garde_sergent",
-			"soldier_garde_caporal",
-			"soldier_garde_basique"
+			"tenue_de_garde_commandant",
+			"tenue_de_garde_lieutenant",
+			"tenue_de_garde_sergent",
+			"tenue_de_garde_caporal",
+			"tenue_de_garde_basique"
 		};
 		headgear[] =
 		{
@@ -543,17 +530,18 @@ class ALYSIA_SHOPS_CLOTHING
 			"Masque_speedRunner",
 			"Masque_Unic",
 			"Masque_Wolfv2",
+			"mgsr_eyepatch" 
+		};
+		goggles[] = {
 			"Skyline_Skyrim",
 			"Skyline_Anonymous",
 			"Skyline_NioshFace",
 			"Skyline_Corvo",
 			"Skyline_Dallas",
 			"Skyline_Hoxton",
-			"Masque_Solitaire",
 			"Skyline_Wolf",
-			"mgsr_eyepatch" 
-		};
-		goggles[] = {};
+			"Masque_Solitaire"
+			};
 		vests[] = {};
 		backpacks[] = {};
 	};
@@ -586,19 +574,18 @@ class ALYSIA_SHOPS_CLOTHING
 			"combi_plonge_samu",
 			"TRYK_U_B_PCUHsW5",
 			"TRYK_U_B_PCUHsW6",
-			"DAES_Lifeliner_Uniform",
+			"SAMU_combi",
 			"rds_uniform_assistant",
 			"rds_uniform_doctor"
 		};
 		headgear[] =
 		{
-			"DAES_Lifeliner_Helmet",
+			"SAMU_helmet",
 			"H_Cap_blk",
 			"H_Cap_grn",
 			"H_Cap_blu",
 			"H_Cap_red",
-			"max_paramedic_cap",
-			"Masque_Chirurgical"
+			"max_paramedic_cap"
 		};
 		goggles[] =
 		{
@@ -623,7 +610,8 @@ class ALYSIA_SHOPS_CLOTHING
 			"Bear_RoundGlasses_blk",
 			"Bear_RoundGlasses_gold",
 			"Skyline_NioshFace",
-			"Mask_M40"
+			"Mask_M40",
+			"Masque_Chirurgical"
 		};
 		vests[] =
 		{

@@ -5,7 +5,8 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_math", "_item", "_num", "_var", "_weight", "_value", "_return"];
+private["_math", "_item", "_num", "_weight", "_value", "_return"];
+
 if (!params [
 	["_math", false, [false]],
 	["_item", "", [""]],
@@ -13,28 +14,27 @@ if (!params [
 ]) exitWith {false};
 
 if ((_item isEqualTo "") || (_num isEqualTo 0)) exitWith {false};
+
+_return = false;
+_weight = ([_item] call public_fnc_itemGetWeight) * _num;
+_value = missionNamespace getVariable[format["inv_%1", _item], 0];
+
 if (_math) then
 {
 	_num = [_item, _num, g_carryWeight, g_maxWeight] call public_fnc_calWeightDiff;
-	if (_num <= 0) exitWith {false};
-};
-
-_return = false;
-_var = format["inv_%1", _item];
-_weight = ([_item] call public_fnc_itemGetWeight) * _num;
-_value = missionNamespace getVariable[_var, 0];
-if (_math) then
-{
-	if ((g_carryWeight + _weight) <= g_maxWeight) then
+	if (_num > 0) then
 	{
-		missionNamespace setVariable[_var, (_value + _num)];	
-		g_carryWeight = g_carryWeight + _weight;
-		_return = true;
+		if ((g_carryWeight + _weight) <= g_maxWeight) then
+		{
+			missionNamespace setVariable[format["inv_%1", _item], (_value + _num)];	
+			g_carryWeight = g_carryWeight + _weight;
+			_return = true;
+		};
 	};
 } else {
 	if (_value - _num >= 0) then
 	{
-		missionNamespace setVariable[_var, (_value - _num)];
+		missionNamespace setVariable[format["inv_%1", _item], (_value - _num)];
 		g_carryWeight = g_carryWeight - _weight;
 		_return = true;
 	};

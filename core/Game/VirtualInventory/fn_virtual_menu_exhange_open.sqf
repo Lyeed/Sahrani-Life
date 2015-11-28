@@ -27,28 +27,41 @@ _isCar = true;
 g_interaction_target_trunk_stock = g_interaction_target getVariable ["Trunk", []];
 g_interaction_target_trunk_weight_actual = [g_interaction_target_trunk_stock] call public_fnc_weightGenerate;
 g_interaction_target_trunk_transfer = false;
-g_interaction_target_trunk_weight_max = [typeOf(g_interaction_target)] call public_fnc_getVehVirtual;
 
-if (g_interaction_target_trunk_weight_max isEqualTo 0) then
+g_interaction_target_trunk_weight_max = switch (true) do
 {
-	if (isClass(missionConfigFile >> "ALYSIA_STORAGES" >> typeOf(g_interaction_target))) then
+	case (typeOf(g_interaction_target) in ["Bank_Sahrani_N", "Bank_Sahrani_S"]):
 	{
-		g_interaction_target_trunk_weight_max = getNumber(missionConfigFile >> "ALYSIA_STORAGES" >> typeOf(g_interaction_target) >> "inventory");
 		_isCar = false;
+		5000
 	};
+	case (isClass(missionConfigFile >> "ALYSIA_STORAGES" >> typeOf(g_interaction_target))):
+	{
+		_isCar = false;
+		getNumber(missionConfigFile >> "ALYSIA_STORAGES" >> typeOf(g_interaction_target) >> "inventory")
+	};
+	default {[typeOf(g_interaction_target)] call public_fnc_getVehVirtual};
 };
+
 if (g_interaction_target_trunk_weight_max isEqualTo 0) exitWith {
 	["Impossible de déterminer l'inventaire du véhicule"] call public_fnc_error;
 };
 
-if (!(createDialog "RscDisplayVehicleTrunk")) exitWith {};
+if (!(createDialog "RscDisplayVirtualExhange")) exitWith {};
 
 disableSerialization;
 _display = findDisplay 500;
 if (isNull _display) exitWith {};
 
 if ((vehicle player) isEqualTo player) then {player playAction "Gear";};
+
 g_interaction_target setVariable ["trunk_in_use_ID", (getPlayerUID player), true];
+
+if (!_isCar) then
+{
+	ctrlShow[516, false];
+	ctrlShow[521, false];
+};
 
 (_display displayCtrl 501) ctrlSetStructuredText parseText format["<t align='center' size='1.8'>%1</t>", getText(configFile >> "CfgVehicles" >> typeOf(g_interaction_target) >> "displayName")];
 (_display displayCtrl 515) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", g_maxWeight];

@@ -1,11 +1,3 @@
-/*
-		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
-	Code written by Lyeed
-	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
-	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
-	More informations : https://www.bistudio.com/community/game-content-usage-rules
-*/
-
 class ALYSIA_FARMING_PLANT_OBJETCS
 {
 	/*
@@ -53,6 +45,17 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 	{
 		receive[] = {{"cotton", 3, 1}};
 		seed = "cotton_seed";
+		distance = 3;
+		growingTime = 350;
+		groundLevel = 0;
+		upLevel = 0.4;
+		extraGrow = 100;
+	};
+
+	class Skyline_Wheat
+	{
+		receive[] = {{"wheat", 3, 1}};
+		seed = "wheatseed";
 		distance = 3;
 		growingTime = 350;
 		groundLevel = 0;
@@ -138,6 +141,11 @@ class ALYSIA_FARMING_PLANT_MARKERS
 	class cotton_1
 	{
 		plant = "Skyline_Cotton";
+	};
+
+	class wheat_1
+	{
+		plant = "Skyline_Wheat";
 	};
 
 	class heroin_1
