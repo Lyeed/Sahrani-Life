@@ -145,7 +145,7 @@ if ((vehicle player) isEqualTo player) then
 					};
 				};
 
-				if (typeOf(cursorTarget) in ["station_a", "station_b", "station_c"]) then
+				if (typeOf(cursorTarget) in ["Land_FuelStation_Build_F","Land_FuelStation_Shed_F","Land_FuelStation_Feed_F"]) then
 				{
 					[cursorTarget] spawn public_fnc_fuelMenu_open;
 					breakOut "main";
@@ -171,6 +171,11 @@ if ((vehicle player) isEqualTo player) then
 	{
 		if ((alive _vehicle) && ((damage _vehicle) < 1)) then
 		{
+			if (!(player getVariable ["typeRefuel", ""] isEqualTo "")) exitWith
+			{
+				[(nearestObject [player, ["Land_FuelStation_Build_F","Land_FuelStation_Shed_F","Land_FuelStation_Feed_F"]])] spawn public_fnc_fuelMenu_use_refuel_veh;
+			};
+			
 			[_vehicle] spawn public_fnc_vehicleMenu_open;
 			breakOut "main";
 		};
