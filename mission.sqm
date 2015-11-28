@@ -5488,7 +5488,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this setdir 270;this setposATL [7580.0527344,6326.504395,0.0968008];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Barbier"",public_fnc_shop_clothing_open,""beard"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this setdir 270;this setposATL [7580.0527344,6326.504395,0.0968008];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Barbier"",public_fnc_shop_clothing_open,""beard"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item188
 		{
