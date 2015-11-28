@@ -76,10 +76,7 @@ for "_i" from _idc_actual to 5033 do
 
 while {!(isNull _display)} do
 {
-	(_display displayCtrl 5003) ctrlSetStructuredText parseText format 
-	[
-		"<t align='left'><img size='2.5' image='\Devilz80_Images\data\fuelStations\logo.paa'/></t>"
-	];
+	(_display displayCtrl 5003) ctrlSetStructuredText parseText format ["<t align='left'><img size='2.5' image='\Devilz80_Images\data\fuelStations\logo.paa'/></t>"];
 
 	if (g_coma) exitWith {
 		closeDialog 0;
