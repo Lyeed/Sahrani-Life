@@ -61,6 +61,7 @@ switch (_cfg) do
 	{
 		_type = getText(_config >> "vehicleClass");
 		_scope = getNumber(_config >> "scope");
+		_fuel = getNumber(_config >> "fuelCapacity");
 	};
 	
 	case "CfgWeapons":

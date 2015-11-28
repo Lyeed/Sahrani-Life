@@ -27,6 +27,8 @@
 #include "Dialogs\RscDisplayAtm.hpp"
 #include "Dialogs\RscDisplayHousing.hpp"
 #include "Dialogs\RscDisplayVirtualExhange.hpp"
+#include "Dialogs\RscDisplayFuelStation.hpp"
+#include "Dialogs\RscDisplayFuelRefuel.hpp"
 class RscTitles // Defines custom UI displays.
 {
 	#include "Hud\HUD_default.hpp"
