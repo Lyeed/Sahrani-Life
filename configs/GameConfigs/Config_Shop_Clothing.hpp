@@ -65,7 +65,7 @@ class ALYSIA_SHOPS_CLOTHING
 			"TRYK_U_B_wh_blk_Rollup_CombatUniform",
 			"TRYK_U_B_wh_OD_Rollup_CombatUniform",
 			"TRYK_U_B_wh_tan_Rollup_CombatUniform",
-			"RYK_shirts_DENIM_BK",
+			"TRYK_shirts_DENIM_BK",
 			"TRYK_shirts_DENIM_BL",
 			"TRYK_shirts_DENIM_BWH",
 			"TRYK_shirts_DENIM_od",
@@ -364,7 +364,6 @@ class ALYSIA_SHOPS_CLOTHING
 			"casquette_Basique",
 			"rds_Woodlander_cap3",
 			"TRYK_H_Helmet_ACU",
-			"G_Balaclava_blk"
 		};
 		goggles[] =
 		{
@@ -388,13 +387,14 @@ class ALYSIA_SHOPS_CLOTHING
 			"Bear_RoundGlasses",
 			"Bear_RoundGlasses_blk",
 			"Bear_RoundGlasses_gold"
+			"TRYK_SPgear_PHC1_NV",
+			"G_Balaclava_blk"
 		};
 		vests[] =
 		{
 			"TRYK_V_Sheriff_BA_TB5",
 			"TRYK_V_Sheriff_BA_TB",
 			"police_belt_pistol",
-			"TRYK_SPgear_PHC1_NV",
 			"Garde_Veste",
 			"Garde_VesteCargo",
 			"Garde_Belt"
