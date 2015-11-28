@@ -20,7 +20,7 @@ if (count (nearestObjects [player, [_plant], getNumber(missionConfigFile >> "ALY
 
 _seed = getText(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "seed");
 if (!([false, _seed, 1] call public_fnc_handleInv)) exitWith { 
-	["Vous devez acheter des graines"] call public_fnc_error;
+	[format["Vous n'avez pas les graines requises (%1)", ([_seed] call public_fnc_itemGetName)]] call public_fnc_error;
 };
 
 g_action_delay = time;
