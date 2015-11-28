@@ -13,7 +13,7 @@ if (!params [
 
 // Pour 10km -> 10000m -> Augmentation de 5Kn -> / par 2000
 
-if ((isNil _station) || (_fuel isEqualTo "")) exitWith {};
+if (_fuel isEqualTo "") exitWith {};
 
 private ["_price"];
 

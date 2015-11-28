@@ -16,14 +16,17 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
-if (isNil (player getVariable ["typeRefuel", nil])) then
+private ["_typeRefuel"];
+_typeRefuel = player getVariable "typeRefuel";
+
+if (isNil "_typeRefuel") then
 {
 	private ["_combo","_index"];
 	if (!(createDialog "RscDisplayFuelStation")) exitWith {};
 
 	disableSerialization;
 	_display = findDisplay 16000;
-	if (isNull _display) exitWith {};
+	if (isNull "_display") exitWith {};
 
 	_combo = (_display displayCtrl 16004);
 	{
@@ -43,7 +46,7 @@ if (isNil (player getVariable ["typeRefuel", nil])) then
 	};
 } else {
 	_vehicle = cursorTarget;
-	if (isNil (player getVariable ["typeRefuel", nil])) exitWith {};
+	if (isNil "_typeRefuel") exitWith {};
 	if ((isNull _station) || ((player distance _station) < 10)) exitWith {["Vous êtes trop loin de la pompe à essence."] call public_fnc_error};
 	if (!(_vehicle in g_vehicles)) exitWith {["Vous n'avez pas les clées de ce véhicule."] call public_fnc_error};
 	if (isEngineOn _vehicle) exitWith {["Veuillez couper le moteur du véhicule avant de faire le plein."] call public_fnc_error};
@@ -60,7 +63,7 @@ if (isNil (player getVariable ["typeRefuel", nil])) then
 
 	while {dialog} do
 	{
-		if (_station getVariable [(player getVariable ["typeRefuel", nil]), 250] < 1) exitWith
+		if (_station getVariable [(player getVariable ["typeRefuel", ""]), 250] < 1) exitWith
 		{
 			[format["Les réservoirs en %1 de cette station essence sont vides.", (getText(missionConfigFile) >> "ALYSIA_FUEL" >> "fuels" >> _x >> "name")]] call public_fnc_error;
 			closeDialog 0;
@@ -73,14 +76,14 @@ if (isNil (player getVariable ["typeRefuel", nil])) then
 		};
 
 		_vehicle setFuel ((fuel _vehicle) + 0.1);
-		_bill = _bill + [_station, (player getVariable ["typeRefuel", nil])] call public_fnc_fuelPrice;
+		_bill = _bill + [_station, (player getVariable ["typeRefuel", ""])] call public_fnc_fuelPrice;
 		_fuel = ([_vehicle] call public_fnc_fetchVehInfo select 12);
 
 		(_display displayCtrl 17015) ctrlSetStructuredText parseText format ["%1/%2 Litres", (_vehicle fuel * _fuel), _fuel];
 		(_display displayCtrl 17008) ctrlSetStructuredText parseText format ["<t size ='2' align='center'>%1</t>", _bill];
-		(_display displayCtrl 17010) ctrlSetStructuredText parseText format ["<t align='right'>%1</t>", (_station getVariable [(player getVariable ["typeRefuel", nil]), 250])];
+		(_display displayCtrl 17010) ctrlSetStructuredText parseText format ["<t align='right'>%1</t>", (_station getVariable [(player getVariable ["typeRefuel", ""]), 250])];
 
 		sleep 0.1;
 	};
-	[false, _bill, "Carburant Véhicule"] call public_fnc_handleATM;
+	[false, _bill, "Station Essence"] call public_fnc_handleATM;
 };
