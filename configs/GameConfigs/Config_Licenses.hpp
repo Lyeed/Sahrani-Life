@@ -5,7 +5,6 @@ class ALYSIA_LICENSES
 		name = "Permis de conduire";
 		price = 1000;
 		illegal = 0;
-		required = "";
 		pad_store = 1;
 	};
 
@@ -14,7 +13,6 @@ class ALYSIA_LICENSES
 		name = "Permis de pilotage";
 		price = 500000;
 		illegal = 0;
-		required = "";
 		pad_store = 1;
 	};
 
@@ -23,7 +21,6 @@ class ALYSIA_LICENSES
 		name = "Permis de bateau";
 		price = 10000;
 		illegal = 0;
-		required = "";
 		pad_store = 1;
 	};
 
@@ -32,7 +29,6 @@ class ALYSIA_LICENSES
 		name = "Permis poids lourd";
 		price = 60000;
 		illegal = 0;
-		required = "";
 		pad_store = 1;
 	};
 
@@ -41,7 +37,6 @@ class ALYSIA_LICENSES
 		name = "Licence de propriété";
 		price = 500000;
 		illegal = 0;
-		required = "";
 		pad_store = 1;
 	};
 
@@ -50,7 +45,6 @@ class ALYSIA_LICENSES
 		name = "Licence de sécurité";
 		price = 175000;
 		illegal = 0;
-		required = "((group player) getVariable[""gang_name"", """"]) in gServer_secu_gangs)";
 		pad_store = 0;
 	};
 
@@ -59,7 +53,6 @@ class ALYSIA_LICENSES
 		name = "Doctorat de médecine";
 		price = 100000;
 		illegal = 0;
-		required = "((call g_MEDICLevel) > 0)";
 		pad_store = 0;
 	};
 
@@ -68,7 +61,6 @@ class ALYSIA_LICENSES
 		name = "Licence de dépanneur";
 		price = 80000;
 		illegal = 0;
-		required = "((group player) getVariable[""gang_name"", """"]) in gServer_depan_gangs)";
 		pad_store = 0;
 	};
 
@@ -77,7 +69,6 @@ class ALYSIA_LICENSES
 		name = "Licence de plongée";
 		price = 6000;
 		illegal = 0;
-		required = "";
 		pad_store = 1;
 	};
 
@@ -86,7 +77,6 @@ class ALYSIA_LICENSES
 		name = "Licence d'armes à feu";
 		price = 75000;
 		illegal = 0;
-		required = "";
 		pad_store = 0;
 	};
 
@@ -95,7 +85,6 @@ class ALYSIA_LICENSES
 		name = "Entrainement rebel";
 		price = 150000;
 		illegal = 1;
-		required = "((call g_REBLevel) > 0)";
 		pad_store = 0;
 	};
 
@@ -104,7 +93,6 @@ class ALYSIA_LICENSES
 		name = "Entrainement rebel supérieur";
 		price = 300000;
 		illegal = 1;
-		required = "((call g_REBLevel) == 2)";
 		pad_store = 0;
 	};
 
@@ -113,7 +101,6 @@ class ALYSIA_LICENSES
 		name = "Traitement de la marijuana";
 		price = 45000;
 		illegal = 1;
-		required = "";
 		pad_store = 0;
 	};
 
@@ -122,7 +109,6 @@ class ALYSIA_LICENSES
 		name = "Licence d'archéologie";
 		price = 50000;
 		illegal = 1;
-		required = "";
 		pad_store = 0;
 	};
 
@@ -131,7 +117,6 @@ class ALYSIA_LICENSES
 		name = "Traitement du platine";
 		price = 95000;
 		illegal = 0;
-		required = "";
 		pad_store = 1;
 	};
 
@@ -140,7 +125,6 @@ class ALYSIA_LICENSES
 		name = "Traitement du cuivre";
 		price = 95000;
 		illegal = 0;
-		required = "";
 		pad_store = 1;
 	};
 
@@ -149,7 +133,6 @@ class ALYSIA_LICENSES
 		name = "Traitement du bois";
 		price = 8000;
 		illegal = 0;
-		required = "";
 		pad_store = 1;
 	};
 
@@ -158,7 +141,6 @@ class ALYSIA_LICENSES
 		name = "Traitement du pétrole";
 		price = 50000;
 		illegal = 0;
-		required = "";
 		pad_store = 1;
 	};
 
@@ -167,7 +149,6 @@ class ALYSIA_LICENSES
 		name = "Traitement du fer";
 		price = 25000;
 		illegal = 0;
-		required = "";
 		pad_store = 1;
 	};
 
@@ -176,7 +157,6 @@ class ALYSIA_LICENSES
 		name = "Traitement de sable";
 		price = 10000;
 		illegal = 0;
-		required = "";
 		pad_store = 1;
 	};
 
@@ -185,7 +165,6 @@ class ALYSIA_LICENSES
 		name = "Traitement du tabac";
 		price = 35000;
 		illegal = 0;
-		required = "";
 		pad_store = 1;
 	};
 
@@ -194,7 +173,6 @@ class ALYSIA_LICENSES
 		name = "Fonte de l'or";
 		price = 35000;
 		illegal = 0;
-		required = "";
 		pad_store = 1;
 	};
 
@@ -203,7 +181,6 @@ class ALYSIA_LICENSES
 		name = "Traitement de sel";
 		price = 35000;
 		illegal = 0;
-		required = "";
 		pad_store = 1;
 	};
 
@@ -212,7 +189,6 @@ class ALYSIA_LICENSES
 		name = "Traitement de l'argile";
 		price = 35000;
 		illegal = 0;
-		required = "";
 		pad_store = 1;
 	};
 
@@ -221,7 +197,6 @@ class ALYSIA_LICENSES
 		name = "Traitement du bauxite";
 		price = 35000;
 		illegal = 0;
-		required = "";
 		pad_store = 1;
 	};
 };
