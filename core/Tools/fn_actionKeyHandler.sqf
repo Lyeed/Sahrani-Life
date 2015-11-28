@@ -111,7 +111,6 @@ if ((vehicle player) isEqualTo player) then
 				{
 					if (((player distance (bank_n)) < 10) || ((player distance (bank_s) < 10))) then
 					{
-						systemChat format ["< Robbery System - Debug > Joueur près d'un ordinateur à Hack"];
 						if ([player] call public_fnc_getRegion isEqualTo "NORTH") then
 						{
 							[bank_n, "Security"] spawn public_fnc_robberyStart;
@@ -150,7 +149,6 @@ if ((vehicle player) isEqualTo player) then
 					{
 						_pos = cursorTarget modelToWorld (cursorTarget selectionPosition _x);
 						if ((player distance [_pos select 0, _pos select 1, (_pos select 2) - 1.5]) < 3) exitWith {
-							systemChat format ["< Robbery System - Debug > Joueur près de la porte %1", _x];
 							[cursorTarget, _x] spawn public_fnc_robberyStart;
 							_door = _x;
 						};
@@ -158,7 +156,6 @@ if ((vehicle player) isEqualTo player) then
 
 					if (isNil "_door") then
 					{
-						systemChat format ["< Robbery System - Debug > Joueur non près d'une porte"];
 						["Vous devez être près pour d'une porte pour pouvoir la forcer"] call public_fnc_error;
 						breakOut "main";
 					};
