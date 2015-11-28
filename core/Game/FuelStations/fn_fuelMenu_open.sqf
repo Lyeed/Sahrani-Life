@@ -65,7 +65,7 @@ _idc_actual = 5010;
 	};
 } forEach
 ([
-	["use_refuel_veh", "Remplir Voiture", "[_station] spawn public_fnc_fuelMenu_use_refuel_veh;", "(player distance _station < 10)"],
+	["use_refuel_veh", "Remplir Véhicule", "[_station] spawn public_fnc_fuelMenu_use_refuel_veh;", "(player distance _station < 10)"],
 	["use_refuel_jerry", "Remplir Jerrican", "[_station] spawn public_fnc_fuelMenu_use_refuel_jerry;", "(""Fuel_E"" in magazines player)"]
 ]);
 
