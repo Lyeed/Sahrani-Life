@@ -63,63 +63,60 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 		extraGrow = 100;
 	};
 
-	/*
 	class Oleander2
 	{
-		receive[] = {{"heroin"}};
+		receive[] = {{"heroin", 1, 1}};
 		seed = "heroin_seed";
-		amount = 1;
 		distance = 3;
 		growingTime = 800;
 		groundLevel = 1.5;
 		upLevel = 1.5;
 		extraGrow = 200;
 	};
+
 	class Skyline_Cannabis
 	{
-		receive[] = {{"cannabis"}};
+		receive[] = {{"cannabis", 2, 1}};
 		seed = "cannabis_seed";
-		amount = 2;
 		distance = 3;
 		growingTime = 800;
 		groundLevel = 0;
 		upLevel = 1.4;
 		extraGrow = 200;
 	};
+
 	class Reeds
 	{
-		receive[] = {{"meth"}};
+		receive[] = {{"meth", 1, 1}};
 		seed = "meth_seed";
-		amount = 1;
 		distance = 3;
 		growingTime = 900;
 		groundLevel = 0;
 		upLevel = 0;
 		extraGrow = 60;
 	};
+
 	class Ficus_1
 	{
-		receive[] = {{"cocaine_seed"}};
-		seed = "meth_seed";
-		amount = 1;
+		receive[] = {{"cocaine_seed", 1, 1}};
+		seed = "cocaine_seed";
 		distance = 7;
 		growingTime = 800;
 		groundLevel = 6.1;
 		upLevel = 3;
 		extraGrow = 200;
 	};
+
 	class Skyline_Tabac
 	{
-		receive[] = {{"tabac"}};
+		receive[] = {{"tabac", 2, 1}};
 		seed = "tabac_seed";
-		amount = 2;
 		distance = 4;
 		growingTime = 480;
 		groundLevel = 0;
 		upLevel = 1;
 		extraGrow = 100;
 	};
-	*/
 };
 
 class ALYSIA_FARMING_PLANT_MARKERS
@@ -128,6 +125,7 @@ class ALYSIA_FARMING_PLANT_MARKERS
 	{
 		plant = "";
 	};
+
 	class corn_1
 	{
 		plant = "Skyline_Corn";
@@ -172,6 +170,4 @@ class ALYSIA_FARMING_PLANT_MARKERS
 	{
 		plant = "Skyline_Tabac";
 	};
-	class tabac_2 : tabac_1 {};
-	class tabac_3 : tabac_1 {};
 };
