@@ -36,9 +36,6 @@ with missionNamespace do
 	g_phone_messages = [];
 	g_phone_forfait = "none";
 	g_phone_blacklist = [];
-
-	g_phone_forfaits = [];
-	"g_phone_forfaits pushBack(configName _x); true" configClasses (missionConfigFile >> "ALYSIA_FORFAITS");
 	/* ===================[First Person View]======================= */
 	g_firstCombatActive = false;
 	/* ===================[Weight system]======================= */

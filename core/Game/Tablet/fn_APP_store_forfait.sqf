@@ -15,12 +15,13 @@ _list = _display displayCtrl 8132;
 lbClear _list;
 
 {
+	_forfait = configName _x;
 	_index = _list lbAdd format
 	[
 		"%1 %2",
-		getText(missionConfigFile >> "ALYSIA_FORFAITS" >> _x >> "name"),
-		if (_x isEqualTo g_phone_forfait) then {"(le votre)"} else {""}
+		getText(missionConfigFile >> "ALYSIA_FORFAITS" >> _forfait >> "name"),
+		if (_forfait isEqualTo g_phone_forfait) then {"(le votre)"} else {""}
 	];
-	_list lbSetData [_index, _x];	
-} forEach (g_phone_forfaits);
+	_list lbSetData [_index, _forfait];
+} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_FORFAITS"));
 _list lbSetCurSel 0;

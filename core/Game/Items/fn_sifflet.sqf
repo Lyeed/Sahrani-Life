@@ -13,7 +13,7 @@ if ((["sifflet"] call public_fnc_itemCount) > 0) then
 	if ((vehicle player) isEqualTo player) then
 	{
 		[player, "sifflet", 60] call CBA_fnc_globalSay3d;
-		player setFatigue ((getFatigue player) + 0.15);
+		player setFatigue ((getFatigue player) + 0.05);
 		g_action_delay = time;
 	} else {
 		["Vous devez être à pieds pour utiliser le sifflet"] call public_fnc_error;

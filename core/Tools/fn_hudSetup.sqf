@@ -37,6 +37,7 @@ showGPS false;
 
 8 cutRsc ["RscHudPlayer", "PLAIN"];
 
+disableSerialization;
 _hud = uiNameSpace getVariable ["RscHudPlayer", displayNull];
 _hud spawn
 {
