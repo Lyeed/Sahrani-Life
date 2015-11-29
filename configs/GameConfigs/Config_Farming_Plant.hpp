@@ -48,7 +48,7 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 		distance = 3;
 		growingTime = 350;
 		groundLevel = 0;
-		upLevel = 0.4;
+		upLevel = 0.7;
 		extraGrow = 100;
 	};
 
@@ -59,7 +59,7 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 		distance = 3;
 		growingTime = 350;
 		groundLevel = 0;
-		upLevel = 1.4;
+		upLevel = 1.1;
 		extraGrow = 100;
 	};
 
