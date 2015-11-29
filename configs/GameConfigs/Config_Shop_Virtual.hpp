@@ -10,9 +10,9 @@ class ALYSIA_SHOPS_VIRTUAL
 
 	class farmingmarket
 	{
-		name = "Commerçant agricol";
+		name = "Commerçant agricole";
 		side = "CIV";
-		items[] = {{"corn_seed", "bean_seed", "cotton_seed", "wheatseed", "patate", "engrais"}, {"cotton", "bean", "corn"}};
+		items[] = {{"corn_seed", "bean_seed", "cotton_seed", "wheatseed", "patate", "engrais"}, {"cotton", "bean", "corn", "wheat", "patate"}};
 	};
 	
 	class market
@@ -95,11 +95,11 @@ class ALYSIA_SHOPS_VIRTUAL
 		items[] = {{}, {"ironp", "soufre"}};
 	};
 
-	class gold
+	class bijoutier
 	{
-		name = "Commerçant d'or";
+		name = "Bijoutier";
 		side = "CIV";
-		items[] = {{}, {"goldbar"}};
+		items[] = {{}, {"goldbar", "platinep"}};
 	};
 
 	class black_market
