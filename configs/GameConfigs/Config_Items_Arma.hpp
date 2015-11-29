@@ -3248,4 +3248,32 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
+	class EWK_Cig1
+	{		
+		buy_price = 20;
+	};
+	class EWK_Cig2
+	{		
+		buy_price = 20;
+	};
+	class EWK_Cig3
+	{		
+		buy_price = 20;
+	};
+	class EWK_Cig4
+	{		
+		buy_price = 20;
+	};
+	class EWK_Cig6
+	{		
+		buy_price = 20;
+	};
+	class EWK_Cigar1
+	{		
+		buy_price = 20;
+	};
+	class vietsh_Head
+	{		
+		buy_price = 20;
+	};
 };

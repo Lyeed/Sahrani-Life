@@ -2737,7 +2737,7 @@ class ALYSIA_VEHICLES
 		side = "CIV";
 		insurance = 1;
 		license = "pilot";
-		fuel = "SP98";
+		fuel = "Kerosene";
 		rank = 0;
 		colors[] = 
 		{
@@ -2769,6 +2769,30 @@ class ALYSIA_VEHICLES
   	class Sab_af_An2 : sab_a2 {};
   	class Sab_A2_An2 : sab_a2 {};
 
+	class CUP_C_DC3_CIV{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "pilot";
+		fuel = "Kerosene";
+		rank = 0;
+		colors[] = {};
+		realname = "DC3";
+	};
+	
+	class CUP_C_C47_CIV{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "pilot";
+		fuel = "Kerosene";
+		rank = 0;
+		colors[] = {};
+		realname = "DC3 long-courrier";
+	};
+	
   	class Skyline_Bus
 	{
 		buyPrice = 25000;
@@ -2839,6 +2863,17 @@ class ALYSIA_VEHICLES
 		rank = 0;
 		colors[] = {};
 		realname = "Bateau à moteur civil";
+	};
+	class CUP_C_Fishing_Boat_Chernarus{
+		buyPrice = 25000;
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		license = "boat";
+		fuel = "Diesel";
+		rank = 0;
+		colors[] = {};
+		realname = "Bateau de pêche";
 	};
 
   	class C_Heli_light

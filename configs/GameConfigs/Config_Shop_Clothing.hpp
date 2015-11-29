@@ -188,7 +188,8 @@ class ALYSIA_SHOPS_CLOTHING
 			"rds_worker_cap3",
 			"rds_worker_cap4",
 			"rds_worker_cap1",
-			"Casque_Moto"
+			"Casque_Moto",
+			"vietsh_Head"
 		};
 		goggles[] =
 		{
@@ -213,7 +214,13 @@ class ALYSIA_SHOPS_CLOTHING
 			"Bear_RoundGlasses_blk",
 			"Bear_RoundGlasses_gold",
 			"Skyline_NioshFace",
-			"Mask_M40"
+			"Mask_M40",
+			"EWK_Cig1",
+			"EWK_Cig2",
+			"EWK_Cig3",
+			"EWK_Cig4",
+			"EWK_Cig6",
+			"EWK_Cigar1"
 		};
 		vests[] = {};
 		backpacks[] =
@@ -304,7 +311,13 @@ class ALYSIA_SHOPS_CLOTHING
 			"Bear_RoundGlasses",
 			"Bear_RoundGlasses_blk",
 			"Bear_RoundGlasses_gold",
-			"Skyline_NioshFace"
+			"Skyline_NioshFace",
+			"EWK_Cig1",
+			"EWK_Cig2",
+			"EWK_Cig3",
+			"EWK_Cig4",
+			"EWK_Cig6",
+			"EWK_Cigar1"
 		};
 		vests[] =
 		{
@@ -388,7 +401,13 @@ class ALYSIA_SHOPS_CLOTHING
 			"Bear_RoundGlasses_blk",
 			"Bear_RoundGlasses_gold",
 			"TRYK_SPgear_PHC1_NV",
-			"G_Balaclava_blk"
+			"G_Balaclava_blk",
+			"EWK_Cig1",
+			"EWK_Cig2",
+			"EWK_Cig3",
+			"EWK_Cig4",
+			"EWK_Cig6",
+			"EWK_Cigar1"
 		};
 		vests[] =
 		{
@@ -611,7 +630,13 @@ class ALYSIA_SHOPS_CLOTHING
 			"Bear_RoundGlasses_gold",
 			"Skyline_NioshFace",
 			"Mask_M40",
-			"Masque_Chirurgical"
+			"Masque_Chirurgical",
+			"EWK_Cig1",
+			"EWK_Cig2",
+			"EWK_Cig3",
+			"EWK_Cig4",
+			"EWK_Cig6",
+			"EWK_Cigar1"
 		};
 		vests[] =
 		{

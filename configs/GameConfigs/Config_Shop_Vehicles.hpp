@@ -109,7 +109,8 @@ class ALYSIA_SHOPS_VEHICLES
 		stock[] =
 		{
 			"B_Boat_Transport_01_F",
-			"C_Boat_Civil_01_F"
+			"C_Boat_Civil_01_F",
+			"CUP_C_Fishing_Boat_Chernarus"
 		};
 	};
 	class CIV_vehicles_air
@@ -122,7 +123,9 @@ class ALYSIA_SHOPS_VEHICLES
 			"dezkit_b206",
 			"Fett_orca",
 			"Fett_mohawk",
-			"sab_a2"
+			"sab_a2",
+			"CUP_C_DC3_CIV",
+			"CUP_C_C47_CIV"
 		};
 	};
 	
