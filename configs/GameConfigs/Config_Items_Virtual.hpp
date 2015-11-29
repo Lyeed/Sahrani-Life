@@ -39,7 +39,7 @@ class ALYSIA_ITEMS
 	class goldbar
 	{
 		weight = 40;
-		name = "Barre d'or";
+		name = "Lingot d'or";
 		price_buy   = 60;
 		price_sell  = 30;
 		market      = 0;
