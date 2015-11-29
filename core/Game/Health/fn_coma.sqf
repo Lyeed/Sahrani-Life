@@ -7,7 +7,12 @@
 */
 private["_time", "_display", "_ctrl_left", "_id", "_ctrl_suicide"];
 
-if (g_coma) exitWith {};
+if (player getVariable ["is_coma", false]) exitWith {};
+if (dialog) then
+{
+	closeDialog 0;
+	waitUntil {!dialog};
+};
 if (!(createDialog "RscDisplayComa")) exitWith {};
 
 disableSerialization;
@@ -26,19 +31,18 @@ _time = 1000;
 
 g_bleed = 0;
 g_blood = 1;
-g_coma = true;
 
 player setVariable ["tf_globalVolume", 0];
 player setVariable ["tf_voiceVolume", 0, true];
 player setVariable ["is_coma", true, true];
 
-while {(_time > 0) && g_coma && (alive player) && (player getVariable ["is_coma", false])} do
+while {(_time > 0) && (alive player) && (player getVariable ["is_coma", false])} do
 {
 	if ((vehicle player) != player) then { 
 		player action ["Eject", (vehicle player)]; 
 	};
 	if ((animationState player) != "acts_InjuredLookingRifle01") then {
-		[player, "acts_InjuredLookingRifle01"] remoteExecCall ["public_fnc_playAnimation", -2];
+		[player, "acts_InjuredLookingRifle01"] remoteExecCall ["switchMove", -2];
 	};
 	
 	player setOxygenRemaining 1;
@@ -77,10 +81,9 @@ if (alive player) then
 	[100] call public_fnc_handleBlood;
 	cutText ["", "BLACK IN", 20, true];
 	player setVariable ["tf_voiceVolume", 1, true];
-	[player, ""] remoteExecCall ["public_fnc_playAnimation", -2, false];
+	[player, ""] remoteExecCall ["switchMove", -2];
 };
 
-g_coma = false;
 if (player getVariable ["is_coma", false]) then {
 	player setVariable ["is_coma", false, true];
 };

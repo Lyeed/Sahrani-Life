@@ -19,7 +19,7 @@ if (!(_target getVariable["is_coma", false])) exitWith {
 	["La cible n'est pas dans le coma"] call public_fnc_error; 
 };
 
-if (g_coma) exitWith {
+if (player getVariable ["is_coma", false]) exitWith {
 	["Vous êtes dans le coma"] call public_fnc_error; 
 };
 
@@ -43,7 +43,7 @@ titleText["* Appuyez sur 'windows' pour déposer le corps *", "PLAIN DOWN"];
 {
 	while {!(isNull g_dragingBody)} do
 	{
-		if (!g_coma || ((vehicle player) != player)) exitWith {
+		if (!(player getVariable ["is_coma", false]) || ((vehicle player) != player)) exitWith {
 			[] spawn public_fnc_bodyDrop;
 		};
 		sleep 1;

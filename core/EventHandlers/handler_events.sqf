@@ -10,9 +10,8 @@
 player addEventHandler["FiredNear", "_this call EVENT_fnc_onPlayerFireNear"];
 player addEventHandler["handleDamage", "_this call EVENT_fnc_onPlayerHandleDamage"];
 player addEventHandler["InventoryOpened", "[_this select 1] call EVENT_fnc_onPlayerInventoryOpen"];
-player addEventHandler["Killed", "[] call EVENT_fnc_onPlayerKilled"];
-player addEventHandler["Respawn", "[] call EVENT_fnc_onPlayerRespawn"];
-// onPlayerMapOpen
+player addEventHandler["Killed", "call EVENT_fnc_onPlayerKilled"];
+player addEventHandler["Respawn", "call EVENT_fnc_onPlayerRespawn"];
 
 "gServer_fog" addPublicVariableEventHandler {60 setfog (_this select 1)};
 "gServer_rain" addPublicVariableEventHandler {60 setRain (_this select 1)};
@@ -21,5 +20,5 @@ player addEventHandler["Respawn", "[] call EVENT_fnc_onPlayerRespawn"];
 "gServer_wind" addPublicVariableEventHandler {setWind (_this select 1)};
 
 /* TASK_FORCE_RADIO */
-["actionRadio", "OnTangent", {_this call EVENT_fnc_onPlayerSpeakRadio}, player] call TFAR_fnc_addEventHandler;
-["actionSpeak", "OnSpeak", {_this call EVENT_fnc_onPlayerSpeak}, player] call TFAR_fnc_addEventHandler;
+["actionRadio", "OnTangent", {call EVENT_fnc_onPlayerSpeakRadio}, player] call TFAR_fnc_addEventHandler;
+["actionSpeak", "OnSpeak", {(_this select 1) call EVENT_fnc_onPlayerSpeak}, player] call TFAR_fnc_addEventHandler;

@@ -45,7 +45,7 @@ while {g_action_inUse} do
 	{
 		if ((animationState player) != _anim) then
 		{
-			[player, _anim] call public_fnc_playAnimation;
+			[player, _anim] remoteExecCall ["switchMove", -2];
 		};
 	};
 	
@@ -59,7 +59,7 @@ while {g_action_inUse} do
 	
 	if (_cP >= 1) exitWith {_ret_status = true};
 
-	if (g_coma || !(alive player)) exitWith {_ret_reason = "Vous êtes dans le coma"};
+	if ((player getVariable ["is_coma", false]) || !(alive player)) exitWith {_ret_reason = "Vous êtes dans le coma"};
 	if (g_interrupted) exitWith {_ret_reason = "Vous avez interrompu l'action"};
 	if (player getVariable ["restrained", false]) exitWith {_ret_reason = "Vous êtes menotté"};
 	if (player getVariable ["surrender", false]) exitWith {_ret_reason = "Vous avez les mains sur la tête"};
@@ -68,7 +68,7 @@ while {g_action_inUse} do
 };
 
 if (_anim != "") then {
-	[player, ""] call public_fnc_playAnimation;
+	[player, ""] remoteExecCall ["switchMove", -2];
 };
 
 if (!_ret_status) then

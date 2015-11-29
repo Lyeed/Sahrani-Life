@@ -363,7 +363,7 @@ class ALYSIA_SHOPS_CLOTHING
 			"casquette_Caporal",
 			"casquette_Basique",
 			"rds_Woodlander_cap3",
-			"TRYK_H_Helmet_ACU",
+			"TRYK_H_Helmet_ACU"
 		};
 		goggles[] =
 		{
@@ -386,7 +386,7 @@ class ALYSIA_SHOPS_CLOTHING
 			"G_Spectacles_Tinted",
 			"Bear_RoundGlasses",
 			"Bear_RoundGlasses_blk",
-			"Bear_RoundGlasses_gold"
+			"Bear_RoundGlasses_gold",
 			"TRYK_SPgear_PHC1_NV",
 			"G_Balaclava_blk"
 		};

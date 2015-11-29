@@ -38,12 +38,12 @@ if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "can_
 /* ==================[MEDICAL]===================*/
 [[
 	"<img image='\lyeed_IMG\data\actions_menu\morphine.paa'/> Se faire une <t color='#FF5722'>piqure de morphine</t>",
-	public_fnc_morphineUse, player, 0, false, true, "", '("SkylineItems_Adrenaline" in (magazines player)) && !g_coma && !g_action_inUse'
+	public_fnc_morphineUse, player, 0, false, true, "", '("SkylineItems_Adrenaline" in (magazines player)) && !(player getVariable [""is_coma"",false]) && !g_action_inUse'
 ]] call CBA_fnc_addPlayerAction;
 
 [[
 	"<img image='\lyeed_IMG\data\actions_menu\bandage.paa'/> Se faire un <t color='#FF5722'>bandage</t>",
-	public_fnc_bandageUse, player, 0, true, true, "", '(g_bleed > 0) && ("SkylineItems_Bandage" in (magazines player)) && !g_coma && !g_action_inUse'
+	public_fnc_bandageUse, player, 0, true, true, "", '(g_bleed > 0) && ("SkylineItems_Bandage" in (magazines player)) && !(player getVariable [""is_coma"",false]) && !g_action_inUse'
 ]] call CBA_fnc_addPlayerAction;
 //---------------
 

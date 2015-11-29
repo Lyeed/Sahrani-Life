@@ -80,9 +80,6 @@ while {!(isNull _display)} do
 	if (((locked g_interaction_target) isEqualTo 2) && !(g_interaction_target in g_vehicles)) exitWith {
 		closeDialog 0;
 	};
-	if (g_coma) exitWith {
-		closeDialog 0;
-	};
 	if (player getVariable ["restrained", false]) exitWith {
 		closeDialog 0;
 	};

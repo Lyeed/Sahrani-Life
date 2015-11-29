@@ -12,12 +12,12 @@ if (player getVariable ["surrender", false]) then {
 	player setVariable ["surrender", true, true];
 	[] spawn
 	{
-		while {(player getVariable ["surrender", false]) && !g_coma} do
+		while {(player getVariable ["surrender", false]) && !(player getVariable ["is_coma", false])} do
 		{
 			player playMove "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon";
 			sleep 0.7;
 		};
-		if (g_coma) then
+		if (player getVariable ["is_coma", false]) then
 		{
 			if (player getVariable ["surrender", false]) then {
 				player setVariable ["surrender", false, true];

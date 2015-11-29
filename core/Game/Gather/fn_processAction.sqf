@@ -32,7 +32,7 @@ if (g_action_inUse) exitWith {
 if ((player getVariable["restrained", false]) || (player getVariable["surrender", false])) exitWith {
 	["Vous ne pouvez pas traiter lorsque vous êtes menotté ou avez les mains sur la tête"] call public_fnc_error;
 };
-if (!(alive player) || g_coma) exitWith {
+if (!(alive player) || (player getVariable ["is_coma", false])) exitWith {
 	["Vous devez être vivant pour traiter"] call public_fnc_error;
 };
 if ((vehicle player) != player) exitWith {

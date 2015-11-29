@@ -26,14 +26,14 @@ if (!(isNull _unit)) then
 				titleText["Déplacez-vous pour annuler l'action", "PLAIN", 2];
 				g_interrupted = false;
 				_amount = 1;
-				while {(!g_interrupted && (_unit getVariable["is_coma", false]) && !g_coma && !(player getVariable["restrained", false]) && (player distance _unit < 3))} do
+				while {(!g_interrupted && (_unit getVariable ["is_coma", false]) && !(player getVariable ["is_coma", false]) && !(player getVariable["restrained", false]) && (player distance _unit < 3))} do
 				{
 					player playAction "medicStart";
 					sleep 6;
 					player playAction "medicStop";
 					if (random(100) <= 5) exitWith { _unit setVariable["is_coma", false, true]; };
-					if (player getVariable["restrained", false]) exitWith {};
-					if (g_coma) exitWith {};
+					if (player getVariable ["restrained", false]) exitWith {};
+					if (player getVariable ["is_coma", false]) exitWith {};
 					titleText[format["Tentative n°%1", _amount], "PLAIN", 2];
 					_amount = _amount + 1;
 				};
@@ -44,7 +44,7 @@ if (!(isNull _unit)) then
 				if ((backpack player) == "B_Defibrilateur_khk") then 
 				{
 					player playAction "medicStart";
-					[[_unit, "defib"], "public_fnc_playSound", nil] spawn life_fnc_MP;
+					[player, "defib", 20] call CBA_fnc_globalSay3d;
 					sleep 7;
 					if (random(100) < 61) then {
 						_unit setVariable["is_coma", false, true]; 

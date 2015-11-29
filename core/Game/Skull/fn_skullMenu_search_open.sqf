@@ -37,9 +37,6 @@ while {!(isNull _display)} do
 	if ((g_interaction_target getVariable ["inventory_in_use_UID", ""]) != (getPlayerUID player)) exitWith {
 		closeDialog 0;
 	};
-	if (g_coma) exitWith {
-		closeDialog 0;
-	};
 	if (player getVariable ["restrained", false]) exitWith {
 		closeDialog 0;
 	};

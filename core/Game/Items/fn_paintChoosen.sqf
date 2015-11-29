@@ -20,7 +20,7 @@ if ((currentWeapon player) != g_paint_weapon) exitWith {
 	["Vous devez garder l'arme dans les mains pendant l'application"] call public_fnc_error; 
 };
 
-[[player, "paint"], "public_fnc_playSound", nil] spawn life_fnc_MP;
+[player, "paint", 20] call CBA_fnc_globalSay3d;
 ["Application de la bombe de peinture", 6] call public_fnc_showProgress;
 
 if ((currentWeapon player) != g_paint_weapon) exitWith {

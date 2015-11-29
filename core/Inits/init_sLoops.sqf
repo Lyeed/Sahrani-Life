@@ -40,7 +40,7 @@
 			{
 				if (_type in ["lacrymo", "meth"]) then
 				{
-					[[player, "coughing"], "public_fnc_playSound", nil] spawn life_fnc_MP;
+					[player, "coughing", 20] call CBA_fnc_globalSay3d;
 					"dynamicBlur" ppEffectEnable true;
 					"dynamicBlur" ppEffectAdjust [_gazEffect];
 					"dynamicBlur" ppEffectCommit 5;
@@ -57,7 +57,7 @@
 				{
 					g_drugs_consuming = g_drugs_consuming + 20;
 					missionNamespace setVariable["CONSUME_marijuana", ((missionNamespace getVariable "CONSUME_marijuana") + 20)];
-					[[player, "coughing"], "public_fnc_playSound", nil] spawn life_fnc_MP;
+					[player, "coughing", 20] call CBA_fnc_globalSay3d;
 				};
 			}
 			else

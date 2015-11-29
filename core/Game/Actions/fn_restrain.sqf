@@ -11,7 +11,7 @@ if (!(player getVariable ["surrender", false])) exitWith {};
 [player, "handcuffs", 10] call CBA_fnc_globalSay3d;
 player setVariable ["restrained", true, true];
 
-while {((player getVariable ["restrained", false]) && !g_coma)} do
+while {((player getVariable ["restrained", false]) && !(player getVariable ["is_coma", false]))} do
 {
 	if ((animationState player) != "AmovPercMstpSnonWnonDnon_Ease") then {
 		if ((vehicle player) isEqualTo player) then {

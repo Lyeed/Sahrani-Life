@@ -79,8 +79,6 @@ with missionNamespace do
 	g_bleed = 0;
 	g_morphine = 0;
 	//--------------
-	g_coma = false;
-	//--------------
 	g_regen_active = false;
 	//--------------
 	g_dragingBody = ObjNull;

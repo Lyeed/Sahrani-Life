@@ -32,7 +32,7 @@
 			};
 	 	};
 
-		if (g_coma || (player getVariable ["restrained", false]) || (player getVariable ["surrender", false])) then {
+		if ((player getVariable ["is_coma", false]) || (player getVariable ["restrained", false]) || (player getVariable ["surrender", false])) then {
 			closeDialog 0;
 		};
 
