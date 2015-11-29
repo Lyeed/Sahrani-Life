@@ -21,7 +21,8 @@ if (!(isNull _unit)) then
 			if ("SkylineItems_Adrenaline" in (magazines player)) then 
 			{
 				life_action_inUse = true;
-				[[player, "adrenaline"], "public_fnc_playSound", nil] spawn life_fnc_MP;	
+
+				[player, "adrenaline", 20] call CBA_fnc_globalSay3d;
 				player playAction "medic";
 				sleep 3;
 				life_action_inUse = false;
@@ -30,11 +31,11 @@ if (!(isNull _unit)) then
 					["Vous n'avez pas d'adrénaline"] call public_fnc_error; 
 				};
 				
-				if (g_coma) exitWith {
+				if (player getVariable ["is_coma", false]) exitWith {
 					["Vous êtes dans le coma"] call public_fnc_error; 
 				};
 				
-				if (player getVariable["restrained", false]) exitWith {
+				if (player getVariable ["restrained", false]) exitWith {
 					["Vous êtes menotté"] call public_fnc_error; 
 				};
 				

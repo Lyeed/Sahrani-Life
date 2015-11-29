@@ -76,7 +76,7 @@ if (isNil "_typeRefuel") then
 		};
 
 		_vehicle setFuel ((fuel _vehicle) + 0.1);
-		_bill = _bill + [_station, (player getVariable ["typeRefuel", ""])] call public_fnc_fuelPrice;
+		_bill = (_bill + [_station, (player getVariable ["typeRefuel", ""])] call public_fnc_fuelPrice);
 		_fuel = ([_vehicle] call public_fnc_fetchVehInfo select 12);
 
 		(_display displayCtrl 17015) ctrlSetStructuredText parseText format ["%1/%2 Litres", (_vehicle fuel * _fuel), _fuel];

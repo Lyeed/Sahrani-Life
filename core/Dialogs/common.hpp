@@ -279,7 +279,7 @@ idc = -1;
 	tooltipColorShade[] = {0,0,0,0.65};
 };
 
-class Life_RscButton 
+class RscButton 
 {
 	style = 2;
 	x = 0;
@@ -307,6 +307,7 @@ class Life_RscButton
 	soundClick[] = {"\A3\ui_f\data\sound\RscButton\soundClick",0.09,1};
 	soundEscape[] = {"\A3\ui_f\data\sound\RscButton\soundEscape",0.09,1};
 };
+class Life_RscButton: RscButton {};
 
 class Life_RscButtonTextOnly : Life_RscButton {
 	SizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";

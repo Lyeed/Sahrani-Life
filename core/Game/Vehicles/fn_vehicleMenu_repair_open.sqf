@@ -29,7 +29,7 @@ _health_color = switch (true) do
 	case (_health >= 25 && _health < 50): {"FFC107"};
 	case (_health >= 50 && _health < 75): {"FFEB3B"};
 	case (_health >= 75 && _health < 100): {"CDDC39"};
-	case (_health == 100): {"8BC34A"};
+	case (_health isEqualTo 100): {"8BC34A"};
 };
 (_display displayCtrl 2909) ctrlSetStructuredText parseText format["<t align='center'><t color='#%2'>%3</t>%1</t>", "%", _health_color, _health];
 
@@ -38,9 +38,6 @@ _health_color = switch (true) do
 while {!(isNull _display)} do
 {
 	if ((player distance g_interaction_target) > ((((boundingBox g_interaction_target) select 1) select 0) + 2)) exitWith {
-		closeDialog 0;
-	};
-	if (g_coma) exitWith {
 		closeDialog 0;
 	};
 	if (player getVariable ["restrained", false]) exitWith {

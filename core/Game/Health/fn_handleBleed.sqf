@@ -8,7 +8,7 @@
 private["_amount"];
 _amount = round([_this, 0, 0, [0]] call BIS_fnc_param);
 
-if (g_coma) exitWith {};
+if (player getVariable ["is_coma", false]) exitWith {};
 if (_amount < 3) exitWith {};
 
 if (g_bleed isEqualTo 0) then

@@ -40,7 +40,7 @@ if ([false, _type, 1] call public_fnc_handleInv) then
 	missionNamespace setVariable[format["drug_stats_%1", _type], ((missionNamespace getVariable[format["drug_stats_%1", _type], 0]) + 1)];
 	[format["<t align='center'>Vous avez consommé<br/>1x %1</t>", ([_type] call public_fnc_itemGetName)] call public_fnc_varToStr] call public_fnc_info;
 	if (_sound != "") then {
-		[[player, _sound], "public_fnc_playSound", nil] spawn life_fnc_MP;
+		[player, _sound, 20] call CBA_fnc_globalSay3d;
 	};
 	
 	_oldConsume = missionNamespace getVariable[format["drug_consume_%1", _type], 0];

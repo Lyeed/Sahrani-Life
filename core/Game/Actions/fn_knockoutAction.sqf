@@ -20,9 +20,13 @@ if ((getFatigue player) > 85) exitWith { ["Vous êtes trop fatigué pour pouvoir
 
 life_knockout = true;
 player setFatigue ((getFatigue player) + 0.3);
-[[_target, "punch"], "ALYSIA_fnc_playSound", nil] spawn life_fnc_MP;
-[[player,"AwopPercMstpSgthWrflDnon_End2"], "life_fnc_animSync", nil] spawn life_fnc_MP;
+
+[_target, "punch", 15] call CBA_fnc_globalSay3d;
+[_target, "AwopPercMstpSgthWrflDnon_End2"] remoteExecCall ["switchMove", -2];
 sleep 0.08;
+
 [[_target, profileName],"life_fnc_knockedOut", _target] spawn life_fnc_MP;
+
 sleep 3;
+
 life_knockout = false;

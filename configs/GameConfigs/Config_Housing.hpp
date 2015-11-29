@@ -65,7 +65,7 @@ class ALYSIA_HOUSES
 	{
 		price = 15000;
 		storage = "Skyline_Coffre_Small";
-		storage_building_pos_index = 2;
+		storage_building_pos_index = 1;
 		garage = 0;
 		garage_type[] = {};
 		sides[] = {"CIV", "GUER"};

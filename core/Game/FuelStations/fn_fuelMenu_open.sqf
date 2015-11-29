@@ -76,12 +76,9 @@ for "_i" from _idc_actual to 5033 do
 
 while {!(isNull _display)} do
 {
-	(_display displayCtrl 5003) ctrlSetStructuredText parseText format 
-	[
-		"<t align='left'><img size='2.5' image='\Devilz80_Images\data\fuelStations\logo.paa'/></t>"
-	];
+	(_display displayCtrl 5003) ctrlSetStructuredText parseText format ["<t align='left'><img size='2.5' image='\Devilz80_Images\data\fuelStations\logo.paa'/></t>"];
 
-	if (g_coma) exitWith {
+	if (player getVariable ["is_coma", false]) exitWith {
 		closeDialog 0;
 	};
 	if ((player distance _station) > ((((boundingBox _station) select 1) select 0) + 2)) exitWith {

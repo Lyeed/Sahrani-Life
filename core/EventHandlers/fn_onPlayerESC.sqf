@@ -29,7 +29,7 @@ _respawnButton = (findDisplay 49) displayCtrl 1010;
 _respawnButton ctrlEnable false;
 _respawnButton ctrlShow false;
 
-if (!(missionNamespace getVariable["g_coma", false])) then
+if (!(player getVariable ["is_coma", false])) then
 {
 	[_abortButton] spawn
 	{
@@ -45,7 +45,7 @@ if (!(missionNamespace getVariable["g_coma", false])) then
 		};
 		if (!(isNull (findDisplay 49))) then
 		{
-			if (!(missionNamespace getVariable["g_coma", false]) && !(missionNamespace getVariable["surrender", false]) && !(missionNamespace getVariable["restrained", false])) then
+			if (!(player getVariable ["is_coma", false]) && !(missionNamespace getVariable["surrender", false]) && !(missionNamespace getVariable["restrained", false])) then
 			{
 				_abortButton ctrlSetText "VOUS POUVEZ DECONNECTER";
 				_abortButton ctrlCommit 0;

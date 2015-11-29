@@ -13,7 +13,7 @@ if (!params [
 
 if (_item isEqualTo "") exitWith {false};
 
-if (g_coma) exitWith
+if (player getVariable ["is_coma", false]) exitWith
 {
 	["Vous ne pouvez pas utiliser d'objet dans le coma"] call public_fnc_error; 
 	false;

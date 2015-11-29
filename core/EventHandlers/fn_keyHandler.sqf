@@ -15,7 +15,7 @@ if ((_code in (actionKeys "MiniMap")) || (_code in (actionKeys "MiniMapToggle"))
 if ((player getVariable ["restrained", false]) || (player getVariable ["knockedOut", false])) exitWith {true};
 if ((player getVariable ["surrender", false]) && !(_code isEqualTo (((["Alysia", "actionSurrender"] call CBA_fnc_getKeybind) select 5) select 0))) exitWith {true};
 
-if (g_coma) exitWith {true};
+if (player getVariable ["is_coma", false]) exitWith {true};
 if (!(alive player)) exitWith {true};
 
 if (g_action_inUse) exitWith 

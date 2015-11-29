@@ -33,7 +33,7 @@ if (!isClass (configFile >> "CfgVehicles" >> _class)) exitWith {[]};
 	getText(configFile >> "CfgVehicles" >> _class >> "picture"),
 	getText(configFile >> "CfgVehicles" >> _class >> "displayName"),
 	getText(configFile >> "CfgVehicles" >> _class >> "vehicleClass"),
-	getNumber(configFile >> "CfgVehicles" >> _class >> "side");,
+	getNumber(configFile >> "CfgVehicles" >> _class >> "side"),
 	getText(configFile >> "CfgVehicles" >> _class >> "faction"),
 	configName(inheritsFrom (configFile >> "CfgVehicles" >> _class)),
 	getNumber(configFile >> "CfgVehicles" >> _class >> "maxSpeed"),

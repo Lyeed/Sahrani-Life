@@ -14,7 +14,7 @@ if (g_action_inUse) exitWith {
 	["Vous êtes déjà en train d'effectuer une action"] call public_fnc_error; 
 };
 
-if (g_coma) exitWith {
+if (player getVariable ["is_coma", false]) exitWith {
 	["Vous êtes dans le coma"] call ALYSIA_fnc_error; 
 };
 

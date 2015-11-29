@@ -9,7 +9,7 @@ private["_value", "_regen"];
 _value = round([_this, 0, 0, [0]] call BIS_fnc_param);
 
 if (_value isEqualTo 0) exitWith {};
-if (g_coma) exitWith {};
+if (player getVariable ["is_coma", false]) exitWith {};
 
 g_blood = g_blood + _value;
 if (g_blood > 4000) then {
@@ -35,7 +35,7 @@ if (!g_regen_active) then
 	{
 		while {(g_blood < 4000)} do
 		{
-			if ((g_bleed isEqualTo 0) && !g_coma && (g_hunger > 0) && (g_thirst > 0)) then 
+			if ((g_bleed isEqualTo 0) && !(player getVariable ["is_coma", false]) && (g_hunger > 0) && (g_thirst > 0)) then 
 			{
 				_regen = 0;
 				if ((g_hunger >= 90) && (g_thirst >= 90)) then {

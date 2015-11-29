@@ -1302,7 +1302,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""Vous devez utiliser le raccourci clavier pour utiliser cet objet""]";
-		image       = "alysia_items_virtual\data\drogue\opium.paa";// A CHANGER
+		image       = "alysia_items_virtual\data\1\sifflet.paa";
 	};
 
 	class bip

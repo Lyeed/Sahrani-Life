@@ -15,7 +15,7 @@ if (player distance _target > 4) exitWith { ["Vous êtes trop loin"] call ALYSIA
 if (_target getVariable["baillon", false]) then {
 	if ([true, "baillon", 1] call life_fnc_handleInv) then
 	{
-		[[player, "AinvPknlMstpSnonWnonDnon_Putdown_AmovPknlMstpSnonWnonDnon"], "life_fnc_animSync", nil, false] spawn life_fnc_MP;
+		[player, "AinvPknlMstpSnonWnonDnon_Putdown_AmovPknlMstpSnonWnonDnon"] remoteExecCall ["switchMove", -2];
 		titleText["* Vous avez enlevé le baillon de la personne *", "PLAIN DOWN"];
 		[[], "ALYSIA_fnc_getOffBaillon", _target] spawn life_fnc_MP;
 	}

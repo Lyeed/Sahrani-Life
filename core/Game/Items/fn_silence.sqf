@@ -5,9 +5,11 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_unit", "_anim"];
-_unit = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-_anim = [_this, 1, "", [""]] call BIS_fnc_param;
 
-_unit switchMove _anim;
-// _unit playAction _anim;
+if (missionNamespace getVariable ["silence", false]) then {
+	1 fadeSound 1;
+	missionNamespace setVariable ["silence", false];
+} else {
+	1 fadeSound 0.2;
+	missionNamespace setVariable ["silence", true];
+};

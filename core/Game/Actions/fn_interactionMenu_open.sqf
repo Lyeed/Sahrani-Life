@@ -93,7 +93,7 @@ while {!(isNull _display)} do
 	if ((player distance g_interaction_target) > ((((boundingBox g_interaction_target) select 1) select 0) + 2)) exitWith {
 		closeDialog 0;
 	};
-	if (g_coma) exitWith {
+	if (player getVariable ["is_coma", false]) exitWith {
 		closeDialog 0;
 	};
 	if (player getVariable ["restrained", false]) exitWith {

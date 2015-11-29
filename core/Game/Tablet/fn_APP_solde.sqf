@@ -6,8 +6,8 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private["_dialog", "_list"];
-disableSerialization;
 
+disableSerialization;
 _dialog = uiNamespace getVariable["tablet", displayNull];
 if (isNull _dialog) exitWith {};
 

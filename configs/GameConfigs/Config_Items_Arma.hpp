@@ -1808,10 +1808,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 3000;
 	};
-	class RYK_shirts_DENIM_BK
-	{
-		buy_price = 20;
-	};
 	class shemagh_faceD
 	{
 		buy_price = 20;
@@ -2385,6 +2381,10 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 20;
 	};
 	class TRYK_shirts_BLK_PAD_BK
+	{
+		buy_price = 20;
+	};
+	class TRYK_shirts_DENIM_BK
 	{
 		buy_price = 20;
 	};

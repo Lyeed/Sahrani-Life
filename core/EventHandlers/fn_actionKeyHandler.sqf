@@ -110,18 +110,7 @@ if ((vehicle player) isEqualTo player) then
 				{
 					if (player distance (nearestObject [player, "xcam_Laptop_unfolded_F"]) <= 2) then
 					{
-<<<<<<< HEAD:core/Tools/fn_actionKeyHandler.sqf
-						if ([player] call public_fnc_getRegion isEqualTo "NORTH") then
-						{
-							[bank_n, "Security"] spawn public_fnc_robberyStart;
-						}
-						else
-						{
-							[bank_s, "Security"] spawn public_fnc_robberyStart;
-						};
-=======
 						[cursorTarget, "Security"] spawn public_fnc_robberyStart;
->>>>>>> ff10031b9ef4ef36ab6215928b9d8a8eaa0a13cf:core/EventHandlers/fn_actionKeyHandler.sqf
 						breakOut "main";
 					};
 
@@ -131,24 +120,9 @@ if ((vehicle player) isEqualTo player) then
 						breakOut "main";
 					};
 
-<<<<<<< HEAD:core/Tools/fn_actionKeyHandler.sqf
-					private ["_door", "_pos"];
-					{
-						_pos = cursorTarget modelToWorld (cursorTarget selectionPosition _x);
-						if ((player distance [_pos select 0, _pos select 1, (_pos select 2) - 1.5]) < 3) exitWith {
-							[cursorTarget, _x] spawn public_fnc_robberyStart;
-							_door = _x;
-						};
-					} forEach (["AutoDoor_trigger", "Interact1", "Interact2", "Interact3", "Interact4", "Interact5", "Interact6", "Vault_Door"]);
-
-					if (isNil "_door") then
-					{
-						["Vous devez être près pour d'une porte pour pouvoir la forcer"] call public_fnc_error;
-=======
 					if (player distance (nearestObject [player, "Bank_Bomb"]) < 3) then
 					{
 						[((nearestObject [player, "Bank_Bomb"]) getVariable ["bank", ObjNull]), "", (nearestObject [player, "Bank_Bomb"])] spawn public_fnc_robberyProcess;
->>>>>>> ff10031b9ef4ef36ab6215928b9d8a8eaa0a13cf:core/EventHandlers/fn_actionKeyHandler.sqf
 						breakOut "main";
 					};
 
@@ -171,7 +145,7 @@ if ((vehicle player) isEqualTo player) then
 					};
 				};
 
-				if (typeOf(cursorTarget) in ["station_a", "station_b", "station_c"]) then
+				if (typeOf(cursorTarget) in ["Land_FuelStation_Build_F","Land_FuelStation_Shed_F","Land_FuelStation_Feed_F"]) then
 				{
 					[cursorTarget] spawn public_fnc_fuelMenu_open;
 					breakOut "main";
@@ -197,6 +171,11 @@ if ((vehicle player) isEqualTo player) then
 	{
 		if ((alive _vehicle) && ((damage _vehicle) < 1)) then
 		{
+			if (!(player getVariable ["typeRefuel", ""] isEqualTo "")) exitWith
+			{
+				[(nearestObject [player, ["Land_FuelStation_Build_F","Land_FuelStation_Shed_F","Land_FuelStation_Feed_F"]])] spawn public_fnc_fuelMenu_use_refuel_veh;
+			};
+			
 			[_vehicle] spawn public_fnc_vehicleMenu_open;
 			breakOut "main";
 		};

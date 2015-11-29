@@ -41,7 +41,6 @@ class Public
 		class errorExit {};
 		class getInv {};
 		class accType {};
-		class animSync {};
 		class calWeightDiff {};
 		class camShake {};
 		class createMarker {};
@@ -65,7 +64,6 @@ class Public
 		class numberText {};
 		class objPut {};
 		class packupObjPut {};
-		class playAnimation {};
 		class pushObject {};
 		class saveGear {};
 		class seizeObjects {};
@@ -101,6 +99,7 @@ class Public
 		class paintWeapon {};
 		class radar {};
 		class removeItem {};
+		class silence {};
 		class spikeStripEffect {};
 		class useBaillon {};
 		class useBandeau {};

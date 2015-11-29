@@ -50,7 +50,7 @@ while {(g_action_inUse && !g_interrupted)} do
 
 	if (
 			!(alive player) || 
-			g_coma || 
+			(player getVariable ["is_coma", false]) || 
 			((vehicle player) != player) || 
 			(player distance (getMarkerPos _marker) > 40) || 
 			((speed player) > 1) ||

@@ -28,7 +28,7 @@ if (_veh != player) then
 					_veh = _this select 0;
 					_sirene = _this select 1;
 					_sleep = _this select 2;
-					while {((_this getVariable ["sireneOn", false]) && ((vehicle player) isEqualTo _veh) && ((driver _veh) isEqualTo player) && (isEngineOn _veh))} do
+					while {((_veh getVariable ["sireneOn", false]) && ((vehicle player) isEqualTo _veh) && ((driver _veh) isEqualTo player) && (isEngineOn _veh))} do
 					{
 						_veh setVariable ["sireneTime", (time + _sleep)];
 						[_veh, _sirene, 200] call CBA_fnc_globalSay3d;
