@@ -50,11 +50,17 @@ class CfgRemoteExec
 		class TON_fnc_sheepGenerate {allowTargets = SERVER;};
 		//- Bank
 		class TON_fnc_bank_state {allowTargets = SERVER;};
+		//- AH
+		class TON_fnc_auctionHouse_add {allowTargets = SERVER;};
+		class TON_fnc_auctionHouse_getMenu {allowTargets = SERVER;};
+		class TON_fnc_auctionHouse_remove {allowTargets = SERVER;};
+		class TON_fnc_auctionHouse_tryBuy {allowTargets = SERVER;};
 
 		/*
 		**		CLIENT FUNCTIONS
 		*/
 		// - Mission
+
 		class MySQL_fnc_requestReceived {allowTargets = CLIENT;};
 		class public_fnc_garageOpen {allowTargets = CLIENT;};
 		class public_fnc_leaderMenuBoard {allowTargets = CLIENT;};
@@ -79,6 +85,11 @@ class CfgRemoteExec
 		class public_fnc_restrain {allowTargets = CLIENT;};
 		class public_fnc_sheepProcess {allowTargets = CLIENT;};
 		class public_fnc_lightOn {allowTargets = CLIENT;};
+		//- AH
+		class public_fnc_auctionHouse_buyOpen {allowTargets = CLIENT;};
+		class public_fnc_auctionHouse_sellCancel {allowTargets = CLIENT;};
+		class public_fnc_auctionHouse_sellSuccess {allowTargets = CLIENT;};
+		class public_fnc_auctionHouse_buySuccess {allowTargets = CLIENT;};
 
 		//- Arma
 		class setFuel {allowTargets = EVERYONE;};

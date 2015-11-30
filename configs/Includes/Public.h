@@ -313,19 +313,19 @@ class Public
 	class AuctionHouse
 	{
 		file = "core\Game\AuctionHouse";
-		class hvBuyAction {};
-		class hvBuyOpen {};
-		class hvBuyPreOpen {};
-		class hvBuySuccess {};
-		class hvBuyUpdate {};
-		class hvBuyUpdateInfo {};
-		class hvSellAction {};
-		class hvSellCancel {};
-		class hvSellCancelSuccess {};
-		class hvSellOpen {};
-		class hvSellSuccess {};
-		class hvSellUpdate {};
-		class hvSellUpdateInfo {};
+		class auctionHouse_buyAction {};
+		class auctionHouse_buyOpen {};
+		class auctionHouse_buyPreOpen {};
+		class auctionHouse_buySuccess {};
+		class auctionHouse_buyUpdate {};
+		class auctionHouse_buyUpdateInfo {};
+		class auctionHouse_sellAction {};
+		class auctionHouse_sellCancel {};
+		class auctionHouse_sellCancelSuccess {};
+		class auctionHouse_sellOpen {};
+		class auctionHouse_sellSuccess {};
+		class auctionHouse_sellUpdate {};
+		class auctionHouse_sellUpdateInfo {};
 	};
 
 	class Arrest

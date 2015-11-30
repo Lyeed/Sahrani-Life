@@ -6,10 +6,10 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-class DIALOG_AC_BUY_NAME : default_base_dialog
+class RscDisplayAuctionHouseBuy: default_base_dialog
 {
-	idd = DIALOG_AC_BUY_IDD;
-	name = #DIALOG_AC_BUY_NAME;
+	idd = 45600;
+	name = "RscDisplayAuctionHouse";
 	
 	class controlsBackground
 	{
@@ -139,10 +139,10 @@ class DIALOG_AC_BUY_NAME : default_base_dialog
 	};
 };
 
-class DIALOG_AC_SELL_NAME : default_base_dialog
+class RscDisplayAuctionHouseSell: default_base_dialog
 {
-	idd = DIALOG_AC_SELL_IDD;
-	name = #DIALOG_AC_SELL_NAME;
+	idd = 45700;
+	name = "RscDisplayAuctionHouseSell";
 	
 	class controlsBackground
 	{

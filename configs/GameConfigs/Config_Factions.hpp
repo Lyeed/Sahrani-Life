@@ -310,7 +310,7 @@ class ALYSIA_FACTIONS
 
 		/*** SIRENE ***/
 		sirene_sound = "sirene_guer";
-		sirene_sleep = 2;
+		sirene_sleep = 3;
 
 		/*** SPAWN/RESPAWN ***/
 		respawn_marker = "guer_spawn";

@@ -4,10 +4,10 @@
 /* Dialogs  */
 #include "Dialogs\DIALOG_admin.h"
 #include "Dialogs\DIALOG_arrest.hpp"
-#include "Dialogs\DIALOG_auctionHouse.hpp"
 #include "Dialogs\DIALOG_federalReserve.h"
 #include "Dialogs\DIALOG_launder.hpp"
 #include "Dialogs\DIALOG_vehSteal.h"
+#include "Dialogs\RscDisplayAuctionHouse.hpp"
 #include "Dialogs\RscDisplayShopClothing.hpp"
 #include "Dialogs\RscDisplayShopArma.h"
 #include "Dialogs\RscDisplayShopVirtual.hpp"

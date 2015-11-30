@@ -285,7 +285,7 @@ class ALYSIA_HOUSES
 		garage = 0;
 		garage_type[] = {};
 		sides[] = {"WEST"};
-		rank = 0;
+		rank = 1;
 		license = "";
 	};
 	
@@ -309,7 +309,7 @@ class ALYSIA_HOUSES
 		garage = 0;
 		garage_type[] = {};
 		sides[] = {"EAST"};
-		rank = 0;
+		rank = 1;
 		license = "";
 	};
 };

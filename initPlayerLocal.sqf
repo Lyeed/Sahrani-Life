@@ -275,6 +275,6 @@ if (hasInterface) then
 	};
 
 	diag_log "---------------------------------------------------------------------------------------------------------";
-	diag_log format["                End of Client Init :: Total Execution Time %1 seconds ", (diag_tickTime - _timeStamp)];
+	diag_log format["              End of Client Init :: Total Execution Time %1 seconds ", (diag_tickTime - _timeStamp)];
 	diag_log "---------------------------------------------------------------------------------------------------------";
-}; 
+};
