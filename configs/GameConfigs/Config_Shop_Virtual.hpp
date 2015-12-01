@@ -164,4 +164,25 @@ class ALYSIA_SHOPS_VIRTUAL
 		side = "CIV";
 		items[] = {{}, {"alu"}};
 	};
+	
+	class coal
+	{
+		name = "Commerçant de charbon";
+		side = "CIV";
+		items[] = {{}, {"coal"}};
+	};
+	
+	class alcool
+	{
+		name = "Commerçant d'alcool";
+		side = "CIV";
+		items[] = {{}, {"grozdova","slivovica"}};
+	};
+	
+	class poterie
+	{
+		name = "Commerçant de poterie";
+		side = "CIV";
+		items[] = {{}, {"pottery"}};
+	};
 };

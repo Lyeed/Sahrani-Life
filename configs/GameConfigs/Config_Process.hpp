@@ -300,4 +300,30 @@ class ALYSIA_PROCESS
 		time_default = 3;
 		sides[] = {"CIV"};
 	};
+	
+	class Distillerie_Grozdova
+	{
+		name = "Distillerie";
+		license = "";
+		sound = "smelting";
+		requiere_target = 1;
+		require[] = {{"raisin", 1}};
+		receive[] = {{"grozdova", 1}};
+		time_per_item = 3;
+		time_default = 5;
+		sides[] = {"CIV"};
+	};
+	
+	class Distillerie_Slivovica
+	{
+		name = "Distillerie";
+		license = "";
+		sound = "smelting";
+		requiere_target = 1;
+		require[] = {{"Prune", 1}};
+		receive[] = {{"Slivovica", 1}};
+		time_per_item = 3;
+		time_default = 5;
+		sides[] = {"CIV"};
+	};
 };

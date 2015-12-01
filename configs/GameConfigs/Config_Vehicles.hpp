@@ -2864,7 +2864,8 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		realname = "Bateau à moteur civil";
 	};
-	class CUP_C_Fishing_Boat_Chernarus{
+	class CUP_C_Fishing_Boat_Chernarus
+	{
 		buyPrice = 25000;
 		inventory = 150;
 		side = "CIV";
