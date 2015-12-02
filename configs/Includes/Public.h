@@ -208,7 +208,7 @@ class Public
 		file = "core\Game\FuelStations";
 		class refuelVehicle {};
 		class fuelMenu_open {};
-		class fuelMenu_action_refuel {};
+		// class fuelMenu_action_refuel {};
 		class fuelMenu_use_refuel_veh {};
 		//class fuelMenu_use_refuel_jerry {};
 	};
@@ -313,19 +313,18 @@ class Public
 	class AuctionHouse
 	{
 		file = "core\Game\AuctionHouse";
-		class auctionHouse_buyAction {};
-		class auctionHouse_buyOpen {};
-		class auctionHouse_buyPreOpen {};
-		class auctionHouse_buySuccess {};
-		class auctionHouse_buyUpdate {};
-		class auctionHouse_buyUpdateInfo {};
-		class auctionHouse_sellAction {};
-		class auctionHouse_sellCancel {};
-		class auctionHouse_sellCancelSuccess {};
-		class auctionHouse_sellOpen {};
-		class auctionHouse_sellSuccess {};
-		class auctionHouse_sellUpdate {};
-		class auctionHouse_sellUpdateInfo {};
+		class auctionHouse_menu_open {};
+		class auctionHouse_menu_filter {};
+		class auctionHouse_menu_update {};
+		class auctionHouse_getStock {};
+		class auctionHouse_getInfo {};
+		class auctionHouse_getPlayerData {};
+		class auctionHouse_action_buy {};
+		class auctionHouse_action_cancel {};
+		class auctionHouse_receive_buy {};
+		class auctionHouse_receive_money {};
+		class auctionHouse_receive_cancel {};
+		class auctionHouse_addItem {};
 	};
 
 	class Arrest

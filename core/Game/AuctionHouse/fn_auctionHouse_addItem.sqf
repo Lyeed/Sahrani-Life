@@ -5,15 +5,12 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_res"];
-_res = [];
+private["_item", "_type"];
+_type = [_this, 0, 0, [0]] call BIS_fnc_param;
+_item = [_this, 1, "", [""]] call BIS_fnc_param;
 
+switch (_type) do
 {
-	_var = missionNamespace getVariable[format["inv_%1", _x], 0];
-	if (_var > 0) then
-	{
-		_res pushBack [_x, _var];
-	};
-} forEach (missionNamespace getVariable["g_inv_items", []]);
-
-_res;
+	case 0: {[true, _item, 1] call public_fnc_handleInv};
+	case 1: {[_item, true] call public_fnc_handleItem};
+};

@@ -6,8 +6,6 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-disableSerialization;
-
 private
 [
 	"_hud",

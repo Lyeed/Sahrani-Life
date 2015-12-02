@@ -52,7 +52,6 @@ class CfgRemoteExec
 		class TON_fnc_bank_state {allowTargets = SERVER;};
 		//- AH
 		class TON_fnc_auctionHouse_add {allowTargets = SERVER;};
-		class TON_fnc_auctionHouse_getMenu {allowTargets = SERVER;};
 		class TON_fnc_auctionHouse_remove {allowTargets = SERVER;};
 		class TON_fnc_auctionHouse_tryBuy {allowTargets = SERVER;};
 
@@ -60,7 +59,6 @@ class CfgRemoteExec
 		**		CLIENT FUNCTIONS
 		*/
 		// - Mission
-
 		class MySQL_fnc_requestReceived {allowTargets = CLIENT;};
 		class public_fnc_garageOpen {allowTargets = CLIENT;};
 		class public_fnc_leaderMenuBoard {allowTargets = CLIENT;};
@@ -79,17 +77,19 @@ class CfgRemoteExec
 		class public_fnc_interactionMenu_action_license_get {allowTargets = CLIENT;};
 		class public_fnc_interactionMenu_action_license_return {allowTargets = CLIENT;};
 		class public_fnc_interactionMenu_action_license_revoke {allowTargets = CLIENT;};
-		class public_fnc_dynamicMarkers_update {allowTargets = CLIENT;};
-		class public_fnc_house_menu_owner_action_light_update {allowTargets = CLIENT;};
+		
 		class public_fnc_endGame {allowTargets = CLIENT;};
 		class public_fnc_restrain {allowTargets = CLIENT;};
 		class public_fnc_sheepProcess {allowTargets = CLIENT;};
 		class public_fnc_lightOn {allowTargets = CLIENT;};
 		//- AH
-		class public_fnc_auctionHouse_buyOpen {allowTargets = CLIENT;};
-		class public_fnc_auctionHouse_sellCancel {allowTargets = CLIENT;};
-		class public_fnc_auctionHouse_sellSuccess {allowTargets = CLIENT;};
-		class public_fnc_auctionHouse_buySuccess {allowTargets = CLIENT;};
+		class public_fnc_auctionHouse_receive_money {allowTargets = CLIENT;};
+		class public_fnc_auctionHouse_receive_buy {allowTargets = CLIENT;};
+		class public_fnc_auctionHouse_receive_cancel {allowTargets = CLIENT};
+		//- Housing
+		class public_fnc_house_menu_owner_action_light_update {allowTargets = CLIENT;};
+		//- dynamicMarkers
+		class public_fnc_dynamicMarkers_update {allowTargets = CLIENT;};
 
 		//- Arma
 		class setFuel {allowTargets = EVERYONE;};
