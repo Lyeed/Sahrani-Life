@@ -28,12 +28,33 @@ class Cfg_Garages
 		};
 	};
 
-	class EAST_base
+	class EAST_base_1
 	{
 		name = "Garage de la milice";
 		spawns[] = 
 		{
-			"EAST_vehicles_land_marker_1"
+			"EAST_vehicles_land_marker_1",
+			"east_marker_1"
+			
+		};
+		types[] =
+		{
+			"Car",
+			"Truck",
+			"Air"
+		};
+	};
+	
+	class EAST_base_2
+	{
+		name = "Garage de la milice";
+		spawns[] = 
+		{
+			"EAST_vehicles_land_marker_2",
+			"EAST_vehicles_land_marker_3",
+			"east_marker_2",
+			"east_marker_3"
+			
 		};
 		types[] =
 		{
@@ -201,7 +222,6 @@ class Cfg_Garages
 		name = "Garage Maritime";
 		spawns[] = 
 		{
-			"CIV_vehicles_sea_marker_1",
 			"CIV_vehicles_sea_marker_2"
 		};
 		types[] =
