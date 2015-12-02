@@ -3658,7 +3658,7 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		license = "";
 		fuel = "SP95";
-		rank = 3;
+		rank = 2;
 		colors[] = {};
 		realname = "Impala Milice";
 	};
@@ -3671,7 +3671,7 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		license = "";
 		fuel = "SP95";
-		rank = 3;
+		rank = 6;
 		colors[] = {};
 		realname = "Dodge Charger Milice";
 	};
@@ -3684,7 +3684,7 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		license = "";
 		fuel = "SP95";
-		rank = 3;
+		rank = 4;
 		colors[] = {};
 		realname = "Ford Explorer Milice";
 	};
@@ -3697,7 +3697,7 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		license = "";
 		fuel = "SP98";
-		rank = 3;
+		rank = 5;
 		colors[] = {};
 		realname = "Ford Taurus Milice";
 	};
@@ -3710,7 +3710,7 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		license = "";
 		fuel = "SP98";
-		rank = 3;
+		rank = 1;
 		colors[] = {};
 		realname = "Crown Victoria Milice";
 	};
@@ -3724,7 +3724,7 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		license = "";
 		fuel = "Kerosene";
-		rank = 3;
+		rank = 6;
 		colors[] = {};
 		realname = "EC635 Milice";
 	};
@@ -3737,7 +3737,7 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		license = "";
 		fuel = "Kerosene";
-		rank = 3;
+		rank = 6;
 		colors[] = 
 		{
 			"dezkit_b206_police",
