@@ -9,7 +9,8 @@ class ALYSIA_DYN_MARKERS
 		positions[] =
 		{
 			{9396.87,10084.8,0},
-			{10213.3,10075.2,0}
+			{10213.3,10075.2,0},
+			{9363.92,10637.4,0}
 		};
 		shop_appear  = 1;
 		shop_price   = 4000;
@@ -23,7 +24,9 @@ class ALYSIA_DYN_MARKERS
 		shape  = "ICON";
 		positions[] =
 		{
-
+			{17973.2,18135.2,0},
+			{13195.3,15351.7,0},
+			{9833.72,9010.51,0}
 		};
 		shop_appear  = 1;
 		shop_price   = 1500;
@@ -37,7 +40,9 @@ class ALYSIA_DYN_MARKERS
 		shape  = "ICON";
 		positions[] =
 		{
-
+			{6026.2,7379.96,0},
+			{16433.2,4620.58,0},
+			{16080.7,9360.87,0}
 		};
 		shop_appear  = 1;
 		shop_price   = 15000;
@@ -51,7 +56,9 @@ class ALYSIA_DYN_MARKERS
 		shape  = "ICON";
 		positions[] =
 		{
-
+			{3255.72,3283.39,0},
+			{17723.5,9695.56,0},
+			{10195.1,16966.5,0}
 		};
 		shop_appear  = 1;
 		shop_price   = 8000;
