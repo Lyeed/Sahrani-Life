@@ -1971,58 +1971,72 @@ class ALYSIA_ITEMS_ARMA
 	class soldier_garde_basique
 	{
 		buy_price = 20;
+		buy_condition_EAST = 1;
 	};
 	class soldier_garde_caporal
 	{
 		buy_price = 20;
+		buy_condition_EAST = 2;
 	};
 	class soldier_garde_commandant
 	{
 		buy_price = 20;
+		buy_condition_EAST = 5;
 	};
 	class soldier_garde_lieutenant
 	{
 		buy_price = 20;
+		buy_condition_EAST = 4;
 	};
 	class soldier_garde_sergent
 	{
 		buy_price = 20;
+		buy_condition_EAST = 3;
 	};
 	class soldier_milice_adjudant
 	{
 		buy_price = 20;
+		buy_condition_WEST = 5;
 	};
 	class soldier_milice_cadet
 	{
 		buy_price = 20;
+		buy_condition_WEST = 1;
 	};
 	class soldier_milice_capitaine
 	{
 		buy_price = 20;
+		buy_condition_WEST = 8;
 	};
 	class soldier_milice_caporal
 	{
 		buy_price = 20;
+		buy_condition_WEST = 3;
 	};
 	class soldier_milice_commandant
 	{
 		buy_price = 20;
+		buy_condition_WEST = 9;
 	};
 	class soldier_milice_lieutenant
 	{
 		buy_price = 20;
+		buy_condition_WEST = 7;
 	};
 	class soldier_milice_major
 	{
 		buy_price = 20;
+		buy_condition_WEST = 6;
 	};
 	class soldier_milice_milicien
 	{
 		buy_price = 20;
+		buy_condition_WEST = 2;
 	};
 	class soldier_milice_sergent
 	{
 		buy_price = 20;
+		buy_condition_WEST = 4;
 	};
 	class special_agent_uniform_new
 	{
