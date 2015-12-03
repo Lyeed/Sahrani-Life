@@ -62,7 +62,6 @@ if ((vehicle player) isEqualTo player) then
 				breakOut "main";
 			};
 		} forEach (getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "farming_markers_gather"));
-
 	} else {
 		if ((player distance cursorTarget) < ((((boundingBox cursorTarget) select 1) select 0) + 2.5)) then
 		{

@@ -18,6 +18,6 @@ lbClear _list;
 	_index = _list lbAdd ([_x] call public_fnc_itemGetName);
 	_list lbSetData [_index, _x];
 	_list lbSetPicture [_index, ([_x] call public_fnc_itemGetImage)];
-} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_BOURSE"));
+} foreach ("isClass(_x >> 'market')" configClasses (missionConfigFile >> "ALYSIA_ITEMS"));
 
 _list lbSetCurSel 0;

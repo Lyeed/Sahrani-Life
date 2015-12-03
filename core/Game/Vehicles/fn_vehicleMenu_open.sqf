@@ -93,7 +93,7 @@ while {!(isNull _display)} do
 		round(player distance g_interaction_target)
 	];
 
-	if ((player distance g_interaction_target) > ((((boundingBox g_interaction_target) select 1) select 0) + 2)) exitWith {
+	if ((player distance g_interaction_target) > ((((boundingBox g_interaction_target) select 1) select 0) + 2.5)) exitWith {
 		closeDialog 0;
 	};
 	if (player getVariable ["restrained", false]) exitWith {

@@ -18,6 +18,14 @@ class Public
 		class loadout {};
 	};
 
+	class Market
+	{
+		file = "core\Game\Market";
+		class market_getPrice {};
+		class market_handlePrice {};
+		class market_setPrice {};
+	};
+
 	class VirtualInventory
 	{
 		file = "core\Game\VirtualInventory";
@@ -105,6 +113,7 @@ class Public
 		class useBandeau {};
 		class useItem {};
 		class storageBox {};
+		class patch {};
 	};
 
 	class LastingObjects
@@ -299,6 +308,7 @@ class Public
 		class saliveStart {};
 	};
 
+
 	class Bank
 	{
 		file = "core\Game\Bank";
@@ -414,8 +424,6 @@ class Public
 		class licenseGetName {};
 		class licenseGetPrice {};
 		class licenseIsIllegal {};
-		class marketGetBuyPrice {};
-		class marketGetSellPrice {};
 		class rankToStr {};
 		class sideToStr {};
 		class itemCount {};

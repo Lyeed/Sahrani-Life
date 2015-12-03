@@ -37,7 +37,7 @@ switch (_selected) do
 		(_display displayCtrl 45634) ctrlSetStructuredText parseText 
 		(
 				"<t font='PuristaSemiBold'>"
-			+	"L'hôtel des ventes vous permet de vendre vos objets et véhicules à d'autres au prix que vous avez décidé.<br/>"
+			+	"L'hôtel des ventes vous permet de vendre vos objets et véhicules à d'autres personnes au prix que vous avez décidé.<br/>"
 			+	"Le Nord et le Sud ne partage pas les même stocks, les prix peuvent donc varier d'une région à l'autre.<br/>"
 			+	"En tant que vendeur, vous n'avez pas besoin d'être présent sur l'île pour recevoir l'argent d'une transaction.<br/>"
 			+	"La commission d'une vente est de 5% à payer lors de la mise en vente."

@@ -49,35 +49,11 @@ if (!(_market_sell isEqualTo []) || !(_market_buy isEqualTo [])) then
 		sleep 20;
 
 		{
-			_ressource = _x select 0;
-			_newPrice = ([_ressource] call public_fnc_itemGetSellPrice) - ((_x select 1) * (getNumber(missionConfigFile >> "ALYSIA_BOURSE" >> _ressource >> "mult")));
-			_minPrice = getNumber(missionConfigFile >> "ALYSIA_BOURSE" >> _ressource >> "min");
-			if (_newPrice < _minPrice) then {
-				_newPrice = _minPrice;
-			};
-			[(format["market_%1", _ressource]), _newPrice] call CBA_fnc_publicVariable;
-
-			_affect = getArray(missionConfigFile >> "ALYSIA_BOURSE" >> _ressource >> "affect");
-			if (!(_affect isEqualTo [])) then
-			{
-				_affect = _affect call BIS_fnc_selectRandom;
-				_newPrice = ([_affect] call public_fnc_itemGetBuyPrice) + ((random(_x select 1)) * (getNumber(missionConfigFile >> "ALYSIA_BOURSE" >> _affect >> "mult")));
-				_maxPrice = getNumber(missionConfigFile >> "ALYSIA_BOURSE" >> _affect >> "max");
-				if (_newPrice < _maxPrice) then {
-					_newPrice = _maxPrice;
-				};
-				[(format["market_%1", _affect]), _newPrice] call CBA_fnc_publicVariable;
-			};
+			[false, (_x select 0), (_x select 1), true] call public_fnc_market_handlePrice;
 		} forEach (_this select 0);
 
 		{
-			_ressource = _x select 0;
-			_newPrice = ([_ressource] call public_fnc_itemGetBuyPrice) + ((_x select 1) * (getNumber(missionConfigFile >> "ALYSIA_BOURSE" >> _ressource >> "mult")));
-			_maxPrice = getNumber(missionConfigFile >> "ALYSIA_BOURSE" >> _ressource >> "max");
-			if (_newPrice < _maxPrice) then {
-				_newPrice = _maxPrice;
-			};
-			[(format["market_%1", _ressource]), _newPrice] call CBA_fnc_publicVariable;
+			[true, (_x select 0), (_x select 1)] call public_fnc_market_handlePrice;
 		} forEach (_this select 1);
 	};
 };

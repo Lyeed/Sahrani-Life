@@ -18,15 +18,11 @@ _ressource = _list lbData _index;
 
 (_display displayCtrl 8805) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", ([_ressource] call public_fnc_itemGetName)];
 
-_license = getText(missionConfigFile >> "ALYSIA_BOURSE" >> _ressource >> "license");
+_license = getText(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "license");
 (_display displayCtrl 8807) ctrlSetStructuredText parseText format
 [
 	"<t align='center'>%1</t>",
-	if (_license isEqualTo "none") then {
-		"Non"
-	} else {
-		[_license] call public_fnc_licenseGetName
-	}
+	if (_license isEqualTo "") then {"Non"} else {[_license] call public_fnc_licenseGetName}
 ];
 
 (_display displayCtrl 8809) ctrlSetStructuredText parseText format
@@ -48,13 +44,13 @@ _license = getText(missionConfigFile >> "ALYSIA_BOURSE" >> _ressource >> "licens
 (_display displayCtrl 8814) ctrlSetStructuredText parseText format
 [
 	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
-	[getNumber(missionConfigFile >> "ALYSIA_BOURSE" >> _ressource >> "max")] call public_fnc_numberText
+	[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "market" >> "max")] call public_fnc_numberText
 ];
 
 (_display displayCtrl 8816) ctrlSetStructuredText parseText format
 [
 	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
-	[getNumber(missionConfigFile >> "ALYSIA_BOURSE" >> _ressource >> "min")] call public_fnc_numberText
+	[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "market" >> "min")] call public_fnc_numberText
 ];
 
 (_display displayCtrl 8818) ctrlSetStructuredText parseText format

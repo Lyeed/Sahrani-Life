@@ -6,7 +6,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 3;
 		price_sell  = 2;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""raisin""] call public_fnc_eatFood;";
@@ -15,800 +14,814 @@ class ALYSIA_ITEMS
 
 	class illegal_money
 	{
-		name = "kn (argent sale)";
-		weight = 0;
-		illegal = 1;
-		removable = 0;
+		name        = "kn (argent sale)";
+		weight      = 0;
+		illegal     = 1;
+		removable   = 0;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\.paa";
-		use = "";
 	};
 
 	class engrais
 	{
-		name = "Engrais";
-		weight = 1;
+		name        = "Engrais";
+		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
-		illegal = 0;
-		removable = 1;
-		use = 	"";
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\engrais.paa";
 	};
 
 	class goldbar
 	{
-		weight = 40;
-		name = "Lingot d'or";
+		name        = "Lingot d'or";
+		weight      = 40;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
-		illegal = 1;
-		removable = 1;
-		use = 	"";
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\lingot_or.paa";
 	};
 
 	class water
 	{
-		weight = 1;
-		name = "Bouteille d'eau";
+		name        = "Bouteille d'eau";
+		weight      = 1;
 		price_buy   = 1;
 		price_sell  = 1;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
+		illegal     = 0;
+		removable   = 1;
 		use         = "[""water""] call public_fnc_eatFood;";
 		image       = "alysia_items_virtual\data\1\bouteille_eau.paa";
 	};
 
 	class lockpick
 	{
-		weight = 2;
-		name = "Kit de crochetage";
+		name        = "Kit de crochetage";
+		weight      = 2;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
-		illegal = 1;
-		removable = 1;
-		use = "";
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\kit_crochetage.paa";
 	};
 
 	class handcuffs
 	{
-		weight = 2;
-		name = "Menottes";
+		name        = "Menottes";
+		weight      = 2;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
-		illegal = 1;
-		removable = 1;
-		use = "";
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\menottes.paa";
 	};
 
 	class handcuffkeys
 	{
-		weight = 1;
-		name = "Clés de menottes";
+		name        = "Clés de menottes";
+		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
-		illegal = 1;
-		removable = 1;
-		use = "";
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\clee_menottes.paa";
 	};
 
 	class patch
 	{
-		weight = 1;
-		name = "Patch anti addiction";
+		name        = "Patch anti addiction";
+		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
-		illegal = 0;
-		removable = 1;
-		use = 
-		"\
-			if (g_drugs_patched != 0) exitWith {\
-				[""Vous avez déjà un patch d'appliqué""] call public_fnc_error;\
-			};\
-			if ([false, ""patch"", 1] call public_fnc_handleInv) then \
-			{\
-				[""Vous vous êtes appliqué un patch anti-addiction""] call public_fnc_info;\
-				g_drugs_patched = 60 * 20;\
-				[] spawn\
-				{\
-					while {(g_drugs_patched > 0)} do\
-					{\
-						g_drugs_patched = g_drugs_patched - 5;\
-						sleep 5;\
-					};\
-				};\
-			};\
-		";
+		illegal     = 0;
+		removable   = 1;
+		use         = "[] call public_fnc_patch;";
 		image       = "alysia_items_virtual\data\1\patch_anti_addiction.paa";
 	};
 
 	class nitro
 	{
-		weight = 4;
-		name = "Nitro";
+		name        = "Nitro";
+		weight      = 4;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
-		illegal = 1;
-		removable = 1;
-		use = "";
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\nitroboost.paa";
 	};
 
 	class storage
 	{
-		weight = 30;
-		name = "Coffre";
+		name        = "Coffre";
+		weight      = 30;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = 
-		"\
-			[] spawn public_fnc_storageBox;\
-		";
+		illegal     = 0;
+		removable   = 1;
+		use         = "[] spawn public_fnc_storageBox;";
 		image       = "alysia_items_virtual\data\1\coffre.paa";
 	};
 
 	class barriere
 	{
-		weight = 6;
-		name = "Barrière";
+		name        = "Barrière";
+		weight      = 6;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = 
-		"\
-			[%1] spawn public_fnc_objPut;\
-		";
+		illegal     = 1;
+		removable   = 1;
+		use         = "[%1] spawn public_fnc_objPut;";
 		image       = "alysia_items_virtual\data\1\barriere.paa";
 	};
 
 	class cone
 	{
-		weight = 3;
-		name = "Cône";
+		name        = "Cône";
+		weight      = 3;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = 
-		"\
-			[%1] spawn public_fnc_objPut;\
-		";
+		illegal     = 1;
+		removable   = 1;
+		use         = "[%1] spawn public_fnc_objPut;";
 		image       = "alysia_items_virtual\data\1\cone.paa";
 	};
 
 	class spikeStrip
 	{
-		weight = 5;
-		name = "Herse";
+		name        = "Herse";
+		weight      = 5;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = 
-		"\
-			[%1] spawn public_fnc_objPut;\
-		";
+		illegal     = 0;
+		removable   = 1;
+		use         = "[%1] spawn public_fnc_objPut;";
 		image       = "alysia_items_virtual\data\1\herse.paa";
 	};
 
 	class tabac
 	{
-		weight = 4;
-		name = "Tabac";
+		name        = "Tabac";
+		weight      = 4;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\tabac.paa";
 	};
 
 	class tabac_seed
 	{
-		weight = 1;
-		name = "Graine (tabac)";
+		name        = "Graine (tabac)";
+		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\graine_tabac.paa";
 	};
 
 	class cigare
 	{
-		weight = 3;
-		name = "Cigare";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		name        = "Cigare";
+		weight      = 3;
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\cigare.paa";
+		license     = "tabac";
+		class market
+		{
+			max = 3100;
+			min = 1400;
+			mult = 2;
+			affect[] = {};
+		};
 	};
 
 	class cigarette
 	{
-		weight = 2;
-		name = "Cigarette";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		name        = "Cigarette";
+		weight      = 2;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\cigarette.paa";
+		license     = "tabac";
+		class market
+		{
+			max = 3100;
+			min = 1400;
+			mult = 2;
+			affect[] = {};
+		};
 	};
 
 	class objvaleur
 	{
-		weight = 2;
-		name = "Objet de valeur";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		name        = "Objet de valeur";
+		weight      = 2;
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\objet_de_valeur.paa";
+		class market
+		{
+			max = 2250;
+			min = 900;
+			mult = 4;
+			affect[] = {};
+		};
 	};
 
 	class artefact
 	{
-		weight = 6;
-		name = "Artefact";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		name        = "Artefact";
+		weight      = 6;
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "Alysia_textures\data\life_inv_banane.paa";
+		license     = "archeologie";
+		class market
+		{
+			max = 1500;
+			min = 900;
+			mult = 2;
+			affect[] = {};
+		};
 	};
 
 	class artefact_R
 	{
-		weight = 4;
-		name = "Artefact rénové";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		name        = "Artefact rénové";
+		weight      = 4;
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "Alysia_textures\data\life_inv_banane.paa";
+		license     = "archeologie";
+		class market
+		{
+			max = 6000;
+			min = 2400;
+			mult = 4;
+			affect[] = {};
+		};
 	};
 
 	class artefact_exrare
 	{
-		weight = 2;
-		name = "Artefact extrèmement rare";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		name        = "Artefact extrèmement rare";
+		weight      = 2;
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "Alysia_textures\data\life_inv_banane.paa";
+		class market
+		{
+			max = 21000;
+			min = 9000;
+			mult = 6;
+			affect[] = {};
+		};
 	};
 
 	class artefact_rare
 	{
-		weight = 2;
-		name = "Arteftact rare";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		name        = "Arteftact rare";
+		weight      = 2;
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "Alysia_textures\data\life_inv_banane.paa";
+		class market
+		{
+			max = 9000;
+			min = 4000;
+			mult = 5;
+			affect[] = {};
+		};
 	};
 
 	class artefact_common
 	{
-		weight = 2;
-		name = "Artefact commum";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		name        = "Artefact commum";
+		weight      = 2;
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "Alysia_textures\data\life_inv_banane.paa";
+		class market
+		{
+			max = 4000;
+			min = 2500;
+			mult = 3;
+			affect[] = {};
+		};
 	};
 
 	class wood
 	{
-		weight = 2;
-		name = "Bois";
+		name        = "Bois";
+		weight      = 2;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\tas_bois.paa";
 	};
 
 	class woodp
 	{
-		weight = 2;
-		name = "Planche";
+		name        = "Planche";
+		weight      = 2;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\planche.paa";
+		license     = "wood";
+		class market
+		{
+			max = 1500;
+			min = 700;
+			mult = 1;
+			affect[] = {};
+		};
 	};
 
 	class furniture
 	{
-		weight = 20;
-		name = "Meuble";
+		name        = "Meuble";
+		weight      = 20;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\meuble.paa";
 	};
 
 	class iron
 	{
-		weight = 5;
-		name = "Minerai de fer";
+		name        = "Minerai de fer";
+		weight      = 5;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\minerai_fer.paa";
 	};
 
 	class ironp
 	{
-		weight = 3;
-		name = "Barre de fer";
+		name        = "Barre de fer";
+		weight      = 3;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\lingot_fer.paa";
+		license     = "iron";
+		class market
+		{
+			max = 2600;
+			min = 800;
+			mult = 3;
+			affect[] = {};
+		};
 	};
 
 	class soufre
 	{
-		weight = 1;
-		name = "Soufre";
+		name        = "Soufre";
+		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = 
-		"\
-			[ObjNull, ""soufre""] spawn public_fnc_processAction;\
-		";
+		illegal     = 0;
+		removable   = 1;
+		use         = "[ObjNull, ""soufre""] spawn public_fnc_processAction;";
 		image       = "alysia_items_virtual\data\1\soufre.paa";
 	};
 
 	class platine
 	{
-		weight = 7;
-		name = "Minerai de platine";
+		name        = "Minerai de platine";
+		weight      = 7;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\minerai_platine.paa";
 	};
 
 	class platinep
 	{
-		weight = 4;
-		name = "Barre de platine";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		name        = "Barre de platine";
+		weight      = 4;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\lingot_platine.paa";
+		license     = "platine";
+		class market
+		{
+			max = 5600;
+			min = 1100;
+			mult = 4;
+			affect[] = {};
+		};
 	};
 
 	class cocaine_seed
 	{
-		weight = 1;
-		name = "Graine (coca)";
+		name        = "Graine (coca)";
+		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\drogue\graines_coca.paa";
 	};
 
 	class cocaine
 	{
-		weight = 5;
-		name = "Feuille de coca";
+		name        = "Feuille de coca";
+		weight      = 5;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\drogue\coca.paa";
 	};
 
 	class cocainep
 	{
-		weight = 2;
-		name = "Cocaïne pure";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = 
-		"\
-			[""%1""] call public_fnc_drugConsume;\
-		";
+		name        = "Cocaïne pure";
+		weight      = 2;
+		illegal     = 1;
+		removable   = 1;
+		use         = "[""%1""] call public_fnc_drugConsume;";
 		image       = "alysia_items_virtual\data\drogue\cocaine.paa";
+		class market
+		{
+			max = 9800;
+			min = 3700;
+			mult = 3;
+			affect[] = {};
+		};
 	};
 
 	class cocainepc
 	{
-		weight = 2;
-		name = "Cocaïne coupée";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = 
-		"\
-			[""%1""] call public_fnc_drugConsume;\
-		";
+		name        = "Cocaïne coupée";
+		weight      = 2;
+		illegal     = 1;
+		removable   = 1;
+		use         = "[""%1""] call public_fnc_drugConsume;";
 		image       = "alysia_items_virtual\data\drogue\cocaine_coupe.paa";
+		class market
+		{
+			max = 7100;
+			min = 2800;
+			mult = 4;
+			affect[] = {};
+		};
 	};
 
 	class heroin_seed
 	{
-		weight = 1;
-		name = "Graine (pavot)";
+		name        = "Graine (pavot)";
+		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\drogue\graine_pavot.paa";
 	};
 
 	class heroin
 	{
-		weight = 6;
-		name = "Fleur de pavot";
+		name        = "Fleur de pavot";
+		weight      = 6;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\drogue\pavot.paa";
 	};
 
 	class heroinp
 	{
-		weight = 4;
-		name = "Heroïne pure";
+		name        = "Heroïne pure";
+		weight      = 4;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\drogue\heroine.paa";
-	};
-
-	class seringue
-	{
-		weight = 1;
-		name = "Seringue";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 1;
-		drop = "Land_Suitcase_F";
-		removable = 1;
-		use = "";
-		image       = "alysia_items_virtual\data\1\seringue_vide.paa";
 	};
 
 	class heroinps
 	{
-		weight = 3;
-		name = "Seringue d'héroïne pure";
+		name        = "Seringue d'héroïne pure";
+		weight      = 3;
+		illegal     = 1;
+		removable   = 1;
+		use         = "[""%1""] call public_fnc_drugConsume;";
+		image       = "alysia_items_virtual\data\drogue\seringue_heroine.paa";
+		class heroinps
+		{
+			max = 11000;
+			min = 4200;
+			mult = 5;
+			affect[] = {};
+		};
+	};
+
+	class seringue
+	{
+		name        = "Seringue";
+		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = 
-		"\
-			[""%1""] call public_fnc_drugConsume;\
-		";
-		image       = "alysia_items_virtual\data\drogue\seringue_heroine.paa";
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\1\seringue_vide.paa";
 	};
 
 	class meth_seed
 	{
-		weight = 1;
-		name = "Graine (Ephedra)";
+		name        = "Graine (Ephedra)";
+		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\drogue\graines_ephedra.paa";
 	};
 
 	class hsoufre
 	{
-		weight = 1;
-		name = "Hydrate de soufre";
+		name        = "Hydrate de soufre";
+		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\soufre_hydrate.paa";
 	};
 
 	class meth
 	{
-		weight = 4;
-		name = "Feuille d'ephedra";
+		name        = "Feuille d'ephedra";
+		weight      = 4;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\drogue\ephedra.paa";
 	};
 
 	class methp
 	{
-		weight = 3;
-		name = "Methamphetamine";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = 
-		"\
-			[""%1""] call public_fnc_drugConsume;\
-		";
+		name        = "Methamphetamine";
+		weight      = 3;
+		illegal     = 1;
+		removable   = 1;
+		use         = "[""%1""] call public_fnc_drugConsume;";
 		image       = "alysia_items_virtual\data\drogue\methamphetamine.paa";
+		class market
+		{
+			max = 15600;
+			min = 2000;
+			mult = 4;
+			affect[] = {};
+		};
 	};
 
 	class cannabis_seed
 	{
-		weight = 1;
-		name = "Graine (cannabis)";
+		name        = "Graine (cannabis)";
+		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\drogue\graines_canabis.paa";
 	};
 
 	class cannabis
 	{
-		weight = 5;
-		name = "Cannabis";
+		name        = "Cannabis";
+		weight      = 5;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 1;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\drogue\canabis.paa";
 	};
 
 	class marijuana
 	{
-		weight = 4;
-		name = "Marijuana";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 1;
-		market      = 0;
-		removable = 1;
-		use = 
-		"\
-			[""%1""] call public_fnc_drugConsume;\
-		";
+		name        = "Marijuana";
+		weight      = 4;
+		illegal     = 1;
+		removable   = 1;
+		use         = "[""%1""] call public_fnc_drugConsume;";
 		image       = "alysia_items_virtual\data\drogue\marijuana.paa";
+		license     = "marijuana";
+		class market
+		{
+			max = 5300;
+			min = 1900;
+			mult = 3;
+			affect[] = {};
+		};
 	};
 
 	class oilu
 	{
-		weight = 7;
-		name = "Pétrole";
+		name        = "Pétrole";
+		weight      = 7;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\petrole.paa";
 	};
 
 	class oilp
 	{
-		weight = 5;
-		name = "Pétrole traité";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		name        = "Pétrole traité";
+		weight      = 5;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\essence.paa";
+		license     = "oil";
+		class market
+		{
+			max = 4700;
+			min = 2100;
+			mult = 3;
+			affect[] = {};
+		};
 	};
 
 	class fishingpoles
 	{
-		weight = 1;
-		name = "Filet de pêche";
+		name        = "Filet de pêche";
+		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\filet_peche.paa";
 	};
 
 	class bean_seed
 	{
-		weight = 1;
-		name = "Graine (haricot)";
+		name        = "Graine (haricot)";
+		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\graine_haricot.paa";
 	};
 
 	class bean
 	{
-		weight = 2;
-		name = "Haricot";
-		price_buy   = 60;
-		price_sell  = 30;
-		market      = 0;
-		removable = 1;
-		use = "";
+		name        = "Haricot";
+		weight      = 2;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\haricot.paa";
+		class market
+		{
+			max = 350;
+			min = 80;
+			mult = 3;
+			affect[] = {};
+		};
 	};
 
 	class corn_seed
 	{
-		weight = 1;
-		name = "Graine (maïs)";
+		name        = "Graine (maïs)";
+		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\graine_mais.paa";
 	};
 
 	class corn
 	{
-		weight = 2;
-		name = "Maïs";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		name        = "Maïs";
+		weight      = 2;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\mais.paa";
+		class market
+		{
+			max = 260;
+			min = 60;
+			mult = 3;
+			affect[] = {};
+		};
 	};
 
 	class cotton_seed
 	{
-		weight = 1;
-		name = "Graine (coton)";
+		name        = "Graine (coton)";
+		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\graine_coton.paa";
 	};
 
 	class cotton
 	{
-		weight = 2;
-		name = "Coton";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		name        = "Coton";
+		weight      = 2;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\coton.paa";
+		class market
+		{
+			max = 350;
+			min = 60;
+			mult = 2;
+			affect[] = {};
+		};
 	};
 
 	class sand
 	{
-		weight = 3;
-		name = "Sable";
+		name        = "Sable";
+		weight      = 3;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\sable.paa";
 	};
 
 	class glass
 	{
-		weight = 3;
-		name = "Verre";
-		price_buy   = 60;
-		price_sell  = 30;
-		illegal = 0;
-		market      = 0;
-		removable = 1;
-		use = "";
+		name        = "Verre";
+		weight      = 3;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
 		image       = "alysia_items_virtual\data\1\verre.paa";
+		license     = "sand";
+		class market
+		{
+			max = 1900;
+			min = 800;
+			mult = 3;
+			affect[] = {};
+		};
 	};
 
 	class cerealbar
@@ -817,7 +830,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 2;
 		price_sell  = 2;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""cerealbar""] call public_fnc_eatFood;";
@@ -830,7 +842,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 1;
 		price_sell  = 1;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""sparklingwater""] call public_fnc_eatFood;";
@@ -843,7 +854,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 2;
 		price_sell  = 2;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""prune""] call public_fnc_eatFood;";
@@ -856,7 +866,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 2;
 		price_sell  = 2;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""sandwich""] call public_fnc_eatFood;";
@@ -869,7 +878,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 1;
 		price_sell  = 1;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""donut""] call public_fnc_eatFood;";
@@ -882,7 +890,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 1;
 		price_sell  = 1;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""soda""] call public_fnc_eatFood;";
@@ -895,7 +902,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 2;
 		price_sell  = 2;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""ragout""] call public_fnc_eatFood;";
@@ -908,7 +914,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 1;
 		price_sell  = 1;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""kefir""] call public_fnc_eatFood;";
@@ -921,7 +926,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -934,7 +938,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -947,7 +950,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -958,13 +960,17 @@ class ALYSIA_ITEMS
 	{
 		name        = "Poterie";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\1\poterie.paa";
+		class market
+		{
+			max = 60;
+			min = 30;
+			mult = 2;
+			affect[] = {};
+		};
 	};
 
 	class baux
@@ -973,7 +979,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -984,13 +989,17 @@ class ALYSIA_ITEMS
 	{
 		name        = "Barre d'aliminium";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\1\alluminium.paa";
+		class market
+		{
+			max = 60;
+			min = 30;
+			mult = 2;
+			affect[] = {};
+		};
 	};
 
 	class moule
@@ -999,7 +1008,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1012,7 +1020,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1025,7 +1032,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1038,7 +1044,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1051,7 +1056,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1064,7 +1068,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1077,7 +1080,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1090,7 +1092,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1103,7 +1104,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1116,7 +1116,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1129,7 +1128,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1142,7 +1140,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1155,7 +1152,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1166,13 +1162,17 @@ class ALYSIA_ITEMS
 	{
 		name        = "Sel traité";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\1\sel_traiter.paa";
+		class market
+		{
+			max = 60;
+			min = 30;
+			mult = 2;
+			affect[] = {};
+		};
 	};
 
 	class goldnuggets
@@ -1181,7 +1181,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1192,26 +1191,34 @@ class ALYSIA_ITEMS
 	{
 		name        = "Patate";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\1\patate.paa";
+		class market
+		{
+			max = 60;
+			min = 30;
+			mult = 2;
+			affect[] = {};
+		};
 	};
 
 	class wheat
 	{
 		name        = "Blé";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\1\ble.paa";
+		class market
+		{
+			max = 60;
+			min = 30;
+			mult = 2;
+			affect[] = {};
+		};
 	};
 
 	class wheatseed
@@ -1220,7 +1227,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1231,13 +1237,17 @@ class ALYSIA_ITEMS
 	{
 		name        = "Coton traité";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\1\boule_coton.paa";
+		class market
+		{
+			max = 60;
+			min = 30;
+			mult = 2;
+			affect[] = {};
+		};
 	};
 
 	class grozdova
@@ -1246,7 +1256,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1259,7 +1268,6 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1270,26 +1278,34 @@ class ALYSIA_ITEMS
 	{
 		name        = "Charbon";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\1\charbon.paa";
+		class market
+		{
+			max = 60;
+			min = 30;
+			mult = 2;
+			affect[] = {};
+		};
 	};
 
 	class opium
 	{
 		name        = "Opium";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\drogue\opium.paa";
+		class market
+		{
+			max = 60;
+			min = 30;
+			mult = 2;
+			affect[] = {};
+		};
 	};
 
 	class sifflet
@@ -1298,10 +1314,9 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 0;
-		market      = 0;
 		illegal     = 0;
 		removable   = 1;
-		use         = "[""Vous devez utiliser le raccourci clavier pour utiliser cet objet""]";
+		use         = "[""Vous devez utiliser le raccourci clavier pour utiliser cet objet""] call public_fnc_info";
 		image       = "alysia_items_virtual\data\1\sifflet.paa";
 	};
 
@@ -1312,9 +1327,8 @@ class ALYSIA_ITEMS
 		price_buy   = 120;
 		price_sell  = 0;
 		illegal     = 0;
-		market      = 0;
 		removable   = 1;
-		use         = "[""Vous devez utiliser le raccourci clavier pour utiliser cet objet""]";
+		use         = "[""Vous devez utiliser le raccourci clavier pour utiliser cet objet""] call public_fnc_info";
 		image       = "alysia_items_virtual\data\1\telecommande_portail.paa";
 	};
 };
