@@ -7,6 +7,14 @@ class ALYSIA_LICENSES
 		illegal = 0;
 		pad_store = 1;
 	};
+	
+	class moto
+	{
+		name = "Permis moto";
+		price = 1000;
+		illegal = 0;
+		pad_store = 1;
+	};
 
 	class pilot
 	{

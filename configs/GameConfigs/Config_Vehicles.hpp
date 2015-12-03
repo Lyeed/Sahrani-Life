@@ -4014,4 +4014,98 @@ class ALYSIA_VEHICLES
 	};
 	class dezkit_b206_ems : dezkit_b206ems {};
 	class dezkit_b206_rescue : dezkit_b206ems {};
+	
+	
+	/***motos***/
+	class Mrshounka_ducati_p_base
+	{
+		buyPrice = 250000;
+		inventory = 70;
+		side = "CIV";
+		insurance = 1;
+		license = "moto";
+		fuel = "SP95";
+		rank = 0;
+		colors[] = 
+		{
+			"Mrshounka_ducati_p",
+			"Mrshounka_ducati_p_noir",
+			"Mrshounka_ducati_p_bf",
+			"Mrshounka_ducati_p_r",
+			"Mrshounka_ducati_p_j",
+			"Mrshounka_ducati_p_rose",
+			"Mrshounka_ducati_p_g",
+			"Mrshounka_ducati_p_v",
+			"Mrshounka_ducati_p_o"
+		};
+		realname = "Moto Ducati";
+	};
+	class Mrshounka_ducati_p : Mrshounka_ducati_p_base {};
+	class Mrshounka_ducati_p_noir : Mrshounka_ducati_p_base {};
+	class Mrshounka_ducati_p_bf : Mrshounka_ducati_p_base {};
+	class Mrshounka_ducati_p_r : Mrshounka_ducati_p_base {};
+	class Mrshounka_ducati_p_j : Mrshounka_ducati_p_base {};
+	class Mrshounka_ducati_p_rose : Mrshounka_ducati_p_base {};
+	class Mrshounka_ducati_p_g : Mrshounka_ducati_p_base {};
+	class Mrshounka_ducati_p_v : Mrshounka_ducati_p_base {};
+	class Mrshounka_ducati_p_o : Mrshounka_ducati_p_base {};
+	
+	class Mrshounka_yamaha_p_base
+	{
+		buyPrice = 250000;
+		inventory = 70;
+		side = "CIV";
+		insurance = 1;
+		license = "moto";
+		fuel = "SP95";
+		rank = 0;
+		colors[] = 
+		{
+			"Mrshounka_yamaha_p",
+			"Mrshounka_yamaha_p_noir",
+			"Mrshounka_yamaha_p_bf",
+			"Mrshounka_yamaha_p_r",
+			"Mrshounka_yamaha_p_j",
+			"Mrshounka_yamaha_p_rose",
+			"Mrshounka_yamaha_p_g",
+			"Mrshounka_yamaha_p_v",
+			"Mrshounka_yamaha_p_o"
+		};
+		realname = "Moto Yamaha";
+	};
+	class Mrshounka_yamaha_p : Mrshounka_yamaha_p_base {};
+	class Mrshounka_yamaha_p_noir : Mrshounka_yamaha_p_base {};
+	class Mrshounka_yamaha_p_bf : Mrshounka_yamaha_p_base {};
+	class Mrshounka_yamaha_p_r : Mrshounka_yamaha_p_base {};
+	class Mrshounka_yamaha_p_j : Mrshounka_yamaha_p_base {};
+	class Mrshounka_yamaha_p_rose : Mrshounka_yamaha_p_base {};
+	class Mrshounka_yamaha_p_g : Mrshounka_yamaha_p_base {};
+	class Mrshounka_yamaha_p_v : Mrshounka_yamaha_p_base {};
+	class Mrshounka_yamaha_p_o : Mrshounka_yamaha_p_base {};
+	
+	class max_bike_base
+	{
+		buyPrice = 250000;
+		inventory = 70;
+		side = "CIV";
+		insurance = 1;
+		license = "moto";
+		fuel = "SP95";
+		rank = 0;
+		colors[] = 
+		{
+			"max_bike",
+			"max_bike1",
+			"max_bike2",
+			"max_bike3",
+			"max_bike4"
+		};
+		realname = "Vieille Moto";
+	};
+	class max_bike : max_bike_base {};
+	class max_bike1 : max_bike_base {};
+	class max_bike2 : max_bike_base {};
+	class max_bike3 : max_bike_base {};
+	class max_bike4 : max_bike_base {};
+	
 };	
