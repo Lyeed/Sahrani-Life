@@ -6,10 +6,6 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (!params [
-	["_station", ObjNull, [ObjNull]]
-]) exitWith {};
-
 if (dialog) then
 {
 	closeDialog 0;
@@ -65,8 +61,8 @@ _idc_actual = 5010;
 	};
 } forEach
 ([
-	["use_refuel_veh", "Remplir Véhicule", "[_station] spawn public_fnc_fuelMenu_use_refuel_veh;", "(player distance _station < 10)"],
-	["use_refuel_jerry", "Remplir Jerrican", "[_station] spawn public_fnc_fuelMenu_use_refuel_jerry;", "(""Fuel_E"" in magazines player)"]
+	["use_refuel_veh", "Remplir Véhicule", "[cursorTarget] spawn public_fnc_fuelMenu_use_refuel_veh;", "(player distance _station < 10)"],
+	["use_refuel_jerry", "Remplir Jerrican", "[cursorTarget] spawn public_fnc_fuelMenu_use_refuel_jerry;", "(""Fuel_E"" in magazines player)"]
 ]);
 
 for "_i" from _idc_actual to 5033 do

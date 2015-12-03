@@ -26,14 +26,14 @@ if (isNil "_typeRefuel") then
 
 	disableSerialization;
 	_display = findDisplay 16000;
-	if (isNull "_display") exitWith {};
+	if (isNull _display) exitWith {};
 
 	_combo = (_display displayCtrl 16004);
 	{
-		_index = _combo lbAdd format ["%1", (getText(missionConfigFile) >> "ALYSIA_FUEL" >> "fuels" >> _x >> "name")];
-		_combo lbSetData [_index, (getText(missionConfigFile) >> "ALYSIA_FUEL" >> "fuels" >> _x)];
-		_combo lbSetPicture [_index, (getText(missionConfigFile) >> "ALYSIA_FUEL" >> "fuels" >> _x >> "picture")];
-	} forEach (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels"));
+		_index = _combo lbAdd format ["%1", (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _x >> "name"))];
+		_combo lbSetData [_index, (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _x))];
+		_combo lbSetPicture [_index, (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _x >> "picture"))];
+	} forEach ["Diesel", "SP95", "SP98", "Kerosene", "GPL"];
 
 	(_display displayCtrl 16010) ctrlSetStructuredText parseText format ["<t align='right'>%1</t>", (_station getVariable [(_combo lbData 0), 250])];
 

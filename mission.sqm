@@ -3503,8 +3503,8 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={10024.904,15.383545,10948.963};
-					azimut=-6835.98;
+					position[]={10158.17,55.450321,10707.116};
+					azimut=-7011.5918;
 					id=153;
 					side="CIV";
 					vehicle="Max_pilot_blue";
@@ -3521,7 +3521,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=785;
+		items=793;
 		class Item0
 		{
 			position[]={14231.394,0.13552099,12805.147};
@@ -4984,7 +4984,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir -1170;this setposATL [9546.411133,9870.323242,0];this addAction[""Concessionnaire"",public_fnc_shop_vehicles_open,[""EAST_vehicles_land"", [""EAST_vehicles_land_marker_1""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Ranger son véhicule"",public_fnc_garageVehicleStore,[""Car"", ""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4 '];this addAction[""Garage"",public_fnc_garageGet,""EAST_base"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == EAST'];";
+			init="this enableSimulation false;this allowDamage false;this setdir -1170;this setposATL [9546.411133,9870.323242,0];this addAction[""Concessionnaire"",public_fnc_shop_vehicles_open,[""EAST_vehicles_land"", [""EAST_vehicles_land_marker_1""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Ranger son véhicule"",public_fnc_garageVehicleStore,[""Car"", ""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4 '];this addAction[""Garage"",public_fnc_garageGet,""EAST_base_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == EAST'];";
 		};
 		class Item139
 		{
@@ -5034,7 +5034,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir -1530;this setposATL [8175.8125,7772.532227,0];this setVectorUp [0,0,1]; this addAction[""Concessionnaire"",public_fnc_shop_vehicles_open,[""EAST_vehicles_land"", [""EAST_vehicles_land_marker_2"",""EAST_vehicles_land_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Ranger son véhicule"",public_fnc_garageVehicleStore,[""Car"", ""Truck"", ""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4 '];this addAction[""Garage"",public_fnc_garageGet,""EAST_base"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == EAST']; this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""EAST_vehicles_air"", [""east_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir -1530;this setposATL [8175.8125,7772.532227,0];this setVectorUp [0,0,1]; this addAction[""Concessionnaire"",public_fnc_shop_vehicles_open,[""EAST_vehicles_land"", [""EAST_vehicles_land_marker_2"",""EAST_vehicles_land_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Ranger son véhicule"",public_fnc_garageVehicleStore,[""Car"", ""Truck"", ""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4 '];this addAction[""Garage"",public_fnc_garageGet,""EAST_base_2"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == EAST']; this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""EAST_vehicles_air"", [""east_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item144
 		{
@@ -11284,18 +11284,96 @@ class Mission
 		class Item784
 		{
 			position[]={9771.418,0,11163.741};
-			azimut=0.7891807;
+			azimut=0.78918099;
 			offsetY=3.2;
 			id=938;
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageVehicleStore,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",public_fnc_shop_vehicles_open,[""CIV_vehicles_sea"", [""CIV_vehicles_sea_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",public_fnc_garageGet,""garage_sea_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageVehicleStore,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",public_fnc_shop_vehicles_open,[""CIV_vehicles_sea"", [""CIV_vehicles_sea_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",public_fnc_garageGet,""garage_sea_2"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+		};
+		class Item785
+		{
+			position[]={8286.1846,15.975,9068.5508};
+			azimut=541.21899;
+			id=939;
+			side="EMPTY";
+			vehicle="xcam_InfoStand_V2_F";
+			skill=0.60000002;
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire moto"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_moto"", [""CIV_vehicles_land_moto_marker_1""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+		};
+		class Item786
+		{
+			position[]={8294.2148,15.975,9054.5566};
+			azimut=271.836;
+			id=940;
+			side="EMPTY";
+			vehicle="xcam_Atm_01_F";
+			skill=0.60000002;
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]";
+		};
+		class Item787
+		{
+			position[]={11256.246,24.975,5899.5752};
+			azimut=180;
+			id=941;
+			side="EMPTY";
+			vehicle="xcam_Atm_01_F";
+			skill=0.60000002;
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]";
+		};
+		class Item788
+		{
+			position[]={12347.273,7.9650002,7111.9536};
+			id=942;
+			side="EMPTY";
+			vehicle="xcam_Atm_02_F";
+			skill=0.60000002;
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]";
+		};
+		class Item789
+		{
+			position[]={12744.576,17.151861,8774.6367};
+			azimut=90;
+			id=943;
+			side="EMPTY";
+			vehicle="xcam_Atm_02_F";
+			skill=0.60000002;
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]";
+		};
+		class Item790
+		{
+			position[]={13670.672,21.171574,9289.041};
+			azimut=15;
+			id=944;
+			side="EMPTY";
+			vehicle="xcam_Atm_02_F";
+			skill=0.60000002;
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]";
+		};
+		class Item791
+		{
+			position[]={12484.976,180,14986.211};
+			id=945;
+			side="EMPTY";
+			vehicle="xcam_Atm_02_F";
+			skill=0.60000002;
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]";
+		};
+		class Item792
+		{
+			position[]={17439.928,25.590195,13526.983};
+			azimut=180;
+			id=946;
+			side="EMPTY";
+			vehicle="xcam_Atm_02_F";
+			skill=0.60000002;
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]";
 		};
 	};
 	class Markers
 	{
-		items=147;
+		items=157;
 		class Item0
 		{
 			position[]={10548.405,122.985,9604.9873};
@@ -12427,7 +12505,7 @@ class Mission
 			position[]={10621.927,122.985,9533.6367};
 			name="Poissonerie";
 			text="Poissonerie";
-			type="plp_mark_as_boat";
+			type="plp_mark_as_hardpoint";
 			colorName="ColorGreen";
 			a=0.60000002;
 			b=0.60000002;
@@ -12607,6 +12685,103 @@ class Mission
 			position[]={8199.9258,176.985,7775.9688};
 			name="east_marker_3";
 			type="Empty";
+		};
+		class Item147
+		{
+			position[]={8286.2998,15.975,9068.3584};
+			name="concessionnaire_moto";
+			type="plp_mark_as_motorcycle";
+			colorName="ColorPink";
+			a=0.60000002;
+			b=0.60000002;
+		};
+		class Item148
+		{
+			position[]={8285.9385,15.975,9073.3076};
+			name="CIV_vehicles_land_moto_marker_1";
+			type="Empty";
+		};
+		class Item149
+		{
+			position[]={13190.94,19.485001,8850.6514};
+			name="Marker_frontiere";
+			markerType="RECTANGLE";
+			type="Empty";
+			colorName="ColorRed";
+			fillName="Grid";
+			a=150;
+			b=600;
+			angle=-43.0891;
+		};
+		class Item150
+		{
+			position[]={8294.1123,15.975,9053.9688};
+			name="DAB_1";
+			text="DAB";
+			type="plp_mark_as_flag";
+			colorName="ColorGreen";
+			a=0.60000002;
+			b=0.60000002;
+		};
+		class Item151
+		{
+			position[]={11255.963,24.975,5899.6851};
+			name="DAB_2";
+			text="DAB";
+			type="plp_mark_as_flag";
+			colorName="ColorGreen";
+			a=0.60000002;
+			b=0.60000002;
+		};
+		class Item152
+		{
+			position[]={12347.299,7.9650002,7111.9912};
+			name="DAB_3";
+			text="DAB";
+			type="plp_mark_as_flag";
+			colorName="ColorGreen";
+			a=0.60000002;
+			b=0.60000002;
+		};
+		class Item153
+		{
+			position[]={12744.608,17.152901,8774.5879};
+			name="DAB_4";
+			text="DAB";
+			type="plp_mark_as_flag";
+			colorName="ColorGreen";
+			a=0.60000002;
+			b=0.60000002;
+		};
+		class Item154
+		{
+			position[]={13670.859,21.174431,9288.9141};
+			name="DAB_5";
+			text="DAB";
+			type="plp_mark_as_flag";
+			colorName="ColorGreen";
+			a=0.60000002;
+			b=0.60000002;
+		};
+		class Item155
+		{
+			position[]={12485.125,180,14986.241};
+			name="DAB_6";
+			text="DAB";
+			type="plp_mark_as_flag";
+			colorName="ColorGreen";
+			a=0.60000002;
+			b=0.60000002;
+		};
+		class Item156
+		{
+			position[]={17439.951,25.588022,13527.015};
+			name="DAB_7";
+			text="DAB";
+			type="plp_mark_as_flag";
+			colorName="ColorGreen";
+			a=0.60000002;
+			b=0.60000002;
 		};
 	};
 };

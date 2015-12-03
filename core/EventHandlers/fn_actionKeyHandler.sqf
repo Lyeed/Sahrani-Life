@@ -146,7 +146,7 @@ if ((vehicle player) isEqualTo player) then
 
 				if (typeOf(cursorTarget) in ["Land_FuelStation_Build_F","Land_FuelStation_Shed_F","Land_FuelStation_Feed_F"]) then
 				{
-					[cursorTarget] spawn public_fnc_fuelMenu_open;
+					[] spawn public_fnc_fuelMenu_open;
 					breakOut "main";
 				};
 

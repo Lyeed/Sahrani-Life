@@ -169,6 +169,18 @@ class ALYSIA_SHOPS_VEHICLES
 			"Jonzie_Mini_Cooper"
 		};
 	};
+	class CIV_vehicles_land_moto
+	{
+		name = "Concessionnaire moto";
+		side = "CIV";
+		stock[] =
+		{
+			"max_bike_base",
+			"Mrshounka_ducati_p_base",
+			"Mrshounka_yamaha_p_base"
+			
+		};
+	};
 	class CIV_vehicles_land_normal
 	{
 		name = "Concessionnaire automobiles civil";
