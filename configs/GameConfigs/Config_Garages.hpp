@@ -33,8 +33,7 @@ class Cfg_Garages
 		name = "Garage de la milice";
 		spawns[] = 
 		{
-			"EAST_vehicles_land_marker_1",
-			"east_marker_1"
+			"EAST_vehicles_land_marker_1"
 			
 		};
 		types[] =
@@ -52,7 +51,6 @@ class Cfg_Garages
 		{
 			"EAST_vehicles_land_marker_2",
 			"EAST_vehicles_land_marker_3",
-			"east_marker_2",
 			"east_marker_3"
 			
 		};
@@ -60,6 +58,21 @@ class Cfg_Garages
 		{
 			"Car",
 			"Truck",
+			"Air"
+		};
+	};
+	
+	class EAST_air
+	{
+		name = "Garage de la milice";
+		spawns[] = 
+		{
+			"east_marker_1",
+			"east_marker_2"
+		};
+		types[] =
+		{
+			"Car",
 			"Air"
 		};
 	};

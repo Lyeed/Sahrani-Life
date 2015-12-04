@@ -3521,7 +3521,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=793;
+		items=785;
 		class Item0
 		{
 			position[]={14231.394,0.13552099,12805.147};
@@ -11292,93 +11292,15 @@ class Mission
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageVehicleStore,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",public_fnc_shop_vehicles_open,[""CIV_vehicles_sea"", [""CIV_vehicles_sea_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",public_fnc_garageGet,""garage_sea_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
-		class Item785
-		{
-			position[]={8286.1846,15.975,9068.5508};
-			azimut=541.21899;
-			id=939;
-			side="EMPTY";
-			vehicle="xcam_InfoStand_V2_F";
-			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire moto"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_moto"", [""CIV_vehicles_land_moto_marker_1""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
-		};
-		class Item786
-		{
-			position[]={8294.2148,15.975,9054.5566};
-			azimut=271.836;
-			id=940;
-			side="EMPTY";
-			vehicle="xcam_Atm_01_F";
-			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]";
-		};
-		class Item787
-		{
-			position[]={11256.246,24.975,5899.5752};
-			azimut=180;
-			id=941;
-			side="EMPTY";
-			vehicle="xcam_Atm_01_F";
-			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]";
-		};
-		class Item788
-		{
-			position[]={12347.273,7.9650002,7111.9536};
-			id=942;
-			side="EMPTY";
-			vehicle="xcam_Atm_02_F";
-			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]";
-		};
-		class Item789
-		{
-			position[]={12744.576,17.151861,8774.6367};
-			azimut=90;
-			id=943;
-			side="EMPTY";
-			vehicle="xcam_Atm_02_F";
-			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]";
-		};
-		class Item790
-		{
-			position[]={13670.672,21.171574,9289.041};
-			azimut=15;
-			id=944;
-			side="EMPTY";
-			vehicle="xcam_Atm_02_F";
-			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]";
-		};
-		class Item791
-		{
-			position[]={12484.976,180,14986.211};
-			id=945;
-			side="EMPTY";
-			vehicle="xcam_Atm_02_F";
-			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]";
-		};
-		class Item792
-		{
-			position[]={17439.928,25.590195,13526.983};
-			azimut=180;
-			id=946;
-			side="EMPTY";
-			vehicle="xcam_Atm_02_F";
-			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]";
-		};
 	};
 	class Markers
 	{
-		items=157;
+		items=147;
 		class Item0
 		{
 			position[]={10548.405,122.985,9604.9873};
 			name="Supérette";
-			type="Fett_building";
+			type="plp_mark_as_building";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -11387,7 +11309,7 @@ class Mission
 		{
 			position[]={10772.09,126.79598,9467.5537};
 			name="Concessionnaire d'occasions";
-			type="Fett_quad";
+			type="plp_mark_as_quad";
 			colorName="ColorPink";
 			a=0.60000002;
 			b=0.60000002;
@@ -11396,7 +11318,7 @@ class Mission
 		{
 			position[]={10245.265,123.35083,9307.4023};
 			name="Concessionnaire";
-			type="Fett_vehicle";
+			type="plp_mark_as_vehicle";
 			colorName="ColorPink";
 			a=0.60000002;
 			b=0.60000002;
@@ -11405,7 +11327,7 @@ class Mission
 		{
 			position[]={13719.569,27.580906,10526.789};
 			name="guer_spawn";
-			type="Fett_hospitalA";
+			type="plp_mark_civ_hospitalA";
 			a=0.5;
 			b=0.5;
 		};
@@ -11413,7 +11335,7 @@ class Mission
 		{
 			position[]={10498.299,122.985,9573.9277};
 			name="Quincaillerie";
-			type="Fett_hardpoint";
+			type="plp_mark_as_hardpoint";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -11422,7 +11344,7 @@ class Mission
 		{
 			position[]={10332.433,122.985,9517.0889};
 			name="Garage";
-			type="Fett_bicycle";
+			type="plp_mark_as_bicycle";
 			colorName="ColorPink";
 			a=0.60000002;
 			b=0.60000002;
@@ -11432,7 +11354,7 @@ class Mission
 			position[]={10559.906,122.985,9552.2285};
 			name="DAB";
 			text="DAB";
-			type="Fett_flag";
+			type="plp_mark_as_flag";
 			colorName="ColorGreen";
 			a=0.60000002;
 			b=0.60000002;
@@ -11442,7 +11364,7 @@ class Mission
 			position[]={14744.826,86.784149,13952.325};
 			name="archeologie_1";
 			text="Vestige Archéologique";
-			type="Fett_ruins";
+			type="plp_mark_civ_ruins";
 			colorName="ColorRed";
 			a=0.5;
 			b=0.5;
@@ -11452,7 +11374,7 @@ class Mission
 			position[]={14275.177,39.959999,12409.175};
 			name="Parlement";
 			text="Parlement";
-			type="Fett_ammunition";
+			type="plp_mark_as_ammunition";
 			colorName="ColorBlue";
 			a=0.5;
 			b=0.5;
@@ -11461,7 +11383,7 @@ class Mission
 		{
 			position[]={9815.0059,139.995,9980.4209};
 			name="Concessionaire Aérien";
-			type="Fett_explosives";
+			type="plp_mark_as_explosives";
 			colorName="ColorPink";
 			a=0.60000002;
 			b=0.60000002;
@@ -11470,7 +11392,7 @@ class Mission
 		{
 			position[]={17329.941,13.455,14142.571};
 			name="Concessionaire Poids Lourds";
-			type="Fett_truck";
+			type="plp_mark_as_truck";
 			colorName="ColorPink";
 			a=0.60000002;
 			b=0.60000002;
@@ -11479,7 +11401,7 @@ class Mission
 		{
 			position[]={19223.072,11.97,13924.612};
 			name="Concessionaire Aérien 2";
-			type="Fett_explosives";
+			type="plp_mark_as_explosives";
 			colorName="ColorPink";
 			a=0.60000002;
 			b=0.60000002;
@@ -11488,7 +11410,7 @@ class Mission
 		{
 			position[]={13242.467,13.995,6852.8169};
 			name="Concessionaire Poid Lourd 1";
-			type="Fett_checkpoint";
+			type="plp_mark_as_checkpoint";
 			colorName="ColorPink";
 			a=0.60000002;
 			b=0.60000002;
@@ -11498,7 +11420,7 @@ class Mission
 			position[]={13158.72,25.965,11276.889};
 			name="Marché agricole";
 			text="Marché agricole";
-			type="Fett_canteen";
+			type="plp_mark_as_canteen";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -11508,7 +11430,7 @@ class Mission
 			position[]={13119.393,25.965,11257.05};
 			name="Bergerie";
 			text="Bergerie";
-			type="Fett_animals";
+			type="plp_mark_civ_animals";
 			colorName="ColorYellow";
 			a=0.5;
 			b=0.5;
@@ -11517,7 +11439,7 @@ class Mission
 		{
 			position[]={12520.162,180,14952.712};
 			name="Concesionnaire de luxe";
-			type="Fett_vehicle";
+			type="plp_mark_as_vehicle";
 			colorName="ColorGreen";
 			a=0.60000002;
 			b=0.60000002;
@@ -11527,7 +11449,7 @@ class Mission
 			position[]={16823.605,6.5315208,9461.543};
 			name="salt_1";
 			text="Marais salant";
-			type="Fett_airradar";
+			type="plp_mark_as_airradar";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -11537,7 +11459,7 @@ class Mission
 			position[]={8770.8291,34.965,6283.9785};
 			name="oil_1";
 			text="Puits de pétrole";
-			type="Fett_airport";
+			type="plp_mark_as_airport";
 			colorName="ColorBrown";
 			a=0.60000002;
 			b=0.60000002;
@@ -11547,7 +11469,7 @@ class Mission
 			position[]={13248.781,6.48,9098.0693};
 			name="Commerçant de pétrole";
 			text="Commerçant de pétrole";
-			type="Fett_hardpoint";
+			type="plp_mark_as_hardpoint";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -11557,7 +11479,7 @@ class Mission
 			position[]={14681.518,43.965,10745.329};
 			name="Rafinierie de pétrole";
 			text="Rafinierie de pétrole";
-			type="Fett_industrial";
+			type="plp_mark_as_industrial";
 			colorName="ColorOrange";
 			a=0.5;
 			b=0.5;
@@ -11567,7 +11489,7 @@ class Mission
 			position[]={14348.388,43.236233,12751.479};
 			name="prunes_1";
 			text="Verger de prunes";
-			type="Fett_tree";
+			type="plp_mark_civ_tree";
 			colorName="ColorYellow";
 			a=0.5;
 			b=0.5;
@@ -11577,7 +11499,7 @@ class Mission
 			position[]={13641.244,40.100075,11904.702};
 			name="wheat_1";
 			text="Champ de blé";
-			type="Fett_canteen";
+			type="plp_mark_as_canteen";
 			colorName="ColorYellow";
 			a=0.5;
 			b=0.5;
@@ -11587,7 +11509,7 @@ class Mission
 			position[]={14195.194,23.312876,16216.547};
 			name="wood_1";
 			text="Camp de bûcheron";
-			type="Fett_tree";
+			type="plp_mark_civ_tree";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -11597,7 +11519,7 @@ class Mission
 			position[]={14010.349,26.167707,16553.406};
 			name="Scierie 1";
 			text="Scierie";
-			type="Fett_industrial";
+			type="plp_mark_as_industrial";
 			colorName="ColorOrange";
 			a=0.5;
 			b=0.5;
@@ -11607,7 +11529,7 @@ class Mission
 			position[]={12639.888,180,14976.067};
 			name="Commercant de planche";
 			text="Commercant de planche";
-			type="Fett_commercialzone";
+			type="plp_mark_civ_commercialzone";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -11617,7 +11539,7 @@ class Mission
 			position[]={10116.076,177.4745,13964.351};
 			name="iron_1";
 			text="Mine de Fer";
-			type="Fett_aamissile";
+			type="plp_mark_as_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -11627,7 +11549,7 @@ class Mission
 			position[]={12759.685,43.965,8081.3115};
 			name="Commerçant de fer";
 			text="Commerçant de fer";
-			type="Fett_hardpoint";
+			type="plp_mark_as_hardpoint";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -11637,7 +11559,7 @@ class Mission
 			position[]={15386.115,22.892738,13785.129};
 			name="Traitement de platine";
 			text="Traitement de platine";
-			type="Fett_industrial";
+			type="plp_mark_as_industrial";
 			colorName="ColorOrange";
 			a=0.5;
 			b=0.5;
@@ -11647,7 +11569,7 @@ class Mission
 			position[]={10081.833,124.965,9407.1924};
 			name="Traitement de fer";
 			text="Traitement de fer";
-			type="Fett_industrial";
+			type="plp_mark_as_industrial";
 			colorName="ColorOrange";
 			a=0.5;
 			b=0.5;
@@ -11657,7 +11579,7 @@ class Mission
 			position[]={10064.935,124.965,9389.9063};
 			name="Traitement du cuivre";
 			text="Traitement du cuivre";
-			type="Fett_industrial";
+			type="plp_mark_as_industrial";
 			colorName="ColorOrange";
 			a=0.5;
 			b=0.5;
@@ -11667,7 +11589,7 @@ class Mission
 			position[]={11380.056,116.24154,10069.938};
 			name="copper_1";
 			text="Mine de cuivre";
-			type="Fett_aamissile";
+			type="plp_mark_as_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -11677,7 +11599,7 @@ class Mission
 			position[]={10676.022,150.97501,8989.1025};
 			name="Souflerie";
 			text="Souflerie";
-			type="Fett_industrial";
+			type="plp_mark_as_industrial";
 			colorName="ColorOrange";
 			a=0.5;
 			b=0.5;
@@ -11687,7 +11609,7 @@ class Mission
 			position[]={11662.848,3.9959064,5562.0117};
 			name="sand_1";
 			text="Mine de sable";
-			type="Fett_aamissile";
+			type="plp_mark_as_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -11697,7 +11619,7 @@ class Mission
 			position[]={13723.33,23.963264,8997.585};
 			name="Commerçant de verre";
 			text="Commerçant de verre";
-			type="Fett_hardpoint";
+			type="plp_mark_as_hardpoint";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -11716,7 +11638,7 @@ class Mission
 			position[]={15140.998,155.49858,12316.778};
 			name="coal_1";
 			text="Mine de charbon";
-			type="Fett_aamissile";
+			type="plp_mark_as_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -11726,7 +11648,7 @@ class Mission
 			position[]={13517.138,34.732651,11982.202};
 			name="Bergerie 2";
 			text="Bergerie";
-			type="Fett_animals";
+			type="plp_mark_civ_animals";
 			colorName="ColorYellow";
 			a=0.5;
 			b=0.5;
@@ -11736,7 +11658,7 @@ class Mission
 			position[]={9195.5137,17.978632,5390.5029};
 			name="vignes_1";
 			text="Vignes";
-			type="Fett_tree";
+			type="plp_mark_civ_tree";
 			colorName="ColorYellow";
 			a=0.5;
 			b=0.5;
@@ -11746,7 +11668,7 @@ class Mission
 			position[]={10317.292,158.48711,8785.5742};
 			name="prunes_2";
 			text="Verger de prunes";
-			type="Fett_tree";
+			type="plp_mark_civ_tree";
 			colorName="ColorYellow";
 			a=0.5;
 			b=0.5;
@@ -11755,7 +11677,7 @@ class Mission
 		{
 			position[]={14385.478,39.959999,12613.504};
 			name="Concessionaire";
-			type="Fett_camp";
+			type="plp_mark_as_camp";
 			colorName="ColorPink";
 			a=0.60000002;
 			b=0.60000002;
@@ -11764,7 +11686,7 @@ class Mission
 		{
 			position[]={14245.553,39.853756,12663.372};
 			name="Supérette_2";
-			type="Fett_building";
+			type="plp_mark_as_building";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -11774,7 +11696,7 @@ class Mission
 			position[]={14433.685,39.959999,12498.773};
 			name="Friperie_1";
 			text="Friperie";
-			type="Fett_boat";
+			type="plp_mark_as_boat";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -11784,7 +11706,7 @@ class Mission
 			position[]={11467.626,23.927937,6138.2129};
 			name="Distillerie";
 			text="Distillerie";
-			type="Fett_industrial";
+			type="plp_mark_as_industrial";
 			colorName="ColorYellow";
 			a=0.5;
 			b=0.5;
@@ -11794,7 +11716,7 @@ class Mission
 			position[]={14435.931,26.046333,8524.6885};
 			name="Commerçant d'alcool";
 			text="Commerçant d'alcool";
-			type="Fett_hardpoint";
+			type="plp_mark_as_hardpoint";
 			colorName="ColorRed";
 			a=0.5;
 			b=0.5;
@@ -11804,7 +11726,7 @@ class Mission
 			position[]={7584.5679,39.959999,6622.5693};
 			name="Dealer";
 			text="Dealer";
-			type="Fett_commercialzone";
+			type="plp_mark_civ_commercialzone";
 			colorName="ColorRed";
 			a=0.5;
 			b=0.5;
@@ -11814,7 +11736,7 @@ class Mission
 			position[]={4913.1357,56.970001,15495.626};
 			name="Camp rebelle";
 			text="Camp rebelle";
-			type="Fett_campingsite";
+			type="plp_mark_civ_campingsite";
 			colorName="ColorRed";
 			a=0.5;
 			b=0.5;
@@ -11823,7 +11745,7 @@ class Mission
 		{
 			position[]={9771.9756,0.031102309,11162.753};
 			name="Port";
-			type="Fett_fuel";
+			type="plp_mark_as_fuel";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -11833,7 +11755,7 @@ class Mission
 			position[]={12498.13,30.959999,17650.174};
 			name="gold_1";
 			text="Mine d'or";
-			type="Fett_aamissile";
+			type="plp_mark_as_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -11843,7 +11765,7 @@ class Mission
 			position[]={10675.328,320.50299,8389.918};
 			name="plat_1";
 			text="Mine de platine";
-			type="Fett_aamissile";
+			type="plp_mark_as_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -11853,7 +11775,7 @@ class Mission
 			position[]={12967.824,31.442734,7088.2935};
 			name="baux_1";
 			text="Mine de bauxite";
-			type="Fett_aamissile";
+			type="plp_mark_as_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -11863,7 +11785,7 @@ class Mission
 			position[]={12370.182,180,15003.119};
 			name="Commerçant de cuivre";
 			text="Commerçant de cuivre";
-			type="Fett_shoppingcart";
+			type="plp_mark_civ_shoppingcart";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -11872,7 +11794,7 @@ class Mission
 		{
 			position[]={12289.301,25.799999,6833.1289};
 			name="Station service";
-			type="Fett_maptools";
+			type="plp_mark_as_maptools";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -11881,7 +11803,7 @@ class Mission
 		{
 			position[]={11232.326,24.975,6113.5693};
 			name="Station service2";
-			type="Fett_maptools";
+			type="plp_mark_as_maptools";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -11890,7 +11812,7 @@ class Mission
 		{
 			position[]={9227.4482,45.990002,5839.2383};
 			name="Station service3";
-			type="Fett_maptools";
+			type="plp_mark_as_maptools";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -11899,7 +11821,7 @@ class Mission
 		{
 			position[]={9433.6465,25.695,5187.5381};
 			name="Station service4";
-			type="Fett_maptools";
+			type="plp_mark_as_maptools";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -11908,7 +11830,7 @@ class Mission
 		{
 			position[]={8472.8311,11.520067,9423.0518};
 			name="Station service5";
-			type="Fett_maptools";
+			type="plp_mark_as_maptools";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -11917,7 +11839,7 @@ class Mission
 		{
 			position[]={11756.125,28.378393,10227.328};
 			name="Station service7";
-			type="Fett_maptools";
+			type="plp_mark_as_maptools";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -11926,7 +11848,7 @@ class Mission
 		{
 			position[]={19294.27,11.937893,13879.293};
 			name="Station service8";
-			type="Fett_maptools";
+			type="plp_mark_as_maptools";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -11935,7 +11857,7 @@ class Mission
 		{
 			position[]={14229.809,38.250141,12798.098};
 			name="Station service9";
-			type="Fett_maptools";
+			type="plp_mark_as_maptools";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -11945,7 +11867,7 @@ class Mission
 			position[]={14296.966,39.959999,12586.036};
 			name="bank nord";
 			text="Banque";
-			type="Fett_helicopter";
+			type="plp_mark_as_helicopter";
 			colorName="ColorBlue";
 			a=0.5;
 			b=0.5;
@@ -11955,7 +11877,7 @@ class Mission
 			position[]={14401.581,40.170135,10792.872};
 			name="Vendeur de masque";
 			text="Vendeur de masque";
-			type="Fett_artycannon";
+			type="plp_mark_as_artycannon";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -11965,7 +11887,7 @@ class Mission
 			position[]={7718.9185,22.819887,15800.008};
 			name="Friperie de luxe";
 			text="Friperie de luxe";
-			type="Fett_binoculars";
+			type="plp_mark_as_binoculars";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -11975,7 +11897,7 @@ class Mission
 			position[]={17164.551,13.455,14315.177};
 			name="DAB4";
 			text="DAB";
-			type="Fett_flag";
+			type="plp_mark_as_flag";
 			colorName="ColorGreen";
 			a=0.60000002;
 			b=0.60000002;
@@ -12015,7 +11937,7 @@ class Mission
 			position[]={14204.858,54.990002,11865.687};
 			name="Menuiserie";
 			text="Menuiserie";
-			type="Fett_industrial";
+			type="plp_mark_as_industrial";
 			colorName="ColorOrange";
 			a=0.5;
 			b=0.5;
@@ -12025,7 +11947,7 @@ class Mission
 			position[]={12980.356,3.96,9038.2715};
 			name="Commerçant de meuble";
 			text="Commerçant de meuble";
-			type="Fett_hardpoint";
+			type="plp_mark_as_hardpoint";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -12035,7 +11957,7 @@ class Mission
 			position[]={9788.6592,171.49741,8670.2461};
 			name="Marché agricole 2";
 			text="Marché agricole";
-			type="Fett_canteen";
+			type="plp_mark_as_canteen";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -12045,7 +11967,7 @@ class Mission
 			position[]={13855.685,35.530075,11450.189};
 			name="corn_1";
 			text="Champs de mais";
-			type="Fett_canteen";
+			type="plp_mark_as_canteen";
 			colorName="ColorYellow";
 			a=0.5;
 			b=0.5;
@@ -12090,7 +12012,7 @@ class Mission
 		{
 			position[]={14332.27,39.959999,12604.595};
 			name="Garage_bagongo";
-			type="Fett_bicycle";
+			type="plp_mark_as_bicycle";
 			colorName="ColorPink";
 			a=0.60000002;
 			b=0.60000002;
@@ -12099,7 +12021,7 @@ class Mission
 		{
 			position[]={14218.022,39.959999,12452.239};
 			name="Concess_occas";
-			type="Fett_quad";
+			type="plp_mark_as_quad";
 			colorName="ColorPink";
 			a=0.60000002;
 			b=0.60000002;
@@ -12108,7 +12030,7 @@ class Mission
 		{
 			position[]={13544.882,3.96,8682.4248};
 			name="Port maritime";
-			type="Fett_fuel";
+			type="plp_mark_as_fuel";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -12118,7 +12040,7 @@ class Mission
 			position[]={14966.255,-21.248823,7415.5835};
 			name="shell_1";
 			text="Récolte de coquillage";
-			type="Fett_lake";
+			type="plp_mark_civ_lake";
 			colorName="ColorYellow";
 			a=0.5;
 			b=0.5;
@@ -12128,7 +12050,7 @@ class Mission
 			position[]={7657.9365,0,12549.531};
 			name="fish_1";
 			text="Zone de pêche";
-			type="Fett_lake";
+			type="plp_mark_civ_lake";
 			colorName="ColorYellow";
 			a=0.5;
 			b=0.5;
@@ -12138,7 +12060,7 @@ class Mission
 			position[]={10312.79,147.44421,8926.1875};
 			name="bean_1";
 			text="Champ de haricot";
-			type="Fett_canteen";
+			type="plp_mark_as_canteen";
 			colorName="ColorYellow";
 			a=0.5;
 			b=0.5;
@@ -12148,7 +12070,7 @@ class Mission
 			position[]={9372.7129,165.92883,8368.7891};
 			name="potato_1";
 			text="Champ de patate";
-			type="Fett_canteen";
+			type="plp_mark_as_canteen";
 			colorName="ColorYellow";
 			a=0.5;
 			b=0.5;
@@ -12158,7 +12080,7 @@ class Mission
 			position[]={9549.8643,171.22054,8567.3535};
 			name="cotton_1";
 			text="Champ de coton";
-			type="Fett_canteen";
+			type="plp_mark_as_canteen";
 			colorName="ColorYellow";
 			a=0.5;
 			b=0.5;
@@ -12168,7 +12090,7 @@ class Mission
 			position[]={11552.649,219.20267,9203.002};
 			name="Traitement de coton";
 			text="Traitement de coton";
-			type="Fett_industrial";
+			type="plp_mark_as_industrial";
 			colorName="ColorOrange";
 			a=0.5;
 			b=0.5;
@@ -12178,7 +12100,7 @@ class Mission
 			position[]={14049.339,39.959999,12657.564};
 			name="Fonte de l'or";
 			text="Fonte de l'or";
-			type="Fett_industrial";
+			type="plp_mark_as_industrial";
 			colorName="ColorOrange";
 			a=0.5;
 			b=0.5;
@@ -12188,7 +12110,7 @@ class Mission
 			position[]={12181.312,28.440001,7117.2314};
 			name="Bijoutier";
 			text="Bijoutier";
-			type="Fett_hardpoint";
+			type="plp_mark_as_hardpoint";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -12198,7 +12120,7 @@ class Mission
 			position[]={8962.5508,162,8425.1963};
 			name="Traitement du sel";
 			text="Traitement du sel";
-			type="Fett_industrial";
+			type="plp_mark_as_industrial";
 			colorName="ColorOrange";
 			a=0.5;
 			b=0.5;
@@ -12208,7 +12130,7 @@ class Mission
 			position[]={10438.924,122.985,9452.3877};
 			name="Commerçant de sel";
 			text="Commerçant de sel";
-			type="Fett_hardpoint";
+			type="plp_mark_as_hardpoint";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -12218,7 +12140,7 @@ class Mission
 			position[]={13721.001,26.0168,12775.98};
 			name="clay_1";
 			text="Mine d'argile";
-			type="Fett_aamissile";
+			type="plp_mark_as_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -12228,7 +12150,7 @@ class Mission
 			position[]={12967.765,21.959999,11323.953};
 			name="Poterie";
 			text="Poterie";
-			type="Fett_industrial";
+			type="plp_mark_as_industrial";
 			colorName="ColorOrange";
 			a=0.5;
 			b=0.5;
@@ -12238,7 +12160,7 @@ class Mission
 			position[]={12258.817,18.450001,7170.8872};
 			name="Commerçant de poterie";
 			text="Commerçant de poterie";
-			type="Fett_hardpoint";
+			type="plp_mark_as_hardpoint";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -12247,7 +12169,7 @@ class Mission
 		{
 			position[]={12141.051,25.965,17735.432};
 			name="Prison";
-			type="Fett_handgrenade";
+			type="plp_mark_as_handgrenade";
 			colorName="ColorBlue";
 			a=0.60000002;
 			b=0.60000002;
@@ -12257,7 +12179,7 @@ class Mission
 			position[]={16530.057,12.195,9305.4463};
 			name="Usine de textile";
 			text="Usine de textile";
-			type="Fett_boat";
+			type="plp_mark_as_boat";
 			colorName="ColorYellow";
 			a=0.5;
 			b=0.5;
@@ -12267,7 +12189,7 @@ class Mission
 			position[]={12420.233,188.5,13397.545};
 			name="Traitement de l'aluminium";
 			text="Traitement du bauxite";
-			type="Fett_industrial";
+			type="plp_mark_as_industrial";
 			colorName="ColorOrange";
 			a=0.5;
 			b=0.5;
@@ -12277,7 +12199,7 @@ class Mission
 			position[]={12808.809,19.98,8808.6104};
 			name="Commerçant d'aluminium";
 			text="Commerçant d'aluminium";
-			type="Fett_hardpoint";
+			type="plp_mark_as_hardpoint";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -12295,7 +12217,7 @@ class Mission
 			position[]={1409.8065,-0.00052624318,19610.609};
 			name="Garage légende";
 			text="Garage";
-			type="Fett_storage";
+			type="plp_mark_as_storage";
 			colorName="ColorPink";
 			a=0.60000002;
 			b=0.60000002;
@@ -12305,7 +12227,7 @@ class Mission
 			position[]={1412.4647,0.0009356027,19012.998};
 			name="Quincaillerie légende";
 			text="Quincaillerie";
-			type="Fett_carWorkshop";
+			type="plp_mark_civ_carWorkshop";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -12315,7 +12237,7 @@ class Mission
 			position[]={1399.5253,-0.00028958707,18397.578};
 			name="super légende";
 			text="Superrette";
-			type="Fett_food";
+			type="plp_mark_civ_food";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -12325,7 +12247,7 @@ class Mission
 			position[]={3404.7798,-0.0023825574,19610.758};
 			name="concess";
 			text="Concessionaire";
-			type="Fett_vehicle";
+			type="plp_mark_as_vehicle";
 			colorName="ColorPink";
 			a=0.60000002;
 			b=0.60000002;
@@ -12335,7 +12257,7 @@ class Mission
 			position[]={3409.6763,-0.0004217932,19006.875};
 			name="concess ocass";
 			text="Concessionaire d'occasion";
-			type="Fett_quad";
+			type="plp_mark_as_quad";
 			colorName="ColorPink";
 			a=0.60000002;
 			b=0.60000002;
@@ -12345,7 +12267,7 @@ class Mission
 			position[]={3409.0513,-0.0018609872,18411.902};
 			name="concess pl";
 			text="Concessionaire Poid Lourd";
-			type="Fett_truck";
+			type="plp_mark_as_truck";
 			colorName="ColorPink";
 			a=0.60000002;
 			b=0.60000002;
@@ -12355,7 +12277,7 @@ class Mission
 			position[]={3412.729,0.000901105,17802.482};
 			name="concess luxe";
 			text="Concessionaire de luxe";
-			type="Fett_vehicle";
+			type="plp_mark_as_vehicle";
 			colorName="ColorGreen";
 			a=0.60000002;
 			b=0.60000002;
@@ -12365,7 +12287,7 @@ class Mission
 			position[]={1405.4159,-0.00048951665,17810.385};
 			name="Station service légende";
 			text="Station service";
-			type="Fett_fuelstation";
+			type="plp_mark_civ_fuelstation";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -12375,7 +12297,7 @@ class Mission
 			position[]={9531.2793,139.995,9836.4346};
 			name="Base de la garde";
 			text="Base de la garde";
-			type="Fett_campingsite";
+			type="plp_mark_civ_campingsite";
 			colorName="ColorGrey";
 			a=0.5;
 			b=0.5;
@@ -12384,7 +12306,7 @@ class Mission
 		{
 			position[]={12626.887,67.092461,7493.1602};
 			name="Centre médical";
-			type="Fett_hospitalA";
+			type="plp_mark_civ_hospitalA";
 			a=0.5;
 			b=0.5;
 		};
@@ -12463,7 +12385,7 @@ class Mission
 			position[]={11918.127,153,15357.602};
 			name="Base de la Milice";
 			text="Base de la Milice";
-			type="Fett_camp";
+			type="plp_mark_as_camp";
 			colorName="ColorBlue";
 			a=0.60000002;
 			b=0.60000002;
@@ -12473,7 +12395,7 @@ class Mission
 			position[]={14621.302,44.032402,10572.478};
 			name="Base relais de la milice";
 			text="Base relais de la milice";
-			type="Fett_camp";
+			type="plp_mark_as_camp";
 			colorName="ColorBlue";
 			a=0.5;
 			b=0.5;
@@ -12483,7 +12405,7 @@ class Mission
 			position[]={12362.661,31.995001,8473.5996};
 			name="Base relais de la garde";
 			text="Base relais de la garde";
-			type="Fett_campingsite";
+			type="plp_mark_civ_campingsite";
 			colorName="ColorGrey";
 			a=0.5;
 			b=0.5;
@@ -12505,7 +12427,7 @@ class Mission
 			position[]={10621.927,122.985,9533.6367};
 			name="Poissonerie";
 			text="Poissonerie";
-			type="Fett_boat";
+			type="plp_mark_as_boat";
 			colorName="ColorGreen";
 			a=0.60000002;
 			b=0.60000002;
@@ -12515,7 +12437,7 @@ class Mission
 			position[]={19124.277,11.97,14007.115};
 			name="Vendeur de parachute et parapente";
 			text="Vendeur de parachute et parapente";
-			type="Fett_hardpoint";
+			type="plp_mark_as_hardpoint";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -12549,7 +12471,7 @@ class Mission
 			position[]={8149.7637,176.985,7831.0068};
 			name="Base de la garde_2";
 			text="Base de la garde";
-			type="Fett_campingsite";
+			type="plp_mark_civ_campingsite";
 			colorName="ColorGrey";
 			a=0.5;
 			b=0.5;
@@ -12566,7 +12488,7 @@ class Mission
 			position[]={7579.4585,12.072006,6325.7104};
 			name="Barbier";
 			text="Barbier";
-			type="Fett_electronics";
+			type="plp_mark_as_electronics";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -12576,7 +12498,7 @@ class Mission
 			position[]={10395.749,144.05576,8936.0586};
 			name="fourriere_SOUTH";
 			text="Fourrière";
-			type="Fett_bicycle";
+			type="plp_mark_as_bicycle";
 			colorName="ColorBlue";
 			a=0.60000002;
 			b=0.60000002;
@@ -12586,7 +12508,7 @@ class Mission
 			position[]={13981.523,47.194004,12285.249};
 			name="fourriere_NORTH";
 			text="Fourrière";
-			type="Fett_bicycle";
+			type="plp_mark_as_bicycle";
 			colorName="ColorBlue";
 			a=0.60000002;
 			b=0.60000002;
@@ -12596,7 +12518,7 @@ class Mission
 			position[]={10366.644,122.985,9400.7891};
 			name="Friperie_2";
 			text="Friperie";
-			type="Fett_boat";
+			type="plp_mark_as_boat";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -12606,7 +12528,7 @@ class Mission
 		{
 			position[]={14066.323,39.959999,12509.546};
 			name="Quicaillerie_2";
-			type="Fett_hardpoint";
+			type="plp_mark_as_hardpoint";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -12616,7 +12538,7 @@ class Mission
 			position[]={13490.318,11.97,8747.9395};
 			name="Boutique de plongé";
 			text="Boutique de plongée";
-			type="Fett_aacannon";
+			type="plp_mark_as_aacannon";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -12626,7 +12548,7 @@ class Mission
 			position[]={9694.7285,15.03,11038.732};
 			name="Boutique de plongé_2";
 			text="Boutique de plongé";
-			type="Fett_aacannon";
+			type="plp_mark_as_aacannon";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -12642,7 +12564,7 @@ class Mission
 			position[]={17165.807,13.455,14289.355};
 			name="Commerçant de charbon";
 			text="Commerçant de charbon";
-			type="Fett_hardpoint";
+			type="plp_mark_as_hardpoint";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -12685,103 +12607,6 @@ class Mission
 			position[]={8199.9258,176.985,7775.9688};
 			name="east_marker_3";
 			type="Empty";
-		};
-		class Item147
-		{
-			position[]={8286.2998,15.975,9068.3584};
-			name="concessionnaire_moto";
-			type="Fett_motorcycle";
-			colorName="ColorPink";
-			a=0.60000002;
-			b=0.60000002;
-		};
-		class Item148
-		{
-			position[]={8285.9385,15.975,9073.3076};
-			name="CIV_vehicles_land_moto_marker_1";
-			type="Empty";
-		};
-		class Item149
-		{
-			position[]={13190.94,19.485001,8850.6514};
-			name="Marker_frontiere";
-			markerType="RECTANGLE";
-			type="Empty";
-			colorName="ColorRed";
-			fillName="Grid";
-			a=150;
-			b=600;
-			angle=-43.0891;
-		};
-		class Item150
-		{
-			position[]={8294.1123,15.975,9053.9688};
-			name="DAB_1";
-			text="DAB";
-			type="Fett_flag";
-			colorName="ColorGreen";
-			a=0.60000002;
-			b=0.60000002;
-		};
-		class Item151
-		{
-			position[]={11255.963,24.975,5899.6851};
-			name="DAB_2";
-			text="DAB";
-			type="Fett_flag";
-			colorName="ColorGreen";
-			a=0.60000002;
-			b=0.60000002;
-		};
-		class Item152
-		{
-			position[]={12347.299,7.9650002,7111.9912};
-			name="DAB_3";
-			text="DAB";
-			type="Fett_flag";
-			colorName="ColorGreen";
-			a=0.60000002;
-			b=0.60000002;
-		};
-		class Item153
-		{
-			position[]={12744.608,17.152901,8774.5879};
-			name="DAB_4";
-			text="DAB";
-			type="Fett_flag";
-			colorName="ColorGreen";
-			a=0.60000002;
-			b=0.60000002;
-		};
-		class Item154
-		{
-			position[]={13670.859,21.174431,9288.9141};
-			name="DAB_5";
-			text="DAB";
-			type="Fett_flag";
-			colorName="ColorGreen";
-			a=0.60000002;
-			b=0.60000002;
-		};
-		class Item155
-		{
-			position[]={12485.125,180,14986.241};
-			name="DAB_6";
-			text="DAB";
-			type="Fett_flag";
-			colorName="ColorGreen";
-			a=0.60000002;
-			b=0.60000002;
-		};
-		class Item156
-		{
-			position[]={17439.951,25.588022,13527.015};
-			name="DAB_7";
-			text="DAB";
-			type="Fett_flag";
-			colorName="ColorGreen";
-			a=0.60000002;
-			b=0.60000002;
 		};
 	};
 };
