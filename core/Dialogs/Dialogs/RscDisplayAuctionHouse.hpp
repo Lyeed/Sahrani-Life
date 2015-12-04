@@ -424,7 +424,7 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class ACTION_RECUP_BUTTON: RscButtonSilent
 		{
 			idc = 45626;
-			action = "[] call public_fnc_auctionHouse_action_cancel;";
+			action = "[] spawn public_fnc_auctionHouse_action_cancel;";
 			onMouseEnter = "\
 			ctrlSetText[45625,""\lyeed_IMG\data\auctionHouse\actions\action_recup_select.paa""];\
 			ctrlShow[45623, false];\
@@ -488,7 +488,7 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class ACTION_SELL_BUTTON: RscButtonSilent
 		{
 			idc = 45631;
-			action = "";
+			action = "[] spawn public_fnc_auctionHouse_action_sell;";
 			onMouseEnter = "\
 			ctrlSetText[45630,""\lyeed_IMG\data\auctionHouse\actions\action_buy_select.paa""];\
 			ctrlShow[45628, false];\

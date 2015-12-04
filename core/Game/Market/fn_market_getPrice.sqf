@@ -6,4 +6,4 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-missionNamespace getVariable [(format["market_%1", [_this, 0, "", [""]] call BIS_fnc_param]), 0];
+missionNamespace getVariable [(format["market_%1", ([_this, 0, "", [""]] call BIS_fnc_param)]), 0];

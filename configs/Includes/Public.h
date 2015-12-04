@@ -331,10 +331,12 @@ class Public
 		class auctionHouse_getPlayerData {};
 		class auctionHouse_action_buy {};
 		class auctionHouse_action_cancel {};
+		class auctionHouse_action_sell {};
 		class auctionHouse_receive_buy {};
 		class auctionHouse_receive_money {};
 		class auctionHouse_receive_cancel {};
 		class auctionHouse_addItem {};
+		class auctionHouse_canAdd {};
 	};
 
 	class Arrest

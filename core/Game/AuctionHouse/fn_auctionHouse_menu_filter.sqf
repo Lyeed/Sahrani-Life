@@ -40,7 +40,8 @@ switch (_selected) do
 			+	"L'hôtel des ventes vous permet de vendre vos objets et véhicules à d'autres personnes au prix que vous avez décidé.<br/>"
 			+	"Le Nord et le Sud ne partage pas les même stocks, les prix peuvent donc varier d'une région à l'autre.<br/>"
 			+	"En tant que vendeur, vous n'avez pas besoin d'être présent sur l'île pour recevoir l'argent d'une transaction.<br/>"
-			+	"La commission d'une vente est de 5% à payer lors de la mise en vente."
+			+	"La commission d'une vente est de 5% à payer lors de la mise en vente.<br/>"
+			+	"Vous ne pouvez pas vendre votre sac à dos ou ce qu'il y a dedans."
 			+	"</t>"
 		);
 
@@ -124,6 +125,7 @@ switch (_selected) do
 			_data = [g_AH_type, _x] call public_fnc_auctionHouse_getInfo;
 			_index = _list lbAdd (_data select 0);
 			_list lbSetPicture [_index, (_data select 1)];
+			_list lbSetValue [_index, _forEachIndex];
 			_list lbSetData [_index, _x];
 		} forEach ([g_AH_type] call public_fnc_auctionHouse_getPlayerData);
 
@@ -167,6 +169,7 @@ switch (_selected) do
 				_index = _list lbAdd format["%1 - %2kn", (_data select 0), (_x select 1)];
 				_list lbSetPicture [_index, (_data select 1)];
 				_list lbSetValue [_index, _forEachIndex];
+				_list lbSetData [_index, (_x select 0)];
 			};
 		} forEach ([g_AH_type, g_AH_location] call public_fnc_auctionHouse_getStock);
 		if ((lbSize _list) isEqualTo 0) then {

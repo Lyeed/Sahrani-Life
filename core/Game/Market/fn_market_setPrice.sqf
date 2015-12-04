@@ -6,4 +6,4 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-[(format["market_%1", [_this, 0, "", [""]] call BIS_fnc_param]), [_this, 1, 0, [0]]] call CBA_fnc_publicVariable;
+[(format["market_%1", [_this, 0, "", [""]] call BIS_fnc_param]), ([_this, 1, 1, [1]] call BIS_fnc_param)] call CBA_fnc_publicVariable;

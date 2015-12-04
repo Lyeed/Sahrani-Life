@@ -101,6 +101,7 @@ _radio allowDamage false;
 
 [_lamp, _radio] spawn
 {
+	waitUntil {((missionNamespace getVariable ["g_connected", false]) && (serverTime > 310))};
 	while {true} do
 	{
 		if ((floor(serverTime) % 7) isEqualTo 0) then
