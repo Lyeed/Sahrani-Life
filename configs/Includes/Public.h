@@ -215,10 +215,11 @@ class Public
 	class FuelStations
 	{
 		file = "core\Game\FuelStations";
-		class refuelVehicle {};
 		class fuelMenu_open {};
-		// class fuelMenu_action_refuel {};
 		class fuelMenu_use_refuel_veh {};
+		class refuelVehicle {};
+		class fuelPrice {};
+		//class fuelMenu_action_refuel {};
 		//class fuelMenu_use_refuel_jerry {};
 	};
 

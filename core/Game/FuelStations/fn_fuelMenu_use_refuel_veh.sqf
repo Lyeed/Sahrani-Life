@@ -49,10 +49,13 @@ if (isNil "_typeRefuel") then
 } else {
 	_vehicle = cursorTarget;
 	if (isNil "_typeRefuel") exitWith {};
-	if ((isNull _station) || ((player distance _station) < 10)) exitWith {["Vous êtes trop loin de la pompe à essence."] call public_fnc_error};
 	if (!(_vehicle in g_vehicles)) exitWith {["Vous n'avez pas les clées de ce véhicule."] call public_fnc_error};
-	if (isEngineOn _vehicle) exitWith {["Veuillez couper le moteur du véhicule avant de faire le plein."] call public_fnc_error};
+	if (isEngineOn _vehicle) exitWith {["Veuillez couper le moteur du véhicule."] call public_fnc_error};
 	if ((fuel vehicle player) isEqualTo 1) then {["Le réservoir du véhicule est déjà rempli."] call public_fnc_error};
+	if ((isNull _station) || ((player distance _station) < 10)) exitWith {
+		["Le plein d'essence est annulé."] call public_fnc_error;
+		player setVariable ["typeRefuel", "", false];
+	};
 
 	if (!(createDialog "RscDisplayRefuel")) exitWith {};
 
@@ -88,4 +91,5 @@ if (isNil "_typeRefuel") then
 		sleep 0.1;
 	};
 	[false, _bill, "Station Essence"] call public_fnc_handleATM;
+	player setVariable ["typeRefuel", "", false];
 };

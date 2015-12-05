@@ -82,6 +82,21 @@ if ((vehicle player) isEqualTo player) then
 				{
 					if (alive cursorTarget) then
 					{
+						if (!(player getVariable ["typeRefuel", ""] isEqualTo "")) exitWith
+						{
+							private ["_station"];
+							{
+								if (typeOf _x in ["Land_FuelStation_Build_F","Land_FuelStation_Shed_F","Land_FuelStation_Feed_F"]) then {
+									_station = _x;
+									[_x] spawn public_fnc_fuelMenu_use_refuel_veh;
+								};
+							} forEach nearestObjects [player, [], 10];
+							if (isNull "_station") then {
+								["Vous êtes trop loin de la station essence."] call public_fnc_error;
+								player setVariable ["typeRefuel", "", false];
+							};
+						};
+
 						[cursorTarget] spawn public_fnc_vehicleMenu_open;
 						breakOut "main";
 					};
@@ -146,6 +161,12 @@ if ((vehicle player) isEqualTo player) then
 
 				if (typeOf(cursorTarget) in ["Land_FuelStation_Build_F","Land_FuelStation_Shed_F","Land_FuelStation_Feed_F"]) then
 				{
+					if (!(player getVariable ["typeRefuel", ""] isEqualTo "")) exitWith
+					{
+						["Le plein d'essence est annulé."] call public_fnc_error;
+						player setVariable ["typeRefuel", "", false];
+					};
+
 					[] spawn public_fnc_fuelMenu_open;
 					breakOut "main";
 				};
@@ -169,12 +190,7 @@ if ((vehicle player) isEqualTo player) then
 	if ((_vehicle isKindOf "Car") || (_vehicle isKindOf "Ship") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Truck") || (_vehicle isKindOf "Tank")) then
 	{
 		if ((alive _vehicle) && ((damage _vehicle) < 1)) then
-		{
-			if (!(player getVariable ["typeRefuel", ""] isEqualTo "")) exitWith
-			{
-				[(nearestObject [player, ["Land_FuelStation_Build_F","Land_FuelStation_Shed_F","Land_FuelStation_Feed_F"]])] spawn public_fnc_fuelMenu_use_refuel_veh;
-			};
-			
+		{	
 			[_vehicle] spawn public_fnc_vehicleMenu_open;
 			breakOut "main";
 		};
