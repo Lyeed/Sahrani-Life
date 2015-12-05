@@ -61,7 +61,7 @@ _idc_actual = 5010;
 	};
 } forEach
 ([
-	["use_refuel_veh", "Remplir Véhicule", "[cursorTarget] spawn public_fnc_fuelMenu_use_refuel_veh;", "(player distance _station < 10)"],
+	["use_refuel_veh", "Remplir Véhicule", "[cursorTarget] spawn public_fnc_fuelMenu_use_refuel_veh;", "(player distance cursorTarget < 10)"],
 	["use_refuel_jerry", "Remplir Jerrican", "[cursorTarget] spawn public_fnc_fuelMenu_use_refuel_jerry;", "(""Fuel_E"" in magazines player)"]
 ]);
 
@@ -77,7 +77,7 @@ while {!(isNull _display)} do
 	if (player getVariable ["is_coma", false]) exitWith {
 		closeDialog 0;
 	};
-	if ((player distance _station) > ((((boundingBox _station) select 1) select 0) + 2)) exitWith {
+	if ((player distance cursorTarget) > ((((boundingBox cursorTarget) select 1) select 0) + 2)) exitWith {
 		closeDialog 0;
 	};
 	if (player getVariable ["restrained", false]) exitWith {

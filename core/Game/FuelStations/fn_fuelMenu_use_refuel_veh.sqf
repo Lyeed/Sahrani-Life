@@ -5,6 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+
 private["_station"];
 _station = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 
@@ -21,7 +22,7 @@ _typeRefuel = player getVariable "typeRefuel";
 
 if (isNil "_typeRefuel") then
 {
-	private ["_combo","_index"];
+	private ["_combo","_index","_ressourceName"];
 	if (!(createDialog "RscDisplayFuelStation")) exitWith {};
 
 	disableSerialization;
@@ -30,18 +31,19 @@ if (isNil "_typeRefuel") then
 
 	_combo = (_display displayCtrl 16004);
 	{
-		_index = _combo lbAdd format ["%1", (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _x >> "name"))];
-		_combo lbSetData [_index, (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _x))];
-		_combo lbSetPicture [_index, (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _x >> "picture"))];
-	} forEach ["Diesel", "SP95", "SP98", "Kerosene", "GPL"];
+		_fuelName = configName _x;
+		_index = _combo lbAdd format ["%1", (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuelName >> "name"))];
+		_combo lbSetData [_index, (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuelName))];
+		_combo lbSetPicture [_index, (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuelName >> "picture"))];
+	} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL" >> "fuels"));
 
-	(_display displayCtrl 16010) ctrlSetStructuredText parseText format ["<t align='right'>%1</t>", (_station getVariable [(_combo lbData 0), 250])];
+	(_display displayCtrl 16010) ctrlSetStructuredText parseText format ["<t align='right'>%1L</t>", (_station getVariable [(_combo lbData (lbCurSel _combo)), 250])];
 
-	if ((_station getVariable [(lbCurSel _combo), 0]) > 0) then {(_display displayCtrl 16014) ctrlEnable true} else {(_display displayCtrl 16014) ctrlEnable false};
+	if ((_station getVariable [(_combo lbData (lbCurSel _combo)), 250]) > 0) then {(_display displayCtrl 16014) ctrlEnable true} else {(_display displayCtrl 16014) ctrlEnable false};
 
 	while {dialog} do
 	{
-		(_display displayCtrl 16008) ctrlSetStructuredText parseText format ["<t align='center' size='2'>%1</t>", (getNumber(missionConfigFile) >> "ALYSIA_FUEL" >> "fuels" >> (_combo lbData 0) >> price)];
+		(_display displayCtrl 16008) ctrlSetStructuredText parseText format ["<t align='center' size='2'>%1</t>", [_station, (_combo lbData (lbCurSel _combo))] spawn public_fnc_fuelPrice];
 		sleep 0.5;
 	};
 } else {

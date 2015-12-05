@@ -14,6 +14,6 @@ if (isNull _display) exitWith {};
 
 _combo = (_display displayCtrl 16004);
 
-player setVariable ["typeRefuel", (lbCurSel _combo), false];
+player setVariable ["typeRefuel", (_combo lbData (lbCurSel _combo)), false];
 ["Veuillez maintenant insérer le pistolet dans le réservoir de votre véhicule. Pour annuler, veuillez ranger le pistolet dans la pompe."] call public_fnc_info;
 closeDialog 0;
