@@ -5,13 +5,10 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display", "_ctrl_virtual", "_ctrl_arma"];
-
-if (!params [
-		["_inv_virtual", [], [[]]],
-		["_inv_arma", [], [[]]],
-		["_money", 0, [0]]
-	]) exitWith {};
+private["_display", "_ctrl_virtual", "_ctrl_arma", "_inv_virtual", "_inv_arma", "_money"];
+_inv_virtual = [_this, 0, [], [[]]] call BIS_fnc_param;
+_inv_arma = [_this, 1, [], [[]]] call BIS_fnc_param;
+_money = [_this, 2, 0, [0]] call BIS_fnc_param;
 
 if (!(createDialog "RscDisplayPlayerSearch")) exitWith {};
 

@@ -5,11 +5,9 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-if (!params [
-	["_obj", objNull, [objNull]],
-	["_state", false, [false]]
-]) exitWith {};
+private["_obj", "_state"];
+_obj = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+_state = [_this, 1, false, [false]] call BIS_fnc_param;
 
 if (isNull _obj) exitWith {};
 

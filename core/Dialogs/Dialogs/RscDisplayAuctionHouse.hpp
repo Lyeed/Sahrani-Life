@@ -210,7 +210,7 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class ACTION_BUY_BUTTON: RscButtonSilent
 		{
 			idc = 45613;
-			action = "[] call public_fnc_auctionHouse_action_buy;";
+			action = "[] spawn public_fnc_auctionHouse_action_buy;";
 			onMouseEnter = "\
 			ctrlSetText[45612,""\lyeed_IMG\data\auctionHouse\actions\action_buy_select.paa""];\
 			ctrlShow[45610, false];\

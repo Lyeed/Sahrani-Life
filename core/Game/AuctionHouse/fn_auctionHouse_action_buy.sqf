@@ -36,6 +36,7 @@ if (isNil "_data") then {
 		ctrlShow[45612, false];
 		ctrlShow[45613, false];
 		[g_AH_type, g_AH_location, _data, _index_stock, player] remoteExec ["TON_fnc_auctionHouse_tryBuy", 2];	
+		sleep 1.5;
 	} else {
 		[_handle] call public_fnc_error;
 	};

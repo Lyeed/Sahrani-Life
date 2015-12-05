@@ -5,15 +5,13 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-if (!params [
-	["_action", "", [""]]
-]) exitWith {};
+private["_action"];
+_action = [_this, 0, "", [""]] call BIS_fnc_param;
 
 disableSerialization;
 _display = findDisplay 15000;
 if (isNull _display) then {};
-	
+
 if (!([ctrlText 15019] call public_fnc_isNumber)) exitWith {["Erreur dans le montant"] call public_fnc_error};
 _amount = parseNumber (ctrlText 15019);
 if (_amount <= 0) exitWith {["Erreur dans le montant"] call public_fnc_error};

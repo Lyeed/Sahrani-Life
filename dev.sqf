@@ -1,10 +1,13 @@
-["","","",["NORTH", 0]] call public_fnc_auctionHouse_menu_open
 
 gServer_AH_NORTH_stock_virtual = [["handcuffs", 500, (getPlayerUID player)]];
 publicVariable "gServer_AH_NORTH_stock_virtual";
+["","","",["NORTH", 0]] call public_fnc_auctionHouse_menu_open
+
 
 gServer_AH_NORTH_stock_virtual = [["handcuffs", 500, "123"]];
 publicVariable "gServer_AH_NORTH_stock_virtual";
+["","","",["NORTH", 0]] call public_fnc_auctionHouse_menu_open
+
 
 profileNamespace setVariable ["cba_keybinding_registry", []]; saveProfileNamespace;
 

@@ -5,10 +5,8 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-if (!params [
-		["_marker", "", [""]]
-	]) exitWith {};
+private["_marker"];
+_marker = [_this, 0, "", [""]] call BIS_fnc_param;
 
 if (_marker isEqualTo "") exitWith {};
 

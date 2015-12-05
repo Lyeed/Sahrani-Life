@@ -6,11 +6,7 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (!params [
-		["_side", "", [""]]
-	]) exitWith {};
-
-switch (_side) do
+switch ([_this, 0, "", [""]] call BIS_fnc_param) do
 {
 	case "CIV": {civilian};
 	case "EAST": {east};

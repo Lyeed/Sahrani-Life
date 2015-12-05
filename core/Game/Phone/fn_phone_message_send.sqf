@@ -5,13 +5,10 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_bad", "_from", "_sent", "_price", "_error"];
-
-params [
-	["_msg", "", [""]],
-	["_to", [], [[]]],
-	["_hide", false, [false]]
-] exitWith {};
+private["_bad", "_from", "_sent", "_price", "_error", "_msg", "_to", "_hide"];
+_msg = [_this, 0, "", [""]] call BIS_fnc_param;
+_to = [_this, 1, [], [[]]] call BIS_fnc_param;
+_hide = [_this, 2, false, [false]] call BIS_fnc_param;
 
 if ((time - g_action_delay) < 2) exitWith {[0, "Veuillez ralentir dans vos actions"]};
 if (_msg isEqualTo "") exitWith {[0, "Vous ne pouvez pas envoyer de message vide"]};

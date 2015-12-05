@@ -1,14 +1,12 @@
 /*
-ArmA 3 N'Ziwasogo Life RPG - ALYSIA
-Code written by Devilz80
-@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
-YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
-More informations : https://www.bistudio.com/community/game-content-usage-rules
+		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
+		Code written by Devilz80
+	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
+	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
+	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-if (!params [
-	["_action", "", [""]]
-]) exitWith {};
+private["_action"];
+_action = [_this, 0, "", [""]] call BIS_fnc_param;
 
 disableSerialization;
 _display = findDisplay 15000;

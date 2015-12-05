@@ -5,9 +5,8 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-if (!params [
-	["_unit", objNull, [objNull]]
-]) exitWith {};
+private["_unit"];
+_unit = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 if ((_unit distance (getMarkerPos "civ_spawn_NORTH")) < (_unit distance (getMarkerPos "civ_spawn_SOUTH"))) then {"NORTH"} else {"SOUTH"};
+	

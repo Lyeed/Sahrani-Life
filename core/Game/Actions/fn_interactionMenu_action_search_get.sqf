@@ -5,10 +5,8 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_inv_arma"];
-if (!params [
-		["_from", objNull, [objNull]]
-	]) exitWith {};
+private["_inv_arma", "_from"];
+_from = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 if (isNull _from) exitWith {};
 

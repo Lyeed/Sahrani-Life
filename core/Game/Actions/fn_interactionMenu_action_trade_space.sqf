@@ -5,9 +5,8 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-if (!params [
-		["_inv", [], [[]]]
-	]) exitWith {};
+private["_inv"];
+_inv = [_this, 0, [], [[]]] call BIS_fnc_param;
 
 {
 	[true, (_x select 0), (_x select 1)] call public_fnc_handleInv;

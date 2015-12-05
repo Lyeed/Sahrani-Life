@@ -5,11 +5,9 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-if (!params [
-	["_type", -1, [-1]],
-	["_item", "", [""]]
-]) exitWith {};
+private["_type", "_item"];
+_type = [_this, 0, -1, [-1]] call BIS_fnc_param;
+_item = [_this, 1, "", [""]] call BIS_fnc_param;
 
 if ((_item isEqualTo "") || (_type isEqualTo -1)) exitWith {};
 

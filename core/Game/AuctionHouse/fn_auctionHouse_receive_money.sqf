@@ -5,12 +5,10 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-if (!params [
-	["_type", -1, [-1]],
-	["_item", "", [""]],
-	["_price", 0, [0]]
-]) exitWith {};
+private["_type", "_item", "_price"];
+_type = [_this, 0, -1, [-1]] call BIS_fnc_param;
+_item = [_this, 1, "", [""]] call BIS_fnc_param;
+_price = [_this, 2, 0, [0]] call BIS_fnc_param;
 
 if ((_item isEqualTo "") || (_price isEqualTo 0) || (_type isEqualTo -1)) exitWith {};
 

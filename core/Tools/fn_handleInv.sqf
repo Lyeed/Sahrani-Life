@@ -6,12 +6,9 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private["_math", "_item", "_num", "_weight", "_value", "_return"];
-
-if (!params [
-	["_math", false, [false]],
-	["_item", "", [""]],
-	["_num", 0, [0]]
-]) exitWith {false};
+_math = [_this, 0, false, [false]] call BIS_fnc_param;
+_item = [_this, 1, "", [""]] call BIS_fnc_param;
+_num = [_this, 2, 0, [0]] call BIS_fnc_param;
 
 if ((_item isEqualTo "") || (_num isEqualTo 0)) exitWith {false};
 

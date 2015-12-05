@@ -5,12 +5,10 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
+private["_list", "_sel"];
 disableSerialization;
-if (!params [
-	["_list", controlNull, [controlNull]],
-	["_sel", -1, [-1]]
-]) exitWith {};
+_list = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
+_sel = [_this, 1, -1, [-1]] call BIS_fnc_param;
 
 if ((isNull _list) || (_sel isEqualTo -1)) exitWith {};
 if (g_shop_active) exitWith {};

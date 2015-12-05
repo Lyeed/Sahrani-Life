@@ -5,11 +5,8 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display", "_ctrl"];
-
-if (!params [
-		["_licenses", [], [[]]]
-	]) exitWith {};
+private["_display", "_ctrl", "_licenses"];
+_licenses = [_this, 0, [], [[]]] call BIS_fnc_param;
 
 if (!(createDialog "RscDisplayPlayerRevokeLicense")) exitWith {};
 

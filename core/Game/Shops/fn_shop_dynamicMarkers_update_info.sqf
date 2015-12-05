@@ -5,11 +5,8 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display", "_price"];
-
-if (!params [
-		["_sel", -1, [-1]]
-	]) exitWith {};
+private["_display", "_price", "_sel"];
+_sel = [_this, 0, -1, [-1]] call BIS_fnc_param;
 
 if (_sel isEqualTo -1) exitWith {};
 

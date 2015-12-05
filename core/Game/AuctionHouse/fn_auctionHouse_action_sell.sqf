@@ -88,7 +88,7 @@ if (_action) then
 	};
 	if (_condition) then
 	{
-		[g_AH_type, g_AH_location, _item, _price, (getPlayerUID player), _vehicle] remoteExec ["TON_fnc_auctionHouse_tryBuy", 2];
+		[g_AH_type, g_AH_location, _item, _price, player, _vehicle] remoteExec ["TON_fnc_auctionHouse_add", 2];
 		[false, _cost] call public_fnc_handleCash;
 		[format
 			[

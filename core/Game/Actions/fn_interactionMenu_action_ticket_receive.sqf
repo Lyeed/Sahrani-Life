@@ -5,13 +5,10 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_action", "_side"];
-
-if (!params [
-	["_price", 0, [0]],
-	["_desc", "", [""]],
-	["_from", objNull, [objNull]]
-]) exitWith {};
+private["_action", "_side", "_price", "_desc", "_from"];
+_price = [_this, 0, 0, [0]] call BIS_fnc_param;
+_desc = [_this, 1, "", [""]] call BIS_fnc_param;
+_from = [_this, 2, objNull, [objNull]] call BIS_fnc_param;
 
 if (isNull _from) exitWith {};
 

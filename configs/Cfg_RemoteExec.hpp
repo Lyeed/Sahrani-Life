@@ -85,7 +85,7 @@ class CfgRemoteExec
 		//- AH
 		class public_fnc_auctionHouse_receive_money {allowTargets = CLIENT;};
 		class public_fnc_auctionHouse_receive_buy {allowTargets = CLIENT;};
-		class public_fnc_auctionHouse_receive_cancel {allowTargets = CLIENT};
+		class public_fnc_auctionHouse_receive_cancel {allowTargets = CLIENT;};
 		//- Housing
 		class public_fnc_house_menu_owner_action_light_update {allowTargets = CLIENT;};
 		//- dynamicMarkers

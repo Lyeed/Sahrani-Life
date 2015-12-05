@@ -5,12 +5,10 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-params [
-	["_bank", ObjNull, [ObjNull]],
-	["_door", "", [""]],
-	["_tool", ObjNull, [ObjNull]]
-];
+private["_bank", "_door", "_tool"];
+_bank = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
+_door = [_this, 1, "", [""]] call BIS_fnc_param;
+_tool = [_this, 2, ObjNull, [ObjNull]] call BIS_fnc_param;
 
 if (_door isEqualTo "") then
 {

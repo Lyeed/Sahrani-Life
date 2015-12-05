@@ -5,12 +5,10 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-if (!params [
-	["_inv", [], [[]]],
-	["_keys", [], [[]]],
-	["_money", 0, [0]]
-]) exitWith {};
+private["_inv", "_keys", "_money"];
+_inv = [_this, 0, [], [[]]] call BIS_fnc_param;
+_keys = [_this, 1, [], [[]]] call BIS_fnc_param;
+_money = [_this, 2, 0, [0]] call BIS_fnc_param;
 
 [true, _money] call public_fnc_handleCash;
 

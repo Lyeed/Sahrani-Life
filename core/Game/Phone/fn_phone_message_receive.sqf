@@ -5,11 +5,9 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-if (!params [
-	["_msg", "", [""]],
-	["_from", "", [""]]
-]) exitWith {};
+private["_msg", "_from"];
+_msg = [_this, 0, "", [""]] call BIS_fnc_param;
+_from = [_this, 1, "", [""]] call BIS_fnc_param;
 
 if ((_msg isEqualTo "") || (_from isEqualTo "")) exitWith {};
 if (!g_connected) exitWith {};

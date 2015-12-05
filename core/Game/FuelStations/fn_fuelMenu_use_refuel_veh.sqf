@@ -5,10 +5,10 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+private["_station"];
+_station = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 
-if (!params [
-	["_station", ObjNull, [ObjNull]]
-]) exitWith {};
+if (isNull _station) exitWith {};
 
 if (dialog) then
 {
