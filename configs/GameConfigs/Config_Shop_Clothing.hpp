@@ -287,7 +287,8 @@ class ALYSIA_SHOPS_CLOTHING
 		};
 		headgear[] =
 		{
-			"Skyline_Army_PatroopLevel"
+			"Skyline_Army_PatroopLevel",
+			"H_Beret_blk"
 		};
 		goggles[] =
 		{
