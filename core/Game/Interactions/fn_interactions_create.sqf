@@ -6,7 +6,7 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private["_target", "_path", "_array", "_display", "_idc_actual", "_title"];
-_target = [_this, 0, [objNull], [objNull]] call BIS_fnc_param;
+_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _path = [_this, 1, "", [""]] call BIS_fnc_param;//must be folder name inside lyeed_IMG\data\interactions\ with images defined as action_%1 and action_%1_select
 _array = [_this, 2, [], [[]]] call BIS_fnc_param;
 _title = [_this, 3, "", [""]] call BIS_fnc_param;

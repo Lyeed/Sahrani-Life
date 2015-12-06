@@ -7,7 +7,7 @@
 */
 
 [
-	[_this, 0, [objNull], [objNull]] call BIS_fnc_param,
+	[_this, 0, objNull, [objNull]] call BIS_fnc_param,
 	"player_to_player_coma",
 	[
 		["massage", "Stabiliser", "[g_interaction_target, 'main'] spawn public_fnc_massageCardiaque;", "true"],

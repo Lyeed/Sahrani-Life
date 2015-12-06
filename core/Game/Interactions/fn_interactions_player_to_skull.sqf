@@ -7,7 +7,7 @@
 */
 
 [
-	[_this, 0, [objNull], [objNull]] call BIS_fnc_param,
+	[_this, 0, objNull, [objNull]] call BIS_fnc_param,
 	"player_to_skull",
 	[
 		["search", "Fouiller", "[] spawn public_fnc_skullMenu_search_open;", "true"],

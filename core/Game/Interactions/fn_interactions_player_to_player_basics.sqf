@@ -7,7 +7,7 @@
 */
 
 [
-	[_this, 0, [objNull], [objNull]] call BIS_fnc_param,
+	[_this, 0, objNull, [objNull]] call BIS_fnc_param,
 	"player_to_player_basics",
 	[
 		["identity", "Carte d'identité", "[] call public_fnc_interactionMenu_action_identity;", "((getText(missionConfigFile >> 'ALYSIA_FACTIONS' >> str(playerSide) >> 'identity_item') != '') || (getText(missionConfigFile >> 'ALYSIA_FACTIONS' >> str(playerSide) >> 'identity_item') in (magazines player)))"],
