@@ -74,7 +74,7 @@ if ((vehicle player) isEqualTo player) then
 
 				if ((vehicle cursorTarget) isEqualTo cursorTarget) then
 				{
-					[cursorTarget] spawn public_fnc_interactionMenu_open;
+					[cursorTarget] call public_fnc_interactions_player_to_player_basics;
 					breakOut "main";
 				};
 			} else {
@@ -82,14 +82,14 @@ if ((vehicle player) isEqualTo player) then
 				{
 					if (alive cursorTarget) then
 					{
-						[cursorTarget] spawn public_fnc_vehicleMenu_open;
+						[cursorTarget] call public_fnc_interactions_player_to_vehicle;
 						breakOut "main";
 					};
 				};
 
 				if (typeof(cursorTarget) isEqualTo "Land_HumanSkull_F") then
 				{
-					[cursorTarget] spawn public_fnc_skullMenu_open;
+					[cursorTarget] call public_fnc_interactions_player_to_skull;
 					breakOut "main";
 				};
 
@@ -174,8 +174,8 @@ if ((vehicle player) isEqualTo player) then
 			{
 				[(nearestObject [player, ["Land_FuelStation_Build_F","Land_FuelStation_Shed_F","Land_FuelStation_Feed_F"]])] spawn public_fnc_fuelMenu_use_refuel_veh;
 			};
-			
-			[_vehicle] spawn public_fnc_vehicleMenu_open;
+
+			[_vehicle] call public_fnc_interactions_player_to_vehicle;
 			breakOut "main";
 		};
 	};

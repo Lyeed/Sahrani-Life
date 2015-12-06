@@ -9,7 +9,7 @@ private["_action", "_text", "_from", "_inv", "_keys", "_money"];
 _from = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _inv = [_this, 1, [], [[]]] call BIS_fnc_param;
 _keys = [_this, 2, [], [[]]] call BIS_fnc_param;
-_money = [_this, 2, 0, [0]] call BIS_fnc_param;
+_money = [_this, 3, 0, [0]] call BIS_fnc_param;
 
 if (isNull _from) exitWith {};
 

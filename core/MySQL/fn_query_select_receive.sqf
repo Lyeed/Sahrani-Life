@@ -149,7 +149,7 @@ g_houses = _houses;
 	_marker = createMarkerLocal [format["house_%1", (_forEachIndex + 1)], (getPosATL _x)];
 	_marker setMarkerTextLocal "Chez vous";
 	_marker setMarkerColorLocal "ColorPink";
-	_marker setMarkerTypeLocal "plp_mark_as_house";
+	_marker setMarkerTypeLocal "Fett_house";
 	_marker setMarkerSizeLocal [0.6, 0.6];
 } forEach (g_houses);
 

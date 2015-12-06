@@ -158,7 +158,6 @@ class Public
 	class Skull
 	{
 		file = "core\Game\Skull";
-		class skullMenu_open {};
 		class skullMenu_search_open {};
 		class skullMenu_search_update {};
 		class skullMenu_search_take {};
@@ -199,7 +198,6 @@ class Public
 		class clearVehicleAmmo {};
 		class vehicleMenu_flip {};
 		class vehicleMenu_key {};
-		class vehicleMenu_open {};
 		class vehicleMenu_owner {};
 		class vehicleMenu_refuel {};
 		class vehicleMenu_repair_action {};
@@ -227,8 +225,6 @@ class Public
 		file = "core\Game\Housing";
 		class house_menu_handler {};
 		class house_menu_open_buy {};
-		class house_menu_open_owner {};
-		class house_menu_open_search {};
 		class house_menu_action_sell {};
 		class house_menu_action_light {};
 		class house_menu_action_light_update {};
@@ -375,10 +371,22 @@ class Public
 		class adminHvStatus {};
 	};
 
+	class Interactions
+	{
+		file = "core\Game\Interactions";
+		class interactions_create {};
+		class interactions_recall {};
+		class interactions_player_to_player_basics {};
+		class interactions_player_to_player_coma {};
+		class interactions_player_to_skull {};
+		class interactions_player_to_vehicle {};
+		class interactions_player_to_house_search {};
+		class interactions_player_to_house_owner {};
+	};
+
 	class Actions
 	{
 		file = "core\Game\Actions";
-		class interactionMenu_open {};
 		class interactionMenu_action_restrain {};
 		class interactionMenu_action_unrestrain {};
 		class interactionMenu_action_escort {};

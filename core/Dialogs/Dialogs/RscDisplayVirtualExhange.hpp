@@ -432,7 +432,7 @@ class RscDisplayVirtualExhange: default_base_dialog
 		class BACK_BUTTON: RscButtonSilent
 		{
 			idc = 521;
-			action = "[g_interaction_target] spawn public_fnc_vehicleMenu_open;";
+			action = "[] call public_fnc_interactions_recall;";
 			tooltip = "Retour";
 			onMouseEnter = "ctrlSetText[516,""\lyeed_IMG\data\vehicle\back_select.paa""];";
 			onMouseExit = "ctrlSetText[516,""\lyeed_IMG\data\vehicle\back.paa""];";
