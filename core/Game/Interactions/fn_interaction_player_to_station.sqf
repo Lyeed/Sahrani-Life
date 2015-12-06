@@ -17,5 +17,6 @@ if (isNull _target) exitWith {};
 	[
 		["refuel_veh", "Plein Véhicule", "[cursorTarget] spawn public_fnc_fuelMenu_use_refuel_veh;", "(player distance cursorTarget < 10)"],
 		["refuel_jerry", "Plein Jerrican", "[cursorTarget] spawn public_fnc_fuelMenu_use_refuel_jerry;", "(""Fuel_E"" in magazines player)"]
+	],
 	"Station Essence"
 ] spawn public_fnc_interactions_create;
