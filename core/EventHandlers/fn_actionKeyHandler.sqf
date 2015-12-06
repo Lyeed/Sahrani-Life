@@ -6,10 +6,7 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (g_action_inUse || 
-	(player getVariable ["surrender", false]) ||
-	dialog
-) exitWith {};
+if (g_action_inUse || dialog) exitWith {};
 
 scopeName "main";
 
@@ -69,6 +66,7 @@ if ((vehicle player) isEqualTo player) then
 			{
 				if (player getVariable ["is_coma", false]) then
 				{
+					[cursorTarget] call public_fnc_interactions_player_to_player_coma;
 					breakOut "main";
 				};
 
@@ -82,27 +80,26 @@ if ((vehicle player) isEqualTo player) then
 				{
 					if (alive cursorTarget) then
 					{
-<<<<<<< HEAD
-						if (!(player getVariable ["typeRefuel", ""] isEqualTo "")) exitWith
+						if (player getVariable ["typeRefuel", ""] isEqualTo "") then
 						{
+							[cursorTarget] call public_fnc_interactions_player_to_vehicle;
+							breakOut "main";
+						} else {
 							private ["_station"];
 							{
-								if (typeOf _x in ["Land_FuelStation_Build_F","Land_FuelStation_Shed_F","Land_FuelStation_Feed_F"]) then {
+								if (typeOf _x in ["Land_FuelStation_Build_F", "Land_FuelStation_Shed_F", "Land_FuelStation_Feed_F"]) exitWith {
 									_station = _x;
-									[_x] spawn public_fnc_fuelMenu_use_refuel_veh;
 								};
 							} forEach nearestObjects [player, [], 10];
-							if (isNull "_station") then {
+							if (isNil "_station") then
+							{
 								["Vous êtes trop loin de la station essence."] call public_fnc_error;
 								player setVariable ["typeRefuel", "", false];
+							} else {
+								[_station] spawn public_fnc_fuelMenu_use_refuel_veh;
 							};
+							breakOut "main";
 						};
-
-						[cursorTarget] spawn public_fnc_vehicleMenu_open;
-=======
-						[cursorTarget] call public_fnc_interactions_player_to_vehicle;
->>>>>>> 49785a5cf84ca678da0a510a11492119885174f2
-						breakOut "main";
 					};
 				};
 
@@ -194,18 +191,8 @@ if ((vehicle player) isEqualTo player) then
 	if ((_vehicle isKindOf "Car") || (_vehicle isKindOf "Ship") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Truck") || (_vehicle isKindOf "Tank")) then
 	{
 		if ((alive _vehicle) && ((damage _vehicle) < 1)) then
-<<<<<<< HEAD
-		{	
-			[_vehicle] spawn public_fnc_vehicleMenu_open;
-=======
 		{
-			if (!(player getVariable ["typeRefuel", ""] isEqualTo "")) exitWith
-			{
-				[(nearestObject [player, ["Land_FuelStation_Build_F","Land_FuelStation_Shed_F","Land_FuelStation_Feed_F"]])] spawn public_fnc_fuelMenu_use_refuel_veh;
-			};
-
 			[_vehicle] call public_fnc_interactions_player_to_vehicle;
->>>>>>> 49785a5cf84ca678da0a510a11492119885174f2
 			breakOut "main";
 		};
 	};
