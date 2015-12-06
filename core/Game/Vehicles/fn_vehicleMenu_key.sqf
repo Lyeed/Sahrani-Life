@@ -36,7 +36,7 @@ if (_lock) then
 			[g_interaction_target, 2] remoteExecCall ["lock", g_interaction_target, false];
 		};
 		[g_interaction_target, "car_lock", 50] call CBA_fnc_globalSay3d;
-		[g_interaction_target] spawn public_fnc_vehicleMenu_open;
+		[] call public_fnc_interactions_recall;
 	} else {
 		systemChat "<MENU VEHICULE> Véhicule déjà verrouillé";
 	};
@@ -59,7 +59,7 @@ if (_lock) then
 			[g_interaction_target, 0] remoteExecCall ["lock", g_interaction_target, false];
 		};
 		[g_interaction_target, "car_open", 50] call CBA_fnc_globalSay3d;
-		[g_interaction_target] spawn public_fnc_vehicleMenu_open;
+		[] call public_fnc_interactions_recall;
 	} else {
 		systemChat "<MENU VEHICULE> Véhicule déjà déverrouillé";
 	};

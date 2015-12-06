@@ -17,13 +17,13 @@ if (g_interaction_target in g_houses) then {
 } else {
 	if ((g_interaction_target getVariable ["house_owner", []]) isEqualTo []) then {
 		if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_HOUSES" >> (typeOf g_interaction_target) >> "sides")) then {
-			[] call public_fnc_house_menu_open_buy;
+			[g_interaction_target] call public_fnc_interactions_player_to_house_owner;
 		} else {
 			["Vous n'êtes pas autorisé à acheter ce type de bâtiment"] call public_fnc_info;
 		};
 	} else {
 		if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "house_can_search") isEqualTo 1) then {
-			[] call public_fnc_house_menu_open_search;
+			[g_interaction_target] call public_fnc_interactions_player_to_house_search;
 		} else {
 			["Ce bâtiment n'est pas en vente"] call public_fnc_error;
 		};

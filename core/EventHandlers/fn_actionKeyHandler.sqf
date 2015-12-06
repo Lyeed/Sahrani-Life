@@ -74,7 +74,7 @@ if ((vehicle player) isEqualTo player) then
 
 				if ((vehicle cursorTarget) isEqualTo cursorTarget) then
 				{
-					[cursorTarget] spawn public_fnc_interactionMenu_open;
+					[cursorTarget] call public_fnc_interactions_player_to_player_basics;
 					breakOut "main";
 				};
 			} else {
@@ -82,6 +82,7 @@ if ((vehicle player) isEqualTo player) then
 				{
 					if (alive cursorTarget) then
 					{
+<<<<<<< HEAD
 						if (!(player getVariable ["typeRefuel", ""] isEqualTo "")) exitWith
 						{
 							private ["_station"];
@@ -98,13 +99,16 @@ if ((vehicle player) isEqualTo player) then
 						};
 
 						[cursorTarget] spawn public_fnc_vehicleMenu_open;
+=======
+						[cursorTarget] call public_fnc_interactions_player_to_vehicle;
+>>>>>>> 49785a5cf84ca678da0a510a11492119885174f2
 						breakOut "main";
 					};
 				};
 
 				if (typeof(cursorTarget) isEqualTo "Land_HumanSkull_F") then
 				{
-					[cursorTarget] spawn public_fnc_skullMenu_open;
+					[cursorTarget] call public_fnc_interactions_player_to_skull;
 					breakOut "main";
 				};
 
@@ -190,8 +194,18 @@ if ((vehicle player) isEqualTo player) then
 	if ((_vehicle isKindOf "Car") || (_vehicle isKindOf "Ship") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Truck") || (_vehicle isKindOf "Tank")) then
 	{
 		if ((alive _vehicle) && ((damage _vehicle) < 1)) then
+<<<<<<< HEAD
 		{	
 			[_vehicle] spawn public_fnc_vehicleMenu_open;
+=======
+		{
+			if (!(player getVariable ["typeRefuel", ""] isEqualTo "")) exitWith
+			{
+				[(nearestObject [player, ["Land_FuelStation_Build_F","Land_FuelStation_Shed_F","Land_FuelStation_Feed_F"]])] spawn public_fnc_fuelMenu_use_refuel_veh;
+			};
+
+			[_vehicle] call public_fnc_interactions_player_to_vehicle;
+>>>>>>> 49785a5cf84ca678da0a510a11492119885174f2
 			breakOut "main";
 		};
 	};

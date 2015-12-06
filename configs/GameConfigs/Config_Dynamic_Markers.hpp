@@ -60,3 +60,5 @@ class ALYSIA_DYN_MARKERS
 		shop_price   = 8000;
 	};
 };
+
+#undef G_POS
