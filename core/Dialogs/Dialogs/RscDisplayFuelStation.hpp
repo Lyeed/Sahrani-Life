@@ -156,7 +156,6 @@
 			y = 0.500926 * safezoneH + safezoneY;
 			w = 0.0464063 * safezoneW;
 			h = 0.022 * safezoneH;
-			colorBackground[] = {0,0,0,0};
 		};
 	};
 };

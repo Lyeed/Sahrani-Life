@@ -213,10 +213,10 @@ class Public
 	class FuelStations
 	{
 		file = "core\Game\FuelStations";
-		class refuelVehicle {};
-		class fuelMenu_open {};
-		// class fuelMenu_action_refuel {};
 		class fuelMenu_use_refuel_veh {};
+		class refuelVehicle {};
+		class fuelPrice {};
+		//class fuelMenu_action_refuel {};
 		//class fuelMenu_use_refuel_jerry {};
 	};
 
@@ -382,6 +382,7 @@ class Public
 		class interactions_player_to_vehicle {};
 		class interactions_player_to_house_search {};
 		class interactions_player_to_house_owner {};
+		class interactions_player_to_station {};
 	};
 
 	class Actions
