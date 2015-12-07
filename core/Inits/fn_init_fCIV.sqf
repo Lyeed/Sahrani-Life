@@ -12,12 +12,6 @@ if ((((call g_EASTLevel) > 0) || ((call g_WESTLevel) > 0) || ((call g_GUERLevel)
 	false;
 };
 
-if ((missionNamespace getVariable["license_rebel2", false]) && ((call g_REBLevel) != 2)) then 
-{
-	["Vous avez perdu votre licence rebelle supérieur car vous ne possedez plus l'accréditation<br/><br/>"] call public_fnc_info;
-	missionNamespace setVariable["license_rebel2", false];
-};
-
 if (g_launder > 0) then
 {
 	[] spawn

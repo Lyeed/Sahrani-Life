@@ -344,7 +344,7 @@ class PHONE_MESSAGE_SEND_MESSAGE_HEADER : Life_RscStructuredText
 	w = 0.252656 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_MESSAGE_SEND_MESSAGE_INFO : Life_RscEdit
+class PHONE_MESSAGE_SEND_MESSAGE_INFO : RscEdit
 {
 	idc = PHONE_MESSAGE_SEND_MESSAGE_INFO_IDC;
 	text = "";
@@ -368,7 +368,7 @@ class PHONE_MESSAGE_SEND_NUMBER_HEADER : Life_RscStructuredText
 	w = 0.252656 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_MESSAGE_SEND_NUMBER_INFO : Life_RscEdit
+class PHONE_MESSAGE_SEND_NUMBER_INFO : RscEdit
 {
 	idc = PHONE_MESSAGE_SEND_NUMBER_INFO_IDC;
 	text = "";
@@ -529,7 +529,7 @@ class PHONE_SETTING_RING_LIST: Life_RscListBox
 	w = 0.195937 * safezoneW;
 	h = 0.209 * safezoneH;
 };
-class PHONE_SETTING_RING_FRAME: Life_RscFrame
+class PHONE_SETTING_RING_FRAME: RscFrame
 {
 	idc = PHONE_SETTING_RING_FRAME_IDC;
 	colorText[] = {0,0,0,0.8};
@@ -634,7 +634,7 @@ class PHONE_SETTINGS_SILENT_CHECK: RscCheckBox
 	w = 0.020625 * safezoneW;
 	h = 0.033 * safezoneH;
 };
-class PHONE_SETTINGS_SILENT_FRAME: Life_RscFrame
+class PHONE_SETTINGS_SILENT_FRAME: RscFrame
 {
 	idc = PHONE_SETTINGS_SILENT_FRAME_IDC;
 	colorText[] = {0,0,0,0.8};
@@ -838,7 +838,7 @@ class PHONE_CONTACTS_ADD_NUMBER_HEADER : Life_RscStructuredText
 	w = 0.0721875 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_CONTACTS_ADD_NUMBER_INFO : Life_RscEdit
+class PHONE_CONTACTS_ADD_NUMBER_INFO : RscEdit
 {
 	idc = PHONE_CONTACTS_ADD_NUMBER_INFO_IDC;
 	colorBackground[] = {0,0,0,0.6};
@@ -861,7 +861,7 @@ class PHONE_CONTACTS_ADD_NAME_HEADER : Life_RscStructuredText
 	w = 0.0721875 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_CONTACTS_ADD_NAME_INFO : Life_RscEdit
+class PHONE_CONTACTS_ADD_NAME_INFO : RscEdit
 {
 	idc = PHONE_CONTACTS_ADD_NAME_INFO_IDC;
 	colorBackground[] = {0,0,0,0.6};

@@ -43,11 +43,14 @@ switch (_type) do
 	case 2:
 	{
 		{
-			if ((player distance _x) < 20) then
+			if (alive _x) then
 			{
-				(((_x getVariable ["info", [""]]) select 0) isEqualTo (getPlayerUID player)) then
+				if ((player distance _x) < 20) then
 				{
-					_ret pushBack (typeOf _x);
+					if (((_x getVariable ["info", [""]]) select 0) isEqualTo (getPlayerUID player)) then
+					{
+						_ret pushBack (typeOf _x);
+					};
 				};
 			};
 		} forEach g_vehicles;

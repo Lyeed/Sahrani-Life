@@ -178,17 +178,20 @@ class Public
 		file = "core\Game\Garage";
 		class garageGet {};
 		class garageOpen {};
-		class garageVehicleSelect {};
 		class garageTypeSelect {};
-		class garageVehicleStore {};
-		class garageVehicleGet {};
-		class garageVehicleFind {};
-		class garageVehicleRefuel {};
-		class garageVehicleImport {};
-		class garageVehicleSell {};
 		class garageVehicleAssure {};
-		class garageVehicleRenameStart {};
+		class garageVehicleFind {};
+		class garageVehicleGet {};
+		class garageVehicleImport {};
+		class garageVehicleRefuel {};
 		class garageVehicleRenameProcess {};
+		class garageVehicleRenameStart {};
+		class garageVehicleSelect {};
+		class garageVehicleSell {};
+		class garageVehicleStore {};
+		class garageStoreOpen {};
+		class garageStoreUpdate {};
+		class garageStoreAction {};
 	};
 
 	class Vehicles

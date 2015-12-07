@@ -17,7 +17,7 @@ class RscCheckBox
 	y = "0.36 * safezoneH + safezoneY";
 	w = "0.025 * safezoneW";
 	h = "0.04 * safezoneH";
-	color[] = {1, 1, 1, 0.7};
+	color[] = {1, 1, 1, 1};
 	colorFocused[] = {1, 1, 1, 1};
 	colorHover[] = {1, 1, 1, 1};
 	colorPressed[] = {1, 1, 1, 1};
@@ -45,103 +45,28 @@ class RscCheckBox
 	soundClick[] = {"", 0.1, 1};
 	soundEscape[] = {"", 0.1, 1};
 };
-class Life_RscCheckBox : RscCheckBox {};
-class Life_CheckBox : RscCheckBox {};
 
-class Life_RscScrollBar
+class RscScrollBar
 {
-	color[] = {1,1,1,0.6};
-	colorActive[] = {1,1,1,1};
-	colorDisabled[] = {1,1,1,0.3};
-	thumb = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
-	arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
-	arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
-	border = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
-	shadow = 0;
-	scrollSpeed = 0.06;
-	width = 0;
-	height = 0;
+	shadow            = 0;
+	scrollSpeed       = 0.06;
+	width             = 0;
+	height            = 0;
+
+	color[]           = {1,1,1,0.6};
+	colorActive[]     = {1,1,1,1};
+	colorDisabled[]   = {1,1,1,0.3};
+	
+	thumb             = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
+	arrowEmpty        = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+	arrowFull         = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+	border            = "\A3\ui_f\data\gui\cfg\scrollbar\border_ca.paa";
+
 	autoScrollEnabled = 1;
-	autoScrollSpeed = -1;
-	autoScrollDelay = 5;
-	autoScrollRewind = 0;
+	autoScrollSpeed   = -1;
+	autoScrollDelay   = 5;
+	autoScrollRewind  = 0;
 };
-
-class Life_RscControlsGroup {
-	type = 15;
-	idc = -1;
-	x = 0;
-	y = 0;
-	w = 1;
-	h = 1;
-	shadow = 0;
-	style = 16;
-	
-	class VScrollBar : Life_RscScrollBar
-	{
-		width = 0.021;
-		autoScrollEnabled = 1;
-	};
-	
-	class HScrollBar : Life_RscScrollBar
-	{
-		height = 0.028;
-	};
-	
-	class Controls {};
-};
-
-class Life_RscControlsGroupNoScrollbars : Life_RscControlsGroup 
-{
-	class VScrollbar : VScrollbar {
-		width = 0;
-	};
-	
-	class HScrollbar : HScrollbar {
-		height = 0;
-	};
-};
-
-class Life_RscHud 
-{
-	idc = -1;
-	type = 0;
-	style = 0x00;
-	colorBackground[] = { 1 , 1 , 1 , 0 };
-	colorText[] = { 1 , 1 , 1 , 1 };
-	font = "PuristaSemibold";
-	sizeEx = 0.025;
-	h = 0.25;
-	text = "";
-};
-
-class Life_RscListNBox
-{
-	style = 16;
-	type = 102;
-	shadow = 0;
-	font = "PuristaMedium";
-	sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-	color[] = {0.95,0.95,0.95,1};
-	colorText[] = {1,1,1,1.0};
-	colorDisabled[] = {1,1,1,0.25};
-	colorScrollbar[] = {0.95,0.95,0.95,1};
-	colorSelect[] = {0,0,0,1};
-	colorSelect2[] = {0,0,0,1};
-	colorSelectBackground[] = {0.8,0.8,0.8,1};
-	colorSelectBackground2[] = {1,1,1,0.5};
-	soundSelect[] = {"",0.1,1};
-	soundExpand[] = {"",0.1,1};
-	soundCollapse[] = {"",0.1,1};
-	period = 1.2;
-	maxHistoryDelay = 0.5;
-	autoScrollSpeed = -1;
-	autoScrollDelay = 5;
-	autoScrollRewind = 0;
-	class ListScrollBar: Life_RscScrollBar{};
-	class ScrollBar: Life_RscScrollBar{};
-};
-
 
 class RscText
 {
@@ -166,39 +91,6 @@ class RscText
 };
 class Life_RscText : RscText {};
 
-class Life_RscLine : Life_RscText {
-	idc = -1;
-	style = 176;
-	x = 0.17;
-	y = 0.48;
-	w = 0.66;
-	h = 0;
-	text = "";
-	colorBackground[] = {0, 0, 0, 0};
-	colorText[] = {1, 1, 1, 1.0};
-};
-
-class Life_RscTree {
-	style = 2;
-	font = "PuristaMedium";
-	sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-	expandedTexture = "A3\ui_f\data\gui\Rsccommon\Rsctree\expandedTexture_ca.paa";
-	hiddenTexture = "A3\ui_f\data\gui\Rsccommon\Rsctree\hiddenTexture_ca.paa";
-	rowHeight = 0.0439091;
-	color[] = {1, 1, 1, 1};
-	colorSelect[] = {0.7, 0.7, 0.7, 1};
-	colorBackground[] = {0, 0, 0, 0};
-	colorSelectBackground[] = {0, 0, 0, 0.5};
-	colorBorder[] = {0, 0, 0, 0};
-	borderSize = 0;
-};
-
-class Life_RscTitle : Life_RscText {
-	style = 0;
-	sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-	colorText[] = {0.95, 0.95, 0.95, 1};
-};
-
 class RscPicture
 {
 	idc = -1;
@@ -210,10 +102,6 @@ class RscPicture
 	font = "PuristaMedium";
 	colorBackground[] = {};
 	colorText[] = {};
-	x = 0;
-	y = 0;
-	w = 0.2;
-	h = 0.15;
 	tooltipColorText[] = {1,1,1,1};
 	tooltipColorBox[] = {1,1,1,1};
 	tooltipColorShade[] = {0,0,0,0.65};
@@ -561,7 +449,7 @@ class RscListBox
 	tooltipColorText[] = {1,1,1,1};
 	tooltipColorBox[] = {1,1,1,1};
 	tooltipColorShade[] = {0,0,0,0.65};
-	class ListScrollBar: Life_RscScrollBar
+	class ListScrollBar: RscScrollBar
 	{
 		color[] = {1,1,1,1};
 		autoScrollEnabled = 1;
@@ -595,13 +483,6 @@ class RscEdit
 	tooltipColorBox[] = {1, 1, 1, 1};
 	tooltipColorShade[] = {0, 0, 0, 0.65};
 };
-class Life_RscEdit : RscEdit {};
-
-class Life_RscSlider {
-	h = 0.025;
-	color[] = {1, 1, 1, 0.8};
-	colorActive[] = {1, 1, 1, 1};
-};
 
 class RscSlider
 {
@@ -629,123 +510,17 @@ class RscSlider
 	h = 0.025;
 };
 
-class life_RscXSliderH 
-{
-	style = 1024;
-	type = 43;
-	shadow = 2;
-	x = 0;
-	y = 0;
-	h = 0.029412;
-	w = 0.400000;
-	color[] = {1, 1, 1, 0.7};
-	colorActive[] = {1, 1, 1, 1};
-	colorDisabled[] = {1, 1, 1, 0.500000};
-	arrowEmpty = "\A3\ui_f\data\gui\cfg\slider\arrowEmpty_ca.paa";
-	arrowFull = "\A3\ui_f\data\gui\cfg\slider\arrowFull_ca.paa";
-	border = "\A3\ui_f\data\gui\cfg\slider\border_ca.paa";
-	thumb = "\A3\ui_f\data\gui\cfg\slider\thumb_ca.paa";
-};
-
 class RscFrame
 {
-	type = 0;
-	idc = -1;
-	style = 64;
-	shadow = 2;
-	colorBackground[] = {0, 0, 0, 0};
-	colorText[] = {1, 1, 1, 1};
-	font = "PuristaMedium";
-	sizeEx = 0.02;
-	text = "";
-};
-class Life_RscFrame : RscFrame {};
-
-class Life_RscBackground : Life_RscText {
-	type = 0;
-	IDC = -1;
-	style = 512;
-	shadow = 0;
-	x = 0.0;
-	y = 0.0;
-	w = 1.0;
-	h = 1.0;
-	text = "";
-	ColorBackground[] = {0.48, 0.5, 0.35, 1};
-	ColorText[] = {0.1, 0.1, 0.1, 1};
-	font = "PuristaMedium";
-	SizeEx = 1;
-};
-
-class Life_RscHTML {
-	colorText[] = {1, 1, 1, 1.0};
-	colorBold[] = {1, 1, 1, 1.0};
-	colorLink[] = {1, 1, 1, 0.75};
-	colorLinkActive[] = {1, 1, 1, 1.0};
-	sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-	prevPage = "\A3\ui_f\data\gui\Rsccommon\Rschtml\arrow_left_ca.paa";
-	nextPage = "\A3\ui_f\data\gui\Rsccommon\Rschtml\arrow_right_ca.paa";
-	shadow = 2;
-	
-	class H1 {
-		font = "PuristaMedium";
-		fontBold = "PuristaSemibold";
-		sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
-		align = "left";
-	};
-	
-	class H2 {
-		font = "PuristaMedium";
-		fontBold = "PuristaSemibold";
-		sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-		align = "right";
-	};
-	
-	class H3 {
-		font = "PuristaMedium";
-		fontBold = "PuristaSemibold";
-		sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-		align = "left";
-	};
-	
-	class H4 {
-		font = "PuristaMedium";
-		fontBold = "PuristaSemibold";
-		sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-		align = "left";
-	};
-	
-	class H5 {
-		font = "PuristaMedium";
-		fontBold = "PuristaSemibold";
-		sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-		align = "left";
-	};
-	
-	class H6 {
-		font = "PuristaMedium";
-		fontBold = "PuristaSemibold";
-		sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-		align = "left";
-	};
-	
-	class P {
-		font = "PuristaMedium";
-		fontBold = "PuristaSemibold";
-		sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-		align = "left";
-	};
-};
-
-class Life_RscHitZones {
-	x = 0;
-	y = 0;
-	w = 0.1;
-	h = 0.1;
-	xCount = 1;
-	yCount = 1;
-	xSpace = 0;
-	ySpace = 0;
+	type               = 0;
+	idc                = -1;
+	style              = 64;
+	shadow             = 2;
+	colorBackground[]  = {0, 0, 0, 0};
+	colorText[]        = {0, 0, 0, 0.8};
+	font               = "PuristaMedium";
+	sizeEx             = 0.02;
+	text               = "";
 };
 
 class RscMapControl 
@@ -1126,74 +901,35 @@ class RscMapControl
 
 class RscCombo
 {
-	style = 16;
-	type = 4;
-	shadow = 0;
-	x = 0;		y = 0;
-	w = 0.12;	h = 0.035;
-	colorSelect[] = {0, 0, 0, 1};
-	soundExpand[] = {"",0.1,1};
-	colorText[] = {0.95, 0.95, 0.95, 1};
-	soundCollapse[] = {"",0.1,1};
-	maxHistoryDelay = 1;
-	colorBackground[] = {0.4,0.4,0.4, 1};
+	style                   = 16;
+	type                    = 4;
+	shadow                  = 0;
+	maxHistoryDelay         = 1.0;
+	wholeHeight             = 0.45;
+
+	colorDisabled[]         = {1, 1, 1, 0.25};
+	colorScrollbar[]        = {0.54, 0.54, 0.54, 1};
+
+	soundExpand[]           = {"\A3\ui_f\data\sound\RscCombo\soundExpand", 0.1, 1};
+	soundCollapse[]         = {"\A3\ui_f\data\sound\RscCombo\soundCollapse", 0.1, 1};
+	soundSelect[]           = {"\A3\ui_f\data\sound\RscCombo\soundSelect", 0.1, 1};
+
+	font                    = "PuristaMedium";
+	sizeEx                  = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+	colorText[]             = {1, 1, 1, 1};
+	colorSelect[]           = {0, 0, 0, 1};
+
+	colorBackground[]       = {0, 0, 0, 0.6};
 	colorSelectBackground[] = {1, 1, 1, 1};
-	colow_Rscrollbar[] = {1, 0, 0, 1};
-	colorPicture[] = {1,1,1,1};
-	colorPictureSelected[] = {1,1,1,1};
-	colorPictureDisabled[] = {1,1,1,1};
-	soundSelect[] = {"", 0.000000, 1};
-	arrowFull = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
-	arrowEmpty = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
-	wholeHeight = 0.45;
-	color[] = {1, 1, 1, 1};
-	colorActive[] = {1, 0, 0, 1};
-	colorDisabled[] = {1, 1, 1, 0.25};
-	font = "PuristaMedium";
-	sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-	class ComboScrollBar : Life_RscScrollBar {};
-};
-class Life_RscCombo : RscCombo {};
 
-class Life_RscToolbox {
-	colorText[] = {0.95, 0.95, 0.95, 1};
-	color[] = {0.95, 0.95, 0.95, 1};
-	colorTextSelect[] = {0.95, 0.95, 0.95, 1};
-	colorSelect[] = {0.95, 0.95, 0.95, 1};
-	colorTextDisable[] = {0.4, 0.4, 0.4, 1};
-	colorDisable[] = {0.4, 0.4, 0.4, 1};
-	colorSelectedBg[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
-	font = "PuristaMedium";
-	sizeEx = "(			(			(			((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
-};
+	colorPicture[]          = {1, 1, 1, 1};
+	colorPictureSelected[]  = {0, 0, 0, 1};
+	colorPictureDisabled[]  = {1, 1, 1, 1};
 
-class IGUIBack
-{
-	type = 0;
-	idc = 124;
-	style = 128;
-	text = "";
-	colorText[] = 
-	{
-		0,
-		0,
-		0,
-		0
-	};
-	font = "PuristaMedium";
-	sizeEx = 0;
-	shadow = 0;
-	x = 0.1;
-	y = 0.1;
-	w = 0.1;
-	h = 0.1;
-	colorbackground[] = 
-	{
-		"(profilenamespace getvariable ['IGUI_BCG_RGB_R',0])",
-		"(profilenamespace getvariable ['IGUI_BCG_RGB_G',1])",
-		"(profilenamespace getvariable ['IGUI_BCG_RGB_B',1])",
-		"(profilenamespace getvariable ['IGUI_BCG_RGB_A',0.8])"
-	};
+	arrowFull               = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";
+	arrowEmpty              = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
+
+	class ComboScrollBar: RscScrollBar {};
 };
 
 class default_base_dialog
@@ -1202,7 +938,7 @@ class default_base_dialog
 	enableSimulation = 1;
 };
 
-class RscButtonMenu_colored : Life_RscButtonMenu
+class RscButtonMenu_colored: Life_RscButtonMenu
 {
 	shadow = 1;
 	colorShadow[] = {0, 0, 0, 0.5};
@@ -1218,36 +954,6 @@ class RscButtonMenu_colored : Life_RscButtonMenu
 };
 class life_RscButtonMenu_colored : RscButtonMenu_colored {};
 class life_RscButtonMenu_transparent : Life_RscButtonMenu {};
-
-class life_RscButtonClose : life_RscButtonMenu_transparent
-{
-	onButtonClick = "closeDialog 0;";
-	text = "Fermer";
-};
-
-class life_RscHeader : Life_RscText
-{
-	h = (1 / 25);
-	text = "";
-	colorBackground[] = 
-	{
-		"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
-		"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
-		"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
-		"(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"
-	};
-};
-
-class life_RscBack : Life_RscText
-{
-	colorBackground[] = 
-	{
-		0,
-		0,
-		0,
-		0.7
-	};
-};
 
 class RscButtonSilent
 {
@@ -1333,3 +1039,16 @@ class RscButtonSilent
 	offsetPressedY = 0.002;
 	borderSize = 0;
 };
+
+
+
+
+
+
+
+
+
+
+
+
+

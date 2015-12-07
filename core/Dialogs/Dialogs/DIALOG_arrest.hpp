@@ -38,7 +38,7 @@ class DIALOG_ARREST_NAME : default_base_dialog
 			w = 0.6;	h = (1 / 25);
 		};
 		
-		class minutsEdit : Life_RscEdit 
+		class minutsEdit : RscEdit 
 		{
 			idc = 89691;
 			text = "1";
@@ -48,7 +48,7 @@ class DIALOG_ARREST_NAME : default_base_dialog
 			w = 0.25;	h = 0.03;
 		};
 
-		class reasonEdit : Life_RscEdit 
+		class reasonEdit : RscEdit 
 		{
 			idc = 89692;
 			text = "raison";

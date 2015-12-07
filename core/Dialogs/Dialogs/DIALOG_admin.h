@@ -259,7 +259,7 @@ class DIALOG_ADMIN_REMBOURSEMENT_NAME : default_base_dialog
 			w = 0.6;	h = (1 / 25);
 		};
 		
-		class moneyEdit : Life_RscEdit 
+		class moneyEdit : RscEdit 
 		{
 			idc = 2952;
 			text = "0";

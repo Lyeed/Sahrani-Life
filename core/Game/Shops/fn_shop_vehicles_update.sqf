@@ -22,6 +22,8 @@ if (isNull _display) exitWith {};
 _vehicleList = call compile format["%1", _data];
 _className = _vehicleList select 0;
 
+(_display displayCtrl 2306) ctrlSetStructuredText parseText format["<t align='center' size='1.2'>%1</t>", getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "realname")];
+
 _price = [_className] call public_fnc_getVehBuyPrice;
 (_display displayCtrl 2310) ctrlSetStructuredText parseText format
 [

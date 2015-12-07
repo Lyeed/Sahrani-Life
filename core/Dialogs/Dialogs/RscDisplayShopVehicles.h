@@ -118,7 +118,6 @@ class RscDisplayShopVehicles: default_base_dialog
 		class SELECT_TITLE: RscStructuredText
 		{
 			idc = 2306;
-			text = "<t align='center' size='1.2'>HEMTT Transport</t>";
 			colorBackground[] = {0,0,0,0.9};
 
 			x = 0.484531 * safezoneW + safezoneX;

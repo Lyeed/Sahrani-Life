@@ -27,8 +27,8 @@ _price = parseNumber(_price);
 if (_price < 0) exitWith {
 	["Le <t color='#FF8000'>prix de vente</t> doit être positif"] call public_fnc_error;
 };
-if (_price < 500) exitWith {
-	["Le <t color='#FF8000'>prix de vente</t> doit être supérieur ou égal à <t color='#8cff9b'>500</t>kn"] call public_fnc_error;
+if (_price < 100) exitWith {
+	["Le <t color='#FF8000'>prix de vente</t> doit être supérieur ou égal à <t color='#8cff9b'>100</t>kn"] call public_fnc_error;
 };
 if (_price >= 999999) exitWith {
 	[format["Le <t color='#FF8000'>prix de vente</t> doit être inférieur à <t color='#8cff9b'>%1</t>kn", ([999999] call public_fnc_numberText)]] call public_fnc_error;
@@ -44,7 +44,7 @@ if (g_cash < _cost) exitWith
 		[
 				"Vous n'avez pas assez d'argent pour mettre cet objet en vente pour <t color='#8cff9b'>%1kn</t><br/><br/>"
 			+	"Commission : <t color='#8cff9b'>%2</t>kn<br/>"
-			+	"Manquant : </t><t color='#ff8c8c'>%3</t>kn",
+			+	"Manquant : <t color='#ff8c8c'>%3</t>kn",
 			([_price] call public_fnc_numberText),
 			([_cost] call public_fnc_numberText),
 			[(_cost - g_cash)] call public_fnc_numberText
@@ -92,7 +92,7 @@ if (_action) then
 		[false, _cost] call public_fnc_handleCash;
 		[format
 			[
-				"Vous avez mis <t color='#FF8000'>%1</t> en vente pour <t color='#8cff9b'>%2</t>kn<br/><br/>Vous avez payé <t color='#8cff9b'>%3kn</t> de commission",
+				"Vous avez mis <t color='#FF8000'>%1</t> en vente pour <t color='#8cff9b'>%2</t>kn<br/><br/>Vous avez payé <t color='#8cff9b'>%3</t>kn de commission",
 				(lbText[45621, _sel]),
 				([_price] call public_fnc_numberText),
 				([_cost] call public_fnc_numberText)

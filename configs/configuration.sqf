@@ -13,7 +13,6 @@ with missionNamespace do
 	g_action_delay = time;
 	g_net_dropped = false;
 	g_action_inUse = false;
-	g_garage_store = false;
 	g_knockout = false;
 	g_interrupted = false;
 	g_is_alive = false;
@@ -21,6 +20,7 @@ with missionNamespace do
 	g_yielding = false;
 	g_speaking = false;
 	g_seatbelt = false;
+	g_garage_store = false;
 	/* ===================[roleplay info]======================= */
 	g_choice = "";
 	g_firstName = "";

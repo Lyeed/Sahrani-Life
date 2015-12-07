@@ -104,9 +104,7 @@ if (hasInterface) then
 		case independent: {call public_fnc_init_fGUER};
 		default {false};
 	};
-	if (!_res) exitWith {
-		["Impossible d'initialiser la mission."] spawn public_fnc_errorExit;
-	};
+	if (!_res) exitWith {};
 	diag_log "<INIT> Fonctions factions initialisées";
 
 	waitUntil {!(isNull (findDisplay 46))};

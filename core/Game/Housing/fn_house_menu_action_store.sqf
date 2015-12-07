@@ -25,17 +25,16 @@ if (isNil "_distance") then {
 };
 
 {
-	if (alive _x) then
+	if (!(isNull _x)) then
 	{
-		_vehData = _x getVariable["vehicle_info_owners", []];
-		if (!(_vehData isEqualTo [])) then
+		if (alive _x) then
 		{
-			if ((getPlayerUID player) isEqualTo (_vehData select 0)) exitWith {
+			if ((g_interaction_target distance _x) <= _distance) exitWith {
 				_vehicle = _x;
 			};
 		};
 	};
-} forEach (nearestObjects[g_interaction_target, _types, _distance]);
+} forEach (g_vehicles);
 if (isNil "_vehicle") exitWith {
 	["Aucun véhicule stationné près du garage ne vous appartient"] call public_fnc_error;
 };
