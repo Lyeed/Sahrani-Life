@@ -1204,6 +1204,18 @@ class ALYSIA_ITEMS
 		};
 	};
 
+	class patate_seed
+	{
+		name        = "Patate germé";
+		weight      = 1;
+		illegal     = 0;
+		price_buy   = 60;
+		price_sell  = 30;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\1\patate.paa";
+	};
+
 	class wheat
 	{
 		name        = "Blé";

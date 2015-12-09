@@ -114,18 +114,24 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 		distance = 4;
 		growingTime = 480;
 		groundLevel = 0;
-		upLevel = 1;
+		upLevel = 1;s
+		extraGrow = 100;
+	};
+
+	class Potato_Plant_F
+	{
+		receive[] = {{"patate", 2, 1}};
+		seed = "patate_seed";
+		distance = 4;
+		growingTime = 480;
+		groundLevel = 0.5;
+		upLevel = 0.5;
 		extraGrow = 100;
 	};
 };
 
 class ALYSIA_FARMING_PLANT_MARKERS
 {
-	class potato_1
-	{
-		plant = "";
-	};
-
 	class corn_1
 	{
 		plant = "Skyline_Corn";
@@ -169,5 +175,10 @@ class ALYSIA_FARMING_PLANT_MARKERS
 	class tabac_1
 	{
 		plant = "Skyline_Tabac";
+	};
+
+	class patate_1
+	{
+		plant = "Potato_Plant_F";
 	};
 };
