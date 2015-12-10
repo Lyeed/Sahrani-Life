@@ -131,7 +131,7 @@ lbClear _list_origin;
 	["Maroc", "\world_markers\images\Morocco.paa"],
 	["Maurice", "\world_markers\images\Mauritius.paa"],
 	["Mauritanie", "\world_markers\images\Mauritania.paa"],
-	["Mayotte", "\world_markers\images\Comorros.paa"],
+	["Comorres", "\world_markers\images\Comorros.paa"],
 	["Mexique", "\world_markers\images\Mexico.paa"],
 	["Moldavie", "\world_markers\images\Moldova.paa"],
 	["Monaco", "\world_markers\images\Monaco.paa"],
