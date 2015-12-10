@@ -24,12 +24,10 @@ disableSerialization;
 _display = findDisplay 69000;
 if (isNull _display) exitWith {};
 
-if ((vehicle player) isEqualTo player) then {player playAction "Gear";};
+player playAction "Gear";
 g_interaction_target setVariable ["inventory_in_use_UID", (getPlayerUID player), true];
-
 g_interaction_target_inv = g_interaction_target getVariable ["inv", []];
 g_interaction_target_inv_active = false;
-
 [] call public_fnc_skullMenu_search_update;
 
 while {!(isNull _display)} do
@@ -41,6 +39,9 @@ while {!(isNull _display)} do
 		closeDialog 0;
 	};
 	if (isNull g_interaction_target) exitWith {
+		closeDialog 0;
+	};
+	if (player getVariable ["is_coma", false]) exitWith {
 		closeDialog 0;
 	};
 	sleep 0.5;

@@ -3575,7 +3575,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 295.259;this setposATL [14205.776367,11864.0830078,-0.00168228];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de meuble"",public_fnc_processAction,""furniture"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 295.259;this setposATL [14205.776367,11864.0830078,-0.00168228];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de meuble"",public_fnc_process_open,""furniture"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item5
 		{
@@ -3606,7 +3606,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 35.7275;this setposATL [14681.597656,10745.803711,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Rafinerie"",public_fnc_processAction,""oil"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 35.7275;this setposATL [14681.597656,10745.803711,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Rafinerie"",public_fnc_process_open,""oil"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item8
 		{
@@ -3781,7 +3781,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 61.0986;this setposATL [14010.59668,16553.380859,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du bois"",public_fnc_processAction,""wood"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 61.0986;this setposATL [14010.59668,16553.380859,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du bois"",public_fnc_process_open,""wood"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item25
 		{
@@ -3791,7 +3791,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 3.84515;this setposATL [10083.125977,9406.625977,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du fer"",public_fnc_processAction,""iron"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 3.84515;this setposATL [10083.125977,9406.625977,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du fer"",public_fnc_process_open,""iron"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item26
 		{
@@ -3801,7 +3801,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 92.0197;this setposATL [8962.610352,8425.400391,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du sel"",public_fnc_processAction,""salt"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 92.0197;this setposATL [8962.610352,8425.400391,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du sel"",public_fnc_process_open,""salt"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item27
 		{
@@ -3811,7 +3811,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 268.47;this setposATL [10064.99707,9388.237305,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du cuivre"",public_fnc_processAction,""copper"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 268.47;this setposATL [10064.99707,9388.237305,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du cuivre"",public_fnc_process_open,""copper"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item28
 		{
@@ -3821,7 +3821,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 80.5872;this setposATL [10676.165039,8989.0664063,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du sable"",public_fnc_processAction,""sand"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de seringue"",public_fnc_processAction,""seringue"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 80.5872;this setposATL [10676.165039,8989.0664063,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du sable"",public_fnc_process_open,""sand"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de seringue"",public_fnc_process_open,""seringue"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item29
 		{
@@ -4770,7 +4770,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 349.641;this setposATL [11552.662109,9203.297852,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du cotton"",public_fnc_processAction,""cotton"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 349.641;this setposATL [11552.662109,9203.297852,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du cotton"",public_fnc_process_open,""cotton"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item118
 		{
@@ -4780,7 +4780,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 34.641;this setposATL [14049.241211,12657.819336,0];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Fonte de l'or"",public_fnc_processAction,""gold"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 34.641;this setposATL [14049.241211,12657.819336,0];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Fonte de l'or"",public_fnc_process_open,""gold"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item119
 		{
@@ -4801,7 +4801,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 353.333;this setposATL [12967.568359,11323.791992,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Poterie"",public_fnc_processAction,""pottery"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 353.333;this setposATL [12967.568359,11323.791992,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Poterie"",public_fnc_process_open,""pottery"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item121
 		{
@@ -4841,7 +4841,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 138.054;this setposATL [12422.206055,13398.737305,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du bauxite"",public_fnc_processAction,""bauxite"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 138.054;this setposATL [12422.206055,13398.737305,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du bauxite"",public_fnc_process_open,""bauxite"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item125
 		{
@@ -11269,7 +11269,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]; this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Fonte du platine"",public_fnc_processAction,""platine1"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse']; this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Enrichissement du platine"",public_fnc_processAction,""platine2"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]; this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Fonte du platine"",public_fnc_process_open,""platine1"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse']; this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Enrichissement du platine"",public_fnc_process_open,""platine2"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item783
 		{
@@ -11279,7 +11279,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Distillerie du raisin"",public_fnc_processAction,""Distillerie_Grozdova"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse']; this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Distillerie de prune"",public_fnc_processAction,""Distillerie_Slivovica"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Distillerie du raisin"",public_fnc_process_open,""Distillerie_Grozdova"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse']; this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Distillerie de prune"",public_fnc_process_open,""Distillerie_Slivovica"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item784
 		{

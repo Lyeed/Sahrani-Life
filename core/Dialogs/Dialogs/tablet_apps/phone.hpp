@@ -93,7 +93,7 @@ class PHONE_MESSAGE_READ_LIST_HEADER : Life_RscStructuredText
 	w = 0.355781 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_MESSAGE_READ_LIST_INFO : Life_RscListBox
+class PHONE_MESSAGE_READ_LIST_INFO : RscListBox
 {
 	idc = PHONE_MESSAGE_READ_LIST_INFO_IDC;
 	onLBSelChanged = "[_this select 0, _this select 1] call public_fnc_APP_phone_messages_read_open;";
@@ -303,7 +303,7 @@ class PHONE_MESSAGE_SEND_CONTACTS_HEADER : Life_RscStructuredText
 	w = 0.0979687 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_MESSAGE_SEND_CONTACTS_LIST : Life_RscListBox
+class PHONE_MESSAGE_SEND_CONTACTS_LIST : RscListBox
 {
 	idc = PHONE_MESSAGE_SEND_CONTACTS_LIST_IDC;
 	onLBSelChanged ="\
@@ -519,7 +519,7 @@ class PHONE_SETTING_RING_HEADER: Life_RscStructuredText
 	w = 0.195937 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_SETTING_RING_LIST: Life_RscListBox
+class PHONE_SETTING_RING_LIST: RscListBox
 {
 	idc = PHONE_SETTING_RING_LIST_IDC;
 	colorBackground[] = {0,0,0,0.6};
@@ -717,7 +717,7 @@ class PHONE_CONTACTS_LIST_HEADER : Life_RscStructuredText
 	w = 0.216563 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_CONTACTS_LIST_INFO : Life_RscListBox
+class PHONE_CONTACTS_LIST_INFO : RscListBox
 {
 	idc = PHONE_CONTACTS_LIST_INFO_IDC;
 

@@ -278,7 +278,9 @@ class Public
 		class pickGather {};
 		class plantHarvest {};
 		class plantSeed {};
-		class processAction {};
+		class process_action {};
+		class process_open {};
+		class process_update {};
 		class sheepStart {};
 		class sheepProcess {};
 	};

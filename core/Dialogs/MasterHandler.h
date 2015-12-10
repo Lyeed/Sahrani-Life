@@ -30,6 +30,8 @@
 #include "Dialogs\RscDisplayVirtualExhange.hpp"
 #include "Dialogs\RscDisplayFuelStation.hpp"
 #include "Dialogs\RscDisplayFuelRefuel.hpp"
+#include "Dialogs\RscDisplayProcess.hpp"
+
 class RscTitles // Defines custom UI displays.
 {
 	#include "Hud\HUD_default.hpp"

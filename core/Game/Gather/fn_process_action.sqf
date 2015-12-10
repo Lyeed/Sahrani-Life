@@ -23,8 +23,8 @@ private
 	"_rank"
 ];
 
-_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-_type = [_this, 3, "", [""]] call BIS_fnc_param;
+_type = [_this, 0, "", [""]] call BIS_fnc_param;
+_target = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
 
 if (g_action_inUse) exitWith {
 	["Vous avez l'air occupé<br>Revenez plus tard"] call public_fnc_error;

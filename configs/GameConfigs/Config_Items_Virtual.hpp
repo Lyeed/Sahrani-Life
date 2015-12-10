@@ -414,7 +414,7 @@ class ALYSIA_ITEMS
 		price_sell  = 30;
 		illegal     = 0;
 		removable   = 1;
-		use         = "[ObjNull, ""soufre""] spawn public_fnc_processAction;";
+		use         = "[player, ""soufre""] spawn public_fnc_process_action;";
 		image       = "alysia_items_virtual\data\1\soufre.paa";
 	};
 
@@ -657,6 +657,7 @@ class ALYSIA_ITEMS
 		use         = "[""%1""] call public_fnc_drugConsume;";
 		image       = "alysia_items_virtual\data\drogue\marijuana.paa";
 		license     = "marijuana";
+		store[]     = {"B_G_Van_01_fuel_F", "B_Truck_01_fuel_F", "O_Truck_02_fuel_F"};
 		class market
 		{
 			max = 5300;
@@ -676,6 +677,7 @@ class ALYSIA_ITEMS
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\1\petrole.paa";
+		store[]     = {"B_G_Van_01_fuel_F", "B_Truck_01_fuel_F", "O_Truck_02_fuel_F"};
 	};
 
 	class oilp

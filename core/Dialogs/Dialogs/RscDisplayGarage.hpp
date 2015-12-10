@@ -526,7 +526,7 @@ class RscDisplayGarageStore: default_base_dialog
 	{
 		class BACKGROUND: RscPicture
 		{
-			text = "#(argb,8,8,3)color(0.203921568627451,0.596078431372549,0.8588235294117647,1)";
+			text = "\lyeed_IMG\data\auctionHouse\background.jpg";
 
 			x = 0.37625 * safezoneW + safezoneX;
 			y = 0.522 * safezoneH + safezoneY;
@@ -591,8 +591,8 @@ class RscDisplayGarageStore: default_base_dialog
 			idc = 35002;
 			onCheckedChanged = "[] call public_fnc_garageStoreUpdate;";
 
-			x = 0.386562 * safezoneW + safezoneX;
-			y = 0.566 * safezoneH + safezoneY;
+			x = 0.385016 * safezoneW + safezoneX;
+			y = 0.56886 * safezoneH + safezoneY;
 			w = 0.020625 * safezoneW;
 			h = 0.033 * safezoneH;
 		};
@@ -602,8 +602,8 @@ class RscDisplayGarageStore: default_base_dialog
 			text = "Préserver l'inventaire";
 			colorBackground[] = {0,0,0,0};
 			
-			x = 0.403062 * safezoneW + safezoneX;
-			y = 0.5704 * safezoneH + safezoneY;
+			x = 0.402031 * safezoneW + safezoneX;
+			y = 0.57326 * safezoneH + safezoneY;
 			w = 0.0979687 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
@@ -644,8 +644,8 @@ class RscDisplayGarageStore: default_base_dialog
 		{
 			idc = 35010;
 
-			x = 0.386562 * safezoneW + safezoneX;
-			y = 0.61 * safezoneH + safezoneY;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.621 * safezoneH + safezoneY;
 			w = 0.108281 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
@@ -654,8 +654,8 @@ class RscDisplayGarageStore: default_base_dialog
 			idc = 35011;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.386562 * safezoneW + safezoneX;
-			y = 0.61 * safezoneH + safezoneY;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.621 * safezoneH + safezoneY;
 			w = 0.108281 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
@@ -665,8 +665,8 @@ class RscDisplayGarageStore: default_base_dialog
 			colorBackground[] = {0,0,0,0};
 			text = "<t align='left' size='1.3' color='#FFFFFF'>Ranger</t>";
 
-			x = 0.4175 * safezoneW + safezoneX;
-			y = 0.621 * safezoneH + safezoneY;
+			x = 0.484323 * safezoneW + safezoneX;
+			y = 0.632741 * safezoneH + safezoneY;
 			w = 0.0721875 * safezoneW;
 			h = 0.033 * safezoneH;
 		};
@@ -675,8 +675,8 @@ class RscDisplayGarageStore: default_base_dialog
 			idc = 35013;
 			text = "\lyeed_IMG\data\garage\store\action_store.paa";
 
-			x = 0.38963 * safezoneW + safezoneX;
-			y = 0.615831 * safezoneH + safezoneY;
+			x = 0.451354 * safezoneW + safezoneX;
+			y = 0.627667 * safezoneH + safezoneY;
 			w = 0.0257812 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
@@ -695,71 +695,58 @@ class RscDisplayGarageStore: default_base_dialog
 			((findDisplay 35000) displayCtrl 35011) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 35000) displayCtrl 35012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Ranger</t>"";";
 
-			x = 0.386562 * safezoneW + safezoneX;
-			y = 0.61 * safezoneH + safezoneY;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.621 * safezoneH + safezoneY;
 			w = 0.108281 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 
-		class ACTION_EXIT_FRAME: RscFrame
+		class OPTION_EXIT_FRAME: RscFrame
 		{
 			idc = 35015;
+			colorText[] = {0,0,0,1};
 
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.61 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
-			h = 0.055 * safezoneH;
+			x = 0.345312 * safezoneW + safezoneX;
+			y = 0.5 * safezoneH + safezoneY;
+			w = 0.0309375 * safezoneW;
+			h = 0.044 * safezoneH;
 		};
-		class ACTION_EXIT_BACKGROUND: RscStructuredText
+		class OPTION_EXIT_BACKGROUND: RscText
 		{
 			idc = 35016;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.61 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
-			h = 0.055 * safezoneH;
-		};
-		class ACTION_EXIT_TEXT: RscStructuredText
-		{
-			idc = 35017;
-			text = "<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>";
-			colorBackground[] = {0,0,0,0};
-
-			x = 0.536094 * safezoneW + safezoneX;
-			y = 0.621 * safezoneH + safezoneY;
-			w = 0.0721875 * safezoneW;
-			h = 0.033 * safezoneH;
-		};
-		class ACTION_EXIT_IMAGE: RscPicture
-		{
-			idc = 35018;
-			text = "\lyeed_IMG\data\garage\store\action_exit.paa";
-
-			x = 0.507812 * safezoneW + safezoneX;
-			y = 0.615741 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
+			x = 0.345312 * safezoneW + safezoneX;
+			y = 0.5 * safezoneH + safezoneY;
+			w = 0.0309375 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
-		class ACTION_EXIT_BUTTON: RscButtonSilent
+		class OPTION_EXIT_IMAGE: RscPicture
 		{
-			idc = 35019;
-			action = "closeDialog 0;";
-			onMouseEnter = "\
-			ctrlSetText[35018,""\lyeed_IMG\data\garage\store\action_exit_select.paa""];\
-			ctrlShow[35015, false];\
-			((findDisplay 35000) displayCtrl 35016) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 35000) displayCtrl 35017) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
-			onMouseExit = "\
-			ctrlSetText[35018,""\lyeed_IMG\data\garage\store\action_exit.paa""];\
-			ctrlShow[35015, true];\
-			((findDisplay 35000) displayCtrl 35016) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 35000) displayCtrl 35017) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";
+			idc = 35017;
+			text = "lyeed_IMG\data\global\option_exit.paa";
 
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.61 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
-			h = 0.055 * safezoneH;
+			x = 0.352187 * safezoneW + safezoneX;
+			y = 0.511333 * safezoneH + safezoneY;
+			w = 0.0154689 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class OPTION_EXIT_BUTTON: RscButtonSilent
+		{
+			idc = 5005;
+			action = "closedialog 0;";
+			tooltip = "Quitter";
+			onMouseEnter = "((findDisplay 35000) displayCtrl 35016) ctrlSetBackgroundColor [1,1,1,1];\
+			ctrlSetText[35017,""lyeed_IMG\data\global\option_exit_select.paa""];\
+			ctrlShow[35015, false];";
+			onMouseExit = "((findDisplay 35000) displayCtrl 35016) ctrlSetBackgroundColor [0,0,0,0.6];\
+			ctrlSetText[35017,""lyeed_IMG\data\global\option_exit.paa""];\
+			ctrlShow[35015, true];";
+
+			x = 0.345312 * safezoneW + safezoneX;
+			y = 0.5 * safezoneH + safezoneY;
+			w = 0.0309375 * safezoneW;
+			h = 0.044 * safezoneH;
 		};
 	};
 };
