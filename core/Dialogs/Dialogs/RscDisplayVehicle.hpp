@@ -362,7 +362,6 @@ class RscDisplayVehicleRepair: default_base_dialog
 
 		class REPAIR_GLOBAL_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Etat général</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -383,9 +382,6 @@ class RscDisplayVehicleRepair: default_base_dialog
 		};
 		class REPAIR_GLOBAL_FRAME: RscFrame
 		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-			
 			x = 0.5 * safezoneW + safezoneX;
 			y = 0.346 * safezoneH + safezoneY;
 			w = 0.113437 * safezoneW;
@@ -404,7 +400,6 @@ class RscDisplayVehicleRepair: default_base_dialog
 		};
 		class BACK_BUTTON: RscButtonSilent
 		{
-			idc = -1;
 			action = "[] call public_fnc_interactions_recall;";
 			tooltip = "Retour";
 			onMouseEnter = "ctrlSetText[2917,""\lyeed_IMG\data\vehicle\back_select.paa""];";

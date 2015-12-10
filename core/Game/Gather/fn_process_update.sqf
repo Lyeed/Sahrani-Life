@@ -12,8 +12,16 @@ _display = findDisplay 53000;
 if (isNull _display) exitWith {};
 
 _maxAmount = round(parseNumber(ctrlText 53006));
-if (_maxAmount < 1) then {
+if (_maxAmount < 1) then
+{
 	_maxAmount = 1;
+	ctrlSetText[53006, "1"];
+} else {
+	if (_maxAmount > 150) then
+	{
+		_maxAmount = 150;
+		ctrlSetText[53006, "150"];
+	};
 };
 
 _list  = _display displayCtrl 53005;

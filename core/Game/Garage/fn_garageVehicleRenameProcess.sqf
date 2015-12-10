@@ -18,9 +18,8 @@ if (_val isEqualTo "") exitWith {
 	["Vous n'avez pas entré de nom pour votre véhicule"] call public_fnc_error;
 };
 
-_max = 20;
-if (([_val] call CBA_fnc_strLen) > _max) exitWith {
-	[format["Vous ne pouvez pas dépasser %1 caractères", _max]] call public_fnc_error;
+if (([_val] call CBA_fnc_strLen) > 25) exitWith {
+	[format["Vous ne pouvez pas dépasser %1 caractères", 25]] call public_fnc_error;
 };
 
 _bad = [_val, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_() -"] call public_fnc_TextAllowed;
@@ -33,7 +32,6 @@ if (_val isEqualTo ((g_garage_vehicles select g_garage_rename) select 5)) exitWi
 };
 
 closeDialog 0;
-[format["Vous avez changé le nom de votre véhicule<br/><t align='center'>%1</t>", _val]] call public_fnc_info;
 [((g_garage_vehicles select g_garage_rename) select 0), _val] remoteExec ["TON_fnc_vehicle_update_name", 2];
 (g_garage_vehicles select g_garage_rename) set[5, _val];
 g_garage_rename = -1;

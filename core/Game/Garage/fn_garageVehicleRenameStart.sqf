@@ -16,7 +16,7 @@ g_garage_rename = _index;
 
 closeDialog 0;
 waitUntil {!dialog};
+
 if (!(createDialog "RscDisplayGarageRename")) exitWith {};
-waitUntil {dialog};
 
 ctrlSetText[555991, ((g_garage_vehicles select _index) select 5)];

@@ -6,26 +6,23 @@ class RscDisplayGarageAlysia: default_base_dialog
 	
 	class controlsBackground
 	{
-		class FRAME: RscPicture
-		{
-			idc = -1;
-			text = "\lyeed_IMG\data\frames\frame_2_borderless.paa";
-
-			x = 0.231354 * safezoneW + safezoneX;
-			y = 0.196519 * safezoneH + safezoneY;
-			w = 0.540885 * safezoneW;
-			h = 0.53263 * safezoneH;
-		};
-
 		class BACKGROUND: RscPicture
 		{
-			idc = -1;
 			text = "\lyeed_IMG\data\garage\garage_background.jpg";
 
-			x = 0.254 * safezoneW + safezoneX;
-			y = 0.22588 * safezoneH + safezoneY;
-			w = 0.5 * safezoneW;
-			h = 0.473 * safezoneH;
+			x = 0.258161 * safezoneW + safezoneX;
+			y = 0.203 * safezoneH + safezoneY;
+			w = 0.499636 * safezoneW;
+			h = 0.504038 * safezoneH;
+		};
+		class FRAME: RscFrame
+		{
+			colorText[] = {0,0,0,1};
+			
+			x = 0.257656 * safezoneW + safezoneX;
+			y = 0.203 * safezoneH + safezoneY;
+			w = 0.500156 * safezoneW;
+			h = 0.506 * safezoneH;
 		};
 	};
 	
@@ -34,37 +31,60 @@ class RscDisplayGarageAlysia: default_base_dialog
 		class TITLE: RscStructuredText
 		{
 			idc = 2805;
-			text = "";
 			colorBackground[] = {0,0,0,0.8};
 
-			x = 0.254 * safezoneW + safezoneX;
-			y = 0.22588 * safezoneH + safezoneY;
-			w = 0.5 * safezoneW;
-			h = 0.0210741 * safezoneH;
+			x = 0.257656 * safezoneW + safezoneX;
+			y = 0.203 * safezoneH + safezoneY;
+			w = 0.500156 * safezoneW;
+			h = 0.044 * safezoneH;
 		};
 
-		class EXIT_IMAGE: RscPicture
+		class OPTION_EXIT_FRAME: RscFrame
 		{
 			idc = 2832;
-			text = "\lyeed_IMG\data\garage\close.paa";
+			colorText[] = {0,0,0,1};
 
-			x = 0.259375 * safezoneW + safezoneX;
-			y = 0.254407 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.033 * safezoneH;
+			x = 0.226719 * safezoneW + safezoneX;
+			y = 0.258 * safezoneH + safezoneY;
+			w = 0.0309375 * safezoneW;
+			h = 0.044 * safezoneH;
 		};
-		class EXIT_BUTTON: RscButtonSilent
+		class OPTION_EXIT_BACKGROUND: RscText
 		{
-			idc = -1;
-			action = "closeDialog 0;";
+			idc = 2833;
+			colorBackground[] = {0,0,0,0.6};
+
+			x = 0.226719 * safezoneW + safezoneX;
+			y = 0.258 * safezoneH + safezoneY;
+			w = 0.0309375 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+		class OPTION_EXIT_IMAGE: RscPicture
+		{
+			idc = 2834;
+			text = "lyeed_IMG\data\global\option_exit.paa";
+
+			x = 0.234041 * safezoneW + safezoneX;
+			y = 0.26878 * safezoneH + safezoneY;
+			w = 0.0154689 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class OPTION_EXIT_BUTTON: RscButtonSilent
+		{
+			idc = 2835;
+			action = "closedialog 0;";
 			tooltip = "Quitter";
-			onMouseEnter = "ctrlSetText[2832,""\lyeed_IMG\data\garage\close_select.paa""];";
-			onMouseExit = "ctrlSetText[2832,""\lyeed_IMG\data\garage\close.paa""];";
-			
-			x = 0.259375 * safezoneW + safezoneX;
-			y = 0.254407 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.033 * safezoneH;
+			onMouseEnter = "((findDisplay 2800) displayCtrl 2833) ctrlSetBackgroundColor [1,1,1,1];\
+			ctrlSetText[2834,""lyeed_IMG\data\global\option_exit_select.paa""];\
+			ctrlShow[2832, false];";
+			onMouseExit = "((findDisplay 2800) displayCtrl 2833) ctrlSetBackgroundColor [0,0,0,0.6];\
+			ctrlSetText[2834,""lyeed_IMG\data\global\option_exit.paa""];\
+			ctrlShow[2832, true];";
+
+			x = 0.226719 * safezoneW + safezoneX;
+			y = 0.258 * safezoneH + safezoneY;
+			w = 0.0309375 * safezoneW;
+			h = 0.044 * safezoneH;
 		};
 
 		class TYPE_FRAME: RscFrame
@@ -86,9 +106,7 @@ class RscDisplayGarageAlysia: default_base_dialog
 		};
 
 		class VEHICLES_FRAME: RscFrame
-		{
-			colorText[] = {0,0,0,0.8};
-			
+		{	
 			x = 0.267969 * safezoneW + safezoneX;
 			y = 0.357 * safezoneH + safezoneY;
 			w = 0.159844 * safezoneW;
@@ -96,7 +114,6 @@ class RscDisplayGarageAlysia: default_base_dialog
 		};
 		class VEHICLES_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Vos véhicules</t>";
 			colorBackground[] = {0,0,0,0.8};
 
@@ -129,7 +146,6 @@ class RscDisplayGarageAlysia: default_base_dialog
 		class SELECT_FRAME: RscFrame
 		{
 			idc = 2809;
-			colorText[] = {0,0,0,0.8};
 
 			x = 0.438125 * safezoneW + safezoneX;
 			y = 0.258 * safezoneH + safezoneY;
@@ -151,7 +167,6 @@ class RscDisplayGarageAlysia: default_base_dialog
 		class SELECT_INVENTORY_FRAME: RscFrame
 		{
 			idc = 2830;
-			colorText[] = {0,0,0,0.8};
 
 			x = 0.54125 * safezoneW + safezoneX;
 			y = 0.522 * safezoneH + safezoneY;
@@ -172,7 +187,6 @@ class RscDisplayGarageAlysia: default_base_dialog
 		class SELECT_INVENTORY_INFO: RscListBox
 		{
 			idc = 2804;
-			colorBackground[] = {0,0,0,0.6};
 
 			x = 0.54125 * safezoneW + safezoneX;
 			y = 0.544 * safezoneH + safezoneY;
@@ -183,7 +197,6 @@ class RscDisplayGarageAlysia: default_base_dialog
 		class SELECT_DESC_FRAME: RscFrame
 		{
 			idc = 2831;
-			colorText[] = {0,0,0,0.8};
 
 			x = 0.54125 * safezoneW + safezoneX;
 			y = 0.28 * safezoneH + safezoneY;
@@ -226,7 +239,6 @@ class RscDisplayGarageAlysia: default_base_dialog
 		class SELECT_DISTANCE_INFO: RscStructuredText
 		{
 			idc = 2828;
-			text = "";
 			colorBackground[] = {0,0,0,0.6};
 
 			x = 0.649531 * safezoneW + safezoneX;
@@ -238,7 +250,6 @@ class RscDisplayGarageAlysia: default_base_dialog
 		class SELECT_ACTIONS_FRAME: RscFrame
 		{
 			idc = 2829;
-			colorText[] = {0,0,0,0.8};
 
 			x = 0.438125 * safezoneW + safezoneX;
 			y = 0.28 * safezoneH + safezoneY;
@@ -427,92 +438,180 @@ class RscDisplayGarageAlysia: default_base_dialog
 	};
 };
 
-class RscDisplayGarageRename : default_base_dialog
+class RscDisplayGarageRename: default_base_dialog
 {
-	idd = 555990;
+	idd = 101000;
 	name = "RscDisplayGarageRename";
 	
 	class controlsBackground 
 	{
-		class background_border: life_RscPicture
+		class BACKGROUND: RscPicture
 		{
-			idc = -1;
-			text = "\lyeed_IMG\data\shop\border.paa";
+			text = "\lyeed_IMG\data\auctionHouse\background.jpg";
 
-			x = 0.350469 * safezoneW + safezoneX;
-			y = 0.357 * safezoneH + safezoneY;
-			w = 0.293906 * safezoneW;
-			h = 0.264 * safezoneH;
+			x = 0.37625 * safezoneW + safezoneX;
+			y = 0.522 * safezoneH + safezoneY;
+			w = 0.2475 * safezoneW;
+			h = 0.165 * safezoneH;
 		};
-		class background_picture: life_RscPicture
+		class FRAME: RscFrame
 		{
-			idc = -1;
-			text = "\lyeed_IMG\data\shop\back_EAST_vehicles_land.jpg";
-
-			x = 0.370062 * safezoneW + safezoneX;
-			y = 0.379 * safezoneH + safezoneY;
-			w = 0.254739 * safezoneW;
-			h = 0.220926 * safezoneH;
+			colorText[] = {0,0,0,1};
+			
+			x = 0.37625 * safezoneW + safezoneX;
+			y = 0.489 * safezoneH + safezoneY;
+			w = 0.248021 * safezoneW;
+			h = 0.199852 * safezoneH;
 		};
 	};
 	
 	class controls
 	{
-		class title: Life_RscStructuredText
+		class TITLE: RscStructuredText
 		{
-			idc = -1;
-			text = "<t align='center'>Personnalisation du garage</t>";
+			text = "<t align='center' size='1.5'>Garage</t>";
+			colorBackground[] = {0,0,0,1};
+
+			x = 0.37625 * safezoneW + safezoneX;
+			y = 0.489 * safezoneH + safezoneY;
+			w = 0.248021 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+
+		class NAME_FRAME: RscFrame
+		{
+			x = 0.4175 * safezoneW + safezoneX;
+			y = 0.544 * safezoneH + safezoneY;
+			w = 0.170156 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class NAME_HEADER: RscStructuredText
+		{
+			text = "<t align='center'>Nom</t>";
 			colorBackground[] = {0,0,0,0.8};
 
-			x = 0.368516 * safezoneW + safezoneX;
-			y = 0.379 * safezoneH + safezoneY;
-			w = 0.25526 * safezoneW;
-			h = 0.023852 * safezoneH;
-		};
-
-		class validate: life_RscButtonMenu_colored
-		{
-			idc = -1;
-			text = "Valider";
-			onButtonClick = "[] call public_fnc_garageVehicleRenameProcess;";
-
-			x = 0.479375 * safezoneW + safezoneX;
-			y = 0.522 * safezoneH + safezoneY;
-			w = 0.0464063 * safezoneW;
+			x = 0.4175 * safezoneW + safezoneX;
+			y = 0.544 * safezoneH + safezoneY;
+			w = 0.04125 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-
-		class exit_image: life_RscPicture
+		class NAME_EDIT: RscEdit
 		{
-			idc = -1;
-			text = "\lyeed_IMG\data\global\exit.paa";
+			idc = 101001;
 
-			x = 0.37625 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.033 * safezoneH;
-		};
-		class exit_button: RscButtonSilent
-		{
-			idc = -1;
-			action = "closeDialog 0;";
-			tooltip = "Fermer";
-			
-			x = 0.37625 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.033 * safezoneH;
-		};
-
-		class name: RscEdit
-		{
-			idc = 555991;
-			text = "";
-
-			x = 0.438125 * safezoneW + safezoneX;
-			y = 0.478 * safezoneH + safezoneY;
+			x = 0.45875 * safezoneW + safezoneX;
+			y = 0.544 * safezoneH + safezoneY;
 			w = 0.128906 * safezoneW;
 			h = 0.022 * safezoneH;
+		};
+
+		class ACTION_FRAME: RscFrame
+		{
+			idc = 101002;
+
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.621 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+		class ACTION_BACKGROUND: RscStructuredText
+		{
+			idc = 101003;
+			colorBackground[] = {0,0,0,0.6};
+
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.621 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+		class ACTION_TEXT: RscStructuredText
+		{
+			idc = 101004;
+			colorBackground[] = {0,0,0,0};
+			text = "<t align='left' size='1.3' color='#FFFFFF'>Changer</t>";
+
+			x = 0.484323 * safezoneW + safezoneX;
+			y = 0.632741 * safezoneH + safezoneY;
+			w = 0.0721875 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+		class ACTION_IMAGE: RscPicture
+		{
+			idc = 101005;
+			text = "\lyeed_IMG\data\garage\store\action_store.paa";
+
+			x = 0.451354 * safezoneW + safezoneX;
+			y = 0.627667 * safezoneH + safezoneY;
+			w = 0.0257812 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+		class ACTION_BUTTON: RscButtonSilent
+		{
+			idc = 101006;
+			action = "[] call public_fnc_garageVehicleRenameProcess;";
+			onMouseEnter = "\
+			ctrlSetText[101005,""\lyeed_IMG\data\garage\store\action_store_select.paa""];\
+			ctrlShow[101002, false];\
+			((findDisplay 101000) displayCtrl 101003) ctrlSetBackgroundColor [1,1,1,1];\
+			((findDisplay 101000) displayCtrl 101004) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Changer</t>"";";
+			onMouseExit = "\
+			ctrlSetText[101005,""\lyeed_IMG\data\garage\store\action_store.paa""];\
+			ctrlShow[101002, true];\
+			((findDisplay 101000) displayCtrl 101003) ctrlSetBackgroundColor [0,0,0,0.6];\
+			((findDisplay 101000) displayCtrl 101004) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Changer</t>"";";
+
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.621 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+
+		class OPTION_EXIT_FRAME: RscFrame
+		{
+			idc = 101007;
+			colorText[] = {0,0,0,1};
+
+			x = 0.345312 * safezoneW + safezoneX;
+			y = 0.5 * safezoneH + safezoneY;
+			w = 0.0309375 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+		class OPTION_EXIT_BACKGROUND: RscText
+		{
+			idc = 101008;
+			colorBackground[] = {0,0,0,0.6};
+
+			x = 0.345312 * safezoneW + safezoneX;
+			y = 0.5 * safezoneH + safezoneY;
+			w = 0.0309375 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+		class OPTION_EXIT_IMAGE: RscPicture
+		{
+			idc = 101009;
+			text = "lyeed_IMG\data\global\option_exit.paa";
+
+			x = 0.352187 * safezoneW + safezoneX;
+			y = 0.511333 * safezoneH + safezoneY;
+			w = 0.0154689 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class OPTION_EXIT_BUTTON: RscButtonSilent
+		{
+			idc = 101010;
+			action = "closedialog 0;";
+			tooltip = "Quitter";
+			onMouseEnter = "((findDisplay 101000) displayCtrl 101008) ctrlSetBackgroundColor [1,1,1,1];\
+			ctrlSetText[101009,""lyeed_IMG\data\global\option_exit_select.paa""];\
+			ctrlShow[101007, false];";
+			onMouseExit = "((findDisplay 101000) displayCtrl 101008) ctrlSetBackgroundColor [0,0,0,0.6];\
+			ctrlSetText[101009,""lyeed_IMG\data\global\option_exit.paa""];\
+			ctrlShow[101007, true];";
+
+			x = 0.345312 * safezoneW + safezoneX;
+			y = 0.5 * safezoneH + safezoneY;
+			w = 0.0309375 * safezoneW;
+			h = 0.044 * safezoneH;
 		};
 	};
 };
