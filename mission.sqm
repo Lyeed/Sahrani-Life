@@ -11373,7 +11373,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=157;
+		items=158;
 		class Item0
 		{
 			position[]={10548.405,122.985,9604.9873};
@@ -12266,7 +12266,7 @@ class Mission
 			position[]={1409.8065,-0.00052624318,19610.609};
 			name="Garage légende";
 			text="Garage";
-			type="Fett_storage";
+			type="Fett_bicycle";
 			colorName="ColorPink";
 			a=0.60000002;
 			b=0.60000002;
@@ -12276,7 +12276,7 @@ class Mission
 			position[]={1412.4647,0.0009356027,19012.998};
 			name="Quincaillerie légende";
 			text="Quincaillerie";
-			type="Fett_carWorkshop";
+			type="Fett_hardpoint";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -12286,7 +12286,7 @@ class Mission
 			position[]={1399.5253,-0.00028958707,18397.578};
 			name="super légende";
 			text="Superrette";
-			type="Fett_food";
+			type="Fett_building";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -12296,7 +12296,7 @@ class Mission
 			position[]={3404.7798,-0.0023825574,19610.758};
 			name="concess";
 			text="Concessionaire";
-			type="Fett_vehicle";
+			type="Fett_camp";
 			colorName="ColorPink";
 			a=0.60000002;
 			b=0.60000002;
@@ -12316,7 +12316,7 @@ class Mission
 			position[]={3409.0513,-0.0018609872,18411.902};
 			name="concess pl";
 			text="Concessionaire Poid Lourd";
-			type="Fett_truck";
+			type="Fett_checkpoint";
 			colorName="ColorPink";
 			a=0.60000002;
 			b=0.60000002;
@@ -12336,7 +12336,7 @@ class Mission
 			position[]={1405.4159,-0.00048951665,17810.385};
 			name="Station service légende";
 			text="Station service";
-			type="Fett_fuelstation";
+			type="Fett_maptools";
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
@@ -12782,6 +12782,16 @@ class Mission
 			colorName="ColorGreen";
 			a=0.5;
 			b=0.5;
+		};
+		class Item157
+		{
+			position[]={3423.814,-0.00075869029,17245.658};
+			name="concessionnaire_moto_legende";
+			text="Concessionnaire moto";
+			type="Fett_motorcycle";
+			colorName="ColorPink";
+			a=0.60000002;
+			b=0.60000002;
 		};
 	};
 };
