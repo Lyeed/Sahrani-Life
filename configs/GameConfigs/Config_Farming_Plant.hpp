@@ -177,7 +177,7 @@ class ALYSIA_FARMING_PLANT_MARKERS
 		plant = "Skyline_Tabac";
 	};
 
-	class patate_1
+	class patato_1
 	{
 		plant = "Potato_Plant_F";
 	};
