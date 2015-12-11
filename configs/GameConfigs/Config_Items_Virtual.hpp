@@ -1215,7 +1215,7 @@ class ALYSIA_ITEMS
 		price_sell  = 30;
 		removable   = 1;
 		use         = "";
-		image       = "alysia_items_virtual\data\1\patate.paa";
+		image       = "alysia_items_virtual\data\1\patategerme.paa";
 	};
 
 	class wheat

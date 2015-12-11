@@ -22,45 +22,45 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 	class Skyline_Corn
 	{
 		seed = "corn_seed";
-		receive[] = {{"corn", 3, 1}};
+		receive[] = {{"corn", 4, 1}};
 		distance = 2.3;
-		growingTime = 350;
+		growingTime = 120;
 		groundLevel = 0;
 		upLevel = 1.47;
-		extraGrow = 100;
+		extraGrow = 50;
 	};
 	
 	class Skyline_Beans
 	{
 		seed = "bean_seed";
-		receive[] = {{"bean", 3, 1}};
+		receive[] = {{"bean", 4, 1}};
 		distance = 2.3;
-		growingTime = 350;
+		growingTime = 120;
 		groundLevel = 0;
 		upLevel = 1.23;
-		extraGrow = 100;
+		extraGrow = 50;
 	};
 
 	class Skyline_Cotton
 	{
-		receive[] = {{"cotton", 3, 1}};
+		receive[] = {{"cotton", 4, 1}};
 		seed = "cotton_seed";
 		distance = 3;
-		growingTime = 350;
+		growingTime = 120;
 		groundLevel = 0;
 		upLevel = 0.7;
-		extraGrow = 100;
+		extraGrow = 50;
 	};
 
 	class Skyline_Wheat
 	{
-		receive[] = {{"wheat", 3, 1}};
+		receive[] = {{"wheat", 4, 1}};
 		seed = "wheatseed";
 		distance = 3;
-		growingTime = 350;
+		growingTime = 120;
 		groundLevel = 0;
 		upLevel = 1.1;
-		extraGrow = 100;
+		extraGrow = 50;
 	};
 
 	class Oleander2
@@ -68,10 +68,10 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 		receive[] = {{"heroin", 1, 1}};
 		seed = "heroin_seed";
 		distance = 3;
-		growingTime = 800;
+		growingTime = 360;
 		groundLevel = 1.5;
 		upLevel = 1.5;
-		extraGrow = 200;
+		extraGrow = 100;
 	};
 
 	class Skyline_Cannabis
@@ -79,10 +79,10 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 		receive[] = {{"cannabis", 2, 1}};
 		seed = "cannabis_seed";
 		distance = 3;
-		growingTime = 800;
+		growingTime = 360;
 		groundLevel = 0;
 		upLevel = 1.4;
-		extraGrow = 200;
+		extraGrow = 100;
 	};
 
 	class Reeds
@@ -90,10 +90,10 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 		receive[] = {{"meth", 1, 1}};
 		seed = "meth_seed";
 		distance = 3;
-		growingTime = 900;
+		growingTime = 420;
 		groundLevel = 0;
 		upLevel = 0;
-		extraGrow = 60;
+		extraGrow = 120;
 	};
 
 	class Ficus_1
@@ -101,10 +101,10 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 		receive[] = {{"cocaine_seed", 1, 1}};
 		seed = "cocaine_seed";
 		distance = 7;
-		growingTime = 800;
+		growingTime = 360;
 		groundLevel = 6.1;
 		upLevel = 3;
-		extraGrow = 200;
+		extraGrow = 100;
 	};
 
 	class Skyline_Tabac
@@ -112,7 +112,7 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 		receive[] = {{"tabac", 2, 1}};
 		seed = "tabac_seed";
 		distance = 4;
-		growingTime = 480;
+		growingTime = 180;
 		groundLevel = 0;
 		upLevel = 1;
 		extraGrow = 100;
@@ -120,13 +120,13 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 
 	class Potato_Plant_F
 	{
-		receive[] = {{"patate", 2, 1}};
+		receive[] = {{"patate", 4, 1}};
 		seed = "patate_seed";
 		distance = 4;
-		growingTime = 480;
+		growingTime = 120;
 		groundLevel = 0.5;
 		upLevel = 0.5;
-		extraGrow = 100;
+		extraGrow = 50;
 	};
 };
 
