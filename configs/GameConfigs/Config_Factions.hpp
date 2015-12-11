@@ -252,7 +252,8 @@ class ALYSIA_FACTIONS
 			"cocaine_1",
 			"tabac_1",
 			"tabac_2", 
-			"tabac_3"
+			"tabac_3",
+			"potato_1"
 		};
 
 		/*** DYNAMIC MARKERS ***/
