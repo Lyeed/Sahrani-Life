@@ -4,7 +4,6 @@ class Mission
 	addOns[]=
 	{
 		"xCam_EU",
-		"aia_sara_config",
 		"A3_Characters_F_INDEP",
 		"a3_characters_f",
 		"A3_Characters_F_BLUFOR",
@@ -13401,7 +13400,6 @@ class Intro
 {
 	addOns[]=
 	{
-		"aia_sara_config",
 		"sibranak"
 	};
 	addOnsAuto[]=
@@ -13429,7 +13427,6 @@ class OutroWin
 {
 	addOns[]=
 	{
-		"aia_sara_config",
 		"sibranak"
 	};
 	addOnsAuto[]=
@@ -13457,7 +13454,6 @@ class OutroLoose
 {
 	addOns[]=
 	{
-		"aia_sara_config",
 		"sibranak"
 	};
 	addOnsAuto[]=
