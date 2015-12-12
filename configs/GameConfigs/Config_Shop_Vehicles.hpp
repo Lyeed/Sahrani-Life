@@ -12,7 +12,8 @@ class ALYSIA_SHOPS_VEHICLES
 			"DAR_ExplorerPolice",
 			"DAR_TaurusPolice", 
 			"DAR_CVPIAux", 
-			"DAR_ImpalaPolice"
+			"DAR_ImpalaPolice",
+			"Fett_truck_milice"
 		};
 	};
 	class WEST_vehicles_air

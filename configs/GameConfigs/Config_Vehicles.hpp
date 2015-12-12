@@ -3570,6 +3570,18 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		realname = "Chevrolet Tahoe Milice";
 	};
+	class Fett_truck_milice
+	{
+		buyPrice = 150000;
+		inventory = 300;
+		side = "WEST";
+		insurance = 1;
+		license = "";
+		fuel = "Diesel";
+		rank = 3;
+		colors[] = {};
+		realname = "Camion milice";
+	};
 	
 
 	class Fett_boat_milice
