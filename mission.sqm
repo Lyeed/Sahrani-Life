@@ -48,7 +48,6 @@ class Mission
 		"A3_Structures_F_Bootcamp_Items_Sport",
 		"A3_Structures_F_EPA_Mil_Scrapyard",
 		"A3_Weapons_F",
-		"3DEN",
 		"sibranak"
 	};
 	addOnsAuto[]=
@@ -59,7 +58,6 @@ class Mission
 		"A3_Characters_F_OPFOR",
 		"A3_Characters_F_Civil",
 		"cba_main",
-		"3DEN",
 		"a3_modules_f_curator_curator",
 		"xcam_source",
 		"bmw",
