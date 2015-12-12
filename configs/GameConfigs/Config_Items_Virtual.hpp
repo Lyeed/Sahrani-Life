@@ -683,7 +683,7 @@ class ALYSIA_ITEMS
 	class oilp
 	{
 		name        = "Pétrole traité";
-		weight      = 5;
+		weight      = 4;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -691,8 +691,8 @@ class ALYSIA_ITEMS
 		license     = "oil";
 		class market
 		{
-			max = 4700;
-			min = 2100;
+			max = 24;
+			min = 16;
 			mult = 3;
 			affect[] = {};
 		};
@@ -855,7 +855,7 @@ class ALYSIA_ITEMS
 		name        = "Prune";
 		weight      = 1;
 		price_buy   = 2;
-		price_sell  = 2;
+		price_sell  = 3;
 		illegal     = 0;
 		removable   = 1;
 		use         = "[""prune""] call public_fnc_eatFood;";

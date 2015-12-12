@@ -179,7 +179,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"max_bike_base",
 			"Mrshounka_ducati_p_base",
 			"Mrshounka_yamaha_p_base"
-			
 		};
 	};
 	class CIV_vehicles_land_normal

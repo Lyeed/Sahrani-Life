@@ -47,7 +47,7 @@ class ALYSIA_FARMING_GATHER
 
 	class prunes_1
 	{
-		receive[] = {{"prune", 3, 0}};
+		receive[] = {{"prune", 6, 1}};
 		tool = "";
 		sound = "gather1";
 	};
@@ -55,7 +55,7 @@ class ALYSIA_FARMING_GATHER
 
 	class vignes_1
 	{
-		receive[] = {{"raisin", 3, 0}};
+		receive[] = {{"raisin", 6, 1}};
 		tool = "";
 		sound = "gather1";
 	};
