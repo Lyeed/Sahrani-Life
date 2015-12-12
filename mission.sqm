@@ -47,7 +47,9 @@ class Mission
 		"A3_Structures_F_Civ_Garbage",
 		"A3_Structures_F_Bootcamp_Items_Sport",
 		"A3_Structures_F_EPA_Mil_Scrapyard",
-		"A3_Weapons_F"
+		"A3_Weapons_F",
+		"3DEN",
+		"sibranak"
 	};
 	addOnsAuto[]=
 	{
@@ -57,6 +59,7 @@ class Mission
 		"A3_Characters_F_OPFOR",
 		"A3_Characters_F_Civil",
 		"cba_main",
+		"3DEN",
 		"a3_modules_f_curator_curator",
 		"xcam_source",
 		"bmw",
@@ -95,7 +98,7 @@ class Mission
 		"A3_Structures_F_Bootcamp_Items_Sport",
 		"A3_Structures_F_EPA_Mil_Scrapyard",
 		"A3_Weapons_F",
-		"aia_sara_config"
+		"sibranak"
 	};
 	randomSeed=13763187;
 	class Intel
@@ -3503,7 +3506,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={10024.904,15.383545,10948.963};
+					position[]={9970.7246,15.128239,10948.514};
 					azimut=-6835.98;
 					id=153;
 					side="CIV";
@@ -9615,7 +9618,7 @@ class Mission
 			vehicle="HeliHEmpty";
 			leader=1;
 			skill=0.60000002;
-			init="building2 = (position this nearestobject 195918); this setPos [(getPos building2 select 0), (getPos building2 select 1), 0]; this setDir (getDir building2); building2 hideObjectGlobal true; building3 = (position this nearestobject 195924); this setPos [(getPos building3 select 0), (getPos building3 select 1), 0]; this setDir (getDir building3); building3 hideObjectGlobal true; building4 = (position this nearestobject 195908); this setPos [(getPos building4 select 0), (getPos building4 select 1), 0]; this setDir (getDir building4); building4 hideObjectGlobal true; building5 = (position this nearestobject 195927); this setPos [(getPos building5 select 0), (getPos building5 select 1), 0]; this setDir (getDir building5); building5 hideObjectGlobal true;";
+			init="bu1 = [0,0,0] nearestObject 129015; bu1 hideObject true; bu2 = [0,0,0] nearestObject 129014; bu2 hideObject true;";
 		};
 		class Item608
 		{
@@ -9658,12 +9661,12 @@ class Mission
 		};
 		class Item612
 		{
-			position[]={12209.388,25.965,17734.402};
+			position[]={12231.612,25.951591,17692.684};
 			id=766;
 			side="EMPTY";
 			vehicle="HeliHEmpty";
 			skill=0.60000002;
-			init="bat = (position this nearestobject 175909); this setPos [(getPos bat select 0), (getPos bat select 1), 0]; this setDir (getDir bat); bat hideObjectGlobal true; bat1 = (position this nearestobject 175911); this setPos [(getPos bat1 select 0), (getPos bat1 select 1), 0]; this setDir (getDir bat1); bat1 hideObjectGlobal true; bat2 = (position this nearestobject 175913); this setPos [(getPos bat2 select 0), (getPos bat2 select 1), 0]; this setDir (getDir bat2); bat2 hideObjectGlobal true; bat3 = (position this nearestobject 175946); this setPos [(getPos bat3 select 0), (getPos bat3 select 1), 0]; this setDir (getDir bat3); bat3 hideObjectGlobal true; bat4 = (position this nearestobject 175948); this setPos [(getPos bat4 select 0), (getPos bat4 select 1), 0]; this setDir (getDir bat4); bat4 hideObjectGlobal true; bat5 = (position this nearestobject 175950); this setPos [(getPos bat5 select 0), (getPos bat5 select 1), 0]; this setDir (getDir bat5); bat5 hideObjectGlobal true; bat6 = (position this nearestobject 175952); this setPos [(getPos bat6 select 0), (getPos bat6 select 1), 0]; this setDir (getDir bat6); bat6 hideObjectGlobal true; bat7 = (position this nearestobject 175842); this setPos [(getPos bat7 select 0), (getPos bat7 select 1), 0]; this setDir (getDir bat7); bat7 hideObjectGlobal true; bat8 = (position this nearestobject 175844); this setPos [(getPos bat8 select 0), (getPos bat8 select 1), 0]; this setDir (getDir bat8); bat8 hideObjectGlobal true; bat9 = (position this nearestobject 175834); this setPos [(getPos bat9 select 0), (getPos bat9 select 1), 0]; this setDir (getDir bat9); bat9 hideObjectGlobal true; bat10 = (position this nearestobject 175838); this setPos [(getPos bat10 select 0), (getPos bat10 select 1), 0]; this setDir (getDir bat10); bat10 hideObjectGlobal true; bat11 = (position this nearestobject 175836); this setPos [(getPos bat11 select 0), (getPos bat11 select 1), 0]; this setDir (getDir bat11); bat11 hideObjectGlobal true; bat12 = (position this nearestobject 175982); this setPos [(getPos bat12 select 0), (getPos bat12 select 1), 0]; this setDir (getDir bat12); bat12 hideObjectGlobal true; bat13 = (position this nearestobject 175984); this setPos [(getPos bat13 select 0), (getPos bat13 select 1), 0]; this setDir (getDir bat13); bat13 hideObjectGlobal true; bat14 = (position this nearestobject 175988); this setPos [(getPos bat14 select 0), (getPos bat14 select 1), 0]; this setDir (getDir bat14); bat14 hideObjectGlobal true; bat15 = (position this nearestobject 175986); this setPos [(getPos bat15 select 0), (getPos bat15 select 1), 0]; this setDir (getDir bat15); bat15 hideObjectGlobal true; bat16 = (position this nearestobject 175990); this setPos [(getPos bat16 select 0), (getPos bat16 select 1), 0]; this setDir (getDir bat16); bat16 hideObjectGlobal true; bat17 = (position this nearestobject 175992); this setPos [(getPos bat17 select 0), (getPos bat17 select 1), 0]; this setDir (getDir bat17); bat17 hideObjectGlobal true;";
+			init="bat = [0,0,0] nearestObject 129081; bat hideObject true; bat1 = [0,0,0] nearestObject 129102; bat1 hideObject true; bat2 = [0,0,0] nearestObject 129101; bat2 hideObject true; bat3 = [0,0,0] nearestObject 129145; bat3 hideObject true; bat4 = [0,0,0] nearestObject 129144; bat4 hideObject true; bat5 = [0,0,0] nearestObject 129143; bat5 hideObject true; bat6 = [0,0,0] nearestObject 129134; bat6 hideObject true; bat7 = [0,0,0] nearestObject 129132; bat7 hideObject true; bat8 = [0,0,0] nearestObject 129344; bat8 hideObject true; bat9 = [0,0,0] nearestObject 129343; bat9 hideObject true; bat10 = [0,0,0] nearestObject 129342; bat10 hideObject true; bat11 = [0,0,0] nearestObject 129133; bat11 hideObject true; bat12 = [0,0,0] nearestObject 129135; bat12 hideObject true; bat13 = [0,0,0] nearestObject 129080; bat13 hideObject true; bat14 = [0,0,0] nearestObject 129334; bat14 hideObject true; bat15 = [0,0,0] nearestObject 129345; bat15 hideObject true;";
 		};
 		class Item613
 		{
@@ -9878,12 +9881,12 @@ class Mission
 		};
 		class Item636
 		{
-			position[]={8106.4209,176.985,7758.585};
+			position[]={8078.5415,176.89897,7808.3096};
 			id=790;
 			side="EMPTY";
 			vehicle="HeliHEmpty";
 			skill=0.60000002;
-			init="bateast = (position this nearestobject 9028); this setPos [(getPos bateast select 0), (getPos bateast select 1), 0]; this setDir (getDir bateast); bateast hideObjectGlobal true; bateast1 = (position this nearestobject 9027); this setPos [(getPos bateast1 select 0), (getPos bateast1 select 1), 0]; this setDir (getDir bateast1); bateast1 hideObjectGlobal true; bateast2 = (position this nearestobject 474155); this setPos [(getPos bateast2 select 0), (getPos bateast2 select 1), 0]; this setDir (getDir bateast2); bateast2 hideObjectGlobal true; bateast3 = (position this nearestobject 474121); this setPos [(getPos bateast3 select 0), (getPos bateast3 select 1), 0]; this setDir (getDir bateast3); bateast3 hideObjectGlobal true; bateast4 = (position this nearestobject 8648); this setPos [(getPos bateast4 select 0), (getPos bateast4 select 1), 0]; this setDir (getDir bateast4); bateast4 hideObjectGlobal true; bateast5 = (position this nearestobject 474124); this setPos [(getPos bateast5 select 0), (getPos bateast5 select 1), 0]; this setDir (getDir bateast5); bateast5 hideObjectGlobal true; bateast6 = (position this nearestobject 474163); this setPos [(getPos bateast6 select 0), (getPos bateast6 select 1), 0]; this setDir (getDir bateast6); bateast6 hideObjectGlobal true; bateast7 = (position this nearestobject 474164); this setPos [(getPos bateast7 select 0), (getPos bateast7 select 1), 0]; this setDir (getDir bateast7); bateast7 hideObjectGlobal true; bateast8 = (position this nearestobject 474165); this setPos [(getPos bateast8 select 0), (getPos bateast8 select 1), 0]; this setDir (getDir bateast8); bateast8 hideObjectGlobal true;";
+			init="bateast = [0,0,0] nearestObject 100162; bateast hideObject true; bateast1 = [0,0,0] nearestObject 100161; bateast1 hideObject true; bateast2 = [0,0,0] nearestObject 100163; bateast2 hideObject true; bateast3 = [0,0,0] nearestObject 100163; bateast3 hideObject true; bateast4 = [0,0,0] nearestObject 100164; bateast4 hideObject true; bateast5 = [0,0,0] nearestObject 100286; bateast5 hideObject true; bateast6 = [0,0,0] nearestObject 100287; bateast6 hideObject true; bateast7 = [0,0,0] nearestObject 100284; bateast7 hideObject true; bateast8 = [0,0,0] nearestObject 100285; bateast8 hideObject true; bateast9 = [0,0,0] nearestObject 100306; bateast9 hideObject true;";
 		};
 		class Item637
 		{
@@ -10864,7 +10867,7 @@ class Mission
 			side="EMPTY";
 			vehicle="HeliHEmpty";
 			skill=0.60000002;
-			init="f1 = (position this nearestobject 256254); f1 hideObjectGlobal true;";
+			init="f1 = [0,0,0] nearestObject 333334; f1 hideObject true;";
 		};
 		class Item739
 		{
@@ -11372,13 +11375,13 @@ class Mission
 		};
 		class Item793
 		{
-			position[]={11880.95,153,15354.058};
+			position[]={11881.532,152.99063,15356.908};
 			id=947;
 			side="EMPTY";
 			vehicle="HeliHEmpty";
 			leader=1;
 			skill=0.60000002;
-			init="b1 = [0,0,0] nearestObject 566428; b1 hideObject true; b2 = [0,0,0] nearestObject 566427; b2 hideObject true; b3 = [0,0,0] nearestObject 566429; b3 hideObject true; b4 = [0,0,0] nearestObject 566430; b4 hideObject true; b5 = [0,0,0] nearestObject 566431; b5 hideObject true; b6 = [0,0,0] nearestObject 566458; b6 hideObject true; b7 = [0,0,0] nearestObject 566457; b7 hideObject true; b8 = [0,0,0] nearestObject 566455; b8 hideObject true;";
+			init="b1 = [0,0,0] nearestObject 196242; b1 hideObject true; b2 = [0,0,0] nearestObject 198653; b2 hideObject true; b3 = [0,0,0] nearestObject 198652; b3 hideObject true; b4 = [0,0,0] nearestObject 198691; b4 hideObject true; b5 = [0,0,0] nearestObject 198690; b5 hideObject true; b6 = [0,0,0] nearestObject 198666; b6 hideObject true; b7 = [0,0,0] nearestObject 198665; b7 hideObject true; b8 = [0,0,0] nearestObject 198725; b8 hideObject true;";
 		};
 		class Item794
 		{
@@ -12218,7 +12221,7 @@ class Mission
 			position[]={10116.076,177.4745,13964.351};
 			name="iron_1";
 			text="Mine de Fer";
-			type="Fett_as_aamissile";
+			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -12268,7 +12271,7 @@ class Mission
 			position[]={11380.056,116.24154,10069.938};
 			name="copper_1";
 			text="Mine de cuivre";
-			type="Fett_as_aamissile";
+			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -12288,7 +12291,7 @@ class Mission
 			position[]={11662.848,3.9959064,5562.0117};
 			name="sand_1";
 			text="Mine de sable";
-			type="Fett_as_aamissile";
+			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -12317,7 +12320,7 @@ class Mission
 			position[]={15140.998,155.49858,12316.778};
 			name="coal_1";
 			text="Mine de charbon";
-			type="Fett_as_aamissile";
+			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -12434,7 +12437,7 @@ class Mission
 			position[]={12498.13,30.959999,17650.174};
 			name="gold_1";
 			text="Mine d'or";
-			type="Fett_as_aamissile";
+			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -12444,7 +12447,7 @@ class Mission
 			position[]={10675.328,320.50299,8389.918};
 			name="plat_1";
 			text="Mine de platine";
-			type="Fett_as_aamissile";
+			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -12454,7 +12457,7 @@ class Mission
 			position[]={12967.824,31.442734,7088.2935};
 			name="baux_1";
 			text="Mine de bauxite";
-			type="Fett_as_aamissile";
+			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -12800,7 +12803,7 @@ class Mission
 			position[]={13721.001,26.0168,12775.98};
 			name="clay_1";
 			text="Mine d'argile";
-			type="Fett_as_aamissile";
+			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -13400,11 +13403,12 @@ class Intro
 {
 	addOns[]=
 	{
-		"aia_sara_config"
+		"aia_sara_config",
+		"sibranak"
 	};
 	addOnsAuto[]=
 	{
-		"aia_sara_config"
+		"sibranak"
 	};
 	randomSeed=13763187;
 	class Intel
@@ -13427,11 +13431,12 @@ class OutroWin
 {
 	addOns[]=
 	{
-		"aia_sara_config"
+		"aia_sara_config",
+		"sibranak"
 	};
 	addOnsAuto[]=
 	{
-		"aia_sara_config"
+		"sibranak"
 	};
 	randomSeed=13763187;
 	class Intel
@@ -13454,11 +13459,12 @@ class OutroLoose
 {
 	addOns[]=
 	{
-		"aia_sara_config"
+		"aia_sara_config",
+		"sibranak"
 	};
 	addOnsAuto[]=
 	{
-		"aia_sara_config"
+		"sibranak"
 	};
 	randomSeed=13763187;
 	class Intel
