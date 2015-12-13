@@ -8,18 +8,20 @@
 
 /* DEV */
 [["===================", {}]] call CBA_fnc_addPlayerAction;
-[["(DEV) Teleport ON", {onMapSingleClick "player setPos _pos";}]] call CBA_fnc_addPlayerAction;
+[["(DEV) Teleport ON", {onMapSingleClick "(vehicle player) setPos _pos";}]] call CBA_fnc_addPlayerAction;
 [["(DEV) Teleport OFF", {onMapSingleClick "";}]] call CBA_fnc_addPlayerAction;
 [["(DEV) Copier ma position", {copyToClipboard(str(getPos player))}]] call CBA_fnc_addPlayerAction;
 [["(DEV) Bandage", {g_bleed = 0;}]] call CBA_fnc_addPlayerAction;
 [["(DEV) santé", {[4000] call public_fnc_handleBlood;}]] call CBA_fnc_addPlayerAction;
 [["(DEV) +100.000kn (porte-feuille)", {[true, 100000] call public_fnc_handleCash;}]] call CBA_fnc_addPlayerAction;
 [["(DEV) +100.000kn (compte)", {[true, 100000, "Dev"] call public_fnc_handleATM;}]] call CBA_fnc_addPlayerAction;
-[["(DEV) Réparer véhicule cursorTarget", {cursorTarget setDamage 0;}]] call CBA_fnc_addPlayerAction;
+[["(DEV) Réparer cible", {cursorTarget setDamage 0;}]] call CBA_fnc_addPlayerAction;
+[["(DEV) Supprimer cible", {deleteVehicle cursorTarget}]] call CBA_fnc_addPlayerAction;
 [["(DEV) Réparer mon véhicule", {(vehicle player) setDamage 0;}]] call CBA_fnc_addPlayerAction;
-[["(DEV) + 1 GPS", {player addItem "ItemGPS";}]] call CBA_fnc_addPlayerAction;
-[["(DEV) + 1 MAP", {player addItem "ItemMap";}]] call CBA_fnc_addPlayerAction;
+[["(DEV) Essence mon véhicule", {(vehicle player) setFuel 1;}]] call CBA_fnc_addPlayerAction;
 [["(DEV) + 1 Tenue (Alysia)", {player forceAddUniform "U_C_Alysia_01";}]] call CBA_fnc_addPlayerAction;
+[["(DEV) + 1 GPS", {player addItem "ItemGPS"; player assignItem "ItemGPS"; }]] call CBA_fnc_addPlayerAction;
+[["(DEV) + 1 MAP", {player addItem "ItemMap"; player assignItem "ItemMap";}]] call CBA_fnc_addPlayerAction;
 [["(DEV) + 1 UZI", {player addMagazine "RH_30Rnd_9x19_UZI"; player addWeapon "RH_muzi";}]] call CBA_fnc_addPlayerAction;
 [["(DEV) Revivre", {cursorTarget setVariable ["is_coma", false, true];}]] call CBA_fnc_addPlayerAction;
 [["(DEV) +100 faim", {[100] call public_fnc_handleHunger;}]] call CBA_fnc_addPlayerAction;

@@ -1,3 +1,6 @@
+arifle_SDAR_F
+30Rnd_556x45_Stanag
+
 
 gServer_AH_NORTH_stock_virtual = [["handcuffs", 500, (getPlayerUID player)]];
 publicVariable "gServer_AH_NORTH_stock_virtual";
