@@ -259,7 +259,7 @@ class Public
 		class handleBleed {};
 		class handleBlood {};
 		class handleHunger {};
-		class HandleThirst {};
+		class handleThirst {};
 		class healHospital {};
 		class killAction {};
 		class killProcess {};
@@ -308,7 +308,6 @@ class Public
 		class saliveProcess {};
 		class saliveStart {};
 	};
-
 
 	class Bank
 	{

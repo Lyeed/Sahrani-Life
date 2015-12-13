@@ -6,12 +6,12 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if ((g_phone_number isEqualTo "") || (g_phone_forfait isEqualTo "none") || (g_phone_forfait isEqualTo "")) then {
+if (((player getVariable ["number", ""]) isEqualTo "") || (g_phone_forfait isEqualTo "none") || (g_phone_forfait isEqualTo "")) then {
 	["store_forfait"] spawn public_fnc_tabletApp;
 } else {
 	disableSerialization;
 	_display = findDisplay 7500;
-	(_display displayCtrl 8501) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", g_phone_number];
+	(_display displayCtrl 8501) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", (player getVariable ["number", ""])];
 	(_display displayCtrl 8504) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", getText(missionConfigFile >> "ALYSIA_FORFAITS" >> g_phone_forfait >> "name")];
 
 	if (playerSide isEqualTo civilian) then

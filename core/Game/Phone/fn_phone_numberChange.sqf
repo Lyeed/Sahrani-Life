@@ -14,12 +14,10 @@ while {_newNumber in _numbers} do
 	_newNumber = format["%1%2%3%4%5%6", floor(random 10), floor(random 10), floor(random 10), floor(random 10), floor(random 10), floor(random 10)];
 };
 
-if (g_phone_number != "") then {
-	_numbers deleteAt (_numbers find g_phone_number);
+if ((player getVariable ["number", ""]) != "") then {
+	_numbers deleteAt (player getVariable ["number", ""]);
 };
 
 _numbers pushBack _newNumber;
-g_phone_number = _newNumber;
 player setVariable ["number", _newNumber, true];
 ["gServer_phone_numbers", _numbers] call CBA_fnc_publicVariable;
-true;

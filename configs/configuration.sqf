@@ -32,7 +32,6 @@ with missionNamespace do
 	g_apps = [];
 	/* ===================[Phone]======================= */
 	g_phone_contacts = [];
-	g_phone_number = "";
 	g_phone_messages = [];
 	g_phone_forfait = "none";
 	g_phone_blacklist = [];

@@ -88,9 +88,8 @@ if (g_arrestMinuts > 0) then {
 	g_arrested = true;
 };
 // Phone
-g_phone_number = _basic select 26;
-if (g_phone_number != "") then {
-	player setVariable["number", g_phone_number, true];
+if ((_basic select 26) != "") then {
+	player setVariable ["number", (_basic select 26), true];
 };
 g_phone_contacts = _basic select 27;
 g_phone_messages = _basic select 28;

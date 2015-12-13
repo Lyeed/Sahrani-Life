@@ -170,13 +170,13 @@ if (hasInterface) then
 		{
 			waitUntil {((vehicle player) != player)};
 
-			_veh = vehicle player;
-			_inc = switch (true) do
-			{
-				case (_veh isKindOf "Air"): {100000};
-				default {50000};
-			};
 			g_seatbelt = false;
+			_veh = vehicle player;
+			if (_veh isKindOf "Air") then {
+				_inc = 100000;
+			} else {
+				_inc = 60000;
+			};
 
 			while {((vehicle player) isEqualTo _veh)} do
 			{

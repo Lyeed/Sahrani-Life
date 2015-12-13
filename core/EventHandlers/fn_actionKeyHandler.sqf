@@ -109,7 +109,7 @@ if ((vehicle player) isEqualTo player) then
 					breakOut "main";
 				};
 
-				if (typeOf(cursorTarget) in ["Land_Atm_01_F", "Land_Atm_02_F", "xcam_Atm_01_F"]) then
+				if (typeOf(cursorTarget) in ["Land_Atm_01_F", "Land_Atm_02_F", "xcam_Atm_01_F", "xcam_Atm_02_F"]) then
 				{
 					["home"] call public_fnc_atmScreen;
 					breakOut "main";

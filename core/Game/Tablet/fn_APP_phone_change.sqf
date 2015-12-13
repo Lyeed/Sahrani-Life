@@ -7,7 +7,7 @@
 */
 private["_action", "_numbers"];
 
-if (g_phone_number isEqualTo "") exitWith {};
+if ((player getVariable ["number", ""]) isEqualTo "") exitWith {};
 if (g_atm < 10000) exitWith {
 	[format["Vous n'avez pas assez d'argent<br/><br/><t align='left'>Prix</t><t align='right'><t color='#8cff9b'>%1</t>kn</t>", [10000] call public_fnc_numberText]] call public_fnc_error;
 };
@@ -22,7 +22,7 @@ _action =
 if (_action) then
 {
 	[] call public_fnc_phone_numberChange;
-	[format["Vous avez changé de numéro<br/><br/><t align='left'>Nouveau</t><t align='right' color='#FF4000'>%1</t>", g_phone_number]] call public_fnc_info;
+	[format["Vous avez changé de numéro<br/><br/><t align='left'>Nouveau</t><t align='right' color='#FF4000'>%1</t>", (player getVariable ["number", ""])]] call public_fnc_info;
 	playSound "buy";
 	[false, 10000, "Changement numéro"] call public_fnc_handleATM;
 };

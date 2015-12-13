@@ -20,8 +20,6 @@ disableSerialization;
 _display = findDisplay 2900;
 if (isNull _display) exitWith {};
 
-(_display displayCtrl 2904) ctrlSetStructuredText parseText format["<t align='center' size='1.8'>%1</t>", getText(configFile >> "CfgVehicles" >> typeOf(g_interaction_target) >> "displayName")];
-
 _health = floor(1 - (damage g_interaction_target)) * 100;
 _health_color = switch (true) do
 {
@@ -31,27 +29,18 @@ _health_color = switch (true) do
 	case (_health >= 75 && _health < 100): {"CDDC39"};
 	case (_health isEqualTo 100): {"8BC34A"};
 };
-(_display displayCtrl 2909) ctrlSetStructuredText parseText format["<t align='center'><t color='#%2'>%3</t>%1</t>", "%", _health_color, _health];
+(_display displayCtrl 2910) ctrlSetStructuredText parseText format["<t align='center'><t color='#%2'>%3</t>%1</t>", "%", _health_color, _health];
 
 [] call public_fnc_vehicleMenu_repair_fill;
 
 while {!(isNull _display)} do
 {
-	if ((player distance g_interaction_target) > ((((boundingBox g_interaction_target) select 1) select 0) + 2)) exitWith {
-		closeDialog 0;
-	};
-	if (player getVariable ["restrained", false]) exitWith {
-		closeDialog 0;
-	};
-	if (player getVariable ["surrender", false]) exitWith {
-		closeDialog 0;
-	};
-	if (isNull g_interaction_target) exitWith {
-		closeDialog 0;
-	};
-	if (!(alive g_interaction_target)) exitWith {
-		closeDialog 0;
-	};
-
+	if (
+			(isNull g_interaction_target)
+			!(alive g_interaction_target)
+			(player distance g_interaction_target) > ((((boundingBox g_interaction_target) select 1) select 0) + 2.5)
+			(player getVariable ["restrained", false])
+			(player getVariable ["surrender", false])
+		) exitWith {closeDialog 0};
 	sleep 0.5;
 };

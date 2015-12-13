@@ -11,9 +11,9 @@ _display = findDisplay 2900;
 if (isNull _display) exitWith {};
 if (isNull g_interaction_target) exitWith {};
 
-_type = cbChecked (_display displayCtrl 2910);
+_type = cbChecked (_display displayCtrl 2908);
 
-_list = _display displayCtrl 2901;
+_list = _display displayCtrl 2907;
 lbClear _list;
 
 _parts = getAllHitPointsDamage g_interaction_target;
@@ -24,14 +24,14 @@ _partValue = _parts select 2;
 {
 	if (_x != "") then
 	{
-		_value = floor((1 - (_partValue select _forEachIndex)) * 100);
-		if (!_type || (_type && (_value < 100))) then
+		if (isClass(missionConfigFile >> "ALYSIA_REPAIR" >> _x)) then
 		{
-			_index = _list lbAdd _x;
-			_list lbSetData [_index, _x];
-			_list lbSetValue [_index, _value];
-			if (isClass(missionConfigFile >> "ALYSIA_REPAIR" >> _x)) then
+			_value = floor((1 - (_partValue select _forEachIndex)) * 100);
+			if (!_type || (_type && (_value < 100))) then
 			{
+				_index = _list lbAdd _x;
+				_list lbSetData [_index, _x];
+				_list lbSetValue [_index, _value];
 				_picture = getText(missionConfigFile >> "ALYSIA_REPAIR" >> _x >> "picture");
 				if (_picture isEqualTo "unknown") then {
 					_list lbSetPicture [_index, "\lyeed_IMG\data\vehicle\repair\parts\unknown.paa"];
@@ -51,7 +51,8 @@ _partValue = _parts select 2;
 			};
 		};
 	};
-} forEach (_partVariables);
+} forEach _partVariables;
+
 if ((lbSize _list) isEqualTo 0) then {
 	_list lbAdd "Aucune";
 };

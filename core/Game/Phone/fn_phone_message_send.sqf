@@ -27,7 +27,7 @@ _sent = 0;
 if (_hide) then {
 	_from = "Numéro Masqué";
 } else {
-	_from = g_phone_number;
+	_from = player getVariable ["number", ""];
 };
 
 {
@@ -86,7 +86,7 @@ if (_hide) then {
 			{
 				if (([_number] call CBA_fnc_strLen) isEqualTo 6) then
 				{
-					if (!(_number isEqualTo g_phone_number)) then
+					if (_number != (player getVariable ["number", ""])) then
 					{
 						if (_number in (missionNamespace getVariable ["gServer_phone_numbers", []])) then
 						{

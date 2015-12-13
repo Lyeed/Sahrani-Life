@@ -25,6 +25,7 @@ _isEmpty = false;
 		_index = _list lbAdd format["%1x %2", ([_val] call public_fnc_numberText), ([_x] call public_fnc_itemGetName)];
 		_list lbSetData [_index, _x];
 		_list lbSetPicture [_index, ([_x] call public_fnc_itemGetImage)];
+		_list lbSetTooltip [_index, ([_x] call public_fnc_itemGetName)];
 	};
 } forEach g_inv_items;
 

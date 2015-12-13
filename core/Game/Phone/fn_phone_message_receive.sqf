@@ -11,7 +11,7 @@ _from = [_this, 1, "", [""]] call BIS_fnc_param;
 
 if ((_msg isEqualTo "") || (_from isEqualTo "")) exitWith {};
 if (!g_connected) exitWith {};
-if (g_phone_number isEqualTo "") exitWith {};
+if (((player getVariable ["number", ""])) isEqualTo "") exitWith {};
 if (_from in g_phone_blacklist) exitWith {};
 
 if ((count g_phone_messages) >= getNumber(missionConfigFile >> "ALYSIA_FORFAITS" >> g_phone_forfait >> "sms_max")) then {

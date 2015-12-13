@@ -7,7 +7,6 @@ class RscDisplayInteraction: default_base_dialog
 	{
 		class BACKGROUND: RscPicture
 		{
-			idc = -1;
 			text = "\lyeed_IMG\data\interactions\background.jpg";
 
 			x = 0.37625 * safezoneW + safezoneX;
@@ -18,7 +17,6 @@ class RscDisplayInteraction: default_base_dialog
 
 		class FRAME: RscFrame
 		{
-			idc = -1;
 			colorText[] = {0,0,0,1};
 			
 			x = 0.37625 * safezoneW + safezoneX;
@@ -33,7 +31,6 @@ class RscDisplayInteraction: default_base_dialog
 		class TITLE: RscStructuredText
 		{
 			idc = 5001;
-			text = "";
 			colorBackground[] = {0,0,0,1};
 			
 			x = 0.37625 * safezoneW + safezoneX;
