@@ -42,7 +42,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Milice";
 		side = "WEST";
-		items[] = {{"defusekit", "cone", "barriere", "donut", "soda", "handcuffkeys", "handcuffs", "kit_destru", "spikeStrip", "bip", "sifflet"}, {}};
+		items[] = {{"cone", "barriere", "donut", "soda", "handcuffkeys", "handcuffs", "spikeStrip", "bip", "sifflet"}, {}};
 	};
 
 	class east

@@ -108,6 +108,8 @@ class ALYSIA_FARMING_GATHER
 		extra[] = {{"palourde", 10}, {"saintjacques", 25}, {"bigorneau", 12}, {"crabe", 15}, {"bulot", 8}};
 		tool = "";
 		sound = "";
+		water = 1;
+		water_depth = 21;
 	};
 
 	class fish_1
