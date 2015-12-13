@@ -6,18 +6,28 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if ((currentWeapon player) isEqualTo "") then
+if ((vehicle player) isEqualTo player) then
 {
-	if (g_curWep_h in (weapons player)) then 
-	{
-		player selectWeapon g_curWep_h;
-		g_curWep_h = "";
-	};	
-} else {
-	if (((handgunWeapon player) isEqualTo (currentWeapon player)) && !(player canAdd (currentWeapon player))) then {
-		["Vous n'avez pas assez de place pour ranger votre arme"] spawn public_fnc_error;
+	if (((getPosASLW player) select 2) < 0) then {
+		["Vous ne pouvez pas utiliser votre holdster sous l'eau"] call public_fnc_error;
 	} else {
-		g_curWep_h = currentWeapon player;
-		player action ["SwitchWeapon", player, player, 100];
+		if ((currentWeapon player) isEqualTo "") then
+		{
+			if (g_curWep_h in (weapons player)) then 
+			{
+				player selectWeapon g_curWep_h;
+				g_curWep_h = "";
+			};	
+		} else {
+			if (((handgunWeapon player) isEqualTo (currentWeapon player)) && !(player canAdd (currentWeapon player))) then {
+				["Vous n'avez pas assez de place pour ranger votre arme"] spawn public_fnc_error;
+			} else {
+				g_curWep_h = currentWeapon player;
+				player action ["SwitchWeapon", player, player, 100];
+			};
+		};
+
 	};
+} else {
+	["Vous ne pouvez pas utiliser votre holdster en véhicule"] call public_fnc_error;
 };

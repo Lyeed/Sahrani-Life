@@ -23,7 +23,7 @@ if ((_tool != "") && ((currentWeapon player) != _tool)) exitWith {
 	[format["Vous n'avez pas le bon outil<br/>Vous avez besoin de <t color='#FF8000'>%1</t> pour commencer la récolte", getText(configFile >> "CfgWeapons" >> _tool >> "displayName")]] call public_fnc_error;
 };
 if ((_tool isEqualTo "") && ((currentWeapon player) != "")) exitWith {
-	["Pour avoir besoin d'avoir les mains vides pour commencer la récolte"] call public_fnc_error;
+	["Vous devez avoir les mains vides pour commencer la récolte"] call public_fnc_error;
 };
 
 _water = getNumber(missionConfigFile >> "ALYSIA_FARMING_GATHER" >> _marker >> "water");
