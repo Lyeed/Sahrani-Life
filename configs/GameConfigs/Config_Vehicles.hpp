@@ -3712,6 +3712,19 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		realname = "btr";
 	};
+	
+	class Fett_truck_army
+	{
+		buyPrice = 75000;
+		inventory = 300;
+		side = "EAST";
+		insurance = 1;
+		license = "";
+		fuel = "Diesel";
+		rank = 3;
+		colors[] = {};
+		realname = "HEMTT cargo";
+	};
 
 	class sfp_bo105_unarmed
 	{

@@ -43,6 +43,7 @@ class ALYSIA_SHOPS_VEHICLES
 		side = "EAST";
 		stock[] = {
 			"Cha_BTR60_Cuba",
+			"Fett_truck_army",
 			"gac_JGSDF_BXD10_MG",
 			"gac_JGSDF_V16_Rcn",
 			"gac_JGSDF_BXD10",
