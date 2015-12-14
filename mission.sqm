@@ -3523,7 +3523,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=966;
+		items=968;
 		class Item0
 		{
 			position[]={14231.394,0.13552099,12805.147};
@@ -13245,10 +13245,30 @@ class Mission
 			skill=0.60000002;
 			init="this enableSimulation false;this setVectorUp [0,0,1];this allowDamage false;this addAction[""Garagiste"",public_fnc_shop_arma_open,""garagiste"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
+		class Item966
+		{
+			position[]={10874.529,10.175215,5043.6743};
+			azimut=-90.625504;
+			id=1120;
+			side="EMPTY";
+			vehicle="xcam_InfoStand_V2_F";
+			skill=0.60000002;
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement de la pierre"",public_fnc_process_open,""Cimenttr"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+		};
+		class Item967
+		{
+			position[]={16494.701,12.163434,9302.2305};
+			azimut=56.06839;
+			id=1121;
+			side="EMPTY";
+			vehicle="xcam_InfoStand_V2_F";
+			skill=0.60000002;
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""Commerçant de ciment"",public_fnc_shop_virtual_open,""cime"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+		};
 	};
 	class Markers
 	{
-		items=179;
+		items=182;
 		class Item0
 		{
 			position[]={10548.405,122.985,9604.9873};
@@ -14823,6 +14843,36 @@ class Mission
 			name="CIV_vehicles_sea_marker_4";
 			type="Empty";
 			angle=179.243;
+		};
+		class Item179
+		{
+			position[]={13021.694,46.222153,7717.7861};
+			name="pierre_1";
+			text="Carrière";
+			type="Fett_as_aamissile";
+			colorName="ColorBrown";
+			a=0.5;
+			b=0.5;
+		};
+		class Item180
+		{
+			position[]={10874.619,10.176373,5043.7949};
+			name="Traitement de la pierre_1";
+			text="Traitement de la pierre";
+			type="Fett_industrial";
+			colorName="ColorOrange";
+			a=0.5;
+			b=0.5;
+		};
+		class Item181
+		{
+			position[]={16494.066,12.153721,9302.1494};
+			name="Commerçant de ciment_1";
+			text="Commerçant de ciment";
+			type="Fett_hardpoint";
+			colorName="ColorBrown";
+			a=0.5;
+			b=0.5;
 		};
 	};
 };
