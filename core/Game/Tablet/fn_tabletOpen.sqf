@@ -75,11 +75,13 @@ if (!(isNull _display)) then
 	{
 		_bar ctrlSetStructuredText parseText format
 		[
-			"<t align='left'><img image='%4'/> %1</t><t align='center'>%2</t><t align='right'>%3 <img image='\lyeed\data\infobar\date.paa'/></t>",
+			"<t align='left'><img image='%1'/> %2</t><t align='center'>%3</t><t align='right'>%4/%5/%6 <img image='\lyeed\data\infobar\date.paa'/></t>",
+			if ("ItemGPS" in (assignedItems player)) then {"\lyeed\data\infobar\gps_yes.paa"} else {"\lyeed\data\infobar\gps_no.paa"}
 			if ("ItemGPS" in (assignedItems player)) then {(mapGridPosition player)} else {"noGPS"},
 			([] call public_fnc_strTime),
-			([] call public_fnc_strDate),
-			if ("ItemGPS" in (assignedItems player)) then {"\lyeed\data\infobar\gps_yes.paa"} else {"\lyeed\data\infobar\gps_no.paa"}
+			(date select 2),
+			(date select 1),
+			(date select 0)
 		];
 		sleep 0.5;
 	};

@@ -7,31 +7,33 @@
 */
 private["_display", "_list", "_parts", "_partVariables", "_partName", "_partValue", "_type"];
 
-_display = findDisplay 2900;
-if (isNull _display) exitWith {};
 if (isNull g_interaction_target) exitWith {};
 
+disableSerialization;
+_display = findDisplay 2900;
+if (isNull _display) exitWith {};
+
 _type = cbChecked (_display displayCtrl 2908);
-
-_list = _display displayCtrl 2907;
-lbClear _list;
-
 _parts = getAllHitPointsDamage g_interaction_target;
 _partVariables = _parts select 0;
 _partName = _parts select 1;
 _partValue = _parts select 2;
 
+_list = _display displayCtrl 2907;
+lbClear _list;
+
 {
 	if (_x != "") then
 	{
-		if (isClass(missionConfigFile >> "ALYSIA_REPAIR" >> _x)) then
+		_value = floor((1 - (_partValue select _forEachIndex)) * 100);
+		if (!_type || (_type && (_value < 100))) then
 		{
-			_value = floor((1 - (_partValue select _forEachIndex)) * 100);
-			if (!_type || (_type && (_value < 100))) then
+			_index = _list lbAdd _x;
+			_list lbSetData [_index, _x];
+			_list lbSetValue [_index, _value];
+
+			if (isClass(missionConfigFile >> "ALYSIA_REPAIR" >> _x)) then
 			{
-				_index = _list lbAdd _x;
-				_list lbSetData [_index, _x];
-				_list lbSetValue [_index, _value];
 				_picture = getText(missionConfigFile >> "ALYSIA_REPAIR" >> _x >> "picture");
 				if (_picture isEqualTo "unknown") then {
 					_list lbSetPicture [_index, "\lyeed_IMG\data\vehicle\repair\parts\unknown.paa"];
@@ -45,7 +47,7 @@ _partValue = _parts select 2;
 						case (_value == 100): {"100"};
 					};
 					_list lbSetPicture [_index, format["\lyeed_IMG\data\vehicle\repair\parts\%1_%2", getText(missionConfigFile >> "ALYSIA_REPAIR" >> _x >> "picture"), _picture_add]];
-				};
+				};		
 			} else {
 				_list lbSetPicture [_index, "\lyeed_IMG\data\vehicle\repair\parts\unknown.paa"];
 			};

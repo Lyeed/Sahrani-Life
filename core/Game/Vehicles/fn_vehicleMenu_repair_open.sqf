@@ -36,10 +36,10 @@ _health_color = switch (true) do
 while {!(isNull _display)} do
 {
 	if (
-			(isNull g_interaction_target)
-			!(alive g_interaction_target)
-			(player distance g_interaction_target) > ((((boundingBox g_interaction_target) select 1) select 0) + 2.5)
-			(player getVariable ["restrained", false])
+			(isNull g_interaction_target) ||
+			!(alive g_interaction_target) ||
+			(player distance g_interaction_target) > ((((boundingBox g_interaction_target) select 1) select 0) + 2.5) ||
+			(player getVariable ["restrained", false]) ||
 			(player getVariable ["surrender", false])
 		) exitWith {closeDialog 0};
 	sleep 0.5;

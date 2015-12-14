@@ -29,7 +29,7 @@
 [["===================", {}]] call CBA_fnc_addPlayerAction;
 
 /* ==================[CONFIG]===================*/
-if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "can_seize_gear") isEqualTo 1) then
+if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "interaction_seize_gear") isEqualTo 1) then
 {
 	[[
 		"<img image='\lyeed_IMG\data\actions_menu\seize.paa'/> <t color='#3F51B5'>Saisir</t> les objets proches</t>",

@@ -165,7 +165,7 @@ if (hasInterface) then
 
 	[] spawn
 	{
-		private "_veh";
+		private["_veh", "_inc"];
 		while {true} do
 		{
 			waitUntil {((vehicle player) != player)};

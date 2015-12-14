@@ -6,19 +6,20 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (((player getVariable ["number", ""]) isEqualTo "") || (g_phone_forfait isEqualTo "none") || (g_phone_forfait isEqualTo "")) then {
+if (((player getVariable ["number", ""]) isEqualTo "") || (g_phone_forfait in ["none", ""])) then {
 	["store_forfait"] spawn public_fnc_tabletApp;
 } else {
+	
 	disableSerialization;
-	_display = findDisplay 7500;
-	(_display displayCtrl 8501) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", (player getVariable ["number", ""])];
-	(_display displayCtrl 8504) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", getText(missionConfigFile >> "ALYSIA_FORFAITS" >> g_phone_forfait >> "name")];
+	_display = uiNamespace getVariable ["tablet", displayNull];
+	if (isNull _display) exitWith {};
 
-	if (playerSide isEqualTo civilian) then
+	(_display displayCtrl 8500) ctrlSetStructuredText parseText format["<t font='PuristaBold'><t size='1.2'>Numéro</t> <t size='2.3' color='#190707'>%1</t></t>", (player getVariable ["number", ""])];
+	(_display displayCtrl 8501) ctrlSetStructuredText parseText format["<t font='PuristaBold' align='right'><t size='1.2'>Forfait</t> <t size='2' color='#190707'>%1</t></t>", getText(missionConfigFile >> "ALYSIA_FORFAITS" >> g_phone_forfait >> "name")];
+
+	if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "phone_send_global_message") isEqualTo 1) then
 	{
-		[[8527, 8529], false] call public_fnc_tabletShow;
-	} else {
-		(_display displayCtrl 8529) ctrlSetStructuredText parseText format["<t align='center' font='PuristaSemiBold' size='0.7'>%1</t>", getText(missionConfigFile >> "ALYSIA_FACTION" >> str(playerSide) >> "name")];
-		ctrlSetText[8527, getText(missionConfigFile >> "ALYSIA_FACTION" >> str(playerSide) >> "icon")];
+		[8516, true] call public_fnc_tabletShow;
+		[8517, true] call public_fnc_tabletShow;
 	};
 };

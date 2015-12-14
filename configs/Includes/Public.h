@@ -194,10 +194,15 @@ class Public
 		class garageStoreAction {};
 	};
 
+	class Missions
+	{
+		file = "core\Game\Missions";
+		class mission_start {};
+	};
+
 	class Vehicles
 	{
 		file = "core\Game\Vehicles";
-		class addVehicle2Chain {};
 		class clearVehicleAmmo {};
 		class vehicleMenu_flip {};
 		class vehicleMenu_key {};

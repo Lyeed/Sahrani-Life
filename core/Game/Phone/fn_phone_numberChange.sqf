@@ -15,7 +15,7 @@ while {_newNumber in _numbers} do
 };
 
 if ((player getVariable ["number", ""]) != "") then {
-	_numbers deleteAt (player getVariable ["number", ""]);
+	_numbers deleteAt (_numbers find (player getVariable ["number", ""]));
 };
 
 _numbers pushBack _newNumber;

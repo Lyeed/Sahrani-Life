@@ -8,6 +8,23 @@ class ALYSIA_FACTIONS
 		paycheck = 750;
 		identity_item = "SkylineItems_PlaqueMilitaire";
 
+		/*** PHONE ***/
+		phone_change_number_price = 1000;
+		phone_send_global_message = 1;
+
+		/*** GEAR MISSION ***/
+		mission_vehicle = "";
+		mission_items[] =
+		{
+
+		};
+		mission_start[] =
+		{
+			{17736.2,12417.5,0.00143433},
+			{10811.7,12593.7,0.00143814},
+			{8136.29,16978.4,0.00143814}
+		};
+
 		/*** MAP ***/
 		faction_markers_on_map = 1;
 		faction_markers_color = "ColorBlue";
@@ -23,7 +40,7 @@ class ALYSIA_FACTIONS
 		respawn_price = 0;
 
 		/*** HOUSING ***/
-		house_can_search = 1;
+		house_search = 1;
 		house_max = 1;
 
 		/*** HEAL ***/
@@ -38,10 +55,13 @@ class ALYSIA_FACTIONS
 		dynamic_markers_destroy  = 1;
 		dynamic_markers_discover = 0;
 		
-		/*** INTERACTIONS ***/
+		/*** SKULL ***/
 		skull_who = 0;// can check skull owner's identity
 		skull_take = 0;// can pack-up skull
-		can_seize_gear = 1;// can size near gear
+
+		/*** INTERACTIONS ***/
+		interaction_seize_gear = 1;// can size near gear
+		interaction_ticket = 1;// can put ticket
 
 		/*** LEADER BOARD ***/
 		leader_rank = 9;
@@ -106,6 +126,21 @@ class ALYSIA_FACTIONS
 		paycheck = 750;
 		identity_item = "SkylineItems_PlaqueMilitaire";
 
+		/*** PHONE ***/
+		phone_change_number_price = 1000;
+		phone_send_global_message = 1;
+
+		/*** GEAR MISSION ***/
+		mission_vehicle = "";
+		mission_items[] =
+		{
+
+		};
+		mission_start[] =
+		{
+
+		};
+
 		/*** MAP ***/
 		faction_markers_on_map = 1;
 		faction_markers_color = "ColorWhite";
@@ -121,7 +156,7 @@ class ALYSIA_FACTIONS
 		respawn_price = 0;
 
 		/*** HOUSING ***/
-		house_can_search = 1;
+		house_search = 1;
 		house_max = 1;
 
 		/*** HEAL ***/
@@ -136,10 +171,13 @@ class ALYSIA_FACTIONS
 		dynamic_markers_destroy  = 1;
 		dynamic_markers_discover = 0;
 
-		/*** INTERACTIONS ***/
+		/*** SKULL ***/
 		skull_who = 0;
 		skull_take = 0;
-		can_seize_gear = 1;
+
+		/*** INTERACTIONS ***/
+		interaction_seize_gear = 1;
+		interaction_ticket = 1;
 
 		/*** LEADER BOARD ***/
 		leader_rank = 5;
@@ -195,7 +233,16 @@ class ALYSIA_FACTIONS
 		icon = "\lyeed_IMG\data\faction\CIV_logo.paa";
 		paycheck = 600;
 		identity_item = "SkylineItems_Passeport";
-		
+
+		/*** PHONE ***/
+		phone_change_number_price = 1000;
+		phone_send_global_message = 0;
+
+		/*** GEAR MISSION ***/
+		mission_vehicle = "";
+		mission_items[] = {};
+		mission_start[] = {};
+
 		/*** MAP ***/
 		faction_markers_on_map = 0;
 		faction_markers_color = "";
@@ -211,7 +258,7 @@ class ALYSIA_FACTIONS
 		respawn_price = 10000;
 
 		/*** HOUSING ***/
-		house_can_search = 0;
+		house_search = 0;
 		house_max = 1;
 
 		/*** HEAL ***/
@@ -261,10 +308,13 @@ class ALYSIA_FACTIONS
 		dynamic_markers_destroy   = 0;
 		dynamic_markers_discover  = 1;
 
-		/*** INTERACTIONS ***/
+		/*** SKULL ***/
 		skull_who = 0;
 		skull_take = 0;
-		can_seize_gear = 0;
+
+		/*** INTERACTIONS ***/
+		interaction_seize_gear = 0;
+		interaction_ticket = 0;
 
 		/*** LEADER BOARD ***/
 		leader_rank = -1;// MUST BE -1
@@ -303,6 +353,15 @@ class ALYSIA_FACTIONS
 		paycheck = 600;
 		identity_item = "Badge_samu";
 
+		/*** PHONE ***/
+		phone_change_number_price = 1000;
+		phone_send_global_message = 0;
+
+		/*** GEAR MISSION ***/
+		mission_vehicle = "";
+		mission_items[] = {};
+		mission_start[] = {};
+
 		/*** MAP ***/
 		faction_markers_on_map = 1;
 		faction_markers_color = "ColorPink";
@@ -318,7 +377,7 @@ class ALYSIA_FACTIONS
 		respawn_price = 0;
 
 		/*** HOUSING ***/
-		house_can_search = 0;
+		house_search = 0;
 		house_max = 1;
 
 		/*** HEAL ***/
@@ -333,10 +392,13 @@ class ALYSIA_FACTIONS
 		dynamic_markers_destroy   = 0;
 		dynamic_markers_discover  = 0;
 
-		/*** INTERACTIONS ***/
+		/*** SKULL ***/
 		skull_who = 1;
 		skull_take = 1;
-		can_seize_gear = 0;
+
+		/*** INTERACTIONS ***/
+		interaction_seize_gear = 0;
+		interaction_ticket = 1;// can put ticket
 
 		/*** LEADER BOARD ***/
 		leader_rank = 6;

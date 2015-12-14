@@ -25,7 +25,7 @@ if (isNil "_info") exitWith {
 };
 
 _action = true;
-if (g_interaction_target in g_vehicles) then
+if (!(g_interaction_target in g_vehicles)) then
 {
 	if (!(["Inspection", 5, g_interaction_target] call public_fnc_showProgress)) then {
 		_action = false;
@@ -48,10 +48,10 @@ if (_action) then
 	while {!(isNull _display)} do
 	{
 		if (
-			(isNull g_interaction_target)
-			!(alive g_interaction_target)
-			(player distance g_interaction_target) > ((((boundingBox g_interaction_target) select 1) select 0) + 2.5)
-			(player getVariable ["restrained", false])
+			(isNull g_interaction_target) ||
+			!(alive g_interaction_target) ||
+			(player distance g_interaction_target) > ((((boundingBox g_interaction_target) select 1) select 0) + 2.5) ||
+			(player getVariable ["restrained", false]) ||
 			(player getVariable ["surrender", false])
 		) exitWith {closeDialog 0};
 		sleep 0.5;

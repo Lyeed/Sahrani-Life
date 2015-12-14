@@ -25,7 +25,7 @@ if ((_item != "") && !(_item in (magazines player))) exitWith {};
 
 if (!([format["Réparation : %1", _part], round(15 - (_health / 10)), g_interaction_target, "", "InBaseMoves_repairVehicleKnl"] call public_fnc_showProgress)) exitWith {};
 
-removeMagazine _item;
+player removeMagazine _item;
 if (local g_interaction_target) then {
 	g_interaction_target setHitPointDamage [_part, 0];
 } else {

@@ -131,7 +131,8 @@ while {!(isNull _hud)} do
 		["fight.paa", "(g_firstCombatActive)"],
 		["speak.paa", "(g_speaking)"],
 		["seatbelt.paa", "(g_seatbelt)"],
-		["silence.paa", "(missionNamespace getVariable[""silence"",false])"]
+		["silence.paa", "(missionNamespace getVariable[""silence"",false])"],
+		["sirene.paa", "((vehicle player) getVariable ['sireneOn', false])"]
 	]);
 
 	for "_i" from _idc to 7 do

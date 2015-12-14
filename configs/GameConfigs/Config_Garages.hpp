@@ -2,7 +2,7 @@ class Cfg_Garages
 {
 	class garage_paraiso
 	{
-		name = "Garage du Paraiso";
+		name = "Garage de Paraiso";
 		spawns[] = 
 		{
 			"garage_paraiso_1"
@@ -16,7 +16,7 @@ class Cfg_Garages
 
 	class garage_bagongo
 	{
-		name = "Garage du Bagongo";
+		name = "Garage de Bagongo";
 		spawns[] = 
 		{
 			"garage_bagongo_1"
@@ -30,7 +30,7 @@ class Cfg_Garages
 
 	class EAST_base_1
 	{
-		name = "Garage de la milice";
+		name = "Garage de la Garde";
 		spawns[] = 
 		{
 			"EAST_vehicles_land_marker_1"
@@ -46,7 +46,7 @@ class Cfg_Garages
 	
 	class EAST_base_2
 	{
-		name = "Garage de la milice";
+		name = "Garage de la Garde";
 		spawns[] = 
 		{
 			"EAST_vehicles_land_marker_2",
@@ -64,7 +64,7 @@ class Cfg_Garages
 	
 	class EAST_air
 	{
-		name = "Garage de la milice";
+		name = "Garage de la Garde";
 		spawns[] = 
 		{
 			"east_marker_1",

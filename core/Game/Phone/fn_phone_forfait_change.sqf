@@ -11,19 +11,19 @@ _new = [_this, 0 , "none", [""]] call BIS_fnc_param;
 if (g_phone_forfait != "none") then
 {
 	_maxSMS = getNumber(missionConfigFile >> "ALYSIA_FORFAITS" >> _new >> "sms_max");
-	if (_maxSMS < count((g_phone_messages) - 1)) then
+	if (_maxSMS < (count(g_phone_messages) - 1)) then
 	{
 		g_phone_messages deleteRange [_maxSMS, count((g_phone_messages) - 1)];
 	};
 
 	_maxContacts = getNumber(missionConfigFile >> "ALYSIA_FORFAITS" >> _new >> "contacts_max");
-	if (_maxContacts < count((g_phone_contacts) - 1)) then
+	if (_maxContacts < (count(g_phone_contacts) - 1)) then
 	{
 		g_phone_contacts deleteRange [_maxContacts, count((g_phone_contacts) - 1)];	
 	};
 
 	_maxBlacklist = getNumber(missionConfigFile >> "ALYSIA_FORFAITS" >> _new >> "backlist_max");
-	if (_maxBlacklist < count((g_phone_blacklist) - 1)) then
+	if (_maxBlacklist < (count(g_phone_blacklist) - 1)) then
 	{
 		g_phone_blacklist deleteRange [_maxBlacklist, count((g_phone_blacklist) - 1)];
 	};

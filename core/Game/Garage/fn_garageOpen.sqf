@@ -16,7 +16,7 @@ disableSerialization;
 _display = findDisplay 2800;
 if (isNull _display) exitWith {};
 
-(_display displayCtrl 2805) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", (g_garage_info select 0)];
+(_display displayCtrl 2805) ctrlSetStructuredText parseText format["<t align='center' size='1.2'>%1</t>", (g_garage_info select 0)];
 
 _list = _display displayCtrl 2826;
 {

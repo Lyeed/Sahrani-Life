@@ -13,7 +13,7 @@ if ((isNil "g_garage_rename") || {g_garage_rename isEqualTo -1}) exitWith
 	["Aucun véhicule à renommer"] call public_fnc_error;
 };
 
-_val = ctrlText 555991;
+_val = ctrlText 101001;
 if (_val isEqualTo "") exitWith {
 	["Vous n'avez pas entré de nom pour votre véhicule"] call public_fnc_error;
 };
