@@ -1345,4 +1345,30 @@ class ALYSIA_ITEMS
 		use         = "[""Vous devez utiliser le raccourci clavier pour utiliser cet objet""] call public_fnc_info";
 		image       = "alysia_items_virtual\data\1\telecommande_portail.paa";
 	};
+	
+	class pierre
+	{
+		weight      = 1;
+		name        = "Pierre";
+		weight      = 7;
+		price_buy   = 60;
+		price_sell  = 30;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\1\pierre.paa";
+	};
+	
+	class ciment
+	{
+		weight      = 1;
+		name        = "Ciment";
+		weight      = 10;
+		price_buy   = 60;
+		price_sell  = 30;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\1\ciment.paa";
+	};
 };

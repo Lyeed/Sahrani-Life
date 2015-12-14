@@ -125,4 +125,11 @@ class ALYSIA_FARMING_GATHER
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
 	};
+	
+	class pierre_1
+	{
+		receive[] = {{"pierre", 1, 0}};
+		tool = "Skyline_Pioche_01";
+		sound = "mining";
+	};
 };

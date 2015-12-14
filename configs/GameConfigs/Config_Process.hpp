@@ -303,7 +303,7 @@ class ALYSIA_PROCESS
 	
 	class Distillerie_Grozdova
 	{
-		name = "Distillerie";
+		name = "Distillerie Grozdova";
 		license = "";
 		sound = "smelting";
 		requiere_target = 1;
@@ -316,7 +316,7 @@ class ALYSIA_PROCESS
 	
 	class Distillerie_Slivovica
 	{
-		name = "Distillerie";
+		name = "Distillerie Slivovica";
 		license = "";
 		sound = "smelting";
 		requiere_target = 1;
@@ -324,6 +324,19 @@ class ALYSIA_PROCESS
 		receive[] = {{"Slivovica", 1}};
 		time_per_item = 3;
 		time_default = 5;
+		sides[] = {"CIV"};
+	};
+	
+	class Cimenttr
+	{
+		name = "Traitement de la pierre";
+		license = "Pierretr";
+		sound = "salt_process";
+		requiere_target = 1;
+		require[] = {{"pierre", 1}};
+		receive[] = {{"ciment", 1}};
+		time_per_item = 5;
+		time_default = 8;
 		sides[] = {"CIV"};
 	};
 };

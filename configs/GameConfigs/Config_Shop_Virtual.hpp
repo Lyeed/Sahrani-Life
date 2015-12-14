@@ -178,4 +178,11 @@ class ALYSIA_SHOPS_VIRTUAL
 		side = "CIV";
 		items[] = {{}, {"pottery"}};
 	};
+	
+	class cime
+	{
+		name = "Commerçant de ciment";
+		side = "CIV";
+		items[] = {{}, {"ciment"}};
+	};
 };

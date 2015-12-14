@@ -207,4 +207,12 @@ class ALYSIA_LICENSES
 		illegal = 0;
 		pad_store = 1;
 	};
+	
+	class Pierretr
+	{
+		name = "Traitement de la pierre";
+		price = 35000;
+		illegal = 0;
+		pad_store = 1;
+	};
 };
