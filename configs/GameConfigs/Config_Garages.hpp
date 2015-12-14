@@ -5,7 +5,9 @@ class Cfg_Garages
 		name = "Garage de Paraiso";
 		spawns[] = 
 		{
-			"garage_paraiso_1"
+			"garage_paraiso_1",
+			"garage_paraiso_2",
+			"garage_paraiso_3"
 		};
 		types[] =
 		{
@@ -19,7 +21,9 @@ class Cfg_Garages
 		name = "Garage de Bagongo";
 		spawns[] = 
 		{
-			"garage_bagongo_1"
+			"garage_bagongo_1",
+			"garage_bagongo_2",
+			"garage_bagongo_3"
 		};
 		types[] =
 		{
