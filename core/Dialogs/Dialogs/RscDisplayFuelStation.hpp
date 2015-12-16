@@ -156,7 +156,6 @@
 			y = 0.50088 * safezoneH + safezoneY;
 			w = 0.0714063 * safezoneW;
 			h = 0.0248888 * safezoneH;
-			colorBackground[] = {0,0,0,0.6};
 		};
 		class VALIDATE_IMAGE: RscPicture
 		{
