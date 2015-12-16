@@ -8,7 +8,7 @@
 
 private["_station", "_fuel"];
 _station = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
-_fuel = [_this, 1, "", ""] call BIS_fnc_param;
+_fuel = [_this, 1, "", [""]] call BIS_fnc_param;
 
 // Pour 10km -> 10000m -> Augmentation de 5Kn -> / par 2000
 

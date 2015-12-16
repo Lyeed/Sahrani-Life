@@ -168,7 +168,7 @@ if ((vehicle player) isEqualTo player) then
 						player setVariable ["typeRefuel", "", false];
 					};
 
-					[] spawn public_fnc_interactions_player_to_station;
+					[cursorTarget] spawn public_fnc_interactions_player_to_station;
 					breakOut "main";
 				};
 

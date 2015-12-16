@@ -92,6 +92,17 @@
 			h = 0.0522223 * safezoneH;
 			colorBackground[] = {0,0,0,0.6};
 		};
+		class PRICE_TEXT3: RscStructuredText
+		{
+			idc = 16012;
+			text = "<t size ='0.7' align='center'>Kn</t>";
+
+			x = 0.579999 * safezoneW + safezoneX;
+			y = 0.463111 * safezoneH + safezoneY;
+			w = 0.020625 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {0,0,0,0};
+		};
 		class STOCK_TEXT: RscStructuredText
 		{
 			idc = 16009;
@@ -123,17 +134,6 @@
 			y = 10.57 * GUI_GRID_H + GUI_GRID_Y;
 			w = 1.50001 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
-			colorBackground[] = {0,0,0,0};
-		};
-		class PRICE_TEXT3: RscStructuredText
-		{
-			idc = 16012;
-			text = "<t size ='0.7' align='center'>Kn</t>";
-
-			x = 0.579999 * safezoneW + safezoneX;
-			y = 0.463111 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.022 * safezoneH;
 			colorBackground[] = {0,0,0,0};
 		};
 		class FUEL_FRAME: RscFrame
