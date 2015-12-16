@@ -26,5 +26,6 @@ if (isNull _target) exitWith {};
 		["impound", "Fourrière", "[] spawn public_fnc_vehicleMenu_impound;", "((playerSide in [east,west]) && ((vehicle player) isEqualTo player))"],
 		["putin", "Transférer", "[] call public_fnc_vehicleMenu_putIn;", "false"]
 	],
-	getText(configFile >> "CfgVehicles" >> typeOf(_target) >> "displayName")
+	getText(configFile >> "CfgVehicles" >> typeOf(_target) >> "displayName"),
+	"lyeed_IMG\data\vehicle\background.jpg"
 ] spawn public_fnc_interactions_create;

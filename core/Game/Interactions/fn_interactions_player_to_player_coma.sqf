@@ -15,5 +15,7 @@
 		["defib", "Defib.", "[g_interaction_target, 'debif'] spawn public_fnc_massageCardiaque;", "true"]
 	],
 	"Blessé",
-	true, false
+	nil,
+	true,
+	false
 ] spawn public_fnc_interactions_create;

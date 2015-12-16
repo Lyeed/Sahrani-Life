@@ -7,7 +7,7 @@ class RscDisplayVehicleOwner: default_base_dialog
 	{
 		class BACKGROUND: RscPicture
 		{
-			text = "\lyeed_IMG\data\vehicle\background.jpg";
+			text = "lyeed_IMG\data\vehicle\background.jpg";
 
 			x = 0.37625 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
@@ -207,7 +207,7 @@ class RscDisplayVehicleRepair: default_base_dialog
 	{
 		class BACKGROUND: RscPicture
 		{
-			text = "\lyeed_IMG\data\vehicle\background.jpg";
+			text = "lyeed_IMG\data\vehicle\background.jpg";
 
 			x = 0.37625 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
@@ -484,13 +484,13 @@ class RscDisplayVehicleRepair: default_base_dialog
 			idc = 2915;
 			action = "[] spawn public_fnc_vehicleMenu_repair_action";
 			onMouseEnter = "\
-			ctrlSetText[2911,""lyeed_IMG\data\vehicle\action_repair_select.paa""];\
-			ctrlShow[45002, false];\
+			ctrlSetText[2913,""lyeed_IMG\data\vehicle\action_repair_select.paa""];\
+			ctrlShow[2911, false];\
 			((findDisplay 2900) displayCtrl 2912) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 2900) displayCtrl 2914) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Réparer</t>"";";
 			onMouseExit = "\
-			ctrlSetText[2911,""lyeed_IMG\data\vehicle\action_repair.paa""];\
-			ctrlShow[45002, true];\
+			ctrlSetText[2913,""lyeed_IMG\data\vehicle\action_repair.paa""];\
+			ctrlShow[2911, true];\
 			((findDisplay 2900) displayCtrl 2912) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 2900) displayCtrl 2914) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Réparer</t>"";";
 

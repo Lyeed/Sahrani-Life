@@ -53,9 +53,9 @@ class RscScrollBar
 	width             = 0;
 	height            = 0;
 
-	color[]           = {1,1,1,0.6};
-	colorActive[]     = {1,1,1,1};
-	colorDisabled[]   = {1,1,1,0.3};
+	color[]           = {0,0,0,0.8};
+	colorActive[]     = {0,0,0,0.8};
+	colorDisabled[]   = {0,0,0,0.8};
 	
 	thumb             = "\A3\ui_f\data\gui\cfg\scrollbar\thumb_ca.paa";
 	arrowEmpty        = "\A3\ui_f\data\gui\cfg\scrollbar\arrowEmpty_ca.paa";
@@ -71,10 +71,6 @@ class RscScrollBar
 class RscText
 {
 	idc = -1;
-	x = 0;
-	y = 0;
-	h = 0.037;
-	w = 0.3;
 	type = 0;
 	style = 0;
 	shadow = 1;
@@ -451,11 +447,7 @@ class RscListBox
 	colorShadow[] = {0, 0, 0, 0.5};
 	period = 1.2;
 	maxHistoryDelay = 1;
-	class ListScrollBar
-	{
-		color[] = {1, 1, 1, 1};
-		autoScrollEnabled = 1;
-	};
+	class ListScrollBar: RscScrollBar {};
 };
 
 class RscEdit
