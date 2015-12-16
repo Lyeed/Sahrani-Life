@@ -43,6 +43,7 @@
 		class FUEL_COMBO: RscCombo
 		{
 			idc = 16004;
+			colorPictureSelected[] = {1, 1, 1, 1};
 
 			x = 0.400484 * safezoneW + safezoneX;
 			y = 0.42762 * safezoneH + safezoneY;

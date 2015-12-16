@@ -36,7 +36,16 @@ lbClear _list;
 	};
 } foreach ("true" configClasses (configFile >> "CfgVehicles" >> typeOf(g_interaction_target) >> "HitPoints"));
 
-if ((lbSize _list) isEqualTo 0) then {
+if ((lbSize _list) isEqualTo 0) then
+{
+	ctrlShow[2909, false];
+	ctrlShow[2911, false];
+	ctrlShow[2912, false];
+	ctrlShow[2913, false];
+	ctrlShow[2914, false];
+	ctrlShow[2915, false];
+	ctrlShow[2916, false];
+	ctrlShow[2917, false];
 	_list lbAdd "Aucune";
 };
 

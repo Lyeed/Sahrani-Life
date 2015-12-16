@@ -7,21 +7,26 @@
 */
 
 if (isNull g_interaction_target) exitWith {};
+
 if (dialog) then
 {
 	closeDialog 0;
 	waitUntil {!dialog};
 };
 
-if (!(["Retourner", 4, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress)) exitWith {};
-
-if (!((crew g_interaction_target) isEqualTo [])) exitWith
-{
+if (!((crew g_interaction_target) isEqualTo [])) exitWith {
 	["Le véhicule doit être vide"] call public_fnc_error;
 };
+if ((speed g_interaction_target) > 0) exitWith {
+	["Le véhicule doit être à l'arrêt"] call public_fnc_error;	
+};
 
-if ((speed g_interaction_target) > 0) exitWith
-{
+if (!(["Retourner", 4, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress)) exitWith {};
+
+if (!((crew g_interaction_target) isEqualTo [])) exitWith {
+	["Le véhicule doit être vide"] call public_fnc_error;
+};
+if ((speed g_interaction_target) > 0) exitWith {
 	["Le véhicule doit être à l'arrêt"] call public_fnc_error;	
 };
 

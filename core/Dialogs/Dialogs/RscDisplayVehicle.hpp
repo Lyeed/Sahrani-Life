@@ -384,6 +384,8 @@ class RscDisplayVehicleRepair: default_base_dialog
 
 		class INFO_FRAME: RscFrame
 		{
+			idc = 2917;
+
 			x = 0.5 * safezoneW + safezoneX;
 			y = 0.445 * safezoneH + safezoneY;
 			w = 0.113437 * safezoneW;
@@ -391,7 +393,7 @@ class RscDisplayVehicleRepair: default_base_dialog
 		};
 		class INFO_HEADER: RscStructuredText
 		{
-			text = "<t align='center'>Informations</t>";
+			idc = 2916;
 			colorBackground[] = {0,0,0,0.8};
 
 			x = 0.5 * safezoneW + safezoneX;

@@ -4,7 +4,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Réservoir";
 		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_fuel";
+		item = "Alysia_repair_fuel";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\fuel_100.paa";
 	};
 
@@ -12,7 +12,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Moteur";
 		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_engine";
+		item = "Alysia_repair_engine";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\engine_100.paa";
 	};
 	class HitEngine1: HitEngine {};
@@ -23,7 +23,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Carcasse";
 		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_body";
+		item = "Alysia_repair_body";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\body_100.paa";
 	};
 
@@ -31,7 +31,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Chenille gauche";
 		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_track";
+		item = "Alysia_repair_track";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\track_100.paa";
 	};
 	class HitRTrack: HitLTrack {
@@ -42,9 +42,9 @@ class ALYSIA_REPAIR
 	{
 		name = "Roue avant gauche";
 		tool = "Alysia_repair_tireLever";
-		use = "Alysia_repair_tire";
+		item = "Alysia_repair_tire";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\wheel_100.paa";
-	};	
+	};
 	class HitLBWheel: HitLFWheel {
 		name = "Roue arrière gauche";
 	};
@@ -77,7 +77,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Vitre";
 		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_glass";
+		item = "Alysia_repair_glass";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\glass_100.paa";
 	};
 	class HitGlass2: HitGlass1 {};
@@ -92,7 +92,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Tourelle";
 		tool = "Alysia_repair_toolbox";
-		use = "";
+		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\unknown.paa";
 	};
 
@@ -100,7 +100,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Armement";
 		tool = "Alysia_repair_toolbox";
-		use = "";
+		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\gun_100.paa";
 	};
 
@@ -108,7 +108,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Coque";
 		tool = "Alysia_repair_toolbox";
-		use = "";
+		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\unknown.paa";
 	};
 
@@ -116,7 +116,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Avionique";
 		tool = "Alysia_repair_toolbox";
-		use = "";
+		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\unknown.paa";
 	};
 
@@ -124,7 +124,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Rotor principal";
 		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_rotor";
+		item = "Alysia_repair_rotor";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\rotor_100.paa";
 	};
 	class HitVRotor: HitHRotor {
@@ -135,7 +135,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Missiles";
 		tool = "Alysia_repair_toolbox";
-		use = "";
+		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\unknown.paa";
 	};
 
@@ -143,7 +143,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Treuil";
 		tool = "Alysia_repair_toolbox";
-		use = "";
+		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\winch_100.paa";
 	};
 
@@ -151,7 +151,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Transmission";
 		tool = "Alysia_repair_toolbox";
-		use = "";
+		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\transmission_100.paa";
 	};
 
@@ -159,7 +159,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Phare";
 		tool = "Alysia_repair_toolbox";
-		use = "";
+		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\light_100.paa";
 	};
 
@@ -167,7 +167,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Suspenssion";
 		tool = "Alysia_repair_toolbox";
-		use = "";
+		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\hydraulics_100.paa";
 	};
 
@@ -175,7 +175,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Trains d'attérrissage";
 		tool = "Alysia_repair_toolbox";
-		use = "";
+		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\unknown.paa";
 	};
 
@@ -183,7 +183,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Stabilisateur gauche";
 		tool = "Alysia_repair_toolbox";
-		use = "";
+		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\stabilizer_100.paa";
 	};
 	class HitHStabilizerR1: HitHStabilizerL1 {
@@ -197,7 +197,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Queue";
 		tool = "Alysia_repair_toolbox";
-		use = "";
+		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\unknown.paa";
 	};
 
@@ -205,7 +205,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Tube de Pitot";
 		tool = "Alysia_repair_toolbox";
-		use = "";
+		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\unknown.paa";
 	};
 
@@ -213,7 +213,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Instruments";
 		tool = "Alysia_repair_toolbox";
-		use = "";
+		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\unknown.paa";
 	};
 
@@ -221,7 +221,7 @@ class ALYSIA_REPAIR
 	{
 		name = "Boite de démarrage";
 		tool = "Alysia_repair_toolbox";
-		use = "";
+		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\starter_100.paa";
 	};
 	class HitStarter2: HitStarter1 {};

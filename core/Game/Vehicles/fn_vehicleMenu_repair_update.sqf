@@ -11,33 +11,28 @@ disableSerialization;
 _list = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
 _sel = [_this, 1, -1, [-1]] call BIS_fnc_param;
 
-if ((_sel isEqualTo -1) || (isNull _list) || ((_list lbText _sel) isEqualTo "Aucune")) exitWith
-{
-	ctrlShow[2911, false];
-	ctrlShow[2912, false];
-	ctrlShow[2913, false];
-	ctrlShow[2914, false];
-	ctrlShow[2915, false];
-	(_display displayCtrl 2909) ctrlSetStructuredText parseText "<t align='center'>Non défini</t>";
-};
-
 _display = findDisplay 2900;
 if (isNull _display) exitWith {};
+if ((_sel isEqualTo -1) || (isNull _list) || ((_list lbText _sel) isEqualTo "Aucune")) exitWith {};
 
 _health = _list lbValue _sel;
 _part = _list lbData _sel;
 _item = getText(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "item");
 _tool = getText(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "tool");
+
+(_display displayCtrl 2916) ctrlSetStructuredText parseText format["<t align='left'><img image='%1'/></t><t align='center'>Informations</t>", getText(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "picture")];
 (_display displayCtrl 2909) ctrlSetStructuredText parseText format
 [
 		"<t align='left'>Etat</t><t align='right' color='%5'>%1%2</t><br/>"
-    +	"<t align='left'>Outil</t><t align='right'>%3</t><br/>"
-    +	"<t align='left'>Pièce</t><t align='right'>%4</t>",
+    +	"<t align='left'>Outil</t><t align='right' color='%6'>%3</t><br/>"
+    +	"<t align='left'>Pièce</t><t align='right' color='%7'>%4</t>",
     _health,
     "%",
-	if (_item isEqualTo "") then {"Aucune"} else {getText(configFile >> "CfgMagazines" >> _item >> "displayName")},
 	if (_tool isEqualTo "") then {"Aucun"} else {getText(configFile >> "CfgMagazines" >> _tool >> "displayName")},
-	([_health] call public_fnc_vehicleMenu_repair_getColor) select 1
+	if (_item isEqualTo "") then {"Aucune"} else {getText(configFile >> "CfgMagazines" >> _item >> "displayName")},
+	([_health] call public_fnc_vehicleMenu_repair_getColor) select 1,
+	if ((_tool isEqualTo "") || (_tool in (magazines player))) then {"#ff8c8c"} else {"#8cff9b"},
+	if ((_item isEqualTo "") || (_item in (magazines player))) then {"#ff8c8c"} else {"#8cff9b"}
 ];
 
 if ((_health < 100) && ((_tool isEqualTo "") || (_tool in (magazines player))) && ((_item isEqualTo "") || (_item in (magazines player)))) then {
