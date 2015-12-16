@@ -21,6 +21,7 @@ _item = getText(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "item");
 _tool = getText(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "tool");
 
 (_display displayCtrl 2916) ctrlSetStructuredText parseText format["<t align='left'><img image='%1'/></t><t align='center'>Informations</t>", getText(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "picture")];
+
 (_display displayCtrl 2909) ctrlSetStructuredText parseText format
 [
 		"<t align='left'>Etat</t><t align='right' color='%5'>%1%2</t><br/>"
@@ -31,11 +32,11 @@ _tool = getText(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "tool");
 	if (_tool isEqualTo "") then {"Aucun"} else {getText(configFile >> "CfgMagazines" >> _tool >> "displayName")},
 	if (_item isEqualTo "") then {"Aucune"} else {getText(configFile >> "CfgMagazines" >> _item >> "displayName")},
 	([_health] call public_fnc_vehicleMenu_repair_getColor) select 1,
-	if ((_tool isEqualTo "") || (_tool in (magazines player))) then {"#ff8c8c"} else {"#8cff9b"},
-	if ((_item isEqualTo "") || (_item in (magazines player))) then {"#ff8c8c"} else {"#8cff9b"}
+	if ((_tool isEqualTo "") || (_tool in (magazines player))) then {"#8cff9b"} else {"#ff8c8c"},
+	if ((_item isEqualTo "") || (_item in (magazines player))) then {"#8cff9b"} else {"#ff8c8c"}
 ];
 
-if ((_health < 100) && ((_tool isEqualTo "") || (_tool in (magazines player))) && ((_item isEqualTo "") || (_item in (magazines player)))) then {
+if ((_health < 100) && ((_tool isEqualTo "") || (_tool in (magazines player)))) then {
 	ctrlShow[2911, true];
 	ctrlShow[2912, true];
 	ctrlShow[2913, true];

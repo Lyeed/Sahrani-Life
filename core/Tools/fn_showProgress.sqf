@@ -45,8 +45,8 @@ while {g_action_inUse} do
 	{
 		if ((animationState player) != _anim) then
 		{
-			player playMove _anim;
 			[player, _anim] remoteExecCall ["switchMove", -2];
+			player playMove _anim;
 		};
 	};
 	
