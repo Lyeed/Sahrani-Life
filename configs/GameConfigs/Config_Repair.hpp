@@ -2,294 +2,228 @@ class ALYSIA_REPAIR
 {
 	class HitFuel
 	{
+		name = "Réservoir";
 		tool = "Alysia_repair_toolbox";
 		use = "Alysia_repair_fuel";
-		picture = "fuel";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\fuel_100.paa";
 	};
 
 	class HitEngine
 	{
+		name = "Moteur";
 		tool = "Alysia_repair_toolbox";
 		use = "Alysia_repair_engine";
-		picture = "engine";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\engine_100.paa";
 	};
-	class HitEngine1
-	{
-		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_engine";
-		picture = "engine";
-	};
-	class HitEngine2
-	{
-		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_engine";
-		picture = "engine";
-	};
-	class HitEngine3
-	{
-		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_engine";
-		picture = "engine";
-	};
+	class HitEngine1: HitEngine {};
+	class HitEngine2: HitEngine {};
+	class HitEngine3: HitEngine {};
 
 	class HitBody
 	{
+		name = "Carcasse";
 		tool = "Alysia_repair_toolbox";
 		use = "Alysia_repair_body";
-		picture = "body";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\body_100.paa";
 	};
 
 	class HitLTrack
 	{
+		name = "Chenille gauche";
 		tool = "Alysia_repair_toolbox";
 		use = "Alysia_repair_track";
-		picture = "track";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\track_100.paa";
 	};
-	class HitRTrack
-	{
-		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_track";
-		picture = "track";
+	class HitRTrack: HitLTrack {
+		name = "Chenille droite";
 	};
 
 	class HitLFWheel
 	{
+		name = "Roue avant gauche";
 		tool = "Alysia_repair_tireLever";
 		use = "Alysia_repair_tire";
-		picture = "wheel";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\wheel_100.paa";
+	};	
+	class HitLBWheel: HitLFWheel {
+		name = "Roue arrière gauche";
 	};
-	class HitLBWheel
-	{
-		tool = "Alysia_repair_tireLever";
-		use = "Alysia_repair_tire";
-		picture = "wheel";
+	class HitLMWheel: HitLFWheel {
+		name = "Roue milieu gauche";
 	};
-	class HitLMWheel
-	{
-		tool = "Alysia_repair_tireLever";
-		use = "Alysia_repair_tire";
-		picture = "wheel";
+	class HitLF2Wheel: HitLFWheel {
+		name = "Roue avant gauche 2";
 	};
-	class HitLF2Wheel
-	{
-		tool = "Alysia_repair_tireLever";
-		use = "Alysia_repair_tire";
-		picture = "wheel";
+	class HitRFWheel: HitLFWheel {
+		name = "Roue avant droite";
 	};
-	class HitRFWheel
-	{
-		tool = "Alysia_repair_tireLever";
-		use = "Alysia_repair_tire";
-		picture = "wheel";
+	class HitRBWheel: HitLFWheel {
+		name = "Roue arrière droite";
 	};
-	class HitRBWheel
-	{
-		tool = "Alysia_repair_tireLever";
-		use = "Alysia_repair_tire";
-		picture = "wheel";
+	class HitRMWheel: HitLFWheel {
+		name = "Roue milieu droite";
 	};
-	class HitRMWheel
-	{
-		tool = "Alysia_repair_tireLever";
-		use = "Alysia_repair_tire";
-		picture = "wheel";
+	class HitRF2Wheel: HitLFWheel {
+		name = "Roue avant droite 2";
 	};
-	class HitRF2Wheel
-	{
-		tool = "Alysia_repair_tireLever";
-		use = "Alysia_repair_tire";
-		picture = "wheel";
+	class HitFWheel: HitLFWheel {
+		name = "Roue avant";
+	};
+	class HitBWheel: HitLFWheel {
+		name = "Roue arrière";
 	};
 
 	class HitGlass1
 	{
+		name = "Vitre";
 		tool = "Alysia_repair_toolbox";
 		use = "Alysia_repair_glass";
-		picture = "glass";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\glass_100.paa";
 	};
-	class HitGlass2
-	{
-		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_glass";
-		picture = "glass";
-	};
-	class HitGlass3
-	{
-		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_glass";
-		picture = "glass";
-	};
-	class HitGlass4
-	{
-		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_glass";
-		picture = "glass";
-	};
-	class HitGlass5
-	{
-		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_glass";
-		picture = "glass";
-	};
-	class HitGlass6
-	{
-		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_glass";
-		picture = "glass";
-	};
-
-	class HitRGlass
-	{
-		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_glass";
-		picture = "glass";
-	};
-	class HitLGlass
-	{
-		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_glass";
-		picture = "glass";
-	};
+	class HitGlass2: HitGlass1 {};
+	class HitGlass3: HitGlass1 {};
+	class HitGlass4: HitGlass1 {};
+	class HitGlass5: HitGlass1 {};
+	class HitGlass6: HitGlass1 {};
+	class HitRGlass: HitGlass1 {};
+	class HitLGlass: HitGlass1 {};
 
 	class HitTurret
 	{
+		name = "Tourelle";
 		tool = "Alysia_repair_toolbox";
 		use = "";
-		picture = "unknown";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\unknown.paa";
 	};
 
 	class HitGun
 	{
+		name = "Armement";
 		tool = "Alysia_repair_toolbox";
 		use = "";
-		picture = "gun";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\gun_100.paa";
 	};
 
 	class HitHull
 	{
+		name = "Coque";
 		tool = "Alysia_repair_toolbox";
 		use = "";
-		picture = "unknown";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\unknown.paa";
 	};
 
 	class HitAvionics
 	{
+		name = "Avionique";
 		tool = "Alysia_repair_toolbox";
 		use = "";
-		picture = "unknown";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\unknown.paa";
 	};
 
 	class HitHRotor
 	{
+		name = "Rotor principal";
 		tool = "Alysia_repair_toolbox";
 		use = "Alysia_repair_rotor";
-		picture = "rotor";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\rotor_100.paa";
 	};
-	class HitVRotor
-	{
-		tool = "Alysia_repair_toolbox";
-		use = "Alysia_repair_rotor";
-		picture = "rotor";
+	class HitVRotor: HitHRotor {
+		name = "Rotor secondaire";
 	};
 
 	class HitMissiles
 	{
+		name = "Missiles";
 		tool = "Alysia_repair_toolbox";
 		use = "";
-		picture = "unknown";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\unknown.paa";
 	};
 
 	class HitWinch
 	{
+		name = "Treuil";
 		tool = "Alysia_repair_toolbox";
 		use = "";
-		picture = "winch";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\winch_100.paa";
 	};
 
 	class HitTransmission
 	{
+		name = "Transmission";
 		tool = "Alysia_repair_toolbox";
 		use = "";
-		picture = "transmission";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\transmission_100.paa";
 	};
 
 	class HitLight
 	{
+		name = "Phare";
 		tool = "Alysia_repair_toolbox";
 		use = "";
-		picture = "light";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\light_100.paa";
 	};
 
 	class HitHydraulics
 	{
+		name = "Suspenssion";
 		tool = "Alysia_repair_toolbox";
 		use = "";
-		picture = "hydraulics";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\hydraulics_100.paa";
 	};
 
 	class HitGear
 	{
+		name = "Trains d'attérrissage";
 		tool = "Alysia_repair_toolbox";
 		use = "";
-		picture = "unknown";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\unknown.paa";
 	};
 
 	class HitHStabilizerL1
 	{
+		name = "Stabilisateur gauche";
 		tool = "Alysia_repair_toolbox";
 		use = "";
-		picture = "stabilizer";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\stabilizer_100.paa";
 	};
-	class HitHStabilizerR1
-	{
-		tool = "Alysia_repair_toolbox";
-		use = "";
-		picture = "stabilizer";
+	class HitHStabilizerR1: HitHStabilizerL1 {
+		name = "Stabilisateur droit";
 	};
-	class HitVStabilizer1
-	{
-		tool = "Alysia_repair_toolbox";
-		use = "";
-		picture = "stabilizer";
+	class HitVStabilizer1: HitHStabilizerL1 {
+		name = "Stabilisateur";
 	};
 
 	class HitTail
 	{
+		name = "Queue";
 		tool = "Alysia_repair_toolbox";
 		use = "";
-		picture = "unknown";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\unknown.paa";
 	};
 
 	class HitPitotTube
 	{
+		name = "Tube de Pitot";
 		tool = "Alysia_repair_toolbox";
 		use = "";
-		picture = "unknown";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\unknown.paa";
 	};
 
 	class HitStaticPort
 	{
+		name = "Instruments";
 		tool = "Alysia_repair_toolbox";
 		use = "";
-		picture = "unknown";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\unknown.paa";
 	};
 
 	class HitStarter1
 	{
+		name = "Boite de démarrage";
 		tool = "Alysia_repair_toolbox";
 		use = "";
-		picture = "starter";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\starter_100.paa";
 	};
-	class HitStarter2
-	{
-		tool = "Alysia_repair_toolbox";
-		use = "";
-		picture = "starter";
-	};
-	class HitStarter3
-	{
-		tool = "Alysia_repair_toolbox";
-		use = "";
-		picture = "starter";
-	};
+	class HitStarter2: HitStarter1 {};
+	class HitStarter3: HitStarter1 {};
 };

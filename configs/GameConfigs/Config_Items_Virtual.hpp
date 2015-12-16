@@ -1336,8 +1336,8 @@ class ALYSIA_ITEMS
 
 	class bip
 	{
-		weight      = 1;
 		name        = "Télécommande (barrière)";
+		weight      = 1;
 		price_buy   = 120;
 		price_sell  = 0;
 		illegal     = 0;
@@ -1348,7 +1348,6 @@ class ALYSIA_ITEMS
 	
 	class pierre
 	{
-		weight      = 1;
 		name        = "Pierre";
 		weight      = 7;
 		price_buy   = 60;
@@ -1361,7 +1360,6 @@ class ALYSIA_ITEMS
 	
 	class ciment
 	{
-		weight      = 1;
 		name        = "Ciment";
 		weight      = 10;
 		price_buy   = 60;

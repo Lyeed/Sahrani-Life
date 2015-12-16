@@ -5,18 +5,19 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_target", "_path", "_array", "_display", "_idc_actual", "_title"];
+private["_target", "_path", "_array", "_display", "_idc_actual", "_title", "_background"];
 _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _path = [_this, 1, "", [""]] call BIS_fnc_param;//must be folder name inside lyeed_IMG\data\interactions\ with images defined as action_%1 and action_%1_select
 _array = [_this, 2, [], [[]]] call BIS_fnc_param;
 _title = [_this, 3, "", [""]] call BIS_fnc_param;
+_background = [_this, 4, "lyeed_IMG\data\interactions\background.jpg", [""]] call BIS_fnc_param;
 
-_check_target_distance = [_this, 4, true, [true]] call BIS_fnc_param;
-_check_target_coma = [_this, 5, true, [true]] call BIS_fnc_param;
-_check_target_null = [_this, 6, true, [true]] call BIS_fnc_param;
-_check_player_coma = [_this, 7, true, [true]] call BIS_fnc_param;
-_check_player_restrained = [_this, 8, true, [true]] call BIS_fnc_param;
-_check_player_surrender = [_this, 9, true, [true]] call BIS_fnc_param;
+_check_target_distance = [_this, 5, true, [true]] call BIS_fnc_param;
+_check_target_coma = [_this, 6, true, [true]] call BIS_fnc_param;
+_check_target_null = [_this, 7, true, [true]] call BIS_fnc_param;
+_check_player_coma = [_this, 8, true, [true]] call BIS_fnc_param;
+_check_player_restrained = [_this, 9, true, [true]] call BIS_fnc_param;
+_check_player_surrender = [_this, 10, true, [true]] call BIS_fnc_param;
 
 if ((isNull _target) || (_path isEqualTo "") || (_array isEqualTo []))  exitWith {};
 
@@ -42,6 +43,8 @@ _display = findDisplay 5000;
 if (isNull _display) exitWith {};
 
 uiNamespace setVariable ["interaction_save", _this];
+
+(_display displayCtrl 5050) ctrlSetText _background;
 
 if (_title isEqualTo "") then {
 	ctrlShow[5001, false];

@@ -7,7 +7,7 @@ class RscDisplayInteraction: default_base_dialog
 	{
 		class BACKGROUND: RscPicture
 		{
-			text = "\lyeed_IMG\data\interactions\background.jpg";
+			idc = 5050;
 
 			x = 0.37625 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
