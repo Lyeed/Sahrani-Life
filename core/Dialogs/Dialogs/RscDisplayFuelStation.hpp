@@ -95,7 +95,7 @@
 		};
 		class PRICE_TEXT3: RscStructuredText
 		{
-			idc = 16012;
+			idc = 16009;
 			text = "<t size ='0.7' align='center'>Kn</t>";
 
 			x = 0.579999 * safezoneW + safezoneX;
@@ -106,7 +106,7 @@
 		};
 		class STOCK_TEXT: RscStructuredText
 		{
-			idc = 16009;
+			idc = 16010;
 			text = "<t align='right'>Disponnibilité</t>";
 
 			x = 0.394812 * safezoneW + safezoneX;
@@ -117,7 +117,7 @@
 		};
 		class STOCK_TEXT2: RscStructuredText
 		{
-			idc = 16010;
+			idc = 16011;
 			text = "<t align='right'>0</t>";
 
 			x = 0.461741 * safezoneW + safezoneX;
@@ -128,8 +128,8 @@
 		};
 		class STOCK_TEXT3: RscStructuredText
 		{
-			idc = 16011;
-			text = "<t align='right'>L</t>";
+			idc = 16012;
+			text = "<t align='left'>L</t>";
 
 			x = 21.41 * GUI_GRID_W + GUI_GRID_X;
 			y = 10.57 * GUI_GRID_H + GUI_GRID_Y;
@@ -137,26 +137,56 @@
 			h = 1 * GUI_GRID_H;
 			colorBackground[] = {0,0,0,0};
 		};
-		class FUEL_FRAME: RscFrame
+		class VALIDATE_FRAME: RscFrame
 		{
 			idc = 16013;
 
-			x = 0.474219 * safezoneW + safezoneX;
+			x = 0.464319 * safezoneW + safezoneX;
 			y = 0.5 * safezoneH + safezoneY;
-			w = 0.0480208 * safezoneW;
-			h = 0.0247778 * safezoneH;
+			w = 0.0728125 * safezoneW;
+			h = 0.0274443 * safezoneH;
 			colorText[] = {0,0,0,0.8};
 		};
-		class FUEL_BTN: RscButton
+		class VALIDATE_BACKGROUND: RscStructuredText
 		{
 			idc = 16014;
-			text = "Valider";
+			colorBackground[] = {0,0,0,0.6};
+
+			x = 0.464422 * safezoneW + safezoneX;
+			y = 0.50088 * safezoneH + safezoneY;
+			w = 0.0714063 * safezoneW;
+			h = 0.0248888 * safezoneH;
+			colorBackground[] = {0,0,0,0.6};
+		};
+		class VALIDATE_IMAGE: RscPicture
+		{
+			idc = 16015;
+
+			x = 0.467413 * safezoneW + safezoneX;
+			y = 0.50462 * safezoneH + safezoneY;
+			w = 0.0117187 * safezoneW;
+			h = 0.0171481 * safezoneH;
+		};
+		class VALIDATE_TEXT: RscStructuredText
+		{
+			idc = 16016;
+			text = "<t align='center'>Valider</t>";
+
+			x = 0.484531 * safezoneW + safezoneX;
+			y = 0.5044 * safezoneH + safezoneY;
+			w = 0.0461458 * safezoneW;
+			h = 0.0172593 * safezoneH;
+			colorBackground[] = {0,0,0,0};
+		};
+		class VALIDATE_BUTTON: RscButtonSilent
+		{
+			idc = 16017;
 			action = "[] call public_fnc_refuelVehicle";
 
-			x = 0.475208 * safezoneW + safezoneX;
-			y = 0.500926 * safezoneH + safezoneY;
-			w = 0.0464063 * safezoneW;
-			h = 0.022 * safezoneH;
+			x = 0.467396 * safezoneW + safezoneX;
+			y = 0.505963 * safezoneH + safezoneY;
+			w = 0.0660937 * safezoneW;
+			h = 0.0170369 * safezoneH;
 		};
 	};
 };

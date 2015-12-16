@@ -10,10 +10,7 @@ private["_station", "_fuel"];
 _station = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 _fuel = [_this, 1, "", [""]] call BIS_fnc_param;
 
-private ["_price"];
-
 // Pour 10km -> 10000m -> Augmentation de 5Kn -> / par 2000
-
 if (_fuel isEqualTo "") exitWith {};
 
 (round((getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuel >> "price")) + ((_station distance (markerPos "oilu")) / 2000)));

@@ -165,7 +165,6 @@ class RscDisplayAuctionHouse: default_base_dialog
 			w = 0.0825 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
-
 		class ACTION_BUY_BACKGROUND: RscText
 		{
 			idc = 45609;

@@ -37,13 +37,12 @@ if (isNil "_typeRefuel") then
 		_combo lbSetPicture [_index, (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuelName >> "picture"))];
 	} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL" >> "fuels"));
 
-	(_display displayCtrl 16010) ctrlSetStructuredText parseText format ["<t align='right'>%1L</t>", (_station getVariable [(_combo lbData (lbCurSel _combo)), 250])];
-
-	if ((_station getVariable [(_combo lbData (lbCurSel _combo)), 250]) > 0) then {(_display displayCtrl 16014) ctrlEnable true} else {(_display displayCtrl 16014) ctrlEnable false};
+	(_display displayCtrl 16011) ctrlSetStructuredText parseText format ["<t align='right'>%1</t>", (_station getVariable [(_combo lbData (lbCurSel _combo)), 250])];
 
 	while {dialog} do
 	{
 		(_display displayCtrl 16008) ctrlSetStructuredText parseText format ["<t align='center' size='2'>%1</t>", ([_station, (_combo lbData (lbCurSel _combo))] call public_fnc_fuelPrice)];
+		(_display displayCtrl 16015) ctrlSetText (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> (_combo lbData (lbCurSel _combo)) >> picture));
 		sleep 0.5;
 	};
 } else {
@@ -70,7 +69,7 @@ if (isNil "_typeRefuel") then
 			closeDialog 0;
 		};
 
-		if ((_bill + [_station, (player getVariable [])] call public_fnc_fuelPrice) > g_cash) exitWith
+		if ((_bill + [_station, (player getVariable ["typeRefuel", ""])] call public_fnc_fuelPrice) > g_cash) exitWith
 		{
 			["Vous n'avez pas assez d'argent sur votre compte pour pouvoir faire le plein."] call public_fnc_error;
 			closeDialog 0;		
@@ -80,9 +79,9 @@ if (isNil "_typeRefuel") then
 		_bill = (_bill + [_station, (player getVariable ["typeRefuel", ""])] call public_fnc_fuelPrice);
 		_fuel = ([_vehicle] call public_fnc_fetchVehInfo select 12);
 
-		(_display displayCtrl 17015) ctrlSetStructuredText parseText format ["%1/%2 Litres", ((fuel _vehicle) * _fuel), _fuel];
 		(_display displayCtrl 17008) ctrlSetStructuredText parseText format ["<t size ='2' align='center'>%1</t>", _bill];
 		(_display displayCtrl 17010) ctrlSetStructuredText parseText format ["<t align='right'>%1</t>", (_station getVariable [(player getVariable ["typeRefuel", ""]), 250])];
+		(_display displayCtrl 17015) ctrlSetStructuredText parseText format ["%1/%2 Litres", ((fuel _vehicle) * _fuel), _fuel];
 
 		sleep 0.1;
 	};
