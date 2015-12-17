@@ -138,7 +138,7 @@
 			h = 1 * GUI_GRID_H;
 			colorBackground[] = {0,0,0,0};
 		};
-		class VALIDATE_FRAME: RscFrame
+		/*class VALIDATE_FRAME: RscFrame
 		{
 			idc = 16013;
 
@@ -193,6 +193,6 @@
 			y = 0.505963 * safezoneH + safezoneY;
 			w = 0.0660937 * safezoneW;
 			h = 0.0170369 * safezoneH;
-		};
+		};*/
 	};
 };
