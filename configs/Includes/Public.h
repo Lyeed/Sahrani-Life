@@ -223,6 +223,7 @@ class Public
 	{
 		file = "core\Game\FuelStations";
 		class fuelMenu_use_refuel_veh {};
+		class fuelMenu_Update {};
 		class refuelVehicle {};
 		class fuelPrice {};
 		//class fuelMenu_action_refuel {};

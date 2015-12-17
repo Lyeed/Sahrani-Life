@@ -20,7 +20,7 @@ if (dialog) then
 private ["_typeRefuel"];
 _typeRefuel = player getVariable "typeRefuel";
 
-if ((isNil "_typeRefuel") || (_typeRefuel isEqualTo "")) then
+if ((isNil "_typeRefuel") || {_typeRefuel isEqualTo ""}) then
 {
 	private ["_combo","_index","_ressourceName"];
 	if (!(createDialog "RscDisplayFuelStation")) exitWith {};
@@ -37,14 +37,7 @@ if ((isNil "_typeRefuel") || (_typeRefuel isEqualTo "")) then
 		_combo lbSetPicture [_index, (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuelName >> "picture"))];
 	} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL" >> "fuels"));
 
-	(_display displayCtrl 16011) ctrlSetStructuredText parseText format ["<t align='right'>%1</t>", (_station getVariable [(_combo lbData (lbCurSel _combo)), 250])];
-
-	while {dialog} do
-	{
-		(_display displayCtrl 16008) ctrlSetStructuredText parseText format ["<t align='center' size='2'>%1</t>", ([_station, (_combo lbData (lbCurSel _combo))] call public_fnc_fuelPrice)];
-		(_display displayCtrl 16015) ctrlSetText (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> (_combo lbData (lbCurSel _combo)) >> "picture"));
-		sleep 0.5;
-	};
+	(_display displayCtrl 16011) ctrlSetStructuredText parseText format ["<t align='right'>%1</t>", (_station getVariable [(lbData [16004, lbCurSel 16004]), 250])];
 } else {
 	_vehicle = cursorTarget;
 	if (isNil "_typeRefuel") exitWith {};
