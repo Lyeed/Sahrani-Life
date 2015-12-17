@@ -22,26 +22,13 @@ lbClear _list;
 if (!(g_phone_messages isEqualTo [])) then
 {
 	{
-		private["_message", "_from", "_index"];
-		_message = _x;
-		_from = _message select 0;
-		if (_from in ["GUER", "WEST", "EAST"]) then {
-			_from = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> _from >> "name");
+		_index = _list lbAdd format["%1 - %2", [(_x select 0)] call public_fnc_phone_number_to_name, (_x select 1)];
+		if ((_x select 2) isEqualTo 1) then {
+			_list lbSetPicture [_index, "lyeed_IMG\data\phone\read\sms_old.paa"];
 		} else {
-			{
-				if ((_x select 1) isEqualTo _from) exitWith {
-					_from = _x select 0;
-				};
-			} forEach (g_phone_contacts);		
+			_list lbSetPicture [_index, "lyeed_IMG\data\phone\read\sms_new.paa"];
 		};
-
-		_index = _list lbAdd format["%1 - %2", _from, (_message select 1)];
-		if ((_message select 2) isEqualTo 1) then {
-			_list lbSetPicture [_index, "\lyeed\images\phone_messages_read"];
-		} else {
-			_list lbSetPicture [_index, "\lyeed\images\phone_messages_notread"];
-		};
-		_list lbSetData [_index, (_message select 0)];
+		_list lbSetData [_index, (_x select 0)];
 	} forEach (g_phone_messages);
 	_list lbSetCurSel -1;
 

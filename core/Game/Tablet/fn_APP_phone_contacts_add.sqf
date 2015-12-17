@@ -17,11 +17,11 @@ if (_name isEqualTo "") exitWith {
 	["Vous n'avez pas entré de nom pour votre contact"] call public_fnc_error;
 };
 
-_bad = [_name, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-"] call public_fnc_TextAllowed;
-if (!(_bad isEqualTo "")) exitWith {
-	["Vous utilisez un caractère interdit dans le nom de votre contact à ajouter<br/>Caractères autorisés :<br/>(ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzéè-)"] call public_fnc_error;
+_bad = [_name, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789- "] call public_fnc_TextAllowed;
+if (_bad != "") exitWith {
+	[format["Vous utilisez un caractère interdit dans le nom de votre contact à ajouter (%1)", _bad]] call public_fnc_error;
 };
-if (count(toArray(_name)) > 25) exitWith {
+if (([_name] call CBA_fnc_strLen) > 25) exitWith {
 	["Le nom entré pour votre contact ne doit pas dépasser 25 caractères"] call public_fnc_error;
 };
 

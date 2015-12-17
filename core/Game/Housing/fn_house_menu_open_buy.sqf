@@ -5,11 +5,14 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_require", "_display", "_price", "_disable"];
+private["_require", "_display", "_price", "_disable", "_house"];
+_house = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if (isNull g_interaction_target) exitWith {};
+if (isNull _house) exitWith {};
 
 if (!(createDialog "RscDisplayHousingBuy")) exitWith {};
+
+g_interaction_target = _house;
 
 _disable =
 {

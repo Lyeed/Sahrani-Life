@@ -252,6 +252,7 @@ class Public
 		class phone_message_send {};
 		class phone_message_receive {};
 		class phone_forfait_change {};
+		class phone_number_to_name {};
 	};
 
 	class Health

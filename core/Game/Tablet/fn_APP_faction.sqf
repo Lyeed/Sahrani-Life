@@ -31,6 +31,7 @@ lbClear _list_ranks;
 	};
 } forEach (getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "Ranks" >> "ranks_complet"));
 _list_ranks lbSetCurSel -1;
+_list_ranks ctrlEnable false;
 
 _list_duty = _display displayCtrl 8709;
 lbClear _list_duty;
@@ -42,3 +43,4 @@ lbClear _list_duty;
 	};
 } forEach (allPlayers);
 _list_duty lbSetCurSel -1;
+_list_duty ctrlEnable false;

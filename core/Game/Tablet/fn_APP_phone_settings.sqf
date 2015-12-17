@@ -6,9 +6,9 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private["_display", "_list", "_ring"];
-disableSerialization;
 
-_display = findDisplay 7500;
+disableSerialization;
+_display = uiNamespace getVariable["tablet", displayNull];
 if (isNull _display) exitWith {};
 
 _list = _display displayCtrl 8351;
@@ -34,7 +34,7 @@ _ring = profileNamespace getVariable["ALYSIA_phone_recv", 1];
 	]);
 _list lbSetCurSel (_ring - 1);
 
-if (profileNamespace getVariable["ALYSIA_phone_SILENT", false]) then {
+if (profileNamespace getVariable ["ALYSIA_phone_SILENT", false]) then {
 	(_display displayCtrl 8360) cbSetChecked true;
 } else {
 	(_display displayCtrl 8360) cbSetChecked false;

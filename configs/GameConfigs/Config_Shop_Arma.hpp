@@ -98,15 +98,15 @@ class ALYSIA_SHOPS_ARMA
 		side = "";
 		stocks[] =
 		{
- 			"Alysia_repair_glass",
- 			"Alysia_repair_engine",
- 			"Alysia_repair_track",
- 			"Alysia_repair_body",
- 			"Alysia_repair_tire",
- 			"Alysia_repair_tireLever",
- 			"Alysia_repair_rotor",
- 			"Alysia_repair_fuel",
- 			"Alysia_repair_toolbox"
+			"Alysia_repair_toolbox",
+			"Alysia_repair_tireLever",
+			"Alysia_repair_fuel",
+			"Alysia_repair_engine",
+			"Alysia_repair_body",
+			"Alysia_repair_track",
+			"Alysia_repair_tire",
+			"Alysia_repair_glass",
+			"Alysia_repair_rotor"
 		};
 	};
 
