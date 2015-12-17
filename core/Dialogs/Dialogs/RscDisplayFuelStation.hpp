@@ -44,6 +44,7 @@
 		{
 			idc = 16004;
 			colorPictureSelected[] = {1, 1, 1, 1};
+			onLBSelChanged = "_this call public_fnc_fuelStationMenu_Update;";
 
 			x = 0.400484 * safezoneW + safezoneX;
 			y = 0.42762 * safezoneH + safezoneY;
@@ -129,7 +130,7 @@
 		class STOCK_TEXT3: RscStructuredText
 		{
 			idc = 16012;
-			text = "<t align='left'>L</t>";
+			text = "<t align='right'>L</t>";
 
 			x = 21.41 * GUI_GRID_W + GUI_GRID_X;
 			y = 10.57 * GUI_GRID_H + GUI_GRID_Y;
@@ -181,6 +182,12 @@
 		{
 			idc = 16017;
 			action = "[] call public_fnc_refuelVehicle";
+			onMouseEnter = "\
+			((findDisplay 16000) displayCtrl 16014) ctrlSetBackgroundColor [1,1,1,1];\
+			((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' color='#000000'>Remplir</t>"";";
+			onMouseExit = "\
+			((findDisplay 16000) displayCtrl 16014) ctrlSetBackgroundColor [0,0,0,0.6];\
+			((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' color='#FFFFFF'>Remplir</t>"";";
 
 			x = 0.467396 * safezoneW + safezoneX;
 			y = 0.505963 * safezoneH + safezoneY;
