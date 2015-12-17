@@ -6,7 +6,7 @@
 class PHONE_RETURN_IMAGE: RscPicture
 {
 	idc = PHONE_RETURN_IMAGE_IDC;
-	text = "lyeed_IMG\data\global\option_back";
+	text = "lyeed_IMG\data\global\option_back.paa";
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.346 * safezoneH + safezoneY;
@@ -287,7 +287,6 @@ class PHONE_CATEGORY_APP_8_BUTTON: RscButtonSilent
 // =======================================[Read]=======================================
 #define PHONE_MESSAGE_READ_MESSAGE_FRAME_IDC 			8312
 #define PHONE_MESSAGE_READ_MESSAGES_FRAME_IDC 			8313
-#define PHONE_MESSAGE_READ_ACTION_HEADER_IDC 			8314
 #define PHONE_MESSAGE_READ_LIST_HEADER_IDC 				8319
 #define PHONE_MESSAGE_READ_LIST_INFO_IDC 				8320
 #define PHONE_MESSAGE_READ_MESSAGE_HEADER_IDC 			8321
@@ -316,9 +315,9 @@ class PHONE_MESSAGE_READ_MESSAGE_FRAME: RscFrame
 	idc = PHONE_MESSAGE_READ_MESSAGE_FRAME_IDC;
 	colorText[] = {0,0,0,0.8};
 
-	x = 0.427812 * safezoneW + safezoneX;
+	x = 0.479375 * safezoneW + safezoneX;
 	y = 0.346 * safezoneH + safezoneY;
-	w = 0.252656 * safezoneW;
+	w = 0.201094 * safezoneW;
 	h = 0.176 * safezoneH;
 };
 class PHONE_MESSAGE_READ_MESSAGES_FRAME: RscFrame
@@ -332,22 +331,9 @@ class PHONE_MESSAGE_READ_MESSAGES_FRAME: RscFrame
 	h = 0.154 * safezoneH;
 };
 
-class PHONE_MESSAGE_READ_ACTION_HEADER: RscStructuredText
-{
-	idc = PHONE_MESSAGE_READ_ACTION_HEADER_IDC;
-	colorBackground[] = {0,0,0,0.8};
-	text = "<t align='center'>Actions</t>";
-
-	x = 0.427812 * safezoneW + safezoneX;
-	y = 0.346 * safezoneH + safezoneY;
-	w = 0.0515625 * safezoneW;
-	h = 0.022 * safezoneH;
-};
-
 class PHONE_MESSAGE_READ_LIST_HEADER : RscStructuredText
 {
 	idc = PHONE_MESSAGE_READ_LIST_HEADER_IDC;
-	text = "";
 	colorBackground[] = {0,0,0,0.8};
 
 	x = 0.324687 * safezoneW + safezoneX;
@@ -369,7 +355,6 @@ class PHONE_MESSAGE_READ_LIST_INFO : RscListBox
 class PHONE_MESSAGE_READ_MESSAGE_HEADER : RscStructuredText
 {
 	idc = PHONE_MESSAGE_READ_MESSAGE_HEADER_IDC;
-	text = "";
 	colorBackground[] = {0,0,0,0.8};
 
 	x = 0.479375 * safezoneW + safezoneX;
@@ -380,7 +365,6 @@ class PHONE_MESSAGE_READ_MESSAGE_HEADER : RscStructuredText
 class PHONE_MESSAGE_READ_MESSAGE_INFO : RscStructuredText
 {
 	idc = PHONE_MESSAGE_READ_MESSAGE_INFO_IDC;
-	text = "";
 	colorBackground[] = {0,0,0,0.6};
 
 	x = 0.479375 * safezoneW + safezoneX;
@@ -392,7 +376,7 @@ class PHONE_MESSAGE_READ_MESSAGE_INFO : RscStructuredText
 class PHONE_MESSAGE_READ_DELETE_MESSAGE_IMAGE : RscPicture
 {
 	idc = PHONE_MESSAGE_READ_DELETE_MESSAGE_IMAGE_IDC;
-	text = "\lyeed\images\phone_messages_remove.paa";
+	text = "lyeed_IMG\data\phone\read\remove.paa";
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.467 * safezoneH + safezoneY;
@@ -404,6 +388,8 @@ class PHONE_MESSAGE_READ_DELETE_MESSAGE_BUTTON : RscButtonSilent
 	idc = PHONE_MESSAGE_READ_DELETE_MESSAGE_BUTTON_IDC;
 	action = "[0] call public_fnc_APP_phone_messages_read_delete;";
 	tooltip = "Supprimer le message sélectionné";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\read\remove_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\read\remove.paa""];";
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.467 * safezoneH + safezoneY;
@@ -414,7 +400,7 @@ class PHONE_MESSAGE_READ_DELETE_MESSAGE_BUTTON : RscButtonSilent
 class PHONE_MESSAGE_READ_DELETE_ALL_IMAGE : RscPicture
 {
 	idc = PHONE_MESSAGE_READ_DELETE_ALL_IMAGE_IDC;
-	text = "\lyeed\images\phone_messages_removeall.paa";
+	text = "lyeed_IMG\data\phone\read\remove_all.paa";
 
 	x = 0.360781 * safezoneW + safezoneX;
 	y = 0.467 * safezoneH + safezoneY;
@@ -426,6 +412,8 @@ class PHONE_MESSAGE_READ_DELETE_ALL_BUTTON : RscButtonSilent
 	idc = PHONE_MESSAGE_READ_DELETE_ALL_BUTTON_IDC;
 	action = "[1] call public_fnc_APP_phone_messages_read_delete;";
 	tooltip = "Supprimer tous les messages";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\read\remove_all_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\read\remove_all.paa""];";
 
 	x = 0.360781 * safezoneW + safezoneX;
 	y = 0.467 * safezoneH + safezoneY;
@@ -436,7 +424,7 @@ class PHONE_MESSAGE_READ_DELETE_ALL_BUTTON : RscButtonSilent
 class PHONE_MESSAGE_READ_ANSWER_IMAGE: RscPicture
 {
 	idc = PHONE_MESSAGE_READ_ANSWER_IMAGE_IDC;
-	text = "\lyeed\images\phone_messages_send_action.paa";
+	text = "lyeed_IMG\data\phone\contacts\send.paa";
 
 	x = 0.438125 * safezoneW + safezoneX;
 	y = 0.445 * safezoneH + safezoneY;
@@ -454,6 +442,8 @@ class PHONE_MESSAGE_READ_ANSWER_BUTTON: RscButtonSilent
 		ctrlSetText[8336, (g_phone_messages select _index) select 0];\
 	";
 	tooltip = "Répondre";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\send_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\send.paa""];";
 
 	x = 0.438125 * safezoneW + safezoneX;
 	y = 0.445 * safezoneH + safezoneY;
@@ -464,7 +454,7 @@ class PHONE_MESSAGE_READ_ANSWER_BUTTON: RscButtonSilent
 class PHONE_MESSAGE_READ_ADD_IMAGE : RscPicture
 {
 	idc = PHONE_MESSAGE_READ_ADD_IMAGE_IDC;
-	text = "\lyeed\images\phone_contacts_add.paa";
+	text = "lyeed_IMG\data\phone\contacts\add.paa";
 
 	x = 0.438125 * safezoneW + safezoneX;
 	y = 0.379 * safezoneH + safezoneY;
@@ -482,6 +472,8 @@ class PHONE_MESSAGE_READ_ADD_BUTTON : RscButtonSilent
 		ctrlSetText[8384, (g_phone_messages select _index) select 0];\
 	";
 	tooltip = "Ajouter aux contacts";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\add_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\add.paa""];";
 
 	x = 0.438125 * safezoneW + safezoneX;
 	y = 0.379 * safezoneH + safezoneY;
@@ -586,7 +578,6 @@ class PHONE_MESSAGE_SEND_MESSAGE_HEADER : RscStructuredText
 class PHONE_MESSAGE_SEND_MESSAGE_INFO : RscEdit
 {
 	idc = PHONE_MESSAGE_SEND_MESSAGE_INFO_IDC;
-	text = "";
 	colorBackground[] = {0,0,0,0.6};
 	style = 16;
 
@@ -665,7 +656,7 @@ class PHONE_MESSAGE_SEND_HIDE_FRAME: RscFrame
 class PHONE_MESSAGE_SEND_IMAGE : RscPicture
 {
 	idc = PHONE_MESSAGE_SEND_IMAGE_IDC;
-	text = "\lyeed\images\phone_messages_send_action.paa";
+	text = "lyeed_IMG\data\phone\send.paa";
 
 	x = 0.525781 * safezoneW + safezoneX;
 	y = 0.368 * safezoneH + safezoneY;
@@ -676,6 +667,8 @@ class PHONE_MESSAGE_SEND_BUTTON : RscButtonSilent
 {
 	idc = PHONE_MESSAGE_SEND_BUTTON_IDC;
 	action = "[] call public_fnc_APP_phone_messages_send_action;";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\send_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\send.paa""];";
 	tooltip = "Envoyer";
 
 	x = 0.525781 * safezoneW + safezoneX;
@@ -780,7 +773,7 @@ class PHONE_SETTING_RING_FRAME: RscFrame
 class PHONE_SETTINGS_RING_VALIDATE_IMAGE: RscPicture
 {
 	idc = PHONE_SETTINGS_RING_VALIDATE_IMAGE_IDC;
-	text = "\lyeed_IMG\data\global\validate_settings.paa";
+	text = "lyeed_IMG\data\phone\settings\validate.paa";
 
 	x = 0.54125 * safezoneW + safezoneX;
 	y = 0.5 * safezoneH + safezoneY;
@@ -795,16 +788,19 @@ class PHONE_SETTINGS_RING_VALIDATE_BUTTON : RscButtonSilent
 		[] call public_fnc_APP_phone_settings;\
 	";
 	tooltip = "Sauvegarder la sonnerie";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\settings\validate_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\settings\validate.paa""];";
 
 	x = 0.54125 * safezoneW + safezoneX;
 	y = 0.5 * safezoneH + safezoneY;
 	w = 0.0257812 * safezoneW;
 	h = 0.044 * safezoneH;
 };
+
 class PHONE_SETTINGS_RING_LISTEN_IMAGE: RscPicture
 {
 	idc = PHONE_SETTINGS_RING_LISTEN_IMAGE_IDC;
-	text = "\lyeed_IMG\data\tablet\listen.paa";
+	text = "lyeed_IMG\data\phone\settings\listen.paa";
 
 	x = 0.54125 * safezoneW + safezoneX;
 	y = 0.588 * safezoneH + safezoneY;
@@ -815,6 +811,8 @@ class PHONE_SETTINGS_RING_LISTEN_BUTTON : RscButtonSilent
 {
 	idc = PHONE_SETTINGS_RING_LISTEN_BUTTON_IDC;
 	action = "playSound (lbData[8351, lbCurSel 8351]);";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\settings\listen_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\settings\listen.paa""];";
 	tooltip = "Ecouter la sonnerie";
 
 	x = 0.54125 * safezoneW + safezoneX;
@@ -1101,6 +1099,7 @@ class PHONE_FACTION_MESSAGE_HEADER: RscStructuredText
 class PHONE_FACTION_MESSAGE_INFO: RscEdit
 {
 	idc = PHONE_FACTION_MESSAGE_INFO_IDC;
+	style = 16;
 
 	x = 0.381406 * safezoneW + safezoneX;
 	y = 0.434 * safezoneH + safezoneY;
@@ -1111,7 +1110,7 @@ class PHONE_FACTION_MESSAGE_INFO: RscEdit
 class PHONE_FACTION_MESSAGE_SEND_IMAGE: RscPicture
 {
 	idc = PHONE_FACTION_MESSAGE_SEND_IMAGE_IDC;
-	text = "\lyeed\images\phone_messages_send_action.paa";
+	text = "lyeed_IMG\data\phone\send.paa";
 
 	x = 0.484531 * safezoneW + safezoneX;
 	y = 0.346 * safezoneH + safezoneY;
@@ -1122,18 +1121,21 @@ class PHONE_FACTION_MESSAGE_SEND_BUTTON: RscButtonSilent
 {
 	idc = PHONE_FACTION_MESSAGE_SEND_BUTTON_IDC;
 	action = "[ctrlText 8393, playerSide] call public_fnc_APP_phone_faction_send;";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\send_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\send.paa""];";
 	tooltip = "Envoyer";
 
-	x = 0.324687 * safezoneW + safezoneX;
+	x = 0.484531 * safezoneW + safezoneX;
 	y = 0.346 * safezoneH + safezoneY;
-	w = 0.020625 * safezoneW;
-	h = 0.033 * safezoneH;
+	w = 0.0360937 * safezoneW;
+	h = 0.055 * safezoneH;
 };
 /* ===================================================================================================================== */
 
 // =======================================[Blacklist]=======================================
 PHONE_BLACKLIST_IDCS[] =
 {
-
+	PHONE_RETURN_IMAGE_IDC,
+	PHONE_RETURN_BUTTON_IDC
 };
 PHONE_BLACKLIST_BACKGROUND = PHONE_BACKGROUND;

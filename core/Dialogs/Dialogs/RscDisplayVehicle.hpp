@@ -28,6 +28,7 @@ class RscDisplayVehicleOwner: default_base_dialog
 
 	class controls
 	{
+
 		class TITLE: RscStructuredText
 		{
 			text = "<t size='1.5' align='center'>Carte grise</t>";
@@ -39,14 +40,21 @@ class RscDisplayVehicleOwner: default_base_dialog
 			h = 0.033 * safezoneH;
 		};
 
+		class PLATE_FRAME: RscFrame
+		{
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.467 * safezoneH + safezoneY;
+			w = 0.103125 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
 		class PLATE_HEADER: RscStructuredText
 		{
 			text = "<t align='center'>Immatriculation</t>";
 			colorBackground[] = {0,0,0,0.8};
 
-			x = 0.4175 * safezoneW + safezoneX;
-			y = 0.39 * safezoneH + safezoneY;
-			w = 0.118594 * safezoneW;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.467 * safezoneH + safezoneY;
+			w = 0.103125 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class PLATE_INFO: RscStructuredText
@@ -54,20 +62,27 @@ class RscDisplayVehicleOwner: default_base_dialog
 			idc = 601;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.4175 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.118594 * safezoneW;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.489 * safezoneH + safezoneY;
+			w = 0.103125 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-	
+
+		class OWNER_FRAME: RscFrame
+		{
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.533 * safezoneH + safezoneY;
+			w = 0.103125 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
 		class OWNER_HEADER: RscStructuredText
 		{
 			text = "<t align='center'>Propriétaire</t>";
 			colorBackground[] = {0,0,0,0.8};
-
-			x = 0.407187 * safezoneW + safezoneX;
-			y = 0.5 * safezoneH + safezoneY;
-			w = 0.139219 * safezoneW;
+			
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.533 * safezoneH + safezoneY;
+			w = 0.103125 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class OWNER_INFO: RscStructuredText
@@ -75,20 +90,27 @@ class RscDisplayVehicleOwner: default_base_dialog
 			idc = 602;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.407187 * safezoneW + safezoneX;
-			y = 0.522 * safezoneH + safezoneY;
-			w = 0.139219 * safezoneW;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.555 * safezoneH + safezoneY;
+			w = 0.103125 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 
+		class INSURED_FRAME: RscFrame
+		{
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.599 * safezoneH + safezoneY;
+			w = 0.103125 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
 		class INSURED_HEADER: RscStructuredText
 		{
 			text = "<t align='center'>Assuré</t>";
 			colorBackground[] = {0,0,0,0.8};
-
-			x = 0.427812 * safezoneW + safezoneX;
+			
+			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.599 * safezoneH + safezoneY;
-			w = 0.0979687 * safezoneW;
+			w = 0.103125 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class INSURED_INFO: RscStructuredText
@@ -96,9 +118,9 @@ class RscDisplayVehicleOwner: default_base_dialog
 			idc = 603;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.427812 * safezoneW + safezoneX;
+			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.621 * safezoneH + safezoneY;
-			w = 0.0979687 * safezoneW;
+			w = 0.103125 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 
