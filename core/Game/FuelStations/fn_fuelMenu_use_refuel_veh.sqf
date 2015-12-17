@@ -36,8 +36,6 @@ if ((isNil "_typeRefuel") || {_typeRefuel isEqualTo ""}) then
 		_combo lbSetData [_index, (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuelName))];
 		_combo lbSetPicture [_index, (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuelName >> "picture"))];
 	} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL" >> "fuels"));
-
-	(_display displayCtrl 16011) ctrlSetStructuredText parseText format ["<t align='right'>%1</t>", (_station getVariable [(lbData [16004, lbCurSel 16004]), 250])];
 } else {
 	_vehicle = cursorTarget;
 	if (isNil "_typeRefuel") exitWith {};
@@ -54,7 +52,7 @@ if ((isNil "_typeRefuel") || {_typeRefuel isEqualTo ""}) then
 	private ["_bill","_progress","_fuel"];
 	_bill = 0;
 
-	while {dialog} do
+	while {findDisplay 16000} do
 	{
 		if (_station getVariable [(player getVariable ["typeRefuel", ""]), 250] < 1) exitWith
 		{
