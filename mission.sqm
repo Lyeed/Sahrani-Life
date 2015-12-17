@@ -14855,7 +14855,7 @@ class Mission
 		class Item180
 		{
 			position[]={10874.619,10.176373,5043.7949};
-			name="Traitement de la pierre_1";
+			name="Traitement_pierre_1";
 			text="Traitement de la pierre";
 			type="Fett_industrial";
 			colorName="ColorOrange";
