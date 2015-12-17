@@ -6,14 +6,8 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-private ["_combo"];
+if (isNull findDisplay 16000) exitWith {};
 
-disableSerialization;
-_display = findDisplay 16000;
-if (isNull _display) exitWith {};
-
-_combo = (_display displayCtrl 16004);
-
-player setVariable ["typeRefuel", (_combo lbData (lbCurSel _combo)), false];
+player setVariable ["typeRefuel", (lbData [16004, lbCurSel 16004]), false];
 ["Veuillez maintenant insérer le pistolet dans le réservoir de votre véhicule. Pour annuler, veuillez ranger le pistolet dans la pompe."] call public_fnc_info;
 closeDialog 0;

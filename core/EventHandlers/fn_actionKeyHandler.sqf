@@ -80,7 +80,7 @@ if ((vehicle player) isEqualTo player) then
 				{
 					if (alive cursorTarget) then
 					{
-						if (player getVariable ["typeRefuel", ""] isEqualTo "") then
+						if ((player getVariable ["typeRefuel", ""]) isEqualTo "") exitWith
 						{
 							[cursorTarget] call public_fnc_interactions_player_to_vehicle;
 							breakOut "main";
@@ -162,7 +162,7 @@ if ((vehicle player) isEqualTo player) then
 
 				if (typeOf(cursorTarget) in ["Land_FuelStation_Build_F","Land_FuelStation_Shed_F","Land_FuelStation_Feed_F"]) then
 				{
-					if (!(player getVariable ["typeRefuel", ""] isEqualTo "")) exitWith
+					if ((player getVariable ["typeRefuel", ""]) != "") exitWith
 					{
 						["Le plein d'essence est annulé."] call public_fnc_error;
 						player setVariable ["typeRefuel", "", false];
