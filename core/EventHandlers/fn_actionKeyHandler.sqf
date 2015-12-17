@@ -80,7 +80,7 @@ if ((vehicle player) isEqualTo player) then
 				{
 					if (alive cursorTarget) then
 					{
-						if ((player getVariable ["typeRefuel", ""]) isEqualTo "") exitWith
+						if ((player getVariable ["typeRefuel", ""]) isEqualTo "") then
 						{
 							[cursorTarget] call public_fnc_interactions_player_to_vehicle;
 							breakOut "main";
