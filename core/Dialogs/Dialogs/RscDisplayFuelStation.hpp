@@ -8,7 +8,7 @@
 		class BACKGROUND: RscPicture
 		{
 			idc = 16001;
-			text = "\Devilz80_Images\Data\Menu\fuelStations\background.paa";
+			text = "\lyeed_IMG\data\interactions\background.jpg";
 
 			x = 0.383489 * safezoneW + safezoneX;
 			y = 0.281371 * safezoneH + safezoneY;
@@ -24,10 +24,10 @@
 			idc = 16002;
 			text = "\lyeed_IMG\data\frames\frame_2_borderless.paa";
 
-			x = 0.371928 * safezoneW + safezoneX;
-			y = 0.321223 * safezoneH + safezoneY;
-			w = 0.259844 * safezoneW;
-			h = 0.232852 * safezoneH;
+			x = 0.372125 * safezoneW + safezoneX;
+			y = 0.32026 * safezoneH + safezoneY;
+			w = 0.257813 * safezoneW;
+			h = 0.286 * safezoneH;
 		};
 		class TITLE_TEXT: RscStructuredText
 		{
@@ -132,50 +132,51 @@
 			idc = 16012;
 			text = "<t align='right'>L</t>";
 
-			x = 21.41 * GUI_GRID_W + GUI_GRID_X;
-			y = 10.57 * GUI_GRID_H + GUI_GRID_Y;
-			w = 1.50001 * GUI_GRID_W;
-			h = 1 * GUI_GRID_H;
+			x = 21.41 * safezoneW + safezoneX;
+			y = 10.57 * safezoneH + safezoneY;
+			w = 1.50001 * safezoneW;
+			h = 1 * safezoneH;
 			colorBackground[] = {0,0,0,0};
-		};
-		/*class VALIDATE_FRAME: RscFrame
-		{
-			idc = 16013;
-
-			x = 0.464319 * safezoneW + safezoneX;
-			y = 0.5 * safezoneH + safezoneY;
-			w = 0.0728125 * safezoneW;
-			h = 0.0274443 * safezoneH;
-			colorText[] = {0,0,0,0.8};
 		};
 		class VALIDATE_BACKGROUND: RscStructuredText
 		{
-			idc = 16014;
-			colorBackground[] = {0,0,0,0.6};
+			idc = 16013;
 
-			x = 0.464422 * safezoneW + safezoneX;
-			y = 0.50088 * safezoneH + safezoneY;
-			w = 0.0714063 * safezoneW;
-			h = 0.0248888 * safezoneH;
+			x = 15 * safezoneW + safezoneX;
+			y = 13.5 * safezoneH + safezoneY;
+			w = 10.5 * safezoneW;
+			h = 2.5 * safezoneH;
+			colorBackground[] = {0,0,0,0.6};
+		};
+		class VALIDATE_FRAME: RscFrame
+		{
+			idc = 16014;
+
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.522 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
+			h = 0.055 * safezoneH;
+			colorText[] = {0,0,0,0.8};
 		};
 		class VALIDATE_IMAGE: RscPicture
 		{
 			idc = 16015;
+			text = "\lyeed_IMG\data\housing\actions\action_exit.paa";
 
-			x = 0.467413 * safezoneW + safezoneX;
-			y = 0.50462 * safezoneH + safezoneY;
-			w = 0.0117187 * safezoneW;
-			h = 0.0171481 * safezoneH;
+			x = 0.453594 * safezoneW + safezoneX;
+			y = 0.53014 * safezoneH + safezoneY;
+			w = 0.0216146 * safezoneW;
+			h = 0.0375186 * safezoneH;
 		};
 		class VALIDATE_TEXT: RscStructuredText
 		{
 			idc = 16016;
-			text = "<t align='center'>Valider</t>";
-
-			x = 0.484531 * safezoneW + safezoneX;
-			y = 0.5044 * safezoneH + safezoneY;
-			w = 0.0461458 * safezoneW;
-			h = 0.0172593 * safezoneH;
+			text = "<t align='center'>Remplir</t>";
+			
+			x = 0.489687 * safezoneW + safezoneX;
+			y = 0.533 * safezoneH + safezoneY;
+			w = 0.0567187 * safezoneW;
+			h = 0.033 * safezoneH;
 			colorBackground[] = {0,0,0,0};
 		};
 		class VALIDATE_BUTTON: RscButtonSilent
@@ -183,16 +184,18 @@
 			idc = 16017;
 			action = "[] call public_fnc_refuelVehicle";
 			onMouseEnter = "\
-			((findDisplay 16000) displayCtrl 16014) ctrlSetBackgroundColor [1,1,1,1];\
+			ctrlShow[16014, false];\
+			((findDisplay 16000) displayCtrl 16013) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' color='#000000'>Remplir</t>"";";
 			onMouseExit = "\
-			((findDisplay 16000) displayCtrl 16014) ctrlSetBackgroundColor [0,0,0,0.6];\
+			ctrlShow[16014, true];\
+			((findDisplay 16000) displayCtrl 16013) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' color='#FFFFFF'>Remplir</t>"";";
 
-			x = 0.467396 * safezoneW + safezoneX;
-			y = 0.505963 * safezoneH + safezoneY;
-			w = 0.0660937 * safezoneW;
-			h = 0.0170369 * safezoneH;
-		};*/
+			x = 6 * safezoneW + safezoneX;
+			y = 20* safezoneH + safezoneY;
+			w = 10.5 * safezoneW;
+			h = 2.5 * safezoneH;
+		};
 	};
 };
