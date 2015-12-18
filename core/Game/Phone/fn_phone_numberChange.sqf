@@ -20,4 +20,5 @@ if ((player getVariable ["number", ""]) != "") then {
 
 _numbers pushBack _newNumber;
 player setVariable ["number", _newNumber, true];
-["gServer_phone_numbers", _numbers] call CBA_fnc_publicVariable;
+gServer_phone_numbers = _numbers;
+publicVariable "gServer_phone_numbers";

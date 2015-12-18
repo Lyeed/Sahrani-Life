@@ -30,13 +30,13 @@ if ((_item isEqualTo "") || ((_item != "") && (_item in (magazines player)))) th
 	_useItem = true;
 	_time = getNumber(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "time") * 1.5;
 } else {
-	_heal = 0.4;
+	_heal = 0.6;
 	_useItem = false;
 	_time = getNumber(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "time");
 };
 
 _error = false;
-_dmg = g_interaction_target getHitPointDamage _part;
+_dmg = floor(g_interaction_target getHitPointDamage _part);
 if (_dmg <= _heal) exitWith
 {
 	[

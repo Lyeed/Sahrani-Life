@@ -3166,42 +3166,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class Alysia_repair_glass
-	{
-		buy_price = 20;
-	};
- 	class Alysia_repair_engine
- 	{
-		buy_price = 20;
-	};
- 	class Alysia_repair_track
- 	{
-		buy_price = 20;
-	};
- 	class Alysia_repair_body
- 	{
-		buy_price = 20;
-	};
- 	class Alysia_repair_tire
- 	{
-		buy_price = 20;
-	};
- 	class Alysia_repair_tireLever
- 	{
-		buy_price = 20;
-	};
- 	class Alysia_repair_rotor
- 	{
-		buy_price = 20;
-	};
- 	class Alysia_repair_fuel
- 	{
-		buy_price = 20;
-	};
- 	class Alysia_repair_toolbo
- 	{
-		buy_price = 20;
-	};
 	class G_B_Diving
 	{
 		buy_price = 20;
@@ -3299,6 +3263,43 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 20;
 	};
 	class H_Beret_blk
+	{
+		buy_price = 20;
+	};
+
+	class Alysia_repair_toolbox
+	{
+		buy_price = 20;
+	};
+	class Alysia_repair_tireLever
+	{
+		buy_price = 20;
+	};
+	class Alysia_repair_fuel
+	{
+		buy_price = 20;
+	};
+	class Alysia_repair_engine
+	{
+		buy_price = 20;
+	};
+	class Alysia_repair_body
+	{
+		buy_price = 20;
+	};
+	class Alysia_repair_track
+	{
+		buy_price = 20;
+	};
+	class Alysia_repair_tire
+	{
+		buy_price = 20;
+	};
+	class Alysia_repair_glass
+	{
+		buy_price = 20;
+	};
+	class Alysia_repair_rotor
 	{
 		buy_price = 20;
 	};

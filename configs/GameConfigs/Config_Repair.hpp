@@ -8,6 +8,7 @@ class ALYSIA_REPAIR
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitFuel.paa";
 		time = 6;
 	};
+	class HitFuelTank: HitFuel {};
 
 	class HitEngine
 	{

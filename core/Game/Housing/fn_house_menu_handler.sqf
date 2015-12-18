@@ -21,7 +21,7 @@ if (_target in g_houses) then {
 		};
 	} else {
 		if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "house_search") isEqualTo 1) then {
-			[_target] call public_fnc_interactions_player_to_house_search;
+			[_target] spawn public_fnc_interactions_player_to_house_search;
 		} else {
 			["Ce bâtiment n'est pas en vente"] call public_fnc_error;
 		};
