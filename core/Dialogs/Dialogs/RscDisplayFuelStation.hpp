@@ -44,7 +44,7 @@
 		{
 			idc = 16004;
 			colorPictureSelected[] = {1, 1, 1, 1};
-			onLBSelChanged = "_this call public_fnc_fuelStationMenu_Update;";
+			onLBSelChanged = "_this call public_fnc_fuelMenu_Update;";
 
 			x = 0.400484 * safezoneW + safezoneX;
 			y = 0.42762 * safezoneH + safezoneY;
@@ -172,7 +172,7 @@
 		{
 			idc = 16016;
 			text = "<t align='center'>Remplir</t>";
-			
+
 			x = 0.489687 * safezoneW + safezoneX;
 			y = 0.533 * safezoneH + safezoneY;
 			w = 0.0567187 * safezoneW;
