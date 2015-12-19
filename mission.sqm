@@ -3755,7 +3755,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			leader=1;
 			skill=1;
-			init="this addAction[""Armurerie"",public_fnc_shop_arma_open,""gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];
+			init="this addAction[""Armurerie"",public_fnc_shop_arma_open,""gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item36
 		{
