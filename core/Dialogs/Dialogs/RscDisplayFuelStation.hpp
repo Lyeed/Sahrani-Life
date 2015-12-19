@@ -10,10 +10,10 @@
 			idc = 16001;
 			text = "\lyeed_IMG\data\interactions\background.jpg";
 
-			x = 0.383489 * safezoneW + safezoneX;
-			y = 0.281371 * safezoneH + safezoneY;
-			w = 0.235624 * safezoneW;
-			h = 0.312148 * safezoneH;
+			x = 0.382953 * safezoneW + safezoneX;
+			y = 0.33126 * safezoneH + safezoneY;
+			w = 0.236145 * safezoneW;
+			h = 0.261221 * safezoneH;
 		};
 	};
 	
@@ -44,7 +44,7 @@
 		{
 			idc = 16004;
 			colorPictureSelected[] = {1, 1, 1, 1};
-			onLBSelChanged = "_this call public_fnc_fuelMenu_Update;";
+			onLBSelChanged = "[_this] call public_fnc_fuelMenu_Update;";
 
 			x = 0.400484 * safezoneW + safezoneX;
 			y = 0.42762 * safezoneH + safezoneY;
@@ -151,12 +151,12 @@
 		class VALIDATE_FRAME: RscFrame
 		{
 			idc = 16014;
+			colorText[] = {0,0,0,0.8};
 
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.522 * safezoneH + safezoneY;
 			w = 0.108281 * safezoneW;
 			h = 0.055 * safezoneH;
-			colorText[] = {0,0,0,0.8};
 		};
 		class VALIDATE_IMAGE: RscPicture
 		{
@@ -171,13 +171,13 @@
 		class VALIDATE_TEXT: RscStructuredText
 		{
 			idc = 16016;
-			text = "<t align='center'>Remplir</t>";
+			text = "<t align='center' size='1.3'>Remplir</t>";
+			colorBackground[] = {0,0,0,0};
 
 			x = 0.489687 * safezoneW + safezoneX;
 			y = 0.533 * safezoneH + safezoneY;
 			w = 0.0567187 * safezoneW;
 			h = 0.033 * safezoneH;
-			colorBackground[] = {0,0,0,0};
 		};
 		class VALIDATE_BUTTON: RscButtonSilent
 		{
@@ -186,11 +186,11 @@
 			onMouseEnter = "\
 			ctrlShow[16014, false];\
 			((findDisplay 16000) displayCtrl 16013) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' color='#000000'>Remplir</t>"";";
+			((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#000000'>Remplir</t>"";";
 			onMouseExit = "\
 			ctrlShow[16014, true];\
 			((findDisplay 16000) displayCtrl 16013) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' color='#FFFFFF'>Remplir</t>"";";
+			((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#FFFFFF'>Remplir</t>"";";
 
 			x = 6 * safezoneW + safezoneX;
 			y = 20* safezoneH + safezoneY;
