@@ -182,4 +182,14 @@ class ALYSIA_SHOPS_ARMA
 			"FLAY_HangGliderBlack_Bag"
 		};
 	};
+	
+	class rebel_black_market
+	{
+		name = "Marché illégal";
+		side = "CIV";
+		stocks[] = 
+		{
+			
+		};
+	};
 };
