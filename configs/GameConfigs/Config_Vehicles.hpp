@@ -172,7 +172,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_rs4_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 123000;
 		inventory = 40;
 		side = "CIV";
 		insurance = 1;
@@ -204,7 +204,7 @@ class ALYSIA_VEHICLES
 
 	class shounka_a3_rs5_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 105000;
 		inventory = 40;
 		side = "CIV";
 		insurance = 1;
@@ -236,7 +236,7 @@ class ALYSIA_VEHICLES
 
 	class shounka_rs6
 	{
-		buyPrice = 25000;
+		buyPrice = 96000;
 		inventory = 55;
 		side = "CIV";
 		insurance = 1;
@@ -268,7 +268,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_bmwm1_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 75300;
 		inventory = 40;
 		side = "CIV";
 		insurance = 1;
@@ -300,7 +300,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_bmwm6_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 145000;
 		inventory = 40;
 		side = "CIV";
 		insurance = 1;
@@ -332,7 +332,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_Bowler_c
 	{
-		buyPrice = 25000;
+		buyPrice = 195000;
 		inventory = 75;
 		side = "CIV";
 		insurance = 1;
@@ -460,7 +460,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_a3_ds3_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 15950;
 		inventory = 32;
 		side = "CIV";
 		insurance = 1;
@@ -492,7 +492,7 @@ class ALYSIA_VEHICLES
 
 	class shounka_a3_ds4_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 23700;
 		inventory = 40;
 		side = "CIV";
 		insurance = 1;
@@ -524,7 +524,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_c4_p_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 19900;
 		inventory = 40;
 		side = "CIV";
 		insurance = 1;
@@ -556,7 +556,7 @@ class ALYSIA_VEHICLES
 
 	class shounka_nemo
 	{
-		buyPrice = 25000;
+		buyPrice = 16000;
 		inventory = 105;
 		side = "CIV";
 		insurance = 1;
@@ -588,7 +588,7 @@ class ALYSIA_VEHICLES
 
 	class shounka_a3_cliors_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 13500;
 		inventory = 32;
 		side = "CIV";
 		insurance = 1;
@@ -684,7 +684,7 @@ class ALYSIA_VEHICLES
 
 	class shounka_gt
 	{
-		buyPrice = 25000;
+		buyPrice = 250000;
 		inventory = 20;
 		side = "CIV";
 		insurance = 1;
@@ -716,7 +716,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_mustang_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 63500;
 		inventory = 20;
 		side = "CIV";
 		insurance = 1;
@@ -818,7 +818,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_golfvi_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 12500;
 		inventory = 32;
 		side = "CIV";
 		insurance = 1;
@@ -850,7 +850,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_hummer_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 145000;
 		inventory = 75;
 		side = "CIV";
 		insurance = 1;
@@ -914,7 +914,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_cherokee_noir
 	{
-		buyPrice = 25000;
+		buyPrice = 43000;
 		inventory = 75;
 		side = "CIV";
 		insurance = 1;
@@ -1002,7 +1002,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_evox_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 23400;
 		inventory = 40;
 		side = "CIV";
 		insurance = 1;
@@ -1194,7 +1194,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_c63_2015_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 96000;
 		inventory = 40;
 		side = "CIV";
 		insurance = 1;
@@ -1264,7 +1264,7 @@ class ALYSIA_VEHICLES
 
 	class shounka_a3_spr_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 65000;
 		inventory = 220;
 		side = "CIV";
 		insurance = 1;
@@ -1296,7 +1296,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_a3_gtr_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 95300;
 		inventory = 40;
 		side = "CIV";
 		insurance = 1;
@@ -1348,7 +1348,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_207_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 12000;
 		inventory = 32;
 		side = "CIV";
 		insurance = 1;
@@ -1412,7 +1412,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_a3_308_rcz
 	{
-		buyPrice = 25000;
+		buyPrice = 36100;
 		inventory = 32;
 		side = "CIV";
 		insurance = 1;
@@ -1444,7 +1444,7 @@ class ALYSIA_VEHICLES
 
 	class shounka_a3_peugeot508_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 28000;
 		inventory = 40;
 		side = "CIV";
 		insurance = 1;
@@ -1636,7 +1636,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_twingo_p
 	{
-		buyPrice = 25000;
+		buyPrice = 10900;
 		inventory = 32;
 		side = "CIV";
 		insurance = 1;
@@ -1668,7 +1668,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_a3_smart_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 18000;
 		inventory = 20;
 		side = "CIV";
 		insurance = 1;
@@ -1688,7 +1688,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_subaru08_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 37000;
 		inventory = 55;
 		side = "CIV";
 		insurance = 1;
@@ -1752,7 +1752,7 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_Volkswagen_Touareg_civ
 	{
-		buyPrice = 25000;
+		buyPrice = 35000;
 		inventory = 55;
 		side = "CIV";
 		insurance = 1;
@@ -1848,7 +1848,7 @@ class ALYSIA_VEHICLES
 
 	class max_impala
 	{
-		buyPrice = 25000;
+		buyPrice = 44500;
 		inventory = 40;
 		side = "CIV";
 		insurance = 1;
@@ -1871,7 +1871,7 @@ class ALYSIA_VEHICLES
 	
 	class DAR_TahoeCiv
 	{
-		buyPrice = 25000;
+		buyPrice = 51300;
 		inventory = 75;
 		side = "CIV";
 		insurance = 1;
@@ -1936,7 +1936,7 @@ class ALYSIA_VEHICLES
 
 	class SAL_AudiCiv
 	{
-		buyPrice = 25000;
+		buyPrice = 60000;
 		inventory = 40;
 		side = "CIV";
 		insurance = 1;
@@ -1978,7 +1978,7 @@ class ALYSIA_VEHICLES
 
   	class max_charger
 	{
-		buyPrice = 25000;
+		buyPrice = 95000;
 		inventory = 40;
 		side = "CIV";
 		insurance = 1;
@@ -2207,7 +2207,7 @@ class ALYSIA_VEHICLES
 
   	class Tal_Wrangler
 	{
-		buyPrice = 25000;
+		buyPrice = 41300;
 		inventory = 75;
 		side = "CIV";
 		insurance = 1;
@@ -2388,7 +2388,7 @@ class ALYSIA_VEHICLES
 
 	class max_BMW_M3_GTR
 	{
-		buyPrice = 25000;
+		buyPrice = 93000;
 		inventory = 20;
 		side = "CIV";
 		insurance = 1;
@@ -3410,7 +3410,7 @@ class ALYSIA_VEHICLES
 	
 	class Jonzie_STI
 	{
-		buyPrice = 25000;
+		buyPrice = 45000;
 		inventory = 40;
 		side = "CIV";
 		insurance = 1;
