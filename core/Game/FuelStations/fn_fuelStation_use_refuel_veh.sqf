@@ -36,7 +36,8 @@ if ((isNil "_typeRefuel") || {_typeRefuel isEqualTo ""}) then
 		_combo lbSetData [_index, (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuelName))];
 		_combo lbSetPicture [_index, (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuelName >> "picture"))];
 	} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL" >> "fuels"));
-} else {
+};
+/* else {
 	_vehicle = cursorTarget;
 	if (isNil "_typeRefuel") exitWith {};
 	if (!(_vehicle in g_vehicles)) exitWith {["Vous n'avez pas les clées de ce véhicule."] call public_fnc_error};
@@ -78,4 +79,4 @@ if ((isNil "_typeRefuel") || {_typeRefuel isEqualTo ""}) then
 	};
 	[false, _bill, "Station Essence"] call public_fnc_handleATM;
 	player setVariable ["typeRefuel", "", false];
-};
+};*/

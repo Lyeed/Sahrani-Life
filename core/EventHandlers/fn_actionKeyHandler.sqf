@@ -96,7 +96,7 @@ if ((vehicle player) isEqualTo player) then
 								["Vous êtes trop loin de la station essence."] call public_fnc_error;
 								player setVariable ["typeRefuel", "", false];
 							} else {
-								[_station] spawn public_fnc_fuelMenu_use_refuel_veh;
+								[_station] spawn public_fnc_fuelStation_use_refuel_veh;
 							};
 							breakOut "main";
 						};

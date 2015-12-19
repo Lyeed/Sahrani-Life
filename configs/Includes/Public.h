@@ -222,12 +222,16 @@ class Public
 	class FuelStations
 	{
 		file = "core\Game\FuelStations";
-		class fuelMenu_use_refuel_veh {};
-		class fuelMenu_Update {};
-		class refuelVehicle {};
-		class fuelPrice {};
-		//class fuelMenu_action_refuel {};
-		//class fuelMenu_use_refuel_jerry {};
+		class fuelStation_use_refuel_veh {};
+		class fuelStation_refuel_veh_update {};
+		class fuelStation_refuel_veh_validate {};
+		class fuelStation_price_buy {};
+		class fuelStation_price_sell {};
+		class fuelRefuel_use_refuel_veh {};
+		//class fuelStation_use_refuel_jerry {};
+		//class fuelStation_refuel_jerry_update {};
+		//class fuelStation_refuel_jerry_validate {};
+		//class fuelRefuel_use_refuel_jerry {};
 	};
 
 	class Housing

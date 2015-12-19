@@ -44,7 +44,7 @@
 		{
 			idc = 16004;
 			colorPictureSelected[] = {1, 1, 1, 1};
-			onLBSelChanged = "[_this] call public_fnc_fuelMenu_Update;";
+			onLBSelChanged = "[_this] call public_fnc_fuelStation_refuel_veh_update;";
 
 			x = 0.400484 * safezoneW + safezoneX;
 			y = 0.42762 * safezoneH + safezoneY;
@@ -182,7 +182,7 @@
 		class VALIDATE_BUTTON: RscButtonSilent
 		{
 			idc = 16017;
-			action = "[] call public_fnc_refuelVehicle";
+			action = "[] call public_fnc_fuelStation_refuel_veh_validate";
 			onMouseEnter = "\
 			ctrlShow[16014, false];\
 			((findDisplay 16000) displayCtrl 16013) ctrlSetBackgroundColor [1,1,1,1];\
