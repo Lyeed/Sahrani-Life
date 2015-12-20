@@ -71,7 +71,7 @@ class ALYSIA_FACTIONS
 		/*** LOADOUT ***/
 		class Loadout
 		{
-			uniform = "Skyline_Army_Uniform";
+			uniform = "tenue_de_milice_cadet";
 			headgear = "";
 			vest = "";
 			backpack = "";
@@ -187,7 +187,7 @@ class ALYSIA_FACTIONS
 		/*** LOADOUT ***/
 		class Loadout
 		{
-			uniform = "U_mas_afr_B_uniform_s";
+			uniform = "tenue_de_garde_basique";
 			headgear = "";
 			vest = "";
 			backpack = "";

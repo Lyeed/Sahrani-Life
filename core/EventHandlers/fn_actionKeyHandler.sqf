@@ -76,31 +76,10 @@ if ((vehicle player) isEqualTo player) then
 					breakOut "main";
 				};
 			} else {
-				if ((cursorTarget isKindOf "Car") || (cursorTarget isKindOf "Ship") || (cursorTarget isKindOf "Air") || (cursorTarget isKindOf "Tank") || (cursorTarget isKindOf "Truck")) then
+				if ((alive cursorTarget) && ((cursorTarget isKindOf "Car") || (cursorTarget isKindOf "Ship") || (cursorTarget isKindOf "Air") || (cursorTarget isKindOf "Tank") || (cursorTarget isKindOf "Truck"))) then
 				{
-					if (alive cursorTarget) then
-					{
-						if ((player getVariable ["typeRefuel", ""]) isEqualTo "") then
-						{
-							[cursorTarget] call public_fnc_interactions_player_to_vehicle;
-							breakOut "main";
-						} else {
-							private ["_station"];
-							{
-								if (typeOf _x in ["Land_FuelStation_Build_F", "Land_FuelStation_Shed_F", "Land_FuelStation_Feed_F"]) exitWith {
-									_station = _x;
-								};
-							} forEach nearestObjects [player, [], 10];
-							if (isNil "_station") then
-							{
-								["Vous êtes trop loin de la station essence."] call public_fnc_error;
-								player setVariable ["typeRefuel", "", false];
-							} else {
-								[_station] spawn public_fnc_fuelStation_use_refuel_veh;
-							};
-							breakOut "main";
-						};
-					};
+					[cursorTarget] call public_fnc_interactions_player_to_vehicle;
+					breakOut "main";
 				};
 
 				if (typeof(cursorTarget) isEqualTo "Land_HumanSkull_F") then
@@ -162,13 +141,13 @@ if ((vehicle player) isEqualTo player) then
 
 				if (typeOf(cursorTarget) in ["Land_FuelStation_Build_F","Land_FuelStation_Shed_F","Land_FuelStation_Feed_F"]) then
 				{
-					if ((player getVariable ["typeRefuel", ""]) != "") exitWith
+					if ((player getVariable ["typeRefuel", ""]) != "") then
 					{
 						["Le plein d'essence est annulé."] call public_fnc_error;
 						player setVariable ["typeRefuel", "", false];
+					} else {
+						[cursorTarget] call public_fnc_interactions_player_to_station;
 					};
-
-					[cursorTarget] spawn public_fnc_interactions_player_to_station;
 					breakOut "main";
 				};
 
