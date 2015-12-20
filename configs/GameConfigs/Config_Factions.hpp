@@ -4,7 +4,7 @@ class ALYSIA_FACTIONS
 	{
 		/*** GLOBAL ***/
 		name = "Milice";
-		icon = "\lyeed_IMG\data\faction\WEST_logo.paa";
+		icon = "lyeed_IMG\data\faction\WEST_logo.paa";
 		paycheck = 750;
 		identity_item = "SkylineItems_PlaqueMilitaire";
 
@@ -122,7 +122,7 @@ class ALYSIA_FACTIONS
 	{
 		/*** GLOBAL ***/
 		name = "Garde";
-		icon = "\lyeed_IMG\data\faction\EAST_logo.paa";
+		icon = "lyeed_IMG\data\faction\EAST_logo.paa";
 		paycheck = 750;
 		identity_item = "SkylineItems_PlaqueMilitaire";
 
@@ -230,7 +230,7 @@ class ALYSIA_FACTIONS
 	{
 		/*** GLOBAL ***/
 		name = "Civil";
-		icon = "\lyeed_IMG\data\faction\CIV_logo.paa";
+		icon = "lyeed_IMG\data\faction\CIV_logo.paa";
 		paycheck = 600;
 		identity_item = "SkylineItems_Passeport";
 
@@ -349,7 +349,7 @@ class ALYSIA_FACTIONS
 	{
 		/*** GLOBAL ***/
 		name = "SAMU";
-		icon = "\lyeed_IMG\data\faction\GUER_logo.paa";
+		icon = "lyeed_IMG\data\faction\GUER_logo.paa";
 		paycheck = 600;
 		identity_item = "Badge_samu";
 
