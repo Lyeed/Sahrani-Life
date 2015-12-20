@@ -14,7 +14,7 @@ if (isNull _target) exitWith {};
 	_target,
 	"player_to_station",
 	[
-		["refuel_veh", "Plein Véhicule", "[g_interaction_target] spawn public_fnc_fuelMenu_use_refuel_veh;", "((player distance g_interaction_target) < 10)"],
+		["refuel_veh", "Plein Véhicule", "[g_interaction_target] spawn public_fnc_fuelStation_use_refuel_veh;", "((player distance g_interaction_target) < 10)"],
 		["refuel_jerry", "Plein Jerrican", "[g_interaction_target] spawn public_fnc_fuelMenu_use_refuel_jerry;", "(""Fuel_E"" in (magazines player))"]
 	],
 	"Station Essence"
