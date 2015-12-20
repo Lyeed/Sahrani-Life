@@ -13,7 +13,7 @@ class ALYSIA_FACTIONS
 		phone_send_global_message = 1;
 
 		/*** GEAR MISSION ***/
-		mission_vehicle = "";
+		mission_vehicle = "Fett_truck_milice";
 		mission_items[] =
 		{
 
@@ -131,7 +131,7 @@ class ALYSIA_FACTIONS
 		phone_send_global_message = 1;
 
 		/*** GEAR MISSION ***/
-		mission_vehicle = "";
+		mission_vehicle = "Fett_truck_army";
 		mission_items[] =
 		{
 

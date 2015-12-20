@@ -5,11 +5,8 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-private["_station"];
+private["_station", "_typeRefuel"];
 _station = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
-
-if (isNull _station) exitWith {};
 
 if (dialog) then
 {
@@ -17,24 +14,22 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
-private ["_typeRefuel"];
-_typeRefuel = player getVariable "typeRefuel";
+if (isNull _station) exitWith {};
 
+_typeRefuel = player getVariable "typeRefuel";
 if ((isNil "_typeRefuel") || {_typeRefuel isEqualTo ""}) then
-{
-	private ["_combo","_index","_ressourceName"];
-	
+{	
 	if (!(createDialog "RscDisplayFuelStation")) exitWith {};
 
 	disableSerialization;
 	_display = findDisplay 16000;
 	if (isNull _display) exitWith {};
 
-	_combo = (_display displayCtrl 16004);
+	missionNamespace setVariable ["refuel_station_inUse", _station];
+	_list = _display displayCtrl 16004;
 	{
-		_fuelName = configName _x;
-		_index = _combo lbAdd format ["%1", (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuelName >> "name"))];
-		_combo lbSetData [_index, (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuelName))];
-		_combo lbSetPicture [_index, (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuelName >> "picture"))];
+		_index = _list lbAdd getText(_x >> "name");
+		_list lbSetData [_index, (configName _x)];
+		_list lbSetPicture [_index, getText(_x >> "picture")];
 	} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL" >> "fuels"));
 };
