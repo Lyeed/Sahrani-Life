@@ -17,5 +17,5 @@ if (isNull _display) exitWith {};
 if ((_sel isEqualTo -1) || (isNull _list)) exitWith {};
 
 (_display displayCtrl 16008) ctrlSetStructuredText parseText format ["<t align='center' size='2'>%1</t>", ([cursorTarget, (lbData [16004, lbCurSel 16004])] call public_fnc_fuelStation_price_buy)];
-(_display displayCtrl 16011) ctrlSetStructuredText parseText format ["<t align='right'> %1L</t>", (cursorTarget getVariable [(lbData [16004, lbCurSel 16004), ""], 250])];
+(_display displayCtrl 16011) ctrlSetStructuredText parseText format ["<t align='right'> %1L</t>", (cursorTarget getVariable [(lbData [16004, lbCurSel 16004]), ""], 250])];
 (_display displayCtrl 16015) ctrlSetText (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> (lbData [16004, lbCurSel 16004]) >> "picture"));
