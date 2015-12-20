@@ -60,6 +60,6 @@ while {dialog} do
 	sleep 0.1;
 };
 
-[(format ["%1Kn ont été prélevés de votre compte en banque pour payer le plein."])]
+[format["%1Kn ont été prélevés de votre compte en banque pour payer le plein.", _bill]] call public_fnc_info;
 [false, _bill, "Station Essence"] call public_fnc_handleATM;
 player setVariable ["typeRefuel", "", false];
