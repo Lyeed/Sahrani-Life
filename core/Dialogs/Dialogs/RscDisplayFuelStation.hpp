@@ -171,7 +171,7 @@
 		class VALIDATE_TEXT: RscStructuredText
 		{
 			idc = 16016;
-			text = "<t align='center' size='1.3'>Remplir</t>";
+			text = "<t align='center' size='1.3'>Quitter</t>";
 			colorBackground[] = {0,0,0,0};
 
 			x = 0.489687 * safezoneW + safezoneX;
