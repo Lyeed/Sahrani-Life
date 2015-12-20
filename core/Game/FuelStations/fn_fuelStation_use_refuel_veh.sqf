@@ -23,6 +23,7 @@ _typeRefuel = player getVariable "typeRefuel";
 if ((isNil "_typeRefuel") || {_typeRefuel isEqualTo ""}) then
 {
 	private ["_combo","_index","_ressourceName"];
+	
 	if (!(createDialog "RscDisplayFuelStation")) exitWith {};
 
 	disableSerialization;
