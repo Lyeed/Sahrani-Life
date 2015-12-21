@@ -786,4 +786,25 @@ class ALYSIA_SHOPS_CLOTHING
 			"B_AssaultPack_Kerry"
 		};
 	};
+	
+	class prisoner_shop_clothing
+	{
+		name = "Friperie prisonnier";
+		side = "CIV";
+		uniforms[] = 
+		{
+		};
+		headgear[] =
+		{
+		};
+		goggles[] =
+		{
+		};
+		vests[] =
+		{
+		};
+		backpacks[] =
+		{
+		};
+	}
 };

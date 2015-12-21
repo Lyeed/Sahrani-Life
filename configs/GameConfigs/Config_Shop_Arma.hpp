@@ -88,7 +88,9 @@ class ALYSIA_SHOPS_ARMA
 			"Skyline_B95",
 			"Skyline_B95_Green",
 			"Skyline_B95_Black",
-			"2Rnd_762x51_Mag_B95"
+			"2Rnd_762x51_Mag_B95",
+			"Fett_SDAR",
+			"Fett_20Rnd_556x45_UW_mag"
 		};
 	};
 
@@ -183,7 +185,7 @@ class ALYSIA_SHOPS_ARMA
 		};
 	};
 	
-	class rebel_black_market
+	class black_market
 	{
 		name = "Marché illégal";
 		side = "CIV";
@@ -192,4 +194,15 @@ class ALYSIA_SHOPS_ARMA
 			
 		};
 	};
+	
+	class prisoner_shop_store
+	{
+		name = "Travail et tais toi !";
+		side = "CIV";
+		stocks[] = 
+		{
+			"Skyline_Merlin_01"
+		};
+	};
+	
 };

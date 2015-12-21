@@ -3303,4 +3303,12 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
+	class Fett_SDAR
+	{
+		buy_price = 20;
+	};
+	class Fett_20Rnd_556x45_UW_mag
+	{
+		buy_price = 20;
+	};
 };

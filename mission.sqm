@@ -3372,7 +3372,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={12092.177,25.951591,17665.025};
+					position[]={9738.9287,15.065693,11017.611};
 					azimut=-6835.98;
 					id=153;
 					side="CIV";
@@ -3390,7 +3390,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1355;
+		items=1357;
 		class Item0
 		{
 			position[]={12129.837,0,17612.104};
@@ -5106,7 +5106,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			leader=1;
 			skill=1;
-			init="this addAction[""Armurerie"",public_fnc_shop_arma_open,""gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this addAction[""Armurerie"",public_fnc_shop_arma_open,""civ_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item174
 		{
@@ -6896,7 +6896,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this addAction[""Armurerie"",public_fnc_shop_arma_open,""gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this addAction[""Armurerie"",public_fnc_shop_arma_open,""civ_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item354
 		{
@@ -16933,11 +16933,12 @@ class Mission
 		class Item1351
 		{
 			position[]={8192.1719,176.97188,7891.6509};
-			azimut=-88.637024;
+			azimut=-88.637001;
 			id=1505;
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
+			init="this addAction[""Intendant"",public_fnc_shop_arma_open,""prisoner_shop_store"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian']; this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""Contremaitre"",public_fnc_shop_virtual_open,""prisoner_pierre"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item1352
 		{
@@ -16948,6 +16949,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
+			init="this addAction[""Supérette"",public_fnc_shop_virtual_open,""market"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item1353
 		{
@@ -16958,6 +16960,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
+			init="this addAction[""Intendant"",public_fnc_shop_arma_open,""prisoner_shop_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item1354
 		{
@@ -16967,11 +16970,32 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
+			init="this addAction[""Mineur"",public_fnc_shop_arma_open,""prisoner_shop_store"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian']; this addAction[""Contremaitre"",public_fnc_shop_virtual_open,""prisoner_pierre"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+		};
+		class Item1355
+		{
+			position[]={2322.6113,10.231556,18866.814};
+			id=1509;
+			side="EMPTY";
+			vehicle="xcam_InfoStand_V2_F";
+			skill=0.60000002;
+			text="black_market_1";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop.paa'/> Acheter des positions <t color='#01DF3A'>illégales</t>"" ,public_fnc_shop_dynamicMarkers_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse && playerSide == civilian']; this addAction[""Marché illégal"",public_fnc_shop_virtual_open,""rebel"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""Marché illégal objet"",public_fnc_shop_arma_open,""black_market"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+		};
+		class Item1356
+		{
+			position[]={2327.5227,9.4787817,18866.709};
+			id=1510;
+			side="EMPTY";
+			vehicle="xcam_InfoStand_V2_F";
+			skill=0.60000002;
+			text="black_market_2";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop.paa'/> Acheter des positions <t color='#01DF3A'>illégales</t>"" ,public_fnc_shop_dynamicMarkers_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse && playerSide == civilian']; this addAction[""Marché illégal"",public_fnc_shop_virtual_open,""rebel"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""Marché illégal objet"",public_fnc_shop_arma_open,""black_market"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 	};
 	class Markers
 	{
-		items=188;
+		items=190;
 		class Item0
 		{
 			position[]={10960.932,139.97812,9459.1475};
@@ -18623,6 +18647,18 @@ class Mission
 		{
 			position[]={12093.437,25.951591,17643.043};
 			name="prison_farm_1";
+			type="Empty";
+		};
+		class Item188
+		{
+			position[]={2322.4832,10.764857,18864.549};
+			name="black_market_1_marker";
+			type="Empty";
+		};
+		class Item189
+		{
+			position[]={2327.5747,9.9622726,18864.188};
+			name="black_market_2_marker";
 			type="Empty";
 		};
 	};
