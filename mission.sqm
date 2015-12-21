@@ -146,7 +146,7 @@ class Mission
 					special="NONE";
 					id=0;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="I_medic_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="GUER_10";
@@ -167,7 +167,7 @@ class Mission
 					special="NONE";
 					id=1;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="I_medic_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="GUER_9";
@@ -188,7 +188,7 @@ class Mission
 					special="NONE";
 					id=2;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="I_medic_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="GUER_1";
@@ -209,7 +209,7 @@ class Mission
 					special="NONE";
 					id=3;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="I_medic_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="GUER_3";
@@ -230,7 +230,7 @@ class Mission
 					special="NONE";
 					id=4;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="I_medic_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="GUER_5";
@@ -251,7 +251,7 @@ class Mission
 					special="NONE";
 					id=5;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="I_medic_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="GUER_7";
@@ -272,7 +272,7 @@ class Mission
 					special="NONE";
 					id=6;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="I_medic_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="GUER_6";
@@ -293,7 +293,7 @@ class Mission
 					special="NONE";
 					id=7;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="I_medic_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="GUER_4";
@@ -314,7 +314,7 @@ class Mission
 					special="NONE";
 					id=8;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="I_medic_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="GUER_2";
@@ -335,7 +335,7 @@ class Mission
 					special="NONE";
 					id=9;
 					side="GUER";
-					vehicle="I_medic_F";
+					vehicle="I_medic_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="GUER_8";
@@ -356,7 +356,7 @@ class Mission
 					special="NONE";
 					id=10;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_21";
@@ -377,7 +377,7 @@ class Mission
 					special="NONE";
 					id=11;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_1";
@@ -398,7 +398,7 @@ class Mission
 					special="NONE";
 					id=12;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_2";
@@ -419,7 +419,7 @@ class Mission
 					special="NONE";
 					id=13;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_3";
@@ -440,7 +440,7 @@ class Mission
 					special="NONE";
 					id=14;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_4";
@@ -461,7 +461,7 @@ class Mission
 					special="NONE";
 					id=15;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_5";
@@ -482,7 +482,7 @@ class Mission
 					special="NONE";
 					id=16;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_10";
@@ -503,7 +503,7 @@ class Mission
 					special="NONE";
 					id=17;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_9";
@@ -524,7 +524,7 @@ class Mission
 					special="NONE";
 					id=18;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_8";
@@ -545,7 +545,7 @@ class Mission
 					special="NONE";
 					id=19;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_7";
@@ -566,7 +566,7 @@ class Mission
 					special="NONE";
 					id=20;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_6";
@@ -587,7 +587,7 @@ class Mission
 					special="NONE";
 					id=21;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_11";
@@ -608,7 +608,7 @@ class Mission
 					special="NONE";
 					id=22;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_12";
@@ -629,7 +629,7 @@ class Mission
 					special="NONE";
 					id=23;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_13";
@@ -650,7 +650,7 @@ class Mission
 					special="NONE";
 					id=24;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_14";
@@ -671,7 +671,7 @@ class Mission
 					special="NONE";
 					id=25;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_15";
@@ -692,7 +692,7 @@ class Mission
 					special="NONE";
 					id=26;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_16";
@@ -713,7 +713,7 @@ class Mission
 					special="NONE";
 					id=27;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_17";
@@ -734,7 +734,7 @@ class Mission
 					special="NONE";
 					id=28;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_19";
@@ -755,7 +755,7 @@ class Mission
 					special="NONE";
 					id=29;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_20";
@@ -776,7 +776,7 @@ class Mission
 					special="NONE";
 					id=30;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_18";
@@ -797,7 +797,7 @@ class Mission
 					special="NONE";
 					id=31;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_24";
@@ -818,7 +818,7 @@ class Mission
 					special="NONE";
 					id=32;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_25";
@@ -839,7 +839,7 @@ class Mission
 					special="NONE";
 					id=33;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_23";
@@ -860,7 +860,7 @@ class Mission
 					special="NONE";
 					id=34;
 					side="WEST";
-					vehicle="B_Soldier_F";
+					vehicle="B_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="WEST_22";
@@ -881,7 +881,7 @@ class Mission
 					special="NONE";
 					id=35;
 					side="EAST";
-					vehicle="O_Soldier_F";
+					vehicle="O_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="EAST_15";
@@ -902,7 +902,7 @@ class Mission
 					special="NONE";
 					id=36;
 					side="EAST";
-					vehicle="O_Soldier_F";
+					vehicle="O_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="EAST_1";
@@ -923,7 +923,7 @@ class Mission
 					special="NONE";
 					id=37;
 					side="EAST";
-					vehicle="O_Soldier_F";
+					vehicle="O_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="EAST_2";
@@ -944,7 +944,7 @@ class Mission
 					special="NONE";
 					id=38;
 					side="EAST";
-					vehicle="O_Soldier_F";
+					vehicle="O_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="EAST_3";
@@ -965,7 +965,7 @@ class Mission
 					special="NONE";
 					id=39;
 					side="EAST";
-					vehicle="O_Soldier_F";
+					vehicle="O_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="EAST_4";
@@ -986,7 +986,7 @@ class Mission
 					special="NONE";
 					id=40;
 					side="EAST";
-					vehicle="O_Soldier_F";
+					vehicle="O_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="EAST_5";
@@ -1007,7 +1007,7 @@ class Mission
 					special="NONE";
 					id=41;
 					side="EAST";
-					vehicle="O_Soldier_F";
+					vehicle="O_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="EAST_10";
@@ -1028,7 +1028,7 @@ class Mission
 					special="NONE";
 					id=42;
 					side="EAST";
-					vehicle="O_Soldier_F";
+					vehicle="O_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="EAST_9";
@@ -1049,7 +1049,7 @@ class Mission
 					special="NONE";
 					id=43;
 					side="EAST";
-					vehicle="O_Soldier_F";
+					vehicle="O_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="EAST_8";
@@ -1070,7 +1070,7 @@ class Mission
 					special="NONE";
 					id=44;
 					side="EAST";
-					vehicle="O_Soldier_F";
+					vehicle="O_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="EAST_7";
@@ -1091,7 +1091,7 @@ class Mission
 					special="NONE";
 					id=45;
 					side="EAST";
-					vehicle="O_Soldier_F";
+					vehicle="O_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="EAST_6";
@@ -1112,7 +1112,7 @@ class Mission
 					special="NONE";
 					id=46;
 					side="EAST";
-					vehicle="O_Soldier_F";
+					vehicle="O_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="EAST_11";
@@ -1133,7 +1133,7 @@ class Mission
 					special="NONE";
 					id=47;
 					side="EAST";
-					vehicle="O_Soldier_F";
+					vehicle="O_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="EAST_12";
@@ -1154,7 +1154,7 @@ class Mission
 					special="NONE";
 					id=48;
 					side="EAST";
-					vehicle="O_Soldier_F";
+					vehicle="O_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="EAST_13";
@@ -1175,7 +1175,7 @@ class Mission
 					special="NONE";
 					id=49;
 					side="EAST";
-					vehicle="O_Soldier_F";
+					vehicle="O_Soldier_F";player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
 					text="EAST_14";

@@ -1230,10 +1230,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class optic_Aco
-	{
-		buy_price = 20;
-	};
 	class optic_ACO_grn
 	{
 		buy_price = 20;
