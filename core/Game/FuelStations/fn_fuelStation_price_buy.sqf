@@ -13,4 +13,4 @@ _fuel = [_this, 1, "", [""]] call BIS_fnc_param;
 // 1km = +0.5kn
 if (_fuel isEqualTo "") exitWith {};
 
-round (((((getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuel >> "price")) + ((_station distance (markerPos "oilu")) / 2000)) + 1) + ((2000 / (_station getVariable [_fuel, "250"])) / 5)));
+round (((((getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuel >> "price")) + ((_station distance (markerPos "oilu")) / 2000)) + 1) + ((2000 / (_station getVariable [_fuel, 250])) / 5)));

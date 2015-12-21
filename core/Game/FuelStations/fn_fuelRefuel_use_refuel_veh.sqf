@@ -35,7 +35,7 @@ _current_fuel = _station getVariable [_typeRefuel, 250];
 if (_current_fuel <= 1) exitWith {
 	[format["Cette station ne possède plus l'essence que vous désirez (%1).", getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _typeRefuel >> "name")]] call public_fnc_error;
 };
-if (!(createDialog "RscDisplayRefuel")) exitWith {};
+if (!(createDialog "RscDisplayFuelRefuel")) exitWith {};
 
 disableSerialization;
 _display = findDisplay 17000;
