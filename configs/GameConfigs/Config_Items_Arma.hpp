@@ -3311,4 +3311,135 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
+	class SMG_01_F
+	{
+		buy_price = 20;
+		buy_condition_WEST = 1;
+	};
+	class optic_Aco
+	{
+		buy_price = 20;
+		buy_condition_WEST = 1;
+	};
+	class RH_m9
+	{
+		buy_price = 20;
+		buy_condition_WEST = 1;
+	};
+	class hlc_rifle_aks74u
+	{
+		buy_price = 20;
+		buy_condition_WEST = 2;
+	};
+	class optic_MRCO
+	{
+		buy_price = 20;
+		buy_condition_WEST = 2;
+	};
+	class optic_Holosight
+	{
+		buy_price = 20;
+		buy_condition_WEST = 2;
+	};	
+	class RH_fnp45
+	{
+		buy_price = 20;
+		buy_condition_WEST = 2;
+	};
+	class Skyline_HK_SL8
+	{
+		buy_price = 20;
+		buy_condition_WEST = 3;
+	};
+	class TRYK_HRPIGEAR_NV
+	{
+		buy_price = 20;
+		buy_condition_WEST = 3;
+	};
+	class optic_Hamr
+	{
+		buy_price = 20;
+		buy_condition_WEST = 3;
+	};
+	class RH_g19
+	{
+		buy_price = 20;
+		buy_condition_WEST = 3;
+	};
+	class hlc_rifle_ak47
+	{
+		buy_price = 20;
+		buy_condition_WEST = 4;
+	};
+	class hlc_optic_kobra
+	{
+		buy_price = 20;
+		buy_condition_WEST = 4;
+	};
+	class hlc_45Rnd_545x39_t_rpk
+	{
+		buy_price = 20;
+		buy_condition_WEST = 5;
+	};
+	class RH_g17
+	{
+		buy_price = 20;
+		buy_condition_WEST = 5;
+	};
+	class hlc_rifle_RPK12
+	{
+		buy_price = 20;
+		buy_condition_WEST = 6;
+	};
+	class gac_JSDF_W_MG_MINIMI
+	{
+		buy_price = 20;
+		buy_condition_WEST = 7;
+	};
+	class Rangefinder
+	{
+		buy_price = 20;
+		buy_condition_WEST = 7;
+	};
+	class hlc_rifle_m14sopmod
+	{
+		buy_price = 20;
+		buy_condition_WEST = 7;
+	};
+	class hlc_rifle_rpk
+	{
+		buy_price = 20;
+		buy_condition_WEST = 8;
+	};
+	class optic_LRPS
+	{
+		buy_price = 20;
+		buy_condition_WEST = 8;
+	};
+	class srifle_DMR_03_F
+	{
+		buy_price = 20;
+		buy_condition_WEST = 8;
+	};
+	class srifle_GM6_F
+	{
+		buy_price = 20;
+		buy_condition_WEST = 9;
+	};
+	class optic_DMS
+	{
+		buy_price = 20;
+		buy_condition_WEST = 9;
+	};
+	class hlc_rifle_akmgl
+	{
+		buy_price = 20;
+		buy_condition_WEST = 9;
+	};
+	class RH_Deaglem
+	{
+		buy_price = 20;
+		buy_condition_WEST = 9;
+	};
+	
 };
