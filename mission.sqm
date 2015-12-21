@@ -3372,7 +3372,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9738.9287,15.065693,11017.611};
+					position[]={9921.3428,15.24997,10966.452};
 					azimut=-6835.98;
 					id=153;
 					side="CIV";
@@ -3390,7 +3390,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1357;
+		items=1358;
 		class Item0
 		{
 			position[]={12129.837,0,17612.104};
@@ -16991,6 +16991,14 @@ class Mission
 			skill=0.60000002;
 			text="black_market_2";
 			init="this enableSimulation false; this allowDamage false; this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop.paa'/> Acheter des positions <t color='#01DF3A'>illégales</t>"" ,public_fnc_shop_dynamicMarkers_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse && playerSide == civilian']; this addAction[""Marché illégal"",public_fnc_shop_virtual_open,""rebel"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""Marché illégal objet"",public_fnc_shop_arma_open,""black_market"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+		};
+		class Item1357
+		{
+			position[]={8209.9473,176.97188,7841.9678};
+			id=1511;
+			side="EMPTY";
+			vehicle="xcam_dum_mesto_in";
+			skill=0.60000002;
 		};
 	};
 	class Markers
