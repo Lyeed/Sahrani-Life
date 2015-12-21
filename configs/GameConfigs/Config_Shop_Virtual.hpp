@@ -185,4 +185,11 @@ class ALYSIA_SHOPS_VIRTUAL
 		side = "CIV";
 		items[] = {{}, {"ciment"}};
 	};
+	
+	class prisoner_pierre
+	{
+		name = "Contremaitre";
+		side = "CIV";
+		items[] = {{}, {"pierre"}};
+	};
 };

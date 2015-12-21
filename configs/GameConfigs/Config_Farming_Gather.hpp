@@ -129,7 +129,21 @@ class ALYSIA_FARMING_GATHER
 	class pierre_1
 	{
 		receive[] = {{"pierre", 1, 0}};
-		tool = "Skyline_Pioche_01";
+		tool = "Skyline_Merlin_01";
+		sound = "mining";
+	};
+	
+	class prison_farm
+	{
+		receive[] = {{"pierre", 1, 0}};
+		tool = "Skyline_Merlin_01";
+		sound = "mining";
+	};
+	
+	class prison_farm_1
+	{
+		receive[] = {{"pierre", 1, 0}};
+		tool = "Skyline_Merlin_01";
 		sound = "mining";
 	};
 };

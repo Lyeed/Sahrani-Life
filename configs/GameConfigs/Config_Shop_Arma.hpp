@@ -75,7 +75,33 @@ class ALYSIA_SHOPS_ARMA
 			"SkylineItems_RadarGun",
 			"SkylineItems_Couteau",
 			"SmokeShellWhite",
-			"Rangefinder"
+			"Rangefinder",
+			"SMG_01_F",
+			"optic_Aco",
+			"RH_m9",
+			"hlc_rifle_aks74u",
+			"optic_MRCO",
+			"optic_Holosight",
+			"RH_fnp45",
+			"Skyline_HK_SL8",
+			"TRYK_HRPIGEAR_NV",
+			"optic_Hamr",
+			"RH_g19",
+			"hlc_rifle_ak47",
+			"hlc_optic_kobra",
+			"hlc_45Rnd_545x39_t_rpk",
+			"RH_g17",
+			"hlc_rifle_RPK12",
+			"gac_JSDF_W_MG_MINIMI",
+			"Rangefinder",
+			"hlc_rifle_m14sopmod",
+			"hlc_rifle_rpk",
+			"optic_LRPS",
+			"srifle_DMR_03_F",
+			"srifle_GM6_F",
+			"optic_DMS",
+			"hlc_rifle_akmgl",
+			"RH_Deaglem"
 		};
 	};
 
@@ -88,7 +114,9 @@ class ALYSIA_SHOPS_ARMA
 			"Skyline_B95",
 			"Skyline_B95_Green",
 			"Skyline_B95_Black",
-			"2Rnd_762x51_Mag_B95"
+			"2Rnd_762x51_Mag_B95",
+			"Fett_SDAR",
+			"Fett_20Rnd_556x45_UW_mag"
 		};
 	};
 
@@ -183,7 +211,7 @@ class ALYSIA_SHOPS_ARMA
 		};
 	};
 	
-	class rebel_black_market
+	class black_market
 	{
 		name = "Marché illégal";
 		side = "CIV";
@@ -192,4 +220,15 @@ class ALYSIA_SHOPS_ARMA
 			
 		};
 	};
+	
+	class prisoner_shop_store
+	{
+		name = "Travail et tais toi !";
+		side = "CIV";
+		stocks[] = 
+		{
+			"Skyline_Merlin_01"
+		};
+	};
+	
 };
