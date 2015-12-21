@@ -1724,10 +1724,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class RH_m9
-	{
-		buy_price = 20;
-	};
 	class RH_m9c
 	{
 		buy_price = 20;
