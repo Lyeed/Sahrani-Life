@@ -22,18 +22,18 @@ if (_typeRefuel isEqualTo "") exitWith {
 	["Impossible de trouver l'essence que vous avez selectionné"] call public_fnc_error;
 };
 if (((locked _veh) isEqualTo 2)) exitWith {
-	["Le véhicule doit être ouvert pour effectuer un plein"] call public_fnc_error;
+	["Le véhicule doit être ouvert pour effectuer un plein."] call public_fnc_error;
 };
 if (isEngineOn _veh) exitWith {
-	["Le véhicule doit avoir le moteur éteint pour effectuer un plein"] call public_fnc_error;
+	["Le véhicule doit avoir le moteur éteint pour effectuer un plein."] call public_fnc_error;
 };
-if ((fuel vehicle player) isEqualTo 1) then {
+if ((fuel _veh) isEqualTo 1) then {
 	["Le réservoir du véhicule est déjà plein"] call public_fnc_error;
 };
 
 _current_fuel = _station getVariable [_typeRefuel, 250];
 if (_current_fuel <= 1) exitWith {
-	[format["Cette station ne possède plus l'essence que vous désirez (%1)", getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _typeRefuel >> "name")]] call public_fnc_error;
+	[format["Cette station ne possède plus l'essence que vous désirez (%1).", getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _typeRefuel >> "name")]] call public_fnc_error;
 };
 if (!(createDialog "RscDisplayRefuel")) exitWith {};
 
