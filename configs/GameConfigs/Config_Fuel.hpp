@@ -38,7 +38,7 @@ class ALYSIA_FUEL
 		{
 			name = "Gaz de pétrole liquéfié";
 			picture = "\Devilz80_Images\Data\Menu\fuelStations\GPL.paa";
-			price = 2;
+			price = 1;
 			conso = 1;
 		};
 	};

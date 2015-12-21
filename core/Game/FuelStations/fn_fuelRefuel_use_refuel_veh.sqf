@@ -5,6 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+
 private["_station","_veh", "_typeRefuel", "_bill", "_display", "_fuel_max", "_current_fuel"];
 _veh = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 _station = [_this, 1, ObjNull, [ObjNull]] call BIS_fnc_param;
@@ -19,7 +20,7 @@ if (dialog) then
 
 _typeRefuel = player getVariable ["typeRefuel", ""];
 if (_typeRefuel isEqualTo "") exitWith {
-	["Impossible de trouver l'essence que vous avez selectionné"] call public_fnc_error;
+	["Impossible de trouver l'essence que vous avez selectionné."] call public_fnc_error;
 };
 if (((locked _veh) isEqualTo 2)) exitWith {
 	["Le véhicule doit être ouvert pour effectuer un plein."] call public_fnc_error;
@@ -28,7 +29,7 @@ if (isEngineOn _veh) exitWith {
 	["Le véhicule doit avoir le moteur éteint pour effectuer un plein."] call public_fnc_error;
 };
 if ((fuel _veh) isEqualTo 1) then {
-	["Le réservoir du véhicule est déjà plein"] call public_fnc_error;
+	["Le réservoir du véhicule est déjà plein."] call public_fnc_error;
 };
 
 _current_fuel = _station getVariable [_typeRefuel, 250];
@@ -55,6 +56,10 @@ while {(!(isNull _display) && (_current_fuel > 1) && (_bill <= g_atm))} do
 	(_display displayCtrl 17015) ctrlSetStructuredText parseText format ["%1/%2 Litres", ((fuel _veh) * _fuel_max), _fuel_max];
 
 	sleep 0.5;
+};
+
+if ((getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf (_veh) >> "fuel")) != _typeRefuel) then {
+	_veh setVariable ["typeRefuel", _typeRefuel, true];
 };
 
 _station setVariable [_typeRefuel, _current_fuel, true];
