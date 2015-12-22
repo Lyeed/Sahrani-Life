@@ -47,6 +47,10 @@ if ((lbSize _list) isEqualTo 0) then
 	ctrlShow[2916, false];
 	ctrlShow[2917, false];
 	_list lbAdd "Aucune";
+} else {
+	ctrlShow[2909, true];
+	ctrlShow[2916, true];
+	ctrlShow[2917, true];	
 };
 
 _list lbSetCurSel 0;

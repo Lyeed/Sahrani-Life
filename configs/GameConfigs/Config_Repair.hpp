@@ -6,7 +6,7 @@ class ALYSIA_REPAIR
 		tool = "Alysia_repair_toolbox";
 		item = "Alysia_repair_fuel";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitFuel.paa";
-		time = 6;
+		time = 8;
 	};
 	class HitFuelTank: HitFuel {};
 
@@ -16,7 +16,7 @@ class ALYSIA_REPAIR
 		tool = "Alysia_repair_toolbox";
 		item = "Alysia_repair_engine";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitEngine.paa";
-		time = 15;
+		time = 17;
 	};
 	class HitEngine1: HitEngine {};
 	class HitEngine2: HitEngine {};
@@ -24,11 +24,11 @@ class ALYSIA_REPAIR
 
 	class HitBody
 	{
-		name = "Carcasse";
+		name = "Coque";
 		tool = "Alysia_repair_toolbox";
 		item = "Alysia_repair_body";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitBody.paa";
-		time = 13;
+		time = 15;
 	};
 
 	class HitLTrack
@@ -37,7 +37,7 @@ class ALYSIA_REPAIR
 		tool = "Alysia_repair_toolbox";
 		item = "Alysia_repair_track";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitLTrack.paa";
-		time = 11;
+		time = 13;
 	};
 	class HitRTrack: HitLTrack {
 		name = "Chenille droite";
@@ -45,33 +45,34 @@ class ALYSIA_REPAIR
 
 	class HitLFWheel
 	{
-		name = "Roue avant gauche";
+		name = "Roue gauche 1";
 		tool = "Alysia_repair_tireLever";
 		item = "Alysia_repair_tire";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitLFWheel.paa";
-		time = 6;
-	};
-	class HitLBWheel: HitLFWheel {
-		name = "Roue arrière gauche";
-	};
-	class HitLMWheel: HitLFWheel {
-		name = "Roue milieu gauche";
+		time = 8;
 	};
 	class HitLF2Wheel: HitLFWheel {
-		name = "Roue avant gauche 2";
+		name = "Roue gauche 2";
+	};
+	class HitLMWheel: HitLFWheel {
+		name = "Roue gauche 3";
+	};
+	class HitLBWheel: HitLFWheel {
+		name = "Roue gauche 4";
 	};
 	class HitRFWheel: HitLFWheel {
-		name = "Roue avant droite";
-	};
-	class HitRBWheel: HitLFWheel {
-		name = "Roue arrière droite";
-	};
-	class HitRMWheel: HitLFWheel {
-		name = "Roue milieu droite";
+		name = "Roue droite 1";
 	};
 	class HitRF2Wheel: HitLFWheel {
-		name = "Roue avant droite 2";
+		name = "Roue droite 2";
 	};
+	class HitRMWheel: HitLFWheel {
+		name = "Roue droite 3";
+	};
+	class HitRBWheel: HitLFWheel {
+		name = "Roue droite 4";
+	};
+
 	class HitFWheel: HitLFWheel {
 		name = "Roue avant";
 	};
@@ -85,13 +86,17 @@ class ALYSIA_REPAIR
 		tool = "Alysia_repair_toolbox";
 		item = "Alysia_repair_glass";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitGlass1.paa";
-		time = 5;
+		time = 7;
 	};
 	class HitGlass2: HitGlass1 {};
 	class HitGlass3: HitGlass1 {};
 	class HitGlass4: HitGlass1 {};
 	class HitGlass5: HitGlass1 {};
 	class HitGlass6: HitGlass1 {};
+	class HitGlass7: HitGlass1 {};
+	class HitGlass8: HitGlass1 {};
+	class HitGlass9: HitGlass1 {};
+	class HitGlass10: HitGlass1 {};
 	class HitRGlass: HitGlass1 {};
 	class HitLGlass: HitGlass1 {};
 
@@ -101,7 +106,7 @@ class ALYSIA_REPAIR
 		tool = "Alysia_repair_toolbox";
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitTurret.paa";
-		time = 15;
+		time = 17;
 	};
 
 	class HitGun
@@ -110,7 +115,16 @@ class ALYSIA_REPAIR
 		tool = "Alysia_repair_toolbox";
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitGun.paa";
-		time = 18;
+		time = 20;
+	};
+
+	class HitAmmo
+	{
+		name = "Soute à munitions";
+		tool = "Alysia_repair_toolbox";
+		item = "";
+		picture = "lyeed_IMG\data\vehicle\repair\parts\HitGun.paa";
+		time = 20;
 	};
 
 	class HitHull
@@ -119,7 +133,7 @@ class ALYSIA_REPAIR
 		tool = "Alysia_repair_toolbox";
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitHull.paa";
-		time = 12;
+		time = 14;
 	};
 
 	class HitAvionics
@@ -128,7 +142,7 @@ class ALYSIA_REPAIR
 		tool = "Alysia_repair_toolbox";
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitAvionics.paa";
-		time = 11;
+		time = 13;
 	};
 
 	class HitHRotor
@@ -136,8 +150,8 @@ class ALYSIA_REPAIR
 		name = "Rotor principal";
 		tool = "Alysia_repair_toolbox";
 		item = "Alysia_repair_rotor";
-		picture = "lyeed_IMG\data\vehicle\repair\parts\HitHRotor.paa";
-		time = 19;
+		picture = "lyeed_IMG\data\vehicle\repair\parts\HitRotor.paa";
+		time = 21;
 	};
 	class HitVRotor: HitHRotor {
 		name = "Rotor secondaire";
@@ -149,7 +163,7 @@ class ALYSIA_REPAIR
 		tool = "Alysia_repair_toolbox";
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitMissiles.paa";
-		time = 19;
+		time = 21;
 	};
 
 	class HitWinch
