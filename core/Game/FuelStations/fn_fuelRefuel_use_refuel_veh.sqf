@@ -56,7 +56,7 @@ while {(!(isNull _display) && (_currentfuel > 1) && (_bill <= g_atm)) && ((fuel 
 	(_display displayCtrl 17014) progressSetPosition (fuel _veh);
 	(_display displayCtrl 17015) ctrlSetStructuredText parseText format ["%1/%2 Litres", ((fuel _veh) * _fuelmax), _fuelmax];
 
-	sleep 0.1;
+	sleep 1.5;
 };
 
 if ((getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf (_veh) >> "fuel")) != _typeRefuel) then {
