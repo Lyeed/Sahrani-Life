@@ -9,10 +9,10 @@
 private["_veh","_fuel","_currentfuel"];
 _veh = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 _fuel = (getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf (_veh) >> "fuel"));
-_curentfuel = _veh getVariable ["typeRefuel", ""];
+_currentfuel = _veh getVariable ["typeRefuel", ""];
 
-if (_fuel != _curentfuel) then {
-	_fuel = _curentfuel;
+if (_fuel != _currentfuel) then {
+	_fuel = _currentfuel;
 };
 
 if (["Siphonnage du véhicule", 30 , objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then

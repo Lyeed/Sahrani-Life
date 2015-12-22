@@ -180,7 +180,7 @@ if (hasInterface) then
 			{
 				if (((driver _veh) isEqualTo player) && (isEngineOn _veh)) then {
 					if (_fuel != _curentfuel) then {
-						if (!((_curentfuel in ["SP95","SP98"]) && (_fuel isEqualTo in ["SP95","SP98"]))) then {
+						if (!((_curentfuel in ["SP95","SP98"]) && (_fuel in ["SP95","SP98"]))) then {
 							[_veh, "motorexplose", 20] call CBA_fnc_globalSay3d;
 							[_veh, "HitEngine", 1] call public_fnc_setHitPointDamage;
 						};
