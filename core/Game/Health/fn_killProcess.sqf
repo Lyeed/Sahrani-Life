@@ -35,7 +35,7 @@ if (_unit getVariable["is_coma", false]) then
 
 	if ([_text, 12, _unit, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then
 	{
-		if ("SkylineItems_Couteau" in (magazines player))) then
+		if ("SkylineItems_Couteau" in (magazines player)) then
 		{
 			if (_unit getVariable["is_coma", false]) then
 			{

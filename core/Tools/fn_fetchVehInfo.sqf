@@ -25,7 +25,7 @@ private["_class"];
 _class = [_this, 0, "", [""]] call BIS_fnc_param;
 
 if (_class isEqualTo "") exitWith {[]};
-if (!isClass (configFile >> "CfgVehicles" >> _class)) exitWith {[]};
+if (!isClass(configFile >> "CfgVehicles" >> _class)) exitWith {[]};
 
 [
 	_class,

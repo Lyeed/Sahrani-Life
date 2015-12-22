@@ -1,11 +1,3 @@
-/*
-		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
-	Code written by Lyeed
-	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
-	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
-	More informations : https://www.bistudio.com/community/game-content-usage-rules
-*/
-
 class RscDisplayAuctionHouse: default_base_dialog
 {
 	idd = 45600;
@@ -15,7 +7,6 @@ class RscDisplayAuctionHouse: default_base_dialog
 	{
 		class FRAME: RscFrame
 		{
-			idc = -1;
 			colorText[] = {0,0,0,1};
 			
 			x = 0.335 * safezoneW + safezoneX;
@@ -25,8 +16,7 @@ class RscDisplayAuctionHouse: default_base_dialog
 		};
 		class BACKGROUND: RscPicture
 		{
-			idc = -1;
-			text = "\lyeed_IMG\data\auctionHouse\background.jpg";
+			text = "lyeed_IMG\data\auctionHouse\background.jpg";
 
 			x = 0.335 * safezoneW + safezoneX;
 			y = 0.346 * safezoneH + safezoneY;
@@ -39,7 +29,6 @@ class RscDisplayAuctionHouse: default_base_dialog
 	{
 		class TITLE: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center' size='1.8'>Hôtel des ventes</t>";
 			colorBackground[] = {0,0,0,1};
 
@@ -52,7 +41,6 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class STOCK_FRAME: RscFrame
 		{
 			idc = 45618;
-			colorText[] = {0,0,0,0.8};
 
 			x = 0.340156 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
@@ -74,7 +62,6 @@ class RscDisplayAuctionHouse: default_base_dialog
 		{
 			idc = 45602;
 			onLBSelChanged = "_this call public_fnc_auctionHouse_menu_update;";
-			colorBackground[] = {0,0,0,0.8};
 			
 			x = 0.340156 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
@@ -117,7 +104,6 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class ACTION_EXIT_FRAME: RscFrame
 		{
 			idc = 45606;
-			colorText[] = {0,0,0,0.8};
 
 			x = 0.567031 * safezoneW + safezoneX;
 			y = 0.676 * safezoneH + safezoneY;
@@ -138,7 +124,7 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class ACTION_EXIT_IMAGE: RscPicture
 		{
 			idc = 45608;
-			text = "\lyeed_IMG\data\auctionHouse\actions\action_exit.paa";
+			text = "lyeed_IMG\data\auctionHouse\actions\action_exit.paa";
 
 			x = 0.572187 * safezoneW + safezoneX;
 			y = 0.687 * safezoneH + safezoneY;
@@ -150,12 +136,12 @@ class RscDisplayAuctionHouse: default_base_dialog
 			idc = -1;
 			action = "closeDialog 0;";
 			onMouseEnter = "\
-			ctrlSetText[45608,""\lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""];\
+			ctrlSetText[45608,""lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""];\
 			ctrlShow[45606, false];\
 			((findDisplay 45600) displayCtrl 45605) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 45600) displayCtrl 45607) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
 			onMouseExit = "\
-			ctrlSetText[45608,""\lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];\
+			ctrlSetText[45608,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];\
 			ctrlShow[45606, true];\
 			((findDisplay 45600) displayCtrl 45605) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 45600) displayCtrl 45607) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";
@@ -178,7 +164,6 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class ACTION_BUY_FRAME: RscFrame
 		{
 			idc = 45610;
-			colorText[] = {0,0,0,0.8};
 			
 			x = 0.567031 * safezoneW + safezoneX;
 			y = 0.511 * safezoneH + safezoneY;
@@ -199,7 +184,7 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class ACTION_BUY_IMAGE: RscPicture
 		{
 			idc = 45612;
-			text = "\lyeed_IMG\data\auctionHouse\actions\action_buy.paa";
+			text = "lyeed_IMG\data\auctionHouse\actions\action_buy.paa";
 
 			x = 0.569948 * safezoneW + safezoneX;
 			y = 0.51637 * safezoneH + safezoneY;
@@ -211,12 +196,12 @@ class RscDisplayAuctionHouse: default_base_dialog
 			idc = 45613;
 			action = "[] spawn public_fnc_auctionHouse_action_buy;";
 			onMouseEnter = "\
-			ctrlSetText[45612,""\lyeed_IMG\data\auctionHouse\actions\action_buy_select.paa""];\
+			ctrlSetText[45612,""lyeed_IMG\data\auctionHouse\actions\action_buy_select.paa""];\
 			ctrlShow[45610, false];\
 			((findDisplay 45600) displayCtrl 45609) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 45600) displayCtrl 45611) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
 			onMouseExit = "\
-			ctrlSetText[45612,""\lyeed_IMG\data\auctionHouse\actions\action_buy.paa""];\
+			ctrlSetText[45612,""lyeed_IMG\data\auctionHouse\actions\action_buy.paa""];\
 			if (ctrlVisible 45612) then {\
 				ctrlShow[45610, true];\
 			};\
@@ -360,7 +345,6 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class SELECT_PRICE_EDIT: RscEdit
 		{
 			idc = 45620;
-			colorBackground[] = {0,0,0,0.6};
 			
 			x = 0.561875 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;
@@ -371,7 +355,6 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class MISC_LIST: RscListbox
 		{
 			idc = 45621;
-			colorBackground[] = {0,0,0,0.8};
 			
 			x = 0.340156 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
@@ -392,7 +375,6 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class ACTION_RECUP_FRAME: RscFrame
 		{
 			idc = 45623;
-			colorText[] = {0,0,0,0.8};
 
 			x = 0.567031 * safezoneW + safezoneX;
 			y = 0.511 * safezoneH + safezoneY;
@@ -413,7 +395,7 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class ACTION_RECUP_IMAGE: RscPicture
 		{
 			idc = 45625;
-			text = "\lyeed_IMG\data\auctionHouse\actions\action_recup.paa";
+			text = "lyeed_IMG\data\auctionHouse\actions\action_recup.paa";
 
 			x = 0.569948 * safezoneW + safezoneX;
 			y = 0.51637 * safezoneH + safezoneY;
@@ -425,12 +407,12 @@ class RscDisplayAuctionHouse: default_base_dialog
 			idc = 45626;
 			action = "[] spawn public_fnc_auctionHouse_action_cancel;";
 			onMouseEnter = "\
-			ctrlSetText[45625,""\lyeed_IMG\data\auctionHouse\actions\action_recup_select.paa""];\
+			ctrlSetText[45625,""lyeed_IMG\data\auctionHouse\actions\action_recup_select.paa""];\
 			ctrlShow[45623, false];\
 			((findDisplay 45600) displayCtrl 45622) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 45600) displayCtrl 45624) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Récup.</t>"";";
 			onMouseExit = "\
-			ctrlSetText[45625,""\lyeed_IMG\data\auctionHouse\actions\action_recup.paa""];\
+			ctrlSetText[45625,""lyeed_IMG\data\auctionHouse\actions\action_recup.paa""];\
 			if (ctrlVisible 45625) then {\
 				ctrlShow[45623, true];\
 			};\
@@ -456,7 +438,6 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class ACTION_SELL_FRAME: RscFrame
 		{
 			idc = 45628;
-			colorText[] = {0,0,0,0.8};
 
 			x = 0.567031 * safezoneW + safezoneX;
 			y = 0.511 * safezoneH + safezoneY;
@@ -477,7 +458,7 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class ACTION_SELL_IMAGE: RscPicture
 		{
 			idc = 45630;
-			text = "\lyeed_IMG\data\auctionHouse\actions\action_buy.paa";
+			text = "lyeed_IMG\data\auctionHouse\actions\action_buy.paa";
 
 			x = 0.569948 * safezoneW + safezoneX;
 			y = 0.51637 * safezoneH + safezoneY;
@@ -489,12 +470,12 @@ class RscDisplayAuctionHouse: default_base_dialog
 			idc = 45631;
 			action = "[] spawn public_fnc_auctionHouse_action_sell;";
 			onMouseEnter = "\
-			ctrlSetText[45630,""\lyeed_IMG\data\auctionHouse\actions\action_buy_select.paa""];\
+			ctrlSetText[45630,""lyeed_IMG\data\auctionHouse\actions\action_buy_select.paa""];\
 			ctrlShow[45628, false];\
 			((findDisplay 45600) displayCtrl 45627) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 45600) displayCtrl 45629) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Vendre</t>"";";
 			onMouseExit = "\
-			ctrlSetText[45630,""\lyeed_IMG\data\auctionHouse\actions\action_buy.paa""];\
+			ctrlSetText[45630,""lyeed_IMG\data\auctionHouse\actions\action_buy.paa""];\
 			if (ctrlVisible 45630) then {\
 				ctrlShow[45628, true];\
 			};\
@@ -510,7 +491,7 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class ACTION_REFRESH_IMAGE: RscPicture
 		{
 			idc = 45632;
-			text = "\lyeed_IMG\data\auctionHouse\actions\action_refresh.paa";
+			text = "lyeed_IMG\data\auctionHouse\actions\action_refresh.paa";
 
 			x = 0.551562 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
@@ -521,8 +502,8 @@ class RscDisplayAuctionHouse: default_base_dialog
 		{
 			idc = 45633;
 			action = "[0] call public_fnc_auctionHouse_menu_filter;";
-			onMouseEnter = "ctrlSetText[45632,""\lyeed_IMG\data\auctionHouse\actions\action_refresh_select.paa""];";
-			onMouseExit = "ctrlSetText[45632,""\lyeed_IMG\data\auctionHouse\actions\action_refresh.paa""];";
+			onMouseEnter = "ctrlSetText[45632,""lyeed_IMG\data\auctionHouse\actions\action_refresh_select.paa""];";
+			onMouseExit = "ctrlSetText[45632,""lyeed_IMG\data\auctionHouse\actions\action_refresh.paa""];";
 			
 			x = 0.551562 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
@@ -544,7 +525,6 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class STATS_GLOBAL_FRAME: RscFrame
 		{
 			idc = 45635;
-			colorText[] = {0,0,0,0.8};
 			
 			x = 0.355626 * safezoneW + safezoneX;
 			y = 0.577 * safezoneH + safezoneY;
@@ -576,7 +556,6 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class STATS_NORTH_FRAME: RscFrame
 		{
 			idc = 45638;
-			colorText[] = {0,0,0,0.8};
 
 			x = 0.355626 * safezoneW + safezoneX;
 			y = 0.61 * safezoneH + safezoneY;
@@ -608,7 +587,6 @@ class RscDisplayAuctionHouse: default_base_dialog
 		class STATS_SOUTH_FRAME: RscFrame
 		{
 			idc = 45641;
-			colorText[] = {0,0,0,0.8};
 
 			x = 0.355625 * safezoneW + safezoneX;
 			y = 0.643 * safezoneH + safezoneY;
@@ -636,6 +614,5 @@ class RscDisplayAuctionHouse: default_base_dialog
 			w = 0.0979687 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-
 	};
 };

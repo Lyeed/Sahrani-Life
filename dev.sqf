@@ -1,3 +1,7 @@
+
+RscMiniMap
+
+
 arifle_SDAR_F
 30Rnd_556x45_Stanag
 
