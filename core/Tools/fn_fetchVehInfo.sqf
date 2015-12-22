@@ -21,6 +21,7 @@
 	11: Max Horse power
 	12: Fuel Capacity
 */
+
 private["_class"];
 _class = [_this, 0, "", [""]] call BIS_fnc_param;
 
