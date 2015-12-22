@@ -45,7 +45,7 @@ if (isNull _display) exitWith {};
 _fuelmax = getNumber(configFile >> "CfgVehicles" >> typeOf _veh >> "fuelCapacity");
 _bill = 0;
 
-while {(!(isNull _display) && (_currentfuel > 1) && (_bill <= g_atm)) && ((fuel _veh) < 0.9)} do
+while {(!(isNull _display) && (_currentfuel > 1) && (_bill <= g_atm)) && ((fuel _veh) != 1)} do
 {
 	_currentfuel = _currentfuel - 1;
 	_veh setFuel ((fuel _veh) + 0.1);
@@ -53,7 +53,7 @@ while {(!(isNull _display) && (_currentfuel > 1) && (_bill <= g_atm)) && ((fuel 
 	
 	(_display displayCtrl 17008) ctrlSetStructuredText parseText format ["<t size ='2' align='center'>%1</t>", [_bill] call public_fnc_numberText];
 	(_display displayCtrl 17010) ctrlSetStructuredText parseText format ["<t align='right'>%1</t>", _currentfuel];
-	(_display displayCtrl 17014) progressSetPosition fuel_veh;
+	(_display displayCtrl 17014) progressSetPosition (fuel _veh);
 	(_display displayCtrl 17015) ctrlSetStructuredText parseText format ["%1/%2 Litres", ((fuel _veh) * _fuelmax), _fuelmax];
 
 	sleep 0.1;
