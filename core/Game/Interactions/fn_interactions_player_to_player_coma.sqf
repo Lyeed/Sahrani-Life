@@ -12,7 +12,7 @@
 	[
 		["massage", "Stabiliser", "closeDialog 0; [g_interaction_target, 'main'] spawn public_fnc_massageCardiaque;", "true"],
 		["kill", "Achever", "closeDialog 0; [g_interaction_target] spawn public_fnc_killProcess;", "true"],
-		["defib", "Defib.", "closeDialog 0; [g_interaction_target, 'debif'] spawn public_fnc_massageCardiaque;", "true"]
+		["defib", "Defib.", "closeDialog 0; [g_interaction_target, 'debif'] spawn public_fnc_massageCardiaque;", "(((backpack player) != 'B_Defibrilateur_khk') && (getNumber(missionConfigFile >> 'ALYSIA_FACTIONS' >> str(playerSide) >> 'can_use_debrif') isEqualTo 1))"]
 	],
 	"Blessé",
 	nil,

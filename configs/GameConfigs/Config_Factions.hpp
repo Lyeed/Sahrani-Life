@@ -45,6 +45,7 @@ class ALYSIA_FACTIONS
 
 		/*** HEAL ***/
 		price_heal_hopital = 0;
+		can_use_debrif = 0;
 
 		/*** FARM ***/
 		farming_markers_plant[] = {};
@@ -161,6 +162,7 @@ class ALYSIA_FACTIONS
 
 		/*** HEAL ***/
 		price_heal_hopital = 0;
+		can_use_debrif = 0;
 
 		/*** FARM ***/
 		farming_markers[] = {};
@@ -263,6 +265,7 @@ class ALYSIA_FACTIONS
 
 		/*** HEAL ***/
 		price_heal_hopital = 500;
+		can_use_debrif = 0;
 
 		/*** FARM ***/
 		farming_markers_gather[] = 
@@ -385,6 +388,7 @@ class ALYSIA_FACTIONS
 
 		/*** HEAL ***/
 		price_heal_hopital = 0;
+		can_use_debrif = 1;
 
 		/*** FARM ***/
 		farming_markers_gather[] = {};
