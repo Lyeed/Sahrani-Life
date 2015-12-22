@@ -64,15 +64,19 @@ if ((vehicle player) isEqualTo player) then
 		{
 			if (isPlayer cursorTarget) then
 			{
-				if (player getVariable ["is_coma", false]) then
+				if (alive cursorTarget) then
 				{
-					[cursorTarget] call public_fnc_interactions_player_to_player_coma;
-					breakOut "main";
-				};
+					if ((cursorTarget isKindOf "Car") || (cursorTarget isKindOf "Ship") || (cursorTarget isKindOf "Air") || (cursorTarget isKindOf "Tank") || (cursorTarget isKindOf "Truck")) then
+					{
+						[(vehicle cursorTarget)] call public_fnc_interactions_player_to_vehicle;
+						breakOut "main";
+					};
 
-				if ((vehicle cursorTarget) isEqualTo cursorTarget) then
-				{
-					[cursorTarget] call public_fnc_interactions_player_to_player_basics;
+					if (cursorTarget getVariable ["is_coma", false]) then {
+						[cursorTarget] call public_fnc_interactions_player_to_player_coma;
+					} else {
+						[cursorTarget] call public_fnc_interactions_player_to_player_basics;
+					};
 					breakOut "main";
 				};
 			} else {

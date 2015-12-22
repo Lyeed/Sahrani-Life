@@ -17,7 +17,7 @@ lbClear _list;
 {
 	_data = switch (_x select 0) do
 	{
-		case "money": {[format["%1kn", (_x select 1)], "\Alysia_Textures\data\life_inv_illegal_money.paa"]};
+		case "money": {[format["%1kn", (_x select 1)], "Alysia_Textures\data\life_inv_illegal_money.paa"]};
 		case "virtual": {[format["%1x %2", (_x select 1) select 1, ([(_x select 1) select 0] call public_fnc_itemGetName)], ([(_x select 1) select 0] call public_fnc_itemGetImage)]};
 		case "arma":
 		{
@@ -34,6 +34,9 @@ if ((lbSize _list) isEqualTo 0) then
 	_list lbAdd "Vide";
 	ctrlShow[69003, false];
 	ctrlShow[69004, false];
+	ctrlShow[69005, false];
+	ctrlShow[69006, false];
+	ctrlShow[69007, false];
 };
 
 _list lbSetCurSel 0;

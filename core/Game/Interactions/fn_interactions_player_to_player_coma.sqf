@@ -10,9 +10,9 @@
 	[_this, 0, objNull, [objNull]] call BIS_fnc_param,
 	"player_to_player_coma",
 	[
-		["massage", "Stabiliser", "[g_interaction_target, 'main'] spawn public_fnc_massageCardiaque;", "true"],
-		["kill", "Achever", "[g_interaction_target] spawn public_fnc_killProcess;", "true"],
-		["defib", "Defib.", "[g_interaction_target, 'debif'] spawn public_fnc_massageCardiaque;", "true"]
+		["massage", "Stabiliser", "closeDialog 0; [g_interaction_target, 'main'] spawn public_fnc_massageCardiaque;", "true"],
+		["kill", "Achever", "closeDialog 0; [g_interaction_target] spawn public_fnc_killProcess;", "true"],
+		["defib", "Defib.", "closeDialog 0; [g_interaction_target, 'debif'] spawn public_fnc_massageCardiaque;", "true"]
 	],
 	"Blessé",
 	nil,

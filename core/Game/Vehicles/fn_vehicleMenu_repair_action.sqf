@@ -70,11 +70,6 @@ if ((_item != "") && _useItem) then
 	};
 };
 
-if (!_error) then
-{
-	if (local g_interaction_target) then {
-		g_interaction_target setHitPointDamage [_part, _heal];
-	} else {
-		[g_interaction_target, [_part, _heal]] remoteExecCall ["setHitPointDamage", g_interaction_target, false];
-	};
+if (!_error) then {
+	[g_interaction_target, _part, _heal] call public_fnc_setHitPointDamage;
 };

@@ -5,11 +5,10 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_type", "_ret"];
-_type = [_this, 0, 0, [0]] call BIS_fnc_param;
+private "_ret";
 
 _ret = [];
-switch (_type) do
+switch ([_this, 0, 0, [0]] call BIS_fnc_param) do
 {
 	case 0:
 	{

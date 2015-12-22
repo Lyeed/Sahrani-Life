@@ -1,44 +1,32 @@
-class RscDisplayVehicleOwner: default_base_dialog
+class RscDisplayVehicleOwner: default_interaction_back_dialog
 {
 	idd = 600;
 	name = "RscDisplayVehicleOwner";
 	
-	class controlsBackground
+	class controlsBackground: DEFAULT_controlsBackground
 	{
-		class BACKGROUND: RscPicture
+		class BACKGROUND_SPEC: BACKGROUND
 		{
 			text = "lyeed_IMG\data\vehicle\background.jpg";
-
-			x = 0.37625 * safezoneW + safezoneX;
-			y = 0.39 * safezoneH + safezoneY;
-			w = 0.2475 * safezoneW;
-			h = 0.297 * safezoneH;
 		};
-
-		class FRAME: RscFrame
-		{
-			colorText[] = {0,0,0,1};
-			
-			x = 0.37625 * safezoneW + safezoneX;
-			y = 0.357 * safezoneH + safezoneY;
-			w = 0.248542 * safezoneW;
-			h = 0.33 * safezoneH;
-		};
+		class FRAME: FRAME {};
 	};
 
-	class controls
+	class controls: DEFAULT_controls
 	{
-
-		class TITLE: RscStructuredText
+		class TITLE: TITLE
 		{
 			text = "<t size='1.5' align='center'>Carte grise</t>";
-			colorBackground[] = {0,0,0,1};
-			
-			x = 0.37625 * safezoneW + safezoneX;
-			y = 0.357 * safezoneH + safezoneY;
-			w = 0.248021 * safezoneW;
-			h = 0.033 * safezoneH;
 		};
+
+		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME {};
+		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND {};
+		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE {};
+		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON {};
+		class OPTION_BACK_FRAME: OPTION_BACK_FRAME {};
+		class OPTION_BACK_BACKGROUND: OPTION_BACK_BACKGROUND {};
+		class OPTION_BACK_IMAGE: OPTION_BACK_IMAGE {};
+		class OPTION_BACK_BUTTON: OPTION_BACK_BUTTON {};
 
 		class PLATE_FRAME: RscFrame
 		{
@@ -123,237 +111,38 @@ class RscDisplayVehicleOwner: default_base_dialog
 			w = 0.103125 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-
-		class OPTION_EXIT_FRAME: RscFrame
-		{
-			idc = 604;
-			colorText[] = {0,0,0,1};
-
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
-		};
-		class OPTION_EXIT_BACKGROUND: RscText
-		{
-			idc = 605;
-			colorBackground[] = {0,0,0,0.6};
-
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
-		};
-		class OPTION_EXIT_IMAGE: RscPicture
-		{
-			idc = 606;
-			text = "lyeed_IMG\data\global\option_exit.paa";
-
-			x = 0.352605 * safezoneW + safezoneX;
-			y = 0.424074 * safezoneH + safezoneY;
-			w = 0.0154688 * safezoneW;
-			h = 0.022 * safezoneH;
-		};
-		class OPTION_EXIT_BUTTON: RscButtonSilent
-		{
-			action = "closedialog 0;";
-			tooltip = "Quitter";
-			onMouseEnter = "((findDisplay 600) displayCtrl 605) ctrlSetBackgroundColor [1,1,1,1];\
-			ctrlSetText[606,""lyeed_IMG\data\global\option_exit_select.paa""];\
-			ctrlShow[604, false];";
-			onMouseExit = "((findDisplay 600) displayCtrl 605) ctrlSetBackgroundColor [0,0,0,0.6];\
-			ctrlSetText[606,""lyeed_IMG\data\global\option_exit.paa""];\
-			ctrlShow[604, true];";
-
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
-		};
-
-		class OPTION_BACK_FRAME: RscFrame
-		{
-			idc = 607;
-			colorText[] = {0,0,0,1};
-
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.467 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
-		};
-		class OPTION_BACK_BACKGROUND: RscText
-		{
-			idc = 608;
-			colorBackground[] = {0,0,0,0.6};
-
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.467 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
-		};
-		class OPTION_BACK_IMAGE: RscPicture
-		{
-			idc = 609;
-			text = "lyeed_IMG\data\global\option_back.paa";
-
-			x = 0.352343 * safezoneW + safezoneX;
-			y = 0.477593 * safezoneH + safezoneY;
-			w = 0.0154688 * safezoneW;
-			h = 0.022 * safezoneH;
-		};
-		class OPTION_BACK_BUTTON: RscButtonSilent
-		{
-			action = "[] call public_fnc_interactions_recall;";
-			tooltip = "Retour";
-			onMouseEnter = "((findDisplay 600) displayCtrl 608) ctrlSetBackgroundColor [1,1,1,1];\
-			ctrlSetText[609,""lyeed_IMG\data\global\option_back_select.paa""];\
-			ctrlShow[607, false];";
-			onMouseExit = "((findDisplay 600) displayCtrl 608) ctrlSetBackgroundColor [0,0,0,0.6];\
-			ctrlSetText[609,""lyeed_IMG\data\global\option_back.paa""];\
-			ctrlShow[607, true];";
-
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.467 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
-		};
 	};
 };
 
-class RscDisplayVehicleRepair: default_base_dialog
+class RscDisplayVehicleRepair: default_interaction_back_dialog
 {
 	idd = 2900;
 	name = "RscDisplayVehicleRepair";
 	
-	class controlsBackground
+	class controlsBackground: DEFAULT_controlsBackground
 	{
-		class BACKGROUND: RscPicture
+		class BACKGROUND_SPEC: BACKGROUND
 		{
 			text = "lyeed_IMG\data\vehicle\background.jpg";
-
-			x = 0.37625 * safezoneW + safezoneX;
-			y = 0.39 * safezoneH + safezoneY;
-			w = 0.2475 * safezoneW;
-			h = 0.297 * safezoneH;
 		};
-
-		class FRAME: RscFrame
-		{
-			colorText[] = {0,0,0,1};
-			
-			x = 0.37625 * safezoneW + safezoneX;
-			y = 0.357 * safezoneH + safezoneY;
-			w = 0.248542 * safezoneW;
-			h = 0.33 * safezoneH;
-		};
+		class FRAME: FRAME {};
 	};
 
-	class controls
+	class controls: DEFAULT_controls
 	{
-		class TITLE: RscStructuredText
+		class TITLE: TITLE
 		{
-			text = "<t size='1.5' align='center'>Réparation</t>";
-			colorBackground[] = {0,0,0,1};
-			
-			x = 0.37625 * safezoneW + safezoneX;
-			y = 0.357 * safezoneH + safezoneY;
-			w = 0.248021 * safezoneW;
-			h = 0.033 * safezoneH;
+			text = "<t size='1.5' align='center'>Carte grise</t>";
 		};
 
-		class OPTION_EXIT_FRAME: RscFrame
-		{
-			idc = 2901;
-			colorText[] = {0,0,0,1};
-
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
-		};
-		class OPTION_EXIT_BACKGROUND: RscText
-		{
-			idc = 2902;
-			colorBackground[] = {0,0,0,0.6};
-
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
-		};
-		class OPTION_EXIT_IMAGE: RscPicture
-		{
-			idc = 2903;
-			text = "lyeed_IMG\data\global\option_exit.paa";
-
-			x = 0.352605 * safezoneW + safezoneX;
-			y = 0.424074 * safezoneH + safezoneY;
-			w = 0.0154688 * safezoneW;
-			h = 0.022 * safezoneH;
-		};
-		class OPTION_EXIT_BUTTON: RscButtonSilent
-		{
-			action = "closedialog 0;";
-			tooltip = "Quitter";
-			onMouseEnter = "((findDisplay 2900) displayCtrl 2902) ctrlSetBackgroundColor [1,1,1,1];\
-			ctrlSetText[2903,""lyeed_IMG\data\global\option_exit_select.paa""];\
-			ctrlShow[2901, false];";
-			onMouseExit = "((findDisplay 2900) displayCtrl 2902) ctrlSetBackgroundColor [0,0,0,0.6];\
-			ctrlSetText[2903,""lyeed_IMG\data\global\option_exit.paa""];\
-			ctrlShow[2901, true];";
-
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
-		};
-
-		class OPTION_BACK_FRAME: RscFrame
-		{
-			idc = 2904;
-			colorText[] = {0,0,0,1};
-
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.467 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
-		};
-		class OPTION_BACK_BACKGROUND: RscText
-		{
-			idc = 2905;
-			colorBackground[] = {0,0,0,0.6};
-
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.467 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
-		};
-		class OPTION_BACK_IMAGE: RscPicture
-		{
-			idc = 2906;
-			text = "lyeed_IMG\data\global\option_back.paa";
-
-			x = 0.352343 * safezoneW + safezoneX;
-			y = 0.477593 * safezoneH + safezoneY;
-			w = 0.0154688 * safezoneW;
-			h = 0.022 * safezoneH;
-		};
-		class OPTION_BACK_BUTTON: RscButtonSilent
-		{
-			action = "[] call public_fnc_interactions_recall;";
-			tooltip = "Retour";
-			onMouseEnter = "((findDisplay 2900) displayCtrl 2905) ctrlSetBackgroundColor [1,1,1,1];\
-			ctrlSetText[2906,""lyeed_IMG\data\global\option_back_select.paa""];\
-			ctrlShow[2904, false];";
-			onMouseExit = "((findDisplay 2900) displayCtrl 2905) ctrlSetBackgroundColor [0,0,0,0.6];\
-			ctrlSetText[2906,""lyeed_IMG\data\global\option_back.paa""];\
-			ctrlShow[2904, true];";
-
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.467 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
-		};
+		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME {};
+		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND {};
+		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE {};
+		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON {};
+		class OPTION_BACK_FRAME: OPTION_BACK_FRAME {};
+		class OPTION_BACK_BACKGROUND: OPTION_BACK_BACKGROUND {};
+		class OPTION_BACK_IMAGE: OPTION_BACK_IMAGE {};
+		class OPTION_BACK_BUTTON: OPTION_BACK_BUTTON {};
 
 		class REPAIR_FRAME: RscFrame
 		{

@@ -15,4 +15,8 @@
 		["who", "Identité", "[] spawn public_fnc_skullMenu_who;", "(getNumber(missionConfigFile >> 'ALYSIA_FACTIONS' >> str(playerSide) >> 'skull_who') isEqualTo 1)"]
 	],
 	"Cadavre"
+	"lyeed_IMG\data\skull\background.jpg",
+	true,
+	false,
+	true,
 ] spawn public_fnc_interactions_create;

@@ -40,8 +40,8 @@ if (_action) then
 	_display = findDisplay 600;
 	if (isNull _display) exitWith {};
 
-	(_display displayCtrl 601) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", (_info select 1)];
-	(_display displayCtrl 602) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", (_info select 2)];
+	(_display displayCtrl 601) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", (_info select 2)];
+	(_display displayCtrl 602) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", (_info select 1)];
 	(_display displayCtrl 603) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", if ((_info select 3) isEqualTo 1) then {"<t color='#8cff9b'>Oui</t>"} else {"<t color='#ff8c8c'>Non</t>"}];
 
 	while {!(isNull _display)} do
