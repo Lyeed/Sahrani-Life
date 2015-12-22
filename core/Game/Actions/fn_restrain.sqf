@@ -6,23 +6,28 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (!(player getVariable ["surrender", false])) exitWith {};
-
-[player, "handcuffs", 10] call CBA_fnc_globalSay3d;
-player setVariable ["restrained", true, true];
-
-while {((player getVariable ["restrained", false]) && !(player getVariable ["is_coma", false]))} do
+if (player getVariable ["surrender", false]) then
 {
-	if ((animationState player) != "AmovPercMstpSnonWnonDnon_Ease") then {
-		if ((vehicle player) isEqualTo player) then {
-			player playMove "AmovPercMstpSnonWnonDnon_Ease";
-		};
-	};
-	if (((vehicle player) != player) && ((driver (vehicle player)) isEqualTo player)) then {
-		player action ["eject", (vehicle player)];
-	};
-};
+	[player, "handcuffs", 10] call CBA_fnc_globalSay3d;
+	player setVariable ["restrained", true, true];
+	player setVariable ["surrender", false, true];
 
-if (player getVariable ["restrained", false]) then {
-	player setVariable ["restrained", false, true];
+	while {(player getVariable ["restrained", false])} do
+	{
+		if ((vehicle player) isEqualTo player) then
+		{
+			if (!((animationState player) in ["amovpercmstpsnonwnondnon_easeout","amovpercmstpsnonwnondnon_easein"])) then
+			{
+				[player, "AmovPercMstpSnonWnonDnon_Ease"] remoteExecCall ["switchMove", -2];
+				player playMoveNow "AmovPercMstpSnonWnonDnon_Ease";
+			};
+		};
+		if (((vehicle player) != player) && ((driver (vehicle player)) isEqualTo player)) then
+		{
+			player action ["eject", (vehicle player)];
+		};
+		sleep 0.7;
+	};
+	[player, "AmovPercMstpSnonWnonDnon_Ease"] remoteExecCall ["switchMove", -2];
+	player playMove "AmovPercMstpSnonWnonDnon_Ease";
 };

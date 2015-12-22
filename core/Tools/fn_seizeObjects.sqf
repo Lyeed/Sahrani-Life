@@ -22,5 +22,5 @@ _objCount = count _objects;
 } forEach (_objects);
 
 if (_display) then {
-	[format["Vous avez saisi %1 objet%2", _objCount, if (_objCount > 1) then {"s"} else {""}]] call ALYSIA_fnc_info;
+	[format["Vous avez saisi %1 objet%2", _objCount, if (_objCount > 1) then {"s"} else {""}]] call public_fnc_info;
 };

@@ -15,6 +15,13 @@ if (dialog) then
 };
 if (!(createDialog "RscDisplayComa")) exitWith {};
 
+if (player getVariable ["surrender", false]) then {
+	player setVariable ["surrender", false, true];
+};
+if (player getVariable ["restrained", false]) then {
+	player setVariable ["restrained", false, true];
+};
+
 disableSerialization;
 _display = findDisplay 350;
 if (isNull _display) exitWith {};

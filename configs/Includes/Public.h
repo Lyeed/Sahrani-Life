@@ -41,6 +41,7 @@ class Public
 	class Tools
 	{
 		file = "core\Tools";
+		class setHitPointDamage {};
 		class lightOn {};
 		class lightBug {};
 		class weightGenerate {};

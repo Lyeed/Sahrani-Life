@@ -6989,7 +6989,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this addAction[""<img image='\lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>objets</t>)"" ,public_fnc_auctionHouse_menu_open,[""SOUTH"", 2],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this addAction[""<img image='\lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>objets</t>)"" ,public_fnc_auctionHouse_menu_open,[""SOUTH"", 0],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item363
 		{

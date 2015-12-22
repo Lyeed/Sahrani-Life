@@ -10,21 +10,15 @@ if (player getVariable ["surrender", false]) then {
 	player setVariable ["surrender", false, true];
 } else {
 	player setVariable ["surrender", true, true];
+	player playActionNow "Surrender";
 	[] spawn
 	{
-		while {(player getVariable ["surrender", false]) && !(player getVariable ["is_coma", false])} do
+		while {(player getVariable ["surrender", false])} do
 		{
-			player playMove "amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon";
-			sleep 0.7;
+			player playActionNow "Surrender";
+			sleep 0.8;
 		};
-		if (player getVariable ["is_coma", false]) then
-		{
-			if (player getVariable ["surrender", false]) then {
-				player setVariable ["surrender", false, true];
-			};
-		} else {
-			player playMoveNow "AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon";
-			player switchMove "";
-		};
+		[player, "amovpercmstpssurwnondnon_amovpercmstpsnonwnondnon"] remoteExecCall ["switchMove", -2];
+		player playMove "amovpercmstpssurwnondnon_amovpercmstpsnonwnondnon";  
 	};
 };

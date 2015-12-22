@@ -15,7 +15,7 @@ if (g_action_inUse) exitWith {
 
 if (!(isNull _unit)) then
 {
-	if (_unit getVariable["is_coma", false]) then 
+	if (_unit getVariable ["is_coma", false]) then 
 	{ 
 		if (player distance _unit < 3) then
 		{

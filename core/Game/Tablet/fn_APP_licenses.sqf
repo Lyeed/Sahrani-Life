@@ -22,5 +22,4 @@ if ((lbSize _list) isEqualTo 0) then {
 	_list lbAdd "Aucune";
 };
 
-ctrlEnable[8600, false];
 _list lbSetCurSel -1;
