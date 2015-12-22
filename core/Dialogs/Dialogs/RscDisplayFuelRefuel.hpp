@@ -149,7 +149,7 @@ class RscDisplayFuelRefuel: default_base_dialog
 		class PROGRESS_FRAME: RscFrame
 		{
 			idc = 17015;
-			text = "45L";
+			text = "";
 
 			x = 0.4 * safezoneW + safezoneX;
 			y = 0.428556 * safezoneH + safezoneY;

@@ -165,23 +165,27 @@ if (hasInterface) then
 
 	[] spawn
 	{
-		private["_veh", "_inc"];
+		private["_veh", "_fuel", "_curentfuel", "_conso"];
 		while {true} do
 		{
 			waitUntil {((vehicle player) != player)};
 
 			g_seatbelt = false;
 			_veh = vehicle player;
-			if (_veh isKindOf "Air") then {
-				_inc = 100000;
-			} else {
-				_inc = 60000;
-			};
+			_fuel = (getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf (_veh) >> "fuel"));
+			_curentfuel = _veh getVariable ["typeRefuel", ""];
+			_conso = (getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _curentfuel >> "conso"));
 
 			while {((vehicle player) isEqualTo _veh)} do
 			{
 				if (((driver _veh) isEqualTo player) && (isEngineOn _veh)) then {
-					_veh setFuel ((fuel _veh) - (((speed _veh) / _inc) + (([_veh getVariable ["Trunk", []]] call public_fnc_weightGenerate) / 100000)));
+					if (_fuel != _curentfuel) then {
+						if (!((_curentfuel in ["SP95","SP98"]) && (_fuel isEqualTo in ["SP95","SP98"]))) then {
+							[_veh, "motorexplose", 20] call CBA_fnc_globalSay3d;
+							[_veh, "HitEngine", 1] call public_fnc_setHitPointDamage;
+						};
+					};
+					_veh setFuel ((fuel _veh) - (((speed _veh) / conso) + (([_veh getVariable ["Trunk", []]] call public_fnc_weightGenerate) / 100000)));
 				};
 				sleep 2;
 			};

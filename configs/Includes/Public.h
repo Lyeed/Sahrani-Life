@@ -217,6 +217,7 @@ class Public
 		class vehicleMenu_impound {};
 		class vehicleMenu_pullout {};
 		class vehicleMenu_putIn {};
+		class vehicleMenu_siphon {};
 	};
 
 	class FuelStations
