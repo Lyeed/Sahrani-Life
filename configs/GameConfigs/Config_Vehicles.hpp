@@ -4045,7 +4045,7 @@ class ALYSIA_VEHICLES
 	
 	class max_bike_base
 	{
-		buyPrice = 250000;
+		buyPrice = 25000;
 		inventory = 5;
 		side = "CIV";
 		insurance = 1;
