@@ -28,7 +28,7 @@ if (((locked _veh) isEqualTo 2)) exitWith {
 if (isEngineOn _veh) exitWith {
 	["Le véhicule doit avoir le moteur éteint pour effectuer un plein."] call public_fnc_error;
 };
-if ((fuel _veh) isEqualTo 1) then {
+if ((fuel _veh) > 0.9) exitWith {
 	["Le réservoir du véhicule est déjà plein."] call public_fnc_error;
 };
 
@@ -48,7 +48,7 @@ _bill = 0;
 while {(!(isNull _display) && (_currentfuel > 1) && (_bill <= g_atm)) && ((fuel _veh) != 1)} do
 {
 	_currentfuel = _currentfuel - 1;
-	_veh setFuel ((fuel _veh) + 0.1);
+	_veh setFuel ((fuel _veh) + 0.01);
 	_bill = _bill + ([_station, _typeRefuel] call public_fnc_fuelStation_price_buy);
 	
 	(_display displayCtrl 17008) ctrlSetStructuredText parseText format ["<t size ='2' align='center'>%1</t>", [_bill] call public_fnc_numberText];
@@ -56,7 +56,7 @@ while {(!(isNull _display) && (_currentfuel > 1) && (_bill <= g_atm)) && ((fuel 
 	(_display displayCtrl 17014) progressSetPosition (fuel _veh);
 	(_display displayCtrl 17015) ctrlSetStructuredText parseText format ["%1/%2 Litres", ((fuel _veh) * _fuelmax), _fuelmax];
 
-	sleep 1.5;
+	sleep 0.5;
 };
 
 if ((getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf (_veh) >> "fuel")) != _typeRefuel) then {
