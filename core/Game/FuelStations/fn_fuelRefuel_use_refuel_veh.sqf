@@ -42,10 +42,10 @@ disableSerialization;
 _display = findDisplay 17000;
 if (isNull _display) exitWith {};
 
-_fuelmax = ([_veh] call public_fnc_fetchVehInfo) select 12;
+_fuelmax = getNumber(configFile >> "CfgVehicles" >> typeOf _veh >> "fuelCapacity");
 _bill = 0;
 
-while {(!(isNull _display) && (_currentfuel > 1) && (_bill <= g_atm)) && ((fuel _veh) != 1)} do
+while {(!(isNull _display) && (_currentfuel > 1) && (_bill <= g_atm)) && ((fuel _veh) < 0.9)} do
 {
 	_currentfuel = _currentfuel - 1;
 	_veh setFuel ((fuel _veh) + 0.1);
@@ -55,7 +55,7 @@ while {(!(isNull _display) && (_currentfuel > 1) && (_bill <= g_atm)) && ((fuel 
 	(_display displayCtrl 17010) ctrlSetStructuredText parseText format ["<t align='right'>%1</t>", _currentfuel];
 	(_display displayCtrl 17015) ctrlSetStructuredText parseText format ["%1/%2 Litres", ((fuel _veh) * _fuelmax), _fuelmax];
 
-	sleep 0.5;
+	sleep 0.1;
 };
 
 if ((getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf (_veh) >> "fuel")) != _typeRefuel) then {

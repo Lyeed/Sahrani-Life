@@ -185,7 +185,7 @@ if (hasInterface) then
 							[_veh, "HitEngine", 1] call public_fnc_setHitPointDamage;
 						};
 					};
-					_veh setFuel ((fuel _veh) - (((speed _veh) / conso) + (([_veh getVariable ["Trunk", []]] call public_fnc_weightGenerate) / 100000)));
+					_veh setFuel ((fuel _veh) - (((speed _veh) / _conso) + (([_veh getVariable ["Trunk", []]] call public_fnc_weightGenerate) / 100000)));
 				};
 				sleep 2;
 			};
