@@ -183,8 +183,9 @@ if (hasInterface) then
 						if (!((_curentfuel in ["SP95","SP98"]) && (_fuel in ["SP95","SP98"]))) then {
 							[_veh, "motorexplose", 20] call CBA_fnc_globalSay3d;
 							[_veh, "HitEngine", 1] call public_fnc_setHitPointDamage;
+							_conso = (getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _curentfuel >> "conso"));
 						};
-						_conso = (getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _curentfuel >> "conso"));
+
 					};
 
 					_veh setFuel ((fuel _veh) - (((speed _veh) / _conso) + (([_veh getVariable ["Trunk", []]] call public_fnc_weightGenerate) / 100000)));
