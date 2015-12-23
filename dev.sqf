@@ -124,7 +124,7 @@ player addMagazine "30Rnd_65x39_caseless_mag";
 */
 [] spawn
 {
-	_video = ["\lyeed\tablette_alysia.ogv", [0.0625,0.22,0.8625,0.62]] spawn BIS_fnc_playVideo;
+	_video = ["lyeed\tablette_alysia.ogv", [0.0625,0.22,0.8625,0.62]] spawn BIS_fnc_playVideo;
 	waitUntil {scriptDone _video};
 };
 

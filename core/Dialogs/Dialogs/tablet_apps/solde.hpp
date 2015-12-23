@@ -15,7 +15,7 @@
 #define SOLDE_BILLS_FRAME_IDC          7614
 #define SOLDE_BILLS_INFO_IDC           7615
 
-SOLDE_BACKGROUND = "\lyeed\images\back_bank.jpg";
+SOLDE_BACKGROUND = "lyeed\images\back_bank.jpg";
 SOLDE_IDCS[] =
 {
 	SOLDE_ATM_BACKGROUND_IDC,
@@ -59,7 +59,7 @@ class SOLDE_ATM_FRAME: RscFrame
 class SOLDE_ATM_PICTURE: RscPicture
 {
 	idc = SOLDE_ATM_PICTURE_IDC;
-	text = "\lyeed\images\solde_atm.paa";
+	text = "lyeed\images\solde_atm.paa";
 	
 	x = 0.55925 * safezoneW + safezoneX;
 	y = 0.383073 * safezoneH + safezoneY;

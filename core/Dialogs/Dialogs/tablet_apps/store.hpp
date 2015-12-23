@@ -4,7 +4,7 @@
 class STORE_BACK_IMAGE: RscPicture
 {
 	idc = STORE_BACK_IMAGE_IDC;
-	text = "\lyeed_IMG\data\global\back.paa";
+	text = "lyeed_IMG\data\global\back.paa";
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.346 * safezoneH + safezoneY;
@@ -27,7 +27,7 @@ class STORE_BACK_BUTTON: RscButtonSilent
 #define STORE_CATEGORY_INFO_IDC     8101
 #define STORE_CATEGORY_FRAME_IDC    8102
 
-STORE_BACKGROUND = "\lyeed\images\back_store.jpg";
+STORE_BACKGROUND = "lyeed\images\back_store.jpg";
 STORE_IDCS[] =
 {
 	STORE_CATEGORY_HEADER_IDC,
@@ -79,7 +79,7 @@ class STORE_CATEGORY_FRAME: RscFrame
 #define STORE_LICENSES_SELECTED_BACKGROUND_IDC       8119
 #define STORE_LICENSES_SELECTED_FRAME_IDC            8120
 
-STORE_LICENSES_BACKGROUND = "\lyeed\images\back_store_licenses.jpg";
+STORE_LICENSES_BACKGROUND = "lyeed\images\back_store_licenses.jpg";
 STORE_LICENSES_IDCS[] =
 {
 	STORE_LICENSES_LIST_HEADER_IDC,
@@ -171,7 +171,7 @@ class STORE_LICENSES_SELECTED_INFO: RscStructuredText
 class STORE_LICENSES_SELECTED_ACTION_IMAGE: RscPicture
 {
 	idc = STORE_LICENSES_SELECTED_ACTION_IMAGE_IDC;
-	text = "\lyeed\images\store_licenses_buy.paa";
+	text = "lyeed\images\store_licenses_buy.paa";
 
 	x = 0.587656 * safezoneW + safezoneX;
 	y = 0.522 * safezoneH + safezoneY;
@@ -202,7 +202,7 @@ class STORE_LICENSES_SELECTED_ACTION_BUTTON: RscButtonSilent
 #define STORE_APPLICATIONS_SELECTED_ACTION_BUTTON_IDC  8168
 #define STORE_APPLICATIONS_SELECTED_DESC_IDC           8169
 
-STORE_APPLICATIONS_BACKGROUND = "\lyeed\images\back.jpg";
+STORE_APPLICATIONS_BACKGROUND = "lyeed\images\back.jpg";
 STORE_APPLICATIONS_IDCS[] =
 {
 	STORE_APPLICATIONS_LIST_FRAME_IDC,
@@ -289,7 +289,7 @@ class STORE_APPLICATIONS_SELECTED_INFO: RscStructuredText
 class STORE_APPLICATIONS_SELECTED_ACTION_IMAGE: RscPicture
 {
 	idc = STORE_APPLICATIONS_SELECTED_ACTION_IMAGE_IDC;
-	text = "\lyeed\images\store_licenses_buy.paa";
+	text = "lyeed\images\store_licenses_buy.paa";
 
 	x = 0.572187 * safezoneW + safezoneX;
 	y = 0.577 * safezoneH + safezoneY;
@@ -338,7 +338,7 @@ class STORE_APPLICATIONS_SELECTED_DESC: RscStructuredText
 #define STORE_FORFAIT_ACTION_IMAGE_IDC            8149
 #define STORE_FORFAIT_ACTION_BUTTON_IDC           8150
 
-STORE_FORFAIT_BACKGROUND = "\lyeed\images\back.jpg";
+STORE_FORFAIT_BACKGROUND = "lyeed\images\back.jpg";
 STORE_FORFAIT_IDCS[] =
 {
 	STORE_FORFAIT_LIST_FRAME_IDC,
@@ -551,7 +551,7 @@ class STORE_FORFAIT_MAX_BLACKLIST_INFO: RscStructuredText
 class STORE_FORFAIT_ACTION_IMAGE: RscPicture
 {
 	idc = STORE_FORFAIT_ACTION_IMAGE_IDC;
-	text = "\lyeed\images\store_licenses_buy.paa";
+	text = "lyeed\images\store_licenses_buy.paa";
 
 	x = 0.592812 * safezoneW + safezoneX;
 	y = 0.599 * safezoneH + safezoneY;

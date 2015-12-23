@@ -1,13 +1,6 @@
 
 #include "common.hpp"
 
-/* Dialogs  */
-/*
-#include "Dialogs\DIALOG_admin.h"
-#include "Dialogs\DIALOG_arrest.hpp"
-#include "Dialogs\DIALOG_launder.hpp"
-#include "Dialogs\DIALOG_vehSteal.h"
-*/
 #include "Dialogs\RscDisplayAuctionHouse.hpp"
 #include "Dialogs\RscDisplayShopClothing.hpp"
 #include "Dialogs\RscDisplayShopArma.h"
@@ -31,7 +24,7 @@
 #include "Dialogs\RscDisplayFuel.hpp"
 #include "Dialogs\RscDisplayProcess.hpp"
 
-class RscTitles // Defines custom UI displays.
+class RscTitles
 {
 	#include "Hud\HUD_default.hpp"
 	#include "Hud\HUD_progressBar.hpp"

@@ -33,7 +33,7 @@
 #define APP_PREV_BUTTON_IDC   7543
 #define APP_STATUS_IDC        7544
 
-MAIN_BACKGROUND = "\lyeed\images\back.jpg";
+MAIN_BACKGROUND = "lyeed\images\back.jpg";
 MAIN_IDCS[] = 
 {
 	APP_1_IMAGE_IDC,
@@ -322,7 +322,7 @@ class APP_8_TITLE: RscStructuredText
 class APP_SMS_IMAGE: RscPicture
 {
 	idc = APP_SMS_IMAGE_IDC;
-	text = "\lyeed\data\app_main\new_sms.paa";
+	text = "lyeed\data\app_main\new_sms.paa";
 
 	x = 0.660359 * safezoneW + safezoneX;
 	y = 0.34798 * safezoneH + safezoneY;
@@ -344,8 +344,8 @@ class APP_SMS_BUTTON: RscButtonSilent
 {
 	idc = APP_SMS_BUTTON_IDC;
 	action = "[""phone_messages_read""] spawn public_fnc_tabletApp;";
-	onMouseEnter = "ctrlSetText[7503,""\lyeed\data\app_main\new_sms_select.paa""];";
-	onMouseExit = "ctrlSetText[7503,""\lyeed\data\app_main\new_sms.paa""];";
+	onMouseEnter = "ctrlSetText[7503,""lyeed\data\app_main\new_sms_select.paa""];";
+	onMouseExit = "ctrlSetText[7503,""lyeed\data\app_main\new_sms.paa""];";
 
 	x = 0.644375 * safezoneW + safezoneX;
 	y = 0.346 * safezoneH + safezoneY;
@@ -368,7 +368,7 @@ class APP_STATUS: RscStructuredText
 class APP_NEXT_IMAGE: RscPicture
 {
 	idc = APP_NEXT_IMAGE_IDC;
-	text = "\lyeed\data\app_main\right_arrow.paa";
+	text = "lyeed\data\app_main\right_arrow.paa";
 
 	x = 0.502031 * safezoneW + safezoneX;
 	y = 0.346 * safezoneH + safezoneY;
@@ -379,8 +379,8 @@ class APP_NEXT_BUTTON: RscButtonSilent
 {
 	idc = APP_NEXT_BUTTON_IDC;
 	action = "uiNamespace setVariable ['main_status', (uiNamespace getVariable ['main_status', 0]) + 1]; ['MAIN'] spawn public_fnc_tabletApp;";
-	onMouseEnter = "ctrlSetText[7540,""\lyeed\data\app_main\right_arrow_select.paa""];";
-	onMouseExit = "ctrlSetText[7540,""\lyeed\data\app_main\right_arrow.paa""];";
+	onMouseEnter = "ctrlSetText[7540,""lyeed\data\app_main\right_arrow_select.paa""];";
+	onMouseExit = "ctrlSetText[7540,""lyeed\data\app_main\right_arrow.paa""];";
 
 	x = 0.502031 * safezoneW + safezoneX;
 	y = 0.346 * safezoneH + safezoneY;
@@ -391,7 +391,7 @@ class APP_NEXT_BUTTON: RscButtonSilent
 class APP_PREV_IMAGE: RscPicture
 {
 	idc = APP_PREV_IMAGE_IDC;
-	text = "\lyeed\data\app_main\left_arrow.paa";
+	text = "lyeed\data\app_main\left_arrow.paa";
 
 	x = 0.487135 * safezoneW + safezoneX;
 	y = 0.346 * safezoneH + safezoneY;
@@ -402,8 +402,8 @@ class APP_PREV_BUTTON: RscButtonSilent
 {
 	idc = APP_PREV_BUTTON_IDC;
 	action = "uiNamespace setVariable ['main_status', (uiNamespace getVariable ['main_status', 0]) - 1]; ['MAIN'] spawn public_fnc_tabletApp;";
-	onMouseEnter = "ctrlSetText[7542,""\lyeed\data\app_main\left_arrow_select.paa""];";
-	onMouseExit = "ctrlSetText[7542,""\lyeed\data\app_main\left_arrow.paa""];";
+	onMouseEnter = "ctrlSetText[7542,""lyeed\data\app_main\left_arrow_select.paa""];";
+	onMouseExit = "ctrlSetText[7542,""lyeed\data\app_main\left_arrow.paa""];";
 
 	x = 0.487135 * safezoneW + safezoneX;
 	y = 0.346 * safezoneH + safezoneY;

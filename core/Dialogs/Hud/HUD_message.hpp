@@ -48,7 +48,7 @@ class RscHudMessage
 		class IMAGE: RscPicture
 		{
 			idc = 95001;
-			text = "\lyeed_IMG\data\message_system\info.paa";
+			text = "lyeed_IMG\data\message_system\info.paa";
 
 			x = 0.365937 * safezoneW + safezoneX;
 			y = 0.071 * safezoneH + safezoneY;

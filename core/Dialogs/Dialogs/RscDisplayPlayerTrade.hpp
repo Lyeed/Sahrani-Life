@@ -1,81 +1,82 @@
-#define TITLE_IDC                                     -1
-#define PLAYER_FRAME_IDC                              -1
-#define PLAYER_HEADER_IDC                             -1
-#define PLAYER_INVENTORY_FRAME_IDC                    -1
-#define PLAYER_INVENTORY_HEADER_IDC                   -1
-#define PLAYER_INVENTORY_LIST_IDC                     10016
-#define PLAYER_INVENTORY_ACTION_ADD_SINGLE_IMAGE_IDC  10001
-#define PLAYER_INVENTORY_ACTION_ADD_SINGLE_BUTTON_IDC 10002
-#define PLAYER_INVENTORY_ACTION_ADD_DOUBLE_IMAGE_IDC  10003
-#define PLAYER_INVENTORY_ACTION_ADD_DOUBLE_BUTTON_IDC 10004
-#define PLAYER_KEY_FRAME_IDC                          -1
-#define PLAYER_KEY_HEADER_IDC                         -1
-#define PLAYER_KEY_LIST_IDC                           10005
-#define PLAYER_KEY_ACTION_ADD_IMAGE_IDC               10006
-#define PLAYER_KEY_ACTION_ADD_BUTTON_IDC              10007
-#define PLAYER_MONEY_FRAME_IDC                        -1
-#define PLAYER_MONEY_HEADER_IDC                       -1
-#define PLAYER_MONEY_EDIT_IDC                         10008
-#define PLAYER_MONEY_ACTION_ADD_IMAGE_IDC             10009
-#define PLAYER_MONEY_ACTION_ADD_BUTTON_IDC            10010
-#define TRADE_FRAME_IDC                               -1
-#define TRADE_HEADER_IDC                              -1
-#define TRADE_LIST_FRAME_IDC                          -1
-#define TRADE_LIST_HEADER_IDC                         -1
-#define TRADE_LIST_LIST_IDC                           10011
-#define TRADE_LIST_ACTION_REMOVE_IMAGE_IDC            10012
-#define TRADE_LIST_ACTION_REMOVE_BUTTON_IDC           10013
-#define ACTION_VALIDATE_IMAGE_IDC                     10014
-#define ACTION_VALIDATE_BUTTON_IDC                    10015
-
-class RscDisplayPlayerTrade: default_base_dialog
+class RscDisplayPlayerTrade: default_interaction_back_dialog
 {
 	idd = 10000;
 	name = "RscDisplayPlayerTrade";
 
-	class controlsBackground 
+	class controlsBackground: DEFAULT_controlsBackground
 	{
-		class BORDER: RscPicture
+		class BACKGROUND: BACKGROUND
 		{
-			idc = -1;
-			text = "\lyeed_IMG\data\frames\frame_2_borderless.paa";
-
-			x = 0.247344 * safezoneW + safezoneX;
-			y = 0.214 * safezoneH + safezoneY;
-			w = 0.505313 * safezoneW;
-			h = 0.638 * safezoneH;
+			x = 0.262812 * safezoneW + safezoneX;
+			y = 0.269 * safezoneH + safezoneY;
+			w = 0.474375 * safezoneW;
+			h = 0.539 * safezoneH;
 		};
-		class BACKGROUND: RscPicture
+		class FRAME: FRAME
 		{
-			idc = -1;
-			text = "\lyeed_IMG\data\player_interactions\background.jpg";
-		
-			x = 0.267969 * safezoneW + safezoneX;
-			y = 0.247 * safezoneH + safezoneY;
-			w = 0.464062 * safezoneW;
-			h = 0.572 * safezoneH;
+			x = 0.262812 * safezoneW + safezoneX;
+			y = 0.236 * safezoneH + safezoneY;
+			w = 0.474375 * safezoneW;
+			h = 0.583 * safezoneH;
 		};
 	};
 
-	class controls 
+	class controls: DEFAULT_controls
 	{
-		class TITLE: RscStructuredText
+		class TITLE: TITLE
 		{
-			idc = TITLE_IDC;
-			text = "<t align='center' size='1.8'>Echange</t>";
-			colorBackground[] = {0,0,0,0.8};
+			text = "<t size='1.5' align='center'>Echange</t>";
 
-			x = 0.267969 * safezoneW + safezoneX;
-			y = 0.247 * safezoneH + safezoneY;
-			w = 0.464062 * safezoneW;
-			h = 0.044 * safezoneH;
+			x = 0.262813 * safezoneW + safezoneX;
+			y = 0.236 * safezoneH + safezoneY;
+			w = 0.474375 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+
+		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME
+		{
+			x = 0.231875 * safezoneW + safezoneX;
+			y = 0.28 * safezoneH + safezoneY;
+		};
+		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND
+		{
+			x = 0.231875 * safezoneW + safezoneX;
+			y = 0.28 * safezoneH + safezoneY;
+		};
+		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE
+		{
+			x = 0.239614 * safezoneW + safezoneX;
+			y = 0.290664 * safezoneH + safezoneY;
+		};
+		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON
+		{
+			x = 0.231875 * safezoneW + safezoneX;
+			y = 0.28 * safezoneH + safezoneY;
+		};
+
+		class OPTION_BACK_FRAME: OPTION_BACK_FRAME
+		{
+			x = 0.231875 * safezoneW + safezoneX;
+			y = 0.335 * safezoneH + safezoneY;
+		};
+		class OPTION_BACK_BACKGROUND: OPTION_BACK_BACKGROUND
+		{
+			x = 0.231875 * safezoneW + safezoneX;
+			y = 0.335 * safezoneH + safezoneY;
+		};
+		class OPTION_BACK_IMAGE: OPTION_BACK_IMAGE
+		{
+			x = 0.239304 * safezoneW + safezoneX;
+			y = 0.34505 * safezoneH + safezoneY;
+		};
+		class OPTION_BACK_BUTTON: OPTION_BACK_BUTTON
+		{
+			x = 0.231875 * safezoneW + safezoneX;
+			y = 0.335 * safezoneH + safezoneY;
 		};
 
 		class PLAYER_FRAME: RscFrame
 		{
-			idc = PLAYER_FRAME_IDC;
-			colorText[] = {0,0,0,0.8};
-			
 			x = 0.273125 * safezoneW + safezoneX;
 			y = 0.302 * safezoneH + safezoneY;
 			w = 0.216563 * safezoneW;
@@ -83,7 +84,6 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class PLAYER_HEADER: RscStructuredText
 		{
-			idc = PLAYER_HEADER_IDC;
 			text = "<t align='center'>Vous</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -95,9 +95,6 @@ class RscDisplayPlayerTrade: default_base_dialog
 
 		class PLAYER_INVENTORY_FRAME: RscFrame
 		{
-			idc = PLAYER_INVENTORY_FRAME_IDC;
-			colorText[] = {0,0,0,0.8};
-			
 			x = 0.283437 * safezoneW + safezoneX;
 			y = 0.335 * safezoneH + safezoneY;
 			w = 0.195937 * safezoneW;
@@ -105,7 +102,6 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class PLAYER_INVENTORY_HEADER: RscStructuredText
 		{
-			idc = PLAYER_INVENTORY_HEADER_IDC;
 			text = "<t align='center'>Inventaire</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -116,8 +112,7 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class PLAYER_INVENTORY_LIST: RscListbox
 		{
-			idc = PLAYER_INVENTORY_LIST_IDC;
-			colorBackground[] = {0,0,0,0.6};
+			idc = 10016;
 
 			x = 0.283437 * safezoneW + safezoneX;
 			y = 0.357 * safezoneH + safezoneY;
@@ -126,8 +121,8 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class PLAYER_INVENTORY_ACTION_ADD_SINGLE_IMAGE: RscPicture
 		{
-			idc = PLAYER_INVENTORY_ACTION_ADD_SINGLE_IMAGE_IDC;
-			text = "\lyeed_IMG\data\trade\inventory_add_single.paa";
+			idc = 10001;
+			text = "lyeed_IMG\data\trade\inventory_add_single.paa";
 
 			x = 0.432969 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
@@ -136,10 +131,10 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class PLAYER_INVENTORY_ACTION_ADD_SINGLE_BUTTON: RscButtonSilent
 		{
-			idc = PLAYER_INVENTORY_ACTION_ADD_SINGLE_BUTTON_IDC;
+			idc = 10002;
 			action = "[false] call public_fnc_interactionMenu_action_trade_add_inventory;";
-			onMouseEnter = "ctrlSetText[10001,""\lyeed_IMG\data\trade\inventory_add_single_select.paa""];";
-			onMouseExit = "ctrlSetText[10001,""\lyeed_IMG\data\trade\inventory_add_single.paa""];";
+			onMouseEnter = "ctrlSetText[10001,""lyeed_IMG\data\trade\inventory_add_single_select.paa""];";
+			onMouseExit = "ctrlSetText[10001,""lyeed_IMG\data\trade\inventory_add_single.paa""];";
 
 			x = 0.432969 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
@@ -148,8 +143,8 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class PLAYER_INVENTORY_ACTION_ADD_DOUBLE_IMAGE: RscPicture
 		{
-			idc = PLAYER_INVENTORY_ACTION_ADD_DOUBLE_IMAGE_IDC;
-			text = "\lyeed_IMG\data\trade\inventory_add_double.paa";
+			idc = 10003;
+			text = "lyeed_IMG\data\trade\inventory_add_double.paa";
 
 			x = 0.432969 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;
@@ -158,10 +153,10 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class PLAYER_INVENTORY_ACTION_ADD_DOUBLE_BUTTON: RscButtonSilent
 		{
-			idc = PLAYER_INVENTORY_ACTION_ADD_DOUBLE_BUTTON_IDC;
+			idc = 10004;
 			action = "[true] call public_fnc_interactionMenu_action_trade_add_inventory;";
-			onMouseEnter = "ctrlSetText[10003,""\lyeed_IMG\data\trade\inventory_add_double_select.paa""];";
-			onMouseExit = "ctrlSetText[10003,""\lyeed_IMG\data\trade\inventory_add_double.paa""];";
+			onMouseEnter = "ctrlSetText[10003,""lyeed_IMG\data\trade\inventory_add_double_select.paa""];";
+			onMouseExit = "ctrlSetText[10003,""lyeed_IMG\data\trade\inventory_add_double.paa""];";
 
 			x = 0.432969 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;
@@ -171,9 +166,6 @@ class RscDisplayPlayerTrade: default_base_dialog
 
 		class PLAYER_KEY_FRAME: RscFrame
 		{
-			idc = PLAYER_KEY_FRAME_IDC;
-			colorText[] = {0,0,0,0.8};
-			
 			x = 0.283437 * safezoneW + safezoneX;
 			y = 0.566 * safezoneH + safezoneY;
 			w = 0.195937 * safezoneW;
@@ -181,7 +173,6 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class PLAYER_KEY_HEADER: RscStructuredText
 		{
-			idc = PLAYER_KEY_HEADER_IDC;
 			text = "<t align='center'>Clefs</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -192,8 +183,7 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class PLAYER_KEY_LIST: RscListbox
 		{
-			idc = PLAYER_KEY_LIST_IDC;
-			colorBackground[] = {0,0,0,0.6};
+			idc = 10005;
 
 			x = 0.283437 * safezoneW + safezoneX;
 			y = 0.588 * safezoneH + safezoneY;
@@ -202,8 +192,8 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class PLAYER_KEY_ACTION_ADD_IMAGE: RscPicture
 		{
-			idc = PLAYER_KEY_ACTION_ADD_IMAGE_IDC;
-			text = "\lyeed_IMG\data\trade\add.paa";
+			idc = 10006;
+			text = "lyeed_IMG\data\trade\add.paa";
 
 			x = 0.432969 * safezoneW + safezoneX;
 			y = 0.621 * safezoneH + safezoneY;
@@ -212,10 +202,10 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class PLAYER_KEY_ACTION_ADD_BUTTON: RscButtonSilent
 		{
-			idc = PLAYER_KEY_ACTION_ADD_BUTTON_IDC;
+			idc = 10007;
 			action = "[] call public_fnc_interactionMenu_action_trade_add_key;";
-			onMouseEnter = "ctrlSetText[10006,""\lyeed_IMG\data\trade\add_select.paa""];";
-			onMouseExit = "ctrlSetText[10006,""\lyeed_IMG\data\trade\add.paa""];";
+			onMouseEnter = "ctrlSetText[10006,""lyeed_IMG\data\trade\add_select.paa""];";
+			onMouseExit = "ctrlSetText[10006,""lyeed_IMG\data\trade\add.paa""];";
 
 			x = 0.432969 * safezoneW + safezoneX;
 			y = 0.621 * safezoneH + safezoneY;
@@ -225,9 +215,6 @@ class RscDisplayPlayerTrade: default_base_dialog
 
 		class PLAYER_MONEY_FRAME: RscFrame
 		{
-			idc = PLAYER_MONEY_FRAME_IDC;
-			colorText[] = {0,0,0,0.8};
-			
 			x = 0.283437 * safezoneW + safezoneX;
 			y = 0.731 * safezoneH + safezoneY;
 			w = 0.195937 * safezoneW;
@@ -235,7 +222,6 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class PLAYER_MONEY_HEADER: RscStructuredText
 		{
-			idc = PLAYER_MONEY_HEADER_IDC;
 			text = "<t align='center'>Porte feuille</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -246,7 +232,7 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class PLAYER_MONEY_EDIT: RscEdit
 		{
-			idc = PLAYER_MONEY_EDIT_IDC;
+			idc = 10008;
 			text = "0";
 
 			x = 0.298906 * safezoneW + safezoneX;
@@ -256,8 +242,8 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class PLAYER_MONEY_ACTION_ADD_IMAGE: RscPicture
 		{
-			idc = PLAYER_MONEY_ACTION_ADD_IMAGE_IDC;
-			text = "\lyeed_IMG\data\trade\add.paa";
+			idc = 10009;
+			text = "lyeed_IMG\data\trade\add.paa";
 
 			x = 0.433278 * safezoneW + safezoneX;
 			y = 0.75806 * safezoneH + safezoneY;
@@ -266,10 +252,10 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class PLAYER_MONEY_ACTION_ADD_BUTTON: RscButtonSilent
 		{
-			idc = PLAYER_MONEY_ACTION_ADD_BUTTON_IDC;
+			idc = 10010;
 			action = "[] call public_fnc_interactionMenu_action_trade_add_money;";
-			onMouseEnter = "ctrlSetText[10009,""\lyeed_IMG\data\trade\add_select.paa""];";
-			onMouseExit = "ctrlSetText[10009,""\lyeed_IMG\data\trade\add.paa""];";
+			onMouseEnter = "ctrlSetText[10009,""lyeed_IMG\data\trade\add_select.paa""];";
+			onMouseExit = "ctrlSetText[10009,""lyeed_IMG\data\trade\add.paa""];";
 
 			x = 0.433278 * safezoneW + safezoneX;
 			y = 0.75806 * safezoneH + safezoneY;
@@ -279,9 +265,6 @@ class RscDisplayPlayerTrade: default_base_dialog
 
 		class TRADE_FRAME: RscFrame
 		{
-			idc = TRADE_FRAME_IDC;
-			colorText[] = {0,0,0,0.8};
-			
 			x = 0.510312 * safezoneW + safezoneX;
 			y = 0.302 * safezoneH + safezoneY;
 			w = 0.216563 * safezoneW;
@@ -289,21 +272,17 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class TRADE_HEADER: RscStructuredText
 		{
-			idc = TRADE_HEADER_IDC;
 			text = "<t align='center'>A échanger</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
 			x = 0.510312 * safezoneW + safezoneX;
 			y = 0.302 * safezoneH + safezoneY;
-			w = 0.216563 * safezoneW;
+			w = 0.211406 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 
 		class TRADE_LIST_FRAME: RscFrame
 		{
-			idc = TRADE_LIST_FRAME_IDC;
-			colorText[] = {0,0,0,0.8};
-			
 			x = 0.515469 * safezoneW + safezoneX;
 			y = 0.335 * safezoneH + safezoneY;
 			w = 0.195937 * safezoneW;
@@ -311,7 +290,6 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class TRADE_LIST_HEADER: RscStructuredText
 		{
-			idc = TRADE_LIST_HEADER_IDC;
 			text = "<t align='center'>Liste</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -322,8 +300,7 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class TRADE_LIST_LIST: RscListbox
 		{
-			idc = TRADE_LIST_LIST_IDC;
-			colorBackground[] = {0,0,0,0.6};
+			idc = 10011;
 
 			x = 0.515469 * safezoneW + safezoneX;
 			y = 0.357 * safezoneH + safezoneY;
@@ -332,8 +309,8 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class TRADE_LIST_ACTION_REMOVE_IMAGE: RscPicture
 		{
-			idc = TRADE_LIST_ACTION_REMOVE_IMAGE_IDC;
-			text = "\lyeed_IMG\data\trade\delete.paa";
+			idc = 10012;
+			text = "lyeed_IMG\data\trade\delete.paa";
 
 			x = 0.670156 * safezoneW + safezoneX;
 			y = 0.368 * safezoneH + safezoneY;
@@ -342,10 +319,10 @@ class RscDisplayPlayerTrade: default_base_dialog
 		};
 		class TRADE_LIST_ACTION_REMOVE_BUTTON: RscButtonSilent
 		{
-			idc = TRADE_LIST_ACTION_REMOVE_BUTTON_IDC;
+			idc = 10013;
 			action = "[] call public_fnc_interactionMenu_action_trade_remove;";
-			onMouseEnter = "ctrlSetText[10012,""\lyeed_IMG\data\trade\delete_select.paa""];";
-			onMouseExit = "ctrlSetText[10012,""\lyeed_IMG\data\trade\delete.paa""];";
+			onMouseEnter = "ctrlSetText[10012,""lyeed_IMG\data\trade\delete_select.paa""];";
+			onMouseExit = "ctrlSetText[10012,""lyeed_IMG\data\trade\delete.paa""];";
 
 			x = 0.670156 * safezoneW + safezoneX;
 			y = 0.368 * safezoneH + safezoneY;
@@ -353,28 +330,66 @@ class RscDisplayPlayerTrade: default_base_dialog
 			h = 0.044 * safezoneH;
 		};
 
-		class ACTION_VALIDATE_IMAGE: RscPicture
+		class ACTION_FRAME: RscFrame
 		{
-			idc = ACTION_VALIDATE_IMAGE_IDC;
-			text = "\lyeed_IMG\data\trade\validate.paa";
+			idc = 10014;
+			colorText[] = {0,0,0,0.8};
 
-			x = 0.5825 * safezoneW + safezoneX;
+			x = 0.561875 * safezoneW + safezoneX;
 			y = 0.676 * safezoneH + safezoneY;
-			w = 0.0670312 * safezoneW;
-			h = 0.099 * safezoneH;
+			w = 0.108281 * safezoneW;
+			h = 0.055 * safezoneH;
 		};
-		class ACTION_VALIDATE_BUTTON: RscButtonSilent
+		class ACTION_BACKGROUND: RscStructuredText
 		{
-			idc = ACTION_VALIDATE_BUTTON_IDC;
-			action = "[] call public_fnc_interactionMenu_action_trade_propose;";
-			onMouseEnter = "ctrlSetText[10014,""\lyeed_IMG\data\trade\validate_select.paa""];";
-			onMouseExit = "ctrlSetText[10014,""\lyeed_IMG\data\trade\validate.paa""];";
-			tooltip = "Valider l'échange";
+			idc = 10015;
+			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.5825 * safezoneW + safezoneX;
+			x = 0.561875 * safezoneW + safezoneX;
 			y = 0.676 * safezoneH + safezoneY;
-			w = 0.0670312 * safezoneW;
-			h = 0.099 * safezoneH;
+			w = 0.108281 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+		class ACTION_IMAGE: RscPicture
+		{
+			idc = 10016;
+			text = "lyeed_IMG\data\interactions\player_to_player_basics\action_trade.paa";
+
+			x = 0.565119 * safezoneW + safezoneX;
+			y = 0.681354 * safezoneH + safezoneY;
+			w = 0.0257812 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+		class ACTION_TEXT: RscStructuredText
+		{
+			idc = 10017;
+			text = "<t align='left' size='1.3'>Echanger</t>";
+			colorBackground[] = {0,0,0,0};
+
+			x = 0.593907 * safezoneW + safezoneX;
+			y = 0.685222 * safezoneH + safezoneY;
+			w = 0.0721875 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+		class ACTION_BUTTON: RscButtonSilent
+		{
+			idc = 10018;
+			action = "[] call public_fnc_interactionMenu_action_trade_propose;";
+			onMouseEnter = "\
+			ctrlSetText[10016,""lyeed_IMG\data\interactions\player_to_player_basics\action_trade_select.paa""];\
+			ctrlShow[10014, false];\
+			((findDisplay 10000) displayCtrl 10015) ctrlSetBackgroundColor [1,1,1,1];\
+			((findDisplay 10000) displayCtrl 10017) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Echanger</t>"";";
+			onMouseExit = "\
+			ctrlSetText[10016,""lyeed_IMG\data\interactions\player_to_player_basics\action_trade.paa""];\
+			ctrlShow[10014, true];\
+			((findDisplay 10000) displayCtrl 10015) ctrlSetBackgroundColor [0,0,0,0.6];\
+			((findDisplay 10000) displayCtrl 10017) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Echanger</t>"";";
+
+			x = 0.561875 * safezoneW + safezoneX;
+			y = 0.676 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
+			h = 0.055 * safezoneH;
 		};
 	};
 };

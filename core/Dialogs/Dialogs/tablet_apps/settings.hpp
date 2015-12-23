@@ -22,7 +22,7 @@
 #define SETTINGS_TASKFORCE_INFO_IDC				7821
 #define SETTINGS_FPS_FRAME_IDC					7825
 
-SETTINGS_BACKGROUND = "\lyeed\images\back.jpg";
+SETTINGS_BACKGROUND = "lyeed\images\back.jpg";
 SETTINGS_IDCS[] =
 {
 	SETTINGS_FPS_HEADER_IDC,

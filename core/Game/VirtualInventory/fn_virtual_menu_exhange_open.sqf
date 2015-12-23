@@ -59,8 +59,10 @@ g_interaction_target setVariable ["trunk_in_use_ID", (getPlayerUID player), true
 
 if (!_isCar) then
 {
-	ctrlShow[516, false];
-	ctrlShow[521, false];
+	ctrlShow[19503, false];
+	ctrlShow[19504, false];
+	ctrlShow[19505, false];
+	ctrlShow[19506, false];
 };
 
 (_display displayCtrl 501) ctrlSetStructuredText parseText format["<t align='center' size='1.8'>%1</t>", getText(configFile >> "CfgVehicles" >> typeOf(g_interaction_target) >> "displayName")];

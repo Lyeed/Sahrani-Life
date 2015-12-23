@@ -395,10 +395,9 @@ class RscProgress
 	texture = "";
 	shadow = 0;
 	colorFrame[] = {0, 0, 0, 1};
-	colorBackground[] = {0, 0, 0, 0.7};
+	colorBackground[] = {0, 0, 0, 0.6};
 	colorBar[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 };
-class Life_RscProgress : RscProgress {};
 
 class RscListBox
 {
@@ -1149,6 +1148,7 @@ class default_interaction_back_dialog: default_base_dialog
 		};
 		class OPTION_BACK_BUTTON: RscButtonSilent
 		{
+			idc = 19506;
 			action = "[] call public_fnc_interactions_recall;";
 			tooltip = "Retour";
 			onMouseEnter = "((uinamespace getvariable 'current_interaction_dialog') displayCtrl 19504) ctrlSetBackgroundColor [1,1,1,1];\

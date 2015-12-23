@@ -49,6 +49,8 @@ while {(!g_interrupted && (_unit getVariable ["is_coma", false]) && !(player get
 	};
 };
 
-if (g_interrupted) then {
+if (g_interrupted) then 
+{
+	player playAction "medicStop";
 	titleText["* Annulé *", "PLAIN DOWN"];
 };

@@ -26,4 +26,4 @@ if ((binocular player) != "") then {_inv_arma pushBack (binocular player);};
 	};
 } forEach ((primaryWeaponItems player) + (assignedItems player) + (uniformItems player) + (vestItems player));
 
-[([] call public_fnc_getInv), _inv_arma, g_cash] remoteExecCall ["public_fnc_interactionMenu_action_search_return", _from];
+[([] call public_fnc_getInv), _inv_arma, g_cash] remoteExec ["public_fnc_interactionMenu_action_search_return", _from];

@@ -7,7 +7,7 @@
 #define VEHICLES_DISTANCE_HEADER_IDC	7706
 #define VEHICLES_DISTANCE_INFO_IDC		7707
 
-VEHICLES_BACKGROUND = "\lyeed\images\back.jpg";
+VEHICLES_BACKGROUND = "lyeed\images\back.jpg";
 VEHICLES_IDCS[] =
 {
 	VEHICLES_LIST_FRAME_IDC,
@@ -20,7 +20,7 @@ VEHICLES_IDCS[] =
 class VEHICLES_DATA_PICTURE: RscPicture
 {
 	idc = VEHICLES_DATA_PICTURE_IDC;
-	text = "\lyeed\images\vehicles_noSignal.jpg";
+	text = "lyeed\images\vehicles_noSignal.jpg";
 
 	x = 0.319531 * safezoneW + safezoneX;
 	y = 0.346 * safezoneH + safezoneY;

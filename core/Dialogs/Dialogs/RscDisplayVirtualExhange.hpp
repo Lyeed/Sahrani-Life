@@ -1,25 +1,21 @@
-class RscDisplayVirtualExhange: default_base_dialog
+class RscDisplayVirtualExhange: default_interaction_back_dialog
 {
 	idd = 500;
 	name = "RscDisplayVirtualExhange";
 	
-	class controlsBackground
+	class controlsBackground: DEFAULT_controlsBackground
 	{
-		class BORDER: RscPicture
+		class BACKGROUND: BACKGROUND
 		{
-			idc = -1;
-			text = "\lyeed_IMG\data\frames\frame_2_borderless.paa";
+			text = "lyeed_IMG\data\vehicle\background.jpg";
 
-			x = 0.311797 * safezoneW + safezoneX;
-			y = 0.2778 * safezoneH + safezoneY;
-			w = 0.329479 * safezoneW;
-			h = 0.505074 * safezoneH;
+			x = 0.324687 * safezoneW + safezoneX;
+			y = 0.302 * safezoneH + safezoneY;
+			w = 0.304219 * safezoneW;
+			h = 0.462 * safezoneH;
 		};
-		class BACKGROUND: RscPicture
+		class FRAME: FRAME
 		{
-			idc = -1;
-			text = "\lyeed_IMG\data\vehicle\background.jpg";
-		
 			x = 0.324687 * safezoneW + safezoneX;
 			y = 0.302 * safezoneH + safezoneY;
 			w = 0.304219 * safezoneW;
@@ -28,7 +24,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 
 		class VEHICLE_BAR: RscText
 		{
-			idc = -1;
 			colorBackground[] = {0,0,0,0.8};
 			
 			x = 0.329844 * safezoneW + safezoneX;
@@ -38,7 +33,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 		};
 		class PLAYER_BAR: RscText
 		{
-			idc = -1;
 			colorBackground[] = {0,0,0,0.8};
 			
 			x = 0.494844 * safezoneW + safezoneX;
@@ -49,7 +43,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 
 		class VEHICLE_PROGRESS_BACKGROUND: RscText
 		{
-			idc = -1;
 			colorBackground[] = {0,0,0,0.6};
 			
 			x = 0.329844 * safezoneW + safezoneX;
@@ -59,7 +52,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 		};
 		class PLAYER_PROGRESS_BACKGROUND: RscText
 		{
-			idc = -1;
 			colorBackground[] = {0,0,0,0.6};
 			
 			x = 0.494844 * safezoneW + safezoneX;
@@ -69,12 +61,11 @@ class RscDisplayVirtualExhange: default_base_dialog
 		};
 	};
 
-	class controls
+	class controls: DEFAULT_controls
 	{
-		class TITLE: RscStructuredText
+		class TITLE: TITLE
 		{
 			idc = 501;
-			colorBackground[] = {0,0,0,0.8};
 
 			x = 0.324687 * safezoneW + safezoneX;
 			y = 0.302 * safezoneH + safezoneY;
@@ -82,11 +73,49 @@ class RscDisplayVirtualExhange: default_base_dialog
 			h = 0.0384445 * safezoneH;
 		};
 
+		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME
+		{
+			x = 0.29375 * safezoneW + safezoneX;
+			y = 0.335 * safezoneH + safezoneY;
+		};
+		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND
+		{
+			x = 0.29375 * safezoneW + safezoneX;
+			y = 0.335 * safezoneH + safezoneY;			
+		};
+		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE
+		{
+			x = 0.301072 * safezoneW + safezoneX;
+			y = 0.346322 * safezoneH + safezoneY;
+		};
+		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON
+		{
+			x = 0.29375 * safezoneW + safezoneX;
+			y = 0.335 * safezoneH + safezoneY;
+		};
+		class OPTION_BACK_FRAME: OPTION_BACK_FRAME
+		{
+			x = 0.29375 * safezoneW + safezoneX;
+			y = 0.39 * safezoneH + safezoneY;
+		};
+		class OPTION_BACK_BACKGROUND: OPTION_BACK_BACKGROUND
+		{
+			x = 0.29375 * safezoneW + safezoneX;
+			y = 0.39 * safezoneH + safezoneY;			
+		};
+		class OPTION_BACK_IMAGE: OPTION_BACK_IMAGE
+		{
+			x = 0.300762 * safezoneW + safezoneX;
+			y = 0.39968 * safezoneH + safezoneY;
+		};
+		class OPTION_BACK_BUTTON: OPTION_BACK_BUTTON
+		{
+			x = 0.29375 * safezoneW + safezoneX;
+			y = 0.39 * safezoneH + safezoneY;			
+		};
+
 		class VEHICLE_FRAME: RscFrame
 		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-
 			x = 0.329844 * safezoneW + safezoneX;
 			y = 0.346 * safezoneH + safezoneY;
 			w = 0.128906 * safezoneW;
@@ -94,7 +123,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 		};
 		class VEHICLE_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Cible</t>";
 			colorBackground[] = {0.5450980392156863,0.7647058823529412,0.2901960784313725,1};
 			
@@ -103,7 +131,7 @@ class RscDisplayVirtualExhange: default_base_dialog
 			w = 0.128906 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-		class VEHICLE_PROGRESSBAR: Life_RscProgress
+		class VEHICLE_PROGRESSBAR: RscProgress
 		{
 			idc = 517;
 
@@ -125,7 +153,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 
 		class VEHICLE_WEIGHT_ACTUAL_BAR: RscText
 		{
-			idc = -1;
 			colorBackground[] = {0,0,0,0.8};
 			
 			x = 0.391719 * safezoneW + safezoneX;
@@ -136,7 +163,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 
 		class VEHICLE_WEIGHT_ACTUAL_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>ACTUEL</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -148,7 +174,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 		class VEHICLE_WEIGHT_ACTUAL_INFO: RscStructuredText
 		{
 			idc = 502;
-			text = "";
 			colorBackground[] = {0,0,0,0.6};
 
 			x = 0.329844 * safezoneW + safezoneX;
@@ -159,7 +184,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 
 		class VEHICLE_WEIGHT_MAX_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>MAX</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -171,7 +195,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 		class VEHICLE_WEIGHT_MAX_INFO: RscStructuredText
 		{
 			idc = 514;
-			text = "";
 			colorBackground[] = {0,0,0,0.6};
 
 			x = 0.396875 * safezoneW + safezoneX;
@@ -182,7 +205,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 
 		class VEHICLE_INVENTORY_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Inventaire</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -204,9 +226,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 
 		class PLAYER_FRAME: RscFrame
 		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-			
 			x = 0.494844 * safezoneW + safezoneX;
 			y = 0.346 * safezoneH + safezoneY;
 			w = 0.128906 * safezoneW;
@@ -214,7 +233,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 		};
 		class PLAYER_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Vous</t>";
 			colorBackground[] = {0.0117647058823529,0.6627450980392157,0.9568627450980392,1};
 			
@@ -224,7 +242,7 @@ class RscDisplayVirtualExhange: default_base_dialog
 			h = 0.022 * safezoneH;
 		};
 
-		class PLAYER_PROGRESSBAR: Life_RscProgress
+		class PLAYER_PROGRESSBAR: RscProgress
 		{
 			idc = 518;
 
@@ -246,7 +264,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 
 		class PLAYER_WEIGHT_ACTUAL_BAR: RscText
 		{
-			idc = -1;
 			colorBackground[] = {0,0,0,0.8};
 			
 			x = 0.556719 * safezoneW + safezoneX;
@@ -257,7 +274,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 
 		class PLAYER_WEIGHT_ACTUAL_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>ACTUEL</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -269,7 +285,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 		class PLAYER_WEIGHT_ACTUAL_INFO: RscStructuredText
 		{
 			idc = 504;
-			text = "";
 			colorBackground[] = {0,0,0,0.6};
 			
 			x = 0.494844 * safezoneW + safezoneX;
@@ -280,7 +295,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 
 		class PLAYER_WEIGHT_MAX_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>MAX</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -292,7 +306,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 		class PLAYER_WEIGHT_MAX_INFO: RscStructuredText
 		{
 			idc = 515;
-			text = "";
 			colorBackground[] = {0,0,0,0.6};
 			
 			x = 0.561875 * safezoneW + safezoneX;
@@ -303,7 +316,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 
 		class PLAYER_INVENTORY_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Inventaire</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -315,7 +327,6 @@ class RscDisplayVirtualExhange: default_base_dialog
 		class PLAYER_INVENTORY_LIST: RscListbox
 		{
 			idc = 505;
-			colorBackground[] = {0,0,0,0.6};
 			
 			x = 0.494844 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;
@@ -326,7 +337,7 @@ class RscDisplayVirtualExhange: default_base_dialog
 		class ACTION_GET_SINGLE_IMAGE: RscPicture
 		{
 			idc = 506;
-			text = "\lyeed_IMG\data\vehicle\trunk\right_arrow_single.paa";
+			text = "lyeed_IMG\data\vehicle\trunk\right_arrow_single.paa";
 
 			x = 0.463906 * safezoneW + safezoneX;
 			y = 0.478 * safezoneH + safezoneY;
@@ -338,8 +349,8 @@ class RscDisplayVirtualExhange: default_base_dialog
 			idc = 507;
 			action = "[false] call public_fnc_virtual_menu_exhange_take;";
 			tooltip = "Récupérer la quantité minimum";
-			onMouseEnter = "ctrlSetText[506,""\lyeed_IMG\data\vehicle\trunk\right_arrow_single_select.paa""];";
-			onMouseExit = "ctrlSetText[506,""\lyeed_IMG\data\vehicle\trunk\right_arrow_single.paa""];";
+			onMouseEnter = "ctrlSetText[506,""lyeed_IMG\data\vehicle\trunk\right_arrow_single_select.paa""];";
+			onMouseExit = "ctrlSetText[506,""lyeed_IMG\data\vehicle\trunk\right_arrow_single.paa""];";
 
 			x = 0.463906 * safezoneW + safezoneX;
 			y = 0.478 * safezoneH + safezoneY;
@@ -350,7 +361,7 @@ class RscDisplayVirtualExhange: default_base_dialog
 		class ACTION_GET_DOUBLE_IMAGE: RscPicture
 		{
 			idc = 508;
-			text = "\lyeed_IMG\data\vehicle\trunk\right_arrow_double.paa";
+			text = "lyeed_IMG\data\vehicle\trunk\right_arrow_double.paa";
 
 			x = 0.463906 * safezoneW + safezoneX;
 			y = 0.533 * safezoneH + safezoneY;
@@ -362,8 +373,8 @@ class RscDisplayVirtualExhange: default_base_dialog
 			idc = 509;
 			action = "[true] call public_fnc_virtual_menu_exhange_take;";
 			tooltip = "Récupérer la quantité maximum";
-			onMouseEnter = "ctrlSetText[508,""\lyeed_IMG\data\vehicle\trunk\right_arrow_double_select.paa""];";
-			onMouseExit = "ctrlSetText[508,""\lyeed_IMG\data\vehicle\trunk\right_arrow_double.paa""];";
+			onMouseEnter = "ctrlSetText[508,""lyeed_IMG\data\vehicle\trunk\right_arrow_double_select.paa""];";
+			onMouseExit = "ctrlSetText[508,""lyeed_IMG\data\vehicle\trunk\right_arrow_double.paa""];";
 
 			x = 0.463906 * safezoneW + safezoneX;
 			y = 0.533 * safezoneH + safezoneY;
@@ -374,7 +385,7 @@ class RscDisplayVirtualExhange: default_base_dialog
 		class ACTION_PUT_SINGLE_IMAGE: RscPicture
 		{
 			idc = 510;
-			text = "\lyeed_IMG\data\vehicle\trunk\left_arrow_single.paa";
+			text = "lyeed_IMG\data\vehicle\trunk\left_arrow_single.paa";
 
 			x = 0.463906 * safezoneW + safezoneX;
 			y = 0.599 * safezoneH + safezoneY;
@@ -386,8 +397,8 @@ class RscDisplayVirtualExhange: default_base_dialog
 			idc = 511;
 			action = "[false] call public_fnc_virtual_menu_exhange_store;";
 			tooltip = "Déposer la quantité minimum";
-			onMouseEnter = "ctrlSetText[510,""\lyeed_IMG\data\vehicle\trunk\left_arrow_single_select.paa""];";
-			onMouseExit = "ctrlSetText[510,""\lyeed_IMG\data\vehicle\trunk\left_arrow_single.paa""];";
+			onMouseEnter = "ctrlSetText[510,""lyeed_IMG\data\vehicle\trunk\left_arrow_single_select.paa""];";
+			onMouseExit = "ctrlSetText[510,""lyeed_IMG\data\vehicle\trunk\left_arrow_single.paa""];";
 
 			x = 0.463906 * safezoneW + safezoneX;
 			y = 0.599 * safezoneH + safezoneY;
@@ -398,7 +409,7 @@ class RscDisplayVirtualExhange: default_base_dialog
 		class ACTION_PUT_DOUBLE_IMAGE: RscPicture
 		{
 			idc = 512;
-			text = "\lyeed_IMG\data\vehicle\trunk\left_arrow_double.paa";
+			text = "lyeed_IMG\data\vehicle\trunk\left_arrow_double.paa";
 
 			x = 0.463906 * safezoneW + safezoneX;
 			y = 0.654 * safezoneH + safezoneY;
@@ -410,35 +421,11 @@ class RscDisplayVirtualExhange: default_base_dialog
 			idc = 513;
 			action = "[true] call public_fnc_virtual_menu_exhange_store;";
 			tooltip = "Déposer la quantité maximum";
-			onMouseEnter = "ctrlSetText[512,""\lyeed_IMG\data\vehicle\trunk\left_arrow_double_select.paa""];";
-			onMouseExit = "ctrlSetText[512,""\lyeed_IMG\data\vehicle\trunk\left_arrow_double.paa""];";
+			onMouseEnter = "ctrlSetText[512,""lyeed_IMG\data\vehicle\trunk\left_arrow_double_select.paa""];";
+			onMouseExit = "ctrlSetText[512,""lyeed_IMG\data\vehicle\trunk\left_arrow_double.paa""];";
 
 			x = 0.463906 * safezoneW + safezoneX;
 			y = 0.654 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
-			h = 0.044 * safezoneH;
-		};
-
-		class BACK_IMAGE: RscPicture
-		{
-			idc = 516;
-			text = "\lyeed_IMG\data\vehicle\back.paa";
-
-			x = 0.463906 * safezoneW + safezoneX;
-			y = 0.346 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
-			h = 0.044 * safezoneH;
-		};
-		class BACK_BUTTON: RscButtonSilent
-		{
-			idc = 521;
-			action = "[] call public_fnc_interactions_recall;";
-			tooltip = "Retour";
-			onMouseEnter = "ctrlSetText[516,""\lyeed_IMG\data\vehicle\back_select.paa""];";
-			onMouseExit = "ctrlSetText[516,""\lyeed_IMG\data\vehicle\back.paa""];";
-
-			x = 0.463906 * safezoneW + safezoneX;
-			y = 0.346 * safezoneH + safezoneY;
 			w = 0.0257812 * safezoneW;
 			h = 0.044 * safezoneH;
 		};

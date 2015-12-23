@@ -8,7 +8,7 @@ class RscDisplayGarageAlysia: default_base_dialog
 	{
 		class BACKGROUND: RscPicture
 		{
-			text = "\lyeed_IMG\data\garage\garage_background.jpg";
+			text = "lyeed_IMG\data\garage\garage_background.jpg";
 
 			x = 0.258161 * safezoneW + safezoneX;
 			y = 0.203 * safezoneH + safezoneY;
@@ -271,7 +271,7 @@ class RscDisplayGarageAlysia: default_base_dialog
 		class ACTION_IMAGE_1: RscPicture
 		{
 			idc = 2810;
-			text = "\lyeed_IMG\data\garage\action_get.paa";
+			text = "lyeed_IMG\data\garage\action_get.paa";
 
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.324 * safezoneH + safezoneY;
@@ -282,8 +282,8 @@ class RscDisplayGarageAlysia: default_base_dialog
 		{
 			idc = 2811;
 			action = "[] call public_fnc_garageVehicleGet;";
-			onMouseEnter = "if ((ctrlText 2810) isEqualTo ""\lyeed_IMG\data\garage\action_get.paa"") then {ctrlSetText[2810,""\lyeed_IMG\data\garage\action_get_select.paa""]};";
-			onMouseExit = "if ((ctrlText 2810) isEqualTo ""\lyeed_IMG\data\garage\action_get_select.paa"") then {ctrlSetText[2810,""\lyeed_IMG\data\garage\action_get.paa""]};";
+			onMouseEnter = "if ((ctrlText 2810) isEqualTo ""lyeed_IMG\data\garage\action_get.paa"") then {ctrlSetText[2810,""lyeed_IMG\data\garage\action_get_select.paa""]};";
+			onMouseExit = "if ((ctrlText 2810) isEqualTo ""lyeed_IMG\data\garage\action_get_select.paa"") then {ctrlSetText[2810,""lyeed_IMG\data\garage\action_get.paa""]};";
 			tooltip = "Récupérer";
 
 			x = 0.448438 * safezoneW + safezoneX;
@@ -295,7 +295,7 @@ class RscDisplayGarageAlysia: default_base_dialog
 		class ACTION_IMAGE_2: RscPicture
 		{
 			idc = 2812;
-			text = "\lyeed_IMG\data\garage\action_insurrance.paa";
+			text = "lyeed_IMG\data\garage\action_insurrance.paa";
 
 			x = 0.494844 * safezoneW + safezoneX;
 			y = 0.324 * safezoneH + safezoneY;
@@ -306,8 +306,8 @@ class RscDisplayGarageAlysia: default_base_dialog
 		{
 			idc = 2813;
 			action = "[] call public_fnc_garageVehicleAssure;";
-			onMouseEnter = "if ((ctrlText 2812) isEqualTo ""\lyeed_IMG\data\garage\action_insurrance.paa"") then {ctrlSetText[2812,""\lyeed_IMG\data\garage\action_insurrance_select.paa""]};";
-			onMouseExit = "if ((ctrlText 2812) isEqualTo ""\lyeed_IMG\data\garage\action_insurrance_select.paa"") then {ctrlSetText[2812,""\lyeed_IMG\data\garage\action_insurrance.paa""]};";
+			onMouseEnter = "if ((ctrlText 2812) isEqualTo ""lyeed_IMG\data\garage\action_insurrance.paa"") then {ctrlSetText[2812,""lyeed_IMG\data\garage\action_insurrance_select.paa""]};";
+			onMouseExit = "if ((ctrlText 2812) isEqualTo ""lyeed_IMG\data\garage\action_insurrance_select.paa"") then {ctrlSetText[2812,""lyeed_IMG\data\garage\action_insurrance.paa""]};";
 			tooltip = "Assurer";
 			
 			x = 0.494844 * safezoneW + safezoneX;
@@ -319,7 +319,7 @@ class RscDisplayGarageAlysia: default_base_dialog
 		class ACTION_IMAGE_3: RscPicture
 		{
 			idc = 2814;
-			text = "\lyeed_IMG\data\garage\action_localize.paa";
+			text = "lyeed_IMG\data\garage\action_localize.paa";
 
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.412 * safezoneH + safezoneY;
@@ -331,8 +331,8 @@ class RscDisplayGarageAlysia: default_base_dialog
 			idc = 2815;
 			action = "[] spawn public_fnc_garageVehicleFind;";
 			tooltip = "Afficher sur la carte le garage contenant le véhicule";
-			onMouseEnter = "if ((ctrlText 2814) isEqualTo ""\lyeed_IMG\data\garage\action_localize.paa"") then {ctrlSetText[2814,""\lyeed_IMG\data\garage\action_localize_select.paa""]};";
-			onMouseExit = "if ((ctrlText 2814) isEqualTo ""\lyeed_IMG\data\garage\action_localize_select.paa"") then {ctrlSetText[2814,""\lyeed_IMG\data\garage\action_localize.paa""]};";
+			onMouseEnter = "if ((ctrlText 2814) isEqualTo ""lyeed_IMG\data\garage\action_localize.paa"") then {ctrlSetText[2814,""lyeed_IMG\data\garage\action_localize_select.paa""]};";
+			onMouseExit = "if ((ctrlText 2814) isEqualTo ""lyeed_IMG\data\garage\action_localize_select.paa"") then {ctrlSetText[2814,""lyeed_IMG\data\garage\action_localize.paa""]};";
 			
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.412 * safezoneH + safezoneY;
@@ -343,7 +343,7 @@ class RscDisplayGarageAlysia: default_base_dialog
 		class ACTION_IMAGE_4: RscPicture
 		{
 			idc = 2816;
-			text = "\lyeed_IMG\data\garage\action_refuel.paa";
+			text = "lyeed_IMG\data\garage\action_refuel.paa";
 
 			x = 0.494844 * safezoneW + safezoneX;
 			y = 0.412 * safezoneH + safezoneY;
@@ -355,8 +355,8 @@ class RscDisplayGarageAlysia: default_base_dialog
 			idc = 2817;
 			action = "[] call public_fnc_garageVehicleRefuel;";
 			tooltip = "Faire le plein";
-			onMouseEnter = "if ((ctrlText 2816) isEqualTo ""\lyeed_IMG\data\garage\action_refuel.paa"") then {ctrlSetText[2816,""\lyeed_IMG\data\garage\action_refuel_select.paa""]};";
-			onMouseExit = "if ((ctrlText 2816) isEqualTo ""\lyeed_IMG\data\garage\action_refuel_select.paa"") then {ctrlSetText[2816,""\lyeed_IMG\data\garage\action_refuel.paa""]};";
+			onMouseEnter = "if ((ctrlText 2816) isEqualTo ""lyeed_IMG\data\garage\action_refuel.paa"") then {ctrlSetText[2816,""lyeed_IMG\data\garage\action_refuel_select.paa""]};";
+			onMouseExit = "if ((ctrlText 2816) isEqualTo ""lyeed_IMG\data\garage\action_refuel_select.paa"") then {ctrlSetText[2816,""lyeed_IMG\data\garage\action_refuel.paa""]};";
 
 			x = 0.494844 * safezoneW + safezoneX;
 			y = 0.412 * safezoneH + safezoneY;
@@ -367,7 +367,7 @@ class RscDisplayGarageAlysia: default_base_dialog
 		class ACTION_IMAGE_5: RscPicture
 		{
 			idc = 2818;
-			text = "\lyeed_IMG\data\garage\action_import.paa";
+			text = "lyeed_IMG\data\garage\action_import.paa";
 
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.5 * safezoneH + safezoneY;
@@ -379,8 +379,8 @@ class RscDisplayGarageAlysia: default_base_dialog
 			idc = 2819;
 			action = "[] spawn public_fnc_garageVehicleImport;";
 			tooltip = "Importer dans ce garage";
-			onMouseEnter = "if ((ctrlText 2818) isEqualTo ""\lyeed_IMG\data\garage\action_import.paa"") then {ctrlSetText[2818,""\lyeed_IMG\data\garage\action_import_select.paa""]};";
-			onMouseExit = "if ((ctrlText 2818) isEqualTo ""\lyeed_IMG\data\garage\action_import_select.paa"") then {ctrlSetText[2818,""\lyeed_IMG\data\garage\action_import.paa""]};";
+			onMouseEnter = "if ((ctrlText 2818) isEqualTo ""lyeed_IMG\data\garage\action_import.paa"") then {ctrlSetText[2818,""lyeed_IMG\data\garage\action_import_select.paa""]};";
+			onMouseExit = "if ((ctrlText 2818) isEqualTo ""lyeed_IMG\data\garage\action_import_select.paa"") then {ctrlSetText[2818,""lyeed_IMG\data\garage\action_import.paa""]};";
 
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.5 * safezoneH + safezoneY;
@@ -391,7 +391,7 @@ class RscDisplayGarageAlysia: default_base_dialog
 		class ACTION_IMAGE_6: RscPicture
 		{
 			idc = 2820;
-			text = "\lyeed_IMG\data\garage\action_rename.paa";
+			text = "lyeed_IMG\data\garage\action_rename.paa";
 
 			x = 0.494844 * safezoneW + safezoneX;
 			y = 0.5 * safezoneH + safezoneY;
@@ -403,8 +403,8 @@ class RscDisplayGarageAlysia: default_base_dialog
 			idc = 2821;
 			action = "[] spawn public_fnc_garageVehicleRenameStart;";
 			tooltip = "Renommer";
-			onMouseEnter = "if ((ctrlText 2820) isEqualTo ""\lyeed_IMG\data\garage\action_rename.paa"") then {ctrlSetText[2820,""\lyeed_IMG\data\garage\action_rename_select.paa""]};";
-			onMouseExit = "if ((ctrlText 2820) isEqualTo ""\lyeed_IMG\data\garage\action_rename_select.paa"") then {ctrlSetText[2820,""\lyeed_IMG\data\garage\action_rename.paa""]};";
+			onMouseEnter = "if ((ctrlText 2820) isEqualTo ""lyeed_IMG\data\garage\action_rename.paa"") then {ctrlSetText[2820,""lyeed_IMG\data\garage\action_rename_select.paa""]};";
+			onMouseExit = "if ((ctrlText 2820) isEqualTo ""lyeed_IMG\data\garage\action_rename_select.paa"") then {ctrlSetText[2820,""lyeed_IMG\data\garage\action_rename.paa""]};";
 
 			x = 0.494844 * safezoneW + safezoneX;
 			y = 0.5 * safezoneH + safezoneY;
@@ -415,7 +415,7 @@ class RscDisplayGarageAlysia: default_base_dialog
 		class ACTION_IMAGE_7: RscPicture
 		{
 			idc = 2822;
-			text = "\lyeed_IMG\data\garage\action_sell.paa";
+			text = "lyeed_IMG\data\garage\action_sell.paa";
 
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.588 * safezoneH + safezoneY;
@@ -427,8 +427,8 @@ class RscDisplayGarageAlysia: default_base_dialog
 			idc = 2823;
 			action = "[] spawn public_fnc_garageVehicleSell;";
 			tooltip = "Vendre";
-			onMouseEnter = "if ((ctrlText 2822) isEqualTo ""\lyeed_IMG\data\garage\action_sell.paa"") then {ctrlSetText[2822,""\lyeed_IMG\data\garage\action_sell_select.paa""]};";
-			onMouseExit = "if ((ctrlText 2822) isEqualTo ""\lyeed_IMG\data\garage\action_sell_select.paa"") then {ctrlSetText[2822,""\lyeed_IMG\data\garage\action_sell.paa""]};";
+			onMouseEnter = "if ((ctrlText 2822) isEqualTo ""lyeed_IMG\data\garage\action_sell.paa"") then {ctrlSetText[2822,""lyeed_IMG\data\garage\action_sell_select.paa""]};";
+			onMouseExit = "if ((ctrlText 2822) isEqualTo ""lyeed_IMG\data\garage\action_sell_select.paa"") then {ctrlSetText[2822,""lyeed_IMG\data\garage\action_sell.paa""]};";
 
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.588 * safezoneH + safezoneY;
@@ -447,7 +447,7 @@ class RscDisplayGarageRename: default_base_dialog
 	{
 		class BACKGROUND: RscPicture
 		{
-			text = "\lyeed_IMG\data\auctionHouse\background.jpg";
+			text = "lyeed_IMG\data\auctionHouse\background.jpg";
 
 			x = 0.37625 * safezoneW + safezoneX;
 			y = 0.522 * safezoneH + safezoneY;
@@ -538,7 +538,7 @@ class RscDisplayGarageRename: default_base_dialog
 		class ACTION_IMAGE: RscPicture
 		{
 			idc = 101005;
-			text = "\lyeed_IMG\data\garage\store\action_store.paa";
+			text = "lyeed_IMG\data\garage\store\action_store.paa";
 
 			x = 0.451354 * safezoneW + safezoneX;
 			y = 0.627667 * safezoneH + safezoneY;
@@ -550,12 +550,12 @@ class RscDisplayGarageRename: default_base_dialog
 			idc = 101006;
 			action = "[] call public_fnc_garageVehicleRenameProcess;";
 			onMouseEnter = "\
-			ctrlSetText[101005,""\lyeed_IMG\data\garage\store\action_store_select.paa""];\
+			ctrlSetText[101005,""lyeed_IMG\data\garage\store\action_store_select.paa""];\
 			ctrlShow[101002, false];\
 			((findDisplay 101000) displayCtrl 101003) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 101000) displayCtrl 101004) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Changer</t>"";";
 			onMouseExit = "\
-			ctrlSetText[101005,""\lyeed_IMG\data\garage\store\action_store.paa""];\
+			ctrlSetText[101005,""lyeed_IMG\data\garage\store\action_store.paa""];\
 			ctrlShow[101002, true];\
 			((findDisplay 101000) displayCtrl 101003) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 101000) displayCtrl 101004) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Changer</t>"";";
@@ -625,7 +625,7 @@ class RscDisplayGarageStore: default_base_dialog
 	{
 		class BACKGROUND: RscPicture
 		{
-			text = "\lyeed_IMG\data\auctionHouse\background.jpg";
+			text = "lyeed_IMG\data\auctionHouse\background.jpg";
 
 			x = 0.37625 * safezoneW + safezoneX;
 			y = 0.522 * safezoneH + safezoneY;
@@ -772,7 +772,7 @@ class RscDisplayGarageStore: default_base_dialog
 		class ACTION_STORE_IMAGE: RscPicture
 		{
 			idc = 35013;
-			text = "\lyeed_IMG\data\garage\store\action_store.paa";
+			text = "lyeed_IMG\data\garage\store\action_store.paa";
 
 			x = 0.451354 * safezoneW + safezoneX;
 			y = 0.627667 * safezoneH + safezoneY;
@@ -784,12 +784,12 @@ class RscDisplayGarageStore: default_base_dialog
 			idc = 35014;
 			action = "[] call public_fnc_garageStoreAction;";
 			onMouseEnter = "\
-			ctrlSetText[35013,""\lyeed_IMG\data\garage\store\action_store_select.paa""];\
+			ctrlSetText[35013,""lyeed_IMG\data\garage\store\action_store_select.paa""];\
 			ctrlShow[35010, false];\
 			((findDisplay 35000) displayCtrl 35011) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 35000) displayCtrl 35012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Ranger</t>"";";
 			onMouseExit = "\
-			ctrlSetText[35013,""\lyeed_IMG\data\garage\store\action_store.paa""];\
+			ctrlSetText[35013,""lyeed_IMG\data\garage\store\action_store.paa""];\
 			ctrlShow[35010, true];\
 			((findDisplay 35000) displayCtrl 35011) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 35000) displayCtrl 35012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Ranger</t>"";";

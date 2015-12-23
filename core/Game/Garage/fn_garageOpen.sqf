@@ -22,11 +22,11 @@ _list = _display displayCtrl 2826;
 {
 	_data = switch (_x) do
 	{
-		case "Car": {["Voiture", "\lyeed_IMG\data\garage\type_car.paa"]};
-		case "Truck": {["Camion", "\lyeed_IMG\data\garage\type_truck.paa"]};
-		case "Air": {["Aérien", "\lyeed_IMG\data\garage\type_air.paa"]};
-		case "Ship": {["Bateau", "\lyeed_IMG\data\garage\type_boat.paa"]};
-		case "Tank": {["Tank", "\lyeed_IMG\data\garage\type_tank.paa"]};
+		case "Car": {["Voiture", "lyeed_IMG\data\garage\type_car.paa"]};
+		case "Truck": {["Camion", "lyeed_IMG\data\garage\type_truck.paa"]};
+		case "Air": {["Aérien", "lyeed_IMG\data\garage\type_air.paa"]};
+		case "Ship": {["Bateau", "lyeed_IMG\data\garage\type_boat.paa"]};
+		case "Tank": {["Tank", "lyeed_IMG\data\garage\type_tank.paa"]};
 		default {[]};
 	};
 	if (_data isEqualTo []) then {

@@ -46,7 +46,7 @@ class RscDisplayComa : default_base_dialog
 		class MEDIC_IMAGE: RscPicture
 		{
 			idc = -1;
-			text = "\lyeed_IMG\data\death\medic.paa";
+			text = "lyeed_IMG\data\death\medic.paa";
 
 			x = 0.0153125 * safezoneW + safezoneX;
 			y = 0.071 * safezoneH + safezoneY;
@@ -77,7 +77,7 @@ class RscDisplayComa : default_base_dialog
 		class SUICIDE_IMAGE: RscPicture
 		{
 			idc = 352;
-			text = "\lyeed_IMG\data\death\suicide.paa";
+			text = "lyeed_IMG\data\death\suicide.paa";
 
 			x = 0.412344 * safezoneW + safezoneX;
 			y = 0.676 * safezoneH + safezoneY;
@@ -88,8 +88,8 @@ class RscDisplayComa : default_base_dialog
 		{
 			idc = 354;
 			action = "player setDamage 1;";
-			onMouseEnter = "ctrlSetText[352,""\lyeed_IMG\data\death\suicide_select.paa""];";
-			onMouseExit = "ctrlSetText[352,""\lyeed_IMG\data\death\suicide.paa""];";
+			onMouseEnter = "ctrlSetText[352,""lyeed_IMG\data\death\suicide_select.paa""];";
+			onMouseExit = "ctrlSetText[352,""lyeed_IMG\data\death\suicide.paa""];";
 
 			x = 0.412344 * safezoneW + safezoneX;
 			y = 0.676 * safezoneH + safezoneY;

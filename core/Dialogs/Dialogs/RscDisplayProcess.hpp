@@ -7,7 +7,7 @@ class RscDisplayProcess: default_base_dialog
 	{
 		class BACKGROUND: RscPicture
 		{
-			text = "\lyeed_IMG\data\process\background.jpg";
+			text = "lyeed_IMG\data\process\background.jpg";
 
 			x = 0.340156 * safezoneW + safezoneX;
 			y = 0.313 * safezoneH + safezoneY;
@@ -149,7 +149,7 @@ class RscDisplayProcess: default_base_dialog
 		};
 		class TIME_HEADER: RscStructuredText
 		{
-			text = "<img image='\lyeed_IMG\data\process\timer.paa'/> Temps approximatif";
+			text = "<img image='lyeed_IMG\data\process\timer.paa'/> Temps approximatif";
 			colorBackground[] = {0,0,0,0.8};
 			
 			x = 0.536094 * safezoneW + safezoneX;
@@ -202,7 +202,7 @@ class RscDisplayProcess: default_base_dialog
 		class ACTION_IMAGE: RscPicture
 		{
 			idc = 53011;
-			text = "\lyeed_IMG\data\process\action_process.paa";
+			text = "lyeed_IMG\data\process\action_process.paa";
 
 			x = 0.538352 * safezoneW + safezoneX;
 			y = 0.526922 * safezoneH + safezoneY;
@@ -214,12 +214,12 @@ class RscDisplayProcess: default_base_dialog
 			idc = 53012;
 			action = "closedialog 0; [g_interaction_process_type, g_interaction_target] spawn public_fnc_process_action;";
 			onMouseEnter = "\
-			ctrlSetText[53011,""\lyeed_IMG\data\process\action_process_select.paa""];\
+			ctrlSetText[53011,""lyeed_IMG\data\process\action_process_select.paa""];\
 			ctrlShow[53008, false];\
 			((findDisplay 53000) displayCtrl 53009) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 53000) displayCtrl 53010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Traiter</t>"";";
 			onMouseExit = "\
-			ctrlSetText[53011,""\lyeed_IMG\data\process\action_process.paa""];\
+			ctrlSetText[53011,""lyeed_IMG\data\process\action_process.paa""];\
 			ctrlShow[53008, true];\
 			((findDisplay 53000) displayCtrl 53009) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 53000) displayCtrl 53010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Traiter</t>"";";

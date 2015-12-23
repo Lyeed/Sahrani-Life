@@ -116,7 +116,7 @@ while {!(isNull _hud)} do
 		if (call compile format["%1", (_x select 1)]) then
 		{
 			_ctrl = call compile format["_ico_%1", _idc];
-			_ctrl ctrlSetText format["\lyeed_IMG\data\player_hud\%1", (_x select 0)];
+			_ctrl ctrlSetText format["lyeed_IMG\data\player_hud\%1", (_x select 0)];
 			_ctrl ctrlShow true;
 			_idc = _idc + 1;
 		};

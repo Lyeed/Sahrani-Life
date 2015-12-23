@@ -37,7 +37,7 @@ class RscHudPlayer
 		class HUNGER_IMAGE: RscPicture
 		{
 			idc = -1;
-			text = "\lyeed_IMG\data\player_hud\hunger.paa";
+			text = "lyeed_IMG\data\player_hud\hunger.paa";
 
 			x = 0.860937 * safezoneW + safezoneX;
 			y = 0.797 * safezoneH + safezoneY;
@@ -57,7 +57,7 @@ class RscHudPlayer
 		class THIRST_IMAGE: RscPicture
 		{
 			idc = -1;
-			text = "\lyeed_IMG\data\player_hud\thirst.paa";
+			text = "lyeed_IMG\data\player_hud\thirst.paa";
 
 			x = 0.860937 * safezoneW + safezoneX;
 			y = 0.841 * safezoneH + safezoneY;
@@ -77,7 +77,7 @@ class RscHudPlayer
 		class SPEAK_IMAGE: RscPicture
 		{
 			idc = -1;
-			text = "\lyeed_IMG\data\player_hud\volume.paa";
+			text = "lyeed_IMG\data\player_hud\volume.paa";
 
 			x = 0.860937 * safezoneW + safezoneX;
 			y = 0.885 * safezoneH + safezoneY;
@@ -99,7 +99,7 @@ class RscHudPlayer
 		class FATIGUE_IMAGE: RscPicture
 		{
 			idc = -1;
-			text = "\lyeed_IMG\data\player_hud\fatigue.paa";
+			text = "lyeed_IMG\data\player_hud\fatigue.paa";
 
 			x = 0.824844 * safezoneW + safezoneX;
 			y = 0.797 * safezoneH + safezoneY;
@@ -121,7 +121,7 @@ class RscHudPlayer
 		class BLOOD_IMAGE: RscPicture
 		{
 			idc = -1;
-			text = "\lyeed_IMG\data\player_hud\blood.paa";
+			text = "lyeed_IMG\data\player_hud\blood.paa";
 
 			x = 0.783594 * safezoneW + safezoneX;
 			y = 0.797 * safezoneH + safezoneY;
@@ -288,7 +288,7 @@ class RscHudPlayer
 		class VEHICLE_FUEL_IMAGE: RscPicture
 		{
 			idc = 23523;
-			text = "\lyeed_IMG\data\player_hud\fuel.paa";
+			text = "lyeed_IMG\data\player_hud\fuel.paa";
 			
 			x = 0.12875 * safezoneW + safezoneX;
 			y = 0.082 * safezoneH + safezoneY;
@@ -341,7 +341,7 @@ class RscHudPlayer
 		class AMMO_NAME_IMAGE: RscPicture
 		{
 			idc = 23533;
-			text = "\lyeed_IMG\data\player_hud\weapon_bullet_name.paa";
+			text = "lyeed_IMG\data\player_hud\weapon_bullet_name.paa";
 			
 			x = 0.78875 * safezoneW + safezoneX;
 			y = 0.06 * safezoneH + safezoneY;
@@ -363,7 +363,7 @@ class RscHudPlayer
 		class WEAPON_MOD_IMAGE: RscPicture
 		{
 			idc = 23535;
-			text = "\lyeed_IMG\data\player_hud\weapon_mod.paa";
+			text = "lyeed_IMG\data\player_hud\weapon_mod.paa";
 
 			x = 0.78875 * safezoneW + safezoneX;
 			y = 0.104 * safezoneH + safezoneY;
@@ -385,7 +385,7 @@ class RscHudPlayer
 		class ALYSIA_IMAGE: RscPicture
 		{
 			idc = 23537;
-			text = "\lyeed_IMG\data\alysia.paa";
+			text = "lyeed_IMG\data\alysia.paa";
 
 			x = 0.267969 * safezoneW + safezoneX;
 			y = 0.225 * safezoneH + safezoneY;
@@ -416,7 +416,7 @@ class RscHudPlayer
 		class MAP_IMAGE: RscPicture
 		{
 			idc = 23541;
-			text = "\lyeed_IMG\data\player_hud\gps.paa";
+			text = "lyeed_IMG\data\player_hud\gps.paa";
 
 			x = 0.867865 * safezoneW + safezoneX;
 			y = 0.559704 * safezoneH + safezoneY;

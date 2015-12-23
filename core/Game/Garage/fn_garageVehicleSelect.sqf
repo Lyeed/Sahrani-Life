@@ -80,19 +80,19 @@ _vehicleInfo = [_className] call public_fnc_fetchVehInfo;
 
 if ((_data select 2) isEqualTo 1) then
 {
-    (_display displayCtrl 2812) ctrlSetText "\lyeed_IMG\data\garage\action_insurrance_disable.paa";
+    (_display displayCtrl 2812) ctrlSetText "lyeed_IMG\data\garage\action_insurrance_disable.paa";
     ctrlShow[2813, false];
 } else {
-    (_display displayCtrl 2812) ctrlSetText "\lyeed_IMG\data\garage\action_insurrance.paa";
+    (_display displayCtrl 2812) ctrlSetText "lyeed_IMG\data\garage\action_insurrance.paa";
     ctrlShow[2813, true];
 };
 
 if (_fuel < 100) then
 {
-    ctrlSetText[2816, "\lyeed_IMG\data\garage\action_fuel.paa"];
+    ctrlSetText[2816, "lyeed_IMG\data\garage\action_fuel.paa"];
     ctrlShow[2817, true];
 } else {
-    ctrlSetText[2816, "\lyeed_IMG\data\garage\action_fuel_disable.paa"];
+    ctrlSetText[2816, "lyeed_IMG\data\garage\action_fuel_disable.paa"];
     ctrlShow[2817, false];
 };
 
@@ -101,17 +101,17 @@ if (_storePos isEqualTo [0, 0, 0]) then
 {
     (_display displayCtrl 2828) ctrlSetStructuredText parseText "<t align='center'><t size='3'>0</t><br/>mètre</t>";
 
-    ctrlSetText[2814, "\lyeed_IMG\data\garage\action_localize_disable.paa"];
+    ctrlSetText[2814, "lyeed_IMG\data\garage\action_localize_disable.paa"];
     ctrlShow[2815, false];
-    ctrlSetText[2818, "\lyeed_IMG\data\garage\action_import_disable.paa"];
+    ctrlSetText[2818, "lyeed_IMG\data\garage\action_import_disable.paa"];
     ctrlShow[2819, false];
     
     if (([getPos player] call public_fnc_posNearFourriere) isEqualTo "") then
     {
-        ctrlSetText[2810, "\lyeed_IMG\data\garage\action_get.paa"];
+        ctrlSetText[2810, "lyeed_IMG\data\garage\action_get.paa"];
         ctrlShow[2811, true];
     } else {
-        ctrlSetText[2810, "\lyeed_IMG\data\garage\action_get_disable.paa"];
+        ctrlSetText[2810, "lyeed_IMG\data\garage\action_get_disable.paa"];
         ctrlShow[2811, false];
     };
 } else {
@@ -119,40 +119,40 @@ if (_storePos isEqualTo [0, 0, 0]) then
     (_display displayCtrl 2828) ctrlSetStructuredText parseText format["<t align='center'><t size='3'>%1</t><br/>mètre%2</t>", round(_distance), if (_distance > 1) then {"s"} else {""}];
 	if (_distance > 40) then
 	{
-        ctrlSetText[2810, "\lyeed_IMG\data\garage\action_get_disable.paa"];
+        ctrlSetText[2810, "lyeed_IMG\data\garage\action_get_disable.paa"];
         ctrlShow[2811, false];
 
         if (([_storePos] call public_fnc_posNearFourriere) isEqualTo "") then
       	{
-            ctrlSetText[2814, "\lyeed_IMG\data\garage\action_localize.paa"];
+            ctrlSetText[2814, "lyeed_IMG\data\garage\action_localize.paa"];
             ctrlShow[2815, true];
 
-            ctrlSetText[2818, "\lyeed_IMG\data\garage\action_import.paa"];
+            ctrlSetText[2818, "lyeed_IMG\data\garage\action_import.paa"];
             ctrlShow[2819, true];
         } else {
-            ctrlSetText[2814, "\lyeed_IMG\data\garage\action_localize_disable.paa"];
+            ctrlSetText[2814, "lyeed_IMG\data\garage\action_localize_disable.paa"];
             ctrlShow[2815, false];
 
-            ctrlSetText[2818, "\lyeed_IMG\data\garage\action_import_disable.paa"];
+            ctrlSetText[2818, "lyeed_IMG\data\garage\action_import_disable.paa"];
             ctrlShow[2819, false];
         };
   	} else {
-        ctrlSetText[2810, "\lyeed_IMG\data\garage\action_get.paa"];
+        ctrlSetText[2810, "lyeed_IMG\data\garage\action_get.paa"];
         ctrlShow[2811, true];
 
-        ctrlSetText[2814, "\lyeed_IMG\data\garage\action_localize_disable.paa"];
+        ctrlSetText[2814, "lyeed_IMG\data\garage\action_localize_disable.paa"];
         ctrlShow[2815, false];
 
-        ctrlSetText[2818, "\lyeed_IMG\data\garage\action_import_disable.paa"];
+        ctrlSetText[2818, "lyeed_IMG\data\garage\action_import_disable.paa"];
         ctrlShow[2819, false];
   	};
 };
 
 if (([getPos player] call public_fnc_posNearFourriere) != "") then
 {
-    ctrlSetText[2814, "\lyeed_IMG\data\garage\action_localize_disable.paa"];
+    ctrlSetText[2814, "lyeed_IMG\data\garage\action_localize_disable.paa"];
     ctrlShow[2815, false];
 
-    ctrlSetText[2818, "\lyeed_IMG\data\garage\action_import_disable.paa"];
+    ctrlSetText[2818, "lyeed_IMG\data\garage\action_import_disable.paa"];
     ctrlShow[2819, false];
 };

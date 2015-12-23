@@ -2,7 +2,7 @@
 #define LICENSES_HEADER_IDC  8601
 #define LICENSES_FRAME_IDC   8602
 
-LICENSES_BACKGROUND = "\lyeed\images\back.jpg";
+LICENSES_BACKGROUND = "lyeed\images\back.jpg";
 LICENSES_IDCS[] = 
 {
 	LICENSES_LIST_IDC,

@@ -79,7 +79,7 @@ lbClear _ctrl_list_trade;
 if (g_interaction_trade_money > 0) then
 {
 	_index = _ctrl_list_trade lbAdd format["%1kn", g_interaction_trade_money];
-	_ctrl_list_trade lbSetPicture [_index, "\Alysia_Textures\data\life_inv_illegal_money.paa"];
+	_ctrl_list_trade lbSetPicture [_index, "Alysia_Textures\data\life_inv_illegal_money.paa"];
 	_ctrl_list_trade lbSetData [_index, "money"];
 };
 
@@ -104,10 +104,16 @@ if ((lbSize _ctrl_list_trade) isEqualTo 0) then
 	ctrlShow[10013, false];
 	ctrlShow[10014, false];
 	ctrlShow[10015, false];
+	ctrlShow[10016, false];
+	ctrlShow[10017, false];
+	ctrlShow[10018, false];
 } else {
 	_ctrl_list_trade lbSetCurSel 0;
 	ctrlShow[10012, true];
 	ctrlShow[10013, true];
 	ctrlShow[10014, true];
 	ctrlShow[10015, true];
+	ctrlShow[10016, true];
+	ctrlShow[10017, true];
+	ctrlShow[10018, true];
 };

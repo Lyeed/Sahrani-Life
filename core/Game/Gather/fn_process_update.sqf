@@ -32,9 +32,9 @@ _can = true;
 {
 	_index = _list lbAdd format["%1x %2", (_maxAmount * (_x select 1)), [(_x select 0)] call public_fnc_itemGetName];
 	if ([(_x select 0)] call public_fnc_itemCount >= (_maxAmount * (_x select 1))) then {
-		_list lbSetPicture [_index, "\lyeed_IMG\data\process\items_ok"];
+		_list lbSetPicture [_index, "lyeed_IMG\data\process\items_ok"];
 	} else {
-		_list lbSetPicture [_index, "\lyeed_IMG\data\process\items_missing"];
+		_list lbSetPicture [_index, "lyeed_IMG\data\process\items_missing"];
 		_can = false;
 	};
 } forEach getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "require");
