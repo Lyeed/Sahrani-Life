@@ -47,7 +47,7 @@ _bill = 0;
 
 while {(!(isNull _display) && (_currentfuel > 1) && (_bill <= g_atm)) && ((fuel _veh) != 1)} do
 {
-	_currentfuel = _currentfuel - 1;
+	_currentfuel = _currentfuel - (_fuelmax/100);
 	_veh setFuel ((fuel _veh) + 0.01);
 	_bill = _bill + ([_station, _typeRefuel] call public_fnc_fuelStation_price_buy);
 	
