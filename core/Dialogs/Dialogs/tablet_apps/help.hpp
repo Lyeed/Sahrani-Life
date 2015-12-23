@@ -5,7 +5,7 @@
 #define HELP_COMMAND_INFO_IDC	8204
 #define HELP_COMMAND_FRAME_IDC	8205
 
-HELP_BACKGROUND = "\lyeed\images\back_help.jpg";
+HELP_BACKGROUND = "lyeed\images\back_help.jpg";
 HELP_IDCS[] =
 {
 	HELP_ACTIONS_HEADER_IDC,

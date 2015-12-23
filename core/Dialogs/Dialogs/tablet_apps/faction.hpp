@@ -10,7 +10,7 @@
 #define FACTION_DUTY_LIST_IDC              8709
 #define FACTION_OFFICE_BUTTON_IDC          8710
 
-FACTION_BACKGROUND = "\lyeed\images\back.jpg";
+FACTION_BACKGROUND = "lyeed\images\back.jpg";
 FACTION_IDCS[] = 
 {
 	FACTION_HEADER_IMAGE_IDC,
@@ -159,7 +159,7 @@ class FACTION_OFFICE_BUTTON: RscButtonMenu_colored
 #define FACTION_LEADER_OFFICE_BACK_IMAGE_IDC        8740
 #define FACTION_LEADER_OFFICE_BACK_BUTTON_IDC       8741
 
-FACTION_LEADER_OFFICE_BACKGROUND = "\lyeed\images\back.jpg";
+FACTION_LEADER_OFFICE_BACKGROUND = "lyeed\images\back.jpg";
 FACTION_LEADER_OFFICE_IDCS[] = 
 {
 	FACTION_LEADER_OFFICE_CIVILIAN_FRAME_IDC,
@@ -287,7 +287,7 @@ class FACTION_LEADER_OFFICE_FACTION_HISTORY: RscButtonMenu_colored
 class FACTION_LEADER_OFFICE_BACK_IMAGE: RscPicture
 {
 	idc = FACTION_LEADER_OFFICE_BACK_IMAGE_IDC;
-	text = "\lyeed_IMG\data\global\back.paa";
+	text = "lyeed_IMG\data\global\back.paa";
 
 	x = 0.321927 * safezoneW + safezoneX;
 	y = 0.350852 * safezoneH + safezoneY;
@@ -313,7 +313,7 @@ class FACTION_LEADER_OFFICE_BACK_BUTTON: RscButtonSilent
 #define FACTION_LEADER_HISTORY_BACK_IMAGE_IDC  8754
 #define FACTION_LEADER_HISTORY_BACK_BUTTON_IDC 8755
 
-FACTION_LEADER_HISTORY_BACKGROUND = "\lyeed\images\back.jpg";
+FACTION_LEADER_HISTORY_BACKGROUND = "lyeed\images\back.jpg";
 FACTION_LEADER_HISTORY_IDCS[] = 
 {
 	FACTION_LEADER_HISTORY_LIST_IDC,
@@ -370,7 +370,7 @@ class FACTION_LEADER_HISTORY_DELETEALL: RscButtonMenu_colored
 class FACTION_LEADER_HISTORY_BACK_IMAGE: RscPicture
 {
 	idc = FACTION_LEADER_HISTORY_BACK_IMAGE_IDC;
-	text = "\lyeed_IMG\data\global\back.paa";
+	text = "lyeed_IMG\data\global\back.paa";
 
 	x = 0.323124 * safezoneW + safezoneX;
 	y = 0.35237 * safezoneH + safezoneY;

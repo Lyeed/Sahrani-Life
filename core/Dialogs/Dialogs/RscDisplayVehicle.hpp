@@ -5,7 +5,7 @@ class RscDisplayVehicleOwner: default_interaction_back_dialog
 	
 	class controlsBackground: DEFAULT_controlsBackground
 	{
-		class BACKGROUND_SPEC: BACKGROUND
+		class BACKGROUND: BACKGROUND
 		{
 			text = "lyeed_IMG\data\vehicle\background.jpg";
 		};
@@ -16,7 +16,7 @@ class RscDisplayVehicleOwner: default_interaction_back_dialog
 	{
 		class TITLE: TITLE
 		{
-			text = "<t size='1.5' align='center'>Carte grise</t>";
+			text = "<t size='1.5' align='center'>Réparation</t>";
 		};
 
 		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME {};
@@ -121,7 +121,7 @@ class RscDisplayVehicleRepair: default_interaction_back_dialog
 	
 	class controlsBackground: DEFAULT_controlsBackground
 	{
-		class BACKGROUND_SPEC: BACKGROUND
+		class BACKGROUND: BACKGROUND
 		{
 			text = "lyeed_IMG\data\vehicle\background.jpg";
 		};

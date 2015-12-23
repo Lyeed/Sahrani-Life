@@ -23,7 +23,7 @@ if (_msg isEqualTo (uiNamespace getVariable ["RscHudMessage_last", ""])) then {
 };
 
 (_hud displayCtrl 95000) ctrlSetStructuredText parseText "<t align='left'>Erreur</t>";
-(_hud displayCtrl 95001) ctrlSetText "\lyeed_IMG\data\message_system\error.paa";
+(_hud displayCtrl 95001) ctrlSetText "lyeed_IMG\data\message_system\error.paa";
 (_hud displayCtrl 95002) ctrlSetStructuredText parseText format["<t font='PuristaBold' size='0.7'>%1</t>", _msg];
 
 _count = uiNamespace getVariable ["RscHudMessage_count", 0];

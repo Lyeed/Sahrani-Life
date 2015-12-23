@@ -8,7 +8,7 @@ class RscDisplayHousingBuy: default_base_dialog
 		class BORDER: RscPicture
 		{
 			idc = -1;
-			text = "\lyeed_IMG\data\frames\frame_2_borderless.paa";
+			text = "lyeed_IMG\data\frames\frame_2_borderless.paa";
 
 			x = 0.365937 * safezoneW + safezoneX;
 			y = 0.346 * safezoneH + safezoneY;
@@ -18,7 +18,7 @@ class RscDisplayHousingBuy: default_base_dialog
 		class BACKGROUND: RscPicture
 		{
 			idc = -1;
-			text = "\lyeed_IMG\data\housing\background.jpg";
+			text = "lyeed_IMG\data\housing\background.jpg";
 
 			x = 0.37625 * safezoneW + safezoneX;
 			y = 0.357 * safezoneH + safezoneY;
@@ -191,7 +191,7 @@ class RscDisplayHousingBuy: default_base_dialog
 		class ACTION_BUY_IMAGE: RscPicture
 		{
 			idc = 45007;
-			text = "\lyeed_IMG\data\housing\actions\action_buy.paa";
+			text = "lyeed_IMG\data\housing\actions\action_buy.paa";
 
 			x = 0.513922 * safezoneW + safezoneX;
 			y = 0.47162 * safezoneH + safezoneY;
@@ -214,12 +214,12 @@ class RscDisplayHousingBuy: default_base_dialog
 			idc = 45008;
 			action = "[] spawn public_fnc_house_menu_action_buy;";
 			onMouseEnter = "\
-			ctrlSetText[45007,""\lyeed_IMG\data\housing\actions\action_buy_select.paa""];\
+			ctrlSetText[45007,""lyeed_IMG\data\housing\actions\action_buy_select.paa""];\
 			ctrlShow[45002, false];\
 			((findDisplay 45000) displayCtrl 45001) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 45000) displayCtrl 45010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
 			onMouseExit = "\
-			ctrlSetText[45007,""\lyeed_IMG\data\housing\actions\action_buy.paa""];\
+			ctrlSetText[45007,""lyeed_IMG\data\housing\actions\action_buy.paa""];\
 			ctrlShow[45002, true];\
 			((findDisplay 45000) displayCtrl 45001) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 45000) displayCtrl 45010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>"";";
@@ -253,7 +253,7 @@ class RscDisplayHousingBuy: default_base_dialog
 		class ACTION_EXIT_IMAGE: RscPicture
 		{
 			idc = 45011;
-			text = "\lyeed_IMG\data\housing\actions\action_exit.paa";
+			text = "lyeed_IMG\data\housing\actions\action_exit.paa";
 
 			x = 0.514334 * safezoneW + safezoneX;
 			y = 0.40936 * safezoneH + safezoneY;
@@ -276,12 +276,12 @@ class RscDisplayHousingBuy: default_base_dialog
 			idc = -1;
 			action = "closeDialog 0;";
 			onMouseEnter = "\
-			ctrlSetText[45011,""\lyeed_IMG\data\housing\actions\action_exit_select.paa""];\
+			ctrlSetText[45011,""lyeed_IMG\data\housing\actions\action_exit_select.paa""];\
 			ctrlShow[45013, false];\
 			((findDisplay 45000) displayCtrl 45014) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 45000) displayCtrl 45012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
 			onMouseExit = "\
-			ctrlSetText[45011,""\lyeed_IMG\data\housing\actions\action_exit.paa""];\
+			ctrlSetText[45011,""lyeed_IMG\data\housing\actions\action_exit.paa""];\
 			ctrlShow[45013, true];\
 			((findDisplay 45000) displayCtrl 45014) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 45000) displayCtrl 45012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";

@@ -16,9 +16,9 @@ _list_sexe = _display displayCtrl 1505;
 lbClear _list_sexe;
 
 _list_sexe lbAdd "homme";
-_list_sexe lbSetPicture [0, "\lyeed_IMG\data\welcome\male.paa"];
+_list_sexe lbSetPicture [0, "lyeed_IMG\data\welcome\male.paa"];
 _list_sexe lbAdd "femme";
-_list_sexe lbSetPicture [1, "\lyeed_IMG\data\welcome\female.paa"];
+_list_sexe lbSetPicture [1, "lyeed_IMG\data\welcome\female.paa"];
 _list_sexe lbSetCurSel 0;
 
 _list_origin = _display displayCtrl 1504;

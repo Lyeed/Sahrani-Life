@@ -1,132 +1,109 @@
-class RscDisplayPlayerRevokeLicense: default_base_dialog
+class RscDisplayPlayerRevokeLicense: default_interaction_back_dialog
 {
 	idd = 18000;
 	name = "RscDisplayPlayerRevokeLicense";
 	
-	class controlsBackground
+	class controlsBackground: DEFAULT_controlsBackground
 	{
-		class BORDER: RscPicture
-		{
-			idc = -1;
-			text = "\lyeed_IMG\data\frames\frame_2_borderless.paa";
-
-			x = 0.311797 * safezoneW + safezoneX;
-			y = 0.2778 * safezoneH + safezoneY;
-			w = 0.329479 * safezoneW;
-			h = 0.505074 * safezoneH;
-		};
-		class BACKGROUND: RscPicture
-		{
-			idc = -1;
-			text = "\lyeed_IMG\data\player_interactions\background.jpg";
-		
-			x = 0.324687 * safezoneW + safezoneX;
-			y = 0.302 * safezoneH + safezoneY;
-			w = 0.304219 * safezoneW;
-			h = 0.462 * safezoneH;
-		};
+		class BACKGROUND: BACKGROUND {};
+		class FRAME: FRAME {};
 	};
 
-	class controls
+	class controls: DEFAULT_controls
 	{
-		class TITLE: RscStructuredText
+		class TITLE: TITLE
 		{
-			idc = -1;
-			colorBackground[] = {0,0,0,0.8};
-			text = "<t align='center' size='1.8'>Licenses</t>";
-
-			x = 0.324687 * safezoneW + safezoneX;
-			y = 0.302 * safezoneH + safezoneY;
-			w = 0.304219 * safezoneW;
-			h = 0.0384445 * safezoneH;
+			text = "<t size='1.5' align='center'>Licences</t>";
 		};
 
-		class LICENSE_FRAME: RscFrame
-		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-			
-			x = 0.329844 * safezoneW + safezoneX;
-			y = 0.357 * safezoneH + safezoneY;
-			w = 0.154687 * safezoneW;
-			h = 0.396 * safezoneH;
-		};
-		class LICENSE_HEADER: RscStructuredText
-		{
-			idc = -1;
-			text = "<t align='center'>Licenses possédées</t>";
-			colorBackground[] = {0,0,0,0.8};
+		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME {};
+		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND {};
+		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE {};
+		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON {};
+		class OPTION_BACK_FRAME: OPTION_BACK_FRAME {};
+		class OPTION_BACK_BACKGROUND: OPTION_BACK_BACKGROUND {};
+		class OPTION_BACK_IMAGE: OPTION_BACK_IMAGE {};
+		class OPTION_BACK_BUTTON: OPTION_BACK_BUTTON {};
 
-			x = 0.329844 * safezoneW + safezoneX;
-			y = 0.357 * safezoneH + safezoneY;
-			w = 0.154687 * safezoneW;
-			h = 0.022 * safezoneH;
+		class FRAME: RscFrame
+		{
+			x = 0.381406 * safezoneW + safezoneX;
+			y = 0.401 * safezoneH + safezoneY;
+			w = 0.237187 * safezoneW;
+			h = 0.165 * safezoneH;
 		};
-		class LICENSE_LIST: RscListbox
+		class LIST: RscListbox
 		{
 			idc = 18001;
-			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.329844 * safezoneW + safezoneX;
-			y = 0.379 * safezoneH + safezoneY;
-			w = 0.154687 * safezoneW;
-			h = 0.374 * safezoneH;
-		};
-
-		class ACTIONS_BACKGROUND: RscText
-		{
-			idc = -1;
-
-			x = 0.505156 * safezoneW + safezoneX;
+			x = 0.381407 * safezoneW + safezoneX;
 			y = 0.401 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
-			h = 0.286 * safezoneH;
-			colorBackground[] = {0,0,0,0.6};
+			w = 0.237187 * safezoneW;
+			h = 0.165 * safezoneH;
 		};
+
 		class ACTION_FRAME: RscFrame
 		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-			
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.379 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
-			h = 0.308 * safezoneH;
-		};
-		class ACTIONS_HEADER: RscStructuredText
-		{
-			idc = -1;
-			text = "<t align='center'>Actions</t>";
-			colorBackground[] = {0,0,0,0.8};
-			
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.379 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
-			h = 0.022 * safezoneH;
-		};
-
-		class REVOKE_IMAGE: RscPicture
-		{
 			idc = 18002;
-			text = "\lyeed_IMG\data\license_revoke\action_revoke.paa";
+			colorText[] = {0,0,0,0.8};
 
-			x = 0.530937 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.0567187 * safezoneW;
-			h = 0.099 * safezoneH;
+			x = 0.505156 * safezoneW + safezoneX;
+			y = 0.577 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
+			h = 0.055 * safezoneH;
 		};
-		class REVOKE_BUTTON: RscButtonSilent
+		class ACTION_BACKGROUND: RscStructuredText
 		{
 			idc = 18003;
-			action = "[(lbData[18001, (lbCurSel 18001)]), player] remoteExecCall [""public_fnc_interactionMenu_action_license_revoke"", g_interaction_target];";
-			tooltip = "Retirer";
-			onMouseEnter = "ctrlSetText[17003,""\lyeed_IMG\data\license_revoke\action_revoke_select.paa""];";
-			onMouseExit = "ctrlSetText[17003,""\lyeed_IMG\data\license_revoke\action_revoke.paa""];";
+			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.530937 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.0567187 * safezoneW;
-			h = 0.099 * safezoneH;
+			x = 0.505156 * safezoneW + safezoneX;
+			y = 0.577 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+		class ACTION_IMAGE: RscPicture
+		{
+			idc = 18004;
+			text = "lyeed_IMG\data\skull\take.paa";
+
+			x = 0.508879 * safezoneW + safezoneX;
+			y = 0.582387 * safezoneH + safezoneY;
+			w = 0.0257812 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+		class ACTION_TEXT: RscStructuredText
+		{
+			idc = 18005;
+			text = "<t align='left' size='1.3'>Retirer</t>";
+			colorBackground[] = {0,0,0,0};
+
+			x = 0.536094 * safezoneW + safezoneX;
+			y = 0.588 * safezoneH + safezoneY;
+			w = 0.0721875 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+		class ACTION_BUTTON: RscButtonSilent
+		{
+			idc = 18006;
+			action = "\
+				[(lbData[18001, (lbCurSel 18001)]), player] remoteExecCall [""public_fnc_interactionMenu_action_license_revoke"", g_interaction_target];\
+				closeDialog 0;";
+			onMouseEnter = "\
+			ctrlSetText[18004,""lyeed_IMG\data\skull\take_select.paa""];\
+			ctrlShow[18002, false];\
+			((findDisplay 18000) displayCtrl 18003) ctrlSetBackgroundColor [1,1,1,1];\
+			((findDisplay 18000) displayCtrl 18005) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Retirer</t>"";";
+			onMouseExit = "\
+			ctrlSetText[18004,""lyeed_IMG\data\skull\take.paa""];\
+			ctrlShow[18002, true];\
+			((findDisplay 18000) displayCtrl 18003) ctrlSetBackgroundColor [0,0,0,0.6];\
+			((findDisplay 18000) displayCtrl 18005) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Retirer</t>"";";
+
+			x = 0.505156 * safezoneW + safezoneX;
+			y = 0.577 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
+			h = 0.055 * safezoneH;
 		};
 	};
 };

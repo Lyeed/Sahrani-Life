@@ -29,7 +29,7 @@ if ((vehicle player) isEqualTo player) then {
 _display = uiNamespace getVariable["tablet", displayNull];
 
 _loading_ctrl = _display ctrlCreate ["RscPicture", 7506];
-_loading_ctrl ctrlSetText "\lyeed\images\loading_screen.jpg";
+_loading_ctrl ctrlSetText "lyeed\images\loading_screen.jpg";
 _loading_ctrl ctrlSetPosition (ctrlPosition (_display displayCtrl 7502));
 _loading_ctrl ctrlSetFade 1;
 _loading_ctrl ctrlCommit 0;
@@ -75,8 +75,8 @@ if (!(isNull _display)) then
 	{
 		_bar ctrlSetStructuredText parseText format
 		[
-			"<t align='left'><img image='%1'/> %2</t><t align='center'>%3</t><t align='right'>%4/%5/%6 <img image='\lyeed\data\infobar\date.paa'/></t>",
-			if ("ItemGPS" in (assignedItems player)) then {"\lyeed\data\infobar\gps_yes.paa"} else {"\lyeed\data\infobar\gps_no.paa"},
+			"<t align='left'><img image='%1'/> %2</t><t align='center'>%3</t><t align='right'>%4/%5/%6 <img image='lyeed\data\infobar\date.paa'/></t>",
+			if ("ItemGPS" in (assignedItems player)) then {"lyeed\data\infobar\gps_yes.paa"} else {"lyeed\data\infobar\gps_no.paa"},
 			if ("ItemGPS" in (assignedItems player)) then {(mapGridPosition player)} else {"noGPS"},
 			([] call public_fnc_strTime),
 			(date select 2),

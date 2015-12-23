@@ -13,7 +13,7 @@ class RscDisplayTablet: default_base_dialog
 		class FRAME: RscPicture
 		{
 			idc = -1;
-			text = "\lyeed\images\frame_test2.paa";
+			text = "lyeed\images\frame_test2.paa";
 
 			x = 0.292971 * safezoneW + safezoneX;
 			y = 0.30191 * safezoneH + safezoneY;
@@ -23,7 +23,7 @@ class RscDisplayTablet: default_base_dialog
 		class BACKGROUND: RscPicture
 		{
 			idc = 7502;
-			text = "\lyeed\images\loading_screen.jpg";
+			text = "lyeed\images\loading_screen.jpg";
 
 			x = 0.316437 * safezoneW + safezoneX;
 			y = 0.3394 * safezoneH + safezoneY;
@@ -49,7 +49,7 @@ class RscDisplayTablet: default_base_dialog
 		class MAIN_BUTTON_IMAGE: RscPicture
 		{
 			idc = 7507;
-			text = "\lyeed\images\home_basic.paa";
+			text = "lyeed\images\home_basic.paa";
 
 			x = 0.680469 * safezoneW + safezoneX;
 			y = 0.5 * safezoneH + safezoneY;
@@ -60,8 +60,8 @@ class RscDisplayTablet: default_base_dialog
 		{
 			idc = -1;
 			action = "uiNamespace setVariable[""main_status"", 0]; [""MAIN""] spawn public_fnc_tabletApp;";
-			onMouseEnter = "ctrlSetText[7507,""\lyeed\images\home_select.paa""];";
-			onMouseExit = "ctrlSetText[7507,""\lyeed\images\home_basic.paa""];";
+			onMouseEnter = "ctrlSetText[7507,""lyeed\images\home_select.paa""];";
+			onMouseExit = "ctrlSetText[7507,""lyeed\images\home_basic.paa""];";
 			tooltip = "Menu principal";
 
 			x = 0.680469 * safezoneW + safezoneX;

@@ -8,7 +8,7 @@ class RscDisplayShopClothing: default_base_dialog
 		class BORDER: RscPicture
 		{
 			idc = -1;
-			text = "\lyeed_IMG\data\frames\frame_2_borderless.paa";
+			text = "lyeed_IMG\data\frames\frame_2_borderless.paa";
 
 			x = 0.0875 * safezoneW + safezoneX;
 			y = 0.247 * safezoneH + safezoneY;
@@ -18,7 +18,7 @@ class RscDisplayShopClothing: default_base_dialog
 		class BACKGROUND: RscPicture
 		{
 			idc = -1;
-			text = "\lyeed_IMG\data\shops\background.jpg";
+			text = "lyeed_IMG\data\shops\background.jpg";
 
 			x = 0.0925209 * safezoneW + safezoneX;
 			y = 0.272593 * safezoneH + safezoneY;
@@ -140,7 +140,7 @@ class RscDisplayShopClothing: default_base_dialog
 		class ACTION_EXIT_IMAGE: RscPicture
 		{
 			idc = 3107;
-			text = "\lyeed_IMG\data\shops\actions\action_exit.paa";
+			text = "lyeed_IMG\data\shops\actions\action_exit.paa";
 
 			x = 0.211094 * safezoneW + safezoneX;
 			y = 0.676111 * safezoneH + safezoneY;
@@ -152,12 +152,12 @@ class RscDisplayShopClothing: default_base_dialog
 			idc = -1;
 			action = "closeDialog 0;";
 			onMouseEnter = "\
-			ctrlSetText[3107,""\lyeed_IMG\data\shops\actions\action_exit_select.paa""];\
+			ctrlSetText[3107,""lyeed_IMG\data\shops\actions\action_exit_select.paa""];\
 			ctrlShow[3105, false];\
 			((findDisplay 3100) displayCtrl 3104) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 3100) displayCtrl 3106) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
 			onMouseExit = "\
-			ctrlSetText[3107,""\lyeed_IMG\data\shops\actions\action_exit.paa""];\
+			ctrlSetText[3107,""lyeed_IMG\data\shops\actions\action_exit.paa""];\
 			ctrlShow[3105, true];\
 			((findDisplay 3100) displayCtrl 3104) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 3100) displayCtrl 3106) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";
@@ -202,7 +202,7 @@ class RscDisplayShopClothing: default_base_dialog
 		class ACTION_BUY_IMAGE: RscPicture
 		{
 			idc = 3111;
-			text = "\lyeed_IMG\data\shops\actions\action_buy.paa";
+			text = "lyeed_IMG\data\shops\actions\action_buy.paa";
 
 			x = 0.110677 * safezoneW + safezoneX;
 			y = 0.670444 * safezoneH + safezoneY;
@@ -214,12 +214,12 @@ class RscDisplayShopClothing: default_base_dialog
 			idc = 3112;
 			action = "[] call public_fnc_shop_clothing_buy;";
 			onMouseEnter = "\
-			ctrlSetText[3111,""\lyeed_IMG\data\shops\actions\action_buy_select.paa""];\
+			ctrlSetText[3111,""lyeed_IMG\data\shops\actions\action_buy_select.paa""];\
 			ctrlShow[3109, false];\
 			((findDisplay 3100) displayCtrl 3108) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 3100) displayCtrl 3110) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
 			onMouseExit = "\
-			ctrlSetText[3111,""\lyeed_IMG\data\shops\actions\action_buy.paa""];\
+			ctrlSetText[3111,""lyeed_IMG\data\shops\actions\action_buy.paa""];\
 			if (ctrlVisible 3111) then {\
 				ctrlShow[3109, true];\
 			};\

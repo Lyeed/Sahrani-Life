@@ -5,7 +5,7 @@ class RscDisplaySkullOwner: default_interaction_back_dialog
 
 	class controlsBackground: DEFAULT_controlsBackground
 	{
-		class BACKGROUND_SPEC: BACKGROUND
+		class BACKGROUND: BACKGROUND
 		{
 			text = "lyeed_IMG\data\skull\background.jpg";
 		};
@@ -65,7 +65,7 @@ class RscDisplaySkullInventory: default_interaction_back_dialog
 
 	class controlsBackground: DEFAULT_controlsBackground
 	{
-		class BACKGROUND_SPEC: BACKGROUND
+		class BACKGROUND: BACKGROUND
 		{
 			text = "lyeed_IMG\data\skull\background.jpg";
 		};
@@ -88,14 +88,14 @@ class RscDisplaySkullInventory: default_interaction_back_dialog
 		class OPTION_BACK_IMAGE: OPTION_BACK_IMAGE {};
 		class OPTION_BACK_BUTTON: OPTION_BACK_BUTTON {};
 
-		class INVENTORY_FRAME: RscFrame
+		class FRAME: RscFrame
 		{
 			x = 0.381406 * safezoneW + safezoneX;
 			y = 0.401 * safezoneH + safezoneY;
 			w = 0.237187 * safezoneW;
 			h = 0.165 * safezoneH;
 		};
-		class INVENTORY_LIST: RscListbox
+		class LIST: RscListbox
 		{
 			idc = 69002;
 
@@ -105,7 +105,7 @@ class RscDisplaySkullInventory: default_interaction_back_dialog
 			h = 0.165 * safezoneH;
 		};
 
-		class ACTION_TAKE_FRAME: RscFrame
+		class ACTION_FRAME: RscFrame
 		{
 			idc = 69003;
 			colorText[] = {0,0,0,0.8};
@@ -115,7 +115,7 @@ class RscDisplaySkullInventory: default_interaction_back_dialog
 			w = 0.108281 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
-		class ACTION_TAKE_BACKGROUND: RscStructuredText
+		class ACTION_BACKGROUND: RscStructuredText
 		{
 			idc = 69004;
 			colorBackground[] = {0,0,0,0.6};
@@ -125,7 +125,7 @@ class RscDisplaySkullInventory: default_interaction_back_dialog
 			w = 0.108281 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
-		class ACTION_TAKE_IMAGE: RscPicture
+		class ACTION_IMAGE: RscPicture
 		{
 			idc = 69005;
 			text = "lyeed_IMG\data\skull\take.paa";
@@ -135,7 +135,7 @@ class RscDisplaySkullInventory: default_interaction_back_dialog
 			w = 0.0257812 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
-		class ACTION_TAKE_TEXT: RscStructuredText
+		class ACTION_TEXT: RscStructuredText
 		{
 			idc = 69006;
 			text = "<t align='left' size='1.3'>Prendre</t>";
@@ -146,7 +146,7 @@ class RscDisplaySkullInventory: default_interaction_back_dialog
 			w = 0.0721875 * safezoneW;
 			h = 0.033 * safezoneH;
 		};
-		class ACTION_TAKE_BUTTON: RscButtonSilent
+		class ACTION_BUTTON: RscButtonSilent
 		{
 			idc = 69007;
 			action = "[] call public_fnc_skullMenu_search_take";

@@ -17,10 +17,11 @@ if (missionNamespace getVariable [format["license_%1", _license], false]) then
 	[
 		format
 		[
-			"<t align='center'>Votre licence<br/><t color='#DF7401'>%1</t><br/>vous a été retiré par<br/>%<t color='#2E64FE'>%2 %3</t></t>",
+			"Votre licence <t color='#DF7401'>%1</t> vous a été retirée par <t color='#2E64FE'>%2 %3</t>",
 			([_license] call public_fnc_licenseGetName),
 			([(side _from), (_from getVariable["rank", 0])] call public_fnc_rankToStr),
 			(_from getVariable ["realname", (name _from)])
 		]
 	] call public_fnc_info;
+	[format["La licence <t color='#DF7401'>%1</t> a été retirée", ([_license] call public_fnc_licenseGetName)]] remoteExecCall ["public_fnc_info", _from];
 };

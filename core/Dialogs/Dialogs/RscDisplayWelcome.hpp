@@ -387,7 +387,7 @@ class RscDisplayWelcomeFaction: default_base_dialog
 		class LEFT_IMAGE: RscPicture
 		{
 			idc = 853;
-			text = "\lyeed_IMG\data\faction\EAST_logo.paa";
+			text = "lyeed_IMG\data\faction\EAST_logo.paa";
 
 			x = 0.0720312 * safezoneW + safezoneX;
 			y = 0.17 * safezoneH + safezoneY;
@@ -477,7 +477,7 @@ class RscDisplayWelcomeFaction: default_base_dialog
 		class RIGHT_IMAGE: RscPicture
 		{
 			idc = 863;
-			text = "\lyeed_IMG\data\faction\WEST_logo.paa";
+			text = "lyeed_IMG\data\faction\WEST_logo.paa";
 			
 			x = 0.845469 * safezoneW + safezoneX;
 			y = 0.17 * safezoneH + safezoneY;
@@ -573,7 +573,7 @@ class RscDisplayWelcomeFaction: default_base_dialog
 		class LEFT_CHOICE_IMAGE: RscPicture
 		{
 			idc = 810;
-			text = "\lyeed_IMG\data\welcome\welcome_faction_left_fade.jpg";
+			text = "lyeed_IMG\data\welcome\welcome_faction_left_fade.jpg";
 			
 			x = 0.242187 * safezoneW + safezoneX;
 			y = 0.599 * safezoneH + safezoneY;
@@ -592,7 +592,7 @@ class RscDisplayWelcomeFaction: default_base_dialog
 			ctrlShow[855,true];\
 			ctrlShow[856,true];\
 			ctrlShow[857,true];\
-			ctrlSetText[810,""\lyeed_IMG\data\welcome\welcome_faction_left.jpg""];\
+			ctrlSetText[810,""lyeed_IMG\data\welcome\welcome_faction_left.jpg""];\
 			playMusic [""welcome_EAST"", random 220];\
 			";
 			onMouseExit = "\
@@ -604,7 +604,7 @@ class RscDisplayWelcomeFaction: default_base_dialog
 			ctrlShow[855,false];\
 			ctrlShow[856,false];\
 			ctrlShow[857,false];\
-			ctrlSetText[810,""\lyeed_IMG\data\welcome\welcome_faction_left_fade.jpg""];\
+			ctrlSetText[810,""lyeed_IMG\data\welcome\welcome_faction_left_fade.jpg""];\
 			playMusic """";\
 			";
 			action = "\
@@ -653,7 +653,7 @@ class RscDisplayWelcomeFaction: default_base_dialog
 		class RIGHT_CHOICE_IMAGE: RscPicture
 		{
 			idc = 811;
-			text = "\lyeed_IMG\data\welcome\welcome_faction_right_fade.jpg";
+			text = "lyeed_IMG\data\welcome\welcome_faction_right_fade.jpg";
 
 			x = 0.520625 * safezoneW + safezoneX;
 			y = 0.599 * safezoneH + safezoneY;
@@ -672,7 +672,7 @@ class RscDisplayWelcomeFaction: default_base_dialog
 			ctrlShow[865,true];\
 			ctrlShow[866,true];\
 			ctrlShow[867,true];\
-			ctrlSetText[811,""\lyeed_IMG\data\welcome\welcome_faction_right.jpg""];\
+			ctrlSetText[811,""lyeed_IMG\data\welcome\welcome_faction_right.jpg""];\
 			playMusic [""welcome_WEST"", random 200];\
 			";
 			onMouseExit = "\
@@ -684,7 +684,7 @@ class RscDisplayWelcomeFaction: default_base_dialog
 			ctrlShow[865,false];\
 			ctrlShow[866,false];\
 			ctrlShow[867,false];\
-			ctrlSetText[811,""\lyeed_IMG\data\welcome\welcome_faction_right_fade.jpg""];\
+			ctrlSetText[811,""lyeed_IMG\data\welcome\welcome_faction_right_fade.jpg""];\
 			playMusic """";\
 			";
 			action = "\

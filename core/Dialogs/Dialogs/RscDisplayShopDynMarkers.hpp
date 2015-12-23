@@ -8,7 +8,7 @@ class RscDisplayShopDynMarkers: default_base_dialog
 		class BORDER: RscPicture
 		{
 			idc = -1;
-			text = "\lyeed_IMG\data\frames\frame_2_borderless.paa";
+			text = "lyeed_IMG\data\frames\frame_2_borderless.paa";
 
 			x = 0.283437 * safezoneW + safezoneX;
 			y = 0.324 * safezoneH + safezoneY;
@@ -18,7 +18,7 @@ class RscDisplayShopDynMarkers: default_base_dialog
 		class BACKGROUND: RscPicture
 		{
 			idc = -1;
-			text = "\lyeed_IMG\data\shops\background.jpg";
+			text = "lyeed_IMG\data\shops\background.jpg";
 
 			x = 0.298906 * safezoneW + safezoneX;
 			y = 0.346 * safezoneH + safezoneY;
@@ -140,7 +140,7 @@ class RscDisplayShopDynMarkers: default_base_dialog
 		class ACTION_BUY_IMAGE: RscPicture
 		{
 			idc = 21008;
-			text = "\lyeed_IMG\data\shops\actions\action_buy.paa";
+			text = "lyeed_IMG\data\shops\actions\action_buy.paa";
 			
 			x = 0.4665 * safezoneW + safezoneX;
 			y = 0.583465 * safezoneH + safezoneY;
@@ -152,12 +152,12 @@ class RscDisplayShopDynMarkers: default_base_dialog
 			idc = 21009;
 			action = "[] call public_fnc_shop_virtual_buy;";
 			onMouseEnter = "\
-			ctrlSetText[21008,""\lyeed_IMG\data\shops\actions\action_buy_select.paa""];\
+			ctrlSetText[21008,""lyeed_IMG\data\shops\actions\action_buy_select.paa""];\
 			ctrlShow[21006, false];\
 			((findDisplay 21000) displayCtrl 21005) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 21000) displayCtrl 21007) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
 			onMouseExit = "\
-			ctrlSetText[21008,""\lyeed_IMG\data\shops\actions\action_buy.paa""];\
+			ctrlSetText[21008,""lyeed_IMG\data\shops\actions\action_buy.paa""];\
 			if (ctrlVisible 21008) then {\
 				ctrlShow[21006, true];\
 			};\
@@ -204,7 +204,7 @@ class RscDisplayShopDynMarkers: default_base_dialog
 		class ACTION_EXIT_IMAGE: RscPicture
 		{
 			idc = 21013;
-			text = "\lyeed_IMG\data\shops\actions\action_exit.paa";
+			text = "lyeed_IMG\data\shops\actions\action_exit.paa";
 			
 			x = 0.561875 * safezoneW + safezoneX;
 			y = 0.588 * safezoneH + safezoneY;
@@ -216,12 +216,12 @@ class RscDisplayShopDynMarkers: default_base_dialog
 			idc = 21014;
 			action = "closeDialog 0;";
 			onMouseEnter = "\
-			ctrlSetText[21013,""\lyeed_IMG\data\shops\actions\action_exit_select.paa""];\
+			ctrlSetText[21013,""lyeed_IMG\data\shops\actions\action_exit_select.paa""];\
 			ctrlShow[21011, false];\
 			((findDisplay 21000) displayCtrl 21010) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 21000) displayCtrl 21012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
 			onMouseExit = "\
-			ctrlSetText[21013,""\lyeed_IMG\data\shops\actions\action_exit.paa""];\
+			ctrlSetText[21013,""lyeed_IMG\data\shops\actions\action_exit.paa""];\
 			ctrlShow[21011, true];\
 			((findDisplay 21000) displayCtrl 21010) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 21000) displayCtrl 21012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";

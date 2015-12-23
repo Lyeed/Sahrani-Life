@@ -7081,7 +7081,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this addAction[""<img image='\lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>véhicules</t>)"" ,public_fnc_auctionHouse_menu_open,[""NORTH"", 2],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this addAction[""<img image='lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>véhicules</t>)"" ,public_fnc_auctionHouse_menu_open,[""NORTH"", 2],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item357
 		{
@@ -7092,7 +7092,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this addAction[""<img image='\lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>équipements</t>)"" ,public_fnc_auctionHouse_menu_open,[""NORTH"", 1],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this addAction[""<img image='lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>équipements</t>)"" ,public_fnc_auctionHouse_menu_open,[""NORTH"", 1],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item358
 		{
@@ -7103,7 +7103,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this addAction[""<img image='\lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>objets</t>)"" ,public_fnc_auctionHouse_menu_open,[""NORTH"", 0],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this addAction[""<img image='lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>objets</t>)"" ,public_fnc_auctionHouse_menu_open,[""NORTH"", 0],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item359
 		{
@@ -7123,7 +7123,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this addAction[""<img image='\lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>véhicules</t>)"" ,public_fnc_auctionHouse_menu_open,[""SOUTH"", 2],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this addAction[""<img image='lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>véhicules</t>)"" ,public_fnc_auctionHouse_menu_open,[""SOUTH"", 2],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item361
 		{
@@ -7134,7 +7134,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this addAction[""<img image='\lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>équipements</t>)"" ,public_fnc_auctionHouse_menu_open,[""SOUTH"", 1],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this addAction[""<img image='lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>équipements</t>)"" ,public_fnc_auctionHouse_menu_open,[""SOUTH"", 1],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item362
 		{
@@ -7145,7 +7145,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this addAction[""<img image='\lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>objets</t>)"" ,public_fnc_auctionHouse_menu_open,[""SOUTH"", 0],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this addAction[""<img image='lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>objets</t>)"" ,public_fnc_auctionHouse_menu_open,[""SOUTH"", 0],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item363
 		{
@@ -7186,7 +7186,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 39.0973;this setposATL [14385.507813,12613.570313,0.00589371];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_normal"", [""CIV_vehicles_land_normal_marker_1"", ""CIV_vehicles_land_normal_marker_2"",""CIV_vehicles_land_normal_marker_5""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 39.0973;this setposATL [14385.507813,12613.570313,0.00589371];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_normal"", [""CIV_vehicles_land_normal_marker_1"", ""CIV_vehicles_land_normal_marker_2"",""CIV_vehicles_land_normal_marker_5""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item367
 		{
@@ -7208,7 +7208,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 295.259;this setposATL [14205.776367,11864.0830078,-0.00168228];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de meuble"",public_fnc_process_open,""furniture"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 295.259;this setposATL [14205.776367,11864.0830078,-0.00168228];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de meuble"",public_fnc_process_open,""furniture"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item369
 		{
@@ -7239,7 +7239,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 35.7275;this setposATL [14681.597656,10745.803711,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Rafinerie"",public_fnc_process_open,""oil"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 35.7275;this setposATL [14681.597656,10745.803711,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Rafinerie"",public_fnc_process_open,""oil"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item372
 		{
@@ -7260,7 +7260,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 1.78521;this setposATL [12519.96875,14952.645508,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de luxe"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_luxe"", [""CIV_vehicles_land_luxe_marker_1"",""CIV_vehicles_land_luxe_marker_2"",""CIV_vehicles_land_luxe_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 1.78521;this setposATL [12519.96875,14952.645508,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de luxe"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_luxe"", [""CIV_vehicles_land_luxe_marker_1"",""CIV_vehicles_land_luxe_marker_2"",""CIV_vehicles_land_luxe_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item374
 		{
@@ -7281,7 +7281,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 75.8111;this setposATL [13681.598633,10526.348633,-0.00871468];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",public_fnc_shop_vehicles_open,[""GUER_vehicles_land"", [""GUER_vehicles_marker_1"",""GUER_vehicles_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == independent'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""GUER_vehicles_air"", [""GUER_vehicles_marker_1"",""GUER_vehicles_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == independent'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",public_fnc_garageGet,""garage_guer"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Car"", ""Truck"", ""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 75.8111;this setposATL [13681.598633,10526.348633,-0.00871468];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",public_fnc_shop_vehicles_open,[""GUER_vehicles_land"", [""GUER_vehicles_marker_1"",""GUER_vehicles_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == independent'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""GUER_vehicles_air"", [""GUER_vehicles_marker_1"",""GUER_vehicles_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == independent'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",public_fnc_garageGet,""garage_guer"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Car"", ""Truck"", ""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item376
 		{
@@ -7302,7 +7302,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 149.481;this setposATL [10771.695313,9467.229492,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de d'occasion"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_occasion"", [""CIV_vehicles_land_occasion_marker_1"",""CIV_vehicles_land_occasion_marker_4""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 149.481;this setposATL [10771.695313,9467.229492,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de d'occasion"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_occasion"", [""CIV_vehicles_land_occasion_marker_1"",""CIV_vehicles_land_occasion_marker_4""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item378
 		{
@@ -7323,7 +7323,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 76.6548;this setposATL [10245.015625,9307.206055,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_normal"", [""CIV_vehicles_land_normal_marker_3"", ""CIV_vehicles_land_normal_marker_4"",""CIV_vehicles_land_normal_marker_6""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 76.6548;this setposATL [10245.015625,9307.206055,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_normal"", [""CIV_vehicles_land_normal_marker_3"", ""CIV_vehicles_land_normal_marker_4"",""CIV_vehicles_land_normal_marker_6""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item380
 		{
@@ -7344,7 +7344,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 316.836;this setposATL [10353.198242,9518.652344,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",public_fnc_garageGet,""garage_paraiso"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Car"", ""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 316.836;this setposATL [10353.198242,9518.652344,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",public_fnc_garageGet,""garage_paraiso"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Car"", ""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item382
 		{
@@ -7364,7 +7364,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 181.836;this setposATL [9815.916992,9980.357422,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""CIV_vehicles_air"", [""CIV_vehicles_air_marker_2"",""CIV_vehicles_air_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage aérien"",public_fnc_garageGet,""garage_air_sud"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Air"",""Truck"", ""Car""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 181.836;this setposATL [9815.916992,9980.357422,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""CIV_vehicles_air"", [""CIV_vehicles_air_marker_2"",""CIV_vehicles_air_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage aérien"",public_fnc_garageGet,""garage_air_sud"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Air"",""Truck"", ""Car""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item384
 		{
@@ -7374,7 +7374,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 331.519;this setposATL [17330.117188,14142.501953,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire Poid Lourd"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_truck"", [""CIV_vehicles_land_truck_marker_1"",""CIV_vehicles_land_truck_marker_2"",""CIV_vehicles_land_truck_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 331.519;this setposATL [17330.117188,14142.501953,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire Poid Lourd"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_truck"", [""CIV_vehicles_land_truck_marker_1"",""CIV_vehicles_land_truck_marker_2"",""CIV_vehicles_land_truck_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item385
 		{
@@ -7384,7 +7384,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 196.519;this setposATL [19223.0957031,13924.3125,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""CIV_vehicles_air"", [""CIV_vehicles_air_marker_1"",""CIV_vehicles_air_marker_4""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage aérien"",public_fnc_garageGet,""garage_air_nord"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Air"",""Truck"", ""Car""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 196.519;this setposATL [19223.0957031,13924.3125,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""CIV_vehicles_air"", [""CIV_vehicles_air_marker_1"",""CIV_vehicles_air_marker_4""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage aérien"",public_fnc_garageGet,""garage_air_nord"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Air"",""Truck"", ""Car""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item386
 		{
@@ -7394,7 +7394,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 156.158;this setposATL [13242.945313,6852.496582,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire Poid Lourd"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_truck"", [""CIV_vehicles_land_truck_marker_4"",""CIV_vehicles_land_truck_marker_5""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 156.158;this setposATL [13242.945313,6852.496582,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire Poid Lourd"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_truck"", [""CIV_vehicles_land_truck_marker_4"",""CIV_vehicles_land_truck_marker_5""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item387
 		{
@@ -7414,7 +7414,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 61.0986;this setposATL [14010.59668,16553.380859,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du bois"",public_fnc_process_open,""wood"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 61.0986;this setposATL [14010.59668,16553.380859,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Traitement du bois"",public_fnc_process_open,""wood"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item389
 		{
@@ -7424,7 +7424,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 3.84515;this setposATL [10083.125977,9406.625977,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du fer"",public_fnc_process_open,""iron"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 3.84515;this setposATL [10083.125977,9406.625977,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Traitement du fer"",public_fnc_process_open,""iron"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item390
 		{
@@ -7434,7 +7434,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 92.0197;this setposATL [8962.610352,8425.400391,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du sel"",public_fnc_process_open,""salt"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 92.0197;this setposATL [8962.610352,8425.400391,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Traitement du sel"",public_fnc_process_open,""salt"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item391
 		{
@@ -7444,7 +7444,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 268.47;this setposATL [10064.99707,9388.237305,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du cuivre"",public_fnc_process_open,""copper"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 268.47;this setposATL [10064.99707,9388.237305,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Traitement du cuivre"",public_fnc_process_open,""copper"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item392
 		{
@@ -7454,7 +7454,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 80.5872;this setposATL [10676.165039,8989.0664063,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du sable"",public_fnc_process_open,""sand"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de seringue"",public_fnc_process_open,""seringue"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 80.5872;this setposATL [10676.165039,8989.0664063,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Traitement du sable"",public_fnc_process_open,""sand"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de seringue"",public_fnc_process_open,""seringue"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item393
 		{
@@ -8372,7 +8372,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 75.5073;this setposATL [14332.210938,12604.59668,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",public_fnc_garageGet,""garage_bagongo"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Car"", ""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 75.5073;this setposATL [14332.210938,12604.59668,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",public_fnc_garageGet,""garage_bagongo"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Car"", ""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item479
 		{
@@ -8382,7 +8382,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 355.428;this setposATL [14217.644531,12451.855469,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de d'occasion"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_occasion"", [""CIV_vehicles_land_occasion_marker_2"",""CIV_vehicles_land_occasion_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 355.428;this setposATL [14217.644531,12451.855469,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de d'occasion"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_occasion"", [""CIV_vehicles_land_occasion_marker_2"",""CIV_vehicles_land_occasion_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item480
 		{
@@ -8393,7 +8393,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 181.883;this setposATL [13544.765625,8683.416992,-0.00290489];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",public_fnc_shop_vehicles_open,[""CIV_vehicles_sea"", [""CIV_vehicles_sea_marker_1"",""CIV_vehicles_sea_marker_4""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",public_fnc_garageGet,""garage_sea_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 181.883;this setposATL [13544.765625,8683.416992,-0.00290489];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",public_fnc_shop_vehicles_open,[""CIV_vehicles_sea"", [""CIV_vehicles_sea_marker_1"",""CIV_vehicles_sea_marker_4""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",public_fnc_garageGet,""garage_sea_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item481
 		{
@@ -8403,7 +8403,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 349.641;this setposATL [11552.662109,9203.297852,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du cotton"",public_fnc_process_open,""cotton"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 349.641;this setposATL [11552.662109,9203.297852,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Traitement du cotton"",public_fnc_process_open,""cotton"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item482
 		{
@@ -8413,7 +8413,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 34.641;this setposATL [14049.241211,12657.819336,0];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Fonte de l'or"",public_fnc_process_open,""gold"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 34.641;this setposATL [14049.241211,12657.819336,0];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fonte de l'or"",public_fnc_process_open,""gold"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item483
 		{
@@ -8434,7 +8434,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 353.333;this setposATL [12967.568359,11323.791992,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Poterie"",public_fnc_process_open,""pottery"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 353.333;this setposATL [12967.568359,11323.791992,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Poterie"",public_fnc_process_open,""pottery"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item485
 		{
@@ -8474,7 +8474,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 138.054;this setposATL [12422.206055,13398.737305,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement du bauxite"",public_fnc_process_open,""bauxite"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 138.054;this setposATL [12422.206055,13398.737305,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Traitement du bauxite"",public_fnc_process_open,""bauxite"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item489
 		{
@@ -8495,7 +8495,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir -170;this setposATL [11987.179688,15412.923828,-0.0165344];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",public_fnc_shop_vehicles_open,[""WEST_vehicles_land"", [""west_marker_1"",""west_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == WEST'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",public_fnc_garageGet,""garage_west_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Car"", ""Truck"",""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""WEST_vehicles_air"", [""west_marker_1"",""west_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir -170;this setposATL [11987.179688,15412.923828,-0.0165344];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",public_fnc_shop_vehicles_open,[""WEST_vehicles_land"", [""west_marker_1"",""west_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == WEST'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",public_fnc_garageGet,""garage_west_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Car"", ""Truck"",""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""WEST_vehicles_air"", [""west_marker_1"",""west_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item491
 		{
@@ -8577,7 +8577,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir -1045;this setposATL [14630.254883,10575.623047,0];this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",public_fnc_shop_vehicles_open,[""WEST_vehicles_land"", [""west_marker_3"",""west_marker_4""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == WEST'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",public_fnc_garageGet,""garage_west_2"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Car"", ""Truck"",""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""WEST_vehicles_air"", [""west_marker_3"",""west_marker_4""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir -1045;this setposATL [14630.254883,10575.623047,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",public_fnc_shop_vehicles_open,[""WEST_vehicles_land"", [""west_marker_3"",""west_marker_4""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == WEST'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",public_fnc_garageGet,""garage_west_2"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Car"", ""Truck"",""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""WEST_vehicles_air"", [""west_marker_3"",""west_marker_4""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item499
 		{
@@ -8637,7 +8637,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir -1345;this setposATL [9659.520508,9988.935547,0];this setVectorUp [0,0,1]; this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""EAST_vehicles_air"", [""east_marker_1"",""east_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""Garage"",public_fnc_garageGet,""EAST_air"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == EAST'];";
+			init="this enableSimulation false;this allowDamage false;this setdir -1345;this setposATL [9659.520508,9988.935547,0];this setVectorUp [0,0,1]; this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""EAST_vehicles_air"", [""east_marker_1"",""east_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""Garage"",public_fnc_garageGet,""EAST_air"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == EAST'];";
 		};
 		class Item505
 		{
@@ -8667,7 +8667,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir -1530;this setposATL [8175.8125,7772.532227,0];this setVectorUp [0,0,1]; this addAction[""Concessionnaire"",public_fnc_shop_vehicles_open,[""EAST_vehicles_land"", [""EAST_vehicles_land_marker_2"",""EAST_vehicles_land_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Ranger son véhicule"",public_fnc_garageStoreOpen,[""Car"", ""Truck"", ""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4 '];this addAction[""Garage"",public_fnc_garageGet,""EAST_base_2"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == EAST']; this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""EAST_vehicles_air"", [""east_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir -1530;this setposATL [8175.8125,7772.532227,0];this setVectorUp [0,0,1]; this addAction[""Concessionnaire"",public_fnc_shop_vehicles_open,[""EAST_vehicles_land"", [""EAST_vehicles_land_marker_2"",""EAST_vehicles_land_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Ranger son véhicule"",public_fnc_garageStoreOpen,[""Car"", ""Truck"", ""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4 '];this addAction[""Garage"",public_fnc_garageGet,""EAST_base_2"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == EAST']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",public_fnc_shop_vehicles_open,[""EAST_vehicles_air"", [""east_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item508
 		{
@@ -14807,7 +14807,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]; this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Fonte du platine"",public_fnc_process_open,""platine1"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse']; this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Enrichissement du platine"",public_fnc_process_open,""platine2"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1]; this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fonte du platine"",public_fnc_process_open,""platine1"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse']; this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Enrichissement du platine"",public_fnc_process_open,""platine2"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item1138
 		{
@@ -14817,7 +14817,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Distillerie du raisin"",public_fnc_process_open,""Distillerie_Grozdova"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse']; this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Distillerie de prune"",public_fnc_process_open,""Distillerie_Slivovica"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Distillerie du raisin"",public_fnc_process_open,""Distillerie_Grozdova"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse']; this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Distillerie de prune"",public_fnc_process_open,""Distillerie_Slivovica"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item1139
 		{
@@ -14828,7 +14828,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",public_fnc_shop_vehicles_open,[""CIV_vehicles_sea"", [""CIV_vehicles_sea_marker_2"",""CIV_vehicles_sea_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='\lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",public_fnc_garageGet,""garage_sea_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",public_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",public_fnc_shop_vehicles_open,[""CIV_vehicles_sea"", [""CIV_vehicles_sea_marker_2"",""CIV_vehicles_sea_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",public_fnc_garageGet,""garage_sea_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item1140
 		{
@@ -14838,7 +14838,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire moto"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_moto"", [""CIV_vehicles_land_moto_marker_1"",""CIV_vehicles_land_moto_marker_2"",""CIV_vehicles_land_moto_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire moto"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_moto"", [""CIV_vehicles_land_moto_marker_1"",""CIV_vehicles_land_moto_marker_2"",""CIV_vehicles_land_moto_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item1141
 		{
@@ -16865,7 +16865,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Traitement de la pierre"",public_fnc_process_open,""Cimenttr"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Traitement de la pierre"",public_fnc_process_open,""Cimenttr"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item1329
 		{
@@ -17136,7 +17136,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="black_market_1";
-			init="this enableSimulation false; this allowDamage false; this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop.paa'/> Acheter des positions <t color='#01DF3A'>illégales</t>"" ,public_fnc_shop_dynamicMarkers_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse && playerSide == civilian']; this addAction[""Marché illégal"",public_fnc_shop_virtual_open,""rebel"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""Marché illégal objet"",public_fnc_shop_arma_open,""black_market"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Acheter des positions <t color='#01DF3A'>illégales</t>"" ,public_fnc_shop_dynamicMarkers_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse && playerSide == civilian']; this addAction[""Marché illégal"",public_fnc_shop_virtual_open,""rebel"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""Marché illégal objet"",public_fnc_shop_arma_open,""black_market"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item1356
 		{
@@ -17146,7 +17146,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="black_market_2";
-			init="this enableSimulation false; this allowDamage false; this addAction[""<img image='\lyeed_IMG\data\actions_menu\shop.paa'/> Acheter des positions <t color='#01DF3A'>illégales</t>"" ,public_fnc_shop_dynamicMarkers_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse && playerSide == civilian']; this addAction[""Marché illégal"",public_fnc_shop_virtual_open,""rebel"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""Marché illégal objet"",public_fnc_shop_arma_open,""black_market"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Acheter des positions <t color='#01DF3A'>illégales</t>"" ,public_fnc_shop_dynamicMarkers_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse && playerSide == civilian']; this addAction[""Marché illégal"",public_fnc_shop_virtual_open,""rebel"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""Marché illégal objet"",public_fnc_shop_arma_open,""black_market"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item1357
 		{

@@ -1,65 +1,45 @@
-class RscDisplayPlayerTicket: default_base_dialog
+class RscDisplayPlayerTicket: default_interaction_back_dialog
 {
 	idd = 17000;
 	name = "RscDisplayPlayerTicket";
 	
-	class controlsBackground
+	class controlsBackground: DEFAULT_controlsBackground
 	{
-		class BORDER: RscPicture
-		{
-			idc = -1;
-			text = "\lyeed_IMG\data\frames\frame_2_borderless.paa";
-
-			x = 0.311797 * safezoneW + safezoneX;
-			y = 0.2778 * safezoneH + safezoneY;
-			w = 0.329479 * safezoneW;
-			h = 0.505074 * safezoneH;
-		};
-		class BACKGROUND: RscPicture
-		{
-			idc = -1;
-			text = "\lyeed_IMG\data\player_interactions\background.jpg";
-		
-			x = 0.324687 * safezoneW + safezoneX;
-			y = 0.302 * safezoneH + safezoneY;
-			w = 0.304219 * safezoneW;
-			h = 0.462 * safezoneH;
-		};
+		class BACKGROUND: BACKGROUND {};
+		class FRAME: FRAME {};
 	};
 
-	class controls
+	class controls: DEFAULT_controls
 	{
-		class TITLE: RscStructuredText
+		class TITLE: TITLE
 		{
-			idc = -1;
-			colorBackground[] = {0,0,0,0.8};
-			text = "<t align='center' size='1.8'>Paiement</t>";
-
-			x = 0.324687 * safezoneW + safezoneX;
-			y = 0.302 * safezoneH + safezoneY;
-			w = 0.304219 * safezoneW;
-			h = 0.0384445 * safezoneH;
+			text = "<t size='1.5' align='center'>Paiement</t>";
 		};
+
+		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME {};
+		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND {};
+		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE {};
+		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON {};
+		class OPTION_BACK_FRAME: OPTION_BACK_FRAME {};
+		class OPTION_BACK_BACKGROUND: OPTION_BACK_BACKGROUND {};
+		class OPTION_BACK_IMAGE: OPTION_BACK_IMAGE {};
+		class OPTION_BACK_BUTTON: OPTION_BACK_BUTTON {};
 
 		class PRICE_FRAME: RscFrame
 		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-			
-			x = 0.4175 * safezoneW + safezoneX;
-			y = 0.401 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.386562 * safezoneW + safezoneX;
+			y = 0.566 * safezoneH + safezoneY;
+			w = 0.0928125 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
 		class PRICE_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Montant à payer</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
-			x = 0.4175 * safezoneW + safezoneX;
-			y = 0.401 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.386562 * safezoneW + safezoneX;
+			y = 0.566 * safezoneH + safezoneY;
+			w = 0.0928125 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class PRICE_EDIT: RscEdit
@@ -67,66 +47,97 @@ class RscDisplayPlayerTicket: default_base_dialog
 			idc = 17001;
 			text = "100";
 
-			x = 0.4175 * safezoneW + safezoneX;
-			y = 0.423 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.386562 * safezoneW + safezoneX;
+			y = 0.588 * safezoneH + safezoneY;
+			w = 0.0928125 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 
 		class DESC_FRAME: RscFrame
 		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-
-			x = 0.335 * safezoneW + safezoneX;
-			y = 0.478 * safezoneH + safezoneY;
-			w = 0.283594 * safezoneW;
-			h = 0.264 * safezoneH;
+			x = 0.386563 * safezoneW + safezoneX;
+			y = 0.401 * safezoneH + safezoneY;
+			w = 0.226875 * safezoneW;
+			h = 0.154 * safezoneH;
 		};
 		class DESC_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Description</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
-			x = 0.335 * safezoneW + safezoneX;
-			y = 0.478 * safezoneH + safezoneY;
-			w = 0.283594 * safezoneW;
+			x = 0.386562 * safezoneW + safezoneX;
+			y = 0.401 * safezoneH + safezoneY;
+			w = 0.226875 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class DESC_EDIT: RscEdit
 		{
 			idc = 17002;
-			text = "";
 			style = 16;
 			
-			x = 0.335 * safezoneW + safezoneX;
-			y = 0.5 * safezoneH + safezoneY;
-			w = 0.283594 * safezoneW;
-			h = 0.242 * safezoneH;
+			x = 0.386562 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.226875 * safezoneW;
+			h = 0.132 * safezoneH;
 		};
 
-		class SEND_IMAGE: RscPicture
+		class ACTION_VALIDATE_FRAME: RscFrame
 		{
 			idc = 17003;
-			text = "\lyeed_IMG\data\player_interactions\actions\action_ticket.paa";
 
-			x = 0.551562 * safezoneW + safezoneX;
-			y = 0.401 * safezoneH + safezoneY;
-			w = 0.04125 * safezoneW;
+			x = 0.505156 * safezoneW + safezoneX;
+			y = 0.577 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
-		class SEND_BUTTON: RscButtonSilent
+		class ACTION_VALIDATE_BACKGROUND: RscStructuredText
 		{
-			idc = -1;
-			action = "[] call public_fnc_interactionMenu_action_ticket_send;";
-			tooltip = "Valider";
-			onMouseEnter = "ctrlSetText[17003,""\lyeed_IMG\data\player_interactions\actions\action_ticket_select.paa""];";
-			onMouseExit = "ctrlSetText[17003,""\lyeed_IMG\data\player_interactions\actions\action_ticket.paa""];";
+			idc = 17004;
+			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.551562 * safezoneW + safezoneX;
-			y = 0.401 * safezoneH + safezoneY;
-			w = 0.04125 * safezoneW;
+			x = 0.505156 * safezoneW + safezoneX;
+			y = 0.577 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+		class ACTION_VALIDATE_IMAGE: RscPicture
+		{
+			idc = 17005;
+			text = "lyeed_IMG\data\interactions\player_to_player_basics\action_ticket.paa";
+
+			x = 0.508879 * safezoneW + safezoneX;
+			y = 0.582387 * safezoneH + safezoneY;
+			w = 0.0257812 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+		class ACTION_VALIDATE_TEXT: RscStructuredText
+		{
+			idc = 17006;
+			text = "<t align='left' size='1.3'>Valider</t>";
+			colorBackground[] = {0,0,0,0};
+
+			x = 0.536094 * safezoneW + safezoneX;
+			y = 0.588 * safezoneH + safezoneY;
+			w = 0.0721875 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+		class ACTION_VALIDATE_BUTTON: RscButtonSilent
+		{
+			action = "[] call public_fnc_interactionMenu_action_ticket_send";
+			onMouseEnter = "\
+			ctrlSetText[17005,""lyeed_IMG\data\interactions\player_to_player_basics\action_ticket_select.paa""];\
+			ctrlShow[17003, false];\
+			((findDisplay 17000) displayCtrl 17004) ctrlSetBackgroundColor [1,1,1,1];\
+			((findDisplay 17000) displayCtrl 17006) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Valider</t>"";";
+			onMouseExit = "\
+			ctrlSetText[17005,""lyeed_IMG\data\interactions\player_to_player_basics\action_ticket.paa""];\
+			ctrlShow[17003, true];\
+			((findDisplay 17000) displayCtrl 17004) ctrlSetBackgroundColor [0,0,0,0.6];\
+			((findDisplay 17000) displayCtrl 17006) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Valider</t>"";";
+
+			x = 0.505156 * safezoneW + safezoneX;
+			y = 0.577 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 	};

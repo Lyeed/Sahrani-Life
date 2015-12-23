@@ -1,141 +1,55 @@
-class RscDisplayPlayerSearch: default_base_dialog
+class RscDisplayPlayerSearch: default_interaction_back_dialog
 {
 	idd = 16000;
 	name = "RscDisplayPlayerSearch";
 	
-	class controlsBackground
+	class controlsBackground: DEFAULT_controlsBackground
 	{
-		class BORDER: RscPicture
-		{
-			idc = -1;
-			text = "\lyeed_IMG\data\frames\frame_2_borderless.paa";
-
-			x = 0.311797 * safezoneW + safezoneX;
-			y = 0.2778 * safezoneH + safezoneY;
-			w = 0.329479 * safezoneW;
-			h = 0.505074 * safezoneH;
-		};
-		class BACKGROUND: RscPicture
-		{
-			idc = -1;
-			text = "\lyeed_IMG\data\player_interactions\background.jpg";
-		
-			x = 0.324687 * safezoneW + safezoneX;
-			y = 0.302 * safezoneH + safezoneY;
-			w = 0.304219 * safezoneW;
-			h = 0.462 * safezoneH;
-		};
+		class BACKGROUND: BACKGROUND {};
+		class FRAME: FRAME {};
 	};
 
-	class controls
+	class controls: DEFAULT_controls
 	{
-		class TITLE: RscStructuredText
+		class TITLE: TITLE
 		{
-			idc = -1;
-			colorBackground[] = {0,0,0,0.8};
-			text = "<t align='center' size='1.8'>Fouille</t>";
-
-			x = 0.324687 * safezoneW + safezoneX;
-			y = 0.302 * safezoneH + safezoneY;
-			w = 0.304219 * safezoneW;
-			h = 0.0384445 * safezoneH;
+			text = "<t size='1.5' align='center'>Fouille</t>";
 		};
 
-		class INVENTORY_FRAME: RscFrame
+		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME {};
+		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND {};
+		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE {};
+		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON {};
+		class OPTION_BACK_FRAME: OPTION_BACK_FRAME {};
+		class OPTION_BACK_BACKGROUND: OPTION_BACK_BACKGROUND {};
+		class OPTION_BACK_IMAGE: OPTION_BACK_IMAGE {};
+		class OPTION_BACK_BUTTON: OPTION_BACK_BUTTON {};
+
+		class FRAME: RscFrame
 		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-			
-			x = 0.329844 * safezoneW + safezoneX;
-			y = 0.434 * safezoneH + safezoneY;
-			w = 0.144375 * safezoneW;
-			h = 0.319 * safezoneH;
+			x = 0.396875 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.20625 * safezoneW;
+			h = 0.242 * safezoneH;
 		};
-		class INVENTORY_HEADER: RscStructuredText
+		class HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Inventaire</t>";
 			colorBackground[] = {0,0,0,0.8};
 
-			x = 0.329844 * safezoneW + safezoneX;
-			y = 0.434 * safezoneH + safezoneY;
-			w = 0.144375 * safezoneW;
+			x = 0.396875 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.20625 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-		class INVENTORY_LIST: RscListbox
-		{
-			idc = 16002;
-			colorBackground[] = {0,0,0,0.6};
-
-			x = 0.329844 * safezoneW + safezoneX;
-			y = 0.456 * safezoneH + safezoneY;
-			w = 0.144375 * safezoneW;
-			h = 0.297 * safezoneH;
-		};
-
-		class EQUIPMENT_FRAME: RscFrame
-		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-
-			x = 0.479375 * safezoneW + safezoneX;
-			y = 0.434 * safezoneH + safezoneY;
-			w = 0.144375 * safezoneW;
-			h = 0.319 * safezoneH;
-		};
-		class EQUIPMENT_HEADER: RscStructuredText
-		{
-			idc = -1;
-			text = "<t align='center'>Equipement</t>";
-			colorBackground[] = {0,0,0,0.8};
-
-			x = 0.479375 * safezoneW + safezoneX;
-			y = 0.434 * safezoneH + safezoneY;
-			w = 0.144375 * safezoneW;
-			h = 0.022 * safezoneH;
-		};
-		class EQUIPMENT_LIST: RscListbox
-		{
-			idc = 16003;
-			colorBackground[] = {0,0,0,0.6};
-
-			x = 0.479375 * safezoneW + safezoneX;
-			y = 0.456 * safezoneH + safezoneY;
-			w = 0.144375 * safezoneW;
-			h = 0.297 * safezoneH;
-		};
-
-		class MONEY_FRAME: RscFrame
-		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-
-			x = 0.407187 * safezoneW + safezoneX;
-			y = 0.357 * safezoneH + safezoneY;
-			w = 0.144375 * safezoneW;
-			h = 0.044 * safezoneH;
-		};
-		class MONEY_HEADER: RscStructuredText
-		{
-			idc = -1;
-			text = "<t align='center'>Porte-feuille</t>";
-			colorBackground[] = {0,0,0,0.8};
-
-			x = 0.407187 * safezoneW + safezoneX;
-			y = 0.357 * safezoneH + safezoneY;
-			w = 0.144375 * safezoneW;
-			h = 0.022 * safezoneH;
-		};
-		class MONEY_INFO: RscStructuredText
+		class LIST: RscListbox
 		{
 			idc = 16001;
-			text = "<t align='center'>0kn</t>";
-			colorBackground[] = {0,0,0,0.6};
-
-			x = 0.407187 * safezoneW + safezoneX;
-			y = 0.379 * safezoneH + safezoneY;
-			w = 0.144375 * safezoneW;
-			h = 0.022 * safezoneH;
+			
+			x = 0.396875 * safezoneW + safezoneX;
+			y = 0.445 * safezoneH + safezoneY;
+			w = 0.20625 * safezoneW;
+			h = 0.22 * safezoneH;
 		};
 	};
 };
