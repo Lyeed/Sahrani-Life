@@ -31,7 +31,7 @@ if (isEngineOn _veh) exitWith {
 if ((fuel _veh) > 0.9) exitWith {
 	["Le réservoir du véhicule est déjà plein."] call public_fnc_error;
 };
-if (!(_veh getVariable ["refueling", false])) exitWith {
+if (_veh getVariable ["refueling", false]) exitWith {
 	["Une autre personne effectue actuellement le plein du véhicule."] call public_fnc_error;
 };
 _currentfuel = _station getVariable [_typeRefuel, 250];
