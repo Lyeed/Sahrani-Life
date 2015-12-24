@@ -144,15 +144,6 @@ class RscDisplayFuelRefuel: default_base_dialog
 			w = 0.130989 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-		class PROGRESS_FRAME: RscFrame
-		{
-			idc = 17015;
-
-			x = 0.4 * safezoneW + safezoneX;
-			y = 0.428556 * safezoneH + safezoneY;
-			w = 0.132396 * safezoneW;
-			h = 0.0247777 * safezoneH;
-		};
 		class FUEL_BTN: RscButton
 		{
 			idc = 17016;

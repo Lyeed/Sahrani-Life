@@ -395,7 +395,7 @@ class RscProgress
 	texture = "";
 	shadow = 0;
 	colorFrame[] = {0, 0, 0, 1};
-	colorBackground[] = {0, 0, 0, 0.6};
+	colorBackground[] = {0, 0, 0, 1};
 	colorBar[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 };
 

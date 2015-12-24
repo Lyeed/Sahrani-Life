@@ -308,10 +308,10 @@ class Public
 	class Launder
 	{
 		file = "core\Game\Launder";
-		class launderCalc {};
-		class launderExecute {};
-		class launderOpen {};
-		class launderReceive {};
+		class launder_calc {};
+		class launder_action {};
+		class launder_open {};
+		class launder_receive {};
 	};
 
 	class Drugs

@@ -7,6 +7,7 @@ class ALYSIA_FACTIONS
 		icon = "lyeed_IMG\data\faction\WEST_logo.paa";
 		paycheck = 750;
 		identity_item = "SkylineItems_PlaqueMilitaire";
+		launder = 0;
 
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
@@ -126,6 +127,7 @@ class ALYSIA_FACTIONS
 		icon = "lyeed_IMG\data\faction\EAST_logo.paa";
 		paycheck = 750;
 		identity_item = "SkylineItems_PlaqueMilitaire";
+		launder = 0;
 
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
@@ -235,6 +237,7 @@ class ALYSIA_FACTIONS
 		icon = "lyeed_IMG\data\faction\CIV_logo.paa";
 		paycheck = 600;
 		identity_item = "SkylineItems_Passeport";
+		launder = 1;
 
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
@@ -358,6 +361,7 @@ class ALYSIA_FACTIONS
 		icon = "lyeed_IMG\data\faction\GUER_logo.paa";
 		paycheck = 600;
 		identity_item = "Badge_samu";
+		launder = 0;
 
 		/*** PHONE ***/
 		phone_change_number_price = 1000;

@@ -7,8 +7,7 @@
 	{
 		class BACKGROUND: RscPicture
 		{
-			idc = -1;
-			text = "\Devilz80_Images\Data\Menu\ATM\frame_atm.paa";
+			text = "Devilz80_Images\Data\Menu\ATM\frame_atm.paa";
 		  
 			x = 0.335 * safezoneW + safezoneX;
 			y = 0.203 * safezoneH + safezoneY;
@@ -18,8 +17,7 @@
 		
 		class SCREEN: RscPicture
 		{
-			idc = -1;
-			text = "\Devilz80_Images\Data\Menu\ATM\background.jpg";
+			text = "Devilz80_Images\Data\Menu\ATM\background.jpg";
 		  
 			x = 0.389062 * safezoneW + safezoneX;
 			y = 0.346815 * safezoneH + safezoneY;
@@ -44,9 +42,6 @@
 		
 		class BALANCE_FRAME: RscFrame
 		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-			
 			x = 0.396875 * safezoneW + safezoneX;
 			y = 0.412 * safezoneH + safezoneY;
 			w = 0.20625 * safezoneW;
@@ -67,7 +62,6 @@
 
 		class BALANCE_BACKGROUND: RscText
 		{
-			idc = -1;
 			colorBackground[] = {0,0,0,0.6};
 			
 			x = 0.396875 * safezoneW + safezoneX;
@@ -77,9 +71,8 @@
 		};
 		
 		class ICON_BALANCE: RscPicture
-		{
-			idc = -1;			
-			text = "\Devilz80_Images\Data\Menu\ATM\balance_logo.paa";
+		{			
+			text = "Devilz80_Images\Data\Menu\ATM\balance_logo.paa";
 
 			x = 0.408116 * safezoneW + safezoneX;
 			y = 0.41662 * safezoneH + safezoneY;
@@ -89,8 +82,7 @@
 		
 		class ICON_CAMERA: RscPicture
 		{
-			idc = -1;
-			text = "\Devilz80_Images\Data\Menu\ATM\camera_icon.paa";
+			text = "Devilz80_Images\Data\Menu\ATM\camera_icon.paa";
 
 			x = 0.477828 * safezoneW + safezoneX;
 			y = 0.52948 * safezoneH + safezoneY;
@@ -189,7 +181,6 @@
 		class TXT_L1: RscStructuredText
 		{
 			idc = 15011;
-			text = "";
 			colorBackground[] = {0,0,0,0};
 			
 			x = 0.393472 * safezoneW + safezoneX;
@@ -201,7 +192,6 @@
 		class TXT_L2: RscStructuredText
 		{
 			idc = 15012;
-			text = "";
 			colorBackground[] = {0,0,0,0};
 
 			x = 0.393266 * safezoneW + safezoneX;
@@ -213,7 +203,6 @@
 		class TXT_L3: RscStructuredText
 		{
 			idc = 15013;
-			text = "";
 			colorBackground[] = {0,0,0,0};
 			
 			x = 0.392234 * safezoneW + safezoneX;
@@ -225,7 +214,6 @@
 		class TXT_L4: RscStructuredText
 		{
 			idc = 15014;
-			text = "";
 			colorBackground[] = {0,0,0,0};
 			
 			x = 0.39275 * safezoneW + safezoneX;
@@ -237,7 +225,6 @@
 		class TXT_R1: RscStructuredText
 		{
 			idc = 15015;
-			text = "";
 			colorBackground[] = {0,0,0,0};
 
 			x = 0.518562 * safezoneW + safezoneX;
@@ -249,7 +236,6 @@
 		class TXT_R2: RscStructuredText
 		{
 			idc = 15016;
-			text = "";
 			colorBackground[] = {0,0,0,0};
 
 			x = 0.518872 * safezoneW + safezoneX;
@@ -261,7 +247,6 @@
 		class TXT_R3: RscStructuredText
 		{
 			idc = 15017;
-			text = "";
 			colorBackground[] = {0,0,0,0};
 
 			x = 0.519491 * safezoneW + safezoneX;
@@ -273,7 +258,6 @@
 		class TXT_R4: RscStructuredText
 		{
 			idc = 15018;
-			text = "";
 			colorBackground[] = {0,0,0,0};
 			
 			x = 0.519491 * safezoneW + safezoneX;

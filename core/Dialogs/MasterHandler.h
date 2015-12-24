@@ -23,6 +23,7 @@
 #include "Dialogs\RscDisplayVirtualExhange.hpp"
 #include "Dialogs\RscDisplayFuel.hpp"
 #include "Dialogs\RscDisplayProcess.hpp"
+#include "Dialogs\RscDisplayLaunder.hpp"
 
 class RscTitles
 {

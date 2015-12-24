@@ -31,7 +31,7 @@ if (_chance isEqualTo -1) exitWith {
 
 g_action_inUse = true;
 g_interrupted = false;
-_amount = 0;
+_amount = 1;
 while {(!g_interrupted && (_unit getVariable ["is_coma", false]) && !(player getVariable ["is_coma", false]) && !(player getVariable ["restrained", false]) && (player distance _unit < 3))} do
 {
 	player playAction "medicStart";
@@ -54,3 +54,5 @@ if (g_interrupted) then
 	player playAction "medicStop";
 	titleText["* Annulé *", "PLAIN DOWN"];
 };
+
+g_action_inUse = false;
