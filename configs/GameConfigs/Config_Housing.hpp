@@ -325,7 +325,7 @@ class ALYSIA_HOUSES
 		license = "";
 	};
 	
-	class xcam_Cihlovej_dum_in
+	class Land_Cihlovej_dum_in
 	{
 		price = 0;
 		storage = "R3F_WeaponStock";
