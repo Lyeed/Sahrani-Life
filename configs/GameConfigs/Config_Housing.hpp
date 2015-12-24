@@ -313,7 +313,7 @@ class ALYSIA_HOUSES
 		license = "";
 	};
 	
-	class xcam_dum_mesto_in
+	class Land_dum_mesto_in
 	{
 		price = 0;
 		storage = "R3F_WeaponStock";
@@ -321,6 +321,18 @@ class ALYSIA_HOUSES
 		garage = 0;
 		garage_type[] = {};
 		sides[] = {"EAST"};
+		rank = 5;
+		license = "";
+	};
+	
+	class xcam_Cihlovej_dum_in
+	{
+		price = 0;
+		storage = "R3F_WeaponStock";
+		storage_building_pos_index = 1;
+		garage = 0;
+		garage_type[] = {};
+		sides[] = {"WEST"};
 		rank = 5;
 		license = "";
 	};

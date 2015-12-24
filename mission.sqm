@@ -17227,7 +17227,7 @@ class Mission
 			azimut=190.993;
 			id=1519;
 			side="EMPTY";
-			vehicle="Land_HouseV2_04_interier";
+			vehicle="xcam_Cihlovej_dum_in";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 190.993;this setposATL [11959.300781,15370.0292969,0];this setVectorUp [0,0,1]";
 		};
