@@ -31,11 +31,14 @@ if (isEngineOn _veh) exitWith {
 if ((fuel _veh) > 0.9) exitWith {
 	["Le réservoir du véhicule est déjà plein."] call public_fnc_error;
 };
-
+if (_veh getVariable ["refueling", false]) exitWith {
+	["Une autre personne effectue actuellement le plein du véhicule."] call public_fnc_error;
+};
 _currentfuel = _station getVariable [_typeRefuel, 250];
 if (_currentfuel <= 1) exitWith {
 	[format["Cette station ne possède plus l'essence que vous désirez (%1).", getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _typeRefuel >> "name")]] call public_fnc_error;
 };
+_veh setVariable ["refueling", true, true];
 
 if (!(createDialog "RscDisplayFuelRefuel")) exitWith {};
 disableSerialization;
@@ -45,10 +48,9 @@ if (isNull _display) exitWith {};
 
 _bill = 0;
 _fuel = 0;
-_veh setVariable ["refueling", true, true];
 _fuelmax = getNumber(configFile >> "CfgVehicles" >> typeOf _veh >> "fuelCapacity");
 
-while {(!(isNull _display) && (_currentfuel > 1) && (_bill <= g_atm)) && ((fuel _veh) != 1) && (!(_veh getVariable ["refueling", false]))} do
+while {(!(isNull _display) && (_currentfuel > 1) && (_bill <= g_atm)) && ((fuel _veh) != 1)} do
 {
 	_fuel = _fuel + 0.1;
 	_currentfuel = _currentfuel - (_fuelmax / 100);
@@ -63,18 +65,16 @@ while {(!(isNull _display) && (_currentfuel > 1) && (_bill <= g_atm)) && ((fuel 
 	sleep 0.5;
 };
 
+player setVariable ["typeRefuel", ""];
+_veh setVariable ["refueling", false, true];
+_station setVariable [_typeRefuel, _currentfuel, true];
+[false, _bill, "Station Essence"] call public_fnc_handleATM;
+[format["%1Kn ont été prélevés de votre compte en banque.", [_bill] call public_fnc_numberText]] call public_fnc_info;
 if ((getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf (_veh) >> "fuel")) != _typeRefuel) then {
 	_veh setVariable ["typeRefuel", _typeRefuel, true];
 };
-
 if (local _veh) then {
 	_veh setFuel ((Fuel _veh) + _fuel);
 } else {
 	[_veh, (Fuel _veh) + _fuel] remoteExecCall ["setFuel", _veh, false];
 };
-
-_station setVariable [_typeRefuel, _currentfuel, true];
-_veh setVariable ["refueling", false, true];
-[format["%1Kn ont été prélevés de votre compte en banque.", [_bill] call public_fnc_numberText]] call public_fnc_info;
-[false, _bill, "Station Essence"] call public_fnc_handleATM;
-player setVariable ["typeRefuel", ""];
