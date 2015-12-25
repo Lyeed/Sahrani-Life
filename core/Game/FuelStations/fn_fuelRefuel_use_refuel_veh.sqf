@@ -50,7 +50,7 @@ _bill = 0;
 _fuel = 0;
 _fuelmax = getNumber(configFile >> "CfgVehicles" >> typeOf _veh >> "fuelCapacity");
 
-while {(!(isNull _display) && (_currentfuel > 1) && (_bill <= g_atm)) && ((fuel _veh) != 1)} do
+while {(!(isNull _display) && (_currentfuel > 1) && ((fuel _veh) != 1) && (_bill <= g_atm)) && (!(isEngineOn _veh)) && (!((locked _veh) isEqualTo 2)) && (player distance _station < 5)} do
 {
 	_fuel = _fuel + 0.1;
 	_currentfuel = _currentfuel - (_fuelmax / 100);

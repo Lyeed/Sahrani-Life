@@ -52,7 +52,7 @@ class RscDisplayFuelRefuel: default_base_dialog
 		class FUEL_TEXT: RscStructuredText
 		{
 			idc = 17006;
-			text = "Sans Plomb 95";
+			text = "";
 			colorBackground[] = {0,0,0,0};
 
 			x = 0.396875 * safezoneW + safezoneX;
