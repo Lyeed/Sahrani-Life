@@ -17,6 +17,10 @@ class ALYSIA_ITEMS_ARMA
 	/*
 	**    ITEMS
 	*/
+	class SkylineItems_Couteau
+	{
+		buy_price = 20;
+	};
 	class Skyline_Hache_01
 	{
 		buy_price = 20;
@@ -3373,5 +3377,8 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 20;
 		buy_condition_WEST = 9;
 	};
-	
+	class SmokeShellWhite
+	{
+		buy_price = 20;
+	};
 };
