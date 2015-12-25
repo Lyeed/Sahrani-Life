@@ -23497,7 +23497,7 @@ class Mission
 			offsetY=0.603535;
 			id=2136;
 			side="EMPTY";
-			vehicle="xcam_A_Mosque_big_hq_EP1";
+			vehicle="Land_A_Mosque_big_hq_EP1";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 170;this setposATL [13003.390625,6738.369629,0.603535];this setVectorUp [0,0,1]";
 		};
