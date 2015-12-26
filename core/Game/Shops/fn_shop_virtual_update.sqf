@@ -43,7 +43,7 @@ _ctrl_target = _display displayCtrl 2407;
 lbClear _ctrl_target;
 {
 	_index = _ctrl_target lbAdd format["%1 (%2kn)", ([_x] call public_fnc_itemGetName), ([_x] call public_fnc_itemGetBuyPrice)];
-	_ctrl_target lbSetTooltip (_ctrl_target lbText _index);
+	_ctrl_target lbSetTooltip [_index, (_ctrl_target lbText _index)];
 	_ctrl_target lbSetData [_index, _x];
 	_ctrl_target lbSetPicture [_index, ([_x] call public_fnc_itemGetImage)];
 } forEach (g_shop_list select 0);
@@ -75,7 +75,7 @@ lbClear _ctrl_tmp;
 		([_item] call public_fnc_itemGetName),
 		([_price] call public_fnc_numberText)
 	];
-	_ctrl_tmp lbSetTooltip (_ctrl_tmp lbText _index);
+	_ctrl_tmp lbSetTooltip [_index, (_ctrl_tmp lbText _index)];
 	_ctrl_tmp lbSetData [_index, "BUY"];
 	_ctrl_tmp lbSetValue [_index, _forEachIndex];
 	g_shop_bill_dollar = g_shop_bill_dollar - _price;

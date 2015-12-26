@@ -6,12 +6,12 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if ((getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "dynamic_markers_shown")) isEqualTo 0) then
+
 {
-	{
+	if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "shown"))) then {
 		_x setMarkerAlphaLocal 0;
-	} forEach (g_dynamic_markers);
-};
+	};
+} forEach (g_dynamic_markers);
 
 if (g_arrested) then {
 	[g_arrestMinuts, g_arrestReason] spawn public_fnc_putInJail;

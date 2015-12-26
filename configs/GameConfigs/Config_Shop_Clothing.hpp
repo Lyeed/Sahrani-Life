@@ -793,19 +793,11 @@ class ALYSIA_SHOPS_CLOTHING
 		side = "CIV";
 		uniforms[] = 
 		{
-			"U_C_Prisonnier_01";
+			"U_C_Prisonnier_01"
 		};
-		headgear[] =
-		{
-		};
-		goggles[] =
-		{
-		};
-		vests[] =
-		{
-		};
-		backpacks[] =
-		{
-		};
-	}
+		headgear[] = {};
+		goggles[] = {};
+		vests[] = {};
+		backpacks[] = {};
+	};
 };

@@ -78,8 +78,8 @@ g_WESTLevel = compileFinal (_basic select 19);
 g_GUERLevel = compileFinal (_basic select 20);
 // EASTLevel
 g_EASTLevel = compileFinal (_basic select 21);
-// REBLevel
-g_REBLevel = compileFinal (_basic select 22);
+// CIVLevel
+g_CIVLevel = compileFinal (_basic select 22);
 // Justice
 g_arrestMinuts = _basic select 23;
 g_arrestReason = _basic select 24;
@@ -114,19 +114,19 @@ switch (playerSide) do
 {
 	case west: 
 	{
-		g_paycheck = g_paycheck + round((call g_WESTLevel) * (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "WEST" >> "paycheck")));
+		g_paycheck = g_paycheck + round((call g_WESTLevel) * getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "WEST" >> "paycheck"));
 		player setVariable ["rank", (call g_WESTLevel), true];
 	};
 	
 	case east:
 	{
-		g_paycheck = g_paycheck + round((call g_EASTLevel) * (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "EAST" >> "paycheck")));
+		g_paycheck = g_paycheck + round((call g_EASTLevel) * getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "EAST" >> "paycheck"));
 		player setVariable ["rank", (call g_EASTLevel), true];
 	};
 
 	case civilian:
 	{
-		g_paycheck = g_paycheck + (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "CIV" >> "paycheck"));
+		g_paycheck = g_paycheck + round((call g_CIVLevel) * getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "CIV" >> "paycheck"));
 		// Licenses
 		{
 			missionNamespace setVariable [format["license_%1", _x], true];
@@ -137,7 +137,7 @@ switch (playerSide) do
 
 	case independent:
 	{
-		g_paycheck = g_paycheck + round((call g_GUERLevel) * (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "GUER" >> "paycheck")));
+		g_paycheck = g_paycheck + round((call g_GUERLevel) * getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "GUER" >> "paycheck"));
 		player setVariable["rank", (call g_GUERLevel), true];
 	};
 };

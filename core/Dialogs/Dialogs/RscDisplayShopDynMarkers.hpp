@@ -1,86 +1,63 @@
-class RscDisplayShopDynMarkers: default_base_dialog
+class RscDisplayShopDynMarkers: default_interaction_back_dialog
 {
 	idd = 21000;
 	name = "RscDisplayShopDynMarkers";
 	
-	class controlsBackground
+	class controlsBackground: DEFAULT_controlsBackground
 	{
-		class BORDER: RscPicture
+		class BACKGROUND: BACKGROUND
 		{
-			idc = -1;
-			text = "lyeed_IMG\data\frames\frame_2_borderless.paa";
-
-			x = 0.283437 * safezoneW + safezoneX;
-			y = 0.324 * safezoneH + safezoneY;
-			w = 0.386719 * safezoneW;
-			h = 0.385 * safezoneH;
-		};
-		class BACKGROUND: RscPicture
-		{
-			idc = -1;
 			text = "lyeed_IMG\data\shops\background.jpg";
-
-			x = 0.298906 * safezoneW + safezoneX;
-			y = 0.346 * safezoneH + safezoneY;
-			w = 0.356823 * safezoneW;
-			h = 0.342741 * safezoneH;
 		};
+		class FRAME: FRAME {};
 	};
-	
-	class controls
+
+	class controls: DEFAULT_controls
 	{
-		class TITLE: RscStructuredText
+		class TITLE: TITLE
 		{
-			idc = -1;
-			text = "<t align='center' size='1.8'>Acheter une coordonnée</t>";
-			colorBackground[] = {0,0,0,0.8};
-			
-			x = 0.298906 * safezoneW + safezoneX;
-			y = 0.34512 * safezoneH + safezoneY;
-			w = 0.360937 * safezoneW;
-			h = 0.044926 * safezoneH;
+			text = "<t size='1.5' align='center'>Coordonnées</t>";
 		};
+
+		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME {};
+		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND {};
+		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE {};
+		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON {};
 
 		class STOCK_FRAME: RscFrame
 		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-
-			x = 0.304062 * safezoneW + safezoneX;
+			x = 0.438125 * safezoneW + safezoneX;
 			y = 0.401 * safezoneH + safezoneY;
-			w = 0.144375 * safezoneW;
-			h = 0.275 * safezoneH;
+			w = 0.128906 * safezoneW;
+			h = 0.044 * safezoneH;
 		};
 		class STOCK_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Disponible</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
-			x = 0.304062 * safezoneW + safezoneX;
+			x = 0.438125 * safezoneW + safezoneX;
 			y = 0.401 * safezoneH + safezoneY;
-			w = 0.144375 * safezoneW;
+			w = 0.128906 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-		class STOCK_LIST: RscListbox
+		class STOCK_LIST: RscCombo
 		{
 			idc = 21001;
-			colorBackground[] = {0,0,0,0.6};
-			onLBSelChanged = "[_this select 1] call public_fnc_dynamicMarkers_menu_update_info;";
+			onLBSelChanged = "_this call public_fnc_shop_dynamicMarkers_update_info;";
 			
-			x = 0.304062 * safezoneW + safezoneX;
+			x = 0.438125 * safezoneW + safezoneX;
 			y = 0.423 * safezoneH + safezoneY;
-			w = 0.144375 * safezoneW;
-			h = 0.253 * safezoneH;
+			w = 0.128906 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
 
 		class SELECT_FRAME: RscFrame
 		{
 			idc = 21002;
-			colorText[] = {0,0,0,0.8};
 
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.467 * safezoneH + safezoneY;
+			x = 0.453594 * safezoneW + safezoneX;
+			y = 0.511 * safezoneH + safezoneY;
 			w = 0.0979687 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
@@ -90,8 +67,8 @@ class RscDisplayShopDynMarkers: default_base_dialog
 			text = "<t align='center'>Prix</t>";
 			colorBackground[] = {0,0,0,0.8};
 
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.467 * safezoneH + safezoneY;
+			x = 0.453594 * safezoneW + safezoneX;
+			y = 0.511 * safezoneH + safezoneY;
 			w = 0.0979687 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
@@ -100,8 +77,8 @@ class RscDisplayShopDynMarkers: default_base_dialog
 			idc = 21004;
 			colorBackground[] = {0,0,0,0.6};
 			
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.489 * safezoneH + safezoneY;
+			x = 0.453594 * safezoneW + safezoneX;
+			y = 0.533 * safezoneH + safezoneY;
 			w = 0.0979687 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
@@ -150,7 +127,7 @@ class RscDisplayShopDynMarkers: default_base_dialog
 		class ACTION_BUY_BUTTON: RscButtonSilent
 		{
 			idc = 21009;
-			action = "[] call public_fnc_shop_virtual_buy;";
+			action = "[] call public_fnc_shop_dynamicMarkers_buy;";
 			onMouseEnter = "\
 			ctrlSetText[21008,""lyeed_IMG\data\shops\actions\action_buy_select.paa""];\
 			ctrlShow[21006, false];\
@@ -165,68 +142,6 @@ class RscDisplayShopDynMarkers: default_base_dialog
 			((findDisplay 21000) displayCtrl 21007) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>"";";
 
 			x = 0.463906 * safezoneW + safezoneX;
-			y = 0.577 * safezoneH + safezoneY;
-			w = 0.0825 * safezoneW;
-			h = 0.055 * safezoneH;
-		};
-
-		class ACTION_EXIT_BACKGROUND: RscText
-		{
-			idc = 21010;
-			colorBackground[] = {0,0,0,0.6};
-			
-			x = 0.556719 * safezoneW + safezoneX;
-			y = 0.577 * safezoneH + safezoneY;
-			w = 0.0825 * safezoneW;
-			h = 0.055 * safezoneH;
-		};
-		class ACTION_EXIT_FRAME: RscFrame
-		{
-			idc = 21011;
-			colorText[] = {0,0,0,0.8};
-			
-			x = 0.556719 * safezoneW + safezoneX;
-			y = 0.577 * safezoneH + safezoneY;
-			w = 0.0825 * safezoneW;
-			h = 0.055 * safezoneH;
-		};
-		class ACTION_EXIT_TEXT: RscStructuredText
-		{
-			idc = 21012;
-			text = "<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>";
-			colorBackground[] = {-1,-1,-1,0};
-			
-			x = 0.5825 * safezoneW + safezoneX;
-			y = 0.588 * safezoneH + safezoneY;
-			w = 0.0515625 * safezoneW;
-			h = 0.033 * safezoneH;
-		};
-		class ACTION_EXIT_IMAGE: RscPicture
-		{
-			idc = 21013;
-			text = "lyeed_IMG\data\shops\actions\action_exit.paa";
-			
-			x = 0.561875 * safezoneW + safezoneX;
-			y = 0.588 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.033 * safezoneH;
-		};
-		class ACTION_EXIT_BUTTON: RscButtonSilent
-		{
-			idc = 21014;
-			action = "closeDialog 0;";
-			onMouseEnter = "\
-			ctrlSetText[21013,""lyeed_IMG\data\shops\actions\action_exit_select.paa""];\
-			ctrlShow[21011, false];\
-			((findDisplay 21000) displayCtrl 21010) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 21000) displayCtrl 21012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
-			onMouseExit = "\
-			ctrlSetText[21013,""lyeed_IMG\data\shops\actions\action_exit.paa""];\
-			ctrlShow[21011, true];\
-			((findDisplay 21000) displayCtrl 21010) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 21000) displayCtrl 21012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";
-
-			x = 0.556719 * safezoneW + safezoneX;
 			y = 0.577 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
 			h = 0.055 * safezoneH;

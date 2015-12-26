@@ -50,7 +50,7 @@ with missionNamespace do
 	g_WESTLevel = 0;
 	g_EASTLevel = 0;
 	g_GUERLevel = 0;
-	g_REBLevel = 0;
+	g_CIVLevel = 0;
 	//--------------
 	g_adminlevel = 0;
 	/* =================[ViewDistances]=================== */

@@ -3190,10 +3190,6 @@ class ALYSIA_ITEMS_ARMA
 	{		
 		buy_price = 20;
 	};
-	class SmokeShellWhite
-	{
-		buy_price = 20;
-	};
 	class Skyline_Army_PatroopLevel
 	{
 		buy_price = 20;

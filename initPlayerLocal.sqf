@@ -18,7 +18,7 @@ if (hasInterface) then
 
 	{
 		_x setVariable ["BIS_noCoreConversations", true];
-	} forEach (allUnits);
+	} forEach allUnits;
 
 	0 fadeRadio 0;
 	0 fadeSpeech 0;
@@ -178,9 +178,12 @@ if (hasInterface) then
 
 			while {((vehicle player) isEqualTo _veh)} do
 			{
-				if (((driver _veh) isEqualTo player) && (isEngineOn _veh)) then {
-					if ((_fuel != _curentfuel) && (_curentfuel != "")) then {
-						if (!((_curentfuel in ["SP95","SP98"]) && (_fuel in ["SP95","SP98"]))) then {
+				if (((driver _veh) isEqualTo player) && (isEngineOn _veh)) then
+				{
+					if ((_fuel != _curentfuel) && (_curentfuel != "")) then
+					{
+						if (!((_curentfuel in ["SP95","SP98"]) && (_fuel in ["SP95","SP98"]))) then
+						{
 							[_veh, "motorexplose", 20] call CBA_fnc_globalSay3d;
 							[_veh, "HitEngine", 1] call public_fnc_setHitPointDamage;
 							_conso = (getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> _curentfuel >> "conso"));

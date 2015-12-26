@@ -6,16 +6,25 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private["_display", "_price", "_sel"];
-_sel = [_this, 0, -1, [-1]] call BIS_fnc_param;
+
+disableSerialization;
+_list = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
+_sel = [_this, 1, -1, [-1]] call BIS_fnc_param;
 
 if (_sel isEqualTo -1) exitWith {};
+if ((_list lbText _sel) isEqualTo "Aucune") exitWith {};
 
 disableSerialization;
 _display = findDisplay 21000;
 if (isNull _display) exitWith {};
 
-_price = lbValue[21001, _sel];
-(_display displayCtrl 21004) ctrlSetStructuredText parseText format["<t align='center' color='#%2'>%1</t><t align='right'>kn</t>", ([_price] call public_fnc_numberText), if (g_cash >= _price) then {"8cff9b"} else {"ff8c8c"}];
+_price = _list lbValue _sel;
+(_display displayCtrl 21004) ctrlSetStructuredText parseText format
+[
+	"<t align='center' color='#%2'>%1</t><t align='right'>kn</t>",
+	([_price] call public_fnc_numberText),
+	if (g_cash >= _price) then {"8cff9b"} else {"ff8c8c"}
+];
 
 if (g_cash < _price) then {
 	ctrlShow[21005, false];

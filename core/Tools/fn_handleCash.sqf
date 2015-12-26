@@ -8,7 +8,6 @@
 private["_value"];
 _type = [_this, 0, false, [false]] call BIS_fnc_param;
 _value = round([_this, 1, 0, [0]] call BIS_fnc_param);
-_from = [_this, 2, "", [""]] call BIS_fnc_param;
 
 if (_value isEqualTo 0) exitWith {};
 

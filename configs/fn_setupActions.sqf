@@ -23,9 +23,11 @@
 [["(DEV) + 1 GPS", {player addItem "ItemGPS"; player assignItem "ItemGPS"; }]] call CBA_fnc_addPlayerAction;
 [["(DEV) + 1 MAP", {player addItem "ItemMap"; player assignItem "ItemMap";}]] call CBA_fnc_addPlayerAction;
 [["(DEV) + 1 UZI", {player addMagazine "RH_30Rnd_9x19_UZI"; player addWeapon "RH_muzi";}]] call CBA_fnc_addPlayerAction;
+[["(DEV) + 1 NVG", {player addItem "Skyline_NVGoogle"; player assignItem "Skyline_NVGoogle"; }]] call CBA_fnc_addPlayerAction;
 [["(DEV) Revivre", {cursorTarget setVariable ["is_coma", false, true];}]] call CBA_fnc_addPlayerAction;
 [["(DEV) +100 faim", {[100] call public_fnc_handleHunger;}]] call CBA_fnc_addPlayerAction;
 [["(DEV) +100 soif", {[100] call public_fnc_handleThirst;}]] call CBA_fnc_addPlayerAction;
+[["(DEV) Tp marché noir", {player setPos (getMarkerPos "black_market_1_marker");}]] call CBA_fnc_addPlayerAction;
 [["===================", {}]] call CBA_fnc_addPlayerAction;
 
 /* ==================[CONFIG]===================*/

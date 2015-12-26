@@ -12,7 +12,7 @@ if ((isNil "g_EASTLevel") || ((call g_EASTLevel) isEqualTo 0)) exitWith
 	false;
 };
 
-if ((((call g_GUERLevel) > 0) || ((call g_REBLevel) > 0) || ((call g_WESTLevel) > 0)) && ((call g_adminlevel) isEqualTo 0)) exitWith
+if ((((call g_GUERLevel) > 0) || ((call g_CIVLevel) > 0) || ((call g_WESTLevel) > 0)) && ((call g_adminlevel) isEqualTo 0)) exitWith
 {
 	["Vous n'êtes pas autorisé à changer de faction"] spawn public_fnc_errorExit;
 	false;

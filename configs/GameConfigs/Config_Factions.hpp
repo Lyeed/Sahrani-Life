@@ -52,11 +52,6 @@ class ALYSIA_FACTIONS
 		farming_markers_plant[] = {};
 		farming_markers_gather[] = {};
 
-		/*** DYNAMIC MARKERS ***/
-		dynamic_markers_shown    = 0;
-		dynamic_markers_destroy  = 1;
-		dynamic_markers_discover = 0;
-		
 		/*** SKULL ***/
 		skull_who = 0;// can check skull owner's identity
 		skull_take = 0;// can pack-up skull
@@ -169,11 +164,6 @@ class ALYSIA_FACTIONS
 		/*** FARM ***/
 		farming_markers[] = {};
 		farming_markers_plant[] = {};
-
-		/*** DYNAMIC MARKERS ***/
-		dynamic_markers_shown    = 0;
-		dynamic_markers_destroy  = 1;
-		dynamic_markers_discover = 0;
 
 		/*** SKULL ***/
 		skull_who = 0;
@@ -312,11 +302,6 @@ class ALYSIA_FACTIONS
 			"potato_1"
 		};
 
-		/*** DYNAMIC MARKERS ***/
-		dynamic_markers_shown     = 0;
-		dynamic_markers_destroy   = 0;
-		dynamic_markers_discover  = 1;
-
 		/*** SKULL ***/
 		skull_who = 0;
 		skull_take = 0;
@@ -349,8 +334,16 @@ class ALYSIA_FACTIONS
 		/*** RANKS ***/
 		class Ranks
 		{
-			ranks_complet[] = {"Civil"};
-			ranks_short[] = {"Civ"};
+			ranks_complet[] =
+			{
+				"Civil",
+				"Parlementaire"
+			};
+			ranks_short[] =
+			{
+				"Civ",
+				"Parlm"
+			};
 		};
 	};
 
@@ -397,11 +390,6 @@ class ALYSIA_FACTIONS
 		/*** FARM ***/
 		farming_markers_gather[] = {};
 		farming_markers_plant[] = {};
-
-		/*** DYNAMIC MARKERS ***/
-		dynamic_markers_shown     = 0;
-		dynamic_markers_destroy   = 0;
-		dynamic_markers_discover  = 0;
 
 		/*** SKULL ***/
 		skull_who = 1;

@@ -14,30 +14,36 @@ _sound = [_this, 1, "", [""]] call BIS_fnc_param;
 
 if (_msg isEqualTo "") exitWith {};
 
-15 cutRsc ["RscHudMessage", "PLAIN"];
+if (alive player) then
+{
+	if (!(player getVariable ["is_coma", false])) then
+	{
+		15 cutRsc ["RscHudMessage", "PLAIN"];
 
-disableSerialization;
-_hud = uiNameSpace getVariable ["RscHudMessage", displayNull];
-if (_msg isEqualTo (uiNamespace getVariable ["RscHudMessage_last", ""])) then {
-	uiNamespace setVariable ["RscHudMessage_count", (uiNamespace getVariable ["RscHudMessage_count", 0]) + 1];
-} else {
-	uiNamespace setVariable ["RscHudMessage_count", 1];
-	uiNamespace setVariable ["RscHudMessage_last", _msg];
-};
+		disableSerialization;
+		_hud = uiNameSpace getVariable ["RscHudMessage", displayNull];
+		if (_msg isEqualTo (uiNamespace getVariable ["RscHudMessage_last", ""])) then {
+			uiNamespace setVariable ["RscHudMessage_count", (uiNamespace getVariable ["RscHudMessage_count", 0]) + 1];
+		} else {
+			uiNamespace setVariable ["RscHudMessage_count", 1];
+			uiNamespace setVariable ["RscHudMessage_last", _msg];
+		};
 
-(_hud displayCtrl 95000) ctrlSetStructuredText parseText "<t align='left'>Information</t>";
-(_hud displayCtrl 95001) ctrlSetText "lyeed_IMG\data\message_system\info.paa";
-(_hud displayCtrl 95002) ctrlSetStructuredText parseText format["<t font='PuristaBold' size='0.7'>%1</t>", _msg];
+		(_hud displayCtrl 95000) ctrlSetStructuredText parseText "<t align='left'>Information</t>";
+		(_hud displayCtrl 95001) ctrlSetText "lyeed_IMG\data\message_system\info.paa";
+		(_hud displayCtrl 95002) ctrlSetStructuredText parseText format["<t font='PuristaBold' size='0.7'>%1</t>", _msg];
 
-_count = uiNamespace getVariable ["RscHudMessage_count", 0];
-if (_count > 1) then {
-	(_hud displayCtrl 95003) ctrlSetStructuredText parseText format["<t align='center' font='PuristaBold'>x%1</t>", _count];
-} else {
-	(_hud displayCtrl 95003) ctrlSetStructuredText parseText "";
-};
+		_count = uiNamespace getVariable ["RscHudMessage_count", 0];
+		if (_count > 1) then {
+			(_hud displayCtrl 95003) ctrlSetStructuredText parseText format["<t align='center' font='PuristaBold'>x%1</t>", _count];
+		} else {
+			(_hud displayCtrl 95003) ctrlSetStructuredText parseText "";
+		};
 
-if (_sound isEqualTo "") then {
-	playSound "defaultNotification";
-} else {
-	playSound _sound;
+		if (_sound isEqualTo "") then {
+			playSound "defaultNotification";
+		} else {
+			playSound _sound;
+		};
+	};
 };

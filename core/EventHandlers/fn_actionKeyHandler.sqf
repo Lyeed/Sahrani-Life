@@ -14,28 +14,32 @@ if ((vehicle player) isEqualTo player) then
 {
 	if (isNull cursorTarget) then 
 	{
-		if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "dynamic_markers_destroy") isEqualTo 1) then
 		{
+			if ((player distance (getMarkerPos _x)) < 20) then
 			{
-				if ((player distance (getMarkerPos _x)) < 20) exitWith
+				if (isClass(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "destroy")) then
 				{
-					[_x] spawn public_fnc_dynamicMarkers_destroy;
-					breakOut "main";
-				};
-			} forEach (g_dynamic_markers);
-		} else {
-			if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "dynamic_markers_discover") isEqualTo 1) then
-			{
-				{
-					if (((player distance (getMarkerPos _x)) < 20) && ((markerAlpha _x) != 1)) exitWith
+					if ((player distance (getMarkerPos _x)) < 10) then
 					{
-						[format["<t align='center'>Vous avez découvert<br/><t color='#74DF00'>%1</t>", (markerText _x)]] call public_fnc_info;
+						if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "destroy" >> "factions")) then
+						{
+							[_x] spawn public_fnc_dynamicMarkers_destroy;
+							breakOut "main";
+						};
+					};
+				};
+
+				if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "discover")) then
+				{
+					if ((markerAlpha _x) != 1) then
+					{
+						[format["Vous avez découvert <t color='#74DF00'>%1</t>", (markerText _x)]] call public_fnc_info;
 						[_x] call public_fnc_dynamicMarkers_reveal;
 						breakOut "main";
 					};
-				} forEach (g_dynamic_markers);
+				};
 			};
-		};
+		} forEach (g_dynamic_markers);
 
 		_plant = (nearestObjects [player, (call g_plants), 3]) select 0;
 		if (!(isNil "_plant")) then

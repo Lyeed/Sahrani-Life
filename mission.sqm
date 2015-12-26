@@ -17098,7 +17098,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="black_market_1";
-			init="this enableSimulation false; this allowDamage false; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Acheter des positions <t color='#01DF3A'>illégales</t>"" ,public_fnc_shop_dynamicMarkers_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse && playerSide == civilian']; this addAction[""Marché illégal"",public_fnc_shop_virtual_open,""rebel"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""Marché illégal objet"",public_fnc_shop_arma_open,""black_market"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian']; this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Blanchiment d'(<t color='#01DF3A'>argent sale</t>)"" ,public_fnc_launder_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Acheter des positions <t color='#01DF3A'>illégales</t>"" ,public_fnc_shop_dynamicMarkers_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse && playerSide == civilian']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Marché illégal"",public_fnc_shop_virtual_open,""rebel"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Marché illégal équipements"",public_fnc_shop_arma_open,""black_market"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian']; this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Blanchiment d'(<t color='#01DF3A'>argent sale</t>)"" ,public_fnc_launder_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item1352
 		{
@@ -25047,7 +25047,7 @@ class Mission
 			azimut=340;
 			id=2277;
 			side="EMPTY";
-			vehicle="xcam_church_03";
+			vehicle="Land_church_03";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 340;this setposATL [10881.339844,9355.493164,0];this setVectorUp [0,0,1]";
 		};
@@ -26772,122 +26772,6 @@ class Mission
 			position[]={12093.437,25.951591,17643.043};
 			name="prison_farm_1";
 			type="Empty";
-		};
-		class Item188
-		{
-			position[]={2322.4832,10.764857,18864.549};
-			name="black_market_1_marker";
-			type="Empty";
-		};
-		class Item189
-		{
-			position[]={2327.5747,9.9622726,18864.188};
-			name="black_market_2_marker";
-			type="Empty";
-		};
-	};
-	class Sensors
-	{
-		items=10;
-		class Item0
-		{
-			position[]={0,1.0301871,0};
-			type="ERROR";
-			age="UNKNOWN";
-			expCond="call cba_common_fnc_monitorFrameRender";
-			class Effects
-			{
-			};
-		};
-		class Item1
-		{
-			position[]={0,1.0301871,0};
-			type="ERROR";
-			age="UNKNOWN";
-			expCond="if ((cba_events_keypressed + 10) < time) then { call cba_events_fnc_attach_handler }";
-			class Effects
-			{
-			};
-		};
-		class Item2
-		{
-			position[]={0,1.0301871,0};
-			type="ERROR";
-			age="UNKNOWN";
-			expCond="call cba_common_fnc_monitorFrameRender";
-			class Effects
-			{
-			};
-		};
-		class Item3
-		{
-			position[]={0,1.0301871,0};
-			type="ERROR";
-			age="UNKNOWN";
-			expCond="if ((cba_events_keypressed + 10) < time) then { call cba_events_fnc_attach_handler }";
-			class Effects
-			{
-			};
-		};
-		class Item4
-		{
-			position[]={0,1.0301871,0};
-			type="ERROR";
-			age="UNKNOWN";
-			expCond="if ((cba_events_keypressed + 10) < time) then { call cba_events_fnc_attach_handler }";
-			class Effects
-			{
-			};
-		};
-		class Item5
-		{
-			position[]={0,1.0301871,0};
-			type="ERROR";
-			age="UNKNOWN";
-			expCond="call cba_common_fnc_monitorFrameRender";
-			class Effects
-			{
-			};
-		};
-		class Item6
-		{
-			position[]={0,1.0301871,0};
-			type="ERROR";
-			age="UNKNOWN";
-			expCond="if ((cba_events_keypressed + 10) < time) then { call cba_events_fnc_attach_handler }";
-			class Effects
-			{
-			};
-		};
-		class Item7
-		{
-			position[]={0,1.0301871,0};
-			type="ERROR";
-			age="UNKNOWN";
-			expCond="call cba_common_fnc_monitorFrameRender";
-			class Effects
-			{
-			};
-		};
-		class Item8
-		{
-			position[]={0,1.0301871,0};
-			type="ERROR";
-			age="UNKNOWN";
-			expCond="call cba_common_fnc_monitorFrameRender";
-			class Effects
-			{
-			};
-		};
-		class Item9
-		{
-			position[]={0,1.0301871,0};
-			type="ERROR";
-			age="UNKNOWN";
-			expCond="if ((cba_events_keypressed + 10) < time) then { call cba_events_fnc_attach_handler }";
-			class Effects
-			{
-			};
 		};
 	};
 };

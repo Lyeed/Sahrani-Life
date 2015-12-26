@@ -10,10 +10,10 @@
 // ********* loading infos ***********
 // ***********************************
 author = "Alysia"; // Author of the mission. The default loading screen shows this string below the onLoadName in a smaller font prefixed by "by ".
-onLoadName = "Sahrani Life"; // String (usually mission name) shown during mission loading. The string is shown in a slightly larger font above the loadScreen.
+onLoadName = "Sibranak RP"; // String (usually mission name) shown during mission loading. The string is shown in a slightly larger font above the loadScreen.
 onLoadMission = ""; // Displays a message while the mission is loading. Note that a mission that takes very little time to load will only display the message for a short time. Care should be taken to see whether your message is readable in that timeframe.
 onLoadMissionTime = 0; // Define whether you will see the time and date displayed while the mission loads. 1 means visible, 0 hidden.
-onLoadIntro = "Sahrani Life"; // Displays a message while the intro is loading.
+onLoadIntro = "Sibranak RP"; // Displays a message while the intro is loading.
 onLoadIntroTime = 0; // Define whether you will see the time and date displayed while the intro loads. 1 means visible, 0 hidden.
 //---------------------------------
 

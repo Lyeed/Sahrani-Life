@@ -10,7 +10,7 @@ _side = [_this, 0, sideUnknown, [sideUnknown]] call BIS_fnc_param;
 _level = [_this, 1, 0, [0]] call BIS_fnc_param;
 _short = [_this, 2, false, [false]] call BIS_fnc_param;
 
-if (_side == sideUnknown) exitWith {"Unknown side"};
+if (_side isEqualTo sideUnknown) exitWith {"Unknown side"};
 
 if (!_short) then {
 	_array = getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(_side) >> "Ranks" >> "ranks_complet");
