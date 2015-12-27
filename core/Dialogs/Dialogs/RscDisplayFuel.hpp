@@ -1,45 +1,21 @@
-class RscDisplayFuelRefuel: default_base_dialog
+class RscDisplayFuelRefuel: default_interaction_back_dialog
 {	
 	idd = 17000;
 	name = "RscDisplayFuelRefuel";
 	
-	class controlsBackground
+	class controlsBackground: DEFAULT_controlsBackground
 	{
-		class BACKGROUND: RscPicture
-		{
-			idc = 17001;
-			text = "Devilz80_Images\Data\Menu\fuelStations\background.paa";
-
-			x = 0.383489 * safezoneW + safezoneX;
-			y = 0.281371 * safezoneH + safezoneY;
-			w = 0.235624 * safezoneW;
-			h = 0.312148 * safezoneH;
-		};
+		class BACKGROUND: BACKGROUND {};
+		class FRAME: FRAME {};
 	};
 	
-	class controls
+	class controls: DEFAULT_controls
 	{
-		class BORDERFRAME: RscPicture
+		class TITLE: TITLE
 		{
-			idc = 17002;
-			text = "lyeed_IMG\data\frames\frame_2_borderless.paa";
-
-			x = 0.371919 * safezoneW + safezoneX;
-			y = 0.32114 * safezoneH + safezoneY;
-			w = 0.259844 * safezoneW;
-			h = 0.232852 * safezoneH;
-		};
-		class TITLE_TEXT: RscStructuredText
-		{
-			idc = 17003;
 			text = "<t size ='1.5' align='center'>Pompe à essence</t>";
-			colorBackground[] = {0,0,0,0.6};
-
-			x = 0.382953 * safezoneW + safezoneX;
-			y = 0.33324 * safezoneH + safezoneY;
-			w = 0.238176 * safezoneW;
-			h = 0.045852 * safezoneH;
 		};
+
 		class FRAME_PRICE: RscFrame
 		{
 			idc = 17005;
@@ -49,6 +25,12 @@ class RscDisplayFuelRefuel: default_base_dialog
 			w = 0.0619791 * safezoneW;
 			h = 0.0568517 * safezoneH;
 		};
+
+		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME {};
+		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND {};
+		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE {};
+		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON {};
+
 		class FUEL_TEXT: RscStructuredText
 		{
 			idc = 17006;
@@ -159,48 +141,29 @@ class RscDisplayFuelRefuel: default_base_dialog
 	};
 };
 
-class RscDisplayFuelStation: default_base_dialog
+class RscDisplayFuelStation: default_interaction_back_dialog
 {	
 	idd = 16000;
 	name = "RscDisplayFuelStation";
 	
-	class controlsBackground
+	class controlsBackground: DEFAULT_controlsBackground
 	{
-		class BACKGROUND: RscPicture
-		{
-			idc = 16001;
-			text = "lyeed_IMG\data\interactions\background.jpg";
-
-			x = 0.382953 * safezoneW + safezoneX;
-			y = 0.33126 * safezoneH + safezoneY;
-			w = 0.236145 * safezoneW;
-			h = 0.261221 * safezoneH;
-		};
+		class BACKGROUND: BACKGROUND {};
+		class FRAME: FRAME {};
 	};
-	
-	class controls
+
+	class controls: DEFAULT_controls
 	{
-		class BORDERFRAME: RscPicture
+		class TITLE: TITLE
 		{
-			idc = 16002;
-			text = "lyeed_IMG\data\frames\frame_2_borderless.paa";
-
-			x = 0.372125 * safezoneW + safezoneX;
-			y = 0.32026 * safezoneH + safezoneY;
-			w = 0.257813 * safezoneW;
-			h = 0.286 * safezoneH;
-		};
-		class TITLE_TEXT: RscStructuredText
-		{
-			idc = 16003;
 			text = "<t size ='1.5' align='center'>Pompe à essence</t>";
-			colorBackground[] = {0,0,0,0.6};
-
-			x = 0.382953 * safezoneW + safezoneX;
-			y = 0.33324 * safezoneH + safezoneY;
-			w = 0.238176 * safezoneW;
-			h = 0.045852 * safezoneH;
 		};
+
+		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME {};
+		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND {};
+		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE {};
+		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON {};
+
 		class FUEL_COMBO: RscCombo
 		{
 			idc = 16004;
@@ -298,7 +261,6 @@ class RscDisplayFuelStation: default_base_dialog
 			w = 1.50001 * safezoneW;
 			h = 1 * safezoneH;
 		};
-
 		class VALIDATE_BACKGROUND: RscStructuredText
 		{
 			idc = 16013;
@@ -318,6 +280,16 @@ class RscDisplayFuelStation: default_base_dialog
 			w = 0.108281 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
+		class VALIDATE_IMAGE: RscPicture
+		{
+			idc = 16015;
+			text = "lyeed_IMG\data\housing\actions\action_exit.paa";
+
+			x = 0.453594 * safezoneW + safezoneX;
+			y = 0.53014 * safezoneH + safezoneY;
+			w = 0.0216146 * safezoneW;
+			h = 0.0375186 * safezoneH;
+		};
 		class VALIDATE_TEXT: RscStructuredText
 		{
 			idc = 16016;
@@ -328,16 +300,6 @@ class RscDisplayFuelStation: default_base_dialog
 			y = 0.533 * safezoneH + safezoneY;
 			w = 0.0567187 * safezoneW;
 			h = 0.033 * safezoneH;
-		};
-		class VALIDATE_IMAGE: RscPicture
-		{
-			idc = 16015;
-			text = "lyeed_IMG\data\housing\actions\action_exit.paa";
-
-			x = 0.453594 * safezoneW + safezoneX;
-			y = 0.53014 * safezoneH + safezoneY;
-			w = 0.0216146 * safezoneW;
-			h = 0.0375186 * safezoneH;
 		};
 
 		class VALIDATE_BUTTON: RscButtonSilent

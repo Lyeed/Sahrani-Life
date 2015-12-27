@@ -57,10 +57,10 @@ while {(!(isNull _display) && (_currentfuel > 1) && ((fuel _veh) != 1) && (_bill
 	_bill = _bill + ([_station, _typeRefuel] call public_fnc_fuelStation_price_buy);
 	
 	(_display displayCtrl 17006) ctrlSetStructuredText parseText _typeRefuel;
-	(_display displayCtrl 17008) ctrlSetStructuredText parseText format ["<t size ='2' align='center'>%1</t>", [_bill] call public_fnc_numberText];
+	(_display displayCtrl 17008) ctrlSetStructuredText parseText format ["<t size='2' align='center'>%1</t>", [_bill] call public_fnc_numberText];
 	(_display displayCtrl 17010) ctrlSetStructuredText parseText format ["<t align='right'>%1</t>", _currentfuel];
-	(_display displayCtrl 17014) progressSetPosition (fuel _veh);
-	(_display displayCtrl 17015) ctrlSetStructuredText parseText format ["%1/%2 Litres", ((fuel _veh) * _fuelmax), _fuelmax];
+	(_display displayCtrl 17013) progressSetPosition (fuel _veh);
+	(_display displayCtrl 17014) ctrlSetStructuredText parseText format ["<t size='1.5' align='center>%1/%2 Litres</t>", ((fuel _veh) * _fuelmax), _fuelmax];
 
 	sleep 0.5;
 };
