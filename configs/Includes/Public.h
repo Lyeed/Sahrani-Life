@@ -355,12 +355,18 @@ class Public
 		class auctionHouse_canAdd {};
 	};
 
-	class Arrest
+	class Prisons
 	{
-		file = "core\game\Arrest";
-		class arrestButton {};
-		class arrestMenu {};
-		class putInJail {};
+		file = "core\game\Prisons";
+		class prisonArrest {};
+		class prisonRelease {};
+		class prisonEscape {};
+		class prisonPutInJail {};
+		class prisonWorkReward {};
+		class prisonNearest {};
+		class prisonArrestMenu_use_caution {};
+		class prisonArrestMenu_use_time {};
+		class prisonArrestMenu_use_release {};
 	};
 
 	class Interactions
@@ -370,6 +376,7 @@ class Public
 		class interactions_recall {};
 		class interactions_player_to_player_basics {};
 		class interactions_player_to_player_coma {};
+		class interactions_player_to_player_prison {};
 		class interactions_player_to_skull {};
 		class interactions_player_to_vehicle {};
 		class interactions_player_to_house_search {};
