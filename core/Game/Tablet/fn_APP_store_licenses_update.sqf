@@ -21,7 +21,7 @@ if ((_list lbText _index) isEqualTo "Aucune") exitWith
 };
 
 disableSerialization;
-_display = uiNamespace getVariabl e["tablet", displayNull];
+_display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
 
 _price = _list lbValue _index;

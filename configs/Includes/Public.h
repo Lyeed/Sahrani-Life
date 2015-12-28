@@ -364,9 +364,9 @@ class Public
 		class prisonPutInJail {};
 		class prisonWorkReward {};
 		class prisonNearest {};
-		class prisonArrestMenu_use_caution {};
-		class prisonArrestMenu_use_time {};
-		class prisonArrestMenu_use_release {};
+		// class prisonArrestMenu_use_caution {};
+		// class prisonArrestMenu_use_time {};
+		// class prisonArrestMenu_use_release {};
 	};
 
 	class Interactions
