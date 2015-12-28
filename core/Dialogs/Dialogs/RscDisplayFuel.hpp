@@ -298,7 +298,7 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 		class STOCK_TEXT3: RscStructuredText
 		{
 			idc = 17011;
-			text = "<t align='right'>L</t>";
+			text = "<t align='right'></t>";
 			colorBackground[] = {0,0,0,0};
 
 			x = 0.514541 * safezoneW + safezoneX;

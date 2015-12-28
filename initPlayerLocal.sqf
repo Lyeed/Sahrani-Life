@@ -174,7 +174,6 @@ if (hasInterface) then
 			_veh = vehicle player;
 			_fuel = (getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf (_veh) >> "fuel"));
 			_curentfuel = _veh getVariable ["typeRefuel", ""];
-			_conso = (getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> _fuel >> "conso"));
 
 			while {((vehicle player) isEqualTo _veh)} do
 			{
@@ -186,10 +185,14 @@ if (hasInterface) then
 						{
 							[_veh, "motorexplose", 20] call CBA_fnc_globalSay3d;
 							[_veh, "HitEngine", 1] call public_fnc_setHitPointDamage;
-							_conso = (getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> _curentfuel >> "conso"));
 						};
 					};
 
+					if (_curentfuel isEqualTo "") then {
+						_conso = (getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> _fuel >> "conso"));
+					} else {
+						_conso = (getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> _curentfuel >> "conso"));
+					};
 					_veh setFuel ((fuel _veh) - (((speed _veh) / _conso) + (([_veh getVariable ["Trunk", []]] call public_fnc_weightGenerate) / 100000)));
 				};
 				sleep 2;
