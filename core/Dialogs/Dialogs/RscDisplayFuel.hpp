@@ -7,8 +7,8 @@ class RscDisplayFuelStation: default_interaction_back_dialog
 	{
 		class BACKGROUND: BACKGROUND
 		{
-			x = 0.654688 * safezoneW + safezoneX;
-			y = 0.599 * safezoneH + safezoneY;
+			x = 0.37625 * safezoneW + safezoneX;
+			y = 0.39 * safezoneH + safezoneY;
 			w = 0.2475 * safezoneW;
 			h = 0.210519 * safezoneH;
 		};
@@ -121,7 +121,7 @@ class RscDisplayFuelStation: default_interaction_back_dialog
 			w = 0.061875 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-		class STOCK_TEXT3: RscStructuredText
+		/*class STOCK_TEXT3: RscStructuredText
 		{
 			idc = 16012;
 			text = "<t align='right'>L</t>";
@@ -131,8 +131,7 @@ class RscDisplayFuelStation: default_interaction_back_dialog
 			y = 10.57 * safezoneH + safezoneY;
 			w = 1.50001 * safezoneW;
 			h = 1 * safezoneH;
-		};
-
+		};*/
 		class VALIDATE_BACKGROUND: RscStructuredText
 		{
 			idc = 16013;
@@ -158,7 +157,7 @@ class RscDisplayFuelStation: default_interaction_back_dialog
 			text = "<t align='center' size='1.5'>Quitter</t>";
 			colorBackground[] = {0,0,0,0};
 
-			x = 0.489687 * safezoneW + safezoneX;
+			x = 0.484531 * safezoneW + safezoneX;
 			y = 0.533 * safezoneH + safezoneY;
 			w = 0.0567187 * safezoneW;
 			h = 0.033 * safezoneH;
@@ -204,8 +203,8 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 	{
 		class BACKGROUND: BACKGROUND
 		{
-			x = 0.654688 * safezoneW + safezoneX;
-			y = 0.599 * safezoneH + safezoneY;
+			x = 0.37625 * safezoneW + safezoneX;
+			y = 0.39 * safezoneH + safezoneY;
 			w = 0.2475 * safezoneW;
 			h = 0.210519 * safezoneH;
 		};
@@ -295,17 +294,17 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 			w = 0.0290625 * safezoneW;
 			h = 0.022926 * safezoneH;
 		};
-		class STOCK_TEXT3: RscStructuredText
+		/*class STOCK_TEXT3: RscStructuredText
 		{
 			idc = 17011;
-			text = "<t align='right'></t>";
+			text = "<t align='right'>L</t>";
 			colorBackground[] = {0,0,0,0};
 
 			x = 0.514541 * safezoneW + safezoneX;
 			y = 0.45754 * safezoneH + safezoneY;
 			w = 0.0154689 * safezoneW;
 			h = 0.022 * safezoneH;
-		};
+		};*/
 		class PRICE_TEXT3: RscStructuredText
 		{
 			idc = 17012;
@@ -329,6 +328,7 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 		class PROGRESS_STATE: RscStructuredText
 		{
 			idc = 17014;
+			colorBackground[] = {0,0,0,0};
 
 			x = 0.425833 * safezoneW + safezoneX;
 			y = 0.429482 * safezoneH + safezoneY;
@@ -367,10 +367,10 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 		class VALIDATE_TEXT: RscStructuredText
 		{
 			idc = 17018;
-			text = "<t align='center' size='1.5'>Quitter</t>";
+			text = "<t align='center' size='1.5'>Arrêter</t>";
 			colorBackground[] = {0,0,0,0};
 
-			x = 0.489687 * safezoneW + safezoneX;
+			x = 0.484531 * safezoneW + safezoneX;
 			y = 0.533 * safezoneH + safezoneY;
 			w = 0.0567187 * safezoneW;
 			h = 0.033 * safezoneH;
@@ -383,12 +383,12 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 			ctrlShow[16016, false];\
 			ctrlSetText[17017,""lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""];\
 			((findDisplay 16000) displayCtrl 16015) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 16000) displayCtrl 16017) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Quitter</t>"";";
+			((findDisplay 16000) displayCtrl 16017) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Arrêter</t>"";";
 			onMouseExit = "\
 			ctrlShow[16016, true];\
 			ctrlSetText[17017,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];\
 			((findDisplay 16000) displayCtrl 16015) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 16000) displayCtrl 16017) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Quitter</t>"";";
+			((findDisplay 16000) displayCtrl 16017) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Arrêter</t>"";";
 
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.522 * safezoneH + safezoneY;
