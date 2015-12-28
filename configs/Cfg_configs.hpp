@@ -22,3 +22,4 @@
 #include "GameConfigs\Config_Bank.hpp"
 #include "GameConfigs\Config_Companies.hpp"
 #include "GameConfigs\Config_Fuel.hpp"
+#include "GameConfigs\Config_Prisons.hpp"
