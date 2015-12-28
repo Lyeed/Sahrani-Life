@@ -52,8 +52,8 @@ _fuelmax = getNumber(configFile >> "CfgVehicles" >> typeOf _veh >> "fuelCapacity
 
 while {(!(isNull _display) && (_currentfuel > 1) && ((fuel _veh) <= 1) && (_bill <= g_atm)) && (!(isEngineOn _veh)) && (!((locked _veh) isEqualTo 2)) && (player distance _station < 5)} do
 {
-	fuel _veh = ((fuel _veh) + (_fuelmax / 25));
-	_currentfuel = _currentfuel - (_fuelmax / 25);
+	_fuel = (_fuel + (_fuelmax / 100));
+	_currentfuel = _currentfuel - (_fuelmax / 100);
 	_bill = _bill + ([_station, _typeRefuel] call public_fnc_fuelStation_price_buy);
 	
 	(_display displayCtrl 17006) ctrlSetStructuredText parseText _typeRefuel;
@@ -62,7 +62,7 @@ while {(!(isNull _display) && (_currentfuel > 1) && ((fuel _veh) <= 1) && (_bill
 	(_display displayCtrl 17013) progressSetPosition (fuel _veh);
 	(_display displayCtrl 17014) ctrlSetStructuredText parseText format ["<t size='1.5' align='center>%1/%2 Litres</t>", ((fuel _veh) * _fuelmax), _fuelmax];
 
-	sleep 0.1;
+	sleep 0.5;
 };
 
 player setVariable ["typeRefuel", ""];
