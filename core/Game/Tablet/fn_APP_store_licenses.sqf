@@ -7,22 +7,22 @@
 */
 private["_list", "_display"];
 
-_display = uiNamespace getVariable["tablet", displayNull];
+disableSerialization;
+_display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
 
 _list = _display displayCtrl 8113;
 lbClear _list;
 
 {
-	if (!(missionNamespace getVariable[format["license_%1", _x], false])) then 
+	_license = configName _x;
+	if (!([_license] call public_fnc_hasLicense)) then 
 	{
-		if ((getNumber(missionConfigFile >> "ALYSIA_LICENSES" >> _x >> "pad_store")) isEqualTo 1) then
-		{
-			_index = _list lbAdd ([_x] call public_fnc_licenseGetName);
-			_list lbSetData [_index, _x];
-		};
+		_index = _list lbAdd ([_license] call public_fnc_licenseGetName);
+		_list lbSetData [_index, _license];
+		_list lbSetValue [_index, getNumber(_x >> "price")];
 	};
-} forEach (g_licenses);
+} foreach ("((str(playerSide) in getArray(_x >> 'sides')) && (getNumber(_x >> 'pad_store') isEqualTo 1))" configClasses (missionConfigFile >> "ALYSIA_LICENSES"));
 if ((lbSize _list) isEqualTo 0) then {
 	_list lbAdd "Aucune";
 };

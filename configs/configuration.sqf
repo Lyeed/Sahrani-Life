@@ -137,13 +137,6 @@ with missionNamespace do
 	{
 		missionNamespace setVariable[format["inv_%1", _x], 0];
 	} forEach (g_inv_items);
-	/* =================[Licenses]=================== */
-	g_licenses = [];
-	"g_licenses pushBack(configName _x); true" configClasses (missionConfigFile >> "ALYSIA_LICENSES");
-
-	{
-		missionNamespace setVariable[format["license_%1", _x], false];
-	} forEach (g_licenses);
 	/* =================[Sheeps]====================*/
 	g_sheeps = [];
 };

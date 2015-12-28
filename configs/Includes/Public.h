@@ -42,6 +42,7 @@ class Public
 	{
 		file = "core\Tools";
 		class setHitPointDamage {};
+		class hasLicense {};
 		class lightOn {};
 		class lightBug {};
 		class weightGenerate {};
@@ -83,6 +84,7 @@ class Public
 		class strTime {};
 		class age {};
 		class getRegion {};
+		class getLicenses {};
 	};
 
 	class Items
@@ -361,34 +363,6 @@ class Public
 		class putInJail {};
 	};
 
-	class Admin
-	{
-		file = "core\Game\Admin";
-		class adminMenu {};
-		class adminQuery {};
-		class adminQueryGetInfo {};
-		class adminQueryShowInfo {};
-		class adminFind {};
-		class adminSpec {};
-		class adminRemboursementInit {};
-		class adminRemboursementProcess {};
-		class adminRemboursementGive {};
-		class adminGoto {};
-		class adminHeal {};
-		class adminHealApply {};
-		class adminTpHere {};
-		class adminInventoryInit {};
-		class adminInventoryGet {};
-		class adminInventoryShow {};
-		class adminGotoSpawn {};
-		class adminMarkers {};
-		class adminTp {};
-		class adminGod {};
-		class adminKey {};
-		class adminOwner {};
-		class adminHvStatus {};
-	};
-
 	class Interactions
 	{
 		file = "core\Game\Interactions";
@@ -451,8 +425,6 @@ class Public
 		class getVehSellPrice {};
 		class getVehVirtual {};
 		class licenseGetName {};
-		class licenseGetPrice {};
-		class licenseIsIllegal {};
 		class rankToStr {};
 		class sideToStr {};
 		class itemCount {};

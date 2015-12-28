@@ -11,16 +11,16 @@ _sel = lbCurSel 8113;
 if (_sel isEqualTo -1) exitWith {};
 
 _license = lbData[8113, _sel];
+if (_license isEqualTo "") exitWith {};
 
-_price = [_license] call public_fnc_licenseGetPrice;
+_price = lbValue[8113, _sel];
 if (_price isEqualTo 0) exitWith {};
 
-_formatLicense = format["license_%1", _license];
-if (missionNamespace getVariable[_formatLicense, false]) exitWith {};
-
+if ([_license] call public_fnc_hasLicense) exitWith {};
 if (g_atm < _price) exitWith {};
 
-missionNamespace setVariable[_formatLicense, true];
+missionNamespace setVariable [format["license_%1", _license], true];
+
 [format[
 		"<t align='center'>Vous avez acheté<br/><t color='#FE9A2E'>%1</t></t><br/><br/>"
 	+ 	"<t align='left'>Prix</t><t align='right' color='#8cff9b'>%2kn</t>", 

@@ -8,14 +8,18 @@
 private["_license", "_price"];
 _license = [_this, 3, "",[""]] call BIS_fnc_param;
 
-if (playerSide != civilian) exitWith {
-	["Votre faction ne pouvez pas d'acheter de licence"] call public_fnc_error;
+if (_license isEqualTo "") exitWith {};
+
+_price = getNumber(missionConfigFile >> "ALYSIA_LICENSES" >> _x >> "price");
+if (_price isEqualTo 0) exitWith {
+	[format["Impossible de déterminer le prix de la license : %1", [_license] call public_fnc_licenseGetName]] call public_fnc_error;
 };
 
-_price = [_license] call public_fnc_licenseGetPrice;
-if (_price isEqualTo 0) exitWith {};
+if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_LICENSES" >> _x >> "sides"))) exitWith {
+	[format["Vous n'êtes pas autorisé à acheter la license : %1", [_license] call public_fnc_licenseGetName]] call public_fnc_error;
+};
 
-if (missionNamespace getVariable[format["license_%1", _license], false]) exitWith {
+if ([_license] call public_fnc_hasLicense) exitWith {
 	[format["Vous possédez déjà la licence : %1", [_license] call public_fnc_licenseGetName]] call public_fnc_error;
 };
 

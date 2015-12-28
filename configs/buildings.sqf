@@ -87,6 +87,7 @@ _bank_computer_SOUTH = ["xcam_Laptop_unfolded_F","[10760.750977,9337.464844,4.20
 ["xcam_W_sharpStones_erosion","[14957.985352,7410.351563,0]",0,-100,0,0,[]] call _cString;
 ["Land_UWreck_FishingBoat_F","[14961.930664,7438.669922,0]",0,-100,0,0,[]] call _cString;
 
+/*
 _lamp = "Land_LampHalogen_F" createVehicleLocal [0, 0, 0];
 _lamp setposATL [13213.299805,8841.537109,-6.76977];
 _lamp setDir 145;
@@ -115,3 +116,4 @@ _radio allowDamage false;
 		sleep 90;
 	};
 };
+*/

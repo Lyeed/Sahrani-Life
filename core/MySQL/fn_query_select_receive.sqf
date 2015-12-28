@@ -97,19 +97,24 @@ g_phone_forfait = _basic select 29;
 g_phone_blacklist = _basic select 30;
 g_apps = _basic select 31;
 g_choice = _basic select 32;
+// Licenses
+{
+	if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_LICENSES" >> _x >> "sides")) then {
+		missionNamespace setVariable [format["license_%1", _x], true];
+	};
+} forEach (_basic select 33);
 // cash
-g_cash = _basic select 33;
+g_cash = _basic select 34;
 // atm
-g_atm = _basic select 34;
+g_atm = _basic select 35;
 // inventory
 g_maxWeight = 100;
 {
     [true, (_x select 0), (_x select 1)] call public_fnc_handleInv;
-} forEach (_basic select 35);
+} forEach (_basic select 36);
 g_maxWeight = 24;
 // gear
-[(_basic select 36)] spawn public_fnc_loadGear;
-
+[(_basic select 37)] spawn public_fnc_loadGear;
 switch (playerSide) do
 {
 	case west: 
@@ -127,10 +132,6 @@ switch (playerSide) do
 	case civilian:
 	{
 		g_paycheck = g_paycheck + round((call g_CIVLevel) * getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "CIV" >> "paycheck"));
-		// Licenses
-		{
-			missionNamespace setVariable [format["license_%1", _x], true];
-		} forEach (_basic select 37);
 		// Launder
 		g_launder = _basic select 38;
 	};

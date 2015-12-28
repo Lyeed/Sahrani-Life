@@ -3,39 +3,48 @@ class ALYSIA_LICENSES
 	class driver
 	{
 		name = "Permis de conduire";
+		sides[] = {"CIV", "EAST", "WEST", "GUER"};
 		price = 1000;
 		illegal = 0;
 		pad_store = 1;
 	};
-	
 	class moto
 	{
 		name = "Permis moto";
+		sides[] = {"CIV", "EAST", "WEST", "GUER"};
 		price = 1000;
 		illegal = 0;
 		pad_store = 1;
 	};
-
 	class pilot
 	{
 		name = "Permis de pilotage";
+		sides[] = {"CIV", "EAST", "WEST", "GUER"};
 		price = 500000;
 		illegal = 0;
 		pad_store = 1;
 	};
-
 	class boat
 	{
 		name = "Permis de bateau";
+		sides[] = {"CIV", "EAST", "WEST", "GUER"};
 		price = 10000;
 		illegal = 0;
 		pad_store = 1;
 	};
-
 	class truck
 	{
 		name = "Permis poids lourd";
+		sides[] = {"CIV", "EAST", "WEST", "GUER"};
 		price = 60000;
+		illegal = 0;
+		pad_store = 1;
+	};
+	class dive
+	{
+		name = "Licence de plongée";
+		sides[] = {"CIV", "EAST", "WEST", "GUER"};
+		price = 6000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -43,39 +52,8 @@ class ALYSIA_LICENSES
 	class home
 	{
 		name = "Licence de propriété";
+		sides[] = {"CIV"};
 		price = 500000;
-		illegal = 0;
-		pad_store = 1;
-	};
-
-	class secu
-	{
-		name = "Licence de sécurité";
-		price = 175000;
-		illegal = 0;
-		pad_store = 0;
-	};
-
-	class doc
-	{
-		name = "Doctorat de médecine";
-		price = 100000;
-		illegal = 0;
-		pad_store = 0;
-	};
-
-	class depan
-	{
-		name = "Licence de dépanneur";
-		price = 80000;
-		illegal = 0;
-		pad_store = 0;
-	};
-
-	class dive
-	{
-		name = "Licence de plongée";
-		price = 6000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -83,134 +61,112 @@ class ALYSIA_LICENSES
 	class gun
 	{
 		name = "Licence d'armes à feu";
+		sides[] = {"CIV"};
 		price = 75000;
 		illegal = 0;
-		pad_store = 0;
-	};
-
-	class rebel
-	{
-		name = "Entrainement rebel";
-		price = 150000;
-		illegal = 1;
-		pad_store = 0;
-	};
-
-	class rebel2
-	{
-		name = "Entrainement rebel supérieur";
-		price = 300000;
-		illegal = 1;
-		pad_store = 0;
-	};
-
-	class marijuana
-	{
-		name = "Traitement de la marijuana";
-		price = 45000;
-		illegal = 1;
 		pad_store = 0;
 	};
 
 	class archeologie
 	{
 		name = "Licence d'archéologie";
+		sides[] = {"CIV"};
 		price = 50000;
 		illegal = 1;
 		pad_store = 0;
 	};
-
 	class platine
 	{
 		name = "Traitement du platine";
+		sides[] = {"CIV"};
 		price = 95000;
 		illegal = 0;
 		pad_store = 1;
 	};
-
 	class copper
 	{
 		name = "Traitement du cuivre";
+		sides[] = {"CIV"};
 		price = 95000;
 		illegal = 0;
 		pad_store = 1;
 	};
-
 	class wood
 	{
 		name = "Traitement du bois";
+		sides[] = {"CIV"};
 		price = 8000;
 		illegal = 0;
 		pad_store = 1;
 	};
-
 	class oil
 	{
 		name = "Traitement du pétrole";
+		sides[] = {"CIV"};
 		price = 50000;
 		illegal = 0;
 		pad_store = 1;
 	};
-
 	class iron
 	{
 		name = "Traitement du fer";
+		sides[] = {"CIV"};
 		price = 25000;
 		illegal = 0;
 		pad_store = 1;
 	};
-
 	class sand
 	{
 		name = "Traitement de sable";
+		sides[] = {"CIV"};
 		price = 10000;
 		illegal = 0;
 		pad_store = 1;
 	};
-
 	class tabac
 	{
 		name = "Traitement du tabac";
+		sides[] = {"CIV"};
 		price = 35000;
 		illegal = 0;
 		pad_store = 1;
 	};
-
 	class gold
 	{
 		name = "Fonte de l'or";
+		sides[] = {"CIV"};
 		price = 35000;
 		illegal = 0;
 		pad_store = 1;
 	};
-
 	class salt
 	{
 		name = "Traitement de sel";
+		sides[] = {"CIV"};
 		price = 35000;
 		illegal = 0;
 		pad_store = 1;
 	};
-
 	class pottery
 	{
 		name = "Traitement de l'argile";
+		sides[] = {"CIV"};
 		price = 35000;
 		illegal = 0;
 		pad_store = 1;
 	};
-
 	class bauxite
 	{
 		name = "Traitement du bauxite";
+		sides[] = {"CIV"};
 		price = 35000;
 		illegal = 0;
 		pad_store = 1;
 	};
-	
 	class Pierretr
 	{
 		name = "Traitement de la pierre";
+		sides[] = {"CIV"};
 		price = 35000;
 		illegal = 0;
 		pad_store = 1;
