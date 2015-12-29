@@ -20,10 +20,11 @@ if ((_list lbText _index) isEqualTo "Aucune") exitWith
 	[8120, false] call public_fnc_tabletShow;
 };
 
-_display = uiNamespace getVariable["tablet", displayNull];
+disableSerialization;
+_display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
 
-_price = [(_list lbData _index)] call public_fnc_licenseGetPrice;
+_price = _list lbValue _index;
 (_display displayCtrl 8116) ctrlSetStructuredText parseText format
 [
 	"<t align='center' color='#%2'>%1</t><t align='right'>kn</t>",

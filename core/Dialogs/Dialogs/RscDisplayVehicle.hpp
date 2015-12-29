@@ -16,7 +16,7 @@ class RscDisplayVehicleOwner: default_interaction_back_dialog
 	{
 		class TITLE: TITLE
 		{
-			text = "<t size='1.5' align='center'>Réparation</t>";
+			text = "<t size='1.5' align='center'>Carte grise</t>";
 		};
 
 		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME {};
@@ -132,7 +132,7 @@ class RscDisplayVehicleRepair: default_interaction_back_dialog
 	{
 		class TITLE: TITLE
 		{
-			text = "<t size='1.5' align='center'>Carte grise</t>";
+			text = "<t size='1.5' align='center'>Réparation</t>";
 		};
 
 		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME {};

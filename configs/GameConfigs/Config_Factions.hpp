@@ -17,13 +17,60 @@ class ALYSIA_FACTIONS
 		mission_vehicle = "Fett_truck_milice";
 		mission_items[] =
 		{
+			{"Weapons",
+				{
+					"SMG_01_F",
+					"RH_fnp45",
+					"Skyline_HK_SL8"
+					"hlc_rifle_aks74u",
+					"hlc_rifle_akm",
+					"hlc_rifle_rpk",
+					"hlc_rifle_RPK12",
+					"RH_g19",
+					"Fett_SDAR",
+					"RH_Deagle",
+					"srifle_EBR_F"
+				}
+			},
+			{"Magazines",
+				{
+					"30Rnd_45ACP_Mag_SMG_01_Tracer_Red",
+					"hlc_30Rnd_545x39_B_AK",
+					"RH_15Rnd_45cal_fnp",
+					"30Rnd_556x45_Stanag",
+					"hlc_30Rnd_762x39_b_ak",
+					"hlc_75Rnd_762x39_m_rpk",
+					"hlc_45Rnd_545x39_t_rpk",
+					"RH_17Rnd_9x19_g17",
+					"Fett_20Rnd_556x45_UW_mag",
+					"RH_7Rnd_50_AE",
+					"20Rnd_762x51_Mag"
+				}
+			},
+			{"Items",
+				{
+					"SmokeShellWhite",
+					"Rangefinder",
+					"optic_Aco",
+					"optic_Hamr",
+					"hlc_optic_kobra",
+					"optic_DMS",
+					"optic_LRPS",
+					"optic_Holosight",
+					"TRYK_HRPIGEAR_NV"					
+				}
+			},
+			{"Backpacks",
+				{
 
+				}
+			}
 		};
 		mission_start[] =
 		{
-			{17736.2,12417.5,0.00143433},
-			{10811.7,12593.7,0.00143814},
-			{8136.29,16978.4,0.00143814}
+			{{17742.5,12402.9,0.00144196}, 265.788},
+			{{10818.1,12604.2,0.00143814}, 289.467},
+			{{8186.99,17044.1,0.00143814}, 20.2156}
 		};
 
 		/*** MAP ***/
@@ -132,11 +179,42 @@ class ALYSIA_FACTIONS
 		mission_vehicle = "Fett_truck_army";
 		mission_items[] =
 		{
+			{"Weapons",
+				{
+					"hlc_rifle_M14_Bipod",
+					"Trixie_Enfield_Rail",
+					"hlc_rifle_aughbar_B",
+					"hlc_rifle_auga2_b",
+					"Fett_SDAR"
+				}
+			},
+			{"Magazines",
+				{
+					"Trixie_Enfield_Mag",
+					"hlc_30Rnd_556x45_B_AUG",
+					"Fett_20Rnd_556x45_UW_mag"
+				}
+			},
+			{"Items",
+				{
+					"DemoCharge_Remote_Mag",
+					"optic_DMS",
+					"SmokeShellWhite",
+					"Rangefinder",
+					"optic_ACO_grn_smg"
+				}
+			},
+			{"Backpacks",
+				{
 
+				}
+			}
 		};
 		mission_start[] =
 		{
-
+			{{6354.66,7456.13,0.00125122}, 39.8453},
+			{{10400.8,5252.98,0.00162888}, 0.137371},
+			{{13366.3,6887.15,0.00107718}, 264.853}
 		};
 
 		/*** MAP ***/
@@ -235,7 +313,29 @@ class ALYSIA_FACTIONS
 
 		/*** GEAR MISSION ***/
 		mission_vehicle = "";
-		mission_items[] = {};
+		mission_items[] =
+		{
+			{"Weapons",
+				{
+
+				}
+			},
+			{"Magazines",
+				{
+
+				}
+			},
+			{"Items",
+				{
+
+				}
+			},
+			{"Backpacks",
+				{
+
+				}
+			}
+		};
 		mission_start[] = {};
 
 		/*** MAP ***/
@@ -362,7 +462,29 @@ class ALYSIA_FACTIONS
 
 		/*** GEAR MISSION ***/
 		mission_vehicle = "";
-		mission_items[] = {};
+		mission_items[] = 
+		{
+			{"Weapons",
+				{
+
+				}
+			},
+			{"Magazines",
+				{
+
+				}
+			},
+			{"Items",
+				{
+
+				}
+			},
+			{"Backpacks",
+				{
+
+				}
+			}
+		};
 		mission_start[] = {};
 
 		/*** MAP ***/

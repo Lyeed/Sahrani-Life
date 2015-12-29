@@ -14,10 +14,8 @@ if (isNull _display) exitWith {};
 _list = _display displayCtrl 8600;
 lbClear _list;
 {
-	if (missionNamespace getVariable[format["license_%1", _x], false]) then {
-		_list lbAdd ([_x] call public_fnc_licenseGetName);
-	};
-} forEach (g_licenses);
+	_list lbAdd ([_x] call public_fnc_licenseGetName);
+} forEach ([] call public_fnc_getLicenses);
 if ((lbSize _list) isEqualTo 0) then {
 	_list lbAdd "Aucune";
 };

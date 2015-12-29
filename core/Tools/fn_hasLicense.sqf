@@ -6,13 +6,4 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (life_coma) then
-{
-	life_coma = false;
-	sleep 1.5;
-};
-
-player setVariable["is_coma", false, true];
-player setVariable["is_bleeding", false, true];
-life_bleed = 0;
-life_blood = 4000;
+missionNamespace getVariable[(format["license_%1", ([_this, 0, "", [""]] call BIS_fnc_param)]), false];

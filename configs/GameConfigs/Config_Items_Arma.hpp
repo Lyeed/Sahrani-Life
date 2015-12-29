@@ -23,7 +23,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Skyline_Hache_01
 	{
-		buy_price = 20;
+		buy_price = 100;
 	};
 	class 1Rnd_FlashBall_Mag
 	{
@@ -243,27 +243,27 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class combi_plonge_civ1
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class combi_plonge_civ2
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class combi_plonge_civ3
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class combi_plonge_civ4
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class combi_plonge_milice
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class combi_plonge_samu
 	{
-		buy_price = 20;
+		buy_price = 200;
 		buy_condition_GUER = 2;
 	};
 	class SAMU_helmet
@@ -938,19 +938,19 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class ItemCompass
 	{
-		buy_price = 20;
+		buy_price = 10;
 	};
 	class ItemGPS
 	{
-		buy_price = 20;
+		buy_price = 250;
 	};
 	class ItemMap
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class ItemWatch
 	{
-		buy_price = 20;
+		buy_price = 25
 	};
 	class Killer_uniform_new
 	{
@@ -3374,6 +3374,15 @@ class ALYSIA_ITEMS_ARMA
 		buy_condition_WEST = 9;
 	};
 	class SmokeShellWhite
+	{
+		buy_price = 20;
+	};
+	class tf_mr3000_multicam
+	{
+		buy_price = 20;
+		buy_condition_WEST = 4;
+	};
+	class tf_anprc148jem_2
 	{
 		buy_price = 20;
 	};
