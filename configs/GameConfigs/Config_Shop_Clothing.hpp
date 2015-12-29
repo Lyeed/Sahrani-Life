@@ -327,7 +327,8 @@ class ALYSIA_SHOPS_CLOTHING
 		};
 		backpacks[] =
 		{
-			"Skyline_Army_Backpack_Kitbag"
+			"Skyline_Army_Backpack_Kitbag",
+			"tf_mr3000_multicam"
 		};
 	};
 
