@@ -59,7 +59,7 @@ while {(!(isNull _display) && (_currentfuel > 1) && (_fuel <= 1) && (_bill <= g_
 	(_display displayCtrl 17006) ctrlSetStructuredText parseText _typeRefuel;
 	(_display displayCtrl 17008) ctrlSetStructuredText parseText format ["<t size='2' align='center'>%1</t>", [_bill] call public_fnc_numberText];
 	(_display displayCtrl 17010) ctrlSetStructuredText parseText format ["<t align='right'>%1L</t>", _currentfuel];
-	(_display displayCtrl 17013) progressSetPosition (fuel _fuel);
+	(_display displayCtrl 17013) progressSetPosition ((fuel _veh) + _fuel);
 	(_display displayCtrl 17014) ctrlSetStructuredText parseText format ["<t size='1.5' align='center>%1/%2 Litres</t>", ((fuel _veh) * _fuelmax), _fuelmax];
 
 	sleep 0.5;
