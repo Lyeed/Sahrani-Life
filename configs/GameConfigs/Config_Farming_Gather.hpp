@@ -2,7 +2,7 @@ class ALYSIA_FARMING_GATHER
 {
 	class wood_1
 	{
-		receive[] = {{"wood", 1, 0}};
+		receive[] = {{"wood", 3, 0}};
 		tool = "Skyline_Hache_01";
 		sound = "axe";
 	};
@@ -18,7 +18,7 @@ class ALYSIA_FARMING_GATHER
 	class archeologie_1
 	{
 		receive[] = {{"artefact", 1, 0}};
-		extra[] = {{"artefact_exrare", 1}, {"artefact_rare", 4}, {"artefact_common", 1}};
+		extra[] = {{"artefact_exrare", 1}, {"artefact_rare", 4}, {"artefact_common", 12}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
 		extra_all = 1;
@@ -26,14 +26,14 @@ class ALYSIA_FARMING_GATHER
 
 	class iron_1
 	{
-		receive[] = {{"iron", 1, 0}};
+		receive[] = {{"iron", 4, 1}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
 	};
 
 	class sand_1
 	{
-		receive[] = {{"sand", 1, 0}};
+		receive[] = {{"sand", 4, 1}};
 		tool = "Skyline_Pelle_01";
 		sound = "shovel";
 	};
@@ -47,7 +47,7 @@ class ALYSIA_FARMING_GATHER
 
 	class prunes_1
 	{
-		receive[] = {{"prune", 6, 1}};
+		receive[] = {{"prune", 7, 1}};
 		tool = "";
 		sound = "gather1";
 	};
@@ -55,7 +55,7 @@ class ALYSIA_FARMING_GATHER
 
 	class vignes_1
 	{
-		receive[] = {{"raisin", 6, 1}};
+		receive[] = {{"raisin", 7, 1}};
 		tool = "";
 		sound = "gather1";
 	};
@@ -69,35 +69,35 @@ class ALYSIA_FARMING_GATHER
 
 	class gold_1
 	{
-		receive[] = {{"goldnuggets", 1, 0}};
+		receive[] = {{"goldnuggets", 3, 1}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
 	};
 
 	class clay_1
 	{
-		receive[] = {{"clay", 1, 0}};
+		receive[] = {{"clay", 6, 1}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
 	};
 
 	class coal_1
 	{
-		receive[] = {{"coal", 1, 0}};
+		receive[] = {{"coal", 6, 1}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
 	};
 
 	class salt_1
 	{
-		receive[] = {{"salt", 1, 0}};
+		receive[] = {{"salt", 5, 1}};
 		tool = "Skyline_Pelle_01";
 		sound = "shovel";
 	};
 
 	class baux_1
 	{
-		receive[] = {{"baux", 1, 0}};
+		receive[] = {{"baux", 4, 1}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
 	};
@@ -121,14 +121,14 @@ class ALYSIA_FARMING_GATHER
 
 	class copper_1
 	{
-		receive[] = {{"copper", 1, 0}};
+		receive[] = {{"copper", 4, 1}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
 	};
 	
 	class pierre_1
 	{
-		receive[] = {{"pierre", 1, 0}};
+		receive[] = {{"pierre", 5, 1}};
 		tool = "Skyline_Merlin_01";
 		sound = "mining";
 	};
