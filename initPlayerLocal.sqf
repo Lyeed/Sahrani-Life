@@ -172,7 +172,7 @@ if (hasInterface) then
 
 			g_seatbelt = false;
 			_veh = vehicle player;
-			_fuel = (getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf (_veh) >> "fuel"));
+			_fuel = (getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf (_veh) >> "fuel"));
 			_curentfuel = _veh getVariable ["typeRefuel", ""];
 
 			while {((vehicle player) isEqualTo _veh)} do

@@ -21,8 +21,8 @@ class ALYSIA_PRISONS
 
 		class time
 		{
-			max = 0;
-			min = 0;
+			min = 600;
+			max = 7200;
 		};
 
 		class bail
@@ -36,7 +36,13 @@ class ALYSIA_PRISONS
 		{
 			class item_1
 			{
-				name = "Traitement de la pierre";
+				name = "Traitement de la Pierre";
+				time = 0;
+				money = 0;
+			};
+			class item_2
+			{
+				name = "Trafique de Tabacs";
 				time = 0;
 				money = 0;
 			};
@@ -93,8 +99,8 @@ class ALYSIA_PRISONS
 
 		class time
 		{
-			max = 0;
-			min = 0;
+			min = 600;
+			max = 7200;
 		};
 
 		class bail
@@ -108,7 +114,19 @@ class ALYSIA_PRISONS
 		{
 			class item_1
 			{
-				name = "Traitement de la pierre";
+				name = "Fabrication de Savons";
+				time = 0;
+				money = 0;
+			};
+			class item_2
+			{
+				name = "Fabrication d'abats jours'";
+				time = 0;
+				money = 0;
+			};
+			class item_3
+			{
+				name = "Fabrication de Boutons";
 				time = 0;
 				money = 0;
 			};
