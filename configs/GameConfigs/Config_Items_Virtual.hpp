@@ -62,8 +62,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Kit de crochetage";
 		weight      = 2;
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 1200;
+		price_sell  = 0;
 		illegal     = 1;
 		removable   = 1;
 		use         = "";
@@ -74,8 +74,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Menottes";
 		weight      = 2;
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 45;
+		price_sell  = 0;
 		illegal     = 1;
 		removable   = 1;
 		use         = "";
@@ -86,8 +86,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Clés de menottes";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 5;
+		price_sell  = 0;
 		illegal     = 1;
 		removable   = 1;
 		use         = "";
@@ -98,8 +98,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Patch anti addiction";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 400;
+		price_sell  = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "[] call public_fnc_patch;";
@@ -110,8 +110,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Nitro";
 		weight      = 4;
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 900;
+		price_sell  = 0;
 		illegal     = 1;
 		removable   = 1;
 		use         = "";
@@ -122,8 +122,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Coffre";
 		weight      = 30;
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 20000;
+		price_sell  = 0;
 		illegal     = 0;
 		removable   = 1;
 		use         = "[] spawn public_fnc_storageBox;";
@@ -134,8 +134,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Barrière";
 		weight      = 6;
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 48;
+		price_sell  = 0;
 		illegal     = 1;
 		removable   = 1;
 		use         = "[%1] spawn public_fnc_objPut;";
@@ -146,8 +146,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Cône";
 		weight      = 3;
-		price_buy   = 60;
-		price_sell  = 30;
+		price_buy   = 10;
+		price_sell  = 0;
 		illegal     = 1;
 		removable   = 1;
 		use         = "[%1] spawn public_fnc_objPut;";
@@ -158,7 +158,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Herse";
 		weight      = 5;
-		price_buy   = 60;
+		price_buy   = 136;
 		price_sell  = 30;
 		illegal     = 0;
 		removable   = 1;
@@ -1326,7 +1326,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Sifflet";
 		weight      = 1;
-		price_buy   = 60;
+		price_buy   = 3;
 		price_sell  = 0;
 		illegal     = 0;
 		removable   = 1;
@@ -1338,7 +1338,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Télécommande (barrière)";
 		weight      = 1;
-		price_buy   = 120;
+		price_buy   = 15;
 		price_sell  = 0;
 		illegal     = 0;
 		removable   = 1;
