@@ -48,7 +48,7 @@ if (isNull _display) exitWith {};
 
 _bill = 0;
 _fuelmax = getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "fuelCapacity");
-_timer = getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "config" >> _timer);
+_timer = getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "config" >> "timer");
 while {(!(isNull _display) && (_station getVariable [_typeRefuel, 250]) && (((fuel _veh) + _addvalue) < 1) && (_bill <= g_atm)) && (!(isEngineOn _veh)) && (!((locked _veh) isEqualTo 2)) && (player distance _station < 5) && (player distance _veh <5) && (speed player < 1)} do
 {
 	_addvalue = (_addvalue + (1 / _fuelmax));
