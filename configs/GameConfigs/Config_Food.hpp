@@ -77,4 +77,11 @@ class ALYSIA_FOOD
 		hunger = 40;
 		sound = "eat";
 	};
+
+	class medova
+	{
+		thirst = 40;
+		hunger = -10;
+		sound = "eat";
+	};
 };
