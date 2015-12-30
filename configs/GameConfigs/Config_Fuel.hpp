@@ -1,5 +1,10 @@
 class ALYSIA_FUEL
 {
+	class config
+	{
+		timer = 0.5;
+	};
+
 	class fuels
 	{
 		class Diesel
