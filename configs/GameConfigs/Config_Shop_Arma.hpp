@@ -84,6 +84,12 @@ class ALYSIA_SHOPS_ARMA
 			"Skyline_B95_Green",
 			"Skyline_B95_Black",
 			"2Rnd_762x51_Mag_B95",
+			"RH_cz75",
+			"RH_16Rnd_9x19_CZ",
+			"RH_p226",
+			"RH_15Rnd_9x19_SIG",
+			"RH_gsh18",
+			"RH_18Rnd_9x19_gsh",
 			"Fett_SDAR",
 			"Fett_20Rnd_556x45_UW_mag"
 		};
