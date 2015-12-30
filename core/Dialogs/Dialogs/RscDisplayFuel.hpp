@@ -319,6 +319,7 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 		class PROGRESS_BAR: RscProgress
 		{
 			idc = 17013;
+			colorBackground[] = {0,0,0,0};
 
 			x = 0.400522 * safezoneW + safezoneX;
 			y = 0.42963 * safezoneH + safezoneY;
@@ -330,9 +331,13 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 			idc = 17014;
 			colorBackground[] = {0,0,0,0};
 
-			x = 0.425833 * safezoneW + safezoneX;
+			/*x = 0.425833 * safezoneW + safezoneX;
 			y = 0.429482 * safezoneH + safezoneY;
 			w = 0.0773437 * safezoneW;
+			h = 0.022 * safezoneH;*/
+			x = 0.400522 * safezoneW + safezoneX;
+			y = 0.42963 * safezoneH + safezoneY;
+			w = 0.130989 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class VALIDATE_BACKGROUND: RscStructuredText
