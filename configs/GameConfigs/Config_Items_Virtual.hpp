@@ -40,7 +40,7 @@ class ALYSIA_ITEMS
 		weight      = 40;
 		price_buy   = 60;
 		price_sell  = 30;
-		illegal     = 1;
+		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\1\lingot_or.paa";
