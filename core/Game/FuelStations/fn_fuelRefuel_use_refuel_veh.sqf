@@ -53,7 +53,7 @@ _timer = getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "config" >> "timer");
 while {(!(isNull _display) && ((_station getVariable [_typeRefuel, 250]) > 1) && (((fuel _veh) + _addvalue) < 1) && (_bill <= g_atm)) && (!(isEngineOn _veh)) && (!((locked _veh) isEqualTo 2)) && (player distance _station < 5) && (player distance _veh <5) && (speed player < 1)} do
 {
 	_addvalue = (_addvalue + (1 / _fuelmax));
-	_bill = (bill + ([_station, _typeRefuel] call public_fnc_fuelStation_price_buy));
+	_bill = (_bill + ([_station, _typeRefuel] call public_fnc_fuelStation_price_buy));
 	
 	(_display displayCtrl 17006) ctrlSetStructuredText parseText _typeRefuel;
 	(_display displayCtrl 17008) ctrlSetStructuredText parseText format ["<t size='2' align='center'>%1</t>", [_bill] call public_fnc_numberText];
