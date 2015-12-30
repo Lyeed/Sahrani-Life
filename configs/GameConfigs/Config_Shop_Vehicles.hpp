@@ -138,16 +138,12 @@ class ALYSIA_SHOPS_VEHICLES
 		stock[] = 
 		{
 			"O_Truck_02_transport_F",
-			"B_Truck_01_transport_F", 
 			"O_Truck_02_covered_F",
-			"B_Truck_01_covered_F",  
-			"B_Truck_01_box_F",
 			"shounka_a3_renaultmagnum_f",
 			"shounka_a3_dafxf_euro6_f",
 			"Mrshounka_a3_iveco_f",
 			"B_G_Van_01_fuel_F",  
 			"O_Truck_02_fuel_F",
-			"B_Truck_01_fuel_F",
 			"Jonzie_Flat_Bed",
 			"Jonzie_Log_Truck",
 			"Jonzie_Tanker_Truck",
@@ -168,6 +164,9 @@ class ALYSIA_SHOPS_VEHICLES
 			"max_CrownVic",
 			"Mrshounka_r5_civ",
 			"Jonzie_Datsun_510",
+			"Jonzie_Transit",
+			"Jonzie_30CSL",
+			"Jonzie_Galant",
 			"Jonzie_Mini_Cooper"
 		};
 	};
@@ -218,12 +217,14 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_a3_smart_civ",
 			"Mrshounka_subaru08_civ",
 			"Mrshounka_Volkswagen_Touareg_civ",
-			"Jonzie_30CSL",
 			"Jonzie_Ceed",
 			"Jonzie_Corolla",
-			"Jonzie_Galant",
 			"Jonzie_Raptor",
-			"Jonzie_Transit",
+			"Mrshounka_bmwm1_civ",
+			"Mrshounka_bmwm6_civ",
+			"Mrshounka_Bowler_c",
+			"shounka_avalanche",
+			"Mrshounka_evox_civ",
 			"Jonzie_Ute"
 		};
 	};
@@ -248,10 +249,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"DAR_M3Civ",
 			"shounka_a3_rs5_civ",
 			"shounka_rs6",
-			"Mrshounka_bmwm1_civ",
-			"Mrshounka_bmwm6_civ",
-			"Mrshounka_Bowler_c",
-			"shounka_avalanche",
 			"shounka_monsteur",
 			"Mrshounka_a3_dodge15_civ",
 			"shounka_f430_spider",
@@ -260,7 +257,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_hummer_civ",
 			"Mrshounka_cherokee_noir",
 			"mrshounka_huracan_c",
-			"Mrshounka_evox_civ",
 			"Mrshounka_lincoln_civ",
 			"Mrshounka_lykan_c",
 			"shounka_mp4",

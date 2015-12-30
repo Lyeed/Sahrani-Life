@@ -82,6 +82,14 @@ class ALYSIA_FOOD
 	{
 		thirst = 40;
 		hunger = -10;
-		sound = "eat";
+		sound = "drink";
 	};
+
+	class cafe
+	{
+		thirst = 40;
+		hunger = 0;
+		sound = "drink";
+	};
+
 };
