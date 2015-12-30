@@ -1266,7 +1266,7 @@ class ALYSIA_ITEMS
 
 	class grozdova
 	{
-		name        = "Grozdova";
+		name        = "Bouteille de Grozdova";
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
@@ -1278,7 +1278,7 @@ class ALYSIA_ITEMS
 
 	class slivovica
 	{
-		name        = "Slivovica";
+		name        = "Bouteille de Slivovica";
 		weight      = 1;
 		price_buy   = 60;
 		price_sell  = 30;
@@ -1368,5 +1368,17 @@ class ALYSIA_ITEMS
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\1\ciment.paa";
+	};
+
+	class medova
+	{
+		name        = "Bouteille de Medova";
+		weight      = 1;
+		price_buy   = 8;
+		price_sell  = 0;
+		illegal     = 1;
+		removable   = 1;
+		use         = "[""medova""] call public_fnc_eatFood;";
+		image       = "alysia_items_virtual\data\1\medova.paa";
 	};
 };
