@@ -21,7 +21,7 @@ class ALYSIA_FACTIONS
 				{
 					"SMG_01_F",
 					"RH_fnp45",
-					"Skyline_HK_SL8"
+					"Skyline_HK_SL8",
 					"hlc_rifle_aks74u",
 					"hlc_rifle_akm",
 					"hlc_rifle_rpk",

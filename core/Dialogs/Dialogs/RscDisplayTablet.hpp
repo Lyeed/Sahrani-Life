@@ -12,7 +12,6 @@ class RscDisplayTablet: default_base_dialog
 	{
 		class FRAME: RscPicture
 		{
-			idc = -1;
 			text = "lyeed\images\frame_test2.paa";
 
 			x = 0.292971 * safezoneW + safezoneX;

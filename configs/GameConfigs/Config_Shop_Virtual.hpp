@@ -31,27 +31,18 @@ class ALYSIA_SHOPS_VIRTUAL
 	};
 
 	/* FACTIONS MARKET */
-	class rebel
-	{
-		name = "Marché illégal";
-		side = "CIV";
-		items[]= {{"water", "banane", "mangue", "lockpick", "handcuffs", "handcuffkeys", "baillon", "bandeau", "blastingcharge", "lab_small", "lab_medium", "lab_large"}, {"banane", "mangue"}};
-	};
-
 	class west 
 	{
 		name = "Milice";
 		side = "WEST";
 		items[] = {{"cone", "barriere", "donut", "soda", "handcuffkeys", "handcuffs", "spikeStrip", "bip", "sifflet"}, {}};
 	};
-
 	class east
 	{
 		name = "Garde";
 		side = "EAST";
 		items[] = {{"ragout", "kefir", "sifflet", "handcuffs", "handcuffkeys", "barriere", "cone", "bip"}, {}};
 	};
-
 	class guer
 	{
 		name = "Hopital";
@@ -99,7 +90,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Marché noir";
 		side = "CIV";
-		items[] = {{"cannabis_seed", "heroin_seed", "cocaine_seed", "meth_seed", "nitro"}, {"artefact", "artefact_R", "artefact_exrare", "artefact_rare", "artefact_common", "objvaleur"}};
+		items[] = {{"lockpick", "handcuffs", "handcuffkeys", "cannabis_seed", "heroin_seed", "cocaine_seed", "meth_seed", "nitro", "baillon", "bandeau"}, {"artefact", "artefact_R", "artefact_exrare", "artefact_rare", "artefact_common", "objvaleur"}};
 	};
 
 	class platine

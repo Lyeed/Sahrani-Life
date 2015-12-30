@@ -158,6 +158,7 @@ class FACTION_OFFICE_BUTTON: RscButtonMenu_colored
 #define FACTION_LEADER_OFFICE_FACTION_HISTORY_IDC   8739
 #define FACTION_LEADER_OFFICE_BACK_IMAGE_IDC        8740
 #define FACTION_LEADER_OFFICE_BACK_BUTTON_IDC       8741
+#define FACTION_LEADER_OFFICE_FACTION_MISSION_IDC   8742
 
 FACTION_LEADER_OFFICE_BACKGROUND = "lyeed\images\back.jpg";
 FACTION_LEADER_OFFICE_IDCS[] = 
@@ -173,7 +174,8 @@ FACTION_LEADER_OFFICE_IDCS[] =
 	FACTION_LEADER_OFFICE_FACTION_ACTION_IDC,
 	FACTION_LEADER_OFFICE_FACTION_HISTORY_IDC,
 	FACTION_LEADER_OFFICE_BACK_IMAGE_IDC,
-	FACTION_LEADER_OFFICE_BACK_BUTTON_IDC
+	FACTION_LEADER_OFFICE_BACK_BUTTON_IDC,
+	FACTION_LEADER_OFFICE_FACTION_MISSION_IDC
 };
 
 class FACTION_LEADER_OFFICE_CIVILIAN_FRAME: RscFrame
@@ -276,11 +278,23 @@ class FACTION_LEADER_OFFICE_FACTION_HISTORY: RscButtonMenu_colored
 {
 	idc = FACTION_LEADER_OFFICE_FACTION_HISTORY_IDC;
 	text = "Historique";
-	onButtonClick = "ctrlEnable[8739, false]; [player] remoteExecCall [""TON_fnc_factionHistoryGet"", 2, false];";
+	onButtonClick = "ctrlEnable[8739, false]; [player] remoteExecCall [""TON_fnc_factionHistoryGet"", 2];";
 
 	x = 0.561875 * safezoneW + safezoneX;
 	y = 0.357 * safezoneH + safezoneY;
 	w = 0.061875 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+
+class FACTION_LEADER_OFFICE_FACTION_MISSION: RscButtonMenu_colored
+{
+	idc = FACTION_LEADER_OFFICE_FACTION_MISSION_IDC;
+	text = "Livraison équipements";
+	onButtonClick = "closeDialog 0; [] spawn public_fnc_mission_start;";
+
+	x = 0.443281 * safezoneW + safezoneX;
+	y = 0.357 * safezoneH + safezoneY;
+	w = 0.103125 * safezoneW;
 	h = 0.022 * safezoneH;
 };
 
