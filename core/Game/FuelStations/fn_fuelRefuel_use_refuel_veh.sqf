@@ -34,7 +34,7 @@ if ((fuel _veh) > 0.9) exitWith {
 if (_veh getVariable ["refueling", false]) exitWith {
 	["Une autre personne effectue actuellement le plein du véhicule."] call public_fnc_error;
 };
-if (_station getVariable [_typeRefuel, 250]) exitWith {
+if ((_station getVariable [_typeRefuel, 250]) <= 1) exitWith {
 	[format["Cette station ne possède plus l'essence que vous désirez (%1).", getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _typeRefuel >> "name")]] call public_fnc_error;
 };
 
