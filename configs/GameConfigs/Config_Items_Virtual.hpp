@@ -1381,4 +1381,16 @@ class ALYSIA_ITEMS
 		use         = "[""medova""] call public_fnc_eatFood;";
 		image       = "alysia_items_virtual\data\1\medova.paa";
 	};
+
+	class cafe
+	{
+		name        = "Tasse de café";
+		weight      = 1;
+		price_buy   = 2;
+		price_sell  = 0;
+		illegal     = 1;
+		removable   = 1;
+		use         = "[""cafe""] call public_fnc_eatFood;";
+		image       = "alysia_items_virtual\data\1\cafe.paa";
+	};
 };

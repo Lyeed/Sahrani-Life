@@ -224,6 +224,11 @@ class ALYSIA_SHOPS_VEHICLES
 			"Jonzie_Galant",
 			"Jonzie_Raptor",
 			"Jonzie_Transit",
+			"Mrshounka_bmwm1_civ",
+			"Mrshounka_bmwm6_civ",
+			"Mrshounka_Bowler_c",
+			"shounka_avalanche",
+			"Mrshounka_evox_civ",
 			"Jonzie_Ute"
 		};
 	};
@@ -248,10 +253,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"DAR_M3Civ",
 			"shounka_a3_rs5_civ",
 			"shounka_rs6",
-			"Mrshounka_bmwm1_civ",
-			"Mrshounka_bmwm6_civ",
-			"Mrshounka_Bowler_c",
-			"shounka_avalanche",
 			"shounka_monsteur",
 			"Mrshounka_a3_dodge15_civ",
 			"shounka_f430_spider",
@@ -260,7 +261,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_hummer_civ",
 			"Mrshounka_cherokee_noir",
 			"mrshounka_huracan_c",
-			"Mrshounka_evox_civ",
 			"Mrshounka_lincoln_civ",
 			"Mrshounka_lykan_c",
 			"shounka_mp4",
