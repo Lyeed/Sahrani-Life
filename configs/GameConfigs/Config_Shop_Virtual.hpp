@@ -20,7 +20,7 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Marché";
 		side = "";
 		// items[]= {{"water", "banane", "mangue", "fishingpoles", "storage", "fuelF"}, {"banane", "mangue"}};
-		items[]= {{"water","storage","sandwich","kefir"}, {"raisin", "prune"}};
+		items[]= {{"water", "petitbeurre", "storage", "sandwich", "croissant","kefir", "ravioli", "raisin", "prune"}, {"raisin", "prune"}};
 	};
 	
 	class hopital

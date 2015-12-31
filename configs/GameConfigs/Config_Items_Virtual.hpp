@@ -854,7 +854,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Prune";
 		weight      = 1;
-		price_buy   = 2;
+		price_buy   = 4;
 		price_sell  = 3;
 		illegal     = 0;
 		removable   = 1;
@@ -1392,5 +1392,53 @@ class ALYSIA_ITEMS
 		removable   = 1;
 		use         = "[""cafe""] call public_fnc_eatFood;";
 		image       = "alysia_items_virtual\data\1\cafe.paa";
+	};
+
+	class ravioli
+	{
+		name        = "Ravioli en boite";
+		weight      = 1;
+		price_buy   = 2;
+		price_sell  = 0;
+		illegal     = 1;
+		removable   = 1;
+		use         = "[""ravioli""] call public_fnc_eatFood;";
+		image       = "alysia_items_virtual\data\1\ravioli.paa";
+	};
+
+	class cookie
+	{
+		name        = "Cookie";
+		weight      = 1;
+		price_buy   = 2;
+		price_sell  = 0;
+		illegal     = 1;
+		removable   = 1;
+		use         = "[""ravioli""] call public_fnc_eatFood;";
+		image       = "alysia_items_virtual\data\1\cookie.paa";
+	};
+
+	class petitbeurre
+	{
+		name        = "Boite de petit beurre";
+		weight      = 1;
+		price_buy   = 2;
+		price_sell  = 0;
+		illegal     = 1;
+		removable   = 1;
+		use         = "[""ravioli""] call public_fnc_eatFood;";
+		image       = "alysia_items_virtual\data\1\petitbeurre.paa";
+	};
+
+	class croissant
+	{
+		name        = "Croissant";
+		weight      = 1;
+		price_buy   = 2;
+		price_sell  = 0;
+		illegal     = 1;
+		removable   = 1;
+		use         = "[""ravioli""] call public_fnc_eatFood;";
+		image       = "alysia_items_virtual\data\1\croissant.paa";
 	};
 };
