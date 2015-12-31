@@ -110,6 +110,7 @@ class ALYSIA_FARMING_GATHER
 		sound = "";
 		water = 1;
 		water_depth = 21;
+		extra_all = 1;
 	};
 
 	class fish_1
