@@ -104,7 +104,7 @@ class ALYSIA_FARMING_GATHER
 
 	class shell_1
 	{
-		receive[] = {{"moule", 3, 1}};
+		receive[] = {{"moule", 2, 0}};
 		extra[] = {{"palourde", 10}, {"saintjacques", 25}, {"bigorneau", 12}, {"crabe", 15}, {"bulot", 8}};
 		tool = "";
 		sound = "";
