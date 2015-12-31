@@ -29,7 +29,7 @@ if (_typeRefuel isEqualTo "") exitWith {
 if (_currentLiters <= 1) exitWith {
 	[format["Cette station ne possède plus l'essence que vous désirez (%1).", getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _typeRefuel >> "name")]] call public_fnc_error;
 };
-if ((fuel _veh) <= 1) exitWith {
+if ((fuel _veh) isEqualTo 1) exitWith {
 	["Le réservoir du véhicule est déjà plein."] call public_fnc_error;
 };
 if (isEngineOn _veh) exitWith {
@@ -39,10 +39,10 @@ if (((locked _veh) isEqualTo 2)) exitWith {
 	["Le véhicule doit être ouvert pour effectuer un plein."] call public_fnc_error;
 };
 if (player distance _station < 5) exitWith {
-	["Vous êtes trop loin de la station."] call public_fnc_error;.
+	["Vous êtes trop loin de la station."] call public_fnc_error;
 };
 if (player distance _veh < 5) exitWith {
-	["Vous êtes trop loin du véhicule."] call public_fnc_error;.
+	["Vous êtes trop loin du véhicule."] call public_fnc_error;
 };
 
 _veh setVariable ["refueling", true, true];
