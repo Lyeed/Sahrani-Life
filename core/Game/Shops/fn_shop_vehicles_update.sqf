@@ -1,10 +1,11 @@
 /*
-		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
+	ArmA 3 N'Ziwasogo Life RPG - ALYSIA
 	Code written by Lyeed
 	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+
 private["_display", "_vehicleList", "_className", "_price", "_trunkSpace", "_vehicleInfo", "_ctrl", "_data", "_list", "_sel"];
 
 disableSerialization;
@@ -53,23 +54,21 @@ _vehicleInfo = [_className] call public_fnc_fetchVehInfo;
 [
 		"<t align='left'>Prix de garage</t><t align='right' color='#8cff9b'>%1kn</t><br/>"
 	+ 	"<t align='left'>Prix de l'assurance</t><t align='right' color='#8cff9b'>%2kn</t><br/>"
-	+ 	"<t align='left'>Prix de vente</t><t align='right' color='#8cff9b'>%9kn</t><br/>"
-	+ 	"<t align='left'>Vitesse max</t><t align='right'>%3 km/h</t><br/>"
-	+ 	"<t align='left'>Puissance en chevaux</t><t align='right'>%4</t><br/>"
-	+	"<t align='left'>Sièges passagers</t><t align='right'>%5</t><br/>"
-	+	"<t align='left'>Capacité du coffre</t><t align='right'>%6</t><br/>"
-	+	"<t align='left'>Autonomie</t><t align='right'>%7</t><br/>"
-	+	"<t align='left'>Solidité</t><t align='right'>%8</t>"
-	+	"<t align='left'>Consomme</t><t align='right'>%9</t>",
+	+ 	"<t align='left'>Prix de vente</t><t align='right' color='#8cff9b'>%3kn</t><br/>"
+	+ 	"<t align='left'>Vitesse max</t><t align='right'>%4 km/h</t><br/>"
+	+ 	"<t align='left'>Puissance en chevaux</t><t align='right'>%5</t><br/>"
+	+	"<t align='left'>Sièges passagers</t><t align='right'>%6</t><br/>"
+	+	"<t align='left'>Capacité du coffre</t><t align='right'>%7</t><br/>"
+	+	"<t align='left'>Capacité du réservoir</t><t align='right'>%8L</t><br/>"
+	+   "<t align='left'>Carburant</t><t align='right'>%9</t><br/>",
 	[[_className] call public_fnc_getVehGaragePrice] call public_fnc_numberText,
 	[[_className] call public_fnc_getVehAssurancePrice] call public_fnc_numberText,
+	[[_className] call public_fnc_getVehSellPrice] call public_fnc_numberText,
 	(_vehicleInfo select 8),
 	(_vehicleInfo select 11),
 	(_vehicleInfo select 10),
 	if (_trunkSpace isEqualTo 0) then {"Aucun"} else {_trunkSpace},
 	(_vehicleInfo select 12),
-	(_vehicleInfo select 9),
-	[[_className] call public_fnc_getVehSellPrice] call public_fnc_numberText,
 	getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")
 ];
 

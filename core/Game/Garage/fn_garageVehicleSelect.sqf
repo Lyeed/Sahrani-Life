@@ -63,7 +63,8 @@ _vehicleInfo = [_className] call public_fnc_fetchVehInfo;
     +	"<t align='left'>Puissance</t><t align='right'>%7 ch</t><br/>"
     +	"<t align='left'>Sièges passagers</t><t align='right'>%8</t><br/>"
     +	"<t align='left'>Capacité du coffre</t><t align='right'>%9</t><br/>"
-    +	"<t align='left'>Autonomie</t><t align='right'>%10 litres (%11%12 plein)</t><br/>",
+    +	"<t align='left'>Capacité du réservoir</t><t align='right'>%10 litres (%11%12 plein)</t><br/>"
+    +   "<t align='left'>Carburant</t><t align='right'>%13</t><br/>",
     (_data select 1),
     if ((_data select 2) isEqualTo 1) then {"<t color='#8cff9b'>Oui</t>"} else {"<t color='#ff8c8c'>Non</t>"},
     ([[_className] call public_fnc_getVehAssurancePrice] call public_fnc_numberText),
@@ -75,7 +76,8 @@ _vehicleInfo = [_className] call public_fnc_fetchVehInfo;
   	([_className] call public_fnc_getVehVirtual),
   	(_vehicleInfo select 12),
   	if (_fuel < 50) then {format["<t color='#ff8c8c'>%1</t>", _fuel]} else {_fuel},
-    "%"
+    "%",
+    getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")
 ];
 
 if ((_data select 2) isEqualTo 1) then
