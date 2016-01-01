@@ -38,10 +38,10 @@ if (isEngineOn _veh) exitWith {
 if (((locked _veh) isEqualTo 2)) exitWith {
 	["Le véhicule doit être ouvert pour effectuer un plein."] call public_fnc_error;
 };
-if (player distance _station < 5) exitWith {
+if (player distance _station > 5) exitWith {
 	["Vous êtes trop loin de la station."] call public_fnc_error;
 };
-if (player distance _veh < 5) exitWith {
+if (player distance _veh > 5) exitWith {
 	["Vous êtes trop loin du véhicule."] call public_fnc_error;
 };
 

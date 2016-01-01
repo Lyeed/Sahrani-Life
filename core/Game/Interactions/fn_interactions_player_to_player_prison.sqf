@@ -11,9 +11,9 @@ if (!(g_interaction_target getVariable ["arrested", false])) exitWith {closeDial
 	([_this, 0, objNull, [objNull]] call BIS_fnc_param),
 	"player_to_player_prison",
 	[
-		["arrest", "Durée", "[] spawn public_fnc_prisonArrestMenu_use_time;", "(g_interaction_target getVariable ['arrested', false])"],
-		["arrest", "Caution", "[] spawn public_fnc_prisonArrestMenu_use_caution;", "(((getText(missionConfigFile >> 'ALYSIA_PRISONS' >> [player] call public_fnc_prisonNearest >> 'bail' >> 'enable')) && (g_interaction_target getVariable ['arrested', false])))"],
-		["arrest", "Relâcher", "[] spawn public_fnc_prisonArrestMenu_use_release;", "(g_interaction_target getVariable ['arrested', false])"]
+		["arrest", "Durée", "[] spawn public_fnc_prisonArrestMenu_use_time;", "true"],
+		["arrest", "Caution", "[] spawn public_fnc_prisonArrestMenu_use_caution;", "true"],
+		["arrest", "Relâcher", "[] spawn public_fnc_prisonArrestMenu_use_release;", "true"]
 	],
 	"Gestion de Peine"
 ] spawn public_fnc_interactions_create;
