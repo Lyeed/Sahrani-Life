@@ -1414,7 +1414,7 @@ class ALYSIA_ITEMS
 		price_sell  = 0;
 		illegal     = 1;
 		removable   = 1;
-		use         = "[""ravioli""] call public_fnc_eatFood;";
+		use         = "[""cookie""] call public_fnc_eatFood;";
 		image       = "alysia_items_virtual\data\cookie.paa";
 	};
 
