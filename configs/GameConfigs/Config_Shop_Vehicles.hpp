@@ -196,7 +196,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"DAR_TahoeCiv",
 			"max_suv",
 			"DAR_FusionCiv",
-			"max_jeep",
 			"Jonzie_Transit",
 			"C_Offroad_01_F",
 			"shounka_a3_cliors_civ",

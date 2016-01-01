@@ -116,7 +116,14 @@ class ALYSIA_FOOD
 	class croissant
 	{
 		thirst = 0;
-		hunger = 40;
+		hunger = 20;
+		sound = "eat";
+	};
+
+	class pizza
+	{
+		thirst = 0;
+		hunger = 70;
 		sound = "eat";
 	};
 };
