@@ -164,9 +164,9 @@ class ALYSIA_SHOPS_VEHICLES
 			"max_CrownVic",
 			"Mrshounka_r5_civ",
 			"Jonzie_Datsun_510",
-			"Jonzie_Transit",
 			"Jonzie_30CSL",
 			"Jonzie_Galant",
+			"Jonzie_Corolla",
 			"Jonzie_Mini_Cooper"
 		};
 	};
@@ -196,7 +196,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"DAR_TahoeCiv",
 			"max_suv",
 			"DAR_FusionCiv",
-			"max_jeep",
+			"Jonzie_Transit",
 			"C_Offroad_01_F",
 			"shounka_a3_cliors_civ",
 			"max_van",
@@ -218,7 +218,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_subaru08_civ",
 			"Mrshounka_Volkswagen_Touareg_civ",
 			"Jonzie_Ceed",
-			"Jonzie_Corolla",
 			"Jonzie_Raptor",
 			"Mrshounka_bmwm1_civ",
 			"Mrshounka_bmwm6_civ",

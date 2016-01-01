@@ -3,15 +3,15 @@ class ALYSIA_FOOD
 
 	class prune
 	{
-		hunger = 10;
+		hunger = 15;
 		thirst = 5;
 		sound = "eat";
 	};
 
 	class raisin
 	{
-		hunger = 15;
-		thirst = 5;
+		hunger = 10;
+		thirst = 2;
 		sound = "eat";
 	};
 
@@ -92,4 +92,38 @@ class ALYSIA_FOOD
 		sound = "drink";
 	};
 
+	class ravioli
+	{
+		thirst = 0;
+		hunger = 40;
+		sound = "eat";
+	};
+
+	class cookie
+	{
+		thirst = 0;
+		hunger = 20;
+		sound = "eat";
+	};
+
+	class petitbeurre
+	{
+		thirst = 0;
+		hunger = 40;
+		sound = "eat";
+	};
+
+	class croissant
+	{
+		thirst = 0;
+		hunger = 20;
+		sound = "eat";
+	};
+
+	class pizza
+	{
+		thirst = 0;
+		hunger = 70;
+		sound = "eat";
+	};
 };
