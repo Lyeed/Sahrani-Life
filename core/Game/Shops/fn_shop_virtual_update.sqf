@@ -18,7 +18,7 @@ lbClear _ctrl_player;
 	if (_amount > 0) then
 	{
 		_index = _ctrl_player lbAdd format["%1 x %2 (%3kn)", ([_amount] call public_fnc_numberText), ([_x] call public_fnc_itemGetName), ([_x] call public_fnc_itemGetSellPrice)];
-		_ctrl_player lbSetTooltip (_ctrl_player lbText _index);
+		_ctrl_player lbSetTooltip [_index, (_ctrl_player lbText _index)];
 		_ctrl_player lbSetData [_index, _x];
 		_ctrl_player lbSetValue [_index, _amount];
 		_ctrl_player lbSetPicture [_index, ([_x] call public_fnc_itemGetImage)];

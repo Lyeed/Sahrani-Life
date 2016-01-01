@@ -97,21 +97,22 @@ while {(g_action_inUse && !g_interrupted)} do
 		["<t align='center'>Votre inventaire est plein</t>"] call public_fnc_info;
 	};
 
-	if (g_interrupted) exitWith {};
-
-	if (!(_extra isEqualTo [])) then
+	if (!g_interrupted) then
 	{
-		if (_extraAll isEqualTo 1) then
+		if (!(_extra isEqualTo [])) then
 		{
+			if (_extraAll isEqualTo 1) then
 			{
-				if (random(100) <= (_x select 1)) then {
-					[true, (_x select 0), 1] call public_fnc_handleInv;
+				{
+					if (random(100) <= (_x select 1)) then {
+						[true, (_x select 0), 1] call public_fnc_handleInv;
+					};
+				} forEach (_extra);
+			} else {
+				_rand = _extra call BIS_fnc_selectRandom;
+				if (random(100) <= (_rand select 1)) then {
+					[true, (_rand select 0), 1] call public_fnc_handleInv;
 				};
-			} forEach (_extra);
-		} else {
-			_rand = _extra call BIS_fnc_selectRandom;
-			if (random(100) <= (_rand select 1)) then {
-				[true, _rand, 1] call public_fnc_handleInv;
 			};
 		};
 	};
