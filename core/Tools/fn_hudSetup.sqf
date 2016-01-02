@@ -5,6 +5,59 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+private["_move_ctrl"];
+_move_ctrl =
+{
+	private["_ctrl", "_type", "_distance", "_default_position"];
+	
+	disableSerialization;
+	_ctrl = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
+
+	if (isNull _ctrl) exitWith {};
+
+	_type = [_this, 1, "", [""]] call BIS_fnc_param;
+	_hide_end = [_this, 2, true, [true]] call BIS_fnc_param;
+	_distance = [_this, 3, 0, [0]] call BIS_fnc_param;
+
+	_default_position = ctrlPosition _ctrl;
+	if (_distance isEqualTo 0) then {
+		_distance = _default_position select 2;
+	};
+
+	if (!(ctrlShown _ctrl)) then {
+		_ctrl ctrlShow true;
+	};
+
+	switch (_type) do
+	{
+		case "right":
+		{
+			_position_end = (_default_position select 0) + _distance;
+			while {((ctrlPosition _ctrl) select 0) < _position_end} do
+			{
+				_ctrl ctrlSetPosition [((ctrlPosition _ctrl) select 0) + (_distance / 40), (_default_position select 1)];
+				_ctrl ctrlCommit 0;
+				sleep 0.01;
+			};
+			if (_hide_end) then {
+				_ctrl ctrlShow false;
+			};
+		};
+		case "left":
+		{
+			_position_end = (_default_position select 0) - _distance;
+			while {((ctrlPosition _ctrl) select 0) > _position_end} do
+			{
+				_ctrl ctrlSetPosition [((ctrlPosition _ctrl) select 0) - (_distance / 40), (_default_position select 1)];
+				_ctrl ctrlCommit 0;
+				sleep 0.01;
+			};
+			if (_hide_end) then {
+				_ctrl ctrlShow false;
+			};
+		};
+	};
+};
 
 if (isNull (uiNameSpace getVariable ["RscHudPlayer", displayNull])) then
 {
@@ -27,19 +80,34 @@ if (isNull (uiNameSpace getVariable ["RscHudPlayer", displayNull])) then
 	  =========================== */
 	_ctrl_weapon_mod = _hud displayCtrl 23530;
 	_ctrl_weapon_ammo = _hud displayCtrl 23532;
-	_ctrl_speed = _hud displayCtrl 23506;
 
+	{
+		(_hud displayCtrl _x) ctrlShow false;
+	} forEach ([23530, 23531, 23532, 23533]);
+	_ctrl_weapon_active = false;
+	_ctrl_weapon_first = true;
 	/*===========================
 	  ===         GPS         ===
 	  =========================== */
 	_ctrl_gps_map = _hud displayCtrl 23539;
 	_ctrl_gps_text = _hud displayCtrl 23542;
 
+	{
+		(_hud displayCtrl _x) ctrlShow false;
+	} forEach ([23538, 23539, 23540, 23541, 23542]);
+	_ctrl_gps_active = false;
+	_ctrl_gps_first = true;
 	/*===========================
 	  ===       VEHICLE       ===
 	  ===========================*/
 	_ctrl_vehicle_speed = _hud displayCtrl 23520;
 	_ctrl_vehicle_fuel = _hud displayCtrl 23522;
+
+	{
+		(_hud displayCtrl _x) ctrlShow false;
+	} forEach ([23520, 23521, 23522, 23523]);
+	_ctrl_vehicle_active = false;
+	_ctrl_vehicle_first = true;
 
 	while {!(isNull _hud)} do
 	{
@@ -118,23 +186,46 @@ if (isNull (uiNameSpace getVariable ["RscHudPlayer", displayNull])) then
 				round((fuel (vehicle player)) * 100), "%"
 			];
 
+			if (!_ctrl_vehicle_active) then
 			{
-				(_hud displayCtrl _x) ctrlShow true;
-			} forEach ([23520, 23521, 23522, 23523]);
+				if (_ctrl_vehicle_first) then
+				{
+					_ctrl_vehicle_first = false;
+					{
+						(_hud displayCtrl _x) ctrlShow true;
+					} forEach ([23520, 23521, 23522, 23523]);
+				} else {
+					[(_hud displayCtrl 23520), "right", false] spawn _move_ctrl;
+					[(_hud displayCtrl 23521), "right", false] spawn _move_ctrl;
+					[(_hud displayCtrl 23522), "left", false] spawn _move_ctrl;
+					[(_hud displayCtrl 23523), "left", false] spawn _move_ctrl;
+				};
+				_ctrl_vehicle_active = true;
+			};
 		} else {
+			if (_ctrl_vehicle_active) then
 			{
-				(_hud displayCtrl _x) ctrlShow false;
-			} forEach ([23520, 23521, 23522, 23523]);
+				_ctrl_vehicle_active = false;
+				[(_hud displayCtrl 23520), "left", true] spawn _move_ctrl;
+				[(_hud displayCtrl 23521), "left", true] spawn _move_ctrl;
+				[(_hud displayCtrl 23522), "right", true] spawn _move_ctrl;
+				[(_hud displayCtrl 23523), "right", true] spawn _move_ctrl;
+			};
 		};
 
 		/*===========================
 		  ===       WEAPONS       ===
 		  =========================== */
-		if ((currentWeapon player) isEqualTo "") then
+		if (((currentWeapon player) isEqualTo "") || ((vehicle player) != player)) then
 		{
+			if (_ctrl_weapon_active) then
 			{
-				(_hud displayCtrl _x) ctrlShow false;
-			} forEach ([23530, 23531, 23532, 23533]);
+				_ctrl_weapon_active = false;
+				[(_hud displayCtrl 23530), "right", true] spawn _move_ctrl;
+				[(_hud displayCtrl 23531), "right", true] spawn _move_ctrl;
+				[(_hud displayCtrl 23532), "right", true] spawn _move_ctrl;
+				[(_hud displayCtrl 23533), "right", true] spawn _move_ctrl;
+			};
 		} else {
 
 			_mod = switch (currentWeaponMode player) do
@@ -158,9 +249,22 @@ if (isNull (uiNameSpace getVariable ["RscHudPlayer", displayNull])) then
 				if ((((weaponState player) select 3)) isEqualTo "") then {"Aucune"} else {getText(configFile >> "CfgMagazines" >> ((weaponState player) select 3) >> "displayName")}
 			];
 
+			if (!_ctrl_weapon_active) then
 			{
-				(_hud displayCtrl _x) ctrlShow true;
-			} forEach ([23530, 23531, 23532, 23533]);
+				if (_ctrl_weapon_first) then 
+				{
+					_ctrl_weapon_first = false;
+					{
+						(_hud displayCtrl _x) ctrlShow true;
+					} forEach ([23530, 23531, 23532, 23533]);
+				} else {
+					[(_hud displayCtrl 23530), "left", false] spawn _move_ctrl;
+					[(_hud displayCtrl 23531), "left", false] spawn _move_ctrl;
+					[(_hud displayCtrl 23532), "left", false] spawn _move_ctrl;
+					[(_hud displayCtrl 23533), "left", false] spawn _move_ctrl;
+				};
+				_ctrl_weapon_active = true;
+			};
 		};
 
 		/*===========================
@@ -177,13 +281,33 @@ if (isNull (uiNameSpace getVariable ["RscHudPlayer", displayNull])) then
 			};
 			ctrlMapAnimCommit _ctrl_gps_map;
 
+			if (!_ctrl_gps_active) then
 			{
-				(_hud displayCtrl _x) ctrlShow true;
-			} forEach ([23538, 23539, 23540, 23541, 23542]);
+				if (_ctrl_gps_first) then
+				{
+					_ctrl_gps_first = false;
+					{
+						(_hud displayCtrl _x) ctrlShow true;
+					} forEach ([23538, 23539, 23540, 23541, 23542]);
+				} else {
+					[(_hud displayCtrl 23538), "left", false, 0.4] spawn _move_ctrl;
+					[(_hud displayCtrl 23539), "left", false, 0.4] spawn _move_ctrl;
+					[(_hud displayCtrl 23540), "left", false, 0.4] spawn _move_ctrl;
+					[(_hud displayCtrl 23541), "left", false, 0.4] spawn _move_ctrl;
+					[(_hud displayCtrl 23542), "left", false, 0.4] spawn _move_ctrl;
+				};
+				_ctrl_gps_active = true;
+			};
 		} else {
+			if (_ctrl_gps_active) then
 			{
-				(_hud displayCtrl _x) ctrlShow false;
-			} forEach ([23538, 23539, 23540, 23541, 23542]);
+				_ctrl_gps_active = false;
+				[(_hud displayCtrl 23538), "right", true, 0.4] spawn _move_ctrl;
+				[(_hud displayCtrl 23539), "right", true, 0.4] spawn _move_ctrl;
+				[(_hud displayCtrl 23540), "right", true, 0.4] spawn _move_ctrl;
+				[(_hud displayCtrl 23541), "right", true, 0.4] spawn _move_ctrl;
+				[(_hud displayCtrl 23542), "right", true, 0.4] spawn _move_ctrl;
+			};
 		};
 
 		sleep 0.3;
