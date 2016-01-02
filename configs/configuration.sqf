@@ -58,10 +58,11 @@ with missionNamespace do
 	tawvd_car = viewDistance;
 	tawvd_air = viewDistance;
 	/* ===================[Prison]======================= */
-	g_arrestReason = "";
-	g_arrestMinuts = 0;
-	g_arrestEscape = false;
-	g_arrested = false;
+	g_arrest_Cellule = 0;
+	g_arrest_Time = 0;
+	g_arrest_Caution = 0;
+	g_arrest_Reason = "";
+	g_arrest_Gear = [];
 	/* ================[Objects containers]================== */
 	g_vehicles = [];
 	/* ==================[Health/body system]==================== */

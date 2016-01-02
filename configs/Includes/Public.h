@@ -358,15 +358,19 @@ class Public
 	class Prisons
 	{
 		file = "core\game\Prisons";
+		class prisonNearest {};
 		class prisonArrest {};
 		class prisonRelease {};
 		class prisonEscape {};
 		class prisonPutInJail {};
 		class prisonWorkReward {};
-		class prisonNearest {};
-		class prisonArrestMenu_use_caution {};
-		class prisonArrestMenu_use_time {};
-		class prisonArrestMenu_use_release {};
+		class prisonModifyMenu_informations_get {};
+		class prisonModifyMenu_information_return {};
+		class prisonModifyMenu_open {};
+		class prisonModifyMenu_update {};
+		class prisonModifyMenu_use_validate {};
+		class prisonModifyMenu_use_validate_send {};
+		class prisonModifyMenu_use_release {};
 	};
 
 	class Interactions

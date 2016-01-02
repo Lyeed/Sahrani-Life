@@ -6,3 +6,7 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
+if (isNull g_interaction_target) exitWith {};
+if (!(g_interaction_target getVariable ["arrested", false])) exitWith {["Cette personne n'est plus en prison"] call public_fnc_error};
+
+[player] remoteExecCall ["public_fnc_prisonModifyMenu_informations_return", g_interaction_target];

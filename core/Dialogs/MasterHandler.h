@@ -24,6 +24,7 @@
 #include "Dialogs\RscDisplayFuel.hpp"
 #include "Dialogs\RscDisplayProcess.hpp"
 #include "Dialogs\RscDisplayLaunder.hpp"
+#include "Dialogs\RscDisplayArrest.hpp"
 
 class RscTitles
 {
