@@ -335,7 +335,7 @@ class ALYSIA_PROCESS
 		requiere_target = 1;
 		require[] = {{"oilu", 1}};
 		receive[] = {{"sp98", 2}, {"sp95", 1}, {"gpl", 1}, {"kerosene", 1}, {"gazole", 3}};
-		time_per_item = 3;
+		time_per_item = 25;
 		time_default = 8;
 		sides[] = {"CIV"};
 	};
