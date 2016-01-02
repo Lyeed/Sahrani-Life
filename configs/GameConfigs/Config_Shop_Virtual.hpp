@@ -20,7 +20,7 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Marché";
 		side = "";
 		// items[]= {{"water", "banane", "mangue", "fishingpoles", "storage", "fuelF"}, {"banane", "mangue"}};
-		items[]= {{"water", "petitbeurre", "pizza","storage", "sandwich", "croissant","kefir", "ravioli", "raisin", "prune"}, {"raisin", "prune"}};
+		items[]= {{"water", "petitbeurre", "pizza","storage", "sandwich", "croissant", "kefir", "ravioli", "raisin", "prune"}, {"raisin", "prune"}};
 	};
 	
 	class hopital
@@ -41,7 +41,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Garde";
 		side = "EAST";
-		items[] = {{"ragout", "medova", "sifflet", "handcuffs", "handcuffkeys", "barriere", "cone", "bip"}, {}};
+		items[] = {{"ragout", "medova", "sifflet", "handcuffs", "handcuffkeys", "barriere", "cone", "bip", "spikeStrip"}, {}};
 	};
 	class guer
 	{
