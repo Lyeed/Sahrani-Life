@@ -115,9 +115,11 @@ class ALYSIA_FARMING_GATHER
 
 	class fish_1
 	{
-		receive[] = {{"", 1, 0}};
+		receive[] = {{"anchois", 1, 0}};
+		extra[] = {{"daurade", 10}, {"sardine", 25}, {"merlu", 12}, {"maquereau", 15}, {"bar", 8}};
 		tool = "";
 		sound = "";
+		extra_all = 1;
 	};
 
 	class copper_1
