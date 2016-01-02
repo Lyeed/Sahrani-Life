@@ -1443,7 +1443,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "alysia_items_virtual\data\essence.paa";
+		image       = "alysia_items_virtual\data\sp98.paa";
 		license     = "oil";
 	};
 
@@ -1454,7 +1454,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "alysia_items_virtual\data\essence.paa";
+		image       = "alysia_items_virtual\data\sp95.paa";
 		license     = "oil";
 	};
 
@@ -1465,7 +1465,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "alysia_items_virtual\data\essence.paa";
+		image       = "alysia_items_virtual\data\gazole.paa";
 		license     = "oil";
 	};
 
@@ -1476,7 +1476,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "alysia_items_virtual\data\essence.paa";
+		image       = "alysia_items_virtual\data\gpl.paa";
 		license     = "oil";
 	};
 
@@ -1487,7 +1487,7 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
-		image       = "alysia_items_virtual\data\essence.paa";
+		image       = "alysia_items_virtual\data\kerosene.paa";
 		license     = "oil";
 	};
 };
