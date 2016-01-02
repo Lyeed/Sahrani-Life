@@ -28,6 +28,8 @@
 [["(DEV) +100 faim", {[100] call public_fnc_handleHunger;}]] call CBA_fnc_addPlayerAction;
 [["(DEV) +100 soif", {[100] call public_fnc_handleThirst;}]] call CBA_fnc_addPlayerAction;
 [["(DEV) Tp marché noir", {player setPos (getMarkerPos "black_market_1_marker");}]] call CBA_fnc_addPlayerAction;
+[["(DEV) Cacher HUD", {8 cutText ["", "PLAIN"];}]] call CBA_fnc_addPlayerAction;
+[["(DEV) Afficher HUD", {[] spawn public_fnc_hudSetup;}]] call CBA_fnc_addPlayerAction;
 [["===================", {}]] call CBA_fnc_addPlayerAction;
 
 /* ==================[CONFIG]===================*/

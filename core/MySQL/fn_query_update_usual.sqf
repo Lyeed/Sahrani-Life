@@ -21,5 +21,5 @@ if (missionNamespace getVariable ["g_connected", false]) then
 		missionNamespace getVariable ["g_thirst", 100],
 		missionNamespace getVariable ["g_phone_forfait", "none"],
 		([] call public_fnc_getLicenses)
-	] remoteExec ["TON_fnc_query_update_usual", 2, false];
+	] remoteExec ["TON_fnc_query_update_usual", 2];
 };

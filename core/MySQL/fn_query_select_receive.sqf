@@ -99,9 +99,7 @@ g_apps = _basic select 31;
 g_choice = _basic select 32;
 // Licenses
 {
-	if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_LICENSES" >> _x >> "sides")) then {
-		missionNamespace setVariable [format["license_%1", _x], true];
-	};
+	missionNamespace setVariable [format["license_%1", _x], true];
 } forEach (_basic select 33);
 // cash
 g_cash = _basic select 34;

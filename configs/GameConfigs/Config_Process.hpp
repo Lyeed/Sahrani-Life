@@ -28,19 +28,6 @@ class ALYSIA_PROCESS
 		sides[] = {"CIV"};
 	};
 
-	class oil
-	{
-		name = "Traitement du pétrole";
-		license = "oil";
-		sound = "processoil";
-		requiere_target = 1;
-		require[] = {{"oilu", 1}};
-		receive[] = {{"oilp", 1}};
-		time_per_item = 3;
-		time_default = 8;
-		sides[] = {"CIV"};
-	};
-
 	class sand
 	{
 		name = "Fonte du verre";
@@ -336,6 +323,19 @@ class ALYSIA_PROCESS
 		require[] = {{"pierre", 1}};
 		receive[] = {{"ciment", 1}};
 		time_per_item = 5;
+		time_default = 8;
+		sides[] = {"CIV"};
+	};
+
+	class oil
+	{
+		name = "Traitement du pétrole";
+		license = "oil";
+		sound = "processoil";
+		requiere_target = 1;
+		require[] = {{"oilu", 1}};
+		receive[] = {{"sp98", 2}, {"sp95", 1}, {"gpl", 1}, {"kerosene", 1}, {"gazole", 3}};
+		time_per_item = 12;
 		time_default = 8;
 		sides[] = {"CIV"};
 	};

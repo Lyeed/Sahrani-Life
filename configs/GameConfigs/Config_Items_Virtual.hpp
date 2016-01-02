@@ -670,7 +670,7 @@ class ALYSIA_ITEMS
 	class oilu
 	{
 		name        = "Pétrole";
-		weight      = 7;
+		weight      = 10;
 		price_buy   = 60;
 		price_sell  = 30;
 		illegal     = 0;
@@ -678,24 +678,6 @@ class ALYSIA_ITEMS
 		use         = "";
 		image       = "alysia_items_virtual\data\petrole.paa";
 		store[]     = {"B_G_Van_01_fuel_F", "B_Truck_01_fuel_F", "O_Truck_02_fuel_F"};
-	};
-
-	class oilp
-	{
-		name        = "Pétrole traité";
-		weight      = 4;
-		illegal     = 0;
-		removable   = 1;
-		use         = "";
-		image       = "alysia_items_virtual\data\essence.paa";
-		license     = "oil";
-		class market
-		{
-			max = 24;
-			min = 16;
-			mult = 3;
-			affect[] = {};
-		};
 	};
 
 	class fishingpoles
@@ -1452,5 +1434,60 @@ class ALYSIA_ITEMS
 		removable   = 1;
 		use         = "[""pizza""] call public_fnc_eatFood;";
 		image       = "alysia_items_virtual\data\pizza.paa";
+	};
+
+	class sp98
+	{
+		name        = "SansPlomb 98";
+		weight      = 1;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\sp98.paa";
+		license     = "oil";
+	};
+
+	class sp95
+	{
+		name        = "SansPlomb 95";
+		weight      = 1;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\sp95.paa";
+		license     = "oil";
+	};
+
+	class gazole
+	{
+		name        = "Gazole";
+		weight      = 1;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\gazole.paa";
+		license     = "oil";
+	};
+
+	class gpl
+	{
+		name        = "GPL";
+		weight      = 2;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\gpl.paa";
+		license     = "oil";
+	};
+
+	class kerosene
+	{
+		name        = "Kéroséne";
+		weight      = 3;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\kerosene.paa";
+		license     = "oil";
 	};
 };

@@ -9,11 +9,11 @@ private["_res"];
 _res = [];
 
 {
-	_var = missionNamespace getVariable[format["inv_%1", _x], 0];
+	_var = missionNamespace getVariable [format["inv_%1", _x], 0];
 	if (_var > 0) then
 	{
 		_res pushBack [_x, _var];
 	};
-} forEach (missionNamespace getVariable["g_inv_items", []]);
+} forEach (missionNamespace getVariable ["g_inv_items", []]);
 
 _res;
