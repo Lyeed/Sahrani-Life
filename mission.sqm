@@ -7159,7 +7159,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 178.598;this setposATL [14433.813477,12498.598633,0.304714];this setVectorUp [0,0,1];this addAction[""Friperie"",public_fnc_shop_clothing_open,""civ_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 178.598;this setposATL [14433.813477,12498.598633,0.304714];this setVectorUp [0,0,1];this addAction[""Friperie"",public_fnc_shop_clothing_open,""civ_clothing_nord"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item364
 		{
@@ -9097,7 +9097,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 45;this setposATL [10366.626953,9400.793945,0];this setVectorUp [0,0,1];this addAction[""Friperie"",public_fnc_shop_clothing_open,""civ_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 45;this setposATL [10366.626953,9400.793945,0];this setVectorUp [0,0,1];this addAction[""Friperie"",public_fnc_shop_clothing_open,""civ_clothing_sud"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item548
 		{
