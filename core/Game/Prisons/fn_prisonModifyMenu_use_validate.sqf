@@ -46,16 +46,16 @@ if (_amount <= 0) exitWith {_error = true};
 } forEach ("true" configClasses (missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "cells"));
 
 if ((_cell < 1) || (_cell > _cells)) then {
-	(_display displayCtrl 15044) ctrlSetBackgroundColor = {153, 0, 0, 0.5};
+	(_display displayCtrl 15044) ctrlSetBackgroundColor {153, 0, 0, 0.5};
 	_error = true;
 };
 if ((_time < _timeMin) || (_time > _timeMax)) then {
-	(_display displayCtrl 15045) ctrlSetBackgroundColor = {153, 0, 0, 0.5};
+	(_display displayCtrl 15045) ctrlSetBackgroundColor {153, 0, 0, 0.5};
 	_error = true;
 };
 if (_bailEnable) then {
 	if ((_amount < _bailMin) || (_amount > _bailMax)) then {
-		(_display displayCtrl 15046) ctrlSetBackgroundColor = {153, 0, 0, 0.5};
+		(_display displayCtrl 15046) ctrlSetBackgroundColor {153, 0, 0, 0.5};
 		_error = true;
 	};
 };
