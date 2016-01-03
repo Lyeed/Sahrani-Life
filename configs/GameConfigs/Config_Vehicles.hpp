@@ -752,37 +752,35 @@ class ALYSIA_VEHICLES
 	class Mrshounka_mustang_violet : Mrshounka_mustang_civ {};
 	class Mrshounka_mustang_orange : Mrshounka_mustang_civ {};
 
-	class Mrshounka_Vandura_civ
+	class ADM_GMC_Vandura
 	{
 		buyPrice = 26000;
 		inventory = 150;
 		side = "CIV";
 		insurance = 1;
 		license = "driver";
-		fuel = "SP95";
+		fuel = "Diesel";
 		rank = 0;
 		colors[] = 
 		{
-			"Mrshounka_Vandura_civ_bleufonce",
-			"Mrshounka_Vandura_civ_grise",
-			"Mrshounka_Vandura_civ_jaune",
-			"Mrshounka_Vandura_civ_noir",
-			"Mrshounka_Vandura_civ_orange",
-			"Mrshounka_Vandura_civ_rose",
-			"Mrshounka_Vandura_civ_rouge",
-			"Mrshounka_Vandura_civ_violet"
+			"ADM_GMC_Vandura_red",
+			"ADM_GMC_Vandura_yellow",
+			"ADM_GMC_Vandura_green",
+			"ADM_GMC_Vandura_blue",
+			"ADM_GMC_Vandura_pink",
+			"ADM_GMC_Vandura_dark",
+			"ADM_GMC_Vandura_white"
 		};
 		realname = "GMC Vendura";
 	};
 
-	class Mrshounka_Vandura_civ_bleufonce : Mrshounka_Vandura_civ {};
-	class Mrshounka_Vandura_civ_grise : Mrshounka_Vandura_civ {};
-	class Mrshounka_Vandura_civ_jaune : Mrshounka_Vandura_civ {};
-	class Mrshounka_Vandura_civ_noir : Mrshounka_Vandura_civ {};
-	class Mrshounka_Vandura_civ_orange : Mrshounka_Vandura_civ {};
-	class Mrshounka_Vandura_civ_rose : Mrshounka_Vandura_civ {};
-	class Mrshounka_Vandura_civ_rouge : Mrshounka_Vandura_civ {};
-	class Mrshounka_Vandura_civ_violet : Mrshounka_Vandura_civ {};
+	class ADM_GMC_Vandura_red : ADM_GMC_Vandura {};
+	class ADM_GMC_Vandura_yellow : ADM_GMC_Vandura {};
+	class ADM_GMC_Vandura_green : ADM_GMC_Vandura {};
+	class ADM_GMC_Vandura_blue : ADM_GMC_Vandura {};
+	class ADM_GMC_Vandura_pink : ADM_GMC_Vandura {};
+	class ADM_GMC_Vandura_dark : ADM_GMC_Vandura {};
+	class ADM_GMC_Vandura_white : ADM_GMC_Vandura {};
 
 	class Mrshounka_golfvi_civ
 	{
@@ -3956,4 +3954,63 @@ class ALYSIA_VEHICLES
 	class max_bike3 : max_bike_base {};
 	class max_bike4 : max_bike_base {};
 	
+	class ADM_Ford_F100
+	{
+		buyPrice = 9000;
+		inventory = 90;
+		side = "CIV";
+		insurance = 1;
+		license = "driver";
+		fuel = "Diesel";
+		rank = 0;
+		colors[] = 
+		{
+			"ADM_Ford_F100_red",
+			"ADM_Ford_F100_yellow",
+			"ADM_Ford_F100_green",
+			"ADM_Ford_F100_blue",
+			"ADM_Ford_F100_pink",
+			"ADM_Ford_F100_dark",
+			"ADM_Ford_F100_white"
+		};
+		realname = "Ford F100";
+	};
+
+	class ADM_Ford_F100_red : ADM_Ford_F100 {};
+	class ADM_Ford_F100_yellow : ADM_Ford_F100 {};
+	class ADM_Ford_F100_green : ADM_Ford_F100 {};
+	class ADM_Ford_F100_blue : ADM_Ford_F100 {};
+	class ADM_Ford_F100_pink : ADM_Ford_F100 {};
+	class ADM_Ford_F100_dark : ADM_Ford_F100 {};
+	class ADM_Ford_F100_white : ADM_Ford_F100 {};
+
+	class Jonzie_Curtain
+	{
+		buyPrice = 9000;
+		inventory = 90;
+		side = "CIV";
+		insurance = 1;
+		license = "driver";
+		fuel = "Diesel";
+		rank = 0;
+		colors[] = 
+		{
+			"Jonzie_Curtain_red",
+			"Jonzie_Curtain_yellow",
+			"Jonzie_Curtain_green",
+			"Jonzie_Curtain_blue",
+			"Jonzie_Curtain_pink",
+			"Jonzie_Curtain_dark",
+			"Jonzie_Curtain_white"
+		};
+		realname = "Remorque";
+	};
+
+	class Jonzie_Curtain_red : Jonzie_Curtain {};
+	class Jonzie_Curtain_yellow : Jonzie_Curtain {};
+	class Jonzie_Curtain_green : Jonzie_Curtain {};
+	class Jonzie_Curtain_blue : Jonzie_Curtain {};
+	class Jonzie_Curtain_pink : Jonzie_Curtain {};
+	class Jonzie_Curtain_dark : Jonzie_Curtain {};
+	class Jonzie_Curtain_white : Jonzie_Curtain {};
 };	
