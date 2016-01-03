@@ -950,7 +950,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class ItemWatch
 	{
-		buy_price = 25
+		buy_price = 25;
 	};
 	class Killer_uniform_new
 	{

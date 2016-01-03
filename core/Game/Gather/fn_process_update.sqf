@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display", "_list", "_maxAmount", "_can", "_receive_weight", "_require_weight", "_newWeight"];
+private["_display", "_list_require", "_maxAmount", "_can", "_receive_weight", "_require_weight", "_newWeight", "_list_receive"];
 
 disableSerialization;
 _display = findDisplay 53000;
@@ -24,26 +24,30 @@ if (_maxAmount < 1) then
 	};
 };
 
-_list  = _display displayCtrl 53005;
-lbClear _list;
-
 _can = true;
 
+_list_require = _display displayCtrl 53005;
+lbClear _list_require;
 _require_weight = 0;
 {
-	_index = _list lbAdd format["%1x %2", (_maxAmount * (_x select 1)), [(_x select 0)] call public_fnc_itemGetName];
+	_index = _list_require lbAdd format["%1x %2", (_maxAmount * (_x select 1)), [(_x select 0)] call public_fnc_itemGetName];
 	if ([(_x select 0)] call public_fnc_itemCount >= (_maxAmount * (_x select 1))) then {
-		_list lbSetPicture [_index, "lyeed_IMG\data\process\items_ok.paa"];
+		_list_require lbSetPicture [_index, "lyeed_IMG\data\process\items_ok.paa"];
 	} else {
-		_list lbSetPicture [_index, "lyeed_IMG\data\process\items_missing.paa"];
+		_list_require lbSetPicture [_index, "lyeed_IMG\data\process\items_missing.paa"];
 		_can = false;
 	};
 
 	_require_weight = _require_weight + ((([(_x select 0)] call public_fnc_itemGetWeight) * (_x select 1)) * _maxAmount);
 } forEach getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "require");
 
+_list_receive = _display displayCtrl 53014;
+lbClear _list_receive;
 _receive_weight = 0;
 {
+	_index = _list_receive lbAdd format["%1x %2", (_maxAmount * (_x select 1)), [(_x select 0)] call public_fnc_itemGetName];
+	_list_receive lbSetPicture [_index, [(_x select 0)] call public_fnc_itemGetImage];
+
 	_receive_weight = _receive_weight + ((([(_x select 0)] call public_fnc_itemGetWeight) * (_x select 1)) * _maxAmount);
 } forEach getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "receive");
 
@@ -60,10 +64,13 @@ _newWeight = g_carryWeight - _require_weight + _receive_weight;
 if (_newWeight > g_maxWeight) then {
 	_can = false;
 };
+if (_newWeight < 0) then {
+	_newWeight = 0;
+};
 
 (_display displayCtrl 53013) ctrlSetStructuredText parseText format
 [
-	"<t align='center'>%1/%3-><t color='%4'>%2</t>/%3</t>",
+	"<t align='center'>%1/%3 <img image='lyeed_IMG\data\vehicle\trunk\right_arrow_single_select.paa'/> <t color='%4'>%2</t>/%3</t>",
 	g_carryWeight,
 	_newWeight,
 	g_maxWeight,
@@ -81,5 +88,5 @@ if (_can) then {
 	ctrlShow[53009, false];
 	ctrlShow[53010, false];
 	ctrlShow[53011, false];
-	ctrlShow[53012, false];	
+	ctrlShow[53012, false];
 };

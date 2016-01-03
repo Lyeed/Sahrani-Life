@@ -1,11 +1,11 @@
-class RscDisplayProcess: default_base_dialog
+class RscDisplayProcess: default_interaction_back_dialog
 {
 	idd = 53000;
 	name = "RscDisplayProcess";
 	
-	class controlsBackground 
+	class controlsBackground: DEFAULT_controlsBackground
 	{
-		class BACKGROUND: RscPicture
+		class BACKGROUND: BACKGROUND
 		{
 			text = "lyeed_IMG\data\process\background.jpg";
 
@@ -14,11 +14,8 @@ class RscDisplayProcess: default_base_dialog
 			w = 0.319688 * safezoneW;
 			h = 0.352 * safezoneH;
 		};
-
-		class FRAME: RscFrame
+		class FRAME: FRAME
 		{
-			colorText[] = {0,0,0,1};
-
 			x = 0.340156 * safezoneW + safezoneX;
 			y = 0.28 * safezoneH + safezoneY;
 			w = 0.319687 * safezoneW;
@@ -26,107 +23,87 @@ class RscDisplayProcess: default_base_dialog
 		};
 	};
 
-	class controls
+	class controls: DEFAULT_controls
 	{
-		class TITLE: RscStructuredText
+		class TITLE: TITLE
 		{
 			idc = 53001;
-			colorBackground[] = {0,0,0,1};
-			
+
 			x = 0.340156 * safezoneW + safezoneX;
 			y = 0.28 * safezoneH + safezoneY;
 			w = 0.319688 * safezoneW;
-			h = 0.033 * safezoneH;
+			h = 0.033 * safezoneH;		
 		};
 
-		class OPTION_EXIT_FRAME: RscFrame
+		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME
 		{
-			idc = 53002;
-			colorText[] = {0,0,0,1};
-
 			x = 0.309219 * safezoneW + safezoneX;
 			y = 0.302 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
 		};
-		class OPTION_EXIT_BACKGROUND: RscText
+		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND
 		{
-			idc = 53003;
-			colorBackground[] = {0,0,0,0.6};
-
 			x = 0.309219 * safezoneW + safezoneX;
 			y = 0.302 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
 		};
-		class OPTION_EXIT_IMAGE: RscPicture
+		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE
 		{
-			idc = 53004;
-			text = "lyeed_IMG\data\global\option_exit.paa";
-
 			x = 0.316458 * safezoneW + safezoneX;
 			y = 0.314296 * safezoneH + safezoneY;
-			w = 0.0154689 * safezoneW;
-			h = 0.022 * safezoneH;
 		};
-		class OPTION_EXIT_BUTTON: RscButtonSilent
+		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON
 		{
-			action = "closedialog 0;";
-			onMouseEnter = "((findDisplay 53000) displayCtrl 53003) ctrlSetBackgroundColor [1,1,1,1];\
-			ctrlSetText[53004,""lyeed_IMG\data\global\option_exit_select.paa""];\
-			ctrlShow[53002, false];";
-			onMouseExit = "((findDisplay 53000) displayCtrl 53003) ctrlSetBackgroundColor [0,0,0,0.6];\
-			ctrlSetText[53004,""lyeed_IMG\data\global\option_exit.paa""];\
-			ctrlShow[53002, true];";
-			tooltip = "Quitter";
-
 			x = 0.309219 * safezoneW + safezoneX;
 			y = 0.302 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
 		};
 
 		class REQUIERE_FRAME: RscFrame
 		{
 			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.175313 * safezoneW;
-			h = 0.242 * safezoneH;
-		};
-		class REQUIERE_HEADER: RscStructuredText
-		{
-			text = "<t align='center'>Requis</t>";
-			colorBackground[] = {0,0,0,0.8};
-			
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.39 * safezoneH + safezoneY;
-			w = 0.175313 * safezoneW;
-			h = 0.022 * safezoneH;
+			y = 0.445 * safezoneH + safezoneY;
+			w = 0.144375 * safezoneW;
+			h = 0.209 * safezoneH;
 		};
 		class REQUIERE_LIST: RscListbox
 		{
 			idc = 53005;
 
 			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.175313 * safezoneW;
-			h = 0.242 * safezoneH;
+			y = 0.445 * safezoneH + safezoneY;
+			w = 0.144375 * safezoneW;
+			h = 0.209 * safezoneH;
+		};
+
+		class RECEIVE_FRAME: RscFrame
+		{
+			x = 0.510312 * safezoneW + safezoneX;
+			y = 0.445 * safezoneH + safezoneY;
+			w = 0.144375 * safezoneW;
+			h = 0.209 * safezoneH;
+		};
+		class RECEIVE_LIST: RscListbox
+		{
+			idc = 53014;
+
+			x = 0.510312 * safezoneW + safezoneX;
+			y = 0.445 * safezoneH + safezoneY;
+			w = 0.144375 * safezoneW;
+			h = 0.209 * safezoneH;
 		};
 
 		class AMOUNT_FRAME: RscFrame
 		{
-			x = 0.45875 * safezoneW + safezoneX;
-			y = 0.335 * safezoneH + safezoneY;
-			w = 0.0825 * safezoneW;
-			h = 0.044 * safezoneH;
+			x = 0.345312 * safezoneW + safezoneX;
+			y = 0.346 * safezoneH + safezoneY;
+			w = 0.0928125 * safezoneW;
+			h = 0.066 * safezoneH;
 		};
 		class AMOUNT_HEADER: RscStructuredText
 		{
 			text = "<t align='center'>Montant</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
-			x = 0.45875 * safezoneW + safezoneX;
-			y = 0.335 * safezoneH + safezoneY;
+			x = 0.350469 * safezoneW + safezoneX;
+			y = 0.357 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
@@ -134,20 +111,20 @@ class RscDisplayProcess: default_base_dialog
 		{
 			idc = 53006;
 
-			x = 0.45875 * safezoneW + safezoneX;
-			y = 0.357 * safezoneH + safezoneY;
+			x = 0.350469 * safezoneW + safezoneX;
+			y = 0.379 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 
 		class WEIGHT_HEADER: RscStructuredText
 		{
-			text = "<t align='center'>Poids</t>";
+			text = "<img image='lyeed_IMG\data\process\weight.paa'/> Poids";
 			colorBackground[] = {0,0,0,0.8};
 			
-			x = 0.54125 * safezoneW + safezoneX;
-			y = 0.588 * safezoneH + safezoneY;
-			w = 0.0979687 * safezoneW;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.379 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class WEIGHT_INFO: RscStructuredText
@@ -155,23 +132,23 @@ class RscDisplayProcess: default_base_dialog
 			idc = 53013;
 			colorBackground[] = {0,0,0,0.6};
 			
-			x = 0.54125 * safezoneW + safezoneX;
-			y = 0.61 * safezoneH + safezoneY;
-			w = 0.0979687 * safezoneW;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.401 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class WEIGHT_FRAME: RscFrame
 		{
-			x = 0.54125 * safezoneW + safezoneX;
-			y = 0.588 * safezoneH + safezoneY;
-			w = 0.0979687 * safezoneW;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.379 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
 
 		class TIMER_FRAME: RscFrame
 		{
-			x = 0.536094 * safezoneW + safezoneX;
-			y = 0.423 * safezoneH + safezoneY;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.324 * safezoneH + safezoneY;
 			w = 0.108281 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
@@ -180,8 +157,8 @@ class RscDisplayProcess: default_base_dialog
 			text = "<img image='lyeed_IMG\data\process\timer.paa'/> Temps approximatif";
 			colorBackground[] = {0,0,0,0.8};
 			
-			x = 0.536094 * safezoneW + safezoneX;
-			y = 0.423 * safezoneH + safezoneY;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.324 * safezoneH + safezoneY;
 			w = 0.108281 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
@@ -190,8 +167,8 @@ class RscDisplayProcess: default_base_dialog
 			idc = 53007;
 			colorBackground[] = {0,0,0,0.6};
 			
-			x = 0.536093 * safezoneW + safezoneX;
-			y = 0.445 * safezoneH + safezoneY;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.346 * safezoneH + safezoneY;
 			w = 0.108281 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
@@ -201,9 +178,9 @@ class RscDisplayProcess: default_base_dialog
 			idc = 53008;
 			colorText[] = {0,0,0,0.8};
 
-			x = 0.536094 * safezoneW + safezoneX;
-			y = 0.522 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.561875 * safezoneW + safezoneX;
+			y = 0.346 * safezoneH + safezoneY;
+			w = 0.0928125 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_BACKGROUND: RscStructuredText
@@ -211,9 +188,9 @@ class RscDisplayProcess: default_base_dialog
 			idc = 53009;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.536094 * safezoneW + safezoneX;
-			y = 0.522 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.561875 * safezoneW + safezoneX;
+			y = 0.346 * safezoneH + safezoneY;
+			w = 0.0928125 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_TEXT: RscStructuredText
@@ -222,9 +199,9 @@ class RscDisplayProcess: default_base_dialog
 			colorBackground[] = {0,0,0,0};
 			text = "<t align='left' size='1.3' color='#FFFFFF'>Traiter</t>";
 
-			x = 0.572187 * safezoneW + safezoneX;
-			y = 0.533 * safezoneH + safezoneY;
-			w = 0.0721875 * safezoneW;
+			x = 0.593021 * safezoneW + safezoneX;
+			y = 0.357074 * safezoneH + safezoneY;
+			w = 0.061875 * safezoneW;
 			h = 0.033 * safezoneH;
 		};
 		class ACTION_IMAGE: RscPicture
@@ -232,8 +209,8 @@ class RscDisplayProcess: default_base_dialog
 			idc = 53011;
 			text = "lyeed_IMG\data\process\action_process.paa";
 
-			x = 0.538352 * safezoneW + safezoneX;
-			y = 0.526922 * safezoneH + safezoneY;
+			x = 0.564404 * safezoneW + safezoneX;
+			y = 0.35184 * safezoneH + safezoneY;
 			w = 0.0257812 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
@@ -252,10 +229,32 @@ class RscDisplayProcess: default_base_dialog
 			((findDisplay 53000) displayCtrl 53009) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 53000) displayCtrl 53010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Traiter</t>"";";
 
-			x = 0.536094 * safezoneW + safezoneX;
-			y = 0.522 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.561875 * safezoneW + safezoneX;
+			y = 0.346 * safezoneH + safezoneY;
+			w = 0.0928125 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
+
+		class DECO: RscPicture
+		{
+			text = "lyeed_IMG\data\process\process.paa";
+
+			x = 0.484531 * safezoneW + safezoneX;
+			y = 0.522 * safezoneH + safezoneY;
+			w = 0.0360937 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+
+		class ERROR_TEXT: RscStructuredText
+		{
+			idc = 53014;
+			colorBackground[] = {-1,-1,-1,0};
+			
+			x = 0.37625 * safezoneW + safezoneX;
+			y = 0.357 * safezoneH + safezoneY;
+			w = 0.2475 * safezoneW;
+			h = 0.264 * safezoneH;
+		};
+
 	};
 };
