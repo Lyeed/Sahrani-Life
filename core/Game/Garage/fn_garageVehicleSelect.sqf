@@ -1,10 +1,11 @@
 /*
-		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
+	ArmA 3 N'Ziwasogo Life RPG - ALYSIA
 	Code written by Lyeed
 	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+
 private["_trunkList", "_vList", "_curSel", "_className", "_data", "_vehicleInfo", "_fuel", "_storePos", "_display", "_fourrierePos", "_arrayIndex"];
 disableSerialization;
 
@@ -74,9 +75,9 @@ _vehicleInfo = [_className] call public_fnc_fetchVehInfo;
   	(_vehicleInfo select 10),
   	([_className] call public_fnc_getVehVirtual),
     (round (_fuel * (_vehicleInfo select 12))),
-  	(_vehicleInfo select 12),
+  	(round (_vehicleInfo select 12)),
     (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")),
-    (if ((getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")) in ["SP95","SP98"]) then
+    (if ((getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")) in ["Essence Sans Plomb 95","Essence Sans Plomb 98"]) then
     {"Essence"} else {getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")})
 ];
 

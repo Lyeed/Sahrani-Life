@@ -69,8 +69,8 @@ _vehicleInfo = [_className] call public_fnc_fetchVehInfo;
 	(_vehicleInfo select 10),
 	if (_trunkSpace isEqualTo 0) then {"Aucun"} else {_trunkSpace},
 	round (_vehicleInfo select 12),
-	if ((getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")) in ["SP95","SP98"]) then 
-	{"Essence"} else {getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")}
+	(if ((getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")) in ["Essence Sans Plomb 95","Essence Sans Plomb 98"]) then 
+	{"Essence"} else {getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")})
 ];
 
 _ctrl = _display displayCtrl 2303;

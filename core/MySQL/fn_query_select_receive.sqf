@@ -80,39 +80,44 @@ g_GUERLevel = compileFinal (_basic select 20);
 g_EASTLevel = compileFinal (_basic select 21);
 // CIVLevel
 g_CIVLevel = compileFinal (_basic select 22);
-// Justice
-g_arrestMinuts = _basic select 23;
-g_arrestReason = _basic select 24;
-g_arrestEscape = _basic select 25;
-if (g_arrestMinuts > 0) then {
+// Prison
+g_arrest_Prison = _basic select 23;
+g_arrest_Cellule = _basic select 24;
+g_arrest_Time = _basic select 25;
+g_arrest_Caution = _basic select 26;
+g_arrest_Reason = _basic select 27;
+g_arrest_Uniform = _basic select 28;
+g_arrest_Gear = _basic select 29;
+if (g_arrest_Time > 0) then {
 	player setVariable ["arrested", true, true];
 };
+
 // Phone
 if ((_basic select 26) != "") then {
 	player setVariable ["number", (_basic select 26), true];
 };
-g_phone_contacts = _basic select 27;
-g_phone_messages = _basic select 28;
-g_phone_forfait = _basic select 29;
-g_phone_blacklist = _basic select 30;
-g_apps = _basic select 31;
-g_choice = _basic select 32;
+g_phone_contacts = _basic select 30;
+g_phone_messages = _basic select 31;
+g_phone_forfait = _basic select 32;
+g_phone_blacklist = _basic select 33;
+g_apps = _basic select 34;
+g_choice = _basic select 35;
 // Licenses
 {
 	missionNamespace setVariable [format["license_%1", _x], true];
-} forEach (_basic select 33);
+} forEach (_basic select 36);
 // cash
-g_cash = _basic select 34;
+g_cash = _basic select 37;
 // atm
-g_atm = _basic select 35;
+g_atm = _basic select 38;
 // inventory
 g_maxWeight = 100;
 {
     [true, (_x select 0), (_x select 1)] call public_fnc_handleInv;
-} forEach (_basic select 36);
+} forEach (_basic select 39);
 g_maxWeight = 24;
 // gear
-[(_basic select 37)] spawn public_fnc_loadGear;
+[(_basic select 40)] spawn public_fnc_loadGear;
 switch (playerSide) do
 {
 	case west: 
@@ -131,7 +136,7 @@ switch (playerSide) do
 	{
 		g_paycheck = g_paycheck + round((call g_CIVLevel) * getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "CIV" >> "paycheck"));
 		// Launder
-		g_launder = _basic select 38;
+		g_launder = _basic select 41;
 	};
 
 	case independent:
