@@ -6,7 +6,7 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (g_arrested) then {
+if (player getVariable ["arrested", false]) then {
 	["Vous n'avez pas reçu votre salaire car vous êtes en prison", "buy"] call public_fnc_info;
 } else {
 	[true, (call g_paycheck), "Salaire"] call public_fnc_handleATM;

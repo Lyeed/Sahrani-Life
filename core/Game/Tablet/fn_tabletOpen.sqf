@@ -16,7 +16,7 @@ if (dialog) exitWith
 	};
 };
 
-if (g_arrested) exitWith {
+if (player getVariable ["arrested", false]) exitWith {
 	["Vous n'avez pas accès à votre tablette en prison"] call public_fnc_error
 };
 

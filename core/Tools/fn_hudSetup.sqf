@@ -156,7 +156,7 @@ if (isNull (uiNameSpace getVariable ["RscHudPlayer", displayNull])) then
 			["lyeed_IMG\data\player_hud\drugs.paa", "(g_drugs_consuming > 0)"],
 			["lyeed_IMG\data\player_hud\handcuffs.paa", "(player getVariable [""restrained"",false])"],
 			["lyeed_IMG\data\player_hud\blind.paa", "(player getVariable [""bandeau"",false])"],
-			["lyeed_IMG\data\player_hud\arrested.paa", "(g_arrested)"],
+			["lyeed_IMG\data\player_hud\arrested.paa", "(player getVariable [""arrested"", false])"],
 			["lyeed_IMG\data\player_hud\fight.paa", "(g_firstCombatActive)"],
 			["lyeed_IMG\data\player_hud\speak.paa", "(g_speaking)"],
 			["lyeed_IMG\data\player_hud\seatbelt.paa", "(g_seatbelt)"],

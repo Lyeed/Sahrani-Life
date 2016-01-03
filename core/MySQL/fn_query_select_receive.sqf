@@ -85,7 +85,7 @@ g_arrestMinuts = _basic select 23;
 g_arrestReason = _basic select 24;
 g_arrestEscape = _basic select 25;
 if (g_arrestMinuts > 0) then {
-	g_arrested = true;
+	player setVariable ["arrested", true, true];
 };
 // Phone
 if ((_basic select 26) != "") then {

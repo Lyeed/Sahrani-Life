@@ -365,9 +365,8 @@ class Public
 		class prisonPutInJail {};
 		class prisonWorkReward {};
 		class prisonModifyMenu_informations_get {};
-		class prisonModifyMenu_information_return {};
+		class prisonModifyMenu_informations_return {};
 		class prisonModifyMenu_open {};
-		class prisonModifyMenu_update {};
 		class prisonModifyMenu_use_validate {};
 		class prisonModifyMenu_use_validate_send {};
 		class prisonModifyMenu_use_release {};
