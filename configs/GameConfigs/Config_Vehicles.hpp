@@ -3993,26 +3993,9 @@ class ALYSIA_VEHICLES
 		license = "truck";
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
-		{
-			"Jonzie_Curtain_red",
-			"Jonzie_Curtain_yellow",
-			"Jonzie_Curtain_green",
-			"Jonzie_Curtain_blue",
-			"Jonzie_Curtain_pink",
-			"Jonzie_Curtain_dark",
-			"Jonzie_Curtain_white"
-		};
+		colors[] = {};
 		realname = "Remorque";
 	};
-
-	class Jonzie_Curtain_red : Jonzie_Curtain {};
-	class Jonzie_Curtain_yellow : Jonzie_Curtain {};
-	class Jonzie_Curtain_green : Jonzie_Curtain {};
-	class Jonzie_Curtain_blue : Jonzie_Curtain {};
-	class Jonzie_Curtain_pink : Jonzie_Curtain {};
-	class Jonzie_Curtain_dark : Jonzie_Curtain {};
-	class Jonzie_Curtain_white : Jonzie_Curtain {};
 
 	class Jonzie_Western
 	{
@@ -4023,26 +4006,23 @@ class ALYSIA_VEHICLES
 		license = "truck";
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
-		{
-			"Jonzie_Western_red",
-			"Jonzie_Western_yellow",
-			"Jonzie_Western_green",
-			"Jonzie_Western_blue",
-			"Jonzie_Western_pink",
-			"Jonzie_Western_dark",
-			"Jonzie_Western_white"
-		};
+		colors[] = {};
 		realname = "Camion Westarn";
 	};
 
-	class Jonzie_Western_red : Jonzie_Western {};
-	class Jonzie_Western_yellow : Jonzie_Western {};
-	class Jonzie_Western_green : Jonzie_Western {};
-	class Jonzie_Western_blue : Jonzie_Western {};
-	class Jonzie_Western_pink : Jonzie_Western {};
-	class Jonzie_Western_dark : Jonzie_Western {};
-	class Jonzie_Western_white : Jonzie_Western {};
+	class Jonzie_Superliner
+	{
+		buyPrice = 9000;
+		inventory = 90;
+		side = "CIV";
+		insurance = 1;
+		license = "truck";
+		fuel = "Diesel";
+		rank = 0;
+		colors[] = {};
+		realname = "Camion Superliner";
+	};
+
 
 	class Jonzie_XB
 	{
@@ -4063,7 +4043,7 @@ class ALYSIA_VEHICLES
 			"Jonzie_XB_dark",
 			"Jonzie_XB_white"
 		};
-		realname = "Camion XB";
+		realname = "Ford Falcon XB";
 	};
 
 	class Jonzie_XB_red : Jonzie_XB {};
