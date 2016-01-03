@@ -259,15 +259,7 @@ class RscHudPlayer
 			w = 0.118594 * safezoneW;
 			h = 0.209 * safezoneH;
 		};
-		class MAP_FRAME_2: RscFrame
-		{
-			idc = 23541;
 
-			x = 0.881563 * safezoneW + safezoneX;
-			y = 0.808 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
-			h = 0.176 * safezoneH;
-		};
 		class MAP_INFO: RscStructuredText
 		{
 			idc = 23542;
@@ -286,6 +278,15 @@ class RscHudPlayer
 			alphaFadeEndScale = 1.29;
 
 			x = 0.881562 * safezoneW + safezoneX;
+			y = 0.808 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
+			h = 0.176 * safezoneH;
+		};
+		class MAP_FRAME_2: RscFrame
+		{
+			idc = 23541;
+
+			x = 0.881563 * safezoneW + safezoneX;
 			y = 0.808 * safezoneH + safezoneY;
 			w = 0.108281 * safezoneW;
 			h = 0.176 * safezoneH;

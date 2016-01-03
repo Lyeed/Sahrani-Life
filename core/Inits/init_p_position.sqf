@@ -6,7 +6,6 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-
 {
 	if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "shown"))) then {
 		_x setMarkerAlphaLocal 0;

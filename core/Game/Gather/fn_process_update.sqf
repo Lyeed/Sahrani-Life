@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display", "_list", "_maxAmount", "_can"];
+private["_display", "_list", "_maxAmount", "_can", "_receive_weight", "_require_weight", "_newWeight"];
 
 disableSerialization;
 _display = findDisplay 53000;
@@ -29,15 +29,23 @@ lbClear _list;
 
 _can = true;
 
+_require_weight = 0;
 {
 	_index = _list lbAdd format["%1x %2", (_maxAmount * (_x select 1)), [(_x select 0)] call public_fnc_itemGetName];
 	if ([(_x select 0)] call public_fnc_itemCount >= (_maxAmount * (_x select 1))) then {
-		_list lbSetPicture [_index, "lyeed_IMG\data\process\items_ok"];
+		_list lbSetPicture [_index, "lyeed_IMG\data\process\items_ok.paa"];
 	} else {
-		_list lbSetPicture [_index, "lyeed_IMG\data\process\items_missing"];
+		_list lbSetPicture [_index, "lyeed_IMG\data\process\items_missing.paa"];
 		_can = false;
 	};
+
+	_require_weight = _require_weight + ((([(_x select 0)] call public_fnc_itemGetWeight) * (_x select 1)) * _maxAmount);
 } forEach getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "require");
+
+_receive_weight = 0;
+{
+	_receive_weight = _receive_weight + ((([(_x select 0)] call public_fnc_itemGetWeight) * (_x select 1)) * _maxAmount);
+} forEach getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "receive");
 
 (_display displayCtrl 53007) ctrlSetStructuredText parseText format
 [
@@ -46,6 +54,20 @@ _can = true;
 		(getNumber(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "time_per_item") * _maxAmount) + getNumber(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "time_default"), 
 		"M:SS"
 	] call CBA_fnc_formatElapsedTime
+];
+
+_newWeight = g_carryWeight - _require_weight + _receive_weight;
+if (_newWeight > g_maxWeight) then {
+	_can = false;
+};
+
+(_display displayCtrl 53013) ctrlSetStructuredText parseText format
+[
+	"<t align='center'>%1/%3-><t color='%4'>%2</t>/%3</t>",
+	g_carryWeight,
+	_newWeight,
+	g_maxWeight,
+	if (_newWeight <= g_maxWeight) then {"#8cff9b"} else {"#ff8c8c"}
 ];
 
 if (_can) then {
