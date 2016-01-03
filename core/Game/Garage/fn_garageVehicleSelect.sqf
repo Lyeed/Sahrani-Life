@@ -77,7 +77,7 @@ _vehicleInfo = [_className] call public_fnc_fetchVehInfo;
   	(_vehicleInfo select 12),
     getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")
     if ((getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")) in ["SP95","SP98"]) then
-    {"Essence"} else {getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")};
+    {"Essence"} else {getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")}
 ];
 
 if ((_data select 2) isEqualTo 1) then

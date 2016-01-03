@@ -13,7 +13,7 @@
 	};
 } forEach (g_dynamic_markers);
 
-if (g_arrested) then {
+if (player getVariable ["arrested", false]) then {
 	[g_arrestMinuts, g_arrestReason] spawn public_fnc_putInJail;
 } else {
 	if (!g_is_alive || ((count g_position) != 3)) then

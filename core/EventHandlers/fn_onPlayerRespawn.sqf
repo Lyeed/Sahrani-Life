@@ -16,7 +16,7 @@ if (player getVariable ["restrained", false]) then {player setVariable ["restrai
 g_carryWeight = 0;
 g_is_alive = true;
 
-if (g_arrested) then {
+if (player getVariable ["arrested", false]) then {
 
 } else {
 	[] spawn public_fnc_loadout;

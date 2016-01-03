@@ -15,7 +15,7 @@ _data = switch (_mode) do
 	case 4: {g_is_alive};
 	case 7: {g_laboratory};
 	case 8: {1};
-	case 9: {[g_arrested, g_arrestMinuts, g_arrestReason, g_arrestUniform, g_arrestOldUniform, life_arrestEscape]};
+	case 9: {[player getVariable ["arrested", false], g_arrestMinuts, g_arrestReason, g_arrestUniform, g_arrestOldUniform, life_arrestEscape]};
 	case 11: {[player getVariable ["is_coma", false], 0] call public_fnc_bool};
 	case 12: {(player getVariable ["realname", profileName])};
 	case 13: {[g_launder, [] call public_fnc_getInv]};
