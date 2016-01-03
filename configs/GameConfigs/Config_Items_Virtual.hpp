@@ -1472,7 +1472,7 @@ class ALYSIA_ITEMS
 	class gpl
 	{
 		name        = "GPL";
-		weight      = 2;
+		weight      = 1;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
