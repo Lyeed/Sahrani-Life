@@ -148,6 +148,8 @@ class ALYSIA_SHOPS_VEHICLES
 			"Jonzie_Log_Truck",
 			"Jonzie_Tanker_Truck",
 			"Jonzie_Curtain",
+			"Jonzie_Western",
+			"Jonzie_XB",
 			"Jonzie_Box_Truck"
 		};
 	};
