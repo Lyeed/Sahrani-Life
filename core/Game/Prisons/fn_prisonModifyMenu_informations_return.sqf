@@ -22,7 +22,7 @@ _infos =
 	g_arrest_Time,
 	g_arrest_Caution,
 	g_arrest_Reason
-]
+];
 
 [_array] remoteExecCall ["public_fnc_prisonModifyMenu_open", _from];
 

@@ -36,7 +36,7 @@ if (!(_checkBox)) exitWith {
 if (_amount <= 0) exitWith {_error = true};
 {
 	if (!([ctrlText _x] call public_fnc_isNumber)) then {
-		(_display displayCtrl _x) ctrlSetBackgroundColor = {153, 0, 0, 0.5};
+		(_display displayCtrl _x) ctrlSetBackgroundColor {153, 0, 0, 0.5};
 		_error = true;
 	};
 } forEach [19044, 19045, 19046];
