@@ -86,8 +86,8 @@ g_arrest_Cellule = _basic select 24;
 g_arrest_Time = _basic select 25;
 g_arrest_Caution = _basic select 26;
 g_arrest_Reason = _basic select 27;
-g_arrest_Uniform = _basic select 28;
-g_arrest_Gear = _basic select 29;
+g_arrest_Gear = _basic select 28;
+g_arrest_Escape = _basic select 29
 if (g_arrest_Time > 0) then {
 	player setVariable ["arrested", true, true];
 };
