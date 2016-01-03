@@ -146,8 +146,10 @@ class ALYSIA_SHOPS_VEHICLES
 			"O_Truck_02_fuel_F",
 			"Jonzie_Flat_Bed",
 			"Jonzie_Log_Truck",
+			"Jonzie_Superliner",
 			"Jonzie_Tanker_Truck",
 			"Jonzie_Curtain",
+			"Jonzie_Western",
 			"Jonzie_Box_Truck"
 		};
 	};
@@ -202,6 +204,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"C_Offroad_01_F",
 			"shounka_a3_cliors_civ",
 			"max_van",
+			"Jonzie_XB",
 			"C_Van_01_transport_F",
 			"C_Van_01_box_F",
 			"shounka_buggy",
