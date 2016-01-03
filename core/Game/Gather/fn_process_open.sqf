@@ -30,22 +30,6 @@ if ((getNumber(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_ty
 if ((getNumber(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "requiere_target") isEqualTo 1) && ((player distance g_interaction_target) > 5)) exitWith {
 	["Le traitement à besoin d'émaner d'une entité"] call public_fnc_error;
 };
-if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "sides"))) exitWith {
-	[format[
-		"Votre faction<br/><t color='#04B404'>%1</t> n'est pas autorisé à traiter ici<br/>Ce traitement (<t color='#2EFE9A'>%2</t>) est <t color='#FF0000'>réservé</t>",
-		([playerSide] call public_fnc_sideToStr),
-		getText(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "name")
-	]] call public_fnc_error;
-};
-
-_processLicense = getText(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "license");
-if ((playerSide isEqualTo civilian) && (_processLicense != "") && !(missionNamespace getVariable[format["license_%1", _processLicense], false])) exitWith {
-	[format["Vous n'avez pas la license requise pour traiter<br/>Vous avez besoin de %1", ([_processLicense] call public_fnc_licenseGetName)]] call public_fnc_error;
-};
-_rank = getNumber(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "rank");
-if ((playerSide != civilian) && ((player getVariable ["rank", 0]) < _rank)) exitWith {
-	["Vous n'avez pas le rank suffisant pour traiter"] call public_fnc_error;
-};
 
 if (!(createDialog "RscDisplayProcess")) exitWith {};
 
@@ -53,8 +37,52 @@ disableSerialization;
 _display = findDisplay 53000;
 if (isNull _display) exitWith {};
 
-ctrlEnable[53005, false];
 (_display displayCtrl 53001) ctrlSetStructuredText parseText format["<t align='center' size='1.5'>%1</t>", getText(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "name")];
+
+if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "sides"))) exitWith
+{
+	{
+		ctrlShow[getNumber(_x >> "IDC"), false];
+	} forEach ("!((configName _x) in ['TITLE', 'OPTION_EXIT_FRAME', 'OPTION_EXIT_BACKGROUND', 'OPTION_EXIT_IMAGE', 'OPTION_EXIT_BUTTON'])" configClasses (missionConfigFile >> "RscDisplayProcess" >> "controls"));
+
+	(_display displayCtrl 53014) ctrlSetStructuredText parseText format
+	[
+		"<t align='center' font='PuristaBold'><t size='1.5'>Votre faction<br/><t color='#04B404'>%1</t> n'est pas autorisé à traiter ici",
+		([playerSide] call public_fnc_sideToStr)
+	];
+};
+
+_processLicense = getText(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "license");
+if ((_processLicense != "") && !([_processLicense] call public_fnc_hasLicense)) exitWith
+{
+	{
+		ctrlShow[getNumber(_x >> "IDC"), false];
+	} forEach ("!((configName _x) in ['TITLE', 'OPTION_EXIT_FRAME', 'OPTION_EXIT_BACKGROUND', 'OPTION_EXIT_IMAGE', 'OPTION_EXIT_BUTTON'])" configClasses (missionConfigFile >> "RscDisplayProcess" >> "controls"));
+
+	(_display displayCtrl 53014) ctrlSetStructuredText parseText format
+	[
+		"<t align='center' font='PuristaBold'><t size='1.5'>Vous n'avez pas la license requise pour traiter<br/><br/>Vous avez besoin de<br/></t><t size='2' color='#FF8000'>%1</t></t>",
+		([_processLicense] call public_fnc_licenseGetName)
+	];
+};
+
+_rank = getNumber(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "rank");
+if ((playerSide != civilian) && ((player getVariable ["rank", 0]) < _rank)) exitWith
+{
+	{
+		ctrlShow[getNumber(_x >> "IDC"), false];
+	} forEach ("!((configName _x) in ['TITLE', 'OPTION_EXIT_FRAME', 'OPTION_EXIT_BACKGROUND', 'OPTION_EXIT_IMAGE', 'OPTION_EXIT_BUTTON'])" configClasses (missionConfigFile >> "RscDisplayProcess" >> "controls"));
+
+	(_display displayCtrl 53014) ctrlSetStructuredText parseText format
+	[
+		"<t align='center' font='PuristaBold'><t size='1.5'>Vous n'avez pas le rank suffisant dans votre faction pour traider<br/><br/>Vous avez besoin de<br/></t><t size='2' color='#FF8000'>%1</t></t>",
+		([playerSide, _rank] call public_fnc_rankToStr)
+	];
+};
+
+ctrlShow[53014, false];
+ctrlEnable[53005, false];
+ctrlEnable[53014, false];
 
 {
 	private["_varMaxAmount", "_varAmount"];
