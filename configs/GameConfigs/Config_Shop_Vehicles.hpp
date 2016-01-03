@@ -147,6 +147,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"Jonzie_Flat_Bed",
 			"Jonzie_Log_Truck",
 			"Jonzie_Tanker_Truck",
+			"Jonzie_Curtain",
 			"Jonzie_Box_Truck"
 		};
 	};
@@ -167,6 +168,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"Jonzie_30CSL",
 			"Jonzie_Galant",
 			"Jonzie_Corolla",
+			"ADM_Ford_F100",
 			"Jonzie_Mini_Cooper"
 		};
 	};
@@ -206,7 +208,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_a3_ds3_civ",
 			"shounka_a3_ds4_civ",
 			"shounka_nemo",
-			"Mrshounka_Vandura_civ",
+			"ADM_GMC_Vandura",
 			"shounka_a3_spr_civ",
 			"Mrshounka_207_civ",
 			"Mrshounka_a3_308_civ",
