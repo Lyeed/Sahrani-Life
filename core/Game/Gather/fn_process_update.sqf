@@ -70,7 +70,7 @@ if (_newWeight < 0) then {
 
 (_display displayCtrl 53013) ctrlSetStructuredText parseText format
 [
-	"<t align='center'>%1/%3 <img image='lyeed_IMG\data\vehicle\trunk\right_arrow_single_select.paa'/> <t color='%4'>%2</t>/%3</t>",
+	"<t align='center'>%1/%3 <t size='0.8'><img image='lyeed_IMG\data\vehicle\trunk\right_arrow_single_select.paa'/></t> <t color='%4'>%2</t>/%3</t>",
 	g_carryWeight,
 	_newWeight,
 	g_maxWeight,

@@ -58,6 +58,8 @@ class RscDisplayProcess: default_interaction_back_dialog
 
 		class REQUIERE_FRAME: RscFrame
 		{
+			idc = 53024;
+
 			x = 0.345312 * safezoneW + safezoneX;
 			y = 0.445 * safezoneH + safezoneY;
 			w = 0.144375 * safezoneW;
@@ -75,6 +77,8 @@ class RscDisplayProcess: default_interaction_back_dialog
 
 		class RECEIVE_FRAME: RscFrame
 		{
+			idc = 53016;
+
 			x = 0.510312 * safezoneW + safezoneX;
 			y = 0.445 * safezoneH + safezoneY;
 			w = 0.144375 * safezoneW;
@@ -92,6 +96,8 @@ class RscDisplayProcess: default_interaction_back_dialog
 
 		class AMOUNT_FRAME: RscFrame
 		{
+			idc = 53017;
+
 			x = 0.345312 * safezoneW + safezoneX;
 			y = 0.346 * safezoneH + safezoneY;
 			w = 0.0928125 * safezoneW;
@@ -99,6 +105,7 @@ class RscDisplayProcess: default_interaction_back_dialog
 		};
 		class AMOUNT_HEADER: RscStructuredText
 		{
+			idc = 53018;
 			text = "<t align='center'>Montant</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -119,6 +126,7 @@ class RscDisplayProcess: default_interaction_back_dialog
 
 		class WEIGHT_HEADER: RscStructuredText
 		{
+			idc = 53019;
 			text = "<img image='lyeed_IMG\data\process\weight.paa'/> Poids";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -139,6 +147,8 @@ class RscDisplayProcess: default_interaction_back_dialog
 		};
 		class WEIGHT_FRAME: RscFrame
 		{
+			idc = 53020;
+
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.379 * safezoneH + safezoneY;
 			w = 0.108281 * safezoneW;
@@ -147,6 +157,8 @@ class RscDisplayProcess: default_interaction_back_dialog
 
 		class TIMER_FRAME: RscFrame
 		{
+			idc = 53021;
+
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.324 * safezoneH + safezoneY;
 			w = 0.108281 * safezoneW;
@@ -154,6 +166,7 @@ class RscDisplayProcess: default_interaction_back_dialog
 		};
 		class TIME_HEADER: RscStructuredText
 		{
+			idc = 53022;
 			text = "<img image='lyeed_IMG\data\process\timer.paa'/> Temps approximatif";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -237,6 +250,7 @@ class RscDisplayProcess: default_interaction_back_dialog
 
 		class DECO: RscPicture
 		{
+			idc = 53023;
 			text = "lyeed_IMG\data\process\process.paa";
 
 			x = 0.484531 * safezoneW + safezoneX;
@@ -247,14 +261,13 @@ class RscDisplayProcess: default_interaction_back_dialog
 
 		class ERROR_TEXT: RscStructuredText
 		{
-			idc = 53014;
+			idc = 53015;
 			colorBackground[] = {-1,-1,-1,0};
-			
+
 			x = 0.37625 * safezoneW + safezoneX;
 			y = 0.357 * safezoneH + safezoneY;
 			w = 0.2475 * safezoneW;
 			h = 0.264 * safezoneH;
 		};
-
 	};
 };

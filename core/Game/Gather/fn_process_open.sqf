@@ -42,10 +42,10 @@ if (isNull _display) exitWith {};
 if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "sides"))) exitWith
 {
 	{
-		ctrlShow[getNumber(_x >> "IDC"), false];
-	} forEach ("!((configName _x) in ['TITLE', 'OPTION_EXIT_FRAME', 'OPTION_EXIT_BACKGROUND', 'OPTION_EXIT_IMAGE', 'OPTION_EXIT_BUTTON'])" configClasses (missionConfigFile >> "RscDisplayProcess" >> "controls"));
+		ctrlShow[getNumber(_x >> "IDC"), false];	
+	} forEach ("(!((configName _x) in ['TITLE', 'ERROR_TEXT', 'OPTION_EXIT_FRAME', 'OPTION_EXIT_BACKGROUND', 'OPTION_EXIT_IMAGE', 'OPTION_EXIT_BUTTON']) && (getNumber(_x >> 'IDC') != -1))" configClasses (missionConfigFile >> "RscDisplayProcess" >> "controls"));
 
-	(_display displayCtrl 53014) ctrlSetStructuredText parseText format
+	(_display displayCtrl 53015) ctrlSetStructuredText parseText format
 	[
 		"<t align='center' font='PuristaBold'><t size='1.5'>Votre faction<br/><t color='#04B404'>%1</t> n'est pas autorisé à traiter ici",
 		([playerSide] call public_fnc_sideToStr)
@@ -56,10 +56,10 @@ _processLicense = getText(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction
 if ((_processLicense != "") && !([_processLicense] call public_fnc_hasLicense)) exitWith
 {
 	{
-		ctrlShow[getNumber(_x >> "IDC"), false];
-	} forEach ("!((configName _x) in ['TITLE', 'OPTION_EXIT_FRAME', 'OPTION_EXIT_BACKGROUND', 'OPTION_EXIT_IMAGE', 'OPTION_EXIT_BUTTON'])" configClasses (missionConfigFile >> "RscDisplayProcess" >> "controls"));
+		ctrlShow[getNumber(_x >> "IDC"), false];	
+	} forEach ("(!((configName _x) in ['TITLE', 'ERROR_TEXT', 'OPTION_EXIT_FRAME', 'OPTION_EXIT_BACKGROUND', 'OPTION_EXIT_IMAGE', 'OPTION_EXIT_BUTTON']) && (getNumber(_x >> 'IDC') != -1))" configClasses (missionConfigFile >> "RscDisplayProcess" >> "controls"));
 
-	(_display displayCtrl 53014) ctrlSetStructuredText parseText format
+	(_display displayCtrl 53015) ctrlSetStructuredText parseText format
 	[
 		"<t align='center' font='PuristaBold'><t size='1.5'>Vous n'avez pas la license requise pour traiter<br/><br/>Vous avez besoin de<br/></t><t size='2' color='#FF8000'>%1</t></t>",
 		([_processLicense] call public_fnc_licenseGetName)
@@ -70,17 +70,17 @@ _rank = getNumber(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process
 if ((playerSide != civilian) && ((player getVariable ["rank", 0]) < _rank)) exitWith
 {
 	{
-		ctrlShow[getNumber(_x >> "IDC"), false];
-	} forEach ("!((configName _x) in ['TITLE', 'OPTION_EXIT_FRAME', 'OPTION_EXIT_BACKGROUND', 'OPTION_EXIT_IMAGE', 'OPTION_EXIT_BUTTON'])" configClasses (missionConfigFile >> "RscDisplayProcess" >> "controls"));
+		ctrlShow[getNumber(_x >> "IDC"), false];	
+	} forEach ("(!((configName _x) in ['TITLE', 'ERROR_TEXT', 'OPTION_EXIT_FRAME', 'OPTION_EXIT_BACKGROUND', 'OPTION_EXIT_IMAGE', 'OPTION_EXIT_BUTTON']) && (getNumber(_x >> 'IDC') != -1))" configClasses (missionConfigFile >> "RscDisplayProcess" >> "controls"));
 
-	(_display displayCtrl 53014) ctrlSetStructuredText parseText format
+	(_display displayCtrl 53015) ctrlSetStructuredText parseText format
 	[
 		"<t align='center' font='PuristaBold'><t size='1.5'>Vous n'avez pas le rank suffisant dans votre faction pour traider<br/><br/>Vous avez besoin de<br/></t><t size='2' color='#FF8000'>%1</t></t>",
 		([playerSide, _rank] call public_fnc_rankToStr)
 	];
 };
 
-ctrlShow[53014, false];
+ctrlShow[53015, false];
 ctrlEnable[53005, false];
 ctrlEnable[53014, false];
 

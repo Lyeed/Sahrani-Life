@@ -9,19 +9,15 @@ private["_basic", "_houses", "_lastingObjects", "_keys"];
 _basic = [_this, 0, [], [[]]] call BIS_fnc_param;
 _houses = [_this, 1, [], [[]]] call BIS_fnc_param;
 _keys = [_this, 2, [], [[]]] call BIS_fnc_param;
-// _lastingObjects = [_this, 3, [], [[]]] call BIS_fnc_param;
 
 diag_log format["BASIC : %1", _basic];
 diag_log format["HOUSES : %1", _houses];
 diag_log format["KEYS : %1", _keys];
-// diag_log format["LASTINGOBJECT : %1", _basic];
-if ((_basic isEqualTo []) || {!((getPlayerUID player) isEqualTo (_basic select 0))}) exitWith
-{
+
+if ((_basic isEqualTo []) || {!((getPlayerUID player) isEqualTo (_basic select 0))}) exitWith {
 	["Une erreur est survenue lors du chargement de vos données. Veuillez vous reconnecter ou contacter un administrateur si le problème persiste"] spawn public_fnc_errorExit;
 };
-
-if (!((_basic select 1) isEqualTo "") && !((_basic select 1) isEqualTo profileName)) exitWith
-{
+if (!((_basic select 1) isEqualTo "") && !((_basic select 1) isEqualTo profileName)) exitWith {
 	[format["Vous n'êtes pas autorisé à changer d'identité. Votre pseudo actuel [%1] ne correspond pas à celui que vous aviez lors de votre arrivé sur le serveur [%2].", profileName, (_basic select 1)]] spawn public_fnc_errorExit;
 };
 
@@ -66,7 +62,7 @@ g_position = [(_basic select 12), (_basic select 13), (_basic select 14)];
 g_is_alive = _basic select 15;
 // drugs
 {
-	missionNamespace setVariable[format["drug_stats_%1", (_x select 0)], (_x select 1)];
+	missionNamespace setVariable [format["drug_stats_%1", (_x select 0)], (_x select 1)];
 } forEach (_basic select 16);
 // hunger
 g_hunger = _basic select 17;
@@ -86,38 +82,38 @@ g_arrest_Cellule = _basic select 24;
 g_arrest_Time = _basic select 25;
 g_arrest_Caution = _basic select 26;
 g_arrest_Reason = _basic select 27;
-g_arrest_Gear = _basic select 28;
-g_arrest_Escape = _basic select 29
+g_arrest_Escape = _basic select 28;
+g_arrest_Gear = _basic select 29;
 if (g_arrest_Time > 0) then {
 	player setVariable ["arrested", true, true];
 };
 
 // Phone
-if ((_basic select 26) != "") then {
-	player setVariable ["number", (_basic select 26), true];
+if ((_basic select 30) != "") then {
+	player setVariable ["number", (_basic select 30), true];
 };
-g_phone_contacts = _basic select 30;
-g_phone_messages = _basic select 31;
-g_phone_forfait = _basic select 32;
-g_phone_blacklist = _basic select 33;
-g_apps = _basic select 34;
-g_choice = _basic select 35;
+g_phone_contacts = _basic select 31;
+g_phone_messages = _basic select 32;
+g_phone_forfait = _basic select 33;
+g_phone_blacklist = _basic select 34;
+g_apps = _basic select 35;
+g_choice = _basic select 36;
 // Licenses
 {
 	missionNamespace setVariable [format["license_%1", _x], true];
-} forEach (_basic select 36);
+} forEach (_basic select 37);
 // cash
-g_cash = _basic select 37;
+g_cash = _basic select 38;
 // atm
-g_atm = _basic select 38;
+g_atm = _basic select 39;
 // inventory
 g_maxWeight = 100;
 {
     [true, (_x select 0), (_x select 1)] call public_fnc_handleInv;
-} forEach (_basic select 39);
+} forEach (_basic select 40);
 g_maxWeight = 24;
 // gear
-[(_basic select 40)] spawn public_fnc_loadGear;
+[(_basic select 41)] spawn public_fnc_loadGear;
 switch (playerSide) do
 {
 	case west: 
@@ -136,7 +132,7 @@ switch (playerSide) do
 	{
 		g_paycheck = g_paycheck + round((call g_CIVLevel) * getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "CIV" >> "paycheck"));
 		// Launder
-		g_launder = _basic select 41;
+		g_launder = _basic select 42;
 	};
 
 	case independent:
