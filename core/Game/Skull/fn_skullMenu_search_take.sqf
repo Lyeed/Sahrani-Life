@@ -25,6 +25,7 @@ switch (_data select 0) do
 	case "money":
 	{
 		[true, (_data select 1)] call public_fnc_handleCash;
+		g_interaction_target_inv deleteAt _sel;
 	};
 	case "virtual": 
 	{

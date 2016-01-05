@@ -9,10 +9,11 @@
 private["_veh", "_station", "_typeRefuel", "_bill", "_display", "_fuelmax", "_addvalue", "_timer", "_liters", "_currentLiters"];
 _veh = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 _station = [_this, 1, ObjNull, [ObjNull]] call BIS_fnc_param;
-_typeRefuel = player getVariable ["typeRefuel", ""];
-_currentLiters = _station getVariable [_typeRefuel, 250];
 
 if ((isNull _station) || (isNull _veh)) exitWith {};
+
+_typeRefuel = player getVariable ["typeRefuel", ""];
+_currentLiters = _station getVariable [_typeRefuel, 250];
 
 if (dialog) then
 {
@@ -45,13 +46,13 @@ if (player distance _veh > 5) exitWith {
 	["Vous êtes trop loin du véhicule."] call public_fnc_error;
 };
 
-_veh setVariable ["refueling", true, true];
-
 if (!(createDialog "RscDisplayFuelRefuel")) exitWith {};
+
 disableSerialization;
 _display = findDisplay 17000;
-
 if (isNull _display) exitWith {};
+
+_veh setVariable ["refueling", true, true];
 
 _bill = 0;
 _liters = 0;
@@ -79,11 +80,14 @@ if (local _veh) then {
 } else {
 	[_veh, (Fuel _veh) + _addvalue] remoteExecCall ["setFuel", _veh, false];
 };
+
 if ((getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf (_veh) >> "fuel")) != _typeRefuel) then {
 	_veh setVariable ["typeRefuel", _typeRefuel, true];
 };
+
 _station setVariable [_typeRefuel, ((_station getVariable [_typeRefuel, 250]) - _liters), true];
 _veh setVariable ["refueling", false, true];
 player setVariable ["typeRefuel", ""];
+
 [false, _bill, "Station Essence"] call public_fnc_handleATM;
-[format["%1Kn ont été prélevés de votre compte en banque.", ([_bill] call public_fnc_numberText)]] call public_fnc_info;
+[format["%1Kn ont été prélevés de votre compte en banque.", ([_bill] call public_fnc_numberText)], "buy"] call public_fnc_info;
