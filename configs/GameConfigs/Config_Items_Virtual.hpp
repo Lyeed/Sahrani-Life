@@ -1618,4 +1618,17 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\kerosene.paa";
 		license     = "oil";
 	};
+	
+	class turtle 
+	{
+		name        = "Viande de tortue";
+		weight      = 2;
+		illegal     = 0;
+		removable   = 1;
+		price_buy   = 8;
+		price_sell  = 0;
+		use         = "";
+		image       = "alysia_items_virtual\data\turtle.paa";
+		license     = "";
+	};
 };
