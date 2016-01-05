@@ -1628,7 +1628,7 @@ class ALYSIA_ITEMS
 		price_buy   = 8;
 		price_sell  = 0;
 		use         = "";
-		image       = "alysia_items_virtual\data\turtle.paa";
+		image       = "alysia_items_virtual\data\tortue.paa";
 		license     = "";
 	};
 };
