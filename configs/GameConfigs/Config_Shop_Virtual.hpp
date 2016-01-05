@@ -12,7 +12,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Commerçant agricole";
 		side = "CIV";
-		items[] = {{"corn_seed", "bean_seed", "cotton_seed", "wheatseed", "patate_seed", "engrais"}, {"cotton", "bean", "corn", "wheat", "patate"}};
+		items[] = {{"corn_seed", "bean_seed", "cotton_seed", "wheatseed", "patate_seed", "engrais"}, {}};
 	};
 	
 	class market
@@ -20,7 +20,7 @@ class ALYSIA_SHOPS_VIRTUAL
 		name = "Marché";
 		side = "";
 		// items[]= {{"water", "banane", "mangue", "fishingpoles", "storage", "fuelF"}, {"banane", "mangue"}};
-		items[]= {{"water", "petitbeurre", "pizza","storage", "sandwich", "croissant", "kefir", "ravioli", "raisin", "prune"}, {"raisin", "prune"}};
+		items[]= {{"water", "petitbeurre", "pizza","storage", "sandwich", "croissant", "kefir", "ravioli", "raisin", "prune"}, {"raisin", "prune", "cotton", "bean", "corn", "wheat", "patate"}};
 	};
 	
 	class hopital
