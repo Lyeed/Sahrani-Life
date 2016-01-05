@@ -14,7 +14,7 @@ _projectile = _this select 4;
 
 if (g_connected) then
 {
-	_damage = _damage * 200;
+	_damage = _damage * 180;
 	if ((isNull _source) && ((vehicle player) != player)) then
 	{
 		 if (g_seatbelt) then {

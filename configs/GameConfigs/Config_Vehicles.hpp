@@ -4053,4 +4053,17 @@ class ALYSIA_VEHICLES
 	class Jonzie_XB_pink : Jonzie_XB {};
 	class Jonzie_XB_dark : Jonzie_XB {};
 	class Jonzie_XB_white : Jonzie_XB {};
+
+	class madsa_mtz_F
+	{
+		realname = "Tracteur MTZ";
+		buyPrice = 10;
+		inventory = 100;
+		side = "CIV";
+		insurance = 1;
+		license = "";
+		fuel = "Diesel";
+		rank = 0;
+		color[] = {};
+	};
 };	

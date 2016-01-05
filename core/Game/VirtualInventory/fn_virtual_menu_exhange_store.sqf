@@ -33,12 +33,7 @@ if (_res > 0) then
 {
 	if ([false, _item, _res] call public_fnc_handleInv) then
 	{
-		_index = [_item, g_interaction_target_trunk_stock] call public_fnc_index;
-		if (_index isEqualTo -1) then {
-			g_interaction_target_trunk_stock pushBack [_item, _res];
-		} else {
-			g_interaction_target_trunk_stock set [_index, [_item, (_res + ((g_interaction_target_trunk_stock select _index) select 1))]];
-		};
+		g_interaction_target_trunk_stock = [true, g_interaction_target_trunk_stock, _item, _res] call public_fnc_handleTrunk;
 		g_interaction_target_trunk_weight_actual = g_interaction_target_trunk_weight_actual + (([_item] call public_fnc_itemGetWeight) * _res);
 	};
 } else {

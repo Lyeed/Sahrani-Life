@@ -24,10 +24,15 @@ if (isNull _target) exitWith {};
 		["pullout", "Sortir", "[] call public_fnc_vehicleMenu_pullout;", "((count (crew g_interaction_target) > 0) && ((vehicle player) isEqualTo player))"],
 		["owner", "Propriétaire", "[] spawn public_fnc_vehicleMenu_owner;", "((playerSide in [east,west]) || (g_interaction_target in g_vehicles))"],
 		["impound", "Fourrière", "[] spawn public_fnc_vehicleMenu_impound;", "((playerSide in [east,west]) && ((vehicle player) isEqualTo player))"],
-		["putin", "Transférer", "[] call public_fnc_vehicleMenu_putIn;", "false"]
+		["putin", "Transférer", "[] call public_fnc_vehicleMenu_putIn;", "false"],
+		["farm_gather", "Récolter", "[] spawn public_fnc_vehicleMenu_farm_gather;", "((typeOf(g_interaction_target) isEqualTo 'madsa_mtz_F') && ((vehicle player) isEqualTo g_interaction_target) && ((driver g_interaction_target) isEqualTo player) && !(g_interaction_target getVariable ['farm_gather', false]))"],
+		["farm_plant", "Planter", "[] spawn public_fnc_vehicleMenu_farm_plant;", "((typeOf(g_interaction_target) isEqualTo 'madsa_mtz_F') && ((vehicle player) isEqualTo g_interaction_target) && ((driver g_interaction_target) isEqualTo player) && !(g_interaction_target getVariable ['farm_plant', false]))"]
 	],
 	getText(configFile >> "CfgVehicles" >> typeOf(_target) >> "displayName"),
-	"lyeed_IMG\data\vehicle\background.jpg"
+	"lyeed_IMG\data\vehicle\background.jpg",
+	true,
+	false,
+	true
 ] spawn public_fnc_interactions_create;
 
 // ["refuel", "Faire le plein", "[] spawn public_fnc_vehicleMenu_refuel;", "((([""fuelF""] call public_fnc_itemCount) > 0) && ((vehicle player) isEqualTo player))"],

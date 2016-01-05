@@ -80,6 +80,7 @@ _idc_actual = 5010;
 		(_idc_actual + 2), (_x select 0), (_idc_actual + 1), (_idc_actual + 3), (_x select 1), _idc_actual, _path
 	]];
 	
+	_ctrl_btn ctrlSetTooltip (_x select 1);
 	_idc_actual = _idc_actual + 5;
 } forEach _data;
 

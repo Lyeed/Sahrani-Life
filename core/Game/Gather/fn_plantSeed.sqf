@@ -38,31 +38,5 @@ if ([false, "engrais", 1] call public_fnc_handleInv) then {
 	_plantGrowingtime = round(_plantGrowingtime * 0.7);
 };
 
-missionNamespace setVariable [format["%1_PLANTS", (getPlayerUID player)], (missionNamespace getVariable [format["%1_PLANTS", (getPlayerUID player)], []]) + [_object] - [objNull]];
-publicVariableServer format["%1_PLANTS", (getPlayerUID player)];
-
-[(_plantGrowingtime / 10), (getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "upLevel") / 10), _object] spawn
-{
-	private["_growtime", "_growup", "_growprcnt", "_object"];
-	_growtime = [_this, 0, 0, [0]] call BIS_fnc_param;
-	_growup = [_this, 1, 0, [0]] call BIS_fnc_param;
-	_object = [_this, 2, objNull, [objNull]] call BIS_fnc_param;
-
-	if (isNull _object) exitWith {};
-	
-	_growprcnt = 0;
-	while {_growprcnt < 100} do
-	{
-		sleep _growtime;
-		if (!(alive _object)) exitWith {
-			deleteVehicle _object;
-		};
-		_object setposATL [(getpos _object select 0), (getpos _object select 1), ((getpos _object select 2) + _growup)];
-		_growprcnt = _growprcnt + 10;
-	};
-	if (alive _object) then {
-		_object setVariable ["ready", true, true];
-	};
-};
-
+[(_plantGrowingtime / 10), (getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "upLevel") / 10), _object] spawn public_fnc_plantGrow;
 g_action_inUse = false;

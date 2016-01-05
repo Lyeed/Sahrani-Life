@@ -14,14 +14,12 @@ if ((speed g_interaction_target) > 0) exitWith
 };
 
 _crew = crew g_interaction_target;
-if (_crew isEqualTo []) exitWith
-{
+if (_crew isEqualTo []) exitWith {
 	["Le véhicule est vide"] call public_fnc_error;
 };
 
 {
-	if ((_x getVariable["restrained", false]) || !(alive _x)) then
-	{
+	if ((_x getVariable["restrained", false]) || !(alive _x)) then {
 		_x action ["Eject", (vehicle _x)];
 	};
 } forEach (_crew);

@@ -41,6 +41,8 @@ class Public
 	class Tools
 	{
 		file = "core\Tools";
+		class handleTrunk {};
+		class itemTrunk {};
 		class setHitPointDamage {};
 		class hasLicense {};
 		class lightOn {};
@@ -221,6 +223,8 @@ class Public
 		class vehicleMenu_pullout {};
 		class vehicleMenu_putIn {};
 		class vehicleMenu_siphon {};
+		class vehicleMenu_farm_gather {};
+		class vehicleMenu_farm_plant {};
 	};
 
 	class FuelStations
@@ -294,6 +298,7 @@ class Public
 		class pickGather {};
 		class plantHarvest {};
 		class plantSeed {};
+		class plantGrow {};
 		class process_action {};
 		class process_open {};
 		class process_update {};
