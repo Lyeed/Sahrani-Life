@@ -3451,52 +3451,7 @@ class Mission
 				};
 			};
 		};
-		class Item151
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
-					position[]={18233.279,0.9932512,3487.0825};
-					class args
-					{
-						items=4;
-						class Item0
-						{
-							value="";
-							parentCls="ModuleCurator_F";
-							typeName="Owner";
-						};
-						class Item1
-						{
-							value="";
-							parentCls="ModuleCurator_F";
-							typeName="Name";
-						};
-						class Item2
-						{
-							value="3";
-							parentCls="ModuleCurator_F";
-							typeName="Addons";
-						};
-						class Item3
-						{
-							value="0";
-							parentCls="ModuleCurator_F";
-							typeName="Forced";
-						};
-					};
-					id=151;
-					side="LOGIC";
-					vehicle="ModuleCurator_F";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
+		
 		class Item152
 		{
 			side="LOGIC";
@@ -7430,7 +7385,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 23.6149;this setposATL [14436.0615234,8524.621094,0];this setVectorUp [0,0,1];this addAction[""Commerçant d'alcool"",public_fnc_shop_virtual_open,""alcool"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 23.6149;this setposATL [14436.0615234,8524.621094,0];this setVectorUp [0,0,1];this addAction[""Commerçant d'alcool"",public_fnc_shop_virtual_open,""dealer_alcool"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item391
 		{
@@ -14366,7 +14321,7 @@ class Mission
 			azimut=49.670868;
 			id=1244;
 			side="EMPTY";
-			vehicle="ZavoraAnim";
+			vehicle="Land_BarGate_F";
 			skill=0.60000002;
 		};
 		class Item1091
@@ -25384,7 +25339,7 @@ class Mission
 			position[]={10116.076,177.47064,13964.351};
 			name="iron_1";
 			text="Mine de Fer";
-			type="Fett_as_aamissile";
+			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -25434,7 +25389,7 @@ class Mission
 			position[]={11380.056,116.23411,10069.938};
 			name="copper_1";
 			text="Mine de cuivre";
-			type="Fett_as_aamissile";
+			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -25454,7 +25409,7 @@ class Mission
 			position[]={11662.848,3.9813426,5562.0117};
 			name="sand_1";
 			text="Mine de sable";
-			type="Fett_as_aamissile";
+			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -25483,7 +25438,7 @@ class Mission
 			position[]={15140.998,155.48955,12316.778};
 			name="coal_1";
 			text="Mine de charbon";
-			type="Fett_as_aamissile";
+			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -25556,36 +25511,6 @@ class Mission
 			a=0.5;
 			b=0.5;
 		};
-		class Item46
-		{
-			position[]={14435.931,26.030704,8524.6885};
-			name="Commerçant d'alcool";
-			text="Commerçant d'alcool";
-			type="Fett_hardpoint";
-			colorName="ColorRed";
-			a=0.5;
-			b=0.5;
-		};
-		class Item47
-		{
-			position[]={7584.5679,39.945313,6622.5693};
-			name="Dealer";
-			text="Dealer";
-			type="Fett_commercialzone";
-			colorName="ColorRed";
-			a=0.5;
-			b=0.5;
-		};
-		class Item48
-		{
-			position[]={4913.1357,56.95649,15495.626};
-			name="Camp rebelle";
-			text="Camp rebelle";
-			type="Fett_campingsite";
-			colorName="ColorRed";
-			a=0.5;
-			b=0.5;
-		};
 		class Item49
 		{
 			position[]={9771.9756,1.0033956,11162.753};
@@ -25600,7 +25525,7 @@ class Mission
 			position[]={12498.13,30.951458,17650.174};
 			name="gold_1";
 			text="Mine d'or";
-			type="Fett_as_aamissile";
+			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -25610,7 +25535,7 @@ class Mission
 			position[]={10675.328,320.492,8389.918};
 			name="plat_1";
 			text="Mine de platine";
-			type="Fett_as_aamissile";
+			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -25620,7 +25545,7 @@ class Mission
 			position[]={12967.824,31.433985,7088.2935};
 			name="baux_1";
 			text="Mine de bauxite";
-			type="Fett_as_aamissile";
+			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -25903,7 +25828,7 @@ class Mission
 			position[]={13721.001,26.003746,12775.98};
 			name="clay_1";
 			text="Mine d'argile";
-			type="Fett_as_aamissile";
+			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
@@ -26721,7 +26646,7 @@ class Mission
 			position[]={13021.694,46.222153,7717.7861};
 			name="pierre_1";
 			text="Carrière";
-			type="Fett_as_aamissile";
+			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
 			b=0.5;
