@@ -268,7 +268,7 @@ class ALYSIA_PROCESS
 		license = "pottery";
 		sound = "salt_process";
 		requiere_target = 1;
-		require[] = {{"clay", 1}};
+		require[] = {{"clay", 2}};
 		receive[] = {{"pottery", 1}};
 		time_per_item = 1;
 		time_default = 3;

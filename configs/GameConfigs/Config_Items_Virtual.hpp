@@ -174,7 +174,7 @@ class ALYSIA_ITEMS
 	class tabac
 	{
 		name        = "Tabac";
-		weight      = 4;
+		weight      = 2;
 		price_buy   = 60;
 		price_sell  = 30;
 		illegal     = 0;
@@ -486,7 +486,7 @@ class ALYSIA_ITEMS
 	class cocainep
 	{
 		name        = "Cocaïne pure";
-		weight      = 2;
+		weight      = 4;
 		illegal     = 1;
 		removable   = 1;
 		use         = "[""%1""] call public_fnc_drugConsume;";
@@ -604,7 +604,7 @@ class ALYSIA_ITEMS
 	class hsoufre
 	{
 		name        = "Hydrate de soufre";
-		weight      = 1;
+		weight      = 2;
 		price_buy   = 60;
 		price_sell  = 30;
 		illegal     = 1;
@@ -635,7 +635,7 @@ class ALYSIA_ITEMS
 	class methp
 	{
 		name        = "Methamphetamine";
-		weight      = 3;
+		weight      = 6;
 		illegal     = 1;
 		removable   = 1;
 		use         = "[""%1""] call public_fnc_drugConsume;";
@@ -960,7 +960,7 @@ class ALYSIA_ITEMS
 	class clay
 	{
 		name        = "Argile";
-		weight      = 1;
+		weight      = 3;
 		price_buy   = 0;
 		price_sell  = 30;
 		illegal     = 0;
@@ -972,7 +972,7 @@ class ALYSIA_ITEMS
 	class pottery
 	{
 		name        = "Poterie";
-		weight      = 1;
+		weight      = 5;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1287,7 +1287,7 @@ class ALYSIA_ITEMS
 	class patate
 	{
 		name        = "Patate";
-		weight      = 1;
+		weight      = 2;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1316,7 +1316,7 @@ class ALYSIA_ITEMS
 	class wheat
 	{
 		name        = "Blé";
-		weight      = 1;
+		weight      = 2;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1345,7 +1345,7 @@ class ALYSIA_ITEMS
 	class cottonp
 	{
 		name        = "Coton traité";
-		weight      = 1;
+		weight      = 2;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1362,7 +1362,7 @@ class ALYSIA_ITEMS
 	class grozdova
 	{
 		name        = "Bouteille de Grozdova";
-		weight      = 1;
+		weight      = 3;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1379,7 +1379,7 @@ class ALYSIA_ITEMS
 	class slivovica
 	{
 		name        = "Bouteille de Slivovica";
-		weight      = 1;
+		weight      = 3;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1396,7 +1396,7 @@ class ALYSIA_ITEMS
 	class coal
 	{
 		name        = "Charbon";
-		weight      = 1;
+		weight      = 2;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1454,7 +1454,7 @@ class ALYSIA_ITEMS
 	class pierre
 	{
 		name        = "Pierre";
-		weight      = 7;
+		weight      = 5;
 		price_buy   = 60;
 		price_sell  = 30;
 		illegal     = 0;
@@ -1466,7 +1466,7 @@ class ALYSIA_ITEMS
 	class ciment
 	{
 		name        = "Ciment";
-		weight      = 10;
+		weight      = 4;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
@@ -1622,7 +1622,7 @@ class ALYSIA_ITEMS
 	class turtle 
 	{
 		name        = "Viande de tortue";
-		weight      = 2;
+		weight      = 4;
 		illegal     = 0;
 		removable   = 1;
 		price_buy   = 8;
