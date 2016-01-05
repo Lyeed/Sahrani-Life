@@ -25,6 +25,7 @@ if ((driver g_interaction_target) != player) exitWith {
 	["Seul le conducteur peut débuter la procédure de récolte"] call public_fnc_error;
 };
 
+closeDialog 0;
 _trunk = g_interaction_target getVariable ["Trunk", []];
 _weight_actual = [_trunk] call public_fnc_weightGenerate;
 _weight_max = [typeOf(g_interaction_target)] call public_fnc_getVehVirtual;

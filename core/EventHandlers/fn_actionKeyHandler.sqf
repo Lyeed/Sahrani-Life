@@ -108,6 +108,12 @@ if ((vehicle player) isEqualTo player) then
 					breakOut "main";
 				};
 
+				if (typeOf(cursorTarget) isEqualTo "Turtle_F") then
+				{
+					[cursorTarget] spawn public_fnc_catchTurtle;
+					breakOut "main";
+				};
+
 				if (typeOf(cursorTarget) in ["Bank_Sahrani_N", "Bank_Sahrani_S"]) then
 				{
 					if (player distance (nearestObject [player, "xcam_Laptop_unfolded_F"]) <= 2) then
@@ -263,22 +269,6 @@ if ((vehicle player) isEqualTo player) then
 						if (_curType == "Land_Money_F") exitWith {
 							[_curTarget] spawn public_fnc_pickupMoney;
 						};
-					};
-				};
-			};
-		};
-	};
-} else {
-	private["_veh"];
-	_veh = vehicle player;
-	if (surfaceIsWater (getPos _veh)) then
-	{
-		if ((_veh isKindOf "Ship") && ((speed _veh) < 2) && ((speed _veh) > -1) && !g_net_dropped) then {
-			[] spawn public_fnc_dropFishingNet;
-		};
-	} else {
-		// land
-	};
-};
+	
 */
 

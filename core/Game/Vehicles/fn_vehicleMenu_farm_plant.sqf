@@ -35,6 +35,7 @@ if (_zone isEqualTo "") exitWith {
 	["Vous n'êtes près d'aucune zone agricole"] call public_fnc_error;
 };
 
+closeDialog 0;
 _plant = getText(missionConfigFile >> "ALYSIA_FARMING_PLANT_MARKERS" >> _zone >> "plant");
 _seed = getText(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "seed");
 

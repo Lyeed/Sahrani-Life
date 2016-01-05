@@ -11,7 +11,6 @@ with missionNamespace do
 	/* ===================[inUse/delay variables]======================= */
 	g_session_completed = false;
 	g_action_delay = time;
-	g_net_dropped = false;
 	g_action_inUse = false;
 	g_knockout = false;
 	g_interrupted = false;

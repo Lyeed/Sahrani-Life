@@ -292,7 +292,6 @@ class Public
 	class Gather
 	{
 		file = "core\Game\Gather";
-		class catchFish {};
 		class catchTurtle {};
 		class dropFishingNet {};
 		class pickGather {};

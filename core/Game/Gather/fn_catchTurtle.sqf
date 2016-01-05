@@ -1,17 +1,16 @@
 /*
-	File: fn_catchTurtle.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Catches a dead turtle?
+		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
+	Code written by Lyeed
+	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
+	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
+	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_obj"];
-_obj = cursorTarget;
-if(isNull _obj) exitWith {}; //Not valid
-if(alive _obj) exitWith {}; //It's alive, don't take it charlie!
+private["_target"];
+_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if(([true,"turtle",1] call life_fnc_handleInv)) then
-{
-	deleteVehicle _obj;
-	titleText[localize "STR_NOTF_CaughtTurtle","PLAIN"];
+if (isNull _target) exitWith {};
+if (alive _target) exitWith {};
+
+if (([true, "turtle", 1] call public_fnc_handleInv)) then {
+	deleteVehicle _target;
 };

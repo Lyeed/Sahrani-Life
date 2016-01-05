@@ -380,7 +380,6 @@ class ALYSIA_FACTIONS
 			"baux_1",
 			"copper_1",
 			"shell_1",
-			"fish_1",
 			"clay_1",
 			"pierre_1",
 			"prison_farm",
