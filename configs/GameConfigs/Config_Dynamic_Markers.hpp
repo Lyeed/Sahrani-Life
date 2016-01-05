@@ -38,12 +38,12 @@ class ALYSIA_DYN_MARKERS
 	class cocaine_1
 	{
 		text        = "Champ de coca";
-		type        = "mil_triangle";
+		type        = "Fett_canteen";
 		color       = "ColorRed";
 		shape       = "ICON";
 		shop_appear = 1;
 		shop_price  = 4000;
-		discover[]  = {"CIV", "GUER"};
+		discover[]  = {"CIV"};
 		shown[]     = {};
 		class destroy
 		{
@@ -56,12 +56,12 @@ class ALYSIA_DYN_MARKERS
 	class cannabis_1
 	{
 		text        = "Champ de cannabis";
-		type        = "mil_triangle";
+		type        = "Fett_canteen";
 		color       = "ColorRed";
 		shape       = "ICON";
 		shop_appear = 1;
 		shop_price  = 1500;
-		discover[]  = {"CIV", "GUER"};
+		discover[]  = {"CIV"};
 		shown[]     = {};
 		class destroy
 		{
@@ -74,12 +74,12 @@ class ALYSIA_DYN_MARKERS
 	class meth_1
 	{
 		text         = "Champ d'ephedra";
-		type         = "mil_triangle";
+		type         = "Fett_canteen";
 		color        = "ColorRed";
 		shape        = "ICON";
 		shop_appear  = 1;
 		shop_price   = 15000;
-		discover[]  = {"CIV", "GUER"};
+		discover[]  = {"CIV"};
 		shown[]     = {};
 		class destroy
 		{
@@ -92,7 +92,7 @@ class ALYSIA_DYN_MARKERS
 	class heroin_1
 	{
 		text         = "Champ de pavot";
-		type         = "mil_triangle";
+		type         = "Fett_canteen";
 		color        = "ColorRed";
 		shape        = "ICON";
 		shop_appear  = 1;
@@ -112,13 +112,13 @@ class ALYSIA_DYN_MARKERS
 	class black_market_1_marker
 	{
 		text        = "Marché noir";
-		type        = "mil_dot";
+		type        = "Fett_campingsite";
 		color       = "ColorRed";
 		shape       = "ICON";
 		shop_appear = 1;
 		shop_price  = 1000;
 		linked      = "black_market_1";
-		discover[]  = {"CIV", "GUER"};
+		discover[]  = {"CIV"};
 		shown[]     = {};
 		class destroy
 		{
@@ -131,19 +131,40 @@ class ALYSIA_DYN_MARKERS
 	class black_market_2_marker
 	{
 		text        = "Marché noir";
-		type        = "mil_dot";
+		type        = "Fett_campingsite";
 		color       = "ColorRed";
 		shape       = "ICON";
 		shop_appear = 1;
 		shop_price  = 1000;
 		linked      = "black_market_2";
-		discover[]  = {"CIV", "GUER"};
+		discover[]  = {"CIV"};
 		shown[]     = {};
 		class destroy
 		{
 			respawn[]      = G_RESPAWN_BLACKMARKET;
 			global_message = "La faction %1 a démantelé un %2";
 			message        = "Vous êtes sur le point de démanteler un <t color='#74DF00'>%1</t><br/>";
+			factions[]     = {"WEST", "EAST"};
+		};
+	};
+
+	//- ALCOOL
+	class dealer_alcool_marker
+	{
+		text        = "Commerçant d'alcool";
+		type        = "Fett_hardpoint";
+		color       = "ColorRed";
+		shape       = "ICON";
+		shop_appear = 1;
+		shop_price  = 1000;
+		linked      = "dealer_alcool";
+		discover[]  = {"CIV"};
+		shown[]     = {};
+		class destroy
+		{
+			respawn[]      = G_RESPAWN_BLACKMARKET;// CHANGER POUR DES POSITIONS AU NOOOOOOOOOOOOOORD
+			global_message = "La faction %1 a arrêté un %2";
+			message        = "Vous êtes sur le point d'arrêter un <t color='#74DF00'>%1</t><br/>";
 			factions[]     = {"WEST", "EAST"};
 		};
 	};

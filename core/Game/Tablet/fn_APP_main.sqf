@@ -33,7 +33,7 @@ _apps =
 {
 	if (_actual_idc >= 7534) exitWith
 	{
-		if (_forEachIndex < (count(_apps) - 1)) then
+		if (_forEachIndex <= (count(_apps) - 1)) then
 		{
 			_apps_more = true;
 		};

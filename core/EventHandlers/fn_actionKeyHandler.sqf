@@ -48,6 +48,13 @@ if ((vehicle player) isEqualTo player) then
 			breakOut "main";
 		};
 
+		_atm = (nearestObjects [player, ["Land_Atm_01_F", "Land_Atm_02_F", "xcam_Atm_01_F", "xcam_Atm_02_F"], 2]) select 0;
+		if (!(isNil "_atm")) then
+		{
+			["home"] call public_fnc_atmScreen;
+			breakOut "main";
+		};
+
 		{
 			if (player distance (getMarkerPos _x) < 40) exitWith
 			{
@@ -153,7 +160,7 @@ if ((vehicle player) isEqualTo player) then
 					};
 				};
 
-				if (typeOf(cursorTarget) in ["Land_FuelStation_Build_F","Land_FuelStation_Shed_F","Land_FuelStation_Feed_F"]) then
+				if (typeOf(cursorTarget) in ["Land_FuelStation_Build_F", "Land_FuelStation_Shed_F", "Land_FuelStation_Feed_F"]) then
 				{
 					if ((player getVariable ["typeRefuel", ""]) != "") then
 					{
@@ -193,38 +200,8 @@ if ((vehicle player) isEqualTo player) then
 
 false;
 
-/*			
-[(nearestObject [player, ["station_a","station_b","station_c"]])] spawn public_fnc_fuelMenu_use_refuel_veh;
-s
-if ((vehicle player) isEqualTo player) then
-{
-	private["_curTarget"];
-	_curTarget = cursorTarget;	
-
-	if (isNull _curTarget) then 
-	{
-		if (surfaceIsWater (getPosASL player)) then
-		{
-			private["_fish"];
-			_fish = (nearestObjects[getPos player, ["Fish_Base_F"], 3]) select 0;
-			if (!(isNil "_fish")) exitWith {
-				[_fish] call public_fnc_catchFish; 
-			};
-		} else {
-			private["_marker", "_plant"];
-			
-		};
-	} else {
-		private["_curDistance"];
-		_curDistance = player distance _curTarget;
-		if (isPlayer _curTarget) then 
-		{
-		} else {
-			private["_curType"];
-			_curType = typeOf _curTarget;
-
-
-			if ((_curType in (call g_lastingObjects_Process)) && (_curDistance < 3) && (count(_curTarget getVariable["info", []]) > 0)) exitWith {
+/*		
+				if ((_curType in (call g_lastingObjects_Process)) && (_curDistance < 3) && (count(_curTarget getVariable["info", []]) > 0)) exitWith {
 				[_curTarget, (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "LastingObjects_menu"))] call public_fnc_LastingObjectsMenuOpen
 			};
 

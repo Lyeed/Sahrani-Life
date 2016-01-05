@@ -3451,7 +3451,52 @@ class Mission
 				};
 			};
 		};
-		
+		class Item151
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={18233.279,0.9932512,3487.0825};
+					class args
+					{
+						items=4;
+						class Item0
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Owner";
+						};
+						class Item1
+						{
+							value="";
+							parentCls="ModuleCurator_F";
+							typeName="Name";
+						};
+						class Item2
+						{
+							value="3";
+							parentCls="ModuleCurator_F";
+							typeName="Addons";
+						};
+						class Item3
+						{
+							value="0";
+							parentCls="ModuleCurator_F";
+							typeName="Forced";
+						};
+					};
+					id=151;
+					side="LOGIC";
+					vehicle="ModuleCurator_F";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
 		class Item152
 		{
 			side="LOGIC";
@@ -25508,6 +25553,36 @@ class Mission
 			text="Distillerie";
 			type="Fett_industrial";
 			colorName="ColorYellow";
+			a=0.5;
+			b=0.5;
+		};
+		class Item46
+		{
+			position[]={14435.931,26.030704,8524.6885};
+			name="A_SUPPRIMER_1";
+			text="A_SUPPRIMER";
+			type="Fett_hardpoint";
+			colorName="ColorRed";
+			a=0.5;
+			b=0.5;
+		};
+		class Item47
+		{
+			position[]={7584.5679,39.945313,6622.5693};
+			name="A_SUPPRIMER_2";
+			text="A_SUPPRIMER";
+			type="Fett_commercialzone";
+			colorName="ColorRed";
+			a=0.5;
+			b=0.5;
+		};
+		class Item48
+		{
+			position[]={4913.1357,56.95649,15495.626};
+			name="A_SUPPRIMER_3";
+			text="A_SUPPRIMER";
+			type="Fett_campingsite";
+			colorName="ColorRed";
 			a=0.5;
 			b=0.5;
 		};
