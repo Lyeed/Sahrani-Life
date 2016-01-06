@@ -60,6 +60,15 @@ class ALYSIA_COMPANIES
 			Batiment : Land_CarService_F
 			Vehicles : dépaneuse
 			Role     : fourriere
+			
+			
+		Land_tovarna2
+Land_hangar_2
+Land_A_Office01_ep1 --
+Land_a_stationhouse
+Land_Shed_Ind02
+Land_A_GeneralStore_01
+Land_Ind_vysypka --
 	*/
 
 	class weapon
