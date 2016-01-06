@@ -56,7 +56,20 @@ class Mission
 		"castructures_castle",
 		"CAStructures_E_HouseA_A_Mosque_big",
 		"CAStructuresHouse_Church_03",
-		"sibranak"
+		"sibranak",
+		"cup_misc3_config",
+		"cup_misc_e_config",
+		"cup_camisc_acr_targets",
+		"cup_camisc",
+		"cup_castructures_e_misc_misc_interier",
+		"cup_cabuildings_misc",
+		"cup_castructures_misc_powerlines",
+		"cup_castructures_e_misc_misc_lamp",
+		"cup_buildings_config",
+		"cup_ca_config",
+		"cup_castructures_castle",
+		"cup_castructures_e_housea_a_mosque_big",
+		"cup_castructureshouse_church_03"
 	};
 	addOnsAuto[]=
 	{
@@ -73,11 +86,15 @@ class Mission
 		"A3_Structures_F_Households_House_Shop01",
 		"A3_Structures_F_EPA_Mil_Scrapyard",
 		"A3_Structures_F_EPC_Walls",
+		"cup_misc3_config",
+		"cup_misc_e_config",
 		"A3_Structures_F_Mil_Offices",
 		"A3_Structures_F_Mark_Training",
 		"CAMisc_ACR_Targets",
+		"cup_camisc_acr_targets",
 		"A3_Structures_F_Bootcamp_Ind_Cargo",
 		"CAMisc",
+		"cup_camisc",
 		"Test_House_01",
 		"A3_Structures_F_Naval_Piers",
 		"A3_Structures_F_Walls",
@@ -87,20 +104,24 @@ class Mission
 		"A3_Structures_F_Heli_Items_Electronics",
 		"A3_Structures_F_Heli_Furniture",
 		"CAStructures_E_Misc_Misc_Interier",
+		"cup_castructures_e_misc_misc_interier",
 		"A3_Structures_F_Items_Documents",
 		"A3_Structures_F_Items_Electronics",
 		"A3_Structures_F_Items_Stationery",
 		"A3_Structures_F_Civ_Lamps",
 		"CABuildings_Misc",
+		"cup_cabuildings_misc",
 		"CAStructures_Misc_Powerlines",
+		"cup_castructures_misc_powerlines",
 		"CAStructures_E_Misc_Misc_Lamp",
+		"cup_castructures_e_misc_misc_lamp",
 		"A3_Data_F",
 		"mm_buildings",
 		"mainsection",
 		"CABuildings",
-		"aia_buildings_config",
+		"cup_buildings_config",
 		"A3_Structures_F_EPA_Walls",
-		"aia_ca_config",
+		"cup_ca_config",
 		"A3_Structures_F_Ind_CarService",
 		"rds_a2_civilians",
 		"A3_Structures_F_Wrecks",
@@ -110,9 +131,11 @@ class Mission
 		"helipad_mapobject",
 		"xCam_Pipe",
 		"gate_c",
-		"castructures_castle",
+		"cup_castructures_castle",
 		"CAStructures_E_HouseA_A_Mosque_big",
+		"cup_castructures_e_housea_a_mosque_big",
 		"CAStructuresHouse_Church_03",
+		"cup_castructureshouse_church_03",
 		"sibranak"
 	};
 	randomSeed=13763187;
@@ -3476,7 +3499,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9970.0117,14.736934,10977.5};
+					position[]={9934.0742,15.24997,10969.098};
 					azimut=-6835.98;
 					id=152;
 					side="CIV";
@@ -3494,7 +3517,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=2128;
+		items=2132;
 		class Item0
 		{
 			position[]={12129.837,0,17612.104};
@@ -17020,23 +17043,23 @@ class Mission
 		};
 		class Item1349
 		{
-			position[]={2322.6113,10.231556,18866.814};
+			position[]={2305.7227,12.706591,18867.293};
 			id=1502;
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="black_market_1";
-			init="this enableSimulation false; this allowDamage false; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Acheter des positions <t color='#01DF3A'>illégales</t>"" ,public_fnc_shop_dynamicMarkers_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse && playerSide == civilian']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Marché illégal"",public_fnc_shop_virtual_open,""rebel"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Marché illégal équipements"",public_fnc_shop_arma_open,""black_market"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian']; this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Blanchiment d'(<t color='#01DF3A'>argent sale</t>)"" ,public_fnc_launder_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Acheter des positions <t color='#01DF3A'>illégales</t>"" ,public_fnc_shop_dynamicMarkers_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse && playerSide == civilian']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Marché illégal"",public_fnc_shop_virtual_open,""rebel"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Marché illégal équipements"",public_fnc_shop_arma_open,""black_market"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item1350
 		{
-			position[]={2327.5227,9.4787817,18866.709};
+			position[]={2309.5188,12.241582,18867.188};
 			id=1503;
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="black_market_2";
-			init="this enableSimulation false; this allowDamage false; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Acheter des positions <t color='#01DF3A'>illégales</t>"" ,public_fnc_shop_dynamicMarkers_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse && playerSide == civilian']; this addAction[""Marché illégal"",public_fnc_shop_virtual_open,""rebel"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""Marché illégal objet"",public_fnc_shop_arma_open,""black_market"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian']; this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Blanchiment d'(<t color='#01DF3A'>argent sale</t>)"" ,public_fnc_launder_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false; this allowDamage false; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Acheter des positions <t color='#01DF3A'>illégales</t>"" ,public_fnc_shop_dynamicMarkers_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse && playerSide == civilian']; this addAction[""Marché illégal"",public_fnc_shop_virtual_open,""rebel"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""Marché illégal objet"",public_fnc_shop_arma_open,""black_market"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item1351
 		{
@@ -25044,10 +25067,50 @@ class Mission
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 190;this setposATL [10120.830078,9299.337891,-7.62939e-006];this setVectorUp [0,0,1]";
 		};
+		class Item2128
+		{
+			position[]={2316.824,11.090607,18867.15};
+			id=2281;
+			side="EMPTY";
+			vehicle="xcam_InfoStand_V2_F";
+			skill=0.60000002;
+			text="dealer_alcool";
+			init="this enableSimulation false; this allowDamage false;this addAction[""Commerçant d'alcool"",public_fnc_shop_virtual_open,""alcool"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+		};
+		class Item2129
+		{
+			position[]={2313.2388,11.60297,18867.152};
+			id=2282;
+			side="EMPTY";
+			vehicle="xcam_InfoStand_V2_F";
+			skill=0.60000002;
+			text="launder";
+			init="this enableSimulation false; this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Blanchiment d'(<t color='#01DF3A'>argent sale</t>)"" ,public_fnc_launder_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+		};
+		class Item2130
+		{
+			position[]={10614.273,122.9685,9646.9189};
+			azimut=180.95403;
+			id=2283;
+			side="EMPTY";
+			vehicle="xcam_InfoStand_V2_F";
+			skill=0.60000002;
+			init="this addAction[""Concessionnaire pour les métiers civils"",public_fnc_shop_vehicles_open,[""CIV_vehicules_job"", [""CIV_vehicules_job_marker_1""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+		};
+		class Item2131
+		{
+			position[]={14142.348,39.941086,12528.552};
+			azimut=268.18289;
+			id=2284;
+			side="EMPTY";
+			vehicle="xcam_InfoStand_V2_F";
+			skill=0.60000002;
+			init="this addAction[""Concessionnaire pour les métiers civils"",public_fnc_shop_vehicles_open,[""CIV_vehicules_job"", [""CIV_vehicules_job_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+		};
 	};
 	class Markers
 	{
-		items=184;
+		items=188;
 		class Item0
 		{
 			position[]={10960.932,139.97812,9459.1475};
@@ -26660,6 +26723,39 @@ class Mission
 			position[]={12093.437,25.951591,17643.043};
 			name="prison_farm_1";
 			type="Empty";
+		};
+		class Item184
+		{
+			position[]={10620.332,122.9685,9643.4102};
+			name="CIV_vehicules_job_marker_1";
+			type="Empty";
+			angle=175.34781;
+		};
+		class Item185
+		{
+			position[]={10614.25,122.9685,9646.9111};
+			name="CIV_vehicules_job_icon_1";
+			type="Fett_industrial_bis";
+			colorName="ColorPink";
+			a=0.5;
+			b=0.5;
+		};
+		class Item186
+		{
+			position[]={14152.519,39.941086,12528.716};
+			name="CIV_vehicules_job_marker_2";
+			type="Empty";
+			angle=87.818962;
+		};
+		class Item187
+		{
+			position[]={14142.508,39.941086,12528.679};
+			name="CIV_vehicules_job_icon_1_1";
+			type="Fett_industrial_bis";
+			colorName="ColorPink";
+			a=0.5;
+			b=0.5;
+			angle=-0.78333569;
 		};
 	};
 };
