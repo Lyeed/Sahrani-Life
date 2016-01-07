@@ -222,7 +222,7 @@ class ALYSIA_SHOPS_CLOTHING
 			"EWK_Cig6",
 			"EWK_Cigar1"
 		};
-		vests[] = {};
+		vests[] ={};
 		backpacks[] =
 		{
 			"B_Carryall_mcamo",
@@ -705,9 +705,15 @@ class civ_clothing_sud
 		{
 			"U_C_Depanneur_01"
 		};
-		headgear[] = {};
+		headgear[] = 
+		{
+			"usm_helmet_safety"
+		};
 		goggles[] = {};
-		vests[] = {};
+		vests[] = 
+		{
+			"usm_vest_safety"
+		};
 		backpacks[] =
 		{
 			"B_Kitbag_Depanneur"
