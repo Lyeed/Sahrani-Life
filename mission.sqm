@@ -6994,7 +6994,7 @@ class Mission
 			side="EMPTY";
 			vehicle="HeliHEmpty";
 			skill=0.60000002;
-			init="hv = [0,0,0] nearestObject 476871; hv hideObject true; hv1 = [0,0,0] nearestObject 476880; hv1 hideObject true; hv2 = [0,0,0] nearestObject 476881; hv2 hideObject true; hv3 = [0,0,0] nearestObject 476879; hv3 hideObject true; hv4 = [0,0,0] nearestObject 480724; hv4 hideObject true; hv5 = [0,0,0] nearestObject 480722; hv5 hideObject true; hv6 = [0,0,0] nearestObject 480710; hv6 hideObject true;";
+			init="hv = [10252,9240,128] nearestObject 476871; hv hideObject true; hv1 = [10252,9240,128] nearestObject 476880; hv1 hideObject true; hv2 = [10252,9240,128] nearestObject 476881; hv2 hideObject true; hv3 = [10252,9240,128] nearestObject 476879; hv3 hideObject true; hv4 = [10252,9240,128] nearestObject 480724; hv4 hideObject true; hv5 = [10252,9240,128] nearestObject 480722; hv5 hideObject true; hv6 = [10252,9240,128] nearestObject 480710; hv6 hideObject true;";
 		};
 		class Item351
 		{
@@ -13085,7 +13085,7 @@ class Mission
 			vehicle="HeliHEmpty";
 			leader=1;
 			skill=0.60000002;
-			init="bu1 = [0,0,0] nearestObject 129015; bu1 hideObject true; bu2 = [0,0,0] nearestObject 129014; bu2 hideObject true;";
+			init="bu1 = [12098,17745,25.9516] nearestObject 129015; bu1 hideObject true; bu2 = [12098,17745,25.9516] nearestObject 129014; bu2 hideObject true;";
 		};
 		class Item959
 		{
@@ -13114,7 +13114,7 @@ class Mission
 			side="EMPTY";
 			vehicle="HeliHEmpty";
 			skill=0.60000002;
-			init="bat = [0,0,0] nearestObject 129081; bat hideObject true; bat1 = [0,0,0] nearestObject 129102; bat1 hideObject true; bat2 = [0,0,0] nearestObject 129101; bat2 hideObject true; bat3 = [0,0,0] nearestObject 129145; bat3 hideObject true; bat4 = [0,0,0] nearestObject 129144; bat4 hideObject true; bat5 = [0,0,0] nearestObject 129143; bat5 hideObject true; bat6 = [0,0,0] nearestObject 129134; bat6 hideObject true; bat7 = [0,0,0] nearestObject 129132; bat7 hideObject true; bat8 = [0,0,0] nearestObject 129344; bat8 hideObject true; bat9 = [0,0,0] nearestObject 129343; bat9 hideObject true; bat10 = [0,0,0] nearestObject 129342; bat10 hideObject true; bat11 = [0,0,0] nearestObject 129133; bat11 hideObject true; bat12 = [0,0,0] nearestObject 129135; bat12 hideObject true; bat13 = [0,0,0] nearestObject 129080; bat13 hideObject true; bat14 = [0,0,0] nearestObject 129334; bat14 hideObject true; bat15 = [0,0,0] nearestObject 129345; bat15 hideObject true;";
+			init="bat = [12098,17745,25.9516] nearestObject 129081; bat hideObject true; bat1 = [12098,17745,25.9516] nearestObject 129102; bat1 hideObject true; bat2 = [12098,17745,25.9516] nearestObject 129101; bat2 hideObject true; bat3 = [12098,17745,25.9516] nearestObject 129145; bat3 hideObject true; bat4 = [12098,17745,25.9516] nearestObject 129144; bat4 hideObject true; bat5 = [12098,17745,25.9516] nearestObject 129143; bat5 hideObject true; bat6 = [12098,17745,25.9516] nearestObject 129134; bat6 hideObject true; bat7 = [12098,17745,25.9516] nearestObject 129132; bat7 hideObject true; bat8 = [12098,17745,25.9516] nearestObject 129344; bat8 hideObject true; bat9 = [12098,17745,25.9516] nearestObject 129343; bat9 hideObject true; bat10 = [12098,17745,25.9516] nearestObject 129342; bat10 hideObject true; bat11 = [12098,17745,25.9516] nearestObject 129133; bat11 hideObject true; bat12 = [12098,17745,25.9516] nearestObject 129135; bat12 hideObject true; bat13 = [12098,17745,25.9516] nearestObject 129080; bat13 hideObject true; bat14 = [12098,17745,25.9516] nearestObject 129334; bat14 hideObject true; bat15 = [12098,17745,25.9516] nearestObject 129345; bat15 hideObject true;";
 		};
 		class Item962
 		{
@@ -13334,7 +13334,7 @@ class Mission
 			side="EMPTY";
 			vehicle="HeliHEmpty";
 			skill=0.60000002;
-			init="bateast = [0,0,0] nearestObject 100162; bateast hideObject true; bateast1 = [0,0,0] nearestObject 100161; bateast1 hideObject true; bateast2 = [0,0,0] nearestObject 100163; bateast2 hideObject true; bateast3 = [0,0,0] nearestObject 100163; bateast3 hideObject true; bateast4 = [0,0,0] nearestObject 100164; bateast4 hideObject true; bateast5 = [0,0,0] nearestObject 100286; bateast5 hideObject true; bateast6 = [0,0,0] nearestObject 100287; bateast6 hideObject true; bateast7 = [0,0,0] nearestObject 100284; bateast7 hideObject true; bateast8 = [0,0,0] nearestObject 100285; bateast8 hideObject true; bateast9 = [0,0,0] nearestObject 100306; bateast9 hideObject true;";
+			init="bateast = [8110,7817,177] nearestObject 100162; bateast hideObject true; bateast1 = [8110,7817,177] nearestObject 100161; bateast1 hideObject true; bateast2 = [8110,7817,177] nearestObject 100163; bateast2 hideObject true; bateast3 = [8110,7817,177] nearestObject 100163; bateast3 hideObject true; bateast4 = [8110,7817,177] nearestObject 100164; bateast4 hideObject true; bateast5 = [8110,7817,177] nearestObject 100286; bateast5 hideObject true; bateast6 = [8110,7817,177] nearestObject 100287; bateast6 hideObject true; bateast7 = [8110,7817,177] nearestObject 100284; bateast7 hideObject true; bateast8 = [8110,7817,177] nearestObject 100285; bateast8 hideObject true; bateast9 = [8110,7817,177] nearestObject 100306; bateast9 hideObject true;";
 		};
 		class Item986
 		{
@@ -14315,7 +14315,7 @@ class Mission
 			side="EMPTY";
 			vehicle="HeliHEmpty";
 			skill=0.60000002;
-			init="f1 = [0,0,0] nearestObject 333334; f1 hideObject true;";
+			init="f1 = [13996,12255,50] nearestObject 333334; f1 hideObject true;";
 		};
 		class Item1088
 		{
@@ -14829,7 +14829,7 @@ class Mission
 			vehicle="HeliHEmpty";
 			leader=1;
 			skill=0.60000002;
-			init="b1 = [0,0,0] nearestObject 196242; b1 hideObject true; b2 = [0,0,0] nearestObject 198653; b2 hideObject true; b3 = [0,0,0] nearestObject 198652; b3 hideObject true; b4 = [0,0,0] nearestObject 198691; b4 hideObject true; b5 = [0,0,0] nearestObject 198690; b5 hideObject true; b6 = [0,0,0] nearestObject 198666; b6 hideObject true; b7 = [0,0,0] nearestObject 198665; b7 hideObject true; b8 = [0,0,0] nearestObject 198725; b8 hideObject true;";
+			init="b1 = [11930,15330,153] nearestObject 196242; b1 hideObject true; b2 = [11930,15330,153] nearestObject 198653; b2 hideObject true; b3 = [11930,15330,153] nearestObject 198652; b3 hideObject true; b4 = [11930,15330,153] nearestObject 198691; b4 hideObject true; b5 = [11930,15330,153] nearestObject 198690; b5 hideObject true; b6 = [11930,15330,153] nearestObject 198666; b6 hideObject true; b7 = [11930,15330,153] nearestObject 198665; b7 hideObject true; b8 = [11930,15330,153] nearestObject 198725; b8 hideObject true;";
 		};
 		class Item1143
 		{
@@ -15429,7 +15429,7 @@ class Mission
 			side="EMPTY";
 			vehicle="HeliHEmpty";
 			skill=0.60000002;
-			init="e1 = [0,0,0] nearestObject 470389; e1 hideObject true; e2 = [0,0,0] nearestObject 465016; e2 hideObject true; e3 = [0,0,0] nearestObject 117209; e3 hideObject true; e4 = [0,0,0] nearestObject 595932; e4 hideObject true; e5 = [0,0,0] nearestObject 577341; e5 hideObject true; e6 = [0,0,0] nearestObject 584192; e6 hideObject true; e7 = [0,0,0] nearestObject 591481; e7 hideObject true; e8 = [0,0,0] nearestObject 483266; e8 hideObject true; e9 = [0,0,0] nearestObject 65563; e9 hideObject true; e10 = [0,0,0] nearestObject 387307; e10 hideObject true; e11 = [0,0,0] nearestObject 483273; e11 hideObject true; e12 = [0,0,0] nearestObject 117221; e12 hideObject true; e13 = [0,0,0] nearestObject 117220; e13 hideObject true; e14 = [0,0,0] nearestObject 584196; e14 hideObject true; e15 = [0,0,0] nearestObject 402591; e15 hideObject true; e16 = [0,0,0] nearestObject 220116; e16 hideObject true; e17 = [0,0,0] nearestObject 220115; e17 hideObject true; e18 = [0,0,0] nearestObject 220156; e18 hideObject true; e19 = [0,0,0] nearestObject 47874; e19 hideObject true; e20 = [0,0,0] nearestObject 539911; e20 hideObject true; ";
+			init="e1 = [8204,7863,177] nearestObject 470389; e1 hideObject true; e2 = [8204,7863,177] nearestObject 465016; e2 hideObject true; e3 = [8204,7863,177] nearestObject 117209; e3 hideObject true; e4 = [8204,7863,177] nearestObject 595932; e4 hideObject true; e5 = [8204,7863,177] nearestObject 577341; e5 hideObject true; e6 = [8204,7863,177] nearestObject 584192; e6 hideObject true; e7 = [8204,7863,177] nearestObject 591481; e7 hideObject true; e8 = [8204,7863,177] nearestObject 483266; e8 hideObject true; e9 = [8204,7863,177] nearestObject 65563; e9 hideObject true; e10 = [8204,7863,177] nearestObject 387307; e10 hideObject true; e11 = [8204,7863,177] nearestObject 483273; e11 hideObject true; e12 = [8204,7863,177] nearestObject 117221; e12 hideObject true; e13 = [8204,7863,177] nearestObject 117220; e13 hideObject true; e14 = [8204,7863,177] nearestObject 584196; e14 hideObject true; e15 = [8204,7863,177] nearestObject 402591; e15 hideObject true; e16 = [8204,7863,177] nearestObject 220116; e16 hideObject true; e17 = [8204,7863,177] nearestObject 220115; e17 hideObject true; e18 = [8204,7863,177] nearestObject 220156; e18 hideObject true; e19 = [8204,7863,177] nearestObject 47874; e19 hideObject true; e20 = [8204,7863,177] nearestObject 539911; e20 hideObject true; ";
 		};
 		class Item1205
 		{
@@ -16797,7 +16797,7 @@ class Mission
 			side="EMPTY";
 			vehicle="HeliHEmpty";
 			skill=0.60000002;
-			init="e0 = [0,0,0] nearestObject 128923; e0 hideObject true;                         e1 = [0,0,0] nearestObject 128927; e1 hideObject true;                         e2 = [0,0,0] nearestObject 128926; e2 hideObject true;                         e3 = [0,0,0] nearestObject 128928; e3 hideObject true;                         e4 = [0,0,0] nearestObject 128924; e4 hideObject true;                         e5 = [0,0,0] nearestObject 128945; e5 hideObject true;                         e6 = [0,0,0] nearestObject 129012; e6 hideObject true;                         e7 = [0,0,0] nearestObject 129016; e7 hideObject true;                         e8 = [0,0,0] nearestObject 129197; e8 hideObject true;                         e9 = [0,0,0] nearestObject 129332; e9 hideObject true;                         e10 = [0,0,0] nearestObject 129196; e10 hideObject true;                         e11 = [0,0,0] nearestObject 100134; e11 hideObject true;                         e15 = [0,0,0] nearestObject 89510; e15 hideObject true;                         e16 = [0,0,0] nearestObject 89511; e16 hideObject true;                         e17 = [0,0,0] nearestObject 89512; e17 hideObject true;                         e18 = [0,0,0] nearestObject 89520; e18 hideObject true;                         e19 = [0,0,0] nearestObject 89514; e19 hideObject true;                         e20 = [0,0,0] nearestObject 89515; e20 hideObject true;                         e21 = [0,0,0] nearestObject 89516; e21 hideObject true;                         e22 = [0,0,0] nearestObject 89589; e22 hideObject true;                    e23 = [0,0,0] nearestObject 89590; e23 hideObject true;                    e24 = [0,0,0] nearestObject 100194; e24 hideObject true;                    e25 = [0,0,0] nearestObject 100195; e25 hideObject true;                    e26 = [0,0,0] nearestObject 100198; e26 hideObject true;                    e27 = [0,0,0] nearestObject 100197; e27 hideObject true;                    e28 = [0,0,0] nearestObject 100199; e28 hideObject true;                    e29 = [0,0,0] nearestObject 100193; e29 hideObject true;                    e30 = [0,0,0] nearestObject 100192; e30 hideObject true;                    e31 = [0,0,0] nearestObject 89513; e31 hideObject true;                    ";
+			init="e0 = [8110,7817,177] nearestObject 128923; e0 hideObject true;                         e1 = [8110,7817,177] nearestObject 128927; e1 hideObject true;                         e2 = [8110,7817,177] nearestObject 128926; e2 hideObject true;                         e3 = [8110,7817,177] nearestObject 128928; e3 hideObject true;                         e4 = [8110,7817,177] nearestObject 128924; e4 hideObject true;                         e5 = [8110,7817,177] nearestObject 128945; e5 hideObject true;                         e6 = [8110,7817,177] nearestObject 129012; e6 hideObject true;                         e7 = [8110,7817,177] nearestObject 129016; e7 hideObject true;                         e8 = [8110,7817,177] nearestObject 129197; e8 hideObject true;                         e9 = [8110,7817,177] nearestObject 129332; e9 hideObject true;                         e10 = [8110,7817,177] nearestObject 129196; e10 hideObject true;                         e11 = [8110,7817,177] nearestObject 100134; e11 hideObject true;                         e15 = [8110,7817,177] nearestObject 89510; e15 hideObject true;                         e16 = [8110,7817,177] nearestObject 89511; e16 hideObject true;                         e17 = [8110,7817,177] nearestObject 89512; e17 hideObject true;                         e18 = [8110,7817,177] nearestObject 89520; e18 hideObject true;                         e19 = [8110,7817,177] nearestObject 89514; e19 hideObject true;                         e20 = [8110,7817,177] nearestObject 89515; e20 hideObject true;                         e21 = [8110,7817,177] nearestObject 89516; e21 hideObject true;                         e22 = [8110,7817,177] nearestObject 89589; e22 hideObject true;                    e23 = [8110,7817,177] nearestObject 89590; e23 hideObject true;                    e24 = [8110,7817,177] nearestObject 100194; e24 hideObject true;                    e25 = [8110,7817,177] nearestObject 100195; e25 hideObject true;                    e26 = [8110,7817,177] nearestObject 100198; e26 hideObject true;                    e27 = [8110,7817,177] nearestObject 100197; e27 hideObject true;                    e28 = [8110,7817,177] nearestObject 100199; e28 hideObject true;                    e29 = [8110,7817,177] nearestObject 100193; e29 hideObject true;                    e30 = [8110,7817,177] nearestObject 100192; e30 hideObject true;                    e31 = [8110,7817,177] nearestObject 89513; e31 hideObject true;                    ";
 		};
 		class Item1325
 		{
@@ -23439,7 +23439,7 @@ class Mission
 			side="EMPTY";
 			vehicle="HeliHEmpty";
 			skill=0.60000002;
-			init="bar = [0,0,0] nearestObject 128972; bar hideObject true; bar1 = [0,0,0] nearestObject 128973; bar1 hideObject true; bar2 = [0,0,0] nearestObject 128964; bar2 hideObject true;";
+			init="bar = [12098,17745,25.9516] nearestObject 128972; bar hideObject true; bar1 = [12098,17745,25.9516] nearestObject 128973; bar1 hideObject true; bar2 = [12098,17745,25.9516] nearestObject 128964; bar2 hideObject true;";
 		};
 		class Item1980
 		{
