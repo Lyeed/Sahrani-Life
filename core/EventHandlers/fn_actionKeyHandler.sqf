@@ -17,25 +17,22 @@ if ((vehicle player) isEqualTo player) then
 		{
 			if ((player distance (getMarkerPos _x)) < 20) then
 			{
-				if (isClass(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "destroy")) then
+				if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "destroy")) then
 				{
 					if ((player distance (getMarkerPos _x)) < 10) then
 					{
-						if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "destroy" >> "factions")) then
+						[_x] spawn public_fnc_dynamicMarkers_destroy;
+						breakOut "main";
+					};
+				} else {
+					if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "discover")) then
+					{
+						if ((markerAlpha _x) != 1) then
 						{
-							[_x] spawn public_fnc_dynamicMarkers_destroy;
+							[format["Vous avez découvert <t color='#74DF00'>%1</t>", (markerText _x)]] call public_fnc_info;
+							[_x] call public_fnc_dynamicMarkers_reveal;
 							breakOut "main";
 						};
-					};
-				};
-
-				if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "discover")) then
-				{
-					if ((markerAlpha _x) != 1) then
-					{
-						[format["Vous avez découvert <t color='#74DF00'>%1</t>", (markerText _x)]] call public_fnc_info;
-						[_x] call public_fnc_dynamicMarkers_reveal;
-						breakOut "main";
 					};
 				};
 			};
@@ -56,7 +53,7 @@ if ((vehicle player) isEqualTo player) then
 		};
 
 		{
-			if (player distance (getMarkerPos _x) < 40) exitWith
+			if (player distance (getMarkerPos _x) < 40) then
 			{
 				[_x] spawn public_fnc_plantSeed;
 				breakOut "main";
@@ -64,7 +61,7 @@ if ((vehicle player) isEqualTo player) then
 		} forEach (getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "farming_markers_plant"));
 
 		{
-			if (player distance (getMarkerPos _x) < 40) exitWith
+			if (player distance (getMarkerPos _x) < 40) then
 			{
 				[_x] spawn public_fnc_pickGather;
 				breakOut "main";
@@ -151,7 +148,7 @@ if ((vehicle player) isEqualTo player) then
 					} else {
 						{
 							_pos = cursorTarget modelToWorld (cursorTarget selectionPosition _x);
-							if ((player distance [_pos select 0, _pos select 1, (_pos select 2) - 1.5]) < 3) exitWith
+							if ((player distance [_pos select 0, _pos select 1, (_pos select 2) - 1.5]) < 3) then
 							{
 								[cursorTarget, _x] spawn public_fnc_robberyStart;
 								breakOut "main";

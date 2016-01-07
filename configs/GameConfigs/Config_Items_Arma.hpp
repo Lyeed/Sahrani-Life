@@ -1616,6 +1616,11 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
+	class RH_Deaglem
+	{
+		buy_price = 20;
+		buy_condition_WEST = 9;
+	};
 	class RH_deagle
 	{
 		buy_price = 20;
@@ -3246,7 +3251,6 @@ class ALYSIA_ITEMS_ARMA
 	class SMG_01_F
 	{
 		buy_price = 20;
-		buy_condition_WEST = 1;
 	};
 	class optic_Aco
 	{
@@ -3261,7 +3265,6 @@ class ALYSIA_ITEMS_ARMA
 	class hlc_rifle_aks74u
 	{
 		buy_price = 20;
-		buy_condition_WEST = 2;
 	};
 	class optic_MRCO
 	{
@@ -3276,12 +3279,10 @@ class ALYSIA_ITEMS_ARMA
 	class RH_fnp45
 	{
 		buy_price = 20;
-		buy_condition_WEST = 2;
 	};
 	class Skyline_HK_SL8
 	{
 		buy_price = 20;
-		buy_condition_WEST = 3;
 	};
 	class TRYK_HRPIGEAR_NV
 	{
@@ -3296,7 +3297,6 @@ class ALYSIA_ITEMS_ARMA
 	class RH_g19
 	{
 		buy_price = 20;
-		buy_condition_WEST = 3;
 	};
 	class hlc_rifle_ak47
 	{
@@ -3321,7 +3321,6 @@ class ALYSIA_ITEMS_ARMA
 	class hlc_rifle_RPK12
 	{
 		buy_price = 20;
-		buy_condition_WEST = 6;
 	};
 	class gac_JSDF_W_MG_MINIMI
 	{
@@ -3341,7 +3340,6 @@ class ALYSIA_ITEMS_ARMA
 	class hlc_rifle_rpk
 	{
 		buy_price = 20;
-		buy_condition_WEST = 8;
 	};
 	class optic_LRPS
 	{
@@ -3366,12 +3364,6 @@ class ALYSIA_ITEMS_ARMA
 	class hlc_rifle_akmgl
 	{
 		buy_price = 20;
-		buy_condition_WEST = 9;
-	};
-	class RH_Deaglem
-	{
-		buy_price = 20;
-		buy_condition_WEST = 9;
 	};
 	class SmokeShellWhite
 	{

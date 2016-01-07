@@ -13,7 +13,7 @@ _hide = [_this, 2, false, [false]] call BIS_fnc_param;
 if ((time - g_action_delay) < 2) exitWith {[0, "Veuillez ralentir dans vos actions"]};
 if (_msg isEqualTo "") exitWith {[0, "Vous ne pouvez pas envoyer de message vide"]};
 
-_bad = [_msg, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè "] call public_fnc_TextAllowed;
+_bad = [_msg, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè?!,.ù_ "] call public_fnc_TextAllowed;
 if (_bad != "") exitWith {[0, format["Vous utilisez un caractère interdit dans votre message (%1)", _bad]]};
 if (([_msg] call CBA_fnc_strLen) > 100) exitWith {[0, "Votre message ne doit pas dépasser 100 caractères"]};
 if (_to isEqualTo []) exitWith {[0, "Vous n'avez pas entré de destinataire"]};

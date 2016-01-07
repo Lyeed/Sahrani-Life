@@ -32,6 +32,17 @@
 	{16611.4,9454.08,0.00144005} \
 }
 
+#define G_RESPAWN_NORTH \
+{ \
+	{16610,9435.35,0.00143909}, \
+	{15344.2,9872.24,0.00129318}, \
+	{13426.5,11049.1,0.00146675}, \
+	{14754.3,11186.1,0.00154877}, \
+	{13102.4,11295,0.00143814}, \
+	{15375.6,13694.5,0.00171661}, \
+	{10815.6,12603.9,0.00143814} \
+}
+
 class ALYSIA_DYN_MARKERS
 {
 	//- DRUGS FIELDS
@@ -41,17 +52,13 @@ class ALYSIA_DYN_MARKERS
 		type        = "Fett_canteen";
 		color       = "ColorRed";
 		shape       = "ICON";
+		size        = 0.5;
 		shop_appear = 1;
 		shop_price  = 4000;
 		discover[]  = {"CIV"};
 		shown[]     = {};
-		class destroy
-		{
-			respawn[]      = G_RESPAWN_FIELD;
-			global_message = "La faction %1 a brulée un %2";
-			message        = "Vous êtes sur le point de bruler <t color='#74DF00'>%1</t><br/>";
-			factions[]     = {"WEST", "EAST"};
-		};
+		destroy[]   = {"WEST", "EAST"};
+		positions[] = G_RESPAWN_FIELD;
 	};
 	class cannabis_1
 	{
@@ -59,53 +66,41 @@ class ALYSIA_DYN_MARKERS
 		type        = "Fett_canteen";
 		color       = "ColorRed";
 		shape       = "ICON";
+		size        = 0.5;
 		shop_appear = 1;
 		shop_price  = 1500;
 		discover[]  = {"CIV"};
 		shown[]     = {};
-		class destroy
-		{
-			respawn[]      = G_RESPAWN_FIELD;
-			global_message = "La faction %1 a brulée un %2";
-			message        = "Vous êtes sur le point de bruler <t color='#74DF00'>%1</t><br/>";
-			factions[]     = {"WEST", "EAST"};
-		};
+		destroy[]   = {"WEST", "EAST"};
+		positions[] = G_RESPAWN_FIELD;
 	};
 	class meth_1
 	{
-		text         = "Champ d'ephedra";
-		type         = "Fett_canteen";
-		color        = "ColorRed";
-		shape        = "ICON";
-		shop_appear  = 1;
-		shop_price   = 15000;
+		text        = "Champ d'ephedra";
+		type        = "Fett_canteen";
+		color       = "ColorRed";
+		shape       = "ICON";
+		size        = 0.5;
+		shop_appear = 1;
+		shop_price  = 15000;
 		discover[]  = {"CIV"};
 		shown[]     = {};
-		class destroy
-		{
-			respawn[]      = G_RESPAWN_FIELD;
-			global_message = "La faction %1 a brulée un %2";
-			message        = "Vous êtes sur le point de bruler <t color='#74DF00'>%1</t><br/>";
-			factions[]     = {"WEST", "EAST"};
-		};
+		destroy[]   = {"WEST", "EAST"};
+		positions[] = G_RESPAWN_FIELD;
 	};
 	class heroin_1
 	{
-		text         = "Champ de pavot";
-		type         = "Fett_canteen";
-		color        = "ColorRed";
-		shape        = "ICON";
-		shop_appear  = 1;
-		shop_price   = 8000;
+		text        = "Champ de pavot";
+		type        = "Fett_canteen";
+		color       = "ColorRed";
+		shape       = "ICON";
+		size        = 0.5;
+		shop_appear = 1;
+		shop_price  = 8000;
 		discover[]  = {"CIV", "GUER"};
 		shown[]     = {};
-		class destroy
-		{
-			respawn[]      = G_RESPAWN_FIELD;
-			global_message = "La faction %1 a brulée un %2";
-			message        = "Vous êtes sur le point de bruler <t color='#74DF00'>%1</t><br/>";
-			factions[]     = {"WEST", "EAST"};
-		};
+		destroy[]   = {"WEST", "EAST"};
+		positions[] = G_RESPAWN_FIELD;
 	};
 
 	//- BLACKMARKETS
@@ -115,18 +110,14 @@ class ALYSIA_DYN_MARKERS
 		type        = "Fett_campingsite";
 		color       = "ColorRed";
 		shape       = "ICON";
+		size        = 0.5;
 		shop_appear = 1;
 		shop_price  = 1000;
 		linked      = "black_market_1";
 		discover[]  = {"CIV"};
 		shown[]     = {};
-		class destroy
-		{
-			respawn[]      = G_RESPAWN_BLACKMARKET;
-			global_message = "La faction %1 a démantelé un %2";
-			message        = "Vous êtes sur le point de démanteler un <t color='#74DF00'>%1</t><br/>";
-			factions[]     = {"WEST", "EAST"};
-		};
+		destroy[]   = {"WEST", "EAST"};
+		positions[] = G_RESPAWN_BLACKMARKET;
 	};
 	class black_market_2_marker
 	{
@@ -134,18 +125,14 @@ class ALYSIA_DYN_MARKERS
 		type        = "Fett_campingsite";
 		color       = "ColorRed";
 		shape       = "ICON";
+		size        = 0.5;
 		shop_appear = 1;
 		shop_price  = 1000;
 		linked      = "black_market_2";
 		discover[]  = {"CIV"};
 		shown[]     = {};
-		class destroy
-		{
-			respawn[]      = G_RESPAWN_BLACKMARKET;
-			global_message = "La faction %1 a démantelé un %2";
-			message        = "Vous êtes sur le point de démanteler un <t color='#74DF00'>%1</t><br/>";
-			factions[]     = {"WEST", "EAST"};
-		};
+		destroy[]   = {"WEST", "EAST"};
+		positions[] = G_RESPAWN_BLACKMARKET;
 	};
 
 	//- ALCOOL
@@ -155,18 +142,31 @@ class ALYSIA_DYN_MARKERS
 		type        = "Fett_hardpoint";
 		color       = "ColorRed";
 		shape       = "ICON";
+		size        = 0.5;
 		shop_appear = 1;
 		shop_price  = 1000;
 		linked      = "dealer_alcool";
 		discover[]  = {"CIV"};
 		shown[]     = {};
-		class destroy
-		{
-			respawn[]      = G_RESPAWN_BLACKMARKET;// CHANGER POUR DES POSITIONS AU NOOOOOOOOOOOOOORD
-			global_message = "La faction %1 a arrêté un %2";
-			message        = "Vous êtes sur le point d'arrêter un <t color='#74DF00'>%1</t><br/>";
-			factions[]     = {"WEST", "EAST"};
-		};
+		destroy[]   = {"WEST", "EAST"};
+		positions[] = G_RESPAWN_NORTH;
+	};
+
+	//- LAUNDER
+	class launder_marker
+	{
+		text        = "Blanchiment d'argent";
+		type        = "Fett_hardpoint";
+		color       = "ColorRed";
+		shape       = "ICON";
+		size        = 0.5;
+		shop_appear = 1;
+		shop_price  = 1000;
+		linked      = "launder";
+		discover[]  = {"CIV"};
+		shown[]     = {};
+		destroy[]   = {"WEST", "EAST"};
+		positions[] = G_RESPAWN_BLACKMARKET;
 	};
 };
 
