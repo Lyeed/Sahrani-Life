@@ -8,7 +8,7 @@
 private["_display", "_list"];
 disableSerialization;
 
-_display = uiNamespace getVariable["tablet", displayNull];
+_display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
 
 _list = _display displayCtrl 8132;
@@ -19,9 +19,9 @@ lbClear _list;
 	_index = _list lbAdd format
 	[
 		"%1 %2",
-		getText(missionConfigFile >> "ALYSIA_FORFAITS" >> _forfait >> "name"),
+		getText(_x >> "name"),
 		if (_forfait isEqualTo g_phone_forfait) then {"(le votre)"} else {""}
 	];
 	_list lbSetData [_index, _forfait];
-} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_FORFAITS"));
+} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS"));
 _list lbSetCurSel 0;

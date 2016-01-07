@@ -17,12 +17,12 @@ if (_name isEqualTo "") exitWith {
 	["Vous n'avez pas entré de nom pour votre contact"] call public_fnc_error;
 };
 
-_bad = [_name, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789- "] call public_fnc_TextAllowed;
+_bad = [_name, getText(missionConfigFile >> "ALYSIA_PHONE" >> "CONTACTS" >> "characters_allowed")] call public_fnc_TextAllowed;
 if (_bad != "") exitWith {
 	[format["Vous utilisez un caractère interdit dans le nom de votre contact à ajouter (%1)", _bad]] call public_fnc_error;
 };
-if (([_name] call CBA_fnc_strLen) > 25) exitWith {
-	["Le nom entré pour votre contact ne doit pas dépasser 25 caractères"] call public_fnc_error;
+if (([_name] call CBA_fnc_strLen) > getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "CONTACTS" >> "length_max")) exitWith {
+	[format["Le nom entré pour votre contact ne doit pas dépasser %1 caractères", getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "CONTACTS" >> "length_max")]] call public_fnc_error;
 };
 
 if (!([_number] call public_fnc_isNumber)) exitWith {
@@ -32,7 +32,7 @@ if (!(count(toArray(_number)) isEqualTo 6)) exitWith {
 	["Un numéro de téléphone doit être composé de six chiffres"] call public_fnc_error;
 };
 
-if ((count g_phone_contacts) >= getNumber(missionConfigFile >> "ALYSIA_FORFAITS" >> g_phone_forfait >> "contacts_max")) exitWith {
+if ((count g_phone_contacts) >= getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> g_phone_forfait >> "contacts_max")) exitWith {
 	["Vous avez déjà atteint votre quota maximum de contacts"] call public_fnc_error;
 };
 

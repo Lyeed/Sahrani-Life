@@ -6,14 +6,16 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private["_display", "_list"];
-disableSerialization;
 
+disableSerialization;
 _display = findDisplay 7500;
+if (isNull _display) exitWith {};
+
 (_display displayCtrl 8319) ctrlSetStructuredText parseText format
 [
 	"<t align='left'>Vos messages</t><t align='right'>%1/%2</t>",
 	count g_phone_messages,
-	getNumber(missionConfigFile >> "ALYSIA_FORFAITS" >> g_phone_forfait >> "sms_max")
+	getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> g_phone_forfait >> "sms_max")
 ];
 
 _list = _display displayCtrl 8320;

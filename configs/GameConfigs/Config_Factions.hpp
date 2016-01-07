@@ -12,6 +12,7 @@ class ALYSIA_FACTIONS
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
 		phone_send_global_message = 1;
+		phone_send_to_faction_price = 0;
 
 		/*** GEAR MISSION ***/
 		mission_vehicle = "Fett_truck_milice";
@@ -174,6 +175,7 @@ class ALYSIA_FACTIONS
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
 		phone_send_global_message = 1;
+		phone_send_to_faction_price = 0;
 
 		/*** GEAR MISSION ***/
 		mission_vehicle = "Fett_truck_army";
@@ -310,6 +312,7 @@ class ALYSIA_FACTIONS
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
 		phone_send_global_message = 0;
+		phone_send_to_faction_price = 0;
 
 		/*** GEAR MISSION ***/
 		mission_vehicle = "";
@@ -458,6 +461,7 @@ class ALYSIA_FACTIONS
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
 		phone_send_global_message = 0;
+		phone_send_to_faction_price = 0;
 
 		/*** GEAR MISSION ***/
 		mission_vehicle = "";

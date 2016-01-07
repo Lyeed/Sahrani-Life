@@ -17,7 +17,7 @@ if ((time - g_action_delay) < 2) exitWith {
 _forfait = lbData[8132, _sel];
 if (_forfait isEqualTo g_phone_forfait) exitWith {};
 
-_price = getNumber(missionConfigFile >> "ALYSIA_FORFAITS" >> _forfait >> "bill");
+_price = getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> _forfait >> "bill");
 if (g_atm < _price) exitWith {};
 
 g_action_delay = time;

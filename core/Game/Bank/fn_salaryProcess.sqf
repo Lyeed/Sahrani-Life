@@ -16,7 +16,7 @@ if (player getVariable ["arrested", false]) then {
 
 if (!(g_phone_forfait in ["", "lite", "none"])) then
 {
-	_price = getNumber(missionConfigFile >> "ALYSIA_FORFAITS" >> g_phone_forfait >> "bill");
+	_price = getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> g_phone_forfait >> "bill");
 	if (_price < g_atm) then
 	{
 		[false, _price, "Forfait téléphonique"] call public_fnc_handleATM;

@@ -15,7 +15,7 @@ if (((player getVariable ["number", ""]) isEqualTo "") || (g_phone_forfait in ["
 	if (isNull _display) exitWith {};
 
 	(_display displayCtrl 8500) ctrlSetStructuredText parseText format["<t font='PuristaBold'><t size='1.2'>Numéro</t> <t size='2.3' color='#190707'>%1</t></t>", (player getVariable ["number", ""])];
-	(_display displayCtrl 8501) ctrlSetStructuredText parseText format["<t font='PuristaBold' align='right'><t size='1.2'>Forfait</t> <t size='2' color='#190707'>%1</t></t>", getText(missionConfigFile >> "ALYSIA_FORFAITS" >> g_phone_forfait >> "name")];
+	(_display displayCtrl 8501) ctrlSetStructuredText parseText format["<t font='PuristaBold' align='right'><t size='1.2'>Forfait</t> <t size='2' color='#190707'>%1</t></t>", getText(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> g_phone_forfait >> "name")];
 
 	if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "phone_send_global_message") isEqualTo 1) then
 	{

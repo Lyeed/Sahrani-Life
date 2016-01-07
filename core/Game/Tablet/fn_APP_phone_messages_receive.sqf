@@ -14,7 +14,7 @@ if (!g_connected) exitWith {};
 if ((player getVariable ["number", ""]) isEqualTo "") exitWith {};
 if (_from in g_phone_blacklist) exitWith {};
 
-if ((count g_phone_messages) >= getNumber(missionConfigFile >> "ALYSIA_FORFAITS" >> g_phone_forfait >> "sms_max")) then {
+if ((count g_phone_messages) >= getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> g_phone_forfait >> "sms_max")) then {
 	g_phone_messages deleteAt 0;
 };
 

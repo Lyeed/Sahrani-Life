@@ -11,7 +11,8 @@ disableSerialization;
 _display = uiNamespace getVariable["tablet", displayNull];
 if (isNull _display) exitWith {};
 
-_max = getNumber(missionConfigFile >> "ALYSIA_FORFAITS" >> g_phone_forfait >> "contacts_max");	
+_max = getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> g_phone_forfait >> "contacts_max");	
+
 (_display displayCtrl 8373) ctrlSetStructuredText parseText format
 [
 	"<t align='center'>Contacts</t><t align='right'>%1/%2</t>",
