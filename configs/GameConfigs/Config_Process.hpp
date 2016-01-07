@@ -21,7 +21,7 @@ class ALYSIA_PROCESS
 		license = "wood";
 		sound = "smelting";
 		requiere_target = 1;
-		require[] = {{"woodp", 10}};
+		require[] = {{"woodp", 5}};
 		receive[] = {{"furniture", 1}};
 		time_per_item = 2;
 		time_default = 4;
