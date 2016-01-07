@@ -15,7 +15,7 @@ if (_msg isEqualTo "") exitWith {[0, "Vous ne pouvez pas envoyer de message vide
 
 _bad = [_msg, getText(missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "characters")] call public_fnc_TextAllowed;
 if (_bad != "") exitWith {[0, format["Vous utilisez un caractère interdit dans votre message (%1)", _bad]]};
-if (([_msg] call CBA_fnc_strLen) > getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "length_max")) exitWith {[0, format["Votre message ne doit pas dépasser %1 caractères", getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "length_max")]]};
+if (([_msg] call CBA_fnc_strLen) > getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "characters_max")) exitWith {[0, format["Votre message ne doit pas dépasser %1 caractères", getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "characters_max")]]};
 if (_to isEqualTo []) exitWith {[0, "Vous n'avez pas entré de destinataire"]};
 if ((count _to) > getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "send_max")) exitWith {[0, format["Vous ne pouvez pas envoyer de message à plus de %1 numéros", getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "send_max")]]};
 

@@ -21,8 +21,8 @@ _bad = [_name, getText(missionConfigFile >> "ALYSIA_PHONE" >> "CONTACTS" >> "cha
 if (_bad != "") exitWith {
 	[format["Vous utilisez un caractère interdit dans le nom de votre contact à ajouter (%1)", _bad]] call public_fnc_error;
 };
-if (([_name] call CBA_fnc_strLen) > getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "CONTACTS" >> "length_max")) exitWith {
-	[format["Le nom entré pour votre contact ne doit pas dépasser %1 caractères", getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "CONTACTS" >> "length_max")]] call public_fnc_error;
+if (([_name] call CBA_fnc_strLen) > getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "CONTACTS" >> "characters_max")) exitWith {
+	[format["Le nom entré pour votre contact ne doit pas dépasser %1 caractères", getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "CONTACTS" >> "characters_max")]] call public_fnc_error;
 };
 
 if (!([_number] call public_fnc_isNumber)) exitWith {

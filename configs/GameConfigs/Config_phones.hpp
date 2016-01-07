@@ -3,13 +3,13 @@ class ALYSIA_PHONE
 	class CONTACTS
 	{
 		characters_allowed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè?!,.ù_ ";
-		length_max = 25;
+		characters_max = 25;
 	};
 
 	class SMS
 	{
 		characters_allowed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè?!,.ù_ ";
-		length_max = 100;
+		characters_max = 100;
 		send_max = 5;
 	};
 
