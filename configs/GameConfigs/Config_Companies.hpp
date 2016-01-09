@@ -68,7 +68,7 @@ Land_Ind_vysypka --
 			Role     : fourriere
 			
 			
-		Land_tovarna2
+Land_tovarna2
 Land_hangar_2
 Land_A_Office01_ep1 --
 Land_a_stationhouse
