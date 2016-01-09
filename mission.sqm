@@ -3517,7 +3517,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=2132;
+		items=2133;
 		class Item0
 		{
 			position[]={12129.837,0,17612.104};
@@ -25107,10 +25107,20 @@ class Mission
 			skill=0.60000002;
 			init="this addAction[""Concessionnaire pour les métiers civils"",public_fnc_shop_vehicles_open,[""CIV_vehicules_job"", [""CIV_vehicules_job_marker_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
+		class Item2132
+		{
+			position[]={12587.629,17.734343,7086.7358};
+			azimut=92.684769;
+			id=2285;
+			side="EMPTY";
+			vehicle="xcam_InfoStand_V2_F";
+			skill=0.60000002;
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""Commerçant de platine"",public_fnc_shop_virtual_open,""platine"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+		};
 	};
 	class Markers
 	{
-		items=188;
+		items=189;
 		class Item0
 		{
 			position[]={10960.932,139.97812,9459.1475};
@@ -26756,6 +26766,16 @@ class Mission
 			a=0.5;
 			b=0.5;
 			angle=-0.78333569;
+		};
+		class Item188
+		{
+			position[]={12587.427,17.740828,7086.7583};
+			name="Commerçant de platine";
+			text="Commerçant de platine";
+			type="Fett_hardpoint";
+			colorName="ColorBrown";
+			a=0.5;
+			b=0.5;
 		};
 	};
 };
