@@ -1203,7 +1203,7 @@ class ALYSIA_VEHICLES
 		side = "CIV";
 		insurance = 1;
 		license = "driver";
-		fuel = "SP98";
+		fuel = "Diesel";
 		rank = 0;
 		colors[] = 
 		{
@@ -4023,7 +4023,6 @@ class ALYSIA_VEHICLES
 		realname = "Camion Superliner";
 	};
 
-
 	class Jonzie_XB
 	{
 		buyPrice = 9000;
@@ -4057,6 +4056,19 @@ class ALYSIA_VEHICLES
 	class madsa_mtz_F
 	{
 		realname = "Tracteur MTZ";
+		buyPrice = 10;
+		inventory = 100;
+		side = "CIV";
+		insurance = 1;
+		license = "";
+		fuel = "Diesel";
+		rank = 0;
+		color[] = {};
+	};
+
+	class Skyline_VW_TouaregR50_01_F
+	{
+		realname = "VW Touareg";
 		buyPrice = 10;
 		inventory = 100;
 		side = "CIV";

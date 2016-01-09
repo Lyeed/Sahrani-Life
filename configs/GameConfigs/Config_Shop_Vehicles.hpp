@@ -211,6 +211,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_a3_ds3_civ",
 			"shounka_a3_ds4_civ",
 			"shounka_nemo",
+			"Skyline_VW_TouaregR50_01_F",
 			"ADM_GMC_Vandura",
 			"shounka_a3_spr_civ",
 			"Mrshounka_207_civ",
