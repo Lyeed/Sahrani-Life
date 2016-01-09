@@ -22,7 +22,7 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 	class Skyline_Corn
 	{
 		seed = "corn_seed";
-		receive[] = {{"corn", 4, 1}};
+		receive[] = {{"corn", 6, 1}};
 		distance = 2.3;
 		growingTime = 120;
 		groundLevel = 0;
@@ -33,7 +33,7 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 	class Skyline_Beans
 	{
 		seed = "bean_seed";
-		receive[] = {{"bean", 4, 1}};
+		receive[] = {{"bean", 6, 1}};
 		distance = 2.3;
 		growingTime = 120;
 		groundLevel = 0;
@@ -43,7 +43,7 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 
 	class Skyline_Cotton
 	{
-		receive[] = {{"cotton", 4, 1}};
+		receive[] = {{"cotton", 6, 1}};
 		seed = "cotton_seed";
 		distance = 3;
 		growingTime = 120;
@@ -54,7 +54,7 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 
 	class Skyline_Wheat
 	{
-		receive[] = {{"wheat", 4, 1}};
+		receive[] = {{"wheat", 6, 1}};
 		seed = "wheatseed";
 		distance = 3;
 		growingTime = 120;
@@ -65,7 +65,7 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 
 	class Oleander2
 	{
-		receive[] = {{"heroin", 1, 1}};
+		receive[] = {{"heroin", 2, 1}};
 		seed = "heroin_seed";
 		distance = 3;
 		growingTime = 360;
@@ -87,7 +87,7 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 
 	class Reeds
 	{
-		receive[] = {{"meth", 1, 1}};
+		receive[] = {{"meth", 2, 1}};
 		seed = "meth_seed";
 		distance = 3;
 		growingTime = 420;
@@ -98,7 +98,7 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 
 	class Ficus_1
 	{
-		receive[] = {{"cocaine_seed", 1, 1}};
+		receive[] = {{"cocaine", 2, 1}};
 		seed = "cocaine_seed";
 		distance = 7;
 		growingTime = 360;

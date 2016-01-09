@@ -19,7 +19,7 @@ class ALYSIA_ITEMS_ARMA
 	*/
 	class SkylineItems_Couteau
 	{
-		buy_price = 20;
+		buy_price = 350;
 	};
 	class Skyline_Hache_01
 	{
@@ -35,11 +35,11 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class 6Rnd_GreenSignal_F
 	{
-		buy_price = 20;
+		buy_price = 10;
 	};
 	class 6Rnd_RedSignal_F
 	{
-		buy_price = 20;
+		buy_price = 10;
 	};
 	class agent_uniform_new
 	{
@@ -227,19 +227,19 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Chemlight_blue
 	{
-		buy_price = 20;
+		buy_price = 10;
 	};
 	class Chemlight_green
 	{
-		buy_price = 20;
+		buy_price = 10;
 	};
 	class Chemlight_red
 	{
-		buy_price = 20;
+		buy_price = 10;
 	};
 	class Chemlight_yellow
 	{
-		buy_price = 20;
+		buy_price = 10;
 	};
 	class combi_plonge_civ1
 	{
@@ -268,21 +268,13 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class SAMU_helmet
 	{
-		buy_price = 20;
+		buy_price = 80;
 		buy_condition_GUER = 3;
 	};
 	class SAMU_combi
 	{
-		buy_price = 20;
+		buy_price = 100;
 		buy_condition_GUER = 3;
-	};
-	class DDOPP_1Rnd_X26
-	{
-		buy_price = 20;
-	};
-	class DDOPP_X26
-	{
-		buy_price = 20;
 	};
 	class digital_uniform
 	{
@@ -334,11 +326,11 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class FLAY_HangGlider_Bag
 	{
-		buy_price = 20;
+		buy_price = 2000;
 	};
 	class FLAY_HangGliderBlack_Bag
 	{
-		buy_price = 20;
+		buy_price = 2000;
 	};
 	class flora_uniform
 	{
