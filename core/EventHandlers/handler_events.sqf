@@ -13,12 +13,6 @@ player addEventHandler["InventoryOpened", "[_this select 1] call EVENT_fnc_onPla
 player addEventHandler["Killed", "call EVENT_fnc_onPlayerKilled"];
 player addEventHandler["Respawn", "call EVENT_fnc_onPlayerRespawn"];
 
-"gServer_fog" addPublicVariableEventHandler {60 setfog (_this select 1)};
-"gServer_rain" addPublicVariableEventHandler {60 setRain (_this select 1)};
-"gServer_waves" addPublicVariableEventHandler {60 setWaves (_this select 1)};
-"gServer_storm" addPublicVariableEventHandler {0 setOvercast (_this select 1)};
-"gServer_wind" addPublicVariableEventHandler {setWind (_this select 1)};
-
 /* TASK_FORCE_RADIO */
 ["actionRadio", "OnTangent", {call EVENT_fnc_onPlayerSpeakRadio}, player] call TFAR_fnc_addEventHandler;
 ["actionSpeak", "OnSpeak", {(_this select 1) call EVENT_fnc_onPlayerSpeak}, player] call TFAR_fnc_addEventHandler;

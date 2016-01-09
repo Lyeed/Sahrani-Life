@@ -1,5 +1,10 @@
 class ALYSIA_NATIONALITIES
 {
+	class Sibranak
+	{
+		name = "Sibranak";
+		flag = "lyeed_IMG\data\faction\CIV_logo.paa";
+	};
 	class Afghanistan
 	{
 		name = "Afghanistan";
@@ -590,14 +595,9 @@ class ALYSIA_NATIONALITIES
 		name = "Nouvelle-Zélande";
 		flag = "world_markers\images\NewZealand.paa";
 	};
-	class Kyrgyzstan
-	{
-		name = "Oman";
-		flag = "world_markers\images\Kyrgyzstan.paa";
-	};
 	class Oman
 	{
-		name = "Ouganda";
+		name = "Oman";
 		flag = "world_markers\images\Oman.paa";
 	};
 	class Pakistan
@@ -620,15 +620,15 @@ class ALYSIA_NATIONALITIES
 		name = "Pays-Bas";
 		flag = "world_markers\images\Netherlands.paa";
 	};
-	class Kyrgyzstan
-	{
-		name = "Pérou";
-		flag = "world_markers\images\Kyrgyzstan.paa";
-	};
 	class Peru
 	{
-		name = "Philippines";
+		name = "Pérou";
 		flag = "world_markers\images\Peru.paa";
+	};
+	class Philippines
+	{
+		name = "Philippines";
+		flag = "world_markers\images\Philippines.paa";
 	};
 	class Poland
 	{

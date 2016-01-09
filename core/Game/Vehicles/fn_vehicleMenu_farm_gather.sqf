@@ -5,46 +5,47 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_trunk", "_weight_actual", "_weight_max"];
+private["_trunk", "_weight_actual", "_weight_max", "_vehicle"];
+_vehicle = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if (isNull g_interaction_target) exitWith {};
+if (isNull _vehicle) exitWith {};
 
-if (g_interaction_target getVariable ["farm_gather", false]) exitWith
+if (_vehicle getVariable ["farm_gather", false]) exitWith
 {
-	g_interaction_target setVariable ["farm_gather", false];
-	["Récolte annulée"] call public_fnc_error;
+	_vehicle setVariable ["farm_gather", false];
+	["Récolte terminé"] call public_fnc_error;
 };
 
-if ((g_interaction_target getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
+if ((_vehicle getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
 	["Vous ne pouvez pas commencer la récolte alors que le coffre est en cours d'utilisation"] call public_fnc_error;
 };
-if (!(isEngineOn g_interaction_target)) exitWith {
+if (!(isEngineOn _vehicle)) exitWith {
 	["Vous devez avoir le moteur démarré pour débuter la procédure de récolte"] call public_fnc_error;
 };
-if ((driver g_interaction_target) != player) exitWith {
+if ((driver _vehicle) != player) exitWith {
 	["Seul le conducteur peut débuter la procédure de récolte"] call public_fnc_error;
 };
 
 closeDialog 0;
-_trunk = g_interaction_target getVariable ["Trunk", []];
+_trunk = _vehicle getVariable ["Trunk", []];
 _weight_actual = [_trunk] call public_fnc_weightGenerate;
-_weight_max = [typeOf(g_interaction_target)] call public_fnc_getVehVirtual;
+_weight_max = [typeOf(_vehicle)] call public_fnc_getVehVirtual;
 
-g_interaction_target setVariable ["farm_gather", true];
-g_interaction_target setVariable ["trunk_in_use_ID", "FARMING", true];
+_vehicle setVariable ["farm_gather", true];
+_vehicle setVariable ["trunk_in_use_ID", "FARMING", true];
 
 ["Début de la procédure de récolte dans deux secondes..."] call public_fnc_info;
 sleep 2;
 
-while {(g_interaction_target getVariable ["farm_gather", false])} do
+while {(_vehicle getVariable ["farm_gather", false])} do
 {
 	scopeName "loop";
 
-	if ((driver g_interaction_target) != player) exitWith {
-		["Récolte annulée<br/>Vous devez rester à la place de conducteur"] call public_fnc_error;
+	if ((driver _vehicle) != player) exitWith {
+		["Récolte terminé<br/>Vous devez rester à la place de conducteur"] call public_fnc_error;
 	};
-	if (!(isEngineOn g_interaction_target)) exitWith {
-		["Récolte annulée<br/>Le moteur doit rester allumé"] call public_fnc_error;
+	if (!(isEngineOn _vehicle)) exitWith {
+		["Récolte terminé<br/>Le moteur doit rester allumé"] call public_fnc_error;
 	};
 
 	_plant = (nearestObjects [player, (call g_plants), 2]) select 0;
@@ -57,14 +58,18 @@ while {(g_interaction_target getVariable ["farm_gather", false])} do
 				_item = _x select 0;
 
 				if ((_x select 2) isEqualTo 1) then {
-					_amount = [_item, round(random(_x select 1)), _weight_actual, _weight_max] call public_fnc_calWeightDiff;
+					_rand = round(random(_x select 1));
+					if (_rand < 1) then {
+						_rand = 1;
+					};
+					_amount = [_item, _rand, _weight_actual, _weight_max] call public_fnc_calWeightDiff;
 				} else {
 					_amount = [_item, (_x select 1), _weight_actual, _weight_max] call public_fnc_calWeightDiff;
 				};
 
 				if (_amount isEqualTo 0) then
 				{
-					["L'inventaire du véhicule est plein"] call public_fnc_error;
+					["Récolte terminé<br/>L'inventaire du véhicule est plein"] call public_fnc_error;
 					breakOut "loop";
 				} else {
 					_trunk = [true, _trunk, _item, _amount] call public_fnc_handleTrunk;
@@ -78,8 +83,8 @@ while {(g_interaction_target getVariable ["farm_gather", false])} do
 	sleep 0.5;
 };
 
-if (!(_trunk isEqualTo (g_interaction_target getVariable ["Trunk", []]))) then {
-	g_interaction_target setVariable ["Trunk", _trunk, true];	
+if (!(_trunk isEqualTo (_vehicle getVariable ["Trunk", []]))) then {
+	_vehicle setVariable ["Trunk", _trunk, true];	
 };
-g_interaction_target setVariable ["trunk_in_use_ID", "", true];
-g_interaction_target setVariable ["farm_gather", false];
+_vehicle setVariable ["trunk_in_use_ID", "", true];
+_vehicle setVariable ["farm_gather", false];

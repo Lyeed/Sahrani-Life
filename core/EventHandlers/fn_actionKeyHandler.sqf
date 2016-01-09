@@ -114,7 +114,7 @@ if ((vehicle player) isEqualTo player) then
 
 				if (typeOf(cursorTarget) isEqualTo "Turtle_F") then
 				{
-					[cursorTarget] spawn public_fnc_catchTurtle;
+					[cursorTarget] call public_fnc_catchTurtle;
 					breakOut "main";
 				};
 

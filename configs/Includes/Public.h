@@ -225,6 +225,7 @@ class Public
 		class vehicleMenu_siphon {};
 		class vehicleMenu_farm_gather {};
 		class vehicleMenu_farm_plant {};
+		class vehicleMenu_farm_fish {};
 	};
 
 	class FuelStations
@@ -293,7 +294,6 @@ class Public
 	{
 		file = "core\Game\Gather";
 		class catchTurtle {};
-		class dropFishingNet {};
 		class pickGather {};
 		class plantHarvest {};
 		class plantSeed {};

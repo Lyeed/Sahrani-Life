@@ -6,19 +6,26 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private["_list", "_index", "_display", "_ressource", "_license"];
+
+disableSerialization;
 _list = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
 _index = [_this, 1, -1, [-1]] call BIS_fnc_param;
 
 if ((_index isEqualTo -1) || (isNull _list)) exitWith {};
 
-_display = uiNamespace getVariable["tablet", displayNull];
+_display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
 
 _ressource = _list lbData _index;
 
-(_display displayCtrl 8805) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", ([_ressource] call public_fnc_itemGetName)];
+(_display displayCtrl 8805) ctrlSetStructuredText parseText format
+[
+	"<t align='center'>%1</t>",
+	([_ressource] call public_fnc_itemGetName)
+];
 
 _license = getText(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "license");
+
 (_display displayCtrl 8807) ctrlSetStructuredText parseText format
 [
 	"<t align='center'>%1</t>",
