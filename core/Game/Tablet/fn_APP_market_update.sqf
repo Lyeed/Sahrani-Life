@@ -45,7 +45,7 @@ _license = getText(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "license
 (_display displayCtrl 8812) ctrlSetStructuredText parseText format
 [
 	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
-	[([_ressource] call public_fnc_marketGetSellPrice)] call public_fnc_numberText
+	[([_ressource] call public_fnc_market_getPrice)] call public_fnc_numberText
 ];
 
 (_display displayCtrl 8814) ctrlSetStructuredText parseText format
@@ -63,5 +63,5 @@ _license = getText(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "license
 (_display displayCtrl 8818) ctrlSetStructuredText parseText format
 [
 	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
-	[([_ressource] call public_fnc_marketGetBuyPrice)] call public_fnc_numberText
+	[([_ressource] call public_fnc_market_getPrice) * 2] call public_fnc_numberText
 ];

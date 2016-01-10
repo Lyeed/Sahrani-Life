@@ -41,6 +41,8 @@ class Public
 	class Tools
 	{
 		file = "core\Tools";
+		class sitDown {};
+		class standUp {};
 		class handleTrunk {};
 		class itemTrunk {};
 		class setHitPointDamage {};

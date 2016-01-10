@@ -20,7 +20,7 @@ _isgun = false;
 
 _details = [_item] call public_fnc_fetchCfgDetails;
 if(count _details == 0) exitWith {};
-
+	
 if(_bool) then
 {
 	switch((_details select 6)) do

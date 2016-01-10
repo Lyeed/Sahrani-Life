@@ -12,8 +12,36 @@ scopeName "main";
 
 if ((vehicle player) isEqualTo player) then
 {
+
+	if (player getVariable ["sit", false]) then
+	{
+		[] call public_fnc_standUp;
+		breakOut "main";
+	};
+
 	if (isNull cursorTarget) then 
 	{
+		_plant = (nearestObjects [player, (call g_plants), 3]) select 0;
+		if (!(isNil "_plant")) then
+		{
+			[_plant] spawn public_fnc_plantHarvest;
+			breakOut "main";
+		};
+
+		_atm = (nearestObjects [player, ["Land_Atm_01_F", "Land_Atm_02_F", "xcam_Atm_01_F", "xcam_Atm_02_F"], 2]) select 0;
+		if (!(isNil "_atm")) then
+		{
+			["home"] call public_fnc_atmScreen;
+			breakOut "main";
+		};
+
+		_chair = (nearestObjects [player, ["Land_OfficeChair_01_F", "xcam_office_chair", "Land_ChairWood_F", "xcam_Bench_01_F"], 1]) select 0;
+		if (!(isNil "_chair")) then
+		{
+			[_chair] call public_fnc_sitDown;
+			breakOut "main";
+		};
+
 		{
 			if ((player distance (getMarkerPos _x)) < 20) then
 			{
@@ -37,20 +65,6 @@ if ((vehicle player) isEqualTo player) then
 				};
 			};
 		} forEach (g_dynamic_markers);
-
-		_plant = (nearestObjects [player, (call g_plants), 3]) select 0;
-		if (!(isNil "_plant")) then
-		{
-			[_plant] spawn public_fnc_plantHarvest;
-			breakOut "main";
-		};
-
-		_atm = (nearestObjects [player, ["Land_Atm_01_F", "Land_Atm_02_F", "xcam_Atm_01_F", "xcam_Atm_02_F"], 2]) select 0;
-		if (!(isNil "_atm")) then
-		{
-			["home"] call public_fnc_atmScreen;
-			breakOut "main";
-		};
 
 		{
 			if (player distance (getMarkerPos _x) < 40) then
@@ -176,9 +190,16 @@ if ((vehicle player) isEqualTo player) then
 				};
 			};
 		};
+		
 		if (((player distance cursorTarget) < 10) && (typeOf(cursorTarget) in (call g_houses_list))) then
 		{
 			[cursorTarget] call public_fnc_house_menu_handler;
+			breakOut "main";
+		};
+
+		if (((player distance cursorTarget) < 1.5) && (typeOf(cursorTarget) in ["Land_OfficeChair_01_F", "xcam_office_chair", "Land_ChairWood_F", "xcam_Bench_01_F"])) then
+		{
+			[cursorTarget] call public_fnc_sitDown;
 			breakOut "main";
 		};
 	};
