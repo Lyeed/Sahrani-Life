@@ -53,6 +53,7 @@ class ALYSIA_PRISONS
 			class cell_1
 			{
 				name = "Cellule N°1";
+				picture = "";
 				door = "";
 				pos[] = {8.86914,-2.53711,-0.00194083};
 				dir = 333;
@@ -61,6 +62,7 @@ class ALYSIA_PRISONS
 			class cell_2
 			{
 				name = "Cellule N°2";
+				picture = "";
 				door = "";
 				pos[] = {4.35156,-2.44336,-0.00169046};
 				dir = 327;
@@ -69,6 +71,7 @@ class ALYSIA_PRISONS
 			class cell_3
 			{
 				name = "Cellule N°3";
+				picture = "";
 				door = "";
 				pos[] = {3.15234,14.5273,-0.000298843};
 				dir = 153;
@@ -77,6 +80,7 @@ class ALYSIA_PRISONS
 			class cell_4
 			{
 				name = "Cellule N°4";
+				picture = "";
 				door = "";
 				pos[] = {7.53906,14.2539,-0.000954971};
 				dir = 147;
@@ -85,6 +89,7 @@ class ALYSIA_PRISONS
 			class cell_5
 			{
 				name = "Cellule N°5";
+				picture = "";
 				door = "";
 				pos[] = {11.9854,14.5156,-0.00121525};
 				dir = 149;
@@ -139,6 +144,7 @@ class ALYSIA_PRISONS
 			class cell_1
 			{
 				name = "Cellule N°1";
+				picture = "";
 				door = "";
 				pos[] = {};
 				dir = 0;

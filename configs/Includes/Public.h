@@ -368,6 +368,8 @@ class Public
 		class prisonEscape {};
 		class prisonPutInJail {};
 		class prisonWorkReward {};
+		class prisonMenu_open {};
+		class prisonMenu_use_validate {};
 		class prisonModifyMenu_informations_get {};
 		class prisonModifyMenu_informations_return {};
 		class prisonModifyMenu_open {};

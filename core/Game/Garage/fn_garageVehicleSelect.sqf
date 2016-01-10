@@ -74,9 +74,8 @@ _vehicleInfo = [_className] call public_fnc_fetchVehInfo;
   	(_vehicleInfo select 11),
   	(_vehicleInfo select 10),
   	([_className] call public_fnc_getVehVirtual),
-    (round (_fuel * (_vehicleInfo select 12))),
+    (round (_fuel * ((_vehicleInfo select 12)) / 100)),
   	(round (_vehicleInfo select 12)),
-    (getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")),
     (if ((getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")) in ["Essence Sans Plomb 95","Essence Sans Plomb 98"]) then
     {"Essence"} else {getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")})
 ];

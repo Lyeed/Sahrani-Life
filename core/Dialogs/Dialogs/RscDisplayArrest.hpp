@@ -1,7 +1,7 @@
-class RscDisplayArrest: default_interaction_back_dialog
+class RscDisplayModifyArrest: default_interaction_back_dialog
 {	
 	idd = 19000;
-	name = "RscDisplayArrest";
+	name = "RscDisplayModifyArrest";
 	
 	class controlsBackground: DEFAULT_controlsBackground
 	{
@@ -658,6 +658,281 @@ class RscDisplayArrest: default_interaction_back_dialog
 			y = 0.588032 * safezoneH + safezoneY;
 			w = 0.134022 * safezoneW;
 			h = 0.0550202 * safezoneH;
+		};
+	};
+};
+
+class RscDisplayArrest: default_interaction_back_dialog
+{	
+	idd = 20000;
+	name = "RscDisplayArrest";
+	
+	class controlsBackground: DEFAULT_controlsBackground
+	{
+		class BACKGROUND: BACKGROUND
+		{
+			x = 0.386562 * safezoneW + safezoneX;
+			y = 0.313 * safezoneH + safezoneY;
+			w = 0.228437 * safezoneW;
+			h = 0.374 * safezoneH;
+		};
+		class FRAME: FRAME
+		{
+			x = 0.386562 * safezoneW + safezoneX;
+			y = 0.313 * safezoneH + safezoneY;
+			w = 0.228437 * safezoneW;
+			h = 0.374 * safezoneH;
+		};
+	};
+
+	class controls: DEFAULT_controls
+	{
+		class TITLE: TITLE
+		{
+			text = "<t align='center' size='1.5'>Arrestation</t>";
+			x = 0.386562 * safezoneW + safezoneX;
+			y = 0.313 * safezoneH + safezoneY;
+			w = 0.227917 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+
+		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME
+		{
+			x = 0.355625 * safezoneW + safezoneX;
+			y = 0.368 * safezoneH + safezoneY;
+			w = 0.0309375 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND
+		{
+			x = 0.355625 * safezoneW + safezoneX;
+			y = 0.368 * safezoneH + safezoneY;
+			w = 0.0309375 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE
+		{
+			x = 0.363385 * safezoneW + safezoneX;
+			y = 0.379926 * safezoneH + safezoneY;
+			w = 0.0154689 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON
+		{
+			x = 0.355625 * safezoneW + safezoneX;
+			y = 0.368 * safezoneH + safezoneY;
+			w = 0.0309375 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+		class OPTION_BACK_FRAME: OPTION_BACK_FRAME
+		{
+			x = 0.355625 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.0309375 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+		class OPTION_BACK_BACKGROUND: OPTION_BACK_BACKGROUND
+		{
+			x = 0.355625 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.0309375 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+		class OPTION_BACK_IMAGE: OPTION_BACK_IMAGE
+		{
+			x = 0.362864 * safezoneW + safezoneX;
+			y = 0.434 * safezoneH + safezoneY;
+			w = 0.0154689 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class OPTION_BACK_BUTTON: OPTION_BACK_BUTTON
+		{
+			x = 0.355625 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.0309375 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+		class CELLULE_TXT: RscStructuredText
+		{
+			text = "<t align = 'left' size='1'>Cellule</t>";
+
+			x = 0.402031 * safezoneW + safezoneX;
+			y = 0.412 * safezoneH + safezoneY;
+			w = 0.195937 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {0,0,0,0.6};
+		};
+		class TIME_TXT: RscStructuredText
+		{
+			text = "<t align = 'left' size='1'>Durée</t>";
+
+			x = 0.402031 * safezoneW + safezoneX;
+			y = 0.445 * safezoneH + safezoneY;
+			w = 0.195937 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {0,0,0,0.6};
+		};
+		class BAIL_TXT: RscStructuredText
+		{
+			text = "<t align = 'left' size='1'>Caution</t>";
+
+			x = 0.402031 * safezoneW + safezoneX;
+			y = 0.478 * safezoneH + safezoneY;
+			w = 0.195937 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {0,0,0,0.6};
+		};
+		class SUSPECT_TXT: RscStructuredText
+		{
+			text = "<t align = 'center' size='1.2'></t>";
+
+			x = 0.402031 * safezoneW + safezoneX;
+			y = 0.368 * safezoneH + safezoneY;
+			w = 0.195937 * safezoneW;
+			h = 0.033 * safezoneH;
+			colorBackground[] = {0,0,0,0.8};
+		};
+		class RscFrame_1804: RscFrame
+		{
+			x = 0.402031 * safezoneW + safezoneX;
+			y = 0.368 * safezoneH + safezoneY;
+			w = 0.195937 * safezoneW;
+			h = 0.033 * safezoneH;
+			colorText[] = {0,0,0,0.8};
+		};
+		class RscListbox_1500: RscListbox
+		{
+			idc = 20001;
+			x = 0.494844 * safezoneW + safezoneX;
+			y = 0.412 * safezoneH + safezoneY;
+			w = 0.103125 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {0,0,0,0};
+		};
+		class RscFrame_1805: RscFrame
+		{
+			x = 0.402031 * safezoneW + safezoneX;
+			y = 0.412 * safezoneH + safezoneY;
+			w = 0.195937 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorText[] = {0,0,0,0.8};
+		};
+		class RscFrame_1806: RscFrame
+		{
+			x = 0.402031 * safezoneW + safezoneX;
+			y = 0.445 * safezoneH + safezoneY;
+			w = 0.195937 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorText[] = {0,0,0,0.8};
+		};
+		class RscFrame_1807: RscFrame
+		{
+			x = 0.402031 * safezoneW + safezoneX;
+			y = 0.478 * safezoneH + safezoneY;
+			w = 0.195937 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorText[] = {0,0,0,0.8};
+		};
+		class RscEdit_1400: RscEdit
+		{
+			text = "0";
+
+			x = 0.494844 * safezoneW + safezoneX;
+			y = 0.445 * safezoneH + safezoneY;
+			w = 0.103125 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class RscEdit_1401: RscEdit
+		{
+			text = "0";
+
+			x = 0.494844 * safezoneW + safezoneX;
+			y = 0.478 * safezoneH + safezoneY;
+			w = 0.103125 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class RscEdit_1402: RscEdit
+		{
+			text = "0";
+
+			x = 0.402031 * safezoneW + safezoneX;
+			y = 0.544 * safezoneH + safezoneY;
+			w = 0.195937 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+		class RscFrame_1809: RscFrame
+		{
+			x = 0.402031 * safezoneW + safezoneX;
+			y = 0.511 * safezoneH + safezoneY;
+			w = 0.195937 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorText[] = {0,0,0,0.8};
+		};
+		class REASON_TITLE: RscStructuredText
+		{
+			text = "<t align = 'center' size='1'>Raison</t>";
+
+			x = 0.402031 * safezoneW + safezoneX;
+			y = 0.511 * safezoneH + safezoneY;
+			w = 0.195937 * safezoneW;
+			h = 0.022 * safezoneH;
+			colorBackground[] = {0,0,0,0.8};
+		};
+		class RscFrame_1808: RscFrame
+		{
+			x = 0.402031 * safezoneW + safezoneX;
+			y = 0.544 * safezoneH + safezoneY;
+			w = 0.195937 * safezoneW;
+			h = 0.044 * safezoneH;
+			colorText[] = {0,0,0,0.8};
+		};
+		class RscStructuredText_1107: RscStructuredText
+		{
+			idc = 20002;
+			x = 0.402031 * safezoneW + safezoneX;
+			y = 0.544 * safezoneH + safezoneY;
+			w = 0.195937 * safezoneW;
+			h = 0.044 * safezoneH;
+			colorBackground[] = {0,0,0,0.6};
+		};
+		class VALIDATE_BACKGROUND: RscStructuredText
+		{
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.61 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
+			h = 0.055 * safezoneH;
+			colorBackground[] = {0,0,0,0.6};
+		};
+		class VALIDATE_FRAME: RscFrame
+		{
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.61 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+		class VALIDATE_IMAGE: RscPicture
+		{
+			text = "lyeed_IMG\data\housing\actions\action_exit.paa";
+			x = 0.453594 * safezoneW + safezoneX;
+			y = 0.618593 * safezoneH + safezoneY;
+			w = 0.0216146 * safezoneW;
+			h = 0.0375186 * safezoneH;
+		};
+		class VALIDATE_TEXT: RscStructuredText
+		{
+			text = "<t align='center' size='1.5'>Arrêter</t>";
+			x = 0.484531 * safezoneW + safezoneX;
+			y = 0.621 * safezoneH + safezoneY;
+			w = 0.0567187 * safezoneW;
+			h = 0.033 * safezoneH;
+			colorBackground[] = {0,0,0,0};
+		};
+		class VALIDATE_BUTTON: RscButtonSilent
+		{
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.61 * safezoneH + safezoneY;
+			w = 0.108281 * safezoneW;
+			h = 0.055 * safezoneH;
 		};
 	};
 };
