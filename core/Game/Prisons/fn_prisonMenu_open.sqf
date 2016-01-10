@@ -7,7 +7,7 @@
 */
 
 private ["_prison","_cells","_index","_list"];
-_prison = [player] call public_fnc_prisonNearest;
+_prison = (([player] call public_fnc_prisonNearest) select 0);
 _prisonName = vehicleVarName _prison;
 _cells = 0;
 

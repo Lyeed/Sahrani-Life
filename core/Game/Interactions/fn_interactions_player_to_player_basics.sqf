@@ -20,8 +20,8 @@
 		["ticket", "Paiement", "[] spawn public_fnc_interactionMenu_action_ticket;", "(getNumber(missionConfigFile >> 'ALYSIA_FACTIONS' >> str(playerSide) >> 'interaction_ticket') isEqualTo 1)"],
 		["search", "Fouiller", "[] spawn public_fnc_interactionMenu_action_search;", "((g_interaction_target getVariable ['surrender', false]) || (g_interaction_target getVariable['restrained', false]))"],
 		["license", "Licences", "[] spawn public_fnc_interactionMenu_action_license;", "(((side g_interaction_target) isEqualTo civilian) && ((g_interaction_target getVariable ['surrender', false]) || (g_interaction_target getVariable['restrained', false])))"],
-		["arrest", "Arrêter", "[] spawn public_fnc_prisonMenu_open", "((!(isNull([player] call public_fnc_prisonNearest))) && (!(g_interaction_target getVariable['restrained', false])) && (!(player getVariable ['arrested', false])))"],
-		["arrest", "Gestion Peine", "[] spawn public_fnc_prisonModifyMenu_informations_get;", "((!(isNull([player] call public_fnc_prisonNearest))) && (!(g_interaction_target getVariable['restrained', false])) && (player getVariable ['arrested', false]))"],
+		["arrest", "Arrêter", "[] spawn public_fnc_prisonMenu_open", "(([player] call public_fnc_prisonNearest != []) && (!(g_interaction_target getVariable['restrained', false])) && (!(player getVariable ['arrested', false])))"],
+		["arrest", "Gestion Peine", "[] spawn public_fnc_prisonModifyMenu_informations_get;", "(([player] call public_fnc_prisonNearest != []) && (!(g_interaction_target getVariable['restrained', false])) && (player getVariable ['arrested', false]))"],
 		["bandage", "Bandage", "[nil,nil,nil,g_interaction_target] spawn public_fnc_bandageUse;", "((g_interaction_target getVariable [""is_bleeding"", false]) && (""SkylineItems_Bandage"" in (magazines player)))"],
 		["morphine", "Morphine", "[nil,nil,nil,g_interaction_target] spawn public_fnc_morphineUse;", "(""SkylineItems_Morphine"" in (magazines player))"]
 	],
