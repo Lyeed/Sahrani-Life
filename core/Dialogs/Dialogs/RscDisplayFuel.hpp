@@ -38,7 +38,6 @@ class RscDisplayFuelStation: default_interaction_back_dialog
 		class FUEL_COMBO: RscCombo
 		{
 			idc = 16004;
-			colorPictureSelected[] = {1, 1, 1, 1};
 			onLBSelChanged = "_this call public_fnc_fuelStation_refuel_veh_update;";
 
 			x = 0.400484 * safezoneW + safezoneX;

@@ -422,11 +422,11 @@ class RscListBox
 	colorBackground[] = {0, 0, 0, 0.6};
 	soundSelect[] = {"\A3\ui_f\data\sound\RscListbox\soundSelect", 0.09, 1};
 	colorPicture[] = {1, 1, 1, 1};
-	colorPictureSelected[] = {0, 0, 0, 1};
 	colorPictureDisabled[] = {1, 1, 1, 1};
 	colorPictureRight[] = {1, 1, 1, 1};
 	colorPictureRightSelected[] = {1, 1, 1, 1};
 	colorPictureRightDisabled[] = {1, 1, 1, 1};
+	colorPictureSelected[] = {1, 1, 1, 1};
 	colorTextRight[] = {1, 1, 1, 1};
 	colorSelectRight[] = {0, 0, 0, 1};
 	colorSelect2Right[] = {0, 0, 0, 1};
