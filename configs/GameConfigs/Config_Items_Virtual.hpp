@@ -1019,19 +1019,12 @@ class ALYSIA_ITEMS
 	{
 		name        = "Moule";
 		weight      = 1;
-		price_buy   = 60;
-		price_sell  = 4;
+		price_buy   = 8;
+		price_sell  = 8;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\moule.paa";
-		class market
-		{
-			max = 110;
-			min = 85;
-			mult = 2;
-			affect[] = {"palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine", "bean", "corn", "cotton", "wheat", "patate"};
-		};
 	};
 
 	class palourde
@@ -1039,18 +1032,11 @@ class ALYSIA_ITEMS
 		name        = "Palourde";
 		weight      = 1;
 		price_buy   = 60;
-		price_sell  = 14;
+		price_sell  = 28;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\palourde.paa";
-		class market
-		{
-			max = 110;
-			min = 85;
-			mult = 2;
-			affect[] = {"moule", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine", "bean", "corn", "cotton", "wheat", "patate"};
-		};
 	};
 
 	class saintjacques
@@ -1058,18 +1044,11 @@ class ALYSIA_ITEMS
 		name        = "Coquilles Saint-Jacques";
 		weight      = 1;
 		price_buy   = 60;
-		price_sell  = 6;
+		price_sell  = 12;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\saint_jacques.paa";
-		class market
-		{
-			max = 110;
-			min = 85;
-			mult = 2;
-			affect[] = {"moule", "palourde", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine", "bean", "corn", "cotton", "wheat", "patate"};
-		};
 	};
 
 	class bigorneau
@@ -1077,18 +1056,11 @@ class ALYSIA_ITEMS
 		name        = "Bigorneau";
 		weight      = 1;
 		price_buy   = 60;
-		price_sell  = 11;
+		price_sell  = 22;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\bigorneau.paa";
-		class market
-		{
-			max = 110;
-			min = 85;
-			mult = 2;
-			affect[] = {"moule", "palourde", "saintjacques", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine", "bean", "corn", "cotton", "wheat", "patate"};
-		};
 	};
 
 	class crabe
@@ -1096,18 +1068,11 @@ class ALYSIA_ITEMS
 		name        = "Crabe";
 		weight      = 1;
 		price_buy   = 60;
-		price_sell  = 7;
+		price_sell  = 14;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\crabe.paa";
-		class market
-		{
-			max = 110;
-			min = 85;
-			mult = 2;
-			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine", "bean", "corn", "cotton", "wheat", "patate"};
-		};
 	};
 
 	class bulot
@@ -1115,18 +1080,11 @@ class ALYSIA_ITEMS
 		name        = "Bulot";
 		weight      = 1;
 		price_buy   = 60;
-		price_sell  = 16;
+		price_sell  = 34;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\bulot.paa";
-		class market
-		{
-			max = 110;
-			min = 85;
-			mult = 2;
-			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine", "bean", "corn", "cotton", "wheat", "patate"};
-		};
 	};
 
 	class anchois
@@ -1134,18 +1092,11 @@ class ALYSIA_ITEMS
 		name        = "Anchois";
 		weight      = 1;
 		price_buy   = 60;
-		price_sell  = 4;
+		price_sell  = 8;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\anchois.paa";
-		class market
-		{
-			max = 110;
-			min = 85;
-			mult = 2;
-			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "bar", "daurade", "maquereau", "merlu", "sardine", "bean", "corn", "cotton", "wheat", "patate"};
-		};
 	};
 
 	class bar
@@ -1153,18 +1104,11 @@ class ALYSIA_ITEMS
 		name        = "Bar";
 		weight      = 1;
 		price_buy   = 60;
-		price_sell  = 19;
+		price_sell  = 38;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\bar.paa";
-		class market
-		{
-			max = 110;
-			min = 85;
-			mult = 2;
-			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "daurade", "maquereau", "merlu", "sardine", "bean", "corn", "cotton", "wheat", "patate"};
-		};
 	};
 
 	class daurade
@@ -1172,18 +1116,11 @@ class ALYSIA_ITEMS
 		name        = "Daurade";
 		weight      = 1;
 		price_buy   = 60;
-		price_sell  = 9;
+		price_sell  = 18;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\daurade.paa";
-		class market
-		{
-			max = 110;
-			min = 85;
-			mult = 2;
-			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "maquereau", "merlu", "sardine", "bean", "corn", "cotton", "wheat", "patate"};
-		};
 	};
 
 	class maquereau
@@ -1191,18 +1128,11 @@ class ALYSIA_ITEMS
 		name        = "Maquereau";
 		weight      = 1;
 		price_buy   = 60;
-		price_sell  = 6;
+		price_sell  = 12;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\maquereau.paa";
-		class market
-		{
-			max = 110;
-			min = 85;
-			mult = 2;
-			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "merlu", "sardine", "bean", "corn", "cotton", "wheat", "patate"};
-		};
 	};
 
 	class merlu
@@ -1210,18 +1140,11 @@ class ALYSIA_ITEMS
 		name        = "Merlu";
 		weight      = 1;
 		price_buy   = 60;
-		price_sell  = 9;
+		price_sell  = 18;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\merlu.paa";
-		class market
-		{
-			max = 110;
-			min = 85;
-			mult = 2;
-			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "sardine", "bean", "corn", "cotton", "wheat", "patate"};
-		};
 	};
 
 	class sardine
@@ -1229,18 +1152,11 @@ class ALYSIA_ITEMS
 		name        = "Sardine";
 		weight      = 1;
 		price_buy   = 60;
-		price_sell  = 5;
+		price_sell  = 10;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\sardine.paa";
-		class market
-		{
-			max = 110;
-			min = 85;
-			mult = 2;
-			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "bean", "corn", "cotton", "wheat", "patate"};
-		};
 	};
 
 	class salt

@@ -140,4 +140,15 @@ class ALYSIA_FARMING_GATHER
 		tool = "Skyline_Merlin_01";
 		sound = "mining";
 	};
+
+	class fish_1
+	{
+		receive[] = {{"anchois", 2, 0}};
+		extra[] = {{"daurade", 10}, {"sardine", 25}, {"merlu", 12}, {"maquereau", 15}, {"bar", 8}};
+		tool = "";
+		sound = "";
+		water = 1;
+		water_depth = 21;
+		extra_all = 1;
+	};
 };
