@@ -1172,16 +1172,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class max_paramedic_cap
-	{
-		buy_price = 20;
-		buy_condition_GUER = 1;
-	};
-	class max_paramedic_uniform
-	{
-		buy_price = 20;
-		buy_condition_GUER = 1;
-	};
 	class max_sheriff_Hat
 	{
 		buy_price = 20;
@@ -3185,10 +3175,6 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class vietsh_Head
 	{		
-		buy_price = 20;
-	};
-	class Skyline_Army_PatroopLevel
-	{
 		buy_price = 20;
 	};
 	class H_Beret_blk
