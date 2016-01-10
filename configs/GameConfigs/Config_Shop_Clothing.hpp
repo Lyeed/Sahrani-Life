@@ -590,13 +590,11 @@ class civ_clothing_sud
 		};
 		vests[] =
 		{
-			"Skyline_Army_Vest_Tactical",
 			"Respirateur_milice"
 		};
 		backpacks[] =
 		{
-			"Skyline_Army_Backpack_Kitbag",
-			"tf_mr3000_multicam"
+			"Fett_tf_mr3000_milice"
 		};
 	};
 
@@ -863,7 +861,6 @@ class civ_clothing_sud
 		side = "GUER";
 		uniforms[] =
 		{
-			"max_paramedic_uniform",
 			"U_C_Secouriste_01",
 			"U_C_Secouriste_02",
 			"combi_plonge_samu",
@@ -879,8 +876,7 @@ class civ_clothing_sud
 			"H_Cap_blk",
 			"H_Cap_grn",
 			"H_Cap_blu",
-			"H_Cap_red",
-			"max_paramedic_cap"
+			"H_Cap_red"
 		};
 		goggles[] =
 		{

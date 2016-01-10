@@ -313,7 +313,7 @@ class ALYSIA_HOUSES
 		license = "";
 	};
 	
-	class Land_dum_mesto_in
+	class Land_Dum_mesto_in
 	{
 		price = 0;
 		storage = "R3F_WeaponStock";
@@ -325,7 +325,7 @@ class ALYSIA_HOUSES
 		license = "";
 	};
 	
-	class Land_Cihlovej_dum_in
+	class Land_Cihlovej_Dum_in
 	{
 		price = 0;
 		storage = "R3F_WeaponStock";
