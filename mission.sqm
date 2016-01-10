@@ -3517,7 +3517,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=2133;
+		items=2134;
 		class Item0
 		{
 			position[]={12129.837,0,17612.104};
@@ -25116,6 +25116,15 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""Commerçant de platine"",public_fnc_shop_virtual_open,""platine"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+		};
+		class Item2133
+		{
+			position[]={14277.46,39.941086,12428.854};
+			id=2286;
+			side="EMPTY";
+			vehicle="HeliHEmpty";
+			skill=0.60000002;
+			init="p0 = [42124,12500,40] nearestObject 314100; p0 hideObject true;p1 = [42124,12500,40] nearestObject 314106; p1 hideObject true;p2 = [42124,12500,40] nearestObject 314737; p2 hideObject true;p3 = [42124,12500,40] nearestObject 314655; p3 hideObject true;p4 = [42124,12500,40] nearestObject 315063; p4 hideObject true;p5 = [42124,12500,40] nearestObject 314974; p5 hideObject true;p6 = [42124,12500,40] nearestObject 314975; p6 hideObject true;p7 = [42124,12500,40] nearestObject 314359; p7 hideObject true;p8 = [42124,12500,40] nearestObject 314356; p8 hideObject true;p9 = [42124,12500,40] nearestObject 314357; p9 hideObject true;p10 = [42124,12500,40] nearestObject 314358; p10 hideObject true;p11 = [42124,12500,40] nearestObject 314093; p11 hideObject true;p12 = [42124,12500,40] nearestObject 314657; p12 hideObject true;p13 = [42124,12500,40] nearestObject 314994; p13 hideObject true;";
 		};
 	};
 	class Markers
