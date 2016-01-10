@@ -35,6 +35,6 @@ _list lbSetPicture [2, getText(missionConfigFile >> "ALYSIA_FACTIONS" >> "EAST" 
 {
 	_index = _list lbAdd (_x select 0);
 	_list lbSetData [_index, (_x select 1)];
-	_list lbSetPicture [_index, "lyeed\images\phone_messages_contact.paa"];
+	_list lbSetPicture [_index, "lyeed_IMG\data\phone\contact.paa"];
 } forEach (g_phone_contacts);
 _list lbSetCurSel -1;

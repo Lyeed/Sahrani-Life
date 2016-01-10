@@ -125,7 +125,7 @@ class RscStructuredText
 	size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 	colorText[] = {1, 1, 1, 1};
 	shadow = 0;
-	colorBackground[] = {0.1, 0.1, 0.1, 0.9};
+	colorBackground[] = {0,0,0,0};
 	class Attributes 
 	{
 		font = "PuristaMedium";

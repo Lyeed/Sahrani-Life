@@ -13,7 +13,7 @@ if (player getVariable ["sit", false]) exitWith {};
 
 _players = false;
 {
-	if (isPlayer _x) exitWith {
+	if ((isPlayer _x) && (_x != player)) exitWith {
 		_players = true;
 	};
 } forEach (_chair nearEntities 1);

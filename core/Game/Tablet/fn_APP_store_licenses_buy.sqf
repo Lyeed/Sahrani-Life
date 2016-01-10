@@ -7,27 +7,25 @@
 */
 private["_sel", "_license", "_price", "_formatLicense"];
 
-_sel = lbCurSel 8113;
+if ((time - g_action_delay) < 1) exitWith { 
+	["Veuillez ralentir dans vos actions"] call public_fnc_error; 
+};
+
+_sel = lbCurSel 8110;
 if (_sel isEqualTo -1) exitWith {};
 
-_license = lbData[8113, _sel];
+_license = lbData[8110, _sel];
 if (_license isEqualTo "") exitWith {};
 
-_price = lbValue[8113, _sel];
+_price = lbValue[8110, _sel];
 if (_price isEqualTo 0) exitWith {};
 
 if ([_license] call public_fnc_hasLicense) exitWith {};
 if (g_atm < _price) exitWith {};
 
+g_action_delay = time;
+
 missionNamespace setVariable [format["license_%1", _license], true];
-
-[format[
-		"<t align='center'>Vous avez acheté<br/><t color='#FE9A2E'>%1</t></t><br/><br/>"
-	+ 	"<t align='left'>Prix</t><t align='right' color='#8cff9b'>%2kn</t>", 
-		[_license] call public_fnc_licenseGetName, 
-		[_price] call public_fnc_numberText
-	], "buy"
-] call public_fnc_info;
-
+playSound "buy";
 [false, _price, format["Licence (%1)", ([_license] call public_fnc_licenseGetName)]] call public_fnc_handleATM;
-["store_licenses"] spawn public_fnc_tabletApp;
+["STORE_LICENSES"] spawn public_fnc_tabletApp;
