@@ -687,6 +687,14 @@ class RscDisplayArrest: default_interaction_back_dialog
 
 	class controls: DEFAULT_controls
 	{
+		class TITLE: TITLE
+		{
+			text = "<t align='center' size='1.5'>Arrestation</t>";
+			x = 0.386562 * safezoneW + safezoneX;
+			y = 0.313 * safezoneH + safezoneY;
+			w = 0.227917 * safezoneW;
+			h = 0.033 * safezoneH;
+ 		};
 		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME
 		{
 			x = 0.355625 * safezoneW + safezoneX;
