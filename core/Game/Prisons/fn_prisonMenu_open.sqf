@@ -12,6 +12,7 @@ _prisonName = vehicleVarName _prison;
 _cells = 0;
 
 if (isNull g_interaction_target) exitWith {};
+if (_prison isEqualTo []) exitWith {["Vous n'êtes pas dans une prison"] call public_fnc_error};
 if (g_interaction_target getVariable ["arrested", false]) exitWith {["Cette personne est déjà en prison."] call public_fnc_error};
 
 if (dialog) then
@@ -30,8 +31,8 @@ _list = _display displayCtrl 20001;
 {
 	_index = _list lbAdd getText(_x >> "name");
 	_list lbSetData [_index, (configName _x)];
-	_list lbSetPicture [_index, getText(_x >> "picture")];
+	//_list lbSetPicture [_index, getText(_x >> "picture")];
 } forEach ("true" configClasses (missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "cells"));
 _list lbSetCurSel 0;
 
-(_display displayCtrl 20002) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1</t>", (g_interaction_target getVariable ["realname", "Erreur"])];
+(_display displayCtrl 20004) ctrlSetStructuredText parseText format["<t align='center' size='1.2'></t>", (g_interaction_target getVariable ["realname", "Erreur"])];

@@ -13,6 +13,7 @@ _prisonName = vehicleVarName _prison;
 _cells = 0;
 
 if (isNull g_interaction_target) exitWith {};
+if (_prison isEqualTo []) exitWith {["Vous n'êtes pas dans une prison"] call public_fnc_error};
 if (!(g_interaction_target getVariable ["arrested", false])) exitWith {["Cette personne n'est plus en prison"] call public_fnc_error};
 
 if (dialog) then
