@@ -36,7 +36,7 @@ switch (_app) do
 	case "PHONE_MESSAGES_SEND": {[] call public_fnc_APP_phone_messages_send};
 	case "PHONE_SETTINGS": {[] call public_fnc_APP_phone_settings};
 	case "PHONE_FACTION": {[] call public_fnc_APP_phone_faction};
-	case "PHONE_BLACKLIST": {};
+	case "PHONE_BLACKLIST": {[] call public_fnc_APP_phone_blacklist};
 	case "LICENSES": {[] call public_fnc_APP_licenses};
 	case "FACTION": {[] call public_fnc_APP_faction};
 	case "FACTION_LEADER_OFFICE": {};
