@@ -396,7 +396,7 @@ class ALYSIA_ITEMS
 
 	class ironp
 	{
-		name        = "Barre de fer";
+		name        = "Lingot de fer";
 		weight      = 3;
 		illegal     = 0;
 		removable   = 1;
@@ -443,7 +443,7 @@ class ALYSIA_ITEMS
 
 	class platinep
 	{
-		name        = "Barre de platine";
+		name        = "Lingot de platine";
 		weight      = 4;
 		illegal     = 0;
 		removable   = 1;
@@ -731,14 +731,14 @@ class ALYSIA_ITEMS
 	class bean
 	{
 		name        = "Haricot";
-		weight      = 2;
+		weight      = 1;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\haricot.paa";
 		class market
 		{
-			max = 8;
-			min = 6;
+			max = 67;
+			min = 45;
 			mult = 3;
 			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine", "corn", "cotton", "wheat", "patate"};
 		};
@@ -759,15 +759,15 @@ class ALYSIA_ITEMS
 	class corn
 	{
 		name        = "Maïs";
-		weight      = 2;
+		weight      = 1;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\mais.paa";
 		class market
 		{
-			max = 8;
-			min = 6;
+			max = 72;
+			min = 55;
 			mult = 3;
 			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine", "bean", "cotton", "wheat", "patate"};
 		};
@@ -788,15 +788,15 @@ class ALYSIA_ITEMS
 	class cotton
 	{
 		name        = "Coton";
-		weight      = 2;
+		weight      = 1;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\coton.paa";
 		class market
 		{
-			max = 9;
-			min = 6;
+			max = 73;
+			min = 60;
 			mult = 2;
 			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine", "bean", "corn", "wheat", "patate"};
 		};
@@ -942,7 +942,7 @@ class ALYSIA_ITEMS
 
 	class copperp
 	{
-		name        = "Barre de cuivre";
+		name        = "Lingot de cuivre";
 		weight      = 3;
 		illegal     = 0;
 		removable   = 1;
@@ -1000,7 +1000,7 @@ class ALYSIA_ITEMS
 
 	class alu
 	{
-		name        = "Barre d'aliminium";
+		name        = "Lingot d'aliminium";
 		weight      = 4;
 		illegal     = 0;
 		removable   = 1;
@@ -1203,15 +1203,15 @@ class ALYSIA_ITEMS
 	class patate
 	{
 		name        = "Patate";
-		weight      = 2;
+		weight      = 1;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\patate.paa";
 		class market
 		{
-			max = 60;
-			min = 30;
+			max = 79;
+			min = 60;
 			mult = 2;
 			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine", "bean", "corn", "cotton", "wheat"};
 		};
@@ -1232,15 +1232,15 @@ class ALYSIA_ITEMS
 	class wheat
 	{
 		name        = "Blé";
-		weight      = 2;
+		weight      = 1;
 		illegal     = 0;
 		removable   = 1;
 		use         = "";
 		image       = "alysia_items_virtual\data\ble.paa";
 		class market
 		{
-			max = 60;
-			min = 30;
+			max = 70;
+			min = 55;
 			mult = 2;
 			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine", "bean", "corn", "cotton", "patate"};
 		};
