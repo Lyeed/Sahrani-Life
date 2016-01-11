@@ -11,8 +11,15 @@ disableSerialization;
 _display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
 
-_list = _display displayCtrl 8113;
+(_display displayCtrl 8107) ctrlSetStructuredText parseText "<t align='center' font='PuristaBold' size='2.7' color='#FF8000'>Licences</t>";
+(_display displayCtrl 8109) buttonSetAction "[] call public_fnc_APP_store_licenses_Buy;";
+
+[8107, true] call public_fnc_tabletShow;
+
+_list = _display displayCtrl 8110;
 lbClear _list;
+
+_list ctrlSetEventHandler ["LBSelChanged", "_this call public_fnc_APP_store_licenses_update;"];
 
 {
 	_license = configName _x;
@@ -23,8 +30,9 @@ lbClear _list;
 		_list lbSetValue [_index, getNumber(_x >> "price")];
 	};
 } foreach ("((str(playerSide) in getArray(_x >> 'sides')) && (getNumber(_x >> 'pad_store') isEqualTo 1))" configClasses (missionConfigFile >> "ALYSIA_LICENSES"));
+
 if ((lbSize _list) isEqualTo 0) then {
 	_list lbAdd "Aucune";
 };
 
-_list lbSetCurSel 0;
+_list lbSetCurSel -1;
