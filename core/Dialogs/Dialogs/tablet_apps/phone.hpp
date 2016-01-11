@@ -71,7 +71,6 @@ PHONE_CATEGORY_IDCS[] =
 class PHONE_CATEGORY_NUMBER: RscStructuredText
 {
 	idc = PHONE_CATEGORY_NUMBER_IDC;
-	colorBackground[] = {-1,-1,-1,0};
 	
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.346 * safezoneH + safezoneY;
@@ -81,7 +80,6 @@ class PHONE_CATEGORY_NUMBER: RscStructuredText
 class PHONE_CATEGORY_FORFAIT: RscStructuredText
 {
 	idc = PHONE_CATEGORY_FORFAIT_IDC;
-	colorBackground[] = {-1,-1,-1,0};
 	
 	x = 0.489688 * safezoneW + safezoneX;
 	y = 0.346 * safezoneH + safezoneY;
@@ -313,7 +311,6 @@ PHONE_MESSAGES_READ_IDCS[] =
 class PHONE_MESSAGE_READ_MESSAGE_FRAME: RscFrame
 {
 	idc = PHONE_MESSAGE_READ_MESSAGE_FRAME_IDC;
-	colorText[] = {0,0,0,0.8};
 
 	x = 0.479375 * safezoneW + safezoneX;
 	y = 0.346 * safezoneH + safezoneY;
@@ -323,7 +320,6 @@ class PHONE_MESSAGE_READ_MESSAGE_FRAME: RscFrame
 class PHONE_MESSAGE_READ_MESSAGES_FRAME: RscFrame
 {
 	idc = PHONE_MESSAGE_READ_MESSAGES_FRAME_IDC;
-	colorText[] = {0,0,0,0.8};
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.533 * safezoneH + safezoneY;
@@ -556,7 +552,6 @@ class PHONE_MESSAGE_SEND_CONTACTS_LIST : RscListBox
 class PHONE_MESSAGE_SEND_CONTACTS_FRAME: RscFrame
 {
 	idc = PHONE_MESSAGE_SEND_CONTACTS_FRAME_IDC;
-	colorText[] = {0,0,0,0.8};
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.39 * safezoneH + safezoneY;
@@ -578,7 +573,6 @@ class PHONE_MESSAGE_SEND_MESSAGE_HEADER : RscStructuredText
 class PHONE_MESSAGE_SEND_MESSAGE_INFO : RscEdit
 {
 	idc = PHONE_MESSAGE_SEND_MESSAGE_INFO_IDC;
-	colorBackground[] = {0,0,0,0.6};
 	style = 16;
 
 	x = 0.427812 * safezoneW + safezoneX;
@@ -601,7 +595,6 @@ class PHONE_MESSAGE_SEND_NUMBER_HEADER : RscStructuredText
 class PHONE_MESSAGE_SEND_NUMBER_INFO : RscEdit
 {
 	idc = PHONE_MESSAGE_SEND_NUMBER_INFO_IDC;
-	text = "";
 	tooltip = "Vous pouvez envoyer votre message jusqu'a cinq personnes en séparant vos numéros par des ',' (ex: 0000,0001,0002...)";
 	style = 530;
 
@@ -680,7 +673,6 @@ class PHONE_MESSAGE_SEND_BUTTON : RscButtonSilent
 class PHONE_MESSAGE_SEND_PRICE_FRAME: RscFrame
 {
 	idc = PHONE_MESSAGE_SEND_PRICE_FRAME_IDC;
-	colorText[] = {0,0,0,0.8};
 
 	x = 0.443281 * safezoneW + safezoneX;
 	y = 0.379 * safezoneH + safezoneY;
@@ -753,7 +745,6 @@ class PHONE_SETTING_RING_HEADER: RscStructuredText
 class PHONE_SETTING_RING_LIST: RscListBox
 {
 	idc = PHONE_SETTING_RING_LIST_IDC;
-	colorBackground[] = {0,0,0,0.6};
 
 	x = 0.335 * safezoneW + safezoneX;
 	y = 0.467 * safezoneH + safezoneY;
@@ -763,7 +754,6 @@ class PHONE_SETTING_RING_LIST: RscListBox
 class PHONE_SETTING_RING_FRAME: RscFrame
 {
 	idc = PHONE_SETTING_RING_FRAME_IDC;
-	colorText[] = {0,0,0,0.8};
 
 	x = 0.335 * safezoneW + safezoneX;
 	y = 0.445 * safezoneH + safezoneY;
@@ -851,7 +841,6 @@ class PHONE_SETTINGS_SILENT_CHECK: RscCheckBox
 class PHONE_SETTINGS_SILENT_FRAME: RscFrame
 {
 	idc = PHONE_SETTINGS_SILENT_FRAME_IDC;
-	colorText[] = {0,0,0,0.8};
 
 	x = 0.597969 * safezoneW + safezoneX;
 	y = 0.368 * safezoneH + safezoneY;
@@ -890,11 +879,11 @@ PHONE_CONTACTS_IDCS[] =
 class PHONE_CONTACTS_LIST_FRAME: RscFrame
 {
 	idc = PHONE_CONTACTS_LIST_FRAME_IDC;
+
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.39 * safezoneH + safezoneY;
 	w = 0.216563 * safezoneW;
 	h = 0.297 * safezoneH;
-	colorText[] = {0,0,0,0.8};
 };
 class PHONE_CONTACTS_LIST_HEADER : RscStructuredText
 {
@@ -991,7 +980,6 @@ class PHONE_CONTACTS_ADD_HEADER : RscStructuredText
 class PHONE_CONTACTS_ADD_FRAME: RscFrame
 {
 	idc = PHONE_CONTACTS_ADD_FRAME_IDC;
-	colorText[] = {0,0,0,0.8};
 
 	x = 0.551562 * safezoneW + safezoneX;
 	y = 0.478 * safezoneH + safezoneY;
@@ -1037,7 +1025,6 @@ class PHONE_CONTACTS_ADD_NUMBER_HEADER : RscStructuredText
 class PHONE_CONTACTS_ADD_NUMBER_INFO : RscEdit
 {
 	idc = PHONE_CONTACTS_ADD_NUMBER_INFO_IDC;
-	colorBackground[] = {0,0,0,0.6};
 
 	x = 0.577344 * safezoneW + safezoneX;
 	y = 0.599 * safezoneH + safezoneY;
@@ -1059,7 +1046,6 @@ class PHONE_CONTACTS_ADD_NAME_HEADER : RscStructuredText
 class PHONE_CONTACTS_ADD_NAME_INFO : RscEdit
 {
 	idc = PHONE_CONTACTS_ADD_NAME_INFO_IDC;
-	colorBackground[] = {0,0,0,0.6};
 
 	x = 0.577344 * safezoneW + safezoneX;
 	y = 0.533 * safezoneH + safezoneY;
@@ -1133,9 +1119,150 @@ class PHONE_FACTION_MESSAGE_SEND_BUTTON: RscButtonSilent
 /* ===================================================================================================================== */
 
 // =======================================[Blacklist]=======================================
+#define PHONE_BLACKLIST_LIST_FRAME_IDC         8530
+#define PHONE_BLACKLIST_LIST_HEADER_IDC        8531
+#define PHONE_BLACKLIST_LIST_INFO_IDC          8532
+#define PHONE_BLACKLIST_REMOVE_IMAGE_IDC       8533
+#define PHONE_BLACKLIST_REMOVE_BUTTON_IDC      8534
+#define PHONE_BLACKLIST_ADD_HEADER_IDC         8535
+#define PHONE_BLACKLIST_ADD_FRAME_IDC          8536
+#define PHONE_BLACKLIST_ADD_IMAGE_IDC          8537
+#define PHONE_BLACKLIST_ADD_BUTTON_IDC         8538
+#define PHONE_BLACKLIST_ADD_NUMBER_HEADER_IDC  8539
+#define PHONE_BLACKLIST_ADD_NUMBER_INFO_IDC    8540
+
 PHONE_BLACKLIST_IDCS[] =
 {
 	PHONE_RETURN_IMAGE_IDC,
-	PHONE_RETURN_BUTTON_IDC
+	PHONE_RETURN_BUTTON_IDC,
+	PHONE_BLACKLIST_LIST_FRAME_IDC,
+	PHONE_BLACKLIST_LIST_HEADER_IDC,
+	PHONE_BLACKLIST_LIST_INFO_IDC
 };
 PHONE_BLACKLIST_BACKGROUND = PHONE_BACKGROUND;
+
+class PHONE_BLACKLIST_LIST_FRAME: RscFrame
+{
+	idc = PHONE_BLACKLIST_LIST_FRAME_IDC;
+	
+	x = 0.324687 * safezoneW + safezoneX;
+	y = 0.39 * safezoneH + safezoneY;
+	w = 0.216563 * safezoneW;
+	h = 0.297 * safezoneH;
+};
+class PHONE_BLACKLIST_LIST_HEADER : RscStructuredText
+{
+	idc = PHONE_BLACKLIST_LIST_HEADER_IDC;
+	text = "<t align='center'>Blacklists</t>";
+	colorBackground[] = {0,0,0,0.8};
+
+	x = 0.324687 * safezoneW + safezoneX;
+	y = 0.39 * safezoneH + safezoneY;
+	w = 0.216563 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class PHONE_BLACKLIST_LIST_INFO : RscListBox
+{
+	idc = PHONE_BLACKLIST_LIST_INFO_IDC;
+
+	x = 0.324687 * safezoneW + safezoneX;
+	y = 0.412 * safezoneH + safezoneY;
+	w = 0.216563 * safezoneW;
+	h = 0.275 * safezoneH;
+};
+
+class PHONE_BLACKLIST_REMOVE_IMAGE : RscPicture
+{
+	idc = PHONE_BLACKLIST_REMOVE_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\blacklist\remove.paa";
+
+	x = 0.546406 * safezoneW + safezoneX;
+	y = 0.379 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class PHONE_BLACKLIST_REMOVE_BUTTON : RscButtonSilent
+{
+	idc = PHONE_BLACKLIST_REMOVE_BUTTON_IDC;
+	action = "\
+		private[""_sel""];\
+		_sel = lbCurSel 8532;\
+		if (_sel isEqualTo -1) exitWith {};\
+		g_phone_blacklist deleteAt _sel;\
+		[""PHONE_BLACKLIST""] spawn public_fnc_tabletApp;\
+	";
+	tooltip = "Supprimer";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\blacklist\remove_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\blacklist\remove.paa""];";
+
+	x = 0.546406 * safezoneW + safezoneX;
+	y = 0.379 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+
+class PHONE_BLACKLIST_ADD_HEADER : RscStructuredText
+{
+	idc = PHONE_BLACKLIST_ADD_HEADER_IDC;
+	text = "<t align='center'>Ajouter un numéro</t>";
+	colorBackground[] = {0,0,0,0.8};
+
+	x = 0.551562 * safezoneW + safezoneX;
+	y = 0.478 * safezoneH + safezoneY;
+	w = 0.12375 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class PHONE_BLACKLIST_ADD_FRAME: RscFrame
+{
+	idc = PHONE_BLACKLIST_ADD_FRAME_IDC;
+
+	x = 0.551562 * safezoneW + safezoneX;
+	y = 0.478 * safezoneH + safezoneY;
+	w = 0.12375 * safezoneW;
+	h = 0.209 * safezoneH;
+};
+
+class PHONE_BLACKLIST_ADD_IMAGE : RscPicture
+{
+	idc = PHONE_BLACKLIST_ADD_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\blacklist\add.paa";
+
+	x = 0.592812 * safezoneW + safezoneX;
+	y = 0.621 * safezoneH + safezoneY;
+	w = 0.04125 * safezoneW;
+	h = 0.066 * safezoneH;
+};
+class PHONE_BLACKLIST_ADD_BUTTON : RscButtonSilent
+{
+	idc = PHONE_BLACKLIST_ADD_BUTTON_IDC;
+	action = "[ctrlText 8540] call public_fnc_APP_phone_BLACKLIST_add;";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\blacklist\add_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\blacklist\add.paa""];";
+	tooltip = "Ajouter";
+
+	x = 0.592812 * safezoneW + safezoneX;
+	y = 0.621 * safezoneH + safezoneY;
+	w = 0.04125 * safezoneW;
+	h = 0.066 * safezoneH;
+};
+
+class PHONE_BLACKLIST_ADD_NUMBER_HEADER : RscStructuredText
+{
+	idc = PHONE_BLACKLIST_ADD_NUMBER_HEADER_IDC;
+	text = "<t align='center'>Numéro</t>";
+	colorBackground[] = {0,0,0,0.8};
+
+	x = 0.577344 * safezoneW + safezoneX;
+	y = 0.577 * safezoneH + safezoneY;
+	w = 0.0721875 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class PHONE_BLACKLIST_ADD_NUMBER_INFO : RscEdit
+{
+	idc = PHONE_BLACKLIST_ADD_NUMBER_INFO_IDC;
+
+	x = 0.577344 * safezoneW + safezoneX;
+	y = 0.599 * safezoneH + safezoneY;
+	w = 0.0721875 * safezoneW;
+	h = 0.022 * safezoneH;
+};

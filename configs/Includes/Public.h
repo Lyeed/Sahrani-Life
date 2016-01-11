@@ -502,6 +502,8 @@ class Public
 		class APP_phone_faction {};
 		class APP_phone_faction_send {};
 		class APP_phone_change {};
+		class APP_phone_blacklist {};
+		class APP_phone_blacklist_add {};
 		class APP_licenses {};
 		class APP_faction {};
 		class APP_faction_leader_office {};

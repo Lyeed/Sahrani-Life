@@ -36,7 +36,7 @@ _list ctrlSetEventHandler ["LBSelChanged", "_this call public_fnc_APP_store_appl
 (
 	[
 		["Extention : Véhicules", "VEHICLES", "Vous permet de débloquer une carte indiquant l'emplacement de vos véhicules dans votre application <t color='#FF4000'Véhicules</t>", 35000, sideUnknown],
-		["Application : Bourse", "MARKET", "Application mettant à votre disposition diverses informations économiques", 12500, civilian]
+		["Application : Bourse", "MARKET", "Application mettant à votre disposition diverses informations économiques", 10000, civilian]
 	]
 );
 

@@ -28,10 +28,9 @@ if (([_name] call CBA_fnc_strLen) > getNumber(missionConfigFile >> "ALYSIA_PHONE
 if (!([_number] call public_fnc_isNumber)) exitWith {
 	["Le numéro de téléphone entré n'est pas valide"] call public_fnc_error;
 };
-if (!(count(toArray(_number)) isEqualTo 6)) exitWith {
+if (([_number] call CBA_fnc_strLen) != 6) exitWith {
 	["Un numéro de téléphone doit être composé de six chiffres"] call public_fnc_error;
 };
-
 if ((count g_phone_contacts) >= getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> g_phone_forfait >> "contacts_max")) exitWith {
 	["Vous avez déjà atteint votre quota maximum de contacts"] call public_fnc_error;
 };
