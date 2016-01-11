@@ -766,7 +766,7 @@ class RscDisplayArrest: default_interaction_back_dialog
 		{
 			idc = 20002;
 			text = "<t align = 'left' size='1'>Durée</t>";
-			colorBackground[] = {0,0,0,0.6};*
+			colorBackground[] = {0,0,0,0.6};
 
 			x = 0.402031 * safezoneW + safezoneX;
 			y = 0.445 * safezoneH + safezoneY;
