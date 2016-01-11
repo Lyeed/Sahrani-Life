@@ -294,7 +294,7 @@ class ALYSIA_PROCESS
 		license = "";
 		sound = "smelting";
 		requiere_target = 1;
-		require[] = {{"raisin", 1}};
+		require[] = {{"raisin", 2}, {"bouteillevide", 1}};
 		receive[] = {{"grozdova", 1}};
 		time_per_item = 3;
 		time_default = 5;
@@ -307,8 +307,8 @@ class ALYSIA_PROCESS
 		license = "";
 		sound = "smelting";
 		requiere_target = 1;
-		require[] = {{"Prune", 1}};
-		receive[] = {{"Slivovica", 1}};
+		require[] = {{"Prune", 2}, {"bouteillevide", 1}};
+		receive[] = {{"slivovica", 1}};
 		time_per_item = 3;
 		time_default = 5;
 		sides[] = {"CIV"};
@@ -337,6 +337,19 @@ class ALYSIA_PROCESS
 		receive[] = {{"sp98", 2}, {"sp95", 1}, {"gpl", 1}, {"kerosene", 1}, {"gazole", 3}};
 		time_per_item = 12;
 		time_default = 8;
+		sides[] = {"CIV"};
+	};
+
+	class bouteille
+	{
+		name = "Fonte du verre en Bouteille";
+		license = "sand";
+		sound = "smelting";
+		requiere_target = 1;
+		require[] = {{"glass", 1}};
+		receive[] = {{"bouteille", 2}};
+		time_per_item = 3;
+		time_default = 5;
 		sides[] = {"CIV"};
 	};
 };

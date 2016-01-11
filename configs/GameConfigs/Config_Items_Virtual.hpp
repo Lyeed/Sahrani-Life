@@ -1554,4 +1554,14 @@ class ALYSIA_ITEMS
 			affect[] = {"woodp", "furniture", "glass", "pottery", "saltp", "cottonp", "coal"};
 		};
 	};
+
+	class bouteillevide
+	{
+		name        = "Bouteille Vide";
+		weight      = 1;
+		illegal     = 0;
+		removable   = 1;
+		use         = "";
+		image       = "alysia_items_virtual\data\bouteillevide.paa";
+	};
 };
