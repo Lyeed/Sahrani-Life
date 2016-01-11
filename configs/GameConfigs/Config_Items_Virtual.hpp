@@ -251,7 +251,7 @@ class ALYSIA_ITEMS
 	class artefact
 	{
 		name        = "Artefact";
-		weight      = 6;
+		weight      = 3;
 		illegal     = 1;
 		removable   = 1;
 		use         = "";
@@ -284,26 +284,9 @@ class ALYSIA_ITEMS
 		};
 	};
 
-	class artefact_exrare
+	class fragment
 	{
-		name        = "Artefact extrèmement rare";
-		weight      = 2;
-		illegal     = 1;
-		removable   = 1;
-		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
-		class market
-		{
-			max = 21000;
-			min = 9000;
-			mult = 6;
-			affect[] = {};
-		};
-	};
-
-	class artefact_rare
-	{
-		name        = "Arteftact rare";
+		name        = "Fragment d'Arteftact";
 		weight      = 2;
 		illegal     = 1;
 		removable   = 1;
@@ -314,23 +297,6 @@ class ALYSIA_ITEMS
 			max = 9000;
 			min = 4000;
 			mult = 5;
-			affect[] = {};
-		};
-	};
-
-	class artefact_common
-	{
-		name        = "Artefact commum";
-		weight      = 2;
-		illegal     = 1;
-		removable   = 1;
-		use         = "";
-		image       = "Alysia_textures\data\life_inv_banane.paa";
-		class market
-		{
-			max = 4000;
-			min = 2500;
-			mult = 3;
 			affect[] = {};
 		};
 	};

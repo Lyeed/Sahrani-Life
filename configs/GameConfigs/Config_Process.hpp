@@ -352,4 +352,17 @@ class ALYSIA_PROCESS
 		time_default = 5;
 		sides[] = {"CIV"};
 	};
+
+	class artefact
+	{
+		name = "Reconstitution d'artefact";
+		license = "";
+		sound = "salt_process";
+		requiere_target = 1;
+		require[] = {{"fragment", 8}};
+		receive[] = {{"artefact_R", 1}};
+		time_per_item = 1;
+		time_default = 3;
+		sides[] = {"CIV"};
+	};
 };
