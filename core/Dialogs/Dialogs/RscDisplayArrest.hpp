@@ -804,7 +804,7 @@ class RscDisplayArrest: default_interaction_back_dialog
 			w = 0.195937 * safezoneW;
 			h = 0.033 * safezoneH;
 		};
-		class CELLULE_LISTBOX: RscText
+		class CELLULE_LISTBOX: RscCombo
 		{
 			idc = 20006;
 			colorText[] = {0,0,0,0.8};

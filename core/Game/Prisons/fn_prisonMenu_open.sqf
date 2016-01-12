@@ -27,7 +27,7 @@ disableSerialization;
 _display = findDisplay 20000;
 if (isNull _display) exitWith {};
 
-_list = _display displayCtrl 20001;
+_list = _display displayCtrl 20006;
 {
 	_index = _list lbAdd getText(_x >> "name");
 	_list lbSetData [_index, (configName _x)];
@@ -35,4 +35,4 @@ _list = _display displayCtrl 20001;
 } forEach ("true" configClasses (missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "cells"));
 _list lbSetCurSel 0;
 
-(_display displayCtrl 20004) ctrlSetStructuredText parseText format["<t align='center' size='1.2'></t>", (g_interaction_target getVariable ["realname", "Erreur"])];
+(_display displayCtrl 20004) ctrlSetStructuredText parseText format["<t align='center' size='1.2'>%1</t>", (g_interaction_target getVariable ["realname", "Erreur"])];
