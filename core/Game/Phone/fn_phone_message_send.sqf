@@ -13,18 +13,13 @@ _hide = [_this, 2, false, [false]] call BIS_fnc_param;
 if ((time - g_action_delay) < 2) exitWith {[0, "Veuillez ralentir dans vos actions"]};
 if (_msg isEqualTo "") exitWith {[0, "Vous ne pouvez pas envoyer de message vide"]};
 
-_bad = [_msg, getText(missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "characters")] call public_fnc_TextAllowed;
+_bad = [_msg, getText(missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "characters_allowed")] call public_fnc_TextAllowed;
 if (_bad != "") exitWith {[0, format["Vous utilisez un caractère interdit dans votre message (%1)", _bad]]};
 if (([_msg] call CBA_fnc_strLen) > getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "characters_max")) exitWith {[0, format["Votre message ne doit pas dépasser %1 caractères", getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "characters_max")]]};
 if (_to isEqualTo []) exitWith {[0, "Vous n'avez pas entré de destinataire"]};
 if ((count _to) > getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "send_max")) exitWith {[0, format["Vous ne pouvez pas envoyer de message à plus de %1 numéros", getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "send_max")]]};
 
-if (_hide) then {
-	_from = "Numéro Masqué";
-} else {
-	_from = player getVariable "number";
-};
-
+_from = player getVariable "number";
 if (isNil "_from") exitWith {[0, "Vous n'avez pas de numéro de téléphone"]};
 
 g_action_delay = time;
@@ -50,7 +45,7 @@ _sent = 0;
 				if (g_atm >= _price) then
 				{
 					_sent = _sent + 1;
-					[_msg, _from] remoteExecCall ["public_fnc_phone_message_receive", independent];
+					[_msg, _from, _hide] remoteExecCall ["public_fnc_phone_message_receive", independent];
 					[false, _price, "SMS"] call public_fnc_handleATM;
 				} else {
 					_error = _error + format["<t align='left'>Numéro</t><t align='right'>[%1]</t><br/>Vous n'avez pas assez d'argent pour envoyer le SMS<br/><t align='center'>----------</t><br/>", _number];
@@ -72,7 +67,7 @@ _sent = 0;
 				if (g_atm >= _price) then
 				{
 					_sent = _sent + 1;
-					[_msg, _from] remoteExecCall ["public_fnc_phone_message_receive", west];
+					[_msg, _from, _hide] remoteExecCall ["public_fnc_phone_message_receive", west];
 					[false, _price, "SMS"] call public_fnc_handleATM;
 				} else {
 					_error = _error + format["<t align='left'>Numéro</t><t align='right'>[%1]</t><br/>Vous n'avez pas assez d'argent pour envoyer le SMS<br/><t align='center'>----------</t><br/>", _number];
@@ -94,7 +89,7 @@ _sent = 0;
 				if (g_atm >= _price) then
 				{
 					_sent = _sent + 1;
-					[_msg, _from] remoteExecCall ["public_fnc_phone_message_receive", east];
+					[_msg, _from, _hide] remoteExecCall ["public_fnc_phone_message_receive", east];
 					[false, _price, "SMS"] call public_fnc_handleATM;
 				} else {
 					_error = _error + format["<t align='left'>Numéro</t><t align='right'>[%1]</t><br/>Vous n'avez pas assez d'argent pour envoyer le SMS<br/><t align='center'>----------</t><br/>", _number];
@@ -108,7 +103,7 @@ _sent = 0;
 			{
 				if (([_number] call CBA_fnc_strLen) isEqualTo 6) then
 				{
-					if (_number != (player getVariable ["number", ""])) then
+					if (_number != _from) then
 					{
 						if (_number in (missionNamespace getVariable ["gServer_phone_numbers", []])) then
 						{
@@ -123,11 +118,11 @@ _sent = 0;
 										if ((_x getVariable ["number", "-1"]) isEqualTo _number) exitWith {
 											_target = _x;
 										};
-									} forEach (allPlayers);
+									} forEach allPlayers;
 									if (isNull _target) then {
-										[_msg, _from, _number] remoteExecCall ["TON_fnc_phoneMessageHandler", 2];
+										[_msg, _from, _number, _hide] remoteExecCall ["TON_fnc_phoneMessageHandler", 2];
 									} else {
-										[_msg, _from] remoteExecCall ["public_fnc_phone_message_receive", _target];
+										[_msg, _from, _hide] remoteExecCall ["public_fnc_phone_message_receive", _target];
 									};
 									[false, _price, "SMS"] call public_fnc_handleATM;
 									_sent = _sent + 1;

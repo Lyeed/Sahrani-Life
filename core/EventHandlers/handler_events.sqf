@@ -6,6 +6,8 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
+(findDisplay 46) displayAddEventHandler["KeyDown", "_this call EVENT_fnc_keyHandler"];
+
 // player addEventHandler["Fired", "_this call EVENT_fnc_onPlayerFire"];
 player addEventHandler["FiredNear", "_this call EVENT_fnc_onPlayerFireNear"];
 player addEventHandler["handleDamage", "_this call EVENT_fnc_onPlayerHandleDamage"];

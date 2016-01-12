@@ -23,7 +23,6 @@ switch (_action) do
 		if (g_atm < _amount) exitWith {["Solde insuffisant"] call public_fnc_error};
 		[false, _amount, "Retrait DAB"] call public_fnc_handleATM;
 		[true, _amount] call public_fnc_handleCash;
-		["Retrait effectué avec succès"] call public_fnc_info;
 		["home"] call public_fnc_atmScreen;
 	};
 
@@ -32,7 +31,6 @@ switch (_action) do
 		if (g_cash < _amount) exitWith {["Vous n'avez pas assez de fonds sur vous"] call public_fnc_error};
 		[false, _amount] call public_fnc_handleCash;
 		[true, _amount, "Dépot DAB"] call public_fnc_handleATM;
-		["Dépot effectué avec succès"] call public_fnc_info;
 		["home"] call public_fnc_atmScreen;
 	};
 
@@ -59,7 +57,6 @@ switch (_action) do
 				publicVariable "gServer_faction_GUER_bank";
 			};
 		};
-		["Dépot effectué avec succès"] call public_fnc_info;
 		["home"] call public_fnc_atmScreen;
 	};
 
@@ -104,7 +101,6 @@ switch (_action) do
 		if (_handle) then
 		{
 			[true, _amount] call public_fnc_handleCash;
-			["Retrait effectué avec succès"] call public_fnc_info;
 			["home"] call public_fnc_atmScreen;
 		} else {
 			["Solde insuffisant"] call public_fnc_error;

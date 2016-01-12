@@ -24,6 +24,9 @@ if ((count g_phone_blacklist) >= getNumber(missionConfigFile >> "ALYSIA_PHONE" >
 if ((g_phone_blacklist find _number) != -1) exitWith {
 	["Ce numéro est déjà blacklisté"] call public_fnc_error;
 };
+if (([_number, g_phone_contacts] call public_fnc_index) != -1) exitWith {
+	["Vous ne pouvez pas blacklister un numéro faisant partie de vos contacts"] call public_fnc_error;
+};
 
 g_action_delay = time;
 g_phone_blacklist pushBack _number;

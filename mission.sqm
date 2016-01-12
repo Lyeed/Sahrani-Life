@@ -25057,7 +25057,7 @@ class Mission
 			azimut=65;
 			id=2280;
 			side="EMPTY";
-			vehicle="xcam_i_Barracks_V2_F";
+			vehicle="Land_i_Barracks_V2_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 65;this setposATL [12633.383789,7504.893555,0];this setVectorUp [0,0,1]";
 		};
@@ -25068,7 +25068,7 @@ class Mission
 			offsetY=0.0115204;
 			id=2281;
 			side="EMPTY";
-			vehicle="xcam_Medevac_HQ_V1_F";
+			vehicle="Land_Medevac_HQ_V1_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 64.8034;this setposATL [12659.363281,7491.341797,0.0115204];this setVectorUp (surfacenormal (getPosATL this))";
 		};
@@ -25995,7 +25995,7 @@ class Mission
 			offsetY=2.44683;
 			id=2370;
 			side="EMPTY";
-			vehicle="xcam_Barn_Metal";
+			vehicle="Land_Barn_Metal";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 230.604;this setposATL [14267.509766,11791.382813,2.44683];this setVectorUp [0,0,1]";
 		};

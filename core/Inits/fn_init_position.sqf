@@ -5,17 +5,13 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-{
-	if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "shown"))) then {
-		_x setMarkerAlphaLocal 0;
-	};
-} forEach (g_dynamic_markers);
+private["_position"];
+_position = [_this, 0, [], [[]]] call BIS_fnc_param;
 
 if (player getVariable ["arrested", false]) then {
-	// [g_arrestMinuts, g_arrestReason] spawn public_fnc_putInJail;
+
 } else {
-	if (!g_is_alive || ((count g_position) != 3)) then
+	if (!g_is_alive || ((count _position) != 3)) then
 	{
 		private["_pos", "_randPos"];
 		if (playerSide isEqualTo civilian) then {
@@ -26,7 +22,7 @@ if (player getVariable ["arrested", false]) then {
 		_randPos = [_pos, 6] call CBA_fnc_randPos;
 		player setPosATL [(_randPos select 0), (_randPos select 1), (_pos select 2)];
 	} else {
-		player setPosATL g_position;
+		player setPosATL _position;
 	};
 };
 
@@ -45,9 +41,5 @@ player setVariable ["realname", profileName, true];
 [] spawn public_fnc_hudSetup;
 
 g_connected = true;
-player allowDamage true;
 g_is_alive = true;
-
-{
-	player reveal _x;
-} forEach (player nearEntities 25);
+player allowDamage true;

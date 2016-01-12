@@ -5,169 +5,127 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_basic", "_houses", "_lastingObjects", "_keys"];
+private["_basic"];
 _basic = [_this, 0, [], [[]]] call BIS_fnc_param;
-_houses = [_this, 1, [], [[]]] call BIS_fnc_param;
-_keys = [_this, 2, [], [[]]] call BIS_fnc_param;
 
-diag_log format["BASIC : %1", _basic];
-diag_log format["HOUSES : %1", _houses];
-diag_log format["KEYS : %1", _keys];
-
-if ((_basic isEqualTo []) || {!((getPlayerUID player) isEqualTo (_basic select 0))}) exitWith {
+if ((_basic isEqualTo []) || {!((getPlayerUID player) isEqualTo (_basic select 0))}) exitWith
+{
 	["Une erreur est survenue lors du chargement de vos données. Veuillez vous reconnecter ou contacter un administrateur si le problème persiste"] spawn public_fnc_errorExit;
+	false;
 };
-if (!((_basic select 1) isEqualTo "") && !((_basic select 1) isEqualTo profileName)) exitWith {
-	[format["Vous n'êtes pas autorisé à changer d'identité. Votre pseudo actuel [%1] ne correspond pas à celui que vous aviez lors de votre arrivé sur le serveur [%2].", profileName, (_basic select 1)]] spawn public_fnc_errorExit;
+if (!((_basic select 1) isEqualTo "") && !((_basic select 1) isEqualTo profileName)) exitWith
+{
+	[format["Vous n'êtes pas autorisé à changer d'identité. Votre pseudo actuel [%1] ne correspond pas à celui que vous aviez lors de votre inscription [%2].", profileName, (_basic select 1)]] spawn public_fnc_errorExit;
+	false;
+};
+if ((face player) != (_basic select 37)) exitWith
+{
+	[format["Vous n'êtes pas autorisé à changer de visage. Votre visage actuel [%1] ne correspond pas à celui que vous aviez lors de votre inscription [%2].", (face player), (_basic select 37)]] spawn public_fnc_errorExit;
+	false;
 };
 
-// firstName
-g_firstName = _basic select 2;
-// lastName
-g_lastName = _basic select 3;
-// birth
-g_birth = _basic select 4;
-// nationality
-g_nationality = _basic select 5;
-// sexe
-g_sexe = _basic select 6;
-// bankacc
-g_adminlevel = compileFinal (_basic select 7);
-if ((call g_adminlevel) > 0) then
-{
-	g_god = false;
-	g_markers = false;
-	g_teleport = false;
-};
-// donator
-g_donator = compileFinal (_basic select 8);
-if ((call g_donator) > 0) then
-{
-	g_paycheck = (call g_donator) * 600;
-};;
-// blood/bleed/coma
-[(_basic select 9), (_basic select 10), (_basic select 11)] spawn
-{
-	waitUntil {g_connected};
-	if (_this select 2) then {
-		[] spawn public_fnc_coma;
-	} else {
-		[((4000 - (_this select 0)) * -1)] call public_fnc_handleBlood;
-		[(_this select 1)] call public_fnc_handleBleed;
-	};
-};
-// position
-g_position = [(_basic select 12), (_basic select 13), (_basic select 14)];
-// alive
-g_is_alive = _basic select 15;
-// drugs
-{
-	missionNamespace setVariable [format["drug_stats_%1", (_x select 0)], (_x select 1)];
-} forEach (_basic select 16);
-// hunger
-g_hunger = _basic select 17;
-// thirst
-g_thirst = _basic select 18;
 // WESTLevel
-g_WESTLevel = compileFinal (_basic select 19);
+g_WESTLevel = compileFinal(_basic select 19);
 // GuerLevel
-g_GUERLevel = compileFinal (_basic select 20);
+g_GUERLevel = compileFinal(_basic select 20);
 // EASTLevel
-g_EASTLevel = compileFinal (_basic select 21);
+g_EASTLevel = compileFinal(_basic select 21);
 // CIVLevel
-g_CIVLevel = compileFinal (_basic select 22);
-// Prison
-g_arrest_Prison = _basic select 23;
-g_arrest_Cellule = _basic select 24;
-g_arrest_Time = _basic select 25;
-g_arrest_Caution = _basic select 26;
-g_arrest_Reason = _basic select 27;
-g_arrest_Escape = _basic select 28;
-g_arrest_Gear = _basic select 29;
-if (g_arrest_Time > 0) then {
-	player setVariable ["arrested", true, true];
-};
+g_CIVLevel = compileFinal(_basic select 22);
+// admin
+g_adminlevel = compileFinal(_basic select 7);
 
-// Phone
-if ((_basic select 30) != "") then {
-	player setVariable ["number", (_basic select 30), true];
-};
-g_phone_contacts = _basic select 31;
-g_phone_messages = _basic select 32;
-g_phone_forfait = _basic select 33;
-g_phone_blacklist = _basic select 34;
-g_apps = _basic select 35;
-g_choice = _basic select 36;
-// Licenses
+_allowed = switch (playerSide) do
 {
-	missionNamespace setVariable [format["license_%1", _x], true];
-} forEach (_basic select 37);
-// cash
-g_cash = _basic select 38;
-// atm
-g_atm = _basic select 39;
-// inventory
-g_maxWeight = 100;
-{
-    [true, (_x select 0), (_x select 1)] call public_fnc_handleInv;
-} forEach (_basic select 40);
-g_maxWeight = 24;
-// gear
-[(_basic select 41)] spawn public_fnc_loadGear;
-switch (playerSide) do
-{
-	case west: 
-	{
-		g_paycheck = g_paycheck + round((call g_WESTLevel) * getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "WEST" >> "paycheck"));
-		player setVariable ["rank", (call g_WESTLevel), true];
-	};
-	
-	case east:
-	{
-		g_paycheck = g_paycheck + round((call g_EASTLevel) * getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "EAST" >> "paycheck"));
-		player setVariable ["rank", (call g_EASTLevel), true];
-	};
-
 	case civilian:
 	{
-		g_paycheck = g_paycheck + round((call g_CIVLevel) * getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "CIV" >> "paycheck"));
-		// Launder
-		g_launder = _basic select 42;
-	};
+		if ((((call g_EASTLevel) > 0) || ((call g_WESTLevel) > 0) || ((call g_GUERLevel) > 0)) && ((call g_adminlevel) isEqualTo 0)) exitWith
+		{
+			["Vous n'êtes pas autorisé à changer de faction"] spawn public_fnc_errorExit;
+			false;
+		};
 
+		true;
+	};
+	case west:
+	{
+		if ((call g_WESTLevel) isEqualTo 0) exitWith 
+		{
+			[format["Ce slot est réservé aux membres de la faction : %1", [west] call public_fnc_sideToStr]] spawn public_fnc_errorExit;
+			false;
+		};
+
+		if ((((call g_EASTLevel) > 0) || ((call g_CIVLevel) > 0) || ((call g_GUERLevel) > 0)) && ((call g_adminlevel) isEqualTo 0)) exitWith
+		{
+			["Vous n'êtes pas autorisé à changer de faction"] spawn public_fnc_errorExit;
+			false;
+		};
+
+		true;
+	};
+	case east:
+	{
+		if ((call g_EASTLevel) isEqualTo 0) exitWith 
+		{
+			[format["Ce slot est réservé aux membres de la faction : %1", [east] call public_fnc_sideToStr]] spawn public_fnc_errorExit;
+			false;
+		};
+
+		if ((((call g_GUERLevel) > 0) || ((call g_CIVLevel) > 0) || ((call g_WESTLevel) > 0)) && ((call g_adminlevel) isEqualTo 0)) exitWith
+		{
+			["Vous n'êtes pas autorisé à changer de faction"] spawn public_fnc_errorExit;
+			false;
+		};
+
+		true;
+	};
 	case independent:
 	{
-		g_paycheck = g_paycheck + round((call g_GUERLevel) * getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "GUER" >> "paycheck"));
-		player setVariable["rank", (call g_GUERLevel), true];
+		if ((call g_GUERLevel) isEqualTo 0) exitWith 
+		{
+			[format["Ce slot est réservé aux membres de la faction : %1", [independent] call public_fnc_sideToStr]] spawn public_fnc_errorExit;
+			false;
+		};
+
+		if ((((call g_EASTLevel) > 0) || ((call g_CIVLevel) > 0) || ((call g_WESTLevel) > 0)) && (g_adminlevel isEqualTo 0)) exitWith
+		{
+			["Vous n'êtes pas autorisé à changer de faction"] spawn public_fnc_errorExit;
+			false;
+		};
+
+		true;
 	};
+	default {false};
 };
 
-//	Houses
-g_houses = _houses;
+if (!_allowed) exitWith {};
+
+g_houses = [_this, 1, [], [[]]] call BIS_fnc_param;
 {
 	_marker = createMarkerLocal [format["house_%1", (_forEachIndex + 1)], (getPosATL _x)];
 	_marker setMarkerTextLocal "Chez vous";
 	_marker setMarkerColorLocal "ColorPink";
 	_marker setMarkerTypeLocal "Fett_house";
 	_marker setMarkerSizeLocal [0.6, 0.6];
-} forEach (g_houses);
+} forEach g_houses;
 
-//	Keys
 {
 	g_vehicles pushBack _x;
-} foreach (_keys);
+} foreach ([_this, 2, [], [[]]] call BIS_fnc_param);
 
-/*
-//  lastingObjects
-g_lastingObjects = _lastingObjects;
 {
-	_marker = createMarkerLocal [format["labo_%1", (_forEachIndex + 1)], (getPosATL _x)];
-	_marker setMarkerTextLocal "Laboratoire";
-	_marker setMarkerColorLocal "ColorRed";
-	_marker setMarkerTypeLocal "loc_Bunker";
-} forEach (g_lastingObjects);
-*/
+	_message = (_messages select _forEachIndex) select 0;
+	if (_x select 1) then {
+		_message set [0, "Numéro caché"];
+	};
+	g_phone_messages pushBack _message;
+} forEach ([_this, 3, [], [[]]] call BIS_fnc_param);
 
-g_paycheck = compileFinal str(g_paycheck);
-g_nextPay = time + ((call g_paycheck_period) * 60);
-g_session_completed = true;
+{
+	if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "shown"))) then {
+		_x setMarkerAlphaLocal 0;
+	};
+} forEach (g_dynamic_markers);
+
+g_session_query = _basic;
+true;

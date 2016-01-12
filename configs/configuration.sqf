@@ -4,12 +4,10 @@ with missionNamespace do
 	****** Backend Variables *****
 	******************************/
 	g_launder = 0;
-	g_position = [];
 	g_objPut = ObjNull;
 	g_killer = ObjNull;
 	g_curWep_h = "";
 	/* ===================[inUse/delay variables]======================= */
-	g_session_completed = false;
 	g_action_delay = time;
 	g_action_inUse = false;
 	g_knockout = false;

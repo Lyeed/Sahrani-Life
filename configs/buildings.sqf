@@ -522,6 +522,17 @@ _cString =
 ["xcam_GH_Stairs_F","[10761.261719,9316.643555,-3.36195]",160.988,-100,0,0,[]] call _cString;
 ["xcam_Laptop_unfolded_F","[10760.750977,9337.464844,4.20779]",251.614,-100,0,0,[]] call _cString;
 
+{
+	if (typeOf(_x) in ["Land_Atm_01_F", "Land_Atm_02_F", "xcam_Atm_01_F", "xcam_Atm_02_F"]) then
+	{
+		_marker = createMarkerLocal [format["atm_marker_%1", _forEachIndex], (getPos _x)];
+	 	_marker setMarkerShapeLocal "ICON";
+		_marker setMarkerTypeLocal "Fett_flag";
+		_marker setMarkerColorLocal "ColorGreen";
+		_marker setMarkerSizeLocal [0.6, 0.6];
+	};
+} forEach (allMissionObjects "All");
+
 /*
 _lamp = "Land_LampHalogen_F" createVehicleLocal [0, 0, 0];
 _lamp setposATL [13213.299805,8841.537109,-6.76977];

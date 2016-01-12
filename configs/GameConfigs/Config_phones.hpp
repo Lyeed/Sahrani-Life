@@ -2,13 +2,13 @@ class ALYSIA_PHONE
 {
 	class CONTACTS
 	{
-		characters_allowed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè?!,.ù_ ";
+		characters_allowed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè?!,.ù_à ";
 		characters_max = 25;
 	};
 
 	class SMS
 	{
-		characters_allowed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè?!,.ù_ ";
+		characters_allowed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè?!,.ù_à ";
 		characters_max = 100;
 		send_max = 5;
 	};

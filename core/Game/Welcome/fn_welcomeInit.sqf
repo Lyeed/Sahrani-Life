@@ -35,10 +35,13 @@ _action =
 [
 	format
 	[
-		"<t align='center'><img size='15' image='lyeed_IMG\data\alysia.paa'/><br/>"
-		+ "Vous êtes sur le point de créer un compte avec [%1] comme nom de profil. Une fois crée vous devrez changer d'identité pour pouvoir vous connecter avec un autre nom de profil.<br/><br/>"
-		+ "De plus vous allez être amené à remplir une fiche de personnage regroupant des informations telles que son nom, son prénom son âge, etc...<br/>"
-		+ "Ces informations doivent correspondre avec votre nom de profil Arma pour le prénom et le nom</t></t>", profileName
+			"<t align='center'><img size='15' image='lyeed_IMG\data\alysia.paa'/><br/>"
+		+ 	"Vous êtes sur le point de vous incrire avec [%1] comme nom de personnage.<br/>"
+		+ 	"Une fois l'inscription terminée, l'aventure débutera et vous ne pourrez plus changer les informations de votre personnage.<br/>"
+		+	"Pensez à bien vérifier :<br/>"
+		+	"- Votre nom de profil ArmA. Il doit correspondre à celui de votre personnage sous la forme Prénom Nom<br/>"
+		+	"- Le visage de votre personnage.<br/>"
+		, profileName
 	],
 	"Inscription",
 	"Commencer",

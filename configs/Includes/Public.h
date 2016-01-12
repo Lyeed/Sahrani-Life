@@ -5,10 +5,9 @@ class Public
 	class Init
 	{
 		file = "core\Inits";
-		class init_fWEST {};
-		class init_fCIV {};
-		class init_fEAST {};
-		class init_fGUER {};
+		class init_loops {};
+		class init_data {};
+		class init_position {};
 	};
 
 	class Configs
