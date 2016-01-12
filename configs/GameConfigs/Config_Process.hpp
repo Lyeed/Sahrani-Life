@@ -347,7 +347,7 @@ class ALYSIA_PROCESS
 		sound = "smelting";
 		requiere_target = 1;
 		require[] = {{"glass", 1}};
-		receive[] = {{"bouteille", 2}};
+		receive[] = {{"bouteillevide", 2}};
 		time_per_item = 3;
 		time_default = 5;
 		sides[] = {"CIV"};

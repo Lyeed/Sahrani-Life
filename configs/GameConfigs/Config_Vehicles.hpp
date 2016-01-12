@@ -2869,24 +2869,9 @@ class ALYSIA_VEHICLES
 		fuel = "Diesel";
 		rank = 0;
 		colors[] = 
-		{
-			"Fett_Tow_Truck_red",
-			"Fett_Tow_Truck_yellow",
-			"Fett_Tow_Truck_green",
-			"Fett_Tow_Truck_blue",
-			"Fett_Tow_Truck_pink",
-			"Fett_Tow_Truck_dark",
-			"Fett_Tow_Truck_white"
-		};
+		{};
 		realname = "Remorqueur";
 	};
-	class Fett_Tow_Truck_red: Jonzie_Tow_Truck {};
-	class Fett_Tow_Truck_yellow: Jonzie_Tow_Truck {};
-	class Fett_Tow_Truck_green: Jonzie_Tow_Truck {};
-	class Fett_Tow_Truck_blue: Jonzie_Tow_Truck {};
-	class Fett_Tow_Truck_pink: Jonzie_Tow_Truck {};
-	class Fett_Tow_Truck_dark: Jonzie_Tow_Truck {};
-	class Fett_Tow_Truck_white: Jonzie_Tow_Truck {};
 	
 	class Jonzie_Flat_Bed
 	{
