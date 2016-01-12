@@ -23,7 +23,7 @@ g_donator = compileFinal (_basic select 8);
 if ((call g_donator) > 0) then
 {
 	g_paycheck = (call g_donator) * 600;
-};;
+};
 // blood/bleed/coma
 [(_basic select 9), (_basic select 10), (_basic select 11)] spawn
 {
@@ -101,7 +101,7 @@ switch (playerSide) do
 	{
 		g_paycheck = g_paycheck + round((call g_CIVLevel) * getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "CIV" >> "paycheck"));
 		// Launder
-		g_launder = _basic select 42;
+		g_launder = _basic select 43;
 	};
 
 	case independent:

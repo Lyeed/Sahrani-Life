@@ -12,9 +12,7 @@ VEHICLES_IDCS[] =
 {
 	VEHICLES_LIST_FRAME_IDC,
 	VEHICLES_LIST_HEADER_IDC,
-	VEHICLES_LIST_INFO_IDC,
-	VEHICLES_DISTANCE_HEADER_IDC,
-	VEHICLES_DISTANCE_INFO_IDC
+	VEHICLES_LIST_INFO_IDC
 };
 
 class VEHICLES_DATA_PICTURE: RscPicture
@@ -76,21 +74,18 @@ class VEHICLES_LIST_INFO: RscListbox
 	idc = VEHICLES_LIST_INFO_IDC;
 	colorBackground[] = {0,0,0,0.6};
 	onLBSelChanged = "\
-		private[""_list"", ""_index""];\
+		private[""_list"", ""_index"",""_distance""];\
 		_list = _this select 0;\
 		_index = _this select 1;\
-		if ((_list lbText _index) isEqualTo ""Aucune"") then {\
-			((findDisplay 7500) displayCtrl 7707) ctrlSetStructuredText parseText ""<t align='center' size='1.5'>Inconnu</t>"";\
-		} else {\
-			private[""_distance""];\
-			_distance = round(player distance (g_vehicles select (_list lbValue _index)));\
-			((findDisplay 7500) displayCtrl 7707) ctrlSetStructuredText parseText format\
-			[\
-				""<t align='center'><t size='1.5'>%1</t><br/>mètre%2</t>"",\
-				_distance,\
-				if (_distance > 1) then {""s""} else {""""}\
-			];\
-		};";
+		if ((_list lbText _index) isEqualTo ""Aucune"") exitWith {};\
+		_distance = round(player distance (g_vehicles select (_list lbValue _index)));\
+		((uiNamespace getVariable [""tablet"", displayNull]) displayCtrl 7707) ctrlSetStructuredText parseText format\
+		[\
+			""<t align='center'><t size='1.5'>%1</t><br/>mètre%2</t>"",\
+			_distance,\
+			if (_distance > 1) then {""s""} else {""""}\
+		];\
+	";
 
 	x = 0.587656 * safezoneW + safezoneX;
 	y = 0.368926 * safezoneH + safezoneY;
@@ -114,7 +109,6 @@ class VEHICLES_DISTANCE_INFO: RscStructuredText
 {
 	idc = VEHICLES_DISTANCE_INFO_IDC;
 	font = "PuristaSemiBold";
-	text = "";
 	colorBackground[] = {0,0,0,0.6};
 
 	x = 0.587656 * safezoneW + safezoneX;

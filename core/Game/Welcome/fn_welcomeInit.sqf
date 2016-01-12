@@ -35,12 +35,14 @@ _action =
 [
 	format
 	[
-			"<t align='center'><img size='15' image='lyeed_IMG\data\alysia.paa'/><br/>"
-		+ 	"Vous êtes sur le point de vous incrire avec [%1] comme nom de personnage.<br/>"
-		+ 	"Une fois l'inscription terminée, l'aventure débutera et vous ne pourrez plus changer les informations de votre personnage.<br/>"
-		+	"Pensez à bien vérifier :<br/>"
-		+	"- Votre nom de profil ArmA. Il doit correspondre à celui de votre personnage sous la forme Prénom Nom<br/>"
-		+	"- Le visage de votre personnage.<br/>"
+			"<t font='EtelkaMonospacePro'><t align='center' size='1.2'>Bienvenue,<br/><br/></t><t size='0.8'>"
+		+ 	"Vous êtes sur le point de vous incrire avec <t color='#80FF00'>%1</t> comme nom de personnage.<br/>"
+		+ 	"Une fois l'inscription terminée, l'aventure débutera et <t color='#FF8000'>vous ne pourrez plus changer les informations de votre personnage</t>.<br/><br/>"
+		+	"Pensez à <t color='#FF8000'>BIEN</t> vérifier:<br/><br/>"
+		+	"- <t color='#0174DF'>Votre nom de profil ArmA</t><br/>doit correspondre à celui de votre personnage sous la forme Prénom Nom<br/><br/>"
+		+	"- <t color='#0174DF'>Le visage de votre personnage</t><br/>doit coincider avec l'origine géographique de votre personnage.<br/><br/>"
+		+	"Lorsque vous êtes pret, cliquez sur <t color='#3A01DF'>COMMENCER</t> pour passer à l'étape suivante.<br/>"
+		+	"Si vous n'êtes pas sûr de vos informations et souhaitez les modifiers, appuyez sur <t color='#DF0101'>QUITTER</t> et reconnectez-vous après les avoir rectifiées.</t></t>"
 		, profileName
 	],
 	"Inscription",

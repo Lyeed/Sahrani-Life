@@ -8,7 +8,6 @@ class RscDisplayWelcomeCharacter: default_base_dialog
 	{
 		class CHAR_BACKGROUND: RscText
 		{
-			idc = -1;
 			colorBackground[] = {0,0,0,0.6};
 
 			x = 0.324687 * safezoneW + safezoneX;
@@ -18,9 +17,6 @@ class RscDisplayWelcomeCharacter: default_base_dialog
 		};
 		class CHAR_FRAME: RscFrame
 		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-
 			x = 0.324687 * safezoneW + safezoneX;
 			y = 0.368 * safezoneH + safezoneY;
 			w = 0.350625 * safezoneW;
@@ -28,7 +24,6 @@ class RscDisplayWelcomeCharacter: default_base_dialog
 		};
 		class CHAR_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center' size='2px'>Informations de votre personnage</t>";
 			colorBackground[] =
 			{
@@ -46,7 +41,6 @@ class RscDisplayWelcomeCharacter: default_base_dialog
 
 		class CHAR_FIRSTNAME_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Prénom</t>";
 			colorBackground[] =
 			{
@@ -74,7 +68,6 @@ class RscDisplayWelcomeCharacter: default_base_dialog
 
 		class CHAR_LASTNAME_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Nom</t>";
 			colorBackground[] =
 			{
@@ -102,7 +95,6 @@ class RscDisplayWelcomeCharacter: default_base_dialog
 
 		class CHAR_BIRTH_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Date de naissance</t>";
 			colorBackground[] =
 			{
@@ -117,21 +109,39 @@ class RscDisplayWelcomeCharacter: default_base_dialog
 			w = 0.134062 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-		class CHAR_BIRTH_EDIT: RscEdit
+		class CHAR_BIRTH_YEAR: RscCombo
 		{
 			idc = 1503;
-			text = "00/00/0000";
-			tooltip = "Date de naissance de votre personnage";
+			tooltip = "Année de naissance";
+
+			x = 0.443281 * safezoneW + safezoneX;
+			y = 0.522 * safezoneH + safezoneY;
+			w = 0.0515625 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class CHAR_BIRTH_MONTH: RscCombo
+		{
+			idc = 1509;
+			tooltip = "Mois de naissance";
+
+			x = 0.402031 * safezoneW + safezoneX;
+			y = 0.522 * safezoneH + safezoneY;
+			w = 0.04125 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class CHAR_BIRTH_DAY: RscCombo
+		{
+			idc = 1510;
+			tooltip = "Jour de naissance";
 
 			x = 0.360781 * safezoneW + safezoneX;
 			y = 0.522 * safezoneH + safezoneY;
-			w = 0.134062 * safezoneW;
+			w = 0.04125 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 
 		class CHAR_ORIGIN_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Origine</t>";
 			colorBackground[] =
 			{
@@ -159,7 +169,6 @@ class RscDisplayWelcomeCharacter: default_base_dialog
 
 		class CHAR_SEXE_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Sexe</t>";
 			colorBackground[] =
 			{
@@ -187,7 +196,6 @@ class RscDisplayWelcomeCharacter: default_base_dialog
 
 		class CHAR_BUTTON: RscButtonMenu_colored
 		{
-			idc = -1;
 			text = "VALIDER";
 			onButtonClick = "[] spawn public_fnc_welcomeMenu_Proceed";
 			colorBackground[] =
@@ -216,7 +224,6 @@ class RscDisplayWelcomeCharacter: default_base_dialog
 
 		class INFO_BACKGROUND: RscText
 		{
-			idc = -1;
 			colorBackground[] = {0,0,0,0.6};
 
 			x = 0.123594 * safezoneW + safezoneX;
@@ -226,9 +233,6 @@ class RscDisplayWelcomeCharacter: default_base_dialog
 		};
 		class INFO_FRAME: RscFrame
 		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-
 			x = 0.123594 * safezoneW + safezoneX;
 			y = 0.335 * safezoneH + safezoneY;
 			w = 0.170156 * safezoneW;
@@ -236,7 +240,6 @@ class RscDisplayWelcomeCharacter: default_base_dialog
 		};
 		class INFO_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Informations de l'île</t>";
 			colorBackground[] =
 			{
@@ -254,7 +257,6 @@ class RscDisplayWelcomeCharacter: default_base_dialog
 
 		class INFO_DATE_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Date</t>";
 			colorBackground[] =
 			{
@@ -272,8 +274,6 @@ class RscDisplayWelcomeCharacter: default_base_dialog
 		class INFO_DATE_INFO: RscStructuredText
 		{
 			idc = 1506;
-			text = "";
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.154531 * safezoneW + safezoneX;
 			y = 0.412 * safezoneH + safezoneY;
@@ -283,7 +283,6 @@ class RscDisplayWelcomeCharacter: default_base_dialog
 
 		class INFO_TIME_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Heure</t>";
 			colorBackground[] =
 			{
@@ -301,8 +300,6 @@ class RscDisplayWelcomeCharacter: default_base_dialog
 		class INFO_TIME_INFO: RscStructuredText
 		{
 			idc = 1507;
-			colorBackground[] = {0,0,0,0};
-			text = "";
 
 			x = 0.154531 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;
@@ -322,7 +319,6 @@ class RscDisplayWelcomeFaction: default_base_dialog
 	{
 		class HISTORY_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center' size='2px'>Histoire</t>";
 			colorBackground[] = {0,0,0,1};
 			
@@ -333,7 +329,6 @@ class RscDisplayWelcomeFaction: default_base_dialog
 		};
 		class HISTORY_INFO: RscStructuredText
 		{
-			idc = -1;
 			colorBackground[] = {0,0,0,0.6};
 			text = "<t size='0.8'>L'archipel de Sibranak est un ensemble d'île situé au large de la Bosnie-Herzégovine, dans la mer adriatique.<br/>Peuplé par les grecs durant l'antiquité, cet archipel a toujours gardé son autonomie vis-à-vis de l'Europe. Au XVIeme siècle, au moment de l'expansion de l'Empire Ottoman, les peuples de Sibranak se forgèrent une réputation de peuple indomptable. Durant la bataille de Brujik en 1546, la petite armée locale réussit à repousser un débarquement ottoman dans l'archipel. Au XIXeme siècle, les armées Napoléoniennes en firent un état fantoche au sein de l'Empire. La langue française y est encore parlé. L'archipel resta en dehors des conflits jusqu’à la fin de la seconde guerre mondiale, où un régime démocratique fut installé. Mais l'archipel de Sibranak ne fut en revanche pas épargné par les guerres balkaniques. La convoitise des Bosniak en fit un territoire incertain. Des attentats organisé par la minorité Bosniak secouèrent la population.<br/>Le 2 décembre 1982, le colonel Brajva, protégé par la Garde, organisa un coup d’État. C'est dans un bain de sang que le colonel mit fin à l'instabilité.<br/>Le 16 février 2011, suite à une des bavures policières, une émeute tourne au drame, et des citoyens en colère prennent d'assaut le palais du dictateur. La Garde dirigée par le commandant de Rastignac repoussa l'attaque en tirant à l'obus. Les émeutes devinrent une véritable guerre civile. Le groupe de rebelles fondèrent la Milice, dirigée par le commandant Dexter. Les pays européens essayèrent de soutenir la rébellion, qui s’étendait avec le temps. Mais le soutien de la Russie au colonel freina la progression de la rébellion. Les combats devinrent des escarmouches, autour de la capitale, coupée en deux.<br/>Après sept années de guerre civile, un cessez-le-feu est signé entre les deux parties sous la pression internationale le 8 mars 2018. Mais la guerre a généré d'autres instabilités qui furent à l'origine d'une forte hausse de la criminalité.<br/><br/>Le traité stipule que les deux parties gardent les positions que le combat avait forgé. Aujourd'hui, la situation est la suivante :<br/>- Dans le Nord, une démocratie doit s'installer. La milice va tout faire pour assurer son maintien.<br/>- Dans le Sud, la garde stabilise le régime autoritaire du colonel Brajva, réfugié dans son bunker.<br/>Les deux camps opposés, sont maintenant face à un ennemi commun : Les bandes organisées qui profitèrent de la guerre pour se développer.</t>";
 
@@ -344,9 +339,6 @@ class RscDisplayWelcomeFaction: default_base_dialog
 		};
 		class HISTORY_FRAME: RscFrame
 		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-			
 			x = 0.242187 * safezoneW + safezoneX;
 			y = 0.027 * safezoneH + safezoneY;
 			w = 0.53625 * safezoneW;
@@ -539,7 +531,6 @@ class RscDisplayWelcomeFaction: default_base_dialog
 
 		class CHOICE_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center' size='1.8px'>Choississez votre nationalité selon votre région de départ</t>";
 			colorBackground[] = {0,0,0,1};
 			
@@ -551,7 +542,6 @@ class RscDisplayWelcomeFaction: default_base_dialog
 
 		class LEFT_CHOICE_FRAME: RscFrame
 		{
-			idc = -1;
 			colorText[] = {0,0,0,1};
 
 			x = 0.242187 * safezoneW + safezoneX;
@@ -561,7 +551,6 @@ class RscDisplayWelcomeFaction: default_base_dialog
 		};
 		class LEFT_CHOICE_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Sahrani SUD</t>";
 			colorBackground[] = {0.709804,0.105882,0.105882,1};
 			
@@ -582,7 +571,6 @@ class RscDisplayWelcomeFaction: default_base_dialog
 		};
 		class LEFT_CHOICE_BUTTON: RscButtonSilent
 		{
-			idc = -1;
 			onMouseEnter = "\
 			ctrlShow[850,true];\
 			ctrlShow[851,true];\
@@ -631,7 +619,6 @@ class RscDisplayWelcomeFaction: default_base_dialog
 
 		class RIGHT_CHOICE_FRAME: RscFrame
 		{
-			idc = -1;
 			colorText[] = {0,0,0,1};
 
 			x = 0.520625 * safezoneW + safezoneX;
@@ -641,7 +628,6 @@ class RscDisplayWelcomeFaction: default_base_dialog
 		};
 		class RIGHT_CHOICE_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Sahrani NORD</t>";
 			colorBackground[] = {0,0.470588,0.831373,1};
 			
@@ -662,7 +648,6 @@ class RscDisplayWelcomeFaction: default_base_dialog
 		};
 		class RIGHT_CHOICE_BUTTON: RscButtonSilent
 		{
-			idc = -1;
 			onMouseEnter = "\
 			ctrlShow[860,true];\
 			ctrlShow[861,true];\

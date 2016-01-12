@@ -22,7 +22,7 @@ with missionNamespace do
 	g_choice = "";
 	g_firstName = "";
 	g_lastName = "";
-	g_birth = "";
+	g_birth = [];
 	g_nationality = "";
 	g_sexe = "";
 	/* ===================[Tablet]==========================*/

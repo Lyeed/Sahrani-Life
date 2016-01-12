@@ -6,12 +6,12 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private["_display", "_actual_idc", "_apps_done", "_status", "_apps"];
-disableSerialization;
 
-_display = uiNamespace getVariable["tablet", displayNull];
+disableSerialization;
+_display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
 
-_status = uiNamespace getVariable["main_status", 0];
+_status = uiNamespace getVariable ["main_status", 0];
 _actual_idc = 7510;
 _apps_done = 0;
 _apps_more = false;
@@ -24,7 +24,7 @@ _apps =
 	["lyeed\images\app_server.paa", "[""server""] spawn public_fnc_tabletApp;", "Server", "true"],
 	["lyeed\images\app_store.paa", "[""store""] spawn public_fnc_tabletApp;", "Boutique", "true"],
 	["lyeed\images\app_help.paa", "[""help""] spawn public_fnc_tabletApp;", "Aide", "true"],
-	["lyeed\images\app_phone.paa", "[""PHONE_CATEGORY""] spawn public_fnc_tabletApp;", "Téléphone", "true"],
+	["lyeed\images\app_phone.paa", "[""PHONE_CATEGORY""] spawn public_fnc_tabletApp;", "Téléphone", "((player getVariable ['number', '']) != '')"],
 	[getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "icon"), "[""faction""] spawn public_fnc_tabletApp;", getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "name"), "playerSide in [east,west,independent]"],
 	["lyeed\images\app_licenses.paa", "[""licenses""] spawn public_fnc_tabletApp;", "Licenses", "playerSide isEqualTo civilian"],
 	["lyeed\images\app_licenses.paa","[""market""] spawn public_fnc_tabletApp;","Bourse","""MARKET"" in g_apps"]

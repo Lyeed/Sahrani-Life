@@ -41,7 +41,6 @@ class RscDisplayLaunder: default_interaction_back_dialog
 		class ACTION_FRAME: RscFrame
 		{
 			idc = 29002;
-			colorText[] = {0,0,0,0.8};
 
 			x = 0.505156 * safezoneW + safezoneX;
 			y = 0.577 * safezoneH + safezoneY;
@@ -72,7 +71,6 @@ class RscDisplayLaunder: default_interaction_back_dialog
 		{
 			idc = 29005;
 			text = "<t align='left' size='1.3'>Blanchir</t>";
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.536094 * safezoneW + safezoneX;
 			y = 0.588 * safezoneH + safezoneY;

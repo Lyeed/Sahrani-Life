@@ -911,7 +911,7 @@ class RscCombo
 	colorSelectBackground[] = {1, 1, 1, 1};
 
 	colorPicture[]          = {1, 1, 1, 1};
-	colorPictureSelected[]  = {0, 0, 0, 1};
+	colorPictureSelected[]  = {1, 1, 1, 1};
 	colorPictureDisabled[]  = {1, 1, 1, 1};
 
 	arrowFull               = "\A3\ui_f\data\gui\cfg\scrollbar\arrowFull_ca.paa";

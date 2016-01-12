@@ -6,9 +6,9 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private["_display", "_list", "_markers"];
-disableSerialization;
 
-_display = uiNamespace getVariable["tablet", displayNull];
+disableSerialization;
+_display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
 
 if ("VEHICLES" in g_apps) then
@@ -44,25 +44,36 @@ lbClear _list;
 	};
 } forEach (g_vehicles);
 if ((lbSize _list) isEqualTo 0) then {
-	_list lbAdd "Aucun";
+	_list lbAdd "Aucune";
+} else {
+	[7706, true] call public_fnc_tabletShow;
+	[7707, true] call public_fnc_tabletShow;	
 };
 
 _list lbSetCurSel 0;
 
 {
-	if (!(_x in g_dynamic_markers)) then {
-		_x setMarkerAlphaLocal 0;
+	if ((markerAlpha _x) isEqualTo 1) then
+	{
+		if (!(_x in g_dynamic_markers) && !(_x in _markers)) then
+		{
+			_x setMarkerAlphaLocal 0;
+		};
 	};
-} forEach (allMapMarkers);
+} forEach allMapMarkers;
 
 waitUntil {(g_app != "APP_VEHICLES")};
 
 {
 	deleteMarkerLocal _x;
-} forEach (_markers);
+} forEach _markers;
 
 {
-	if (!(_x in g_dynamic_markers)) then {
-		_x setMarkerAlphaLocal 1;
+	if ((markerAlpha _x) isEqualTo 0) then
+	{
+		if (!(_x in g_dynamic_markers)) then
+		{
+			_x setMarkerAlphaLocal 1;
+		};
 	};
-} forEach (allMapMarkers);
+} forEach allMapMarkers;

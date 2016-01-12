@@ -22,7 +22,11 @@ if (player getVariable ["arrested", false]) then {
 		_randPos = [_pos, 6] call CBA_fnc_randPos;
 		player setPosATL [(_randPos select 0), (_randPos select 1), (_pos select 2)];
 	} else {
-		player setPosATL _position;
+		if (surfaceIsWater _position) then {
+			player setPosASL (ATLToASL _position);
+		} else {
+			player setPosATL _position;
+		};
 	};
 };
 

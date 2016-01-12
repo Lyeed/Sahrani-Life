@@ -529,7 +529,7 @@ _cString =
 	 	_marker setMarkerShapeLocal "ICON";
 		_marker setMarkerTypeLocal "Fett_flag";
 		_marker setMarkerColorLocal "ColorGreen";
-		_marker setMarkerSizeLocal [0.6, 0.6];
+		_marker setMarkerSizeLocal [0.5, 0.5];
 	};
 } forEach (allMissionObjects "All");
 

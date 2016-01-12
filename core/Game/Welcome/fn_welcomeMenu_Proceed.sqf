@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_firstname", "_lastName", "_birth", "_sexe", "_origin", "_action", "_bad", "_displayError", "_age"];
+private["_firstname", "_lastName", "_birth", "_sexe", "_origin", "_action", "_bad", "_displayError"];
 _displayError =
 {
 	((findDisplay 1500) displayCtrl 1508) ctrlSetStructuredText parseText format["<t align='center' color='#DF0101'>%1</t>", _this];
@@ -18,7 +18,7 @@ if (_firstname isEqualTo "") exitWith {
 	"Vous n'avez pas entré de prénom pour votre personnage" call _displayError;
 };
 
-_bad = [_firstname, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzéè- "] call public_fnc_TextAllowed;
+_bad = [_firstname, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzéè-à "] call public_fnc_TextAllowed;
 if (_bad != "") exitWith {
 	["Vous utilisez un caractère interdit dans le prénom de votre personnage (%1)", _bad] call _displayError;
 };
@@ -44,21 +44,7 @@ if (format["%1 %2", _firstname, _lastName] != profileName) exitWith {
 };
 
 // birth
-_birth = ctrlText 1503;
-if ((_birth isEqualTo "00/00/0000") || (_birth isEqualTo "")) exitWith {
-	"Vous n'avez pas entré de date de naissance pour votre personnage" call _displayError;
-};
-
-_bad = [_birth, "0123456789/"] call public_fnc_TextAllowed;
-if (_bad != "") exitWith {
-	format["Vous utilisez un caractère interdit dans votre date de naissance (%1)", _bad] call _displayError;
-};
-
-_age = [_birth] call public_fnc_age;
-if ((_age < 18) || (_age > 100)) exitWith {
-	"Votre personnage doit avoir plus de 18 ans et moins de 90 ans" call _displayError;
-};
-
+_birth = [lbValue[1503, (lbCurSel 1503)], lbValue[1509, (lbCurSel 1509)], lbValue[1510, (lbCurSel 1510)]];
 _origin = lbText[1504, (lbCurSel 1504)];
 _sexe = lbText[1505, (lbCurSel 1505)];
 _action = 
@@ -68,7 +54,7 @@ _action =
 		"Êtes-vous sûr des informations entrées ? Une fois validé vous devrez <t color='#FF4000'>changer d'identité</t> pour pouvoir les modifier<br/><br/><t align='left'>Sexe</t><t align='right'>%5</t><br/><t align='left'>Prénom</t><t align='right'>%1</t><br/><t align='left'>Nom</t><t align='right'>%2</t><br/><t align='left'>Âge</t><t align='right'>%3</t><br/><t align='left'>Origine</t><t align='right'>%4</t>", 
 		_firstname,
 		_lastName,
-		_age,
+		(_birth call public_fnc_age),
 		_origin,
 		_sexe
 	],

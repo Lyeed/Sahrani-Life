@@ -5,24 +5,22 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-private ["_from","_infos"];
+private["_from"];
 _from = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
   
 if (isNull _from) exitWith {};
-if (!(player getVariable ["arrested", false])) exitWith {};
-
-_infos =
-[
-	_from getVariable ["realname", "Erreur"],
-	g_sexe,
-	[g_birth] call public_fnc_age,
-	g_nationality,
-	g_arrest_Cellule,
-	g_arrest_Time,
-	g_arrest_Caution,
-	g_arrest_Reason
-];
-
-[_array] remoteExecCall ["public_fnc_prisonModifyMenu_open", _from];
-
+if (player getVariable ["arrested", false]) then
+{
+	[
+		(_from getVariable ["realname", ""]),
+		g_sexe,
+		g_birth call public_fnc_age,
+		g_nationality,
+		g_arrest_Cellule,
+		g_arrest_Time,
+		g_arrest_Caution,
+		g_arrest_Reason
+	] remoteExecCall ["public_fnc_prisonModifyMenu_open", _from];
+} else {
+	["La cible n'est pas emprisonné"] remoteExecCall ["public_fnc_info", _from];
+};

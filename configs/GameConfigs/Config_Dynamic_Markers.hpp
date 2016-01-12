@@ -14,7 +14,7 @@
 	{10195.1,16966.5,0} \
 }
 
-#define G_RESPAWN_BLACKMARKET \
+#define G_RESPAWN_GENERAL\
 { \
 	{11678.3,5944.3,0.00143862}, \
 	{10807,5009.23,0.00143909}, \
@@ -117,7 +117,7 @@ class ALYSIA_DYN_MARKERS
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
-		positions[] = G_RESPAWN_BLACKMARKET;
+		positions[] = G_RESPAWN_GENERAL;
 	};
 	class black_market_2_marker
 	{
@@ -132,7 +132,7 @@ class ALYSIA_DYN_MARKERS
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
-		positions[] = G_RESPAWN_BLACKMARKET;
+		positions[] = G_RESPAWN_GENERAL;
 	};
 
 	//- ALCOOL
@@ -166,9 +166,42 @@ class ALYSIA_DYN_MARKERS
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
-		positions[] = G_RESPAWN_BLACKMARKET;
+		positions[] = G_RESPAWN_GENERAL;
+	};
+
+	//- RECELEUR
+	class cardealer_1_marker
+	{
+		text        = "Receleur de véhicules";
+		type        = "Fett_bicycle";
+		color       = "ColorRed";
+		shape       = "ICON";
+		size        = 0.5;
+		shop_appear = 1;
+		shop_price  = 1000;
+		linked      = "cardealer_1";
+		discover[]  = {"CIV"};
+		shown[]     = {};
+		destroy[]   = {"WEST", "EAST"};
+		positions[] = G_RESPAWN_GENERAL;
+	};
+	class cardealer_2_marker
+	{
+		text        = "Receleur de véhicules";
+		type        = "Fett_bicycle";
+		color       = "ColorRed";
+		shape       = "ICON";
+		size        = 0.5;
+		shop_appear = 1;
+		shop_price  = 1000;
+		linked      = "cardealer_2";
+		discover[]  = {"CIV"};
+		shown[]     = {};
+		destroy[]   = {"WEST", "EAST"};
+		positions[] = G_RESPAWN_GENERAL;
 	};
 };
 
 #undef G_RESPAWN_FIELD
-#undef G_RESPAWN_BLACKMARKET
+#undef G_RESPAWN_GENERAL
+#undef G_RESPAWN_NORTH

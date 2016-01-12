@@ -45,7 +45,6 @@ class RscDisplayPlayerRevokeLicense: default_interaction_back_dialog
 		class ACTION_FRAME: RscFrame
 		{
 			idc = 18002;
-			colorText[] = {0,0,0,0.8};
 
 			x = 0.505156 * safezoneW + safezoneX;
 			y = 0.577 * safezoneH + safezoneY;

@@ -23,4 +23,4 @@ _month = switch(date select 1) do
 	case 12: {"Décembre"};
 };
 
-format["%1 %2 %3", (date select 2), _month, (date select 0)];
+format["%1 %2 %3", (date select 2), _month, (date select 0)]
