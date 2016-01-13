@@ -61,13 +61,10 @@ if ((time - g_action_delay) < 1) exitWith {
 };
 
 g_action_delay = time;
-
 [false, _price] call public_fnc_handleCash;
 playSound "buy";
 [_item, true] call public_fnc_handleItem;
 
-if (playerSide != civilian) then {
-	if (_item in getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "leader_bord_history")) then {
-		[(player getVariable["realname", profileName]), _item, playerSide] remoteExecCall ["TON_fnc_factionHistoryAdd", 2];
-	};
+if (_item in getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "leader_bord_history")) then {
+	[(player getVariable["realname", profileName]), _item, playerSide] remoteExecCall ["TON_fnc_factionHistoryAdd", 2];
 };

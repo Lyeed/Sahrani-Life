@@ -204,5 +204,4 @@ class ALYSIA_SHOPS_ARMA
 			"Skyline_Merlin_01"
 		};
 	};
-	
 };

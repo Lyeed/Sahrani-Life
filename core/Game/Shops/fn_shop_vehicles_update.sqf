@@ -99,7 +99,6 @@ lbClear _list_colors;
 		{
 			_index = _list_colors lbAdd getText(configFile >> "CfgVehicles" >> _x >> "displayName");
 			_list_colors lbSetData [_index, _x];
-			_list_colors lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> _x >> "picture")];
 		} else {
 			diag_log format["ERROR: %1 not defined in CfgVehicles", _x];
 			systemChat format["ERROR: %1 not defined in CfgVehicles", _x];

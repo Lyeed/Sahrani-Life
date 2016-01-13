@@ -30,7 +30,7 @@ disableSerialization;
 _display = findDisplay 38400;
 if (isNull _display) exitWith {};
 
-(_display displayCtrl 38401) ctrlSetStructuredText parseText format["<t align='center' size='1.8'>%1</t>", (getText(missionConfigFile >> "ALYSIA_SHOPS_ARMA" >> _type >> "name"))];
+(_display displayCtrl 38401) ctrlSetStructuredText parseText format["<t align='center' size='1.5'>%1</t>", getText(missionConfigFile >> "ALYSIA_SHOPS_ARMA" >> _type >> "name")];
 
 _list = _display displayCtrl 38402;
 lbClear _list;
@@ -44,44 +44,24 @@ lbClear _list;
 			diag_log format["ERROR: %1 does not exist in Arma", _x];
 			systemChat format["ERROR: %1 does not exist in Arma", _x];
 		} else {
-			if (
-					(
-						(playerSide isEqualTo civilian) && 
-							{(
-								(getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_condition_CIV") isEqualTo "") || 
-								(missionNamespace getVariable [format["license_%1", getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_condition_CIV")], false])
-							)}
-					) || (
-						(playerSide in [east, west, independent]) && 
-							{(
-								((player getVariable ["rank", 0]) >= getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> format["buy_condition_%1", str(playerSide)])) && 
-								(getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> format["buy_condition_%1", str(playerSide)]) != -1)
-							)}
-					)
-				) then {
-				_displayName = getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "name");
-				if (_displayName isEqualTo "") then {
-					_displayName = _details select 1;
-				};
-				_price = getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_price");
-				
-				_index = _list lbAdd format["%1 (%2kn)", _displayName, ([_price] call public_fnc_numberText)];
-				_list lbSetData [_index, _x];
-				_list lbSetValue [_index, _price];
-				_list lbSetPicture [_index, (_details select 2)];
+			_displayName = getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "name");
+			if (_displayName isEqualTo "") then {
+				_displayName = _details select 1;
 			};
+			
+			_index = _list lbAdd _displayName;
+			_list lbSetData [_index, _x];
+			_list lbSetValue [_index, getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_price")];
+			_list lbSetPicture [_index, (_details select 2)];
+			_list lbSetTooltip [_index, (_list lbText _index)];
 		};
 	} else {
 		diag_log format["ERROR: %1 not defined in ALYSIA_ITEMS_ARMA", _x];
 		systemChat format["ERROR: %1 not defined in ALYSIA_ITEMS_ARMA", _x];
 	};
-} forEach (getArray(missionConfigFile >> "ALYSIA_SHOPS_ARMA" >> _type >> "stocks"));
-if ((lbSize _list) isEqualTo 0) then
-{
+} forEach getArray(missionConfigFile >> "ALYSIA_SHOPS_ARMA" >> _type >> "stocks");
+if ((lbSize _list) isEqualTo 0) then {
 	_list lbAdd "Vous n'avez rien à acheter ici";
-	{
-		ctrlShow[_x, false];
-	} forEach ([38403, 38404, 38405, 38406, 38407, 38408, 38409, 38421, 38422, 38410, 38411, 38412, 38413, 38414, 38415, 38416]);
-} else {
-	_list lbSetCurSel 0;
 };
+
+_list lbSetCurSel 0;

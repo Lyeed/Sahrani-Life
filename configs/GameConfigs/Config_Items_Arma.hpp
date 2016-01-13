@@ -5,12 +5,16 @@ class ALYSIA_ITEMS_ARMA
 	**==================*/
 	class item_className
 	{
-		name = "Tazer";//        (optional) ingame item display name incase displayname if CfgArma is incorrect
-		buy_price = 2000;//                 item buy price
-		buy_condition_CIV = "";//(optional) license needed to buy                                         <only for civilian>
-		buy_condition_GUER = 0;//(optional) rank needed to buy    (-1 to disable in case of shared menu)  <only for independent>
-		buy_condition_EAST = 0;//(optional) rank needed to buy    (-1 to disable in case of shared menu)  <only for opfort>
-		buy_condition_WEST = 0;//(optional) rank needed to buy    (-1 to disable in case of shared menu)  <only for bluefor>
+		name = "Tazer";//(optional) ingame item display name incase displayname if CfgArma is not correct
+		buy_price = 2000;//item buy price
+		buy_condition_CIV  = 0;//(optional) rank needed to buy <only for civilian>
+		buy_condition_GUER = 0;//(optional) rank needed to buy <only for independent>
+		buy_condition_EAST = 0;//(optional) rank needed to buy <only for opfort>
+		buy_condition_WEST = 0;//(optional) rank needed to buy <only for bluefor>
+		buy_license_CIV = "";//(optional) license needed to buy <only for civilian>
+		buy_license_GUER = "";//(optional) license needed to buy <only for independent>
+		buy_license_EAST = "";//(optional) license needed to buy <only for opfort>
+		buy_license_WEST = "";//(optional) license needed to buy <only for bluefor>
 	};
 	/*==================*/
 

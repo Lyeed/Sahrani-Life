@@ -53,6 +53,7 @@ lbClear _list;
 				_list lbSetData [_index, str(_vList)];
 				_list lbSetValue [_index, ([(_vList select 0)] call public_fnc_getVehBuyPrice)];
 			};
+			_list lbSetTooltip [_index, (_list lbText _index)];
 		} else {
 			diag_log format["ERROR: %1 is not supposed to be in this shop. Vehicle side != Shop side", _x];
 			systemChat format["ERROR: %1 is not supposed to be in this shop. Vehicle side != Shop side", _x];
