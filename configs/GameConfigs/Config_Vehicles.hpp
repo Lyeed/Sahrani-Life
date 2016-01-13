@@ -2104,45 +2104,6 @@ class ALYSIA_VEHICLES
 		realname = "Mercedes G65 AMG";
 	};
 
-  	class Tal_Wrangler
-	{
-		buyPrice = 41300;
-		inventory = 75;
-		side = "CIV";
-		insurance = 1;
-		license = "driver";
-		fuel = "Diesel";
-		rank = 0;
-		colors[] = 
-		{
-			"Tal_Wrangler_Red",
-			"Tal_Wrangler_Pink",
-			"Tal_Wrangler_Black",
-			"Tal_Wrangler_Blue",
-			"Tal_Wrangler_LightBlue",
-			"Tal_Wrangler_Green",
-			"Tal_Wrangler_Lime",
-			"Tal_Wrangler_Purple",
-			"Tal_Wrangler_Grey",
-			"Tal_Wrangler_Orange",
-			"Tal_Wrangler_White",
-			"Tal_Wrangler_Yellow"
-		};
-		realname = "Jeep Wrangler";
-	};
-  	class Tal_Wrangler_Red : Tal_Wrangler {};
-  	class Tal_Wrangler_Pink : Tal_Wrangler {};
-  	class Tal_Wrangler_Black : Tal_Wrangler {};
-  	class Tal_Wrangler_Blue : Tal_Wrangler {};
-  	class Tal_Wrangler_LightBlue : Tal_Wrangler {};
-  	class Tal_Wrangler_Green : Tal_Wrangler {};
-  	class Tal_Wrangler_Lime : Tal_Wrangler {};
-  	class Tal_Wrangler_Purple : Tal_Wrangler {};
-  	class Tal_Wrangler_Grey : Tal_Wrangler {};
-  	class Tal_Wrangler_Orange : Tal_Wrangler {};
-  	class Tal_Wrangler_White : Tal_Wrangler {};
-  	class Tal_Wrangler_Yellow : Tal_Wrangler {};
-
 	class B_Truck_01_transport_F
 	{
 		buyPrice = 25000;
@@ -2884,23 +2845,9 @@ class ALYSIA_VEHICLES
 		rank = 0;
 		colors[] = 
 		{
-			"Fett_Flat_Bed_red",
-			"Fett_Flat_Bed_yellow",
-			"Fett_Flat_Bed_green",
-			"Fett_Flat_Bed_blue",
-			"Fett_Flat_Bed_pink",
-			"Fett_Flat_Bed_dark",
-			"Fett_Flat_Bed_white"
 		};
 		realname = "Man TGX Flat Bed Truck";
 	};
-	class Fett_Flat_Bed_red: Jonzie_Flat_Bed {};
-	class Fett_Flat_Bed_yellow: Jonzie_Flat_Bed {};
-	class Fett_Flat_Bed_green: Jonzie_Flat_Bed {};
-	class Fett_Flat_Bed_blue: Jonzie_Flat_Bed {};
-	class Fett_Flat_Bed_pink: Jonzie_Flat_Bed {};
-	class Fett_Flat_Bed_dark: Jonzie_Flat_Bed {};
-	class Fett_Flat_Bed_white: Jonzie_Flat_Bed {};
 	
 	class Jonzie_Log_Truck
 	{
@@ -2913,23 +2860,9 @@ class ALYSIA_VEHICLES
 		rank = 0;
 		colors[] = 
 		{
-			"Fett_Log_Truck_red",
-			"Fett_Log_Truck_yellow",
-			"Fett_Log_Truck_green",
-			"Fett_Log_Truck_blue",
-			"Fett_Log_Truck_pink",
-			"Fett_Log_Truck_dark",
-			"Fett_Log_Truck_white"
 		};
 		realname = "Man TGX Log Truck";
 	};
-	class Fett_Log_Truck_red: Jonzie_Log_Truck {};
-	class Fett_Log_Truck_yellow: Jonzie_Log_Truck {};
-	class Fett_Log_Truck_green: Jonzie_Log_Truck {};
-	class Fett_Log_Truck_blue: Jonzie_Log_Truck {};
-	class Fett_Log_Truck_pink: Jonzie_Log_Truck {};
-	class Fett_Log_Truck_dark: Jonzie_Log_Truck {};
-	class Fett_Log_Truck_white: Jonzie_Log_Truck {};
 	
 	class Jonzie_Tanker_Truck
 	{
@@ -2942,23 +2875,9 @@ class ALYSIA_VEHICLES
 		rank = 0;
 		colors[] = 
 		{
-			"Fett_Tanker_Truck_red",
-			"Fett_Tanker_Truck_yellow",
-			"Fett_Tanker_Truck_green",
-			"Fett_Tanker_Truck_blue",
-			"Fett_Tanker_Truck_pink",
-			"Fett_Tanker_Truck_dark",
-			"Fett_Tanker_Truck_white"
 		};
 		realname = "Man TGX Tanker Truck";
 	};
-	class Fett_Tanker_Truck_red: Jonzie_Tanker_Truck {};
-	class Fett_Tanker_Truck_yellow: Jonzie_Tanker_Truck {};
-	class Fett_Tanker_Truck_green: Jonzie_Tanker_Truck {};
-	class Fett_Tanker_Truck_blue: Jonzie_Tanker_Truck {};
-	class Fett_Tanker_Truck_pink: Jonzie_Tanker_Truck {};
-	class Fett_Tanker_Truck_dark: Jonzie_Tanker_Truck {};
-	class Fett_Tanker_Truck_white: Jonzie_Tanker_Truck {};
 	
 	class Jonzie_Box_Truck
 	{
@@ -2971,23 +2890,9 @@ class ALYSIA_VEHICLES
 		rank = 0;
 		colors[] = 
 		{
-			"Fett_Box_Truck_red",
-			"Fett_Box_Truck_yellow",
-			"Fett_Box_Truck_green",
-			"Fett_Box_Truck_blue",
-			"Fett_Box_Truck_pink",
-			"Fett_Box_Truck_dark",
-			"Fett_Box_Truck_white"
 		};
 		realname = "Man TGX Box Truck";
 	};
-	class Fett_Box_Truck_red: Jonzie_Box_Truck {};
-	class Fett_Box_Truck_yellow: Jonzie_Box_Truck {};
-	class Fett_Box_Truck_green: Jonzie_Box_Truck {};
-	class Fett_Box_Truck_blue: Jonzie_Box_Truck {};
-	class Fett_Box_Truck_pink: Jonzie_Box_Truck {};
-	class Fett_Box_Truck_dark: Jonzie_Box_Truck {};
-	class Fett_Box_Truck_white: Jonzie_Box_Truck {};
 	
 	class Jonzie_30CSL
 	{
