@@ -27,8 +27,8 @@ class ALYSIA_PRISONS
 
 		class bail
 		{
-			max = 0;
 			min = 0;
+			max = 0;
 			enable = 0;
 		};
 
@@ -113,8 +113,8 @@ class ALYSIA_PRISONS
 
 		class bail
 		{
-			max = 0;
 			min = 0;
+			max = 0;
 			enable = 0;
 		};
 

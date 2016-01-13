@@ -7,9 +7,12 @@
 */
 
 private ["_prison","_prisonName","_cell","_time","_bail","_reason","_timeMin","_timeMax","_bailMin","_bailMax","_bailEnable","_checkBox","_cells","_error","_infos"];
+_prison = (([player] call public_fnc_prisonNearest) select 0);
+_prisonName = vehicleVarName _prison;
 
 if (isNull g_interaction_target) exitWith {};
-if (!(g_interaction_target getVariable ["arrested", false])) exitWith {["Cette personne n'est plus en prison"] call public_fnc_error};
+if (_prison isEqualTo []) exitWith {["Vous n'êtes pas dans une prison"] call public_fnc_error};
+if (g_interaction_target getVariable ["arrested", false]) exitWith {["Cette personne est déjà en prison."] call public_fnc_error};
 
 disableSerialization;
 _display = findDisplay 18000;
@@ -17,9 +20,9 @@ if (isNull _display) exitWith {};
 
 _infos = [];
 _error = false;
-_cell = parseNumber (ctrlText 15044);
-_time = parseNumber (ctrlText 15045);
-_bail = parseNumber (ctrlText 15046);
+_cell = lbData[19044, (lbCurSel 19044)];
+_time = parseNumber (ctrlText 19045);
+_bail = parseNumber (ctrlText 19046);
 _reason = ctrlText 19049;
 _timeMin = getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "time" >> "min");
 _timeMax = getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "time" >> "max");
@@ -33,7 +36,6 @@ if (!(_checkBox)) exitWith {
 	(_display displayCtrl 16008) ctrlSetStructuredText parseText "<t align='left' size='0.8' color='#8A0808'>Comfirmer les modifications</t>";
 };
 
-if (_amount <= 0) exitWith {_error = true};
 {
 	if (!([ctrlText _x] call public_fnc_isNumber)) then {
 		(_display displayCtrl _x) ctrlSetBackgroundColor {153, 0, 0, 0.5};
@@ -45,17 +47,13 @@ if (_amount <= 0) exitWith {_error = true};
 	_cells = _cells + 1;
 } forEach ("true" configClasses (missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "cells"));
 
-if ((_cell < 1) || (_cell > _cells)) then {
-	(_display displayCtrl 15044) ctrlSetBackgroundColor {153, 0, 0, 0.5};
-	_error = true;
-};
 if ((_time < _timeMin) || (_time > _timeMax)) then {
-	(_display displayCtrl 15045) ctrlSetBackgroundColor {153, 0, 0, 0.5};
+	(_display displayCtrl 19045) ctrlSetBackgroundColor {153, 0, 0, 0.5};
 	_error = true;
 };
 if (_bailEnable) then {
 	if ((_amount < _bailMin) || (_amount > _bailMax)) then {
-		(_display displayCtrl 15046) ctrlSetBackgroundColor {153, 0, 0, 0.5};
+		(_display displayCtrl 19046) ctrlSetBackgroundColor {153, 0, 0, 0.5};
 		_error = true;
 	};
 };

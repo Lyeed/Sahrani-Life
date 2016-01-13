@@ -28,9 +28,14 @@ if (isNull _display) exitWith {};
 
 if (!(createDialog "RscDisplayModifyArrest")) exitWith {};
 
+_list = _display displayCtrl 19044;
 {
 	_cells = _cells + 1;
+	_index = _list lbAdd getText(_x >> "name");
+	_list lbSetData [_index, (configName _x)];
+	//_list lbSetPicture [_index, getText(_x >> "picture")];
 } forEach ("true" configClasses (missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "cells"));
+_list lbSetCurSel 0;
 
 (_display displayCtrl 19012) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1</t>", getText(missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "name")];
 (_display displayCtrl 19013) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1</t>", getArray(missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "side")];
