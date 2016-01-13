@@ -4058,7 +4058,7 @@ class ALYSIA_VEHICLES
 		inventory = 100;
 		side = "CIV";
 		insurance = 1;
-		license = "";
+		license = "driver";
 		fuel = "Diesel";
 		rank = 0;
 		color[] = {};

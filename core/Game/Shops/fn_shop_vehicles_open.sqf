@@ -32,7 +32,7 @@ _display = findDisplay 2300;
 if (isNull _display) exitWith {};
 
 g_veh_shop = _spawnPoints;
-(_display displayCtrl 2301) ctrlSetStructuredText parseText format["<t align='center' size='1.3'>%1</t>", (getText(missionConfigFile >> "ALYSIA_SHOPS_VEHICLES" >> _shop >> "name"))];
+(_display displayCtrl 2301) ctrlSetStructuredText parseText format["<t align='center' size='1.5'>%1</t>", getText(missionConfigFile >> "ALYSIA_SHOPS_VEHICLES" >> _shop >> "name")];
 
 _list = _display displayCtrl 2302;
 lbClear _list;
@@ -40,23 +40,9 @@ lbClear _list;
 {
 	if (isClass(missionConfigFile >> "ALYSIA_VEHICLES" >> _x)) then
 	{
-		if 
-			(
-				(
-					(playerSide isEqualTo civilian) && 
-					{(
-						(getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "license") isEqualTo "") || 
-						(missionNamespace getVariable[format["license_%1", getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "license")], false])
-					)}
-				) || (
-					(playerSide != civilian) && 
-					{(
-						(player getVariable ["rank", 0]) >= getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "rank")
-					)}
-				)
-			) then {
+		if (getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "side") isEqualTo str(playerSide)) then
+		{
 			_index = _list lbAdd getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "realname");
-			
 			_vList = getArray(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "colors");
 			if (_vList isEqualTo []) then {
 				_list lbSetPicture [_index, (getText(configFile >> "CfgVehicles" >> _x >> "picture"))];
@@ -67,18 +53,20 @@ lbClear _list;
 				_list lbSetData [_index, str(_vList)];
 				_list lbSetValue [_index, ([(_vList select 0)] call public_fnc_getVehBuyPrice)];
 			};
+		} else {
+			diag_log format["ERROR: %1 is not supposed to be in this shop. Vehicle side != Shop side", _x];
+			systemChat format["ERROR: %1 is not supposed to be in this shop. Vehicle side != Shop side", _x];
 		};
 	} else {
 		diag_log format["ERROR: %1 not defined in ALYSIA_VEHICLES", _x];
 		systemChat format["ERROR: %1 not defined in ALYSIA_VEHICLES", _x];
 	};
-} forEach (getArray(missionConfigFile >> "ALYSIA_SHOPS_VEHICLES" >> _shop >> "stock"));
+} forEach getArray(missionConfigFile >> "ALYSIA_SHOPS_VEHICLES" >> _shop >> "stock");
+
 if ((lbSize _list) isEqualTo 0) then {
 	_list lbAdd "Vous n'avez rien à acheter ici";
-	{
-		ctrlShow[_x, false];
-	} forEach ([2304, 2305, 2306, 2307, 2308, 2309, 2310, 2311, 2312, 2313, 2314, 2315, 2321, 2303]);
 } else {
 	lbSortByValue _list;
-	_list lbSetCurSel 0;
 };
+
+_list lbSetCurSel 0;

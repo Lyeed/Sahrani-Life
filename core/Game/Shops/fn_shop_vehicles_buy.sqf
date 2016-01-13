@@ -17,13 +17,8 @@ if (_sel isEqualTo -1) exitWith {
 };
 
 _price = lbValue[2302, _sel];;
-if (_price isEqualTo 0) exitWith {
-	["Ce véhicule n'a pas de prix de vente"] call public_fnc_error;
-};
-
-if (_price > g_cash) exitWith {
-	["Vous n'avez pas assez d'argent"] call public_fnc_error;
-};
+if (_price isEqualTo 0) exitWith {};
+if (_price > g_cash) exitWith {};
 
 {
 	if ((nearestObjects[(getMarkerPos _x), ["Car", "Air", "Ship", "Tank", "Truck"], 10]) isEqualTo []) exitWith {
