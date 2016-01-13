@@ -3360,4 +3360,20 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
+	class wc_gr_h_m35_feldgrau_1
+	{
+		buy_price = 20;
+	};
+	class wc_gr_h_m35_feldgrau_1_over
+	{
+		buy_price = 20;
+	};
+	class wc_gr_h_m35_feldgrau_1_open
+	{
+		buy_price = 20;
+	};
+	class wc_gr_smg_mp40 {};
+	class wc_32Rnd_9x19_mag {};
+	class wc_us_smg_m1a1 {};
+	class wc_30Rnd_45acp {};
 };

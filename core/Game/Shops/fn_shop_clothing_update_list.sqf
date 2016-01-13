@@ -111,31 +111,16 @@ lbClear _list;
 			diag_log format["ERROR: %1 does not exist in Arma", _x];
 			systemChat format["ERROR: %1 does not exist in Arma", _x];
 		} else {
-			if (
-					(
-						(playerSide isEqualTo civilian) && 
-							{(
-								(getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_condition_CIV") isEqualTo "") || 
-								(missionNamespace getVariable [format["license_%1", getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_condition_CIV")], false])
-							)}
-					) || (
-						(playerSide in [east, west, independent]) && 
-							{(
-								((player getVariable ["rank", 0]) >= getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> format["buy_condition_%1", str(playerSide)])) && 
-								(getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> format["buy_condition_%1", str(playerSide)]) != -1)
-							)}
-					)
-				) then {
-				_displayName = getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "name");
-				_price = getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_price");
-				if (_displayName isEqualTo "") then {
-					_displayName = _details select 1;
-				};
-				_index = _list lbAdd format["%1 (%2kn)", _displayName, ([_price] call public_fnc_numberText)];
-				_list lbSetData [_index, _x];
-				_list lbSetValue [_index, _price];
-				_list lbSetPicture [_index, (_details select 2)];
+			_displayName = getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "name");
+			if (_displayName isEqualTo "") then {
+				_displayName = _details select 1;
 			};
+			
+			_index = _list lbAdd _displayName;
+			_list lbSetData [_index, _x];
+			_list lbSetValue [_index, getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_price")];
+			_list lbSetPicture [_index, (_details select 2)];
+			_list lbSetTooltip [_index, (_list lbText _index)];
 		};
 	} else {
 		diag_log format["ERROR: %1 not defined in ALYSIA_ITEMS_ARMA", _x];
@@ -149,6 +134,9 @@ if ((lbSize _list) isEqualTo 0) then
 	ctrlShow[3110, false];
 	ctrlShow[3111, false];
 	ctrlShow[3112, false];
+	ctrlShow[3106, false];
+	ctrlShow[3105, false];
+	ctrlShow[3104, false];
 } else {
 	_list lbSetCurSel 0;
 	lbSortByValue _list;
@@ -157,6 +145,9 @@ if ((lbSize _list) isEqualTo 0) then
 	ctrlShow[3110, true];
 	ctrlShow[3111, true];
 	ctrlShow[3112, true];
+	ctrlShow[3106, true];
+	ctrlShow[3105, true];
+	ctrlShow[3104, true];
 };
 
 g_shop_clothing_active = false;

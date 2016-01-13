@@ -187,14 +187,16 @@ class ALYSIA_FACTIONS
 					"Trixie_Enfield_Rail",
 					"hlc_rifle_aughbar_B",
 					"hlc_rifle_auga2_b",
-					"Fett_SDAR"
+					"Fett_SDAR",
+					"wc_gr_smg_mp40"
 				}
 			},
 			{"Magazines",
 				{
 					"Trixie_Enfield_Mag",
 					"hlc_30Rnd_556x45_B_AUG",
-					"Fett_20Rnd_556x45_UW_mag"
+					"Fett_20Rnd_556x45_UW_mag",
+					"wc_32Rnd_9x19_mag"
 				}
 			},
 			{"Items",

@@ -1,51 +1,63 @@
-class RscDisplayShopClothing: default_base_dialog
+class RscDisplayShopClothing: default_interaction_back_dialog
 {
 	idd = 3100;
 	name = "RscDisplayShopClothing";
 	
-	class controlsBackground
+	class controlsBackground: DEFAULT_controlsBackground
 	{
-		class BORDER: RscPicture
+		class BACKGROUND: BACKGROUND
 		{
-			idc = -1;
-			text = "lyeed_IMG\data\frames\frame_2_borderless.paa";
-
-			x = 0.0875 * safezoneW + safezoneX;
-			y = 0.247 * safezoneH + safezoneY;
-			w = 0.219635 * safezoneW;
-			h = 0.511444 * safezoneH;
-		};
-		class BACKGROUND: RscPicture
-		{
-			idc = -1;
 			text = "lyeed_IMG\data\shops\background.jpg";
 
-			x = 0.0925209 * safezoneW + safezoneX;
-			y = 0.272593 * safezoneH + safezoneY;
-			w = 0.209167 * safezoneW;
-			h = 0.462 * safezoneH;
+			x = 0.0978125 * safezoneW + safezoneX;
+			y = 0.313 * safezoneH + safezoneY;
+			w = 0.201094 * safezoneW;
+			h = 0.528 * safezoneH;
+		};
+		class FRAME: FRAME
+		{
+			x = 0.0978125 * safezoneW + safezoneX;
+			y = 0.28 * safezoneH + safezoneY;
+			w = 0.201094 * safezoneW;
+			h = 0.561 * safezoneH;
 		};
 	};
 	
-	class controls 
+	class controls: DEFAULT_controls
 	{
-		class TITLE: RscStructuredText
+		class TITLE: TITLE
 		{
 			idc = 3101;
-			text = "";
-			colorBackground[] = {0,0,0,0.8};
-			
-			x = 0.0925209 * safezoneW + safezoneX;
-			y = 0.272593 * safezoneH + safezoneY;
-			w = 0.209167 * safezoneW;
-			h = 0.0430741 * safezoneH;
+
+			x = 0.0978125 * safezoneW + safezoneX;
+			y = 0.28 * safezoneH + safezoneY;
+			w = 0.201094 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+
+		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME
+		{
+			x = 0.066875 * safezoneW + safezoneX;
+			y = 0.302 * safezoneH + safezoneY;
+		};
+		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND
+		{
+			x = 0.066875 * safezoneW + safezoneX;
+			y = 0.302 * safezoneH + safezoneY;
+		};
+		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE
+		{
+			x = 0.0739894 * safezoneW + safezoneX;
+			y = 0.312952 * safezoneH + safezoneY;
+		};
+		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON
+		{
+			x = 0.066875 * safezoneW + safezoneX;
+			y = 0.302 * safezoneH + safezoneY;
 		};
 
 		class TYPE_FRAME: RscFrame
 		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-			
 			x = 0.12875 * safezoneW + safezoneX;
 			y = 0.324 * safezoneH + safezoneY;
 			w = 0.139219 * safezoneW;
@@ -53,7 +65,6 @@ class RscDisplayShopClothing: default_base_dialog
 		};
 		class TYPE_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Type</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -75,9 +86,6 @@ class RscDisplayShopClothing: default_base_dialog
 
 		class STOCK_FRAME: RscFrame
 		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-
 			x = 0.102969 * safezoneW + safezoneX;
 			y = 0.379 * safezoneH + safezoneY;
 			w = 0.190781 * safezoneW;
@@ -85,7 +93,6 @@ class RscDisplayShopClothing: default_base_dialog
 		};
 		class STOCK_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Stock</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -97,8 +104,8 @@ class RscDisplayShopClothing: default_base_dialog
 		class STOCK_LIST: RscListbox
 		{
 			idc = 3103;
-			colorBackground[] = {0,0,0,0.6};
 			onLBSelChanged = "_this call public_fnc_shop_clothing_update_clothe;";
+			rowHeight = 0.05;
 
 			x = 0.102969 * safezoneW + safezoneX;
 			y = 0.401 * safezoneH + safezoneY;
@@ -106,66 +113,34 @@ class RscDisplayShopClothing: default_base_dialog
 			h = 0.253 * safezoneH;
 		};
 
-		class ACTION_EXIT_BACKGROUND: RscText
+		class SELECT_FRAME: RscFrame
+		{
+			idc = 3106;
+			
+			x = 0.118437 * safezoneW + safezoneX;
+			y = 0.665 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
+			h = 0.099 * safezoneH;
+		};
+		class SELECT_HEADER: RscStructuredText
+		{
+			idc = 3105;
+			colorBackground[] = {0,0,0,0.8};
+
+			x = 0.118437 * safezoneW + safezoneX;
+			y = 0.665 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class SELECT_INFO: RscStructuredText
 		{
 			idc = 3104;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.206094 * safezoneW + safezoneX;
-			y = 0.665 * safezoneH + safezoneY;
-			w = 0.0825 * safezoneW;
-			h = 0.055 * safezoneH;
-		};
-		class ACTION_EXIT_FRAME: RscFrame
-		{
-			idc = 3105;
-			colorText[] = {0,0,0,0.8};
-
-			x = 0.206094 * safezoneW + safezoneX;
-			y = 0.665 * safezoneH + safezoneY;
-			w = 0.0825 * safezoneW;
-			h = 0.055 * safezoneH;
-		};
-		class ACTION_EXIT_TEXT: RscStructuredText
-		{
-			idc = 3106;
-			text = "<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>";
-			colorBackground[] = {-1,-1,-1,0};
-
-			x = 0.231875 * safezoneW + safezoneX;
-			y = 0.676 * safezoneH + safezoneY;
-			w = 0.0515625 * safezoneW;
-			h = 0.033 * safezoneH;
-		};
-		class ACTION_EXIT_IMAGE: RscPicture
-		{
-			idc = 3107;
-			text = "lyeed_IMG\data\shops\actions\action_exit.paa";
-
-			x = 0.211094 * safezoneW + safezoneX;
-			y = 0.676111 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.033 * safezoneH;
-		};
-		class ACTION_EXIT_BUTTON: RscButtonSilent
-		{
-			idc = -1;
-			action = "closeDialog 0;";
-			onMouseEnter = "\
-			ctrlSetText[3107,""lyeed_IMG\data\shops\actions\action_exit_select.paa""];\
-			ctrlShow[3105, false];\
-			((findDisplay 3100) displayCtrl 3104) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 3100) displayCtrl 3106) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
-			onMouseExit = "\
-			ctrlSetText[3107,""lyeed_IMG\data\shops\actions\action_exit.paa""];\
-			ctrlShow[3105, true];\
-			((findDisplay 3100) displayCtrl 3104) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 3100) displayCtrl 3106) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";
-
-			x = 0.206094 * safezoneW + safezoneX;
-			y = 0.665 * safezoneH + safezoneY;
-			w = 0.0825 * safezoneW;
-			h = 0.055 * safezoneH;
+			x = 0.118437 * safezoneW + safezoneX;
+			y = 0.687 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
+			h = 0.077 * safezoneH;
 		};
 
 		class ACTION_BUY_BACKGROUND: RscText
@@ -173,18 +148,17 @@ class RscDisplayShopClothing: default_base_dialog
 			idc = 3108;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.108125 * safezoneW + safezoneX;
-			y = 0.665 * safezoneH + safezoneY;
+			x = 0.154531 * safezoneW + safezoneX;
+			y = 0.775 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_BUY_FRAME: RscFrame
 		{
 			idc = 3109;
-			colorText[] = {0,0,0,0.8};
 
-			x = 0.108125 * safezoneW + safezoneX;
-			y = 0.665 * safezoneH + safezoneY;
+			x = 0.154531 * safezoneW + safezoneX;
+			y = 0.775 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
@@ -192,10 +166,9 @@ class RscDisplayShopClothing: default_base_dialog
 		{
 			idc = 3110;
 			text = "<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>";
-			colorBackground[] = {-1,-1,-1,0};
 
-			x = 0.133906 * safezoneW + safezoneX;
-			y = 0.676 * safezoneH + safezoneY;
+			x = 0.18026 * safezoneW + safezoneX;
+			y = 0.785259 * safezoneH + safezoneY;
 			w = 0.0567187 * safezoneW;
 			h = 0.033 * safezoneH;
 		};
@@ -204,8 +177,8 @@ class RscDisplayShopClothing: default_base_dialog
 			idc = 3111;
 			text = "lyeed_IMG\data\shops\actions\action_buy.paa";
 
-			x = 0.110677 * safezoneW + safezoneX;
-			y = 0.670444 * safezoneH + safezoneY;
+			x = 0.157578 * safezoneW + safezoneX;
+			y = 0.781611 * safezoneH + safezoneY;
 			w = 0.02625 * safezoneW;
 			h = 0.0429629 * safezoneH;
 		};
@@ -226,8 +199,8 @@ class RscDisplayShopClothing: default_base_dialog
 			((findDisplay 3100) displayCtrl 3108) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 3100) displayCtrl 3110) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>"";";
 
-			x = 0.108125 * safezoneW + safezoneX;
-			y = 0.665 * safezoneH + safezoneY;
+			x = 0.154531 * safezoneW + safezoneX;
+			y = 0.775 * safezoneH + safezoneY;
 			w = 0.0825 * safezoneW;
 			h = 0.055 * safezoneH;
 		};

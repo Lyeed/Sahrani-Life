@@ -644,7 +644,10 @@ class civ_clothing_sud
 			"casquette_Caporal",
 			"casquette_Basique",
 			"rds_Woodlander_cap3",
-			"TRYK_H_Helmet_ACU"
+			"TRYK_H_Helmet_ACU",
+			"wc_gr_h_m35_feldgrau_1",
+			"wc_gr_h_m35_feldgrau_1_over",
+			"wc_gr_h_m35_feldgrau_1_open"
 		};
 		goggles[] =
 		{

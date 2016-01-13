@@ -37,7 +37,7 @@ _forfait = _list lbData _index;
 
 [8111, true] call public_fnc_tabletShow;
 
-if ((g_atm < (getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> _forfait >> "bill"))) || (_forfait isEqualTo g_phone_forfait)) then
+if ((g_atm < getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> _forfait >> "bill")) || (_forfait isEqualTo g_phone_forfait)) then
 {
 	[8108, false] call public_fnc_tabletShow;
 	[8109, false] call public_fnc_tabletShow;
