@@ -29,7 +29,7 @@ if ((vehicle player) isEqualTo player) then {
 _display = uiNamespace getVariable["tablet", displayNull];
 
 _loading_ctrl = _display ctrlCreate ["RscPicture", 7506];
-_loading_ctrl ctrlSetText "lyeed\images\loading_screen.jpg";
+_loading_ctrl ctrlSetText "lyeed_IMG\data\tablet\backgrounds\loading_screen.jpg";
 _loading_ctrl ctrlSetPosition (ctrlPosition (_display displayCtrl 7502));
 _loading_ctrl ctrlSetFade 1;
 _loading_ctrl ctrlCommit 0;

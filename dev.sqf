@@ -1,3 +1,8 @@
+
+
+["weapon", cursorTarget, (getPlayerUID player), "ABCED", "888888"] remoteExec ["TON_fnc_company_insert", 2];
+
+
 [player] spawn public_fnc_interactions_player_to_player_basics;
 
 Titan_AA

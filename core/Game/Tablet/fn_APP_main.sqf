@@ -18,16 +18,16 @@ _apps_more = false;
 
 _apps = 
 [
-	["lyeed\images\app_bank.paa", "[""solde""] spawn public_fnc_tabletApp;", "Solde", "true"],
-	["lyeed\images\app_gps.paa", "[""vehicles""] spawn public_fnc_tabletApp;", "Véhicules", "true"],
-	["lyeed\images\app_setting.paa", "[""settings""] spawn public_fnc_tabletApp;", "Réglages", "true"],
-	["lyeed\images\app_server.paa", "[""server""] spawn public_fnc_tabletApp;", "Server", "true"],
-	["lyeed\images\app_store.paa", "[""store""] spawn public_fnc_tabletApp;", "Boutique", "true"],
-	["lyeed\images\app_help.paa", "[""help""] spawn public_fnc_tabletApp;", "Aide", "true"],
-	["lyeed\images\app_phone.paa", "[""PHONE_CATEGORY""] spawn public_fnc_tabletApp;", "Téléphone", "((player getVariable ['number', '']) != '')"],
+	["lyeed_IMG\data\tablet\app_main\app_bank.paa", "[""solde""] spawn public_fnc_tabletApp;", "Solde", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_gps.paa", "[""vehicles""] spawn public_fnc_tabletApp;", "Véhicules", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_setting.paa", "[""settings""] spawn public_fnc_tabletApp;", "Réglages", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_server.paa", "[""server""] spawn public_fnc_tabletApp;", "Serveur", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_store.paa", "[""store""] spawn public_fnc_tabletApp;", "Boutique", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_help.paa", "[""help""] spawn public_fnc_tabletApp;", "Aide", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_phone.paa", "[""PHONE_CATEGORY""] spawn public_fnc_tabletApp;", "Téléphone", "((player getVariable ['number', '']) != '')"],
 	[getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "icon"), "[""faction""] spawn public_fnc_tabletApp;", getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "name"), "playerSide in [east,west,independent]"],
-	["lyeed\images\app_licenses.paa", "[""licenses""] spawn public_fnc_tabletApp;", "Licenses", "playerSide isEqualTo civilian"],
-	["lyeed\images\app_market.paa","[""market""] spawn public_fnc_tabletApp;","Bourse","""MARKET"" in g_apps"]
+	["lyeed_IMG\data\tablet\app_main\app_licenses.paa", "[""licenses""] spawn public_fnc_tabletApp;", "Licenses", "playerSide isEqualTo civilian"],
+	["lyeed_IMG\data\tablet\app_main\app_market.paa","[""market""] spawn public_fnc_tabletApp;","Bourse","""MARKET"" in g_apps"]
 ];
 
 {

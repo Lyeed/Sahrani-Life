@@ -88,7 +88,7 @@ class ALYSIA_COMPANIES
 
 		class money_transfer
 		{
-			name = "Transport de fond";
+			name = "Transport de fonds";
 			building = "Land_i_Shed_Ind_F";
 			license = "company_money_tranfer";
 			image = "lyeed_IMG\data\companies\types\money_transfer.paa";
@@ -102,7 +102,7 @@ class ALYSIA_COMPANIES
 
 		class foundry
 		{
-			name = "Fonderie lourde";
+			name = "Fonderie";
 			building = "Land_Factory_Main_F";
 			license = "company_foundry";
 			image = "lyeed_IMG\data\companies\types\foundry.paa";
@@ -116,7 +116,7 @@ class ALYSIA_COMPANIES
 
 		class fuel
 		{
-			name = "Transport et exploitation du pétrole";
+			name = "Exploitation du pétrole";
 			building = "";//?
 			license = "company_fuel";
 			image = "lyeed_IMG\data\companies\types\fuel.paa";

@@ -13,7 +13,7 @@ g_keybinds = [];
 ["Alysia", "actionHandler", "Action", {[] call EVENT_fnc_actionKeyHandler}, {true}, [DIK_LWIN, [false, false, false]], false, 0, true] call CBA_fnc_addKeybind;
 g_keybinds pushBack "actionHandler";
 
-["Alysia", "actionSilent", "Boule-quies", {[] call public_fnc_silence}, {}, [DIK_U, [false, false, false]], false, 0, true] call CBA_fnc_addKeybind;
+["Alysia", "actionSilent", "Boules Quies", {[] call public_fnc_silence}, {}, [DIK_U, [false, false, false]], false, 0, true] call CBA_fnc_addKeybind;
 g_keybinds pushBack "actionSilent";
 
 ["Alysia", "actionTablet", "Ouvrir tablette", {[] spawn public_fnc_tabletOpen}, {true}, [DIK_Y, [false, false, false]], false, 0, true] call CBA_fnc_addKeybind;
@@ -28,7 +28,7 @@ g_keybinds pushBack "actionKnock";
 ["Alysia", "actionCuff", "Menotter", {[cursorTarget] spawn public_fnc_restrainAction}, {true}, [DIK_R, [true, false, false]], false, 0, true] call CBA_fnc_addKeybind;
 g_keybinds pushBack "actionCuff";
 
-["Alysia", "actionHoldster", "Holdster", {[] call public_fnc_holdsterSwitch}, {true}, [DIK_H, [true, false, false]], false, 0, true] call CBA_fnc_addKeybind;
+["Alysia", "actionHoldster", "Holster", {[] call public_fnc_holdsterSwitch}, {true}, [DIK_H, [true, false, false]], false, 0, true] call CBA_fnc_addKeybind;
 g_keybinds pushBack "actionHoldster";
 
 ["Alysia", "actionSifflet", "Utiliser (sifflet)", {[] call public_fnc_sifflet}, {true}, [DIK_F, [false, false, true]], false, 0, true] call CBA_fnc_addKeybind;

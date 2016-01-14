@@ -33,7 +33,7 @@
 #define APP_PREV_BUTTON_IDC   7543
 #define APP_STATUS_IDC        7544
 
-MAIN_BACKGROUND = "lyeed\images\back.jpg";
+MAIN_BACKGROUND = "lyeed_IMG\data\tablet\backgrounds\back.jpg";
 MAIN_IDCS[] = 
 {
 	APP_1_IMAGE_IDC,

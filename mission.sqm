@@ -7208,7 +7208,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Rafinerie"",public_fnc_process_open,""oil"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Raffinerie de pétrole"",public_fnc_process_open,""oil"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item367
 		{
@@ -7333,7 +7333,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 331.519;this setposATL [17330.117188,14142.501953,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire Poid Lourd"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_truck"", [""CIV_vehicles_land_truck_marker_1"",""CIV_vehicles_land_truck_marker_2"",""CIV_vehicles_land_truck_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 331.519;this setposATL [17330.117188,14142.501953,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire Poids Lourd"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_truck"", [""CIV_vehicles_land_truck_marker_1"",""CIV_vehicles_land_truck_marker_2"",""CIV_vehicles_land_truck_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item379
 		{
@@ -7353,7 +7353,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 156.158;this setposATL [13242.945313,6852.496582,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire Poid Lourd"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_truck"", [""CIV_vehicles_land_truck_marker_4"",""CIV_vehicles_land_truck_marker_5""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 156.158;this setposATL [13242.945313,6852.496582,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire Poids Lourd"",public_fnc_shop_vehicles_open,[""CIV_vehicles_land_truck"", [""CIV_vehicles_land_truck_marker_4"",""CIV_vehicles_land_truck_marker_5""]],0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == civilian'];";
 		};
 		class Item381
 		{
@@ -33590,8 +33590,8 @@ class Mission
 		class Item25
 		{
 			position[]={12639.888,179.99561,14976.067};
-			name="Commercant de planche";
-			text="Commercant de planche";
+			name="Commerçant de planche";
+			text="Commerçant de planche";
 			type="Fett_commercialzone";
 			colorName="ColorBrown";
 			a=0.5;
@@ -33620,8 +33620,8 @@ class Mission
 		class Item28
 		{
 			position[]={15386.115,22.882099,13785.129};
-			name="Traitement de platine";
-			text="Traitement de platine";
+			name="Traitement du platine";
+			text="Traitement du platine";
 			type="Fett_industrial";
 			colorName="ColorOrange";
 			a=0.5;
@@ -33630,8 +33630,8 @@ class Mission
 		class Item29
 		{
 			position[]={10081.833,124.95361,9407.1924};
-			name="Traitement de fer";
-			text="Traitement de fer";
+			name="Traitement du fer";
+			text="Traitement du fer";
 			type="Fett_industrial";
 			colorName="ColorOrange";
 			a=0.5;
@@ -33660,8 +33660,8 @@ class Mission
 		class Item32
 		{
 			position[]={10676.022,150.96788,8989.1025};
-			name="Souflerie";
-			text="Souflerie";
+			name="Soufflerie";
+			text="Soufflerie";
 			type="Fett_industrial";
 			colorName="ColorOrange";
 			a=0.5;
@@ -34029,8 +34029,8 @@ class Mission
 		class Item73
 		{
 			position[]={11552.649,219.18913,9203.002};
-			name="Traitement de coton";
-			text="Traitement de coton";
+			name="Traitement du coton";
+			text="Traitement du coton";
 			type="Fett_industrial";
 			colorName="ColorOrange";
 			a=0.5;
@@ -34227,7 +34227,7 @@ class Mission
 		{
 			position[]={9531.2793,139.98311,9836.4346};
 			name="Base de la garde";
-			text="Base de la garde";
+			text="Base de la Garde";
 			type="Fett_campingsite";
 			colorName="ColorGrey";
 			a=0.5;
@@ -34325,7 +34325,7 @@ class Mission
 		{
 			position[]={14621.302,43.959076,10572.478};
 			name="Base relais de la milice";
-			text="Base relais de la milice";
+			text="Base relais de la Milice";
 			type="Fett_camp";
 			colorName="ColorBlue";
 			a=0.5;
@@ -34358,8 +34358,8 @@ class Mission
 		class Item111
 		{
 			position[]={10621.927,122.9685,9533.6367};
-			name="Poissonerie";
-			text="Poissonerie";
+			name="Poissonnerie";
+			text="Poissonnerie";
 			type="Fett_boat";
 			colorName="ColorGreen";
 			a=0.60000002;
@@ -34403,7 +34403,7 @@ class Mission
 		{
 			position[]={8149.7637,176.97188,7831.0068};
 			name="Base de la garde_2";
-			text="Base de la garde";
+			text="Base de la Garde";
 			type="Fett_campingsite";
 			colorName="ColorGrey";
 			a=0.5;

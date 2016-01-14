@@ -26,7 +26,7 @@ _forfait = _list lbData _index;
 +	"<t align='left'>SMS</t><t align='right'><t color='#8cff9b'>%3</t>kn</t><br/>"
 +	"<t align='left'>SMS sauvegardés</t><t align='right'>%4</t><br/>"
 +	"<t align='left'>Contacts</t><t align='right'>%5</t><br/>"
-+	"<t align='left'>Blacklists</t><t align='right'>%6</t><br/></t>",
++	"<t align='left'>Blacklist</t><t align='right'>%6</t><br/></t>",
 	(_list lbText _index),
 	[getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> _forfait >> "bill")] call public_fnc_numberText,
 	[getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> _forfait >> "sms_price")] call public_fnc_numberText,

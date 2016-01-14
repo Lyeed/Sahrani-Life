@@ -1185,7 +1185,7 @@ class ALYSIA_ITEMS
 
 	class patate_seed
 	{
-		name        = "Patate germé";
+		name        = "Patate germée";
 		weight      = 1;
 		illegal     = 0;
 		price_buy   = 60;
@@ -1412,7 +1412,7 @@ class ALYSIA_ITEMS
 
 	class petitbeurre
 	{
-		name        = "Boite de petit beurre";
+		name        = "Boîte de petits beurres";
 		weight      = 1;
 		price_buy   = 2;
 		price_sell  = 0;

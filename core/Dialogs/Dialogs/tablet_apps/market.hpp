@@ -18,7 +18,7 @@
 #define MARKET_INFO_BUY_HEADER_IDC             8817
 #define MARKET_INFO_BUY_INFO_IDC               8818
 
-MARKET_BACKGROUND = "lyeed\images\back.jpg";
+MARKET_BACKGROUND = "lyeed_IMG\data\tablet\backgrounds\back.jpg";
 MARKET_IDCS[] = 
 {
 	MARKET_RESSOURCES_FRAME_IDC,

@@ -26,7 +26,7 @@ class ALYSIA_LICENSES
 	};
 	class boat
 	{
-		name = "Permis de bateau";
+		name = "Permis bateau";
 		sides[] = {"CIV", "EAST", "WEST", "GUER"};
 		price = 10000;
 		illegal = 0;
@@ -141,7 +141,7 @@ class ALYSIA_LICENSES
 	};
 	class salt
 	{
-		name = "Traitement de sel";
+		name = "Traitement du sel";
 		sides[] = {"CIV"};
 		price = 35000;
 		illegal = 0;
