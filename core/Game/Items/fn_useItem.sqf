@@ -22,7 +22,7 @@ if (g_action_inUse) exitWith
 	false;
 };
 
-_use = getText(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "use");
+_use = getText(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "use" >> "action");
 if (_use isEqualTo "") exitWith
 {
 	["Cet objet n'est pas utilisable"] call public_fnc_error;

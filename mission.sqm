@@ -28795,7 +28795,7 @@ class Mission
 			position[]={13474.833,19.965586,8883.3252};
 			id=2640;
 			side="EMPTY";
-			vehicle="Lcam_Cargo_Tower_V1_No7_F";
+			vehicle="Land_Cargo_Tower_V1_No7_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 0;this setposATL [13474.833008,8883.325195,0];this setVectorUp [0,0,1]";
 		};
@@ -28913,7 +28913,7 @@ class Mission
 			azimut=-125;
 			id=2652;
 			side="EMPTY";
-			vehicle="Lcam_Cargo_Patrol_V1_F";
+			vehicle="Land_Cargo_Patrol_V1_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir -125;this setposATL [13499.107422,8875.324219,0];this setVectorUp [0,0,1]";
 		};
@@ -31798,7 +31798,7 @@ class Mission
 			offsetY=0.377947;
 			id=2931;
 			side="EMPTY";
-			vehicle="xcam_i_Shed_Ind_F";
+			vehicle="Land_i_Shed_Ind_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 70;this setposATL [15359.973633,13885.621094,0.377947];this setVectorUp [0,0,1]";
 		};
@@ -31809,7 +31809,7 @@ class Mission
 			offsetY=0.379623;
 			id=2932;
 			side="EMPTY";
-			vehicle="xcam_i_Shed_Ind_F";
+			vehicle="Land_i_Shed_Ind_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 187.399;this setposATL [12411.411133,13394.931641,0.379623];this setVectorUp [0,0,1]";
 		};

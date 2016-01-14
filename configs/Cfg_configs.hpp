@@ -4,7 +4,6 @@
 #include "GameConfigs\Config_Shop_Arma.hpp"
 #include "GameConfigs\Config_Process.hpp"
 #include "GameConfigs\Config_Housing.hpp"
-#include "GameConfigs\Config_Food.hpp"
 #include "GameConfigs\Config_Drugs.hpp"
 #include "GameConfigs\Config_Vehicles.hpp"
 #include "GameConfigs\Config_Factions.hpp"
