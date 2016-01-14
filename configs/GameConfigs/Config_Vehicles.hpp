@@ -170,38 +170,6 @@ class ALYSIA_VEHICLES
 	class Mrshounka_Alfa_Romeo_violet : Mrshounka_Alfa_Romeo_civ {};
 	class Mrshounka_Alfa_Romeo_orange : Mrshounka_Alfa_Romeo_civ {};
 
-	class Mrshounka_rs4_civ
-	{
-		buyPrice = 123000;
-		inventory = 40;
-		side = "CIV";
-		insurance = 1;
-		license = "driver";
-		fuel = "SP95";
-		rank = 0;
-		colors[] = 
-		{
-			"Mrshounka_rs4_civ_noir",
-			"Mrshounka_rs4_civ_bleufonce",
-			"Mrshounka_rs4_civ_rouge",
-			"Mrshounka_rs4_civ_jaune",
-			"Mrshounka_rs4_civ_rose",
-			"Mrshounka_rs4_civ_grise",
-			"Mrshounka_rs4_civ_violet",
-			"Mrshounka_rs4_civ_orange"
-		};
-		realname = "Audi RSA4";
-	};
-
-	class Mrshounka_rs4_civ_noir : Mrshounka_rs4_civ {};
-	class Mrshounka_rs4_civ_bleufonce : Mrshounka_rs4_civ {};
-	class Mrshounka_rs4_civ_rouge : Mrshounka_rs4_civ {};
-	class Mrshounka_rs4_civ_jaune : Mrshounka_rs4_civ {};
-	class Mrshounka_rs4_civ_rose : Mrshounka_rs4_civ {};
-	class Mrshounka_rs4_civ_grise : Mrshounka_rs4_civ {};
-	class Mrshounka_rs4_civ_violet : Mrshounka_rs4_civ {};
-	class Mrshounka_rs4_civ_orange : Mrshounka_rs4_civ {};
-
 	class shounka_a3_rs5_civ
 	{
 		buyPrice = 105000;
@@ -1683,38 +1651,6 @@ class ALYSIA_VEHICLES
 	class shounka_transam_rose : shounka_transam {};
 	class shounka_transam_rouge : shounka_transam {};
 	class shounka_transam_violet : shounka_transam {};
-
-	class Mrshounka_Volkswagen_Touareg_civ
-	{
-		buyPrice = 35000;
-		inventory = 55;
-		side = "CIV";
-		insurance = 1;
-		license = "driver";
-		fuel = "SP95";
-		rank = 0;
-		colors[] = 
-		{
-			"Mrshounka_Volkswagen_Touareg_bleufonce",
-			"Mrshounka_Volkswagen_Touareg_grise",
-			"Mrshounka_Volkswagen_Touareg_jaune",
-			"Mrshounka_Volkswagen_Touareg_noir",
-			"Mrshounka_Volkswagen_Touareg_orange",
-			"Mrshounka_Volkswagen_Touareg_rose",
-			"Mrshounka_Volkswagen_Touareg_rouge",
-			"Mrshounka_Volkswagen_Touareg_violet"
-		};
-		realname = "Volswagen Touareg";
-	};
-
-	class Mrshounka_Volkswagen_Touareg_bleufonce : Mrshounka_Volkswagen_Touareg_civ {};
-	class Mrshounka_Volkswagen_Touareg_grise : Mrshounka_Volkswagen_Touareg_civ {};
-	class Mrshounka_Volkswagen_Touareg_jaune : Mrshounka_Volkswagen_Touareg_civ {};
-	class Mrshounka_Volkswagen_Touareg_noir : Mrshounka_Volkswagen_Touareg_civ {};
-	class Mrshounka_Volkswagen_Touareg_orange : Mrshounka_Volkswagen_Touareg_civ {};
-	class Mrshounka_Volkswagen_Touareg_rose : Mrshounka_Volkswagen_Touareg_civ {};
-	class Mrshounka_Volkswagen_Touareg_rouge : Mrshounka_Volkswagen_Touareg_civ {};
-	class Mrshounka_Volkswagen_Touareg_violet : Mrshounka_Volkswagen_Touareg_civ {};
 
 	class shounka_a3_dafxf_euro6_f
 	{
@@ -3213,35 +3149,6 @@ class ALYSIA_VEHICLES
 	class Fett_STI_dark: Jonzie_STI {};
 	class Fett_STI_white: Jonzie_STI {};
 	
-	class Jonzie_Transit
-	{
-		buyPrice = 26000;
-		inventory = 150;
-		side = "CIV";
-		insurance = 1;
-		license = "driver";
-		fuel = "SP98";
-		rank = 0;
-		colors[] = 
-		{
-			"Fett_Transit_red",
-			"Fett_Transit_yellow",
-			"Fett_Transit_green",
-			"Fett_Transit_blue",
-			"Fett_Transit_pink",
-			"Fett_Transit_dark",
-			"Fett_Transit_white"
-		};
-		realname = "Ford Transit";
-	};
-	class Fett_Transit_red: Jonzie_Transit {};
-	class Fett_Transit_yellow: Jonzie_Transit {};
-	class Fett_Transit_green: Jonzie_Transit {};
-	class Fett_Transit_blue: Jonzie_Transit {};
-	class Fett_Transit_pink: Jonzie_Transit {};
-	class Fett_Transit_dark: Jonzie_Transit {};
-	class Fett_Transit_white: Jonzie_Transit {};
-	
 	class Jonzie_Ute
 	{
 		buyPrice = 27500;
@@ -3956,16 +3863,115 @@ class ALYSIA_VEHICLES
 		color[] = {};
 	};
 
-	class Skyline_VW_TouaregR50_01_F
+	class Skyline_VW_Touareg
 	{
 		realname = "VW Touareg";
-		buyPrice = 10;
-		inventory = 100;
+		buyPrice = 36500;
+		inventory = 75;
+		side = "CIV";
+		insurance = 1;
+		license = "driver";
+		fuel = "SP98";
+		rank = 0;
+		color[] = {
+			"Skyline_VW_TouaregR50_01_F",
+			"Skyline_VW_TouaregR50_02_F",
+			"Skyline_VW_TouaregR50_03_F",
+			"Skyline_VW_TouaregR50_04_F",
+			"Skyline_VW_TouaregR50_05_F",
+			"Skyline_VW_TouaregR50_06_F",
+			"Skyline_VW_TouaregR50_07_F",
+			"Skyline_VW_TouaregR50_08_F",
+			"Skyline_VW_TouaregR50_09_F",
+			"Skyline_VW_TouaregR50_10_F",
+			"Skyline_VW_TouaregR50_11_F",
+			"Skyline_VW_TouaregR50_12_F"
+		};
+	};
+	class Skyline_VW_TouaregR50_01_F : Skyline_VW_Touareg {};
+	class Skyline_VW_TouaregR50_02_F : Skyline_VW_Touareg {};
+	class Skyline_VW_TouaregR50_03_F : Skyline_VW_Touareg {};
+	class Skyline_VW_TouaregR50_04_F : Skyline_VW_Touareg {};
+	class Skyline_VW_TouaregR50_05_F : Skyline_VW_Touareg {};
+	class Skyline_VW_TouaregR50_06_F : Skyline_VW_Touareg {};
+	class Skyline_VW_TouaregR50_07_F : Skyline_VW_Touareg {};
+	class Skyline_VW_TouaregR50_08_F : Skyline_VW_Touareg {};
+	class Skyline_VW_TouaregR50_09_F : Skyline_VW_Touareg {};
+	class Skyline_VW_TouaregR50_10_F : Skyline_VW_Touareg {};
+	class Skyline_VW_TouaregR50_11_F : Skyline_VW_Touareg {};
+	class Skyline_VW_TouaregR50_12_F : Skyline_VW_Touareg {}; 
+
+	class Skyline_Audi_RS4
+	{
+		realname = "Audi RS4";
+		buyPrice = 123000;
+		inventory = 25;
+		side = "CIV";
+		insurance = 1;
+		license = "driver";
+		fuel = "SP98";
+		rank = 0;
+		color[] = {		
+		"Skyline_Audi_RS4_01_F",
+		"Skyline_Audi_RS4_02_F", 
+		"Skyline_Audi_RS4_03_F", 
+		"Skyline_Audi_RS4_04_F",
+		"Skyline_Audi_RS4_05_F",  
+		"Skyline_Audi_RS4_06_F",  
+		"Skyline_Audi_RS4_07_F",   
+		"Skyline_Audi_RS4_08_F",
+		"Skyline_Audi_RS4_09_F", 
+		"Skyline_Audi_RS4_10_F",
+		"Skyline_Audi_RS4_11_F",
+		"Skyline_Audi_RS4_12_F"
+	};
+	class Skyline_Audi_RS4_01_F : Skyline_Audi_RS4 {};
+	class Skyline_Audi_RS4_02_F : Skyline_Audi_RS4 {}; 
+	class Skyline_Audi_RS4_03_F : Skyline_Audi_RS4 {}; 
+	class Skyline_Audi_RS4_04_F : Skyline_Audi_RS4 {};
+	class Skyline_Audi_RS4_05_F : Skyline_Audi_RS4 {};  
+	class Skyline_Audi_RS4_06_F : Skyline_Audi_RS4 {};  
+	class Skyline_Audi_RS4_07_F : Skyline_Audi_RS4 {};   
+	class Skyline_Audi_RS4_08_F : Skyline_Audi_RS4 {};
+	class Skyline_Audi_RS4_09_F : Skyline_Audi_RS4 {}; 
+	class Skyline_Audi_RS4_10_F : Skyline_Audi_RS4 {};
+	class Skyline_Audi_RS4_11_F : Skyline_Audi_RS4 {};
+	class Skyline_Audi_RS4_12_F : Skyline_Audi_RS4 {};
+};	
+
+	class Skyline_Ford_Transit
+	{
+		realname = "Ford Transit";
+		buyPrice = 26000;
+		inventory = 120;
 		side = "CIV";
 		insurance = 1;
 		license = "driver";
 		fuel = "Diesel";
 		rank = 0;
-		color[] = {};
+		color[] = {		
+		"Skyline_Ford_Transit_01_F"
+		"Skyline_Ford_Transit_02_F",
+		"Skyline_Ford_Transit_03_F",
+		"Skyline_Ford_Transit_04_F",
+		"Skyline_Ford_Transit_05_F",
+		"Skyline_Ford_Transit_06_F",
+		"Skyline_Ford_Transit_07_F",
+		"Skyline_Ford_Transit_08_F",
+		"Skyline_Ford_Transit_09_F",
+		"Skyline_Ford_Transit_10_F",
+		"Skyline_Ford_Transit_11_F",
+		"Skyline_Ford_Transit_12_F"
 	};
-};	
+	class Skyline_Ford_Transit_01_F : Skyline_Ford_Transit {};
+	class Skyline_Ford_Transit_02_F : Skyline_Ford_Transit {};
+	class Skyline_Ford_Transit_03_F : Skyline_Ford_Transit {};
+	class Skyline_Ford_Transit_04_F : Skyline_Ford_Transit {};
+	class Skyline_Ford_Transit_05_F : Skyline_Ford_Transit {};
+	class Skyline_Ford_Transit_06_F : Skyline_Ford_Transit {};
+	class Skyline_Ford_Transit_07_F : Skyline_Ford_Transit {};
+	class Skyline_Ford_Transit_08_F : Skyline_Ford_Transit {};
+	class Skyline_Ford_Transit_09_F : Skyline_Ford_Transit {};
+	class Skyline_Ford_Transit_10_F : Skyline_Ford_Transit {};
+	class Skyline_Ford_Transit_11_F : Skyline_Ford_Transit {};
+	class Skyline_Ford_Transit_12_F : Skyline_Ford_Transit {};
