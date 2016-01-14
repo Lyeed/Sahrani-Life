@@ -1,3 +1,5 @@
+[player] spawn public_fnc_interactions_player_to_player_basics;
+
 Titan_AA
 launch_B_Titan_F
 

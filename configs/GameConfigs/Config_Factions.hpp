@@ -65,6 +65,11 @@ class ALYSIA_FACTIONS
 				{
 
 				}
+			},
+			{"Virtual",
+				{
+
+				}
 			}
 		};
 		mission_start[] =
@@ -212,6 +217,11 @@ class ALYSIA_FACTIONS
 				{
 
 				}
+			},
+			{"Virtual",
+				{
+
+				}
 			}
 		};
 		mission_start[] =
@@ -336,6 +346,11 @@ class ALYSIA_FACTIONS
 				}
 			},
 			{"Backpacks",
+				{
+
+				}
+			},
+			{"Virtual",
 				{
 
 				}
@@ -485,6 +500,11 @@ class ALYSIA_FACTIONS
 				}
 			},
 			{"Backpacks",
+				{
+
+				}
+			},
+			{"Virtual",
 				{
 
 				}

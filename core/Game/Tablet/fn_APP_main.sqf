@@ -27,7 +27,7 @@ _apps =
 	["lyeed\images\app_phone.paa", "[""PHONE_CATEGORY""] spawn public_fnc_tabletApp;", "Téléphone", "((player getVariable ['number', '']) != '')"],
 	[getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "icon"), "[""faction""] spawn public_fnc_tabletApp;", getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "name"), "playerSide in [east,west,independent]"],
 	["lyeed\images\app_licenses.paa", "[""licenses""] spawn public_fnc_tabletApp;", "Licenses", "playerSide isEqualTo civilian"],
-	["lyeed\images\app_licenses.paa","[""market""] spawn public_fnc_tabletApp;","Bourse","""MARKET"" in g_apps"]
+	["lyeed\images\app_market.paa","[""market""] spawn public_fnc_tabletApp;","Bourse","""MARKET"" in g_apps"]
 ];
 
 {

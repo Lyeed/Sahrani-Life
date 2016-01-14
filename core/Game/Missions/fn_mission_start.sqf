@@ -69,6 +69,9 @@ for "_i" from 0 to (round(random(40)) + 10) do
 			case "Items": {
 				_vehicle addItemCargoGlobal [_item, 1];
 			};
+			case "Virtual": {
+				_vehicle setVariable ["Trunk", [true, (_vehicle getVariable ["Trunk", []]), _item, round(random(4))] call public_fnc_handleTrunk, true];
+			};
 		};
 	};
 };

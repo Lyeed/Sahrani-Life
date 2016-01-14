@@ -171,4 +171,12 @@ class ALYSIA_LICENSES
 		illegal = 0;
 		pad_store = 1;
 	};
+	class gov_company
+	{
+		name = "Investisseur gouvernementale";
+		sides[] = {"CIV", "EAST", "WEST", "GUER"};
+		price = 0;
+		illegal = 0;
+		pad_store = 0;
+	};
 };

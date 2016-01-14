@@ -37,6 +37,14 @@ class Public
 		class virtual_menu_action_remove {};
 	};
 
+	class Companies
+	{
+		file = "core\Game\Companies";
+		class company_create_open {};
+		class company_create_action {};
+		class company_create_update {};
+	};
+
 	class Tools
 	{
 		file = "core\Tools";
