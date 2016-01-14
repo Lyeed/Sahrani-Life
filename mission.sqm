@@ -3510,7 +3510,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9812.5264,15.120269,10994.927};
+					position[]={9814.4307,15.123798,10994.044};
 					azimut=-6835.98;
 					offsetY=-38;
 					id=151;
@@ -3546,7 +3546,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=2772;
+		items=2775;
 		class Item0
 		{
 			position[]={12129.837,0,17612.104};
@@ -28882,7 +28882,7 @@ class Mission
 			position[]={13474.833,19.965586,8883.3252};
 			id=2651;
 			side="EMPTY";
-			vehicle="xcam_Cargo_Tower_V1_No7_F";
+			vehicle="Lcam_Cargo_Tower_V1_No7_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 0;this setposATL [13474.833008,8883.325195,0];this setVectorUp [0,0,1]";
 		};
@@ -28910,7 +28910,7 @@ class Mission
 			azimut=-95;
 			id=2654;
 			side="EMPTY";
-			vehicle="xcam_BarGate_F";
+			vehicle="Land_BarGate_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir -95;this setposATL [13465.553711,8849.713867,0];this setVectorUp [0,0,1]";
 		};
@@ -28920,7 +28920,7 @@ class Mission
 			azimut=-90;
 			id=2655;
 			side="EMPTY";
-			vehicle="xcam_BarGate_F";
+			vehicle="Land_BarGate_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir -90;this setposATL [13441.5,8848.674805,0];this setVectorUp [0,0,1]";
 		};
@@ -29000,7 +29000,7 @@ class Mission
 			azimut=-125;
 			id=2663;
 			side="EMPTY";
-			vehicle="xcam_Cargo_Patrol_V1_F";
+			vehicle="Lcam_Cargo_Patrol_V1_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir -125;this setposATL [13499.107422,8875.324219,0];this setVectorUp [0,0,1]";
 		};
@@ -29752,7 +29752,7 @@ class Mission
 			azimut=44.712002;
 			id=2734;
 			side="EMPTY";
-			vehicle="xcam_BarGate_F";
+			vehicle="Land_BarGate_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 44.712;this setposATL [13221.526367,8856.03125,0];this setVectorUp [0,0,1]";
 		};
@@ -29762,7 +29762,7 @@ class Mission
 			azimut=134.71201;
 			id=2735;
 			side="EMPTY";
-			vehicle="xcam_BarGate_F";
+			vehicle="Land_BarGate_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 134.712;this setposATL [13245.307617,8857.189453,0];this setVectorUp [0,0,1]";
 		};
@@ -30155,7 +30155,7 @@ class Mission
 			offsetY=-0.146826;
 			id=2772;
 			side="EMPTY";
-			vehicle="xcam_Cargo_Patrol_V2_F";
+			vehicle="Land_Cargo_Patrol_V2_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 269.712;this setposATL [13242.600586,8845.887695,-0.146826];this setVectorUp [0,0,1]";
 		};
@@ -30908,7 +30908,7 @@ class Mission
 			azimut=449.901;
 			id=2844;
 			side="EMPTY";
-			vehicle="xcam_i_House_Small_03_V1_F";
+			vehicle="Land_i_House_Small_03_V1_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 449.901;this setposATL [13252.780273,8868.523438,0];this setVectorUp [0,0,1]";
 		};
@@ -31704,6 +31704,35 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];";
+		};
+		class Item2772
+		{
+			position[]={13206.072,19.485607,8853.6641};
+			id=2925;
+			side="EMPTY";
+			vehicle="HeliHEmpty";
+			skill=0.60000002;
+			init="front0 = [13218.47168,8845.404297,0] nearestObject 501481; front0 hideObject true; front1 = [13218.47168,8845.404297,0] nearestObject 501648; front1 hideObject true;front2 = [13218.47168,8845.404297,0] nearestObject 501643; front2 hideObject true; front3 = [13218.47168,8845.404297,0] nearestObject 501703; front3 hideObject true; front4 = [13218.47168,8845.404297,0] nearestObject 501606; front4 hideObject true; front5 = [13218.47168,8845.404297,0] nearestObject 501470; front5 hideObject true; front6 = [13218.47168,8845.404297,0] nearestObject 501401; front6 hideObject true; front7 = [13218.47168,8845.404297,0] nearestObject 501587; front7 hideObject true; front8 = [13218.47168,8845.404297,0] nearestObject 5016051; front8 hideObject true; front9 = [13218.47168,8845.404297,0] nearestObject 501548; front9 hideObject true; front10 = [13218.47168,8845.404297,0] nearestObject 501606; front10 hideObject true; front11 = [13218.47168,8845.404297,0] nearestObject 501703; front11 hideObject true; front12 = [13218.47168,8845.404297,0] nearestObject 501643; front12 hideObject true; front13 = [13218.47168,8845.404297,0] nearestObject 501344; front13 hideObject true; front14 = [13218.47168,8845.404297,0] nearestObject 501464; front14 hideObject true; front15 = [13218.47168,8845.404297,0] nearestObject 501457; front15 hideObject true; front16 = [13218.47168,8845.404297,0] nearestObject 501465; front16 hideObject true; front17 = [13218.47168,8845.404297,0] nearestObject 501472; front17 hideObject true; front18 = [13218.47168,8845.404297,0] nearestObject 501471; front18 hideObject true; front19 = [13218.47168,8845.404297,0] nearestObject 501476; front19 hideObject true; front20 = [13218.47168,8845.404297,0] nearestObject 501473; front20 hideObject true; front21 = [13218.47168,8845.404297,0] nearestObject 501466; front21 hideObject true; front22 = [13218.47168,8845.404297,0] nearestObject 501451; front22 hideObject true; front23 = [13218.47168,8845.404297,0] nearestObject 501458; front23 hideObject true; front24 = [13218.47168,8845.404297,0] nearestObject 501454; front24 hideObject true; front25 = [13218.47168,8845.404297,0] nearestObject 501453; front25 hideObject true; front26 = [13218.47168,8845.404297,0] nearestObject 501459; front26 hideObject true; front27 = [13218.47168,8845.404297,0] nearestObject 501462; front27 hideObject true; front28 = [13218.47168,8845.404297,0] nearestObject 501487; front28 hideObject true; front29 = [13218.47168,8845.404297,0] nearestObject 501493; front29 hideObject true; front30 = [13218.47168,8845.404297,0] nearestObject 501429; front30 hideObject true; front31 = [13218.47168,8845.404297,0] nearestObject 501474; front31 hideObject true; front32 = [13218.47168,8845.404297,0] nearestObject 501477; front32 hideObject true; front33 = [13218.47168,8845.404297,0] nearestObject 501467; front33 hideObject true; front34 = [13218.47168,8845.404297,0] nearestObject 501490; front34 hideObject true; front35 = [13218.47168,8845.404297,0] nearestObject 501452; front35 hideObject true; front36 = [13218.47168,8845.404297,0] nearestObject 501491; front36 hideObject true;";
+		};
+		class Item2773
+		{
+			position[]={13229.363,19.485607,8857.5205};
+			azimut=319.901;
+			id=2926;
+			side="EMPTY";
+			vehicle="Land_ClutterCutter_large_F";
+			skill=0.60000002;
+			init="this enableSimulation true;this setdir 319.901;this setposATL [13229.405273,8866.338867,0];this setVectorUp [0,0,1]";
+		};
+		class Item2774
+		{
+			position[]={13213.064,19.485607,8856.5605};
+			azimut=319.901;
+			id=2927;
+			side="EMPTY";
+			vehicle="Land_ClutterCutter_large_F";
+			skill=0.60000002;
+			init="this enableSimulation true;this setdir 319.901;this setposATL [13229.405273,8866.338867,0];this setVectorUp [0,0,1]";
 		};
 	};
 	class Markers
