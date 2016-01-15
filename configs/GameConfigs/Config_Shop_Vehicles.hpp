@@ -246,7 +246,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"max_charger",
 			"Mrshounka_Alfa_Romeo_civ",
 			"Tal_Maserati",
-			"Tal_Wrangler",
 			"Skyline_G65_01_F",
 			"DAR_ChallengerCiv",
 			"DAR_MF1",
