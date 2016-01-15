@@ -169,7 +169,7 @@ class ALYSIA_DYN_MARKERS
 		positions[] = G_RESPAWN_GENERAL;
 	};
 
-	//- RECELEUR
+	//- RECELEURS
 	class cardealer_1_marker
 	{
 		text        = "Receleur de véhicules";
@@ -195,6 +195,38 @@ class ALYSIA_DYN_MARKERS
 		shop_appear = 1;
 		shop_price  = 1000;
 		linked      = "cardealer_2";
+		discover[]  = {"CIV"};
+		shown[]     = {};
+		destroy[]   = {"WEST", "EAST"};
+		positions[] = G_RESPAWN_GENERAL;
+	};
+
+	//- DEALERS
+	class drugs_dealer_1_marker
+	{
+		text        = "Dealeur";
+		type        = "Fett_campingsite";
+		color       = "ColorRed";
+		shape       = "ICON";
+		size        = 0.5;
+		shop_appear = 1;
+		shop_price  = 1000;
+		linked      = "drugs_dealer_1";
+		discover[]  = {"CIV"};
+		shown[]     = {};
+		destroy[]   = {"WEST", "EAST"};
+		positions[] = G_RESPAWN_GENERAL;
+	};
+	class drugs_dealer_2_marker
+	{
+		text        = "Dealeur";
+		type        = "Fett_campingsite";
+		color       = "ColorRed";
+		shape       = "ICON";
+		size        = 0.5;
+		shop_appear = 1;
+		shop_price  = 1000;
+		linked      = "drugs_dealer_2";
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
