@@ -14,6 +14,9 @@ class ALYSIA_FACTIONS
 		phone_send_global_message = 1;
 		phone_send_to_faction_price = 0;
 
+		/*** COMPANIES ***/
+		companies_search = 1;
+
 		/*** GEAR MISSION ***/
 		mission_vehicle = "Fett_truck_milice";
 		mission_items[] =
@@ -182,6 +185,9 @@ class ALYSIA_FACTIONS
 		phone_send_global_message = 1;
 		phone_send_to_faction_price = 0;
 
+		/*** COMPANIES ***/
+		companies_search = 1;
+
 		/*** GEAR MISSION ***/
 		mission_vehicle = "Fett_truck_army";
 		mission_items[] =
@@ -325,6 +331,9 @@ class ALYSIA_FACTIONS
 		phone_change_number_price = 1000;
 		phone_send_global_message = 0;
 		phone_send_to_faction_price = 0;
+
+		/*** COMPANIES ***/
+		companies_search = 0;
 
 		/*** GEAR MISSION ***/
 		mission_vehicle = "";
@@ -479,6 +488,9 @@ class ALYSIA_FACTIONS
 		phone_change_number_price = 1000;
 		phone_send_global_message = 0;
 		phone_send_to_faction_price = 0;
+
+		/*** COMPANIES ***/
+		companies_search = 0;
 
 		/*** GEAR MISSION ***/
 		mission_vehicle = "";

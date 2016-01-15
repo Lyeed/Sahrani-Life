@@ -8,6 +8,9 @@ class Public
 		class init_loops {};
 		class init_data {};
 		class init_position {};
+		class preInit {
+			preInit = 1;
+		};
 	};
 
 	class Configs
@@ -400,6 +403,7 @@ class Public
 		class interactions_player_to_house_search {};
 		class interactions_player_to_house_owner {};
 		class interactions_player_to_station {};
+		class interactions_player_to_company {};
 	};
 
 	class Actions

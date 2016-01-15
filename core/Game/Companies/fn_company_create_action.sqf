@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_sel", "_price", "_type", "_object", "_action_1", "_action_2", "_name", "_bad", "_position", "_plate"];
+private["_sel", "_price", "_type", "_object", "_action_1", "_action_2", "_name", "_bad"];
 
 _sel = lbCurSel 90006;
 if (_sel isEqualTo -1) exitWith {};
@@ -71,15 +71,6 @@ if (isNull g_interaction_target) exitWith
 };
 
 _object setPos [((getPos _object) select 0), ((getPos _object) select 1), 0];
-_position = getPos _object;
-_plate = round(random(999999));
-
-[_type, _object, (getPlayerUID g_interaction_target), _name, str(_plate)] remoteExec ["TON_fnc_company_insert", 2];
-
-waitUntil {isNull _object};
-
-_construction = getText(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> _type >> "construction" >> "building") createVehicle _position;
-_construction setVariable ["construction_require", getText(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> _type >> "construction" >> "require"), true];
-_construction setVariable ["company_info", [_name, (getPlayerUID g_interaction_target), _type, _plate], true];
 playSound "buy";
 [false, _price, "Création d'entreprise"] call public_fnc_handleATM;
+[_type, _object, (getPlayerUID g_interaction_target), _name] remoteExec ["TON_fnc_company_insert", 2];

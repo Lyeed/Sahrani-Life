@@ -188,6 +188,12 @@ if ((vehicle player) isEqualTo player) then
 					[cursorTarget] call public_fnc_plantHarvest;
 					breakOut "main";
 				};
+
+				if (count(cursorTarget getVariable ["company_info", []]) > 0) then
+				{
+					[cursorTarget] call public_fnc_interactions_player_to_company;
+					breakOut "main";
+				};
 			};
 		};
 		

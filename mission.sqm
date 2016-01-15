@@ -28819,6 +28819,7 @@ class Mission
 		};
 		class Item2490
 		{
+			text = "border_gate_north_north";
 			position[]={13465.554,19.965586,8849.7139};
 			azimut=-95;
 			id=2643;
@@ -28829,6 +28830,7 @@ class Mission
 		};
 		class Item2491
 		{
+			text = "border_gate_north_south";
 			position[]={13441.5,19.522562,8848.6748};
 			azimut=-90;
 			id=2644;
@@ -29661,6 +29663,7 @@ class Mission
 		};
 		class Item2570
 		{
+			text = "border_gate_south_south";
 			position[]={13221.526,19.485607,8856.0313};
 			azimut=44.712002;
 			id=2723;
@@ -29671,6 +29674,7 @@ class Mission
 		};
 		class Item2571
 		{
+			text = "border_gate_south_north";
 			position[]={13245.308,19.485607,8857.1895};
 			azimut=134.71201;
 			id=2724;
@@ -30560,6 +30564,7 @@ class Mission
 		};
 		class Item2656
 		{
+			text = "border_control_south_3";
 			position[]={13235.271,19.485607,8875.0039};
 			azimut=350;
 			offsetY=0.79860699;
@@ -30604,6 +30609,7 @@ class Mission
 		};
 		class Item2660
 		{
+			text = "border_control_south_2";
 			position[]={13252.485,19.485607,8837.0205};
 			azimut=165;
 			offsetY=13.6915;
@@ -30615,6 +30621,7 @@ class Mission
 		};
 		class Item2661
 		{
+			text = "border_control_south_1";
 			position[]={13256.709,19.485607,8873.6787};
 			azimut=20;
 			offsetY=21.062201;
@@ -31196,6 +31203,7 @@ class Mission
 		};
 		class Item2717
 		{
+			text = "speaker_south_1";
 			position[]={13218.086,19.485607,8845.0781};
 			azimut=210;
 			id=2870;
@@ -31206,6 +31214,7 @@ class Mission
 		};
 		class Item2718
 		{
+			text = "speaker_south_2";
 			position[]={13244.578,19.485607,8850.751};
 			azimut=315;
 			id=2871;
@@ -31216,6 +31225,7 @@ class Mission
 		};
 		class Item2719
 		{
+			text = "speaker_south_3";
 			position[]={13245.833,19.485607,8870.9951};
 			azimut=230.496;
 			id=2872;
@@ -31386,76 +31396,84 @@ class Mission
 		};
 		class Item2736
 		{
+			text = "border_sign_north_north";
 			position[]={13472.407,19.965586,8857.873};
 			azimut=255.839;
 			id=2889;
 			side="EMPTY";
-			vehicle="xcam_SignsAd_Sponsor_F";
+			vehicle="Sign_Frontiere_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 255.839;this setposATL [13472.407227,8857.873047,0];this setVectorUp [0,0,1]";
 		};
 		class Item2737
 		{
+			text = "border_sign_north_south";
 			position[]={13436.301,19.485607,8841.9326};
 			azimut=105.839;
 			id=2890;
 			side="EMPTY";
-			vehicle="xcam_SignsAd_Sponsor_F";
+			vehicle="Sign_Frontiere_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 105.839;this setposATL [13436.300781,8841.932617,0];this setVectorUp [0,0,1]";
 		};
 		class Item2738
 		{
+			text = "border_sign_north_middle";
 			position[]={13452.871,19.796923,8856.4463};
 			azimut=-2.12729;
 			id=2891;
 			side="EMPTY";
-			vehicle="xcam_SignsAd_Sponsor_F";
+			vehicle="Sign_Frontiere_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir -2.12729;this setposATL [13452.871094,8856.446289,0];this setVectorUp [0,0,1]";
 		};
 		class Item2739
 		{
+			text = "border_sign_south_south";
 			position[]={13218.472,19.485607,8845.4043};
 			azimut=135.839;
 			id=2892;
 			side="EMPTY";
-			vehicle="xcam_SignsAd_Sponsor_F";
+			vehicle="Sign_Frontiere_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 135.839;this setposATL [13218.47168,8845.404297,0];this setVectorUp [0,0,1]";
 		};
 		class Item2740
 		{
+			text = "border_sign_south_north";
 			position[]={13253.392,19.485607,8858.6455};
 			azimut=-24.160999;
 			id=2893;
 			side="EMPTY";
-			vehicle="xcam_SignsAd_Sponsor_F";
+			vehicle="Sign_Frontiere_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir -24.161;this setposATL [13253.391602,8858.645508,0];this setVectorUp [0,0,1]";
 		};
 		class Item2741
 		{
+			text = "border_sign_south_middle_1";
 			position[]={13229.014,19.485607,8874.5674};
 			azimut=10.839;
 			id=2894;
 			side="EMPTY";
-			vehicle="xcam_SignsAd_Sponsor_F";
+			vehicle="Sign_Frontiere_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 10.839;this setposATL [13229.0136719,8874.567383,0];this setVectorUp [0,0,1]";
 		};
 		class Item2742
 		{
+			text = "border_sign_south_middle_2";
 			position[]={13230.336,19.485607,8853.4854};
 			azimut=170.839;
 			id=2895;
 			side="EMPTY";
-			vehicle="xcam_SignsAd_Sponsor_F";
+			vehicle="Sign_Frontiere_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 170.839;this setposATL [13230.335938,8853.485352,0];this setVectorUp [0,0,1]";
 		};
 		class Item2743
 		{
+			text = "border_plot_north_south_1";
 			position[]={13437.534,19.485607,8851.4619};
 			id=2896;
 			side="EMPTY";
@@ -31465,6 +31483,7 @@ class Mission
 		};
 		class Item2744
 		{
+			text = "border_plot_north_south_2";
 			position[]={13437.512,19.485607,8849.5225};
 			id=2897;
 			side="EMPTY";
@@ -31474,6 +31493,7 @@ class Mission
 		};
 		class Item2745
 		{
+			text = "border_plot_north_south_3";
 			position[]={13437.426,19.485607,8847.4785};
 			id=2898;
 			side="EMPTY";
@@ -31483,6 +31503,7 @@ class Mission
 		};
 		class Item2746
 		{
+			text = "border_plot_north_south_4";
 			position[]={13437.419,19.485607,8845.3623};
 			id=2899;
 			side="EMPTY";
@@ -31492,6 +31513,7 @@ class Mission
 		};
 		class Item2747
 		{
+			text = "border_plot_north_north_1";
 			position[]={13466.758,19.965586,8846.333};
 			id=2900;
 			side="EMPTY";
@@ -31501,6 +31523,7 @@ class Mission
 		};
 		class Item2748
 		{
+			text = "border_plot_north_north_2";
 			position[]={13466.604,19.965586,8848.3701};
 			id=2901;
 			side="EMPTY";
@@ -31510,6 +31533,7 @@ class Mission
 		};
 		class Item2749
 		{
+			text = "border_plot_north_north_3";
 			position[]={13466.515,19.965586,8850.6602};
 			id=2902;
 			side="EMPTY";
@@ -31519,6 +31543,7 @@ class Mission
 		};
 		class Item2750
 		{
+			text = "border_plot_north_north_4";
 			position[]={13466.361,19.965586,8852.5977};
 			id=2903;
 			side="EMPTY";
@@ -31528,6 +31553,7 @@ class Mission
 		};
 		class Item2751
 		{
+			text = "border_plot_south_south_1";
 			position[]={13200.274,19.485607,8851.4883};
 			id=2904;
 			side="EMPTY";
@@ -31537,6 +31563,7 @@ class Mission
 		};
 		class Item2752
 		{
+			text = "border_plot_south_south_2";
 			position[]={13200.126,19.485607,8849.5703};
 			id=2905;
 			side="EMPTY";
@@ -31546,6 +31573,7 @@ class Mission
 		};
 		class Item2753
 		{
+			text = "border_plot_south_south_3";
 			position[]={13199.836,19.485607,8845.5205};
 			id=2906;
 			side="EMPTY";
@@ -31555,6 +31583,7 @@ class Mission
 		};
 		class Item2754
 		{
+			text = "border_plot_south_south_4";
 			position[]={13199.939,19.485607,8847.5469};
 			id=2907;
 			side="EMPTY";
@@ -31564,6 +31593,7 @@ class Mission
 		};
 		class Item2755
 		{
+			text = "border_plot_south_north_1";
 			position[]={13258.533,19.485607,8853.6084};
 			id=2908;
 			side="EMPTY";
@@ -31573,6 +31603,7 @@ class Mission
 		};
 		class Item2756
 		{
+			text = "border_plot_south_north_2";
 			position[]={13258.479,19.485607,8851.1475};
 			id=2909;
 			side="EMPTY";
@@ -31582,6 +31613,7 @@ class Mission
 		};
 		class Item2757
 		{
+			text = "border_plot_south_north_3";
 			position[]={13258.456,19.485607,8847.9336};
 			id=2910;
 			side="EMPTY";
@@ -31591,6 +31623,7 @@ class Mission
 		};
 		class Item2758
 		{
+			text = "border_plot_south_north_4";
 			position[]={13258.44,19.485607,8845.3818};
 			id=2911;
 			side="EMPTY";
