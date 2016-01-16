@@ -254,8 +254,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\objet_de_valeur.paa";
 		class market
 		{
-			max = 2250;
-			min = 900;
+			max = 290;
+			min = 200;
 			mult = 4;
 			affect[] = {};
 		};
@@ -264,15 +264,15 @@ class ALYSIA_ITEMS
 	class artefact
 	{
 		name        = "Artefact";
-		weight      = 3;
+		weight      = 4;
 		illegal     = 1;
 		removable   = 1;
 		image       = "Alysia_textures\data\life_inv_banane.paa";
 		license     = "archeologie";
 		class market
 		{
-			max = 1500;
-			min = 900;
+			max = 590;
+			min = 500;
 			mult = 2;
 			affect[] = {};
 		};
@@ -288,8 +288,8 @@ class ALYSIA_ITEMS
 		license     = "archeologie";
 		class market
 		{
-			max = 6000;
-			min = 2400;
+			max = 635;
+			min = 300;
 			mult = 4;
 			affect[] = {};
 		};
@@ -298,7 +298,7 @@ class ALYSIA_ITEMS
 	class fragment
 	{
 		name        = "Fragment d'Arteftact";
-		weight      = 2;
+		weight      = 1;
 		illegal     = 1;
 		removable   = 1;
 		image       = "Alysia_textures\data\life_inv_banane.paa";
