@@ -28,6 +28,12 @@ class Public
 		class market_setPrice {};
 	};
 
+	class Border
+	{
+		file = "core\Game\Border";
+		class border_south_sounds {};
+	};
+
 	class VirtualInventory
 	{
 		file = "core\Game\VirtualInventory";

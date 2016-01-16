@@ -35,7 +35,7 @@ if ((vehicle player) isEqualTo player) then
 			breakOut "main";
 		};
 
-		_chair = (nearestObjects [player, ["Land_OfficeChair_01_F", "xcam_office_chair", "Land_ChairWood_F", "xcam_Bench_01_F"], 1]) select 0;
+		_chair = (nearestObjects [player, (call g_chairs), 1]) select 0;
 		if (!(isNil "_chair")) then
 		{
 			[_chair] call public_fnc_sitDown;
@@ -203,7 +203,7 @@ if ((vehicle player) isEqualTo player) then
 			breakOut "main";
 		};
 
-		if (((player distance cursorTarget) < 1.5) && (typeOf(cursorTarget) in ["Land_OfficeChair_01_F", "xcam_office_chair", "Land_ChairWood_F", "xcam_Bench_01_F"])) then
+		if (((player distance cursorTarget) < 1.5) && (typeOf(cursorTarget) in (call g_chairs))) then
 		{
 			[cursorTarget] call public_fnc_sitDown;
 			breakOut "main";

@@ -12,8 +12,8 @@ class ALYSIA_FACTIONS
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
 		phone_send_global_message = 1;
+		phone_send_global_message_rank = 4;
 		phone_send_to_faction_price = 0;
-
 		/*** COMPANIES ***/
 		companies_search = 1;
 
@@ -183,6 +183,7 @@ class ALYSIA_FACTIONS
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
 		phone_send_global_message = 1;
+		phone_send_global_message_rank = 3;
 		phone_send_to_faction_price = 0;
 
 		/*** COMPANIES ***/
@@ -330,6 +331,7 @@ class ALYSIA_FACTIONS
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
 		phone_send_global_message = 0;
+		phone_send_global_message_rank = 0;
 		phone_send_to_faction_price = 0;
 
 		/*** COMPANIES ***/
@@ -487,6 +489,7 @@ class ALYSIA_FACTIONS
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
 		phone_send_global_message = 0;
+		phone_send_global_message_rank = 1;
 		phone_send_to_faction_price = 0;
 
 		/*** COMPANIES ***/

@@ -1,4 +1,8 @@
-// NORTH
+
+xcam_Loudspeakers_F
+// ((getPos player) nearestObject 507979) hideObject true;
+
+
 
 border_plot_north_north_1
 border_plot_north_north_2

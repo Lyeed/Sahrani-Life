@@ -29090,7 +29090,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir -450.288;this setposATL [13259.90625,8857.260742,-0.215608];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir -450.288;this setposATL [13259.90625,8857.260742,-0.215608];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2517
 		{
@@ -29101,7 +29101,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 269.712;this setposATL [13259.885742,8861.248047,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 269.712;this setposATL [13259.885742,8861.248047,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2518
 		{
@@ -29112,7 +29112,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir -450.288;this setposATL [13259.912109,8865.217773,-0.215608];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir -450.288;this setposATL [13259.912109,8865.217773,-0.215608];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2519
 		{
@@ -29123,7 +29123,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir -450.288;this setposATL [13259.891602,8869.205078,-0.215608];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir -450.288;this setposATL [13259.891602,8869.205078,-0.215608];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2520
 		{
@@ -29134,7 +29134,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir -450.288;this setposATL [13259.824219,8873.209961,-0.215608];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir -450.288;this setposATL [13259.824219,8873.209961,-0.215608];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2521
 		{
@@ -29145,7 +29145,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 269.712;this setposATL [13259.803711,8877.197266,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 269.712;this setposATL [13259.803711,8877.197266,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2522
 		{
@@ -29176,7 +29176,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 179.712;this setposATL [13258.123047,8879.25,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 179.712;this setposATL [13258.123047,8879.25,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2525
 		{
@@ -29187,7 +29187,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 179.712;this setposATL [13254.135742,8879.229492,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 179.712;this setposATL [13254.135742,8879.229492,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2526
 		{
@@ -29198,7 +29198,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 179.712;this setposATL [13250.148438,8879.208984,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 179.712;this setposATL [13250.148438,8879.208984,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2527
 		{
@@ -29209,7 +29209,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 179.712;this setposATL [13246.161133,8879.188477,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 179.712;this setposATL [13246.161133,8879.188477,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2528
 		{
@@ -29220,7 +29220,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 179.712;this setposATL [13242.173828,8879.167969,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 179.712;this setposATL [13242.173828,8879.167969,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2529
 		{
@@ -29231,7 +29231,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 179.712;this setposATL [13238.186523,8879.147461,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 179.712;this setposATL [13238.186523,8879.147461,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2530
 		{
@@ -29242,7 +29242,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 179.712;this setposATL [13234.199219,8879.126953,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 179.712;this setposATL [13234.199219,8879.126953,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2531
 		{
@@ -29253,7 +29253,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 179.712;this setposATL [13230.211914,8879.106445,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 179.712;this setposATL [13230.211914,8879.106445,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2532
 		{
@@ -29264,7 +29264,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 179.712;this setposATL [13226.224609,8879.0859375,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 179.712;this setposATL [13226.224609,8879.0859375,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2533
 		{
@@ -29275,7 +29275,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 179.712;this setposATL [13222.237305,8879.0654297,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 179.712;this setposATL [13222.237305,8879.0654297,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2534
 		{
@@ -29286,7 +29286,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 179.712;this setposATL [13218.25,8879.0449219,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 179.712;this setposATL [13218.25,8879.0449219,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2535
 		{
@@ -29297,7 +29297,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 179.712;this setposATL [13214.262695,8879.0244141,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 179.712;this setposATL [13214.262695,8879.0244141,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2536
 		{
@@ -29308,7 +29308,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 179.712;this setposATL [13210.275391,8879.00390625,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 179.712;this setposATL [13210.275391,8879.00390625,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2537
 		{
@@ -29319,7 +29319,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 179.712;this setposATL [13206.288086,8878.983398,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 179.712;this setposATL [13206.288086,8878.983398,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2538
 		{
@@ -29330,7 +29330,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 179.712;this setposATL [13202.300781,8878.962891,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 179.712;this setposATL [13202.300781,8878.962891,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2539
 		{
@@ -29341,7 +29341,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 49.712;this setposATL [13241.460938,8839.780273,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 49.712;this setposATL [13241.460938,8839.780273,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2540
 		{
@@ -29352,7 +29352,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 359.712;this setposATL [13238.110352,8841.166016,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 359.712;this setposATL [13238.110352,8841.166016,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2541
 		{
@@ -29363,7 +29363,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 359.712;this setposATL [13234.123047,8841.145508,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 359.712;this setposATL [13234.123047,8841.145508,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2542
 		{
@@ -29374,7 +29374,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 359.712;this setposATL [13230.135742,8841.125,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 359.712;this setposATL [13230.135742,8841.125,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2543
 		{
@@ -29385,7 +29385,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 359.712;this setposATL [13226.148438,8841.104492,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 359.712;this setposATL [13226.148438,8841.104492,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2544
 		{
@@ -29396,7 +29396,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 359.712;this setposATL [13222.161133,8841.0839844,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 359.712;this setposATL [13222.161133,8841.0839844,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2545
 		{
@@ -29407,7 +29407,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 359.712;this setposATL [13218.173828,8841.0634766,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 359.712;this setposATL [13218.173828,8841.0634766,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2546
 		{
@@ -29418,7 +29418,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 359.712;this setposATL [13214.186523,8841.0429688,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 359.712;this setposATL [13214.186523,8841.0429688,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2547
 		{
@@ -29429,7 +29429,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 359.712;this setposATL [13210.199219,8841.0224609,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 359.712;this setposATL [13210.199219,8841.0224609,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2548
 		{
@@ -29440,7 +29440,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 359.712;this setposATL [13206.211914,8841.00195313,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 359.712;this setposATL [13206.211914,8841.00195313,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2549
 		{
@@ -29451,7 +29451,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 359.712;this setposATL [13202.224609,8840.981445,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 359.712;this setposATL [13202.224609,8840.981445,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2550
 		{
@@ -29462,7 +29462,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 359.712;this setposATL [13198.237305,8840.960938,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 359.712;this setposATL [13198.237305,8840.960938,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2551
 		{
@@ -29473,7 +29473,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 34.712;this setposATL [13244.260742,8837.204102,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 34.712;this setposATL [13244.260742,8837.204102,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2552
 		{
@@ -29484,7 +29484,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 269.712;this setposATL [13259.500977,8835.892578,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 269.712;this setposATL [13259.500977,8835.892578,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2553
 		{
@@ -29495,7 +29495,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 309.712;this setposATL [13258.292969,8832.59082,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 309.712;this setposATL [13258.292969,8832.59082,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2554
 		{
@@ -29506,7 +29506,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 89.712;this setposATL [13200.629883,8877.101563,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 89.712;this setposATL [13200.629883,8877.101563,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2555
 		{
@@ -29517,7 +29517,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 89.712;this setposATL [13200.650391,8873.114258,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 89.712;this setposATL [13200.650391,8873.114258,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2556
 		{
@@ -29528,7 +29528,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 89.712;this setposATL [13200.670898,8869.126953,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 89.712;this setposATL [13200.670898,8869.126953,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2557
 		{
@@ -29539,7 +29539,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 89.712;this setposATL [13200.691406,8865.139648,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 89.712;this setposATL [13200.691406,8865.139648,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2558
 		{
@@ -29550,7 +29550,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 89.712;this setposATL [13200.711914,8861.152344,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 89.712;this setposATL [13200.711914,8861.152344,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2559
 		{
@@ -29560,7 +29560,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 219.712;this setposATL [13257.964844,8838.851563,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 219.712;this setposATL [13257.964844,8838.851563,0];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2560
 		{
@@ -29570,7 +29570,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir -140.288;this setposATL [13254.897461,8841.399414,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir -140.288;this setposATL [13254.897461,8841.399414,0];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2561
 		{
@@ -29580,7 +29580,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir -140.288;this setposATL [13251.830078,8843.947266,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir -140.288;this setposATL [13251.830078,8843.947266,0];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2562
 		{
@@ -29590,7 +29590,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir -140.288;this setposATL [13248.762695,8846.495117,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir -140.288;this setposATL [13248.762695,8846.495117,0];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2563
 		{
@@ -29600,7 +29600,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 219.712;this setposATL [13245.695313,8849.0429688,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 219.712;this setposATL [13245.695313,8849.0429688,0];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2564
 		{
@@ -29611,7 +29611,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 359.712;this setposATL [13214.880859,8859.435547,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 359.712;this setposATL [13214.880859,8859.435547,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2565
 		{
@@ -29621,7 +29621,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 219.712;this setposATL [13242.62793,8851.59082,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 219.712;this setposATL [13242.62793,8851.59082,0];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2566
 		{
@@ -29631,7 +29631,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 134.712;this setposATL [13224.194336,8850.459961,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 134.712;this setposATL [13224.194336,8850.459961,0];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2567
 		{
@@ -29641,7 +29641,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 134.712;this setposATL [13221.388672,8847.625977,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 134.712;this setposATL [13221.388672,8847.625977,0];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2568
 		{
@@ -29651,7 +29651,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 134.712;this setposATL [13218.583008,8844.791992,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 134.712;this setposATL [13218.583008,8844.791992,0];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2569
 		{
@@ -29661,7 +29661,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 134.712;this setposATL [13215.777344,8841.958008,0];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 134.712;this setposATL [13215.777344,8841.958008,0];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2570
 		{
@@ -29694,7 +29694,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir -360.288;this setposATL [13251.0458984,8860.785156,-0.215608];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir -360.288;this setposATL [13251.0458984,8860.785156,-0.215608];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2573
 		{
@@ -29705,7 +29705,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir -360.288;this setposATL [13255.0332031,8860.805664,-0.215608];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir -360.288;this setposATL [13255.0332031,8860.805664,-0.215608];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2574
 		{
@@ -29716,7 +29716,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 359.712;this setposATL [13257.868164,8860.888672,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 359.712;this setposATL [13257.868164,8860.888672,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2575
 		{
@@ -29727,7 +29727,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir -0.288;this setposATL [13210.893555,8859.415039,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir -0.288;this setposATL [13210.893555,8859.415039,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2576
 		{
@@ -29738,7 +29738,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir -0.288;this setposATL [13206.90625,8859.394531,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir -0.288;this setposATL [13206.90625,8859.394531,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2577
 		{
@@ -29749,7 +29749,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 359.712;this setposATL [13202.918945,8859.374023,-0.215609];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 359.712;this setposATL [13202.918945,8859.374023,-0.215609];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2578
 		{
@@ -30373,7 +30373,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 89.9544;this setposATL [13280.416992,8691.770508,-0.791005];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 89.9544;this setposATL [13280.416992,8691.770508,-0.791005];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2638
 		{
@@ -30384,7 +30384,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 89.9544;this setposATL [13280.477539,8687.916016,-0.791005];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 89.9544;this setposATL [13280.477539,8687.916016,-0.791005];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2639
 		{
@@ -30395,7 +30395,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 89.9544;this setposATL [13280.490234,8684.03125,-0.791005];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 89.9544;this setposATL [13280.490234,8684.03125,-0.791005];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2640
 		{
@@ -30406,7 +30406,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 89.9544;this setposATL [13280.558594,8680.140625,-0.791005];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 89.9544;this setposATL [13280.558594,8680.140625,-0.791005];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2641
 		{
@@ -30417,7 +30417,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 89.9544;this setposATL [13280.626953,8676.238281,-0.791005];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 89.9544;this setposATL [13280.626953,8676.238281,-0.791005];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2642
 		{
@@ -30428,7 +30428,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 89.9544;this setposATL [13280.731445,8672.34668,-0.791005];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 89.9544;this setposATL [13280.731445,8672.34668,-0.791005];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2643
 		{
@@ -30439,7 +30439,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 89.9544;this setposATL [13280.794922,8668.526367,-0.791005];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 89.9544;this setposATL [13280.794922,8668.526367,-0.791005];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2644
 		{
@@ -30450,7 +30450,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Mil_WallBig_4m_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 89.9544;this setposATL [13280.806641,8664.641602,-0.791005];this setVectorUp [0,0,1]";
+			init="this enableSimulation true;this setdir 89.9544;this setposATL [13280.806641,8664.641602,-0.791005];this setVectorUp [0,0,1]; this allowDamage false;";
 		};
 		class Item2645
 		{
@@ -31211,7 +31211,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Tlampac_vo_seda";
 			skill=0.60000002;
-			text="speaker_south_1";
+			text="light_south_1";
 			init="this enableSimulation true;this setdir 210;this setposATL [13218.0859375,8845.078125,0];this setVectorUp [0,0,1]";
 		};
 		class Item2718
@@ -31222,7 +31222,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Tlampac_vo_seda";
 			skill=0.60000002;
-			text="speaker_south_2";
+			text="light_south_2";
 			init="this enableSimulation true;this setdir 315;this setposATL [13244.578125,8850.750977,0];this setVectorUp [0,0,1]";
 		};
 		class Item2719
@@ -31233,7 +31233,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_Tlampac_vo_seda";
 			skill=0.60000002;
-			text="speaker_south_3";
+			text="light_south_3";
 			init="this enableSimulation true;this setdir 230.496;this setposATL [13245.833008,8870.995117,0];this setVectorUp [0,0,1]";
 		};
 		class Item2720
@@ -31244,6 +31244,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Loudspeakers_F";
 			skill=0.60000002;
+			text="speaker_south_4";
 			init="this enableSimulation true;this setdir -2.12729;this setposATL [12928.955078,8854.466797,0];this setVectorUp [0,0,1]";
 		};
 		class Item2721
@@ -31254,6 +31255,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Loudspeakers_F";
 			skill=0.60000002;
+			text="speaker_south_5";
 			init="this enableSimulation true;this setdir -2.12729;this setposATL [12723.510742,8065.556641,0];this setVectorUp [0,0,1]";
 		};
 		class Item2722
@@ -31264,6 +31266,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Loudspeakers_F";
 			skill=0.60000002;
+			text="speaker_south_6";
 			init="this enableSimulation true;this setdir -2.12729;this setposATL [12449.639648,7228.384766,0];this setVectorUp [0,0,1]";
 		};
 		class Item2723
@@ -31274,6 +31277,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Loudspeakers_F";
 			skill=0.60000002;
+			text="speaker_south_7";
 			init="this enableSimulation true;this setdir -2.12729;this setposATL [11517.431641,6167.317383,0];this setVectorUp [0,0,1]";
 		};
 		class Item2724
@@ -31284,6 +31288,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Loudspeakers_F";
 			skill=0.60000002;
+			text="speaker_south_8";
 			init="this enableSimulation true;this setdir -2.12729;this setposATL [10741.762695,5022.34082,0];this setVectorUp [0,0,1]";
 		};
 		class Item2725
@@ -31294,6 +31299,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Loudspeakers_F";
 			skill=0.60000002;
+			text="speaker_south_9";
 			init="this enableSimulation true;this setdir -2.12729;this setposATL [9348.681641,5292.483398,0];this setVectorUp [0,0,1]";
 		};
 		class Item2726
@@ -31304,6 +31310,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Loudspeakers_F";
 			skill=0.60000002;
+			text="speaker_south_10";
 			init="this enableSimulation true;this setdir -2.12729;this setposATL [7661.0424805,6326.00488281,0];this setVectorUp [0,0,1]";
 		};
 		class Item2727
@@ -31314,6 +31321,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Loudspeakers_F";
 			skill=0.60000002;
+			text="speaker_south_11";
 			init="this enableSimulation true;this setdir -2.12729;this setposATL [8200.905273,8915.772461,0];this setVectorUp [0,0,1]";
 		};
 		class Item2728
@@ -31324,6 +31332,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Loudspeakers_F";
 			skill=0.60000002;
+			text="speaker_south_12";
 			init="this enableSimulation true;this setdir -2.12729;this setposATL [9535.814453,9563.00976563,0];this setVectorUp [0,0,1]";
 		};
 		class Item2729
@@ -31334,6 +31343,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Loudspeakers_F";
 			skill=0.60000002;
+			text="speaker_south_13";
 			init="this enableSimulation true;this setdir -2.12729;this setposATL [10591.182617,9458.729492,0];this setVectorUp [0,0,1]";
 		};
 		class Item2730
@@ -31344,6 +31354,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Loudspeakers_F";
 			skill=0.60000002;
+			text="speaker_south_14";
 			init="this enableSimulation true;this setdir -2.12729;this setposATL [9146.396484,8238.878906,0];this setVectorUp [0,0,1]";
 		};
 		class Item2731
@@ -31354,6 +31365,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Loudspeakers_F";
 			skill=0.60000002;
+			text="speaker_south_15";
 			init="this enableSimulation true;this setdir -2.12729;this setposATL [8718.97168,6977.275879,0];this setVectorUp [0,0,1]";
 		};
 		class Item2732
@@ -31364,6 +31376,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Loudspeakers_F";
 			skill=0.60000002;
+			text="speaker_south_16";
 			init="this enableSimulation true;this setdir -2.12729;this setposATL [10722.245117,7368.466797,0];this setVectorUp [0,0,1]";
 		};
 		class Item2733
@@ -31374,6 +31387,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Loudspeakers_F";
 			skill=0.60000002;
+			text="speaker_south_17";
 			init="this enableSimulation true;this setdir -2.12729;this setposATL [10273.568359,10878.908203,0];this setVectorUp [0,0,1]";
 		};
 		class Item2734
@@ -31384,6 +31398,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Loudspeakers_F";
 			skill=0.60000002;
+			text="speaker_south_18";
 			init="this enableSimulation true;this setdir -2.12729;this setposATL [7260.817871,8406.851563,0];this setVectorUp [0,0,1]";
 		};
 		class Item2735
@@ -31394,6 +31409,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Loudspeakers_F";
 			skill=0.60000002;
+			text="speaker_south_19";
 			init="this enableSimulation true;this setdir -2.12729;this setposATL [12584.0566406,7710.811035,0];this setVectorUp [0,0,1]";
 		};
 		class Item2736

@@ -41,7 +41,8 @@ class ALYSIA_SHOPS_VEHICLES
 	{
 		name = "";
 		side = "EAST";
-		stock[] = {
+		stock[] =
+		{
 			"Cha_BTR60_Cuba",
 			"Fett_truck_army",
 			"gac_JGSDF_BXD10_MG",
@@ -56,7 +57,8 @@ class ALYSIA_SHOPS_VEHICLES
 	{
 		name = "";
 		side = "EAST";
-		stock[] = {
+		stock[] =
+		{
 			"sfp_bo105_unarmed"
 		};
 	};
