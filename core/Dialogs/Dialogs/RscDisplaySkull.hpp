@@ -108,7 +108,6 @@ class RscDisplaySkullInventory: default_interaction_back_dialog
 		class ACTION_FRAME: RscFrame
 		{
 			idc = 69003;
-			colorText[] = {0,0,0,0.8};
 
 			x = 0.505156 * safezoneW + safezoneX;
 			y = 0.577 * safezoneH + safezoneY;
@@ -139,7 +138,6 @@ class RscDisplaySkullInventory: default_interaction_back_dialog
 		{
 			idc = 69006;
 			text = "<t align='left' size='1.3'>Prendre</t>";
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.536094 * safezoneW + safezoneX;
 			y = 0.588 * safezoneH + safezoneY;

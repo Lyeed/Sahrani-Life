@@ -44,12 +44,6 @@ border_control_south_3
 border_gate_south_south
 border_gate_south_north
 
-// speaker south
-speaker_south_1
-speaker_south_2
-speaker_south_3
-
-
 
 
 ["weapon", cursorTarget, (getPlayerUID player), "ABCED", "888888"] remoteExec ["TON_fnc_company_insert", 2];

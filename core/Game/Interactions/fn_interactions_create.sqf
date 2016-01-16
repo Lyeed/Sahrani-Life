@@ -60,7 +60,7 @@ _idc_actual = 5010;
 
 	_ctrl_btn = _display displayCtrl (_idc_actual + 4);
 	_ctrl_btn buttonSetAction (_x select 2);
-	_ctrl_btn ctrlAddEventHandler["MouseEnter",
+	_ctrl_btn ctrlSetEventHandler["MouseEnter",
 	format
 	[
 		"((findDisplay 5000) displayCtrl %4) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>%5</t>"";
@@ -70,7 +70,7 @@ _idc_actual = 5010;
 		(_idc_actual + 2), (_x select 0), (_idc_actual + 1), (_idc_actual + 3), (_x select 1), _idc_actual, _path
 	]];
 
-	_ctrl_btn ctrlAddEventHandler["MouseExit",
+	_ctrl_btn ctrlSetEventHandler["MouseExit",
 	format
 	[
 		"((findDisplay 5000) displayCtrl %4) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>%5</t>"";

@@ -42,6 +42,13 @@ if ((vehicle player) isEqualTo player) then
 			breakOut "main";
 		};
 
+		_speaker = (nearestObjects [player, ["xcam_Loudspeakers_F"], 4]) select 0;
+		if (!(isNil "_speaker")) then
+		{
+			[_speaker] call public_fnc_interactions_player_to_speaker;
+			breakOut "main";
+		};
+
 		{
 			if ((player distance (getMarkerPos _x)) < 20) then
 			{
@@ -64,7 +71,7 @@ if ((vehicle player) isEqualTo player) then
 					};
 				};
 			};
-		} forEach (g_dynamic_markers);
+		} forEach g_dynamic_markers;
 
 		{
 			if (player distance (getMarkerPos _x) < 40) then

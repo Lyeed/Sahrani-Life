@@ -36,5 +36,7 @@ if (!gServer_border_south_alarm) then {
 };
 
 {
-	_x say3D _sound;
-} forEach _objects
+	if (!(_x getVariable ["destroyed", false])) then {
+		_x say3D _sound;
+	};
+} forEach _objects;
