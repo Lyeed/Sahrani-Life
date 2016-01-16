@@ -8,6 +8,9 @@ class Public
 		class init_loops {};
 		class init_data {};
 		class init_position {};
+		class preInit {
+			preInit = 1;
+		};
 	};
 
 	class Configs
@@ -25,6 +28,14 @@ class Public
 		class market_setPrice {};
 	};
 
+	class Border
+	{
+		file = "core\Game\Border";
+		class border_south_sounds {};
+		class border_south_speaker_destroy {};
+		class border_south_speaker_repair {};
+	};
+
 	class VirtualInventory
 	{
 		file = "core\Game\VirtualInventory";
@@ -35,6 +46,14 @@ class Public
 		class virtual_menu_update {};
 		class virtual_menu_action_use {};
 		class virtual_menu_action_remove {};
+	};
+
+	class Companies
+	{
+		file = "core\Game\Companies";
+		class company_create_open {};
+		class company_create_action {};
+		class company_create_update {};
 	};
 
 	class Tools
@@ -392,6 +411,8 @@ class Public
 		class interactions_player_to_house_search {};
 		class interactions_player_to_house_owner {};
 		class interactions_player_to_station {};
+		class interactions_player_to_company {};
+		class interactions_player_to_speaker {};
 	};
 
 	class Actions

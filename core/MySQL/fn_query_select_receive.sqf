@@ -109,12 +109,10 @@ g_houses = [_this, 1, [], [[]]] call BIS_fnc_param;
 	_marker setMarkerSizeLocal [0.6, 0.6];
 } forEach g_houses;
 
-{
-	g_vehicles pushBack _x;
-} foreach ([_this, 2, [], [[]]] call BIS_fnc_param);
+g_vehicles = [_this, 2, [], [[]]] call BIS_fnc_param;
 
 {
-	_message = (_messages select _forEachIndex) select 0;
+	_message = _x select 0;
 	if (_x select 1) then {
 		_message set [0, "Numéro caché"];
 	};
@@ -125,7 +123,9 @@ g_houses = [_this, 1, [], [[]]] call BIS_fnc_param;
 	if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "shown"))) then {
 		_x setMarkerAlphaLocal 0;
 	};
-} forEach (g_dynamic_markers);
+} forEach g_dynamic_markers;
+
+g_company = [_this, 4, objNull, [objNull]] call BIS_fnc_param;
 
 g_session_query = _basic;
 true;

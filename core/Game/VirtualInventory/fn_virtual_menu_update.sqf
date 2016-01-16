@@ -48,10 +48,20 @@ if (_item isEqualTo "") exitWith
 	ctrlShow[85003, false];
 };
 
-if (getText(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "use") isEqualTo "") then {
-	ctrlShow[85002, false];
-} else {
+if (isClass(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food")) then
+{
+	ctrlSetText[85002, "Consommer"];
+	(_display displayCtrl 85002) buttonSetAction format["['%1'] call public_fnc_eatFood;", _item];
 	ctrlShow[85002, true];
+} else {
+	if (isClass(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "use")) then
+	{
+		ctrlSetText[85002, "Utiliser"];
+		(_display displayCtrl 85002) buttonSetAction "[] call public_fnc_virtual_menu_action_use;";;
+		ctrlShow[85002, true];
+	} else {
+		ctrlShow[85002, false];
+	};
 };
 
 if (getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "removable") isEqualTo 1) then {

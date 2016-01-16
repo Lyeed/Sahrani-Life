@@ -1,3 +1,60 @@
+
+
+["radio_search_1"] remoteExecCall ["public_fnc_border_south_sounds", -2];
+["light_south_3"] remoteExec ["public_fnc_lightBug", -2];
+
+xcam_Loudspeakers_F
+// ((getPos player) nearestObject 507979) hideObject true;
+
+
+
+border_plot_north_north_1
+border_plot_north_north_2
+border_plot_north_north_3
+border_plot_north_north_4
+
+border_plot_north_south_1
+border_plot_north_south_2
+border_plot_north_south_3
+border_plot_north_south_4
+
+border_sign_north_north
+border_sign_north_south
+border_sign_north_middle
+
+border_gate_north_north
+border_gate_north_south
+
+// SOUTH
+border_plot_south_north_1
+border_plot_south_north_2
+border_plot_south_north_3
+border_plot_south_north_4
+
+border_plot_south_south_1
+border_plot_south_south_2
+border_plot_south_south_3
+border_plot_south_south_4
+
+border_sign_south_south
+border_sign_south_north
+border_sign_south_middle_1
+border_sign_south_middle_2
+
+border_control_south_1
+border_control_south_2
+border_control_south_3
+
+border_gate_south_south
+border_gate_south_north
+
+
+
+["weapon", cursorTarget, (getPlayerUID player), "ABCED", "888888"] remoteExec ["TON_fnc_company_insert", 2];
+
+
+[player] spawn public_fnc_interactions_player_to_player_basics;
+
 Titan_AA
 launch_B_Titan_F
 

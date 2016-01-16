@@ -45,6 +45,7 @@ class RscDisplayShopDynMarkers: default_interaction_back_dialog
 		{
 			idc = 21001;
 			onLBSelChanged = "_this call public_fnc_shop_dynamicMarkers_update_info;";
+			colorBackground[] = {0, 0, 0, 1};
 			
 			x = 0.438125 * safezoneW + safezoneX;
 			y = 0.423 * safezoneH + safezoneY;
@@ -107,7 +108,6 @@ class RscDisplayShopDynMarkers: default_interaction_back_dialog
 		{
 			idc = 21007;
 			text = "<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>";
-			colorBackground[] = {-1,-1,-1,0};
 			
 			x = 0.489687 * safezoneW + safezoneX;
 			y = 0.588 * safezoneH + safezoneY;

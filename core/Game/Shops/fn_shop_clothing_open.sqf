@@ -30,7 +30,11 @@ disableSerialization;
 _display = findDisplay 3100;
 if (isNull _display) exitWith {};
 
-(_display displayCtrl 3101) ctrlSetStructuredText parseText format["<t align='center' size='1.8'>%1</t>", (getText(missionConfigFile >> "ALYSIA_SHOPS_CLOTHING" >> _type >> "name"))];
+(_display displayCtrl 3101) ctrlSetStructuredText parseText format
+[
+	"<t align='center' size='1.5'>%1</t>",
+	getText(missionConfigFile >> "ALYSIA_SHOPS_CLOTHING" >> _type >> "name")
+];
 
 _list = _display displayCtrl 3102;
 lbClear _list;

@@ -5,17 +5,16 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_vehicle","_veh"];
+private["_vehicle"];
 _vehicle = [_this, 0, Objnull, [Objnull]] call BIS_fnc_param;
-_side = [_this, 1, sideUnknown, [west]] call BIS_fnc_param;
 
 if (isNull _vehicle) exitWith {};
-_veh = typeOf _vehicle;
 
 clearWeaponCargoGlobal _vehicle;
 clearMagazineCargoGlobal _vehicle;
 clearItemCargoGlobal _vehicle;
 clearBackpackCargoGlobal _vehicle;
+
 _vehicle disableTIEquipment true;
 _vehicle enableRopeAttach false;
 
@@ -47,4 +46,3 @@ switch (typeOf _vehicle) do
 		_vehicle removeMagazinesTurret ["2000Rnd_65x39_Belt_Tracer_Red", [2]];
 	};
 };
-

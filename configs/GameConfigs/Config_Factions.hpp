@@ -12,7 +12,10 @@ class ALYSIA_FACTIONS
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
 		phone_send_global_message = 1;
+		phone_send_global_message_rank = 4;
 		phone_send_to_faction_price = 0;
+		/*** COMPANIES ***/
+		companies_search = 1;
 
 		/*** GEAR MISSION ***/
 		mission_vehicle = "Fett_truck_milice";
@@ -62,6 +65,11 @@ class ALYSIA_FACTIONS
 				}
 			},
 			{"Backpacks",
+				{
+
+				}
+			},
+			{"Virtual",
 				{
 
 				}
@@ -175,7 +183,11 @@ class ALYSIA_FACTIONS
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
 		phone_send_global_message = 1;
+		phone_send_global_message_rank = 3;
 		phone_send_to_faction_price = 0;
+
+		/*** COMPANIES ***/
+		companies_search = 1;
 
 		/*** GEAR MISSION ***/
 		mission_vehicle = "Fett_truck_army";
@@ -187,14 +199,16 @@ class ALYSIA_FACTIONS
 					"Trixie_Enfield_Rail",
 					"hlc_rifle_aughbar_B",
 					"hlc_rifle_auga2_b",
-					"Fett_SDAR"
+					"Fett_SDAR",
+					"wc_gr_smg_mp40"
 				}
 			},
 			{"Magazines",
 				{
 					"Trixie_Enfield_Mag",
 					"hlc_30Rnd_556x45_B_AUG",
-					"Fett_20Rnd_556x45_UW_mag"
+					"Fett_20Rnd_556x45_UW_mag",
+					"wc_32Rnd_9x19_mag"
 				}
 			},
 			{"Items",
@@ -207,6 +221,11 @@ class ALYSIA_FACTIONS
 				}
 			},
 			{"Backpacks",
+				{
+
+				}
+			},
+			{"Virtual",
 				{
 
 				}
@@ -312,7 +331,11 @@ class ALYSIA_FACTIONS
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
 		phone_send_global_message = 0;
+		phone_send_global_message_rank = 0;
 		phone_send_to_faction_price = 0;
+
+		/*** COMPANIES ***/
+		companies_search = 0;
 
 		/*** GEAR MISSION ***/
 		mission_vehicle = "";
@@ -334,6 +357,11 @@ class ALYSIA_FACTIONS
 				}
 			},
 			{"Backpacks",
+				{
+
+				}
+			},
+			{"Virtual",
 				{
 
 				}
@@ -461,7 +489,11 @@ class ALYSIA_FACTIONS
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
 		phone_send_global_message = 0;
+		phone_send_global_message_rank = 1;
 		phone_send_to_faction_price = 0;
+
+		/*** COMPANIES ***/
+		companies_search = 0;
 
 		/*** GEAR MISSION ***/
 		mission_vehicle = "";
@@ -483,6 +515,11 @@ class ALYSIA_FACTIONS
 				}
 			},
 			{"Backpacks",
+				{
+
+				}
+			},
+			{"Virtual",
 				{
 
 				}

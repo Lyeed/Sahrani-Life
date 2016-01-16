@@ -44,7 +44,7 @@ _vehicle setVectorUp (surfaceNormal _spawnPos);
 _vehicle setDir (markerDir _validSpawn);
 _vehicle setPos _spawnPos;
 
-[_vehicle, playerSide] call public_fnc_clearVehicleAmmo;
+[_vehicle] call public_fnc_clearVehicleAmmo;
 g_vehicles pushBack _vehicle;
 
 _plate = round(random(1000000));

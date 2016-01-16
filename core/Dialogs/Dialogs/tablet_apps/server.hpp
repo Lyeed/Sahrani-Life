@@ -14,7 +14,7 @@
 #define SERVER_PLAYER_HEADER_IDC			7913
 #define SERVER_PLAYER_FRAME_IDC				7914
 
-SERVER_BACKGROUND = "lyeed\images\back_server.jpg";
+SERVER_BACKGROUND = "lyeed_IMG\data\tablet\backgrounds\back_server.jpg";
 SERVER_IDCS[] =
 {
 	SERVER_SERVER_HEADER_IDC,

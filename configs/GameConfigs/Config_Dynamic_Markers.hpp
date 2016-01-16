@@ -29,7 +29,24 @@
 	{11376.8,14387.5,0.00100708}, \
 	{11175.8,14601,0.00143433}, \
 	{4428.55,15817.2,0.00144005}, \
-	{16611.4,9454.08,0.00144005} \
+	{16611.4,9454.08,0.00144005}, \
+	{3274.83,2158.89,0.00111008}, \
+	{1568.53,2299.73,0.00154495}, \
+	{7493.31,6509.01,0.00146675}, \
+	{6404.16,7448.47,0.0015564}, \
+	{6254.07,7763.6,0.00162888}, \
+	{9749.5,8202.34,0.00170898}, \
+	{12045,7042.5,0.00182724}, \
+	{13878.9,10292,0.00152016}, \
+	{13288.2,10706.5,0.00150299}, \
+	{11400.8,14279.2,0.00160217}, \
+	{10341.1,14957.9,0.00193787}, \
+	{11336.9,16887,0.00160027}, \
+	{9854.27,16537.6,0.000976563}, \
+	{14021.5,16779.9,0.00154114}, \
+	{17877.8,12363.1,0.00143814}, \
+	{17245.6,9662.67,0.00164413}, \
+	{16652.2,11901.9,0.00123596} \
 }
 
 #define G_RESPAWN_NORTH \
@@ -169,7 +186,7 @@ class ALYSIA_DYN_MARKERS
 		positions[] = G_RESPAWN_GENERAL;
 	};
 
-	//- RECELEUR
+	//- RECELEURS
 	class cardealer_1_marker
 	{
 		text        = "Receleur de véhicules";
@@ -195,6 +212,38 @@ class ALYSIA_DYN_MARKERS
 		shop_appear = 1;
 		shop_price  = 1000;
 		linked      = "cardealer_2";
+		discover[]  = {"CIV"};
+		shown[]     = {};
+		destroy[]   = {"WEST", "EAST"};
+		positions[] = G_RESPAWN_GENERAL;
+	};
+
+	//- DEALERS
+	class drugs_dealer_1_marker
+	{
+		text        = "Dealeur";
+		type        = "Fett_campingsite";
+		color       = "ColorRed";
+		shape       = "ICON";
+		size        = 0.5;
+		shop_appear = 1;
+		shop_price  = 1000;
+		linked      = "drugs_dealer_1";
+		discover[]  = {"CIV"};
+		shown[]     = {};
+		destroy[]   = {"WEST", "EAST"};
+		positions[] = G_RESPAWN_GENERAL;
+	};
+	class drugs_dealer_2_marker
+	{
+		text        = "Dealeur";
+		type        = "Fett_campingsite";
+		color       = "ColorRed";
+		shape       = "ICON";
+		size        = 0.5;
+		shop_appear = 1;
+		shop_price  = 1000;
+		linked      = "drugs_dealer_2";
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};

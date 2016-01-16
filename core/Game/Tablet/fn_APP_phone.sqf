@@ -19,7 +19,10 @@ if (((player getVariable ["number", ""]) isEqualTo "") || (g_phone_forfait in ["
 
 	if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "phone_send_global_message") isEqualTo 1) then
 	{
-		[8516, true] call public_fnc_tabletShow;
-		[8517, true] call public_fnc_tabletShow;
+		if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "phone_send_global_message_rank") <= (player getVariable ["rank", 0])) then
+		{
+			[8516, true] call public_fnc_tabletShow;
+			[8517, true] call public_fnc_tabletShow;
+		};
 	};
 };

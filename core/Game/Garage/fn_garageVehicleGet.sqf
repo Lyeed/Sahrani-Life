@@ -62,7 +62,7 @@ _spawnPos = getMarkerPos _validSpawn;
 _vehicle = createVehicle [_vehicleClassname, _spawnPos, [], 0, "NONE"];
 waitUntil {!isNil "_vehicle" && {!isNull _vehicle}};
 _vehicle allowDamage false;
-[_vehicle, playerSide] call public_fnc_clearVehicleAmmo;
+[_vehicle] call public_fnc_clearVehicleAmmo;
 
 _vehicle setPos _spawnPos;
 _vehicle setVectorUp (surfaceNormal _spawnPos);
