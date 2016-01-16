@@ -257,7 +257,7 @@ class Life_RscShortcutButton {
 		font = "PuristaMedium";
 		color = "#E5E5E5";
 		align = "left";
-		shadow = "true";
+		shadow = 0;
 	};
 	class AttributesImage
 	{
@@ -310,7 +310,7 @@ class Life_RscButtonMenu : Life_RscShortcutButton
 	class Attributes
 	{
 		color = "#E5E5E5";
-		shadow = "false";
+		shadow = 0;
 		align = "center";
 		valign = "middle";		
 	};
@@ -378,13 +378,13 @@ class Life_RscShortcutButtonMain : Life_RscShortcutButton {
 		font = "PuristaMedium";
 		color = "#E5E5E5";
 		align = "left";
-		shadow = "false";
+		shadow = 0;
 	};
 	
 	class AttributesImage {
 		font = "PuristaMedium";
 		color = "#E5E5E5";
-		align = "false";
+		align = 0;
 	};
 };
 
@@ -1103,11 +1103,11 @@ class default_interaction_back_dialog: default_base_dialog
 		{
 			action = "closedialog 0;";
 			tooltip = "Quitter";
-			onMouseEnter = "((uinamespace getvariable 'current_interaction_dialog') displayCtrl 19501) ctrlSetBackgroundColor [1,1,1,1];\
-			ctrlSetText[19502,""lyeed_IMG\data\global\option_exit_select.paa""];\
+			onMouseEnter = "((uinamespace getvariable 'current_interaction_dialog') displayCtrl 19501) ctrlSetBackgroundColor [1,1,1,1]; \
+			ctrlSetText[19502,""lyeed_IMG\data\global\option_exit_select.paa""]; \
 			ctrlShow[19500, false];";
-			onMouseExit = "((uinamespace getvariable 'current_interaction_dialog') displayCtrl 19501) ctrlSetBackgroundColor [0,0,0,0.6];\
-			ctrlSetText[19502,""lyeed_IMG\data\global\option_exit.paa""];\
+			onMouseExit = "((uinamespace getvariable 'current_interaction_dialog') displayCtrl 19501) ctrlSetBackgroundColor [0,0,0,0.6]; \
+			ctrlSetText[19502,""lyeed_IMG\data\global\option_exit.paa""]; \
 			ctrlShow[19500, true];";
 
 			x = 0.345312 * safezoneW + safezoneX;

@@ -33595,8 +33595,8 @@ class Mission
 		class Item20
 		{
 			position[]={14681.518,43.94091,10745.329};
-			name="Rafinierie de pétrole";
-			text="Rafinierie de pétrole";
+			name="Raffinerie de pétrole";
+			text="Raffinerie de pétrole";
 			type="Fett_industrial";
 			colorName="ColorOrange";
 			a=0.5;

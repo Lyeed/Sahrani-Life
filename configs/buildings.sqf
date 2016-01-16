@@ -593,6 +593,16 @@ _cString =
 		border_sign_south_south animate ["sign_anim6", 0];
 		border_sign_south_south animate ["sign_anim7", 1];
 
+		border_plot_south_north_1 animate ["plot_1_translation", 0];
+		border_plot_south_north_2 animate ["plot_1_translation", 0];
+		border_plot_south_north_3 animate ["plot_1_translation", 0];
+		border_plot_south_north_4 animate ["plot_1_translation", 0];
+
+		border_plot_south_south_1 animate ["plot_1_translation", 0];
+		border_plot_south_south_2 animate ["plot_1_translation", 0];
+		border_plot_south_south_3 animate ["plot_1_translation", 0];
+		border_plot_south_south_4 animate ["plot_1_translation", 0];
+
 	}, "", 9992, true, false, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]))"];
 
 	_x addAction ["<img image='\lyeed_IMG\data\actions_menu\fence.paa'/> <t color='#FF0000'>Fermer</t>",
@@ -611,6 +621,15 @@ _cString =
 		border_sign_south_south animate ["sign_anim6", 1];
 		border_sign_south_south animate ["sign_anim7", 0];
 
+		border_plot_south_north_1 animate ["plot_1_translation", 1];
+		border_plot_south_north_2 animate ["plot_1_translation", 1];
+		border_plot_south_north_3 animate ["plot_1_translation", 1];
+		border_plot_south_north_4 animate ["plot_1_translation", 1];
+
+		border_plot_south_south_1 animate ["plot_1_translation", 1];
+		border_plot_south_south_2 animate ["plot_1_translation", 1];
+		border_plot_south_south_3 animate ["plot_1_translation", 1];
+		border_plot_south_south_4 animate ["plot_1_translation", 1];
 	}, "", 9991, true, false, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]))"];
 
 	_x addAction ["=====[Alarme]=====", "", "", 9990, false, false, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]))"];
