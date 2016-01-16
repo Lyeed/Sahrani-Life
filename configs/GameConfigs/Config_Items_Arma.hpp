@@ -3351,7 +3351,7 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class tf_mr3000_multicam
+	class Fett_tf_mr3000_milice
 	{
 		buy_price = 20;
 		buy_condition_WEST = 4;

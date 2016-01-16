@@ -1,4 +1,8 @@
 
+
+["radio_search_1"] remoteExecCall ["public_fnc_border_south_sounds", -2];
+["light_south_3"] remoteExec ["public_fnc_lightBug", -2];
+
 xcam_Loudspeakers_F
 // ((getPos player) nearestObject 507979) hideObject true;
 
