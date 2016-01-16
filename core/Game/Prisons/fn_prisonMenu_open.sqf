@@ -27,7 +27,7 @@ disableSerialization;
 _display = findDisplay 20000;
 if (isNull _display) exitWith {};
 
-if (!(getNumber (missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "bail" >> "enable"))) then {
+if (!(getNumber (missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "bail" >> "enable") isEqualTo 1)) then {
 	(_display displayCtrl 20011) ctrlEnable false;
 };
 
@@ -40,6 +40,6 @@ _list = _display displayCtrl 20006;
 _list lbSetCurSel 0;
 
 (_display displayCtrl 20004) ctrlSetStructuredText parseText format["<t align='center' size='1.2'>%1</t>", (g_interaction_target getVariable ["realname", "Erreur"])];
-(_display displayCtrl 20010) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", (getNumber (missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "time" >> "min"))];
-(_display displayCtrl 20011) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", (getNumber (missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "bail" >> "min"))];
-(_display displayCtrl 20012) ctrlSetStructuredText parseText "<t align='right'>Aucune</t>";
+(_display displayCtrl 20010) ctrlSetText format["%1", (getNumber (missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "time" >> "min"))];
+(_display displayCtrl 20011) ctrlSetText format["%1", (getNumber (missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "bail" >> "min"))];
+(_display displayCtrl 20012) ctrlSetText "Aucune";

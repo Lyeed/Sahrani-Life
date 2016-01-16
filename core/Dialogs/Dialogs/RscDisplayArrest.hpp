@@ -505,7 +505,7 @@ class RscDisplayModifyArrest: default_interaction_back_dialog
 		class MODIFY_TXT_1: RscStructuredText
 		{
 			idc = 19041;
-			text = "<t align='left' size='0.8'>Numéro de cellule</t>";
+			text = "<t align='left' size='0.8'>Numéro cellule</t>";
 
 			x = 0.58763 * safezoneW + safezoneX;
 			y = 0.378956 * safezoneH + safezoneY;
@@ -516,7 +516,7 @@ class RscDisplayModifyArrest: default_interaction_back_dialog
 		class MODIFY_TXT_2: RscStructuredText
 		{
 			idc = 19042;
-			text = "<t align='left' size='0.8'>Durée de la peine</t>";
+			text = "<t align='left' size='0.8'>Durée peine</t>";
 
 			x = 0.58763 * safezoneW + safezoneX;
 			y = 0.411968 * safezoneH + safezoneY;
@@ -527,7 +527,7 @@ class RscDisplayModifyArrest: default_interaction_back_dialog
 		class MODIFY_TXT_3: RscStructuredText
 		{
 			idc = 19043;
-			text = "<t align='left' size='0.8'>Caution de la peine</t>";
+			text = "<t align='left' size='0.8'>Caution peine</t>";
 
 			x = 0.58763 * safezoneW + safezoneX;
 			y = 0.44498 * safezoneH + safezoneY;
@@ -594,7 +594,7 @@ class RscDisplayModifyArrest: default_interaction_back_dialog
 		class MODIFY_COMFIRM_TXT: RscStructuredText
 		{
 			idc = 19050;
-			text = "<t align='left' size='0.8'>Comfirmer les modifications</t>";
+			text = "<t align='left' size='0.8'>Comfirmer modifications</t>";
 
 			x = 0.58763 * safezoneW + safezoneX;
 			y = 0.55502 * safezoneH + safezoneY;
@@ -653,6 +653,17 @@ class RscDisplayModifyArrest: default_interaction_back_dialog
 		class RELEASE_BUTTON: RscButtonSilent
 		{
 			idc = 19056;
+			action = "[] spawn public_fnc_prisonModifyMenu_use_release;";
+			onMouseEnter = "\
+			ctrlShow[19052, false];\
+			ctrlSetText[19055,""lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""];\
+			((findDisplay 19000) displayCtrl 19052) ctrlSetBackgroundColor [1,1,1,1];\
+			((findDisplay 19000) displayCtrl 19054) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Libérer</t>"";";
+			onMouseExit = "\
+			ctrlShow[19052, false];\
+			ctrlSetText[19055,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];\
+			((findDisplay 19000) displayCtrl 19052) ctrlSetBackgroundColor [0,0,0,0.6];\
+			((findDisplay 19000) displayCtrl 19054) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Libérer</t>"";";
 
 			x = 0.582475 * safezoneW + safezoneX;
 			y = 0.588032 * safezoneH + safezoneY;
@@ -952,6 +963,18 @@ class RscDisplayArrest: default_interaction_back_dialog
 		class VALIDATE_BUTTON: RscButtonSilent
 		{
 			idc = 20020;
+			action = "[] spawn public_fnc_prisonMenu_use_validate;";
+			onMouseEnter = "\
+			ctrlShow[20016, false];\
+			ctrlSetText[20018,""lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""];\
+			((findDisplay 20000) displayCtrl 20016) ctrlSetBackgroundColor [1,1,1,1];\
+			((findDisplay 20000) displayCtrl 20019) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Arrêter</t>"";";
+			onMouseExit = "\
+			ctrlShow[20018, false];\
+			ctrlSetText[17017,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];\
+			((findDisplay 20000) displayCtrl 20016) ctrlSetBackgroundColor [0,0,0,0.6];\
+			((findDisplay 20000) displayCtrl 20019) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Arrêter</t>"";";
+
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.61 * safezoneH + safezoneY;
 			w = 0.108281 * safezoneW;

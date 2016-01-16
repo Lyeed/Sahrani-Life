@@ -380,12 +380,12 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 			idc = 17019;
 			action = "closedialog 0;";
 			onMouseEnter = "\
-			ctrlShow[16016, false];\
+			ctrlShow[17016, false];\
 			ctrlSetText[17017,""lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""];\
 			((findDisplay 16000) displayCtrl 17015) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 16000) displayCtrl 17017) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Arrêter</t>"";";
 			onMouseExit = "\
-			ctrlShow[16016, true];\
+			ctrlShow[17016, true];\
 			ctrlSetText[17017,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];\
 			((findDisplay 16000) displayCtrl 17015) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 16000) displayCtrl 17017) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Arrêter</t>"";";
