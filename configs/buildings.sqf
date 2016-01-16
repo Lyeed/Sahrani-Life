@@ -12,6 +12,7 @@ _cString =
 	_obj = (_this select 0) createVehicleLocal [0,0,0];
 	if((_this select 4) isEqualTo 0) then {
 		_obj enableSimulation false;
+		_obj allowDamage false;
 	};
 	_obj setdir (_this select 2);
 	if((_this select 3) isEqualTo -100) then {
