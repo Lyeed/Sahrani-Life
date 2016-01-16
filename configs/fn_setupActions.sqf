@@ -6,31 +6,36 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
+
 /* DEV */
-[["===================", {}]] call CBA_fnc_addPlayerAction;
-[["(DEV) Teleport ON", {onMapSingleClick "(vehicle player) setPos _pos";}]] call CBA_fnc_addPlayerAction;
-[["(DEV) Teleport OFF", {onMapSingleClick "";}]] call CBA_fnc_addPlayerAction;
-[["(DEV) Copier ma position", {copyToClipboard(str(getPos player))}]] call CBA_fnc_addPlayerAction;
-[["(DEV) Bandage", {g_bleed = 0;}]] call CBA_fnc_addPlayerAction;
-[["(DEV) santé", {[4000] call public_fnc_handleBlood;}]] call CBA_fnc_addPlayerAction;
-[["(DEV) +100.000kn (porte-feuille)", {[true, 100000] call public_fnc_handleCash;}]] call CBA_fnc_addPlayerAction;
-[["(DEV) +100.000kn (compte)", {[true, 100000, "Dev"] call public_fnc_handleATM;}]] call CBA_fnc_addPlayerAction;
-[["(DEV) Réparer cible", {cursorTarget setDamage 0;}]] call CBA_fnc_addPlayerAction;
-[["(DEV) Supprimer cible", {deleteVehicle cursorTarget}]] call CBA_fnc_addPlayerAction;
-[["(DEV) Réparer mon véhicule", {(vehicle player) setDamage 0;}]] call CBA_fnc_addPlayerAction;
-[["(DEV) Essence mon véhicule", {(vehicle player) setFuel 1;}]] call CBA_fnc_addPlayerAction;
-[["(DEV) + 1 Tenue (Alysia)", {player forceAddUniform "U_C_Alysia_01";}]] call CBA_fnc_addPlayerAction;
-[["(DEV) + 1 GPS", {player addItem "ItemGPS"; player assignItem "ItemGPS"; }]] call CBA_fnc_addPlayerAction;
-[["(DEV) + 1 MAP", {player addItem "ItemMap"; player assignItem "ItemMap";}]] call CBA_fnc_addPlayerAction;
-[["(DEV) + 1 UZI", {player addMagazine "RH_30Rnd_9x19_UZI"; player addWeapon "RH_muzi";}]] call CBA_fnc_addPlayerAction;
-[["(DEV) + 1 NVG", {player addItem "Skyline_NVGoogle"; player assignItem "Skyline_NVGoogle"; }]] call CBA_fnc_addPlayerAction;
-[["(DEV) Revivre", {cursorTarget setVariable ["is_coma", false, true];}]] call CBA_fnc_addPlayerAction;
-[["(DEV) +100 faim", {[100] call public_fnc_handleHunger;}]] call CBA_fnc_addPlayerAction;
-[["(DEV) +100 soif", {[100] call public_fnc_handleThirst;}]] call CBA_fnc_addPlayerAction;
-[["(DEV) Tp marché noir", {player setPos (getMarkerPos "black_market_1_marker");}]] call CBA_fnc_addPlayerAction;
-[["(DEV) Cacher HUD", {8 cutText ["", "PLAIN"];}]] call CBA_fnc_addPlayerAction;
-[["(DEV) Afficher HUD", {[] spawn public_fnc_hudSetup;}]] call CBA_fnc_addPlayerAction;
-[["===================", {}]] call CBA_fnc_addPlayerAction;
+g_dev = false;
+
+[["Mode developpement <t color='#01DF01'>ON</t>", {g_dev = true;}, "", 0, false, false, "", "!g_dev"]] call CBA_fnc_addPlayerAction;
+[["Mode developpement <t color='#FF0000'>OFF</t>", {g_dev = false;}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["===================", {}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) Teleport ON", {onMapSingleClick "(vehicle player) setPos _pos";}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) Teleport OFF", {onMapSingleClick "";}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) Copier ma position", {copyToClipboard(str(getPos player))}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) Bandage", {g_bleed = 0;}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) santé", {[4000] call public_fnc_handleBlood;}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) +100.000kn (porte-feuille)", {[true, 100000] call public_fnc_handleCash;}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) +100.000kn (compte)", {[true, 100000, "Dev"] call public_fnc_handleATM;}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) Réparer cible", {cursorTarget setDamage 0;}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) Supprimer cible", {deleteVehicle cursorTarget}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) Réparer mon véhicule", {(vehicle player) setDamage 0;}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) Essence mon véhicule", {(vehicle player) setFuel 1;}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) + 1 Tenue (Alysia)", {player forceAddUniform "U_C_Alysia_01";}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) + 1 GPS", {player addItem "ItemGPS"; player assignItem "ItemGPS"; }, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) + 1 MAP", {player addItem "ItemMap"; player assignItem "ItemMap";}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) + 1 UZI", {player addMagazine "RH_30Rnd_9x19_UZI"; player addWeapon "RH_muzi";}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) + 1 NVG", {player addItem "Skyline_NVGoogle"; player assignItem "Skyline_NVGoogle"; }, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) Revivre", {cursorTarget setVariable ["is_coma", false, true];}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) +100 faim", {[100] call public_fnc_handleHunger;}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) +100 soif", {[100] call public_fnc_handleThirst;}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) Tp marché noir", {player setPos (getMarkerPos "black_market_1_marker");}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) Cacher HUD", {8 cutText ["", "PLAIN"];}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) Afficher HUD", {[] spawn public_fnc_hudSetup;}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["===================", {}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
 
 /* ==================[CONFIG]===================*/
 if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "interaction_seize_gear") isEqualTo 1) then

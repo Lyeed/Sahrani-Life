@@ -16,7 +16,7 @@ if ((vehicle player) isEqualTo player) then
 	if (player getVariable ["sit", false]) then
 	{
 		[] call public_fnc_standUp;
-		breakOut "main";
+		true breakOut "main";
 	};
 
 	if (isNull cursorTarget) then 
@@ -25,28 +25,49 @@ if ((vehicle player) isEqualTo player) then
 		if (!(isNil "_plant")) then
 		{
 			[_plant] spawn public_fnc_plantHarvest;
-			breakOut "main";
+			true breakOut "main";
 		};
 
 		_atm = (nearestObjects [player, ["Land_Atm_01_F", "Land_Atm_02_F", "xcam_Atm_01_F", "xcam_Atm_02_F"], 2]) select 0;
 		if (!(isNil "_atm")) then
 		{
 			["home"] call public_fnc_atmScreen;
-			breakOut "main";
+			true breakOut "main";
 		};
 
 		_chair = (nearestObjects [player, (call g_chairs), 1]) select 0;
 		if (!(isNil "_chair")) then
 		{
 			[_chair] call public_fnc_sitDown;
-			breakOut "main";
+			true breakOut "main";
 		};
 
 		_speaker = (nearestObjects [player, ["xcam_Loudspeakers_F"], 4]) select 0;
 		if (!(isNil "_speaker")) then
 		{
 			[_speaker] call public_fnc_interactions_player_to_speaker;
-			breakOut "main";
+			true breakOut "main";
+		};
+
+		_storage = (nearestObjects [player, (call g_houses_storages), 2]) select 0;
+		if (!(isNil "_storage")) then
+		{
+			[_storage] spawn public_fnc_virtual_menu_exhange_open;
+			true breakOut "main";
+		};
+
+		_skull = (nearestObjects [player, ["Land_HumanSkull_F"], 2]) select 0;
+		if (!(isNil "_skull")) then
+		{
+			[_skull] call public_fnc_interactions_player_to_skull;
+			true breakOut "main";
+		};
+
+		_house = (nearestObjects [player, (call g_houses_list), 3]) select 0;
+		if (!(isNil "_house")) then
+		{
+			[_house] call public_fnc_house_menu_handler;
+			true breakOut "main";
 		};
 
 		{
@@ -57,7 +78,7 @@ if ((vehicle player) isEqualTo player) then
 					if ((player distance (getMarkerPos _x)) < 10) then
 					{
 						[_x] spawn public_fnc_dynamicMarkers_destroy;
-						breakOut "main";
+						true breakOut "main";
 					};
 				} else {
 					if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "discover")) then
@@ -66,7 +87,7 @@ if ((vehicle player) isEqualTo player) then
 						{
 							[format["Vous avez découvert <t color='#74DF00'>%1</t>", (markerText _x)]] call public_fnc_info;
 							[_x] call public_fnc_dynamicMarkers_reveal;
-							breakOut "main";
+							true breakOut "main";
 						};
 					};
 				};
@@ -77,17 +98,17 @@ if ((vehicle player) isEqualTo player) then
 			if (player distance (getMarkerPos _x) < 40) then
 			{
 				[_x] spawn public_fnc_plantSeed;
-				breakOut "main";
+				true breakOut "main";
 			};
-		} forEach (getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "farming_markers_plant"));
+		} forEach getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "farming_markers_plant");
 
 		{
 			if (player distance (getMarkerPos _x) < 40) then
 			{
 				[_x] spawn public_fnc_pickGather;
-				breakOut "main";
+				true breakOut "main";
 			};
-		} forEach (getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "farming_markers_gather"));
+		} forEach getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "farming_markers_gather");
 	} else {
 		if ((player distance cursorTarget) < ((((boundingBox cursorTarget) select 1) select 0) + 2.5)) then
 		{
@@ -98,7 +119,7 @@ if ((vehicle player) isEqualTo player) then
 					if ((cursorTarget isKindOf "Car") || (cursorTarget isKindOf "Ship") || (cursorTarget isKindOf "Air") || (cursorTarget isKindOf "Tank") || (cursorTarget isKindOf "Truck")) then
 					{
 						[(vehicle cursorTarget)] call public_fnc_interactions_player_to_vehicle;
-						breakOut "main";
+						true breakOut "main";
 					};
 
 					if (cursorTarget getVariable ["is_coma", false]) then {
@@ -106,37 +127,37 @@ if ((vehicle player) isEqualTo player) then
 					} else {
 						[cursorTarget] call public_fnc_interactions_player_to_player_basics;
 					};
-					breakOut "main";
+					true breakOut "main";
 				};
 			} else {
 				if ((alive cursorTarget) && ((cursorTarget isKindOf "Car") || (cursorTarget isKindOf "Ship") || (cursorTarget isKindOf "Air") || (cursorTarget isKindOf "Tank") || (cursorTarget isKindOf "Truck"))) then
 				{
 					[cursorTarget] call public_fnc_interactions_player_to_vehicle;
-					breakOut "main";
+					true breakOut "main";
 				};
 
 				if (typeof(cursorTarget) isEqualTo "Land_HumanSkull_F") then
 				{
 					[cursorTarget] call public_fnc_interactions_player_to_skull;
-					breakOut "main";
+					true breakOut "main";
 				};
 
 				if (typeOf(cursorTarget) in ["Land_Atm_01_F", "Land_Atm_02_F", "xcam_Atm_01_F", "xcam_Atm_02_F"]) then
 				{
 					["home"] call public_fnc_atmScreen;
-					breakOut "main";
+					true breakOut "main";
 				};
 
 				if (typeOf(cursorTarget) in (call g_houses_storages)) then
 				{
 					[cursorTarget] spawn public_fnc_virtual_menu_exhange_open;
-					breakOut "main";
+					true breakOut "main";
 				};
 
 				if (typeOf(cursorTarget) isEqualTo "Turtle_F") then
 				{
 					[cursorTarget] call public_fnc_catchTurtle;
-					breakOut "main";
+					true breakOut "main";
 				};
 
 				if (typeOf(cursorTarget) in ["Bank_Sahrani_N", "Bank_Sahrani_S"]) then
@@ -144,19 +165,19 @@ if ((vehicle player) isEqualTo player) then
 					if (player distance (nearestObject [player, "xcam_Laptop_unfolded_F"]) <= 2) then
 					{
 						[cursorTarget, "Security"] spawn public_fnc_robberyStart;
-						breakOut "main";
+						true breakOut "main";
 					};
 
 					if (player distance (nearestObject [player, "Bank_Drill"]) < 3) then
 					{
 						[((nearestObject [player, "Bank_Bomb"]) getVariable ["bank", ObjNull]), "", nearestObject [player, "Bank_Drill"]] spawn public_fnc_robberyProcess;
-						breakOut "main";
+						true breakOut "main";
 					};
 
 					if (player distance (nearestObject [player, "Bank_Bomb"]) < 3) then
 					{
 						[((nearestObject [player, "Bank_Bomb"]) getVariable ["bank", ObjNull]), "", (nearestObject [player, "Bank_Bomb"])] spawn public_fnc_robberyProcess;
-						breakOut "main";
+						true breakOut "main";
 					};
 
 					if (cursorTarget getVariable ["robbed", false]) then
@@ -164,7 +185,7 @@ if ((vehicle player) isEqualTo player) then
 						if ((player distance (cursorTarget modelToWorld (cursorTarget selectionPosition "Interact5"))) < 5) then
 						{
 							[cursorTarget] spawn public_fnc_virtuel_menu_exhange_open;
-							breakOut "main";
+							true breakOut "main";
 						};
 					} else {
 						{
@@ -172,7 +193,7 @@ if ((vehicle player) isEqualTo player) then
 							if ((player distance [_pos select 0, _pos select 1, (_pos select 2) - 1.5]) < 3) then
 							{
 								[cursorTarget, _x] spawn public_fnc_robberyStart;
-								breakOut "main";
+								true breakOut "main";
 							};
 						} forEach (["AutoDoor_trigger", "Interact1", "Interact2", "Interact3", "Interact4", "Interact5", "Interact6", "Vault_Door"]);
 					};
@@ -187,19 +208,20 @@ if ((vehicle player) isEqualTo player) then
 					} else {
 						[cursorTarget] call public_fnc_interactions_player_to_station;
 					};
-					breakOut "main";
+					
+					true breakOut "main";
 				};
 
 				if (typeOf(cursorTarget) in (call g_plants)) then
 				{
 					[cursorTarget] call public_fnc_plantHarvest;
-					breakOut "main";
+					true breakOut "main";
 				};
 
 				if (count(cursorTarget getVariable ["company_info", []]) > 0) then
 				{
 					[cursorTarget] call public_fnc_interactions_player_to_company;
-					breakOut "main";
+					true breakOut "main";
 				};
 			};
 		};
@@ -207,13 +229,13 @@ if ((vehicle player) isEqualTo player) then
 		if (((player distance cursorTarget) < 10) && (typeOf(cursorTarget) in (call g_houses_list))) then
 		{
 			[cursorTarget] call public_fnc_house_menu_handler;
-			breakOut "main";
+			true breakOut "main";
 		};
 
 		if (((player distance cursorTarget) < 1.5) && (typeOf(cursorTarget) in (call g_chairs))) then
 		{
 			[cursorTarget] call public_fnc_sitDown;
-			breakOut "main";
+			true breakOut "main";
 		};
 	};
 } else {
@@ -224,7 +246,7 @@ if ((vehicle player) isEqualTo player) then
 		if ((alive _vehicle) && ((damage _vehicle) < 1)) then
 		{
 			[_vehicle] call public_fnc_interactions_player_to_vehicle;
-			breakOut "main";
+			true breakOut "main";
 		};
 	};
 };

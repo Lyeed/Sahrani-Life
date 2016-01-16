@@ -17,6 +17,10 @@ if (isNull _display) exitWith {};
 _sel = lbCurSel 69002;
 if (_sel isEqualTo -1) exitWith {};
 
+if ((time - g_action_delay) < 1) exitWith {
+	["Veuillez ralentir dans vos actions"] call public_fnc_error; 
+};
+
 g_interaction_target_inv_active = true;
 _data = g_interaction_target_inv select _sel;
 
@@ -51,5 +55,6 @@ switch (_data select 0) do
 	};
 };
 
+g_action_delay = time;
 [] call public_fnc_skullMenu_search_update;
 g_interaction_target_inv_active = false;

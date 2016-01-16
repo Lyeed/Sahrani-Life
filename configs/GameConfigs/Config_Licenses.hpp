@@ -182,7 +182,7 @@ class ALYSIA_LICENSES
 
 	class company_weapon
 	{
-		name = "company_weapon";//A DEFINIR
+		name = "Licence de manufacture d'armes";
 		sides[] = {"CIV"};
 		price = 0;
 		illegal = 0;
@@ -190,7 +190,7 @@ class ALYSIA_LICENSES
 	};
 	class company_farming_bio
 	{
-		name = "company_farming_bio";//A DEFINIR
+		name = "Licence d'Agriculture Bio";
 		sides[] = {"CIV"};
 		price = 0;
 		illegal = 0;
@@ -198,7 +198,7 @@ class ALYSIA_LICENSES
 	};
 	class company_farming_industrial
 	{
-		name = "company_farming_industrial";//A DEFINIR
+		name = "Licence d'Agriculture industrielle";
 		sides[] = {"CIV"};
 		price = 0;
 		illegal = 0;
@@ -206,7 +206,7 @@ class ALYSIA_LICENSES
 	};
 	class company_garagist
 	{
-		name = "company_garagist";//A DEFINIR
+		name = "Licence de garagiste";
 		sides[] = {"CIV"};
 		price = 0;
 		illegal = 0;
@@ -214,7 +214,7 @@ class ALYSIA_LICENSES
 	};
 	class company_money_tranfer
 	{
-		name = "company_money_tranfer";//A DEFINIR
+		name = "Licence de convoyeur de fonds";
 		sides[] = {"CIV"};
 		price = 0;
 		illegal = 0;
@@ -222,7 +222,7 @@ class ALYSIA_LICENSES
 	};
 	class company_foundry
 	{
-		name = "company_foundry";//A DEFINIR
+		name = "Licence de fondeur";
 		sides[] = {"CIV"};
 		price = 0;
 		illegal = 0;
@@ -230,7 +230,7 @@ class ALYSIA_LICENSES
 	};
 	class company_fuel
 	{
-		name = "company_fuel";//A DEFINIR
+		name = "Licence d'exploitation pétroliére";
 		sides[] = {"CIV"};
 		price = 0;
 		illegal = 0;
@@ -238,7 +238,7 @@ class ALYSIA_LICENSES
 	};
 	class company_construction
 	{
-		name = "company_construction";//A DEFINIR
+		name = "Licence de BTP";
 		sides[] = {"CIV"};
 		price = 0;
 		illegal = 0;
@@ -246,7 +246,7 @@ class ALYSIA_LICENSES
 	};
 	class company_transport
 	{
-		name = "company_transport";//A DEFINIR
+		name = "Licence de chauffeur";
 		sides[] = {"CIV"};
 		price = 0;
 		illegal = 0;
@@ -254,7 +254,7 @@ class ALYSIA_LICENSES
 	};
 	class company_security
 	{
-		name = "company_security";//A DEFINIR
+		name = "Licence de sécurité";
 		sides[] = {"CIV"};
 		price = 0;
 		illegal = 0;
@@ -262,7 +262,7 @@ class ALYSIA_LICENSES
 	};
 	class company_service
 	{
-		name = "company_service";//A DEFINIR
+		name = "Licence de service";
 		sides[] = {"CIV"};
 		price = 0;
 		illegal = 0;
@@ -270,7 +270,7 @@ class ALYSIA_LICENSES
 	};
 	class company_car_dealer
 	{
-		name = "company_car_dealer";//A DEFINIR
+		name = "Licence de concessionnaire";
 		sides[] = {"CIV"};
 		price = 0;
 		illegal = 0;
@@ -278,7 +278,7 @@ class ALYSIA_LICENSES
 	};
 	class company_shop
 	{
-		name = "company_shop";//A DEFINIR
+		name = "Licence commerciale";
 		sides[] = {"CIV"};
 		price = 0;
 		illegal = 0;
@@ -286,7 +286,7 @@ class ALYSIA_LICENSES
 	};
 	class company_news
 	{
-		name = "company_news";//A DEFINIR
+		name = "Licence de journalisme";
 		sides[] = {"CIV"};
 		price = 0;
 		illegal = 0;

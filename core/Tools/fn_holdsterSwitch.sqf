@@ -26,8 +26,9 @@ if ((vehicle player) isEqualTo player) then
 				player action ["SwitchWeapon", player, player, 100];
 			};
 		};
-
 	};
 } else {
 	["Vous ne pouvez pas utiliser votre holdster en véhicule"] call public_fnc_error;
 };
+
+true;

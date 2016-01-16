@@ -22,3 +22,5 @@ if (player getVariable ["surrender", false]) then {
 		player playMove "amovpercmstpssurwnondnon_amovpercmstpsnonwnondnon";  
 	};
 };
+
+true;

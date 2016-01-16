@@ -133,8 +133,7 @@ class ALYSIA_SHOPS_ARMA
 			"Skyline_tl122_verte",
 			"Skyline_tl122_bleu",
 			"Skyline_tl122_rose",
-			"Skyline_tl122_jaune",
-			"Skyline_NVGoogle"
+			"Skyline_tl122_jaune"
 		};
 	};
 

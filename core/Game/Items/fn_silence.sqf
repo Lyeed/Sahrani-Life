@@ -13,3 +13,5 @@ if (missionNamespace getVariable ["silence", false]) then {
 	1 fadeSound 0.2;
 	missionNamespace setVariable ["silence", true];
 };
+
+true;

@@ -36,7 +36,9 @@ if (!gServer_border_south_alarm) then {
 };
 
 {
-	if (!(_x getVariable ["destroyed", false])) then {
+	if (_x getVariable ["destroyed", false]) then {
+		_x say3D (["radio_buzz_1", "radio_buzz_2"] call BIS_fnc_selectRandom);
+	} else {
 		_x say3D _sound;
 	};
 } forEach _objects;

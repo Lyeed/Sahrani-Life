@@ -21,3 +21,5 @@ if ((["bip"] call public_fnc_itemCount) > 0) then
 } else {
 	["Vous n'avez pas de télécommande"] call public_fnc_error;
 };
+
+true;

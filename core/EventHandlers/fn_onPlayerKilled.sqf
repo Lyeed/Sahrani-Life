@@ -10,6 +10,7 @@ player setVariable ["tf_globalVolume", 0];
 player setVariable ["tf_voiceVolume", 0, true];
 
 playSound "death";
+
 0 cutText["Vous êtes en soin intensif ...", "BLACK FADED"];
 0 cutFadeOut 9999999;
 
@@ -17,8 +18,8 @@ playSound "death";
 **          SKULL
 */
 private["_skull", "_inv"];
-_skull = "Land_HumanSkull_F" createVehicle (getPos player);
-_skull setDir (random(360));
+_skull = createVehicle ["Land_HumanSkull_F", (getPos player), [], 0, "CAN_COLLIDE"];
+_skull setDir random(360);
 
 _data = [];
 

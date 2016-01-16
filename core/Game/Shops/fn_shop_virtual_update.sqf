@@ -36,7 +36,9 @@ if ((lbSize _ctrl_player) isEqualTo 0) then
 	ctrlShow[2403, true];
 	ctrlShow[2404, true];
 	ctrlShow[2405, true];
-	ctrlShow[2406, true];	
+	ctrlShow[2406, true];
+	
+	lbSort [_ctrl_player, "DESC"];
 };
 
 _ctrl_target = _display displayCtrl 2407;
@@ -56,6 +58,8 @@ if ((lbSize _ctrl_target) isEqualTo 0) then
 } else {
 	ctrlShow[2408, true];
 	ctrlShow[2409, true];
+
+	lbSort [_ctrl_target, "DESC"];
 };
 
 g_shop_bill_dollar = 0;
@@ -79,7 +83,7 @@ lbClear _ctrl_tmp;
 	_ctrl_tmp lbSetData [_index, "BUY"];
 	_ctrl_tmp lbSetValue [_index, _forEachIndex];
 	g_shop_bill_dollar = g_shop_bill_dollar - _price;
-} forEach (g_shop_tmp_buy);
+} forEach g_shop_tmp_buy;
 
 {
 	_item = _x select 0;
@@ -99,16 +103,18 @@ lbClear _ctrl_tmp;
 	} else {
 		g_shop_bill_dollar = g_shop_bill_dollar + _price;
 	};
-} forEach (g_shop_tmp_sell);
+} forEach g_shop_tmp_sell;
 
 if ((lbSize _ctrl_tmp) isEqualTo 0) then
 {
 	_ctrl_tmp lbAdd "Vide";
+	
 	ctrlShow[2412, false];
 	ctrlShow[2413, false];
 	ctrlShow[2414, false];
 	ctrlShow[2415, false];
 	ctrlShow[2416, false];
+
 	g_shop_weight_actual = g_carryWeight;
 } else {
 	ctrlShow[2412, true];
@@ -116,6 +122,8 @@ if ((lbSize _ctrl_tmp) isEqualTo 0) then
 	ctrlShow[2414, true];
 	ctrlShow[2415, true];
 	ctrlShow[2416, true];
+
+	lbSort [_ctrl_tmp, "DESC"];
 };
 
 (_display displayCtrl 2422) ctrlSetStructuredText parseText format["<t align='center'>%1/%2</t>", g_shop_weight_actual, g_maxWeight];

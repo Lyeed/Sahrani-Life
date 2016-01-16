@@ -5,8 +5,9 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_veh"];
+private["_veh", "_ret"];
 _veh = vehicle player;
+_ret = false;
 
 if (_veh != player) then
 {
@@ -34,8 +35,11 @@ if (_veh != player) then
 							sleep _sleep;
 						};
 					};
+					_ret = true;
 				};
 			};
 		};
 	};
 };
+
+_ret;

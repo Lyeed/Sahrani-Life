@@ -20,6 +20,7 @@ if (_object getVariable ["destroyed", false]) exitWith {
 	["Le haut parleur a déjà été saboté"] call public_fnc_error;
 };
 
+[_object, (["radio_buzz_1", "radio_buzz_2"] call BIS_fnc_selectRandom), 300] call CBA_fnc_globalSay3d;
 if (!(["Sabotage d'un haut parleur", 7, _object, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress)) exitWith {};
 
 if (_object getVariable ["destroyed", false]) exitWith {
@@ -27,8 +28,4 @@ if (_object getVariable ["destroyed", false]) exitWith {
 };
 
 _object setVariable ["destroyed", true, true];
-if ([true, "copperp", 1] call public_fnc_handleInv) then {
-	["Vous avez saboté le haut parleur.<br/>Vous avez récupéré des pièces détachées équivalent à un lingot de cuivre."] call public_fnc_info;
-} else {
-	["Vous avez saboté le haut parleur.<br/>Vous n'aviez pas assez de place pour récupérer des pièces détachées."] call public_fnc_info;
-};
+["Vous avez saboté le haut parleur"] call public_fnc_info;

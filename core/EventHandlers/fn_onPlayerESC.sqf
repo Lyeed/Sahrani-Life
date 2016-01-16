@@ -9,7 +9,7 @@ private["_abortButton", "_respawnButton", "_manuelButton"];
 disableSerialization;
 
 // quit
-_abortButton = (findDisplay 49) displayCtrl 104;
+_abortButton = (_this select 0) displayCtrl 104;
 _abortButton ctrlEnable false;
 _abortButton buttonSetAction
 "
@@ -20,12 +20,12 @@ _abortButton buttonSetAction
 ";
 
 // fielManual
-_manuelButton = (findDisplay 49) displayCtrl 122;
+_manuelButton = (_this select 0) displayCtrl 122;
 _manuelButton ctrlEnable false;
 _manuelButton ctrlShow false;
 
 // respawn
-_respawnButton = (findDisplay 49) displayCtrl 1010;
+_respawnButton = (_this select 0) displayCtrl 1010;
 _respawnButton ctrlEnable false;
 _respawnButton ctrlShow false;
 
@@ -41,9 +41,9 @@ if (!(player getVariable ["is_coma", false])) then
 		{
 			_abortButton ctrlSetText format["Vous pouvez quitter dans %1 secondes...", ([(_timeStamp - time), "SS.MS"] call BIS_fnc_secondsToString)];
 			_abortButton ctrlCommit 0;
-			round(_timeStamp - time) <= 0 || isNull (findDisplay 49)
+			round(_timeStamp - time) <= 0 || isNull (_this select 0)
 		};
-		if (!(isNull (findDisplay 49))) then
+		if (!(isNull (_this select 0))) then
 		{
 			if (!(player getVariable ["is_coma", false]) && !(missionNamespace getVariable["surrender", false]) && !(missionNamespace getVariable["restrained", false])) then
 			{
