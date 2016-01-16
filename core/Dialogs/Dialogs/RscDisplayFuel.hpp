@@ -14,12 +14,10 @@ class RscDisplayFuelStation: default_interaction_back_dialog
 		};
 		class FRAME: FRAME
 		{
-			idc = 1800;
 			x = 0.37625 * safezoneW + safezoneX;
 			y = 0.357 * safezoneH + safezoneY;
 			w = 0.248542 * safezoneW;
 			h = 0.244816 * safezoneH;
-			colorText[] = {0,0,0,1};
 		};
 	};
 
@@ -58,7 +56,6 @@ class RscDisplayFuelStation: default_interaction_back_dialog
 		{
 			idc = 16006;
 			text = "Choix du carburant";
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.396875 * safezoneW + safezoneX;
 			y = 0.400074 * safezoneH + safezoneY;
@@ -69,7 +66,6 @@ class RscDisplayFuelStation: default_interaction_back_dialog
 		{
 			idc = 16007;
 			text = "Prix/L";
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.561354 * safezoneW + safezoneX;
 			y = 0.401 * safezoneH + safezoneY;
@@ -90,8 +86,7 @@ class RscDisplayFuelStation: default_interaction_back_dialog
 		class PRICE_TEXT3: RscStructuredText
 		{
 			idc = 16009;
-			text = "<t size ='0.7' align='center'>Kn</t>";
-			colorBackground[] = {0,0,0,0};
+			text = "<t size ='0.7' align='center'>kn</t>";
 
 			x = 0.579999 * safezoneW + safezoneX;
 			y = 0.463111 * safezoneH + safezoneY;
@@ -102,7 +97,6 @@ class RscDisplayFuelStation: default_interaction_back_dialog
 		{
 			idc = 16010;
 			text = "<t align='right'>Disponibilité</t>";
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.394812 * safezoneW + safezoneX;
 			y = 0.45886 * safezoneH + safezoneY;
@@ -113,7 +107,6 @@ class RscDisplayFuelStation: default_interaction_back_dialog
 		{
 			idc = 16011;
 			text = "<t align='right'>0</t>";
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.461741 * safezoneW + safezoneX;
 			y = 0.45776 * safezoneH + safezoneY;
@@ -124,7 +117,6 @@ class RscDisplayFuelStation: default_interaction_back_dialog
 		{
 			idc = 16012;
 			text = "<t align='right'>L</t>";
-			colorBackground[] = {0,0,0,0};
 
 			x = 21.41 * safezoneW + safezoneX;
 			y = 10.57 * safezoneH + safezoneY;
@@ -154,7 +146,6 @@ class RscDisplayFuelStation: default_interaction_back_dialog
 		{
 			idc = 16016;
 			text = "<t align='center' size='1.5'>Quitter</t>";
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.484531 * safezoneW + safezoneX;
 			y = 0.533 * safezoneH + safezoneY;
@@ -241,8 +232,6 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 		class FUEL_TEXT: RscStructuredText
 		{
 			idc = 17006;
-			text = "";
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.396875 * safezoneW + safezoneX;
 			y = 0.40012 * safezoneH + safezoneY;
@@ -253,7 +242,6 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 		{
 			idc = 17007;
 			text = "Montant Total";
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.540834 * safezoneW + safezoneX;
 			y = 0.401 * safezoneH + safezoneY;
@@ -275,7 +263,6 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 		{
 			idc = 17009;
 			text = "<t align='right'>Disponnibilité</t>";
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.394812 * safezoneW + safezoneX;
 			y = 0.45886 * safezoneH + safezoneY;
@@ -286,7 +273,6 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 		{
 			idc = 17010;
 			text = "<t align='right'>0</t>";
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.502269 * safezoneW + safezoneX;
 			y = 0.45776 * safezoneH + safezoneY;
@@ -297,7 +283,6 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 		{
 			idc = 17011;
 			text = "<t align='right'>L</t>";
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.514541 * safezoneW + safezoneX;
 			y = 0.45754 * safezoneH + safezoneY;
@@ -307,8 +292,7 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 		class PRICE_TEXT3: RscStructuredText
 		{
 			idc = 17012;
-			text = "<t size ='0.7' align='center'>Kn</t>";
-			colorBackground[] = {0,0,0,0};
+			text = "<t size ='0.7' align='center'>kn</t>";
 
 			x = 0.587347 * safezoneW + safezoneX;
 			y = 0.46304 * safezoneH + safezoneY;
@@ -318,7 +302,6 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 		class PROGRESS_BAR: RscProgress
 		{
 			idc = 17013;
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.400522 * safezoneW + safezoneX;
 			y = 0.42963 * safezoneH + safezoneY;
@@ -328,7 +311,6 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 		class PROGRESS_STATE: RscStructuredText
 		{
 			idc = 17014;
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.400522 * safezoneW + safezoneX;
 			y = 0.42963 * safezoneH + safezoneY;
@@ -368,7 +350,6 @@ class RscDisplayFuelRefuel: default_interaction_back_dialog
 		{
 			idc = 17018;
 			text = "<t align='center' size='1.5'>Arrêter</t>";
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.484531 * safezoneW + safezoneX;
 			y = 0.533 * safezoneH + safezoneY;

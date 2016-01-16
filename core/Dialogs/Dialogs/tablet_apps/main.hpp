@@ -59,14 +59,12 @@ MAIN_IDCS[] =
 	APP_7_TITLE_IDC,
 	APP_8_IMAGE_IDC,
 	APP_8_BUTTON_IDC,
-	APP_8_TITLE_IDC,
-	APP_STATUS_IDC
+	APP_8_TITLE_IDC
 };
 
 class APP_1_IMAGE: RscPicture
 {
 	idc = APP_1_IMAGE_IDC;
-	text = "";
 
 	x = 0.345312 * safezoneW + safezoneX;
 	y = 0.401 * safezoneH + safezoneY;
@@ -76,7 +74,6 @@ class APP_1_IMAGE: RscPicture
 class APP_1_BUTTON: RscButtonSilent
 {
 	idc = APP_1_BUTTON_IDC;
-	action = "";
 
 	x = 0.345312 * safezoneW + safezoneX;
 	y = 0.401 * safezoneH + safezoneY;
@@ -87,7 +84,6 @@ class APP_1_TITLE: RscStructuredText
 {
 	idc = APP_1_TITLE_IDC;
 	font = "PuristaSemiBold";
-	colorBackground[] = {0,0,0,0};
 
 	x = 0.335 * safezoneW + safezoneX;
 	y = 0.467 * safezoneH + safezoneY;
@@ -98,7 +94,6 @@ class APP_1_TITLE: RscStructuredText
 class APP_2_IMAGE: RscPicture
 {
 	idc = APP_2_IMAGE_IDC;
-	text = "";
 
 	x = 0.432969 * safezoneW + safezoneX;
 	y = 0.401 * safezoneH + safezoneY;
@@ -108,7 +103,6 @@ class APP_2_IMAGE: RscPicture
 class APP_2_BUTTON: RscButtonSilent
 {
 	idc = APP_2_BUTTON_IDC;
-	action = "";
 
 	x = 0.432969 * safezoneW + safezoneX;
 	y = 0.401 * safezoneH + safezoneY;
@@ -119,7 +113,6 @@ class APP_2_TITLE: RscStructuredText
 {
 	idc = APP_2_TITLE_IDC;
 	font = "PuristaSemiBold";
-	colorBackground[] = {0,0,0,0};
 
 	x = 0.422656 * safezoneW + safezoneX;
 	y = 0.467 * safezoneH + safezoneY;
@@ -130,7 +123,6 @@ class APP_2_TITLE: RscStructuredText
 class APP_3_IMAGE: RscPicture
 {
 	idc = APP_3_IMAGE_IDC;
-	text = "";
 
 	x = 0.530937 * safezoneW + safezoneX;
 	y = 0.401 * safezoneH + safezoneY;
@@ -140,7 +132,6 @@ class APP_3_IMAGE: RscPicture
 class APP_3_BUTTON: RscButtonSilent
 {
 	idc = APP_3_BUTTON_IDC;
-	action = "";
 
 	x = 0.530937 * safezoneW + safezoneX;
 	y = 0.401 * safezoneH + safezoneY;
@@ -151,7 +142,6 @@ class APP_3_TITLE: RscStructuredText
 {
 	idc = APP_3_TITLE_IDC;
 	font = "PuristaSemiBold";
-	colorBackground[] = {0,0,0,0};
 
 	x = 0.520625 * safezoneW + safezoneX;
 	y = 0.467 * safezoneH + safezoneY;
@@ -162,7 +152,6 @@ class APP_3_TITLE: RscStructuredText
 class APP_4_IMAGE: RscPicture
 {
 	idc = APP_4_IMAGE_IDC;
-	text = "";
 
 	x = 0.618594 * safezoneW + safezoneX;
 	y = 0.401 * safezoneH + safezoneY;
@@ -172,7 +161,6 @@ class APP_4_IMAGE: RscPicture
 class APP_4_BUTTON: RscButtonSilent
 {
 	idc = APP_4_BUTTON_IDC;
-	action = "";
 
 	x = 0.618594 * safezoneW + safezoneX;
 	y = 0.401 * safezoneH + safezoneY;
@@ -183,7 +171,6 @@ class APP_4_TITLE: RscStructuredText
 {
 	idc = APP_4_TITLE_IDC;
 	font = "PuristaSemiBold";
-	colorBackground[] = {0,0,0,0};
 
 	x = 0.608281 * safezoneW + safezoneX;
 	y = 0.467 * safezoneH + safezoneY;
@@ -194,7 +181,6 @@ class APP_4_TITLE: RscStructuredText
 class APP_5_IMAGE: RscPicture
 {
 	idc = APP_5_IMAGE_IDC;
-	text = "";
 
 	x = 0.345312 * safezoneW + safezoneX;
 	y = 0.555 * safezoneH + safezoneY;
@@ -204,7 +190,6 @@ class APP_5_IMAGE: RscPicture
 class APP_5_BUTTON: RscButtonSilent
 {
 	idc = APP_5_BUTTON_IDC;
-	action = "";
 
 	x = 0.345312 * safezoneW + safezoneX;
 	y = 0.555 * safezoneH + safezoneY;
@@ -215,7 +200,6 @@ class APP_5_TITLE: RscStructuredText
 {
 	idc = APP_5_TITLE_IDC;
 	font = "PuristaSemiBold";
-	colorBackground[] = {0,0,0,0};
 
 	x = 0.335 * safezoneW + safezoneX;
 	y = 0.621 * safezoneH + safezoneY;
@@ -226,7 +210,6 @@ class APP_5_TITLE: RscStructuredText
 class APP_6_IMAGE: RscPicture
 {
 	idc = APP_6_IMAGE_IDC;
-	text = "";
 
 	x = 0.432969 * safezoneW + safezoneX;
 	y = 0.555 * safezoneH + safezoneY;
@@ -236,7 +219,6 @@ class APP_6_IMAGE: RscPicture
 class APP_6_BUTTON: RscButtonSilent
 {
 	idc = APP_6_BUTTON_IDC;
-	action = "";
 
 	x = 0.432969 * safezoneW + safezoneX;
 	y = 0.555 * safezoneH + safezoneY;
@@ -247,7 +229,6 @@ class APP_6_TITLE: RscStructuredText
 {
 	idc = APP_6_TITLE_IDC;
 	font = "PuristaSemiBold";
-	colorBackground[] = {0,0,0,0};
 
 	x = 0.422656 * safezoneW + safezoneX;
 	y = 0.621 * safezoneH + safezoneY;
@@ -258,7 +239,6 @@ class APP_6_TITLE: RscStructuredText
 class APP_7_IMAGE: RscPicture
 {
 	idc = APP_7_IMAGE_IDC;
-	text = "";
 
 	x = 0.530937 * safezoneW + safezoneX;
 	y = 0.555 * safezoneH + safezoneY;
@@ -268,7 +248,6 @@ class APP_7_IMAGE: RscPicture
 class APP_7_BUTTON: RscButtonSilent
 {
 	idc = APP_7_BUTTON_IDC;
-	action = "";
 
 	x = 0.530937 * safezoneW + safezoneX;
 	y = 0.555 * safezoneH + safezoneY;
@@ -279,7 +258,6 @@ class APP_7_TITLE: RscStructuredText
 {
 	idc = APP_7_TITLE_IDC;
 	font = "PuristaSemiBold";
-	colorBackground[] = {0,0,0,0};
 
 	x = 0.520625 * safezoneW + safezoneX;
 	y = 0.621 * safezoneH + safezoneY;
@@ -290,7 +268,6 @@ class APP_7_TITLE: RscStructuredText
 class APP_8_IMAGE: RscPicture
 {
 	idc = APP_8_IMAGE_IDC;
-	text = "";
 
 	x = 0.618594 * safezoneW + safezoneX;
 	y = 0.555 * safezoneH + safezoneY;
@@ -300,7 +277,6 @@ class APP_8_IMAGE: RscPicture
 class APP_8_BUTTON: RscButtonSilent
 {
 	idc = APP_8_BUTTON_IDC;
-	action = "";
 
 	x = 0.618594 * safezoneW + safezoneX;
 	y = 0.555 * safezoneH + safezoneY;
@@ -311,7 +287,6 @@ class APP_8_TITLE: RscStructuredText
 {
 	idc = APP_8_TITLE_IDC;
 	font = "PuristaSemiBold";
-	colorBackground[] = {0,0,0,0};
 
 	x = 0.608281 * safezoneW + safezoneX;
 	y = 0.621 * safezoneH + safezoneY;
@@ -332,8 +307,6 @@ class APP_SMS_IMAGE: RscPicture
 class APP_SMS_NUMBER: RscStructuredText
 {
 	idc = APP_SMS_NUMBER_IDC;
-	text = "";
-	colorBackground[] = {0,0,0,0};
 	
 	x = 0.641874 * safezoneW + safezoneX;
 	y = 0.343222 * safezoneH + safezoneY;
@@ -356,8 +329,6 @@ class APP_SMS_BUTTON: RscButtonSilent
 class APP_STATUS: RscStructuredText
 {
 	idc = APP_STATUS_IDC;
-	text = "";
-	colorBackground[] = {0,0,0,0};
 
 	x = 0.489636 * safezoneW + safezoneX;
 	y = 0.343111 * safezoneH + safezoneY;

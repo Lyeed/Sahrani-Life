@@ -108,7 +108,6 @@ class RscDisplayShopDynMarkers: default_interaction_back_dialog
 		{
 			idc = 21007;
 			text = "<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>";
-			colorBackground[] = {-1,-1,-1,0};
 			
 			x = 0.489687 * safezoneW + safezoneX;
 			y = 0.588 * safezoneH + safezoneY;

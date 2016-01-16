@@ -181,7 +181,6 @@
 		class TXT_L1: RscStructuredText
 		{
 			idc = 15011;
-			colorBackground[] = {0,0,0,0};
 			
 			x = 0.393472 * safezoneW + safezoneX;
 			y = 0.4604 * safezoneH + safezoneY;
@@ -192,7 +191,6 @@
 		class TXT_L2: RscStructuredText
 		{
 			idc = 15012;
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.393266 * safezoneW + safezoneX;
 			y = 0.51386 * safezoneH + safezoneY;
@@ -203,7 +201,6 @@
 		class TXT_L3: RscStructuredText
 		{
 			idc = 15013;
-			colorBackground[] = {0,0,0,0};
 			
 			x = 0.392234 * safezoneW + safezoneX;
 			y = 0.56666 * safezoneH + safezoneY;
@@ -214,7 +211,6 @@
 		class TXT_L4: RscStructuredText
 		{
 			idc = 15014;
-			colorBackground[] = {0,0,0,0};
 			
 			x = 0.39275 * safezoneW + safezoneX;
 			y = 0.62034 * safezoneH + safezoneY;
@@ -225,7 +221,6 @@
 		class TXT_R1: RscStructuredText
 		{
 			idc = 15015;
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.518562 * safezoneW + safezoneX;
 			y = 0.46062 * safezoneH + safezoneY;
@@ -236,7 +231,6 @@
 		class TXT_R2: RscStructuredText
 		{
 			idc = 15016;
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.518872 * safezoneW + safezoneX;
 			y = 0.51452 * safezoneH + safezoneY;
@@ -247,7 +241,6 @@
 		class TXT_R3: RscStructuredText
 		{
 			idc = 15017;
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.519491 * safezoneW + safezoneX;
 			y = 0.566 * safezoneH + safezoneY;
@@ -258,7 +251,6 @@
 		class TXT_R4: RscStructuredText
 		{
 			idc = 15018;
-			colorBackground[] = {0,0,0,0};
 			
 			x = 0.519491 * safezoneW + safezoneX;
 			y = 0.62012 * safezoneH + safezoneY;

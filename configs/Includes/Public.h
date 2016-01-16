@@ -32,6 +32,8 @@ class Public
 	{
 		file = "core\Game\Border";
 		class border_south_sounds {};
+		class border_south_speaker_destroy {};
+		class border_south_speaker_repair {};
 	};
 
 	class VirtualInventory
@@ -410,6 +412,7 @@ class Public
 		class interactions_player_to_house_owner {};
 		class interactions_player_to_station {};
 		class interactions_player_to_company {};
+		class interactions_player_to_speaker {};
 	};
 
 	class Actions
