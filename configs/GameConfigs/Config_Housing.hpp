@@ -87,7 +87,7 @@ class ALYSIA_HOUSES
 
 	class Land_Cihlovej_Dum_mini
 	{
-		price = 15000;
+		price = 135000;
 		storage = "Skyline_Coffre_Small";
 		storage_building_pos_index = 3;
 		garage = 0;
@@ -111,8 +111,8 @@ class ALYSIA_HOUSES
 
 	class Land_Hospoda_mesto
 	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
+		price = 615000;
+		storage = "Skyline_Coffre_Large";
 		storage_building_pos_index = 2;
 		garage = 0;
 		garage_type[] = {};
@@ -123,8 +123,8 @@ class ALYSIA_HOUSES
 
 	class Land_Dum_mesto2
 	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
+		price = 585000;
+		storage = "Skyline_Coffre_Large";
 		storage_building_pos_index = 4;
 		garage = 0;
 		garage_type[] = {};
@@ -159,8 +159,8 @@ class ALYSIA_HOUSES
 
 	class Land_House_y
 	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
+		price = 325000;
+		storage = "Skyline_Coffre_Medium";
 		storage_building_pos_index = 5;
 		garage = 0;
 		garage_type[] = {};
@@ -171,8 +171,8 @@ class ALYSIA_HOUSES
 
 	class Land_Sara_Domek_sedy
 	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
+		price = 295000;
+		storage = "Skyline_Coffre_Medium";
 		storage_building_pos_index = 3;
 		garage = 0;
 		garage_type[] = {};
@@ -183,7 +183,7 @@ class ALYSIA_HOUSES
 
 	class Land_Budova3
 	{
-		price = 15000;
+		price = 190000;
 		storage = "Skyline_Coffre_Small";
 		storage_building_pos_index = 1;
 		garage = 0;
@@ -207,8 +207,8 @@ class ALYSIA_HOUSES
 
 	class Land_Sara_zluty_statek_in
 	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
+		price = 605000;
+		storage = "Skyline_Coffre_Large";
 		storage_building_pos_index = 3;
 		garage = 0;
 		garage_type[] = {};
@@ -219,8 +219,8 @@ class ALYSIA_HOUSES
 
 	class Land_Sara_domek_zluty
 	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
+		price = 575000;
+		storage = "Skyline_Coffre_Large";
 		storage_building_pos_index = 1;
 		garage = 0;
 		garage_type[] = {};
@@ -231,8 +231,8 @@ class ALYSIA_HOUSES
 
 	class Land_Budova4_in
 	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
+		price = 345000;
+		storage = "Skyline_Coffre_Medium";
 		storage_building_pos_index = 1;
 		garage = 0;
 		garage_type[] = {};
@@ -243,8 +243,8 @@ class ALYSIA_HOUSES
 
 	class Land_Panelak2
 	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
+		price = 625000;
+		storage = "Skyline_Coffre_Large";
 		storage_building_pos_index = 4;
 		garage = 0;
 		garage_type[] = {};
@@ -255,8 +255,8 @@ class ALYSIA_HOUSES
 
 	class Land_Panelak
 	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
+		price = 287500;
+		storage = "Skyline_Coffre_Large";
 		storage_building_pos_index = 4;
 		garage = 0;
 		garage_type[] = {};
@@ -339,8 +339,8 @@ class ALYSIA_HOUSES
 	
 	class Land_Deutshe_mini
 	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
+		price = 295000;
+		storage = "Skyline_Coffre_Medium";
 		storage_building_pos_index = 2;
 		garage = 0;
 		garage_type[] = {};
@@ -350,8 +350,8 @@ class ALYSIA_HOUSES
 	};
 	class Land_smd_dum_olezlina_open
 	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
+		price = 585000;
+		storage = "Skyline_Coffre_Large";
 		storage_building_pos_index = 2;
 		garage = 0;
 		garage_type[] = {};
@@ -361,8 +361,8 @@ class ALYSIA_HOUSES
 	};
 	class Land_smd_dum_olez_istan2_open
 	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
+		price = 245000;
+		storage = "Skyline_Coffre_Medium";
 		storage_building_pos_index = 1;
 		garage = 0;
 		garage_type[] = {};
@@ -372,8 +372,8 @@ class ALYSIA_HOUSES
 	};
 	class Land_smd_dum_olez_istan2_maly_open
 	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
+		price = 415000;
+		storage = "Skyline_Coffre_Large";
 		storage_building_pos_index = 3;
 		garage = 0;
 		garage_type[] = {};
@@ -383,8 +383,8 @@ class ALYSIA_HOUSES
 	};
 	class Land_smd_dum_olez_istan1_open
 	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
+		price = 515000;
+		storage = "Skyline_Coffre_Large";
 		storage_building_pos_index = 3;
 		garage = 0;
 		garage_type[] = {};
@@ -394,8 +394,8 @@ class ALYSIA_HOUSES
 	};
 	class Land_smd_dum_olez_istan1_open2
 	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
+		price = 515000;
+		storage = "Skyline_Coffre_Large";
 		storage_building_pos_index = 3;
 		garage = 0;
 		garage_type[] = {};
@@ -405,7 +405,7 @@ class ALYSIA_HOUSES
 	};
 	class Land_Bouda2_vnitrek
 	{
-		price = 15000;
+		price = 125000;
 		storage = "Skyline_Coffre_Small";
 		storage_building_pos_index = 4;
 		garage = 0;
@@ -416,7 +416,7 @@ class ALYSIA_HOUSES
 	};
 	class Land_Dum_rasovna
 	{
-		price = 15000;
+		price = 325000;
 		storage = "Skyline_Coffre_Small";
 		storage_building_pos_index = 2;
 		garage = 0;
