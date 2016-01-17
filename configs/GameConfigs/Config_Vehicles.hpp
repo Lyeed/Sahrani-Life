@@ -723,7 +723,7 @@ class ALYSIA_VEHICLES
 	class ADM_GMC_Vandura
 	{
 		buyPrice = 26000;
-		inventory = 150;
+		inventory = 120;
 		side = "CIV";
 		insurance = 1;
 		license = "driver";
@@ -1167,7 +1167,7 @@ class ALYSIA_VEHICLES
 	class shounka_a3_spr_civ
 	{
 		buyPrice = 61500;
-		inventory = 220;
+		inventory = 150;
 		side = "CIV";
 		insurance = 1;
 		license = "driver";
@@ -1941,7 +1941,7 @@ class ALYSIA_VEHICLES
     class max_van
 	{
 		buyPrice = 21000;
-		inventory = 150;
+		inventory = 120;
 		side = "CIV";
 		insurance = 1;
 		license = "driver";
@@ -2267,8 +2267,8 @@ class ALYSIA_VEHICLES
 
     class C_Van_01_transport_F
 	{
-		buyPrice = 25000;
-		inventory = 150;
+		buyPrice = 53250;
+		inventory = 140;
 		side = "CIV";
 		insurance = 1;
 		license = "driver";
@@ -2280,8 +2280,8 @@ class ALYSIA_VEHICLES
 
     class C_Van_01_box_F
 	{
-		buyPrice = 25000;
-		inventory = 150;
+		buyPrice = 48000;
+		inventory = 140;
 		side = "CIV";
 		insurance = 1;
 		license = "driver";
@@ -3753,12 +3753,12 @@ class ALYSIA_VEHICLES
 	
 	class ADM_Ford_F100
 	{
-		buyPrice = 9000;
-		inventory = 90;
+		buyPrice = 11000;
+		inventory = 85;
 		side = "CIV";
 		insurance = 1;
 		license = "driver";
-		fuel = "Diesel";
+		fuel = "GPL";
 		rank = 0;
 		colors[] = 
 		{
@@ -3854,7 +3854,7 @@ class ALYSIA_VEHICLES
 	{
 		realname = "Tracteur MTZ";
 		buyPrice = 10;
-		inventory = 100;
+		inventory = 300;
 		side = "CIV";
 		insurance = 1;
 		license = "";
