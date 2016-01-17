@@ -172,7 +172,7 @@ class ALYSIA_HOUSES
 	class Land_Sara_Domek_sedy
 	{
 		price = 15000;
-		storage = "";
+		storage = "Skyline_Coffre_Small";
 		storage_building_pos_index = 3;
 		garage = 0;
 		garage_type[] = {};
@@ -335,5 +335,94 @@ class ALYSIA_HOUSES
 		sides[] = {"WEST"};
 		rank = 5;
 		license = "";
+	};
+	
+	class Land_Deutshe_mini
+	{
+		price = 15000;
+		storage = "Skyline_Coffre_Small";
+		storage_building_pos_index = 2;
+		garage = 0;
+		garage_type[] = {};
+		sides[] = {"CIV", "GUER"};
+		rank = 0;
+		license = "home";
+	};
+	class Land_smd_dum_olezlina_open
+	{
+		price = 15000;
+		storage = "Skyline_Coffre_Small";
+		storage_building_pos_index = 2;
+		garage = 0;
+		garage_type[] = {};
+		sides[] = {"CIV", "GUER"};
+		rank = 0;
+		license = "home";
+	};
+	class Land_smd_dum_olez_istan2_open
+	{
+		price = 15000;
+		storage = "Skyline_Coffre_Small";
+		storage_building_pos_index = 1;
+		garage = 0;
+		garage_type[] = {};
+		sides[] = {"CIV", "GUER"};
+		rank = 0;
+		license = "home";
+	};
+	class Land_smd_dum_olez_istan2_maly_open
+	{
+		price = 15000;
+		storage = "Skyline_Coffre_Small";
+		storage_building_pos_index = 3;
+		garage = 0;
+		garage_type[] = {};
+		sides[] = {"CIV", "GUER"};
+		rank = 0;
+		license = "home";
+	};
+	class Land_smd_dum_olez_istan1_open
+	{
+		price = 15000;
+		storage = "Skyline_Coffre_Small";
+		storage_building_pos_index = 3;
+		garage = 0;
+		garage_type[] = {};
+		sides[] = {"CIV", "GUER"};
+		rank = 0;
+		license = "home";
+	};
+	class Land_smd_dum_olez_istan1_open2
+	{
+		price = 15000;
+		storage = "Skyline_Coffre_Small";
+		storage_building_pos_index = 3;
+		garage = 0;
+		garage_type[] = {};
+		sides[] = {"CIV", "GUER"};
+		rank = 0;
+		license = "home";
+	};
+	class Land_Bouda2_vnitrek
+	{
+		price = 15000;
+		storage = "Skyline_Coffre_Small";
+		storage_building_pos_index = 4;
+		garage = 0;
+		garage_type[] = {};
+		sides[] = {"CIV", "GUER"};
+		rank = 0;
+		license = "home";
+	};
+	class Land_Dum_rasovna
+	{
+		price = 15000;
+		storage = "Skyline_Coffre_Small";
+		storage_building_pos_index = 2;
+		garage = 0;
+		garage_type[] = {};
+		sides[] = {"CIV", "GUER"};
+		rank = 0;
+		license = "home";
 	};
 };
