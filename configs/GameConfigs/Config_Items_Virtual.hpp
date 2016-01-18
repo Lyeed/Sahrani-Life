@@ -204,7 +204,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Graine (tabac)";
 		weight      = 1;
-		price_buy   = 60;
+		price_buy   = 8;
 		price_sell  = 30;
 		illegal     = 1;
 		removable   = 1;
@@ -431,7 +431,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Graine (coca)";
 		weight      = 1;
-		price_buy   = 60;
+		price_buy   = 20;
 		price_sell  = 30;
 		illegal     = 1;
 		removable   = 1;
@@ -493,7 +493,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Graine (pavot)";
 		weight      = 1;
-		price_buy   = 60;
+		price_buy   = 25;
 		price_sell  = 30;
 		illegal     = 1;
 		removable   = 1;
@@ -564,7 +564,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Graine (Ephedra)";
 		weight      = 1;
-		price_buy   = 60;
+		price_buy   = 35;
 		price_sell  = 30;
 		illegal     = 1;
 		removable   = 1;
@@ -624,7 +624,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Graine (cannabis)";
 		weight      = 1;
-		price_buy   = 60;
+		price_buy   = 18;
 		price_sell  = 30;
 		illegal     = 1;
 		removable   = 1;
