@@ -27,7 +27,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Hopital";
 		side = "";
-		items[] = {{"patch", "seringue", "cerealbar", "sparklingwater"}, {}};
+		items[] = {{"patch", "seringue", "water", "sandwich"}, {}};
 	};
 
 	/* FACTIONS MARKET */
@@ -47,7 +47,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Hopital";
 		side = "GUER";
-		items[] = {{}, {}};
+		items[] = {{"cerealbar", "sparklingwater", "cone", "barriere","bip"}, {}};
 	};
 
 	/* RESSOURCES */
