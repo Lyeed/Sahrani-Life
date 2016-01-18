@@ -35029,10 +35029,10 @@ class Mission
 		};
 		class Item164
 		{
-			position[]={10762.928,127.74699,9492.6436};
+			position[]={10776.062,128.53604,9495.4912};
 			name="CIV_vehicles_land_occasion_marker_4";
 			type="Empty";
-			angle=78.873596;
+			angle=170.12488;
 		};
 		class Item165
 		{
