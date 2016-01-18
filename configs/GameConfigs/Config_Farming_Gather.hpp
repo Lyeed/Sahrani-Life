@@ -1,5 +1,6 @@
 class ALYSIA_FARMING_GATHER
 {
+	// sounds = oil / mining / shovel / gather1 / gather2
 	class wood_1
 	{
 		receive[] = {{"wood", 3, 0}};

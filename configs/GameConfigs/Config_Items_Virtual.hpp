@@ -23,7 +23,7 @@ class ALYSIA_ITEMS
 		weight      = 0;
 		illegal     = 1;
 		removable   = 0;
-		image       = "alysia_items_virtual\data\argentsale.paa";
+		image       = "alysia_items_virtual\data\money.paa";
 	};
 
 	class engrais

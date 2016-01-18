@@ -99,10 +99,6 @@ if (g_launder > 0) then
 			sleep 2;
 		};
 
-		if (g_curWep_h != "") then {
-			[] call public_fnc_holdsterSwitch;
-		};
-
 		if (g_seatbelt) then
 		{
 			playSound "seatbelt_off";

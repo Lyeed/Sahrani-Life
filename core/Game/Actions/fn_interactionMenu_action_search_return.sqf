@@ -25,7 +25,7 @@ if (isNull _display) exitWith {};
 _array = [];
 
 if (_money > 0) then {
-	_array pushBack [format["%1kn", [_money] call public_fnc_numberText], "Alysia_Textures\data\life_inv_illegal_money.paa"];
+	_array pushBack [format["%1kn", [_money] call public_fnc_numberText], "alysia_items_virtual\data\money.paa"];
 };
 
 {

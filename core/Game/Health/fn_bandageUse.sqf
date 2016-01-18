@@ -33,7 +33,7 @@ if ((surfaceIsWater (getPos player)) && (((getPosASLW player) select 2) < 0)) ex
 	["Vous ne pouvez pas faire de bandage sous l'eau"] call public_fnc_error;
 };
 
-if (!(["Bandage", 6, _target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress)) exitWith {};
+if (!(["Bandage", 6, _target, "bandage", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress)) exitWith {};
 
 if (!("SkylineItems_Bandage" in (magazines player))) exitWith {
 	["Vous n'avez pas de bandage"] call public_fnc_error;

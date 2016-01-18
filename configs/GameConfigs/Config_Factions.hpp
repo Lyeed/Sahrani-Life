@@ -61,7 +61,8 @@ class ALYSIA_FACTIONS
 					"optic_DMS",
 					"optic_LRPS",
 					"optic_Holosight",
-					"TRYK_HRPIGEAR_NV"					
+					"TRYK_HRPIGEAR_NV",
+					"Skyline_NVGoogle"
 				}
 			},
 			{"Backpacks",
@@ -217,7 +218,8 @@ class ALYSIA_FACTIONS
 					"optic_DMS",
 					"SmokeShellWhite",
 					"Rangefinder",
-					"optic_ACO_grn_smg"
+					"optic_ACO_grn_smg",
+					"Skyline_NVGoogle"
 				}
 			},
 			{"Backpacks",
