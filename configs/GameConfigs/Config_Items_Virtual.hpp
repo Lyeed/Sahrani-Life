@@ -23,7 +23,7 @@ class ALYSIA_ITEMS
 		weight      = 0;
 		illegal     = 1;
 		removable   = 0;
-		image       = "alysia_items_virtual\data\.paa";
+		image       = "alysia_items_virtual\data\argentsale.paa";
 	};
 
 	class engrais
@@ -73,8 +73,8 @@ class ALYSIA_ITEMS
 	class lockpick
 	{
 		name        = "Kit de crochetage";
-		weight      = 2;
-		price_buy   = 1200;
+		weight      = 6;
+		price_buy   = 600;
 		price_sell  = 0;
 		illegal     = 1;
 		removable   = 1;
@@ -122,7 +122,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Nitro";
 		weight      = 4;
-		price_buy   = 900;
+		price_buy   = 500;
 		price_sell  = 0;
 		illegal     = 1;
 		removable   = 1;
@@ -267,7 +267,7 @@ class ALYSIA_ITEMS
 		weight      = 4;
 		illegal     = 1;
 		removable   = 1;
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\artefact.paa";
 		license     = "archeologie";
 		class market
 		{
@@ -284,7 +284,7 @@ class ALYSIA_ITEMS
 		weight      = 4;
 		illegal     = 1;
 		removable   = 1;
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\artefact_R.paa";
 		license     = "archeologie";
 		class market
 		{
@@ -301,7 +301,7 @@ class ALYSIA_ITEMS
 		weight      = 1;
 		illegal     = 1;
 		removable   = 1;
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\fragment.paa";
 		class market
 		{
 			max = 9000;
@@ -1491,6 +1491,7 @@ class ALYSIA_ITEMS
 		removable   = 1;
 		image       = "alysia_items_virtual\data\sp98.paa";
 		license     = "oil";
+		store[]     = {"B_G_Van_01_fuel_F", "B_Truck_01_fuel_F", "O_Truck_02_fuel_F"};
 	};
 
 	class sp95
@@ -1501,6 +1502,7 @@ class ALYSIA_ITEMS
 		removable   = 1;
 		image       = "alysia_items_virtual\data\sp95.paa";
 		license     = "oil";
+		store[]     = {"B_G_Van_01_fuel_F", "B_Truck_01_fuel_F", "O_Truck_02_fuel_F"};
 	};
 
 	class gazole
@@ -1511,6 +1513,7 @@ class ALYSIA_ITEMS
 		removable   = 1;
 		image       = "alysia_items_virtual\data\gazole.paa";
 		license     = "oil";
+		store[]     = {"B_G_Van_01_fuel_F", "B_Truck_01_fuel_F", "O_Truck_02_fuel_F"};
 	};
 
 	class gpl
@@ -1521,6 +1524,7 @@ class ALYSIA_ITEMS
 		removable   = 1;
 		image       = "alysia_items_virtual\data\gpl.paa";
 		license     = "oil";
+		store[]     = {"B_G_Van_01_fuel_F", "B_Truck_01_fuel_F", "O_Truck_02_fuel_F"};
 	};
 
 	class kerosene
@@ -1531,6 +1535,7 @@ class ALYSIA_ITEMS
 		removable   = 1;
 		image       = "alysia_items_virtual\data\kerosene.paa";
 		license     = "oil";
+		store[]     = {"B_G_Van_01_fuel_F", "B_Truck_01_fuel_F", "O_Truck_02_fuel_F"};
 	};
 	
 	class turtle 
