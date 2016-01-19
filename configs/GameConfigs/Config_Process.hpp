@@ -190,7 +190,7 @@ class ALYSIA_PROCESS
 		license = "archeologie";
 		sound = "cooking";
 		requiere_target = 1;
-		require[] = {{"artefact", 1}};
+		require[] = {{"frag_1", 1}, {"frag_2", 1}, {"frag_3", 1}, {"frag_4", 1}, {"frag_5", 1}, {"frag_6", 1}, {"frag_7", 1}, {"frag_8", 1}};
 		receive[] = {{"artefact_R", 1}};
 		time_per_item = 3;
 		time_default = 5;

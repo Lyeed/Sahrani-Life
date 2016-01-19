@@ -295,22 +295,6 @@ class ALYSIA_ITEMS
 		};
 	};
 
-	class fragment
-	{
-		name        = "Fragment d'Arteftact";
-		weight      = 1;
-		illegal     = 1;
-		removable   = 1;
-		image       = "alysia_items_virtual\data\fragment.paa";
-		class market
-		{
-			max = 9000;
-			min = 4000;
-			mult = 5;
-			affect[] = {};
-		};
-	};
-
 	class wood
 	{
 		name        = "Bois";
@@ -1564,5 +1548,77 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		image       = "alysia_items_virtual\data\bouteillevide.paa";
+	};
+
+	class frag_1
+	{
+		name        = "Fragment (1)";
+		weight      = 1;
+		illegal     = 1;
+		removable   = 1;
+		image       = "alysia_items_virtual\data\frag_1.paa";
+	};
+
+	class frag_2
+	{
+		name        = "Fragment (2)";
+		weight      = 1;
+		illegal     = 1;
+		removable   = 1;
+		image       = "alysia_items_virtual\data\frag_2.paa";
+	};
+
+	class frag_3
+	{
+		name        = "Fragment (3)";
+		weight      = 1;
+		illegal     = 1;
+		removable   = 1;
+		image       = "alysia_items_virtual\data\frag_3.paa";
+	};
+
+	class frag_4
+	{
+		name        = "Fragment (4)";
+		weight      = 1;
+		illegal     = 1;
+		removable   = 1;
+		image       = "alysia_items_virtual\data\frag_4.paa";
+	};
+
+	class frag_5
+	{
+		name        = "Fragment (5)";
+		weight      = 1;
+		illegal     = 1;
+		removable   = 1;
+		image       = "alysia_items_virtual\data\frag_5.paa";
+	};
+
+	class frag_6
+	{
+		name        = "Fragment (6)";
+		weight      = 1;
+		illegal     = 1;
+		removable   = 1;
+		image       = "alysia_items_virtual\data\frag_6.paa";
+	};
+
+	class frag_7
+	{
+		name        = "Fragment (7)";
+		weight      = 1;
+		illegal     = 1;
+		removable   = 1;
+		image       = "alysia_items_virtual\data\frag_7.paa";
+	};
+
+	class frag_8
+	{
+		name        = "Fragment (8)";
+		weight      = 1;
+		illegal     = 1;
+		removable   = 1;
+		image       = "alysia_items_virtual\data\frag_8.paa";
 	};
 };

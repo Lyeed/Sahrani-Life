@@ -19,7 +19,7 @@ class ALYSIA_FARMING_GATHER
 	class archeologie_1
 	{
 		receive[] = {{"artefact", 3, 1}};
-		extra[] = {{"fragment", 8}};
+		extra[] = {{"frag_1", 5}, {"frag_2", 5}, {"frag_3", 5}, {"frag_4", 5}, {"frag_5", 5}, {"frag_6", 5}, {"frag_7", 5}, {"frag_8", 5}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
 		extra_all = 1;
