@@ -193,7 +193,6 @@ class ALYSIA_SHOPS_VEHICLES
 		side = "CIV";
 		stock[] =
 		{
-			"Skyline_VW_TouaregR50_01_F",
 			"Skyline_Audi_RS4",
 			"C_Quadbike_01_F",
 			"DAR_TaurusCiv",
@@ -225,7 +224,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_twingo_p",
 			"Mrshounka_a3_smart_civ",
 			"Mrshounka_subaru08_civ",
-			"Skyline_Audi_RS4",
 			"Jonzie_Ceed",
 			"Jonzie_Raptor",
 			"Mrshounka_bmwm1_civ",
