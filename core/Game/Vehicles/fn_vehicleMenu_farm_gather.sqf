@@ -42,10 +42,13 @@ while {(_vehicle getVariable ["farm_gather", false])} do
 	scopeName "loop";
 
 	if ((driver _vehicle) != player) exitWith {
-		["Récolte terminé<br/>Vous devez rester à la place de conducteur"] call public_fnc_error;
+		["Récolte terminée<br/>Vous devez rester à la place de conducteur"] call public_fnc_error;
 	};
 	if (!(isEngineOn _vehicle)) exitWith {
-		["Récolte terminé<br/>Le moteur doit rester allumé"] call public_fnc_error;
+		["Récolte terminée<br/>Le moteur doit rester allumé"] call public_fnc_error;
+	};
+	if ((_vehicle getVariable ["trunk_in_use_ID", ""]) != "FARMING") exitWith {
+		["Récolte terminée<br/>Quelqu'un fouille le coffre"] call public_fnc_error;
 	};
 
 	_plant = (nearestObjects [player, (call g_plants), 2]) select 0;
@@ -86,5 +89,8 @@ while {(_vehicle getVariable ["farm_gather", false])} do
 if (!(_trunk isEqualTo (_vehicle getVariable ["Trunk", []]))) then {
 	_vehicle setVariable ["Trunk", _trunk, true];	
 };
-_vehicle setVariable ["trunk_in_use_ID", "", true];
+if ((_vehicle getVariable ["trunk_in_use_ID", ""]) isEqualTo "FARMING") then {
+	_vehicle setVariable ["trunk_in_use_ID", "", true];
+};
+
 _vehicle setVariable ["farm_gather", false];

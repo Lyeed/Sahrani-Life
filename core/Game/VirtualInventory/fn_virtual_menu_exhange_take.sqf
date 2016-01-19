@@ -27,7 +27,7 @@ if (_res > 0) then
 {
 	if ([true, _item, _res] call public_fnc_handleInv) then
 	{
-		g_interaction_target_trunk_stock = [false, g_interaction_target_trunk_stock, _item, _res] call public_fnc_handleTrunk;
+		[false, g_interaction_target_trunk, _item, _res] call public_fnc_handleTrunk;
 		g_interaction_target_trunk_weight_actual = g_interaction_target_trunk_weight_actual - (([_item] call public_fnc_itemGetWeight) * _res);
 	};
 } else {

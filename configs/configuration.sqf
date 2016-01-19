@@ -149,7 +149,8 @@ with missionNamespace do
 		"Land_ChairWood_F",
 		"xcam_Bench_01_F",
 		"Land_RattanChair_01_F",
-		"WoodChair"
+		"WoodChair",
+		"xcam_chair_2"
 	];
 
 	g_chairs = compileFinal str(g_chairs);

@@ -39,6 +39,7 @@ while {(count(nearestObjects[_position, ["Car", "Air", "Ship", "Truck", "Tank"],
 	sleep 10;
 };
 
+[format["La livraison est arrivée en <t color='#04B45F'>%1</t>", (mapGridPosition _position)]] call public_fnc_info;
 _vehicle = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "mission_vehicle") createVehicle _position;
 _vehicle setDir (_data select 1);
 [_vehicle] call public_fnc_clearVehicleAmmo;

@@ -53,6 +53,9 @@ while {(_vehicle getVariable ["fishing", false])} do
 	if ((driver _vehicle) != player) exitWith {
 		["Pêche annulée<br/>Vous devez rester à la place de conducteur"] call public_fnc_error;
 	};
+	if ((_vehicle getVariable ["trunk_in_use_ID", ""]) != "FISHING") exitWith {
+		["Pêche terminée<br/>Quelqu'un fouille le coffre"] call public_fnc_error;
+	};
 
 	if (_vehicle getVariable ["fishingpoles", false]) then
 	{
@@ -87,5 +90,8 @@ while {(_vehicle getVariable ["fishing", false])} do
 if (!(_trunk isEqualTo (_vehicle getVariable ["Trunk", []]))) then {
 	_vehicle setVariable ["Trunk", _trunk, true];	
 };
-_vehicle setVariable ["trunk_in_use_ID", "", true];
+if ((_vehicle getVariable ["trunk_in_use_ID", ""]) isEqualTo "FISHING") then {
+	_vehicle setVariable ["trunk_in_use_ID", "", true];
+};
+
 _vehicle setVariable ["fishing", false];

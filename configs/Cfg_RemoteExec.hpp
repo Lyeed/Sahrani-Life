@@ -56,6 +56,7 @@ class CfgRemoteExec
 		class TON_fnc_auctionHouse_tryBuy {allowTargets = SERVER;};
 		//- Companies
 		class TON_fnc_company_insert {allowTargets = SERVER;};
+		class TON_fnc_company_build {allowTargets = SERVER;};
 		//- Border
 		class TON_fnc_border_alarm_south {allowTargets = SERVER;};
 		

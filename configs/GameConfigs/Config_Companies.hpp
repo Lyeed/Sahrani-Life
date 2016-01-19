@@ -21,6 +21,10 @@
 		-> Concesionnaire
 		-> Boutique
 		-> Journaliste
+
+	+ tard :
+		-> Assurance
+		-> Agence immobilière
 */
 
 class ALYSIA_COMPANIES
@@ -39,8 +43,15 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"cement", 5}};
+				require[] = {{"woodp", 3}, {"ciment", 5}};
 				price = 10000;
+			};
+			class marker
+			{
+				type = "Fett_canteen";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
 			};
 		};
 
@@ -53,8 +64,15 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"cement", 5}};
+				require[] = {{"woodp", 3}, {"ciment", 5}};
 				price = 10000;
+			};
+			class marker
+			{
+				type = "Fett_canteen";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
 			};
 		};
 
@@ -67,8 +85,15 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"cement", 5}};
+				require[] = {{"woodp", 3}, {"ciment", 5}};
 				price = 10000;
+			};
+			class marker
+			{
+				type = "Fett_canteen";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
 			};
 		};
 
@@ -81,8 +106,15 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"cement", 5}};
+				require[] = {{"woodp", 3}, {"ciment", 5}};
 				price = 10000;
+			};
+			class marker
+			{
+				type = "Fett_canteen";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
 			};
 		};
 
@@ -95,8 +127,15 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"cement", 5}};
+				require[] = {{"woodp", 3}, {"ciment", 5}};
 				price = 10000;
+			};
+			class marker
+			{
+				type = "Fett_canteen";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
 			};
 		};
 
@@ -109,8 +148,15 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"cement", 5}};
+				require[] = {{"woodp", 3}, {"ciment", 5}};
 				price = 10000;
+			};
+			class marker
+			{
+				type = "Fett_canteen";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
 			};
 		};
 
@@ -123,8 +169,15 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"cement", 5}};
+				require[] = {{"woodp", 3}, {"ciment", 5}};
 				price = 10000;
+			};
+			class marker
+			{
+				type = "Fett_canteen";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
 			};
 		};
 
@@ -137,8 +190,15 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"cement", 5}};
+				require[] = {{"woodp", 3}, {"ciment", 5}};
 				price = 10000;
+			};
+			class marker
+			{
+				type = "Fett_canteen";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
 			};
 		};
 
@@ -151,8 +211,15 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"cement", 5}};
+				require[] = {{"woodp", 3}, {"ciment", 5}};
 				price = 10000;
+			};
+			class marker
+			{
+				type = "Fett_canteen";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
 			};
 		};
 
@@ -165,8 +232,15 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"cement", 5}};
+				require[] = {{"woodp", 3}, {"ciment", 5}};
 				price = 10000;
+			};
+			class marker
+			{
+				type = "Fett_canteen";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
 			};
 		};
 
@@ -179,8 +253,15 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"cement", 5}};
+				require[] = {{"woodp", 3}, {"ciment", 5}};
 				price = 10000;
+			};
+			class marker
+			{
+				type = "Fett_canteen";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
 			};
 		};
 
@@ -193,8 +274,15 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"cement", 5}};
+				require[] = {{"woodp", 3}, {"ciment", 5}};
 				price = 10000;
+			};
+			class marker
+			{
+				type = "Fett_canteen";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
 			};
 		};
 
@@ -207,8 +295,15 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"cement", 5}};
+				require[] = {{"woodp", 3}, {"ciment", 5}};
 				price = 10000;
+			};
+			class marker
+			{
+				type = "Fett_canteen";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
 			};
 		};
 
@@ -221,8 +316,15 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"cement", 5}};
+				require[] = {{"woodp", 3}, {"ciment", 5}};
 				price = 10000;
+			};
+			class marker
+			{
+				type = "Fett_canteen";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
 			};
 		};
 	};

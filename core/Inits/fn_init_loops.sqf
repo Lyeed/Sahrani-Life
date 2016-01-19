@@ -25,9 +25,10 @@ if (g_launder > 0) then
 		if (((g_carryWeight > g_maxWeight) && !(isForcedWalk player)) || !(isNull g_objPut)) then 
 		{
 			player forceWalk true;
-			player setFatigue 1;
-			if (g_carryWeight > g_maxWeight) then {
+			if (g_carryWeight > g_maxWeight) then
+			{
 				titleText["Vous êtes surchargé", "PLAIN"];
+				player setFatigue 1;
 			};
 		} else {
 			if (isForcedWalk player) then {

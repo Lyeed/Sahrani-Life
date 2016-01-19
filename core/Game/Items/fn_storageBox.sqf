@@ -15,7 +15,7 @@ if ((vehicle player) != player) exitWith {
 	if (!(isNil "_house")) exitWith {};
 
 	_houseInfo = _x getVariable "house_owner";
-	if (isNil "_houseInfo") then
+	if (!(isNil "_houseInfo")) then
 	{
 		if ((_houseInfo select 0) isEqualTo (getPlayerUID player)) then
 		{

@@ -5,11 +5,13 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_abortButton", "_respawnButton", "_manuelButton"];
+private["_abortButton", "_respawnButton", "_manuelButton", "_display"];
+
 disableSerialization;
+_display = _this select 0;
 
 // quit
-_abortButton = (_this select 0) displayCtrl 104;
+_abortButton = _display displayCtrl 104;
 _abortButton ctrlEnable false;
 _abortButton buttonSetAction
 "
@@ -20,39 +22,37 @@ _abortButton buttonSetAction
 ";
 
 // fielManual
-_manuelButton = (_this select 0) displayCtrl 122;
+_manuelButton = _display displayCtrl 122;
 _manuelButton ctrlEnable false;
 _manuelButton ctrlShow false;
 
 // respawn
-_respawnButton = (_this select 0) displayCtrl 1010;
+_respawnButton = _display displayCtrl 1010;
 _respawnButton ctrlEnable false;
 _respawnButton ctrlShow false;
 
-if (!(player getVariable ["is_coma", false])) then
+if (!(player getVariable ["is_coma", false]) && !(missionNamespace getVariable ["surrender", false]) && !(missionNamespace getVariable ["restrained", false])) then
 {
-	[_abortButton] spawn
+	[_abortButton, _display] spawn
 	{
-		private["_abortButton", "_timeStamp"];
-		disableSerialization;
-		_abortButton = _this select 0;
 		_timeStamp = time + 10;
 		waitUntil 
 		{
-			_abortButton ctrlSetText format["Vous pouvez quitter dans %1 secondes...", ([(_timeStamp - time), "SS.MS"] call BIS_fnc_secondsToString)];
-			_abortButton ctrlCommit 0;
-			round(_timeStamp - time) <= 0 || isNull (_this select 0)
+			(_this select 0) ctrlSetText format["Vous pouvez quitter dans %1 secondes...", ([(_timeStamp - time), "SS.MS"] call BIS_fnc_secondsToString)];
+			(_this select 0) ctrlCommit 0;
+			round(_timeStamp - time) <= 0 || isNull (_this select 1)
 		};
-		if (!(isNull (_this select 0))) then
+		
+		if (!(isNull (_this select 1))) then
 		{
-			if (!(player getVariable ["is_coma", false]) && !(missionNamespace getVariable["surrender", false]) && !(missionNamespace getVariable["restrained", false])) then
+			if (!(player getVariable ["is_coma", false]) && !(missionNamespace getVariable ["surrender", false]) && !(missionNamespace getVariable ["restrained", false])) then
 			{
-				_abortButton ctrlSetText "VOUS POUVEZ DECONNECTER";
-				_abortButton ctrlCommit 0;
-				_abortButton ctrlEnable true;
+				(_this select 0) ctrlSetText "VOUS POUVEZ DECONNECTER";
+				(_this select 0) ctrlCommit 0;
+				(_this select 0) ctrlEnable true;
 			} else {
-				_abortButton ctrlSetText "IMPOSSIBLE MAINTENANT";
-				_abortButton ctrlCommit 0;
+				(_this select 0) ctrlSetText "IMPOSSIBLE MAINTENANT";
+				(_this select 0) ctrlCommit 0;
 			};
 		};
 	};

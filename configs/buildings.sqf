@@ -766,4 +766,4 @@ _cString =
 		if ((border_plot_north_south_4 animationPhase "plot_1_translation") != 1) then {border_plot_north_south_4 animate ["plot_1_translation", 1]};
 	}, "", 9991, true, false, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]))"];
 
-} forEach ([border_control_north_1]);
+} forEach ([border_control_north_1, border_control_north_2]);

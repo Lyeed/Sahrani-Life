@@ -54,6 +54,11 @@ class Public
 		class company_create_open {};
 		class company_create_action {};
 		class company_create_update {};
+		class company_construction_open {};
+		class company_construction_update {};
+		class company_construction_action {};
+		class company_construction_build {};
+		class company_info_open {};
 	};
 
 	class Tools
