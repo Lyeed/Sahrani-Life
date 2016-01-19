@@ -1,8 +1,8 @@
 class ALYSIA_VEHICLES_INFO
 {
 	/* MASTER VEHICLES CONFIG */
-	insurance_percentage = 0.37;
-	garage_percentage = 0.04;
+	insurance_percentage = 0.33;
+	garage_percentage = 0.03;
 	steal_percentage = 0.20;
 	sell_percentage = 0.40;
 	transfert_percentage = 0.03;
@@ -145,7 +145,7 @@ class ALYSIA_VEHICLES
 		inventory = 40;
 		side = "CIV";
 		insurance = 1;
-		license = "drive";
+		license = "driver";
 		fuel = "SP98";
 		rank = 0;
 		colors[] = 
@@ -879,38 +879,6 @@ class ALYSIA_VEHICLES
 	class Mrshounka_cherokee_noir_violet_mat: Mrshounka_cherokee_noir {};
 	class Mrshounka_cherokee_noir_rouge: Mrshounka_cherokee_noir {};
 	class Mrshounka_cherokee_noir_rouge_mat: Mrshounka_cherokee_noir {};
-
-	class mrshounka_huracan_c
-	{
-		buyPrice = 585000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		license = "driver";
-		fuel = "SP95";
-		rank = 0;
-		colors[] = 
-		{
-			"mrshounka_huracan_c_bleufonce",
-			"mrshounka_huracan_c_grise",
-			"mrshounka_huracan_c_jaune",
-			"mrshounka_huracan_c_noir",
-			"mrshounka_huracan_c_orange",
-			"mrshounka_huracan_c_rose",
-			"mrshounka_huracan_c_rouge",
-			"mrshounka_huracan_c_violet"
-		};
-		realname = "Lamborgini Huracan";
-	};
-
-	class mrshounka_huracan_c_bleufonce: mrshounka_huracan_c {};
-	class mrshounka_huracan_c_grise: mrshounka_huracan_c {};
-	class mrshounka_huracan_c_jaune: mrshounka_huracan_c {};
-	class mrshounka_huracan_c_noir: mrshounka_huracan_c {};
-	class mrshounka_huracan_c_orange: mrshounka_huracan_c {};
-	class mrshounka_huracan_c_rose: mrshounka_huracan_c {};
-	class mrshounka_huracan_c_rouge: mrshounka_huracan_c {};
-	class mrshounka_huracan_c_violet: mrshounka_huracan_c {};
 
 	class Mrshounka_veneno_c
 	{
@@ -2219,31 +2187,6 @@ class ALYSIA_VEHICLES
 		realname = "Crown Victoria Taxi";
 	};
 
-	class DAR_MF1
-	{
-		buyPrice = 926000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		license = "driver";
-		fuel = "SP95";
-		rank = 0;
-		colors[] = 
-		{
-			"DAR_MF1Civ",
-			"DAR_MF1Burgundy",
-			"DAR_MF1Orange",
-			"DAR_MF1Red",
-			"DAR_MF1Silver"
-		};
-		realname = "Mclaren F1";
-	};
-  	class DAR_MF1Civ: DAR_MF1 {};
-  	class DAR_MF1Burgundy: DAR_MF1 {};
-  	class DAR_MF1Orange: DAR_MF1 {};
-  	class DAR_MF1Red: DAR_MF1 {};
-  	class DAR_MF1Silver: DAR_MF1 {};
-
   	class DAR_M3Civ
 	{
 		buyPrice = 48000;
@@ -2393,37 +2336,6 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		realname = "Skoda Octavia";
 	};
-
-	class C_Offroad_01_F
-	{
-		buyPrice = 25000;
-		inventory = 90;
-		side = "CIV";
-		insurance = 1;
-		license = "driver";
-		fuel = "SP98";
-		rank = 0;
-		colors[] = 
-		{
-			"C_Offroad_01_red_F",
-			"C_Offroad_01_sand_F",
-			"C_Offroad_01_white_F",
-			"C_Offroad_01_blue_F",
-			"C_Offroad_01_darkred_F",
-			"C_Offroad_luxe_F",
-			"C_Offroad_default_F",
-			"C_Offroad_stripped_F"
-		};
-		realname = "Pick Up";
-	};
-  	class C_Offroad_01_red_F: C_Offroad_01_F {};
-  	class C_Offroad_01_sand_F: C_Offroad_01_F {};
-  	class C_Offroad_01_white_F: C_Offroad_01_F {};
-  	class C_Offroad_01_blue_F: C_Offroad_01_F {};
-  	class C_Offroad_01_darkred_F: C_Offroad_01_F {};
-  	class C_Offroad_luxe_F: C_Offroad_01_F {};
-  	class C_Offroad_default_F: C_Offroad_01_F {};
-  	class C_Offroad_stripped_F: C_Offroad_01_F {};
 
 	class RDS_Lada_Civ
 	{
