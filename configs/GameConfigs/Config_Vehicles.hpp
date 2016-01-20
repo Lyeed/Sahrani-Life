@@ -3891,4 +3891,17 @@ class ALYSIA_VEHICLES
 	class Skyline_Ford_Transit_10_F: Skyline_Ford_Transit {};
 	class Skyline_Ford_Transit_11_F: Skyline_Ford_Transit {};
 	class Skyline_Ford_Transit_12_F: Skyline_Ford_Transit {};
+
+	class Skyline_Audi_RS4_Police_01_F
+	{
+		buyPrice = 25000;
+		inventory = 90;
+		side = "WEST";
+		insurance = 1;
+		license = "";
+		fuel = "SP98";
+		rank = 3;
+		colors[] = {};
+		realname = "Audi RS4 Milice";
+	};
 };	
