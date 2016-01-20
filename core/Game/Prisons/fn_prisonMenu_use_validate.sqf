@@ -23,7 +23,7 @@ if (_prison isEqualTo []) exitWith {["Vous n'êtes pas dans une prison"] call pu
 if (g_interaction_target getVariable ["arrested", false]) exitWith {["Cette personne est déjà en prison."] call public_fnc_error};
 
 disableSerialization;
-_display = findDisplay 18000;
+_display = findDisplay 20000;
 if (isNull _display) exitWith {};
 
 {

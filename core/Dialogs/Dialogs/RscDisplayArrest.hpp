@@ -970,8 +970,8 @@ class RscDisplayArrest: default_interaction_back_dialog
 			((findDisplay 20000) displayCtrl 20016) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 20000) displayCtrl 20019) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Arrêter</t>"";";
 			onMouseExit = "\
-			ctrlShow[20018, false];\
-			ctrlSetText[20017,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];\
+			ctrlShow[20016, false];\
+			ctrlSetText[20018,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];\
 			((findDisplay 20000) displayCtrl 20016) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 20000) displayCtrl 20019) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Arrêter</t>"";";
 
