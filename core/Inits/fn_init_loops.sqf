@@ -22,19 +22,17 @@ if (g_launder > 0) then
 	_old_vehicle = vehicle player;
 	while {true} do
 	{
-		if (((g_carryWeight > g_maxWeight) && !(isForcedWalk player)) || !(isNull g_objPut)) then 
+		if ((g_carryWeight > g_maxWeight) && !(isForcedWalk player)) then 
 		{
 			player forceWalk true;
-			if (g_carryWeight > g_maxWeight) then
-			{
-				titleText["Vous êtes surchargé", "PLAIN"];
-				player setFatigue 1;
-			};
+			titleText["Vous êtes surchargé", "PLAIN"];
+			player setFatigue 1;
 		} else {
 			if (isForcedWalk player) then {
 				player forceWalk false;
 			};
 		};
+		
 		if ((vehicle player) != _old_vehicle) then 
 		{
 			_old_vehicle = vehicle player;
@@ -45,6 +43,7 @@ if (g_launder > 0) then
 				case (_old_vehicle isKindOf "Air"): {setViewDistance tawvd_air};
 			};
 		};
+		
 		sleep 1;
 	};
 };
@@ -74,7 +73,7 @@ if (g_launder > 0) then
 
 		g_seatbelt = false;
 		_veh = vehicle player;
-		_fuel = (getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf (_veh) >> "fuel"));
+		_fuel = getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf (_veh) >> "fuel");
 		_curentfuel = _veh getVariable ["typeRefuel", ""];
 
 		while {((vehicle player) isEqualTo _veh)} do
@@ -91,9 +90,9 @@ if (g_launder > 0) then
 				};
 
 				if (_curentfuel isEqualTo "") then {
-					_conso = (getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuel >> "conso"));
+					_conso = getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuel >> "conso");
 				} else {
-					_conso = (getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _curentfuel >> "conso"));
+					_conso = getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _curentfuel >> "conso");
 				};
 				_veh setFuel ((fuel _veh) - (((speed _veh) / _conso) + (([_veh getVariable ["Trunk", []]] call public_fnc_weightGenerate) / 100000)));
 			};
@@ -178,6 +177,6 @@ if (g_launder > 0) then
 			if ((local _x) && ((units _x) isEqualTo [])) then {
 				deleteGroup _x;
 			};
-		} forEach (allGroups);
+		} forEach allGroups;
 	};
 };

@@ -5,6 +5,7 @@
 		Land_A_Office01_ep1
 		Land_a_stationhouse
 		Land_i_Shop_01_V1_F
+		Land_i_House_Small_03_V1_F
 	
 	Types d'entreprises :
 		-> Fuel
@@ -247,7 +248,7 @@ class ALYSIA_COMPANIES
 		class service
 		{
 			name = "Service";
-			building = "Land_i_House_Small_03_V1_F";
+			building = "Land_Entreprise01_F";
 			license = "company_service";
 			image = "lyeed_IMG\data\companies\types\service.paa";
 			class construction

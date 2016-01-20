@@ -66,7 +66,7 @@ while {(_vehicle getVariable ["fishing", false])} do
 				_fish = ["daurade", "sardine", "merlu", "maquereau", "bar", "anchois"] call BIS_fnc_selectRandom;
 				if (random(100) <= 4) then
 				{
-					_trunk = [false, _trunk, "fishingpoles", 1] call public_fnc_handleTrunk;
+					[false, _trunk, "fishingpoles", 1] call public_fnc_handleTrunk;
 					if (([_trunk, "fishingpoles"] call public_fnc_itemTrunk) isEqualTo 0) then
 					{
 						["Pêche annulée<br/>Le filet s'est fissuré et vous n'en avez pas d'autre dans le coffre du bateau"] call public_fnc_error;
@@ -78,7 +78,7 @@ while {(_vehicle getVariable ["fishing", false])} do
 						["Pêche annulée<br/>L'inventaire du véhicule est plein"] call public_fnc_error;
 						breakOut "loop";
 					} else {
-						_trunk = [true, _trunk, _fish, 1] call public_fnc_handleTrunk;
+						[true, _trunk, _fish, 1] call public_fnc_handleTrunk;
 						_weight_actual = _weight_actual + ([_fish] call public_fnc_itemGetWeight);
 					};
 				};
@@ -87,9 +87,8 @@ while {(_vehicle getVariable ["fishing", false])} do
 	};
 };
 
-if (!(_trunk isEqualTo (_vehicle getVariable ["Trunk", []]))) then {
-	_vehicle setVariable ["Trunk", _trunk, true];	
-};
+_vehicle setVariable ["Trunk", _trunk, true];
+
 if ((_vehicle getVariable ["trunk_in_use_ID", ""]) isEqualTo "FISHING") then {
 	_vehicle setVariable ["trunk_in_use_ID", "", true];
 };

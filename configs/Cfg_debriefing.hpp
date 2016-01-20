@@ -1,12 +1,5 @@
 class CfgDebriefing // Define custom mission endings or override the default endings (found under cfgDebriefing in the game's config file).
 {
-	class NotWhitelisted
-	{
-		title = "Whiteliste";
-		description = "Ce slot est réservé, vous devez être sur la whiteliste pour pouvoir vous y connecter";
-		pictureColor[] = {0, 0.3, 0.6, 1};
-	};
-
 	class Teamspeak
 	{
 		title = "Teamspeak";

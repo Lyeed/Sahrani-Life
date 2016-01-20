@@ -97,9 +97,7 @@ while {!(isNull _display)} do
 	sleep 0.5;
 };
 
-if (!((g_interaction_target getVariable ["Trunk", []]) isEqualTo g_interaction_target_trunk)) then {
-	g_interaction_target setVariable ["Trunk", g_interaction_target_trunk, true];
-};
+g_interaction_target setVariable ["Trunk", g_interaction_target_trunk, true];
 
 if (_isCar) then {
 	[g_interaction_target, "trunk_close", 20] call CBA_fnc_globalSay3d;

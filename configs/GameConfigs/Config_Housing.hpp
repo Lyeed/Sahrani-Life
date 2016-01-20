@@ -3,14 +3,17 @@ class ALYSIA_STORAGES
 	class Skyline_Coffre_Small 
 	{
 		inventory = 500;//virtual space
+		item = "storage_small";
 	};
 	class Skyline_Coffre_Medium 
 	{
 		inventory = 1000;
+		item = "storage_medium";
 	};	
 	class Skyline_Coffre_Large 
 	{
 		inventory = 2000;
+		item = "storage_large";
 	};
 };
 

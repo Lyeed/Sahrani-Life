@@ -70,7 +70,7 @@ while {(_vehicle getVariable ["farm_plant", false])} do
 
 	if (count (nearestObjects [_vehicle, [_plant], getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "distance")]) isEqualTo 0) then
 	{
-		_trunk = [false, _trunk, _seed, 1] call public_fnc_handleTrunk;
+		[false, _trunk, _seed, 1] call public_fnc_handleTrunk;
 		_pos = getPos _vehicle;
 		_object = createVehicle [_plant, [(_pos select 0), (_pos select 1), ((_pos select 2) - getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "groundLevel"))], [], 0, "CAN_COLLIDE"];
 		
@@ -85,9 +85,7 @@ while {(_vehicle getVariable ["farm_plant", false])} do
 	sleep 0.5;
 };
 
-if (!(_trunk isEqualTo (_vehicle getVariable ["Trunk", []]))) then {
-	_vehicle setVariable ["Trunk", _trunk, true];	
-};
+_vehicle setVariable ["Trunk", _trunk, true];
 
 if ((_vehicle getVariable ["trunk_in_use_ID", ""]) isEqualTo "FARMING") then {
 	_vehicle setVariable ["trunk_in_use_ID", "", true];

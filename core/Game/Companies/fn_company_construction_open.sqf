@@ -51,6 +51,4 @@ if ((g_interaction_target getVariable ["trunk_in_use_ID", ""]) isEqualTo (getPla
 	g_interaction_target setVariable ["trunk_in_use_ID", "", true];
 };
 
-if (!(g_interaction_require isEqualTo (g_interaction_target getVariable ["construction_require", []]))) then {
-	g_interaction_target setVariable ["construction_require", g_interaction_require, true];
-};
+g_interaction_target setVariable ["construction_require", g_interaction_require, true];

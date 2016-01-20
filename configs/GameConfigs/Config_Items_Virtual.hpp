@@ -129,10 +129,10 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\nitroboost.paa";
 	};
 
-	class storage
+	class storage_small
 	{
-		name        = "Coffre";
-		weight      = 30;
+		name        = "Coffre (Petit)";
+		weight      = 10;
 		price_buy   = 20000;
 		price_sell  = 0;
 		illegal     = 0;
@@ -140,10 +140,30 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\coffre.paa";
 		class use
 		{
-			action = "[] spawn public_fnc_storageBox;";
+			action = "['storage_small'] spawn public_fnc_storageBox;";
 		};
 	};
-
+	class storage_medium: storage_small
+	{
+		name        = "Coffre (Moyen)";
+		weight      = 20;
+		price_buy   = 31000;
+		class use
+		{
+			action = "['storage_medium'] spawn public_fnc_storageBox;";
+		};
+	};
+	class storage_large: storage_small
+	{
+		name        = "Coffre (Grand)";
+		weight      = 30;
+		price_buy   = 43000;
+		class use
+		{
+			action = "['storage_large'] spawn public_fnc_storageBox;";
+		};
+	};
+	
 	class barriere
 	{
 		name        = "Barrière";

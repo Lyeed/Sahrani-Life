@@ -75,7 +75,7 @@ while {(_vehicle getVariable ["farm_gather", false])} do
 					["Récolte terminé<br/>L'inventaire du véhicule est plein"] call public_fnc_error;
 					breakOut "loop";
 				} else {
-					_trunk = [true, _trunk, _item, _amount] call public_fnc_handleTrunk;
+					[true, _trunk, _item, _amount] call public_fnc_handleTrunk;
 					_weight_actual = _weight_actual + (([_item] call public_fnc_itemGetWeight) * _amount);
 				};
 			} forEach getArray(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> typeOf(_plant) >> "receive");
@@ -86,9 +86,8 @@ while {(_vehicle getVariable ["farm_gather", false])} do
 	sleep 0.5;
 };
 
-if (!(_trunk isEqualTo (_vehicle getVariable ["Trunk", []]))) then {
-	_vehicle setVariable ["Trunk", _trunk, true];	
-};
+_vehicle setVariable ["Trunk", _trunk, true];
+
 if ((_vehicle getVariable ["trunk_in_use_ID", ""]) isEqualTo "FARMING") then {
 	_vehicle setVariable ["trunk_in_use_ID", "", true];
 };

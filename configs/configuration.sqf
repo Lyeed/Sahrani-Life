@@ -141,17 +141,11 @@ with missionNamespace do
 	g_sheeps = [];
 
 	/* =================[Chairs]====================*/
-	g_chairs =
-	[
-		"Land_Chair_EP1",
-		"Land_OfficeChair_01_F",
-		"xcam_office_chair",
-		"Land_ChairWood_F",
-		"xcam_Bench_01_F",
-		"Land_RattanChair_01_F",
-		"WoodChair",
-		"xcam_chair_2"
-	];
+	g_chairs = [];
+
+	{
+		g_chairs pushBack configName(_x);
+	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_CHAIRS"));
 
 	g_chairs = compileFinal str(g_chairs);
 };
