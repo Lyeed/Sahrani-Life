@@ -46,8 +46,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\lingot_or.paa";
 		class market
 		{
-			max = 3000;
-			min = 2000;
+			max = 2500;
+			min = 1500;
 			mult = 2;
 			affect[] = {"ironp", "soufre", "platinep", "souffre", "hsoufre", "copperp", "alu"};
 		};
@@ -241,8 +241,8 @@ class ALYSIA_ITEMS
 		license     = "tabac";
 		class market
 		{
-			max = 170;
-			min = 130;
+			max = 160;
+			min = 120;
 			mult = 2;
 			affect[] = {};
 		};
@@ -258,8 +258,8 @@ class ALYSIA_ITEMS
 		license     = "tabac";
 		class market
 		{
-			max = 55;
-			min = 35;
+			max = 52;
+			min = 32;
 			mult = 2;
 			affect[] = {};
 		};
@@ -274,7 +274,7 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\objet_de_valeur.paa";
 		class market
 		{
-			max = 290;
+			max = 280;
 			min = 200;
 			mult = 4;
 			affect[] = {};
@@ -291,8 +291,8 @@ class ALYSIA_ITEMS
 		license     = "archeologie";
 		class market
 		{
-			max = 590;
-			min = 500;
+			max = 575;
+			min = 475;
 			mult = 2;
 			affect[] = {};
 		};
@@ -308,7 +308,7 @@ class ALYSIA_ITEMS
 		license     = "archeologie";
 		class market
 		{
-			max = 635;
+			max = 1000;
 			min = 300;
 			mult = 4;
 			affect[] = {};
@@ -380,8 +380,8 @@ class ALYSIA_ITEMS
 		license     = "iron";
 		class market
 		{
-			max = 160;
-			min = 135;
+			max = 155;
+			min = 125;
 			mult = 3;
 			affect[] = {"goldbar", "soufre", "platinep", "souffre", "hsoufre", "copperp", "alu"};
 		};
@@ -396,8 +396,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\soufre.paa";
 		class market
 		{
-			max = 19;
-			min = 12;
+			max = 17;
+			min = 10;
 			mult = 2;
 			affect[] = {"goldbar", "ironp", "platinep", "hsoufre", "copperp", "alu"};
 		};
@@ -424,8 +424,8 @@ class ALYSIA_ITEMS
 		license     = "platine";
 		class market
 		{
-			max = 315;
-			min = 280;
+			max = 260;
+			min = 200;
 			mult = 4;
 			affect[] = {"goldbar", "ironp", "soufre", "hsoufre", "copperp", "alu"};
 		};
@@ -482,8 +482,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\cocaine_coupe.paa";
 		class market
 		{
-			max = 350;
-			min = 280;
+			max = 300;
+			min = 210;
 			mult = 4;
 			affect[] = {"methp", "cocainep", "heroinp", "heroinps", "marijuana", "opium"};
 		};
@@ -542,8 +542,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\seringue_heroine.paa";
 		class market
 		{
-			max = 380;
-			min = 300;
+			max = 325;
+			min = 250;
 			mult = 5;
 			affect[] = {"methp", "cocainep", "cocainepc", "heroinp", "marijuana", "opium"};
 		};
@@ -586,8 +586,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\soufre_hydrate.paa";
 		class market
 		{
-			max = 46;
-			min = 32;
+			max = 23;
+			min = 15;
 			mult = 2;
 			affect[] = {"goldbar", "ironp", "soufre", "platinep", "copperp", "alu"};
 		};
@@ -613,8 +613,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\methamphetamine.paa";
 		class market
 		{
-			max = 1200;
-			min = 950;
+			max = 900;
+			min = 650;
 			mult = 4;
 			affect[] = {"cocainep", "cocainepc", "heroinp", "heroinps", "marijuana", "opium"};
 		};
@@ -656,7 +656,7 @@ class ALYSIA_ITEMS
 		license     = "marijuana";
 		class market
 		{
-			max = 545;
+			max = 535;
 			min = 400;
 			mult = 3;
 			affect[] = {"methp", "cocainep", "cocainepc", "heroinp", "heroinps", "opium"};
@@ -791,8 +791,8 @@ class ALYSIA_ITEMS
 		license     = "sand";
 		class market
 		{
-			max = 150;
-			min = 120;
+			max = 140;
+			min = 110;
 			mult = 3;
 			affect[] = {"woodp", "furniture", "pottery", "saltp", "cottonp", "ciment", "coal"};
 		};
@@ -954,8 +954,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\lingot_cuivre.paa";
 		class market
 		{
-			max = 220;
-			min = 190;
+			max = 200;
+			min = 160;
 			mult = 2;
 			affect[] = {"goldbar", "ironp", "soufre", "platinep", "hsoufre", "alu"};
 		};
@@ -981,8 +981,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\poterie.paa";
 		class market
 		{
-			max = 125;
-			min = 95;
+			max = 120;
+			min = 90;
 			mult = 2;
 			affect[] = {"woodp", "furniture", "glass", "saltp", "cottonp", "ciment", "coal"};
 		};
@@ -1008,8 +1008,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\alluminium.paa";
 		class market
 		{
-			max = 230;
-			min = 190;
+			max = 220;
+			min = 170;
 			mult = 2;
 			affect[] = {"goldbar", "ironp", "soufre", "platinep", "hsoufre", "copperp"};
 		};
@@ -1167,8 +1167,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\sel_traiter.paa";
 		class market
 		{
-			max = 155;
-			min = 120;
+			max = 150;
+			min = 115;
 			mult = 2;
 			affect[] = {"woodp", "furniture", "glass", "pottery", "cottonp", "ciment", "coal"};
 		};
@@ -1248,8 +1248,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\boule_coton.paa";
 		class market
 		{
-			max = 95;
-			min = 70;
+			max = 90;
+			min = 65;
 			mult = 2;
 			affect[] = {"woodp", "furniture", "glass", "pottery", "saltp", "ciment", "coal"};
 		};
@@ -1264,8 +1264,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\bouteille_eau_de_vie_raisin.paa";
 		class market
 		{
-			max = 325;
-			min = 250;
+			max = 300;
+			min = 220;
 			mult = 2;
 			affect[] = {};
 		};
@@ -1280,8 +1280,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\bouteille_eau_de_vie_prune.paa";
 		class market
 		{
-			max = 340;
-			min = 230;
+			max = 315;
+			min = 220;
 			mult = 2;
 			affect[] = {};
 		};
@@ -1296,7 +1296,7 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\charbon.paa";
 		class market
 		{
-			max = 32;
+			max = 30;
 			min = 20;
 			mult = 2;
 			affect[] = {"woodp", "furniture", "glass", "pottery", "saltp", "cottonp", "ciment"};
@@ -1361,8 +1361,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\ciment.paa";
 		class market
 		{
-			max = 175;
-			min = 130;
+			max = 150;
+			min = 115;
 			mult = 2;
 			affect[] = {"woodp", "furniture", "glass", "pottery", "saltp", "cottonp", "coal"};
 		};
@@ -1554,8 +1554,8 @@ class ALYSIA_ITEMS
 		license     = "";
 		class market
 		{
-			max = 900;
-			min = 700;
+			max = 750;
+			min = 600;
 			mult = 2;
 			affect[] = {"woodp", "furniture", "glass", "pottery", "saltp", "cottonp", "coal"};
 		};
