@@ -1,6 +1,6 @@
 class ALYSIA_PROCESS
 {
-
+	// SOunds = cement_mix / collectoil / cooking / drug_process / salt_process / smelting
 	class wood
 	{
 		name = "Scierie";
@@ -110,7 +110,7 @@ class ALYSIA_PROCESS
 	{
 		name = "Traitement de l'héroine";
 		license = "";
-		sound = "processoil";
+		sound = "drug_process";
 		requiere_target = 1;
 		require[] = {{"heroin", 1}};
 		receive[] = {{"heroinp", 1}};
@@ -123,7 +123,7 @@ class ALYSIA_PROCESS
 	{
 		name = "Traitement des seringues d'héroine";
 		license = "";
-		sound = "processoil";
+		sound = "drug_process";
 		requiere_target = 1;
 		require[] = {{"heroinp", 1}, {"seringue", 1}};
 		receive[] = {{"heroinps", 1}};
@@ -175,7 +175,7 @@ class ALYSIA_PROCESS
 	{
 		name = "Hydratation du soufre";
 		license = "";
-		sound = "processoil";
+		sound = "drug_process";
 		requiere_target = 0;
 		require[] = {{"soufre", 1},{"water", 1}};
 		receive[] = {{"hsoufre", 1}};
@@ -190,7 +190,7 @@ class ALYSIA_PROCESS
 		license = "archeologie";
 		sound = "cooking";
 		requiere_target = 1;
-		require[] = {{"artefact", 1}};
+		require[] = {{"frag_1", 1}, {"frag_2", 1}, {"frag_3", 1}, {"frag_4", 1}, {"frag_5", 1}, {"frag_6", 1}, {"frag_7", 1}, {"frag_8", 1}};
 		receive[] = {{"artefact_R", 1}};
 		time_per_item = 3;
 		time_default = 5;
@@ -331,7 +331,7 @@ class ALYSIA_PROCESS
 	{
 		name = "Traitement du pétrole";
 		license = "oil";
-		sound = "processoil";
+		sound = "drug_process";
 		requiere_target = 1;
 		require[] = {{"oilu", 1}};
 		receive[] = {{"sp98", 2}, {"sp95", 1}, {"gpl", 1}, {"kerosene", 1}, {"gazole", 3}};

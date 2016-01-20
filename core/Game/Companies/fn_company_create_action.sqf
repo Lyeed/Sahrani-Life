@@ -73,4 +73,4 @@ if (isNull g_interaction_target) exitWith
 _object setPos [((getPos _object) select 0), ((getPos _object) select 1), 0];
 playSound "buy";
 [false, _price, "Création d'entreprise"] call public_fnc_handleATM;
-[_type, _object, (getPlayerUID g_interaction_target), _name] remoteExec ["TON_fnc_company_insert", 2];
+[_type, _object, g_interaction_target, _name] remoteExec ["TON_fnc_company_insert", 2];

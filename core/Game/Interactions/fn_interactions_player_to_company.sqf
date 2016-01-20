@@ -14,9 +14,9 @@ if (isNull _object) exitWith {};
 	_object,
 	"player_to_company",
 	[
-		["info", "Infos", "", "!(g_interaction_target getVariable ['construction', false])"],
-		["construction", "Matériaux", "", "(g_interaction_target getVariable ['construction', false])"],
-		["finish", "Construire", "", "((g_interaction_target getVariable ['construction', false]) && ((g_interaction_target getVariable ['construction_require', []]) isEqualTo []) && (['company_construction'] call public_fnc_hasLicense))"],
+		["info", "Infos", "[] spawn public_fnc_company_info_open;", "!(g_interaction_target getVariable ['construction', false])"],
+		["construction", "Matériaux", "[] spawn public_fnc_company_construction_open;", "(g_interaction_target getVariable ['construction', false])"],
+		["finish", "Construire", "[] spawn public_fnc_company_construction_build;", "((g_interaction_target getVariable ['construction', false]) && ((g_interaction_target getVariable ['construction_require', []]) isEqualTo []) && (['company_construction'] call public_fnc_hasLicense))"],
 		["search", "Fouille", "", "(getNumber(missionConfigFile >> 'ALYSIA_COMPANIES' >> str(playerSide) >> 'companies_search') isEqualTo 1)"]
 	],
 	(_object getVariable ["company_info", []]) select 0,

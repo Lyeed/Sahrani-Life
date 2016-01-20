@@ -27,7 +27,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Hopital";
 		side = "";
-		items[] = {{"patch", "seringue", "cerealbar", "sparklingwater"}, {}};
+		items[] = {{"patch", "seringue", "water", "sandwich"}, {}};
 	};
 
 	/* FACTIONS MARKET */
@@ -47,7 +47,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Hopital";
 		side = "GUER";
-		items[] = {{}, {}};
+		items[] = {{"cerealbar", "sparklingwater", "cone", "barriere","bip"}, {}};
 	};
 
 	/* RESSOURCES */
@@ -90,7 +90,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Marché noir";
 		side = "CIV";
-		items[] = {{"lockpick", "handcuffs", "handcuffkeys", "cannabis_seed", "heroin_seed", "cocaine_seed", "meth_seed", "nitro", "baillon", "bandeau"}, {"artefact", "artefact_R", "artefact_exrare", "artefact_rare", "artefact_common", "objvaleur"}};
+		items[] = {{"lockpick", "handcuffs", "handcuffkeys", "cannabis_seed", "heroin_seed", "cocaine_seed", "meth_seed", "nitro", "baillon", "bandeau"}, {"artefact_R", "artefact", "objvaleur"}};
 	};
 
 	class platine

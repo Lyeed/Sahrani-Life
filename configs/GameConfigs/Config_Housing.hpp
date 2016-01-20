@@ -3,14 +3,17 @@ class ALYSIA_STORAGES
 	class Skyline_Coffre_Small 
 	{
 		inventory = 500;//virtual space
+		item = "storage_small";
 	};
 	class Skyline_Coffre_Medium 
 	{
 		inventory = 1000;
+		item = "storage_medium";
 	};	
 	class Skyline_Coffre_Large 
 	{
 		inventory = 2000;
+		item = "storage_large";
 	};
 };
 
@@ -425,4 +428,51 @@ class ALYSIA_HOUSES
 		rank = 0;
 		license = "home";
 	};
+	class Land_smd_sara_zluty_statek_in
+	{
+		price = 325000;
+		storage = "Skyline_Coffre_Small";
+		storage_building_pos_index = 4;
+		garage = 0;
+		garage_type[] = {};
+		sides[] = {"CIV", "GUER"};
+		rank = 0;
+		license = "home";
+	};
+	class Land_smd_dum_mesto_in_open
+	{
+		price = 325000;
+		storage = "Skyline_Coffre_Small";
+		storage_building_pos_index = 3;
+		garage = 0;
+		garage_type[] = {};
+		sides[] = {"CIV", "GUER"};
+		rank = 0;
+		license = "home";
+	};
+	class Land_smd_house_y_open
+	{
+		price = 325000;
+		storage = "Skyline_Coffre_Small";
+		storage_building_pos_index = 5;
+		garage = 0;
+		garage_type[] = {};
+		sides[] = {"CIV", "GUER"};
+		rank = 0;
+		license = "home";
+	};
+	class Land_smd_budova3_open
+	{
+		price = 325000;
+		storage = "Skyline_Coffre_Small";
+		storage_building_pos_index = 1;
+		garage = 0;
+		garage_type[] = {};
+		sides[] = {"CIV", "GUER"};
+		rank = 0;
+		license = "home";
+	};
+	/*
+	A DEBATTRE QU EST CE QU ON EN FAIT: "Land_smd_Panelak" "Land_smd_Panelak2"
+	*/
 };

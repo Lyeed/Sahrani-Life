@@ -24,8 +24,8 @@ if (dialog) then
 };
 
 _isCar = true;
-g_interaction_target_trunk_stock = g_interaction_target getVariable ["Trunk", []];
-g_interaction_target_trunk_weight_actual = [g_interaction_target_trunk_stock] call public_fnc_weightGenerate;
+g_interaction_target_trunk = g_interaction_target getVariable ["Trunk", []];
+g_interaction_target_trunk_weight_actual = [g_interaction_target_trunk] call public_fnc_weightGenerate;
 g_interaction_target_trunk_transfer = false;
 
 g_interaction_target_trunk_weight_max = switch (true) do
@@ -97,12 +97,12 @@ while {!(isNull _display)} do
 	sleep 0.5;
 };
 
-if (!(g_interaction_target_trunk_stock isEqualTo (g_interaction_target getVariable ["Trunk", []]))) then {
-	g_interaction_target setVariable ["Trunk", g_interaction_target_trunk_stock, true];
-};
+g_interaction_target setVariable ["Trunk", g_interaction_target_trunk, true];
 
 if (_isCar) then {
 	[g_interaction_target, "trunk_close", 20] call CBA_fnc_globalSay3d;
 };
 
-g_interaction_target setVariable ["trunk_in_use_ID", "", true];
+if ((g_interaction_target getVariable ["trunk_in_use_ID", ""]) isEqualTo (getPlayerUID player)) then {
+	g_interaction_target setVariable ["trunk_in_use_ID", "", true];
+};

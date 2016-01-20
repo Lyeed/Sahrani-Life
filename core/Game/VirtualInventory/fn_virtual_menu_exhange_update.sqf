@@ -61,7 +61,7 @@ lbClear _ctrl_vehicle;
 	_ctrl_vehicle lbSetData [_index, _item];
 	_ctrl_vehicle lbSetValue [_index, _amount];
 	_ctrl_vehicle lbSetPicture [_index, ([_item] call public_fnc_itemGetImage)];
-} forEach (g_interaction_target_trunk_stock);
+} forEach g_interaction_target_trunk;
 if ((lbSize _ctrl_vehicle) isEqualTo 0) then
 {
 	_ctrl_vehicle lbAdd "Vide";

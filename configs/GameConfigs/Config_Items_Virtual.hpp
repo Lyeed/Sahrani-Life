@@ -23,7 +23,7 @@ class ALYSIA_ITEMS
 		weight      = 0;
 		illegal     = 1;
 		removable   = 0;
-		image       = "alysia_items_virtual\data\.paa";
+		image       = "alysia_items_virtual\data\money.paa";
 	};
 
 	class engrais
@@ -46,8 +46,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\lingot_or.paa";
 		class market
 		{
-			max = 3000;
-			min = 2000;
+			max = 2500;
+			min = 1500;
 			mult = 2;
 			affect[] = {"ironp", "soufre", "platinep", "souffre", "hsoufre", "copperp", "alu"};
 		};
@@ -73,8 +73,8 @@ class ALYSIA_ITEMS
 	class lockpick
 	{
 		name        = "Kit de crochetage";
-		weight      = 2;
-		price_buy   = 1200;
+		weight      = 6;
+		price_buy   = 600;
 		price_sell  = 0;
 		illegal     = 1;
 		removable   = 1;
@@ -122,17 +122,17 @@ class ALYSIA_ITEMS
 	{
 		name        = "Nitro";
 		weight      = 4;
-		price_buy   = 900;
+		price_buy   = 500;
 		price_sell  = 0;
 		illegal     = 1;
 		removable   = 1;
 		image       = "alysia_items_virtual\data\nitroboost.paa";
 	};
 
-	class storage
+	class storage_small
 	{
-		name        = "Coffre";
-		weight      = 30;
+		name        = "Coffre (Petit)";
+		weight      = 10;
 		price_buy   = 20000;
 		price_sell  = 0;
 		illegal     = 0;
@@ -140,10 +140,30 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\coffre.paa";
 		class use
 		{
-			action = "[] spawn public_fnc_storageBox;";
+			action = "['storage_small'] spawn public_fnc_storageBox;";
 		};
 	};
-
+	class storage_medium: storage_small
+	{
+		name        = "Coffre (Moyen)";
+		weight      = 20;
+		price_buy   = 31000;
+		class use
+		{
+			action = "['storage_medium'] spawn public_fnc_storageBox;";
+		};
+	};
+	class storage_large: storage_small
+	{
+		name        = "Coffre (Grand)";
+		weight      = 30;
+		price_buy   = 43000;
+		class use
+		{
+			action = "['storage_large'] spawn public_fnc_storageBox;";
+		};
+	};
+	
 	class barriere
 	{
 		name        = "Barrière";
@@ -204,7 +224,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Graine (tabac)";
 		weight      = 1;
-		price_buy   = 60;
+		price_buy   = 8;
 		price_sell  = 30;
 		illegal     = 1;
 		removable   = 1;
@@ -221,8 +241,8 @@ class ALYSIA_ITEMS
 		license     = "tabac";
 		class market
 		{
-			max = 170;
-			min = 130;
+			max = 160;
+			min = 120;
 			mult = 2;
 			affect[] = {};
 		};
@@ -238,8 +258,8 @@ class ALYSIA_ITEMS
 		license     = "tabac";
 		class market
 		{
-			max = 55;
-			min = 35;
+			max = 52;
+			min = 32;
 			mult = 2;
 			affect[] = {};
 		};
@@ -254,7 +274,7 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\objet_de_valeur.paa";
 		class market
 		{
-			max = 290;
+			max = 280;
 			min = 200;
 			mult = 4;
 			affect[] = {};
@@ -267,12 +287,12 @@ class ALYSIA_ITEMS
 		weight      = 4;
 		illegal     = 1;
 		removable   = 1;
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\artefact.paa";
 		license     = "archeologie";
 		class market
 		{
-			max = 590;
-			min = 500;
+			max = 575;
+			min = 475;
 			mult = 2;
 			affect[] = {};
 		};
@@ -284,29 +304,13 @@ class ALYSIA_ITEMS
 		weight      = 4;
 		illegal     = 1;
 		removable   = 1;
-		image       = "Alysia_textures\data\life_inv_banane.paa";
+		image       = "alysia_items_virtual\data\artefact_R.paa";
 		license     = "archeologie";
 		class market
 		{
-			max = 635;
+			max = 1000;
 			min = 300;
 			mult = 4;
-			affect[] = {};
-		};
-	};
-
-	class fragment
-	{
-		name        = "Fragment d'Arteftact";
-		weight      = 1;
-		illegal     = 1;
-		removable   = 1;
-		image       = "Alysia_textures\data\life_inv_banane.paa";
-		class market
-		{
-			max = 9000;
-			min = 4000;
-			mult = 5;
 			affect[] = {};
 		};
 	};
@@ -376,8 +380,8 @@ class ALYSIA_ITEMS
 		license     = "iron";
 		class market
 		{
-			max = 160;
-			min = 135;
+			max = 155;
+			min = 125;
 			mult = 3;
 			affect[] = {"goldbar", "soufre", "platinep", "souffre", "hsoufre", "copperp", "alu"};
 		};
@@ -392,8 +396,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\soufre.paa";
 		class market
 		{
-			max = 19;
-			min = 12;
+			max = 17;
+			min = 10;
 			mult = 2;
 			affect[] = {"goldbar", "ironp", "platinep", "hsoufre", "copperp", "alu"};
 		};
@@ -420,8 +424,8 @@ class ALYSIA_ITEMS
 		license     = "platine";
 		class market
 		{
-			max = 315;
-			min = 280;
+			max = 260;
+			min = 200;
 			mult = 4;
 			affect[] = {"goldbar", "ironp", "soufre", "hsoufre", "copperp", "alu"};
 		};
@@ -431,7 +435,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Graine (coca)";
 		weight      = 1;
-		price_buy   = 60;
+		price_buy   = 20;
 		price_sell  = 30;
 		illegal     = 1;
 		removable   = 1;
@@ -478,8 +482,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\cocaine_coupe.paa";
 		class market
 		{
-			max = 350;
-			min = 280;
+			max = 300;
+			min = 210;
 			mult = 4;
 			affect[] = {"methp", "cocainep", "heroinp", "heroinps", "marijuana", "opium"};
 		};
@@ -493,7 +497,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Graine (pavot)";
 		weight      = 1;
-		price_buy   = 60;
+		price_buy   = 25;
 		price_sell  = 30;
 		illegal     = 1;
 		removable   = 1;
@@ -538,8 +542,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\seringue_heroine.paa";
 		class market
 		{
-			max = 380;
-			min = 300;
+			max = 325;
+			min = 250;
 			mult = 5;
 			affect[] = {"methp", "cocainep", "cocainepc", "heroinp", "marijuana", "opium"};
 		};
@@ -564,7 +568,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Graine (Ephedra)";
 		weight      = 1;
-		price_buy   = 60;
+		price_buy   = 35;
 		price_sell  = 30;
 		illegal     = 1;
 		removable   = 1;
@@ -582,8 +586,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\soufre_hydrate.paa";
 		class market
 		{
-			max = 46;
-			min = 32;
+			max = 23;
+			min = 15;
 			mult = 2;
 			affect[] = {"goldbar", "ironp", "soufre", "platinep", "copperp", "alu"};
 		};
@@ -609,8 +613,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\methamphetamine.paa";
 		class market
 		{
-			max = 1200;
-			min = 950;
+			max = 900;
+			min = 650;
 			mult = 4;
 			affect[] = {"cocainep", "cocainepc", "heroinp", "heroinps", "marijuana", "opium"};
 		};
@@ -624,7 +628,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Graine (cannabis)";
 		weight      = 1;
-		price_buy   = 60;
+		price_buy   = 18;
 		price_sell  = 30;
 		illegal     = 1;
 		removable   = 1;
@@ -652,7 +656,7 @@ class ALYSIA_ITEMS
 		license     = "marijuana";
 		class market
 		{
-			max = 545;
+			max = 535;
 			min = 400;
 			mult = 3;
 			affect[] = {"methp", "cocainep", "cocainepc", "heroinp", "heroinps", "opium"};
@@ -787,8 +791,8 @@ class ALYSIA_ITEMS
 		license     = "sand";
 		class market
 		{
-			max = 150;
-			min = 120;
+			max = 140;
+			min = 110;
 			mult = 3;
 			affect[] = {"woodp", "furniture", "pottery", "saltp", "cottonp", "ciment", "coal"};
 		};
@@ -950,8 +954,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\lingot_cuivre.paa";
 		class market
 		{
-			max = 220;
-			min = 190;
+			max = 200;
+			min = 160;
 			mult = 2;
 			affect[] = {"goldbar", "ironp", "soufre", "platinep", "hsoufre", "alu"};
 		};
@@ -977,8 +981,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\poterie.paa";
 		class market
 		{
-			max = 125;
-			min = 95;
+			max = 120;
+			min = 90;
 			mult = 2;
 			affect[] = {"woodp", "furniture", "glass", "saltp", "cottonp", "ciment", "coal"};
 		};
@@ -1004,8 +1008,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\alluminium.paa";
 		class market
 		{
-			max = 230;
-			min = 190;
+			max = 220;
+			min = 170;
 			mult = 2;
 			affect[] = {"goldbar", "ironp", "soufre", "platinep", "hsoufre", "copperp"};
 		};
@@ -1163,8 +1167,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\sel_traiter.paa";
 		class market
 		{
-			max = 155;
-			min = 120;
+			max = 150;
+			min = 115;
 			mult = 2;
 			affect[] = {"woodp", "furniture", "glass", "pottery", "cottonp", "ciment", "coal"};
 		};
@@ -1244,8 +1248,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\boule_coton.paa";
 		class market
 		{
-			max = 95;
-			min = 70;
+			max = 90;
+			min = 65;
 			mult = 2;
 			affect[] = {"woodp", "furniture", "glass", "pottery", "saltp", "ciment", "coal"};
 		};
@@ -1260,8 +1264,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\bouteille_eau_de_vie_raisin.paa";
 		class market
 		{
-			max = 325;
-			min = 250;
+			max = 300;
+			min = 220;
 			mult = 2;
 			affect[] = {};
 		};
@@ -1276,8 +1280,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\bouteille_eau_de_vie_prune.paa";
 		class market
 		{
-			max = 340;
-			min = 230;
+			max = 315;
+			min = 220;
 			mult = 2;
 			affect[] = {};
 		};
@@ -1292,7 +1296,7 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\charbon.paa";
 		class market
 		{
-			max = 32;
+			max = 30;
 			min = 20;
 			mult = 2;
 			affect[] = {"woodp", "furniture", "glass", "pottery", "saltp", "cottonp", "ciment"};
@@ -1357,8 +1361,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\ciment.paa";
 		class market
 		{
-			max = 175;
-			min = 130;
+			max = 150;
+			min = 115;
 			mult = 2;
 			affect[] = {"woodp", "furniture", "glass", "pottery", "saltp", "cottonp", "coal"};
 		};
@@ -1491,6 +1495,7 @@ class ALYSIA_ITEMS
 		removable   = 1;
 		image       = "alysia_items_virtual\data\sp98.paa";
 		license     = "oil";
+		store[]     = {"B_G_Van_01_fuel_F", "B_Truck_01_fuel_F", "O_Truck_02_fuel_F"};
 	};
 
 	class sp95
@@ -1501,6 +1506,7 @@ class ALYSIA_ITEMS
 		removable   = 1;
 		image       = "alysia_items_virtual\data\sp95.paa";
 		license     = "oil";
+		store[]     = {"B_G_Van_01_fuel_F", "B_Truck_01_fuel_F", "O_Truck_02_fuel_F"};
 	};
 
 	class gazole
@@ -1511,6 +1517,7 @@ class ALYSIA_ITEMS
 		removable   = 1;
 		image       = "alysia_items_virtual\data\gazole.paa";
 		license     = "oil";
+		store[]     = {"B_G_Van_01_fuel_F", "B_Truck_01_fuel_F", "O_Truck_02_fuel_F"};
 	};
 
 	class gpl
@@ -1521,6 +1528,7 @@ class ALYSIA_ITEMS
 		removable   = 1;
 		image       = "alysia_items_virtual\data\gpl.paa";
 		license     = "oil";
+		store[]     = {"B_G_Van_01_fuel_F", "B_Truck_01_fuel_F", "O_Truck_02_fuel_F"};
 	};
 
 	class kerosene
@@ -1531,6 +1539,7 @@ class ALYSIA_ITEMS
 		removable   = 1;
 		image       = "alysia_items_virtual\data\kerosene.paa";
 		license     = "oil";
+		store[]     = {"B_G_Van_01_fuel_F", "B_Truck_01_fuel_F", "O_Truck_02_fuel_F"};
 	};
 	
 	class turtle 
@@ -1545,8 +1554,8 @@ class ALYSIA_ITEMS
 		license     = "";
 		class market
 		{
-			max = 900;
-			min = 700;
+			max = 750;
+			min = 600;
 			mult = 2;
 			affect[] = {"woodp", "furniture", "glass", "pottery", "saltp", "cottonp", "coal"};
 		};
@@ -1559,5 +1568,77 @@ class ALYSIA_ITEMS
 		illegal     = 0;
 		removable   = 1;
 		image       = "alysia_items_virtual\data\bouteillevide.paa";
+	};
+
+	class frag_1
+	{
+		name        = "Fragment (1)";
+		weight      = 1;
+		illegal     = 1;
+		removable   = 1;
+		image       = "alysia_items_virtual\data\frag_1.paa";
+	};
+
+	class frag_2
+	{
+		name        = "Fragment (2)";
+		weight      = 1;
+		illegal     = 1;
+		removable   = 1;
+		image       = "alysia_items_virtual\data\frag_2.paa";
+	};
+
+	class frag_3
+	{
+		name        = "Fragment (3)";
+		weight      = 1;
+		illegal     = 1;
+		removable   = 1;
+		image       = "alysia_items_virtual\data\frag_3.paa";
+	};
+
+	class frag_4
+	{
+		name        = "Fragment (4)";
+		weight      = 1;
+		illegal     = 1;
+		removable   = 1;
+		image       = "alysia_items_virtual\data\frag_4.paa";
+	};
+
+	class frag_5
+	{
+		name        = "Fragment (5)";
+		weight      = 1;
+		illegal     = 1;
+		removable   = 1;
+		image       = "alysia_items_virtual\data\frag_5.paa";
+	};
+
+	class frag_6
+	{
+		name        = "Fragment (6)";
+		weight      = 1;
+		illegal     = 1;
+		removable   = 1;
+		image       = "alysia_items_virtual\data\frag_6.paa";
+	};
+
+	class frag_7
+	{
+		name        = "Fragment (7)";
+		weight      = 1;
+		illegal     = 1;
+		removable   = 1;
+		image       = "alysia_items_virtual\data\frag_7.paa";
+	};
+
+	class frag_8
+	{
+		name        = "Fragment (8)";
+		weight      = 1;
+		illegal     = 1;
+		removable   = 1;
+		image       = "alysia_items_virtual\data\frag_8.paa";
 	};
 };

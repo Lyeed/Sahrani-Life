@@ -13,6 +13,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"DAR_TaurusPolice", 
 			"DAR_CVPIAux", 
 			"DAR_ImpalaPolice",
+			"Skyline_Audi_RS4_Police_01_F",
 			"Fett_truck_milice"
 		};
 	};
@@ -193,7 +194,6 @@ class ALYSIA_SHOPS_VEHICLES
 		side = "CIV";
 		stock[] =
 		{
-			"Skyline_VW_TouaregR50_01_F",
 			"Skyline_Audi_RS4",
 			"C_Quadbike_01_F",
 			"DAR_TaurusCiv",
@@ -205,14 +205,12 @@ class ALYSIA_SHOPS_VEHICLES
 			"max_suv",
 			"DAR_FusionCiv",
 			"Skyline_Ford_Transit",
-			"C_Offroad_01_F",
 			"shounka_a3_cliors_civ",
 			"max_van",
 			"Jonzie_XB",
 			"C_Van_01_transport_F",
 			"C_Van_01_box_F",
 			"shounka_buggy",
-			"Skyline_Ford_Transit",
 			"Mrshounka_a3_ds3_civ",
 			"shounka_a3_ds4_civ",
 			"shounka_nemo",
@@ -227,7 +225,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_twingo_p",
 			"Mrshounka_a3_smart_civ",
 			"Mrshounka_subaru08_civ",
-			"Skyline_Audi_RS4",
 			"Jonzie_Ceed",
 			"Jonzie_Raptor",
 			"Mrshounka_bmwm1_civ",
@@ -252,7 +249,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"Tal_Maserati",
 			"Skyline_G65_01_F",
 			"DAR_ChallengerCiv",
-			"DAR_MF1",
 			"DAR_M3Civ",
 			"shounka_a3_rs5_civ",
 			"shounka_rs6",
@@ -262,7 +258,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_mustang_civ",
 			"Mrshounka_hummer_civ",
 			"Mrshounka_cherokee_noir",
-			"mrshounka_huracan_c",
 			"Mrshounka_lykan_c",
 			"shounka_mp4",
 			"Mrshounka_c63_2015_civ",
