@@ -42,6 +42,7 @@ switch (_app) do
 	case "FACTION_LEADER_OFFICE": {};
 	case "FACTION_LEADER_HISTORY": {};
 	case "MARKET": {[] call public_fnc_APP_market};
+	case "STAFF": {[] call public_fnc_APP_staff};
 };
 
 g_CTRL_inUse = false;

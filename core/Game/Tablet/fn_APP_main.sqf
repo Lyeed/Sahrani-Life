@@ -19,16 +19,17 @@ _apps_more = false;
 _apps = [];
 _global_apps = 
 [
-	["lyeed_IMG\data\tablet\app_main\app_bank.paa", "lyeed_IMG\data\tablet\app_main\app_bank_select.paa", "[""solde""] spawn public_fnc_tabletApp;", "Solde", "true"],
-	["lyeed_IMG\data\tablet\app_main\app_gps.paa", "lyeed_IMG\data\tablet\app_main\app_gps_select.paa", "[""vehicles""] spawn public_fnc_tabletApp;", "Véhicules", "true"],
-	["lyeed_IMG\data\tablet\app_main\app_setting.paa", "lyeed_IMG\data\tablet\app_main\app_setting_select.paa", "[""settings""] spawn public_fnc_tabletApp;", "Réglages", "true"],
-	["lyeed_IMG\data\tablet\app_main\app_server.paa", "lyeed_IMG\data\tablet\app_main\app_server_select.paa", "[""server""] spawn public_fnc_tabletApp;", "Serveur", "true"],
-	["lyeed_IMG\data\tablet\app_main\app_store.paa", "lyeed_IMG\data\tablet\app_main\app_store_select.paa", "[""store""] spawn public_fnc_tabletApp;", "Boutique", "true"],
-	["lyeed_IMG\data\tablet\app_main\app_help.paa", "lyeed_IMG\data\tablet\app_main\app_help_select.paa", "[""help""] spawn public_fnc_tabletApp;", "Aide", "true"],
-	["lyeed_IMG\data\tablet\app_main\app_phone.paa", "lyeed_IMG\data\tablet\app_main\app_phone_select.paa", "[""PHONE_CATEGORY""] spawn public_fnc_tabletApp;", "Téléphone", "((player getVariable ['number', '']) != '')"],
-	[getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "icon"), "", "[""faction""] spawn public_fnc_tabletApp;", getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "name"), "playerSide in [east,west,independent]"],
-	["lyeed_IMG\data\tablet\app_main\app_licences.paa", "lyeed_IMG\data\tablet\app_main\app_licences_select.paa", "[""licenses""] spawn public_fnc_tabletApp;", "Licenses", "playerSide isEqualTo civilian"],
-	["lyeed_IMG\data\tablet\app_main\app_market.paa", "lyeed_IMG\data\tablet\app_main\app_market_select.paa", "[""market""] spawn public_fnc_tabletApp;","Bourse","""MARKET"" in g_apps"]
+	["lyeed_IMG\data\tablet\app_main\app_staff.paa", "lyeed_IMG\data\tablet\app_main\app_staff_select.paa", "['staff'] spawn public_fnc_tabletApp;", "Staff", "((call g_adminlevel) > 0)"],
+	["lyeed_IMG\data\tablet\app_main\app_bank.paa", "lyeed_IMG\data\tablet\app_main\app_bank_select.paa", "['solde'] spawn public_fnc_tabletApp;", "Solde", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_gps.paa", "lyeed_IMG\data\tablet\app_main\app_gps_select.paa", "['vehicles'] spawn public_fnc_tabletApp;", "Véhicules", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_setting.paa", "lyeed_IMG\data\tablet\app_main\app_setting_select.paa", "['settings'] spawn public_fnc_tabletApp;", "Réglages", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_server.paa", "lyeed_IMG\data\tablet\app_main\app_server_select.paa", "['server'] spawn public_fnc_tabletApp;", "Serveur", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_store.paa", "lyeed_IMG\data\tablet\app_main\app_store_select.paa", "['store'] spawn public_fnc_tabletApp;", "Boutique", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_help.paa", "lyeed_IMG\data\tablet\app_main\app_help_select.paa", "['help'] spawn public_fnc_tabletApp;", "Aide", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_phone.paa", "lyeed_IMG\data\tablet\app_main\app_phone_select.paa", "['PHONE_CATEGORY'] spawn public_fnc_tabletApp;", "Téléphone", "((player getVariable ['number', '']) != '')"],
+	[getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "icon"), "", "['faction'] spawn public_fnc_tabletApp;", getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "name"), "playerSide in [east,west,independent]"],
+	["lyeed_IMG\data\tablet\app_main\app_licences.paa", "lyeed_IMG\data\tablet\app_main\app_licences_select.paa", "['licenses'] spawn public_fnc_tabletApp;", "Licenses", "playerSide isEqualTo civilian"],
+	["lyeed_IMG\data\tablet\app_main\app_market.paa", "lyeed_IMG\data\tablet\app_main\app_market_select.paa", "['market'] spawn public_fnc_tabletApp;","Bourse","""MARKET"" in g_apps"]
 ];
 
 {

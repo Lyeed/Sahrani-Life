@@ -523,6 +523,45 @@ _cString =
 ["xcam_GH_Stairs_F","[10761.261719,9316.643555,-3.36195]",160.988,-100,0,0,[]] call _cString;
 ["xcam_Laptop_unfolded_F","[10760.750977,9337.464844,4.20779]",251.614,-100,0,0,[]] call _cString;
 
+//Panneaux
+_signBoard_north_1 = ["Land_Billboard_F","[14416.770508,12246.360352,0]",22.2853,-100,0,0,[]] call _cString;
+_signBoard_north_2 = ["Land_Billboard_F","[14327.142578,10626.0537109,0]",50.6944,-100,0,0,[]] call _cString;
+_signBoard_north_3 = ["Land_Billboard_F","[13537.243164,8898.43457,0]",59.2172,-100,0,0,[]] call _cString;
+_signBoard_north_4 = ["Land_Billboard_F","[17234.794922,14158.000976563,0]",338.788,-100,0,0,[]] call _cString;
+_signBoard_north_5 = ["Land_Billboard_F","[12439.231445,14836.75,0]",40.6566,-100,0,0,[]] call _cString;
+
+_signBoard_north_1 setObjectTexture [0, "lyeed_IMG\data\ads\alysia_1.jpg"];
+_signBoard_north_2 setObjectTexture [0, "lyeed_IMG\data\ads\alysia_1.jpg"];
+_signBoard_north_3 setObjectTexture [0, "lyeed_IMG\data\ads\alysia_1.jpg"];
+_signBoard_north_4 setObjectTexture [0, "lyeed_IMG\data\ads\alysia_1.jpg"];
+_signBoard_north_5 setObjectTexture [0, "lyeed_IMG\data\ads\alysia_1.jpg"];
+
+_signBoard_south_1 = ["Land_Billboard_F","[12814.124023,8794.00195313,0]",91.6035,-100,0,0,[]] call _cString;
+_signBoard_south_2 = ["Land_Billboard_F","[12408.320313,7426.208984,0]",341.149,-100,0,0,[]] call _cString;
+_signBoard_south_3 = ["Land_Billboard_F","[10503.460938,9697.697266,0]",216.666,-100,0,0,[]] call _cString;
+_signBoard_south_4 = ["Land_Billboard_F","[9324.601563,8349.561523,0]",236.666,-100,0,0,[]] call _cString;
+_signBoard_south_5 = ["Land_Billboard_F","[11741.112305,6233.510254,0]",236.666,-100,0,0,[]] call _cString;
+
+_signBoard_south_1 setObjectTexture [0, "lyeed_IMG\data\ads\propagande_sud.jpg"];
+_signBoard_south_2 setObjectTexture [0, "lyeed_IMG\data\ads\alysia_1.jpg"];
+_signBoard_south_3 setObjectTexture [0, "lyeed_IMG\data\ads\propagande_sud.jpg"];
+_signBoard_south_4 setObjectTexture [0, "lyeed_IMG\data\ads\propagande_sud.jpg"];
+_signBoard_south_5 setObjectTexture [0, "lyeed_IMG\data\ads\alysia_1.jpg"];
+
+// Flags
+_flag_north_1 = ["FlagPole_F","[13441.481445,8843.0429688,0]",0,-100,1,0,[]] call _cString;
+_flag_north_2 = ["FlagPole_F","[13466.235352,8842.84375,0]",0,-100,1,0,[]] call _cString;
+
+_flag_north_1 setFlagTexture "lyeed_IMG\data\faction\WEST_flag.jpg";
+_flag_north_2 setFlagTexture "lyeed_IMG\data\faction\WEST_flag.jpg";
+
+_flag_south_1 = ["FlagPole_F","[13259.491211,8842.908203,0]",0,-100,1,0,[]] call _cString;
+_flag_south_2 = ["FlagPole_F","[13241.182617,8853.1875,0]",400,-100,1,0,[]] call _cString;
+
+_flag_south_1 setFlagTexture "lyeed_IMG\data\faction\EAST_flag.jpg";
+_flag_south_2 setFlagTexture "lyeed_IMG\data\faction\EAST_flag.jpg";
+
+// ATM markers
 {
 	if (typeOf(_x) in ["Land_Atm_01_F", "Land_Atm_02_F", "xcam_Atm_01_F", "xcam_Atm_02_F"]) then
 	{

@@ -80,5 +80,6 @@ class RscDisplayTablet: default_base_dialog
 		#include "tablet_apps\licenses.hpp"
 		#include "tablet_apps\faction.hpp"
 		#include "tablet_apps\market.hpp"
+		#include "tablet_apps\staff.hpp"
 	};
 };

@@ -24,7 +24,7 @@ class ALYSIA_REPAIR
 
 	class HitBody
 	{
-		name = "Coque";
+		name = "Carrosserie";
 		tool = "Alysia_repair_toolbox";
 		item = "Alysia_repair_body";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitBody.paa";

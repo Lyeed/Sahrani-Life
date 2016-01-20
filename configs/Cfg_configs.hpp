@@ -11,7 +11,6 @@
 #include "GameConfigs\Config_Items_Arma.hpp"
 #include "GameConfigs\Config_Licenses.hpp"
 #include "GameConfigs\Config_LastingObjects.hpp"
-#include "GameConfigs\Config_Paint.hpp"
 #include "GameConfigs\Config_Phones.hpp"
 #include "GameConfigs\Config_Farming_Gather.hpp"
 #include "GameConfigs\Config_Farming_Plant.hpp"

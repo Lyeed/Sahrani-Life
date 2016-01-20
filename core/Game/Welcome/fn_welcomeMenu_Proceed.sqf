@@ -51,7 +51,7 @@ _action =
 [
 	format
 	[
-		"Êtes-vous sûr des informations entrées ? Une fois validé vous devrez <t color='#FF4000'>changer d'identité</t> pour pouvoir les modifier<br/><br/><t align='left'>Sexe</t><t align='right'>%5</t><br/><t align='left'>Prénom</t><t align='right'>%1</t><br/><t align='left'>Nom</t><t align='right'>%2</t><br/><t align='left'>Âge</t><t align='right'>%3</t><br/><t align='left'>Origine</t><t align='right'>%4</t>", 
+		"Êtes-vous sûr des informations entrées ? Une fois validées vous devrez <t color='#FF4000'>changer d'identité</t> pour pouvoir les modifier<br/><br/><t align='left'>Sexe</t><t align='right'>%5</t><br/><t align='left'>Prénom</t><t align='right'>%1</t><br/><t align='left'>Nom</t><t align='right'>%2</t><br/><t align='left'>Âge</t><t align='right'>%3</t><br/><t align='left'>Origine</t><t align='right'>%4</t>", 
 		_firstname,
 		_lastName,
 		(_birth call public_fnc_age),
