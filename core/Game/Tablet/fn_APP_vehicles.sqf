@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display", "_list", "_markers"];
+private["_display", "_list"];
 
 disableSerialization;
 _display = uiNamespace getVariable ["tablet", displayNull];
@@ -22,57 +22,41 @@ if ("VEHICLES" in g_apps) then
 };
 
 _list = _display displayCtrl 7705;
-_markers = [];
-
 lbClear _list;
 
 {
 	if (alive _x) then
 	{
-		_marker = format["vehicles_tablet_%1", _forEachIndex];
-		createMarkerLocal [_marker, (getPos _x)];
-		_marker setMarkerShapeLocal "ICON";
-		_marker setMarkerTypeLocal "c_car";
-		_marker setMarkerColorLocal "ColorRed";
-		_marker setMarkerTextLocal (getText(configFile >> "CfgVehicles" >> typeOf(_x) >> "displayName"));
-		
 		_index = _list lbAdd getText(configFile >> "CfgVehicles" >> typeOf(_x) >> "displayName");
 		_list lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> typeOf(_x) >> "picture")];
 		_list lbSetValue [_index, _forEachIndex];
-
-		_markers pushBack _marker;
 	};
-} forEach (g_vehicles);
+} forEach g_vehicles;
 if ((lbSize _list) isEqualTo 0) then {
 	_list lbAdd "Aucune";
 } else {
 	[7706, true] call public_fnc_tabletShow;
-	[7707, true] call public_fnc_tabletShow;	
+	[7707, true] call public_fnc_tabletShow;
+	[7708, true] call public_fnc_tabletShow;
 };
-
-_list lbSetCurSel 0;
 
 {
 	if ((markerAlpha _x) isEqualTo 1) then
 	{
-		if (!(_x in g_dynamic_markers) && !(_x in _markers)) then
-		{
+		if (!(_x in g_dynamic_markers)) then {
 			_x setMarkerAlphaLocal 0;
 		};
 	};
 } forEach allMapMarkers;
 
-waitUntil {(g_app != "APP_VEHICLES")};
+_list lbSetCurSel 0;
 
-{
-	deleteMarkerLocal _x;
-} forEach _markers;
+waitUntil {(g_app != "APP_VEHICLES")};
 
 {
 	if ((markerAlpha _x) isEqualTo 0) then
 	{
-		if (!(_x in g_dynamic_markers)) then
-		{
+		if (!(_x in g_dynamic_markers)) then {
 			_x setMarkerAlphaLocal 1;
 		};
 	};

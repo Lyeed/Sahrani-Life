@@ -498,6 +498,7 @@ class Public
 		class APP_main {};
 		class APP_solde {};
 		class APP_vehicles {};
+		class APP_vehicles_update {};
 		class APP_settings {};
 		class APP_settings_slider {};
 		class APP_server {};

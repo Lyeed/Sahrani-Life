@@ -1,6 +1,7 @@
 #include "GameConfigs\Config_Shop_Virtual.hpp"
 #include "GameConfigs\Config_Shop_Clothing.hpp"
 #include "GameConfigs\Config_Shop_Vehicles.hpp"
+#include "GameConfigs\Config_Shop_Applications.hpp"
 #include "GameConfigs\Config_Shop_Arma.hpp"
 #include "GameConfigs\Config_Process.hpp"
 #include "GameConfigs\Config_Housing.hpp"
