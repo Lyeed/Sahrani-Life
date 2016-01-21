@@ -62,8 +62,6 @@ with missionNamespace do
 	g_arrest_Reason = "";
 	g_arrest_Gear = [];
 	g_arrest_Escape = false;
-	/* ================[Objects containers]================== */
-	g_vehicles = [];
 	/* ==================[Health/body system]==================== */
 	g_hurt_effect = ppEffectCreate ["ColorCorrections", 9999];
 	g_hurt_effect ppEffectEnable true;
@@ -94,8 +92,6 @@ with missionNamespace do
 	"g_plants pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS");
 	g_plants = compileFinal str(g_plants);
 	/* =================[Housing]=================== */
-	g_houses = [];
-
 	g_houses_list = [];
 	"g_houses_list pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_HOUSES");
 	g_houses_list = compileFinal str(g_houses_list);
@@ -103,7 +99,6 @@ with missionNamespace do
 	g_houses_storages = [];
 	"g_houses_storages pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_STORAGES");
 	g_houses_storages = compileFinal str(g_houses_storages);
-
 	/* =================[Dynamic Markers]=================== */
 	g_dynamic_markers = [];
 	"g_dynamic_markers pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_DYN_MARKERS");

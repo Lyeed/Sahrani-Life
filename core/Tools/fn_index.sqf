@@ -7,9 +7,9 @@ _stack = _this select 1;
 _return = -1;
 
 {
-	if(_item in _x) exitWith {
+	if (_item in _x) exitWith {
 		_return = _forEachIndex;
 	};
-} forEach (_stack);
+} forEach _stack;
 
 _return;

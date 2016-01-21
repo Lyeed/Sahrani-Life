@@ -24,15 +24,15 @@ lbClear _list;
 		_txt = "";
 		_types = (_info select 5) select 1;
 		if (_types select 0) then {
-			_txt = _txt + "SHIFT ";
+			_txt = _txt + "SHIFT + ";
 		};
 		if (_types select 1) then {
-			_txt = _txt + "CTRL ";
+			_txt = _txt + "CTRL + ";
 		};
 		if (_types select 2) then {
-			_txt = _txt + "ALT ";
+			_txt = _txt + "ALT + ";
 		};
-		_txt = _txt + format["+ %1", (cba_keybinding_dikDecToStringTable select ((_info select 5) select 0)) select 1];
+		_txt = _txt + ((cba_keybinding_dikDecToStringTable select ([str((_info select 5) select 0), cba_keybinding_dikDecToStringTable] call public_fnc_index)) select 1);
 		_list lbSetData [_index, _txt];
 	};
 } forEach g_keybinds;

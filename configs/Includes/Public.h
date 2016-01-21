@@ -133,8 +133,6 @@ class Public
 		class jerryRefuel {};
 		class lockpick {};
 		class nitro {};
-		class paintChoosen {};
-		class paintWeapon {};
 		class radar {};
 		class removeItem {};
 		class silence {};
@@ -500,6 +498,7 @@ class Public
 		class APP_main {};
 		class APP_solde {};
 		class APP_vehicles {};
+		class APP_vehicles_update {};
 		class APP_settings {};
 		class APP_settings_slider {};
 		class APP_server {};
@@ -539,5 +538,6 @@ class Public
 		class APP_faction_leader_history {};
 		class APP_market {};
 		class APP_market_update {};
+		class APP_staff {};
 	};
 };

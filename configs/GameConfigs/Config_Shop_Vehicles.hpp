@@ -143,16 +143,10 @@ class ALYSIA_SHOPS_VEHICLES
 			"O_Truck_02_transport_F",
 			"O_Truck_02_covered_F",
 			"shounka_a3_renaultmagnum_f",
-			"shounka_a3_dafxf_euro6_f",
 			"Mrshounka_a3_iveco_f",
 			"B_G_Van_01_fuel_F",  
 			"O_Truck_02_fuel_F",
-			"Jonzie_Flat_Bed",
-			"Jonzie_Log_Truck",
-			"Jonzie_Superliner",
 			"Jonzie_Tanker_Truck",
-			"Jonzie_Curtain",
-			"Jonzie_Western",
 			"Jonzie_Box_Truck"
 		};
 	};

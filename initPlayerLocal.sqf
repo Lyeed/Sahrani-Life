@@ -39,6 +39,14 @@ if (hasInterface) then
 	setDate [gServer_year, (date select 1), (date select 2), (date select 3), (date select 4)];
 
 	diag_log "<INIT> Initialisation des variables ...";
+	cutText ["Vérification de la résolution ...", "BLACK FADED"];
+	0 cutFadeOut 9999999;
+	if (((getResolution) select 5) != 0.55) exitWith {
+		["Vous devez règler la taille de votre interface sur 'Petit(e)' pour pouvoir vous connecter. L'option est disponible dans Configurer->Vidéo->Affichage->Taille d'interface. Un redémarrage de votre jeu est nécessaire après modification."] spawn public_fnc_errorExit;
+	};
+	diag_log "<INIT> Vérification de la résolution terminée";
+
+	diag_log "<INIT> Initialisation des variables ...";
 	cutText ["Initialisation des variables", "BLACK FADED"];
 	0 cutFadeOut 9999999;
 	[] call compile PreprocessFileLineNumbers "configs\configuration.sqf";

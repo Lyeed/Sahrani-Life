@@ -5,18 +5,18 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_list", "_index", "_display", "_ressource", "_license"];
+private["_list", "_sel", "_display", "_ressource", "_license"];
 
 disableSerialization;
 _list = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
-_index = [_this, 1, -1, [-1]] call BIS_fnc_param;
+_sel = [_this, 1, -1, [-1]] call BIS_fnc_param;
 
-if ((_index isEqualTo -1) || (isNull _list)) exitWith {};
+if ((_sel isEqualTo -1) || (isNull _list)) exitWith {};
 
 _display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
 
-_ressource = _list lbData _index;
+_ressource = _list lbData _sel;
 
 (_display displayCtrl 8805) ctrlSetStructuredText parseText format
 [
@@ -26,13 +26,13 @@ _ressource = _list lbData _index;
 
 _license = getText(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "license");
 
-(_display displayCtrl 8807) ctrlSetStructuredText parseText format
+(_display displayCtrl 8808) ctrlSetStructuredText parseText format
 [
 	"<t align='center'>%1</t>",
-	if (_license isEqualTo "") then {"Non"} else {[_license] call public_fnc_licenseGetName}
+	if (_license isEqualTo "") then {"Aucune"} else {[_license] call public_fnc_licenseGetName}
 ];
 
-(_display displayCtrl 8809) ctrlSetStructuredText parseText format
+(_display displayCtrl 8811) ctrlSetStructuredText parseText format
 [
 	"<t align='center'>%1</t>",
 	if ([_ressource] call public_fnc_itemIsIllegal) then {
@@ -42,26 +42,20 @@ _license = getText(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "license
 	}
 ];
 
-(_display displayCtrl 8812) ctrlSetStructuredText parseText format
+(_display displayCtrl 8815) ctrlSetStructuredText parseText format
 [
 	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
 	[([_ressource] call public_fnc_market_getPrice)] call public_fnc_numberText
 ];
 
-(_display displayCtrl 8814) ctrlSetStructuredText parseText format
+(_display displayCtrl 8817) ctrlSetStructuredText parseText format
 [
 	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
 	[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "market" >> "max")] call public_fnc_numberText
 ];
 
-(_display displayCtrl 8816) ctrlSetStructuredText parseText format
+(_display displayCtrl 8819) ctrlSetStructuredText parseText format
 [
 	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
 	[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "market" >> "min")] call public_fnc_numberText
-];
-
-(_display displayCtrl 8818) ctrlSetStructuredText parseText format
-[
-	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
-	[([_ressource] call public_fnc_market_getPrice) * 2] call public_fnc_numberText
 ];

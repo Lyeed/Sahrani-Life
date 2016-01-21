@@ -16,6 +16,8 @@ clearItemCargoGlobal _vehicle;
 clearBackpackCargoGlobal _vehicle;
 
 _vehicle disableTIEquipment true;
+_vehicle disableNVGEquipment true;
+
 _vehicle enableRopeAttach false;
 
 switch (typeOf _vehicle) do

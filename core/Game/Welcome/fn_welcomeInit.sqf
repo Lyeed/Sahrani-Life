@@ -41,8 +41,8 @@ _action =
 		+	"Pensez à <t color='#FF8000'>BIEN</t> vérifier:<br/><br/>"
 		+	"- <t color='#0174DF'>Votre nom de profil ArmA</t><br/>doit correspondre à celui de votre personnage sous la forme Prénom Nom<br/><br/>"
 		+	"- <t color='#0174DF'>Le visage de votre personnage</t><br/>doit coincider avec l'origine géographique de votre personnage.<br/><br/>"
-		+	"Lorsque vous êtes pret, cliquez sur <t color='#3A01DF'>COMMENCER</t> pour passer à l'étape suivante.<br/>"
-		+	"Si vous n'êtes pas sûr de vos informations et souhaitez les modifiers, appuyez sur <t color='#DF0101'>QUITTER</t> et reconnectez-vous après les avoir rectifiées.</t></t>"
+		+	"Lorsque vous êtes prêt, cliquez sur <t color='#3A01DF'>COMMENCER</t> pour passer à l'étape suivante.<br/>"
+		+	"Si vous n'êtes pas sûr de vos informations et souhaitez les modifier, appuyez sur <t color='#DF0101'>QUITTER</t> et reconnectez-vous après les avoir rectifiées.</t></t>"
 		, profileName
 	],
 	"Inscription",

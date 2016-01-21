@@ -22,23 +22,14 @@ lbClear _list;
 _list ctrlSetEventHandler ["LBSelChanged", "_this call public_fnc_APP_store_applications_update;"];
 
 {
-	if (!((_x select 1) in g_apps)) then
+	_app = configName _x;
+	if (!(_app in g_apps)) then
 	{
-		_side = _x select 4;
-		if ((_side isEqualTo sideUnknown) || (_side isEqualTo playerSide)) then
-		{
-			_index = _list lbAdd (_x select 0);
-			_list lbSetValue [_index, (_x select 3)];
-			_list lbSetData [_index, str([(_x select 1), (_x select 2)])];
-		};
+		_index = _list lbAdd getText(_x >> "name");;
+		_list lbSetValue [_index, getNumber(_x >> "price")];
+		_list lbSetData [_index, str([_app, getText(_x >> "description")])];
 	};
-} forEach 
-(
-	[
-		["Extention : Véhicules", "VEHICLES", "Vous permet de débloquer une carte indiquant l'emplacement de vos véhicules dans votre application <t color='#FF4000'Véhicules</t>", 35000, sideUnknown],
-		["Application : Bourse", "MARKET", "Application mettant à votre disposition diverses informations économiques", 10000, civilian]
-	]
-);
+} forEach ("str(playerSide) in getArray(_x >> 'sides')" configClasses (missionConfigFile >> "ALYSIA_SHOP_APPLICATIONS"));
 
 if ((lbSize _list) isEqualTo 0) then {
 	_list lbAdd "Aucune";
