@@ -140,7 +140,6 @@ class ALYSIA_SHOPS_VEHICLES
 		side = "CIV";
 		stock[] = 
 		{
-			"O_Truck_02_transport_F",
 			"O_Truck_02_covered_F",
 			"shounka_a3_renaultmagnum_f",
 			"Mrshounka_a3_iveco_f",
