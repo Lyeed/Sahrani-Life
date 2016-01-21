@@ -96,9 +96,9 @@ class Mission
 		"cup_castructures_e_housec",
 		"A3_Structures_F_Furniture",
 		"Sign_Frontiere",
-		"policestation",
 		"A3_Structures_F_EPC_Civ_Accessories",
-		"Gym_F"
+		"Gym_F",
+		"pub_a"
 	};
 	addOnsAuto[]=
 	{
@@ -181,7 +181,7 @@ class Mission
 		"A3_Structures_F_Households_House_Small03",
 		"Sign_Frontiere",
 		"Plot",
-		"policestation",
+		"pub_a",
 		"pub_c",
 		"CAStructuresBarn_W",
 		"cup_castructuresbarn_w",
@@ -3540,7 +3540,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={9806.0938,15.120459,10994.879};
+					position[]={9837.0762,15.154127,10989.856};
 					azimut=-6835.98;
 					offsetY=-38;
 					id=151;
@@ -14166,7 +14166,7 @@ class Mission
 		class Item1067
 		{
 			position[]={13973.801,47.210209,12284.143};
-			azimut=317.95392;
+			azimut=138.71423;
 			id=1220;
 			side="EMPTY";
 			vehicle="Land_BarGate_F";
@@ -31587,7 +31587,7 @@ class Mission
 			offsetY=3;
 			id=2904;
 			side="EMPTY";
-			vehicle="Land_PoliceStation";
+			vehicle="Land_Pub_A";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 295;this setposATL [10240.895508,9547.0664063,3];this setVectorUp [0,0,1]";
 		};
