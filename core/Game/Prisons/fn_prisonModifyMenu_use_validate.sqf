@@ -38,7 +38,7 @@ if (!(_checkBox)) exitWith {
 
 {
 	if (!([ctrlText _x] call public_fnc_isNumber)) then {
-		(_display displayCtrl _x) ctrlSetBackgroundColor {153, 0, 0, 0.5};
+		(_display displayCtrl _x) ctrlSetBackgroundColor [153, 0, 0, 0.5];
 		_error = true;
 	};
 } forEach [19044, 19045, 19046];
@@ -48,12 +48,12 @@ if (!(_checkBox)) exitWith {
 } forEach ("true" configClasses (missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "cells"));
 
 if ((_time < _timeMin) || (_time > _timeMax)) then {
-	(_display displayCtrl 19045) ctrlSetBackgroundColor {153, 0, 0, 0.5};
+	(_display displayCtrl 19045) ctrlSetBackgroundColor [153, 0, 0, 0.5];
 	_error = true;
 };
 if (_bailEnable) then {
 	if ((_amount < _bailMin) || (_amount > _bailMax)) then {
-		(_display displayCtrl 19046) ctrlSetBackgroundColor {153, 0, 0, 0.5};
+		(_display displayCtrl 19046) ctrlSetBackgroundColor [153, 0, 0, 0.5];
 		_error = true;
 	};
 };

@@ -28,18 +28,18 @@ if (isNull _display) exitWith {};
 
 {
 	if (!([ctrlText _x] call public_fnc_isNumber)) then {
-		(_display displayCtrl _x) ctrlSetBackgroundColor {153, 0, 0, 0.5};
+		(_display displayCtrl _x) ctrlSetBackgroundColor [153, 0, 0, 0.5];
 		_error = true;
 	};
 } forEach [20010, 20011];
 
 if ((_time < _timeMin) || (_time > _timeMax)) then {
-	(_display displayCtrl 20010) ctrlSetBackgroundColor {153, 0, 0, 0.5};
+	(_display displayCtrl 20010) ctrlSetBackgroundColor [153, 0, 0, 0.5];
 	_error = true;
 };
-if (_bailEnable) then {
+if (_bailEnable isEqualTo 1) then {
 	if ((_amount < _bailMin) || (_amount > _bailMax)) then {
-		(_display displayCtrl 20011) ctrlSetBackgroundColor {153, 0, 0, 0.5};
+		(_display displayCtrl 20011) ctrlSetBackgroundColor [153, 0, 0, 0.5];
 		_error = true;
 	};
 };
