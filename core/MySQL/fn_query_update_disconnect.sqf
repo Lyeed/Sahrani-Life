@@ -8,7 +8,15 @@
 
 if (missionNamespace getVariable ["g_connected", false]) then
 {
-	private["_drugs_stats"];
+	private["_drugs_stats", "_msgs", "_allow"];
+
+	_msgs = missionNamespace getVariable ["g_phone_messages", []];
+	_allow = getText(missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "characters_allowed");
+	{
+		if (([(_x select 3), _allow] call public_fnc_TextAllowed) != "") then {
+			_msgs deleteAt _forEachIndex;
+		};
+	} forEach _msgs;
 
 	_drugs_stats = [];
 	{
@@ -33,7 +41,7 @@ if (missionNamespace getVariable ["g_connected", false]) then
 		missionNamespace getVariable ["g_hunger", 100],
 		missionNamespace getVariable ["g_thirst", 100],
 		missionNamespace getVariable ["g_phone_contacts", []],
-		missionNamespace getVariable ["g_phone_messages", []],
+		_msgs,
 		missionNamespace getVariable ["g_phone_forfait", "none"],
 		missionNamespace getVariable ["g_phone_blacklist", []],
 		missionNamespace getVariable ["g_apps", []],

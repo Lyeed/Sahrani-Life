@@ -51,7 +51,7 @@ if ((lbSize _list) isEqualTo 0) then {
 
 _list lbSetCurSel 0;
 
-waitUntil {(g_app != "APP_VEHICLES")};
+waitUntil {(g_app != "VEHICLES")};
 
 {
 	if ((markerAlpha _x) isEqualTo 0) then

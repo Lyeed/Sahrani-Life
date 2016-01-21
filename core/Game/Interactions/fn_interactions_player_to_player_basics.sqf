@@ -24,7 +24,7 @@
 		["arrest", "Gestion Peine", "[] spawn public_fnc_prisonModifyMenu_informations_get;", "((!(([player] call public_fnc_prisonNearest) isEqualTo '[]')) && (!(g_interaction_target getVariable['restrained', false])) && (player getVariable ['arrested', false]))"],
 		["bandage", "Bandage", "[nil,nil,nil,g_interaction_target] spawn public_fnc_bandageUse;", "((g_interaction_target getVariable [""is_bleeding"", false]) && (""SkylineItems_Bandage"" in (magazines player)))"],
 		["morphine", "Morphine", "[nil,nil,nil,g_interaction_target] spawn public_fnc_morphineUse;", "(""SkylineItems_Morphine"" in (magazines player))"],
-		["company_create", "Entreprise", "[] spawn public_fnc_company_create_open;", "(['gov_company'] call public_fnc_hasLicense)"]
+		["company_create", "Entreprise", "[] spawn public_fnc_company_create_open;", "((['gov_company'] call public_fnc_hasLicense) && (getNumber(missionConfigFile >> 'ALYSIA_FACTIONS' >> str(side cursorTarget) >> 'company_own') isEqualTo 1))"]
 	],
 	"Intéractions"
 ] spawn public_fnc_interactions_create;

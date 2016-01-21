@@ -54,6 +54,11 @@ class ALYSIA_COMPANIES
 				shape = "ICON";
 				size = 0.4;
 			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
+			};
 		};
 
 		class farming_bio
@@ -74,6 +79,11 @@ class ALYSIA_COMPANIES
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
+			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
 			};
 		};
 
@@ -96,6 +106,11 @@ class ALYSIA_COMPANIES
 				shape = "ICON";
 				size = 0.4;
 			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
+			};
 		};
 
 		class garagist
@@ -116,6 +131,11 @@ class ALYSIA_COMPANIES
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
+			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
 			};
 		};
 
@@ -138,6 +158,11 @@ class ALYSIA_COMPANIES
 				shape = "ICON";
 				size = 0.4;
 			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
+			};
 		};
 
 		class foundry
@@ -158,6 +183,11 @@ class ALYSIA_COMPANIES
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
+			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
 			};
 		};
 
@@ -180,6 +210,11 @@ class ALYSIA_COMPANIES
 				shape = "ICON";
 				size = 0.4;
 			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
+			};
 		};
 
 		class construction
@@ -200,6 +235,11 @@ class ALYSIA_COMPANIES
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
+			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
 			};
 		};
 
@@ -222,6 +262,11 @@ class ALYSIA_COMPANIES
 				shape = "ICON";
 				size = 0.4;
 			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
+			};
 		};
 
 		class security
@@ -242,6 +287,11 @@ class ALYSIA_COMPANIES
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
+			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
 			};
 		};
 
@@ -264,6 +314,11 @@ class ALYSIA_COMPANIES
 				shape = "ICON";
 				size = 0.4;
 			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
+			};
 		};
 
 		class car_dealer
@@ -284,6 +339,11 @@ class ALYSIA_COMPANIES
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
+			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
 			};
 		};
 
@@ -306,6 +366,11 @@ class ALYSIA_COMPANIES
 				shape = "ICON";
 				size = 0.4;
 			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
+			};
 		};
 
 		class news
@@ -326,6 +391,11 @@ class ALYSIA_COMPANIES
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
+			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
 			};
 		};
 	};

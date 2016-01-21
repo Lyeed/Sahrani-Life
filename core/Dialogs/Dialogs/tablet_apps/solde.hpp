@@ -49,7 +49,6 @@ class SOLDE_ATM_BACKGROUND: RscText
 class SOLDE_ATM_FRAME: RscFrame
 {
 	idc = SOLDE_ATM_FRAME_IDC;
-	colorText[] = {0,0,0,0.8};
 	
 	x = 0.556719 * safezoneW + safezoneX;
 	y = 0.379 * safezoneH + safezoneY;
@@ -69,7 +68,6 @@ class SOLDE_ATM_PICTURE: RscPicture
 class SOLDE_ATM_INFO: RscStructuredText
 {
 	idc = SOLDE_ATM_INFO_IDC;
-	colorBackground[] = {0,0,0,0};
 	
 	x = 0.5825 * safezoneW + safezoneX;
 	y = 0.39 * safezoneH + safezoneY;
@@ -80,7 +78,6 @@ class SOLDE_ATM_INFO: RscStructuredText
 class SOLDE_SALARY_AMOUNT_FRAME: RscFrame
 {
 	idc = SOLDE_SALARY_AMOUNT_FRAME_IDC;
-	colorText[] = {0,0,0,0.8};
 
 	x = 0.567031 * safezoneW + safezoneX;
 	y = 0.5 * safezoneH + safezoneY;
@@ -112,7 +109,6 @@ class SOLDE_SALARY_AMOUNT_INFO: RscStructuredText
 class SOLDE_SALARY_EACH_FRAME: RscFrame
 {
 	idc = SOLDE_SALARY_EACH_FRAME_IDC;
-	colorText[] = {0,0,0,0.8};
 
 	x = 0.567031 * safezoneW + safezoneX;
 	y = 0.566 * safezoneH + safezoneY;
@@ -144,7 +140,6 @@ class SOLDE_SALARY_EACH_INFO: RscStructuredText
 class SOLDE_SALARY_NEXT_FRAME: RscFrame
 {
 	idc = SOLDE_SALARY_NEXT_FRAME_IDC;
-	colorText[] = {0,0,0,0.8};
 
 	x = 0.567031 * safezoneW + safezoneX;
 	y = 0.632 * safezoneH + safezoneY;
@@ -187,7 +182,6 @@ class SOLDE_BILLS_HEADER: RscStructuredText
 class SOLDE_BILLS_FRAME: RscFrame
 {
 	idc = SOLDE_BILLS_FRAME_IDC;
-	colorText[] = {0,0,0,0.8};
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.346 * safezoneH + safezoneY;
@@ -197,7 +191,6 @@ class SOLDE_BILLS_FRAME: RscFrame
 class SOLDE_BILLS_INFO: RscListbox
 {
 	idc = SOLDE_BILLS_INFO_IDC;
-	colorBackground[] = {0,0,0,0.6};
 	
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.368 * safezoneH + safezoneY;

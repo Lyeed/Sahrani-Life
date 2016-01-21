@@ -36,6 +36,7 @@ class CfgRemoteExec
 		class TON_fnc_factionHistoryAdd {allowTargets = SERVER;};
 		class TON_fnc_factionMemberList {allowTargets = SERVER;};
 		class TON_fnc_factionMemberModify {allowTargets = SERVER;};
+		class TON_fnc_factionBankHandle {allowTargets = SERVER;};
 		//- Phone
 		class TON_fnc_phoneMessageHandler {allowTargets = SERVER;};
 		//- Log

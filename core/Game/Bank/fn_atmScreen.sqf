@@ -62,15 +62,12 @@ switch (_action) do
 		_btnR4 ctrlShow true;
 		_txtR4 ctrlShow true;
 
-		if (playerSide != civilian) then
+		if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "faction_bank_handle_rank") isEqualTo (player getVariable ["rank", 0])) then
 		{
-			if ((player getVariable ["rank", 0]) isEqualTo (count(getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "Ranks" >> "ranks_complet")) - 1)) then
-			{
-				_txtL4 ctrlSetStructuredText parseText "<t align='right'>Faction</t>";
-				_btnL4 buttonSetAction "[""home_faction""] call public_fnc_atmScreen";
-				_btnL4 ctrlShow true;
-				_txtL4 ctrlShow true;
-			};
+			_txtL4 ctrlSetStructuredText parseText "<t align='right'>Faction</t>";
+			_btnL4 buttonSetAction "[""home_faction""] call public_fnc_atmScreen";
+			_btnL4 ctrlShow true;
+			_txtL4 ctrlShow true;
 		};
 	};
 
@@ -179,6 +176,7 @@ switch (_action) do
 			case east: {gServer_faction_EAST_bank};
 			case west: {gServer_faction_WEST_bank};
 			case independent: {gServer_faction_GUER_bank};
+			case civilian: {gServer_faction_CIV_bank};
 		};
 		_balance ctrlSetStructuredText parseText format ["<t align ='left' size='1.2'>Solde </t><t align='center' size='1.2'><t color='#74DF00'>%1</t>kn</t>", [_value] call public_fnc_numberText];
 

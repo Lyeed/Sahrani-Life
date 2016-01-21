@@ -25,7 +25,7 @@ class STORE_CATEGORY_HEADER: RscStructuredText
 class STORE_CATEGORY_INFO: RscListbox
 {
 	idc = STORE_CATEGORY_INFO_IDC;
-	colorBackground[] = {0,0,0,0.6};
+	colorPictureRightSelected[] = {1, 1, 1, 1};
 	onLBSelChanged = "[(_this select 0) lbData (_this select 1)] spawn public_fnc_tabletApp;";
 	rowHeight = 0.1;
 
@@ -37,7 +37,6 @@ class STORE_CATEGORY_INFO: RscListbox
 class STORE_CATEGORY_FRAME: RscFrame
 {
 	idc = STORE_CATEGORY_FRAME_IDC;
-	colorText[] = {0,0,0,0.8};
 
 	x = 0.412344 * safezoneW + safezoneX;
 	y = 0.401 * safezoneH + safezoneY;

@@ -38,26 +38,8 @@ switch (_action) do
 	{
 		if (g_cash < _amount) exitWith {["Vous n'avez pas assez de fonds sur vous"] call public_fnc_error};
 		[false, _amount] call public_fnc_handleCash;
-
-		switch (playerSide) do
-		{
-			case east:
-			{
-				gServer_faction_EAST_bank = gServer_faction_EAST_bank + _amount;
-				publicVariable "gServer_faction_EAST_bank";
-			};
-			case west:
-			{
-				gServer_faction_WEST_bank = gServer_faction_WEST_bank + _amount;
-				publicVariable "gServer_faction_WEST_bank";
-			};
-			case independent:
-			{
-				gServer_faction_GUER_bank = gServer_faction_GUER_bank + _amount;
-				publicVariable "gServer_faction_GUER_bank";
-			};
-		};
-		["home"] call public_fnc_atmScreen;
+		[playerSide, true, _amount] remoteExecCall ["TON_fnc_factionBankHandle", 2];
+		["home_faction"] call public_fnc_atmScreen;
 	};
 
 	case "withdraw_faction":
@@ -66,10 +48,7 @@ switch (_action) do
 		{
 			case east:
 			{
-				if (gServer_faction_EAST_bank >= _amount) then
-				{
-					gServer_faction_EAST_bank = gServer_faction_EAST_bank - _amount;
-					publicVariable "gServer_faction_EAST_bank";
+				if (gServer_faction_EAST_bank >= _amount) then {
 					true;
 				} else {
 					false;
@@ -77,10 +56,7 @@ switch (_action) do
 			};
 			case west:
 			{
-				if (gServer_faction_WEST_bank >= _amount) then
-				{
-					gServer_faction_WEST_bank = gServer_faction_WEST_bank - _amount;
-					publicVariable "gServer_faction_WEST_bank";
+				if (gServer_faction_WEST_bank >= _amount) then {
 					true;
 				} else {
 					false;
@@ -88,23 +64,23 @@ switch (_action) do
 			};
 			case independent:
 			{
-				if (gServer_faction_GUER_bank >= _amount) then
-				{
-					gServer_faction_GUER_bank = gServer_faction_GUER_bank - _amount;
-					publicVariable "gServer_faction_GUER_bank";
+				if (gServer_faction_GUER_bank >= _amount) then {
 					true;
 				} else {
 					false;
 				}
 			};
 		};
+		
 		if (_handle) then
 		{
 			[true, _amount] call public_fnc_handleCash;
-			["home"] call public_fnc_atmScreen;
+			[playerSide, false, _amount] remoteExecCall ["TON_fnc_factionBankHandle", 2];
 		} else {
 			["Solde insuffisant"] call public_fnc_error;
 		};
+		
+		["home_faction"] call public_fnc_atmScreen;
 	};
 	
 	default {["Action non reconnue"] call public_fnc_error};

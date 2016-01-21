@@ -5,17 +5,25 @@ class ALYSIA_FACTIONS
 		/*** GLOBAL ***/
 		name = "Milice";
 		icon = "lyeed_IMG\data\faction\WEST_logo.paa";
-		paycheck = 750;
 		identity_item = "SkylineItems_PlaqueMilitaire";
 		launder = 0;
+		faction_bank_handle_rank = 9;
+
+		/*** SALARY ***/
+		salary = 750;
+		salary_tax = 0.05;
+		salary_apply_rank = 1;
+		salary_timer = 15;
 
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
 		phone_send_global_message = 1;
 		phone_send_global_message_rank = 4;
 		phone_send_to_faction_price = 0;
+		
 		/*** COMPANIES ***/
 		companies_search = 1;
+		company_own = 0;
 
 		/*** GEAR MISSION ***/
 		mission_vehicle = "Fett_truck_milice";
@@ -100,6 +108,8 @@ class ALYSIA_FACTIONS
 		/*** HOUSING ***/
 		house_search = 1;
 		house_max = 1;
+		house_tax_per_house_per_salary = 0;
+		house_tax_percentage_buyPrice_per_house = 0;
 
 		/*** HEAL ***/
 		price_heal_hopital = 0;
@@ -177,9 +187,15 @@ class ALYSIA_FACTIONS
 		/*** GLOBAL ***/
 		name = "Garde";
 		icon = "lyeed_IMG\data\faction\EAST_logo.paa";
-		paycheck = 750;
 		identity_item = "SkylineItems_PlaqueMilitaire";
 		launder = 0;
+		faction_bank_handle_rank = 5;
+
+		/*** SALARY ***/
+		salary = 750;
+		salary_tax = 0.05;
+		salary_apply_rank = 1;
+		salary_timer = 15;
 
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
@@ -189,6 +205,7 @@ class ALYSIA_FACTIONS
 
 		/*** COMPANIES ***/
 		companies_search = 1;
+		company_own = 0;
 
 		/*** GEAR MISSION ***/
 		mission_vehicle = "Fett_truck_army";
@@ -257,6 +274,8 @@ class ALYSIA_FACTIONS
 		/*** HOUSING ***/
 		house_search = 1;
 		house_max = 1;
+		house_tax_per_house_per_salary = 0;
+		house_tax_percentage_buyPrice_per_house = 0;
 
 		/*** HEAL ***/
 		price_heal_hopital = 0;
@@ -326,9 +345,15 @@ class ALYSIA_FACTIONS
 		/*** GLOBAL ***/
 		name = "Civil";
 		icon = "lyeed_IMG\data\faction\CIV_logo.paa";
-		paycheck = 600;
 		identity_item = "SkylineItems_Passeport";
 		launder = 1;
+		faction_bank_handle_rank = 1;
+
+		/*** SALARY ***/
+		salary = 700;
+		salary_tax = 0.05;
+		salary_apply_rank = 0;
+		salary_timer = 15;
 
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
@@ -338,6 +363,7 @@ class ALYSIA_FACTIONS
 
 		/*** COMPANIES ***/
 		companies_search = 0;
+		company_own = 1;
 
 		/*** GEAR MISSION ***/
 		mission_vehicle = "";
@@ -388,6 +414,8 @@ class ALYSIA_FACTIONS
 		/*** HOUSING ***/
 		house_search = 0;
 		house_max = 1;
+		house_tax_per_house_per_salary = 180;
+		house_tax_percentage_buyPrice_per_house = 0.003;
 
 		/*** HEAL ***/
 		price_heal_hopital = 500;
@@ -484,9 +512,15 @@ class ALYSIA_FACTIONS
 		/*** GLOBAL ***/
 		name = "SAMU";
 		icon = "lyeed_IMG\data\faction\GUER_logo.paa";
-		paycheck = 600;
 		identity_item = "Badge_samu";
 		launder = 0;
+		faction_bank_handle_rank = 6;
+
+		/*** SALARY ***/
+		salary = 600;
+		salary_tax = 0.05;
+		salary_apply_rank = 1;
+		salary_timer = 15;
 
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
@@ -496,6 +530,7 @@ class ALYSIA_FACTIONS
 
 		/*** COMPANIES ***/
 		companies_search = 0;
+		company_own = 0;
 
 		/*** GEAR MISSION ***/
 		mission_vehicle = "";
@@ -546,6 +581,8 @@ class ALYSIA_FACTIONS
 		/*** HOUSING ***/
 		house_search = 0;
 		house_max = 1;
+		house_tax_per_house_per_salary = 180;
+		house_tax_percentage_buyPrice_per_house = 0.003;
 
 		/*** HEAL ***/
 		price_heal_hopital = 0;
