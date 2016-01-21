@@ -129,7 +129,7 @@ class ALYSIA_VEHICLES
   	class shounka_a3_renaultmagnum_f
 	{
 		buyPrice = 25000;
-		inventory = 150;
+		inventory = 520;
 		side = "CIV";
 		insurance = 1;
 		license = "truck";
@@ -2024,7 +2024,7 @@ class ALYSIA_VEHICLES
 	class O_Truck_02_transport_F
 	{
 		buyPrice = 25000;
-		inventory = 150;
+		inventory = 250;
 		side = "CIV";
 		insurance = 1;
 		license = "truck";
@@ -2075,7 +2075,7 @@ class ALYSIA_VEHICLES
 
 	class B_G_Van_01_fuel_F
 	{
-		buyPrice = 25000;
+		buyPrice = 28000;
 		inventory = 150;
 		side = "CIV";
 		insurance = 1;
@@ -2730,7 +2730,7 @@ class ALYSIA_VEHICLES
 	class Jonzie_Box_Truck
 	{
 		buyPrice = 25000;
-		inventory = 150;
+		inventory = 380;
 		side = "CIV";
 		insurance = 1;
 		license = "truck";
