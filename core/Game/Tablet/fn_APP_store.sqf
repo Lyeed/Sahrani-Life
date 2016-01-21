@@ -25,3 +25,5 @@ _list lbSetPicture [1, "lyeed_IMG\data\tablet\store\categories\store_application
 _list lbAdd "Forfaits mobiles";
 _list lbSetData [2, "STORE_FORFAIT"];
 _list lbSetPicture [2, "lyeed_IMG\data\tablet\store\categories\store_forfait.paa"];
+
+_list lbSetCurSel -1;

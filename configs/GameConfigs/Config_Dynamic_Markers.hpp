@@ -60,6 +60,16 @@
 	{10815.6,12603.9,0.00143814} \
 }
 
+#define G_RESPAWN_ARCHEOLOGIE \
+{ \
+	{13003.2,6738.72,0.00143814}, \
+	{16648.9,11888.2,0.0014801}, \
+	{7088.14,7800.87,0.0021286}, \
+	{14761.4,13977.3,0.00151062}, \
+	{9617.63,7413.2,0.00178528}, \
+	{8373.28,5631.12,0.00139189} \
+}
+
 class ALYSIA_DYN_MARKERS
 {
 	//- DRUGS FIELDS
@@ -249,8 +259,26 @@ class ALYSIA_DYN_MARKERS
 		destroy[]   = {"WEST", "EAST"};
 		positions[] = G_RESPAWN_GENERAL;
 	};
+
+	//- ARCHEOLOGIE
+	class archeologie_1
+	{
+		text        = "Site archéologique";
+		type        = "Fett_campingsite";
+		color       = "ColorRed";
+		shape       = "ICON";
+		size        = 0.5;
+		shop_appear = 1;
+		shop_price  = 1000;
+		linked      = "";
+		discover[]  = {"CIV"};
+		shown[]     = {};
+		destroy[]   = {"WEST", "EAST"};
+		positions[] = G_RESPAWN_ARCHEOLOGIE;
+	};
 };
 
 #undef G_RESPAWN_FIELD
 #undef G_RESPAWN_GENERAL
 #undef G_RESPAWN_NORTH
+#undef G_RESPAWN_ARCHEOLOGIE

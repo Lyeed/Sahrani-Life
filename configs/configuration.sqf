@@ -41,8 +41,6 @@ with missionNamespace do
 	g_cash = 0;
 	g_atm = 0;
 	g_atm_from = [];
-	g_paycheck = 0;
-	g_paycheck_period = compileFinal "15";
 	/* ===================[Levels]======================= */
 	g_WESTLevel = 0;
 	g_EASTLevel = 0;

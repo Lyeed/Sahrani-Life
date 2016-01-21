@@ -136,7 +136,7 @@ if (g_launder > 0) then
 	};
 
 	_totalSession = 0;
-	_salary_time = call g_paycheck_period;
+	_salary_time = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary_timer");
 	while {true} do
 	{
 		sleep (60 * 1);

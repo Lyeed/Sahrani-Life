@@ -20,10 +20,6 @@ g_nationality = _basic select 5;
 g_sexe = _basic select 6;
 // donator
 g_donator = compileFinal (_basic select 8);
-if ((call g_donator) > 0) then
-{
-	g_paycheck = (call g_donator) * 600;
-};
 // blood/bleed/coma
 [(_basic select 9), (_basic select 10), (_basic select 11)] spawn
 {
@@ -87,32 +83,29 @@ switch (playerSide) do
 {
 	case west: 
 	{
-		g_paycheck = g_paycheck + round((call g_WESTLevel) * getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "WEST" >> "paycheck"));
 		player setVariable ["rank", (call g_WESTLevel), true];
 	};
 	
 	case east:
 	{
-		g_paycheck = g_paycheck + round((call g_EASTLevel) * getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "EAST" >> "paycheck"));
 		player setVariable ["rank", (call g_EASTLevel), true];
 	};
 
 	case civilian:
 	{
-		g_paycheck = g_paycheck + round((call g_CIVLevel) * getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "CIV" >> "paycheck"));
-		// Launder
 		g_launder = _basic select 43;
+		if ((call g_CIVLevel) > 0) then {
+			player setVariable["rank", (call g_CIVLevel), true];
+		};
 	};
 
 	case independent:
 	{
-		g_paycheck = g_paycheck + round((call g_GUERLevel) * getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> "GUER" >> "paycheck"));
 		player setVariable["rank", (call g_GUERLevel), true];
 	};
 };
 
-g_paycheck = compileFinal str(g_paycheck);
-g_nextPay = time + ((call g_paycheck_period) * 60);
+g_nextPay = time + (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary_timer") * 60);
 
 [] call public_fnc_init_loops;
 [[(_basic select 12), (_basic select 13), (_basic select 14)]] call public_fnc_init_position;

@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_sel", "_list", "_display", "_distance", "_vehicle", "_index"];
+private["_sel", "_list", "_display", "_distance", "_vehicle", "_index", "_ctrl_map"];
 
 disableSerialization;
 _list = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
@@ -20,6 +20,7 @@ if (isNull _display) exitWith {};
 _index = _list lbValue _sel;
 _vehicle = g_vehicles select _index;
 _distance = round(player distance _vehicle);
+_ctrl_map = _display displayCtrl 7703;
 
 (_display displayCtrl 7708) ctrlSetStructuredText parseText format
 [
@@ -35,13 +36,18 @@ if ("VEHICLES" in g_apps) then
 	_marker setMarkerTypeLocal "c_car";
 	_marker setMarkerColorLocal "ColorRed";
 	_marker setMarkerTextLocal getText(configFile >> "CfgVehicles" >> typeOf(_vehicle) >> "displayName");
-	while {!(isNull _distance) && ((lbCurSel _list) isEqualTo _sel) && (g_app isEqualTo "APP_VEHICLES") && (alive _vehicle)} do
+
+	_ctrl_map ctrlMapAnimAdd [0, 0.09, _vehicle];
+	ctrlMapAnimCommit _ctrl_map;
+
+	while {!(isNull _display) && ((lbCurSel _list) isEqualTo _sel) && (g_app isEqualTo "VEHICLES") && (alive _vehicle)} do
 	{
 		_marker setMarkerPosLocal (getPos _vehicle);
 		sleep 0.3;
 	};
+
 	deleteMarkerLocal _marker;
-	if (!(alive _vehicle) && (g_app isEqualTo "APP_VEHICLES") && !(isNull _display) && ((lbCurSel _list) isEqualTo _sel)) then
+	if (!(alive _vehicle) && (g_app isEqualTo "VEHICLES") && !(isNull _display) && ((lbCurSel _list) isEqualTo _sel)) then
 	{
 		_list lbDelete _sel;
 		if ((lbSize _list) isEqualTo 0) then

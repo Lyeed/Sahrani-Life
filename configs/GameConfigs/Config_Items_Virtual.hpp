@@ -606,7 +606,7 @@ class ALYSIA_ITEMS
 
 	class methp
 	{
-		name        = "Methamphetamine";
+		name        = "Méthamphétamine";
 		weight      = 6;
 		illegal     = 1;
 		removable   = 1;
