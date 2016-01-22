@@ -5,11 +5,13 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+private["_target"];
 
 if (g_action_inUse || dialog) exitWith {};
 
 scopeName "main";
 
+_target = cursorTarget;
 if ((vehicle player) isEqualTo player) then
 {
 
@@ -19,7 +21,7 @@ if ((vehicle player) isEqualTo player) then
 		true breakOut "main";
 	};
 
-	if (isNull cursorTarget) then 
+	if (isNull _target) then 
 	{
 		_plant = (nearestObjects [player, (call g_plants), 3]) select 0;
 		if (!(isNil "_plant")) then
@@ -110,61 +112,61 @@ if ((vehicle player) isEqualTo player) then
 			};
 		} forEach getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "farming_markers_gather");
 	} else {
-		if ((player distance cursorTarget) < ((((boundingBox cursorTarget) select 1) select 0) + 2.5)) then
+		if ((player distance _target) < ((((boundingBox _target) select 1) select 0) + 2.5)) then
 		{
-			if (isPlayer cursorTarget) then
+			if (isPlayer _target) then
 			{
-				if (alive cursorTarget) then
+				if (alive _target) then
 				{
-					if ((cursorTarget isKindOf "Car") || (cursorTarget isKindOf "Ship") || (cursorTarget isKindOf "Air") || (cursorTarget isKindOf "Tank") || (cursorTarget isKindOf "Truck")) then
+					if ((_target isKindOf "Car") || (_target isKindOf "Ship") || (_target isKindOf "Air") || (_target isKindOf "Tank") || (_target isKindOf "Truck")) then
 					{
-						[(vehicle cursorTarget)] call public_fnc_interactions_player_to_vehicle;
+						[(vehicle _target)] call public_fnc_interactions_player_to_vehicle;
 						true breakOut "main";
 					};
 
-					if (cursorTarget getVariable ["is_coma", false]) then {
-						[cursorTarget] call public_fnc_interactions_player_to_player_coma;
+					if (_target getVariable ["is_coma", false]) then {
+						[_target] call public_fnc_interactions_player_to_player_coma;
 					} else {
-						[cursorTarget] call public_fnc_interactions_player_to_player_basics;
+						[_target] call public_fnc_interactions_player_to_player_basics;
 					};
 					true breakOut "main";
 				};
 			} else {
-				if ((alive cursorTarget) && ((cursorTarget isKindOf "Car") || (cursorTarget isKindOf "Ship") || (cursorTarget isKindOf "Air") || (cursorTarget isKindOf "Tank") || (cursorTarget isKindOf "Truck"))) then
+				if ((alive _target) && ((_target isKindOf "Car") || (_target isKindOf "Ship") || (_target isKindOf "Air") || (_target isKindOf "Tank") || (_target isKindOf "Truck"))) then
 				{
-					[cursorTarget] call public_fnc_interactions_player_to_vehicle;
+					[_target] call public_fnc_interactions_player_to_vehicle;
 					true breakOut "main";
 				};
 
-				if (typeof(cursorTarget) isEqualTo "Land_HumanSkull_F") then
+				if (typeof(_target) isEqualTo "Land_HumanSkull_F") then
 				{
-					[cursorTarget] call public_fnc_interactions_player_to_skull;
+					[_target] call public_fnc_interactions_player_to_skull;
 					true breakOut "main";
 				};
 
-				if (typeOf(cursorTarget) in ["Land_Atm_01_F", "Land_Atm_02_F", "xcam_Atm_01_F", "xcam_Atm_02_F"]) then
+				if (typeOf(_target) in ["Land_Atm_01_F", "Land_Atm_02_F", "xcam_Atm_01_F", "xcam_Atm_02_F"]) then
 				{
 					["home"] call public_fnc_atmScreen;
 					true breakOut "main";
 				};
 
-				if (typeOf(cursorTarget) in (call g_houses_storages)) then
+				if (typeOf(_target) in (call g_houses_storages)) then
 				{
-					[cursorTarget] spawn public_fnc_virtual_menu_exhange_open;
+					[_target] spawn public_fnc_virtual_menu_exhange_open;
 					true breakOut "main";
 				};
 
-				if (typeOf(cursorTarget) isEqualTo "Turtle_F") then
+				if (typeOf(_target) isEqualTo "Turtle_F") then
 				{
-					[cursorTarget] call public_fnc_catchTurtle;
+					[_target] call public_fnc_catchTurtle;
 					true breakOut "main";
 				};
 
-				if (typeOf(cursorTarget) in ["Bank_Sahrani_N", "Bank_Sahrani_S"]) then
+				if (typeOf(_target) in ["Bank_Sahrani_N", "Bank_Sahrani_S"]) then
 				{
 					if (player distance (nearestObject [player, "xcam_Laptop_unfolded_F"]) <= 2) then
 					{
-						[cursorTarget, "Security"] spawn public_fnc_robberyStart;
+						[_target, "Security"] spawn public_fnc_robberyStart;
 						true breakOut "main";
 					};
 
@@ -180,61 +182,61 @@ if ((vehicle player) isEqualTo player) then
 						true breakOut "main";
 					};
 
-					if (cursorTarget getVariable ["robbed", false]) then
+					if (_target getVariable ["robbed", false]) then
 					{
-						if ((player distance (cursorTarget modelToWorld (cursorTarget selectionPosition "Interact5"))) < 5) then
+						if ((player distance (_target modelToWorld (_target selectionPosition "Interact5"))) < 5) then
 						{
-							[cursorTarget] spawn public_fnc_virtuel_menu_exhange_open;
+							[_target] spawn public_fnc_virtuel_menu_exhange_open;
 							true breakOut "main";
 						};
 					} else {
 						{
-							_pos = cursorTarget modelToWorld (cursorTarget selectionPosition _x);
+							_pos = _target modelToWorld (_target selectionPosition _x);
 							if ((player distance [_pos select 0, _pos select 1, (_pos select 2) - 1.5]) < 3) then
 							{
-								[cursorTarget, _x] spawn public_fnc_robberyStart;
+								[_target, _x] spawn public_fnc_robberyStart;
 								true breakOut "main";
 							};
 						} forEach (["AutoDoor_trigger", "Interact1", "Interact2", "Interact3", "Interact4", "Interact5", "Interact6", "Vault_Door"]);
 					};
 				};
 
-				if (typeOf(cursorTarget) in ["Land_FuelStation_Build_F", "Land_FuelStation_Shed_F", "Land_FuelStation_Feed_F"]) then
+				if (typeOf(_target) in ["Land_FuelStation_Build_F", "Land_FuelStation_Shed_F", "Land_FuelStation_Feed_F"]) then
 				{
 					if ((player getVariable ["typeRefuel", ""]) != "") then
 					{
 						["Le plein d'essence est annulé."] call public_fnc_error;
 						player setVariable ["typeRefuel", "", false];
 					} else {
-						[cursorTarget] call public_fnc_interactions_player_to_station;
+						[_target] call public_fnc_interactions_player_to_station;
 					};
 					
 					true breakOut "main";
 				};
 
-				if (typeOf(cursorTarget) in (call g_plants)) then
+				if (typeOf(_target) in (call g_plants)) then
 				{
-					[cursorTarget] call public_fnc_plantHarvest;
+					[_target] call public_fnc_plantHarvest;
 					true breakOut "main";
 				};
 
-				if (count(cursorTarget getVariable ["company_info", []]) > 0) then
+				if (count(_target getVariable ["company_info", []]) > 0) then
 				{
-					[cursorTarget] call public_fnc_interactions_player_to_company;
+					[_target] call public_fnc_interactions_player_to_company;
 					true breakOut "main";
 				};
 			};
 		};
 		
-		if (((player distance cursorTarget) < 10) && (typeOf(cursorTarget) in (call g_houses_list))) then
+		if (((player distance _target) < 10) && (typeOf(_target) in (call g_houses_list))) then
 		{
-			[cursorTarget] call public_fnc_house_menu_handler;
+			[_target] call public_fnc_house_menu_handler;
 			true breakOut "main";
 		};
 
-		if (((player distance cursorTarget) < 1.5) && (typeOf(cursorTarget) in (call g_chairs))) then
+		if (((player distance _target) < 1.5) && (typeOf(_target) in (call g_chairs))) then
 		{
-			[cursorTarget] call public_fnc_sitDown;
+			[_target] call public_fnc_sitDown;
 			true breakOut "main";
 		};
 	};

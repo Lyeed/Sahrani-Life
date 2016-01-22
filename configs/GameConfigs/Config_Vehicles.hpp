@@ -3772,7 +3772,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {""};
 		fuel = "Diesel";
 		rank = 0;
-		color[] = {};
+		colors[] = {};
 	};
 
 	class Skyline_VW_Touareg
@@ -3785,7 +3785,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		color[] =
+		colors[] =
 		{
 			"Skyline_VW_TouaregR50_01_F",
 			"Skyline_VW_TouaregR50_02_F",
@@ -3812,7 +3812,7 @@ class ALYSIA_VEHICLES
 	class Skyline_VW_TouaregR50_09_F: Skyline_VW_Touareg {};
 	class Skyline_VW_TouaregR50_10_F: Skyline_VW_Touareg {};
 	class Skyline_VW_TouaregR50_11_F: Skyline_VW_Touareg {};
-	class Skyline_VW_TouaregR50_12_F: Skyline_VW_Touareg {}; 
+	class Skyline_VW_TouaregR50_12_F: Skyline_VW_Touareg {};
 
 	class Skyline_Audi_RS4
 	{
@@ -3824,7 +3824,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		color[] =
+		colors[] =
 		{
 			"Skyline_Audi_RS4_01_F",
 			"Skyline_Audi_RS4_02_F", 
@@ -3863,7 +3863,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 0;
-		color[] =
+		colors[] =
 		{
 			"Skyline_Ford_Transit_01_F",
 			"Skyline_Ford_Transit_02_F",

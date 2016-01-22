@@ -143,7 +143,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"O_Truck_02_covered_F",
 			"shounka_a3_renaultmagnum_f",
 			"Mrshounka_a3_iveco_f",
-			"B_G_Van_01_fuel_F",  
+			"B_G_Van_01_fuel_F",
 			"O_Truck_02_fuel_F",
 			"Jonzie_Tanker_Truck",
 			"Jonzie_Box_Truck"
