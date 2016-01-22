@@ -98,7 +98,10 @@ class Mission
 		"Sign_Frontiere",
 		"A3_Structures_F_EPC_Civ_Accessories",
 		"Gym_F",
-		"pub_a"
+		"pub_a",
+		"A3_Structures_F_Ind_Windmill",
+		"A_GeneralStore_01",
+		"cup_a_generalstore_01"
 	};
 	addOnsAuto[]=
 	{
@@ -194,6 +197,9 @@ class Mission
 		"A3_Structures_F_Furniture",
 		"A3_Structures_F_EPC_Civ_Accessories",
 		"Gym_F",
+		"A3_Structures_F_Ind_Windmill",
+		"A_GeneralStore_01",
+		"cup_a_generalstore_01",
 		"sibranak"
 	};
 	randomSeed=13763187;
@@ -3576,7 +3582,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=3176;
+		items=3177;
 		class Item0
 		{
 			position[]={12129.837,0,17612.104};
@@ -36032,6 +36038,16 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""Supérette"",public_fnc_shop_virtual_open,""market"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+		};
+		class Item3176
+		{
+			position[]={2313.1135,12.435764,18864.068};
+			id=3329;
+			side="EMPTY";
+			vehicle="xcam_InfoStand_V2_F";
+			skill=0.60000002;
+			text="archeologie_process_1";
+			init="this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Rénovation"",public_fnc_processAction,""archeologue"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 	};
 	class Markers
