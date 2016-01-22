@@ -5,7 +5,10 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_msg", "_sound", "_count"];
+private["_msg", "_sound"];
+
+if (isDedicated) exitWith {};
+
 _msg = [_this, 0, "", [""]] call BIS_fnc_param;
 _sound = [_this, 1, "", [""]] call BIS_fnc_param;
 
@@ -19,23 +22,13 @@ if (alive player) then
 
 		disableSerialization;
 		_hud = uiNameSpace getVariable ["RscHudMessage", displayNull];
-		if (_msg isEqualTo (uiNamespace getVariable ["RscHudMessage_last", ""])) then {
-			uiNamespace setVariable ["RscHudMessage_count", (uiNamespace getVariable ["RscHudMessage_count", 0]) + 1];
-		} else {
-			uiNamespace setVariable ["RscHudMessage_count", 1];
-			uiNamespace setVariable ["RscHudMessage_last", _msg];
-		};
 
-		(_hud displayCtrl 95000) ctrlSetStructuredText parseText "<t align='left'>Erreur</t>";
-		(_hud displayCtrl 95001) ctrlSetText "lyeed_IMG\data\message_system\error.paa";
-		(_hud displayCtrl 95002) ctrlSetStructuredText parseText format["<t font='PuristaBold' size='0.7'>%1</t>", _msg];
+		_info = _hud displayCtrl 95000;
+		_info ctrlSetStructuredText parseText format["<t font='EtelkaMonospacePro' size='0.8'>%1</t>", _msg];
+		_info ctrlSetPosition [(ctrlPosition _info) select 0, (ctrlPosition _info) select 1, (ctrlPosition _info) select 2, ctrlTextHeight _info];
+		_info ctrlCommit 0;
 
-		_count = uiNamespace getVariable ["RscHudMessage_count", 0];
-		if (_count > 1) then {
-			(_hud displayCtrl 95003) ctrlSetStructuredText parseText format["<t align='center' font='PuristaBold'>x%1</t>", _count];
-		} else {
-			(_hud displayCtrl 95003) ctrlSetStructuredText parseText "";
-		};
+		(_hud displayCtrl 95001) ctrlSetText "Erreur";
 
 		if (_sound isEqualTo "") then {
 			playSound "addItemFailed";

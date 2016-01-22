@@ -264,7 +264,7 @@ class ALYSIA_DYN_MARKERS
 	class archeologie_1
 	{
 		text        = "Site archéologique";
-		type        = "Fett_campingsite";
+		type        = "Fett_ruins";
 		color       = "ColorRed";
 		shape       = "ICON";
 		size        = 0.5;

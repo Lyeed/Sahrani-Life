@@ -1,3 +1,69 @@
+
+
+
+FU =
+{
+	createDialog "DEV";
+	
+	disableSerialization;
+	_display = findDisplay 6968;
+	
+	_old = _display displayCtrl 6969;
+	_old ctrlShow false;
+
+
+	_header = _display ctrlCreate ["RscText", 6971];
+	_header ctrlSetText "Informations";
+	_header ctrlSetBackgroundColor [0, 0, 0, 0.8];
+	_header ctrlSetPosition [-0.7, 0.48, 0.2, 0.04];
+	_header ctrlCommit 0; 
+
+	_new = _display ctrlCreate ["RscStructuredText", 6970];
+	_new ctrlSetBackgroundColor [0, 0, 0, 0.6];
+	_new ctrlSetPosition [-0.7, 0.52, 0.625, 0.26];
+	_new ctrlCommit 0;
+
+	_new ctrlSetStructuredText parseText _this;
+	
+	_new ctrlSetPosition [(ctrlPosition _new) select 0, (ctrlPosition _new) select 1, (ctrlPosition _new) select 2, ctrlTextHeight _new];
+	_new ctrlCommit 0;
+};
+
+
+	x = -0.7;
+	y = 0.52;
+	w = 0.625;
+	h = 0.26;
+
+"<t font='EtelkaMonospacePro' size='0.8'>Vous avez reçu votre salaire et vos factures<br/>+ <t color='#8cff9b'>%1</t>kn<br/>- <t color='#ff8c8c'>%2</t>kn<br/>Pour plus d'informations rendez-vous dans l'application <t color='#00FF80'>solde</t> de votre tablette</t>" spawn FU;
+
+
+////////////////////////////////////////////////////////
+// GUI EDITOR OUTPUT START (by Jeremy Cookie, v1.063, #Jopeza)
+////////////////////////////////////////////////////////
+
+class RscStructuredText_1100: RscStructuredText
+{
+	idc = 6969;
+
+	x = -28 * GUI_GRID_W + GUI_GRID_X;
+	y = 13 * GUI_GRID_H + GUI_GRID_Y;
+	w = 25 * GUI_GRID_W;
+	h = 6.5 * GUI_GRID_H;
+	colorBackground[] = {0,0,0,0.6};
+};
+class RscText_1000: RscText
+{
+	idc = 1000;
+	text = "Informations"; //--- ToDo: Localize;
+	x = -0.7;
+	y = 0.48;
+	w = 0.2;
+	h = 0.04;
+	colorBackground[] = {0,0,0,0.8};
+};
+
+
 {diag_log str _x} forEach diag_activeSQFScripts;
 
 https://community.bistudio.com/wiki/setFlagTexture

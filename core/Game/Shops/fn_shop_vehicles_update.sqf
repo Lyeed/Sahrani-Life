@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display", "_data", "_className", "_price", "_vehicleInfo", "_list_colors", "_data", "_list_vehicles", "_sel_vehicles", "_license", "_rank", "_price_condition", "_rank_condition", "_license_condition"];
+private["_display", "_data", "_className", "_price", "_vehicleInfo", "_list_colors", "_data", "_list_vehicles", "_sel_vehicles", "_licenses", "_rank", "_price_condition", "_rank_condition", "_licenses_text", "_license_condition"];
 
 disableSerialization;
 _list_vehicles = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
@@ -42,11 +42,23 @@ if ((_rank isEqualTo 0) || ((_rank > 0) && ((player getVariable ["rank", 0]) >= 
 	_rank_condition = false;
 };
 
-_license = getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "license");
-if ((_license isEqualTo "") || ((_license != "") && ([_license] call public_fnc_hasLicense))) then {
+_licenses = getArray(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "licenses");
+if (count(_licenses) > 0) then
+{
+	_licenses_text = "";
 	_license_condition = true;
+
+	{
+		if ([_x] call public_fnc_hasLicense) then {
+			_licenses_text = _licenses_text + format["<t color='#31B404'>%1</t><br/>", [_x] call public_fnc_licenseGetName];
+		} else {
+			_licenses_text = _licenses_text + format["<t color='#DF0101'>%1</t><br/>", [_x] call public_fnc_licenseGetName];
+			_license_condition = false;
+		};
+	} forEach _licenses;
 } else {
-	_license_condition = false;	
+	_licenses_text = "<t color='#31B404'>Aucune</t>";
+	_license_condition = true;
 };
 
 (_display displayCtrl 2306) ctrlSetStructuredText parseText format
@@ -57,10 +69,10 @@ if ((_license isEqualTo "") || ((_license != "") && ([_license] call public_fnc_
 
 (_display displayCtrl 2308) ctrlSetStructuredText parseText format
 [
-		"<t font='EtelkaMonospacePro' size='0.8'>"
+		"<t font='EtelkaMonospacePro' size='0.7'>"
 	+	"<t align='center'>- Prérequis -</t><br/>"
 	+	"<t align='left'>Rank</t><t align='right' color='%14'>%13</t><br/>"
-	+	"<t align='left'>Licence</t><t align='right' color='%15'>%12</t><br/>"
+	+	"<t align='left'>Licence(s)</t><t align='right'>%12</t><br/>"
 	+	"<t align='left'>Prix</t><t align='right' color='%10'>%11kn</t><br/>"
 	+	"<t align='center'>- Caractéristiques - </t><br/>"
 	+	"<t align='left'>Prix de garage</t><t align='right'><t color='#8cff9b'>%1</t>kn</t><br/>"
@@ -84,10 +96,9 @@ if ((_license isEqualTo "") || ((_license != "") && ([_license] call public_fnc_
 	getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name"),
 	if (_price_condition) then {"#31B404"} else {"#DF0101"},
 	[_price] call public_fnc_numberText,
-	if (_license isEqualTo "") then {"Aucune"} else {getText(missionConfigFile >> "ALYSIA_LICENSES" >> _license >> "name")},
+	_licenses_text,
 	[playerSide, _rank] call public_fnc_sideToStr,
-	if (_rank_condition) then {"#31B404"} else {"#DF0101"},
-	if (_license_condition) then {"#31B404"} else {"#DF0101"}
+	if (_rank_condition) then {"#31B404"} else {"#DF0101"}
 ];
 
 _list_colors = _display displayCtrl 2303;

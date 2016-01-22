@@ -117,7 +117,7 @@ class ALYSIA_LICENSES
 	};
 	class sand
 	{
-		name = "Traitement de sable";
+		name = "Traitement du sable";
 		sides[] = {"CIV"};
 		price = 10000;
 		illegal = 0;

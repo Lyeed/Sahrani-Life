@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_require", "_display", "_price", "_disable", "_house"];
+private["_require", "_display", "_price", "_disable", "_house", "_storage"];
 _house = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 if (isNull _house) exitWith {};
@@ -60,10 +60,11 @@ if (playerSide isEqualTo civilian) then {
 	if (getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >>  "garage") isEqualTo 1) then {"<t color='#8cff9b'>Oui</t>"} else {"<t color='#ff8c8c'>Non</t>"}
 ];
 
+_storage = getText(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >>  "storage");
 (_display displayCtrl 45006) ctrlSetStructuredText parseText format
 [
 	"<t align='center'>%1</t>", 
-	if (getText(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >>  "storage") isEqualTo "") then {"<t color='#ff8c8c'>Non</t>"} else {"<t color='#8cff9b'>Oui</t>"}
+	if (_storage isEqualTo "") then {"<t color='#ff8c8c'>Non</t>"} else {format["<t color='#8cff9b'>%1</t>", ([getText(missionConfigFile >> "ALYSIA_STORAGES" >> _storage >> "item")] call public_fnc_itemGetName)]}
 ];
 
 _price = getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >>  "price");
