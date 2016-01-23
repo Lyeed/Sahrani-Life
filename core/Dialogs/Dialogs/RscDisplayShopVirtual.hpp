@@ -7,7 +7,6 @@ class RscDisplayShopVirtual: default_base_dialog
 	{
 		class BACKGROUND: RscPicture
 		{
-			idc = -1;
 			text = "lyeed_IMG\data\shops\background.jpg";
 
 			x = 0.262812 * safezoneW + safezoneX;
@@ -17,7 +16,6 @@ class RscDisplayShopVirtual: default_base_dialog
 		};
 		class FRAME: RscPicture
 		{
-			idc = -1;
 			text = "lyeed_IMG\data\frames\frame_2_borderless.paa";
 
 			x = 0.242187 * safezoneW + safezoneX;
@@ -32,7 +30,6 @@ class RscDisplayShopVirtual: default_base_dialog
 		class TITLE: RscStructuredText
 		{
 			idc = 2401;
-			text = "<t align='center' size='1.3'>Marché agricol</t>";
 			colorBackground[] = {0,0,0,0.8};
 
 			x = 0.262812 * safezoneW + safezoneX;
@@ -43,9 +40,6 @@ class RscDisplayShopVirtual: default_base_dialog
 
 		class PLAYER_FRAME: RscFrame
 		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
-
 			x = 0.587656 * safezoneW + safezoneX;
 			y = 0.368 * safezoneH + safezoneY;
 			w = 0.134062 * safezoneW;
@@ -53,7 +47,6 @@ class RscDisplayShopVirtual: default_base_dialog
 		};
 		class PLAYER_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Vous</t>";
 			colorBackground[] = {0,0,0,0.8};
 
@@ -122,8 +115,6 @@ class RscDisplayShopVirtual: default_base_dialog
 
 		class TARGET_FRAME: RscFrame
 		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
 			
 			x = 0.273125 * safezoneW + safezoneX;
 			y = 0.368 * safezoneH + safezoneY;
@@ -132,7 +123,6 @@ class RscDisplayShopVirtual: default_base_dialog
 		};
 		class TARGET_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Cible</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -178,8 +168,6 @@ class RscDisplayShopVirtual: default_base_dialog
 
 		class TMP_FRAME: RscFrame
 		{
-			idc = -1;
-			colorText[] = {0,0,0,0.8};
 			
 			x = 0.443281 * safezoneW + safezoneX;
 			y = 0.379 * safezoneH + safezoneY;
@@ -188,7 +176,6 @@ class RscDisplayShopVirtual: default_base_dialog
 		};
 		class TMP_HEADER: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center'>Panier</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
@@ -200,7 +187,6 @@ class RscDisplayShopVirtual: default_base_dialog
 		class TMP_LIST: RscListbox
 		{
 			idc = 2410;
-			colorBackground[] = {0,0,0,0.6};
 			onLBDblClick = "_this call public_fnc_shop_virtual_remove;";
 			
 			x = 0.443281 * safezoneW + safezoneX;
@@ -212,7 +198,6 @@ class RscDisplayShopVirtual: default_base_dialog
 		{
 			idc = 2411;
 			colorBackground[] = {0,0,0,0.8};
-			text = "";
 
 			x = 0.443281 * safezoneW + safezoneX;
 			y = 0.599 * safezoneH + safezoneY;
@@ -222,7 +207,6 @@ class RscDisplayShopVirtual: default_base_dialog
 		class TMP_INFO_WEIGHT: RscStructuredText
 		{
 			idc = 2422;
-			text = "";
 			colorBackground[] = {0,0,0,0.8};
 			
 			x = 0.5 * safezoneW + safezoneX;
@@ -244,7 +228,6 @@ class RscDisplayShopVirtual: default_base_dialog
 		class ACTION_VALIDATE_FRAME: RscFrame
 		{
 			idc = 2413;
-			colorText[] = {0,0,0,0.8};
 			
 			x = 0.412344 * safezoneW + safezoneX;
 			y = 0.643 * safezoneH + safezoneY;
@@ -308,7 +291,6 @@ class RscDisplayShopVirtual: default_base_dialog
 		class ACTION_EXIT_FRAME: RscFrame
 		{
 			idc = 2418;
-			colorText[] = {0,0,0,0.8};
 			
 			x = 0.5 * safezoneW + safezoneX;
 			y = 0.643 * safezoneH + safezoneY;

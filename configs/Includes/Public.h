@@ -539,5 +539,7 @@ class Public
 		class APP_market {};
 		class APP_market_update {};
 		class APP_staff {};
+		class APP_staff_player_actions_update {};
+		class APP_staff_players_actions_update {};
 	};
 };

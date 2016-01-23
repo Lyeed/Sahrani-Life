@@ -12,7 +12,7 @@ _damage = _this select 2;
 _source = _this select 3;
 _projectile = _this select 4;
 
-if (g_connected) then
+if (g_connected && !g_staff_god) then
 {
 	_damage = _damage * 180;
 	if ((isNull _source) && ((vehicle player) != player)) then

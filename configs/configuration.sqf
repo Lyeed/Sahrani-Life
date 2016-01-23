@@ -25,6 +25,10 @@ with missionNamespace do
 	g_birth = [];
 	g_nationality = "";
 	g_sexe = "";
+	/* ===================[Staff]==========================*/
+	g_staff_god = false;
+	g_staff_markers = false;
+	g_staff_spec = false;
 	/* ===================[Tablet]==========================*/
 	g_apps = [];
 	/* ===================[Phone]======================= */

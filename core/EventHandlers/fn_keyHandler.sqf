@@ -26,4 +26,11 @@ if (g_action_inUse) exitWith
 	true;
 };
 
+if (g_staff_spec) exitWith
+{
+	g_staff_spec = false;
+	player switchCamera "INTERNAL";
+	true;
+};
+
 false;

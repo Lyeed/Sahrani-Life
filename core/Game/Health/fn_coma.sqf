@@ -7,12 +7,15 @@
 */
 private["_time", "_display", "_ctrl_left", "_id", "_ctrl_suicide"];
 
+if (g_staff_god) exitWith {};
 if (player getVariable ["is_coma", false]) exitWith {};
+
 if (dialog) then
 {
 	closeDialog 0;
 	waitUntil {!dialog};
 };
+
 if (!(createDialog "RscDisplayComa")) exitWith {};
 
 if (player getVariable ["surrender", false]) then {

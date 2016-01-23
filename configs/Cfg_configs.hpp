@@ -24,3 +24,4 @@
 #include "GameConfigs\Config_Prisons.hpp"
 #include "GameConfigs\Config_Nationalities.hpp"
 #include "GameConfigs\Config_Chairs.hpp"
+#include "GameConfigs\Config_Staff.hpp"

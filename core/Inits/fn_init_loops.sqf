@@ -158,9 +158,9 @@ if (g_launder > 0) then
 			[] call public_fnc_salaryProcess;
 	       	g_nextPay = time + (_salary_time * 60);
 		};
-		
-		/*
-		if ((call g_adminlevel) isEqualTo 0) then
+
+		if (false) then
+		// if (("(getText(_x >> 'uid') isEqualTo (getPlayerUID player)) && (getNumber(_x >> 'teamspeak') isEqualTo 1)" configClasses (missionConfigFile >> "ALYSIA_STAFF" >> "members")) isEqualTo []) then
 		{
 			if (["Alysia", (call TFAR_fnc_getTeamSpeakServerName)] call BIS_fnc_inString) then
 			{
@@ -171,7 +171,6 @@ if (g_launder > 0) then
 				[] spawn _fnc_server;
 			};
 		};
-		*/
 
 		{
 			if ((local _x) && ((units _x) isEqualTo [])) then {

@@ -19,7 +19,7 @@ _apps_more = false;
 _apps = [];
 _global_apps = 
 [
-	["lyeed_IMG\data\tablet\app_main\app_staff.paa", "lyeed_IMG\data\tablet\app_main\app_staff_select.paa", "['staff'] spawn public_fnc_tabletApp;", "Staff", "((call g_adminlevel) > 0)"],
+	["lyeed_IMG\data\tablet\app_main\app_staff.paa", "lyeed_IMG\data\tablet\app_main\app_staff_select.paa", "['staff'] spawn public_fnc_tabletApp;", "Staff", "count(""getText(_x >> 'uid') isEqualTo (getPlayerUID player)"" configClasses (missionConfigFile >> 'ALYSIA_STAFF' >> 'members')) != 0"],
 	["lyeed_IMG\data\tablet\app_main\app_bank.paa", "lyeed_IMG\data\tablet\app_main\app_bank_select.paa", "['solde'] spawn public_fnc_tabletApp;", "Solde", "true"],
 	["lyeed_IMG\data\tablet\app_main\app_gps.paa", "lyeed_IMG\data\tablet\app_main\app_gps_select.paa", "['vehicles'] spawn public_fnc_tabletApp;", "Véhicules", "true"],
 	["lyeed_IMG\data\tablet\app_main\app_setting.paa", "lyeed_IMG\data\tablet\app_main\app_setting_select.paa", "['settings'] spawn public_fnc_tabletApp;", "Réglages", "true"],

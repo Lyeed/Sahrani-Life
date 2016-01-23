@@ -6,7 +6,7 @@ class RscHudMessage
 	duration = 10;
 	fadeout = 3;
 	name = "RscHudMessage";
-	onLoad = "uiNamespace setVariable [""RscHudMessage"", _this select 0];";
+	onLoad = "uiNamespace setVariable ['RscHudMessage', (_this select 0)];";
 	objects[] = {};
 
 	class controlsBackground 

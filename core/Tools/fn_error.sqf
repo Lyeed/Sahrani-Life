@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_msg", "_sound"];
+private["_msg", "_sound", "_hud", "_info", "_frame"];
 
 if (isDedicated) exitWith {};
 
@@ -27,6 +27,10 @@ if (alive player) then
 		_info ctrlSetStructuredText parseText format["<t font='EtelkaMonospacePro' size='0.8'>%1</t>", _msg];
 		_info ctrlSetPosition [(ctrlPosition _info) select 0, (ctrlPosition _info) select 1, (ctrlPosition _info) select 2, ctrlTextHeight _info];
 		_info ctrlCommit 0;
+
+		_frame = _hud displayCtrl 95002;
+		_frame ctrlSetPosition [(ctrlPosition _frame) select 0, (ctrlPosition _frame) select 1, (ctrlPosition _frame) select 2, ctrlTextHeight _frame];
+		_frame ctrlCommit 0;
 
 		(_hud displayCtrl 95001) ctrlSetText "Erreur";
 

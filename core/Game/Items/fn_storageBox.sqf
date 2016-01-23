@@ -47,10 +47,11 @@ _action =
 
 if (_action) then 
 {
-	if ([false, "storage", 1] call public_fnc_handleInv) then
+	if ([false, _item, 1] call public_fnc_handleInv) then
 	{
 		["Vous avez posé un <t color='#FF8000'>Coffre</t> dans votre maison"] call public_fnc_info;
 		[_house] remoteExec ["TON_fnc_house_storage_install", 2];
 		_house setVariable ["house_storage_out", objNull, true];
 	};
 };
+

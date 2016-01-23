@@ -79,7 +79,6 @@ class RscDisplayCompanyCreate: default_interaction_back_dialog
 		{
 			idc = 90003;
 			text = "<t align='left' size='1.3' color='#FFFFFF'>Créer</t>";
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.565587 * safezoneW + safezoneX;
 			y = 0.654 * safezoneH + safezoneY;

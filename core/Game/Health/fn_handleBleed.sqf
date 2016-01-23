@@ -17,7 +17,7 @@ if (g_bleed isEqualTo 0) then
 	g_bleed = _amount;
 	[] spawn
 	{
-		while {((g_bleed > 0) && (player getVariable ["is_bleeding", false]))} do
+		while {((g_bleed > 0) && (player getVariable ["is_bleeding", false]) && !g_staff_god)} do
 		{
 			[(g_bleed * -1)] call public_fnc_handleBlood;
 			[] call EVENT_fnc_onPlayerFireNear;

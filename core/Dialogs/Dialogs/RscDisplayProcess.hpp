@@ -189,7 +189,6 @@ class RscDisplayProcess: default_interaction_back_dialog
 		class ACTION_FRAME: RscFrame
 		{
 			idc = 53008;
-			colorText[] = {0,0,0,0.8};
 
 			x = 0.561875 * safezoneW + safezoneX;
 			y = 0.346 * safezoneH + safezoneY;
@@ -209,7 +208,6 @@ class RscDisplayProcess: default_interaction_back_dialog
 		class ACTION_TEXT: RscStructuredText
 		{
 			idc = 53010;
-			colorBackground[] = {0,0,0,0};
 			text = "<t align='left' size='1.3' color='#FFFFFF'>Traiter</t>";
 
 			x = 0.593021 * safezoneW + safezoneX;
@@ -262,7 +260,6 @@ class RscDisplayProcess: default_interaction_back_dialog
 		class ERROR_TEXT: RscStructuredText
 		{
 			idc = 53015;
-			colorBackground[] = {-1,-1,-1,0};
 
 			x = 0.37625 * safezoneW + safezoneX;
 			y = 0.357 * safezoneH + safezoneY;
