@@ -80,7 +80,9 @@ class ALYSIA_FACTIONS
 			},
 			{"Virtual",
 				{
-
+					"destroy_archeo",
+					"destroy_stand",
+					"destroy_field"
 				}
 			}
 		};
@@ -246,7 +248,9 @@ class ALYSIA_FACTIONS
 			},
 			{"Virtual",
 				{
-
+					"destroy_archeo",
+					"destroy_stand",
+					"destroy_field"
 				}
 			}
 		};

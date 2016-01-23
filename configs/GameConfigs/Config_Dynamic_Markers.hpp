@@ -85,6 +85,7 @@ class ALYSIA_DYN_MARKERS
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
+		destroy_item = "destroy_field";
 		positions[] = G_RESPAWN_FIELD;
 	};
 	class cannabis_1
@@ -99,6 +100,7 @@ class ALYSIA_DYN_MARKERS
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
+		destroy_item = "destroy_field";
 		positions[] = G_RESPAWN_FIELD;
 	};
 	class meth_1
@@ -113,6 +115,7 @@ class ALYSIA_DYN_MARKERS
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
+		destroy_item = "destroy_field";
 		positions[] = G_RESPAWN_FIELD;
 	};
 	class heroin_1
@@ -127,6 +130,7 @@ class ALYSIA_DYN_MARKERS
 		discover[]  = {"CIV", "GUER"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
+		destroy_item = "destroy_field";
 		positions[] = G_RESPAWN_FIELD;
 	};
 
@@ -144,6 +148,7 @@ class ALYSIA_DYN_MARKERS
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
+		destroy_item = "destroy_stand";
 		positions[] = G_RESPAWN_GENERAL;
 	};
 	class black_market_2_marker
@@ -159,6 +164,7 @@ class ALYSIA_DYN_MARKERS
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
+		destroy_item = "destroy_stand";
 		positions[] = G_RESPAWN_GENERAL;
 	};
 
@@ -176,6 +182,7 @@ class ALYSIA_DYN_MARKERS
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
+		destroy_item = "destroy_stand";
 		positions[] = G_RESPAWN_NORTH;
 	};
 
@@ -193,6 +200,7 @@ class ALYSIA_DYN_MARKERS
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
+		destroy_item = "destroy_stand";
 		positions[] = G_RESPAWN_GENERAL;
 	};
 
@@ -210,6 +218,7 @@ class ALYSIA_DYN_MARKERS
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
+		destroy_item = "destroy_stand";
 		positions[] = G_RESPAWN_GENERAL;
 	};
 	class cardealer_2_marker
@@ -225,6 +234,7 @@ class ALYSIA_DYN_MARKERS
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
+		destroy_item = "destroy_stand";
 		positions[] = G_RESPAWN_GENERAL;
 	};
 
@@ -242,6 +252,7 @@ class ALYSIA_DYN_MARKERS
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
+		destroy_item = "destroy_stand";
 		positions[] = G_RESPAWN_GENERAL;
 	};
 	class drugs_dealer_2_marker
@@ -257,6 +268,7 @@ class ALYSIA_DYN_MARKERS
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
+		destroy_item = "destroy_stand";
 		positions[] = G_RESPAWN_GENERAL;
 	};
 
@@ -274,6 +286,7 @@ class ALYSIA_DYN_MARKERS
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
+		destroy_item = "destroy_archeo";
 		positions[] = G_RESPAWN_ARCHEOLOGIE;
 	};
 };

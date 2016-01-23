@@ -1641,4 +1641,29 @@ class ALYSIA_ITEMS
 		removable   = 1;
 		image       = "alysia_items_virtual\data\frag_8.paa";
 	};
+
+	class destroy_archeo
+	{
+		name        = "Kit (Archélogie)";
+		weight      = 6;
+		illegal     = 1;
+		removable   = 1;
+		image       = "";
+	};
+	class destroy_stand
+	{
+		name        = "Kit (Infrastructure)";
+		weight      = 6;
+		illegal     = 1;
+		removable   = 1;
+		image       = "";
+	};
+	class destroy_field
+	{
+		name        = "Kit (Champs)";
+		weight      = 6;
+		illegal     = 1;
+		removable   = 1;
+		image       = "";
+	};
 };

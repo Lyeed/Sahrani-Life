@@ -50,8 +50,6 @@ with missionNamespace do
 	g_EASTLevel = 0;
 	g_GUERLevel = 0;
 	g_CIVLevel = 0;
-	//--------------
-	g_adminlevel = 0;
 	/* =================[ViewDistances]=================== */
 	tawvd_foot = viewDistance;
 	tawvd_car = viewDistance;

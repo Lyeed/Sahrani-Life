@@ -7,9 +7,11 @@
 */
 private["_vehicle", "_data", "_position", "_time", "_try"];
 
+/*
 if (call compile format["!(isNil ""gServer_faction_%1_mission"")", str(playerSide)]) exitWith {
 	["Votre faction a déja effectuée une mission"] call public_fnc_error;
 };
+*/
 
 _time = round(random(20) * 60) + (4 * 60);
 if (((gServer_rebootHour * 60) - serverTime) < _time) exitWith {
@@ -22,7 +24,7 @@ if (((gServer_rebootHour * 60) - serverTime) < _time) exitWith {
 
 _data = getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "mission_start") call BIS_fnc_selectRandom;
 _position = _data select 0;
-call compile format["gServer_faction_%1_mission=true; publicVariable""gServer_faction_%1_mission"";", str(playerSide)];
+// call compile format["gServer_faction_%1_mission=true; publicVariable""gServer_faction_%1_mission"";", str(playerSide)];
 
 [format[
 		"La livraison arrivera en <t color='#04B45F'>%1</t> dans <t color='#FF8000'>%2</t>.<br/>Merci de ne pas déconnecter tant que le convoi n'est pas arrivé",
