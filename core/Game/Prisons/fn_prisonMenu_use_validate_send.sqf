@@ -13,10 +13,10 @@ _prison = (([player] call public_fnc_prisonNearest) select 0);
 _prisonName = vehicleVarName _prison;
 
 g_arrest_Prison = _prisonName;
-g_arrest_Cellule = _this select 0;
-g_arrest_Time = _this select 1;
-g_arrest_Caution = _this select 2;
-g_arrest_Reason = _this select 3;
+g_arrest_Cellule = _infos select 0;
+g_arrest_Time = _infos select 1;
+g_arrest_Caution = _infos select 2;
+g_arrest_Reason = _infos select 3;
 g_arrest_Gear = [];
 
 ["Vous devez à présent déshabiller le prisonnier, lui fournir une tenue de la prison et l'enfermer dans sa cellule."] remoteExecCall ["call public_fnc_info", _from];
