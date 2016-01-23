@@ -20,22 +20,11 @@ if (isNil _infos) exitWith {};
 
 if (!(player getVariable ["arrested", false])) exitWith {["Cette personne n'est plus en prison"] remoteExecCall ["call public_fnc_error", _from];
 
+g_arrest_Cellule = _cell;
+g_arrest_Time = (_time * 60);
+g_arrest_Bail = _bail;
+g_arrest_Cellule = _cell;
+g_arrest_Reason = _reason;
 
-if (_cell != 0) then {
-	g_arrest_Cellule = _cell;
-};
-if (_time != 0) then {
-	g_arrest_Time = (_time * 60);
-};
-if (_cell != 0) then {
-	g_arrest_Cellule = _cell;
-};
-if (_reason != "") then {
-	g_arrest_Reason = _reason;
-};
-
-if (g_arrest_Cellule isEqualTo 0) then {}
-
-["Votre peine a été modifiée: ", ];
-
-["Modifications effectuées."] remoteExecCall ["call public_fnc_info", _from];
+["Votre peine a été modifiée.<br/>Temps: %1<br/>Caution: %2<br/>", g_arrest_Time, g_arrest_Bail] call public_fnc_info;
+["Modifications effectuées.<br/>Temps: %1<br/>Caution: %2<br/>", g_arrest_Time, g_arrest_Bail] remoteExecCall ["call public_fnc_info", _from];

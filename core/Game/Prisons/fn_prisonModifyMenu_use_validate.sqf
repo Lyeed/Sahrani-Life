@@ -51,7 +51,7 @@ if ((_time < _timeMin) || (_time > _timeMax)) then {
 	(_display displayCtrl 19045) ctrlSetBackgroundColor [153, 0, 0, 0.5];
 	_error = true;
 };
-if (_bailEnable isEqualTo 4) then {
+if (_bailEnable isEqualTo 1) then {
 	if ((_amount < _bailMin) || (_amount > _bailMax)) then {
 		(_display displayCtrl 19046) ctrlSetBackgroundColor [153, 0, 0, 0.5];
 		_error = true;
