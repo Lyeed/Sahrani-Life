@@ -5,6 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+
 private["_from"];
 _from = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
   
@@ -14,7 +15,7 @@ if (player getVariable ["arrested", false]) then
 	[
 		(_from getVariable ["realname", ""]),
 		g_sexe,
-		g_birth call public_fnc_age,
+		player call public_fnc_age,
 		g_nationality,
 		g_arrest_Cellule,
 		g_arrest_Time,
@@ -22,5 +23,5 @@ if (player getVariable ["arrested", false]) then
 		g_arrest_Reason
 	] remoteExecCall ["public_fnc_prisonModifyMenu_open", _from];
 } else {
-	["La cible n'est pas emprisonné"] remoteExecCall ["public_fnc_info", _from];
+	["Cette personne n'est plus en prison"] remoteExecCall ["public_fnc_info", _from];
 };
