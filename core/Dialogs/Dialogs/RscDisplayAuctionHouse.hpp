@@ -133,18 +133,9 @@ class RscDisplayAuctionHouse: default_base_dialog
 		};
 		class ACTION_EXIT_BUTTON: RscButtonSilent
 		{
-			idc = -1;
 			action = "closeDialog 0;";
-			onMouseEnter = "\
-			ctrlSetText[45608,""lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""];\
-			ctrlShow[45606, false];\
-			((findDisplay 45600) displayCtrl 45605) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 45600) displayCtrl 45607) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
-			onMouseExit = "\
-			ctrlSetText[45608,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];\
-			ctrlShow[45606, true];\
-			((findDisplay 45600) displayCtrl 45605) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 45600) displayCtrl 45607) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";
+			onMouseEnter = "ctrlSetText[45608,""lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""]; ctrlShow[45606, false]; ((findDisplay 45600) displayCtrl 45605) ctrlSetBackgroundColor [1,1,1,1]; ((findDisplay 45600) displayCtrl 45607) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
+			onMouseExit = "ctrlSetText[45608,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""]; ctrlShow[45606, true]; ((findDisplay 45600) displayCtrl 45605) ctrlSetBackgroundColor [0,0,0,0.6]; ((findDisplay 45600) displayCtrl 45607) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";
 
 			x = 0.567031 * safezoneW + safezoneX;
 			y = 0.676 * safezoneH + safezoneY;
@@ -195,18 +186,8 @@ class RscDisplayAuctionHouse: default_base_dialog
 		{
 			idc = 45613;
 			action = "[] spawn public_fnc_auctionHouse_action_buy;";
-			onMouseEnter = "\
-			ctrlSetText[45612,""lyeed_IMG\data\auctionHouse\actions\action_buy_select.paa""];\
-			ctrlShow[45610, false];\
-			((findDisplay 45600) displayCtrl 45609) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 45600) displayCtrl 45611) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
-			onMouseExit = "\
-			ctrlSetText[45612,""lyeed_IMG\data\auctionHouse\actions\action_buy.paa""];\
-			if (ctrlVisible 45612) then {\
-				ctrlShow[45610, true];\
-			};\
-			((findDisplay 45600) displayCtrl 45609) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 45600) displayCtrl 45611) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>"";";
+			onMouseEnter = "ctrlSetText[45612,""lyeed_IMG\data\auctionHouse\actions\action_buy_select.paa""];ctrlShow[45610, false];((findDisplay 45600) displayCtrl 45609) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 45600) displayCtrl 45611) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
+			onMouseExit = "ctrlSetText[45612,""lyeed_IMG\data\auctionHouse\actions\action_buy.paa""];if (ctrlVisible 45612) then {ctrlShow[45610, true];};((findDisplay 45600) displayCtrl 45609) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 45600) displayCtrl 45611) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>"";";
 
 			x = 0.567031 * safezoneW + safezoneX;
 			y = 0.511 * safezoneH + safezoneY;
@@ -229,16 +210,8 @@ class RscDisplayAuctionHouse: default_base_dialog
 		{
 			idc = -1;
 			action = "[0] call public_fnc_auctionHouse_menu_filter;";
-			onMouseEnter = "\
-			if ((uiNamespace getVariable ['AH_selected', -1]) != 0) then {\
-				((findDisplay 45600) displayCtrl 45615) ctrlSetBackgroundColor [1,1,1,1];\
-				((findDisplay 45600) displayCtrl 45615) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#000000'>Acheter</t>"";\
-			};";
-			onMouseExit = "\
-			if ((uiNamespace getVariable ['AH_selected', -1]) != 0) then {\
-				((findDisplay 45600) displayCtrl 45615) ctrlSetBackgroundColor [0,0,0,1];\
-				((findDisplay 45600) displayCtrl 45615) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#FFFFFF'>Acheter</t>"";\
-			};";
+			onMouseEnter = "if ((uiNamespace getVariable ['AH_selected', -1]) != 0) then {((findDisplay 45600) displayCtrl 45615) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 45600) displayCtrl 45615) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#000000'>Acheter</t>"";};";
+			onMouseExit = "if ((uiNamespace getVariable ['AH_selected', -1]) != 0) then {((findDisplay 45600) displayCtrl 45615) ctrlSetBackgroundColor [0,0,0,1];((findDisplay 45600) displayCtrl 45615) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#FFFFFF'>Acheter</t>"";};";
 
 			x = 0.335 * safezoneW + safezoneX;
 			y = 0.753 * safezoneH + safezoneY;
@@ -261,16 +234,8 @@ class RscDisplayAuctionHouse: default_base_dialog
 		{
 			idc = -1;
 			action = "[1] call public_fnc_auctionHouse_menu_filter;";
-			onMouseEnter = "\
-			if ((uiNamespace getVariable ['AH_selected', -1]) != 1) then {\
-				((findDisplay 45600) displayCtrl 45617) ctrlSetBackgroundColor [1,1,1,1];\
-				((findDisplay 45600) displayCtrl 45617) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#000000'>Vendre</t>"";\
-			};";
-			onMouseExit = "\
-			if ((uiNamespace getVariable ['AH_selected', -1]) != 1) then {\
-				((findDisplay 45600) displayCtrl 45617) ctrlSetBackgroundColor [0,0,0,1];\
-				((findDisplay 45600) displayCtrl 45617) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#FFFFFF'>Vendre</t>"";\
-			};";
+			onMouseEnter = "if ((uiNamespace getVariable ['AH_selected', -1]) != 1) then {((findDisplay 45600) displayCtrl 45617) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 45600) displayCtrl 45617) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#000000'>Vendre</t>"";};";
+			onMouseExit = "if ((uiNamespace getVariable ['AH_selected', -1]) != 1) then {((findDisplay 45600) displayCtrl 45617) ctrlSetBackgroundColor [0,0,0,1];((findDisplay 45600) displayCtrl 45617) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#FFFFFF'>Vendre</t>"";};";
 
 			x = 0.402031 * safezoneW + safezoneX;
 			y = 0.753 * safezoneH + safezoneY;
@@ -293,16 +258,8 @@ class RscDisplayAuctionHouse: default_base_dialog
 		{
 			idc = -1;
 			action = "[2] call public_fnc_auctionHouse_menu_filter;";
-			onMouseEnter = "\
-			if ((uiNamespace getVariable ['AH_selected', -1]) != 2) then {\
-				((findDisplay 45600) displayCtrl 45614) ctrlSetBackgroundColor [1,1,1,1];\
-				((findDisplay 45600) displayCtrl 45614) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#000000'>Mes ventes</t>"";\
-			};";
-			onMouseExit = "\
-			if ((uiNamespace getVariable ['AH_selected', -1]) != 2) then {\
-				((findDisplay 45600) displayCtrl 45614) ctrlSetBackgroundColor [0,0,0,1];\
-				((findDisplay 45600) displayCtrl 45614) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#FFFFFF'>Mes ventes</t>"";\
-			};";
+			onMouseEnter = "if ((uiNamespace getVariable ['AH_selected', -1]) != 2) then {((findDisplay 45600) displayCtrl 45614) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 45600) displayCtrl 45614) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#000000'>Mes ventes</t>"";};";
+			onMouseExit = "if ((uiNamespace getVariable ['AH_selected', -1]) != 2) then {((findDisplay 45600) displayCtrl 45614) ctrlSetBackgroundColor [0,0,0,1];((findDisplay 45600) displayCtrl 45614) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#FFFFFF'>Mes ventes</t>"";};";
 
 			x = 0.469062 * safezoneW + safezoneX;
 			y = 0.753 * safezoneH + safezoneY;
@@ -325,16 +282,8 @@ class RscDisplayAuctionHouse: default_base_dialog
 		{
 			idc = -1;
 			action = "[-1] call public_fnc_auctionHouse_menu_filter;";
-			onMouseEnter = "\
-			if ((uiNamespace getVariable ['AH_selected', -1]) != -1) then {\
-				((findDisplay 45600) displayCtrl 45644) ctrlSetBackgroundColor [1,1,1,1];\
-				((findDisplay 45600) displayCtrl 45644) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#000000'>Infos</t>"";\
-			};";
-			onMouseExit = "\
-			if ((uiNamespace getVariable ['AH_selected', -1]) != -1) then {\
-				((findDisplay 45600) displayCtrl 45644) ctrlSetBackgroundColor [0,0,0,1];\
-				((findDisplay 45600) displayCtrl 45644) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#FFFFFF'>Infos</t>"";\
-			};";
+			onMouseEnter = "if ((uiNamespace getVariable ['AH_selected', -1]) != -1) then {((findDisplay 45600) displayCtrl 45644) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 45600) displayCtrl 45644) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#000000'>Infos</t>"";};";
+			onMouseExit = "if ((uiNamespace getVariable ['AH_selected', -1]) != -1) then {((findDisplay 45600) displayCtrl 45644) ctrlSetBackgroundColor [0,0,0,1];((findDisplay 45600) displayCtrl 45644) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#FFFFFF'>Infos</t>"";};";
 
 			x = 0.556719 * safezoneW + safezoneX;
 			y = 0.753 * safezoneH + safezoneY;
@@ -406,18 +355,8 @@ class RscDisplayAuctionHouse: default_base_dialog
 		{
 			idc = 45626;
 			action = "[] spawn public_fnc_auctionHouse_action_cancel;";
-			onMouseEnter = "\
-			ctrlSetText[45625,""lyeed_IMG\data\auctionHouse\actions\action_recup_select.paa""];\
-			ctrlShow[45623, false];\
-			((findDisplay 45600) displayCtrl 45622) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 45600) displayCtrl 45624) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Récup.</t>"";";
-			onMouseExit = "\
-			ctrlSetText[45625,""lyeed_IMG\data\auctionHouse\actions\action_recup.paa""];\
-			if (ctrlVisible 45625) then {\
-				ctrlShow[45623, true];\
-			};\
-			((findDisplay 45600) displayCtrl 45622) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 45600) displayCtrl 45624) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Récup.</t>"";";
+			onMouseEnter = "ctrlSetText[45625,""lyeed_IMG\data\auctionHouse\actions\action_recup_select.paa""];ctrlShow[45623, false];			((findDisplay 45600) displayCtrl 45622) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 45600) displayCtrl 45624) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Récup.</t>"";";
+			onMouseExit = "ctrlSetText[45625,""lyeed_IMG\data\auctionHouse\actions\action_recup.paa""];if (ctrlVisible 45625) then {				ctrlShow[45623, true];			};			((findDisplay 45600) displayCtrl 45622) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 45600) displayCtrl 45624) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Récup.</t>"";";
 
 			x = 0.567031 * safezoneW + safezoneX;
 			y = 0.511 * safezoneH + safezoneY;
@@ -469,18 +408,8 @@ class RscDisplayAuctionHouse: default_base_dialog
 		{
 			idc = 45631;
 			action = "[] spawn public_fnc_auctionHouse_action_sell;";
-			onMouseEnter = "\
-			ctrlSetText[45630,""lyeed_IMG\data\auctionHouse\actions\action_buy_select.paa""];\
-			ctrlShow[45628, false];\
-			((findDisplay 45600) displayCtrl 45627) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 45600) displayCtrl 45629) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Vendre</t>"";";
-			onMouseExit = "\
-			ctrlSetText[45630,""lyeed_IMG\data\auctionHouse\actions\action_buy.paa""];\
-			if (ctrlVisible 45630) then {\
-				ctrlShow[45628, true];\
-			};\
-			((findDisplay 45600) displayCtrl 45627) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 45600) displayCtrl 45629) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Vendre</t>"";";
+			onMouseEnter = "ctrlSetText[45630,""lyeed_IMG\data\auctionHouse\actions\action_buy_select.paa""];ctrlShow[45628, false];			((findDisplay 45600) displayCtrl 45627) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 45600) displayCtrl 45629) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Vendre</t>"";";
+			onMouseExit = "ctrlSetText[45630,""lyeed_IMG\data\auctionHouse\actions\action_buy.paa""];if (ctrlVisible 45630) then {				ctrlShow[45628, true];			};			((findDisplay 45600) displayCtrl 45627) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 45600) displayCtrl 45629) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Vendre</t>"";";
 
 			x = 0.567031 * safezoneW + safezoneX;
 			y = 0.511 * safezoneH + safezoneY;

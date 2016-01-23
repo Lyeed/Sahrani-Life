@@ -74,12 +74,8 @@ class RscDisplayInteraction: default_base_dialog
 			idc = 5005;
 			action = "closedialog 0;";
 			tooltip = "Quitter";
-			onMouseEnter = "((findDisplay 5000) displayCtrl 5003) ctrlSetBackgroundColor [1,1,1,1];\
-			ctrlSetText[5004,""lyeed_IMG\data\interactions\option_exit_select.paa""];\
-			ctrlShow[5002, false];";
-			onMouseExit = "((findDisplay 5000) displayCtrl 5003) ctrlSetBackgroundColor [0,0,0,0.6];\
-			ctrlSetText[5004,""lyeed_IMG\data\interactions\option_exit.paa""];\
-			ctrlShow[5002, true];";
+			onMouseEnter = "((findDisplay 5000) displayCtrl 5003) ctrlSetBackgroundColor [1,1,1,1];			ctrlSetText[5004,""lyeed_IMG\data\interactions\option_exit_select.paa""];			ctrlShow[5002, false];";
+			onMouseExit = "((findDisplay 5000) displayCtrl 5003) ctrlSetBackgroundColor [0,0,0,0.6];			ctrlSetText[5004,""lyeed_IMG\data\interactions\option_exit.paa""];			ctrlShow[5002, true];";
 
 			x = 0.345312 * safezoneW + safezoneX;
 			y = 0.412 * safezoneH + safezoneY;
@@ -122,12 +118,8 @@ class RscDisplayInteraction: default_base_dialog
 			idc = 5009;
 			action = "[] call public_fnc_interactions_recall;";
 			tooltip = "Rafraichir";
-			onMouseEnter = "((findDisplay 5000) displayCtrl 5007) ctrlSetBackgroundColor [1,1,1,1];\
-			ctrlSetText[5008,""lyeed_IMG\data\interactions\option_refresh_select.paa""];\
-			ctrlShow[5006, false];";
-			onMouseExit = "((findDisplay 5000) displayCtrl 5007) ctrlSetBackgroundColor [0,0,0,0.6];\
-			ctrlSetText[5008,""lyeed_IMG\data\interactions\option_refresh.paa""];\
-			ctrlShow[5006, true];";
+			onMouseEnter = "((findDisplay 5000) displayCtrl 5007) ctrlSetBackgroundColor [1,1,1,1];			ctrlSetText[5008,""lyeed_IMG\data\interactions\option_refresh_select.paa""];			ctrlShow[5006, false];";
+			onMouseExit = "((findDisplay 5000) displayCtrl 5007) ctrlSetBackgroundColor [0,0,0,0.6];			ctrlSetText[5008,""lyeed_IMG\data\interactions\option_refresh.paa""];			ctrlShow[5006, true];";
 
 			x = 0.345312 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;

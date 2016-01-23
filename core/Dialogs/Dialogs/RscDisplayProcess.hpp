@@ -229,16 +229,8 @@ class RscDisplayProcess: default_interaction_back_dialog
 		{
 			idc = 53012;
 			action = "closedialog 0; [g_interaction_process_type,parseNumber(ctrlText 53006),g_interaction_target] spawn public_fnc_process_action;";
-			onMouseEnter = "\
-			ctrlSetText[53011,""lyeed_IMG\data\process\action_process_select.paa""];\
-			ctrlShow[53008, false];\
-			((findDisplay 53000) displayCtrl 53009) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 53000) displayCtrl 53010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Traiter</t>"";";
-			onMouseExit = "\
-			ctrlSetText[53011,""lyeed_IMG\data\process\action_process.paa""];\
-			ctrlShow[53008, true];\
-			((findDisplay 53000) displayCtrl 53009) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 53000) displayCtrl 53010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Traiter</t>"";";
+			onMouseEnter = "			ctrlSetText[53011,""lyeed_IMG\data\process\action_process_select.paa""];			ctrlShow[53008, false];			((findDisplay 53000) displayCtrl 53009) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 53000) displayCtrl 53010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Traiter</t>"";";
+			onMouseExit = "			ctrlSetText[53011,""lyeed_IMG\data\process\action_process.paa""];			ctrlShow[53008, true];			((findDisplay 53000) displayCtrl 53009) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 53000) displayCtrl 53010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Traiter</t>"";";
 
 			x = 0.561875 * safezoneW + safezoneX;
 			y = 0.346 * safezoneH + safezoneY;

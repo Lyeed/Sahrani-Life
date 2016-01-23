@@ -181,18 +181,8 @@ class RscDisplayShopVehicles: default_interaction_back_dialog
 		{
 			idc = 2315;
 			action = "[] call public_fnc_shop_vehicles_buy;";
-			onMouseEnter = "\
-			ctrlSetText[2314,""lyeed_IMG\data\shops\actions\action_buy_select.paa""];\
-			ctrlShow[2312, false];\
-			((findDisplay 2300) displayCtrl 2311) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 2300) displayCtrl 2313) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
-			onMouseExit = "\
-			ctrlSetText[2314,""lyeed_IMG\data\shops\actions\action_buy.paa""];\
-			if (ctrlVisible 2314) then {\
-				ctrlShow[2312, true];\
-			};\
-			((findDisplay 2300) displayCtrl 2311) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 2300) displayCtrl 2313) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>"";";
+			onMouseEnter = "			ctrlSetText[2314,""lyeed_IMG\data\shops\actions\action_buy_select.paa""];			ctrlShow[2312, false];			((findDisplay 2300) displayCtrl 2311) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 2300) displayCtrl 2313) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
+			onMouseExit = "			ctrlSetText[2314,""lyeed_IMG\data\shops\actions\action_buy.paa""];			if (ctrlVisible 2314) then {				ctrlShow[2312, true];			};			((findDisplay 2300) displayCtrl 2311) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 2300) displayCtrl 2313) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>"";";
 
 			x = 0.530937 * safezoneW + safezoneX;
 			y = 0.643 * safezoneH + safezoneY;

@@ -54,7 +54,7 @@ class ALYSIA_STAFF
 			{
 				name = "Soins";
 				statement = "g_bleed = 0; [4000] call public_fnc_handleBlood;";
-				condition = "true";
+				condition = "(true)";
 				allow[] = {"76561198007960495"};
 			};
 
@@ -95,14 +95,14 @@ class ALYSIA_STAFF
 			{
 				name = "TP à";
 				statement = "(vehicle player) setPosATL (getPosATL (call compile (lbData[9000, lbCurSel 9000])));";
-				condition = "true";
+				condition = "(true)";
 				allow[] = {"76561198007960495"};
 			};
 			class tphere
 			{
 				name = "TP ici";
 				statement = "(call compile (lbData[9000, lbCurSel 9000])) setPosATL (getPosATL player);";
-				condition = "true";
+				condition = "(true)";
 				allow[] = {"76561198007960495"};
 			};
 
@@ -110,7 +110,7 @@ class ALYSIA_STAFF
 			{
 				name = "Spec";
 				statement = "(call compile (lbData[9000, lbCurSel 9000])) switchCamera 'INTERNAL'; g_staff_spec = true; closeDialog 0;";
-				condition = "true";
+				condition = "(true)";
 				allow[] = {"76561198007960495"};
 			};
 			
@@ -119,6 +119,14 @@ class ALYSIA_STAFF
 				name = "Rez";
 				statement = "(call compile (lbData[9000, lbCurSel 9000])) setVariable ['is_coma',false];";
 				condition = "((call compile (lbData[9000, lbCurSel 9000])) getVariable ['is_coma',false])";
+				allow[] = {"76561198007960495"};
+			};
+
+			class data
+			{
+				name = "Informations";
+				statement = "[player] remoteExecCall ['public_fnc_APP_staff_players_getData', (lbData[9000, lbCurSel 9000])];";
+				condition = "(true)";
 				allow[] = {"76561198007960495"};
 			};
 		};

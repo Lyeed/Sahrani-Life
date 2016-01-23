@@ -99,18 +99,8 @@ class RscDisplayCompanyCreate: default_interaction_back_dialog
 		{
 			idc = 90005;
 			action = "[] spawn public_fnc_company_create_action;";
-			onMouseEnter = "\
-			ctrlSetText[90004,""lyeed_IMG\data\companies\action_company_select.paa""];\
-			ctrlShow[90002, false];\
-			((findDisplay 90000) displayCtrl 90001) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 90000) displayCtrl 90003) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Créer</t>"";";
-			onMouseExit = "\
-			ctrlSetText[90004,""lyeed_IMG\data\companies\action_company.paa""];\
-			if (ctrlVisible 90004) then {\
-				ctrlShow[90002, true];\
-			};\
-			((findDisplay 90000) displayCtrl 90001) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 90000) displayCtrl 90003) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Créer</t>"";";
+			onMouseEnter = "			ctrlSetText[90004,""lyeed_IMG\data\companies\action_company_select.paa""];			ctrlShow[90002, false];			((findDisplay 90000) displayCtrl 90001) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 90000) displayCtrl 90003) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Créer</t>"";";
+			onMouseExit = "			ctrlSetText[90004,""lyeed_IMG\data\companies\action_company.paa""];			if (ctrlVisible 90004) then {				ctrlShow[90002, true];			};			((findDisplay 90000) displayCtrl 90001) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 90000) displayCtrl 90003) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Créer</t>"";";
 
 			x = 0.530937 * safezoneW + safezoneX;
 			y = 0.643 * safezoneH + safezoneY;

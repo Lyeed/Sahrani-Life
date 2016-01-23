@@ -96,6 +96,9 @@ class CfgRemoteExec
 		class public_fnc_house_menu_owner_action_light_update {allowTargets = CLIENT;};
 		//- dynamicMarkers
 		class public_fnc_dynamicMarkers_update {allowTargets = CLIENT;};
+		//- staff
+		class public_fnc_APP_staff_players_returnData {allowTargets = CLIENT;};
+		class public_fnc_APP_staff_players_getData {allowTargets = CLIENT;};
 
 		//- Arma
 		class setFuel {allowTargets = EVERYONE;};

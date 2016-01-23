@@ -13,6 +13,9 @@ if (!g_connected) exitWith {};
 
 if ((markerAlpha _marker) isEqualTo 1) then
 {
-	_marker setMarkerAlphaLocal 0;
-	[format["Le marqueur <t color='#74DF00'>%1</t> n'est plus d'actualité", (markerText _marker)]] call public_fnc_info;
+	if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _marker >> "shown"))) then
+	{
+		_marker setMarkerAlphaLocal 0;
+		[format["Le marqueur <t color='#74DF00'>%1</t> n'est plus d'actualité", (markerText _marker)]] call public_fnc_info;
+	};
 };

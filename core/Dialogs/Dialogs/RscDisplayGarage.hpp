@@ -74,12 +74,8 @@ class RscDisplayGarageAlysia: default_base_dialog
 			idc = 2835;
 			action = "closedialog 0;";
 			tooltip = "Quitter";
-			onMouseEnter = "((findDisplay 2800) displayCtrl 2833) ctrlSetBackgroundColor [1,1,1,1];\
-			ctrlSetText[2834,""lyeed_IMG\data\global\option_exit_select.paa""];\
-			ctrlShow[2832, false];";
-			onMouseExit = "((findDisplay 2800) displayCtrl 2833) ctrlSetBackgroundColor [0,0,0,0.6];\
-			ctrlSetText[2834,""lyeed_IMG\data\global\option_exit.paa""];\
-			ctrlShow[2832, true];";
+			onMouseEnter = "((findDisplay 2800) displayCtrl 2833) ctrlSetBackgroundColor [1,1,1,1];			ctrlSetText[2834,""lyeed_IMG\data\global\option_exit_select.paa""];			ctrlShow[2832, false];";
+			onMouseExit = "((findDisplay 2800) displayCtrl 2833) ctrlSetBackgroundColor [0,0,0,0.6];			ctrlSetText[2834,""lyeed_IMG\data\global\option_exit.paa""];			ctrlShow[2832, true];";
 
 			x = 0.226719 * safezoneW + safezoneX;
 			y = 0.258 * safezoneH + safezoneY;
@@ -549,16 +545,8 @@ class RscDisplayGarageRename: default_base_dialog
 		{
 			idc = 101006;
 			action = "[] call public_fnc_garageVehicleRenameProcess;";
-			onMouseEnter = "\
-			ctrlSetText[101005,""lyeed_IMG\data\garage\store\action_store_select.paa""];\
-			ctrlShow[101002, false];\
-			((findDisplay 101000) displayCtrl 101003) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 101000) displayCtrl 101004) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Changer</t>"";";
-			onMouseExit = "\
-			ctrlSetText[101005,""lyeed_IMG\data\garage\store\action_store.paa""];\
-			ctrlShow[101002, true];\
-			((findDisplay 101000) displayCtrl 101003) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 101000) displayCtrl 101004) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Changer</t>"";";
+			onMouseEnter = "			ctrlSetText[101005,""lyeed_IMG\data\garage\store\action_store_select.paa""];			ctrlShow[101002, false];			((findDisplay 101000) displayCtrl 101003) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 101000) displayCtrl 101004) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Changer</t>"";";
+			onMouseExit = "			ctrlSetText[101005,""lyeed_IMG\data\garage\store\action_store.paa""];			ctrlShow[101002, true];			((findDisplay 101000) displayCtrl 101003) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 101000) displayCtrl 101004) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Changer</t>"";";
 
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.621 * safezoneH + safezoneY;
@@ -601,12 +589,8 @@ class RscDisplayGarageRename: default_base_dialog
 			idc = 101010;
 			action = "closedialog 0;";
 			tooltip = "Quitter";
-			onMouseEnter = "((findDisplay 101000) displayCtrl 101008) ctrlSetBackgroundColor [1,1,1,1];\
-			ctrlSetText[101009,""lyeed_IMG\data\global\option_exit_select.paa""];\
-			ctrlShow[101007, false];";
-			onMouseExit = "((findDisplay 101000) displayCtrl 101008) ctrlSetBackgroundColor [0,0,0,0.6];\
-			ctrlSetText[101009,""lyeed_IMG\data\global\option_exit.paa""];\
-			ctrlShow[101007, true];";
+			onMouseEnter = "((findDisplay 101000) displayCtrl 101008) ctrlSetBackgroundColor [1,1,1,1];			ctrlSetText[101009,""lyeed_IMG\data\global\option_exit_select.paa""];			ctrlShow[101007, false];";
+			onMouseExit = "((findDisplay 101000) displayCtrl 101008) ctrlSetBackgroundColor [0,0,0,0.6];			ctrlSetText[101009,""lyeed_IMG\data\global\option_exit.paa""];			ctrlShow[101007, true];";
 
 			x = 0.345312 * safezoneW + safezoneX;
 			y = 0.5 * safezoneH + safezoneY;
@@ -783,16 +767,8 @@ class RscDisplayGarageStore: default_base_dialog
 		{
 			idc = 35014;
 			action = "[] call public_fnc_garageStoreAction;";
-			onMouseEnter = "\
-			ctrlSetText[35013,""lyeed_IMG\data\garage\store\action_store_select.paa""];\
-			ctrlShow[35010, false];\
-			((findDisplay 35000) displayCtrl 35011) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 35000) displayCtrl 35012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Ranger</t>"";";
-			onMouseExit = "\
-			ctrlSetText[35013,""lyeed_IMG\data\garage\store\action_store.paa""];\
-			ctrlShow[35010, true];\
-			((findDisplay 35000) displayCtrl 35011) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 35000) displayCtrl 35012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Ranger</t>"";";
+			onMouseEnter = "			ctrlSetText[35013,""lyeed_IMG\data\garage\store\action_store_select.paa""];			ctrlShow[35010, false];			((findDisplay 35000) displayCtrl 35011) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 35000) displayCtrl 35012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Ranger</t>"";";
+			onMouseExit = "			ctrlSetText[35013,""lyeed_IMG\data\garage\store\action_store.paa""];			ctrlShow[35010, true];			((findDisplay 35000) displayCtrl 35011) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 35000) displayCtrl 35012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Ranger</t>"";";
 
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.621 * safezoneH + safezoneY;
@@ -835,12 +811,8 @@ class RscDisplayGarageStore: default_base_dialog
 			idc = 5005;
 			action = "closedialog 0;";
 			tooltip = "Quitter";
-			onMouseEnter = "((findDisplay 35000) displayCtrl 35016) ctrlSetBackgroundColor [1,1,1,1];\
-			ctrlSetText[35017,""lyeed_IMG\data\global\option_exit_select.paa""];\
-			ctrlShow[35015, false];";
-			onMouseExit = "((findDisplay 35000) displayCtrl 35016) ctrlSetBackgroundColor [0,0,0,0.6];\
-			ctrlSetText[35017,""lyeed_IMG\data\global\option_exit.paa""];\
-			ctrlShow[35015, true];";
+			onMouseEnter = "((findDisplay 35000) displayCtrl 35016) ctrlSetBackgroundColor [1,1,1,1];			ctrlSetText[35017,""lyeed_IMG\data\global\option_exit_select.paa""];			ctrlShow[35015, false];";
+			onMouseExit = "((findDisplay 35000) displayCtrl 35016) ctrlSetBackgroundColor [0,0,0,0.6];			ctrlSetText[35017,""lyeed_IMG\data\global\option_exit.paa""];			ctrlShow[35015, true];";
 
 			x = 0.345312 * safezoneW + safezoneX;
 			y = 0.5 * safezoneH + safezoneY;

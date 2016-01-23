@@ -3,7 +3,7 @@ class HUD_inv_message
 	name = "HUD_inv_message";
 	idd = -1;
 	movingEnable = 0;
-	duration = 9999999999999999999999999999999999999;
+	duration = 9999999999999;
 	fadein = 1;
 	fadeout = 1;
 	onLoad = "uiNamespace setVariable [""HUD_inv_message"", _this select 0]";

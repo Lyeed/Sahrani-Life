@@ -47,8 +47,5 @@ while {!(isNull _display)} do
 	sleep 0.5;
 };
 
-if (!((g_interaction_target getVariable ["inv", []]) isEqualTo g_interaction_target_inv)) then {
-	g_interaction_target setVariable ["inv", g_interaction_target_inv, true];
-};
-
+g_interaction_target setVariable ["inv", g_interaction_target_inv, true];
 g_interaction_target setVariable ["inventory_in_use_UID", "", true];

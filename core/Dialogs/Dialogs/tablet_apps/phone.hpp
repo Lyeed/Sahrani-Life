@@ -430,13 +430,7 @@ class PHONE_MESSAGE_READ_ANSWER_IMAGE: RscPicture
 class PHONE_MESSAGE_READ_ANSWER_BUTTON: RscButtonSilent
 {
 	idc = PHONE_MESSAGE_READ_ANSWER_BUTTON_IDC;
-	action = "\
-		private[""_index""];\
-		_index = lbCurSel 8320;\
-		if (_index isEqualTo -1) exitWith {};\
-		[""phone_messages_send""] spawn public_fnc_tabletApp;\
-		ctrlSetText[8336, (g_phone_messages select _index) select 0];\
-	";
+	action = "		private[""_index""];		_index = lbCurSel 8320;		if (_index isEqualTo -1) exitWith {};		[""phone_messages_send""] spawn public_fnc_tabletApp;		ctrlSetText[8336, (g_phone_messages select _index) select 0];	";
 	tooltip = "Répondre";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\send_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\send.paa""];";
@@ -460,13 +454,7 @@ class PHONE_MESSAGE_READ_ADD_IMAGE : RscPicture
 class PHONE_MESSAGE_READ_ADD_BUTTON : RscButtonSilent
 {
 	idc = PHONE_MESSAGE_READ_ADD_BUTTON_IDC;
-	action = "\
-		private[""_index""];\
-		_index = lbCurSel 8320;\
-		if (_index isEqualTo -1) exitWith {};\
-		[""phone_contacts""] spawn public_fnc_tabletApp;\
-		ctrlSetText[8384, (g_phone_messages select _index) select 0];\
-	";
+	action = "		private[""_index""];		_index = lbCurSel 8320;		if (_index isEqualTo -1) exitWith {};		[""phone_contacts""] spawn public_fnc_tabletApp;		ctrlSetText[8384, (g_phone_messages select _index) select 0];	";
 	tooltip = "Ajouter aux contacts";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\add_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\add.paa""];";
@@ -533,16 +521,7 @@ class PHONE_MESSAGE_SEND_CONTACTS_HEADER : RscStructuredText
 class PHONE_MESSAGE_SEND_CONTACTS_LIST : RscListBox
 {
 	idc = PHONE_MESSAGE_SEND_CONTACTS_LIST_IDC;
-	onLBSelChanged ="\
-		private[""_txt"", ""_index""];\
-		_index = _this select 1;\
-		if (_index isEqualTo -1) exitWith {};\
-		_txt = ctrlText 8336;\
-		if (_txt isEqualTo """") then {\
-			ctrlSetText[8336, (_this select 0) lbData _index];\
-		} else {\
-			ctrlSetText[8336, format[""%1,%2"", _txt, (_this select 0) lbData _index]];\
-		};";
+	onLBSelChanged ="		private[""_txt"", ""_index""];		_index = _this select 1;		if (_index isEqualTo -1) exitWith {};		_txt = ctrlText 8336;		if (_txt isEqualTo """") then {			ctrlSetText[8336, (_this select 0) lbData _index];		} else {			ctrlSetText[8336, format[""%1,%2"", _txt, (_this select 0) lbData _index]];		};";
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.412 * safezoneH + safezoneY;
@@ -773,10 +752,7 @@ class PHONE_SETTINGS_RING_VALIDATE_IMAGE: RscPicture
 class PHONE_SETTINGS_RING_VALIDATE_BUTTON : RscButtonSilent
 {
 	idc = PHONE_SETTINGS_RING_VALIDATE_BUTTON_IDC;
-	action = "\
-		profileNamespace setVariable[""ALYSIA_phone_recv"", (lbCurSel 8351) + 1];\
-		[] call public_fnc_APP_phone_settings;\
-	";
+	action = "		profileNamespace setVariable[""ALYSIA_phone_recv"", (lbCurSel 8351) + 1];		[] call public_fnc_APP_phone_settings;	";
 	tooltip = "Sauvegarder la sonnerie";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\settings\validate_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\settings\validate.paa""];";
@@ -825,13 +801,7 @@ class PHONE_SETTINGS_SILENT_HEADER: RscStructuredText
 class PHONE_SETTINGS_SILENT_CHECK: RscCheckBox
 {
 	idc = PHONE_SETTINGS_SILENT_CHECK_IDC;
-	onCheckedChanged = "\
-	if ((_this select 1) isEqualTo 0) then {\
-		profileNamespace setVariable[""ALYSIA_phone_SILENT"", false];\
-	} else {\
-		profileNamespace setVariable[""ALYSIA_phone_SILENT"", true];\
-		playSound ""message_rcv_silent"";\
-	};";
+	onCheckedChanged = "	if ((_this select 1) isEqualTo 0) then {		profileNamespace setVariable[""ALYSIA_phone_SILENT"", false];	} else {		profileNamespace setVariable[""ALYSIA_phone_SILENT"", true];		playSound ""message_rcv_silent"";	};";
 
 	x = 0.62375 * safezoneW + safezoneX;
 	y = 0.39 * safezoneH + safezoneY;
@@ -919,13 +889,7 @@ class PHONE_CONTACTS_REMOVE_IMAGE : RscPicture
 class PHONE_CONTACTS_REMOVE_BUTTON : RscButtonSilent
 {
 	idc = PHONE_CONTACTS_REMOVE_BUTTON_IDC;
-	action = "\
-		private[""_sel""];\
-		_sel = lbCurSel 8374;\
-		if (_sel isEqualTo -1) exitWith {};\
-		g_phone_contacts deleteAt _sel;\
-		[""phone_contacts""] spawn public_fnc_tabletApp;\
-	";
+	action = "		private[""_sel""];		_sel = lbCurSel 8374;		if (_sel isEqualTo -1) exitWith {};		g_phone_contacts deleteAt _sel;		[""phone_contacts""] spawn public_fnc_tabletApp;	";
 	tooltip = "Supprimer";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\remove_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\remove.paa""];";
@@ -949,13 +913,7 @@ class PHONE_CONTACTS_SEND_IMAGE: RscPicture
 class PHONE_CONTACTS_SEND_BUTTON : RscButtonSilent
 {
 	idc = PHONE_CONTACTS_SEND_BUTTON_IDC;
-	action = "\
-		private[""_index""];\
-		_index = lbCurSel 8374;\
-		if (_index isEqualTo -1) exitWith {};\
-		[""phone_messages_send""] spawn public_fnc_tabletApp;\
-		ctrlSetText[8336, (g_phone_contacts select _index) select 1];\
-	";
+	action = "		private[""_index""];		_index = lbCurSel 8374;		if (_index isEqualTo -1) exitWith {};		[""phone_messages_send""] spawn public_fnc_tabletApp;		ctrlSetText[8336, (g_phone_contacts select _index) select 1];	";
 	tooltip = "Envoyer un message";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\send_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\send.paa""];";
@@ -1068,7 +1026,7 @@ PHONE_FACTION_IDCS[] =
 	PHONE_FACTION_MESSAGE_HEADER_IDC,
 	PHONE_FACTION_MESSAGE_INFO_IDC,
 	PHONE_FACTION_MESSAGE_SEND_IMAGE_IDC,
-	PHONE_FACTION_MESSAGE_SEND_BUTTON_IDC,
+	PHONE_FACTION_MESSAGE_SEND_BUTTON_IDC
 };
 
 class PHONE_FACTION_MESSAGE_HEADER: RscStructuredText
@@ -1184,13 +1142,7 @@ class PHONE_BLACKLIST_REMOVE_IMAGE : RscPicture
 class PHONE_BLACKLIST_REMOVE_BUTTON : RscButtonSilent
 {
 	idc = PHONE_BLACKLIST_REMOVE_BUTTON_IDC;
-	action = "\
-		private[""_sel""];\
-		_sel = lbCurSel 8532;\
-		if (_sel isEqualTo -1) exitWith {};\
-		g_phone_blacklist deleteAt _sel;\
-		[""PHONE_BLACKLIST""] spawn public_fnc_tabletApp;\
-	";
+	action = "		private[""_sel""];		_sel = lbCurSel 8532;		if (_sel isEqualTo -1) exitWith {};		g_phone_blacklist deleteAt _sel;		[""PHONE_BLACKLIST""] spawn public_fnc_tabletApp;	";
 	tooltip = "Supprimer";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\blacklist\remove_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\blacklist\remove.paa""];";

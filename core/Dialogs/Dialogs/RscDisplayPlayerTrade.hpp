@@ -375,16 +375,8 @@ class RscDisplayPlayerTrade: default_interaction_back_dialog
 		{
 			idc = 10018;
 			action = "[] call public_fnc_interactionMenu_action_trade_propose;";
-			onMouseEnter = "\
-			ctrlSetText[10016,""lyeed_IMG\data\interactions\player_to_player_basics\action_trade_select.paa""];\
-			ctrlShow[10014, false];\
-			((findDisplay 10000) displayCtrl 10015) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 10000) displayCtrl 10017) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Echanger</t>"";";
-			onMouseExit = "\
-			ctrlSetText[10016,""lyeed_IMG\data\interactions\player_to_player_basics\action_trade.paa""];\
-			ctrlShow[10014, true];\
-			((findDisplay 10000) displayCtrl 10015) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 10000) displayCtrl 10017) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Echanger</t>"";";
+			onMouseEnter = "			ctrlSetText[10016,""lyeed_IMG\data\interactions\player_to_player_basics\action_trade_select.paa""];			ctrlShow[10014, false];			((findDisplay 10000) displayCtrl 10015) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 10000) displayCtrl 10017) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Echanger</t>"";";
+			onMouseExit = "			ctrlSetText[10016,""lyeed_IMG\data\interactions\player_to_player_basics\action_trade.paa""];			ctrlShow[10014, true];			((findDisplay 10000) displayCtrl 10015) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 10000) displayCtrl 10017) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Echanger</t>"";";
 
 			x = 0.561875 * safezoneW + safezoneX;
 			y = 0.676 * safezoneH + safezoneY;

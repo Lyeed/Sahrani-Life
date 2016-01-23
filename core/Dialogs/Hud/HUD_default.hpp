@@ -5,7 +5,7 @@ class RscHudPlayer
 	onLoad = "uiNamespace setVariable [""RscHudPlayer"", _this select 0]";
 	movingEnable = 0;
 	fadein = 6;
-	duration = 99999999999999999999999999999999999;
+	duration = 9999999999999;
 	fadeout = 0;
 	class controlsBackground 
 	{

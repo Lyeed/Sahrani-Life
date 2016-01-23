@@ -542,5 +542,7 @@ class Public
 		class APP_staff {};
 		class APP_staff_player_actions_update {};
 		class APP_staff_players_actions_update {};
+		class APP_staff_players_getData {};
+		class APP_staff_players_returnData {};
 	};
 };

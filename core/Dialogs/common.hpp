@@ -1103,12 +1103,8 @@ class default_interaction_back_dialog: default_base_dialog
 		{
 			action = "closedialog 0;";
 			tooltip = "Quitter";
-			onMouseEnter = "((uinamespace getvariable 'current_interaction_dialog') displayCtrl 19501) ctrlSetBackgroundColor [1,1,1,1]; \
-			ctrlSetText[19502,""lyeed_IMG\data\global\option_exit_select.paa""]; \
-			ctrlShow[19500, false];";
-			onMouseExit = "((uinamespace getvariable 'current_interaction_dialog') displayCtrl 19501) ctrlSetBackgroundColor [0,0,0,0.6]; \
-			ctrlSetText[19502,""lyeed_IMG\data\global\option_exit.paa""]; \
-			ctrlShow[19500, true];";
+			onMouseEnter = "((uinamespace getvariable 'current_interaction_dialog') displayCtrl 19501) ctrlSetBackgroundColor [1,1,1,1]; ctrlSetText[19502,""lyeed_IMG\data\global\option_exit_select.paa""]; ctrlShow[19500, false];";
+			onMouseExit = "((uinamespace getvariable 'current_interaction_dialog') displayCtrl 19501) ctrlSetBackgroundColor [0,0,0,0.6]; ctrlSetText[19502,""lyeed_IMG\data\global\option_exit.paa""]; ctrlShow[19500, true];";
 
 			x = 0.345312 * safezoneW + safezoneX;
 			y = 0.412 * safezoneH + safezoneY;
@@ -1151,12 +1147,8 @@ class default_interaction_back_dialog: default_base_dialog
 			idc = 19506;
 			action = "[] call public_fnc_interactions_recall;";
 			tooltip = "Retour";
-			onMouseEnter = "((uinamespace getvariable 'current_interaction_dialog') displayCtrl 19504) ctrlSetBackgroundColor [1,1,1,1];\
-			ctrlSetText[19505,""lyeed_IMG\data\global\option_back_select.paa""];\
-			ctrlShow[19503, false];";
-			onMouseExit = "((uinamespace getvariable 'current_interaction_dialog') displayCtrl 19504) ctrlSetBackgroundColor [0,0,0,0.6];\
-			ctrlSetText[19505,""lyeed_IMG\data\global\option_back.paa""];\
-			ctrlShow[19503, true];";
+			onMouseEnter = "((uinamespace getvariable 'current_interaction_dialog') displayCtrl 19504) ctrlSetBackgroundColor [1,1,1,1]; ctrlSetText[19505,""lyeed_IMG\data\global\option_back_select.paa""]; ctrlShow[19503, false];";
+			onMouseExit = "((uinamespace getvariable 'current_interaction_dialog') displayCtrl 19504) ctrlSetBackgroundColor [0,0,0,0.6]; ctrlSetText[19505,""lyeed_IMG\data\global\option_back.paa""]; ctrlShow[19503, true];";
 
 			x = 0.345312 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;

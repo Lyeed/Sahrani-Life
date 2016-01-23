@@ -128,18 +128,8 @@ class RscDisplayShopDynMarkers: default_interaction_back_dialog
 		{
 			idc = 21009;
 			action = "[] call public_fnc_shop_dynamicMarkers_buy;";
-			onMouseEnter = "\
-			ctrlSetText[21008,""lyeed_IMG\data\shops\actions\action_buy_select.paa""];\
-			ctrlShow[21006, false];\
-			((findDisplay 21000) displayCtrl 21005) ctrlSetBackgroundColor [1,1,1,1];\
-			((findDisplay 21000) displayCtrl 21007) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
-			onMouseExit = "\
-			ctrlSetText[21008,""lyeed_IMG\data\shops\actions\action_buy.paa""];\
-			if (ctrlVisible 21008) then {\
-				ctrlShow[21006, true];\
-			};\
-			((findDisplay 21000) displayCtrl 21005) ctrlSetBackgroundColor [0,0,0,0.6];\
-			((findDisplay 21000) displayCtrl 21007) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>"";";
+			onMouseEnter = "			ctrlSetText[21008,""lyeed_IMG\data\shops\actions\action_buy_select.paa""];			ctrlShow[21006, false];			((findDisplay 21000) displayCtrl 21005) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 21000) displayCtrl 21007) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
+			onMouseExit = "			ctrlSetText[21008,""lyeed_IMG\data\shops\actions\action_buy.paa""];			if (ctrlVisible 21008) then {				ctrlShow[21006, true];			};			((findDisplay 21000) displayCtrl 21005) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 21000) displayCtrl 21007) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>"";";
 
 			x = 0.463906 * safezoneW + safezoneX;
 			y = 0.577 * safezoneH + safezoneY;

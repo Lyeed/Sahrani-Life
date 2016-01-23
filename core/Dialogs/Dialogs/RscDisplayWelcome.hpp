@@ -423,12 +423,7 @@ class RscDisplayWelcomeFaction: default_base_dialog
 		{
 			idc = 857;
 			colorBackground[] = {0,0,0,0};
-			text = "\
-<t align='left'>Appellation</t><t align='right'>République populaire</t><br/>\
-<t align='left'>Régime</t><t align='right'>Autoritaire</t><br/>\
-<t align='left'>Suffrage</t><t align='right'>Aucun</t><br/>\
-<t align='left'>Force gouvernementale</t><t align='right'>La Garde</t><br/>\
-			";
+			text = "<t align='left'>Appellation</t><t align='right'>République populaire</t><br/><t align='left'>Régime</t><t align='right'>Autoritaire</t><br/><t align='left'>Suffrage</t><t align='right'>Aucun</t><br/><t align='left'>Force gouvernementale</t><t align='right'>La Garde</t><br/>			";
 
 			x = 0.0101562 * safezoneW + safezoneX;
 			y = 0.445 * safezoneH + safezoneY;
@@ -514,12 +509,7 @@ class RscDisplayWelcomeFaction: default_base_dialog
 		class RIGHT_DESC_INFO: RscStructuredText
 		{
 			idc = 867;
-			text = "\
-<t align='left'>Appelation</t><t align='right'>République parlementaire</t><br/>\
-<t align='left'>Régime</t><t align='right'>Démocratie</t><br/>\
-<t align='left'>Suffrage</t><t align='right'>Universel direct</t><br/>\
-<t align='left'>Force gouvernementale</t><t align='right'>La Milice</t><br/>\
-			";
+			text = "<t align='left'>Appelation</t><t align='right'>République parlementaire</t><br/><t align='left'>Régime</t><t align='right'>Démocratie</t><br/><t align='left'>Suffrage</t><t align='right'>Universel direct</t><br/><t align='left'>Force gouvernementale</t><t align='right'>La Milice</t><br/>			";
 			colorBackground[] = {0,0,0,0};
 			
 			x = 0.793906 * safezoneW + safezoneX;
@@ -571,45 +561,9 @@ class RscDisplayWelcomeFaction: default_base_dialog
 		};
 		class LEFT_CHOICE_BUTTON: RscButtonSilent
 		{
-			onMouseEnter = "\
-			ctrlShow[850,true];\
-			ctrlShow[851,true];\
-			ctrlShow[852,true];\
-			ctrlShow[853,true];\
-			ctrlShow[854,true];\
-			ctrlShow[855,true];\
-			ctrlShow[856,true];\
-			ctrlShow[857,true];\
-			ctrlSetText[810,""lyeed_IMG\data\welcome\welcome_faction_left.jpg""];\
-			playMusic [""welcome_EAST"", random 220];\
-			";
-			onMouseExit = "\
-			ctrlShow[850,false];\
-			ctrlShow[851,false];\
-			ctrlShow[852,false];\
-			ctrlShow[853,false];\
-			ctrlShow[854,false];\
-			ctrlShow[855,false];\
-			ctrlShow[856,false];\
-			ctrlShow[857,false];\
-			ctrlSetText[810,""lyeed_IMG\data\welcome\welcome_faction_left_fade.jpg""];\
-			playMusic """";\
-			";
-			action = "\
-			[] spawn\
-			{\
-				_action =\
-				[\
-					""Êtes-vous bien sûr ? Une fois validé vous devrez vous rendre dans une préfecture du Nord pour changer de nationalité"",\
-					""Validation"",\
-					""Valider"",\
-					""Annuler""\
-				] call BIS_fnc_guiMessage;\
-				if (_action) then {\
-					g_choice = ""SOUTH"";\
-					playMusic """";\
-				};\
-			};";
+			onMouseEnter = "			ctrlShow[850,true];			ctrlShow[851,true];			ctrlShow[852,true];			ctrlShow[853,true];			ctrlShow[854,true];			ctrlShow[855,true];			ctrlShow[856,true];			ctrlShow[857,true];			ctrlSetText[810,""lyeed_IMG\data\welcome\welcome_faction_left.jpg""];			playMusic [""welcome_EAST"", random 220];			";
+			onMouseExit = "			ctrlShow[850,false];			ctrlShow[851,false];			ctrlShow[852,false];			ctrlShow[853,false];			ctrlShow[854,false];			ctrlShow[855,false];			ctrlShow[856,false];			ctrlShow[857,false];			ctrlSetText[810,""lyeed_IMG\data\welcome\welcome_faction_left_fade.jpg""];			playMusic """";			";
+			action = "			[] spawn			{				_action =				[					""Êtes-vous bien sûr ? Une fois validé vous devrez vous rendre dans une préfecture du Nord pour changer de nationalité"",					""Validation"",					""Valider"",					""Annuler""				] call BIS_fnc_guiMessage;				if (_action) then {					g_choice = ""SOUTH"";					playMusic """";				};			};";
 
 			x = 0.242187 * safezoneW + safezoneX;
 			y = 0.599 * safezoneH + safezoneY;
@@ -648,45 +602,9 @@ class RscDisplayWelcomeFaction: default_base_dialog
 		};
 		class RIGHT_CHOICE_BUTTON: RscButtonSilent
 		{
-			onMouseEnter = "\
-			ctrlShow[860,true];\
-			ctrlShow[861,true];\
-			ctrlShow[862,true];\
-			ctrlShow[863,true];\
-			ctrlShow[864,true];\
-			ctrlShow[865,true];\
-			ctrlShow[866,true];\
-			ctrlShow[867,true];\
-			ctrlSetText[811,""lyeed_IMG\data\welcome\welcome_faction_right.jpg""];\
-			playMusic [""welcome_WEST"", random 200];\
-			";
-			onMouseExit = "\
-			ctrlShow[860,false];\
-			ctrlShow[861,false];\
-			ctrlShow[862,false];\
-			ctrlShow[863,false];\
-			ctrlShow[864,false];\
-			ctrlShow[865,false];\
-			ctrlShow[866,false];\
-			ctrlShow[867,false];\
-			ctrlSetText[811,""lyeed_IMG\data\welcome\welcome_faction_right_fade.jpg""];\
-			playMusic """";\
-			";
-			action = "\
-			[] spawn\
-			{\
-				_action =\
-				[\
-					""Êtes-vous bien sûr ? Une fois validé vous devrez vous rendre dans une préfecture du Sud pour changer de nationalité"",\
-					""Validation"",\
-					""Valider"",\
-					""Annuler""\
-				] call BIS_fnc_guiMessage;\
-				if (_action) then {\
-					g_choice = ""NORTH"";\
-					playMusic """";\
-				};\
-			};";
+			onMouseEnter = "			ctrlShow[860,true];			ctrlShow[861,true];			ctrlShow[862,true];			ctrlShow[863,true];			ctrlShow[864,true];			ctrlShow[865,true];			ctrlShow[866,true];			ctrlShow[867,true];			ctrlSetText[811,""lyeed_IMG\data\welcome\welcome_faction_right.jpg""];			playMusic [""welcome_WEST"", random 200];			";
+			onMouseExit = "			ctrlShow[860,false];			ctrlShow[861,false];			ctrlShow[862,false];			ctrlShow[863,false];			ctrlShow[864,false];			ctrlShow[865,false];			ctrlShow[866,false];			ctrlShow[867,false];			ctrlSetText[811,""lyeed_IMG\data\welcome\welcome_faction_right_fade.jpg""];			playMusic """";			";
+			action = "			[] spawn			{				_action =				[					""Êtes-vous bien sûr ? Une fois validé vous devrez vous rendre dans une préfecture du Sud pour changer de nationalité"",					""Validation"",					""Valider"",					""Annuler""				] call BIS_fnc_guiMessage;				if (_action) then {					g_choice = ""NORTH"";					playMusic """";				};			};";
 
 			x = 0.520625 * safezoneW + safezoneX;
 			y = 0.599 * safezoneH + safezoneY;
