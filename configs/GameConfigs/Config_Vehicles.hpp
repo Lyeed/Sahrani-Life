@@ -2645,10 +2645,34 @@ class ALYSIA_VEHICLES
 		licenses[] = {"truck"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
-		{};
+		colors[] = {
+			"Skyline_Depanneuse_Jonzie_01_F",
+			"Skyline_Depanneuse_Jonzie_02_F",
+			"Skyline_Depanneuse_Jonzie_03_F",
+			"Skyline_Depanneuse_Jonzie_04_F",
+			"Skyline_Depanneuse_Jonzie_05_F",
+			"Skyline_Depanneuse_Jonzie_06_F",
+			"Skyline_Depanneuse_Jonzie_07_F",
+			"Skyline_Depanneuse_Jonzie_08_F",
+			"Skyline_Depanneuse_Jonzie_09_F",
+			"Skyline_Depanneuse_Jonzie_10_F",
+			"Skyline_Depanneuse_Jonzie_11_F",
+			"Skyline_Depanneuse_Jonzie_12_F"
+		};
 		realname = "Remorqueur";
 	};
+	class Skyline_Depanneuse_Jonzie_01_F : Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_02_F : Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_03_F : Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_04_F : Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_05_F : Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_06_F : Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_07_F : Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_08_F : Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_09_F : Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_10_F : Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_11_F : Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_12_F : Jonzie_Tow_Truck {};
 	
 	class Jonzie_Flat_Bed
 	{
