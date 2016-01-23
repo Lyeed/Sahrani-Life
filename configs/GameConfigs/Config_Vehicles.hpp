@@ -3140,9 +3140,7 @@ class ALYSIA_VEHICLES
 	class Fett_Viper_dark: Jonzie_Viper {};
 	class Fett_Viper_white: Jonzie_Viper {};
 
-
-
-  /*
+  	/*
 	**				WEST VEHICLES
 	*/
 	class DAR_TahoePolice
@@ -3292,12 +3290,11 @@ class ALYSIA_VEHICLES
 		rank = 3;
 		colors[] = {};
 		realname = "Audi RS4 Milice";
-	};	
-  
+	};
+	
   	/*
 	**				EAST VEHICLES
 	*/
-  
 	class Cha_BTR60_Cuba
 	{
 		buyPrice = 75000;
@@ -3414,7 +3411,6 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		realname = "V16";
 	};
-
 
   	/*
 	**				GUER VEHICLES
@@ -3773,11 +3769,7 @@ class ALYSIA_VEHICLES
 		inventory = 300;
 		side = "CIV";
 		insurance = 1;
-<<<<<<< HEAD
-		licenses[] = {"driver"};
-=======
-		licenses[] = {"company_farming_industrial"};
->>>>>>> 24914fde6764f3ae4e7924a3c6dad608347fee79
+		licenses[] = {"driver", "company_farming_industrial"};
 		fuel = "Diesel";
 		rank = 0;
 		colors[] = {};
