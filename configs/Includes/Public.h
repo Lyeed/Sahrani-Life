@@ -393,6 +393,7 @@ class Public
 		class prisonWorkReward {};
 		class prisonMenu_open {};
 		class prisonMenu_use_validate {};
+		class prisonMenu_use_validate_send {};
 		class prisonModifyMenu_informations_get {};
 		class prisonModifyMenu_informations_return {};
 		class prisonModifyMenu_open {};
