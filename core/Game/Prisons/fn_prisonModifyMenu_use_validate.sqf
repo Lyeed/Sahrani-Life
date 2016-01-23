@@ -51,14 +51,14 @@ if ((_time < _timeMin) || (_time > _timeMax)) then {
 	(_display displayCtrl 19045) ctrlSetBackgroundColor [153, 0, 0, 0.5];
 	_error = true;
 };
-if (_bailEnable) then {
+if (_bailEnable isEqualTo 4) then {
 	if ((_amount < _bailMin) || (_amount > _bailMax)) then {
 		(_display displayCtrl 19046) ctrlSetBackgroundColor [153, 0, 0, 0.5];
 		_error = true;
 	};
 };
 
-if (_error != "") exitWith {["Erreur dans le montant."] call public_fnc_error};
+if (_error) exitWith {["Erreur dans le montant."] call public_fnc_error};
 if (!(g_interaction_target getVariable ["arrested", false])) exitWith {["Cette personne n'est plus en prison"] call public_fnc_error};
 
 _infos = [_cell, _time, _bail, _reason];

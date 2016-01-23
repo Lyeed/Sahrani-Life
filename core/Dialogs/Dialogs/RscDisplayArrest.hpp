@@ -660,7 +660,7 @@ class RscDisplayModifyArrest: default_interaction_back_dialog
 			((findDisplay 19000) displayCtrl 19052) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 19000) displayCtrl 19054) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Libérer</t>"";";
 			onMouseExit = "\
-			ctrlShow[19052, false];\
+			ctrlShow[19052, true];\
 			ctrlSetText[19055,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];\
 			((findDisplay 19000) displayCtrl 19052) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 19000) displayCtrl 19054) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Libérer</t>"";";
@@ -970,7 +970,7 @@ class RscDisplayArrest: default_interaction_back_dialog
 			((findDisplay 20000) displayCtrl 20016) ctrlSetBackgroundColor [1,1,1,1];\
 			((findDisplay 20000) displayCtrl 20019) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Arrêter</t>"";";
 			onMouseExit = "\
-			ctrlShow[20016, false];\
+			ctrlShow[20016, true];\
 			ctrlSetText[20018,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];\
 			((findDisplay 20000) displayCtrl 20016) ctrlSetBackgroundColor [0,0,0,0.6];\
 			((findDisplay 20000) displayCtrl 20019) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Arrêter</t>"";";
