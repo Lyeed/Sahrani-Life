@@ -2262,7 +2262,7 @@ class ALYSIA_VEHICLES
 		inventory = 20;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {};
 		fuel = "SP98";
 		rank = 0;
 		colors[] = 
@@ -2827,7 +2827,7 @@ class ALYSIA_VEHICLES
 		inventory = 32;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
 		colors[] = 
@@ -2943,7 +2943,7 @@ class ALYSIA_VEHICLES
 		inventory = 20;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
 		colors[] = 
@@ -3151,7 +3151,7 @@ class ALYSIA_VEHICLES
 		inventory = 90;
 		side = "WEST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 3;
 		colors[] = {};
@@ -3164,7 +3164,7 @@ class ALYSIA_VEHICLES
 		inventory = 300;
 		side = "WEST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"truck"};
 		fuel = "Diesel";
 		rank = 3;
 		colors[] = {};
@@ -3177,7 +3177,7 @@ class ALYSIA_VEHICLES
 		inventory = 30;
 		side = "WEST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"boat"};
 		fuel = "SP95";
 		rank = 3;
 		colors[] = {};
@@ -3190,7 +3190,7 @@ class ALYSIA_VEHICLES
 		inventory = 40;
 		side = "WEST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 2;
 		colors[] = {};
@@ -3203,7 +3203,7 @@ class ALYSIA_VEHICLES
 		inventory = 40;
 		side = "WEST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 6;
 		colors[] = {};
@@ -3216,7 +3216,7 @@ class ALYSIA_VEHICLES
 		inventory = 90;
 		side = "WEST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 4;
 		colors[] = {};
@@ -3229,7 +3229,7 @@ class ALYSIA_VEHICLES
 		inventory = 40;
 		side = "WEST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 5;
 		colors[] = {};
@@ -3242,13 +3242,12 @@ class ALYSIA_VEHICLES
 		inventory = 40;
 		side = "WEST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 1;
 		colors[] = {};
 		realname = "Crown Victoria Milice";
 	};
-
 
 	class EC635_Unarmed
 	{
@@ -3256,7 +3255,7 @@ class ALYSIA_VEHICLES
 		inventory = 38;
 		side = "WEST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 6;
 		colors[] = {};
@@ -3269,7 +3268,7 @@ class ALYSIA_VEHICLES
 		inventory = 70;
 		side = "WEST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 6;
 		colors[] = 
@@ -3281,9 +3280,21 @@ class ALYSIA_VEHICLES
 	};
 	class dezkit_b206_police: dezkit_b206mi {};
 	class dezkit_b206_fbi: dezkit_b206mi {};
-	
+
+	class Skyline_Audi_RS4_Police_01_F
+	{
+		buyPrice = 25000;
+		inventory = 90;
+		side = "WEST";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP98";
+		rank = 3;
+		colors[] = {};
+		realname = "Audi RS4 Milice";
+	};	
   
-  /*
+  	/*
 	**				EAST VEHICLES
 	*/
   
@@ -3293,11 +3304,11 @@ class ALYSIA_VEHICLES
 		inventory = 90;
 		side = "EAST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 5;
 		colors[] = {};
-		realname = "btr";
+		realname = "BTR60 Cuba";
 	};
 	
 	class Fett_truck_army
@@ -3306,7 +3317,7 @@ class ALYSIA_VEHICLES
 		inventory = 300;
 		side = "EAST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"truck"};
 		fuel = "Diesel";
 		rank = 3;
 		colors[] = {};
@@ -3319,11 +3330,11 @@ class ALYSIA_VEHICLES
 		inventory = 90;
 		side = "EAST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 4;
 		colors[] = {};
-		realname = "helico";
+		realname = "bo105";
 	};
 
 	class gac_JGSDF_BXD10_MG
@@ -3332,7 +3343,7 @@ class ALYSIA_VEHICLES
 		inventory = 90;
 		side = "EAST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 4;
 		colors[] = {};
@@ -3345,7 +3356,7 @@ class ALYSIA_VEHICLES
 		inventory = 90;
 		side = "EAST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 3;
 		colors[] = {};
@@ -3358,7 +3369,7 @@ class ALYSIA_VEHICLES
 		inventory = 90;
 		side = "EAST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 3;
 		colors[] = {};
@@ -3371,11 +3382,11 @@ class ALYSIA_VEHICLES
 		inventory = 90;
 		side = "EAST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 2;
 		colors[] = {};
-		realname = "truck";
+		realname = "SKW475";
 	};
 
 	class gac_jsdf_klx
@@ -3384,7 +3395,7 @@ class ALYSIA_VEHICLES
 		inventory = 90;
 		side = "EAST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 1;
 		colors[] = {};
@@ -3397,7 +3408,7 @@ class ALYSIA_VEHICLES
 		inventory = 90;
 		side = "EAST";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 1;
 		colors[] = {};
@@ -3405,7 +3416,7 @@ class ALYSIA_VEHICLES
 	};
 
 
-  /*
+  	/*
 	**				GUER VEHICLES
 	*/  
 	class Jonzie_Ambulance
@@ -3414,7 +3425,7 @@ class ALYSIA_VEHICLES
 		inventory = 100;
 		side = "GUER";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 1;
 		colors[] = {};
@@ -3427,10 +3438,11 @@ class ALYSIA_VEHICLES
 		inventory = 40;
 		side = "GUER";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 6;
-		colors[] = {
+		colors[] =
+		{
 			"Mrshounka_corbillard_c_noir",
 			"Mrshounka_corbillard_c_bleufonce",
 			"Mrshounka_corbillard_c_rouge",
@@ -3458,7 +3470,7 @@ class ALYSIA_VEHICLES
 		inventory = 50;
 		side = "GUER";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"boat"};
 		fuel = "Diesel";
 		rank = 1;
 		colors[] = {};
@@ -3471,7 +3483,7 @@ class ALYSIA_VEHICLES
 		inventory = 40;
 		side = "GUER";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 5;
 		colors[] = {};
@@ -3484,7 +3496,7 @@ class ALYSIA_VEHICLES
 		inventory = 450;
 		side = "GUER";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"truck"};
 		fuel = "Diesel";
 		rank = 2;
 		colors[] = {};
@@ -3497,7 +3509,7 @@ class ALYSIA_VEHICLES
 		inventory = 150;
 		side = "GUER";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"truck"};
 		fuel = "Diesel";
 		rank = 3;
 		colors[] = {};
@@ -3510,7 +3522,7 @@ class ALYSIA_VEHICLES
 		inventory = 90;
 		side = "GUER";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 2;
 		colors[] = {};
@@ -3523,7 +3535,7 @@ class ALYSIA_VEHICLES
 		inventory = 90;
 		side = "GUER";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 3;
 		colors[] = {};
@@ -3536,7 +3548,7 @@ class ALYSIA_VEHICLES
 		inventory = 70;
 		side = "GUER";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 3;
 		colors[] = {};
@@ -3549,7 +3561,7 @@ class ALYSIA_VEHICLES
 		inventory = 70;
 		side = "GUER";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 3;
 		colors[] = 
@@ -3761,7 +3773,7 @@ class ALYSIA_VEHICLES
 		inventory = 300;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 0;
 		colors[] = {};
@@ -3883,19 +3895,6 @@ class ALYSIA_VEHICLES
 	class Skyline_Ford_Transit_10_F: Skyline_Ford_Transit {};
 	class Skyline_Ford_Transit_11_F: Skyline_Ford_Transit {};
 	class Skyline_Ford_Transit_12_F: Skyline_Ford_Transit {};
-
-	class Skyline_Audi_RS4_Police_01_F
-	{
-		buyPrice = 25000;
-		inventory = 90;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {""};
-		fuel = "SP98";
-		rank = 3;
-		colors[] = {};
-		realname = "Audi RS4 Milice";
-	};
 
 	class Skyline_Peugeot_308
 	{

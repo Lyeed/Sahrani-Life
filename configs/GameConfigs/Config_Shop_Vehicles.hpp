@@ -1,6 +1,6 @@
 class ALYSIA_SHOPS_VEHICLES
 {
-	//
+	/*** WEST SHOPS ***/
 	class WEST_vehicles_land
 	{
 		name = "Concessionnaire terrestre militaire";
@@ -37,7 +37,7 @@ class ALYSIA_SHOPS_VEHICLES
 		};
 	};
 
-	//
+	/*** EAST SHOPS ***/
 	class EAST_vehicles_land
 	{
 		name = "";
@@ -70,7 +70,7 @@ class ALYSIA_SHOPS_VEHICLES
 		stock[] = {};
 	};
 
-	//
+	/*** GUER SHOPS ***/
 	class GUER_vehicles_land
 	{
 		name = "Concessionnaire auto SAMU";
@@ -106,7 +106,7 @@ class ALYSIA_SHOPS_VEHICLES
 		};
 	};
 
-	//
+	/*** CIV SHOPS ***/
 	class CIV_vehicles_sea
 	{
 		name = "Concessionnaire maritime civil";
@@ -133,7 +133,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"CUP_C_C47_CIV"
 		};
 	};
-	
 	class CIV_vehicles_land_truck
 	{
 		name = "Concessionnaire poids lourds civil";
@@ -268,13 +267,6 @@ class ALYSIA_SHOPS_VEHICLES
 		};
 	};
 	
-	class CIV_vehicles_rebel
-	{
-		name = "Concessionnaire rebelle";
-		side = "CIV";
-		stock[] = {};
-	};
-
 	// Métier civils
 	class CIV_vehicules_job
 	{
