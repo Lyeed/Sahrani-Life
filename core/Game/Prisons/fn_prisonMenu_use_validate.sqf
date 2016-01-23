@@ -18,6 +18,7 @@ _bailEnable = getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> 
 _cellule = lbData[20006, (lbCurSel 20006)];
 _time = parseNumber (ctrlText 20010);
 _bail = parseNumber (ctrlText 20011);
+_reason = ctrlText 20012;
 
 if (isNull g_interaction_target) exitWith {};
 if (_prison isEqualTo []) exitWith {["Vous n'êtes pas dans une prison"] call public_fnc_error};
@@ -45,9 +46,8 @@ if (_bailEnable isEqualTo 1) then {
 	};
 };
 
-if (_error) exitWith {[(format ["Erreur dans le montant.<br/>Temps minimum: %1<br/>Temps maximum: %2<br/>Caution: %3<br/>Caution minimum: %4<br/>Caution maximum :%5", _timeMin, _timeMax, (if (_bailEnable isEqualTO 1) then {"Autorisée"} else {"Prohibée"}), _bailMin, _bailMax])] call public_fnc_error};
+if (_error) exitWith {[(format ["Temps minimum: %1<br/>Temps maximum: %2<br/>Caution: %3<br/>Caution minimum: %4<br/>Caution maximum: %5", _timeMin, _timeMax, (if (_bailEnable isEqualTo 1) then {"Autorisée"} else {"Prohibée"}), _bailMin, _bailMax])] call public_fnc_error};
 if (g_interaction_target getVariable ["arrested", false]) exitWith {["Cette personne est déjà en prison"] call public_fnc_error};
 
 _infos = [_cellule, _time, _bail, _reason];
 [player, _infos] remoteExecCall ["public_fnc_prisonMenu_use_validate_send", g_interaction_target];
-
