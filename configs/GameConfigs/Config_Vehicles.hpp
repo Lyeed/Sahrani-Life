@@ -132,7 +132,7 @@ class ALYSIA_VEHICLES
 		inventory = 500;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck"};
+		licenses[] = {"truck", "company_foundry"};
 		fuel = "Diesel";
 		rank = 0;
 		colors[] = {};
@@ -820,7 +820,7 @@ class ALYSIA_VEHICLES
 		inventory = 600;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck"};
+		licenses[] = {"truck", "company_foundry"};
 		fuel = "Diesel";
 		rank = 0;
 		colors[] = 
@@ -940,7 +940,7 @@ class ALYSIA_VEHICLES
 		inventory = 20;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"driver"};
+		licenses[] = {"driver", "company_transport"};
 		fuel = "SP95";
 		rank = 0;
 		colors[] = 
@@ -1601,13 +1601,13 @@ class ALYSIA_VEHICLES
 		realname = "Daf euro 6";
 	};
 
-	class shounka_a3_mantgs
+	class shounka_a3_tgs
 	{
 		buyPrice = 25000;
 		inventory = 150;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck"};
+		licenses[] = {"truck", "company_garagist"};
 		fuel = "Diesel";
 		rank = 0;
 		colors[] = {};
@@ -2021,7 +2021,7 @@ class ALYSIA_VEHICLES
 		inventory = 300;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck"};
+		licenses[] = {"truck", "company_foundry"};
 		fuel = "Diesel";
 		rank = 0;
 		colors[] = {};
@@ -2047,7 +2047,7 @@ class ALYSIA_VEHICLES
 		inventory = 150;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck"};
+		licenses[] = {"truck", "company_fuel"};
 		fuel = "Diesel";
 		rank = 0;
 		colors[] = {};
@@ -2073,7 +2073,7 @@ class ALYSIA_VEHICLES
 		inventory = 150;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck"};
+		licenses[] = {"truck", "company_fuel"};
 		rank = 0;
 		colors[] = {};
 		realname = "Zamak Fuel";
@@ -2098,7 +2098,7 @@ class ALYSIA_VEHICLES
 		inventory = 40;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"driver"};
+		licenses[] = {"driver", "company_security"};
 		fuel = "SP95";
 		rank = 0;
 		colors[] = {};
@@ -2111,7 +2111,7 @@ class ALYSIA_VEHICLES
 		inventory = 75;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"driver"};
+		licenses[] = {"driver", "company_garagist"};
 		fuel = "Diesel";
 		rank = 0;
 		colors[] = {};
@@ -2148,7 +2148,7 @@ class ALYSIA_VEHICLES
 		inventory = 50;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"taxi"};
+		licenses[] = {"taxi", "company_transport"};
 		fuel = "SP98";
 		rank = 0;
 		colors[] = {};
@@ -2243,7 +2243,7 @@ class ALYSIA_VEHICLES
 		inventory = 80;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck"};
+		licenses[] = {"truck", "company_transport"};
 		fuel = "Diesel";
 		rank = 0;
 		colors[] = 
@@ -2397,7 +2397,7 @@ class ALYSIA_VEHICLES
 		inventory = 80;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck"};
+		licenses[] = {"truck", "company_transport"};
 		fuel = "Diesel";
 		rank = 0;
 		colors[] = 
@@ -2642,7 +2642,7 @@ class ALYSIA_VEHICLES
 		inventory = 150;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck"};
+		licenses[] = {"truck", "company_garagist"};
 		fuel = "Diesel";
 		rank = 0;
 		colors[] = {
@@ -2710,7 +2710,7 @@ class ALYSIA_VEHICLES
 		inventory = 150;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck"};
+		licenses[] = {"truck", "company_fuel"};
 		fuel = "Diesel";
 		rank = 0;
 		colors[] = 
@@ -2725,7 +2725,7 @@ class ALYSIA_VEHICLES
 		inventory = 400;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck"};
+		licenses[] = {"truck", "company_foundry"};
 		fuel = "Diesel";
 		rank = 0;
 		colors[] = 
@@ -3708,7 +3708,7 @@ class ALYSIA_VEHICLES
 		fuel = "Diesel";
 		rank = 0;
 		colors[] = {};
-		realname = "Camion Westarn";
+		realname = "Camion Western";
 	};
 
 	class Jonzie_Superliner
@@ -3761,7 +3761,7 @@ class ALYSIA_VEHICLES
 		inventory = 300;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {""};
+		licenses[] = {"company_farming_industrial"};
 		fuel = "Diesel";
 		rank = 0;
 		colors[] = {};
