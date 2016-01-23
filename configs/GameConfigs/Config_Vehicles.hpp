@@ -58,7 +58,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"madsa_hummer_h2_black_F",
 			"madsa_hummer_h2_blue_F",
@@ -93,7 +93,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"DAR_FusionCiv",
 			"DAR_FusionCivBlack",
@@ -115,7 +115,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"DAR_TaurusCiv",
 			"DAR_TaurusCivBlack",
@@ -148,7 +148,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_Alfa_Romeo_noir",
 			"Mrshounka_Alfa_Romeo_bleufonce",
@@ -179,7 +179,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_a3_rs5_civ_noir",
 			"shounka_a3_rs5_civ_bleufonce",
@@ -211,7 +211,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_rs6_noir",
 			"shounka_rs6_bleufonce",
@@ -243,7 +243,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_bmwm1_civ_noir",
 			"Mrshounka_bmwm1_civ_bleufonce",
@@ -275,7 +275,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_bmwm6_noir",
 			"Mrshounka_bmwm6_bleufonce",
@@ -307,7 +307,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_Bowler_c_noir",
 			"Mrshounka_Bowler_c_bleufonce",
@@ -339,7 +339,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_buggy_noir",
 			"shounka_buggy_bleufonce",
@@ -371,7 +371,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_avalanche_noir",
 			"shounka_avalanche_bleufonce",
@@ -403,7 +403,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_monsteur_noir",
 			"shounka_monsteur_bleufonce",
@@ -435,7 +435,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_a3_ds3_civ_noir",
 			"Mrshounka_a3_ds3_civ_bleufonce",
@@ -467,7 +467,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_a3_ds4_noir",
 			"shounka_a3_ds4_bleufonce",
@@ -499,7 +499,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_c4_p_bleufonce",
 			"Mrshounka_c4_p_grise",
@@ -531,7 +531,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_nemo_bleufonce",
 			"shounka_nemo_grise",
@@ -563,7 +563,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_a3_cliors_civ_bleufonce",
 			"shounka_a3_cliors_civ_grise",
@@ -595,7 +595,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_a3_dodge15_civ_bleufonce",
 			"Mrshounka_a3_dodge15_civ_grise",
@@ -627,7 +627,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_f430_spider_bleufonce",
 			"shounka_f430_spider_grise",
@@ -659,7 +659,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_gt_bleufonce",
 			"shounka_gt_grise",
@@ -691,7 +691,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_mustang_mat",
 			"Mrshounka_mustang_noir",
@@ -729,7 +729,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"ADM_GMC_Vandura_red",
 			"ADM_GMC_Vandura_yellow",
@@ -759,7 +759,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_golfvi_bleufonce",
 			"Mrshounka_golfvi_grise",
@@ -791,7 +791,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_hummer_civ_bleufonce",
 			"Mrshounka_hummer_civ_grise",
@@ -823,7 +823,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"truck", "company_foundry"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_ivceco_bleufonce",
 			"shounka_ivceco_grise",
@@ -855,7 +855,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_cherokee_noir_mat",
 			"Mrshounka_cherokee_noir_bleu",
@@ -889,7 +889,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_veneno_c_noir",
 			"Mrshounka_veneno_c_bleu",
@@ -911,7 +911,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_evox_bleufonce",
 			"Mrshounka_evox_grise",
@@ -943,7 +943,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver", "company_transport"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_limo_civ_bleufonce",
 			"shounka_limo_civ_grise",
@@ -975,7 +975,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_lykan_c_bleufonce",
 			"Mrshounka_lykan_c_grise",
@@ -1007,7 +1007,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_mp4_bleufonce",
 			"shounka_mp4_grise",
@@ -1039,7 +1039,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_mercedes_190_p_bleufonce",
 			"Mrshounka_mercedes_190_p_grise",
@@ -1071,7 +1071,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_c63_2015_mat",
 			"Mrshounka_c63_2015_noir",
@@ -1109,7 +1109,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_clk_bleufonce",
 			"shounka_clk_grise",
@@ -1141,7 +1141,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_a3_spr_civ_bleufonce",
 			"shounka_a3_spr_civ_grise",
@@ -1173,7 +1173,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_a3_gtr_civ_noir",
 			"Mrshounka_a3_gtr_civ_bleu"
@@ -1193,7 +1193,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_pagani_c_bleufonce",
 			"Mrshounka_pagani_c_grise",
@@ -1225,7 +1225,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_207_bleufonce",
 			"Mrshounka_207_grise",
@@ -1257,7 +1257,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_a3_308_rcz_bleufonce",
 			"Mrshounka_a3_308_rcz_grise",
@@ -1289,7 +1289,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_a3_peugeot508_civ_bleufonce",
 			"shounka_a3_peugeot508_civ_grise",
@@ -1321,7 +1321,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_porsche911_bleufonce",
 			"shounka_porsche911_grise",
@@ -1353,7 +1353,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"mrshounka_92_civ_bleufonce",
 			"mrshounka_92_civ_grise",
@@ -1385,7 +1385,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_cayenne_p_bleufonce",
 			"Mrshounka_cayenne_p_grise",
@@ -1417,7 +1417,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_r5_bleufonce",
 			"Mrshounka_r5_grise",
@@ -1449,7 +1449,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_megane_rs_2015_bleufonce",
 			"Mrshounka_megane_rs_2015_grise",
@@ -1481,7 +1481,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_twingo_p_noir",
 			"Mrshounka_twingo_p_bf",
@@ -1513,7 +1513,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_a3_smart_civ_noir",
 			"Mrshounka_a3_smart_civ_bleu"
@@ -1533,7 +1533,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_subaru08_bleufonce",
 			"Mrshounka_subaru08_grise",
@@ -1565,7 +1565,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"shounka_transam_bleufonce",
 			"shounka_transam_grise",
@@ -1636,7 +1636,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"max_H3_red",
 			"max_H3_black",
@@ -1661,7 +1661,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"max_impala_black",
 			"max_impala_white",
@@ -1684,7 +1684,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"DAR_TahoeCiv",
 			"DAR_TahoeCivBlack",
@@ -1708,7 +1708,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Tal_Murci_Red",
 			"Tal_Murci_Pink",
@@ -1749,7 +1749,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"SAL_AudiCiv",
 			"SAL_AudiCivRed",
@@ -1771,7 +1771,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"max_BMW",
 			"max_BMW1",
@@ -1791,7 +1791,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"max_charger_black",
 			"max_charger_blue",
@@ -1814,7 +1814,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"max_CrownVic_blue",
 			"max_CrownVic_red",
@@ -1835,7 +1835,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"max_jeep_green",
 			"max_jeep_blue",
@@ -1858,7 +1858,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"max_suv_black",
 			"max_suv_red",
@@ -1883,7 +1883,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"max_van_white",
 			"max_van_cola",
@@ -1910,7 +1910,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Tal_Maserati_Red",
 			"Tal_Maserati_Pink",
@@ -1949,7 +1949,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"DAR_ChallengerCivWhite",
 			"DAR_ChallengerCivRed",
@@ -2127,7 +2127,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"max_BMW_M3_GTR",
 			"max_BMW_M3_GTR1",
@@ -2164,7 +2164,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"DAR_M3CivBlack",
 			"DAR_M3CivWhite",
@@ -2202,7 +2202,6 @@ class ALYSIA_VEHICLES
 		realname = "Camionnette Caisse";
 	};
 
-
     class RDS_Gaz24_Civ
 	{
 		buyPrice = 800;
@@ -2212,7 +2211,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "GPL";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"RDS_Gaz24_Civ_01",
 			"RDS_Gaz24_Civ_02",
@@ -2246,7 +2245,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"truck", "company_transport"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"RDS_Ikarus_Civ_01",
 			"RDS_Ikarus_Civ_02"
@@ -2265,7 +2264,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"C_Quadbike_01_black_F",
 			"C_Quadbike_01_blue_F",
@@ -2314,7 +2313,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "GPL";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"RDS_Lada_Civ_01",
 			"RDS_Lada_Civ_02",
@@ -2337,7 +2336,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"sab_BI_An2",
 			"Sab_cz_An2",
@@ -2367,7 +2366,8 @@ class ALYSIA_VEHICLES
   	class Sab_af_An2: sab_a2 {};
   	class Sab_A2_An2: sab_a2 {};
 
-	class CUP_C_DC3_CIV{
+	class CUP_C_DC3_CIV
+	{
 		buyPrice = 145000;
 		inventory = 220;
 		side = "CIV";
@@ -2379,7 +2379,8 @@ class ALYSIA_VEHICLES
 		realname = "DC3";
 	};
 	
-	class CUP_C_C47_CIV{
+	class CUP_C_C47_CIV
+	{
 		buyPrice = 145000;
 		inventory = 220;
 		side = "CIV";
@@ -2400,7 +2401,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"truck", "company_transport"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Skyline_Bus_11_F",
 			"Skyline_Bus_02_F",
@@ -2435,7 +2436,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"boat"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"B_Boat_Transport_01_F",
 			"O_Boat_Transport_01_F",
@@ -2484,7 +2485,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"C_Heli_light_01_blue_F",
 			"C_Heli_light_01_red_F",
@@ -2505,7 +2506,7 @@ class ALYSIA_VEHICLES
 			"C_Heli_light_01_wave_F",
 			"C_Heli_light_01_stripped_F",
 			"C_Heli_light_01_luxe_F"
-			};
+		};
 		realname = "Little BIrd";
 	};
   	class C_Heli_light_01_blue_F: C_Heli_light {};
@@ -2537,7 +2538,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Fett_orca_white",
 			"Fett_orca_blue",
@@ -2550,7 +2551,7 @@ class ALYSIA_VEHICLES
 			"Fett_orca_tiger",
 			"Fett_orca_tiger_jungle",
 			"Fett_orca_red"
-			};
+		};
 		realname = "Orca";
 	};
   	class Fett_orca_white: Fett_orca {};
@@ -2574,7 +2575,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Fett_mohawk_matrix",
 			"Fett_mohawk_jungle",
@@ -2588,7 +2589,7 @@ class ALYSIA_VEHICLES
 			"Fett_mohawk_green",
 			"Fett_mohawk_red",
 			"Fett_mohawk_tiger"
-			};
+		};
 		realname = "Mohawk";
 	};
   	class Fett_mohawk_matrix: Fett_mohawk {};
@@ -2613,11 +2614,11 @@ class ALYSIA_VEHICLES
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"dezkit_b206_ls",
 			"dezkit_b206_hs"
-			};
+		};
 		realname = "B206";
 	};
   	class dezkit_b206_ls: dezkit_b206 {};
@@ -2645,7 +2646,8 @@ class ALYSIA_VEHICLES
 		licenses[] = {"truck", "company_garagist"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = {
+		colors[] =
+		{
 			"Skyline_Depanneuse_Jonzie_01_F",
 			"Skyline_Depanneuse_Jonzie_02_F",
 			"Skyline_Depanneuse_Jonzie_03_F",
@@ -2661,18 +2663,18 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Remorqueur";
 	};
-	class Skyline_Depanneuse_Jonzie_01_F : Jonzie_Tow_Truck {};
-	class Skyline_Depanneuse_Jonzie_02_F : Jonzie_Tow_Truck {};
-	class Skyline_Depanneuse_Jonzie_03_F : Jonzie_Tow_Truck {};
-	class Skyline_Depanneuse_Jonzie_04_F : Jonzie_Tow_Truck {};
-	class Skyline_Depanneuse_Jonzie_05_F : Jonzie_Tow_Truck {};
-	class Skyline_Depanneuse_Jonzie_06_F : Jonzie_Tow_Truck {};
-	class Skyline_Depanneuse_Jonzie_07_F : Jonzie_Tow_Truck {};
-	class Skyline_Depanneuse_Jonzie_08_F : Jonzie_Tow_Truck {};
-	class Skyline_Depanneuse_Jonzie_09_F : Jonzie_Tow_Truck {};
-	class Skyline_Depanneuse_Jonzie_10_F : Jonzie_Tow_Truck {};
-	class Skyline_Depanneuse_Jonzie_11_F : Jonzie_Tow_Truck {};
-	class Skyline_Depanneuse_Jonzie_12_F : Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_01_F: Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_02_F: Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_03_F: Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_04_F: Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_05_F: Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_06_F: Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_07_F: Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_08_F: Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_09_F: Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_10_F: Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_11_F: Jonzie_Tow_Truck {};
+	class Skyline_Depanneuse_Jonzie_12_F: Jonzie_Tow_Truck {};
 	
 	class Jonzie_Flat_Bed
 	{
@@ -2683,9 +2685,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"truck"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
-		{
-		};
+		colors[] = {};
 		realname = "Man TGX Flat Bed Truck";
 	};
 	
@@ -2698,9 +2698,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"truck"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
-		{
-		};
+		colors[] = {};
 		realname = "Man TGX Log Truck";
 	};
 	
@@ -2713,9 +2711,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"truck", "company_fuel"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
-		{
-		};
+		colors[] = {};
 		realname = "Man TGX Tanker Truck";
 	};
 	
@@ -2728,9 +2724,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"truck", "company_foundry"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
-		{
-		};
+		colors[] = {};
 		realname = "Man TGX Box Truck";
 	};
 	
@@ -2743,7 +2737,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Fett_30CSL_red",
 			"Fett_30CSL_yellow",
@@ -2772,7 +2766,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Fett_Ceed_red",
 			"Fett_Ceed_yellow",
@@ -2801,7 +2795,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Fett_Corolla_red",
 			"Fett_Corolla_yellow",
@@ -2830,7 +2824,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Fett_Datsun_510_red",
 			"Fett_Datsun_510_yellow",
@@ -2859,7 +2853,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Fett_Datsun_Z432_red",
 			"Fett_Datsun_Z432_yellow",
@@ -2888,7 +2882,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Fett_Escalade_red",
 			"Fett_Escalade_yellow",
@@ -2917,7 +2911,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Fett_Galant_red",
 			"Fett_Galant_yellow",
@@ -2946,7 +2940,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Fett_Mini_Cooper_red",
 			"Fett_Mini_Cooper_yellow",
@@ -2975,7 +2969,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Fett_Quattroporte_red",
 			"Fett_Quattroporte_yellow",
@@ -3004,7 +2998,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Fett_Raptor_red",
 			"Fett_Raptor_yellow",
@@ -3033,7 +3027,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Fett_STI_red",
 			"Fett_STI_yellow",
@@ -3062,7 +3056,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Fett_Ute_red",
 			"Fett_Ute_yellow",
@@ -3091,7 +3085,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Fett_VE_red",
 			"Fett_VE_yellow",
@@ -3120,7 +3114,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Fett_Viper_red",
 			"Fett_Viper_yellow",
@@ -3269,7 +3263,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 6;
-		colors[] = 
+		colors[] =
 		{
 			"dezkit_b206_police",
 			"dezkit_b206_fbi"
@@ -3291,7 +3285,7 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		realname = "Audi RS4 Milice";
 	};
-	
+
   	/*
 	**				EAST VEHICLES
 	*/
@@ -3414,7 +3408,7 @@ class ALYSIA_VEHICLES
 
   	/*
 	**				GUER VEHICLES
-	*/  
+	*/
 	class Jonzie_Ambulance
 	{
 		buyPrice = 14000;
@@ -3560,7 +3554,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 3;
-		colors[] = 
+		colors[] =
 		{
 			"dezkit_b206_ems",
 			"dezkit_b206_rescue"
@@ -3581,7 +3575,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"moto"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_ducati_p",
 			"Mrshounka_ducati_p_noir",
@@ -3614,7 +3608,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"moto"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Mrshounka_yamaha_p",
 			"Mrshounka_yamaha_p_noir",
@@ -3647,7 +3641,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"moto"};
 		fuel = "SP95";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"max_bike",
 			"max_bike1",
@@ -3672,7 +3666,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "GPL";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"ADM_Ford_F100_red",
 			"ADM_Ford_F100_yellow",
@@ -3741,7 +3735,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"truck"};
 		fuel = "Diesel";
 		rank = 0;
-		colors[] = 
+		colors[] =
 		{
 			"Jonzie_XB_red",
 			"Jonzie_XB_yellow",
@@ -3918,16 +3912,16 @@ class ALYSIA_VEHICLES
 			"Skyline_Peugeot_308_12_F"
 		};
 	};
-	class Skyline_Peugeot_308_01_F : Skyline_Peugeot_308 {};
-	class Skyline_Peugeot_308_02_F : Skyline_Peugeot_308 {};
-	class Skyline_Peugeot_308_03_F : Skyline_Peugeot_308 {};
-	class Skyline_Peugeot_308_04_F : Skyline_Peugeot_308 {};
-	class Skyline_Peugeot_308_05_F : Skyline_Peugeot_308 {};
-	class Skyline_Peugeot_308_06_F : Skyline_Peugeot_308 {};
-	class Skyline_Peugeot_308_07_F : Skyline_Peugeot_308 {};
-	class Skyline_Peugeot_308_08_F : Skyline_Peugeot_308 {};
-	class Skyline_Peugeot_308_09_F : Skyline_Peugeot_308 {};
-	class Skyline_Peugeot_308_10_F : Skyline_Peugeot_308 {};
-	class Skyline_Peugeot_308_11_F : Skyline_Peugeot_308 {};
-	class Skyline_Peugeot_308_12_F : Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_01_F: Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_02_F: Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_03_F: Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_04_F: Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_05_F: Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_06_F: Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_07_F: Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_08_F: Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_09_F: Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_10_F: Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_11_F: Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_12_F: Skyline_Peugeot_308 {};
 };	
