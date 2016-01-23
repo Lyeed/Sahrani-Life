@@ -211,7 +211,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"ADM_GMC_Vandura",
 			"shounka_a3_spr_civ",
 			"Mrshounka_207_civ",
-			"Mrshounka_a3_308_civ",
+			"Skyline_Peugeot_308",
 			"Mrshounka_a3_308_rcz",
 			"shounka_a3_peugeot508_civ",
 			"Mrshounka_megane_rs_2015_civ",

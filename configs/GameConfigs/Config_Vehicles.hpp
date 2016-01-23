@@ -1248,38 +1248,6 @@ class ALYSIA_VEHICLES
 	class Mrshounka_207_rouge: Mrshounka_207_civ {};
 	class Mrshounka_207_violet: Mrshounka_207_civ {};
 
-	class Mrshounka_a3_308_civ
-	{
-		buyPrice = 25250;
-		inventory = 40;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		rank = 0;
-		colors[] = 
-		{
-			"Mrshounka_a3_308_civ_bleufonce",
-			"Mrshounka_a3_308_civ_grise",
-			"Mrshounka_a3_308_civ_jaune",
-			"Mrshounka_a3_308_civ_noir",
-			"Mrshounka_a3_308_civ_orange",
-			"Mrshounka_a3_308_civ_rose",
-			"Mrshounka_a3_308_civ_rouge",
-			"Mrshounka_a3_308_civ_violet"
-		};
-		realname = "Peugeot 308";
-	};
-
-	class Mrshounka_a3_308_civ_bleufonce: Mrshounka_a3_308_civ {};
-	class Mrshounka_a3_308_civ_grise: Mrshounka_a3_308_civ {};
-	class Mrshounka_a3_308_civ_jaune: Mrshounka_a3_308_civ {};
-	class Mrshounka_a3_308_civ_noir: Mrshounka_a3_308_civ {};
-	class Mrshounka_a3_308_civ_orange: Mrshounka_a3_308_civ {};
-	class Mrshounka_a3_308_civ_rose: Mrshounka_a3_308_civ {};
-	class Mrshounka_a3_308_civ_rouge: Mrshounka_a3_308_civ {};
-	class Mrshounka_a3_308_civ_violet: Mrshounka_a3_308_civ {};
-
 	class Mrshounka_a3_308_rcz
 	{
 		buyPrice = 36100;
@@ -3904,4 +3872,43 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		realname = "Audi RS4 Milice";
 	};
+
+	class Skyline_Peugeot_308
+	{
+		realname = "Peugeot 308";
+		buyPrice = 25250;
+		inventory = 40;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP98";
+		rank = 0;
+		colors[] =
+		{
+			"Skyline_Peugeot_308_01_F",
+			"Skyline_Peugeot_308_02_F",
+			"Skyline_Peugeot_308_03_F",
+			"Skyline_Peugeot_308_04_F",
+			"Skyline_Peugeot_308_05_F",
+			"Skyline_Peugeot_308_06_F",
+			"Skyline_Peugeot_308_07_F",
+			"Skyline_Peugeot_308_08_F",
+			"Skyline_Peugeot_308_09_F",
+			"Skyline_Peugeot_308_10_F",
+			"Skyline_Peugeot_308_11_F",
+			"Skyline_Peugeot_308_12_F"
+		};
+	};
+	class Skyline_Peugeot_308_01_F : Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_02_F : Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_03_F : Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_04_F : Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_05_F : Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_06_F : Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_07_F : Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_08_F : Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_09_F : Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_10_F : Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_11_F : Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_12_F : Skyline_Peugeot_308 {};
 };	
