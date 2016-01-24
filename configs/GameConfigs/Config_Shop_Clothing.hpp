@@ -636,7 +636,10 @@ class civ_clothing_sud
 		side = "CIV";
 		uniforms[] =
 		{
-			"U_C_Depanneur_01"
+			"U_C_Depanneur_01",
+			"U_C_Journalist",
+			"U_C_Journaliste_01",
+			"U_C_Journaliste_02"
 		};
 		headgear[] = 
 		{
@@ -645,7 +648,8 @@ class civ_clothing_sud
 		goggles[] = {};
 		vests[] = 
 		{
-			"usm_vest_safety"
+			"usm_vest_safety",
+			"V_TacVest_Securite_01"
 		};
 		backpacks[] =
 		{

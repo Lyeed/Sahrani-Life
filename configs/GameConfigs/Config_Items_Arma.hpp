@@ -140,6 +140,7 @@ class ALYSIA_ITEMS_ARMA
 	class B_Kitbag_Depanneur
 	{
 		buy_price = 80;
+		buy_license_CIV = "company_garagist";
 	};
 	class B_Kitbag_mcamo
 	{
@@ -2918,6 +2919,7 @@ class ALYSIA_ITEMS_ARMA
 	class U_C_Depanneur_01
 	{
 		buy_price = 20;
+		buy_license_CIV = "company_garagist";
 	};
 	class U_C_DolceGabbana_01
 	{
@@ -2934,14 +2936,17 @@ class ALYSIA_ITEMS_ARMA
 	class U_C_Journalist
 	{
 		buy_price = 20;
+		buy_license_CIV = "company_news";
 	};
 	class U_C_Journaliste_01
 	{
 		buy_price = 20;
+		buy_license_CIV = "company_news";
 	};
 	class U_C_Journaliste_02
 	{
 		buy_price = 20;
+		buy_license_CIV = "company_news";
 	};
 	class U_C_Kick_Me_01
 	{
