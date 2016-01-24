@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_maxAmount", "_processLicense", "_rank", "_display"];
+private["_maxAmount", "_processLicenses", "_rank", "_display", "_license_condition", "_licenses_text"];
 g_interaction_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 g_interaction_process_type = [_this, 3, "", [""]] call BIS_fnc_param;
 
@@ -52,8 +52,24 @@ if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_int
 	];
 };
 
-_processLicense = getText(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "license");
-if ((_processLicense != "") && !([_processLicense] call public_fnc_hasLicense)) exitWith
+_processLicenses = getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "licenses");
+if (count(_processLicenses) > 0) then
+{
+	_licenses_text = "";
+	_license_condition = true;
+
+	{
+		if (!([_x] call public_fnc_hasLicense)) then
+		{
+			_licenses_text = _licenses_text + format["%1<br/>", [_x] call public_fnc_licenseGetName];
+			_license_condition = false;
+		};
+	} forEach _processLicenses;
+} else {
+	_license_condition = true;
+};
+
+if (!_license_condition) exitWith
 {
 	{
 		ctrlShow[getNumber(_x >> "IDC"), false];	
@@ -61,8 +77,8 @@ if ((_processLicense != "") && !([_processLicense] call public_fnc_hasLicense)) 
 
 	(_display displayCtrl 53015) ctrlSetStructuredText parseText format
 	[
-		"<t align='center' font='PuristaBold'><t size='1.5'>Vous n'avez pas la license requise pour traiter<br/><br/>Vous avez besoin de<br/></t><t size='2' color='#FF8000'>%1</t></t>",
-		([_processLicense] call public_fnc_licenseGetName)
+		"<t align='center' font='PuristaBold'><t size='1.2'>Vous n'avez pas toutes les licenses requises pour traiter<br/><br/>Vous avez besoin de<br/></t><t size='1.5' color='#FF8000'>%1</t></t>",
+		_licenses_text
 	];
 };
 
