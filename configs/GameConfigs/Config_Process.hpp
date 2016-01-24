@@ -317,7 +317,7 @@ class ALYSIA_PROCESS
 	class Cimenttr
 	{
 		name = "Traitement de la pierre";
-		licenses[] = {"Pierretr"};
+		licenses[] = {"Pierretr", "company_construction"};
 		sound = "salt_process";
 		requiere_target = 1;
 		require[] = {{"pierre", 1}};
@@ -330,7 +330,7 @@ class ALYSIA_PROCESS
 	class oil
 	{
 		name = "Traitement du pétrole";
-		licenses[] = {"oil"};
+		licenses[] = {"oil", "company_fuel"};
 		sound = "drug_process";
 		requiere_target = 1;
 		require[] = {{"oilu", 1}};
