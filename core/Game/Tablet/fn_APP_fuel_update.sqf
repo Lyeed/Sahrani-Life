@@ -23,19 +23,11 @@ if (_data isEqualTo "") exitWith {};
 _data = call compile _data;
 _station = (nearestObjects [_data select 1, [_data select 0], 15]) select 0;
 
-_distance = round(player distance _station);
-(_display displayCtrl 9408) ctrlSetStructuredText parseText format
-[
-	"<t align='center'>%1 mètre%2</t>",
-	_distance,
-	if (_distance > 1) then {"s"} else {""}
-];
-
 _ctrl_fuels = _display displayCtrl 9405;
 lbClear _ctrl_fuels;
 
 {
-	_index = _ctrl_fuels lbAdd format getText(_x >> "name");
+	_index = _ctrl_fuels lbAdd getText(_x >> "name");
 	_ctrl_fuels lbSetPicture [_index, getText(_x >> "picture")];
 	_ctrl_fuels lbSetData [_index, configName _x];
 } forEach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL" >> "fuels"));
@@ -57,13 +49,23 @@ if ("ItemGPS" in (assignedItems player)) then
 	_ctrl_map ctrlMapAnimAdd [0, 0.09, _station];
 	ctrlMapAnimCommit _ctrl_map;
 
-	waitUntil {((isNull _display) || (g_app != "FUEL") || ((lbCurSel _list) != _sel))};
-
-	deleteMarkerLocal _marker;
+	_distance = round(player distance _station);
+	(_display displayCtrl 9408) ctrlSetStructuredText parseText format
+	[
+		"<t align='center'>%1 mètre%2</t>",
+		_distance,
+		if (_distance > 1) then {"s"} else {""}
+	];
 
 	[9409, true] call public_fnc_tabletShow;
 	[9410, false] call public_fnc_tabletShow;
+
+	waitUntil {((isNull _display) || (g_app != "FUEL") || ((lbCurSel _list) != _sel))};
+
+	deleteMarkerLocal _marker;
 } else {
+	(_display displayCtrl 9408) ctrlSetStructuredText parseText "<t align='center'>Inconnu</t>";
+
 	[9410, true] call public_fnc_tabletShow;
 	[9409, false] call public_fnc_tabletShow;
 };

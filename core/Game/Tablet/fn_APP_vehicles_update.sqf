@@ -19,15 +19,20 @@ if (isNull _display) exitWith {};
 
 _index = _list lbValue _sel;
 _vehicle = g_vehicles select _index;
-_distance = round(player distance _vehicle);
 _ctrl_map = _display displayCtrl 7703;
 
-(_display displayCtrl 7708) ctrlSetStructuredText parseText format
-[
-	"<t align='center'><t size='1.5'>%1</t><br/>mètre%2</t>",
-	_distance,
-	if (_distance > 1) then {"s"} else {""}
-];
+if ("ItemGPS" in (assignedItems player)) then
+{
+	_distance = round(player distance _vehicle);
+	(_display displayCtrl 7708) ctrlSetStructuredText parseText format
+	[
+		"<t align='center'><t size='1.5'>%1</t><br/>mètre%2</t>",
+		_distance,
+		if (_distance > 1) then {"s"} else {""}
+	];
+} else {
+	(_display displayCtrl 7708) ctrlSetStructuredText parseText "<t align='center' size='1.5'>Inconnu</t>";
+};
 
 if ("VEHICLES" in g_apps) then
 {

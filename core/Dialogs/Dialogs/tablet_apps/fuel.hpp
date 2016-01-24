@@ -22,6 +22,7 @@ class FUEL_STATIONS_LIST: RscCombo
 {
 	idc = FUEL_STATIONS_LIST_IDC;
 	onLBSelChanged = "_this spawn public_fnc_APP_fuel_update;";
+	colorBackground[] = {0,0,0,1};
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.379 * safezoneH + safezoneY;
@@ -96,6 +97,7 @@ class FUEL_SELECT_DATA_INFO: RscCombo
 {
 	idc = FUEL_SELECT_DATA_INFO_IDC;
 	onLBSelChanged = "_this call public_fnc_APP_fuel_update_info;";
+	colorBackground[] = {0,0,0,1};
 
 	x = 0.525781 * safezoneW + safezoneX;
 	y = 0.467 * safezoneH + safezoneY;
@@ -105,7 +107,7 @@ class FUEL_SELECT_DATA_INFO: RscCombo
 class FUEL_SELECT_DATA_TEXT: RscStructuredText
 {
 	idc = FUEL_SELECT_DATA_TEXT_IDC;
-	colorBackground[] = {0,0,0,0.6};
+	colorBackground[] = {0,0,0,0.8};
 	
 	x = 0.525781 * safezoneW + safezoneX;
 	y = 0.489 * safezoneH + safezoneY;
