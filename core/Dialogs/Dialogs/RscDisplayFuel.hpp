@@ -145,7 +145,7 @@ class RscDisplayFuelStation: default_interaction_back_dialog
 		class VALIDATE_TEXT: RscStructuredText
 		{
 			idc = 16016;
-			text = "<t align='center' size='1.5'>Quitter</t>";
+			text = "<t align='center' size='1.5'>Remplir</t>";
 
 			x = 0.484531 * safezoneW + safezoneX;
 			y = 0.533 * safezoneH + safezoneY;
@@ -167,8 +167,8 @@ class RscDisplayFuelStation: default_interaction_back_dialog
 		{
 			idc = 16017;
 			action = "[] call public_fnc_fuelStation_refuel_veh_validate;";
-			onMouseEnter = "			ctrlShow[16014, false];			((findDisplay 16000) displayCtrl 16013) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Remplir</t>"";";
-			onMouseExit = "			ctrlShow[16014, true];			((findDisplay 16000) displayCtrl 16013) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Remplir</t>"";";
+			onMouseEnter = "ctrlShow[16014, false];((findDisplay 16000) displayCtrl 16013) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Remplir</t>"";";
+			onMouseExit = "ctrlShow[16014, true];((findDisplay 16000) displayCtrl 16013) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Remplir</t>"";";
 
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.522 * safezoneH + safezoneY;

@@ -522,7 +522,8 @@ class civ_clothing_sud
 		};
 		vests[] =
 		{
-			"Respirateur_milice"
+			"Respirateur_milice",
+			"rhs_6b23_sniper"
 		};
 		backpacks[] =
 		{
@@ -614,12 +615,11 @@ class civ_clothing_sud
 		};
 		vests[] =
 		{
-			"TRYK_V_Sheriff_BA_TB5",
+			"rhs_6b23_digi_rifleman",
 			"TRYK_V_Sheriff_BA_TB",
 			"police_belt_pistol",
 			"Garde_Veste",
-			"Garde_VesteCargo",
-			"Garde_Belt"
+			"Garde_VesteCargo"
 		};
 		backpacks[] =
 		{

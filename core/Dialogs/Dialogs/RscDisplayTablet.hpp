@@ -53,7 +53,6 @@ class RscDisplayTablet: default_base_dialog
 		};
 		class MAIN_BUTTON_BUTTON: RscButtonSilent
 		{
-			idc = -1;
 			action = "uiNamespace setVariable[""main_status"", 0]; [""MAIN""] spawn public_fnc_tabletApp;";
 			onMouseEnter = "ctrlSetText[7507,""lyeed_IMG\data\tablet\home_select.paa""];";
 			onMouseExit = "ctrlSetText[7507,""lyeed_IMG\data\tablet\home_basic.paa""];";
@@ -77,5 +76,6 @@ class RscDisplayTablet: default_base_dialog
 		#include "tablet_apps\faction.hpp"
 		#include "tablet_apps\market.hpp"
 		#include "tablet_apps\staff.hpp"
+		#include "tablet_apps\fuel.hpp"
 	};
 };

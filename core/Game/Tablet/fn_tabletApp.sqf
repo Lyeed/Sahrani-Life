@@ -44,6 +44,7 @@ switch (_app) do
 	case "MARKET": {[] call public_fnc_APP_market};
 	case "STAFF": {[] call public_fnc_APP_staff};
 	case "STAFF_DATA": {};
+	case "FUEL": {[] spawn public_fnc_APP_fuel};
 };
 
 g_CTRL_inUse = false;

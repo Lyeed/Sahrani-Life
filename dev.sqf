@@ -1,4 +1,4 @@
-
+if (typeOf(_target) in ["Land_FuelStation_Build_F", "Land_FuelStation_Shed_F", "Land_FuelStation_Feed_F"]) then
 
 
 FU =

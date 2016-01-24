@@ -15,4 +15,12 @@ class ALYSIA_SHOP_APPLICATIONS
 		price = 10000;
 		sides[] = {"CIV"};
 	};
+
+	class FUEL
+	{
+		name = "Application : Stations essence";
+		description = "Application vous permettant de consulter les stocks de toutes les stations service de l'archipel";
+		price = 5000;
+		sides[] = {"CIV", "WEST", "EAST", "GUER"};
+	};
 };

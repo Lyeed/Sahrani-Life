@@ -100,31 +100,9 @@ with missionNamespace do
 	"g_houses_storages pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_STORAGES");
 	g_houses_storages = compileFinal str(g_houses_storages);
 	/* =================[Dynamic Markers]=================== */
+	g_dynamic_markers_discovered = [];
 	g_dynamic_markers = [];
 	"g_dynamic_markers pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_DYN_MARKERS");
-	/* =================[Lasting Objects]===================
-	g_lastingObjects = [];
-	g_lastingObjects_Buildings = [];
-	g_lastingObjects_Process = [];
-	g_lastingObjects_Items = [];
-
-	_missionConfigPatches = missionConfigFile >> "ALYSIA_LASTING_OBJECTS";
-	for "_i" from 0 to count (_missionConfigPatches) - 1 do 
-	{
-		private["_patchEntry"];
-		_patchEntry = _missionConfigPatches select _i;
-		if (isClass _patchEntry) then 
-		{
-			g_lastingObjects_Buildings pushBack str(_patchEntry);
-			g_lastingObjects_Process pushBack (_missionConfigPatches >> str(_patchEntry) >> "process");
-			g_lastingObjects_Items pushBack (_missionConfigPatches >> str(_patchEntry) >> "item");
-		};
-	};
-
-	g_lastingObjects_Buildings = compileFinal str(g_lastingObjects_Buildings);
-	g_lastingObjects_Process = compileFinal str(g_lastingObjects_Process);
-	g_lastingObjects_Items = compileFinal str(g_lastingObjects_Items);
-	 */
 	/* =================[Items]=================== */
 	g_inv_items = [];
 	"g_inv_items pushBack(configName _x); true" configClasses (missionConfigFile >> "ALYSIA_ITEMS");
@@ -137,7 +115,7 @@ with missionNamespace do
 
 	/* =================[Chairs]====================*/
 	g_chairs = [];
-
+	
 	{
 		g_chairs pushBack configName(_x);
 	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_CHAIRS"));

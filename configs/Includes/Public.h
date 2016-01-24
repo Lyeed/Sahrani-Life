@@ -64,6 +64,8 @@ class Public
 	class Tools
 	{
 		file = "core\Tools";
+		class hideAllMarkers {};
+		class showAllMarkers {};
 		class sitDown {};
 		class standUp {};
 		class handleTrunk {};
@@ -544,5 +546,8 @@ class Public
 		class APP_staff_players_actions_update {};
 		class APP_staff_players_getData {};
 		class APP_staff_players_returnData {};
+		class APP_fuel {};
+		class APP_fuel_update {};
+		class APP_fuel_update_info {};
 	};
 };

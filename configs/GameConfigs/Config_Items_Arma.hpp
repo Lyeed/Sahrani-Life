@@ -3065,11 +3065,11 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class TRYK_V_Sheriff_BA_TB5
+	class TRYK_V_Sheriff_BA_TB
 	{
 		buy_price = 20;
 	};
-	class TRYK_V_Sheriff_BA_TB
+	class rhs_6b23_digi_rifleman
 	{
 		buy_price = 20;
 	};
@@ -3081,15 +3081,15 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
+	class rhs_6b23_sniper
+	{
+		buy_price = 20;
+	};
 	class Garde_Veste
 	{
 		buy_price = 20;
 	};
 	class Garde_VesteCargo
-	{
-		buy_price = 20;
-	};
-	class Garde_Belt
 	{
 		buy_price = 20;
 	};

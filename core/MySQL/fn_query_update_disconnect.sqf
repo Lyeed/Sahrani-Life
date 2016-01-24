@@ -45,7 +45,8 @@ if (missionNamespace getVariable ["g_connected", false]) then
 		missionNamespace getVariable ["g_phone_forfait", "none"],
 		missionNamespace getVariable ["g_phone_blacklist", []],
 		missionNamespace getVariable ["g_apps", []],
-		([] call public_fnc_getLicenses)
+		([] call public_fnc_getLicenses),
+		g_dynamic_markers_discovered
 	] remoteExec ["TON_fnc_query_update_disconnect", 2];
 	saveProfileNamespace;
 };
