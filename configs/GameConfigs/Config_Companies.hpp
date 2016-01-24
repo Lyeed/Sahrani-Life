@@ -44,7 +44,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"ciment", 5}, {"goldbar", 5}, {"furniture", 5}, {"ironp", 5}, {"sand", 5}, {"glass", 5}, {"copperp", 5}, {"alu", 5}, {"pierre", 5}};
+				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
 				price = 10000;
 			};
 			class marker
@@ -70,7 +70,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"ciment", 5}, {"goldbar", 5}, {"furniture", 5}, {"ironp", 5}, {"sand", 5}, {"glass", 5}, {"copperp", 5}, {"alu", 5}, {"pierre", 5}};
+				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
 				price = 10000;
 			};
 			class marker
@@ -96,7 +96,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"ciment", 5}, {"goldbar", 5}, {"furniture", 5}, {"ironp", 5}, {"sand", 5}, {"glass", 5}, {"copperp", 5}, {"alu", 5}, {"pierre", 5}};
+				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
 				price = 10000;
 			};
 			class marker
@@ -122,7 +122,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"ciment", 5}, {"goldbar", 5}, {"furniture", 5}, {"ironp", 5}, {"sand", 5}, {"glass", 5}, {"copperp", 5}, {"alu", 5}, {"pierre", 5}};
+				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
 				price = 10000;
 			};
 			class marker
@@ -148,7 +148,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"ciment", 5}, {"goldbar", 5}, {"furniture", 5}, {"ironp", 5}, {"sand", 5}, {"glass", 5}, {"copperp", 5}, {"alu", 5}, {"pierre", 5}};
+				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
 				price = 10000;
 			};
 			class marker
@@ -174,7 +174,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"ciment", 5}, {"goldbar", 5}, {"furniture", 5}, {"ironp", 5}, {"sand", 5}, {"glass", 5}, {"copperp", 5}, {"alu", 5}, {"pierre", 5}};
+				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
 				price = 10000;
 			};
 			class marker
@@ -200,7 +200,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"ciment", 5}, {"goldbar", 5}, {"furniture", 5}, {"ironp", 5}, {"sand", 5}, {"glass", 5}, {"copperp", 5}, {"alu", 5}, {"pierre", 5}};
+				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
 				price = 10000;
 			};
 			class marker
@@ -226,7 +226,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"ciment", 5}, {"goldbar", 5}, {"furniture", 5}, {"ironp", 5}, {"sand", 5}, {"glass", 5}, {"copperp", 5}, {"alu", 5}, {"pierre", 5}};
+				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
 				price = 10000;
 			};
 			class marker
@@ -252,7 +252,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"ciment", 5}, {"goldbar", 5}, {"furniture", 5}, {"ironp", 5}, {"sand", 5}, {"glass", 5}, {"copperp", 5}, {"alu", 5}, {"pierre", 5}};
+				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
 				price = 10000;
 			};
 			class marker
@@ -278,7 +278,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"ciment", 5}, {"goldbar", 5}, {"furniture", 5}, {"ironp", 5}, {"sand", 5}, {"glass", 5}, {"copperp", 5}, {"alu", 5}, {"pierre", 5}};
+				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
 				price = 10000;
 			};
 			class marker
@@ -304,7 +304,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"ciment", 5}, {"goldbar", 5}, {"furniture", 5}, {"ironp", 5}, {"sand", 5}, {"glass", 5}, {"copperp", 5}, {"alu", 5}, {"pierre", 5}};
+				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
 				price = 10000;
 			};
 			class marker
@@ -330,7 +330,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"ciment", 5}, {"goldbar", 5}, {"furniture", 5}, {"ironp", 5}, {"sand", 5}, {"glass", 5}, {"copperp", 5}, {"alu", 5}, {"pierre", 5}};
+				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
 				price = 10000;
 			};
 			class marker
@@ -356,7 +356,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"ciment", 5}, {"goldbar", 5}, {"furniture", 5}, {"ironp", 5}, {"sand", 5}, {"glass", 5}, {"copperp", 5}, {"alu", 5}, {"pierre", 5}};
+				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
 				price = 10000;
 			};
 			class marker
@@ -382,7 +382,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 3}, {"ciment", 5}, {"goldbar", 5}, {"furniture", 5}, {"ironp", 5}, {"sand", 5}, {"glass", 5}, {"copperp", 5}, {"alu", 5}, {"pierre", 5}};
+				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
 				price = 10000;
 			};
 			class marker
