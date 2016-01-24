@@ -23918,7 +23918,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_helfenburk_brana";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 339.576;this setposATL [7101.89502,7780.941895,5.70303];this setVectorUp (surfacenormal (getPosATL this))";
+			init="this enableSimulation true;this setdir 339.576;this setposATL [7101.89502,7780.941895,5.70303];this setVectorUp [0,0,1]";
 		};
 		class Item2018
 		{
@@ -23929,7 +23929,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_helfenburk_cimburi";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 246.559;this setposATL [7092.271973,7810.884766,1.8485];this setVectorUp (surfacenormal (getPosATL this))";
+			init="this enableSimulation true;this setdir 246.559;this setposATL [7092.271973,7810.884766,1.8485];this setVectorUp [0,0,1]";
 		};
 		class Item2019
 		{
@@ -23940,7 +23940,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_helfenburk_zed";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 161.239;this setposATL [7070.490723,7802.138184,-0.828453];this setVectorUp (surfacenormal (getPosATL this))";
+			init="this enableSimulation true;this setdir 161.239;this setposATL [7070.490723,7802.138184,-0.828453];this setVectorUp [0,0,1]";
 		};
 		class Item2020
 		{
@@ -23951,7 +23951,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_ruiny_obvod_3";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 293.471;this setposATL [7111.108887,6865.82959,-0.513939];this setVectorUp (surfacenormal (getPosATL this))";
+			init="this enableSimulation true;this setdir 293.471;this setposATL [7111.108887,6865.82959,-0.513939];this setVectorUp [0,0,1]";
 		};
 		class Item2021
 		{
