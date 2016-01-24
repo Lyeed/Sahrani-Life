@@ -132,7 +132,7 @@ class ALYSIA_PRISONS
 				time = 0;
 				money = 0;
 			};
-			class item_3
+			class item_1
 			{
 				name = "Fabrication de Boutons";
 				time = 0;

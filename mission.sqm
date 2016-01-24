@@ -35229,7 +35229,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="archeologie_process_1";
-			init="this addAction[""<img image='\lyeed_IMG\data\actions_menu\process.paa'/> Rénovation"",public_fnc_processAction,""archeologue"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Rénovation"",public_fnc_processAction,""archeologue"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item3106
 		{
