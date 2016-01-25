@@ -31,8 +31,8 @@ class ALYSIA_SHOPS_ARMA
 			"RH_20Rnd_57x28_FN",
 			"RH_m1911",
 			"RH_7Rnd_45cal_m1911",
-			"hlc_rifle_M14",
-			"hlc_20Rnd_762x51_B_M14"
+			"hlc_rifle_auga2_b",
+			"hlc_30Rnd_556x45_B_AUG"
 		};
 	};
 

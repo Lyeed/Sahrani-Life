@@ -218,17 +218,17 @@ class ALYSIA_FACTIONS
 					"hlc_rifle_M14_Bipod",
 					"Trixie_Enfield_Rail",
 					"hlc_rifle_aughbar_B",
-					"hlc_rifle_auga2_b",
 					"Fett_SDAR",
-					"wc_gr_smg_mp40"
+					"wc_gr_smg_mp40",
+					"hlc_rifle_M14"
 				}
 			},
 			{"Magazines",
 				{
 					"Trixie_Enfield_Mag",
-					"hlc_30Rnd_556x45_B_AUG",
 					"Fett_20Rnd_556x45_UW_mag",
-					"wc_32Rnd_9x19_mag"
+					"wc_32Rnd_9x19_mag",
+					"hlc_20Rnd_762x51_B_M14"
 				}
 			},
 			{"Items",
