@@ -14,15 +14,14 @@ if (missionNamespace getVariable ["g_connected", false]) then
 	_allow = getText(missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "characters_allowed");
 	{
 		if (([(_x select 3), _allow] call public_fnc_TextAllowed) != "") then {
-			_msgs deleteAt _forEachIndex;
+			_msgs = _msgs - [_x];
 		};
 	} forEach _msgs;
 
 	_drugs_stats = [];
 	{
 		_var = missionNamespace getVariable [_x, 0];
-		if (_var > 0) then
-		{
+		if (_var > 0) then {
 			_drugs_stats pushBack [_x, _var];
 		};
 	} forEach (missionNamespace getVariable ["g_drugs", []]);

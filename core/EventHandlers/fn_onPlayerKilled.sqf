@@ -9,8 +9,6 @@
 player setVariable ["tf_globalVolume", 0];
 player setVariable ["tf_voiceVolume", 0, true];
 
-playSound "death";
-
 0 cutText["Vous êtes en soin intensif ...", "BLACK FADED"];
 0 cutFadeOut 9999999;
 

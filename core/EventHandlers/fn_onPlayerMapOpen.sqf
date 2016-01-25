@@ -48,7 +48,7 @@ while {visibleMap} do
 					_marker = createMarkerLocal [format["%1_dead_marker", (getPlayerUID _x)], (visiblePosition _x)];
 					_marker setMarkerColorLocal "ColorRed";
 					_marker setMarkerTypeLocal "loc_Hospital";
-					_marker setMarkerTextLocal format["%1", "APPEL: blessé"];
+					_marker setMarkerTextLocal "SOS: blessé";
 					_markers pushBack _marker;
 				};
 			};

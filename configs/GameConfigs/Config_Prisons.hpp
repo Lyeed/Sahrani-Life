@@ -120,6 +120,7 @@ class ALYSIA_PRISONS
 
 		class works
 		{
+			/*
 			class item_1
 			{
 				name = "Fabrication de Savons";
@@ -138,6 +139,7 @@ class ALYSIA_PRISONS
 				time = 0;
 				money = 0;
 			};
+			*/
 		};
 		class cells
 		{

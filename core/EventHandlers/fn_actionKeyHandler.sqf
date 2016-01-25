@@ -65,7 +65,7 @@ if ((vehicle player) isEqualTo player) then
 			true breakOut "main";
 		};
 
-		_house = (nearestObjects [player, (call g_houses_list), 3]) select 0;
+		_house = (nearestObjects [player, (call g_houses_list), 10]) select 0;
 		if (!(isNil "_house")) then
 		{
 			[_house] call public_fnc_house_menu_handler;

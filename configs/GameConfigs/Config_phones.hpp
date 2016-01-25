@@ -20,7 +20,7 @@ class ALYSIA_PHONE
 			name = "Lite";
 			bill = 0;
 			sms_price = 35;
-			sms_max = 0;
+			sms_max = 3;
 			contacts_max = 5;
 			backlist_max = 0;
 		};
