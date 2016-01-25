@@ -145,7 +145,7 @@ class ALYSIA_HOUSES
 		garage_type[] = {};
 		sides[] = {"WEST", "EAST"};
 		rank = 1;
-		license = "home";
+		license = "";
 	};	
 
 	class Land_Army_hut2_int
@@ -157,7 +157,7 @@ class ALYSIA_HOUSES
 		garage_type[] = {};
 		sides[] = {"WEST", "EAST"};
 		rank = 1;
-		license = "home";
+		license = "";
 	};	
 
 	class Land_House_y
@@ -270,7 +270,7 @@ class ALYSIA_HOUSES
 	
 	class CampEast_EP1
 	{
-		price = 0;
+		price = 10;
 		storage = "Skyline_Coffre_Large";
 		storage_building_pos_index = 2;
 		garage = 0;
@@ -282,7 +282,7 @@ class ALYSIA_HOUSES
 	
 	class Barrack2
 	{
-		price = 0;
+		price = 10;
 		storage = "Skyline_Coffre_Medium";
 		storage_building_pos_index = 4;
 		garage = 0;
@@ -297,7 +297,7 @@ class ALYSIA_HOUSES
 		price = 0;
 		storage = "Skyline_Coffre_Large";
 		storage_building_pos_index = 6;
-		garage = 0;
+		garage = 10;
 		garage_type[] = {};
 		sides[] = {"EAST"};
 		rank = 4;
@@ -309,7 +309,7 @@ class ALYSIA_HOUSES
 		price = 0;
 		storage = "Skyline_Coffre_Medium";
 		storage_building_pos_index = 5;
-		garage = 0;
+		garage = 10;
 		garage_type[] = {};
 		sides[] = {"EAST"};
 		rank = 1;
@@ -321,7 +321,7 @@ class ALYSIA_HOUSES
 		price = 0;
 		storage = "R3F_WeaponStock";
 		storage_building_pos_index = 5;
-		garage = 0;
+		garage = 10;
 		garage_type[] = {};
 		sides[] = {"EAST"};
 		rank = 5;
@@ -333,7 +333,7 @@ class ALYSIA_HOUSES
 		price = 0;
 		storage = "R3F_WeaponStock";
 		storage_building_pos_index = 1;
-		garage = 0;
+		garage = 10;
 		garage_type[] = {};
 		sides[] = {"WEST"};
 		rank = 5;
