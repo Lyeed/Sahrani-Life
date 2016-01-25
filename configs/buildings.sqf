@@ -1797,63 +1797,52 @@ _flag_south_2 setFlagTexture "lyeed_IMG\data\faction\EAST_flag.jpg";
 } forEach ([border_control_north_1, border_control_north_2]);
 
 //feed live
-_border_screen_south_1 = ["Land_FlatTV_01_F","[13256.851563,8834.74707,13.6706]",90,-100,1,0,[]] call _cString;
-_border_screen_south_1 addAction ["<img image='lyeed_IMG\data\actions_menu\camera.paa'/> <t color='#01DF01'>Allumer</t>",
-{
-	(_this select 0) say3D "tv_bip";
-	_border_camera_south_1 = "camera" camCreate [13209.5,8998.77,15.6354];
-	_border_camera_south_1 camSetFov 0.7;
-	_border_camera_south_1 camSetTarget ((getPos (_this select 0)) nearestObject 506878);
-	_border_camera_south_1 camCommit 0;
-	_border_camera_south_1 cameraEffect ["Internal", "Back", "border_camera_south_1"];
-	(_this select 0) setObjectTexture [0, "#(argb,512,512,1)r2t(border_camera_south_1,1)"];
-	(_this select 0) setVariable ["camera_ON", true];
-	(_this select 0) setVariable ["camera", _border_camera_south_1];
-}, "", 9999, false, true, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]) && !(_target getVariable ['camera_ON',false]))"];
+_border_screen_south_1 = ["Land_FlatTV_01_F","[13255.876953,8836.390625,13.6931]",45,-100,1,0,[]] call _cString;
+_border_screen_south_1 setVariable ["pip", "border_camera_south_1"];
+_border_screen_south_1 setVariable ["camera_pos", [13208,8997.01,27.8831]];
+_border_screen_south_1 setVariable ["camera_target_id", 499867];
 
-_border_screen_south_2 = ["Land_FlatTV_01_F","[13256.841797,8833.327148,13.6706]",90,-100,1,0,[]] call _cString;
-_border_screen_south_2 addAction ["<img image='lyeed_IMG\data\actions_menu\camera.paa'/> <t color='#01DF01'>Allumer</t>",
-{
-	(_this select 0) say3D "tv_bip";
-	_border_camera_south_2 = "camera" camCreate [13295.8,8729.42,8.90213];
-	_border_camera_south_2 camSetFov 0.7;
-	_border_camera_south_2 camSetTarget ((getPos (_this select 0)) nearestObject 538385);
-	_border_camera_south_2 camCommit 0;
-	_border_camera_south_2 cameraEffect ["Internal", "Back", "border_camera_south_2"];
-	(_this select 0) setObjectTexture [0, "#(argb,512,512,1)r2t(border_camera_south_2,1)"];
-	(_this select 0) setVariable ["camera_ON", true];
-	(_this select 0) setVariable ["camera", _border_camera_south_2];
-}, "", 9999, false, true, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]) && !(_target getVariable ['camera_ON',false]))"];
+_border_screen_south_2 = ["Land_FlatTV_01_F","[13256.851563,8834.74707,13.6706]",90,-100,1,0,[]] call _cString;
+_border_screen_south_2 setVariable ["pip", "border_camera_south_2"];
+_border_screen_south_2 setVariable ["camera_pos", [13209.5,8890.24,40.0537]];
+_border_screen_south_2 setVariable ["camera_target_id", 500890];
+
+_border_screen_south_3 = ["Land_FlatTV_01_F","[13256.841797,8833.327148,13.6706]",90,-100,1,0,[]] call _cString;
+_border_screen_south_3 setVariable ["pip", "border_camera_south_3"];
+_border_screen_south_3 setVariable ["camera_pos", [13209.9,8889.58,40.9975]];
+_border_screen_south_3 setVariable ["camera_target_id", 501626];
+
+_border_screen_south_4 = ["Land_FlatTV_01_F","[13255.998047,8831.290039,13.6931]",135,-100,1,0,[]] call _cString;
+_border_screen_south_4 setVariable ["pip", "border_camera_south_4"];
+_border_screen_south_4 setVariable ["camera_pos", [13204.5,8794.76,36.7393]];
+_border_screen_south_4 setVariable ["camera_target_id", 536288];
 
 _border_screen_north_1 = ["Land_FlatTV_01_F","[13472.538086,8877.490234,18.6209]",150,-100,1,0,[]] call _cString;
-_border_screen_north_1 addAction ["<img image='lyeed_IMG\data\actions_menu\camera.paa'/> <t color='#01DF01'>Allumer</t>",
-{
-	(_this select 0) say3D "tv_bip";
-	_border_camera_north_1 = "camera" camCreate [13480,8762.22,7.76653];
-	_border_camera_north_1 camSetFov 0.7;
-	_border_camera_north_1 camSetTarget ((getPos (_this select 0)) nearestObject 538385);
-	_border_camera_north_1 camCommit 0;
-	_border_camera_north_1 cameraEffect ["Internal", "Back", "border_camera_north_1"];
-	(_this select 0) setObjectTexture [0, "#(argb,512,512,1)r2t(border_camera_north_1,1)"];
-	(_this select 0) setVariable ["camera_ON", true];
-	(_this select 0) setVariable ["camera", _border_camera_north_1];
-}, "", 9999, false, true, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]) && !(_target getVariable ['camera_ON',false]))"];
+_border_screen_north_1 setVariable ["pip", "border_camera_north_1"];
+_border_screen_north_1 setVariable ["camera_pos", [13480,8762.22,7.76653]];
+_border_screen_north_1 setVariable ["camera_target_id", 538385];
 
 _border_screen_north_2 = ["Land_FlatTV_01_F","[13471.108398,8877.551758,18.6209]",205,-100,1,0,[]] call _cString;
-_border_screen_north_2 addAction ["<img image='lyeed_IMG\data\actions_menu\camera.paa'/> <t color='#01DF01'>Allumer</t>",
-{
-	(_this select 0) say3D "tv_bip";
-	_border_camera_north_2 = "camera" camCreate [13444.1,8990.69,15.042];
-	_border_camera_north_2 camSetFov 0.7;
-	_border_camera_north_2 camSetTarget ((getPos (_this select 0)) nearestObject 506878);
-	_border_camera_north_2 camCommit 0;
-	_border_camera_north_2 cameraEffect ["Internal", "Back", "border_camera_north_2"];
-	(_this select 0) setObjectTexture [0, "#(argb,512,512,1)r2t(border_camera_north_2,1)"];
-	(_this select 0) setVariable ["camera_ON", true];
-	(_this select 0) setVariable ["camera", _border_camera_north_2];
-}, "", 9999, false, true, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]) && !(_target getVariable ['camera_ON',false]))"];
+_border_screen_north_2 setVariable ["pip", "border_camera_north_2"];
+_border_screen_north_2 setVariable ["camera_pos", [13444.1,8990.69,15.042]];
+_border_screen_north_2 setVariable ["camera_target_id", 506878];
 
 {
+	_x addAction ["<img image='lyeed_IMG\data\actions_menu\camera.paa'/> <t color='#01DF01'>Allumer</t>",
+	{
+		(_this select 0) say3D "tv_bip";
+		_camera = "camera" camCreate ((_this select 0) getVariable "camera_pos");
+		_camera camSetFov 0.7;
+		_camera camSetTarget ((getPos (_this select 0)) nearestObject ((_this select 0) getVariable "camera_target_id"));
+		_camera camCommit 0;
+		_camera cameraEffect ["Internal", "Back", (_this select 0) getVariable "pip"];
+		(_this select 0) setObjectTexture [0, format["#(argb,512,512,1)r2t(%1,1)", (_this select 0) getVariable "pip"]];
+		(_this select 0) setVariable ["camera_ON", true];
+		(_this select 0) setVariable ["camera", _camera];
+		(_this select 0) setVariable ["camera_night", false];
+		((_this select 0) getVariable "pip") setPiPEffect [0];
+	}, "", 9999, false, true, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]) && !(_target getVariable ['camera_ON',false]))"];
+
 	_x addAction ["<img image='lyeed_IMG\data\actions_menu\camera.paa'/> <t color='#FF0000'>Eteindre</t>",
 	{
 		(_this select 0) say3D "tv_bip";
@@ -1861,4 +1850,19 @@ _border_screen_north_2 addAction ["<img image='lyeed_IMG\data\actions_menu\camer
 		camDestroy ((_this select 0) getVariable "camera");
 		(_this select 0) setVariable ["camera_ON", false];
 	}, "", 9999, false, true, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]) && (_target getVariable ['camera_ON',false]))"];
-} forEach ([_border_screen_south_1, _border_screen_south_2, _border_screen_north_1, _border_screen_north_2]);
+
+	_x addAction ["<img image='lyeed_IMG\data\actions_menu\night.paa'/> Mode <t color='#01DF01'>vision nocturne</t>",
+	{
+		(_this select 0) say3D "tv_bip";
+		(_this select 0) setVariable ["camera_night", true];
+		((_this select 0) getVariable "pip") setPiPEffect [1];
+	}, "", 9998, false, true, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]) && !(_target getVariable ['camera_night',false]) && (_target getVariable ['camera_ON',false]))"];
+
+	_x addAction ["<img image='lyeed_IMG\data\actions_menu\day.paa'/> Mode <t color='#01DF01'>normal</t>",
+	{
+		(_this select 0) say3D "tv_bip";
+		(_this select 0) setVariable ["camera_night", false];
+		((_this select 0) getVariable "pip") setPiPEffect [0];
+	}, "", 9998, false, true, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]) && (_target getVariable ['camera_night',false]) && (_target getVariable ['camera_ON',false]))"];
+
+} forEach ([_border_screen_south_1, _border_screen_south_2, _border_screen_north_1, _border_screen_north_2, _border_screen_south_3, _border_screen_south_4]);
