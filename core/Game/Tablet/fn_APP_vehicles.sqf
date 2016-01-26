@@ -40,24 +40,10 @@ if ((lbSize _list) isEqualTo 0) then {
 	[7708, true] call public_fnc_tabletShow;
 };
 
-{
-	if ((markerAlpha _x) isEqualTo 1) then
-	{
-		if (!(_x in g_dynamic_markers)) then {
-			_x setMarkerAlphaLocal 0;
-		};
-	};
-} forEach allMapMarkers;
+[] call public_fnc_hideAllMarkers;
 
 _list lbSetCurSel 0;
 
 waitUntil {(g_app != "VEHICLES")};
 
-{
-	if ((markerAlpha _x) isEqualTo 0) then
-	{
-		if (!(_x in g_dynamic_markers)) then {
-			_x setMarkerAlphaLocal 1;
-		};
-	};
-} forEach allMapMarkers;
+[] call public_fnc_showAllMarkers;

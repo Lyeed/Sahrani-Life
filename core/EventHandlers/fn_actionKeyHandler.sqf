@@ -65,7 +65,7 @@ if ((vehicle player) isEqualTo player) then
 			true breakOut "main";
 		};
 
-		_house = (nearestObjects [player, (call g_houses_list), 3]) select 0;
+		_house = (nearestObjects [player, (call g_houses_list), 10]) select 0;
 		if (!(isNil "_house")) then
 		{
 			[_house] call public_fnc_house_menu_handler;
@@ -201,16 +201,15 @@ if ((vehicle player) isEqualTo player) then
 					};
 				};
 
-				if (typeOf(_target) in ["Land_FuelStation_Build_F", "Land_FuelStation_Shed_F", "Land_FuelStation_Feed_F"]) then
+				if (typeOf(_target) isEqualTo "Land_FuelStation_Feed_F") then
 				{
-					if ((player getVariable ["typeRefuel", ""]) != "") then
-					{
-						["Le plein d'essence est annulé."] call public_fnc_error;
-						player setVariable ["typeRefuel", "", false];
-					} else {
+					if ((player getVariable ["typeRefuel", ""]) isEqualTo "") then {
 						[_target] call public_fnc_interactions_player_to_station;
+					} else {
+						["Plein annulé"] call public_fnc_info;
+						player setVariable ["typeRefuel", "", false];
 					};
-					
+
 					true breakOut "main";
 				};
 

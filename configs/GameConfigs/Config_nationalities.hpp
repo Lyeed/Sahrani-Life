@@ -63,7 +63,7 @@ class ALYSIA_NATIONALITIES
 	class Azerbajan
 	{
 		name = "Azerbaïdjan";
-		flag = "world_markers\images\Azerbajan.paa";
+		flag = "world_markers\images\Azerbaijan.paa";
 	};
 	class Bahamas
 	{

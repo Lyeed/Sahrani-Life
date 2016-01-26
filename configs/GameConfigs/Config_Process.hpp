@@ -4,7 +4,7 @@ class ALYSIA_PROCESS
 	class wood
 	{
 		name = "Scierie";
-		license = "wood";
+		licenses[] = {"wood"};
 		sound = "smelting";
 		requiere_target = 1;
 		require[] = {{"wood", 1}};
@@ -18,7 +18,7 @@ class ALYSIA_PROCESS
 	class furniture
 	{
 		name = "Menuiserie";
-		license = "wood";
+		licenses[] = {"wood"};
 		sound = "smelting";
 		requiere_target = 1;
 		require[] = {{"woodp", 5}};
@@ -31,7 +31,7 @@ class ALYSIA_PROCESS
 	class sand
 	{
 		name = "Fonte du verre";
-		license = "sand";
+		licenses[] = {"sand"};
 		sound = "salt_process";
 		requiere_target = 1;
 		require[] = {{"sand", 1}};
@@ -44,7 +44,7 @@ class ALYSIA_PROCESS
 	class seringue
 	{
 		name = "Fonte du verre en seringues";
-		license = "sand";
+		licenses[] = {"sand"};
 		sound = "smelting";
 		requiere_target = 1;
 		require[] = {{"glass", 1}};
@@ -57,7 +57,7 @@ class ALYSIA_PROCESS
 	class iron
 	{
 		name = "Fonte du fer";
-		license = "iron";
+		licenses[] = {"iron"};
 		sound = "smelting";
 		requiere_target = 1;
 		require[] = {{"iron", 1}};
@@ -70,7 +70,7 @@ class ALYSIA_PROCESS
 	class platine1
 	{
 		name = "Fonte du platine";
-		license = "platine";
+		licenses[] = {"platine"};
 		sound = "smelting";
 		requiere_target = 1;
 		require[] = {{"platine", 1}};
@@ -83,7 +83,7 @@ class ALYSIA_PROCESS
 	class platine2
 	{
 		name = "Enrichissement du platine";
-		license = "platine";
+		licenses[] = {"platine"};
 		sound = "smelting";
 		requiere_target = 1;
 		require[] = {{"platinep", 1}, {"soufre", 1}};
@@ -96,7 +96,7 @@ class ALYSIA_PROCESS
 	class marijuana
 	{
 		name = "Traitement du cannabis";
-		license = "marijuana";
+		licenses[] = {"marijuana"};
 		sound = "smelting";
 		requiere_target = 1;
 		require[] = {{"cannabis", 1}};
@@ -109,7 +109,7 @@ class ALYSIA_PROCESS
 	class heroin
 	{
 		name = "Traitement de l'héroine";
-		license = "";
+		licenses[] = {};
 		sound = "drug_process";
 		requiere_target = 1;
 		require[] = {{"heroin", 1}};
@@ -122,7 +122,7 @@ class ALYSIA_PROCESS
 	class seringueheroin
 	{
 		name = "Traitement des seringues d'héroine";
-		license = "";
+		licenses[] = {};
 		sound = "drug_process";
 		requiere_target = 1;
 		require[] = {{"heroinp", 1}, {"seringue", 1}};
@@ -135,7 +135,7 @@ class ALYSIA_PROCESS
 	class cocaine
 	{
 		name = "Traitement de la cocaine";
-		license = "";
+		licenses[] = {};
 		sound = "cooking";
 		requiere_target = 1;
 		require[] = {{"cocaine", 1}};
@@ -148,7 +148,7 @@ class ALYSIA_PROCESS
 	class cocainec
 	{
 		name = "Coupe de la cocaine";
-		license = "";
+		licenses[] = {};
 		sound = "cooking";
 		requiere_target = 1;
 		require[] = {{"cocainep", 1}, {"glass", 1}};
@@ -161,7 +161,7 @@ class ALYSIA_PROCESS
 	class meth
 	{
 		name = "Traitement de la meth";
-		license = "";
+		licenses[] = {};
 		sound = "cooking";
 		requiere_target = 1;
 		require[] = {{"meth", 1},{"hsoufre", 1}};
@@ -174,7 +174,7 @@ class ALYSIA_PROCESS
 	class soufre
 	{
 		name = "Hydratation du soufre";
-		license = "";
+		licenses[] = {};
 		sound = "drug_process";
 		requiere_target = 0;
 		require[] = {{"soufre", 1},{"water", 1}};
@@ -187,7 +187,7 @@ class ALYSIA_PROCESS
 	class archeologue
 	{
 		name = "Rénovation";
-		license = "archeologie";
+		licenses[] = {"archeologie"};
 		sound = "cooking";
 		requiere_target = 1;
 		require[] = {{"frag_1", 1}, {"frag_2", 1}, {"frag_3", 1}, {"frag_4", 1}, {"frag_5", 1}, {"frag_6", 1}, {"frag_7", 1}, {"frag_8", 1}};
@@ -200,7 +200,7 @@ class ALYSIA_PROCESS
 	class tabac
 	{
 		name = "Tubage de cigarettes";
-		license = "tabac";
+		licenses[] = {"tabac"};
 		sound = "smelting";
 		requiere_target = 1;
 		require[] = {{"tabac", 1}};
@@ -213,7 +213,7 @@ class ALYSIA_PROCESS
 	class copper
 	{
 		name = "Traitement du cuivre";
-		license = "copper";
+		licenses[] = {"copper"};
 		sound = "smelting";
 		requiere_target = 1;
 		require[] = {{"copper", 1}};
@@ -226,7 +226,7 @@ class ALYSIA_PROCESS
 	class cotton
 	{
 		name = "Traitement du cotton";
-		license = "";
+		licenses[] = {};
 		sound = "smelting";
 		requiere_target = 1;
 		require[] = {{"cotton", 1}};
@@ -239,7 +239,7 @@ class ALYSIA_PROCESS
 	class gold
 	{
 		name = "Fonte de l'or";
-		license = "gold";
+		licenses[] = {"gold"};
 		sound = "salt_process";
 		requiere_target = 1;
 		require[] = {{"goldnuggets", 40}};
@@ -252,7 +252,7 @@ class ALYSIA_PROCESS
 	class salt
 	{
 		name = "Traitement du sel";
-		license = "salt";
+		licenses[] = {"salt"};
 		sound = "salt_process";
 		requiere_target = 1;
 		require[] = {{"salt", 1}};
@@ -265,7 +265,7 @@ class ALYSIA_PROCESS
 	class pottery
 	{
 		name = "Traitement de l'argile";
-		license = "pottery";
+		licenses[] = {"pottery"};
 		sound = "salt_process";
 		requiere_target = 1;
 		require[] = {{"clay", 2}};
@@ -278,7 +278,7 @@ class ALYSIA_PROCESS
 	class bauxite
 	{
 		name = "Traitement du bauxite";
-		license = "bauxite";
+		licenses[] = {"bauxite"};
 		sound = "salt_process";
 		requiere_target = 1;
 		require[] = {{"baux", 1}};
@@ -291,7 +291,7 @@ class ALYSIA_PROCESS
 	class Distillerie_Grozdova
 	{
 		name = "Distillerie Grozdova";
-		license = "";
+		licenses[] = {};
 		sound = "smelting";
 		requiere_target = 1;
 		require[] = {{"raisin", 2}, {"bouteillevide", 1}};
@@ -304,7 +304,7 @@ class ALYSIA_PROCESS
 	class Distillerie_Slivovica
 	{
 		name = "Distillerie Slivovica";
-		license = "";
+		licenses[] = {};
 		sound = "smelting";
 		requiere_target = 1;
 		require[] = {{"Prune", 2}, {"bouteillevide", 1}};
@@ -317,7 +317,7 @@ class ALYSIA_PROCESS
 	class Cimenttr
 	{
 		name = "Traitement de la pierre";
-		license = "Pierretr";
+		licenses[] = {"Pierretr", "company_construction"};
 		sound = "salt_process";
 		requiere_target = 1;
 		require[] = {{"pierre", 1}};
@@ -330,7 +330,7 @@ class ALYSIA_PROCESS
 	class oil
 	{
 		name = "Traitement du pétrole";
-		license = "oil";
+		licenses[] = {"oil", "company_fuel"};
 		sound = "drug_process";
 		requiere_target = 1;
 		require[] = {{"oilu", 1}};
@@ -343,7 +343,7 @@ class ALYSIA_PROCESS
 	class bouteille
 	{
 		name = "Fonte du verre en Bouteille";
-		license = "sand";
+		licenses[] = {"sand"};
 		sound = "smelting";
 		requiere_target = 1;
 		require[] = {{"glass", 1}};
@@ -356,7 +356,7 @@ class ALYSIA_PROCESS
 	class artefact
 	{
 		name = "Reconstitution d'artefact";
-		license = "";
+		licenses[] = {};
 		sound = "salt_process";
 		requiere_target = 1;
 		require[] = {{"frag_1", 1}, {"frag_2", 1}, {"frag_3", 1}, {"frag_4", 1}, {"frag_5", 1}, {"frag_6", 1}, {"frag_7", 1}, {"frag_8", 1}};

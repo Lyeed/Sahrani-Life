@@ -29,7 +29,7 @@ if (alive player) then
 		_info ctrlCommit 0;
 
 		_frame = _hud displayCtrl 95002;
-		_frame ctrlSetPosition [(ctrlPosition _frame) select 0, (ctrlPosition _frame) select 1, (ctrlPosition _frame) select 2, ctrlTextHeight _frame];
+		_frame ctrlSetPosition [(ctrlPosition _frame) select 0, (ctrlPosition _frame) select 1, (ctrlPosition _frame) select 2, ctrlTextHeight _info];
 		_frame ctrlCommit 0;
 
 		(_hud displayCtrl 95001) ctrlSetText "Erreur";

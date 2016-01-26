@@ -32,14 +32,12 @@ g_GUERLevel = compileFinal(_basic select 20);
 g_EASTLevel = compileFinal(_basic select 21);
 // CIVLevel
 g_CIVLevel = compileFinal(_basic select 22);
-// admin
-g_adminlevel = compileFinal(_basic select 7);
 
 _allowed = switch (playerSide) do
 {
 	case civilian:
 	{
-		if ((((call g_EASTLevel) > 0) || ((call g_WESTLevel) > 0) || ((call g_GUERLevel) > 0)) && ((call g_adminlevel) isEqualTo 0)) exitWith
+		if (((call g_EASTLevel) > 0) || ((call g_WESTLevel) > 0) || ((call g_GUERLevel) > 0)) exitWith
 		{
 			["Vous n'êtes pas autorisé à changer de faction"] spawn public_fnc_errorExit;
 			false;
@@ -55,7 +53,7 @@ _allowed = switch (playerSide) do
 			false;
 		};
 
-		if ((((call g_EASTLevel) > 0) || ((call g_CIVLevel) > 0) || ((call g_GUERLevel) > 0)) && ((call g_adminlevel) isEqualTo 0)) exitWith
+		if (((call g_EASTLevel) > 0) || ((call g_CIVLevel) > 0) || ((call g_GUERLevel) > 0)) exitWith
 		{
 			["Vous n'êtes pas autorisé à changer de faction"] spawn public_fnc_errorExit;
 			false;
@@ -71,7 +69,7 @@ _allowed = switch (playerSide) do
 			false;
 		};
 
-		if ((((call g_GUERLevel) > 0) || ((call g_CIVLevel) > 0) || ((call g_WESTLevel) > 0)) && ((call g_adminlevel) isEqualTo 0)) exitWith
+		if (((call g_GUERLevel) > 0) || ((call g_CIVLevel) > 0) || ((call g_WESTLevel) > 0)) exitWith
 		{
 			["Vous n'êtes pas autorisé à changer de faction"] spawn public_fnc_errorExit;
 			false;
@@ -87,7 +85,7 @@ _allowed = switch (playerSide) do
 			false;
 		};
 
-		if ((((call g_EASTLevel) > 0) || ((call g_CIVLevel) > 0) || ((call g_WESTLevel) > 0)) && (g_adminlevel isEqualTo 0)) exitWith
+		if (((call g_EASTLevel) > 0) || ((call g_CIVLevel) > 0) || ((call g_WESTLevel) > 0)) exitWith
 		{
 			["Vous n'êtes pas autorisé à changer de faction"] spawn public_fnc_errorExit;
 			false;

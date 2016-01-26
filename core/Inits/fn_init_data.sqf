@@ -18,6 +18,14 @@ g_birth = _basic select 4;
 g_nationality = _basic select 5;
 // sexe
 g_sexe = _basic select 6;
+// dynamicMarkers
+{
+	if (((getMarkerPos (_x select 0)) distance (_x select 1)) < 10) then
+	{
+		g_dynamic_markers_discovered pushBack _x;
+		(_x select 0) setMarkerAlphaLocal 1;
+	};
+} forEach (_basic select 7);
 // donator
 g_donator = compileFinal (_basic select 8);
 // blood/bleed/coma

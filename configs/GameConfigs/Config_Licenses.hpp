@@ -12,7 +12,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Permis moto";
 		sides[] = {"CIV", "EAST", "WEST", "GUER"};
-		price = 1000;
+		price = 12000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -20,7 +20,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Permis de pilotage";
 		sides[] = {"CIV", "EAST", "WEST", "GUER"};
-		price = 500000;
+		price = 250000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -28,7 +28,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Permis bateau";
 		sides[] = {"CIV", "EAST", "WEST", "GUER"};
-		price = 10000;
+		price = 1000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -36,7 +36,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Permis poids lourd";
 		sides[] = {"CIV", "EAST", "WEST", "GUER"};
-		price = 60000;
+		price = 80000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -44,7 +44,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Licence de plongée";
 		sides[] = {"CIV", "EAST", "WEST", "GUER"};
-		price = 6000;
+		price = 600;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -53,7 +53,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Licence de propriété";
 		sides[] = {"CIV"};
-		price = 500000;
+		price = 150000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -62,7 +62,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Licence d'armes à feu";
 		sides[] = {"CIV"};
-		price = 75000;
+		price = 120000;
 		illegal = 0;
 		pad_store = 0;
 	};
@@ -79,7 +79,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Traitement du platine";
 		sides[] = {"CIV"};
-		price = 95000;
+		price = 45000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -87,7 +87,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Traitement du cuivre";
 		sides[] = {"CIV"};
-		price = 95000;
+		price = 2000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -95,7 +95,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Traitement du bois";
 		sides[] = {"CIV"};
-		price = 8000;
+		price = 2000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -103,7 +103,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Traitement du pétrole";
 		sides[] = {"CIV"};
-		price = 50000;
+		price = 25000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -111,7 +111,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Traitement du fer";
 		sides[] = {"CIV"};
-		price = 25000;
+		price = 5000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -119,7 +119,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Traitement du sable";
 		sides[] = {"CIV"};
-		price = 10000;
+		price = 5000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -127,7 +127,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Traitement du tabac";
 		sides[] = {"CIV"};
-		price = 35000;
+		price = 15000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -135,7 +135,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Fonte de l'or";
 		sides[] = {"CIV"};
-		price = 35000;
+		price = 45000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -143,7 +143,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Traitement du sel";
 		sides[] = {"CIV"};
-		price = 35000;
+		price = 8000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -151,7 +151,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Traitement de l'argile";
 		sides[] = {"CIV"};
-		price = 35000;
+		price = 5000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -159,7 +159,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Traitement du bauxite";
 		sides[] = {"CIV"};
-		price = 35000;
+		price = 5000;
 		illegal = 0;
 		pad_store = 1;
 	};
@@ -167,7 +167,7 @@ class ALYSIA_LICENSES
 	{
 		name = "Traitement de la pierre";
 		sides[] = {"CIV"};
-		price = 35000;
+		price = 25000;
 		illegal = 0;
 		pad_store = 1;
 	};

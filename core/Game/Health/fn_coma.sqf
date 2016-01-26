@@ -56,6 +56,7 @@ while {(_time > 0) && (alive player) && (player getVariable ["is_coma", false])}
 	};
 	
 	player setOxygenRemaining 1;
+	playSound "death";
 
 	_ctrl_left ctrlSetStructuredText parseText format["<t align='center' size='2'>Il vous reste %1 secondes à vivre</t>", _time];
 	if (_time > (1000 - (60 * 2))) then {

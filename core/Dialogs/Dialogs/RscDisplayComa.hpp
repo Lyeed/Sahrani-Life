@@ -7,7 +7,6 @@ class RscDisplayComa : default_base_dialog
 	{
 		class BACKGROUND: RscText
 		{
-			idc = -1;
 			colorBackground[] = {0,0,0,1};
 			
 			x = 0 * safezoneW + safezoneX;
@@ -21,9 +20,7 @@ class RscDisplayComa : default_base_dialog
 	{
 		class TITLE: RscStructuredText
 		{
-			idc = -1;
 			text = "<t align='center' size='3'>Vous êtes inconscient</t>";
-			colorBackground[] = {0,0,0,0};
 			
 			x = -0.000156274 * safezoneW + safezoneX;
 			y = 0.258 * safezoneH + safezoneY;
@@ -34,8 +31,6 @@ class RscDisplayComa : default_base_dialog
 		class TIME_LEFT: RscStructuredText
 		{
 			idc = 351;
-			text = "";
-			colorBackground[] = {0,0,0,0};
 			
 			x = -0.000156274 * safezoneW + safezoneX;
 			y = 0.368 * safezoneH + safezoneY;
@@ -45,31 +40,32 @@ class RscDisplayComa : default_base_dialog
 
 		class MEDIC_IMAGE: RscPicture
 		{
-			idc = -1;
-			text = "lyeed_IMG\data\death\medic.paa";
+			idc = 356;
+			text = "lyeed_IMG\data\death\samu.paa";
 
 			x = 0.0153125 * safezoneW + safezoneX;
 			y = 0.071 * safezoneH + safezoneY;
 			w = 0.0567187 * safezoneW;
 			h = 0.088 * safezoneH;
 		};
-		class MEDIC_CHECKBOX: RscCheckbox
+		class MEDIC_BUTTON: RscButtonSilent
 		{
-			idc = -1;
-			
-			x = 0.0771875 * safezoneW + safezoneX;
-			y = 0.104 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.033 * safezoneH;
+			idc = 357;
+			action = "ctrlShow[356,false]; ctrlShow[357,false]; player setVariable ['medic_request',true,true];";
+			onMouseEnter = "ctrlSetText[356,'lyeed_IMG\data\death\samu_select.paa'];";
+			onMouseExit = "ctrlSetText[356,'lyeed_IMG\data\death\samu.paa'];";
+
+			x = 0.0153125 * safezoneW + safezoneX;
+			y = 0.071 * safezoneH + safezoneY;
+			w = 0.0567187 * safezoneW;
+			h = 0.088 * safezoneH;
 		};
 		class MEDIC_TEXT: RscText
 		{
-			idc = -1;
 			text = "Contacter le SAMU";
-			colorBackground[] = {0,0,0,0};
 			
-			x = 0.0956773 * safezoneW + safezoneX;
-			y = 0.107704 * safezoneH + safezoneY;
+			x = -0.000156274 * safezoneW + safezoneX;
+			y = 0.17 * safezoneH + safezoneY;
 			w = 0.0876563 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
@@ -88,8 +84,8 @@ class RscDisplayComa : default_base_dialog
 		{
 			idc = 354;
 			action = "player setDamage 1;";
-			onMouseEnter = "ctrlSetText[352,""lyeed_IMG\data\death\suicide_select.paa""];";
-			onMouseExit = "ctrlSetText[352,""lyeed_IMG\data\death\suicide.paa""];";
+			onMouseEnter = "ctrlSetText[352,'lyeed_IMG\data\death\suicide_select.paa'];";
+			onMouseExit = "ctrlSetText[352,'lyeed_IMG\data\death\suicide.paa'];";
 
 			x = 0.412344 * safezoneW + safezoneX;
 			y = 0.676 * safezoneH + safezoneY;
@@ -100,7 +96,6 @@ class RscDisplayComa : default_base_dialog
 		{
 			idc = 353;
 			text = "SE SUICIDER";
-			colorBackground[] = {0,0,0,0};
 			
 			x = 0.456719 * safezoneW + safezoneX;
 			y = 0.906074 * safezoneH + safezoneY;
@@ -110,8 +105,6 @@ class RscDisplayComa : default_base_dialog
 		class SUICIDE_LEFT: RscStructuredText
 		{
 			idc = 355;
-			text = "";
-			colorBackground[] = {0,0,0,0};
 
 			x = -0.000158758 * safezoneW + safezoneX;
 			y = 0.72 * safezoneH + safezoneY;

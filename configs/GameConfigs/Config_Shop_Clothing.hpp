@@ -522,7 +522,8 @@ class civ_clothing_sud
 		};
 		vests[] =
 		{
-			"Respirateur_milice"
+			"Respirateur_milice",
+			"rhs_6b23_sniper"
 		};
 		backpacks[] =
 		{
@@ -614,12 +615,11 @@ class civ_clothing_sud
 		};
 		vests[] =
 		{
-			"TRYK_V_Sheriff_BA_TB5",
+			"rhs_6b23_digi_rifleman",
 			"TRYK_V_Sheriff_BA_TB",
 			"police_belt_pistol",
 			"Garde_Veste",
-			"Garde_VesteCargo",
-			"Garde_Belt"
+			"Garde_VesteCargo"
 		};
 		backpacks[] =
 		{
@@ -636,7 +636,13 @@ class civ_clothing_sud
 		side = "CIV";
 		uniforms[] =
 		{
-			"U_C_Depanneur_01"
+			"U_C_Depanneur_01",
+			"U_C_Journalist",
+			"U_C_Journaliste_01",
+			"U_C_Journaliste_02",
+			"U_C_Securite_03",
+			"U_C_Securite_02",
+			"U_C_Securite_01"
 		};
 		headgear[] = 
 		{
@@ -645,7 +651,8 @@ class civ_clothing_sud
 		goggles[] = {};
 		vests[] = 
 		{
-			"usm_vest_safety"
+			"usm_vest_safety",
+			"V_TacVest_Securite_01"
 		};
 		backpacks[] =
 		{

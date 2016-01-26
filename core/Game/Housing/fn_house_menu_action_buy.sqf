@@ -5,31 +5,9 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_condition", "_maxHouse", "_action", "_price"];
+private["_maxHouse", "_price", "_action"];
 
 if (isNull g_interaction_target) exitWith {};
-
-_condition = false;
-if (playerSide isEqualTo civilian) then
-{
-	_require = getText(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >> "license");
-	if (_require isEqualTo "") then {
-		_condition = true;
-	} else {
-		if (missionNamespace getVariable [format["license_%1", _require], false]) then {
-			_condition = true;
-		};
-	};
-} else {
-	_require = getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >> "rank");
-	if ((player getVariable ["rank", 0]) > _require) then {
-		_condition = true;
-	};
-};
-
-if (!_condition) exitWith {
-	["Vous ne remplissez pas les conditions pour acheter ce bâtiment"] call public_fnc_error;
-};
 
 if (!((g_interaction_target getVariable["house_owner", []]) isEqualTo [])) exitWith {
 	["Ce bâtiment est déjà acheté"] call public_fnc_error;
@@ -58,6 +36,7 @@ _action =
 if (_action) then 
 {
 	closeDialog 0;
+
 	[(getPlayerUID player), g_interaction_target, playerSide] remoteExec ["TON_fnc_house_add", 2];
 	g_interaction_target setVariable["house_owner", [(getPlayerUID player), profileName], true];
 	[false, _price, "Achat maison"] call public_fnc_handleATM;
