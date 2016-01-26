@@ -654,8 +654,8 @@ class RscDisplayModifyArrest: default_interaction_back_dialog
 		{
 			idc = 19056;
 			action = "[] spawn public_fnc_prisonModifyMenu_use_release;";
-			onMouseEnter = "			ctrlShow[19052, false];			ctrlSetText[19055,""lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""];			((findDisplay 19000) displayCtrl 19052) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 19000) displayCtrl 19054) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Libérer</t>"";";
-			onMouseExit = "			ctrlShow[19052, true];			ctrlSetText[19055,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];			((findDisplay 19000) displayCtrl 19052) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 19000) displayCtrl 19054) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Libérer</t>"";";
+			onMouseEnter = "			ctrlShow[19053, false];			ctrlSetText[19055,""lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""];			((findDisplay 19000) displayCtrl 19052) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 19000) displayCtrl 19054) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Libérer</t>"";";
+			onMouseExit = "			ctrlShow[19053, true];			ctrlSetText[19055,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];			((findDisplay 19000) displayCtrl 19052) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 19000) displayCtrl 19054) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Libérer</t>"";";
 
 			x = 0.582475 * safezoneW + safezoneX;
 			y = 0.588032 * safezoneH + safezoneY;
@@ -956,8 +956,8 @@ class RscDisplayArrest: default_interaction_back_dialog
 		{
 			idc = 20020;
 			action = "[] spawn public_fnc_prisonMenu_use_validate;";
-			onMouseEnter = "			ctrlShow[20016, false];			ctrlSetText[20018,""lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""];			((findDisplay 20000) displayCtrl 20016) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 20000) displayCtrl 20019) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Arrêter</t>"";";
-			onMouseExit = "			ctrlShow[20016, true];			ctrlSetText[20018,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];			((findDisplay 20000) displayCtrl 20016) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 20000) displayCtrl 20019) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Arrêter</t>"";";
+			onMouseEnter = "			ctrlShow[20017, false];			ctrlSetText[20018,""lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""];			((findDisplay 20000) displayCtrl 20016) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 20000) displayCtrl 20019) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Arrêter</t>"";";
+			onMouseExit = "			ctrlShow[20017, true];			ctrlSetText[20018,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];			((findDisplay 20000) displayCtrl 20016) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 20000) displayCtrl 20019) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Arrêter</t>"";";
 
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.61 * safezoneH + safezoneY;

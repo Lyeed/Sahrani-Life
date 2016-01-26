@@ -50,7 +50,11 @@ g_arrest_Reason = _basic select 27;
 g_arrest_Escape = _basic select 28;
 g_arrest_Gear = _basic select 29;
 if (g_arrest_Time > 0) then {
-	player setVariable ["arrested", true, true];
+	if (g_arrest_Time isEqualTo -1) then {
+		g_arrest_Escape = true;
+	} else {
+		player setVariable ["arrested", true, true];
+	};
 };
 
 // Phone
