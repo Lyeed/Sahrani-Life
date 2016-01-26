@@ -639,7 +639,10 @@ class civ_clothing_sud
 			"U_C_Depanneur_01",
 			"U_C_Journalist",
 			"U_C_Journaliste_01",
-			"U_C_Journaliste_02"
+			"U_C_Journaliste_02",
+			"U_C_Securite_03",
+			"U_C_Securite_02",
+			"U_C_Securite_01"
 		};
 		headgear[] = 
 		{
