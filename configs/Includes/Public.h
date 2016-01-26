@@ -31,7 +31,7 @@ class Public
 	class Border
 	{
 		file = "core\Game\Border";
-		class border_south_sounds {}; 
+		class border_south_sounds {};
 		class border_south_speaker_destroy {};
 		class border_south_speaker_repair {};
 	};

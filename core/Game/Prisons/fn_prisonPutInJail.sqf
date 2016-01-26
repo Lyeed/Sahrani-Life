@@ -21,12 +21,12 @@ g_arrest_Caution = _infos select 2;
 g_arrest_Reason = _infos select 3;
 g_arrest_Gear = [[g_cash, ([player] call public_fnc_saveGear), ([player] call public_fnc_getInv)]];
 
-removeHeadgear player:
+removeHeadgear player;
 removeGoggles player;
 removeVest player;
 removeBackpack player;
 removeUniform player;
-removeAllWeapons player:
+removeAllWeapons player;
 removeAllAssignedItems player;
 
 ["Vous devez à présent fournir une tenue de la prison au prisonnier et l'enfermer dans sa cellule."] remoteExecCall ["public_fnc_info", _from];

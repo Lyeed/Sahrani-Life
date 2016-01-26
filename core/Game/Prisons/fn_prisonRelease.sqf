@@ -1,4 +1,4 @@
-²/*
+/*
 	ArmA 3 N'Ziwasogo Life RPG - ALYSIA
 	Code written by Devilz80
 	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)

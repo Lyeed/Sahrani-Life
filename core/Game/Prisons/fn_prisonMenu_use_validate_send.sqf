@@ -7,8 +7,8 @@
 */
 
 private ["_from","_infos","_prison","_prisonName"];
-_from = [_player, 0, objNull, [objNull]] call BIS_fnc_param;
-_infos = [_player, 1, [], [[]]] call BIS_fnc_param;
+_from = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+_infos = [_this, 1, [], [[]]] call BIS_fnc_param;
 _prison = (([player] call public_fnc_prisonNearest) select 0);
 _prisonName = vehicleVarName _prison;
 
