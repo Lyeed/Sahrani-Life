@@ -163,7 +163,9 @@ class ALYSIA_SHOPS_CLOTHING
 			"rds_worker_cap4",
 			"rds_worker_cap1",
 			"Casque_Moto",
-			"vietsh_Head"
+			"vietsh_Head",
+			"H_LIB_GER_LW_PilotHelmet",
+			"H_LIB_WP_Cap"
 		};
 		goggles[] =
 		{
@@ -389,7 +391,8 @@ class civ_clothing_sud
 			"rds_worker_cap4",
 			"rds_worker_cap1",
 			"Casque_Moto",
-			"vietsh_Head"
+			"vietsh_Head",
+			"H_LIB_SOV_PilotHelmet"
 		};
 		goggles[] =
 		{
@@ -580,7 +583,11 @@ class civ_clothing_sud
 			"TRYK_H_Helmet_ACU",
 			"wc_gr_h_m35_feldgrau_1",
 			"wc_gr_h_m35_feldgrau_1_over",
-			"wc_gr_h_m35_feldgrau_1_open"
+			"wc_gr_h_m35_feldgrau_1_open",
+			"H_LIB_GER_TankOfficerCap",
+			"H_LIB_GER_Helmet",
+			"H_LIB_GER_HelmetCamo",
+			"H_LIB_GER_OfficerCap"
 		};
 		goggles[] =
 		{
@@ -984,7 +991,12 @@ class civ_clothing_sud
 		};
 		headgear[] =
 		{
-			"H_mas_afr_Bandana_e_civ_rebel"
+			"H_mas_afr_Bandana_e_civ_rebel",
+			"H_LIB_SOV_RA_PrivateCap",
+			"H_LIB_SOV_RA_OfficerCap",
+			"H_LIB_GER_SPGPrivateCap",
+			"H_LIB_GER_TankPrivateCap",
+			"H_LIB_GER_Cap"
 		};
 		goggles[] =
 		{

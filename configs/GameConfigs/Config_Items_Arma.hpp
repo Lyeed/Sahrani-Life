@@ -3380,6 +3380,62 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
+	class H_LIB_GER_TankOfficerCap 
+	{
+		buy_price = 20;
+	};
+	class H_LIB_GER_Helmet 
+	{
+		buy_price = 20;
+	};
+	class H_LIB_GER_HelmetCamo 
+	{
+		buy_price = 20;
+	};
+	class H_LIB_GER_OfficerCap 
+	{
+		buy_price = 20;
+	};
+	class H_LIB_SOV_PilotHelmet
+	{
+		buy_price = 20;
+	};
+	class H_LIB_WP_Cap
+	{
+		buy_price = 20;
+	};
+	class H_LIB_GER_LW_PilotHelmet
+	{
+		buy_price = 20;
+	};
+	class H_LIB_SOV_RA_PrivateCap
+	{
+		buy_price = 20;
+	};
+	class H_LIB_SOV_RA_OfficerCap
+	{
+		buy_price = 20;
+	};
+	class H_LIB_GER_SPGPrivateCap
+	{
+		buy_price = 20;
+	};
+	class H_LIB_GER_TankPrivateCap
+	{
+		buy_price = 20;
+	};
+	class H_LIB_GER_Cap
+	{
+		buy_price = 20;
+	};
+	class usm_helmet_safety
+	{
+		buy_price = 20;
+	};
+	class usm_vest_safety
+	{
+		buy_price = 20;
+	};
 	class wc_gr_smg_mp40 {};
 	class wc_32Rnd_9x19_mag {};
 	class wc_us_smg_m1a1 {};

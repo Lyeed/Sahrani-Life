@@ -3302,6 +3302,19 @@ class ALYSIA_VEHICLES
 		realname = "BTR60 Cuba";
 	};
 	
+	class I_mas_T34_AAF_01
+	{
+		buyPrice = 750000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "Diesel";
+		rank = 5;
+		colors[] = {};
+		realname = "T34";
+	};
+	
 	class Fett_truck_army
 	{
 		buyPrice = 75000;

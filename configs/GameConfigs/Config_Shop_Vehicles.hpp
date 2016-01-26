@@ -51,7 +51,8 @@ class ALYSIA_SHOPS_VEHICLES
 			"gac_JGSDF_BXD10",
 			"gac_JMSDF_SKW475",
 			"gac_jsdf_klx",
-			"gac_JGSDF_V16"
+			"gac_JGSDF_V16",
+			"I_mas_T34_AAF_01"
 		};
 	};
 	class EAST_vehicles_air
