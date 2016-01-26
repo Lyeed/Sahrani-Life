@@ -23,4 +23,12 @@ class ALYSIA_SHOP_APPLICATIONS
 		price = 5000;
 		sides[] = {"CIV", "WEST", "EAST", "GUER"};
 	};
+
+	class ANNOUNCES
+	{
+		name = "Application : Annonces";
+		description = "Que vous cherchiez un compagnon, du travail ou des employés, cette application est faite pour vous !";
+		price = 7000;
+		sides[] = {"CIV", "WEST", "EAST", "GUER"};
+	};
 };

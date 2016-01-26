@@ -6,10 +6,10 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private["_display", "_list_ranks", "_list_duty"];
-disableSerialization;
 
 if (playerSide isEqualTo civilian) exitWith {closeDialog 0;};
 
+disableSerialization;
 _display = uiNamespace getVariable["tablet", displayNull];
 if (isNull _display) exitWith {};
 

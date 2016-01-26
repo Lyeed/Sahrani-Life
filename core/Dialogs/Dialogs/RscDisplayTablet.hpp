@@ -77,5 +77,6 @@ class RscDisplayTablet: default_base_dialog
 		#include "tablet_apps\market.hpp"
 		#include "tablet_apps\staff.hpp"
 		#include "tablet_apps\fuel.hpp"
+		#include "tablet_apps\announces.hpp"
 	};
 };
