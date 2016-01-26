@@ -31,7 +31,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class 1Rnd_FlashBall_Mag
 	{
-		buy_price = 20;
+		buy_price = 5;
 	};
 	class 2Rnd_762x51_Mag_B95
 	{
@@ -39,11 +39,11 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class 6Rnd_GreenSignal_F
 	{
-		buy_price = 10;
+		buy_price = 20;
 	};
 	class 6Rnd_RedSignal_F
 	{
-		buy_price = 10;
+		buy_price = 20;
 	};
 	class agent_uniform_new
 	{
@@ -184,7 +184,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class B_Defibrilateur_khk
 	{
-		buy_price = 20;
+		buy_price = 1600;
 	};
 	class Bear_RoundGlasses
 	{
@@ -232,19 +232,19 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Chemlight_blue
 	{
-		buy_price = 10;
+		buy_price = 15;
 	};
 	class Chemlight_green
 	{
-		buy_price = 10;
+		buy_price = 15;
 	};
 	class Chemlight_red
 	{
-		buy_price = 10;
+		buy_price = 15;
 	};
 	class Chemlight_yellow
 	{
-		buy_price = 10;
+		buy_price = 15;
 	};
 	class combi_plonge_civ1
 	{
@@ -273,12 +273,12 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class SAMU_helmet
 	{
-		buy_price = 80;
+		buy_price = 120;
 		buy_condition_GUER = 3;
 	};
 	class SAMU_combi
 	{
-		buy_price = 100;
+		buy_price = 200;
 		buy_condition_GUER = 3;
 	};
 	class digital_uniform
@@ -331,11 +331,11 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class FLAY_HangGlider_Bag
 	{
-		buy_price = 2000;
+		buy_price = 8000;
 	};
 	class FLAY_HangGliderBlack_Bag
 	{
-		buy_price = 2000;
+		buy_price = 8000;
 	};
 	class flora_uniform
 	{
@@ -695,7 +695,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class hgun_Pistol_Signal_F
 	{
-		buy_price = 20;
+		buy_price = 1500;
 	};
 	class hlc_10rnd_12g_buck_S12
 	{
@@ -1035,35 +1035,35 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Masque_Alien1
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Anonymous
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_archNemesis
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Arnold
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Aubrey
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Bonnie
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Bush
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Chains
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Chirurgical
 	{
@@ -1071,111 +1071,111 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Masque_Chuck
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Clinton
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Clover
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Dallas
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Fish
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_forceAlpha
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_GdG
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Gombo
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Hockey
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Hoxton
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Incendiaire
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Lincoln
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Lion
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Macrilleuse
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Mark
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Mempo
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Metalhead
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Momie
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Optimiste
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Orc
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Religieuse
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Santa
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Smiley
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Solitaire
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_speedRunner
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Unic
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Masque_Wolfv2
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class max_sheriff_Hat
 	{
@@ -2935,17 +2935,17 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class U_C_Journalist
 	{
-		buy_price = 20;
+		buy_price = 200;
 		buy_license_CIV = "company_news";
 	};
 	class U_C_Journaliste_01
 	{
-		buy_price = 20;
+		buy_price = 200;
 		buy_license_CIV = "company_news";
 	};
 	class U_C_Journaliste_02
 	{
-		buy_price = 20;
+		buy_price = 200;
 		buy_license_CIV = "company_news";
 	};
 	class U_C_Kick_Me_01
@@ -2986,25 +2986,28 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class U_C_Secouriste_01
 	{
-		buy_price = 20;
+		buy_price = 50;
 		buy_condition_GUER = 1;
 	};
 	class U_C_Secouriste_02
 	{
-		buy_price = 20;
+		buy_price = 50;
 		buy_condition_GUER = 1;
 	};
 	class U_C_Securite_01
 	{
-		buy_price = 20;
+		buy_price = 150;
+		buy_license_CIV = "company_security";
 	};
 	class U_C_Securite_02
 	{
-		buy_price = 20;
+		buy_price = 150;
+		buy_license_CIV = "company_security";
 	};
 	class U_C_Securite_03
 	{
-		buy_price = 20;
+		buy_price = 150;
+		buy_license_CIV = "company_security";
 	};
 	class U_C_SonsofAnarchy_01
 	{
@@ -3048,7 +3051,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class B_Parachute
 	{
-		buy_price = 20;
+		buy_price = 8000;
 	};
 	class TRYK_B_tube_blk
 	{
@@ -3104,59 +3107,59 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class tenue_de_garde_commandant
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class tenue_de_garde_lieutenant
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class tenue_de_garde_sergent
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class tenue_de_garde_caporal
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class tenue_de_garde_basique
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class tenue_de_milice_commandant
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class tenue_de_milice_capitaine
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class tenue_de_milice_lieutenant
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class tenue_de_milice_major
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class tenue_de_milice_adjudant
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class tenue_de_milice_sergent
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class tenue_de_milice_caporal
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class tenue_de_milice_milicien
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class tenue_de_milice_cadet
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class EWK_Cig1
 	{		

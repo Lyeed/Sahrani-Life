@@ -50,4 +50,4 @@ if (_error) exitWith {[(format ["Temps minimum: %1<br/>Temps maximum: %2<br/>Cau
 if (g_interaction_target getVariable ["arrested", false]) exitWith {["Cette personne est déjà en prison"] call public_fnc_error};
 
 _infos = [_cellule, _time, _bail, _reason];
-[player, _infos] remoteExecCall ["public_fnc_prisonMenu_use_validate_send", g_interaction_target];
+[player, _infos] remoteExecCall ["public_fnc_prisonPutInJail", g_interaction_target];

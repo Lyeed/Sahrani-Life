@@ -16,7 +16,7 @@ class ALYSIA_PRISONS
 		name = "Prison Fédérale du Nord";
 		side[] = {"WEST"};
 		uniform = "";
-		exit[] = {};
+		exit[] = {0,0,0};
 		escape_distance = 50;
 
 		class time

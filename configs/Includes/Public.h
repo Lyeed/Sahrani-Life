@@ -388,11 +388,10 @@ class Public
 	{
 		file = "core\game\Prisons";
 		class prisonNearest {};
-		class prisonArrest {};
 		class prisonRelease {};
-		class prisonEscape {};
 		class prisonPutInJail {};
 		class prisonWorkReward {};
+		class prisonTimer {};
 		class prisonMenu_open {};
 		class prisonMenu_use_validate {};
 		class prisonMenu_use_validate_send {};
