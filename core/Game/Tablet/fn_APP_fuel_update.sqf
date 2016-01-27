@@ -65,7 +65,6 @@ if ("ItemGPS" in (assignedItems player)) then
 	deleteMarkerLocal _marker;
 } else {
 	(_display displayCtrl 9408) ctrlSetStructuredText parseText "<t align='center'>Inconnu</t>";
-
 	[9410, true] call public_fnc_tabletShow;
 	[9409, false] call public_fnc_tabletShow;
 };

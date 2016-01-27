@@ -549,5 +549,9 @@ class Public
 		class APP_fuel_update {};
 		class APP_fuel_update_info {};
 		class APP_announces {};
+		class APP_announces_write {};
+		class APP_announces_write_action {};
+		class APP_announces_show {};
+		class APP_announces_show_update {};
 	};
 };

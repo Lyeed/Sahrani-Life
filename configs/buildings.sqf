@@ -1549,10 +1549,10 @@ _signBoard_south_3 = ["Land_Billboard_F","[10503.460938,9697.697266,0]",216.666,
 _signBoard_south_4 = ["Land_Billboard_F","[9324.601563,8349.561523,0]",236.666,-100,0,0,[]] call _cString;
 _signBoard_south_5 = ["Land_Billboard_F","[11741.112305,6233.510254,0]",236.666,-100,0,0,[]] call _cString;
 
-_signBoard_south_1 setObjectTexture [0, "lyeed_IMG\data\ads\propagande_sud.jpg"];
+_signBoard_south_1 setObjectTexture [0, "lyeed_IMG\data\ads\propagande_sud_1.jpg"];
 _signBoard_south_2 setObjectTexture [0, "lyeed_IMG\data\ads\alysia_1.jpg"];
-_signBoard_south_3 setObjectTexture [0, "lyeed_IMG\data\ads\propagande_sud.jpg"];
-_signBoard_south_4 setObjectTexture [0, "lyeed_IMG\data\ads\propagande_sud.jpg"];
+_signBoard_south_3 setObjectTexture [0, "lyeed_IMG\data\ads\propagande_sud_2.jpg"];
+_signBoard_south_4 setObjectTexture [0, "lyeed_IMG\data\ads\propagande_sud_1.jpg"];
 _signBoard_south_5 setObjectTexture [0, "lyeed_IMG\data\ads\alysia_1.jpg"];
 
 // Flags

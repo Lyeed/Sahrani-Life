@@ -10,3 +10,10 @@ private["_display"];
 disableSerialization;
 _display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
+
+if (g_atm >= 40) then
+{
+	[9526, true] call public_fnc_tabletShow;
+	[9527, true] call public_fnc_tabletShow;
+	[9528, true] call public_fnc_tabletShow;
+};
