@@ -13,6 +13,6 @@ _res = [];
 	if ([_license] call public_fnc_hasLicense) then {
 		_res pushBack _license;
 	};
-} foreach ("(str(playerSide) in getArray(_x >> 'sides'))" configClasses (missionConfigFile >> "ALYSIA_LICENSES"));
+} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_LICENSES"));
 
 _res;

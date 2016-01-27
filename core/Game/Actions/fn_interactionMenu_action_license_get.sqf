@@ -12,7 +12,7 @@ if (isNull _from) exitWith {};
 
 _licenses = [];
 {
-	if (getNumber(missionConfigFile >> "ALYSIA_LICENSES" >> _x >> "illegal") isEqualTo 0) then {
+	if (getNumber(missionConfigFile >> "ALYSIA_LICENSES" >> _x >> "factions" >> str(playerSide) >> "illegal") isEqualTo 0) then {
 		_licenses pushBack _x;
 	};
 } forEach ([] call public_fnc_getLicenses);
