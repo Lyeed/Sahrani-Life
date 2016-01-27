@@ -22,7 +22,7 @@ echo "[BUILD_MISSION] Copying file ..."
 cp -r "$GIT_DIRECTORY" "$MISSION_DIRECTORY"
 
 echo "[BUILD_MISSION] Removing developpement files and folders ..."
-for TARGET in "$MISSION_DIRECTORY/.git" "$MISSION_DIRECTORY/.gitattributes" "$MISSION_DIRECTORY/.gitignore" "$MISSION_DIRECTORY/dev.sqf" "$MISSION_DIRECTORY/AlysiaCompletions_sublimText3_install.sh" "$MISSION_DIRECTORY/AlysiaCompletions_sublimText3_install.sh" "$MISSION_DIRECTORY/Alysia.sublime-completions"
+for TARGET in "$MISSION_DIRECTORY/.git" "$MISSION_DIRECTORY/.gitattributes" "$MISSION_DIRECTORY/.gitignore" "$MISSION_DIRECTORY/dev.sqf" "$MISSION_DIRECTORY/AlysiaCompletions_sublimText3_install.sh" "$MISSION_DIRECTORY/AlysiaCompletions_sublimText3_install.sh" "$MISSION_DIRECTORY/Alysia.sublime-completions" "$MISSION_DIRECTORY/build_mission.sh"
 do
 	echo "Removing $TARGET"
 	rm -rf $TARGET
@@ -39,7 +39,7 @@ if [ "$RAPIFY_EXE" != "" ]; then
 fi
 
 echo "[BUILD_MISSION] Pbo Packing..."
-"$PBO_EXE" -pack "G:\Documents\Projets\ArmA 3\last\Alysia_client.Sibranak" "G:\Documents\Projets\ArmA 3\last\Alysia_client.Sibranak.pbo"
+"$PBO_EXE" -pack "$(pwd)/$MISSION_DIRECTORY" "$(pwd)/$MISSION_DIRECTORY.pbo"
 if [ -f "$MISSION_DIRECTORY.pbo.bak" ]; then
 	echo "Moving .bak to backup folder ..."
 	mv "$MISSION_DIRECTORY.pbo.bak" "$BACKUP_DIRECTORY"

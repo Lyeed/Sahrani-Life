@@ -1,4 +1,6 @@
 #!/bin/bash
+# writen by Lyeed
+# /!\ Must be launch in the same folder as Alysia.sublime-completions /!\
 
 if [ ! -d "$APPDATA\Sublime Text 3" ]; then
 	read -p "Error: Can't find SublimText 3 folder in $APPDATA. Press 'ENTER' to exit"
