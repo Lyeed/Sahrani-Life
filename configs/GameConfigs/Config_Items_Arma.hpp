@@ -3427,10 +3427,12 @@ class ALYSIA_ITEMS_ARMA
 	class usm_helmet_safety
 	{
 		buy_price = 20;
+		buy_license_CIV = "company_construction";
 	};
 	class usm_vest_safety
 	{
 		buy_price = 20;
+		buy_license_CIV = "company_construction";
 	};
 	class wc_gr_smg_mp40 {};
 	class wc_32Rnd_9x19_mag {};
