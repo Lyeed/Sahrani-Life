@@ -10,7 +10,7 @@ _PNJ = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _garage = [_this, 3, "", [""]] call BIS_fnc_param;
 
 if ((_garage isEqualTo "") || (isNull _PNJ)) exitWith {};
-if (!(isClass (missionConfigFile >> "Cfg_Garages" >> _garage))) exitWith {
+if (!(isClass (missionConfigFile >> "ALYSIA_GARAGES" >> _garage))) exitWith {
 	[format["Impossible de trouver les informations concernant le garage [%1]", _garage]] call public_fnc_error;
 };
 if (g_action_inUse) exitWith {
@@ -20,9 +20,9 @@ if (g_action_inUse) exitWith {
 g_action_inUse = true;
 g_garage_info = 
 [
-	getText(missionConfigFile >> "Cfg_Garages" >> _garage >> "name"),
-	getArray(missionConfigFile >> "Cfg_Garages" >> _garage >> "types"),
-	getArray(missionConfigFile >> "Cfg_Garages" >> _garage >> "spawns")
+	getText(missionConfigFile >> "ALYSIA_GARAGES" >> _garage >> "name"),
+	getArray(missionConfigFile >> "ALYSIA_GARAGES" >> _garage >> "types"),
+	getArray(missionConfigFile >> "ALYSIA_GARAGES" >> _garage >> "spawns")
 ];
 
-[player, (g_garage_info select 1)] remoteExec ["TON_fnc_garageVehicles", 2, false];
+[player, (g_garage_info select 1)] remoteExec ["TON_fnc_garageVehicles", 2];

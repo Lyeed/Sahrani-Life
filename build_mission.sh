@@ -22,7 +22,7 @@ echo "[BUILD_MISSION] Copying file ..."
 cp -r "$GIT_DIRECTORY" "$MISSION_DIRECTORY"
 
 echo "[BUILD_MISSION] Removing developpement files and folders ..."
-for TARGET in "$MISSION_DIRECTORY/.git" "$MISSION_DIRECTORY/.gitattributes" "$MISSION_DIRECTORY/.gitignore" "$MISSION_DIRECTORY/dev.sqf" "$MISSION_DIRECTORY/AlysiaCompletions_sublimText3_install.sh" "$MISSION_DIRECTORY/AlysiaCompletions_sublimText3_install.sh" "$MISSION_DIRECTORY/Alysia.sublime-completions" "$MISSION_DIRECTORY/build_mission.sh"
+for TARGET in "$MISSION_DIRECTORY/.git" "$MISSION_DIRECTORY/.gitattributes" "$MISSION_DIRECTORY/.gitignore" "$MISSION_DIRECTORY/dev.sqf" "$MISSION_DIRECTORY/AlysiaCompletions_sublimText3_install.sh" "$MISSION_DIRECTORY/AlysiaCompletions_sublimText3_install.sh" "$MISSION_DIRECTORY/Alysia.sublime-completions" "$MISSION_DIRECTORY/build_mission.sh" "$MISSION_DIRECTORY/CBA.sublime-completions"
 do
 	echo "Removing $TARGET"
 	rm -rf $TARGET

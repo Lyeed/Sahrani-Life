@@ -1,4 +1,4 @@
-class Cfg_Garages
+class ALYSIA_GARAGES
 {
 	class garage_paraiso
 	{

@@ -1,6 +1,6 @@
 #!/bin/bash
 # writen by Lyeed
-# /!\ Must be launch in the same folder as Alysia.sublime-completions /!\
+# /!\ Must be launch in the same folder as Alysia.sublime-completions & CBA.sublime-completions /!\
 
 if [ ! -d "$APPDATA\Sublime Text 3" ]; then
 	read -p "Error: Can't find SublimText 3 folder in $APPDATA. Press 'ENTER' to exit"
@@ -13,5 +13,6 @@ if [ ! -d "$APPDATA\Sublime Text 3\Packages\User" ]; then
 fi
 
 cp "Alysia.sublime-completions" "$APPDATA\Sublime Text 3\Packages\User"
+cp "CBA.sublime-completions" "$APPDATA\Sublime Text 3\Packages\User"
 
 exit 0
