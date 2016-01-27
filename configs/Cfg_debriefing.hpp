@@ -1,4 +1,4 @@
-class CfgDebriefing // Define custom mission endings or override the default endings (found under cfgDebriefing in the game's config file).
+class CfgDebriefing// Define custom mission endings or override the default endings (found under cfgDebriefing in the game's config file).
 {
 	class Teamspeak
 	{
