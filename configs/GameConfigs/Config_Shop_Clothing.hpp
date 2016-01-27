@@ -244,7 +244,7 @@ class ALYSIA_SHOPS_CLOTHING
 		};		
 	};
 
-class civ_clothing_sud
+	class civ_clothing_sud
 	{
 		name = "Friperie civile";
 		side = "CIV";
@@ -587,7 +587,9 @@ class civ_clothing_sud
 			"H_LIB_GER_TankOfficerCap",
 			"H_LIB_GER_Helmet",
 			"H_LIB_GER_HelmetCamo",
-			"H_LIB_GER_OfficerCap"
+			"H_LIB_GER_OfficerCap",
+			"H_LIB_GER_SPGPrivateCap",
+			"H_LIB_GER_TankPrivateCap"
 		};
 		goggles[] =
 		{
@@ -626,7 +628,8 @@ class civ_clothing_sud
 			"TRYK_V_Sheriff_BA_TB",
 			"police_belt_pistol",
 			"Garde_Veste",
-			"Garde_VesteCargo"
+			"Garde_VesteCargo",
+			"rhs_6b23_digi_6sh92_radio"
 		};
 		backpacks[] =
 		{
@@ -993,11 +996,9 @@ class civ_clothing_sud
 		{
 			"H_mas_afr_Bandana_e_civ_rebel",
 			"H_LIB_SOV_RA_PrivateCap",
-			"H_LIB_SOV_RA_OfficerCap",
-			"H_LIB_GER_SPGPrivateCap",
-			"H_LIB_GER_TankPrivateCap",
-			"H_LIB_GER_Cap"
+			"H_LIB_SOV_RA_OfficerCap"
 		};
+
 		goggles[] =
 		{
 			"T_HoodACUBLK"

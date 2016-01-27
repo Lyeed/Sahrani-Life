@@ -49,10 +49,10 @@ while {(g_action_inUse && !g_interrupted)} do
 	private["_space"];
 
 	if (
-			!(alive player) || 
-			(player getVariable ["is_coma", false]) || 
-			((vehicle player) != player) || 
-			(player distance (getMarkerPos _marker) > 40) || 
+			!(alive player) ||
+			(player getVariable ["is_coma", false]) ||
+			((vehicle player) != player) ||
+			(player distance (getMarkerPos _marker) > 40) ||
 			((speed player) > 1) ||
 			(player getVariable ["restrained", false]) ||
 			(player getVariable ["surrender", false]) ||
@@ -60,9 +60,7 @@ while {(g_action_inUse && !g_interrupted)} do
 		) exitWith {titleText["* Récolte annulée *", "PLAIN DOWN"]};
 
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-	if (_sound != "") then {	
-		playSound _sound;
-	};
+	if (_sound != "") then {playSound _sound};
 	waitUntil{((animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon") || g_interrupted)};
 
 	if (g_interrupted) exitWith {};
@@ -82,7 +80,7 @@ while {(g_action_inUse && !g_interrupted)} do
 
 		if (g_interrupted) exitWith {};
 		if ((_x select 2) isEqualTo 1) then {
-			_amount = [(_x select 0), round(random(_x select 1)), g_carryWeight, g_maxWeight] call public_fnc_calWeightDiff;
+			_amount = [(_x select 0), round(random(_x select 1)) + 1, g_carryWeight, g_maxWeight] call public_fnc_calWeightDiff;
 		} else {
 			_amount = [(_x select 0), (_x select 1), g_carryWeight, g_maxWeight] call public_fnc_calWeightDiff;
 		};
@@ -118,7 +116,7 @@ while {(g_action_inUse && !g_interrupted)} do
 	};
 };
 
-if (g_interrupted) then 
+if (g_interrupted) then
 {
 	titleText['* Récolte annulée *', 'PLAIN DOWN'];
 	sleep 1.5;

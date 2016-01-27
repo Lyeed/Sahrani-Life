@@ -25,3 +25,4 @@
 #include "GameConfigs\Config_Nationalities.hpp"
 #include "GameConfigs\Config_Chairs.hpp"
 #include "GameConfigs\Config_Staff.hpp"
+#include "GameConfigs\Config_ATM.hpp"

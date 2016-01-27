@@ -3424,10 +3424,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class H_LIB_GER_Cap
-	{
-		buy_price = 20;
-	};
 	class usm_helmet_safety
 	{
 		buy_price = 20;
@@ -3440,4 +3436,8 @@ class ALYSIA_ITEMS_ARMA
 	class wc_32Rnd_9x19_mag {};
 	class wc_us_smg_m1a1 {};
 	class wc_30Rnd_45acp {};
+	class rhs_6b23_digi_6sh92_radio
+	{
+		buy_price = 20;
+	};
 };

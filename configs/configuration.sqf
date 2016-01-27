@@ -121,4 +121,12 @@ with missionNamespace do
 	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_CHAIRS"));
 
 	g_chairs = compileFinal str(g_chairs);
+	/* =================[ATM]====================*/
+	g_atms = [];
+
+	{
+		g_atms pushBack configName(_x);
+	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_ATM"));
+
+	g_atms = compileFinal str(g_atms);
 };

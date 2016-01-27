@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_target"];
+private "_target";
 
 if (g_action_inUse || dialog) exitWith {};
 
@@ -30,10 +30,10 @@ if ((vehicle player) isEqualTo player) then
 			true breakOut "main";
 		};
 
-		_atm = (nearestObjects [player, ["Land_Atm_01_F", "Land_Atm_02_F", "xcam_Atm_01_F", "xcam_Atm_02_F"], 2]) select 0;
+		_atm = (nearestObjects [player, (call g_atms), 2]) select 0;
 		if (!(isNil "_atm")) then
 		{
-			["home"] call public_fnc_atmScreen;
+			["home", _atm] call public_fnc_atmScreen;
 			true breakOut "main";
 		};
 
@@ -144,7 +144,7 @@ if ((vehicle player) isEqualTo player) then
 					true breakOut "main";
 				};
 
-				if (typeOf(_target) in ["Land_Atm_01_F", "Land_Atm_02_F", "xcam_Atm_01_F", "xcam_Atm_02_F"]) then
+				if (typeOf(_target) in (call g_atms)) then
 				{
 					["home"] call public_fnc_atmScreen;
 					true breakOut "main";
@@ -253,53 +253,3 @@ if ((vehicle player) isEqualTo player) then
 };
 
 false;
-
-/*		
-				if ((_curType in (call g_lastingObjects_Process)) && (_curDistance < 3) && (count(_curTarget getVariable["info", []]) > 0)) exitWith {
-				[_curTarget, (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "LastingObjects_menu"))] call public_fnc_LastingObjectsMenuOpen
-			};
-
-			if (_curDistance < 4) then
-			{
-
-
-
-				if (_curType in ["Salema_F", "Ornate_random_F", "Mackerel_F", "Tuna_F", "Mullet_F", "CatShark_F"]) exitWith {
-					[_curTarget] spawn public_fnc_catchFish; 
-				};
-
-				if (_curType == "Turtle_F") exitWith {
-					[_curTarget] spawn public_fnc_catchTurtle; 
-				};
-
-				if ((_curType in 
-					[
-						"RoadBarrier_small_F",
-						"RoadCone_L_F",
-						"Land_Razorwire_F",
-						"Land_CncWall4_F", 
-						"Land_BagBunker_Tower_F", 
-						"Land_HBarrierWall6_F", 
-						"Land_HBarrierWall_corridor_F", 
-						"Land_Canal_Wall_Stairs_F",
-						"Land_HBarrierTower_F",
-						"Land_Canal_Wall_10m_F",
-						"Land_HBarrierWall_corner_F"
-					]) && (_curTarget getVariable["isPackable", false])) exitWith {
-					[_curTarget] call public_fnc_packupObjPut;
-				};
-
-				if (!((_curTarget getVariable["item", []]) isEqualTo [])) exitWith
-				{
-					if (!(_curTarget getVariable["PickedUp", false])) then
-					{
-						if (_curType in ["Land_BottlePlastic_V1_F", "Land_TacticalBacon_F", "Land_Can_V3_F", "Land_CanisterFuel_F", "Land_Suitcase_F"]) exitWith {
-							[_curTarget] spawn public_fnc_pickupItem;
-						};
-
-						if (_curType == "Land_Money_F") exitWith {
-							[_curTarget] spawn public_fnc_pickupMoney;
-						};
-	
-*/
-
