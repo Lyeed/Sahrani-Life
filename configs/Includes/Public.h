@@ -425,8 +425,8 @@ class Public
 		file = "core\Game\Actions";
 		class interactionMenu_action_restrain {};
 		class interactionMenu_action_unrestrain {};
-		class interactionMenu_action_escort {};
-		class interactionMenu_action_stopescort {};
+		class escort {};
+		class stopescort {};
 		class interactionMenu_action_identity {};
 		class interactionMenu_action_lockpick {};
 		class interactionMenu_action_trade_open {};

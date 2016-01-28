@@ -25,11 +25,10 @@ lbClear _ctrl_list_inventory;
 		_ctrl_list_inventory lbSetPicture [_index, ([_x] call public_fnc_itemGetImage)];
 		_ctrl_list_inventory lbSetValue [_index, _amount];
 	};
-} forEach (g_inv_items);
+} forEach g_inv_items;
 if ((lbSize _ctrl_list_inventory) isEqualTo 0) then
 {
 	_ctrl_list_inventory lbAdd "Vide";
-	_ctrl_list_inventory lbSetCurSel -1;
 	ctrlShow[10001, false];
 	ctrlShow[10002, false];
 	ctrlShow[10003, false];
@@ -39,6 +38,9 @@ if ((lbSize _ctrl_list_inventory) isEqualTo 0) then
 	ctrlShow[10002, true];
 	ctrlShow[10003, true];
 	ctrlShow[10004, true];
+};
+
+if ((lbCurSel _ctrl_list_inventory) isEqualTo -1) then {
 	_ctrl_list_inventory lbSetCurSel 0;
 };
 
@@ -52,16 +54,18 @@ lbClear _ctrl_list_keys;
 		_ctrl_list_keys lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> (typeOf _x) >> "picture")];
 		_ctrl_list_keys lbSetData [_index, str(_forEachIndex)];
 	};
-} forEach (g_vehicles);
+} forEach g_vehicles;
 if ((lbSize _ctrl_list_keys) isEqualTo 0) then
 {
 	_ctrl_list_keys lbAdd "Aucune";
-	_ctrl_list_keys lbSetCurSel -1;
 	ctrlShow[10006, false];
 	ctrlShow[10007, false];
 } else {
 	ctrlShow[10006, true];
 	ctrlShow[10007, true];
+};
+
+if ((lbCurSel _ctrl_list_keys) isEqualTo -1) then {
 	_ctrl_list_keys lbSetCurSel 0;
 };
 
@@ -88,14 +92,14 @@ if (g_interaction_trade_money > 0) then
 	_ctrl_list_trade lbSetPicture [_index, ([(_x select 0)] call public_fnc_itemGetImage)];
 	_ctrl_list_trade lbSetData [_index, "inventory"];
 	_ctrl_list_trade lbSetValue [_index, _forEachIndex];
-} forEach (g_interaction_trade_inventory);
+} forEach g_interaction_trade_inventory;
 
 {
 	_index = _ctrl_list_trade lbAdd format["Clés (%1)", getText(configFile >> "CfgVehicles" >> typeOf(_x) >> "displayName")];
 	_ctrl_list_trade lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> typeOf(_x) >> "picture")];
 	_ctrl_list_trade lbSetData [_index, "key"];
 	_ctrl_list_trade lbSetValue [_index, _forEachIndex];
-} forEach (g_interaction_trade_keys);
+} forEach g_interaction_trade_keys;
 
 if ((lbSize _ctrl_list_trade) isEqualTo 0) then 
 {
@@ -108,7 +112,6 @@ if ((lbSize _ctrl_list_trade) isEqualTo 0) then
 	ctrlShow[10017, false];
 	ctrlShow[10018, false];
 } else {
-	_ctrl_list_trade lbSetCurSel 0;
 	ctrlShow[10012, true];
 	ctrlShow[10013, true];
 	ctrlShow[10014, true];
@@ -116,4 +119,8 @@ if ((lbSize _ctrl_list_trade) isEqualTo 0) then
 	ctrlShow[10016, true];
 	ctrlShow[10017, true];
 	ctrlShow[10018, true];
+};
+
+if ((lbCurSel _ctrl_list_trade) isEqualTo -1) then {
+	_ctrl_list_trade lbSetCurSel 0;
 };
