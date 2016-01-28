@@ -239,7 +239,7 @@ class ALYSIA_HOUSES
 		storage_building_pos_index = 1;
 		garage = 0;
 		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
+		sides[] = {"East", "West"};
 		rank = 0;
 		license = "home";
 	};	
