@@ -994,9 +994,7 @@ class ALYSIA_SHOPS_CLOTHING
 		};
 		headgear[] =
 		{
-			"H_mas_afr_Bandana_e_civ_rebel",
-			"H_LIB_SOV_RA_PrivateCap",
-			"H_LIB_SOV_RA_OfficerCap"
+			"H_mas_afr_Bandana_e_civ_rebel"
 		};
 
 		goggles[] =

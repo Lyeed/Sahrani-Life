@@ -3396,23 +3396,11 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class H_LIB_SOV_PilotHelmet
-	{
-		buy_price = 20;
-	};
 	class H_LIB_WP_Cap
 	{
 		buy_price = 20;
 	};
 	class H_LIB_GER_LW_PilotHelmet
-	{
-		buy_price = 20;
-	};
-	class H_LIB_SOV_RA_PrivateCap
-	{
-		buy_price = 20;
-	};
-	class H_LIB_SOV_RA_OfficerCap
 	{
 		buy_price = 20;
 	};
