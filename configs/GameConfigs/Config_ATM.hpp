@@ -15,7 +15,7 @@ class ALYSIA_ATM
 	class xcam_Atm_01_F: Land_Atm_01_F {};
 	class xcam_Atm_02_F: Land_Atm_01_F {};
 
-	class celui_de_mm_building
+	class ATM_Sarhani
 	{
 		money_stock = 900000000;
 		money_faction = 1;

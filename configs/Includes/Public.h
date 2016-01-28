@@ -161,9 +161,9 @@ class Public
 	class Shops
 	{
 		file = "core\Game\Shops";
-		class chopShopMenu {};
-		class chopShopSelection {};
-		class chopShopSell {};
+		class steal_vehicle_open {};
+		class steal_vehicle_update {};
+		class steal_vehicle_action {};
 		class shop_clothing_update_list {};
 		class shop_clothing_open {};
 		class shop_clothing_buy {};

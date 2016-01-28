@@ -26,6 +26,7 @@
 #include "Dialogs\RscDisplayLaunder.hpp"
 #include "Dialogs\RscDisplayArrest.hpp"
 #include "Dialogs\RscDisplayCompanies.hpp"
+#include "Dialogs\RscDisplayStealVehicle.hpp"
 
 class RscTitles
 {

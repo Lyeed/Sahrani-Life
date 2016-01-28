@@ -29,7 +29,7 @@ _list ctrlSetEventHandler ["LBSelChanged", "_this call public_fnc_APP_store_lice
 		{
 			_index = _list lbAdd ([_license] call public_fnc_licenseGetName);
 			_list lbSetData [_index, _license];
-			_list lbSetValue [_index, getNumber(_x >> "price")];
+			_list lbSetValue [_index, getNumber(_x >> "factions" >> str(playerSide) >> "price")];
 		};
 	};
 } foreach ("isClass(_x >> 'factions' >> str(playerSide))" configClasses (missionConfigFile >> "ALYSIA_LICENSES"));

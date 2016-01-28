@@ -175,7 +175,7 @@ class RscDisplayShopClothing: default_interaction_back_dialog
 		class ACTION_BUY_IMAGE: RscPicture
 		{
 			idc = 3111;
-			text = "lyeed_IMG\data\shops\actions\action_buy.paa";
+			text = "lyeed_IMG\data\global\action_buy.paa";
 
 			x = 0.157578 * safezoneW + safezoneX;
 			y = 0.781611 * safezoneH + safezoneY;
@@ -186,8 +186,8 @@ class RscDisplayShopClothing: default_interaction_back_dialog
 		{
 			idc = 3112;
 			action = "[] call public_fnc_shop_clothing_buy;";
-			onMouseEnter = "ctrlSetText[3111,""lyeed_IMG\data\shops\actions\action_buy_select.paa""];ctrlShow[3109, false];((findDisplay 3100) displayCtrl 3108) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 3100) displayCtrl 3110) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
-			onMouseExit = "ctrlSetText[3111,""lyeed_IMG\data\shops\actions\action_buy.paa""];if (ctrlVisible 3111) then {ctrlShow[3109, true];};((findDisplay 3100) displayCtrl 3108) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 3100) displayCtrl 3110) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>"";";
+			onMouseEnter = "ctrlSetText[3111,""lyeed_IMG\data\global\action_buy_select.paa""];ctrlShow[3109, false];((findDisplay 3100) displayCtrl 3108) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 3100) displayCtrl 3110) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
+			onMouseExit = "ctrlSetText[3111,""lyeed_IMG\data\global\action_buy.paa""];if (ctrlVisible 3111) then {ctrlShow[3109, true];};((findDisplay 3100) displayCtrl 3108) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 3100) displayCtrl 3110) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>"";";
 
 			x = 0.154531 * safezoneW + safezoneX;
 			y = 0.775 * safezoneH + safezoneY;
