@@ -3859,6 +3859,19 @@ class ALYSIA_VEHICLES
 	class Skyline_Audi_RS4_10_F: Skyline_Audi_RS4 {};
 	class Skyline_Audi_RS4_11_F: Skyline_Audi_RS4 {};
 	class Skyline_Audi_RS4_12_F: Skyline_Audi_RS4 {};
+	
+	class Fett_Audi_RS4_12_milice_F
+	{
+		realname = "Audi RS4";
+		buyPrice = 75000;
+		inventory = 25;
+		side = "WEST";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP95";
+		rank = 2;
+		colors[] ={};
+	};
 
 	class Skyline_Ford_Transit
 	{
