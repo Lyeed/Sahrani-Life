@@ -268,8 +268,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"Jonzie_Viper"
 		};
 	};
-	
-	// Métier civils
 	class CIV_vehicules_job
 	{
 		name = "Concessionnaire automobiles métier civils";

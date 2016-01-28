@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display", "_list_require", "_maxAmount", "_can", "_receive_weight", "_require_weight", "_newWeight", "_list_receive"];
+private["_display", "_list_require", "_maxAmount", "_can", "_receive_weight", "_require_weight", "_newWeight", "_list_receive", "_receive"];
 
 disableSerialization;
 _display = findDisplay 53000;
@@ -43,13 +43,31 @@ _require_weight = 0;
 
 _list_receive = _display displayCtrl 53014;
 lbClear _list_receive;
+
+_receive = getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "receive");
+
 _receive_weight = 0;
 {
 	_index = _list_receive lbAdd format["%1x %2", (_maxAmount * (_x select 1)), [(_x select 0)] call public_fnc_itemGetName];
 	_list_receive lbSetPicture [_index, [(_x select 0)] call public_fnc_itemGetImage];
 
 	_receive_weight = _receive_weight + ((([(_x select 0)] call public_fnc_itemGetWeight) * (_x select 1)) * _maxAmount);
-} forEach getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "receive");
+} forEach (_receive select 0);
+
+{
+	_info = [_x] call public_fnc_fetchcfgDetails;
+	for "_i" from 1 to _maxAmount do
+	{
+		_index = _list_receive lbAdd (_info select 1);
+		_list_receive lbSetPicture [_index, (_info select 2)];
+	};
+} forEach (_receive select 1);
+
+if ((_receive select 3) > 0) then
+{
+	_index = _list_receive lbAdd format["%1kn", [((_receive select 3) * _maxAmount)] call public_fnc_numberText];
+	_list_receive lbSetPicture [_index, "alysia_items_virtual\data\money.paa"];
+};
 
 (_display displayCtrl 53007) ctrlSetStructuredText parseText format
 [

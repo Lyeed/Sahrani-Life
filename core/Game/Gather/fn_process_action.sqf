@@ -5,18 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private
-[
-	"_target",
-	"_type",
-	"_requireTarget",
-	"_item_require",
-	"_enoughText",
-	"_maxAmount",
-	"_itemsCheck",
-	"_receiveText"
-];
-
+private["_target", "_type", "_requireTarget", "_item_require", "_enoughText", "_maxAmount", "_itemsCheck", "_receive"];
 _type = [_this, 0, "", [""]] call BIS_fnc_param;
 _maxAmount = [_this, 1, 0, [0]] call BIS_fnc_param;
 _target = [_this, 2, objNull, [objNull]] call BIS_fnc_param;
@@ -50,7 +39,7 @@ _enoughText = "";
 	if (floor(_varAmount / (_x select 1)) < _maxAmount) then {
 		_enoughText = _enoughText + format["%1x %2<br/>", (((_x select 1) * _maxAmount) - (_varAmount * _maxAmount)), ([(_x select 0)] call public_fnc_itemGetName)];
 	};
-} forEach (_item_require);
+} forEach _item_require;
 if (_enoughText != "") exitWith {
 	[format["Vous n'avez pas tous les élements requis<br/><br/>Vous avez besoin de<br/>%1<br/>en plus pour commencer à traiter</t>", _enoughText]] call public_fnc_error;
 };
@@ -67,14 +56,26 @@ _itemsCheck = true;
 	if (!([false, (_x select 0), ((_x select 1) * _maxAmount)] call public_fnc_handleInv)) exitWith {
 		_itemsCheck = false;
 	};
-} forEach (_item_require);
+} forEach _item_require;
 if (!_itemsCheck) exitWith {
 	["Vous devez garder les matériaux sur vous pendant toute la durée du traitement"] call public_fnc_error;
 };
 
-_receiveText = "Vous avez reçu<br/>";
+_receive = getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "receive");
+
 {
-	_receiveText = _receiveText + format["%1x %2<br/>", ((_x select 1) * _maxAmount), [_x select 0] call public_fnc_itemGetName];
 	[true, (_x select 0), ((_x select 1) * _maxAmount)] call public_fnc_handleInv;
-} forEach getArray(missionConfigFile >> "ALYSIA_PROCESS" >> _type >> "receive");
-[_receiveText] call public_fnc_info;
+} forEach (_receive select 0);
+
+{
+	for "_i" from 1 to _maxAmount do
+	{
+		[_x, true] call public_fnc_handleItem;
+	};
+} forEach (_receive select 1);
+
+if ((_receive select 2) > 0) then {
+	[true, ((_receive select 2) * _maxAmount)] call public_fnc_handleCash;
+};
+
+["Traitement terminé"] call public_fnc_info;

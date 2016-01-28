@@ -111,6 +111,19 @@ if ((vehicle player) isEqualTo player) then
 				true breakOut "main";
 			};
 		} forEach getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "farming_markers_gather");
+
+		if (!(isNull g_company)) then
+		{
+			_info = g_company getVariable "company_info";
+			if ((_info select 2) isEqualTo "farming_bio") then
+			{
+				if ((player distance g_company) < 30) then
+				{
+					[] call public_fnc_plantSeed;
+					true breakOut "main";
+				};
+			};
+		};
 	} else {
 		if ((player distance _target) < ((((boundingBox _target) select 1) select 0) + 2.5)) then
 		{

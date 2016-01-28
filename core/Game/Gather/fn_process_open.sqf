@@ -39,7 +39,7 @@ if (isNull _display) exitWith {};
 
 (_display displayCtrl 53001) ctrlSetStructuredText parseText format["<t align='center' size='1.5'>%1</t>", getText(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "name")];
 
-if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "sides"))) exitWith
+if (!(isClass(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "factions" >> str(playerSide)))) exitWith
 {
 	{
 		ctrlShow[getNumber(_x >> "IDC"), false];	
@@ -52,7 +52,7 @@ if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_int
 	];
 };
 
-_processLicenses = getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "licenses");
+_processLicenses = getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "factions" >> str(playerSide) >> "licenses");
 if (count(_processLicenses) > 0) then
 {
 	_licenses_text = "";
@@ -82,8 +82,8 @@ if (!_license_condition) exitWith
 	];
 };
 
-_rank = getNumber(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "rank");
-if ((playerSide != civilian) && ((player getVariable ["rank", 0]) < _rank)) exitWith
+_rank = getNumber(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "factions" >> str(playerSide) >> "rank");
+if ((player getVariable ["rank", 0]) < _rank) exitWith
 {
 	{
 		ctrlShow[getNumber(_x >> "IDC"), false];	
@@ -97,8 +97,6 @@ if ((playerSide != civilian) && ((player getVariable ["rank", 0]) < _rank)) exit
 };
 
 ctrlShow[53015, false];
-ctrlEnable[53005, false];
-ctrlEnable[53014, false];
 
 {
 	private["_varMaxAmount", "_varAmount"];
