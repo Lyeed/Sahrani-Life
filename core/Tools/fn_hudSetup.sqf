@@ -59,12 +59,12 @@ _move_ctrl =
 	};
 };
 
-if (isNull (uiNameSpace getVariable ["RscHudPlayer", displayNull])) then
+if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 {
-	8 cutRsc ["RscHudPlayer", "PLAIN"];
+	8 cutRsc ["RscTitlePlayer", "PLAIN"];
 
 	disableSerialization;
-	_hud = uiNameSpace getVariable ["RscHudPlayer", displayNull];
+	_hud = uiNameSpace getVariable ["RscTitlePlayer", displayNull];
 	if (isNull _hud) exitWith {};
 
 	/*===========================

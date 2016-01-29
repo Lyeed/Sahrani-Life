@@ -98,7 +98,7 @@ lbClear _ctrl_tmp;
 	];
 	_ctrl_tmp lbSetData [_index, "SELL"];
 	_ctrl_tmp lbSetValue [_index, _forEachIndex];
-	if ([_item] call public_fnc_itemIsIllegal) then {
+	if (getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "illegal") isEqualTo 1) then {
 		g_shop_bill_illegal = g_shop_bill_illegal + _price;
 	} else {
 		g_shop_bill_dollar = g_shop_bill_dollar + _price;

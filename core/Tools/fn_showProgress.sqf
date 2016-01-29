@@ -15,8 +15,8 @@ _anim = [_this, 4, "", [""]] call BIS_fnc_param;
 if (g_action_inUse) exitWith {false};
 
 disableSerialization;
-5 cutRsc ["life_progress","PLAIN"];
-_ui = uiNameSpace getVariable["life_progress", displayNull];
+5 cutRsc ["RscTitleProgress","PLAIN"];
+_ui = uiNameSpace getVariable["RscTitleProgress", displayNull];
 if (isNull _ui) exitWith {false};
 
 g_interrupted = false;

@@ -17,6 +17,7 @@ _display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
 
 _ressource = _list lbData _sel;
+if (_ressource isEqualTo "") exitWith {};
 
 (_display displayCtrl 8805) ctrlSetStructuredText parseText format
 [
@@ -35,7 +36,7 @@ _license = getText(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "license
 (_display displayCtrl 8811) ctrlSetStructuredText parseText format
 [
 	"<t align='center'>%1</t>",
-	if ([_ressource] call public_fnc_itemIsIllegal) then {
+	if (getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "illegal") isEqualTo 0) then {
 		"<t color='#ff8c8c'>Non</t>"
 	} else {
 		"<t color='#8cff9b'>Oui</t>"

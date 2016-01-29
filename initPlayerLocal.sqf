@@ -49,15 +49,15 @@ if (hasInterface) then
 	diag_log "<INIT> Initialisation des variables ...";
 	cutText ["Initialisation des variables", "BLACK FADED"];
 	0 cutFadeOut 9999999;
-	[] call compile PreprocessFileLineNumbers "configs\configuration.sqf";
+	[] call public_fnc_init_variables;
 	diag_log "<INIT> Variables initialisées";
 
 	diag_log "<INIT> Ajouts des évènements ...";
 	cutText ["Ajouts des évènements", "BLACK FADED"];
 	0 cutFadeOut 9999999;
-	[] call compile PreprocessFileLineNumbers "core\EventHandlers\handler_keys.sqf";
-	[] call compile PreprocessFileLineNumbers "core\EventHandlers\handler_events.sqf";
-	[] call compile PreprocessFileLineNumbers "core\EventHandlers\handler_triggers.sqf";
+	[] call public_fnc_init_keys;
+	[] call public_fnc_init_eventHandlers;
+	[] call public_fnc_init_triggers;
 	diag_log "<INIT> Evènements ajoutés";
 
 	diag_log "<INIT> Création des objets ...";

@@ -12,7 +12,7 @@ _damage = _this select 2;
 _source = _this select 3;
 _projectile = _this select 4;
 
-if (g_connected && !g_staff_god) then
+if (g_connected && !g_staff_god && (_damage > 0)) then
 {
 	_damage = _damage * 180;
 	if ((isNull _source) && ((vehicle player) != player)) then
@@ -24,11 +24,16 @@ if (g_connected && !g_staff_god) then
 		};
 	};
 
-	if (_damage > 0) then
+	if (!(isNull (player getVariable ["escorting", objNull]))) exitWith
 	{
-		[(_damage * -1)] call public_fnc_handleBlood;
-		[(_damage / 8)] call public_fnc_handleBleed;
+		_target = player getVariable ["escorting", objNull];
+		detach _target;
+		_target setVariable ["escorted", objNull, true];
+		player setVariable ["escorting", objNull, true];
 	};
+
+	[(_damage * -1)] call public_fnc_handleBlood;
+	[(_damage / 8)] call public_fnc_handleBleed;
 };
 
 0;

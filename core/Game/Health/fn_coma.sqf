@@ -24,6 +24,13 @@ if (player getVariable ["surrender", false]) then {
 if (player getVariable ["restrained", false]) then {
 	player setVariable ["restrained", false, true];
 };
+if (!(isNull (player getVariable ["escorted", objNull]))) then
+{
+	_target = player getVariable ["escorted", objNull];
+	detach player;
+	_target setVariable ["escorting", objNull, true];
+	_target setVariable ["escorted", objNull, true];
+};
 
 disableSerialization;
 _display = findDisplay 350;

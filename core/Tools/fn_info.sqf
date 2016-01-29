@@ -18,10 +18,10 @@ if (alive player) then
 {
 	if (!(player getVariable ["is_coma", false])) then
 	{
-		15 cutRsc ["RscHudMessage", "PLAIN"];
+		15 cutRsc ["RscTitleMessage", "PLAIN"];
 
 		disableSerialization;
-		_hud = uiNameSpace getVariable ["RscHudMessage", displayNull];
+		_hud = uiNameSpace getVariable ["RscTitleMessage", displayNull];
 
 		_info = _hud displayCtrl 95000;
 		_info ctrlSetStructuredText parseText format["<t font='EtelkaMonospacePro' size='0.8'>%1</t>", _msg];

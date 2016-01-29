@@ -13,7 +13,7 @@ waitUntil {scriptDone _handle};
 
 if ((count _gear) == 0) then
 {
-    [] call public_fnc_loadout;
+    [] call public_fnc_init_loadout;
 } else {
     _uniformGear = [_gear, 0, [], [["", []]]] call BIS_fnc_param;
     if ((_uniformGear select 0) != "") then {

@@ -24,7 +24,6 @@ if (isNull _target) exitWith {};
 		["pullout", "Sortir", "[] call public_fnc_vehicleMenu_pullout;", "((count (crew g_interaction_target) > 0) && ((vehicle player) isEqualTo player))"],
 		["owner", "Propriétaire", "[] spawn public_fnc_vehicleMenu_owner;", "((playerSide in [east,west]) || (g_interaction_target in g_vehicles))"],
 		["impound", "Fourrière", "[] spawn public_fnc_vehicleMenu_impound;", "((playerSide in [east,west]) && ((vehicle player) isEqualTo player))"],
-		["putin", "Transférer", "[] call public_fnc_vehicleMenu_putIn;", "false"],
 		["farm_gather", "Récolter", "[g_interaction_target] spawn public_fnc_vehicleMenu_farm_gather;", "((typeOf(g_interaction_target) isEqualTo 'madsa_mtz_F') && ((vehicle player) isEqualTo g_interaction_target) && ((driver g_interaction_target) isEqualTo player))"],
 		["farm_plant", "Planter", "[g_interaction_target] spawn public_fnc_vehicleMenu_farm_plant;", "((typeOf(g_interaction_target) isEqualTo 'madsa_mtz_F') && ((vehicle player) isEqualTo g_interaction_target) && ((driver g_interaction_target) isEqualTo player))"],
 		["fishingpool", "Pêche", "[g_interaction_target] spawn public_fnc_vehicleMenu_farm_fish;", "((g_interaction_target isKindOf 'Ship') && ((vehicle player) isEqualTo g_interaction_target) && ((driver g_interaction_target) isEqualTo player))"],

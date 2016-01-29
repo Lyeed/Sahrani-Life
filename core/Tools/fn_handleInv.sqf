@@ -23,7 +23,7 @@ if (_math) then
 	{
 		if ((g_carryWeight + _weight) <= g_maxWeight) then
 		{
-			missionNamespace setVariable[format["inv_%1", _item], (_value + _num)];	
+			missionNamespace setVariable[format["inv_%1", _item], (_value + _num)];
 			g_carryWeight = g_carryWeight + _weight;
 			_return = true;
 		};
@@ -42,38 +42,36 @@ if (_return) then
 	private["_display", "_loop", "_list", "_index"];
 
 	disableSerialization;
-	_display = uiNamespace getVariable ["HUD_inv_message", displayNull];
+	_display = uiNamespace getVariable ["RscTitleLoot", displayNull];
 	_loop = false;
 
 	if (isNull _display) then 
 	{
-		3 cutRsc ["HUD_inv_message", "PLAIN"];
-		_display = uiNamespace getVariable ["HUD_inv_message", displayNull];
+		3 cutRsc ["RscTitleLoot", "PLAIN"];
+		_display = uiNamespace getVariable ["RscTitleLoot", displayNull];
+		(_display displayCtrl 900) ctrlEnable false;
 		_loop = true;
 	};
 
 	_list = _display displayCtrl 900;
+
 	_index = _list lbAdd format["%1 %2 x %3", if (_math) then {"+"} else {"-"}, _num, ([_item] call public_fnc_itemGetName)];
 	_list lbSetPicture [_index, ([_item] call public_fnc_itemGetImage)];
 	_list lbSetValue [_index, (time + 4)];
 	
 	if (_loop) then
 	{
-		[_list] spawn
+		_list spawn
 		{
-			private["_list"];
-			disableSerialization;
-			_list = _this select 0;
-			while {((lbSize _list) > 0)} do
+			while {((lbSize _this) > 0)} do
 			{
-				for "_i" from 0 to (lbSize _list) do
+				for "_i" from 0 to (lbSize _this) do
 				{
-					if ((_list lbValue _i) < time) then {
-						_list lbDelete _i;
-					};
+					if ((_this lbValue _i) < time) then {_this lbDelete _i};
 				};
 				sleep 1;
 			};
+
 			3 cutText ["", "PLAIN"];
 		};
 	};

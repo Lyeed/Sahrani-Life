@@ -4,17 +4,16 @@ class Events
 	class Events_functions
 	{
 		file = "core\EventHandlers";
-		class onPlayerFire {};
+		class actionKeyHandler {};
+		class onPlayerESC {};
 		class onPlayerFireNear {};
 		class onPlayerHandleDamage {};
 		class onPlayerInventoryOpen {};
+		class onPlayerKeyPress {};
 		class onPlayerKilled {};
 		class onPlayerMapOpen {};
 		class onPlayerRespawn {};
 		class onPlayerSpeak {};
 		class onPlayerSpeakRadio {};
-		class onPlayerESC {};
-		class keyHandler {};
-		class actionKeyHandler {};
 	};
 };

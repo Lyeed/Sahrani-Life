@@ -10,15 +10,14 @@ class Public
 		class init_position {};
 		class init_actions {};
 		class init_buildings {};
+		class init_loadout {};
+		class init_variables {};
+		class init_eventHandlers {};
+		class init_keys {};
+		class init_triggers {};
 		class preInit {
 			preInit = 1;
 		};
-	};
-
-	class Configs
-	{
-		file = "configs";
-		class loadout {};
 	};
 
 	class Market
@@ -96,7 +95,6 @@ class Public
 		class handleCash {};
 		class holdsterSwitch {};
 		class hudSetup {};
-		class identityChange {};
 		class index {};
 		class info {};
 		class isNumber {};
@@ -115,6 +113,21 @@ class Public
 		class age {};
 		class getRegion {};
 		class getLicenses {};
+		class getVehAssurancePrice {};
+		class getVehBuyPrice {};
+		class getVehGaragePrice {};
+		class getVehSellPrice {};
+		class getVehVirtual {};
+		class licenseGetName {};
+		class rankToStr {};
+		class sideToStr {};
+		class itemCount {};
+		class itemGetDrop {};
+		class itemGetImage {};
+		class itemGetName {};
+		class itemGetBuyPrice {};
+		class itemGetSellPrice {};
+		class itemGetWeight {};
 	};
 
 	class Items
@@ -133,8 +146,6 @@ class Public
 		class getOffBaillon {};
 		class getOffBandeau {};
 		class handleItem {};
-		class jerryRefuel {};
-		class lockpick {};
 		class nitro {};
 		class radar {};
 		class removeItem {};
@@ -247,7 +258,6 @@ class Public
 		class vehicleMenu_steal {};
 		class vehicleMenu_impound {};
 		class vehicleMenu_pullout {};
-		class vehicleMenu_putIn {};
 		class vehicleMenu_siphon {};
 		class vehicleMenu_farm_gather {};
 		class vehicleMenu_farm_plant {};
@@ -299,11 +309,9 @@ class Public
 	{
 		file = "core\Game\Health";
 		class bandageUse {};
-		class bloodBagUse {};
 		class bodyDrag {};
 		class bodyDrop {};
 		class coma {};
-		class epinephrineUse {};
 		class handleBleed {};
 		class handleBlood {};
 		class handleHunger {};
@@ -312,7 +320,6 @@ class Public
 		class killAction {};
 		class killProcess {};
 		class massageCardiaque {};
-		class medicalMenu {};
 		class morphineApply {};
 		class morphineUse {};
 	};
@@ -351,7 +358,6 @@ class Public
 	{
 		file = "core\Game\Drugs";
 		class drugConsume {};
-		class questionDealer {};
 		class saliveProcess {};
 		class saliveStart {};
 	};
@@ -460,27 +466,6 @@ class Public
 		class pickupMoney {};
 		class restrain {};
 		class surrender {};
-	};
-
-	class GETTERS
-	{
-		file = "configs\GameConfigs\GETTERS";
-		class getVehAssurancePrice {};
-		class getVehBuyPrice {};
-		class getVehGaragePrice {};
-		class getVehSellPrice {};
-		class getVehVirtual {};
-		class licenseGetName {};
-		class rankToStr {};
-		class sideToStr {};
-		class itemCount {};
-		class itemGetDrop {};
-		class itemGetImage {};
-		class itemGetName {};
-		class itemGetBuyPrice {};
-		class itemGetSellPrice {};
-		class itemGetWeight {};
-		class itemIsIllegal {};
 	};
 
 	class Welcome

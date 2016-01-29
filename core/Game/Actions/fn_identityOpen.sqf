@@ -18,9 +18,9 @@ switch (side _from) do
 
 		if ((_info select 0) isEqualTo "NORTH") then
 		{
-			15 cutRsc ["RscIdentityCIV_NORTH", "PLAIN"];
+			15 cutRsc ["RscTitleIdentityCIV_NORTH", "PLAIN"];
 
-			_hud = uiNameSpace getVariable ["RscIdentityCIV_NORTH", displayNull];
+			_hud = uiNameSpace getVariable ["RscTitleIdentityCIV_NORTH", displayNull];
 			if (isNull _hud) exitWith {};
 
 			(_hud displayCtrl 79001) ctrlSetStructuredText parseText format
@@ -42,9 +42,9 @@ switch (side _from) do
 				getText(missionConfigFile >> "ALYSIA_NATIONALITIES" >> (_info select 2) >> "name")
 			];
 		} else {
-			15 cutRsc ["RscIdentityCIV_SOUTH", "PLAIN"];
+			15 cutRsc ["RscTitleIdentityCIV_SOUTH", "PLAIN"];
 
-			_hud = uiNameSpace getVariable ["RscIdentityCIV_SOUTH", displayNull];
+			_hud = uiNameSpace getVariable ["RscTitleIdentityCIV_SOUTH", displayNull];
 			if (isNull _hud) exitWith {};
 
 			(_hud displayCtrl 79041) ctrlSetStructuredText parseText format
@@ -69,9 +69,9 @@ switch (side _from) do
 	};
 	case west:
 	{
-		15 cutRsc ["RscIdentityWEST", "PLAIN"];
+		15 cutRsc ["RscTitleIdentityWEST", "PLAIN"];
 
-		_hud = uiNameSpace getVariable ["RscIdentityWEST", displayNull];
+		_hud = uiNameSpace getVariable ["RscTitleIdentityWEST", displayNull];
 		if (isNull _hud) exitWith {};
 
 		(_hud displayCtrl 79021) ctrlSetStructuredText parseText format
@@ -88,9 +88,9 @@ switch (side _from) do
 	};
 	case east:
 	{
-		15 cutRsc ["RscIdentityEAST", "PLAIN"];
+		15 cutRsc ["RscTitleIdentityEAST", "PLAIN"];
 
-		_hud = uiNameSpace getVariable ["RscIdentityEAST", displayNull];
+		_hud = uiNameSpace getVariable ["RscTitleIdentityEAST", displayNull];
 		if (isNull _hud) exitWith {};
 
 		(_hud displayCtrl 79011) ctrlSetStructuredText parseText format
@@ -107,9 +107,9 @@ switch (side _from) do
 	};
 	case independent:
 	{
-		15 cutRsc ["RscIdentityGUER", "PLAIN"];
+		15 cutRsc ["RscTitleIdentityGUER", "PLAIN"];
 
-		_hud = uiNameSpace getVariable ["RscIdentityGUER", displayNull];
+		_hud = uiNameSpace getVariable ["RscTitleIdentityGUER", displayNull];
 		if (isNull _hud) exitWith {};
 
 		(_hud displayCtrl 79031) ctrlSetStructuredText parseText format

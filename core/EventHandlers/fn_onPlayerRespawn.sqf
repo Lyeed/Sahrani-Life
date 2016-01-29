@@ -1,3 +1,4 @@
+
 /*
 		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
 	Code written by Lyeed
@@ -10,6 +11,8 @@ if ((player getVariable ["tf_voiceVolume", 1]) isEqualTo 0) then {player setVari
 if ((player getVariable ["tf_globalVolume", 1]) isEqualTo 0) then {player setVariable ["tf_globalVolume", 1]};
 if (player getVariable ["surrender", false]) then {player setVariable ["surrender", false, true]};
 if (player getVariable ["restrained", false]) then {player setVariable ["restrained", false, true]};
+if (!(isNull (player getVariable ["escorting", objNull]))) then {player setVariable ["escorting", objNull, true]};
+if (!(isNull (player getVariable ["escorted", objNull]))) then {player setVariable ["escorted", objNull, true]};
 
 [4000] call public_fnc_handleBlood;
 
@@ -20,7 +23,7 @@ if (player getVariable ["arrested", false]) then {
 
 } else {
 
-	[] spawn public_fnc_loadout;
+	[] spawn public_fnc_init_loadout;
 
 	_price = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "respawn_price");
 	if (g_atm < _price) then {

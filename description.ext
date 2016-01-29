@@ -75,7 +75,6 @@ respawnTemplates[] = {"Counter"}; // Respawn templates from CfgRespawnTemplates.
 Revive = 0;
 //---------------------------------
 
-
 /********************************** 
 ********* Removal Manager *********
 ***********************************/
@@ -155,31 +154,27 @@ Group Info Bar
 */
 //---------------------------------
 
-
 /********************************** 
 ************** UI *****************
 ***********************************/
-#include "core\Dialogs\MasterHandler.h"
+#include "core\Rscs\MasterHandler.h"
 //---------------------------------
-
 
 /********************************** 
 ***** mission config classes ******
 ***********************************/
-#include "configs\Cfg_configs.hpp"
+#include "configs\Cfg_Configs.hpp"
 //---------------------------------
-
 
 /********************************** 
 ******** mission functions ********
 ***********************************/
-#include "configs\Cfg_functions.hpp"
+#include "configs\Cfg_Functions.hpp"
 #include "configs\Cfg_RemoteExec.hpp"
 //---------------------------------
-
 
 /********************************** 
 ************ Debriefing ***********
 ***********************************/
-#include "configs\Cfg_debriefing.hpp"
+#include "configs\Cfg_Debriefings.hpp"
 //---------------------------------
