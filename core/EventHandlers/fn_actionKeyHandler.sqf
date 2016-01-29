@@ -237,6 +237,12 @@ if ((vehicle player) isEqualTo player) then
 					[_target] call public_fnc_interactions_player_to_company;
 					true breakOut "main";
 				};
+
+				if (typeOf(_target) in ["Alsatian_Sand_F", "Alsatian_Black_F", "Alsatian_Sandblack_F"]) then
+				{
+					[_target] call public_fnc_interactions_player_to_dog;
+					true breakOut "main";
+				};
 			};
 		};
 		

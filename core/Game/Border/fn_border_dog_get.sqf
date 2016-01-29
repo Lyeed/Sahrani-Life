@@ -20,6 +20,7 @@ _plate = round(random(999999));
 if (isNil "_dog") exitWith {};
 
 g_dog = _dog;
+g_dog setSpeedMode "FULL";
 g_dog setVariable ["follow", true];
 
 [] spawn
@@ -28,7 +29,7 @@ g_dog setVariable ["follow", true];
 	{
 		if (g_dog getVariable ["follow", false]) then
 		{
-			if ((g_dog distance player) > 4) then
+			if ((g_dog distance player) > 3) then
 			{
 				g_dog domove (getPos player);
 			};

@@ -34,6 +34,7 @@ class Public
 		class border_south_sounds {};
 		class border_south_speaker_destroy {};
 		class border_south_speaker_repair {};
+		class border_dog_get {};
 	};
 
 	class VirtualInventory
@@ -426,6 +427,7 @@ class Public
 		class interactions_player_to_station {};
 		class interactions_player_to_company {};
 		class interactions_player_to_speaker {};
+		class interactions_player_to_dog {};
 	};
 
 	class Actions
