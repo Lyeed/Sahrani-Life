@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_handle", "_target"];
+private["_target", "_item"];
 _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 if (g_action_inUse) exitWith {
@@ -15,32 +15,22 @@ if (isNull _target) exitWith {
 	["Cible invalide"] call public_fnc_error;
 };
 
+_item = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "identity_item");
+if ((_item != "") && !(_item in (magazines player))) exitWith {
+	[format[
+		"Vous n'avez pas l'objet nécessaire pour prouver votre identité<br/><br/><t align='left'>Requis</t><t align='right'>%1</t>",
+		(([_item] call public_fnc_fetchCfgDetails) select 1)
+	]] call public_fnc_error;
+};
+
 g_action_inUse = true;
+
 player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
 
-if (!(isNull (_target getVariable ["escorted", objNull]))) then
-{
-	_target = _target getVariable ["escorted", objNull];
-	detach _target;
-	_target setVariable ["escorting", objNull, true];
-	_target setVariable ["escorted", objNull, true];
-	_handle = true;
-} else {
-	if (!(isNull (_target getVariable ["escorting", objNull]))) then
-	{
-		_target = _target getVariable ["escorting", objNull];
-		detach _target;
-		_target setVariable ["escorted", objNull, true];
-		_target setVariable ["escorting", objNull, true];
-		_handle = true;
-	} else {
-		_handle = false;
-	};
+if ((player distance _target) > 3) exitWith {
+	["Vous êtes trop loin"] call public_fnc_error;
 };
 
-if (!_handle) then {
-	["La cible n'est ni en train d'escorter quelqu'un ni en train d'être escortée"] call public_fnc_error;
-};
-
+[player, [g_choice, g_birth, g_nationality, g_sexe]] remoteExecCall ["public_fnc_identityOpen", _target];
 g_action_inUse = false;

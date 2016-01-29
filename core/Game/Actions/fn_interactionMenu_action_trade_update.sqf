@@ -13,7 +13,7 @@ if (isNull _display) exitWith {};
 
 ctrlSetText[10008, str(g_cash)];
 
-_ctrl_list_inventory = _display displayCtrl 10016;
+_ctrl_list_inventory = _display displayCtrl 10019;
 lbClear _ctrl_list_inventory;
 
 {
@@ -52,7 +52,7 @@ lbClear _ctrl_list_keys;
 	{
 		_index = _ctrl_list_keys lbAdd format["Clé (%1)", getText(configFile >> "CfgVehicles" >> (typeOf _x) >> "displayName")];
 		_ctrl_list_keys lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> (typeOf _x) >> "picture")];
-		_ctrl_list_keys lbSetData [_index, str(_forEachIndex)];
+		_ctrl_list_keys lbSetValue [_index, _forEachIndex];
 	};
 } forEach g_vehicles;
 if ((lbSize _ctrl_list_keys) isEqualTo 0) then

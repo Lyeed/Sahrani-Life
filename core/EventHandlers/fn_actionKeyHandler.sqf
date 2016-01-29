@@ -159,7 +159,7 @@ if ((vehicle player) isEqualTo player) then
 
 				if (typeOf(_target) in (call g_atms)) then
 				{
-					["home"] call public_fnc_atmScreen;
+					["home", cursorTarget] call public_fnc_atmScreen;
 					true breakOut "main";
 				};
 

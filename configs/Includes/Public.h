@@ -8,6 +8,8 @@ class Public
 		class init_loops {};
 		class init_data {};
 		class init_position {};
+		class init_actions {};
+		class init_buildings {};
 		class preInit {
 			preInit = 1;
 		};
@@ -16,7 +18,6 @@ class Public
 	class Configs
 	{
 		file = "configs";
-		class setupActions {};
 		class loadout {};
 	};
 
@@ -251,6 +252,7 @@ class Public
 		class vehicleMenu_farm_gather {};
 		class vehicleMenu_farm_plant {};
 		class vehicleMenu_farm_fish {};
+		class vehicleMenu_dog {};
 	};
 
 	class FuelStations
@@ -423,11 +425,12 @@ class Public
 	class Actions
 	{
 		file = "core\Game\Actions";
+		class identityOpen {};
 		class interactionMenu_action_restrain {};
 		class interactionMenu_action_unrestrain {};
 		class escort {};
 		class stopescort {};
-		class interactionMenu_action_identity {};
+		class showIdentity {};
 		class interactionMenu_action_lockpick {};
 		class interactionMenu_action_trade_open {};
 		class interactionMenu_action_trade_update {};

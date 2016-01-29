@@ -6,7 +6,6 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-
 /* DEV */
 g_dev = false;
 

@@ -34,4 +34,5 @@ class RscTitles
 	#include "Hud\HUD_progressBar.hpp"
 	#include "Hud\HUD_itemVirtual.hpp"
 	#include "Hud\HUD_message.hpp"
+	#include "Hud\HUD_identities.hpp"
 };

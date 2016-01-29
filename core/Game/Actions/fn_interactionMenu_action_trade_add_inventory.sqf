@@ -10,17 +10,17 @@ _type = [_this, 0, false, [false]] call BIS_fnc_param;
 
 if (g_interaction_trade_active) exitWith {};
 
-_sel = lbCurSel 10016;
+_sel = lbCurSel 10019;
 if (_sel isEqualTo -1) exitWith {};
 
 g_interaction_trade_active = true;
 if (_type) then {
-	_amount = lbValue[10016, _sel];
+	_amount = lbValue[10019, _sel];
 } else {
 	_amount = 1;
 };
 
-_item = lbData[10016, _sel];
+_item = lbData[10019, _sel];
 if ([false, _item, _amount] call public_fnc_handleInv) then
 {
 	_index = [_item, g_interaction_trade_inventory] call public_fnc_index;

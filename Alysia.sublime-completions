@@ -321,7 +321,7 @@
         "public_fnc_interactionMenu_action_unrestrain",
         "public_fnc_escort",
         "public_fnc_stopescort",
-        "public_fnc_interactionMenu_action_identity",
+        "public_fnc_showIdentity",
         "public_fnc_interactionMenu_action_lockpick",
         "public_fnc_interactionMenu_action_trade_open",
         "public_fnc_interactionMenu_action_trade_update",

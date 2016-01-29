@@ -101,6 +101,8 @@ class CfgRemoteExec
 		//- staff
 		class public_fnc_APP_staff_players_returnData {allowTargets = CLIENT;};
 		class public_fnc_APP_staff_players_getData {allowTargets = CLIENT;};
+		//- Identity
+		class public_fnc_identityOpen {allowTargets = CLIENT;};
 
 		//- Arma
 		class setFuel {allowTargets = EVERYONE;};

@@ -67,7 +67,7 @@ if (_action) then
 	g_firstName = _firstname;
 	g_lastName = _lastName;
 	g_birth = _birth;
-	g_nationality = _origin;
+	g_nationality = lbData[1504, (lbCurSel 1504)];
 	g_sexe = _sexe;
 	closeDialog 0;
 };

@@ -18,6 +18,8 @@ with missionNamespace do
 	g_speaking = false;
 	g_seatbelt = false;
 	g_garage_store = false;
+	/* ===================[dog]======================= */
+	g_dog = objNull;
 	/* ===================[roleplay info]======================= */
 	g_choice = "";
 	g_firstName = "";

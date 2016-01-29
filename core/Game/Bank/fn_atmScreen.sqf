@@ -7,7 +7,7 @@
 */
 private["_action", "_target", "_display", "_title", "_balance", "_btnL1", "_btnL2", "_btnL3", "_btnL4", "_btnR1", "_btnR2", "_btnR3", "_btnR4", "_txtL1", "_txtL2", "_txtL3", "_txtL4", "_txtR1", "_txtR2", "_txtR3", "_txtR4", "_edit"];
 _action = [_this, 0, "", [""]] call BIS_fnc_param;
-_target = [this, 1, objNull, [objNull]] call BIS_fnc_param;
+_target = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
 
 if (isNull _target) exitWith {};
 

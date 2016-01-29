@@ -63,7 +63,7 @@ if (hasInterface) then
 	diag_log "<INIT> Création des objets ...";
 	cutText ["Création des objets", "BLACK FADED"];
 	0 cutFadeOut 9999999;
-	[] call compile PreprocessFileLineNumbers "configs\buildings.sqf";
+	[] call public_fnc_init_buildings;
 	diag_log "<INIT> Objets crées";
 
 	diag_log "<INIT> Validation de l'extension TaskForceRadio...";
@@ -93,7 +93,7 @@ if (hasInterface) then
 	diag_log "<INIT> Ajouts des actions au joueur ...";
 	cutText ["Ajouts des actions au joueur", "BLACK FADED"];
 	0 cutFadeOut 9999999;
-	[] call public_fnc_setupActions;
+	[] call public_fnc_init_actions;
 	diag_log "<INIT> Actions ajoutés";
 
 	diag_log "<INIT> Récupération des données de personnage ...";

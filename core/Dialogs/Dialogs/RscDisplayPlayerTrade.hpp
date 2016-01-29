@@ -10,7 +10,7 @@ class RscDisplayPlayerTrade: default_interaction_back_dialog
 			x = 0.262812 * safezoneW + safezoneX;
 			y = 0.269 * safezoneH + safezoneY;
 			w = 0.474375 * safezoneW;
-			h = 0.539 * safezoneH;
+			h = 0.550 * safezoneH;
 		};
 		class FRAME: FRAME
 		{
@@ -112,7 +112,7 @@ class RscDisplayPlayerTrade: default_interaction_back_dialog
 		};
 		class PLAYER_INVENTORY_LIST: RscListbox
 		{
-			idc = 10016;
+			idc = 10019;
 
 			x = 0.283437 * safezoneW + safezoneX;
 			y = 0.357 * safezoneH + safezoneY;
@@ -277,7 +277,7 @@ class RscDisplayPlayerTrade: default_interaction_back_dialog
 			
 			x = 0.510312 * safezoneW + safezoneX;
 			y = 0.302 * safezoneH + safezoneY;
-			w = 0.211406 * safezoneW;
+			w = 0.216563 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 
