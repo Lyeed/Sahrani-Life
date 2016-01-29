@@ -20,7 +20,7 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
-[g_dog, "whistle", 30] call CBA_fnc_globalSay3d;
+[player, "whistle", 30] call CBA_fnc_globalSay3d;
 g_dog setVariable ["follow", false];
 g_dog setVariable ["search", g_interaction_target];
 

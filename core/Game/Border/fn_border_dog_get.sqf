@@ -12,7 +12,7 @@ _plate = round(random(999999));
 (["Alsatian_Sand_F", "Alsatian_Black_F", "Alsatian_Sandblack_F"] call BIS_fnc_selectRandom) createUnit [(position player), (group player), format["this setVariable ['plate', %1];", _plate], 0.5, "PRIVATE"];
 
 {
-	if ((_x getVariable ['plate', 0]) isEqualTo _plate) exitWith {
+	if ((_x getVariable ["plate", 0]) isEqualTo _plate) exitWith {
 		_dog = _x;
 	};
 } forEach (units (group player));

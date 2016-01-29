@@ -285,7 +285,7 @@ class RscIdentityCIV_SOUTH
 			idc = 79041;
 
 			x = 0.262812 * safezoneW + safezoneX;
-			y = 0.346 * safezoneH + safezoneY;
+			y = 0.357 * safezoneH + safezoneY;
 			w = 0.134062 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
