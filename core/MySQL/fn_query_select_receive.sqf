@@ -125,5 +125,14 @@ g_vehicles = [_this, 2, [], [[]]] call BIS_fnc_param;
 
 g_company = [_this, 4, objNull, [objNull]] call BIS_fnc_param;
 
+g_laboratory = [_this, 5, objNull, [objNull]] call BIS_fnc_param;
+if (!(isNull g_laboratory)) then
+{
+	_marker = createMarkerLocal ["laboratory", (getPosATL g_laboratory)];
+	_marker setMarkerTextLocal "Laboratoire";
+	_marker setMarkerColorLocal "ColorRed";
+	_marker setMarkerTypeLocal "loc_Bunker";
+};
+
 g_session_query = _basic;
 true;

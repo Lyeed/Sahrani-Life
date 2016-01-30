@@ -1666,4 +1666,97 @@ class ALYSIA_ITEMS
 		removable   = 1;
 		image       = "";
 	};
+	class destroy_labo
+	{
+		name        = "Kit (Laboratoire)";
+		weight      = 6;
+		illegal     = 1;
+		removable   = 1;
+		image       = "";
+	};
+
+	class lab_marijuana
+	{
+		name = "Laboratoire de marijuana";
+		price_buy = 10000;
+		price_sell = 0;
+		weight = 15;
+		illegal = 1;
+		removable = 1;
+		image = "";
+		class use
+		{
+			action = "['lab_marijuana'] spawn public_fnc_labo_deploy;";
+		};
+	};
+	class lab_meth
+	{
+		name = "Laboratoire de methamphetamine";
+		price_buy = 10000;
+		price_sell = 0;
+		weight = 40;
+		illegal = 1;
+		removable = 1;
+		image = "";
+		class use
+		{
+			action = "['lab_meth'] spawn public_fnc_labo_deploy;";
+		};
+	};
+	class lab_cocaine
+	{
+		name = "Laboratoire de cocaïne";
+		price_buy = 10000;
+		price_sell = 0;
+		weight = 30;
+		illegal = 1;
+		removable = 1;
+		image = "";
+		class use
+		{
+			action = "['lab_cocaine'] spawn public_fnc_labo_deploy;";
+		};
+	};
+	class lab_heroin
+	{
+		name = "Laboratoire d'héroïne'";
+		price_buy = 10000;
+		price_sell = 0;
+		weight = 30;
+		illegal = 1;
+		removable = 1;
+		image = "";
+		class use
+		{
+			action = "['lab_heroin'] spawn public_fnc_labo_deploy;";
+		};
+	};
+	class lab_weapon
+	{
+		name = "Usine d'armes illégales";
+		price_buy = 10000;
+		price_sell = 0;
+		weight = 40;
+		illegal = 1;
+		removable = 1;
+		image = "";
+		class use
+		{
+			action = "['lab_weapon'] spawn public_fnc_labo_deploy;";
+		};
+	};
+	class lab_clothing
+	{
+		name = "Usine de vêtements illégaux";
+		price_buy = 10000;
+		price_sell = 0;
+		weight = 35;
+		illegal = 1;
+		removable = 1;
+		image = "";
+		class use
+		{
+			action = "['lab_clothing'] spawn public_fnc_labo_deploy;";
+		};
+	};
 };

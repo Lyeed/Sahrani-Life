@@ -64,7 +64,7 @@ class ALYSIA_COMPANIES
 		class farming_bio
 		{
 			name = "Ferme bio";
-			building = "Land_d_Windmill01_F";
+			building = "Land_i_Windmill01_F";
 			license = "company_farming_bio";
 			image = "lyeed_IMG\data\companies\types\farming_bio.paa";
 			class construction

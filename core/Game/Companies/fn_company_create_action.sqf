@@ -38,8 +38,6 @@ if (!(isNull g_objPut)) exitWith {
 	["Vous deployez déjà un élèment"] call public_fnc_error;
 };
 
-g_action_inUse = true;
-
 _object = getText(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> _type >> "building") createVehicle [0, 0, 0];
 _object attachTo [player, [0, 10, 1]];
 g_objPut = _object;
@@ -57,7 +55,6 @@ _action_2 = player addAction["<t color='#ff8c8c'>Annuler</t> la pose",
 waitUntil {((isNull _object) || (isNull (attachedTo _object)))};
 
 g_objPut = objNull;
-g_action_inUse = false;
 
 player removeAction _action_1;
 player removeAction _action_2;

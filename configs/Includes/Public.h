@@ -159,16 +159,12 @@ class Public
 		class patch {};
 	};
 
-	class LastingObjects
+	class Laboratories
 	{
-		file = "core\Game\LastingObjects";
-		class lastingObjectsCreate {};
-		class lastingObjectsDestroy {};
-		class lastingObjectsDestroyOwner {};
-		class lastingObjectsInspect {};
-		class lastingObjectsMenuOpen {};
-		class lastingObjectsProcessInspect {};
-		class lastingObjectsSabotage {};
+		file = "core\Game\Laboratories";
+		class labo_deploy {};
+		class labo_destroy {};
+		class labo_process {};
 	};
 
 	class Shops
@@ -428,6 +424,7 @@ class Public
 		class interactions_player_to_company {};
 		class interactions_player_to_speaker {};
 		class interactions_player_to_dog {};
+		class interactions_player_to_laboratory {};
 	};
 
 	class Actions

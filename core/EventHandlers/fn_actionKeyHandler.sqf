@@ -238,6 +238,12 @@ if ((vehicle player) isEqualTo player) then
 					true breakOut "main";
 				};
 
+				if (count(_target getVariable ["laboratory_info", []]) > 0) then
+				{
+					[_target] call public_fnc_interactions_player_to_laboratory;
+					true breakOut "main";
+				};
+
 				if (typeOf(_target) in ["Alsatian_Sand_F", "Alsatian_Black_F", "Alsatian_Sandblack_F"]) then
 				{
 					[_target] call public_fnc_interactions_player_to_dog;

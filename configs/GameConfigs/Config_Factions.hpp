@@ -9,6 +9,9 @@ class ALYSIA_FACTIONS
 		launder = 0;
 		faction_bank_handle_rank = 9;
 
+		/*** LABORATORIES ***/
+		laboratory_destroy = 1;
+
 		/*** SALARY ***/
 		salary = 750;
 		salary_tax = 0.05;
@@ -199,6 +202,9 @@ class ALYSIA_FACTIONS
 		salary_apply_rank = 1;
 		salary_timer = 15;
 
+		/*** LABORATORIES ***/
+		laboratory_destroy = 1;
+
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
 		phone_send_global_message = 1;
@@ -358,6 +364,9 @@ class ALYSIA_FACTIONS
 		salary_tax = 0.05;
 		salary_apply_rank = 0;
 		salary_timer = 15;
+
+		/*** LABORATORIES ***/
+		laboratory_destroy = 0;
 
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
@@ -525,6 +534,9 @@ class ALYSIA_FACTIONS
 		salary_tax = 0.05;
 		salary_apply_rank = 1;
 		salary_timer = 15;
+
+		/*** LABORATORIES ***/
+		laboratory_destroy = 0;
 
 		/*** PHONE ***/
 		phone_change_number_price = 1000;

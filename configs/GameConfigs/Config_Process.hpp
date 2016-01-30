@@ -212,7 +212,7 @@ class ALYSIA_PROCESS
 			class CIV
 			{
 				rank = 0;
-				licenses[] = {"marijuana"};
+				licenses[] = {};
 			};
 		};
 	};

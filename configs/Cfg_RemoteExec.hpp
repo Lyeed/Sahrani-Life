@@ -62,6 +62,8 @@ class CfgRemoteExec
 		class TON_fnc_border_alarm_south {allowTargets = SERVER;};
 		//- Tablet : announces
 		class TON_fnc_announces_add {allowTargets = SERVER;};
+		//- Laboratories
+		class TON_fnc_laboratory_insert {allowTargets = SERVER;};
 		
 		/*
 		**		CLIENT FUNCTIONS

@@ -111,7 +111,7 @@ with missionNamespace do
 
 	{
 		missionNamespace setVariable[format["inv_%1", _x], 0];
-	} forEach (g_inv_items);
+	} forEach g_inv_items;
 	/* =================[Sheeps]====================*/
 	g_sheeps = [];
 
