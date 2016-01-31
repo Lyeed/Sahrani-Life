@@ -24,10 +24,11 @@ if ((player getVariable["restrained", false]) || (player getVariable["surrender"
 if ((vehicle player) != player) exitWith {
 	["Vous devez être à pied pour traiter"] call public_fnc_error;
 };
-if ((getNumber(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "requiere_target") isEqualTo 1) && (isNull g_interaction_target)) exitWith {
+
+if ((isClass(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "target")) && (isNull g_interaction_target)) exitWith {
 	["Le traitement à besoin d'émaner d'une entité"] call public_fnc_error;
 };
-if ((getNumber(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "requiere_target") isEqualTo 1) && ((player distance g_interaction_target) > 5)) exitWith {
+if ((isClass(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "target")) && ((player distance g_interaction_target) > 5)) exitWith {
 	["Le traitement à besoin d'émaner d'une entité"] call public_fnc_error;
 };
 

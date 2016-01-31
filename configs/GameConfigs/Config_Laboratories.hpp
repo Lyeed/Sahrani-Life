@@ -27,7 +27,7 @@ class ALYSIA_LABORATORIES
 	class lab_weapon
 	{
 		object = "Land_Workbench_01_F";
-		process[] = {};
+		process[] = {"weapon_thompson", "magazine_thompson", "weapon_cz", "magazine_cz", "weapon_sawed", "magazine_sawed", "magazine_tec", "weapon_tec", "magazine_tracker", "weapon_tracker", "weapon_tracker_gold"};
 	};
 
 	class lab_clothing

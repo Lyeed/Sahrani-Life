@@ -5,7 +5,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Scierie";
 		sound = "smelting";
-		requiere_target = 1;
 		require[] =
 		{
 			{"wood", 1}
@@ -18,6 +17,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 2;
 		time_default = 4;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -32,7 +32,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Menuiserie";
 		sound = "smelting";
-		requiere_target = 1;
 		require[] =
 		{
 			{"woodp", 5}
@@ -45,6 +44,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 2;
 		time_default = 4;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -59,7 +59,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Fonte du verre";
 		sound = "salt_process";
-		requiere_target = 1;
 		require[] =
 		{
 			{"sand", 1}
@@ -72,6 +71,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 1;
 		time_default = 3;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -86,7 +86,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Fonte du verre en seringues";
 		sound = "smelting";
-		requiere_target = 1;
 		require[] =
 		{
 			{"glass", 1}
@@ -99,6 +98,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 3;
 		time_default = 5;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -113,7 +113,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Fonte du fer";
 		sound = "smelting";
-		requiere_target = 1;
 		require[] =
 		{
 			{"iron", 1}
@@ -126,6 +125,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 2;
 		time_default = 4;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -140,7 +140,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Fonte du platine";
 		sound = "smelting";
-		requiere_target = 1;
 		require[] =
 		{
 			{"platine", 1}
@@ -153,6 +152,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 2;
 		time_default = 4;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -167,7 +167,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Enrichissement du platine";
 		sound = "smelting";
-		requiere_target = 1;
 		require[] =
 		{
 			{"platinep", 1}, {"soufre", 1}
@@ -180,6 +179,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 3;
 		time_default = 5;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -194,7 +194,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Traitement du cannabis";
 		sound = "smelting";
-		requiere_target = 1;
 		require[] =
 		{
 			{"cannabis", 1}
@@ -207,6 +206,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 3;
 		time_default = 5;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -221,7 +221,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Traitement de l'héroine";
 		sound = "drug_process";
-		requiere_target = 1;
 		require[] =
 		{
 			{"heroin", 1}
@@ -234,6 +233,10 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 4;
 		time_default = 8;
+		class target
+		{
+			smoke_type = "SmokeShellYellow";
+		};
 		class factions
 		{
 			class CIV
@@ -248,7 +251,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Traitement des seringues d'héroine";
 		sound = "drug_process";
-		requiere_target = 1;
 		require[] =
 		{
 			{"heroinp", 1}, {"seringue", 1}
@@ -261,6 +263,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 2;
 		time_default = 4;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -275,7 +278,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Traitement de la cocaine";
 		sound = "cooking";
-		requiere_target = 1;
 		require[] =
 		{
 			{"cocaine", 1}
@@ -288,6 +290,10 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 4;
 		time_default = 5;
+		class target
+		{
+			smoke_type = "SmokeShellGreen";
+		};
 		class factions
 		{
 			class CIV
@@ -302,7 +308,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Coupe de la cocaine";
 		sound = "cooking";
-		requiere_target = 1;
 		require[] =
 		{
 			{"cocainep", 1}, {"glass", 1}
@@ -315,6 +320,10 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 2;
 		time_default = 3;
+		class target
+		{
+			smoke_type = "SmokeShellGreen";
+		};
 		class factions
 		{
 			class CIV
@@ -329,7 +338,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Traitement de la meth";
 		sound = "cooking";
-		requiere_target = 1;
 		require[] =
 		{
 			{"meth", 1},{"hsoufre", 1}
@@ -342,6 +350,10 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 5;
 		time_default = 10;
+		class target
+		{
+			smoke_type = "SmokeShellBlue";
+		};
 		class factions
 		{
 			class CIV
@@ -356,7 +368,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Hydratation du soufre";
 		sound = "drug_process";
-		requiere_target = 0;
 		require[] =
 		{
 			{"soufre", 1},{"water", 1}
@@ -383,7 +394,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Rénovation";
 		sound = "cooking";
-		requiere_target = 1;
 		require[] =
 		{
 			{"frag_1", 1}, {"frag_2", 1}, {"frag_3", 1}, {"frag_4", 1}, {"frag_5", 1}, {"frag_6", 1}, {"frag_7", 1}, {"frag_8", 1}
@@ -396,6 +406,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 3;
 		time_default = 5;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -410,7 +421,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Tubage de cigarettes";
 		sound = "smelting";
-		requiere_target = 1;
 		require[] =
 		{
 			{"tabac", 1}
@@ -423,6 +433,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 4;
 		time_default = 6;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -437,7 +448,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Traitement du cuivre";
 		sound = "smelting";
-		requiere_target = 1;
 		require[] =
 		{
 			{"copper", 1}
@@ -450,6 +460,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 4;
 		time_default = 6;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -464,7 +475,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Traitement du cotton";
 		sound = "smelting";
-		requiere_target = 1;
 		require[] =
 		{
 			{"cotton", 1}
@@ -477,6 +487,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 4;
 		time_default = 6;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -491,7 +502,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Fonte de l'or";
 		sound = "salt_process";
-		requiere_target = 1;
 		require[] =
 		{
 			{"goldnuggets", 40}
@@ -504,6 +514,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 1;
 		time_default = 3;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -518,7 +529,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Traitement du sel";
 		sound = "salt_process";
-		requiere_target = 1;
 		require[] =
 		{
 			{"salt", 1}
@@ -531,6 +541,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 1;
 		time_default = 3;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -545,7 +556,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Traitement de l'argile";
 		sound = "salt_process";
-		requiere_target = 1;
 		require[] =
 		{
 			{"clay", 2}
@@ -558,6 +568,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 1;
 		time_default = 3;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -572,7 +583,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Traitement du bauxite";
 		sound = "salt_process";
-		requiere_target = 1;
 		require[] =
 		{
 			{"baux", 1}
@@ -585,6 +595,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 1;
 		time_default = 3;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -599,7 +610,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Distillerie Grozdova";
 		sound = "smelting";
-		requiere_target = 1;
 		require[] =
 		{
 			{"raisin", 2}, {"bouteillevide", 1}
@@ -612,6 +622,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 3;
 		time_default = 5;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -626,7 +637,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Distillerie Slivovica";
 		sound = "smelting";
-		requiere_target = 1;
 		require[] =
 		{
 			{"Prune", 2}, {"bouteillevide", 1}
@@ -639,6 +649,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 3;
 		time_default = 5;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -653,7 +664,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Traitement de la pierre";
 		sound = "salt_process";
-		requiere_target = 1;
 		require[] =
 		{
 			{"pierre", 1}
@@ -666,6 +676,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 5;
 		time_default = 8;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -680,7 +691,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Traitement du pétrole";
 		sound = "drug_process";
-		requiere_target = 1;
 		require[] =
 		{
 			{"oilu", 1}
@@ -693,6 +703,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 12;
 		time_default = 8;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -707,7 +718,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Fonte du verre en Bouteille";
 		sound = "smelting";
-		requiere_target = 1;
 		require[] =
 		{
 			{"glass", 1}
@@ -720,6 +730,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 3;
 		time_default = 5;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -734,7 +745,6 @@ class ALYSIA_PROCESS
 	{
 		name = "Reconstitution d'artefact";
 		sound = "salt_process";
-		requiere_target = 1;
 		require[] =
 		{
 			{"frag_1", 1}, {"frag_2", 1}, {"frag_3", 1}, {"frag_4", 1}, {"frag_5", 1}, {"frag_6", 1}, {"frag_7", 1}, {"frag_8", 1}
@@ -747,6 +757,7 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 1;
 		time_default = 3;
+		class target {};
 		class factions
 		{
 			class CIV
@@ -755,5 +766,196 @@ class ALYSIA_PROCESS
 				licenses[] = {};
 			};
 		};
+	};
+
+	class weapon_thompson
+	{
+		name = "Arme : Thompson";
+		sound = "smelting";
+		require[] =
+		{
+			{"woodp", 2}
+		};
+		receive[] =
+		{
+			{},
+			{"wc_us_smg_m1a1"},
+			0
+		};
+		time_per_item = 10;
+		time_default = 7;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+	class magazine_thompson: weapon_thompson
+	{
+		name = "Munitions : Thompson";
+		require[] =
+		{
+			{"ironp", 2}
+		};
+		receive[] =
+		{
+			{},
+			{"wc_30Rnd_45acp"},
+			0
+		};
+		time_per_item = 5;
+		time_default = 3;
+	};
+
+	class weapon_cz: weapon_thompson
+	{
+		name = "Arme : CZ";
+		require[] =
+		{
+			{"ironp", 2}
+		};
+		receive[] =
+		{
+			{},
+			{"Trixie_CZ550_Mag"},
+			0
+		};
+		time_per_item = 7;
+		time_default = 5;
+	};
+	class magazine_cz: weapon_thompson
+	{
+		name = "Munitions : CZ";
+		require[] =
+		{
+			{"ironp", 2}
+		};
+		receive[] =
+		{
+			{},
+			{"Trixie_CZ550"},
+			0
+		};
+		time_per_item = 5;
+		time_default = 3;
+	};
+
+	class weapon_sawed: weapon_thompson
+	{
+		name = "Arme : Canons scié";
+		require[] =
+		{
+			{"ironp", 2}
+		};
+		receive[] =
+		{
+			{},
+			{"Sawed_Off_Shotgun"},
+			0
+		};
+		time_per_item = 11;
+		time_default = 4;
+	};
+	class magazine_sawed: weapon_thompson
+	{
+		name = "Munitions : Canons scié";
+		require[] =
+		{
+			{"ironp", 2}
+		};
+		receive[] =
+		{
+			{},
+			{"2Rnd_Sawed_Off_Shotgun_Pellets"},
+			0
+		};
+		time_per_item = 4;
+		time_default = 2;
+	};
+
+	class magazine_tec: weapon_thompson
+	{
+		name = "Munitions : Tec9";
+		require[] =
+		{
+			{"ironp", 2}
+		};
+		receive[] =
+		{
+			{},
+			{"RH_32Rnd_9x19_tec"},
+			0
+		};
+		time_per_item = 4;
+		time_default = 3;
+	};
+	class weapon_tec: weapon_thompson
+	{
+		name = "Arme : Tec9";
+		require[] =
+		{
+			{"ironp", 2}
+		};
+		receive[] =
+		{
+			{},
+			{"RH_tec9"},
+			0
+		};
+		time_per_item = 10;
+		time_default = 5;
+	};
+
+	class magazine_tracker: weapon_thompson
+	{
+		name = "Munitions : Tracker";
+		require[] =
+		{
+			{"ironp", 2}
+		};
+		receive[] =
+		{
+			{},
+			{"RH_6Rnd_45ACP_Mag"},
+			0
+		};
+		time_per_item = 7;
+		time_default = 5;
+	};
+	class weapon_tracker: weapon_thompson
+	{
+		name = "Arme : Tracker";
+		require[] =
+		{
+			{"ironp", 2}
+		};
+		receive[] =
+		{
+			{},
+			{"RH_ttracker"},
+			0
+		};
+		time_per_item = 7;
+		time_default = 5;
+	};
+	class weapon_tracker_gold: weapon_thompson
+	{
+		name = "Arme : Tracker or";
+		require[] =
+		{
+			{"ironp", 2}
+		};
+		receive[] =
+		{
+			{},
+			{"RH_ttracker_g"},
+			0
+		};
+		time_per_item = 7;
+		time_default = 5;
 	};
 };

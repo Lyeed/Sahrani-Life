@@ -131,4 +131,14 @@ with missionNamespace do
 	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_ATM"));
 
 	g_atms = compileFinal str(g_atms);
+	/* =================[LABO]====================*/
+	g_laboratories = [];
+
+	{
+		if (!(getText(_x >> "object") in g_laboratories)) then {
+			g_laboratories pushBack getText(_x >> "object");
+		};
+	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_LABORATORIES"));
+
+	g_laboratories = compileFinal str(g_laboratories);
 };

@@ -64,6 +64,7 @@ class CfgRemoteExec
 		class TON_fnc_announces_add {allowTargets = SERVER;};
 		//- Laboratories
 		class TON_fnc_laboratory_insert {allowTargets = SERVER;};
+		class TON_fnc_laboratory_destroy {allowTargets = SERVER;};
 		
 		/*
 		**		CLIENT FUNCTIONS

@@ -165,6 +165,7 @@ class Public
 		class labo_deploy {};
 		class labo_destroy {};
 		class labo_process {};
+		class labo_update {};
 	};
 
 	class Shops
@@ -321,6 +322,16 @@ class Public
 		class morphineUse {};
 	};
 
+	class Process
+	{
+		file = "core\Game\Process";
+		class process_action {};
+		class process_open {};
+		class process_update {};
+		class process_choice_open {};
+		class process_choice_action {};
+	};
+
 	class Gather
 	{
 		file = "core\Game\Gather";
@@ -329,9 +340,6 @@ class Public
 		class plantHarvest {};
 		class plantSeed {};
 		class plantGrow {};
-		class process_action {};
-		class process_open {};
-		class process_update {};
 		class sheepStart {};
 		class sheepProcess {};
 	};

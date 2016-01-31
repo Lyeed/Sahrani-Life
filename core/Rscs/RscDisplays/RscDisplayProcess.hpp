@@ -229,8 +229,8 @@ class RscDisplayProcess: RscDisplayDefaultInteraction
 		{
 			idc = 53012;
 			action = "closedialog 0; [g_interaction_process_type,parseNumber(ctrlText 53006),g_interaction_target] spawn public_fnc_process_action;";
-			onMouseEnter = "			ctrlSetText[53011,""lyeed_IMG\data\process\action_process_select.paa""];			ctrlShow[53008, false];			((findDisplay 53000) displayCtrl 53009) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 53000) displayCtrl 53010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Traiter</t>"";";
-			onMouseExit = "			ctrlSetText[53011,""lyeed_IMG\data\process\action_process.paa""];			ctrlShow[53008, true];			((findDisplay 53000) displayCtrl 53009) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 53000) displayCtrl 53010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Traiter</t>"";";
+			onMouseEnter = "ctrlSetText[53011,""lyeed_IMG\data\process\action_process_select.paa""];ctrlShow[53008, false];((findDisplay 53000) displayCtrl 53009) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 53000) displayCtrl 53010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Traiter</t>"";";
+			onMouseExit = "ctrlSetText[53011,""lyeed_IMG\data\process\action_process.paa""];ctrlShow[53008, true];((findDisplay 53000) displayCtrl 53009) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 53000) displayCtrl 53010) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Traiter</t>"";";
 
 			x = 0.561875 * safezoneW + safezoneX;
 			y = 0.346 * safezoneH + safezoneY;
@@ -257,6 +257,114 @@ class RscDisplayProcess: RscDisplayDefaultInteraction
 			y = 0.357 * safezoneH + safezoneY;
 			w = 0.2475 * safezoneW;
 			h = 0.264 * safezoneH;
+		};
+	};
+};
+
+class RscDisplayProcessMultiple: RscDisplayDefaultInteraction
+{
+	idd = 53100;
+	name = "RscDisplayProcessMultiple";
+	
+	class controlsBackground: DEFAULT_controlsBackground
+	{
+		class BACKGROUND: BACKGROUND
+		{
+			text = "lyeed_IMG\data\process\background.jpg";
+		};
+		class FRAME: FRAME {};
+	};
+
+	class controls: DEFAULT_controls
+	{
+		class TITLE: TITLE
+		{
+			text = "<t size='1.5' align='center'>Choix du traitement</t>";
+		};
+
+		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME {};
+		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND {};
+		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE {};
+		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON {};
+
+		class STOCK_FRAME: RscFrame
+		{
+			x = 0.438125 * safezoneW + safezoneX;
+			y = 0.401 * safezoneH + safezoneY;
+			w = 0.128906 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+		class STOCK_HEADER: RscStructuredText
+		{
+			text = "<t align='center'>Disponible</t>";
+			colorBackground[] = {0,0,0,0.8};
+			
+			x = 0.438125 * safezoneW + safezoneX;
+			y = 0.401 * safezoneH + safezoneY;
+			w = 0.128906 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class STOCK_LIST: RscCombo
+		{
+			idc = 53101;
+			colorBackground[] = {0,0,0,1};
+			
+			x = 0.438125 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.128906 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+
+		class ACTION_BACKGROUND: RscText
+		{
+			idc = 53102;
+			colorBackground[] = {0,0,0,0.6};
+			
+			x = 0.463906 * safezoneW + safezoneX;
+			y = 0.577 * safezoneH + safezoneY;
+			w = 0.0825 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+		class ACTION_FRAME: RscFrame
+		{
+			idc = 53103;
+			
+			x = 0.463906 * safezoneW + safezoneX;
+			y = 0.577 * safezoneH + safezoneY;
+			w = 0.0825 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+		class ACTION_TEXT: RscStructuredText
+		{
+			idc = 53104;
+			text = "<t align='left' size='1.3' color='#FFFFFF'>Accéder</t>";
+			
+			x = 0.489687 * safezoneW + safezoneX;
+			y = 0.588 * safezoneH + safezoneY;
+			w = 0.0567187 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+		class ACTION_IMAGE: RscPicture
+		{
+			idc = 53105;
+			text = "lyeed_IMG\data\process\action_process.paa";
+			
+			x = 0.4665 * safezoneW + safezoneX;
+			y = 0.583465 * safezoneH + safezoneY;
+			w = 0.02625 * safezoneW;
+			h = 0.0429629 * safezoneH;
+		};
+		class ACTION_BUTTON: RscButtonSilent
+		{
+			idc = 53106;
+			action = "[] call public_fnc_process_choice_action;";
+			onMouseEnter = "ctrlSetText[53105,""lyeed_IMG\data\process\action_process_select.paa""];ctrlShow[53103, false];((findDisplay 53100) displayCtrl 53102) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 53100) displayCtrl 53104) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Accéder</t>"";";
+			onMouseExit = "ctrlSetText[53105,""lyeed_IMG\data\process\action_process.paa""];if (ctrlVisible 53105) then {ctrlShow[53103, true];};((findDisplay 53100) displayCtrl 53102) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 53100) displayCtrl 53104) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Accéder</t>"";";
+
+			x = 0.463906 * safezoneW + safezoneX;
+			y = 0.577 * safezoneH + safezoneY;
+			w = 0.0825 * safezoneW;
+			h = 0.055 * safezoneH;
 		};
 	};
 };

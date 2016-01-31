@@ -26,12 +26,12 @@ _object = getText(missionConfigFile >> "ALYSIA_LABORATORIES" >> _item >> "object
 _object attachTo [player, [0, 2, 1]];
 g_objPut = _object;
 
-_action_1 = player addAction[format["Placer <t color='#FFFF33'>%1</t>", [_item] call public_fnc_itemGetName],
+_action_1 = player addAction [format["Placer <t color='#FFFF33'>%1</t>", [_item] call public_fnc_itemGetName],
 {
 	detach g_objPut;
 }, "", 9999992, true, true, "",'!isNull g_objPut'];
 
-_action_2 = player addAction["<t color='#ff8c8c'>Annuler</t> la pose", 
+_action_2 = player addAction ["<t color='#ff8c8c'>Annuler</t> la pose", 
 {
 	deleteVehicle g_objPut;
 }, "", 9999991, true, true, "",'!isNull g_objPut'];
@@ -44,17 +44,20 @@ player removeAction _action_1;
 player removeAction _action_2;
 
 if (isNull _object) exitWith {};
-if (!([false, _item, 1] call public_fnc_handleInv)) exitWith {
+
+if ([false, _item, 1] call public_fnc_handleInv) then
+{
+	g_laboratory = _object;
+
+	_object setPos [((getPos _object) select 0), ((getPos _object) select 1), 0];
+
+	_marker = createMarkerLocal ["laboratory", (getPosATL _object)];
+	_marker setMarkerTextLocal "Laboratoire";
+	_marker setMarkerColorLocal "ColorRed";
+	_marker setMarkerTypeLocal "loc_Bunker";
+
+	[(getPlayerUID player), _object, _item] remoteExec ["TON_fnc_laboratory_insert", 2];	
+} else {
+	["Impossible de trouver l'objet dans votre inventaire"] call public_fnc_error;
 	deleteVehicle _object;
 };
-
-g_laboratory = _object;
-
-_object setPos [((getPos _object) select 0), ((getPos _object) select 1), 0];
-
-_marker = createMarkerLocal ["laboratory", (getPosATL _object)];
-_marker setMarkerTextLocal "Laboratoire";
-_marker setMarkerColorLocal "ColorRed";
-_marker setMarkerTypeLocal "loc_Bunker";
-
-[(getPlayerUID player), _object, _item] remoteExec ["TON_fnc_laboratory_insert", 2];

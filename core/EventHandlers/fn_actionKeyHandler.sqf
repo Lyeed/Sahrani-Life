@@ -23,31 +23,10 @@ if ((vehicle player) isEqualTo player) then
 
 	if (isNull _target) then 
 	{
-		_plant = (nearestObjects [player, (call g_plants), 3]) select 0;
-		if (!(isNil "_plant")) then
-		{
-			[_plant] spawn public_fnc_plantHarvest;
-			true breakOut "main";
-		};
-
-		_atm = (nearestObjects [player, (call g_atms), 2]) select 0;
-		if (!(isNil "_atm")) then
-		{
-			["home", _atm] call public_fnc_atmScreen;
-			true breakOut "main";
-		};
-
 		_chair = (nearestObjects [player, (call g_chairs), 1]) select 0;
 		if (!(isNil "_chair")) then
 		{
 			[_chair] call public_fnc_sitDown;
-			true breakOut "main";
-		};
-
-		_speaker = (nearestObjects [player, ["xcam_Loudspeakers_F"], 4]) select 0;
-		if (!(isNil "_speaker")) then
-		{
-			[_speaker] call public_fnc_interactions_player_to_speaker;
 			true breakOut "main";
 		};
 
@@ -65,7 +44,38 @@ if ((vehicle player) isEqualTo player) then
 			true breakOut "main";
 		};
 
-		_house = (nearestObjects [player, (call g_houses_list), 10]) select 0;
+		_atm = (nearestObjects [player, (call g_atms), 2]) select 0;
+		if (!(isNil "_atm")) then
+		{
+			["home", _atm] call public_fnc_atmScreen;
+			true breakOut "main";
+		};
+
+		_laboratory = (nearestObjects [player, (call g_laboratories), 2]) select 0;
+		if (!(isNil "_laboratory")) then
+		{
+			if (count(_laboratory getVariable ["laboratory_info", []]) > 0) then
+			{
+				[_laboratory] call public_fnc_interactions_player_to_laboratory;
+				true breakOut "main";
+			};
+		};
+
+		_plant = (nearestObjects [player, (call g_plants), 3]) select 0;
+		if (!(isNil "_plant")) then
+		{
+			[_plant] spawn public_fnc_plantHarvest;
+			true breakOut "main";
+		};
+
+		_speaker = (nearestObjects [player, ["xcam_Loudspeakers_F"], 4]) select 0;
+		if (!(isNil "_speaker")) then
+		{
+			[_speaker] call public_fnc_interactions_player_to_speaker;
+			true breakOut "main";
+		};
+
+		_house = (nearestObjects [player, (call g_houses_list), 7]) select 0;
 		if (!(isNil "_house")) then
 		{
 			[_house] call public_fnc_house_menu_handler;

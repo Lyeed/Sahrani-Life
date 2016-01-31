@@ -10,8 +10,8 @@
 	[_this, 0, objNull, [objNull]] call BIS_fnc_param,
 	"player_to_laboratory",
 	[
-		["process", "Traiter", "[] spawn public_fnc_labo_process;", "true"],
-		["destroy", "Détruire", "[] spawn public_fnc_labo_destroy;", "((['destroy_labo'] call public_fnc_itemCount) > 0)"]
+		["process", "Traiter", "[g_interaction_target] spawn public_fnc_labo_process;", "true"],
+		["destroy", "Détruire", "[g_interaction_target] spawn public_fnc_labo_destroy;", "((['destroy_labo'] call public_fnc_itemCount) > 0)"]
 	],
 	"Laboratoire",
 	"lyeed_IMG\data\interactions\background.jpg",

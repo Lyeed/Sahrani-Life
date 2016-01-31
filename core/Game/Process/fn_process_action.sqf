@@ -23,11 +23,11 @@ if ((vehicle player) != player) exitWith {
 	["Vous devez être à pied pour traiter"] call public_fnc_error;
 };
 
-_requireTarget = getNumber(missionConfigFile >> "ALYSIA_PROCESS" >> _type >> "requiere_target");
-if ((_requireTarget isEqualTo 1) && (isNull _target)) exitWith {
+_requireTarget = isClass(missionConfigFile >> "ALYSIA_PROCESS" >> _type >> "target");
+if (_requireTarget && (isNull _target)) exitWith {
 	["Le traitement à besoin d'émaner d'une entité"] call public_fnc_error;
 };
-if ((_requireTarget isEqualTo 1) && ((player distance _target) > 5)) exitWith {
+if (_requireTarget && ((player distance _target) > 5)) exitWith {
 	["Vous êtes trop loin pour débuter le traitement"] call public_fnc_error;
 };
 
@@ -42,6 +42,14 @@ _enoughText = "";
 } forEach _item_require;
 if (_enoughText != "") exitWith {
 	[format["Vous n'avez pas tous les élements requis<br/><br/>Vous avez besoin de<br/>%1<br/>en plus pour commencer à traiter</t>", _enoughText]] call public_fnc_error;
+};
+
+if (_item_require) then
+{
+	_smoke = getText(missionConfigFile >> "ALYSIA_PROCESS" >> _type >> "target" >> "smoke_type");
+	if (_smoke != "") then {
+		_smoke createVehicle [_smoke, (getPos _target), [], 0, "CAN_COLLIDE"];
+	};
 };
 
 if (!([
@@ -78,4 +86,4 @@ if ((_receive select 2) > 0) then {
 	[true, ((_receive select 2) * _maxAmount)] call public_fnc_handleCash;
 };
 
-["Traitement terminé"] call public_fnc_info;
+["Traitement <t color='#3ADF00'>terminé</t>"] call public_fnc_info;
