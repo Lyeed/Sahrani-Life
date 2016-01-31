@@ -821,7 +821,7 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			{},
-			{"Trixie_CZ550_Mag"},
+			{"Trixie_CZ550"},
 			0
 		};
 		time_per_item = 7;
@@ -837,7 +837,7 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			{},
-			{"Trixie_CZ550"},
+			{"Trixie_CZ550_Mag"},
 			0
 		};
 		time_per_item = 5;

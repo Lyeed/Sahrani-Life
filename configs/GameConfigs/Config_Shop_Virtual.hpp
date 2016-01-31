@@ -90,7 +90,26 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Marché noir";
 		side = "CIV";
-		items[] = {{"lockpick", "handcuffs", "handcuffkeys", "cannabis_seed", "heroin_seed", "cocaine_seed", "meth_seed", "nitro", "baillon", "bandeau"}, {"artefact_R", "artefact", "objvaleur"}};
+		items[] = 
+		{
+			{
+				"lockpick",
+				"handcuffs",
+				"handcuffkeys",
+				"cannabis_seed",
+				"heroin_seed",
+				"cocaine_seed",
+				"meth_seed",
+				"nitro",
+				"lab_marijuana",
+				"lab_meth",
+				"lab_cocaine",
+				"lab_heroin",
+				"lab_weapon",
+				"lab_clothing"
+			},
+			{"artefact_R", "artefact", "objvaleur"}
+		};
 	};
 
 	class platine

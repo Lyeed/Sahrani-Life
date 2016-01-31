@@ -75,7 +75,6 @@ class RscDisplayPlayerRevokeLicense: RscDisplayDefaultInteraction
 		{
 			idc = 18005;
 			text = "<t align='left' size='1.3'>Retirer</t>";
-			colorBackground[] = {0,0,0,0};
 
 			x = 0.536094 * safezoneW + safezoneX;
 			y = 0.588 * safezoneH + safezoneY;
@@ -85,9 +84,9 @@ class RscDisplayPlayerRevokeLicense: RscDisplayDefaultInteraction
 		class ACTION_BUTTON: RscButtonSilent
 		{
 			idc = 18006;
-			action = "				[(lbData[18001, (lbCurSel 18001)]), player] remoteExecCall [""public_fnc_interactionMenu_action_license_revoke"", g_interaction_target];				closeDialog 0;";
-			onMouseEnter = "			ctrlSetText[18004,""lyeed_IMG\data\skull\take_select.paa""];			ctrlShow[18002, false];			((findDisplay 18000) displayCtrl 18003) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 18000) displayCtrl 18005) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Retirer</t>"";";
-			onMouseExit = "			ctrlSetText[18004,""lyeed_IMG\data\skull\take.paa""];			ctrlShow[18002, true];			((findDisplay 18000) displayCtrl 18003) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 18000) displayCtrl 18005) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Retirer</t>"";";
+			action = "[(lbData[18001, (lbCurSel 18001)]), player] remoteExecCall [""public_fnc_interactionMenu_action_license_revoke"", g_interaction_target];closeDialog 0;";
+			onMouseEnter = "ctrlSetText[18004,""lyeed_IMG\data\skull\take_select.paa""];ctrlShow[18002, false];((findDisplay 18000) displayCtrl 18003) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 18000) displayCtrl 18005) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Retirer</t>"";";
+			onMouseExit = "ctrlSetText[18004,""lyeed_IMG\data\skull\take.paa""];ctrlShow[18002, true];((findDisplay 18000) displayCtrl 18003) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 18000) displayCtrl 18005) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Retirer</t>"";";
 
 			x = 0.505156 * safezoneW + safezoneX;
 			y = 0.577 * safezoneH + safezoneY;

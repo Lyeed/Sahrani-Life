@@ -44,7 +44,7 @@ if (_enoughText != "") exitWith {
 	[format["Vous n'avez pas tous les élements requis<br/><br/>Vous avez besoin de<br/>%1<br/>en plus pour commencer à traiter</t>", _enoughText]] call public_fnc_error;
 };
 
-if (_item_require) then
+if (_requireTarget) then
 {
 	_smoke = getText(missionConfigFile >> "ALYSIA_PROCESS" >> _type >> "target" >> "smoke_type");
 	if (_smoke != "") then {

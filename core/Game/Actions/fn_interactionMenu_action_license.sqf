@@ -25,3 +25,4 @@ if (!(g_interaction_target getVariable ["restrained", false]) && !(g_interaction
 };
 
 [player] remoteExecCall ["public_fnc_interactionMenu_action_license_get", g_interaction_target];
+

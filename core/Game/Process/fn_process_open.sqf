@@ -32,6 +32,10 @@ if ((isClass(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type
 	["Le traitement à besoin d'émaner d'une entité"] call public_fnc_error;
 };
 
+if (dialog) then {
+	closeDialog 0;
+};
+
 if (!(createDialog "RscDisplayProcess")) exitWith {};
 
 disableSerialization;

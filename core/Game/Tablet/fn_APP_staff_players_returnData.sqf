@@ -33,13 +33,13 @@ lbClear _list;
 
 if (_cash > 0) then
 {
-	_index = _list lbAdd format["%1kn (porte feuille)", [_cash] call public_fnc_numberText];
+	_index = _list lbAdd format["%1kn (porte-feuille)", [_cash] call public_fnc_numberText];
 	_list lbSetPicture [_index, "alysia_items_virtual\data\money.paa"];
 };
 
 if (_atm > 0) then
 {
-	_index = _list lbAdd format["%1kn (porte-feuille)", [_atm] call public_fnc_numberText];
+	_index = _list lbAdd format["%1kn (compte)", [_atm] call public_fnc_numberText];
 	_list lbSetPicture [_index, "alysia_items_virtual\data\money.paa"];
 };
 
