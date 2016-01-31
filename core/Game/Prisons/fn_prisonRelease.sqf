@@ -39,4 +39,3 @@ g_arrest_Reason = "";
 player setVariable ["arrested", false, true];
 titleText["", "BLACK IN", 5];
 ["Vous êtes désormais libre!"] call public_fnc_info;
-
