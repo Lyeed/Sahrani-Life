@@ -1543,6 +1543,15 @@ _cString =
 ["xcam_Concrete_SmallWall_8m_F","[10496.494141,9546.477539,-0.186027]",-450.552,-100,0,0,[]] call _cString;
 ["xcam_Concrete_SmallWall_4m_F","[10496.453125,9550.464844,-0.186027]",-450.552,-100,0,0,[]] call _cString;
 ["xcam_Concrete_SmallWall_4m_F","[10498.351563,9542.746094,-0.193603]",-360.552,-100,0,0,[]] call _cString;
+["xcam_Concrete_SmallWall_8m_F","[10568.526367,9560.860352,-0.186028]",90.0162,-100,0,0,[]] call _cString;
+["xcam_Concrete_SmallWall_8m_F","[10568.52832,9568.767578,-0.186028]",450.016,-100,0,0,[]] call _cString;
+["xcam_Concrete_SmallWall_8m_F","[10568.530273,9576.674805,-0.186028]",450.016,-100,0,0,[]] call _cString;
+["xcam_Concrete_SmallWall_8m_F","[10568.532227,9584.582031,-0.186028]",450.016,-100,0,0,[]] call _cString;
+["xcam_Concrete_SmallWall_8m_F","[10568.53418,9592.489258,-0.186028]",450.016,-100,0,0,[]] call _cString;
+["xcam_sign_parking","[10558.62793,9543.461914,0]",179.006,-100,0,0,[]] call _cString;
+["xcam_sign_parking","[10543.170898,9543.237305,0]",179.006,-100,0,0,[]] call _cString;
+["xcam_sign_parking","[10523.754883,9543.0488281,0]",179.006,-100,0,0,[]] call _cString;
+["xcam_sign_parking","[10502.548828,9542.78125,0]",179.006,-100,0,0,[]] call _cString;
 ["Land_Lampa_sidl","[10557.779297,9544.463867,0]",-270.274,-100,1,0,[]] call _cString;
 ["Land_Lampa_sidl","[10548.533203,9544.40332,0]",-270.274,-100,1,0,[]] call _cString;
 ["Land_Lampa_sidl","[10539.235352,9544.260742,0]",-270.274,-100,1,0,[]] call _cString;
@@ -1550,11 +1559,28 @@ _cString =
 ["Land_Lampa_sidl","[10519.151367,9544.115234,0]",-270.274,-100,1,0,[]] call _cString;
 ["Land_Lampa_sidl","[10508.438477,9543.902344,0]",-270.274,-100,1,0,[]] call _cString;
 ["Land_Lampa_sidl","[10497.356445,9543.495117,0]",-227.029,-100,1,0,[]] call _cString;
+["Land_lampa_sidl","[10568.456055,9614.457031,0]",179.183,-100,1,0,[]] call _cString;
+["Land_lampa_sidl","[10567.390625,9568.736328,0]",-0.816895,-100,1,0,[]] call _cString;
+["Land_lampa_sidl","[10567.325195,9576.857422,0]",-0.816895,-100,1,0,[]] call _cString;
+["Land_lampa_sidl","[10567.322266,9584.636719,0]",-0.816895,-100,1,0,[]] call _cString;
+["Land_lampa_sidl","[10567.397461,9592.544922,0]",-0.816895,-100,1,0,[]] call _cString;
 ["xcam_Bilboard_pizza_presto","[10552.999023,9542.973633,-0.000841767]",-180.565,-100,0,0,[]] call _cString;
 ["xcam_Bilboard_Riviera","[10534.107422,9542.704102,-0.000841767]",-180.565,-100,0,0,[]] call _cString;
 ["xcam_Bilboard_smadny_maskrnik","[10513.443359,9542.56543,-0.000841767]",-180.565,-100,0,0,[]] call _cString;
 ["xcam_sign_food","[10568.0488281,9608.878906,-0.000839233]",269.436,-100,0,0,[]] call _cString;
-
+["xcam_ChairWood_F","[10558.854492,9556.321289,0]",415.193,-100,0,0,[]] call _cString;
+["xcam_jezek_kov_ep1","[10568.973633,9544.72168,0]",-0.816895,-100,0,0,[]] call _cString;
+["xcam_Mil_Guardhouse_ep1","[10563.0966797,9561.331055,-0.0319864]",-0.816895,-100,0,0,[]] call _cString;
+["xcam_jezek_kov_ep1","[10569.119141,9556.0322266,-0.0319864]",-0.816895,-100,0,0,[]] call _cString;
+["xcam_fort_bagfence_corner","[10566.524414,9555.447266,-0.0631313]",-91.3977,-100,0,0,[]] call _cString;
+["xcam_fort_bagfence_long","[10563.578125,9554.00488281,-0.0631313]",-1.3977,-100,0,0,[]] call _cString;
+["xcam_Bilboard_vodka","[10568.198242,9560.207031,0]",268.779,-100,0,0,[]] call _cString;
+["xcam_SignT_NoParking","[10568.864258,9571.760742,0]",268.779,-100,0,0,[]] call _cString;
+["xcam_SignT_NoParking","[10568.891602,9586.90918,0]",268.779,-100,0,0,[]] call _cString;
+["xcam_SignT_Stop","[10568.03125,9545.0537109,-0.0892256]",452.428,-100,0,0,[]] call _cString;
+["xcam_jezek_kov","[10555.208984,9553.856445,0]",406.91,-100,0,0,[]] call _cString;
+["xcam_WF_hesco_5x","[10555.00585938,9561.532227,0]",448.64,-100,0,0,[]] call _cString;
+["xcam_WoodenTable_large_F","[10561.104492,9556.169922,0]",449.158,-100,0,0,[]] call _cString;
 
 //Panneaux
 _signBoard_north_1 = ["Land_Billboard_F","[14416.770508,12246.360352,0]",22.2853,-100,0,0,[]] call _cString;

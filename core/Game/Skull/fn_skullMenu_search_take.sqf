@@ -42,7 +42,7 @@ switch (_data select 0) do
 			if (_amount isEqualTo (_itemInfo select 1)) then {
 				g_interaction_target_inv deleteAt _sel;
 			} else {
-				(g_interaction_target_inv select _sel) set [1, (_itemInfo select 1) - _amount];
+				((g_interaction_target_inv select _sel) select 1) set [1, (_itemInfo select 1) - _amount];
 			};
 		} else {
 			["Vous n'avez pas assez de place"] call public_fnc_error;
