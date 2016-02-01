@@ -10,7 +10,7 @@
 	[_this, 0, objNull, [objNull]] call BIS_fnc_param,
 	"player_to_station",
 	[
-		["refuel_veh", "Plein Véhicule", "[g_interaction_target] spawn public_fnc_fuelStation_use_refuel_veh;", "true"],
+		["refuel_veh", "Plein Véhicule", "[g_interaction_target] call public_fnc_fuelStation_use_refuel_veh;", "true"],
 		["refuel_jerry", "Plein Jerrican", "[g_interaction_target] spawn public_fnc_fuelMenu_use_refuel_jerry;", "('Fuel_E' in (magazines player))"]
 	],
 	"Station Essence"

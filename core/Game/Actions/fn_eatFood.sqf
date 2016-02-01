@@ -19,5 +19,6 @@ if ([false, _item, 1] call public_fnc_handleInv) then
 		};
 		[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food" >> "thirst")] call public_fnc_handleThirst;
 		[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food" >> "hunger")] call public_fnc_handleHunger;
+		[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food" >> "alcool")] call public_fnc_handleAlcool;
 	};
 };

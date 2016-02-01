@@ -11,7 +11,8 @@
 	"player_to_laboratory",
 	[
 		["process", "Traiter", "[g_interaction_target] spawn public_fnc_labo_process;", "true"],
-		["destroy", "Détruire", "[g_interaction_target] spawn public_fnc_labo_destroy;", "((['destroy_labo'] call public_fnc_itemCount) > 0)"]
+		["destroy", "Détruire", "[g_interaction_target] spawn public_fnc_labo_destroy;", "(((['destroy_labo'] call public_fnc_itemCount) > 0) && (getNumber(missionConfigFile >> 'ALYSIA_FACTIONS' >> str(playerSide) >> 'laboratory_destroy') isEqualTo 1))"],
+		["sabotage", "Saboter", "[g_interaction_target] spawn public_fnc_labo_sabotage;", "(g_interaction_target getVariable ['sabotage',0] < time)"]
 	],
 	"Laboratoire",
 	"lyeed_IMG\data\interactions\background.jpg",

@@ -164,7 +164,8 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 			["lyeed_IMG\data\player_hud\sirene.paa", "((vehicle player) getVariable ['sireneOn',false])"],
 			["lyeed_IMG\data\player_hud\sit.paa", "(player getVariable ['sit',false])"],
 			["lyeed_IMG\data\player_hud\coma.paa", "(player getVariable ['is_coma',false])"],
-			["lyeed_IMG\data\player_hud\weight.paa", "(g_carryWeight > g_maxWeight)"]
+			["lyeed_IMG\data\player_hud\weight.paa", "(g_carryWeight > g_maxWeight)"],
+			["lyeed_IMG\data\player_hud\alcohol.paa", "(g_alcool > 0)"]
 		]);
 
 		for "_i" from _idc to 23516 do

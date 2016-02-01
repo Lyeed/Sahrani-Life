@@ -931,6 +931,7 @@ class ALYSIA_ITEMS
 			thirst = 40;
 			hunger = 0;
 			sound = "drink";
+			alcool = 0.30;
 		};
 	};
 

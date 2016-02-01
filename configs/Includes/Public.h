@@ -166,6 +166,7 @@ class Public
 		class labo_destroy {};
 		class labo_process {};
 		class labo_update {};
+		class labo_sabotage {};
 	};
 
 	class Shops
@@ -310,6 +311,7 @@ class Public
 		class bodyDrag {};
 		class bodyDrop {};
 		class coma {};
+		class handleAlcool {};
 		class handleBleed {};
 		class handleBlood {};
 		class handleHunger {};

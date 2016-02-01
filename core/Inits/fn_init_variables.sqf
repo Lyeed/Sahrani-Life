@@ -67,12 +67,14 @@ with missionNamespace do
 	/* ==================[Health/body system]==================== */
 	g_hurt_effect = ppEffectCreate ["ColorCorrections", 9999];
 	g_hurt_effect ppEffectEnable true;
+	g_hurt_effect ppEffectForceInNVG true;
 	//--------------
 	g_thirst = 100;
 	g_hunger = 100;
 	//--------------
 	g_blood = 4000;
 	g_bleed = 0;
+	g_alcool = 0;
 	g_morphine = 0;
 	//--------------
 	g_regen_active = false;

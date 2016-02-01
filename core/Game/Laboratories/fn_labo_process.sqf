@@ -19,4 +19,8 @@ if (isNull _target) exitWith {};
 _info = _target getVariable "laboratory_info";
 if (isNil "_info") exitWith {};
 
+if ((_target getVariable ["sabotage", 0]) > serverTime) exitWith {
+	[format["Ce laboratoire a été récemment saboté et ne peut être utilisé que dans %1 minutes", [((_target getVariable ["sabotage", 0]) - time), "M:SS"] call CBA_fnc_formatElapsedTime]] call public_fnc_error;
+};
+
 [_target, getArray(missionConfigFile >> "ALYSIA_LABORATORIES" >> (_info select 2) >> "process")] call public_fnc_process_choice_open;

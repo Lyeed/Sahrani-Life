@@ -6,9 +6,9 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private["_display"];
-disableSerialization;
 
-_display = uiNamespace getVariable["tablet", displayNull];
+disableSerialization;
+_display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
 
 (_display displayCtrl 7905) ctrlSetStructuredText parseText format["<t align='center'>%1", gServer_rebootHour_txt];
