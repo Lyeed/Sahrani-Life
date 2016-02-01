@@ -25,36 +25,9 @@ g_hurt_effect ppEffectCommit 0;
 player setDamage (100 - (100 / 4000 * g_blood)) / 100;
 
 if (g_blood isEqualTo 1) exitWith {
-	[] spawn public_fnc_coma;
+	[] spawn public_fnc_handleComa;
 };
 
-if (!g_regen_active) then
-{
-	g_regen_active = true;
-	[] spawn
-	{
-		while {(g_blood < 4000)} do
-		{
-			if ((g_bleed isEqualTo 0) && !(player getVariable ["is_coma", false]) && (g_hunger > 0) && (g_thirst > 0)) then 
-			{
-				_regen = 0;
-				if ((g_hunger >= 90) && (g_thirst >= 90)) then {
-					_regen = 6;
-				} else {
-					_regen = 2;
-				};
-
-				if (_regen > 0) then
-				{
-					if (g_morphine > 0) then {
-						_regen = _regen * 4;
-					};
-
-					[_regen] call public_fnc_handleBlood;
-				};
-			};
-			sleep 2;
-		};
-		g_regen_active = false;
-	};
+if (!g_regen_active) then {
+	[] spawn public_fnc_handleRegen;
 };

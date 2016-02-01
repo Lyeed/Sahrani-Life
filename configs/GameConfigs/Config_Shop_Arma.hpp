@@ -143,10 +143,7 @@ class ALYSIA_SHOPS_ARMA
 		{
 			"SkylineItems_Bandage",
 			"SkylineItems_Adrenaline",
-			"SkylineItems_PocheSang",
-			"SkylineItems_Defibrilateur",
 			"SkylineItems_Morphine",
-			//"SkylineItems_Penicilline",
 			"ItemMap",
 			"ItemGPS",
 			"Binocular",
@@ -188,13 +185,13 @@ class ALYSIA_SHOPS_ARMA
 		side = "CIV";
 		stocks[] = 
 		{
-			
+			"SkylineItems_Couteau"
 		};
 	};
 	
 	class prisoner_shop_store
 	{
-		name = "Travail et tais toi !";
+		name = "Atelier";
 		side = "CIV";
 		stocks[] = 
 		{

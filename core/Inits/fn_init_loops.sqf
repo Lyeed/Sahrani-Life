@@ -76,7 +76,7 @@ if (g_launder > 0) then
 		_fuel = getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf (_veh) >> "fuel");
 		_curentfuel = _veh getVariable ["typeRefuel", ""];
 
-		if (!(isNull (player getVariable ["escorting", objNull]))) exitWith
+		if (!(isNull (player getVariable ["escorting", objNull]))) then
 		{
 			_target = player getVariable ["escorting", objNull];
 			detach _target;
@@ -84,6 +84,14 @@ if (g_launder > 0) then
 			player setVariable ["escorting", objNull, true];
 
 			_target moveInCargo _veh;
+		};
+		
+		if (!(isNull g_dragingBody)) then
+		{
+			detach g_dragingBody;
+			g_dragingBody setVariable ["transporting", false, true];
+			g_dragingBody moveInCargo _veh;
+			g_dragingBody = ObjNull;
 		};
 
 		while {((vehicle player) isEqualTo _veh)} do

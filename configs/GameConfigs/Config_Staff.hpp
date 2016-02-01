@@ -118,7 +118,7 @@ class ALYSIA_STAFF
 			{
 				name = "Rez";
 				statement = "(call compile (lbData[9000, lbCurSel 9000])) setVariable ['is_coma',false];";
-				condition = "((call compile (lbData[9000, lbCurSel 9000])) getVariable ['is_coma',false])";
+				condition = "((call compile (lbData[9000, lbCurSel 9000])) setVariable ['is_bleeding', false, true]); ((call compile (lbData[9000, lbCurSel 9000])) getVariable ['is_coma',false]);";
 				allow[] = {"76561198007960495"};
 			};
 

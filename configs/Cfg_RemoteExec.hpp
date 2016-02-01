@@ -77,7 +77,7 @@ class CfgRemoteExec
 		class public_fnc_leaderInvitePropose {allowTargets = CLIENT;};
 		class public_fnc_info {allowTargets = CLIENT;};
 		class public_fnc_phone_message_receive {allowTargets = CLIENT;};
-		class public_fnc_killAction {allowTargets = CLIENT;};
+		class public_fnc_item_knife_apply {allowTargets = CLIENT;};
 		class public_fnc_welcomeInit {allowTargets = CLIENT;};
 		class public_fnc_interactionMenu_action_trade_receive {allowTargets = CLIENT;};
 		class public_fnc_interactionMenu_action_trade_refuse {allowTargets = CLIENT;};

@@ -11,7 +11,7 @@
 player addEventHandler ["FiredNear", "_this call EVENT_fnc_onPlayerFireNear"];
 player addEventHandler ["handleDamage", "_this call EVENT_fnc_onPlayerHandleDamage"];
 player addEventHandler ["InventoryOpened", "[_this select 1] call EVENT_fnc_onPlayerInventoryOpen"];
-player addEventHandler ["Killed", "call EVENT_fnc_onPlayerKilled"];
+player addEventHandler ["Killed", "call EVENT_fnc_onplayerDeath"];
 player addEventHandler ["Respawn", "call EVENT_fnc_onPlayerRespawn"];
 
 /* TASK_FORCE_RADIO */

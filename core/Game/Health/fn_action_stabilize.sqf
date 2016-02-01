@@ -18,14 +18,16 @@ if (g_action_inUse) exitWith {
 if ((_type isEqualTo "debif") && ((backpack player) != "B_Defibrilateur_khk")) exitWith {
 	["Vous n'avez pas de défibrilateur"] call public_fnc_error;
 };
+if ((_type isEqualTo "debif") && (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "can_use_debrif") isEqualTo 0)) exitWith {
+	["Vous n'êtes pas abilité à manier ce type de défibrilateur"] call public_fnc_error;
+};
 
 _chance = switch (_type) do
 {
 	case "main": {5};
 	case "debif": {61};
-	default {-1};
 };
-if (_chance isEqualTo -1) exitWith {
+if (isNil "_chance") exitWith {
 	["Impossible de déterminer vos chances de réaminer"] call public_fnc_error;
 };
 

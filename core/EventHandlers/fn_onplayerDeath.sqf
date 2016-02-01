@@ -75,6 +75,7 @@ g_is_alive = false;
 g_cash = 0;
 g_blood = 4000;
 g_bleed = 0;
+g_alcool = 0;
 g_hunger = 100;
 g_thirst = 100;
 [] call MySQL_fnc_query_update_usual;
@@ -91,6 +92,7 @@ g_drugs_consuming = 0;
 } forEach (g_drugs);
 /* ****** */
 
+g_adrenaline = 0;
 g_morphine = 0;
 g_action_inUse = false;
 g_killer = ObjNull;

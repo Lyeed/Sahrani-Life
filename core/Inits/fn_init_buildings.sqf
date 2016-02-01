@@ -1380,6 +1380,14 @@ _cString =
 ["xcam_sign_parking","[10543.170898,9543.237305,0]",179.006,-100,0,0,[]] call _cString;
 ["xcam_sign_parking","[10523.754883,9543.0488281,0]",179.006,-100,0,0,[]] call _cString;
 ["xcam_sign_parking","[10502.548828,9542.78125,0]",179.006,-100,0,0,[]] call _cString;
+["xcam_t_fagus2s_summer","[10492.355469,9546.920898,-0.0606061]",810,-100,1,0,[]] call _cString;
+["Land_Lampa_sidl","[10565.826172,9567.808594,3.87102]",405,-100,1,0,[]] call _cString;
+["Land_Lampa_sidl","[10486.00878906,9568.383789,3.87102]",495,-100,1,0,[]] call _cString;
+["Land_Lampa_sidl","[10486.0517578,9627.554688,3.87102]",590,-100,1,0,[]] call _cString;
+["Land_Lampa_sidl","[10486.348633,9598.671875,3.87102]",540,-100,1,0,[]] call _cString;
+["Land_Lampa_sidl","[10527.0302734,9627.308594,3.87102]",630,-100,1,0,[]] call _cString;
+["Land_Lampa_sidl","[10565.543945,9597.558594,3.87103]",2.00358e-005,-100,1,0,[]] call _cString;
+["Land_Lampa_sidl","[10526.928711,9568.514648,3.87102]",810,-100,1,0,[]] call _cString;
 ["Land_Lampa_sidl","[10557.779297,9544.463867,0]",-270.274,-100,1,0,[]] call _cString;
 ["Land_Lampa_sidl","[10548.533203,9544.40332,0]",-270.274,-100,1,0,[]] call _cString;
 ["Land_Lampa_sidl","[10539.235352,9544.260742,0]",-270.274,-100,1,0,[]] call _cString;
@@ -1404,8 +1412,18 @@ _cString =
 ["xcam_SignT_NoParking","[10568.891602,9586.90918,0]",268.779,-100,0,0,[]] call _cString;
 ["xcam_SignT_Stop","[10568.03125,9545.0537109,-0.0892256]",452.428,-100,0,0,[]] call _cString;
 ["xcam_jezek_kov","[10555.208984,9553.856445,0]",406.91,-100,0,0,[]] call _cString;
-["xcam_WF_hesco_5x","[10555.00585938,9561.532227,0]",448.64,-100,0,0,[]] call _cString;
 ["xcam_WoodenTable_large_F","[10561.104492,9556.169922,0]",449.158,-100,0,0,[]] call _cString;
+["xcam_Concrete_SmallWall_8m_F","[10486.329102,9565.725586,0]",90,-100,0,0,[]] call _cString;
+["xcam_Concrete_SmallWall_8m_F","[10490.0712891,9552.523438,0]",180,-100,0,0,[]] call _cString;
+["xcam_Concrete_SmallWall_4m_F","[10494.675781,9552.513672,0]",180,-100,0,0,[]] call _cString;
+["xcam_kasna_new","[10491.708008,9560.15918,-0.00336698]",900,-100,0,0,[]] call _cString;
+["xcam_lavicka_4","[10491.834961,9566.313477,-0.00336456]",180,-100,0,0,[]] call _cString;
+["xcam_Concrete_SmallWall_4m_F","[10486.353516,9554.361328,0]",810,-100,0,0,[]] call _cString;
+["xcam_Concrete_SmallWall_4m_F","[10486.353516,9556.490234,0]",810,-100,0,0,[]] call _cString;
+["xcam_Mil_WallBig_4m_F","[10555.206055,9565.539063,-0.468855]",810,-100,0,0,[]] call _cString;
+["xcam_Mil_WallBig_4m_F","[10555.206055,9561.487305,-0.468855]",810,-100,0,0,[]] call _cString;
+["xcam_Mil_WallBig_4m_F","[10555.206055,9557.435547,-0.468855]",810,-100,0,0,[]] call _cString;
+["xcam_Atm_01_F","[10543.0527344,9566.694336,0]",2.00358e-005,-100,1,0,[]] call _cString;
 
 //Panneaux
 _signBoard_north_1 = ["Land_Billboard_F","[14416.770508,12246.360352,0]",22.2853,-100,0,0,[]] call _cString;
@@ -1441,9 +1459,11 @@ _flag_north_2 setFlagTexture "lyeed_IMG\data\faction\WEST_flag.jpg";
 
 _flag_south_1 = ["FlagPole_F","[13259.491211,8842.908203,0]",0,-100,1,0,[]] call _cString;
 _flag_south_2 = ["FlagPole_F","[13241.182617,8853.1875,0]",400,-100,1,0,[]] call _cString;
+_flag_south_3 = ["FlagPole_F","[10567.205078,9554.953125,0]",720,-100,1,0,[]] call _cString;
 
-_flag_south_1 setFlagTexture "lyeed_IMG\data\faction\EAST_flag.jpg";
-_flag_south_2 setFlagTexture "lyeed_IMG\data\faction\EAST_flag.jpg";
+{
+	_x setFlagTexture "lyeed_IMG\data\faction\EAST_flag.jpg";
+} forEach ([_flag_south_1, _flag_south_2, _flag_south_3]);
 
 // ATM - STATIONS markers
 {

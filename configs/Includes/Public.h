@@ -307,21 +307,25 @@ class Public
 	class Health
 	{
 		file = "core\Game\Health";
-		class bandageUse {};
-		class bodyDrag {};
-		class bodyDrop {};
-		class coma {};
+		class action_hospital_heal {};
+		class action_body_drag {};
+		class action_body_drop {};
+		class action_stabilize {};
+		class action_suicide {};
+		class handleComa {};
 		class handleAlcool {};
 		class handleBleed {};
 		class handleBlood {};
 		class handleHunger {};
 		class handleThirst {};
-		class healHospital {};
-		class killAction {};
-		class killProcess {};
-		class massageCardiaque {};
-		class morphineApply {};
-		class morphineUse {};
+		class handleRegen {};
+		class item_knife_apply {};
+		class item_knife_use {};
+		class item_morphine_apply {};
+		class item_morphine_use {};
+		class item_adrenaline_apply {};
+		class item_adrenaline_use {};
+		class item_bandage_use {};
 	};
 
 	class Process

@@ -31,6 +31,9 @@ if (!(isNull (player getVariable ["escorted", objNull]))) then
 	_target setVariable ["escorting", objNull, true];
 	_target setVariable ["escorted", objNull, true];
 };
+if (!(isNull g_dragingBody)) then {
+	[false] call public_fnc_action_body_drop;
+};
 
 disableSerialization;
 _display = findDisplay 350;
@@ -38,16 +41,15 @@ if (isNull _display) exitWith {};
 
 _id = _display displayAddEventHandler ["KeyDown", "if ((_this select 1) isEqualTo 1) then {true}"];
 
-ctrlShow[352, false];
-ctrlShow[353, false];
-ctrlShow[354, false];
-
 _ctrl_left = _display displayCtrl 351;
 _ctrl_suicide = _display displayCtrl 355;
-_time = 1000;
+_time = getNumber(missionConfigFile >> "ALYSIA_MEDICAL" >> "coma" >> "timer");
 
-g_bleed = 0;
 g_blood = 1;
+
+if ((vehicle player) != player) then { 
+	player action ["Eject", (vehicle player)]; 
+};
 
 player setVariable ["tf_globalVolume", 0];
 player setVariable ["tf_voiceVolume", 0, true];
@@ -55,48 +57,59 @@ player setVariable ["is_coma", true, true];
 
 while {(_time > 0) && (alive player) && (player getVariable ["is_coma", false])} do
 {
-	if ((vehicle player) != player) then { 
-		player action ["Eject", (vehicle player)]; 
-	};
 	if ((animationState player) != "acts_InjuredLookingRifle01") then {
 		[player, "acts_InjuredLookingRifle01"] remoteExecCall ["switchMove", -2];
 	};
 	
+	_ctrl_left ctrlSetStructuredText parseText format["<t align='center' size='2'>Il vous reste %1 secondes à vivre</t>", _time];
 	player setOxygenRemaining 1;
 	playSound "death";
 
-	_ctrl_left ctrlSetStructuredText parseText format["<t align='center' size='2'>Il vous reste %1 secondes à vivre</t>", _time];
-	if (_time > (1000 - (60 * 2))) then {
-		_ctrl_suicide ctrlSetStructuredText parseText format["<t align='center' size='1.5'>Vous pouvez vous suicider dans %1 secondes</t>", (_time - (1000 - (60 * 2)))];
+	if (g_adrenaline isEqualTo 0) then
+	{
+		if (_time > (getNumber(missionConfigFile >> "ALYSIA_MEDICAL" >> "coma" >> "timer") - (60 * 2))) then
+		{
+			_ctrl_suicide ctrlSetStructuredText parseText format["<t align='center' size='1.5'>Vous pouvez vous suicider dans %1 secondes</t>", (_time - (1000 - (60 * 2)))];
+			ctrlShow[352, false];
+			ctrlShow[353, false];
+			ctrlShow[354, false];
+			ctrlShow[355, true];
+		} else {
+			ctrlShow[352, true];
+			ctrlShow[353, true];
+			ctrlShow[354, true];
+			ctrlShow[355, false];
+		};
 	} else {
-		ctrlShow[352, true];
-		ctrlShow[354, true];
-		ctrlShow[353, true];
-		ctrlShow[355, false];
+		_ctrl_suicide ctrlSetStructuredText parseText "<t align='center' size='1.5'>Vous êtes sous l'effet de l'adrénaline et êtes stabilisé</t>";
+		ctrlShow[352, false];
+		ctrlShow[353, false];
+		ctrlShow[354, false];
+		ctrlShow[355, true];
 	};
 	
 	sleep 1;
 	
-	_time = _time - 1;
-	if (_time isEqualTo 1) then
+	if (g_adrenaline isEqualTo 0) then
 	{
-		player setDamage 1; 
+		_time = _time - 1;
+		if (_time isEqualTo 1) then {
+			player setDamage 1; 
+		};
 	};
 };
 
 if (alive player) then 
 {
 	if (g_thirst < 10) then {
-		g_thirst = 15; 
+		[15] call public_fnc_handleThirst; 
 	};
-	
 	if (g_hunger < 10) then {
-		g_hunger = 15; 
+		[15] call public_fnc_handleHunger;
 	};
 
 	player switchCamera "Internal";
 	player setFatigue 1;
-	[100] call public_fnc_handleBlood;
 	cutText ["", "BLACK IN", 20, true];
 	player setVariable ["tf_voiceVolume", 1, true];
 	[player, ""] remoteExecCall ["switchMove", -2];

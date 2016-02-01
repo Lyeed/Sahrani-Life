@@ -83,7 +83,7 @@ class RscDisplayComa : RscDisplayDefault
 		class SUICIDE_BUTTON: RscButtonSilent
 		{
 			idc = 354;
-			action = "player setDamage 1;";
+			action = "[] call public_fnc_action_suicide;";
 			onMouseEnter = "ctrlSetText[352,'lyeed_IMG\data\death\suicide_select.paa'];";
 			onMouseExit = "ctrlSetText[352,'lyeed_IMG\data\death\suicide.paa'];";
 

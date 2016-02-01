@@ -68,17 +68,14 @@ with missionNamespace do
 	g_hurt_effect = ppEffectCreate ["ColorCorrections", 9999];
 	g_hurt_effect ppEffectEnable true;
 	g_hurt_effect ppEffectForceInNVG true;
-	//--------------
 	g_thirst = 100;
 	g_hunger = 100;
-	//--------------
 	g_blood = 4000;
 	g_bleed = 0;
 	g_alcool = 0;
 	g_morphine = 0;
-	//--------------
+	g_adrenaline = 0;
 	g_regen_active = false;
-	//--------------
 	g_dragingBody = ObjNull;
 	/* =================[Drugs]=================== */
 	g_drugs_patched = 0; // time before anti-addiction patch effect disappears (scale in seconds)

@@ -28,7 +28,7 @@ g_dev = false;
 [["(DEV) + 1 MAP", {player addItem "ItemMap"; player assignItem "ItemMap";}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
 [["(DEV) + 1 UZI", {player addMagazine "RH_30Rnd_9x19_UZI"; player addWeapon "RH_muzi";}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
 [["(DEV) + 1 NVG", {player addItem "Skyline_NVGoogle"; player assignItem "Skyline_NVGoogle"; }, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
-[["(DEV) Revivre", {cursorTarget setVariable ["is_coma", false, true];}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) Revivre", {cursorTarget setVariable ["is_bleeding", false, true]; cursorTarget setVariable ["is_coma", false, true];}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
 [["(DEV) +100 faim", {[100] call public_fnc_handleHunger;}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
 [["(DEV) +100 soif", {[100] call public_fnc_handleThirst;}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
 [["(DEV) Tp marché noir", {player setPos (getMarkerPos "black_market_1_marker");}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
@@ -46,14 +46,20 @@ if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "inte
 };
 
 /* ==================[MEDICAL]===================*/
+
+[[
+	"<img image='lyeed_IMG\data\actions_menu\morphine.paa'/> Se faire une <t color='#FF5722'>piqure d'adrénaline</t>",
+	public_fnc_item_morphine_use, player, 0, false, true, "", '(("SkylineItems_Adrenaline" in (magazines player)) && !(player getVariable ["is_coma",false]) && !g_action_inUse)'
+]] call CBA_fnc_addPlayerAction;
+
 [[
 	"<img image='lyeed_IMG\data\actions_menu\morphine.paa'/> Se faire une <t color='#FF5722'>piqure de morphine</t>",
-	public_fnc_morphineUse, player, 0, false, true, "", '(("SkylineItems_Adrenaline" in (magazines player)) && !(player getVariable ["is_coma",false]) && !g_action_inUse)'
+	public_fnc_item_morphine_use, player, 0, false, true, "", '(("SkylineItems_Morphine" in (magazines player)) && !(player getVariable ["is_coma",false]) && !g_action_inUse)'
 ]] call CBA_fnc_addPlayerAction;
 
 [[
 	"<img image='lyeed_IMG\data\actions_menu\bandage.paa'/> Se faire un <t color='#FF5722'>bandage</t>",
-	public_fnc_bandageUse, player, 0, true, true, "", '((g_bleed > 0) && ("SkylineItems_Bandage" in (magazines player)) && !(player getVariable ["is_coma",false]) && !g_action_inUse)'
+	public_fnc_item_bandage_use, player, 0, true, true, "", '((g_bleed > 0) && ("SkylineItems_Bandage" in (magazines player)) && !(player getVariable ["is_coma",false]) && !g_action_inUse)'
 ]] call CBA_fnc_addPlayerAction;
 //---------------
 
@@ -74,18 +80,3 @@ if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "inte
 	}, "", 0, false, false, "", '!g_action_inUse && (vehicle player) != player && g_seatbelt'
 ]] call CBA_fnc_addPlayerAction;
 //---------------
-
-
-/* ==================[PLAYER INTERACTION]===================
-//---------------
-[["<t color='#FF8000'>Bander</t> les yeux", public_fnc_useBandeau, "", 0, false, false, "", '!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && (cursorTarget getVariable["restrained", false]) && !g_action_inUse && !(cursorTarget getVariable["bandeau", false]) && (inv_bandeau > 0)']] call CBA_fnc_addPlayerAction;
-[["Enlever le <t color='#FF8000'>bandeau</t>", public_fnc_getBandeau, "", 0, false, false, "", '!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && !g_action_inUse && (cursorTarget getVariable["bandeau", false])']] call CBA_fnc_addPlayerAction;
-[["Enlever votre <t color='#FF8000'>bandeau</t>", public_fnc_getBandeauSelf, "", 0, false, true, "", '!(player getVariable["restrained", false]) && (player getVariable["bandeau", false]) && !g_coma && !(player getVariable["surrender", false])']] call CBA_fnc_addPlayerAction;
-//---------------
-[["<t color='#FF8000'>Bander</t> la bouche", public_fnc_useBaillon, "", 0, false, false, "", '!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && (cursorTarget getVariable["restrained", false]) && !g_action_inUse && !(cursorTarget getVariable["baillon", false]) && (inv_baillon > 0)']] call CBA_fnc_addPlayerAction;
-[["Enlever le <t color='#FF8000'>baillon</t>", public_fnc_getBaillon, "", 0, false, false, "", '!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && !g_action_inUse && (cursorTarget getVariable["baillon", false])']] call CBA_fnc_addPlayerAction;
-[["Enlever votre <t color='#FF8000'>baillon</t>", public_fnc_getBaillonSelf, "", 0, false, true, "", '!(player getVariable["restrained", false]) && (player getVariable["baillon", false]) && !g_coma && !(player getVariable["surrender", false])']] call CBA_fnc_addPlayerAction;
-//---------------
-[["Faire un <t color='#FF802B'>bandage</t>", public_fnc_bandageUse, "other", 0, true, true, "", '!isNull cursorTarget  && (isPlayer cursorTarget) && cursorTarget isKindOf "Man" && (cursorTarget getVariable["is_bleeding", false]) && ("SkylineItems_Bandage" in (magazines player)) && !g_coma && (player distance cursorTarget < 3) && (vehicle player == player) && !g_action_inUse']] call CBA_fnc_addPlayerAction;
-//---------------
-*/

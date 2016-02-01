@@ -10,7 +10,7 @@ class Events
 		class onPlayerHandleDamage {};
 		class onPlayerInventoryOpen {};
 		class onPlayerKeyPress {};
-		class onPlayerKilled {};
+		class onplayerDeath {};
 		class onPlayerMapOpen {};
 		class onPlayerRespawn {};
 		class onPlayerSpeak {};

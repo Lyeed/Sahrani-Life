@@ -40,7 +40,7 @@ if (_unit getVariable["is_coma", false]) then
 			if (_unit getVariable["is_coma", false]) then
 			{
 				[player, _unit] remoteExecCall ["TON_fnc_logDeath", 2];
-				[player] remoteExecCall ["public_fnc_killAction", _unit];
+				[player] remoteExecCall ["public_fnc_item_knife_apply", _unit];
 			} else {
 				["La personne n'est pas dans le coma"] call public_fnc_error;
 			};			

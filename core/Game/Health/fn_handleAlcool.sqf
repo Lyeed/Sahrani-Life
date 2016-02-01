@@ -18,6 +18,7 @@ if (g_alcool isEqualTo 0) then
 		private["_effect", "_i"];
 		_effect = ppEffectCreate ["ChromAberration", 3500];
 		_effect ppEffectEnable true;
+		_effect ppEffectForceInNVG true;
 
 		_i = 10;
 		while {_i > 1} do

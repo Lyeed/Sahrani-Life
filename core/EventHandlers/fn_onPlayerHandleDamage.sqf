@@ -24,7 +24,11 @@ if (g_connected && !g_staff_god && (_damage > 0)) then
 		};
 	};
 
-	if (!(isNull (player getVariable ["escorting", objNull]))) exitWith
+	if (!(isNull g_dragingBody)) then {
+		[false] call public_fnc_action_body_drop;
+	};
+
+	if (!(isNull (player getVariable ["escorting", objNull]))) then
 	{
 		_target = player getVariable ["escorting", objNull];
 		detach _target;

@@ -20,6 +20,11 @@ if ((vehicle player) isEqualTo player) then
 		[] call public_fnc_standUp;
 		true breakOut "main";
 	};
+	if (!(isNull g_dragingBody)) then
+	{
+		[true] spawn public_fnc_action_body_drop;
+		true breakOut "main";
+	};
 
 	if (isNull _target) then 
 	{

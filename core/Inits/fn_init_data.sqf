@@ -33,7 +33,7 @@ g_donator = compileFinal (_basic select 8);
 {
 	waitUntil {g_connected};
 	if (_this select 2) then {
-		[] spawn public_fnc_coma;
+		[] spawn public_fnc_handleComa;
 	} else {
 		[((4000 - (_this select 0)) * -1)] call public_fnc_handleBlood;
 		[(_this select 1)] call public_fnc_handleBleed;
