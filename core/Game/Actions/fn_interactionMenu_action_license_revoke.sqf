@@ -5,8 +5,8 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_licenses", "_from"];
-_licenses = [_this, 0, [], [[]]] call BIS_fnc_param;
+private["_license", "_from"];
+_license = [_this, 0, "", [""]] call BIS_fnc_param;
 _from = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
 
 if (isNull _from) exitWith {};

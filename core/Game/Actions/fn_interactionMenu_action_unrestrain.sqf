@@ -19,6 +19,8 @@ g_action_inUse = true;
 player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
 
+g_action_inUse = false;
+
 if (!(g_interaction_target getVariable ["restrained", false])) exitWith {
 	["La cible n'est pas menottée"] call public_fnc_error;
 };
@@ -32,4 +34,3 @@ if (!([true, "handcuffs", 1] call public_fnc_handleInv)) then {
 
 g_interaction_target setVariable ["restrained", false, true];
 [player, "cuffout", 10] call CBA_fnc_globalSay3d;
-g_action_inUse = false;

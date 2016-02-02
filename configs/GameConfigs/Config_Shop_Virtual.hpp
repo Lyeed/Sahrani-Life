@@ -19,7 +19,6 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Marché";
 		side = "";
-		// items[]= {{"water", "banane", "mangue", "fishingpoles", "storage", "fuelF"}, {"banane", "mangue"}};
 		items[]= {{"water", "petitbeurre", "pizza","storage_small", "storage_medium", "storage_large", "sandwich", "croissant", "kefir", "ravioli", "raisin", "prune"}, {"raisin", "prune", "cotton", "bean", "corn", "wheat", "patate"}};
 	};
 	
@@ -35,13 +34,13 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Milice";
 		side = "WEST";
-		items[] = {{"cone", "barriere", "cafe", "donut", "soda", "handcuffkeys", "handcuffs", "spikeStrip", "bip", "sifflet"}, {}};
+		items[] = {{"cone", "barriere", "cafe", "donut", "soda", "handcuffkeys", "handcuffs", "spikeStrip", "bip", "sifflet", "storage_stock"}, {}};
 	};
 	class east
 	{
 		name = "Garde";
 		side = "EAST";
-		items[] = {{"ragout", "medova", "sifflet", "handcuffs", "handcuffkeys", "barriere", "cone", "bip", "spikeStrip"}, {}};
+		items[] = {{"ragout", "medova", "sifflet", "handcuffs", "handcuffkeys", "barriere", "cone", "bip", "spikeStrip", "storage_stock"}, {}};
 	};
 	class guer
 	{

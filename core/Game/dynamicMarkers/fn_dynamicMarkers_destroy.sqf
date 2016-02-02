@@ -23,13 +23,11 @@ if ((player distance (getMarkerPos _marker)) < 20) then
 				};
 				(format["La faction %1 a détruit %2.", getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "name"), (markerText _marker)]) remoteExecCall ["systemChat", -2];
 				(format[
-					"%1 %2 a détruit %2.",
+					"%1 %2 a détruit %3.",
 					([(side player), (player getVariable ["rank", 0])] call public_fnc_rankToStr),
 					(player getVariable ["realname", profileName]),
 					(markerText _marker)
 				]) remoteExecCall ["systemChat", playerSide];
-
-				[_marker] remoteExecCall ["public_fnc_dynamicMarkers_update", -2];
 				[_marker] remoteExec ["TON_fnc_dynamicMarkers_update", 2];
 			} else {
 				["Vous êtes trop loin."] call public_fnc_error;

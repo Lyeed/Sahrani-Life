@@ -11,17 +11,12 @@ _marker = [_this, 0, "", [""]] call BIS_fnc_param;
 if (_marker isEqualTo "") exitWith {};
 if (!g_connected) exitWith {};
 
-if ((markerAlpha _marker) isEqualTo 1) then
-{
-	if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _marker >> "shown")) then {
-		[format["Le marqueur <t color='#74DF00'>%1</t> a changé de place.", (markerText _marker)]] call public_fnc_info;
-	} else {
-		_marker setMarkerAlphaLocal 0;
-		_index = [_marker, g_dynamic_markers_discovered] call public_fnc_index;
-		if (_index != -1) then {
-			g_dynamic_markers_discovered deleteAt _index;
-		};
-
-		[format["Le marqueur <t color='#74DF00'>%1</t> n'est plus d'actualité.", (markerText _marker)]] call public_fnc_info;
-	};
+if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _marker >> "shown")) then {
+	_marker setMarkerAlphaLocal 1;
+	[format["Le marqueur <t color='#74DF00'>%1</t> a changé de place.", (markerText _marker)]] call public_fnc_info;
+} else {
+	_marker setMarkerAlphaLocal 0;
+	_index = [_marker, g_dynamic_markers_discovered] call public_fnc_index;
+	if (_index != -1) then {g_dynamic_markers_discovered deleteAt _index};
+	[format["Le marqueur <t color='#74DF00'>%1</t> n'est plus d'actualité.", (markerText _marker)]] call public_fnc_info;
 };

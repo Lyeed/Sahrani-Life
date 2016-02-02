@@ -40,6 +40,7 @@ class ALYSIA_FACTIONS
 					"hlc_rifle_aks74u",
 					"hlc_rifle_akm",
 					"hlc_rifle_rpk",
+					"hlc_rifle_rpk74n",
 					"hlc_rifle_RPK12",
 					"RH_g19",
 					"Fett_SDAR",
@@ -222,6 +223,9 @@ class ALYSIA_FACTIONS
 			{"Weapons",
 				{
 					"hlc_rifle_M14_Bipod",
+					"hlc_rifle_M14_Bipod",
+					"hlc_rifle_m14dmr",
+					"hlc_rifle_m14sopmod",
 					"Trixie_Enfield_Rail",
 					"hlc_rifle_aughbar_B",
 					"Fett_SDAR",

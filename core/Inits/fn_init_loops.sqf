@@ -73,17 +73,15 @@ if (g_launder > 0) then
 
 		g_seatbelt = false;
 		_veh = vehicle player;
-		_fuel = getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf (_veh) >> "fuel");
-		_curentfuel = _veh getVariable ["typeRefuel", ""];
+		_fuel = getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf(_veh) >> "fuel");
 
 		if (!(isNull (player getVariable ["escorting", objNull]))) then
 		{
 			_target = player getVariable ["escorting", objNull];
 			detach _target;
+			_target moveInCargo _veh;
 			_target setVariable ["escorted", objNull, true];
 			player setVariable ["escorting", objNull, true];
-
-			_target moveInCargo _veh;
 		};
 		
 		if (!(isNull g_dragingBody)) then
@@ -98,6 +96,7 @@ if (g_launder > 0) then
 		{
 			if (((driver _veh) isEqualTo player) && (isEngineOn _veh)) then
 			{
+				_curentfuel = _veh getVariable ["typeRefuel", ""];
 				if ((_fuel != _curentfuel) && (_curentfuel != "")) then
 				{
 					if (!((_curentfuel in ["SP95","SP98"]) && (_fuel in ["SP95","SP98"]))) then

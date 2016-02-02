@@ -118,9 +118,11 @@ g_vehicles = [_this, 2, [], [[]]] call BIS_fnc_param;
 } forEach ([_this, 3, [], [[]]] call BIS_fnc_param);
 
 {
-	if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "shown"))) then {
+	if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "shown")) then {
+		_x setMarkerAlphaLocal 1;
+	} else {
 		_x setMarkerAlphaLocal 0;
-	};
+	}
 } forEach g_dynamic_markers;
 
 g_company = [_this, 4, objNull, [objNull]] call BIS_fnc_param;

@@ -19,4 +19,4 @@ deleteMarkerLocal "laboratory";
 		[_item] call public_fnc_itemGetName,
 		[_sideFrom] call public_fnc_sideToStr
 	]
-] remoteExecCall ["public_fnc_info", _owner];
+] call public_fnc_info;

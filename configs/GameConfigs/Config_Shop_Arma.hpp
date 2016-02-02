@@ -64,6 +64,8 @@ class ALYSIA_SHOPS_ARMA
 			"SkylineItems_RadarGun",
 			"SkylineItems_Couteau",
 			"hlc_rifle_ak74_dirty2",
+			"hlc_rifle_ak74_dirty",
+			"hlc_rifle_ak74",
 			"hlc_30Rnd_545x39_B_AK",
 			"RH_g17",
 			"RH_17Rnd_9x19_g17",

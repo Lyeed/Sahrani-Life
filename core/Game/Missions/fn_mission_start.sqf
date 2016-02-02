@@ -62,7 +62,7 @@ if (local _vehicle) then {
 	[_vehicle, 2] remoteExecCall ["lock", _vehicle];	
 };
 
-for "_i" from 0 to (round(random(40)) + 10) do
+for "_i" from 0 to (round(random(30)) + 10) do
 {
 	_type = getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "mission_items") call BIS_fnc_selectRandom;
 	if (!((_type select 1) isEqualTo [])) then
@@ -83,7 +83,7 @@ for "_i" from 0 to (round(random(40)) + 10) do
 				_vehicle addItemCargoGlobal [_item, 1];
 			};
 			case "Virtual": {
-				_vehicle setVariable ["Trunk", [true, (_vehicle getVariable ["Trunk", []]), _item, round(random(4))] call public_fnc_handleTrunk, true];
+				_vehicle setVariable ["Trunk", [true, (_vehicle getVariable ["Trunk", []]), _item, (round(random(2)) + 1)] call public_fnc_handleTrunk, true];
 			};
 		};
 	};

@@ -444,11 +444,19 @@ class Public
 	{
 		file = "core\Game\Actions";
 		class identityOpen {};
-		class interactionMenu_action_restrain {};
-		class interactionMenu_action_unrestrain {};
+		class showIdentity {};
 		class escort {};
 		class stopescort {};
-		class showIdentity {};
+		class sirene {};
+		class eatFood {};
+		class knockedOut {};
+		class knockoutAction {};
+		class pickupItem {};
+		class pickupMoney {};
+		class restrain {};
+		class surrender {};
+		class interactionMenu_action_restrain {};
+		class interactionMenu_action_unrestrain {};
 		class interactionMenu_action_lockpick {};
 		class interactionMenu_action_trade_open {};
 		class interactionMenu_action_trade_update {};
@@ -470,14 +478,6 @@ class Public
 		class interactionMenu_action_license_get {};
 		class interactionMenu_action_license_return {};
 		class interactionMenu_action_license_revoke {};
-		class sirene {};
-		class eatFood {};
-		class knockedOut {};
-		class knockoutAction {};
-		class pickupItem {};
-		class pickupMoney {};
-		class restrain {};
-		class surrender {};
 	};
 
 	class Welcome

@@ -48,7 +48,7 @@ _time = getNumber(missionConfigFile >> "ALYSIA_MEDICAL" >> "coma" >> "timer");
 g_blood = 1;
 
 if ((vehicle player) != player) then { 
-	player action ["Eject", (vehicle player)]; 
+	player action ["Eject", (vehicle player)];
 };
 
 player setVariable ["tf_globalVolume", 0];
@@ -120,7 +120,7 @@ if (player getVariable ["is_coma", false]) then {
 };
 
 if (player getVariable ["medic_request", false]) then {
-	player getVariable ["medic_request", false, true];
+	player setVariable ["medic_request", false, true];
 };
 
 _display displayRemoveEventHandler ["KeyDown", _id];

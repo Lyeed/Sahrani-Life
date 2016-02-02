@@ -15,6 +15,11 @@ class ALYSIA_STORAGES
 		inventory = 2000;
 		item = "storage_large";
 	};
+	class R3F_WeaponStock
+	{
+		inventory = 5000;
+		item = "storage_stock";
+	};
 };
 
 class ALYSIA_HOUSES
@@ -138,7 +143,7 @@ class ALYSIA_HOUSES
 
 	class Land_Army_hut3_long_int
 	{
-		price = 15000;
+		price = 50;
 		storage = "Skyline_Coffre_Small";
 		storage_building_pos_index = 1;
 		garage = 0;
@@ -150,7 +155,7 @@ class ALYSIA_HOUSES
 
 	class Land_Army_hut2_int
 	{
-		price = 15000;
+		price = 50;
 		storage = "Skyline_Coffre_Small";
 		storage_building_pos_index = 1;
 		garage = 0;
@@ -234,15 +239,15 @@ class ALYSIA_HOUSES
 
 	class Land_Budova4_in
 	{
-		price = 345000;
+		price = 50;
 		storage = "Skyline_Coffre_Medium";
 		storage_building_pos_index = 1;
 		garage = 0;
 		garage_type[] = {};
-		sides[] = {"East", "West"};
+		sides[] = {"EAST", "WEST"};
 		rank = 0;
 		license = "home";
-	};	
+	};
 
 	class Land_Panelak2
 	{
@@ -270,7 +275,7 @@ class ALYSIA_HOUSES
 	
 	class CampEast_EP1
 	{
-		price = 10;
+		price = 50;
 		storage = "Skyline_Coffre_Large";
 		storage_building_pos_index = 2;
 		garage = 0;
@@ -282,7 +287,7 @@ class ALYSIA_HOUSES
 	
 	class Barrack2
 	{
-		price = 10;
+		price = 50;
 		storage = "Skyline_Coffre_Medium";
 		storage_building_pos_index = 4;
 		garage = 0;
@@ -294,7 +299,7 @@ class ALYSIA_HOUSES
 	
 	class Land_tent_east
 	{
-		price = 0;
+		price = 50;
 		storage = "Skyline_Coffre_Large";
 		storage_building_pos_index = 6;
 		garage = 10;
@@ -306,7 +311,7 @@ class ALYSIA_HOUSES
 	
 	class Land_Barrack2_EP1
 	{
-		price = 0;
+		price = 50;
 		storage = "Skyline_Coffre_Medium";
 		storage_building_pos_index = 5;
 		garage = 10;
@@ -318,7 +323,7 @@ class ALYSIA_HOUSES
 	
 	class Fett_Land_Dum_mesto_in_east
 	{
-		price = 0;
+		price = 50;
 		storage = "R3F_WeaponStock";
 		storage_building_pos_index = 5;
 		garage = 10;
@@ -330,7 +335,7 @@ class ALYSIA_HOUSES
 	
 	class Fett_Land_Cihlovej_Dum_in_west
 	{
-		price = 0;
+		price = 50;
 		storage = "R3F_WeaponStock";
 		storage_building_pos_index = 1;
 		garage = 10;

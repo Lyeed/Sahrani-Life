@@ -22,7 +22,7 @@ while {(g_blood < 4000)} do
 		};
 
 		if (g_morphine > 0) then {
-			_regen = _regen + (g_morphine * getNumber(missionConfigFile >> "ALYSIA_MEDICAL" >> "morphine" >> "regen_multiplier"));
+			_regen = _regen + (g_morphine * getNumber(missionConfigFile >> "ALYSIA_MEDICAL" >> "regen" >> "regen_morphine_multiplier"));
 		};
 
 		if (_regen > 0) then {

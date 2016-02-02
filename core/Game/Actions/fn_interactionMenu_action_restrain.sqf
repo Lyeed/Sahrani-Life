@@ -19,6 +19,8 @@ g_action_inUse = true;
 player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
 
+g_action_inUse = false;
+
 if (g_interaction_target getVariable ["restrained", false]) exitWith {
 	["La cible est déjà menotté"] call public_fnc_error;
 };
@@ -31,4 +33,3 @@ if (!([false, "handcuffs", 1] call public_fnc_handleInv)) exitWith {
 };
 
 remoteExec ["public_fnc_restrain", g_interaction_target];
-g_action_inUse = false;

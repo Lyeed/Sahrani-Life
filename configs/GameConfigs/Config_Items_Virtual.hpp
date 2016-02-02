@@ -163,6 +163,16 @@ class ALYSIA_ITEMS
 			action = "['storage_large'] spawn public_fnc_storageBox;";
 		};
 	};
+	class storage_stock: storage_small
+	{
+		name        = "Coffre (Stock)";
+		weight      = 35;
+		price_buy   = 50000;
+		class use
+		{
+			action = "['storage_stock'] spawn public_fnc_storageBox;";
+		};
+	};
 	
 	class barriere
 	{

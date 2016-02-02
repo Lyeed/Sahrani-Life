@@ -9,25 +9,21 @@
 if (player getVariable ["surrender", false]) then
 {
 	[player, "handcuffs", 10] call CBA_fnc_globalSay3d;
+
 	player setVariable ["restrained", true, true];
 	player setVariable ["surrender", false, true];
 
 	while {(player getVariable ["restrained", false])} do
 	{
-		if ((vehicle player) isEqualTo player) then
-		{
-			if (!((animationState player) in ["amovpercmstpsnonwnondnon_easeout","amovpercmstpsnonwnondnon_easein"])) then
-			{
-				[player, "AmovPercMstpSnonWnonDnon_Ease"] remoteExecCall ["switchMove", -2];
-				player playMoveNow "AmovPercMstpSnonWnonDnon_Ease";
+		if ((vehicle player) isEqualTo player) then {
+			if ((animationState player) != "amovpercmstpsnonwnondnon_ease") then {
+				player playmove "amovpercmstpsnonwnondnon_ease";
+			};
+		} else {
+			if (((driver (vehicle player)) isEqualTo player)) then {
+				player action ["eject", (vehicle player)];
 			};
 		};
-		if (((vehicle player) != player) && ((driver (vehicle player)) isEqualTo player)) then
-		{
-			player action ["eject", (vehicle player)];
-		};
-		sleep 0.7;
 	};
-	[player, "AmovPercMstpSnonWnonDnon_Ease"] remoteExecCall ["switchMove", -2];
-	player playMove "AmovPercMstpSnonWnonDnon_Ease";
+	player switchmove "AMOVPERCMSTPSNONWNONDNON_EASEOUT";
 };

@@ -4,6 +4,7 @@ class ALYSIA_MEDICAL
 	{
 		regen_basic = 2;
 		regen_healthy = 6;
+		regen_morphine_multiplier = 1;
 	};
 
 	class morphine
@@ -11,7 +12,6 @@ class ALYSIA_MEDICAL
 		seringue_amount = 7;
 		tick_timer = 15;
 		tick_amount = 1;
-		regen_multiplier = 1;
 	};
 
 	class adrenaline
