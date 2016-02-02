@@ -30,4 +30,4 @@ removeAllWeapons player;
 removeAllAssignedItems player;
 
 [] spawn public_fnc_prisonTimer;
-["Vous devez à présent fournir une tenue de la prison au prisonnier et l'enfermer dans sa cellule."] remoteExecCall ["public_fnc_info", _from];
+["Veuillez dès à présent fournir une tenue à l'individu et l'enfermer dans sa cellule."] remoteExecCall ["public_fnc_info", _from];

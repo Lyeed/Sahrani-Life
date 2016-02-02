@@ -6,12 +6,15 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (isNil g_arrest_time) exitWith {};
+private ["_prison"];
+_prison = call compile g_arrest_prison;
+
+if (g_arrest_time isEqualTo 0) exitWith {};
 if (player getVariable ["arrested", false]) exitWith {};
 
 switch {g_arrest_time >= 1} do
 {
-	if (((getposATL player) distance (getPosATL g_arrest_prison)) < (getNumber (missionConfigFile >> "ALYSIA_PRISONS" >> g_arrest_Prison >> "escape_distance"))) then {
+	if (((getposATL player) distance (getPosATL _prison)) < (getNumber (missionConfigFile >> "ALYSIA_PRISONS" >> g_arrest_Prison >> "escape_distance"))) then {
 		g_arrest_time = g_arrest_time - 1;
 		sleep 1;
 	} else {
@@ -27,14 +30,14 @@ switch {g_arrest_time >= 1} do
 		[
 			format
 			[
-				"Le prisonnier %1 s'est évadé de la prison: %2",
+				"URGENCE: Le prisonnier %1 s'est évadé de la %2.",
 				player getVariable ["realname", ""],
-				g_arrest_prison
-			], "getText(missionConfigFile >> ""ALYSIA_PRISONS"" >> g_arrest_Prison >> ""name"")"
-		] remoteExecCall ["public_fnc_phone_message_receive", [getText(missionConfigFile >> "ALYSIA_PRISONS" >> g_arrest_Prison >> "side" select 0)] call public_fnc_strToSide];
+				getText(missionConfigFile >> "ALYSIA_PRISONS" >> g_arrest_Prison >> "name")
+			], getText(missionConfigFile >> "ALYSIA_PRISONS" >> g_arrest_Prison >> "name")
+		] remoteExecCall ["public_fnc_phone_message_receive", [getArray(missionConfigFile >> "ALYSIA_PRISONS" >> g_arrest_Prison >> "side") select 0] call public_fnc_strToSide];
 	};
 };
 
-if (player getVariable ["arrested", false]) then {
+if (g_arrest_Escape) then {
 	[] spawn public_fnc_prisonRelease;
 };
