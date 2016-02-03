@@ -774,7 +774,7 @@ class ALYSIA_PROCESS
 		sound = "smelting";
 		require[] =
 		{
-			{"woodp", 2}
+			{"woodp", 3}
 		};
 		receive[] =
 		{
@@ -782,8 +782,8 @@ class ALYSIA_PROCESS
 			{"wc_us_smg_m1a1"},
 			0
 		};
-		time_per_item = 10;
-		time_default = 7;
+		time_per_item = 20;
+		time_default = 10;
 		class target {};
 		class factions
 		{
