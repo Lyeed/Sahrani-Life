@@ -5,6 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+
 private["_math", "_item", "_num", "_weight", "_value", "_return"];
 _math = [_this, 0, false, [false]] call BIS_fnc_param;
 _item = [_this, 1, "", [""]] call BIS_fnc_param;

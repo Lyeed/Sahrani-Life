@@ -9,13 +9,13 @@
 private ["_prison"];
 _prison = call compile g_arrest_prison;
 
-if (g_arrest_time isEqualTo 0) exitWith {};
-if (player getVariable ["arrested", false]) exitWith {};
+if (g_arrest_Time isEqualTo 0) exitWith {};
+if (!(player getVariable ["arrested", false])) exitWith {};
 
-switch {g_arrest_time >= 1} do
+while {g_arrest_Time >= 1} do
 {
 	if (((getposATL player) distance (getPosATL _prison)) < (getNumber (missionConfigFile >> "ALYSIA_PRISONS" >> g_arrest_Prison >> "escape_distance"))) then {
-		g_arrest_time = g_arrest_time - 1;
+		g_arrest_Time = g_arrest_Time - 1;
 		sleep 1;
 	} else {
 		g_arrest_Time = -1;
@@ -38,6 +38,6 @@ switch {g_arrest_time >= 1} do
 	};
 };
 
-if (g_arrest_Escape) then {
+if (!(g_arrest_Escape)) then {
 	[] spawn AlysiaClient_fnc_prisonRelease;
 };

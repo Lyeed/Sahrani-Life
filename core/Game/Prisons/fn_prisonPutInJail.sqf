@@ -19,7 +19,7 @@ g_arrest_Cellule = _infos select 0;
 g_arrest_Time = _infos select 1;
 g_arrest_Caution = _infos select 2;
 g_arrest_Reason = _infos select 3;
-g_arrest_Gear = [[g_cash, ([player] call AlysiaClient_fnc_saveGear), ([player] call AlysiaClient_fnc_getInv)]];
+g_arrest_Gear = [g_cash, ([player] call AlysiaClient_fnc_getGear), ([player] call AlysiaClient_fnc_getInv)];
 
 removeHeadgear player;
 removeGoggles player;

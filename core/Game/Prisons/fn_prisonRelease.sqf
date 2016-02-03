@@ -22,9 +22,9 @@ removeAllAssignedItems player;
 sleep 5;
 titleText["Remise de vos effets personnels..", "BLACK FADED"];
 g_cash = g_arrest_Gear select 0;
-[g_arrest_Gear select 1] call AlysiaClient_fnc_loadGear;
+[g_arrest_Gear select 1] spawn AlysiaClient_fnc_loadGear;
 {
-	[true, _x, 1];
+	[true, (_x select 0), (_x select 1)] call AlysiaClient_fnc_handleInv;
 } forEach g_arrest_Gear select 2;
 sleep 5;
 titleText["Sortie de prison..", "BLACK FADED"];
