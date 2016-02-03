@@ -18,7 +18,7 @@ if ((count g_phone_messages) >= getNumber(missionConfigFile >> "ALYSIA_PHONE" >>
 	g_phone_messages deleteAt 0;
 };
 
-g_phone_messages pushBack [_from, (format["Le %1 à %2", ([] call public_fnc_strDate), ([] call public_fnc_strTime)]), 0, _msg];
+g_phone_messages pushBack [_from, (format["Le %1 à %2", ([] call AlysiaClient_fnc_strDate), ([] call AlysiaClient_fnc_strTime)]), 0, _msg];
 
 if (profileNamespace getVariable["ALYSIA_phone_SILENT", false]) then {
 	playSound "message_rcv_silent";

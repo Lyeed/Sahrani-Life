@@ -21,7 +21,7 @@ if (isNil "_vehicle") exitWith {};
 if (isNull _vehicle) exitWith {};
 
 if (cbChecked (_display displayCtrl 35002)) then {
-	_price = round(([(_vehicle getVariable ["Trunk", []])] call public_fnc_weightGenerate) * 75);
+	_price = round(([(_vehicle getVariable ["Trunk", []])] call AlysiaClient_fnc_weightGenerate) * 75);
 } else {
 	_price = 0;
 };
@@ -29,7 +29,7 @@ if (cbChecked (_display displayCtrl 35002)) then {
 (_display displayCtrl 35005) ctrlSetStructuredText parseText format
 [
 	"<t align='center' color='%2'>%1</t><t align='right'>kn</t>",
-	([_price] call public_fnc_numberText),
+	([_price] call AlysiaClient_fnc_numberText),
 	if (g_atm < _price) then {"#ff8c8c"} else {"#8cff9b"}
 ];
 

@@ -9,7 +9,7 @@
 if ((vehicle player) isEqualTo player) then
 {
 	if (((getPosASLW player) select 2) < 0) then {
-		["Vous ne pouvez pas utiliser votre holdster sous l'eau"] call public_fnc_error;
+		["Vous ne pouvez pas utiliser votre holdster sous l'eau"] call AlysiaClient_fnc_error;
 	} else {
 		if ((currentWeapon player) isEqualTo "") then
 		{
@@ -20,7 +20,7 @@ if ((vehicle player) isEqualTo player) then
 			};	
 		} else {
 			if (((handgunWeapon player) isEqualTo (currentWeapon player)) && !(player canAdd (currentWeapon player))) then {
-				["Vous n'avez pas assez de place pour ranger votre arme"] spawn public_fnc_error;
+				["Vous n'avez pas assez de place pour ranger votre arme"] spawn AlysiaClient_fnc_error;
 			} else {
 				g_curWep_h = currentWeapon player;
 				player action ["SwitchWeapon", player, player, 100];
@@ -28,7 +28,7 @@ if ((vehicle player) isEqualTo player) then
 		};
 	};
 } else {
-	["Vous ne pouvez pas utiliser votre holdster en véhicule"] call public_fnc_error;
+	["Vous ne pouvez pas utiliser votre holdster en véhicule"] call AlysiaClient_fnc_error;
 };
 
 true;

@@ -93,7 +93,7 @@ class RscDisplayGarageAlysia: RscDisplayDefault
 		class TYPE_LIST: RscCombo
 		{
 			idc = 2826;
-			onLBSelChanged = "_this call public_fnc_garageTypeSelect;";
+			onLBSelChanged = "_this call AlysiaClient_fnc_garageTypeSelect;";
 
 			x = 0.298906 * safezoneW + safezoneX;
 			y = 0.302 * safezoneH + safezoneY;
@@ -121,7 +121,7 @@ class RscDisplayGarageAlysia: RscDisplayDefault
 		class VEHICLES_LIST: RscListBox
 		{
 			idc = 2802;
-			onLBSelChanged = "_this call public_fnc_garageVehicleSelect;";
+			onLBSelChanged = "_this call AlysiaClient_fnc_garageVehicleSelect;";
 
 			x = 0.267969 * safezoneW + safezoneX;
 			y = 0.379 * safezoneH + safezoneY;
@@ -277,7 +277,7 @@ class RscDisplayGarageAlysia: RscDisplayDefault
 		class ACTION_BUTTON_1: RscButtonSilent
 		{
 			idc = 2811;
-			action = "[] call public_fnc_garageVehicleGet;";
+			action = "[] call AlysiaClient_fnc_garageVehicleGet;";
 			onMouseEnter = "if ((ctrlText 2810) isEqualTo ""lyeed_IMG\data\garage\action_get.paa"") then {ctrlSetText[2810,""lyeed_IMG\data\garage\action_get_select.paa""]};";
 			onMouseExit = "if ((ctrlText 2810) isEqualTo ""lyeed_IMG\data\garage\action_get_select.paa"") then {ctrlSetText[2810,""lyeed_IMG\data\garage\action_get.paa""]};";
 			tooltip = "Récupérer";
@@ -301,7 +301,7 @@ class RscDisplayGarageAlysia: RscDisplayDefault
 		class ACTION_BUTTON_2: RscButtonSilent
 		{
 			idc = 2813;
-			action = "[] call public_fnc_garageVehicleAssure;";
+			action = "[] call AlysiaClient_fnc_garageVehicleAssure;";
 			onMouseEnter = "if ((ctrlText 2812) isEqualTo ""lyeed_IMG\data\garage\action_insurrance.paa"") then {ctrlSetText[2812,""lyeed_IMG\data\garage\action_insurrance_select.paa""]};";
 			onMouseExit = "if ((ctrlText 2812) isEqualTo ""lyeed_IMG\data\garage\action_insurrance_select.paa"") then {ctrlSetText[2812,""lyeed_IMG\data\garage\action_insurrance.paa""]};";
 			tooltip = "Assurer";
@@ -325,7 +325,7 @@ class RscDisplayGarageAlysia: RscDisplayDefault
 		class ACTION_BUTTON_3: RscButtonSilent
 		{
 			idc = 2815;
-			action = "[] spawn public_fnc_garageVehicleFind;";
+			action = "[] spawn AlysiaClient_fnc_garageVehicleFind;";
 			tooltip = "Afficher sur la carte le garage contenant le véhicule";
 			onMouseEnter = "if ((ctrlText 2814) isEqualTo ""lyeed_IMG\data\garage\action_localize.paa"") then {ctrlSetText[2814,""lyeed_IMG\data\garage\action_localize_select.paa""]};";
 			onMouseExit = "if ((ctrlText 2814) isEqualTo ""lyeed_IMG\data\garage\action_localize_select.paa"") then {ctrlSetText[2814,""lyeed_IMG\data\garage\action_localize.paa""]};";
@@ -349,7 +349,7 @@ class RscDisplayGarageAlysia: RscDisplayDefault
 		class ACTION_BUTTON_4: RscButtonSilent
 		{
 			idc = 2817;
-			action = "[] call public_fnc_garageVehicleRefuel;";
+			action = "[] call AlysiaClient_fnc_garageVehicleRefuel;";
 			tooltip = "Faire le plein";
 			onMouseEnter = "if ((ctrlText 2816) isEqualTo ""lyeed_IMG\data\garage\action_refuel.paa"") then {ctrlSetText[2816,""lyeed_IMG\data\garage\action_refuel_select.paa""]};";
 			onMouseExit = "if ((ctrlText 2816) isEqualTo ""lyeed_IMG\data\garage\action_refuel_select.paa"") then {ctrlSetText[2816,""lyeed_IMG\data\garage\action_refuel.paa""]};";
@@ -373,7 +373,7 @@ class RscDisplayGarageAlysia: RscDisplayDefault
 		class ACTION_BUTTON_5: RscButtonSilent
 		{
 			idc = 2819;
-			action = "[] spawn public_fnc_garageVehicleImport;";
+			action = "[] spawn AlysiaClient_fnc_garageVehicleImport;";
 			tooltip = "Importer dans ce garage";
 			onMouseEnter = "if ((ctrlText 2818) isEqualTo ""lyeed_IMG\data\garage\action_import.paa"") then {ctrlSetText[2818,""lyeed_IMG\data\garage\action_import_select.paa""]};";
 			onMouseExit = "if ((ctrlText 2818) isEqualTo ""lyeed_IMG\data\garage\action_import_select.paa"") then {ctrlSetText[2818,""lyeed_IMG\data\garage\action_import.paa""]};";
@@ -397,7 +397,7 @@ class RscDisplayGarageAlysia: RscDisplayDefault
 		class ACTION_BUTTON_6: RscButtonSilent
 		{
 			idc = 2821;
-			action = "[] spawn public_fnc_garageVehicleRenameStart;";
+			action = "[] spawn AlysiaClient_fnc_garageVehicleRenameStart;";
 			tooltip = "Renommer";
 			onMouseEnter = "if ((ctrlText 2820) isEqualTo ""lyeed_IMG\data\garage\action_rename.paa"") then {ctrlSetText[2820,""lyeed_IMG\data\garage\action_rename_select.paa""]};";
 			onMouseExit = "if ((ctrlText 2820) isEqualTo ""lyeed_IMG\data\garage\action_rename_select.paa"") then {ctrlSetText[2820,""lyeed_IMG\data\garage\action_rename.paa""]};";
@@ -421,7 +421,7 @@ class RscDisplayGarageAlysia: RscDisplayDefault
 		class ACTION_BUTTON_7: RscButtonSilent
 		{
 			idc = 2823;
-			action = "[] spawn public_fnc_garageVehicleSell;";
+			action = "[] spawn AlysiaClient_fnc_garageVehicleSell;";
 			tooltip = "Vendre";
 			onMouseEnter = "if ((ctrlText 2822) isEqualTo ""lyeed_IMG\data\garage\action_sell.paa"") then {ctrlSetText[2822,""lyeed_IMG\data\garage\action_sell_select.paa""]};";
 			onMouseExit = "if ((ctrlText 2822) isEqualTo ""lyeed_IMG\data\garage\action_sell_select.paa"") then {ctrlSetText[2822,""lyeed_IMG\data\garage\action_sell.paa""]};";
@@ -544,7 +544,7 @@ class RscDisplayGarageRename: RscDisplayDefault
 		class ACTION_BUTTON: RscButtonSilent
 		{
 			idc = 101006;
-			action = "[] call public_fnc_garageVehicleRenameProcess;";
+			action = "[] call AlysiaClient_fnc_garageVehicleRenameProcess;";
 			onMouseEnter = "			ctrlSetText[101005,""lyeed_IMG\data\garage\store\action_store_select.paa""];			ctrlShow[101002, false];			((findDisplay 101000) displayCtrl 101003) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 101000) displayCtrl 101004) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Changer</t>"";";
 			onMouseExit = "			ctrlSetText[101005,""lyeed_IMG\data\garage\store\action_store.paa""];			ctrlShow[101002, true];			((findDisplay 101000) displayCtrl 101003) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 101000) displayCtrl 101004) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Changer</t>"";";
 
@@ -642,7 +642,7 @@ class RscDisplayGarageStore: RscDisplayDefault
 		class VEHICLE: RscCombo
 		{
 			idc = 35001;
-			onLBSelChanged = "[] call public_fnc_garageStoreUpdate;";
+			onLBSelChanged = "[] call AlysiaClient_fnc_garageStoreUpdate;";
 
 			x = 0.4175 * safezoneW + safezoneX;
 			y = 0.533 * safezoneH + safezoneY;
@@ -672,7 +672,7 @@ class RscDisplayGarageStore: RscDisplayDefault
 		class INVENTORY_CHECKBOX: RscCheckbox
 		{
 			idc = 35002;
-			onCheckedChanged = "[] call public_fnc_garageStoreUpdate;";
+			onCheckedChanged = "[] call AlysiaClient_fnc_garageStoreUpdate;";
 
 			x = 0.385016 * safezoneW + safezoneX;
 			y = 0.56886 * safezoneH + safezoneY;
@@ -766,7 +766,7 @@ class RscDisplayGarageStore: RscDisplayDefault
 		class ACTION_STORE_BUTTON: RscButtonSilent
 		{
 			idc = 35014;
-			action = "[] call public_fnc_garageStoreAction;";
+			action = "[] call AlysiaClient_fnc_garageStoreAction;";
 			onMouseEnter = "			ctrlSetText[35013,""lyeed_IMG\data\garage\store\action_store_select.paa""];			ctrlShow[35010, false];			((findDisplay 35000) displayCtrl 35011) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 35000) displayCtrl 35012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Ranger</t>"";";
 			onMouseExit = "			ctrlSetText[35013,""lyeed_IMG\data\garage\store\action_store.paa""];			ctrlShow[35010, true];			((findDisplay 35000) displayCtrl 35011) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 35000) displayCtrl 35012) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Ranger</t>"";";
 

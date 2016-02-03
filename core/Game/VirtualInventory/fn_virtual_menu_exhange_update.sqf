@@ -16,13 +16,13 @@ if (isNull _display) exitWith {};
 _ctrl_player = _display displayCtrl 505;
 lbClear _ctrl_player;
 {
-	_amount = [_x] call public_fnc_itemCount;
+	_amount = [_x] call AlysiaClient_fnc_itemCount;
 	if (_amount > 0) then
 	{
-		_index = _ctrl_player lbAdd format["%1x %2", if (_x isEqualTo "illegal_money") then {[_amount] call public_fnc_numberText} else {_amount}, ([_x] call public_fnc_itemGetName)];
+		_index = _ctrl_player lbAdd format["%1x %2", if (_x isEqualTo "illegal_money") then {[_amount] call AlysiaClient_fnc_numberText} else {_amount}, ([_x] call AlysiaClient_fnc_itemGetName)];
 		_ctrl_player lbSetData [_index, _x];
 		_ctrl_player lbSetValue [_index, _amount];
-		_ctrl_player lbSetPicture [_index, ([_x] call public_fnc_itemGetImage)];
+		_ctrl_player lbSetPicture [_index, ([_x] call AlysiaClient_fnc_itemGetImage)];
 	};
 } forEach (g_inv_items);
 if ((lbSize _ctrl_player) isEqualTo 0) then
@@ -57,10 +57,10 @@ lbClear _ctrl_vehicle;
 	_item = _x select 0;
 	_amount = _x select 1;
 	
-	_index = _ctrl_vehicle lbAdd format["%1x %2", ([_amount] call public_fnc_numberText), ([_item] call public_fnc_itemGetName)];
+	_index = _ctrl_vehicle lbAdd format["%1x %2", ([_amount] call AlysiaClient_fnc_numberText), ([_item] call AlysiaClient_fnc_itemGetName)];
 	_ctrl_vehicle lbSetData [_index, _item];
 	_ctrl_vehicle lbSetValue [_index, _amount];
-	_ctrl_vehicle lbSetPicture [_index, ([_item] call public_fnc_itemGetImage)];
+	_ctrl_vehicle lbSetPicture [_index, ([_item] call AlysiaClient_fnc_itemGetImage)];
 } forEach g_interaction_target_trunk;
 if ((lbSize _ctrl_vehicle) isEqualTo 0) then
 {

@@ -18,7 +18,7 @@ _ctrl = _display displayCtrl 18001;
 lbClear _ctrl;
 
 {
-	_index = _ctrl lbAdd ([_x] call public_fnc_licenseGetName);
+	_index = _ctrl lbAdd ([_x] call AlysiaClient_fnc_licenseGetName);
 	_ctrl lbSetData [_index, _x];
 } forEach (_licenses);
 if ((lbSize _ctrl) isEqualTo 0) then

@@ -8,7 +8,7 @@
 
 if ((time - g_action_delay) < 1) exitWith {};
 
-if ((["bip"] call public_fnc_itemCount) > 0) then
+if ((["bip"] call AlysiaClient_fnc_itemCount) > 0) then
 {
 	{
 		if ((_x animationPhase "Door_1_rot") isEqualTo 1) then {
@@ -19,7 +19,7 @@ if ((["bip"] call public_fnc_itemCount) > 0) then
 	} forEach (nearestObjects [player, ["Land_BarGate_F"], 15]);	player setFatigue ((getFatigue player) + 0.15);
 	g_action_delay = time;
 } else {
-	["Vous n'avez pas de télécommande"] call public_fnc_error;
+	["Vous n'avez pas de télécommande"] call AlysiaClient_fnc_error;
 };
 
 true;

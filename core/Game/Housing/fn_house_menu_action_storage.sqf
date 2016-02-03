@@ -11,7 +11,7 @@ _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 if (isNull _target) exitWith {};
 
 if (!(isNil "gServer_soonReboot") && hasInterface) exitWith {
-	["<t align='center'>Vous ne pouvez pas interagir avec votre coffre juste avant le <t color='#B40404'>redémarrage</t> du serveur</t>"] call public_fnc_error;
+	["<t align='center'>Vous ne pouvez pas interagir avec votre coffre juste avant le <t color='#B40404'>redémarrage</t> du serveur</t>"] call AlysiaClient_fnc_error;
 };
 
 _storage = g_interaction_target getVariable "house_storage_out";
@@ -69,13 +69,13 @@ if (isNull _storage) then
 
 	g_interaction_target setVariable ["house_storage_out", _storage, true];
 	if (hasInterface) then {
-		["<t color='#FF8000'>coffre</t> sortie"] call public_fnc_info;
+		["<t color='#FF8000'>coffre</t> sortie"] call AlysiaClient_fnc_info;
 	};
 } else {
 	g_interaction_target setVariable ["house_inv_virtual", (_storage getVariable ["Trunk", []]), true];
 	g_interaction_target setVariable ["house_inv_arma", ([getWeaponCargo _storage, getMagazineCargo _storage, getItemCargo _storage, getBackpackCargo _storage]), true];
 	deleteVehicle _storage;
 	if (hasInterface) then {
-		["<t color='#FF8000'>coffre</t> rangé"] call public_fnc_info;
+		["<t color='#FF8000'>coffre</t> rangé"] call AlysiaClient_fnc_info;
 	};
 };

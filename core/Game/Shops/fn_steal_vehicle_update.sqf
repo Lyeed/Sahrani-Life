@@ -19,12 +19,12 @@ if (_type isEqualTo "") exitWith {};
 _display = findDisplay 99000;
 if (isNull _display) exitWith {};
 
-_price = [_type] call public_fnc_getVehBuyPrice;
+_price = [_type] call AlysiaClient_fnc_getVehBuyPrice;
 
 (_display displayCtrl 99004) ctrlSetStructuredText parseText format
 [
 	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
-	([_price] call public_fnc_numberText)
+	([_price] call AlysiaClient_fnc_numberText)
 ];
 
 if (_price isEqualTo 0) then

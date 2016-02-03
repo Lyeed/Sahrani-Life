@@ -45,8 +45,8 @@ switch (_selected) do
 			+	"</t>"
 		);
 
-		_south = count([0, "SOUTH"] call public_fnc_auctionHouse_getStock) + count([1, "SOUTH"] call public_fnc_auctionHouse_getStock) + count([2, "SOUTH"] call public_fnc_auctionHouse_getStock);
-		_north = count([0, "NORTH"] call public_fnc_auctionHouse_getStock) + count([1, "NORTH"] call public_fnc_auctionHouse_getStock) + count([2, "NORTH"] call public_fnc_auctionHouse_getStock);
+		_south = count([0, "SOUTH"] call AlysiaClient_fnc_auctionHouse_getStock) + count([1, "SOUTH"] call AlysiaClient_fnc_auctionHouse_getStock) + count([2, "SOUTH"] call AlysiaClient_fnc_auctionHouse_getStock);
+		_north = count([0, "NORTH"] call AlysiaClient_fnc_auctionHouse_getStock) + count([1, "NORTH"] call AlysiaClient_fnc_auctionHouse_getStock) + count([2, "NORTH"] call AlysiaClient_fnc_auctionHouse_getStock);
 
 		(_display displayCtrl 45636) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", (_south + _north)];
 		(_display displayCtrl 45639) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", _north];
@@ -81,12 +81,12 @@ switch (_selected) do
 		lbClear _list;
 
 		{
-			_data = [g_AH_type, (_x select 0)] call public_fnc_auctionHouse_getInfo;
+			_data = [g_AH_type, (_x select 0)] call AlysiaClient_fnc_auctionHouse_getInfo;
 			_index = _list lbAdd format["%1 %2", (_data select 0), if ((getPlayerUID player) isEqualTo (_x select 2)) then {"(Vous)"} else {""}];
 			_list lbSetPicture [_index, (_data select 1)];
 			_list lbSetValue [_index, (_x select 1)];
 			_list lbSetData [_index, (_x select 2)];
-		} forEach ([g_AH_type, g_AH_location] call public_fnc_auctionHouse_getStock);
+		} forEach ([g_AH_type, g_AH_location] call AlysiaClient_fnc_auctionHouse_getStock);
 
 		if ((lbSize _list) isEqualTo 0) then {
 			_list lbAdd "Aucune vente";
@@ -122,12 +122,12 @@ switch (_selected) do
 		lbClear _list;
 
 		{
-			_data = [g_AH_type, _x] call public_fnc_auctionHouse_getInfo;
+			_data = [g_AH_type, _x] call AlysiaClient_fnc_auctionHouse_getInfo;
 			_index = _list lbAdd (_data select 0);
 			_list lbSetPicture [_index, (_data select 1)];
 			_list lbSetValue [_index, _forEachIndex];
 			_list lbSetData [_index, _x];
-		} forEach ([g_AH_type] call public_fnc_auctionHouse_getPlayerData);
+		} forEach ([g_AH_type] call AlysiaClient_fnc_auctionHouse_getPlayerData);
 
 		if ((lbSize _list) isEqualTo 0) then {
 			_list lbAdd "Vide";
@@ -165,13 +165,13 @@ switch (_selected) do
 		{
 			if ((_x select 2) isEqualTo (getPlayerUID player)) then
 			{
-				_data = [g_AH_type, (_x select 0)] call public_fnc_auctionHouse_getInfo;
+				_data = [g_AH_type, (_x select 0)] call AlysiaClient_fnc_auctionHouse_getInfo;
 				_index = _list lbAdd format["%1 - %2kn", (_data select 0), (_x select 1)];
 				_list lbSetPicture [_index, (_data select 1)];
 				_list lbSetValue [_index, _forEachIndex];
 				_list lbSetData [_index, (_x select 0)];
 			};
-		} forEach ([g_AH_type, g_AH_location] call public_fnc_auctionHouse_getStock);
+		} forEach ([g_AH_type, g_AH_location] call AlysiaClient_fnc_auctionHouse_getStock);
 		if ((lbSize _list) isEqualTo 0) then {
 			_list lbAdd "Aucune";
 		} else {

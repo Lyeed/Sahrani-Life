@@ -18,7 +18,7 @@ _players = false;
 	};
 } forEach (_chair nearEntities 1);
 if (_players) exitWith {
-	["Quelqu'un est déjà assis ici"] call public_fnc_error;
+	["Quelqu'un est déjà assis ici"] call AlysiaClient_fnc_error;
 };
 
 [player, "Crew"] remoteExecCall ["switchMove", -2];

@@ -11,7 +11,7 @@ if (isNull g_interaction_target) exitWith {};
 
 _ownerInfo = g_interaction_target getVariable ["house_owner", []];
 if (_ownerInfo isEqualTo []) then {
-	["Cette batisse n'a pas de propriétaire"] call public_fnc_error;
+	["Cette batisse n'a pas de propriétaire"] call AlysiaClient_fnc_error;
 } else {
-	[format["<t align='center'>Propriétaire<br/><t color='#FF0000'>%1</t></t>", (_ownerInfo select 1)]] call public_fnc_info;
+	[format["<t align='center'>Propriétaire<br/><t color='#FF0000'>%1</t></t>", (_ownerInfo select 1)]] call AlysiaClient_fnc_info;
 };

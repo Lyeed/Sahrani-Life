@@ -26,7 +26,7 @@ while {(g_blood < 4000)} do
 		};
 
 		if (_regen > 0) then {
-			[_regen] call public_fnc_handleBlood;
+			[_regen] call AlysiaClient_fnc_handleBlood;
 		};
 	};
 	sleep 2;

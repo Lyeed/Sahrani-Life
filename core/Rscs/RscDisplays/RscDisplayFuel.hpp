@@ -36,7 +36,7 @@ class RscDisplayFuelStation: RscDisplayDefaultInteraction
 		class FUEL_COMBO: RscCombo
 		{
 			idc = 16004;
-			onLBSelChanged = "_this call public_fnc_fuelStation_refuel_veh_update;";
+			onLBSelChanged = "_this call AlysiaClient_fnc_fuelStation_refuel_veh_update;";
 
 			x = 0.400484 * safezoneW + safezoneX;
 			y = 0.42762 * safezoneH + safezoneY;
@@ -166,7 +166,7 @@ class RscDisplayFuelStation: RscDisplayDefaultInteraction
 		class VALIDATE_BUTTON: RscButtonSilent
 		{
 			idc = 16017;
-			action = "[] call public_fnc_fuelStation_refuel_veh_validate;";
+			action = "[] call AlysiaClient_fnc_fuelStation_refuel_veh_validate;";
 			onMouseEnter = "ctrlShow[16014, false];((findDisplay 16000) displayCtrl 16013) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Remplir</t>"";";
 			onMouseExit = "ctrlShow[16014, true];((findDisplay 16000) displayCtrl 16013) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Remplir</t>"";";
 

@@ -65,8 +65,8 @@ _list_origin lbSetCurSel 0;
 
 waitUntil
 {
-	(_display displayCtrl 1507) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", ([] call public_fnc_strTime)];
-	(_display displayCtrl 1506) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", ([] call public_fnc_strDate)];
+	(_display displayCtrl 1507) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", ([] call AlysiaClient_fnc_strTime)];
+	(_display displayCtrl 1506) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", ([] call AlysiaClient_fnc_strDate)];
 	sleep 0.5;
 	isNull (findDisplay 1500)
 };

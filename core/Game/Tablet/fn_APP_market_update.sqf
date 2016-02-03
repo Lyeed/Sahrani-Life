@@ -22,7 +22,7 @@ if (_ressource isEqualTo "") exitWith {};
 (_display displayCtrl 8805) ctrlSetStructuredText parseText format
 [
 	"<t align='center'>%1</t>",
-	([_ressource] call public_fnc_itemGetName)
+	([_ressource] call AlysiaClient_fnc_itemGetName)
 ];
 
 _license = getText(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "license");
@@ -30,7 +30,7 @@ _license = getText(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "license
 (_display displayCtrl 8808) ctrlSetStructuredText parseText format
 [
 	"<t align='center'>%1</t>",
-	if (_license isEqualTo "") then {"Aucune"} else {[_license] call public_fnc_licenseGetName}
+	if (_license isEqualTo "") then {"Aucune"} else {[_license] call AlysiaClient_fnc_licenseGetName}
 ];
 
 (_display displayCtrl 8811) ctrlSetStructuredText parseText format
@@ -46,17 +46,17 @@ _license = getText(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "license
 (_display displayCtrl 8815) ctrlSetStructuredText parseText format
 [
 	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
-	[([_ressource] call public_fnc_market_getPrice)] call public_fnc_numberText
+	[([_ressource] call AlysiaClient_fnc_market_getPrice)] call AlysiaClient_fnc_numberText
 ];
 
 (_display displayCtrl 8817) ctrlSetStructuredText parseText format
 [
 	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
-	[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "market" >> "max")] call public_fnc_numberText
+	[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "market" >> "max")] call AlysiaClient_fnc_numberText
 ];
 
 (_display displayCtrl 8819) ctrlSetStructuredText parseText format
 [
 	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
-	[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "market" >> "min")] call public_fnc_numberText
+	[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "market" >> "min")] call AlysiaClient_fnc_numberText
 ];

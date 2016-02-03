@@ -15,6 +15,6 @@ _licenses = [];
 	if (getNumber(missionConfigFile >> "ALYSIA_LICENSES" >> _x >> "factions" >> str(playerSide) >> "illegal") isEqualTo 0) then {
 		_licenses pushBack _x;
 	};
-} forEach ([] call public_fnc_getLicenses);
+} forEach ([] call AlysiaClient_fnc_getLicenses);
 
-[_licenses] remoteExec ["public_fnc_interactionMenu_action_license_return", _from];
+[_licenses] remoteExec ["AlysiaClient_fnc_interactionMenu_action_license_return", _from];

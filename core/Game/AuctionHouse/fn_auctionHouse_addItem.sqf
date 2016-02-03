@@ -11,6 +11,6 @@ _item = [_this, 1, "", [""]] call BIS_fnc_param;
 
 switch (_type) do
 {
-	case 0: {[true, _item, 1] call public_fnc_handleInv};
-	case 1: {[_item, true] call public_fnc_handleItem};
+	case 0: {[true, _item, 1] call AlysiaClient_fnc_handleInv};
+	case 1: {[_item, true] call AlysiaClient_fnc_handleItem};
 };

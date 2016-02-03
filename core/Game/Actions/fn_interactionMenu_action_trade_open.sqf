@@ -26,7 +26,7 @@ g_interaction_trade_keys = [];
 g_interaction_trade_money = 0;
 g_interaction_trade_active = false;
 
-[] call public_fnc_interactionMenu_action_trade_update;
+[] call AlysiaClient_fnc_interactionMenu_action_trade_update;
 
 while {!(isNull _display)} do
 {
@@ -52,6 +52,6 @@ while {!(isNull _display)} do
 };
 
 {
-	[true, (_x select 0), (_x select 1)] call public_fnc_handleInv;
+	[true, (_x select 0), (_x select 1)] call AlysiaClient_fnc_handleInv;
 } forEach (g_interaction_trade_inventory);
-[true, g_interaction_trade_money] call public_fnc_handleCash;
+[true, g_interaction_trade_money] call AlysiaClient_fnc_handleCash;

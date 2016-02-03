@@ -7,7 +7,7 @@
 */
 
 if (!(g_sheeps isEqualTo [])) exitWith {
-	["Vous possèdez déjà des moutons"] call public_fnc_error;
+	["Vous possèdez déjà des moutons"] call AlysiaClient_fnc_error;
 };
 
-[player] remoteExecCall ["TON_fnc_sheepGenerate", 2];
+[player] remoteExecCall ["AlysiaServer_fnc_sheepGenerate", 2];

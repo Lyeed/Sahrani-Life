@@ -19,4 +19,4 @@ _display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
 
 (_display displayCtrl 9552) ctrlSetStructuredText parseText _text;
-[9552, true] call public_fnc_tabletShow;
+[9552, true] call AlysiaClient_fnc_tabletShow;

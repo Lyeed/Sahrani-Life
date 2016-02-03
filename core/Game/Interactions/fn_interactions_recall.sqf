@@ -6,4 +6,4 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-(uiNamespace getVariable ["interaction_save", []]) spawn public_fnc_interactions_create;
+(uiNamespace getVariable ["interaction_save", []]) spawn AlysiaClient_fnc_interactions_create;

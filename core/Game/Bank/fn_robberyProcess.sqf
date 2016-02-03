@@ -15,7 +15,7 @@ if (_door isEqualTo "") then
 {
 	if ((_tool getVariable ["owner", ObjNull]) isEqualTo player) then
 	{
-		if (["Démontage de l'outil", (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_tool) >> "defuseTime") / 2),  objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then
+		if (["Démontage de l'outil", (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_tool) >> "defuseTime") / 2),  objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress) then
 		{
 			if (typeOf _tool isEqualTo "Bank_Bomb") then {
 				[_tool, "bankDefused"] call CBA_fnc_globalSay3d;
@@ -27,7 +27,7 @@ if (_door isEqualTo "") then
 	} else {
 		if (getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_tool) >> "item") in (magazines player)) then
 		{
-			if (["Désamorçage de l'outil", (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_tool) >> "defuseTime")),objNull,"","AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then
+			if (["Désamorçage de l'outil", (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_tool) >> "defuseTime")),objNull,"","AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress) then
 			{
 				player addItem (typeOf _tool);
 				if ((typeOf _tool) isEqualTo "Bank_Bomb") then
@@ -37,7 +37,7 @@ if (_door isEqualTo "") then
 				deleteVehicle _tool;
 			};
 		} else {
-			[format["Vous avez besoin de %1", ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")] call public_fnc_fetchCfgDetails) select 1]] call public_fnc_error;
+			[format["Vous avez besoin de %1", ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")] call AlysiaClient_fnc_fetchCfgDetails) select 1]] call AlysiaClient_fnc_error;
 		};
 	};
 } else {
@@ -54,5 +54,5 @@ if (_door isEqualTo "") then
 	_item setVariable ["active", true, true];
 	_bank setVariable [getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item"), _item, true];
 	
-	[_item] spawn public_fnc_robberyTools;
+	[_item] spawn AlysiaClient_fnc_robberyTools;
 };

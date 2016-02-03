@@ -8,16 +8,16 @@
 private["_handle", "_display", "_targetPos", "_cameraPos", "_camera", "_action"];
 
 if (playerSide != civilian) exitWith {
-	["Vous devez être connecté en civil pour votre première connexion"] spawn public_fnc_errorExit;
+	["Vous devez être connecté en civil pour votre première connexion"] spawn AlysiaClient_fnc_errorExit;
 };
 if (([profileName] call CBA_fnc_leftTrim) != profileName) exitWith {
-	["Vous avez un ou plusieurs espaces au début de votre pseudo. Veuillez les retirer pour vous connecter."] spawn public_fnc_errorExit;
+	["Vous avez un ou plusieurs espaces au début de votre pseudo. Veuillez les retirer pour vous connecter."] spawn AlysiaClient_fnc_errorExit;
 };
 if (([profileName] call CBA_fnc_rightTrim) != profileName) exitWith {
-	["Vous avez un ou plusieurs espaces à la fin de votre pseudo. Veuillez les retirer pour vous connecter."] spawn public_fnc_errorExit;
+	["Vous avez un ou plusieurs espaces à la fin de votre pseudo. Veuillez les retirer pour vous connecter."] spawn AlysiaClient_fnc_errorExit;
 };
 if (count([profileName, " "] call CBA_fnc_split) < 2) exitWith {
-	["Votre pseudo doit être composé d'un prénom et d'un nom. Exemple: Jean Robert."] spawn public_fnc_errorExit;
+	["Votre pseudo doit être composé d'un prénom et d'un nom. Exemple: Jean Robert."] spawn AlysiaClient_fnc_errorExit;
 };
 
 _targetPos = [13326.7,8852.53,0.00143814];
@@ -51,13 +51,13 @@ _action =
 ] call BIS_fnc_guiMessage;
 if (_action) then
 {
-	_handle = [] spawn public_fnc_welcomeMenu_Open;
+	_handle = [] spawn AlysiaClient_fnc_welcomeMenu_Open;
 	waitUntil {scriptDone _handle};
 
-	_handle = [] spawn public_fnc_welcome_faction;
+	_handle = [] spawn AlysiaClient_fnc_welcome_faction;
 	waitUntil {scriptDone _handle};
 
-	[player, profileName, g_firstName, g_lastName, g_birth, g_nationality, g_sexe, g_choice] remoteExec ["TON_fnc_query_insert_inscription", 2];
+	[player, profileName, g_firstName, g_lastName, g_birth, g_nationality, g_sexe, g_choice] remoteExec ["AlysiaServer_fnc_query_insert_inscription", 2];
 	_camera cameraEffect ["terminate", "back"];
 	camDestroy _camera;
 	player addItem "ItemGPS";
@@ -66,6 +66,6 @@ if (_action) then
 	player addMagazine getText(missionConfigFile >> "ALYSIA_FACTIONS" >> "CIV" >> "identity_item");
 	cutText ["", "BLACK FADED"];
 } else {
-	["Annulation de la création de profil."] spawn public_fnc_errorExit;
+	["Annulation de la création de profil."] spawn AlysiaClient_fnc_errorExit;
 	sleep 99999;
 };

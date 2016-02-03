@@ -14,7 +14,7 @@ disableSerialization;
 _display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
 
-[] call public_fnc_APP_staff_player_actions_update;
+[] call AlysiaClient_fnc_APP_staff_player_actions_update;
 
 _ctrl_players = _display displayCtrl 9000;
 lbClear _ctrl_players;
@@ -29,9 +29,9 @@ if ((lbCurSel _ctrl_players) isEqualTo -1) then {
 
 if (getNumber(_config >> "requests") isEqualTo 1) then
 {
-	[9005, true] call public_fnc_tabletShow;
-	[9006, true] call public_fnc_tabletShow;
-	[9007, true] call public_fnc_tabletShow;
+	[9005, true] call AlysiaClient_fnc_tabletShow;
+	[9006, true] call AlysiaClient_fnc_tabletShow;
+	[9007, true] call AlysiaClient_fnc_tabletShow;
 
 	_request = _display displayCtrl 9007;
 	lbClear _request;

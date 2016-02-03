@@ -22,17 +22,17 @@ if (_type) then {
 };
 
 _item = lbData[503, _sel];
-_res = [_item, _amount, g_carryWeight, g_maxWeight] call public_fnc_calWeightDiff;
+_res = [_item, _amount, g_carryWeight, g_maxWeight] call AlysiaClient_fnc_calWeightDiff;
 if (_res > 0) then
 {
-	if ([true, _item, _res] call public_fnc_handleInv) then
+	if ([true, _item, _res] call AlysiaClient_fnc_handleInv) then
 	{
-		[false, g_interaction_target_trunk, _item, _res] call public_fnc_handleTrunk;
-		g_interaction_target_trunk_weight_actual = g_interaction_target_trunk_weight_actual - (([_item] call public_fnc_itemGetWeight) * _res);
+		[false, g_interaction_target_trunk, _item, _res] call AlysiaClient_fnc_handleTrunk;
+		g_interaction_target_trunk_weight_actual = g_interaction_target_trunk_weight_actual - (([_item] call AlysiaClient_fnc_itemGetWeight) * _res);
 	};
 } else {
-	["Vous n'avez pas assez de place"] call public_fnc_error;
+	["Vous n'avez pas assez de place"] call AlysiaClient_fnc_error;
 };
 
-[] call public_fnc_virtual_menu_exhange_update;
+[] call AlysiaClient_fnc_virtual_menu_exhange_update;
 g_interaction_target_trunk_transfer = false;

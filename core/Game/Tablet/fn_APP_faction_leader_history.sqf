@@ -12,14 +12,14 @@ disableSerialization;
 _display = uiNamespace getVariable["tablet", displayNull];
 if (isNull _display) exitWith {};
 
-_handle = ["FACTION_LEADER_HISTORY"] spawn public_fnc_tabletApp;
+_handle = ["FACTION_LEADER_HISTORY"] spawn AlysiaClient_fnc_tabletApp;
 waitUntil {scriptDone _handle};
 
 _list = _display displayCtrl 8750;
 lbClear _list;
 
 {
-	_list lbAdd format["[%1] - %2 - %3", (_x select 2), (_x select 0), ([(_x select 1)] call public_fnc_fetchCfgDetails) select 1];
+	_list lbAdd format["[%1] - %2 - %3", (_x select 2), (_x select 0), ([(_x select 1)] call AlysiaClient_fnc_fetchCfgDetails) select 1];
 } forEach (_history);
 if ((lbSize _list) isEqualTo 0) then {
 	_list lbAdd "Vide";

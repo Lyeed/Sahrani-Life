@@ -18,8 +18,8 @@ if (g_bleed isEqualTo 0) then
 	{
 		while {((g_bleed > 0) && (player getVariable ["is_bleeding", false]) && !g_staff_god)} do
 		{
-			[(g_bleed * -1)] call public_fnc_handleBlood;
-			[] call EVENT_fnc_onPlayerFireNear;
+			[(g_bleed * -1)] call AlysiaClient_fnc_handleBlood;
+			[] call AlysiaEvent_fnc_onPlayerFireNear;
 			sleep 2;
 		};
 		g_bleed = 0;

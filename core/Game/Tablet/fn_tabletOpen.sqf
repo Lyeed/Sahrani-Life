@@ -17,7 +17,7 @@ if (dialog) exitWith
 };
 
 if (player getVariable ["arrested", false]) exitWith {
-	["Vous n'avez pas accès à votre tablette en prison"] call public_fnc_error
+	["Vous n'avez pas accès à votre tablette en prison"] call AlysiaClient_fnc_error
 };
 
 if (!(createDialog "RscDisplayTablet")) exitWith {};
@@ -78,7 +78,7 @@ if (!(isNull _display)) then
 			"<t align='left'><img image='%1'/> %2</t><t align='center'>%3</t><t align='right'>%4/%5/%6 <img image='lyeed_IMG\data\tablet\infobar\date.paa'/></t>",
 			if ("ItemGPS" in (assignedItems player)) then {"lyeed_IMG\data\tablet\infobar\gps_yes.paa"} else {"lyeed_IMG\data\tablet\infobar\gps_no.paa"},
 			if ("ItemGPS" in (assignedItems player)) then {(mapGridPosition player)} else {"noGPS"},
-			([] call public_fnc_strTime),
+			([] call AlysiaClient_fnc_strTime),
 			(date select 2),
 			(date select 1),
 			(date select 0)

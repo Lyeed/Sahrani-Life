@@ -11,16 +11,16 @@ _bank = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 _door = [_this, 1, "", [""]] call BIS_fnc_param;
 
 if (_bank getVariable ["robbed", false]) exitWith {
-	["La banque a déjà été braquée"] call public_fnc_error;
+	["La banque a déjà été braquée"] call AlysiaClient_fnc_error;
 };
 
 if (!(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item") in (magazines player))) exitWith {
-	[(format["Vous avez besoin de %1", ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")] call public_fnc_fetchCfgDetails) select 1])] call public_fnc_error;
+	[(format["Vous avez besoin de %1", ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")] call AlysiaClient_fnc_fetchCfgDetails) select 1])] call AlysiaClient_fnc_error;
 };
 
 /*if (!(_bank getVariable ["robStarted", false])) then
 {
-	if ((getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(cursorTarget) >> "required")) >= (([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call public_fnc_strToSide) countSide allPlayers)) exitWith
+	if ((getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(cursorTarget) >> "required")) >= (([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call AlysiaClient_fnc_strToSide) countSide allPlayers)) exitWith
 	{
 		systemChat format ["< Robbery System - Debug > Pas assez de flics connectés"];
 
@@ -31,18 +31,18 @@ if (!(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item") 
 				getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "required"),
 				getText(missionConfigFile >> "ALYSIA_FACTIONS" >> getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner") >> "name")
 			]
-		] call public_fnc_error;
+		] call AlysiaClient_fnc_error;
 		breakOut "main";
 	};
 };*/
 
-if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), getNumber(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "time"), objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) exitWith {};
+if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), getNumber(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "time"), objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress) exitWith {};
 
 switch (getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "open")) do
 {
 	case "Simple": {_bank animate [getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "door"), 1]};
-	case "Drill": {[_bank, _door] spawn public_fnc_robberyProcess};
-	case "Vault": {[_bank, _door] spawn public_fnc_robberyProcess};
+	case "Drill": {[_bank, _door] spawn AlysiaClient_fnc_robberyProcess};
+	case "Vault": {[_bank, _door] spawn AlysiaClient_fnc_robberyProcess};
 	case "Sliding":
 	{
 		_bank animate ["LeftSlideDoor", 0];
@@ -50,8 +50,8 @@ switch (getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "open"
 	};
 	case "Security":
 	{
-		[_bank, false] remoteExec ["TON_fnc_bank_state", 2];
-		["Vous avez désactivé le système de sécurité de la banque"] call public_fnc_info;
+		[_bank, false] remoteExec ["AlysiaServer_fnc_bank_state", 2];
+		["Vous avez désactivé le système de sécurité de la banque"] call AlysiaClient_fnc_info;
 		_bank setVariable ["hacked", true, true];
 	};
 };
@@ -60,7 +60,7 @@ if (!(_bank getVariable ["hacked", false])) then
 {
 	if (!(_bank getVariable ["robStarted", false])) then
 	{
-		[_bank, true] remoteExec ["TON_fnc_bank_state", 2];
+		[_bank, true] remoteExec ["AlysiaServer_fnc_bank_state", 2];
 		_bank setVariable ["robStarted", true, true];
 	};
 	
@@ -70,5 +70,5 @@ if (!(_bank getVariable ["hacked", false])) then
 			"Une faille de sécurité a été détectée dans la banque. %1 a été forcée.",
 			getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name")
 		], "BANK"
-	] remoteExecCall ["public_fnc_phone_message_receive", [getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "owner")] call public_fnc_strToSide];
+	] remoteExecCall ["AlysiaClient_fnc_phone_message_receive", [getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_bank) >> "owner")] call AlysiaClient_fnc_strToSide];
 };

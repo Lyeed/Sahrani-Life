@@ -22,7 +22,7 @@ removeAllAssignedItems player;
 sleep 5;
 titleText["Remise de vos effets personnels..", "BLACK FADED"];
 g_cash = g_arrest_Gear select 0;
-[g_arrest_Gear select 1] call public_fnc_loadGear;
+[g_arrest_Gear select 1] call AlysiaClient_fnc_loadGear;
 {
 	[true, _x, 1];
 } forEach g_arrest_Gear select 2;
@@ -38,4 +38,4 @@ g_arrest_Reason = "";
 
 player setVariable ["arrested", false, true];
 titleText["", "BLACK IN", 5];
-["Vous êtes désormais libre!"] call public_fnc_info;
+["Vous êtes désormais libre!"] call AlysiaClient_fnc_info;

@@ -9,17 +9,17 @@ private["_index", "_data", "_vehicleClassname", "_vehicleGaragePosition", "_pric
 
 _index = lbValue[2802, (lbCurSel 2802)];
 if (_index isEqualTo -1) exitWith {
-	["Vous n'avez pas sélectionné de véhicule"] call public_fnc_error;
+	["Vous n'avez pas sélectionné de véhicule"] call AlysiaClient_fnc_error;
 };
 if (!(isNil "gServer_soonReboot")) exitWith {
-	["<t align='center'>Veuillez attendre le <t color='#B40404'>redémarrage</t> du serveur pour sortir un véhicule"] call public_fnc_error;
+	["<t align='center'>Veuillez attendre le <t color='#B40404'>redémarrage</t> du serveur pour sortir un véhicule"] call AlysiaClient_fnc_error;
 };
 
 _data = g_garage_vehicles select _index;
 _vehicleClassname = _data select 0;
 
 _vehicleGaragePosition = [_data select 6, _data select 7, _data select 8];
-_price = [_vehicleClassname] call public_fnc_getVehGaragePrice;
+_price = [_vehicleClassname] call AlysiaClient_fnc_getVehGaragePrice;
 if (
 		!(_vehicleGaragePosition isEqualTo [0, 0, 0]) && 
 		(
@@ -32,7 +32,7 @@ if (
 };
 
 if (g_atm < _price) exitWith {
-	[format["<t align='center'>Vous n'avez pas assez d'argent dans votre compte en banque</t><br/><br/><t align='left'>Manquant</t><t align='right' color='#ff8c8c'>%1kn</t>", [(_price - g_atm)] call public_fnc_numberText]] call public_fnc_error;
+	[format["<t align='center'>Vous n'avez pas assez d'argent dans votre compte en banque</t><br/><br/><t align='left'>Manquant</t><t align='right' color='#ff8c8c'>%1kn</t>", [(_price - g_atm)] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
 };
 
 if ((g_garage_info select 2) isEqualTo []) then
@@ -52,25 +52,25 @@ if ((g_garage_info select 2) isEqualTo []) then
 	} forEach (g_garage_info select 2);	
 };
 if (isNil "_validSpawn") exitWith {
-	["Aucun emplacement de sortie de véhicule n'est libre"] call public_fnc_error;
+	["Aucun emplacement de sortie de véhicule n'est libre"] call AlysiaClient_fnc_error;
 };
 
 closeDialog 0;
-[false, _price, format["Sortie véhicule (%1)", (_data select 5)]] call public_fnc_handleATM;
+[false, _price, format["Sortie véhicule (%1)", (_data select 5)]] call AlysiaClient_fnc_handleATM;
 
 _spawnPos = getMarkerPos _validSpawn;
 _vehicle = createVehicle [_vehicleClassname, _spawnPos, [], 0, "NONE"];
 waitUntil {!isNil "_vehicle" && {!isNull _vehicle}};
 _vehicle allowDamage false;
-[_vehicle] call public_fnc_clearVehicleAmmo;
+[_vehicle] call AlysiaClient_fnc_clearVehicleAmmo;
 
 _vehicle setPos _spawnPos;
 _vehicle setVectorUp (surfaceNormal _spawnPos);
 _vehicle setDir (markerDir _validSpawn);
 _vehicle lock 2;
 
-[format["<t align='center'>Vous avez récupéré<br/><t color='#FF8000'>%1</t></t>", (lbText[2802, (lbCurSel 2802)])]] call public_fnc_info;
-[(_data select 1), _vehicle, player] remoteExec ["TON_fnc_garageVehicleSpawn", 2];
+[format["<t align='center'>Vous avez récupéré<br/><t color='#FF8000'>%1</t></t>", (lbText[2802, (lbCurSel 2802)])]] call AlysiaClient_fnc_info;
+[(_data select 1), _vehicle, player] remoteExec ["AlysiaServer_fnc_garageVehicleSpawn", 2];
 
 if (!((_data select 4) isEqualTo [])) then {
 	_vehicle setVariable ["Trunk", (_data select 4), true];

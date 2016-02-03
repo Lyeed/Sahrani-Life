@@ -33,10 +33,10 @@ g_donator = compileFinal (_basic select 8);
 {
 	waitUntil {g_connected};
 	if (_this select 2) then {
-		[] spawn public_fnc_handleComa;
+		[] spawn AlysiaClient_fnc_handleComa;
 	} else {
-		[((4000 - (_this select 0)) * -1)] call public_fnc_handleBlood;
-		[(_this select 1)] call public_fnc_handleBleed;
+		[((4000 - (_this select 0)) * -1)] call AlysiaClient_fnc_handleBlood;
+		[(_this select 1)] call AlysiaClient_fnc_handleBleed;
 	};
 };
 // alive
@@ -86,11 +86,11 @@ g_atm = _basic select 40;
 // inventory
 g_maxWeight = 100;
 {
-    [true, (_x select 0), (_x select 1)] call public_fnc_handleInv;
+    [true, (_x select 0), (_x select 1)] call AlysiaClient_fnc_handleInv;
 } forEach (_basic select 41);
 g_maxWeight = 24;
 // gear
-[(_basic select 42)] spawn public_fnc_loadGear;
+[(_basic select 42)] spawn AlysiaClient_fnc_loadGear;
 switch (playerSide) do
 {
 	case west: 
@@ -119,6 +119,6 @@ switch (playerSide) do
 
 g_nextPay = time + (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary_timer") * 60);
 
-[] call public_fnc_init_loops;
-[[(_basic select 12), (_basic select 13), (_basic select 14)]] call public_fnc_init_position;
+[] call AlysiaClient_fnc_init_loops;
+[[(_basic select 12), (_basic select 13), (_basic select 14)]] call AlysiaClient_fnc_init_position;
 true;

@@ -56,7 +56,7 @@ if (!(isNull g_killer)) then {
 	_skull setVariable ["killer", (g_killer getVariable["realname", (name g_killer)]), true];
 };
 
-_skull setVariable ["info", [([] call public_fnc_strDate), ([] call public_fnc_strTime), (player getVariable ["realname", profileName]), g_nationality, g_sexe], true];
+_skull setVariable ["info", [([] call AlysiaClient_fnc_strDate), ([] call AlysiaClient_fnc_strTime), (player getVariable ["realname", profileName]), g_nationality, g_sexe], true];
 /* ************* */
 
 hideBody player;
@@ -65,7 +65,7 @@ hideBody player;
 } forEach (nearestObjects [player, ["WeaponHolderSimulated", "GroundWeaponHolder"], 5]);
 
 /* SAVE */
-[] call public_fnc_stripDownPlayer;
+[] call AlysiaClient_fnc_stripDownPlayer;
 
 {
 	missionNamespace setVariable [(format["inv_%1", _x]), 0];
@@ -78,7 +78,7 @@ g_bleed = 0;
 g_alcool = 0;
 g_hunger = 100;
 g_thirst = 100;
-[] call MySQL_fnc_query_update_usual;
+[] call AlysiaDB_fnc_query_update_usual;
 /* **** */
 
 /* DRUGS */

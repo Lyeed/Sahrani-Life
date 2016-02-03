@@ -9,7 +9,7 @@ private["_index"];
 
 _index = lbValue[2802, (lbCurSel 2802)];
 if (_index isEqualTo -1) exitWith {
-	["Vous n'avez pas sélectionné de véhicule"] call public_fnc_error;
+	["Vous n'avez pas sélectionné de véhicule"] call AlysiaClient_fnc_error;
 };
 
 g_garage_rename = _index;

@@ -16,7 +16,7 @@ class PHONE_RETURN_IMAGE: RscPicture
 class PHONE_RETURN_BUTTON: RscButtonSilent
 {
 	idc = PHONE_RETURN_BUTTON_IDC;
-	action = "[""PHONE_CATEGORY""] spawn public_fnc_tabletApp;";
+	action = "[""PHONE_CATEGORY""] spawn AlysiaClient_fnc_tabletApp;";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\global\option_back_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\global\option_back.paa""];";
 	tooltip = "Retour";
@@ -100,7 +100,7 @@ class PHONE_CATEGORY_APP_1_PICTURE: RscPicture
 class PHONE_CATEGORY_APP_1_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CATEGORY_APP_1_BUTTON_IDC;
-	action = "[""phone_messages_read""] spawn public_fnc_tabletApp;";
+	action = "[""phone_messages_read""] spawn AlysiaClient_fnc_tabletApp;";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\sms_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\sms.paa""];";
 	tooltip = "Messages reçus";
@@ -124,7 +124,7 @@ class PHONE_CATEGORY_APP_2_PICTURE: RscPicture
 class PHONE_CATEGORY_APP_2_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CATEGORY_APP_2_BUTTON_IDC;
-	action = "[""phone_contacts""] spawn public_fnc_tabletApp;";
+	action = "[""phone_contacts""] spawn AlysiaClient_fnc_tabletApp;";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\contact_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\contact.paa""];";
 	tooltip = "Contacts";
@@ -148,7 +148,7 @@ class PHONE_CATEGORY_APP_3_PICTURE: RscPicture
 class PHONE_CATEGORY_APP_3_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CATEGORY_APP_3_BUTTON_IDC;
-	action = "[""phone_messages_send""] spawn public_fnc_tabletApp;";
+	action = "[""phone_messages_send""] spawn AlysiaClient_fnc_tabletApp;";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\send_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\send.paa""];";
 	tooltip = "Envoyer un message";
@@ -172,7 +172,7 @@ class PHONE_CATEGORY_APP_4_PICTURE: RscPicture
 class PHONE_CATEGORY_APP_4_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CATEGORY_APP_4_BUTTON_IDC;
-	action = "[""store_forfait""] spawn public_fnc_tabletApp;";
+	action = "[""store_forfait""] spawn AlysiaClient_fnc_tabletApp;";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\forfait_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\forfait.paa""];";
 	tooltip = "Changer de forfait";
@@ -196,7 +196,7 @@ class PHONE_CATEGORY_APP_5_PICTURE: RscPicture
 class PHONE_CATEGORY_APP_5_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CATEGORY_APP_5_BUTTON_IDC;
-	action = "[] spawn public_fnc_APP_phone_change;";
+	action = "[] spawn AlysiaClient_fnc_APP_phone_change;";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\number_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\number.paa""];";
 	tooltip = "Changer de numéro";
@@ -220,7 +220,7 @@ class PHONE_CATEGORY_APP_6_PICTURE: RscPicture
 class PHONE_CATEGORY_APP_6_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CATEGORY_APP_6_BUTTON_IDC;
-	action = "[""phone_blacklist""] spawn public_fnc_tabletApp;";
+	action = "[""phone_blacklist""] spawn AlysiaClient_fnc_tabletApp;";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\blacklist_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\blacklist.paa""];";
 	tooltip = "Bloquer un numéro";
@@ -244,7 +244,7 @@ class PHONE_CATEGORY_APP_7_PICTURE: RscPicture
 class PHONE_CATEGORY_APP_7_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CATEGORY_APP_7_BUTTON_IDC;
-	action = "[""phone_settings""] spawn public_fnc_tabletApp;";
+	action = "[""phone_settings""] spawn AlysiaClient_fnc_tabletApp;";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\config_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\config.paa""];";
 	tooltip = "Réglages";
@@ -268,7 +268,7 @@ class PHONE_CATEGORY_APP_8_PICTURE: RscPicture
 class PHONE_CATEGORY_APP_8_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CATEGORY_APP_8_BUTTON_IDC;
-	action = "[""phone_faction""] spawn public_fnc_tabletApp;";
+	action = "[""phone_faction""] spawn AlysiaClient_fnc_tabletApp;";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\faction_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\faction.paa""];";
 	tooltip = "Envoyer un message faction";
@@ -340,7 +340,7 @@ class PHONE_MESSAGE_READ_LIST_HEADER : RscStructuredText
 class PHONE_MESSAGE_READ_LIST_INFO : RscListBox
 {
 	idc = PHONE_MESSAGE_READ_LIST_INFO_IDC;
-	onLBSelChanged = "[_this select 0, _this select 1] call public_fnc_APP_phone_messages_read_open;";
+	onLBSelChanged = "[_this select 0, _this select 1] call AlysiaClient_fnc_APP_phone_messages_read_open;";
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.555 * safezoneH + safezoneY;
@@ -382,7 +382,7 @@ class PHONE_MESSAGE_READ_DELETE_MESSAGE_IMAGE : RscPicture
 class PHONE_MESSAGE_READ_DELETE_MESSAGE_BUTTON : RscButtonSilent
 {
 	idc = PHONE_MESSAGE_READ_DELETE_MESSAGE_BUTTON_IDC;
-	action = "[0] call public_fnc_APP_phone_messages_read_delete;";
+	action = "[0] call AlysiaClient_fnc_APP_phone_messages_read_delete;";
 	tooltip = "Supprimer le message sélectionné";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\read\remove_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\read\remove.paa""];";
@@ -406,7 +406,7 @@ class PHONE_MESSAGE_READ_DELETE_ALL_IMAGE : RscPicture
 class PHONE_MESSAGE_READ_DELETE_ALL_BUTTON : RscButtonSilent
 {
 	idc = PHONE_MESSAGE_READ_DELETE_ALL_BUTTON_IDC;
-	action = "[1] call public_fnc_APP_phone_messages_read_delete;";
+	action = "[1] call AlysiaClient_fnc_APP_phone_messages_read_delete;";
 	tooltip = "Supprimer tous les messages";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\read\remove_all_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\read\remove_all.paa""];";
@@ -430,7 +430,7 @@ class PHONE_MESSAGE_READ_ANSWER_IMAGE: RscPicture
 class PHONE_MESSAGE_READ_ANSWER_BUTTON: RscButtonSilent
 {
 	idc = PHONE_MESSAGE_READ_ANSWER_BUTTON_IDC;
-	action = "		private[""_index""];		_index = lbCurSel 8320;		if (_index isEqualTo -1) exitWith {};		[""phone_messages_send""] spawn public_fnc_tabletApp;		ctrlSetText[8336, (g_phone_messages select _index) select 0];	";
+	action = "		private[""_index""];		_index = lbCurSel 8320;		if (_index isEqualTo -1) exitWith {};		[""phone_messages_send""] spawn AlysiaClient_fnc_tabletApp;		ctrlSetText[8336, (g_phone_messages select _index) select 0];	";
 	tooltip = "Répondre";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\send_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\send.paa""];";
@@ -454,7 +454,7 @@ class PHONE_MESSAGE_READ_ADD_IMAGE : RscPicture
 class PHONE_MESSAGE_READ_ADD_BUTTON : RscButtonSilent
 {
 	idc = PHONE_MESSAGE_READ_ADD_BUTTON_IDC;
-	action = "		private[""_index""];		_index = lbCurSel 8320;		if (_index isEqualTo -1) exitWith {};		[""phone_contacts""] spawn public_fnc_tabletApp;		ctrlSetText[8384, (g_phone_messages select _index) select 0];	";
+	action = "		private[""_index""];		_index = lbCurSel 8320;		if (_index isEqualTo -1) exitWith {};		[""phone_contacts""] spawn AlysiaClient_fnc_tabletApp;		ctrlSetText[8384, (g_phone_messages select _index) select 0];	";
 	tooltip = "Ajouter aux contacts";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\add_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\add.paa""];";
@@ -638,7 +638,7 @@ class PHONE_MESSAGE_SEND_IMAGE : RscPicture
 class PHONE_MESSAGE_SEND_BUTTON : RscButtonSilent
 {
 	idc = PHONE_MESSAGE_SEND_BUTTON_IDC;
-	action = "[] call public_fnc_APP_phone_messages_send_action;";
+	action = "[] call AlysiaClient_fnc_APP_phone_messages_send_action;";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\send_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\send.paa""];";
 	tooltip = "Envoyer";
@@ -752,7 +752,7 @@ class PHONE_SETTINGS_RING_VALIDATE_IMAGE: RscPicture
 class PHONE_SETTINGS_RING_VALIDATE_BUTTON : RscButtonSilent
 {
 	idc = PHONE_SETTINGS_RING_VALIDATE_BUTTON_IDC;
-	action = "		profileNamespace setVariable[""ALYSIA_phone_recv"", (lbCurSel 8351) + 1];		[] call public_fnc_APP_phone_settings;	";
+	action = "		profileNamespace setVariable[""ALYSIA_phone_recv"", (lbCurSel 8351) + 1];		[] call AlysiaClient_fnc_APP_phone_settings;	";
 	tooltip = "Sauvegarder la sonnerie";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\settings\validate_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\settings\validate.paa""];";
@@ -889,7 +889,7 @@ class PHONE_CONTACTS_REMOVE_IMAGE : RscPicture
 class PHONE_CONTACTS_REMOVE_BUTTON : RscButtonSilent
 {
 	idc = PHONE_CONTACTS_REMOVE_BUTTON_IDC;
-	action = "		private[""_sel""];		_sel = lbCurSel 8374;		if (_sel isEqualTo -1) exitWith {};		g_phone_contacts deleteAt _sel;		[""phone_contacts""] spawn public_fnc_tabletApp;	";
+	action = "		private[""_sel""];		_sel = lbCurSel 8374;		if (_sel isEqualTo -1) exitWith {};		g_phone_contacts deleteAt _sel;		[""phone_contacts""] spawn AlysiaClient_fnc_tabletApp;	";
 	tooltip = "Supprimer";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\remove_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\remove.paa""];";
@@ -913,7 +913,7 @@ class PHONE_CONTACTS_SEND_IMAGE: RscPicture
 class PHONE_CONTACTS_SEND_BUTTON : RscButtonSilent
 {
 	idc = PHONE_CONTACTS_SEND_BUTTON_IDC;
-	action = "		private[""_index""];		_index = lbCurSel 8374;		if (_index isEqualTo -1) exitWith {};		[""phone_messages_send""] spawn public_fnc_tabletApp;		ctrlSetText[8336, (g_phone_contacts select _index) select 1];	";
+	action = "		private[""_index""];		_index = lbCurSel 8374;		if (_index isEqualTo -1) exitWith {};		[""phone_messages_send""] spawn AlysiaClient_fnc_tabletApp;		ctrlSetText[8336, (g_phone_contacts select _index) select 1];	";
 	tooltip = "Envoyer un message";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\send_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\send.paa""];";
@@ -958,7 +958,7 @@ class PHONE_CONTACTS_ADD_IMAGE : RscPicture
 class PHONE_CONTACTS_ADD_BUTTON : RscButtonSilent
 {
 	idc = PHONE_CONTACTS_ADD_BUTTON_IDC;
-	action = "[ctrlText 8386, ctrlText 8384] call public_fnc_APP_phone_contacts_add;";
+	action = "[ctrlText 8386, ctrlText 8384] call AlysiaClient_fnc_APP_phone_contacts_add;";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\add_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\add.paa""];";
 	tooltip = "Ajouter";
@@ -1064,7 +1064,7 @@ class PHONE_FACTION_MESSAGE_SEND_IMAGE: RscPicture
 class PHONE_FACTION_MESSAGE_SEND_BUTTON: RscButtonSilent
 {
 	idc = PHONE_FACTION_MESSAGE_SEND_BUTTON_IDC;
-	action = "[ctrlText 8393, playerSide] call public_fnc_APP_phone_faction_send;";
+	action = "[ctrlText 8393, playerSide] call AlysiaClient_fnc_APP_phone_faction_send;";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\send_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\send.paa""];";
 	tooltip = "Envoyer";
@@ -1142,7 +1142,7 @@ class PHONE_BLACKLIST_REMOVE_IMAGE : RscPicture
 class PHONE_BLACKLIST_REMOVE_BUTTON : RscButtonSilent
 {
 	idc = PHONE_BLACKLIST_REMOVE_BUTTON_IDC;
-	action = "		private[""_sel""];		_sel = lbCurSel 8532;		if (_sel isEqualTo -1) exitWith {};		g_phone_blacklist deleteAt _sel;		[""PHONE_BLACKLIST""] spawn public_fnc_tabletApp;	";
+	action = "		private[""_sel""];		_sel = lbCurSel 8532;		if (_sel isEqualTo -1) exitWith {};		g_phone_blacklist deleteAt _sel;		[""PHONE_BLACKLIST""] spawn AlysiaClient_fnc_tabletApp;	";
 	tooltip = "Supprimer";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\blacklist\remove_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\blacklist\remove.paa""];";
@@ -1187,7 +1187,7 @@ class PHONE_BLACKLIST_ADD_IMAGE : RscPicture
 class PHONE_BLACKLIST_ADD_BUTTON : RscButtonSilent
 {
 	idc = PHONE_BLACKLIST_ADD_BUTTON_IDC;
-	action = "[ctrlText 8540] call public_fnc_APP_phone_BLACKLIST_add;";
+	action = "[ctrlText 8540] call AlysiaClient_fnc_APP_phone_BLACKLIST_add;";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\blacklist\add_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\blacklist\add.paa""];";
 	tooltip = "Ajouter";

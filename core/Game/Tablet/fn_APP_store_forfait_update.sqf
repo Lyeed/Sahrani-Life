@@ -28,20 +28,20 @@ _forfait = _list lbData _index;
 +	"<t align='left'>Contacts</t><t align='right'>%5</t><br/>"
 +	"<t align='left'>Blacklist</t><t align='right'>%6</t><br/></t>",
 	(_list lbText _index),
-	[getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> _forfait >> "bill")] call public_fnc_numberText,
-	[getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> _forfait >> "sms_price")] call public_fnc_numberText,
+	[getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> _forfait >> "bill")] call AlysiaClient_fnc_numberText,
+	[getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> _forfait >> "sms_price")] call AlysiaClient_fnc_numberText,
 	getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> _forfait >> "sms_max"),
 	getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> _forfait >> "contacts_max"),
 	getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> _forfait >> "backlist_max")
 ];
 
-[8111, true] call public_fnc_tabletShow;
+[8111, true] call AlysiaClient_fnc_tabletShow;
 
 if ((g_atm < getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> _forfait >> "bill")) || (_forfait isEqualTo g_phone_forfait)) then
 {
-	[8108, false] call public_fnc_tabletShow;
-	[8109, false] call public_fnc_tabletShow;
+	[8108, false] call AlysiaClient_fnc_tabletShow;
+	[8109, false] call AlysiaClient_fnc_tabletShow;
 } else {
-	[8108, true] call public_fnc_tabletShow;
-	[8109, true] call public_fnc_tabletShow;
+	[8108, true] call AlysiaClient_fnc_tabletShow;
+	[8109, true] call AlysiaClient_fnc_tabletShow;
 };

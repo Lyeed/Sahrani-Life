@@ -11,7 +11,7 @@ _types = [_this, 3, ["Car"], [[]]] call BIS_fnc_param;
 
 if (isNull _PNJ) exitWith {};
 if (g_garage_store) exitWith {
-	["Vous êtes déjà en train de ranger un véhicule<br/>Veuillez patienter"] call public_fnc_error;
+	["Vous êtes déjà en train de ranger un véhicule<br/>Veuillez patienter"] call AlysiaClient_fnc_error;
 };
 
 if (!(createDialog "RscDisplayGarageStore")) exitWith {};

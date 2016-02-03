@@ -10,11 +10,11 @@
 	[_this, 0, objNull, [objNull]] call BIS_fnc_param,
 	"player_to_house",
 	[
-		["sell", "Vendre", "closeDialog 0; [] spawn public_fnc_house_menu_action_sell;", "(((g_interaction_target getVariable [""house_owner"", ["""", """"]]) select 0) isEqualTo (getPlayerUID player))"],
-		["storage", "Coffre", "closeDialog 0; [g_interaction_target] call public_fnc_house_menu_action_storage;", "(!(isNil {(g_interaction_target getVariable ""house_storage_out"")}) && (isNil ""gServer_soonReboot""))"],
-		["garage", "Garage", "closeDialog 0; [] call public_fnc_house_menu_action_garage;", "(getNumber(missionConfigFile >> ""ALYSIA_HOUSES"" >> typeOf(g_interaction_target) >> ""garage"") isEqualTo 1)"],
-		["store", "Rentrer", "closeDialog 0; [] spawn public_fnc_house_menu_action_store;", "(getNumber(missionConfigFile >> ""ALYSIA_HOUSES"" >> typeOf(g_interaction_target) >> ""garage"") isEqualTo 1)"],
-		["light", "Lumière", "[] call public_fnc_house_menu_action_light;", "true"]
+		["sell", "Vendre", "closeDialog 0; [] spawn AlysiaClient_fnc_house_menu_action_sell;", "(((g_interaction_target getVariable [""house_owner"", ["""", """"]]) select 0) isEqualTo (getPlayerUID player))"],
+		["storage", "Coffre", "closeDialog 0; [g_interaction_target] call AlysiaClient_fnc_house_menu_action_storage;", "(!(isNil {(g_interaction_target getVariable ""house_storage_out"")}) && (isNil ""gServer_soonReboot""))"],
+		["garage", "Garage", "closeDialog 0; [] call AlysiaClient_fnc_house_menu_action_garage;", "(getNumber(missionConfigFile >> ""ALYSIA_HOUSES"" >> typeOf(g_interaction_target) >> ""garage"") isEqualTo 1)"],
+		["store", "Rentrer", "closeDialog 0; [] spawn AlysiaClient_fnc_house_menu_action_store;", "(getNumber(missionConfigFile >> ""ALYSIA_HOUSES"" >> typeOf(g_interaction_target) >> ""garage"") isEqualTo 1)"],
+		["light", "Lumière", "[] call AlysiaClient_fnc_house_menu_action_light;", "true"]
 	],
 	"Chez vous"
-] spawn public_fnc_interactions_create;
+] spawn AlysiaClient_fnc_interactions_create;

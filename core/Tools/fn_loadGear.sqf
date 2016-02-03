@@ -8,12 +8,12 @@
 private["_gear", "_handle", "_uniformGear", "_vestGear", "_backpackGear", "_goggles", "_headgear", "_assignedItems", "_primaryWeaponGear", "_secondaryWeaponGear", "_handgunWeaponGear", "_assignedItems"];
 _gear = [_this, 0, [], [[]]] call BIS_fnc_param;
 
-_handle = [] spawn public_fnc_stripDownPlayer;
+_handle = [] spawn AlysiaClient_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
 if ((count _gear) == 0) then
 {
-    [] call public_fnc_init_loadout;
+    [] call AlysiaClient_fnc_init_loadout;
 } else {
     _uniformGear = [_gear, 0, [], [["", []]]] call BIS_fnc_param;
     if ((_uniformGear select 0) != "") then {

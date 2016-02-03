@@ -25,9 +25,9 @@ g_hurt_effect ppEffectCommit 0;
 player setDamage (100 - (100 / 4000 * g_blood)) / 100;
 
 if (g_blood isEqualTo 1) exitWith {
-	[] spawn public_fnc_handleComa;
+	[] spawn AlysiaClient_fnc_handleComa;
 };
 
 if (!g_regen_active) then {
-	[] spawn public_fnc_handleRegen;
+	[] spawn AlysiaClient_fnc_handleRegen;
 };

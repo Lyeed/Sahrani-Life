@@ -17,4 +17,4 @@ if (isNull _vehicle) exitWith {};
 
 _checked = cbChecked ((findDisplay 35000) displayCtrl 35002);
 closeDialog 0;
-[_vehicle, _checked, (getPos g_garage_PNJ), true, g_garage_distance] spawn public_fnc_garageVehicleStore;
+[_vehicle, _checked, (getPos g_garage_PNJ), true, g_garage_distance] spawn AlysiaClient_fnc_garageVehicleStore;

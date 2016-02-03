@@ -11,22 +11,22 @@ _item = [_this, 0, "", [""]] call BIS_fnc_param;
 if (_item isEqualTo "") exitWith {};
 if (!(isClass(missionConfigFile >> "ALYSIA_LABORATORIES" >> _item))) exitWith {};
 if (playerSide != civilian) exitWith {
-	["Vous ne pouvez pas utiliser cet objet"] call public_fnc_error;
+	["Vous ne pouvez pas utiliser cet objet"] call AlysiaClient_fnc_error;
 };
 
 if (!(isNull g_objPut)) exitWith {
-	["Vous deployez déjà un élèment"] call public_fnc_error;
+	["Vous deployez déjà un élèment"] call AlysiaClient_fnc_error;
 };
 
 if (!(isNull g_laboratory)) exitWith {
-	["Vous possédez déjà un laboratoire"] call public_fnc_error;
+	["Vous possédez déjà un laboratoire"] call AlysiaClient_fnc_error;
 };
 
 _object = getText(missionConfigFile >> "ALYSIA_LABORATORIES" >> _item >> "object") createVehicle [0, 0, 0];
 _object attachTo [player, [0, 2, 1]];
 g_objPut = _object;
 
-_action_1 = player addAction [format["Placer <t color='#FFFF33'>%1</t>", [_item] call public_fnc_itemGetName],
+_action_1 = player addAction [format["Placer <t color='#FFFF33'>%1</t>", [_item] call AlysiaClient_fnc_itemGetName],
 {
 	detach g_objPut;
 }, "", 9999992, true, true, "",'!isNull g_objPut'];
@@ -45,7 +45,7 @@ player removeAction _action_2;
 
 if (isNull _object) exitWith {};
 
-if ([false, _item, 1] call public_fnc_handleInv) then
+if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then
 {
 	g_laboratory = _object;
 
@@ -56,8 +56,8 @@ if ([false, _item, 1] call public_fnc_handleInv) then
 	_marker setMarkerColorLocal "ColorRed";
 	_marker setMarkerTypeLocal "loc_Bunker";
 
-	[(getPlayerUID player), _object, _item] remoteExec ["TON_fnc_laboratory_insert", 2];	
+	[(getPlayerUID player), _object, _item] remoteExec ["AlysiaServer_fnc_laboratory_insert", 2];	
 } else {
-	["Impossible de trouver l'objet dans votre inventaire"] call public_fnc_error;
+	["Impossible de trouver l'objet dans votre inventaire"] call AlysiaClient_fnc_error;
 	deleteVehicle _object;
 };

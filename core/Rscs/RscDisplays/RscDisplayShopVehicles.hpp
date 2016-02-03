@@ -76,7 +76,7 @@ class RscDisplayShopVehicles: RscDisplayDefaultInteraction
 		class VEHICLES_LIST: RscListbox
 		{
 			idc = 2302;
-			onLBSelChanged = "_this call public_fnc_shop_vehicles_update;";
+			onLBSelChanged = "_this call AlysiaClient_fnc_shop_vehicles_update;";
 			rowHeight = 0.05;
 
 			x = 0.329844 * safezoneW + safezoneX;
@@ -180,7 +180,7 @@ class RscDisplayShopVehicles: RscDisplayDefaultInteraction
 		class ACTION_BUY_BUTTON: RscButtonSilent
 		{
 			idc = 2315;
-			action = "[] call public_fnc_shop_vehicles_buy;";
+			action = "[] call AlysiaClient_fnc_shop_vehicles_buy;";
 			onMouseEnter = "			ctrlSetText[2314,""lyeed_IMG\data\global\action_buy_select.paa""];			ctrlShow[2312, false];			((findDisplay 2300) displayCtrl 2311) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 2300) displayCtrl 2313) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
 			onMouseExit = "			ctrlSetText[2314,""lyeed_IMG\data\global\action_buy.paa""];			if (ctrlVisible 2314) then {				ctrlShow[2312, true];			};			((findDisplay 2300) displayCtrl 2311) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 2300) displayCtrl 2313) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>"";";
 

@@ -28,7 +28,7 @@ if (g_phone_forfait != "none") then
 		g_phone_blacklist deleteRange [_maxBlacklist, count((g_phone_blacklist) - 1)];
 	};
 } else {
-	[] call public_fnc_phone_numberChange;
+	[] call AlysiaClient_fnc_phone_numberChange;
 };
 
 if ((count g_phone_messages) >= getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> g_phone_forfait >> "sms_max")) then {

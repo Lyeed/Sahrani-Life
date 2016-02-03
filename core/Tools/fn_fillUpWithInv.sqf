@@ -19,13 +19,13 @@ _isEmpty = false;
 
 {
 	private["_val"];
-	_val = [_x] call public_fnc_itemCount;
+	_val = [_x] call AlysiaClient_fnc_itemCount;
 	if (_val > 0) then
 	{
-		_index = _list lbAdd format["%1x %2", ([_val] call public_fnc_numberText), ([_x] call public_fnc_itemGetName)];
+		_index = _list lbAdd format["%1x %2", ([_val] call AlysiaClient_fnc_numberText), ([_x] call AlysiaClient_fnc_itemGetName)];
 		_list lbSetData [_index, _x];
-		_list lbSetPicture [_index, ([_x] call public_fnc_itemGetImage)];
-		_list lbSetTooltip [_index, ([_x] call public_fnc_itemGetName)];
+		_list lbSetPicture [_index, ([_x] call AlysiaClient_fnc_itemGetImage)];
+		_list lbSetTooltip [_index, ([_x] call AlysiaClient_fnc_itemGetName)];
 	};
 } forEach g_inv_items;
 
@@ -38,7 +38,9 @@ if ((lbSize _list) isEqualTo 0) then
 };
 
 if (_select) then {
-	_list lbSetCurSel 0;
+	if ((lbCurSel _list) isEqualTo -1) then {
+		_list lbSetCurSel 0;
+	};
 };
 
 _isEmpty;

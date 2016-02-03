@@ -8,13 +8,13 @@
 
 if (isNull g_interaction_target) exitWith {};
 if (!(g_interaction_target getVariable ["restrained", false])) exitWith {
-	["La cible doit être menotté"] call public_fnc_error;
+	["La cible doit être menotté"] call AlysiaClient_fnc_error;
 };
 
 closeDialog 0;
 
-if (!(["Crochetage", 7, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress)) exitWith {};
-if (!([false, "lockpick", 1] call public_fnc_handleInv)) exitWith {};
+if (!(["Crochetage", 7, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {};
+if (!([false, "lockpick", 1] call AlysiaClient_fnc_handleInv)) exitWith {};
 
 if ((random(100)) < 35) then {
 	g_interaction_target setVariable ["restrained", false, true];

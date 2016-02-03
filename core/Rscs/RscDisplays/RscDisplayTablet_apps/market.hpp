@@ -70,7 +70,7 @@ class MARKET_RESSOURCES_LIST: RscListbox
 	idc = MARKET_RESSOURCES_LIST_IDC;
 	rowHeight = 0.04;
 	colorBackground[] = {0,0,0,0.8};
-	onLBSelChanged = "_this call public_fnc_APP_market_update;";
+	onLBSelChanged = "_this call AlysiaClient_fnc_APP_market_update;";
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.379 * safezoneH + safezoneY;

@@ -8,7 +8,7 @@
 private["_vehicle", "_data", "_position", "_time", "_try"];
 
 if (call compile format["!(isNil ""gServer_faction_%1_mission"")", str(playerSide)]) exitWith {
-	["Votre faction a déja effectuée une mission"] call public_fnc_error;
+	["Votre faction a déja effectuée une mission"] call AlysiaClient_fnc_error;
 };
 
 _time = round(random(20) * 60) + (4 * 60);
@@ -17,7 +17,7 @@ if (((gServer_rebootHour * 60) - serverTime) < _time) exitWith {
 		"Le serveur redémarre dans %1<br/>Le temps de livraison est de %2<br/>Impossible de démarrer la mission",
 		[(gServer_rebootHour * 60) - serverTime, "H:MM:SS"] call CBA_fnc_formatElapsedTime,
 		[_time, "H:MM:SS"] call CBA_fnc_formatElapsedTime
-	]] call public_fnc_error;
+	]] call AlysiaClient_fnc_error;
 };
 
 _data = getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "mission_start") call BIS_fnc_selectRandom;
@@ -32,14 +32,14 @@ call compile format["gServer_faction_%1_mission=true; publicVariable""gServer_fa
 		[_time, "H:MM:SS"] call CBA_fnc_formatElapsedTime
 	],
 	"LIVRAISON"
-] call public_fnc_phone_message_receive;
+] call AlysiaClient_fnc_phone_message_receive;
 
 sleep _time;
 
 _try = 1;
 while {(count(nearestObjects[_position, ["Car", "Air", "Ship", "Truck", "Tank"], 10]) > 0)} do
 {
-	[format["Un véhicule bloque l'apparition du camion.<br/>Tentative n°%1<br/>Essaie dans 10 secondes...", _try]] call public_fnc_error;
+	[format["Un véhicule bloque l'apparition du camion.<br/>Tentative n°%1<br/>Essaie dans 10 secondes...", _try]] call AlysiaClient_fnc_error;
 	sleep 10;
 };
 
@@ -50,11 +50,11 @@ while {(count(nearestObjects[_position, ["Car", "Air", "Ship", "Truck", "Tank"],
 		(mapGridPosition _position)
 	],
 	"LIVRAISON"
-] call public_fnc_phone_message_receive;
+] call AlysiaClient_fnc_phone_message_receive;
 
 _vehicle = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "mission_vehicle") createVehicle _position;
 _vehicle setDir (_data select 1);
-[_vehicle] call public_fnc_clearVehicleAmmo;
+[_vehicle] call AlysiaClient_fnc_clearVehicleAmmo;
 
 if (local _vehicle) then {
 	_vehicle lock 2;
@@ -83,7 +83,7 @@ for "_i" from 0 to (round(random(30)) + 10) do
 				_vehicle addItemCargoGlobal [_item, 1];
 			};
 			case "Virtual": {
-				_vehicle setVariable ["Trunk", [true, (_vehicle getVariable ["Trunk", []]), _item, (round(random(2)) + 1)] call public_fnc_handleTrunk, true];
+				_vehicle setVariable ["Trunk", [true, (_vehicle getVariable ["Trunk", []]), _item, (round(random(2)) + 1)] call AlysiaClient_fnc_handleTrunk, true];
 			};
 		};
 	};

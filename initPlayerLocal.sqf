@@ -34,7 +34,7 @@ if (hasInterface) then
 	0 cutFadeOut 9999999;
 	waitUntil {!(isNil "gServer_server_isReady")};
 	if (!(isNil "gServer_soonReboot")) exitWith {
-		["Le serveur redémarre dans moins de 4 minutes, veuillez vous reconnecter après."] spawn public_fnc_errorExit;
+		["Le serveur redémarre dans moins de 4 minutes, veuillez vous reconnecter après."] spawn AlysiaClient_fnc_errorExit;
 	};
 	setDate [gServer_year, (date select 1), (date select 2), (date select 3), (date select 4)];
 
@@ -42,28 +42,28 @@ if (hasInterface) then
 	cutText ["Vérification de la résolution ...", "BLACK FADED"];
 	0 cutFadeOut 9999999;
 	if (((getResolution) select 5) != 0.55) exitWith {
-		["Vous devez règler la taille de votre interface sur 'Petit(e)' pour pouvoir vous connecter. L'option est disponible dans Configurer->Vidéo->Affichage->Taille d'interface. Un redémarrage de votre jeu est nécessaire après modification."] spawn public_fnc_errorExit;
+		["Vous devez règler la taille de votre interface sur 'Petit(e)' pour pouvoir vous connecter. L'option est disponible dans Configurer->Vidéo->Affichage->Taille d'interface. Un redémarrage de votre jeu est nécessaire après modification."] spawn AlysiaClient_fnc_errorExit;
 	};
 	diag_log "<INIT> Vérification de la résolution terminée";
 
 	diag_log "<INIT> Initialisation des variables ...";
 	cutText ["Initialisation des variables", "BLACK FADED"];
 	0 cutFadeOut 9999999;
-	[] call public_fnc_init_variables;
+	[] call AlysiaClient_fnc_init_variables;
 	diag_log "<INIT> Variables initialisées";
 
 	diag_log "<INIT> Ajouts des évènements ...";
 	cutText ["Ajouts des évènements", "BLACK FADED"];
 	0 cutFadeOut 9999999;
-	[] call public_fnc_init_keys;
-	[] call public_fnc_init_eventHandlers;
-	[] call public_fnc_init_triggers;
+	[] call AlysiaClient_fnc_init_keys;
+	[] call AlysiaClient_fnc_init_eventHandlers;
+	[] call AlysiaClient_fnc_init_triggers;
 	diag_log "<INIT> Evènements ajoutés";
 
 	diag_log "<INIT> Création des objets ...";
 	cutText ["Création des objets", "BLACK FADED"];
 	0 cutFadeOut 9999999;
-	[] call public_fnc_init_buildings;
+	[] call AlysiaClient_fnc_init_buildings;
 	diag_log "<INIT> Objets crées";
 
 	diag_log "<INIT> Validation de l'extension TaskForceRadio...";
@@ -93,20 +93,20 @@ if (hasInterface) then
 	diag_log "<INIT> Ajouts des actions au joueur ...";
 	cutText ["Ajouts des actions au joueur", "BLACK FADED"];
 	0 cutFadeOut 9999999;
-	[] call public_fnc_init_actions;
+	[] call AlysiaClient_fnc_init_actions;
 	diag_log "<INIT> Actions ajoutés";
 
 	diag_log "<INIT> Récupération des données de personnage ...";
 	cutText ["Récupération des données de personnage", "BLACK FADED"];
 	0 cutFadeOut 9999999;
-	[player] remoteExec ["TON_fnc_query_select_connect", 2, false];
+	[player] remoteExec ["AlysiaServer_fnc_query_select_connect", 2, false];
 	waitUntil {!(isNil "g_session_query")};
 	diag_log "<INIT> Données de personnage récupéré";
 
 	diag_log "<INIT> Chargement des données personnage ...";
 	cutText ["Chargement des données de personnage", "BLACK FADED"];
 	0 cutFadeOut 9999999;
-	if (!([g_session_query] call public_fnc_init_data)) exitWith {};
+	if (!([g_session_query] call AlysiaClient_fnc_init_data)) exitWith {};
 	diag_log "<INIT> Données de personnage chargées";
 
 	diag_log "---------------------------------------------------------------------------------------------------------";

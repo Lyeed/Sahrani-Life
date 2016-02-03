@@ -8,10 +8,10 @@
 
 if (isNull g_interaction_target) exitWith {};
 if (!(g_interaction_target getVariable ["restrained", false])) exitWith {
-	["La cible n'est pas menottée"] call public_fnc_error;
+	["La cible n'est pas menottée"] call AlysiaClient_fnc_error;
 };
 if (g_interaction_target getVariable ["escorting", false]) exitWith {
-	["Quelqu'un escorte la cible"] call public_fnc_error;
+	["Quelqu'un escorte la cible"] call AlysiaClient_fnc_error;
 };
 
 closeDialog 0;
@@ -22,14 +22,14 @@ waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMst
 g_action_inUse = false;
 
 if (!(g_interaction_target getVariable ["restrained", false])) exitWith {
-	["La cible n'est pas menottée"] call public_fnc_error;
+	["La cible n'est pas menottée"] call AlysiaClient_fnc_error;
 };
 if (g_interaction_target getVariable ["escorting", false]) exitWith {
-	["Quelqu'un escorte la cible"] call public_fnc_error;
+	["Quelqu'un escorte la cible"] call AlysiaClient_fnc_error;
 };
 
-if (!([true, "handcuffs", 1] call public_fnc_handleInv)) then {
-	["Vous n'avez pas récupéré les menottes car vous n'avez pas assez de place"] call public_fnc_error;
+if (!([true, "handcuffs", 1] call AlysiaClient_fnc_handleInv)) then {
+	["Vous n'avez pas récupéré les menottes car vous n'avez pas assez de place"] call AlysiaClient_fnc_error;
 };
 
 g_interaction_target setVariable ["restrained", false, true];

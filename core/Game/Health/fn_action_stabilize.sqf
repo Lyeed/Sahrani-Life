@@ -10,16 +10,16 @@ _unit = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _type = [_this, 1, "", [""]] call BIS_fnc_param;
 
 if (isNull _unit) exitWith {
-	["Cible invalide"] call public_fnc_error;
+	["Cible invalide"] call AlysiaClient_fnc_error;
 };
 if (g_action_inUse) exitWith {
-	["Vous êtes déjà en train d'effectuer une action"] call public_fnc_error;
+	["Vous êtes déjà en train d'effectuer une action"] call AlysiaClient_fnc_error;
 };
 if ((_type isEqualTo "debif") && ((backpack player) != "B_Defibrilateur_khk")) exitWith {
-	["Vous n'avez pas de défibrilateur"] call public_fnc_error;
+	["Vous n'avez pas de défibrilateur"] call AlysiaClient_fnc_error;
 };
 if ((_type isEqualTo "debif") && (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "can_use_debrif") isEqualTo 0)) exitWith {
-	["Vous n'êtes pas abilité à manier ce type de défibrilateur"] call public_fnc_error;
+	["Vous n'êtes pas abilité à manier ce type de défibrilateur"] call AlysiaClient_fnc_error;
 };
 
 _chance = switch (_type) do
@@ -28,7 +28,7 @@ _chance = switch (_type) do
 	case "debif": {61};
 };
 if (isNil "_chance") exitWith {
-	["Impossible de déterminer vos chances de réaminer"] call public_fnc_error;
+	["Impossible de déterminer vos chances de réaminer"] call AlysiaClient_fnc_error;
 };
 
 g_action_inUse = true;

@@ -32,7 +32,7 @@ if (!(isNull (player getVariable ["escorted", objNull]))) then
 	_target setVariable ["escorted", objNull, true];
 };
 if (!(isNull g_dragingBody)) then {
-	[false] call public_fnc_action_body_drop;
+	[false] call AlysiaClient_fnc_action_body_drop;
 };
 
 disableSerialization;
@@ -102,10 +102,10 @@ while {(_time > 0) && (alive player) && (player getVariable ["is_coma", false])}
 if (alive player) then 
 {
 	if (g_thirst < 10) then {
-		[15] call public_fnc_handleThirst; 
+		[15] call AlysiaClient_fnc_handleThirst; 
 	};
 	if (g_hunger < 10) then {
-		[15] call public_fnc_handleHunger;
+		[15] call AlysiaClient_fnc_handleHunger;
 	};
 
 	player switchCamera "Internal";

@@ -14,7 +14,7 @@ if (player getVariable ["restrained", false]) then {player setVariable ["restrai
 if (!(isNull (player getVariable ["escorting", objNull]))) then {player setVariable ["escorting", objNull, true]};
 if (!(isNull (player getVariable ["escorted", objNull]))) then {player setVariable ["escorted", objNull, true]};
 
-[4000] call public_fnc_handleBlood;
+[4000] call AlysiaClient_fnc_handleBlood;
 
 g_carryWeight = 0;
 g_is_alive = true;
@@ -23,14 +23,14 @@ if (player getVariable ["arrested", false]) then {
 
 } else {
 
-	[] spawn public_fnc_init_loadout;
+	[] spawn AlysiaClient_fnc_init_loadout;
 
 	_price = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "respawn_price");
 	if (g_atm < _price) then {
-		["Vous n'avez pas assez d'argent pour payer vos frais d'hospitalisation<br/>Ces derniers on été payé par l'Etat", "buy"] call public_fnc_info;
+		["Vous n'avez pas assez d'argent pour payer vos frais d'hospitalisation<br/>Ces derniers on été payé par l'Etat", "buy"] call AlysiaClient_fnc_info;
 	} else {
-		[format["Vos frais d'<t color='#FE2EF7'>hospitalisation</t> s'élèvent à <t color='#8cff9b'>%1kn</t>", ([_price] call public_fnc_numberText)], "buy"] call public_fnc_info;
-		[false, _price, "Soins hôpital"] call public_fnc_handleATM;
+		[format["Vos frais d'<t color='#FE2EF7'>hospitalisation</t> s'élèvent à <t color='#8cff9b'>%1kn</t>", ([_price] call AlysiaClient_fnc_numberText)], "buy"] call AlysiaClient_fnc_info;
+		[false, _price, "Soins hôpital"] call AlysiaClient_fnc_handleATM;
 	};
 
 	if (count(g_houses) > 0) then {
@@ -48,7 +48,7 @@ cutText ["", "BLACK IN", 8, false];
 
 [
 	[
-		[([] call public_fnc_strDate), "<t align = 'center' size = '0.7'>%1</t><br/>"], ["", ""],
-		[([] call public_fnc_strTime), "<t align = 'center' size = '0.7'>%1</t>"], ["", ""], ["", ""]
+		[([] call AlysiaClient_fnc_strDate), "<t align = 'center' size = '0.7'>%1</t><br/>"], ["", ""],
+		[([] call AlysiaClient_fnc_strTime), "<t align = 'center' size = '0.7'>%1</t>"], ["", ""], ["", ""]
 	]
 ] spawn BIS_fnc_typeText;

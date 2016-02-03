@@ -8,30 +8,30 @@
 private["_price", "_sel", "_item", "_cost", "_vehicle"];
 
 if (!(isNil "gServer_soonReboot")) exitWith {
-	["Veuillez attendre le <t color='#B40404'>redémarrage</t> du serveur pour interagir avec l'hôtel des ventes"] call public_fnc_error;
+	["Veuillez attendre le <t color='#B40404'>redémarrage</t> du serveur pour interagir avec l'hôtel des ventes"] call AlysiaClient_fnc_error;
 };
 
 if ((time - g_action_delay) < 2) exitWith {
-	["Veuillez ralentir dans vos actions"] call public_fnc_error; 
+	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error; 
 };
 
 _sel = lbCurSel 45621;
 if (_sel isEqualTo -1) exitWith {};
 
 _price = ctrlText 45620;
-if (!([_price] call public_fnc_isNumber)) exitWith {
-	["Prix de vente invalide"] call public_fnc_error;
+if (!([_price] call AlysiaClient_fnc_isNumber)) exitWith {
+	["Prix de vente invalide"] call AlysiaClient_fnc_error;
 };
 
 _price = parseNumber(_price);
 if (_price < 0) exitWith {
-	["Le <t color='#FF8000'>prix de vente</t> doit être positif"] call public_fnc_error;
+	["Le <t color='#FF8000'>prix de vente</t> doit être positif"] call AlysiaClient_fnc_error;
 };
 if (_price < 100) exitWith {
-	["Le <t color='#FF8000'>prix de vente</t> doit être supérieur ou égal à <t color='#8cff9b'>100</t>kn"] call public_fnc_error;
+	["Le <t color='#FF8000'>prix de vente</t> doit être supérieur ou égal à <t color='#8cff9b'>100</t>kn"] call AlysiaClient_fnc_error;
 };
 if (_price >= 999999) exitWith {
-	[format["Le <t color='#FF8000'>prix de vente</t> doit être inférieur à <t color='#8cff9b'>%1</t>kn", ([999999] call public_fnc_numberText)]] call public_fnc_error;
+	[format["Le <t color='#FF8000'>prix de vente</t> doit être inférieur à <t color='#8cff9b'>%1</t>kn", ([999999] call AlysiaClient_fnc_numberText)]] call AlysiaClient_fnc_error;
 };
 
 _vehicle = objNull;
@@ -45,11 +45,11 @@ if (g_cash < _cost) exitWith
 				"Vous n'avez pas assez d'argent pour mettre cet objet en vente pour <t color='#8cff9b'>%1kn</t><br/><br/>"
 			+	"Commission : <t color='#8cff9b'>%2</t>kn<br/>"
 			+	"Manquant : <t color='#ff8c8c'>%3</t>kn",
-			([_price] call public_fnc_numberText),
-			([_cost] call public_fnc_numberText),
-			[(_cost - g_cash)] call public_fnc_numberText
+			([_price] call AlysiaClient_fnc_numberText),
+			([_cost] call AlysiaClient_fnc_numberText),
+			[(_cost - g_cash)] call AlysiaClient_fnc_numberText
 		]
-	] call public_fnc_error;
+	] call AlysiaClient_fnc_error;
 };
 
 _action = 
@@ -59,8 +59,8 @@ _action =
 			"Vous êtes sur le point de démarrer une vente de <t color='#FF8000'>%1</t> pour <t color='#8cff9b'>%2</t>kn.<br/>"
 		+	"Le prix de la commission est de <t color='#8cff9b'>%3</t>kn immédiatement et <t color='#8cff9b'>%3</t>kn lorsque l'objet sera vendu.",
 		(lbText[45621, _sel]),
-		([_price] call public_fnc_numberText),
-		([_cost] call public_fnc_numberText)
+		([_price] call AlysiaClient_fnc_numberText),
+		([_cost] call AlysiaClient_fnc_numberText)
 	],
 	"Démarrer une vente", 
 	"Valider", 
@@ -71,10 +71,10 @@ if (_action) then
 	g_action_delay = time;
 	_condition = switch (g_AH_type) do
 	{
-		case 0: {([false, _item, 1] call public_fnc_handleInv)};
+		case 0: {([false, _item, 1] call AlysiaClient_fnc_handleInv)};
 		case 1:
 		{
-			[_item, false] call public_fnc_handleItem;
+			[_item, false] call AlysiaClient_fnc_handleItem;
 			true;
 		};
 		case 2:
@@ -88,23 +88,23 @@ if (_action) then
 	};
 	if (_condition) then
 	{
-		[g_AH_type, g_AH_location, _item, _price, player, _vehicle] remoteExec ["TON_fnc_auctionHouse_add", 2];
-		[false, _cost] call public_fnc_handleCash;
+		[g_AH_type, g_AH_location, _item, _price, player, _vehicle] remoteExec ["AlysiaServer_fnc_auctionHouse_add", 2];
+		[false, _cost] call AlysiaClient_fnc_handleCash;
 		[format
 			[
 				"Vous avez mis <t color='#FF8000'>%1</t> en vente pour <t color='#8cff9b'>%2</t>kn<br/><br/>Vous avez payé <t color='#8cff9b'>%3</t>kn de commission",
 				(lbText[45621, _sel]),
-				([_price] call public_fnc_numberText),
-				([_cost] call public_fnc_numberText)
+				([_price] call AlysiaClient_fnc_numberText),
+				([_cost] call AlysiaClient_fnc_numberText)
 			], "buy"
-		] call public_fnc_info;
+		] call AlysiaClient_fnc_info;
 		ctrlShow[45627, false];
 		ctrlShow[45628, false];
 		ctrlShow[45629, false];
 		ctrlShow[45630, false];
 		ctrlShow[45631, false];
 	} else {
-		["Impossible de récupérer l'objet à mettre en vente"] call public_fnc_error;
+		["Impossible de récupérer l'objet à mettre en vente"] call AlysiaClient_fnc_error;
 	};
-	[1] call public_fnc_auctionHouse_menu_filter;
+	[1] call AlysiaClient_fnc_auctionHouse_menu_filter;
 };

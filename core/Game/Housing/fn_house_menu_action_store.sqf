@@ -10,7 +10,7 @@ private["_vehicle", "_trunk", "_types", "_distance"];
 if (isNull g_interaction_target) exitWith {};
 
 if (g_garage_store) exitWith {
-	["Vous êtes déjà en train de ranger un véhicule<br/>Veuillez patienter"] call public_fnc_error;
+	["Vous êtes déjà en train de ranger un véhicule<br/>Veuillez patienter"] call AlysiaClient_fnc_error;
 };
 
 _types = getArray(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >> "garage_type");
@@ -36,31 +36,31 @@ if (isNil "_distance") then {
 	};
 } forEach (g_vehicles);
 if (isNil "_vehicle") exitWith {
-	["Aucun véhicule stationné près du garage ne vous appartient"] call public_fnc_error;
+	["Aucun véhicule stationné près du garage ne vous appartient"] call AlysiaClient_fnc_error;
 };
 if (isNull _vehicle) exitWith {
-	["Impossible de récupérer les informations de votre véhicule"] call public_fnc_error;
+	["Impossible de récupérer les informations de votre véhicule"] call AlysiaClient_fnc_error;
 };
 if (_vehicle getVariable ["trunk_in_use", false]) exitWith {
-	["Vous ne pouvez pas ranger un véhicule lorsque son coffre est en train d'être fouillé"] call public_fnc_error;
+	["Vous ne pouvez pas ranger un véhicule lorsque son coffre est en train d'être fouillé"] call AlysiaClient_fnc_error;
 };
 if (!((crew _vehicle) isEqualTo [])) exitWith {
-	["Vous ne pouvez pas ranger un véhicule contenant des passagers ou un conducteur"] call public_fnc_error;
+	["Vous ne pouvez pas ranger un véhicule contenant des passagers ou un conducteur"] call AlysiaClient_fnc_error;
 };
 if ((speed _vehicle) > 0) exitWith {
-	["Vous ne pouvez pas ranger un véhicule qui se déplace"] call public_fnc_error;
+	["Vous ne pouvez pas ranger un véhicule qui se déplace"] call AlysiaClient_fnc_error;
 };
 if (isEngineOn _vehicle) exitWith {
-	["Vous ne pouvez pas ranger un véhicule ayant le moteur allumé"] call public_fnc_error;
+	["Vous ne pouvez pas ranger un véhicule ayant le moteur allumé"] call AlysiaClient_fnc_error;
 };
 
 g_garage_store = true;
 
-[_vehicle, (getPos g_interaction_target), false] remoteExec ["TON_fnc_garageVehicleStore", 2];
+[_vehicle, (getPos g_interaction_target), false] remoteExec ["AlysiaServer_fnc_garageVehicleStore", 2];
 if (g_garage_store) then
 {
 	waitUntil {(isNull _vehicle)};
-	["Vous avez rangé votre véhicule"] call public_fnc_info;
+	["Vous avez rangé votre véhicule"] call AlysiaClient_fnc_info;
 };
 
 g_garage_store = false;

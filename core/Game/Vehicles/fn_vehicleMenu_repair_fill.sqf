@@ -29,7 +29,7 @@ lbClear _list;
 			_list lbSetData [_index, _part];
 			_list lbSetValue [_index, _value];
 			_list lbSetPicture [_index, getText(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "picture")];
-			_list lbSetPictureColor [_index, ([_value] call public_fnc_vehicleMenu_repair_getColor) select 0];
+			_list lbSetPictureColor [_index, ([_value] call AlysiaClient_fnc_vehicleMenu_repair_getColor) select 0];
 		};
 	} else {
 		systemChat format["[ERROR] %1 is not defined in ALYSIA_REPAIR", _part];

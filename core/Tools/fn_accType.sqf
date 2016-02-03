@@ -29,7 +29,7 @@ _weaponArray = [primaryWeapon player, secondaryWeapon player, handgunWeapon play
 	if(_x != "") then
 	{
 		_weapon = _x;
-		_cfgInfo = [_weapon,"CfgWeapons"] call public_fnc_fetchCfgDetails;
+		_cfgInfo = [_weapon,"CfgWeapons"] call AlysiaClient_fnc_fetchCfgDetails;
 		_legacyItems = ((_cfgInfo select 10) + (_cfgInfo select 11) + (_cfgInfo select 12));
 		_newItems = _cfgInfo select 14;
 		

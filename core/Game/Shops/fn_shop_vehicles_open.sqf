@@ -12,7 +12,7 @@ _spawnPoints = [(_this select 3), 1, [], [[]]] call BIS_fnc_param;
 if ((_shop isEqualTo "") || (_spawnPoints isEqualTo [])) exitWith {};
 if (!isClass(missionConfigFile >> "ALYSIA_SHOPS_VEHICLES" >> _shop)) exitWith
 {
-	[format["Impossible de trouver les informations concernant le magasin<br/><t align='center' color='#FF8000'>%1</t>", _shop]] call public_fnc_error;
+	[format["Impossible de trouver les informations concernant le magasin<br/><t align='center' color='#FF8000'>%1</t>", _shop]] call AlysiaClient_fnc_error;
 	diag_log format["[ALYSIA:ERROR] Vehicle shop %1 not defined in ALYSIA_SHOPS_VEHICLES (class not found)", _shop];
 };
 
@@ -20,9 +20,9 @@ _side = getText(missionConfigFile >> "ALYSIA_SHOPS_VEHICLES" >> _shop >> "side")
 if ((_side != "") && (str(playerSide) != _side)) exitWith {
 	[format[
 		"Votre faction <t color='#04B404'>%1</t> n'est pas autorisé à acheter ici.<br/>Ce magasin <t color='#2EFE9A'>%2</t> est <t color='#FF0000'>réservé</t>.",
-		([playerSide] call public_fnc_sideToStr),
+		([playerSide] call AlysiaClient_fnc_sideToStr),
 		getText(missionConfigFile >> "ALYSIA_SHOPS_VEHICLES" >> _shop >> "name")
-	]] call public_fnc_error;
+	]] call AlysiaClient_fnc_error;
 };
 
 if (!(createDialog "RscDisplayShopVehicles")) exitWith {};
@@ -47,11 +47,11 @@ lbClear _list;
 			if (_vList isEqualTo []) then {
 				_list lbSetPicture [_index, (getText(configFile >> "CfgVehicles" >> _x >> "picture"))];
 				_list lbSetData [_index, str([_x])];
-				_list lbSetValue [_index, ([_x] call public_fnc_getVehBuyPrice)];
+				_list lbSetValue [_index, ([_x] call AlysiaClient_fnc_getVehBuyPrice)];
 			} else {
 				_list lbSetPicture [_index, (getText(configFile >> "CfgVehicles" >> (_vList select 0) >> "picture"))];
 				_list lbSetData [_index, str(_vList)];
-				_list lbSetValue [_index, ([(_vList select 0)] call public_fnc_getVehBuyPrice)];
+				_list lbSetValue [_index, ([(_vList select 0)] call AlysiaClient_fnc_getVehBuyPrice)];
 			};
 			_list lbSetTooltip [_index, (_list lbText _index)];
 		} else {

@@ -11,7 +11,7 @@ _type = [_this, 3, "", [""]] call BIS_fnc_param;
 if (_type isEqualTo "") exitWith {};
 if (!isClass(missionConfigFile >> "ALYSIA_SHOPS_CLOTHING" >> _type)) exitWith 
 {
-	[format["Impossible de trouver les informations concernant le magasin<br/><t align='center' color='#FF8000'>%1</t>", _type]] call public_fnc_error;
+	[format["Impossible de trouver les informations concernant le magasin<br/><t align='center' color='#FF8000'>%1</t>", _type]] call AlysiaClient_fnc_error;
 	diag_log format["[ALYSIA:ERROR] Weapon shop %1 not defined in ALYSIA_SHOPS_CLOTHING (class not found)", _type];
 };
 
@@ -19,9 +19,9 @@ _side = getText(missionConfigFile >> "ALYSIA_SHOPS_CLOTHING" >> _type >> "side")
 if ((_side != "") && (str(playerSide) != _side)) exitWith {
 	[format[
 		"Votre faction <t color='#04B404'>%1</t> n'est pas autorisé à acheter ici.<br/>Ce magasin <t color='#2EFE9A'>%2</t> est <t color='#FF0000'>réservé</t>.",
-		([playerSide] call public_fnc_sideToStr),
+		([playerSide] call AlysiaClient_fnc_sideToStr),
 		getText(missionConfigFile >> "ALYSIA_SHOPS_CLOTHING" >> _type >> "name")
-	]] call public_fnc_error;
+	]] call AlysiaClient_fnc_error;
 };
 
 if (!(createDialog "RscDisplayShopClothing")) exitWith {};
@@ -40,7 +40,7 @@ _list = _display displayCtrl 3102;
 lbClear _list;
 
 if ((currentWeapon player) != "") then {
-	[] call public_fnc_holdsterSwitch;
+	[] call AlysiaClient_fnc_holdsterSwitch;
 };
 
 titleText["", "BLACK IN"];
@@ -165,7 +165,7 @@ if (!(g_shop_clothing_oldList isEqualTo [])) then
 	_txt = "";
 	{
 		if (player canAdd _x) then {
-			_txt = format["%1%2<br/>", _txt, ([_x] call public_fnc_fetchCfgDetails) select 1];
+			_txt = format["%1%2<br/>", _txt, ([_x] call AlysiaClient_fnc_fetchCfgDetails) select 1];
 		} else {
 			g_shop_clothing_oldList deleteAt _forEachIndex;
 		};

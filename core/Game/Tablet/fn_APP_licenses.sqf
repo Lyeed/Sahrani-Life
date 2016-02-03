@@ -14,8 +14,8 @@ if (isNull _display) exitWith {};
 _list = _display displayCtrl 8600;
 lbClear _list;
 {
-	_list lbAdd ([_x] call public_fnc_licenseGetName);
-} forEach ([] call public_fnc_getLicenses);
+	_list lbAdd ([_x] call AlysiaClient_fnc_licenseGetName);
+} forEach ([] call AlysiaClient_fnc_getLicenses);
 if ((lbSize _list) isEqualTo 0) then {
 	_list lbAdd "Aucune";
 };

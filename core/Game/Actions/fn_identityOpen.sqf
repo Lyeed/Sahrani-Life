@@ -83,7 +83,7 @@ switch (side _from) do
 		(_hud displayCtrl 79022) ctrlSetStructuredText parseText format
 		[
 			"<t size='1.6' color='#FF8000' font='EtelkaMonospacePro' align='center'>%1</t>",
-			([side _from, (_from getVariable ["rank", 0])] call public_fnc_rankToStr)
+			([side _from, (_from getVariable ["rank", 0])] call AlysiaClient_fnc_rankToStr)
 		];
 	};
 	case east:
@@ -102,7 +102,7 @@ switch (side _from) do
 		(_hud displayCtrl 79012) ctrlSetStructuredText parseText format
 		[
 			"<t color='#FF8000' size='1.3' font='EtelkaMonospacePro' align='center'>%1</t>",
-			([side _from, (_from getVariable ["rank", 0])] call public_fnc_rankToStr)
+			([side _from, (_from getVariable ["rank", 0])] call AlysiaClient_fnc_rankToStr)
 		];
 	};
 	case independent:
@@ -121,7 +121,7 @@ switch (side _from) do
 		(_hud displayCtrl 79032) ctrlSetStructuredText parseText format
 		[
 			"<t size='1.6' color='#FF8000' font='EtelkaMonospacePro' align='center'>%1</t>",
-			([side _from, (_from getVariable ["rank", 0])] call public_fnc_rankToStr)
+			([side _from, (_from getVariable ["rank", 0])] call AlysiaClient_fnc_rankToStr)
 		];
 	};
 };

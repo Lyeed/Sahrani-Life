@@ -9,7 +9,7 @@ private["_display"];
 
 if (isNull g_interaction_target) exitWith {};
 if ((g_interaction_target getVariable ["inventory_in_use_UID", ""]) != "") exitWith {
-	["Quelqu'un est déjà en train de fouiller ce corps"] call public_fnc_error;
+	["Quelqu'un est déjà en train de fouiller ce corps"] call AlysiaClient_fnc_error;
 };
 
 if (dialog) then
@@ -28,7 +28,7 @@ player playAction "Gear";
 g_interaction_target setVariable ["inventory_in_use_UID", (getPlayerUID player), true];
 g_interaction_target_inv = g_interaction_target getVariable ["inv", []];
 g_interaction_target_inv_active = false;
-[] call public_fnc_skullMenu_search_update;
+[] call AlysiaClient_fnc_skullMenu_search_update;
 
 while {!(isNull _display)} do
 {

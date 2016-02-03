@@ -9,7 +9,7 @@ private["_item", "_sound"];
 _item = [_this, 0, "", [""]] call BIS_fnc_param;
 
 if (_item isEqualTo "") exitWith {};
-if ([false, _item, 1] call public_fnc_handleInv) then 
+if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then 
 {
 	if (isClass(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food")) then
 	{
@@ -17,8 +17,8 @@ if ([false, _item, 1] call public_fnc_handleInv) then
 		if (_sound != "") then {
 			[player, _sound, 10] call CBA_fnc_globalSay3d;
 		};
-		[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food" >> "thirst")] call public_fnc_handleThirst;
-		[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food" >> "hunger")] call public_fnc_handleHunger;
-		[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food" >> "alcool")] call public_fnc_handleAlcool;
+		[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food" >> "thirst")] call AlysiaClient_fnc_handleThirst;
+		[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food" >> "hunger")] call AlysiaClient_fnc_handleHunger;
+		[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food" >> "alcool")] call AlysiaClient_fnc_handleAlcool;
 	};
 };

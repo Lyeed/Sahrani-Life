@@ -11,7 +11,7 @@ if (g_launder > 0) then
 	[] spawn
 	{
 		sleep ((60 * random(15)) + 3);
-		[] call public_fnc_launderReceive;
+		[] call AlysiaClient_fnc_launderReceive;
 	};
 };
 
@@ -102,7 +102,7 @@ if (g_launder > 0) then
 					if (!((_curentfuel in ["SP95","SP98"]) && (_fuel in ["SP95","SP98"]))) then
 					{
 						[_veh, "motorexplose", 20] call CBA_fnc_globalSay3d;
-						[_veh, "HitEngine", 1] call public_fnc_setHitPointDamage;
+						[_veh, "HitEngine", 1] call AlysiaClient_fnc_setHitPointDamage;
 					};
 				};
 
@@ -111,7 +111,7 @@ if (g_launder > 0) then
 				} else {
 					_conso = getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _curentfuel >> "conso");
 				};
-				_veh setFuel ((fuel _veh) - (((speed _veh) / _conso) + (([_veh getVariable ["Trunk", []]] call public_fnc_weightGenerate) / 100000)));
+				_veh setFuel ((fuel _veh) - (((speed _veh) / _conso) + (([_veh getVariable ["Trunk", []]] call AlysiaClient_fnc_weightGenerate) / 100000)));
 			};
 			sleep 2;
 		};
@@ -130,11 +130,11 @@ if (g_launder > 0) then
 
 	_fnc_channel =
 	{
-		["Vous devez être dans le channel TaskForceRadio pour pouvoir jouer sur le serveur. Vous allez être expulsé dans 20 secondes"] call public_fnc_error; 
+		["Vous devez être dans le channel TaskForceRadio pour pouvoir jouer sur le serveur. Vous allez être expulsé dans 20 secondes"] call AlysiaClient_fnc_error; 
 		sleep 20;
 		if ((call TFAR_fnc_getTeamSpeakChannelName) != "TaskForceRadio") then
 		{
-			[] call MySQL_fnc_query_update_disconnect;
+			[] call AlysiaDB_fnc_query_update_disconnect;
 			sleep 2;
 			["Teamspeak", false, true] call BIS_fnc_endMission;
 		};
@@ -142,11 +142,11 @@ if (g_launder > 0) then
 
 	_fnc_server =
 	{
-		["Vous n'êtes pas connecté sur le Teamspeak du serveur. Vous allez être expulsé dans 20 secondes."] call public_fnc_error; 
+		["Vous n'êtes pas connecté sur le Teamspeak du serveur. Vous allez être expulsé dans 20 secondes."] call AlysiaClient_fnc_error; 
 		sleep 20;
 		if (!(["Alysia", (call TFAR_fnc_getTeamSpeakServerName)] call BIS_fnc_inString)) then
 		{
-			[] call MySQL_fnc_query_update_disconnect;
+			[] call AlysiaDB_fnc_query_update_disconnect;
 			sleep 2;
 			["Teamspeak", false, true] call BIS_fnc_endMission;
 		};
@@ -160,19 +160,19 @@ if (g_launder > 0) then
 		_totalSession = _totalSession + 1;
 		
 		if ((_totalSession % 4) isEqualTo 0) then {
-			[4] call MySQL_fnc_query_update_usual 
+			[4] call AlysiaDB_fnc_query_update_usual 
 		};
 
 		if ((_totalSession % 5) isEqualTo 0) then {
-			[(random(8) * -1)] call public_fnc_handleThirst;
+			[(random(8) * -1)] call AlysiaClient_fnc_handleThirst;
 		};
 		if ((_totalSession % 6) isEqualTo 0) then {
-			[(random(8) * -1)] call public_fnc_handleHunger;
+			[(random(8) * -1)] call AlysiaClient_fnc_handleHunger;
 		};
 		
 		if ((_totalSession % _salary_time) isEqualTo 0) then
 		{
-			[] call public_fnc_salaryProcess;
+			[] call AlysiaClient_fnc_salaryProcess;
 	       	g_nextPay = time + (_salary_time * 60);
 		};
 

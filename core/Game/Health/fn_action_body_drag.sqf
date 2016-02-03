@@ -9,15 +9,15 @@ private["_target"];
 _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 if (!(isNull g_dragingBody)) exitWith {
-	["Vous êtes déjà en train de trainer quelqu'un"] call public_fnc_error;
+	["Vous êtes déjà en train de trainer quelqu'un"] call AlysiaClient_fnc_error;
 };
 
 if (!(_target getVariable ["is_coma", false])) exitWith {
-	["La cible n'est pas dans le coma"] call public_fnc_error;
+	["La cible n'est pas dans le coma"] call AlysiaClient_fnc_error;
 };
 
 if (_target getVariable ["transporting", false]) exitWith {
-	["Quelqu'un traine déjà ce corps"] call public_fnc_error;
+	["Quelqu'un traine déjà ce corps"] call AlysiaClient_fnc_error;
 };
 
 player playAction "grabDrag";

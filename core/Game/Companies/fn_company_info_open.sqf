@@ -23,7 +23,7 @@ if (isNull _display) exitWith {};
 
 _info = g_interaction_target getVariable "company_info";
 if (isNil "_info") exitWith {
-	["Impossible de trouver les informations de l'entreprise"] call public_fnc_error;
+	["Impossible de trouver les informations de l'entreprise"] call AlysiaClient_fnc_error;
 };
 
 (_display displayCtrl 92001) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", (_info select 0)];

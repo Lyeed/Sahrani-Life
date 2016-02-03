@@ -30,7 +30,7 @@ class ALYSIA_DRUG
 		sound = "";
 		effect_init =
 		"\
-			[6] call public_fnc_camShake;\
+			[6] call AlysiaClient_fnc_camShake;\
 			g_drugs_methp_chromAberration = ppEffectCreate[""chromAberration"", 5004];\
 			g_drugs_methp_colorCorrections = ppEffectCreate[""colorCorrections"", 5004];\
 		";		
@@ -45,7 +45,7 @@ class ALYSIA_DRUG
 		effect_end =
 		"\
 			ppEffectDestroy [g_drugs_methp_chromAberration, g_drugs_methp_colorCorrections];\
-			[-6] call public_fnc_camShake;\
+			[-6] call AlysiaClient_fnc_camShake;\
 		";
 	};
 
@@ -120,7 +120,7 @@ class ALYSIA_DRUG
 				deleteVehicle _smoke;\
 			};\
 			g_drugs_marijuana_colorCorrections = ppEffectCreate[""colorCorrections"", 5000];\
-			[3] call public_fnc_camShake;\
+			[3] call AlysiaClient_fnc_camShake;\
 		";
 		effect_loop = "\
 			g_drugs_marijuana_colorCorrections ppEffectAdjust [1, 0.9, -0.002, [0.0, 0.0, 0.0, 0.0], [1.0, 0.6, 0.4, 0.6],  [random 4.5, random 0.7, random 0.7, 0.0]];\
@@ -129,7 +129,7 @@ class ALYSIA_DRUG
 		";
 		effect_end = "\
 			ppEffectDestroy g_drugs_marijuana_colorCorrections;\
-			[-3] call public_fnc_camShake;\
+			[-3] call AlysiaClient_fnc_camShake;\
 		";
 	};
 };

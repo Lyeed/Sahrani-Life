@@ -114,7 +114,7 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\patch_anti_addiction.paa";
 		class use
 		{
-			action = "[] call public_fnc_patch;";
+			action = "[] call AlysiaClient_fnc_patch;";
 		};
 	};
 
@@ -140,7 +140,7 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\coffre.paa";
 		class use
 		{
-			action = "['storage_small'] spawn public_fnc_storageBox;";
+			action = "['storage_small'] spawn AlysiaClient_fnc_storageBox;";
 		};
 	};
 	class storage_medium: storage_small
@@ -150,7 +150,7 @@ class ALYSIA_ITEMS
 		price_buy   = 31000;
 		class use
 		{
-			action = "['storage_medium'] spawn public_fnc_storageBox;";
+			action = "['storage_medium'] spawn AlysiaClient_fnc_storageBox;";
 		};
 	};
 	class storage_large: storage_small
@@ -160,7 +160,7 @@ class ALYSIA_ITEMS
 		price_buy   = 43000;
 		class use
 		{
-			action = "['storage_large'] spawn public_fnc_storageBox;";
+			action = "['storage_large'] spawn AlysiaClient_fnc_storageBox;";
 		};
 	};
 	class storage_stock: storage_small
@@ -170,7 +170,7 @@ class ALYSIA_ITEMS
 		price_buy   = 50000;
 		class use
 		{
-			action = "['storage_stock'] spawn public_fnc_storageBox;";
+			action = "['storage_stock'] spawn AlysiaClient_fnc_storageBox;";
 		};
 	};
 	
@@ -185,7 +185,7 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\barriere.paa";
 		class use
 		{
-			action = "['barriere'] spawn public_fnc_objPut;";
+			action = "['barriere'] spawn AlysiaClient_fnc_objPut;";
 		};
 	};
 
@@ -200,7 +200,7 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\cone.paa";
 		class use
 		{
-			action = "['cone'] spawn public_fnc_objPut;";
+			action = "['cone'] spawn AlysiaClient_fnc_objPut;";
 		};
 	};
 
@@ -215,7 +215,7 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\herse.paa";
 		class use
 		{
-			action = "['spikeStrip'] spawn public_fnc_objPut;";
+			action = "['spikeStrip'] spawn AlysiaClient_fnc_objPut;";
 		};
 	};
 
@@ -479,7 +479,7 @@ class ALYSIA_ITEMS
 		};
 		class use
 		{
-			action = "['cocainep'] call public_fnc_drugConsume;";
+			action = "['cocainep'] call AlysiaClient_fnc_drugConsume;";
 		};
 	};
 
@@ -499,7 +499,7 @@ class ALYSIA_ITEMS
 		};
 		class use
 		{
-			action = "['cocainepc'] call public_fnc_drugConsume;";
+			action = "['cocainepc'] call AlysiaClient_fnc_drugConsume;";
 		};
 	};
 
@@ -559,7 +559,7 @@ class ALYSIA_ITEMS
 		};
 		class use
 		{
-			action = "['heroinps'] call public_fnc_drugConsume;";
+			action = "['heroinps'] call AlysiaClient_fnc_drugConsume;";
 		};
 	};
 
@@ -630,7 +630,7 @@ class ALYSIA_ITEMS
 		};
 		class use
 		{
-			action = "['methp'] call public_fnc_drugConsume;";
+			action = "['methp'] call AlysiaClient_fnc_drugConsume;";
 		};
 	};
 
@@ -673,7 +673,7 @@ class ALYSIA_ITEMS
 		};
 		class use
 		{
-			action = "['marijuana'] call public_fnc_drugConsume;";
+			action = "['marijuana'] call AlysiaClient_fnc_drugConsume;";
 		};
 	};
 
@@ -1697,7 +1697,7 @@ class ALYSIA_ITEMS
 		image = "";
 		class use
 		{
-			action = "['lab_marijuana'] spawn public_fnc_labo_deploy;";
+			action = "['lab_marijuana'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
 	class lab_meth
@@ -1711,7 +1711,7 @@ class ALYSIA_ITEMS
 		image = "";
 		class use
 		{
-			action = "['lab_meth'] spawn public_fnc_labo_deploy;";
+			action = "['lab_meth'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
 	class lab_cocaine
@@ -1725,7 +1725,7 @@ class ALYSIA_ITEMS
 		image = "";
 		class use
 		{
-			action = "['lab_cocaine'] spawn public_fnc_labo_deploy;";
+			action = "['lab_cocaine'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
 	class lab_heroin
@@ -1739,7 +1739,7 @@ class ALYSIA_ITEMS
 		image = "";
 		class use
 		{
-			action = "['lab_heroin'] spawn public_fnc_labo_deploy;";
+			action = "['lab_heroin'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
 	class lab_weapon
@@ -1753,7 +1753,7 @@ class ALYSIA_ITEMS
 		image = "";
 		class use
 		{
-			action = "['lab_weapon'] spawn public_fnc_labo_deploy;";
+			action = "['lab_weapon'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
 	class lab_clothing
@@ -1767,7 +1767,7 @@ class ALYSIA_ITEMS
 		image = "";
 		class use
 		{
-			action = "['lab_clothing'] spawn public_fnc_labo_deploy;";
+			action = "['lab_clothing'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
 };

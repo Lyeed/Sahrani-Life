@@ -12,14 +12,14 @@ _price = [_this, 2, 0, [0]] call BIS_fnc_param;
 
 if ((_item isEqualTo "") || (_price isEqualTo 0) || (_type isEqualTo -1)) exitWith {};
 
-[_type, _item] call public_fnc_auctionHouse_addItem;
+[_type, _item] call AlysiaClient_fnc_auctionHouse_addItem;
 
 [
 	format
 	[
 		"Vous avez acheté <t color='#FF8000'>%1</t> à l'hôtel des ventes.<br/>Prix: <t color='#8cff9b'>%2kn</t>",
-		([_type, _item] call public_fnc_auctionHouse_getInfo) select 0,
-		([_price] call public_fnc_numberText)
+		([_type, _item] call AlysiaClient_fnc_auctionHouse_getInfo) select 0,
+		([_price] call AlysiaClient_fnc_numberText)
 	], "buy"
-] call public_fnc_info;
-[false, _price] call public_fnc_handleCash;
+] call AlysiaClient_fnc_info;
+[false, _price] call AlysiaClient_fnc_handleCash;

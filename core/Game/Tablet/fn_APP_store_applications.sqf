@@ -12,14 +12,14 @@ _display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
 
 (_display displayCtrl 8107) ctrlSetStructuredText parseText "<t align='center' font='PuristaBold' size='2.7' color='#FF8000'>Applications</t>";
-(_display displayCtrl 8109) buttonSetAction "[] call public_fnc_APP_store_applications_buy;";
+(_display displayCtrl 8109) buttonSetAction "[] call AlysiaClient_fnc_APP_store_applications_buy;";
 
-[8107, true] call public_fnc_tabletShow;
+[8107, true] call AlysiaClient_fnc_tabletShow;
 
 _list = _display displayCtrl 8110;
 lbClear _list;
 
-_list ctrlSetEventHandler ["LBSelChanged", "_this call public_fnc_APP_store_applications_update;"];
+_list ctrlSetEventHandler ["LBSelChanged", "_this call AlysiaClient_fnc_APP_store_applications_update;"];
 
 {
 	_app = configName _x;

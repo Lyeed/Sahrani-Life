@@ -10,7 +10,7 @@ private["_info", "_display", "_action"];
 if (isNull g_interaction_target) exitWith {};
 
 if ((speed g_interaction_target) > 0) exitWith {
-	["Le véhicule doit être à l'arrêt"] call public_fnc_error;	
+	["Le véhicule doit être à l'arrêt"] call AlysiaClient_fnc_error;	
 };
 
 if (dialog) then
@@ -21,13 +21,13 @@ if (dialog) then
 
 _info = g_interaction_target getVariable "info";
 if (isNil "_info") exitWith {
-	["Impossible de récupérer les informations du véhicule"] call public_fnc_error;
+	["Impossible de récupérer les informations du véhicule"] call AlysiaClient_fnc_error;
 };
 
 _action = true;
 if (!(g_interaction_target in g_vehicles)) then
 {
-	if (!(["Inspection", 5, g_interaction_target] call public_fnc_showProgress)) then {
+	if (!(["Inspection", 5, g_interaction_target] call AlysiaClient_fnc_showProgress)) then {
 		_action = false;
 	};
 };

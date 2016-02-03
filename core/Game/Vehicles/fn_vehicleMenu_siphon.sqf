@@ -15,7 +15,7 @@ if (_fuel != _currentfuel) then {
 	_fuel = _currentfuel;
 };
 
-if (["Siphonnage du véhicule", 30 , objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress) then
+if (["Siphonnage du véhicule", 30 , objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress) then
 {
 	player removeItem "jerrican_empty";
 	player addMagazine format ["jerrican_%1", _fuel];

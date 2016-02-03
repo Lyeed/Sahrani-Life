@@ -14,7 +14,7 @@ if (!(isNull _target)) then {
 
 if (isNull g_interaction_target) exitWith {};
 if ((g_interaction_target getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
-	["Le coffre est déjà en cours d'utilisation"] call public_fnc_error;
+	["Le coffre est déjà en cours d'utilisation"] call AlysiaClient_fnc_error;
 };
 
 if (dialog) then
@@ -25,7 +25,7 @@ if (dialog) then
 
 _isCar = true;
 g_interaction_target_trunk = g_interaction_target getVariable ["Trunk", []];
-g_interaction_target_trunk_weight_actual = [g_interaction_target_trunk] call public_fnc_weightGenerate;
+g_interaction_target_trunk_weight_actual = [g_interaction_target_trunk] call AlysiaClient_fnc_weightGenerate;
 g_interaction_target_trunk_transfer = false;
 
 g_interaction_target_trunk_weight_max = switch (true) do
@@ -40,11 +40,11 @@ g_interaction_target_trunk_weight_max = switch (true) do
 		_isCar = false;
 		getNumber(missionConfigFile >> "ALYSIA_STORAGES" >> typeOf(g_interaction_target) >> "inventory")
 	};
-	default {[typeOf(g_interaction_target)] call public_fnc_getVehVirtual};
+	default {[typeOf(g_interaction_target)] call AlysiaClient_fnc_getVehVirtual};
 };
 
 if (g_interaction_target_trunk_weight_max isEqualTo 0) exitWith {
-	["Impossible de déterminer l'inventaire du véhicule"] call public_fnc_error;
+	["Impossible de déterminer l'inventaire du véhicule"] call AlysiaClient_fnc_error;
 };
 
 if (!(createDialog "RscDisplayVirtualExhange")) exitWith {};
@@ -69,7 +69,7 @@ if (!_isCar) then
 (_display displayCtrl 515) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", g_maxWeight];
 (_display displayCtrl 514) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", g_interaction_target_trunk_weight_max];
 
-[] call public_fnc_virtual_menu_exhange_update;
+[] call AlysiaClient_fnc_virtual_menu_exhange_update;
 
 while {!(isNull _display)} do
 {

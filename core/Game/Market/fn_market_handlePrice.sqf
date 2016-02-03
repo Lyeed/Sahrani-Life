@@ -11,7 +11,7 @@ _item = [_this, 1, "", [""]] call BIS_fnc_param;
 _amount = [_this, 2, 1, [1]] call BIS_fnc_param;
 _affect = [_this, 3, false, [false]] call BIS_fnc_param;
 
-_oldPrice = [_item] call public_fnc_market_getPrice;
+_oldPrice = [_item] call AlysiaClient_fnc_market_getPrice;
 if (_type) then
 {//buy
 	_newPrice = _oldPrice + (_amount * getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market" >> "mult"));
@@ -31,9 +31,9 @@ if (_type) then
 	{
 		_affected = getArray(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market" >> "affect");
 		if (!(_affected isEqualTo [])) then {
-			[true, _affected, round(random(_amount)), false] call public_fnc_market_handlePrice;
+			[true, _affected, round(random(_amount)), false] call AlysiaClient_fnc_market_handlePrice;
 		};
 	};
 };
 
-[_item, _newPrice] call public_fnc_market_setPrice;
+[_item, _newPrice] call AlysiaClient_fnc_market_setPrice;

@@ -16,7 +16,7 @@ if (_sel isEqualTo -1) exitWith {};
 _item = lbData[505, _sel];
 _storeType = getArray(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "store");
 if (!(_storeType isEqualTo []) && !(typeOf(g_interaction_target) in _storeType)) exitWith {
-	[format["%1 ne peut pas être entreposer dans %2", ([_item] call public_fnc_itemGetName), getText(configFile >> "CfgVehicles" >> typeOf(g_interaction_target) >> "displayName")]] call public_fnc_error;
+	[format["%1 ne peut pas être entreposer dans %2", ([_item] call AlysiaClient_fnc_itemGetName), getText(configFile >> "CfgVehicles" >> typeOf(g_interaction_target) >> "displayName")]] call AlysiaClient_fnc_error;
 };
 
 if (g_interaction_target_trunk_transfer) exitWith {};
@@ -28,17 +28,17 @@ if (_type) then {
 	_amount = 1;
 };
 
-_res = [_item, _amount, g_interaction_target_trunk_weight_actual, g_interaction_target_trunk_weight_max] call public_fnc_calWeightDiff;
+_res = [_item, _amount, g_interaction_target_trunk_weight_actual, g_interaction_target_trunk_weight_max] call AlysiaClient_fnc_calWeightDiff;
 if (_res > 0) then
 {
-	if ([false, _item, _res] call public_fnc_handleInv) then
+	if ([false, _item, _res] call AlysiaClient_fnc_handleInv) then
 	{
-		[true, g_interaction_target_trunk, _item, _res] call public_fnc_handleTrunk;
-		g_interaction_target_trunk_weight_actual = g_interaction_target_trunk_weight_actual + (([_item] call public_fnc_itemGetWeight) * _res);
+		[true, g_interaction_target_trunk, _item, _res] call AlysiaClient_fnc_handleTrunk;
+		g_interaction_target_trunk_weight_actual = g_interaction_target_trunk_weight_actual + (([_item] call AlysiaClient_fnc_itemGetWeight) * _res);
 	};
 } else {
-	["Il n'y a pas assez de place dans le coffre"] call public_fnc_error;
+	["Il n'y a pas assez de place dans le coffre"] call AlysiaClient_fnc_error;
 };
 
-[] call public_fnc_virtual_menu_exhange_update;
+[] call AlysiaClient_fnc_virtual_menu_exhange_update;
 g_interaction_target_trunk_transfer = false;

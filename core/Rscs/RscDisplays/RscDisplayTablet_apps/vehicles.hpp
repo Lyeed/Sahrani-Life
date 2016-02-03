@@ -72,7 +72,7 @@ class VEHICLES_LIST_INFO: RscListbox
 {
 	idc = VEHICLES_LIST_INFO_IDC;
 	rowHeight = 0.05;
-	onLBSelChanged = "_this spawn public_fnc_APP_vehicles_update;";
+	onLBSelChanged = "_this spawn AlysiaClient_fnc_APP_vehicles_update;";
 
 	x = 0.319531 * safezoneW + safezoneX;
 	y = 0.379 * safezoneH + safezoneY;

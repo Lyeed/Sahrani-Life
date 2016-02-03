@@ -9,7 +9,7 @@
 if (isNull g_interaction_target) exitWith {};
 
 if (serverTime < 600) exitWith {
-	[format["Vous <t color='#FF0000'>ne pouvez pas</t> crocheter de véhicule juste après le démarrage du serveur. Veuillez attendre <t color='#2E64FE'>%1 secondes</t>", 600 - serverTime]] call public_fnc_error;
+	[format["Vous <t color='#FF0000'>ne pouvez pas</t> crocheter de véhicule juste après le démarrage du serveur. Veuillez attendre <t color='#2E64FE'>%1 secondes</t>", 600 - serverTime]] call AlysiaClient_fnc_error;
 };
 
 if (dialog) then
@@ -18,8 +18,8 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
-if (!(["Crochetage", 12, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress)) exitWith {};
-if (!([false, "lockpick", 1] call public_fnc_handleInv)) exitWith {};
+if (!(["Crochetage", 12, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {};
+if (!([false, "lockpick", 1] call AlysiaClient_fnc_handleInv)) exitWith {};
 
 [g_interaction_target, "lockpick", 100] call CBA_fnc_globalSay3d;
 if ((random(100)) < 25) then 

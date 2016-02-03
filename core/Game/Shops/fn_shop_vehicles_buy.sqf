@@ -8,12 +8,12 @@
 private["_sel", "_price", "_validSpawn", "_spawnPos", "_vehicle", "_plate"];
 
 if ((time - g_action_delay) < 1) exitWith {
-	["Veuillez ralentir dans vos actions"] call public_fnc_error;
+	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error;
 };
 
 _sel = lbCurSel 2302;
 if (_sel isEqualTo -1) exitWith {
-	["Vous n'avez pas sélectionné de véhicule à acheter"] call public_fnc_error;
+	["Vous n'avez pas sélectionné de véhicule à acheter"] call AlysiaClient_fnc_error;
 };
 
 _price = lbValue[2302, _sel];;
@@ -26,11 +26,11 @@ if (_price > g_cash) exitWith {};
 	};
 } forEach (g_veh_shop);
 if (isNil "_validSpawn") exitWith {
-	["Aucun emplacement de sortie de véhicule n'est libre"] call public_fnc_error;
+	["Aucun emplacement de sortie de véhicule n'est libre"] call AlysiaClient_fnc_error;
 };
 
 g_action_delay = time;
-[false, _price] call public_fnc_handleCash;
+[false, _price] call AlysiaClient_fnc_handleCash;
 playSound "buy";
 closeDialog 0;
 
@@ -44,11 +44,11 @@ _vehicle setVectorUp (surfaceNormal _spawnPos);
 _vehicle setDir (markerDir _validSpawn);
 _vehicle setPos _spawnPos;
 
-[_vehicle] call public_fnc_clearVehicleAmmo;
+[_vehicle] call AlysiaClient_fnc_clearVehicleAmmo;
 g_vehicles pushBack _vehicle;
 
 _plate = round(random(1000000));
 _vehicle setVariable ["info", [(getPlayerUID player), (player getVariable ["realname", profileName]), _plate, 1], true];
 _vehicle allowDamage true;
 
-[player, _vehicle, _plate, g_cash] remoteExec ["TON_fnc_vehicleCreate", 2];
+[player, _vehicle, _plate, g_cash] remoteExec ["AlysiaServer_fnc_vehicleCreate", 2];

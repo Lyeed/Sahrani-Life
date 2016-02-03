@@ -18,7 +18,7 @@ _preview = [_this,7,false,[true]] call BIS_fnc_param;
 if(_item == "") exitWith {};
 _isgun = false;
 
-_details = [_item] call public_fnc_fetchCfgDetails;
+_details = [_item] call AlysiaClient_fnc_fetchCfgDetails;
 if(count _details == 0) exitWith {};
 	
 if(_bool) then
@@ -62,7 +62,7 @@ if(_bool) then
 			clearAllItemsFromBackpack player;
 			if(!isNil {_items}) then 
 			{ 
-				{[_x,true,true,false,true] spawn public_fnc_handleItem; } foreach _items;
+				{[_x,true,true,false,true] spawn AlysiaClient_fnc_handleItem; } foreach _items;
 			};
 		};
 
@@ -244,7 +244,7 @@ if(_bool) then
 
 									if(!isNil {_items}) then
 									{
-										{[_x,true,false,false,true] spawn public_fnc_handleItem;} foreach _items;
+										{[_x,true,false,false,true] spawn AlysiaClient_fnc_handleItem;} foreach _items;
 									};
 								};
 							};
@@ -260,7 +260,7 @@ if(_bool) then
 							else
 						{
 							private["_type"];
-							_type = [_item,201] call public_fnc_accType;
+							_type = [_item,201] call AlysiaClient_fnc_accType;
 							if(_ongun) then
 							{
 								switch (_type) do
@@ -318,7 +318,7 @@ if(_bool) then
 							else
 						{
 							private["_type"];
-							_type = [_item,301] call public_fnc_accType;
+							_type = [_item,301] call AlysiaClient_fnc_accType;
 
 							if(_ongun) then
 							{ 
@@ -377,7 +377,7 @@ if(_bool) then
 							else
 						{
 							private["_type"];
-							_type = [_item,101] call public_fnc_accType;
+							_type = [_item,101] call AlysiaClient_fnc_accType;
 
 							if(_ongun) then
 							{

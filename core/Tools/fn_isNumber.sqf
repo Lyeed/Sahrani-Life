@@ -10,4 +10,4 @@ _txt = [_this, 0, "", [""]] call BIS_fnc_param;
 
 if (_txt isEqualTo "") exitWith {false};
 
-(([_txt, "0123456789"] call public_fnc_TextAllowed) isEqualTo "")
+(([_txt, "0123456789"] call AlysiaClient_fnc_TextAllowed) isEqualTo "")

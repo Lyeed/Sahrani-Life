@@ -11,7 +11,7 @@ if (isNull g_interaction_target) exitWith {};
 if (isNull g_dog) exitWith {};
 
 if ((speed g_interaction_target) > 0) exitWith {
-	["Le véhicule doit être à l'arrêt"] call public_fnc_error;	
+	["Le véhicule doit être à l'arrêt"] call AlysiaClient_fnc_error;	
 };
 
 if (dialog) then
@@ -34,7 +34,7 @@ _trunk = g_interaction_target getVariable ["trunk", []];
 
 _find = false;
 {
-	if ((([_trunk, _x] call public_fnc_itemTrunk) > 0) && random(100) > 15) exitWith {
+	if ((([_trunk, _x] call AlysiaClient_fnc_itemTrunk) > 0) && random(100) > 15) exitWith {
 		_find = true;
 	};
 } forEach 

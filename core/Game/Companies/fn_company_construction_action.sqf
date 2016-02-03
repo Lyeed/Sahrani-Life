@@ -16,8 +16,8 @@ if (isNull _display) exitWith {};
 _item = lbData[91002, (lbCurSel 91002)];
 if (_item isEqualTo "") exitWith {};
 
-if ([false, _item, 1] call public_fnc_handleInv) then {
-	[false, g_interaction_require, _item, 1] call public_fnc_handleTrunk;
+if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then {
+	[false, g_interaction_require, _item, 1] call AlysiaClient_fnc_handleTrunk;
 };
 
-[] call public_fnc_company_construction_update;
+[] call AlysiaClient_fnc_company_construction_update;

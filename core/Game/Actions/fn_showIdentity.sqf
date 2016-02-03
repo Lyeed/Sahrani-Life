@@ -9,18 +9,18 @@ private["_target", "_item"];
 _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 if (g_action_inUse) exitWith {
-	["Vous êtes déjà en train d'effectuer une action"] call public_fnc_error;
+	["Vous êtes déjà en train d'effectuer une action"] call AlysiaClient_fnc_error;
 };
 if (isNull _target) exitWith {
-	["Cible invalide"] call public_fnc_error;
+	["Cible invalide"] call AlysiaClient_fnc_error;
 };
 
 _item = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "identity_item");
 if ((_item != "") && !(_item in (magazines player))) exitWith {
 	[format[
 		"Vous n'avez pas l'objet nécessaire pour prouver votre identité<br/><br/><t align='left'>Requis</t><t align='right'>%1</t>",
-		(([_item] call public_fnc_fetchCfgDetails) select 1)
-	]] call public_fnc_error;
+		(([_item] call AlysiaClient_fnc_fetchCfgDetails) select 1)
+	]] call AlysiaClient_fnc_error;
 };
 
 g_action_inUse = true;
@@ -29,8 +29,8 @@ player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
 
 if ((player distance _target) > 3) exitWith {
-	["Vous êtes trop loin"] call public_fnc_error;
+	["Vous êtes trop loin"] call AlysiaClient_fnc_error;
 };
 
-[player, [g_choice, g_birth, g_nationality, g_sexe]] remoteExecCall ["public_fnc_identityOpen", _target];
+[player, [g_choice, g_birth, g_nationality, g_sexe]] remoteExecCall ["AlysiaClient_fnc_identityOpen", _target];
 g_action_inUse = false;

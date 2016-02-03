@@ -26,12 +26,12 @@ switch (_list lbData _sel) do
 		} else {
 			(g_shop_tmp_buy select _index) set [1, (_data select 1) - 1];
 		};
-		g_shop_weight_actual = g_shop_weight_actual - ([(_data select 0)] call public_fnc_itemGetWeight);
+		g_shop_weight_actual = g_shop_weight_actual - ([(_data select 0)] call AlysiaClient_fnc_itemGetWeight);
 	};
 	case "SELL":
 	{
 		_data = g_shop_tmp_sell select _index;
-		if ([true, (_data select 0), 1] call public_fnc_handleInv) then
+		if ([true, (_data select 0), 1] call AlysiaClient_fnc_handleInv) then
 		{
 			if ((_data select 1) isEqualTo 1) then {
 				g_shop_tmp_sell deleteAt _index;
@@ -39,10 +39,10 @@ switch (_list lbData _sel) do
 				(g_shop_tmp_sell select _index) set [1, (_data select 1) - 1];
 			};
 		} else {
-			["Vous n'avez pas assez de place pour récupérer cet objet"] call public_fnc_error;
+			["Vous n'avez pas assez de place pour récupérer cet objet"] call AlysiaClient_fnc_error;
 		};
 	};
 };
 
-[] call public_fnc_shop_virtual_update;
+[] call AlysiaClient_fnc_shop_virtual_update;
 g_shop_active = false;

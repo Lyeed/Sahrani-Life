@@ -22,28 +22,28 @@ if (dialog) then
 };
 
 if (_veh getVariable ["refueling", false]) exitWith {
-	["Une autre personne effectue actuellement le plein du véhicule."] call public_fnc_error;
+	["Une autre personne effectue actuellement le plein du véhicule."] call AlysiaClient_fnc_error;
 };
 if (_typeRefuel isEqualTo "") exitWith {
-	["Impossible de trouver l'essence que vous avez selectionné."] call public_fnc_error;
+	["Impossible de trouver l'essence que vous avez selectionné."] call AlysiaClient_fnc_error;
 };
 if (_currentLiters <= 1) exitWith {
-	[format["Cette station ne possède plus l'essence que vous désirez (%1).", getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _typeRefuel >> "name")]] call public_fnc_error;
+	[format["Cette station ne possède plus l'essence que vous désirez (%1).", getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _typeRefuel >> "name")]] call AlysiaClient_fnc_error;
 };
 if ((fuel _veh) isEqualTo 1) exitWith {
-	["Le réservoir du véhicule est déjà plein."] call public_fnc_error;
+	["Le réservoir du véhicule est déjà plein."] call AlysiaClient_fnc_error;
 };
 if (isEngineOn _veh) exitWith {
-	["Le véhicule doit avoir le moteur éteint pour effectuer un plein."] call public_fnc_error;
+	["Le véhicule doit avoir le moteur éteint pour effectuer un plein."] call AlysiaClient_fnc_error;
 };
 if (((locked _veh) isEqualTo 2)) exitWith {
-	["Le véhicule doit être ouvert pour effectuer un plein."] call public_fnc_error;
+	["Le véhicule doit être ouvert pour effectuer un plein."] call AlysiaClient_fnc_error;
 };
 if (player distance _station > 5) exitWith {
-	["Vous êtes trop loin de la station."] call public_fnc_error;
+	["Vous êtes trop loin de la station."] call AlysiaClient_fnc_error;
 };
 if (player distance _veh > 5) exitWith {
-	["Vous êtes trop loin du véhicule."] call public_fnc_error;
+	["Vous êtes trop loin du véhicule."] call AlysiaClient_fnc_error;
 };
 
 if (!(createDialog "RscDisplayFuelRefuel")) exitWith {};
@@ -63,11 +63,11 @@ _timer = getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "config" >> "timer");
 while {(!(isNull _display) && ((_currentLiters - _liters) > 1) && (((fuel _veh) + _addvalue) < 1) && (_bill <= g_atm)) && (!(isEngineOn _veh)) && (!((locked _veh) isEqualTo 2)) && (player distance _station < 5) && (player distance _veh <5) && (speed player < 1)} do
 {
 	_addvalue = (_addvalue + (1 / _fuelmax));
-	_bill = (_bill + ([_station, _typeRefuel] call public_fnc_fuelStation_price_buy));
+	_bill = (_bill + ([_station, _typeRefuel] call AlysiaClient_fnc_fuelStation_price_buy));
 	_liters = (_liters + 1);
 	
 	(_display displayCtrl 17006) ctrlSetStructuredText parseText _typeRefuel;
-	(_display displayCtrl 17008) ctrlSetStructuredText parseText format ["<t size='2' align='center'>%1</t>", [_bill] call public_fnc_numberText];
+	(_display displayCtrl 17008) ctrlSetStructuredText parseText format ["<t size='2' align='center'>%1</t>", [_bill] call AlysiaClient_fnc_numberText];
 	(_display displayCtrl 17010) ctrlSetStructuredText parseText format ["<t align='right'>%1L</t>", (_currentLiters - _liters)];
 	(_display displayCtrl 17013) progressSetPosition ((fuel _veh) + _addvalue);
 	(_display displayCtrl 17014) ctrlSetStructuredText parseText format ["<t size='1.5' align='center>%1/%2 Litres</t>", ((fuel _veh) * _fuelmax), _fuelmax];
@@ -89,5 +89,5 @@ _station setVariable [_typeRefuel, ((_station getVariable [_typeRefuel, 250]) - 
 _veh setVariable ["refueling", false, true];
 player setVariable ["typeRefuel", ""];
 
-[false, _bill, "Station Essence"] call public_fnc_handleATM;
-[format["%1Kn ont été prélevés de votre compte en banque.", ([_bill] call public_fnc_numberText)], "buy"] call public_fnc_info;
+[false, _bill, "Station Essence"] call AlysiaClient_fnc_handleATM;
+[format["%1Kn ont été prélevés de votre compte en banque.", ([_bill] call AlysiaClient_fnc_numberText)], "buy"] call AlysiaClient_fnc_info;

@@ -10,7 +10,7 @@ _distance = [_this, 0, 3, [3]] call BIS_fnc_param;
 _display = [_this, 1, true, [true]] call BIS_fnc_param;
 
 if (g_firstCombatActive) exitWith {
-	["Vous ne pouvez pas saisir alors que vous êtes en combat"] call public_fnc_error;
+	["Vous ne pouvez pas saisir alors que vous êtes en combat"] call AlysiaClient_fnc_error;
 };
 
 _objects = 
@@ -28,5 +28,5 @@ _objCount = count _objects;
 
 
 if (_display) then {
-	[format["Vous avez saisi %1 objet%2", _objCount, if (_objCount > 1) then {"s"} else {""}]] call public_fnc_info;
+	[format["Vous avez saisi %1 objet%2", _objCount, if (_objCount > 1) then {"s"} else {""}]] call AlysiaClient_fnc_info;
 };

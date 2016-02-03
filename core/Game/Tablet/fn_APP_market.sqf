@@ -16,9 +16,9 @@ lbClear _list;
 
 {
 	_item = configName _x;
-	_index = _list lbAdd ([_item] call public_fnc_itemGetName);
+	_index = _list lbAdd ([_item] call AlysiaClient_fnc_itemGetName);
 	_list lbSetData [_index, _item];
-	_list lbSetPicture [_index, ([_item] call public_fnc_itemGetImage)];
+	_list lbSetPicture [_index, ([_item] call AlysiaClient_fnc_itemGetImage)];
 } foreach ("isClass(_x >> 'market')" configClasses (missionConfigFile >> "ALYSIA_ITEMS"));
 
 _list lbSetCurSel 0;

@@ -132,7 +132,7 @@ class SETTINGS_DISTANCE_LAND_HEADER: RscStructuredText
 class SETTINGS_DISTANCE_LAND_SLIDER: RscSlider
 {
 	idc = SETTINGS_DISTANCE_LAND_SLIDER_IDC;
-	onSliderPosChanged = "[_this select 1, 0] call public_fnc_APP_settings_slider;";
+	onSliderPosChanged = "[_this select 1, 0] call AlysiaClient_fnc_APP_settings_slider;";
 	
 	x = 0.438125 * safezoneW + safezoneX;
 	y = 0.401 * safezoneH + safezoneY;
@@ -165,7 +165,7 @@ class SETTINGS_DISTANCE_VEHICLES_HEADER: RscStructuredText
 class SETTINGS_DISTANCE_VEHICLES_SLIDER: RscSlider
 {
 	idc = SETTINGS_DISTANCE_VEHICLES_SLIDER_IDC;
-	onSliderPosChanged = "[_this select 1, 1] call public_fnc_APP_settings_slider;";
+	onSliderPosChanged = "[_this select 1, 1] call AlysiaClient_fnc_APP_settings_slider;";
 
 	x = 0.438125 * safezoneW + safezoneX;
 	y = 0.434 * safezoneH + safezoneY;
@@ -198,7 +198,7 @@ class SETTINGS_DISTANCE_AIR_HEADER: RscStructuredText
 class SETTINGS_DISTANCE_AIR_SLIDER: RscSlider
 {
 	idc = SETTINGS_DISTANCE_AIR_SLIDER_IDC;
-	onSliderPosChanged = "[_this select 1, 2] call public_fnc_APP_settings_slider;";
+	onSliderPosChanged = "[_this select 1, 2] call AlysiaClient_fnc_APP_settings_slider;";
 
 	x = 0.438125 * safezoneW + safezoneX;
 	y = 0.467 * safezoneH + safezoneY;
@@ -231,7 +231,7 @@ class SETTINGS_DISTANCE_OBJECTS_HEADER: RscStructuredText
 class SETTINGS_DISTANCE_OBJECTS_SLIDER: RscSlider
 {
 	idc = SETTINGS_DISTANCE_OBJECTS_SLIDER_IDC;
-	onSliderPosChanged = "[_this select 1, 3] call public_fnc_APP_settings_slider;";
+	onSliderPosChanged = "[_this select 1, 3] call AlysiaClient_fnc_APP_settings_slider;";
 
 	x = 0.438125 * safezoneW + safezoneX;
 	y = 0.5 * safezoneH + safezoneY;
@@ -272,7 +272,7 @@ class SETTINGS_TASKFORCE_FRAME: RscFrame
 class SETTINGS_TASKFORCE_SLIDER: RscSlider
 {
 	idc = SETTINGS_TASKFORCE_SLIDER_IDC;
-	onSliderPosChanged = "[_this select 1, 4] call public_fnc_APP_settings_slider;";
+	onSliderPosChanged = "[_this select 1, 4] call AlysiaClient_fnc_APP_settings_slider;";
 
 	x = 0.422656 * safezoneW + safezoneX;
 	y = 0.588 * safezoneH + safezoneY;

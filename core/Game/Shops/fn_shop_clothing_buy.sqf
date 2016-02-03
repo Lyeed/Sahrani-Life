@@ -55,5 +55,5 @@ switch (_type) do
 };
 
 playSound "buy";
-[false, _price] call public_fnc_handleCash;
+[false, _price] call AlysiaClient_fnc_handleCash;
 g_shop_clothing_active = false;

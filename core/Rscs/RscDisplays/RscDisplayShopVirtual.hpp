@@ -59,7 +59,7 @@ class RscDisplayShopVirtual: RscDisplayDefault
 		{
 			idc = 2402;
 			colorBackground[] = {0,0,0,0.6};
-			onLBDblClick = "[0] call public_fnc_shop_virtual_add;";
+			onLBDblClick = "[0] call AlysiaClient_fnc_shop_virtual_add;";
 			
 			x = 0.587656 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
@@ -80,7 +80,7 @@ class RscDisplayShopVirtual: RscDisplayDefault
 		class PLAYER_ADD_SINGLE_BUTTON: RscButtonSilent
 		{
 			idc = 2404;
-			action = "[0] call public_fnc_shop_virtual_add;";
+			action = "[0] call AlysiaClient_fnc_shop_virtual_add;";
 			onMouseEnter = "ctrlSetText[2403,""lyeed_IMG\data\shops\actions\action_player_single_select.paa""];";
 			onMouseExit = "ctrlSetText[2403,""lyeed_IMG\data\shops\actions\action_player_single.paa""];";
 
@@ -103,7 +103,7 @@ class RscDisplayShopVirtual: RscDisplayDefault
 		class PLAYER_ADD_DOUBLE_BUTTON: RscButtonSilent
 		{
 			idc = 2406;
-			action = "[0, true] call public_fnc_shop_virtual_add;";
+			action = "[0, true] call AlysiaClient_fnc_shop_virtual_add;";
 			onMouseEnter = "ctrlSetText[2405,""lyeed_IMG\data\shops\actions\action_player_double_select.paa""];";
 			onMouseExit = "ctrlSetText[2405,""lyeed_IMG\data\shops\actions\action_player_double.paa""];";
 
@@ -135,7 +135,7 @@ class RscDisplayShopVirtual: RscDisplayDefault
 		{
 			idc = 2407;
 			colorBackground[] = {0,0,0,0.6};
-			onLBDblClick = "[1] call public_fnc_shop_virtual_add;";
+			onLBDblClick = "[1] call AlysiaClient_fnc_shop_virtual_add;";
 			
 			x = 0.273125 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
@@ -156,7 +156,7 @@ class RscDisplayShopVirtual: RscDisplayDefault
 		class TARGET_ADD_BUTTON: RscButtonSilent
 		{
 			idc = 2409;
-			action = "[1] call public_fnc_shop_virtual_add;";
+			action = "[1] call AlysiaClient_fnc_shop_virtual_add;";
 			onMouseEnter = "ctrlSetText[2408,""lyeed_IMG\data\shops\actions\action_target_select.paa""];";
 			onMouseExit = "ctrlSetText[2408,""lyeed_IMG\data\shops\actions\action_target.paa""];";
 
@@ -187,7 +187,7 @@ class RscDisplayShopVirtual: RscDisplayDefault
 		class TMP_LIST: RscListbox
 		{
 			idc = 2410;
-			onLBDblClick = "_this call public_fnc_shop_virtual_remove;";
+			onLBDblClick = "_this call AlysiaClient_fnc_shop_virtual_remove;";
 			
 			x = 0.443281 * safezoneW + safezoneX;
 			y = 0.401 * safezoneH + safezoneY;
@@ -258,7 +258,7 @@ class RscDisplayShopVirtual: RscDisplayDefault
 		class ACTION_VALIDATE_BUTTON: RscButtonSilent
 		{
 			idc = 2416;
-			action = "[] call public_fnc_shop_virtual_buysell;";
+			action = "[] call AlysiaClient_fnc_shop_virtual_buysell;";
 			onMouseEnter = "			ctrlSetText[2415,""lyeed_IMG\data\global\action_buy_select.paa""];			ctrlShow[2413, false];			((findDisplay 2400) displayCtrl 2412) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 2400) displayCtrl 2414) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Valider</t>"";";
 			onMouseExit = "			ctrlSetText[2415,""lyeed_IMG\data\global\action_buy.paa""];			if (ctrlVisible 2415) then {				ctrlShow[2413, true];			};			((findDisplay 2400) displayCtrl 2412) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 2400) displayCtrl 2414) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Valider</t>"";";
 

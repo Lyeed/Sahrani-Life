@@ -10,6 +10,6 @@ closeDialog 0;
 
 if (isNull g_interaction_target) exitWith {};
 
-if (!(["Récupération", 5, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress)) exitWith {};
+if (!(["Récupération", 5, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {};
 
 deleteVehicle g_interaction_target;

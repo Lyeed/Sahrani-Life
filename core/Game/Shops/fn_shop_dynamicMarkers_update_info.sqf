@@ -22,7 +22,7 @@ _price = _list lbValue _sel;
 (_display displayCtrl 21004) ctrlSetStructuredText parseText format
 [
 	"<t align='center' color='#%2'>%1</t><t align='right'>kn</t>",
-	([_price] call public_fnc_numberText),
+	([_price] call AlysiaClient_fnc_numberText),
 	if (g_cash >= _price) then {"8cff9b"} else {"ff8c8c"}
 ];
 

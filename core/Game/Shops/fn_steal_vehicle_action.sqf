@@ -13,59 +13,59 @@ if (isNull _display) exitWith {};
 
 _sel = lbCurSel 99001;
 if (_sel isEqualTo -1) exitWith {
-	["Vous n'avez pas sélectionné de véhicule à vendre"] call public_fnc_error;
+	["Vous n'avez pas sélectionné de véhicule à vendre"] call AlysiaClient_fnc_error;
 };
 
 _type = lbData[99001, _sel];
 if (_type isEqualTo "") exitWith {
-	["Vous n'avez pas sélectionné de véhicule à vendre"] call public_fnc_error;
+	["Vous n'avez pas sélectionné de véhicule à vendre"] call AlysiaClient_fnc_error;
 };
 
 closeDialog 0;
 
 _vehicle = g_interaction_steal_list select (lbValue[99001, _sel]);
 if ((isNil "_vehicle") || {(isNull _vehicle)}) exitWith {
-	["Impossible de trouver les informations du véhicule"] call public_fnc_error;
+	["Impossible de trouver les informations du véhicule"] call AlysiaClient_fnc_error;
 };
 
 if ((player distance _vehicle) > 25) exitWith {
-	["Le véhicule est trop loin pour être vendu"] call public_fnc_error;
+	["Le véhicule est trop loin pour être vendu"] call AlysiaClient_fnc_error;
 };
 
 if (count(crew _vehicle) > 0) exitWith {
-	["Le véhicule ne doit avoir personne à son bord pour pouvoir être vendu"] call public_fnc_error;
+	["Le véhicule ne doit avoir personne à son bord pour pouvoir être vendu"] call AlysiaClient_fnc_error;
 };
 
 if (isEngineOn _vehicle) exitWith {
-	["Le moteur du véhicule doit être éteint pour pouvoir être vendu"] call public_fnc_error;
+	["Le moteur du véhicule doit être éteint pour pouvoir être vendu"] call AlysiaClient_fnc_error;
 };
 
 if ((speed _vehicle) > 0) exitWith {
-	["Le véhicule doit être à l'arrêt pour pouvoir être vendu"] call public_fnc_error;
+	["Le véhicule doit être à l'arrêt pour pouvoir être vendu"] call AlysiaClient_fnc_error;
 };
 
-_price = [_type] call public_fnc_getVehBuyPrice;
+_price = [_type] call AlysiaClient_fnc_getVehBuyPrice;
 if (_price isEqualTo 0) exitWith {
-	["Ce véhicule n'a pas de prix de vente"] call public_fnc_error;
+	["Ce véhicule n'a pas de prix de vente"] call AlysiaClient_fnc_error;
 };
 
 _info = _vehicle getVariable "info";
 if (!(isNil "_info") && {(getPlayerUID player) isEqualTo (_info select 0)}) exitWith {
-	["Vous ne pouvez pas receler vos véhicules"] call public_fnc_error;
+	["Vous ne pouvez pas receler vos véhicules"] call AlysiaClient_fnc_error;
 };
 
 if (g_action_inUse) exitWith {
-	["Vous êtes déjà en train d'effectuer une action"] call public_fnc_error;
+	["Vous êtes déjà en train d'effectuer une action"] call AlysiaClient_fnc_error;
 };
 
 g_action_inUse = true;
 
 if (!(isNil "_info")) then {
-	[_info] remoteExec ["TON_fnc_vehicleDelete", 2];
+	[_info] remoteExec ["AlysiaServer_fnc_vehicleDelete", 2];
 };
 
 deleteVehicle _vehicle;
-[true, "illegal_money", round(_price * getNumber(missionConfigFile >> "ALYSIA_VEHICLES_INFO" >> "steal_percentage"))] call public_fnc_handleInv;
+[true, "illegal_money", round(_price * getNumber(missionConfigFile >> "ALYSIA_VEHICLES_INFO" >> "steal_percentage"))] call AlysiaClient_fnc_handleInv;
 playSound "buy";
 
 g_action_inUse = false;

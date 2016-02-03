@@ -6,14 +6,14 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-(findDisplay 46) displayAddEventHandler ["KeyDown", "_this call EVENT_fnc_onPlayerKeyPress"];
+(findDisplay 46) displayAddEventHandler ["KeyDown", "_this call AlysiaEvent_fnc_onPlayerKeyPress"];
 
-player addEventHandler ["FiredNear", "_this call EVENT_fnc_onPlayerFireNear"];
-player addEventHandler ["handleDamage", "_this call EVENT_fnc_onPlayerHandleDamage"];
-player addEventHandler ["InventoryOpened", "[_this select 1] call EVENT_fnc_onPlayerInventoryOpen"];
-player addEventHandler ["Killed", "call EVENT_fnc_onplayerDeath"];
-player addEventHandler ["Respawn", "call EVENT_fnc_onPlayerRespawn"];
+player addEventHandler ["FiredNear", "_this call AlysiaEvent_fnc_onPlayerFireNear"];
+player addEventHandler ["handleDamage", "_this call AlysiaEvent_fnc_onPlayerHandleDamage"];
+player addEventHandler ["InventoryOpened", "[_this select 1] spawn AlysiaEvent_fnc_onPlayerInventoryOpen"];
+player addEventHandler ["Killed", "call AlysiaEvent_fnc_onplayerDeath"];
+player addEventHandler ["Respawn", "call AlysiaEvent_fnc_onPlayerRespawn"];
 
 /* TASK_FORCE_RADIO */
-["actionRadio", "OnTangent", {call EVENT_fnc_onPlayerSpeakRadio}, player] call TFAR_fnc_addEventHandler;
-["actionSpeak", "OnSpeak", {(_this select 1) call EVENT_fnc_onPlayerSpeak}, player] call TFAR_fnc_addEventHandler;
+["actionRadio", "OnTangent", {call AlysiaEvent_fnc_onPlayerSpeakRadio}, player] call TFAR_fnc_addEventHandler;
+["actionSpeak", "OnSpeak", {(_this select 1) call AlysiaEvent_fnc_onPlayerSpeak}, player] call TFAR_fnc_addEventHandler;

@@ -14,11 +14,11 @@ if (_location isEqualTo "") exitWith {};
 if ((player getVariable ["surrender", false]) || (player getVariable ["restrained", false])) exitWith {};
 
 if (g_action_inUse) exitWith {
-	["Vous avez l'air occupé<br/>Revenez plus tard"] call public_fnc_error;
+	["Vous avez l'air occupé<br/>Revenez plus tard"] call AlysiaClient_fnc_error;
 };
 
 if (!(isNil "gServer_soonReboot")) exitWith {
-	["Veuillez attendre le <t color='#B40404'>redémarrage</t> du serveur pour interagir avec l'hôtel des ventes"] call public_fnc_error;
+	["Veuillez attendre le <t color='#B40404'>redémarrage</t> du serveur pour interagir avec l'hôtel des ventes"] call AlysiaClient_fnc_error;
 };
 
 if (createDialog "RscDisplayAuctionHouse") then
@@ -30,5 +30,5 @@ if (createDialog "RscDisplayAuctionHouse") then
 	g_AH_location = _location;
 	g_AH_type = _type;
 
-	[-1] call public_fnc_auctionHouse_menu_filter;
+	[-1] call AlysiaClient_fnc_auctionHouse_menu_filter;
 };

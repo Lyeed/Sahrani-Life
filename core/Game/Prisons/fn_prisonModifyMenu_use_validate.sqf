@@ -7,12 +7,12 @@
 */
 
 private ["_prison","_prisonName","_cell","_time","_bail","_reason","_timeMin","_timeMax","_bailMin","_bailMax","_bailEnable","_checkBox","_cells","_error","_infos"];
-_prison = (([player] call public_fnc_prisonNearest) select 0);
+_prison = (([player] call AlysiaClient_fnc_prisonNearest) select 0);
 _prisonName = vehicleVarName _prison;
 
 if (isNull g_interaction_target) exitWith {};
-if (_prison isEqualTo []) exitWith {["Vous n'êtes pas dans une prison"] call public_fnc_error};
-if (g_interaction_target getVariable ["arrested", false]) exitWith {["Cette personne est déjà en prison."] call public_fnc_error};
+if (_prison isEqualTo []) exitWith {["Vous n'êtes pas dans une prison"] call AlysiaClient_fnc_error};
+if (g_interaction_target getVariable ["arrested", false]) exitWith {["Cette personne est déjà en prison."] call AlysiaClient_fnc_error};
 
 disableSerialization;
 _display = findDisplay 19000;
@@ -32,12 +32,12 @@ _bailEnable = getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> 
 _checkBox = ctrlChecked (_display displayCtrl 19051);
 
 if (!(_checkBox)) exitWith {
-	["Vous devez comfirmer les modifications."] call public_fnc_error;
+	["Vous devez comfirmer les modifications."] call AlysiaClient_fnc_error;
 	(_display displayCtrl 16008) ctrlSetStructuredText parseText "<t align='left' size='0.8' color='#8A0808'>Comfirmer les modifications</t>";
 };
 
 {
-	if (!([ctrlText _x] call public_fnc_isNumber)) then {
+	if (!([ctrlText _x] call AlysiaClient_fnc_isNumber)) then {
 		(_display displayCtrl _x) ctrlSetBackgroundColor [153, 0, 0, 0.5];
 		_error = true;
 	};
@@ -58,8 +58,8 @@ if (_bailEnable isEqualTo 1) then {
 	};
 };
 
-if (_error) exitWith {["Erreur dans le montant."] call public_fnc_error};
-if (!(g_interaction_target getVariable ["arrested", false])) exitWith {["Cette personne n'est plus en prison"] call public_fnc_error};
+if (_error) exitWith {["Erreur dans le montant."] call AlysiaClient_fnc_error};
+if (!(g_interaction_target getVariable ["arrested", false])) exitWith {["Cette personne n'est plus en prison"] call AlysiaClient_fnc_error};
 
 _infos = [_cell, _time, _bail, _reason];
-[player, _infos] remoteExecCall ["public_fnc_prisonModifyMenu_use_validate_send", g_interaction_target];
+[player, _infos] remoteExecCall ["AlysiaClient_fnc_prisonModifyMenu_use_validate_send", g_interaction_target];

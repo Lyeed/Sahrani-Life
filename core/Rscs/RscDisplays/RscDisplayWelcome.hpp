@@ -197,7 +197,7 @@ class RscDisplayWelcomeCharacter: RscDisplayDefault
 		class CHAR_BUTTON: RscButtonMenu
 		{
 			text = "VALIDER";
-			onButtonClick = "[] spawn public_fnc_welcomeMenu_Proceed";
+			onButtonClick = "[] spawn AlysiaClient_fnc_welcomeMenu_Proceed";
 			colorBackground[] =
 			{
 				"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",

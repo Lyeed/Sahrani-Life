@@ -19,8 +19,8 @@ if (_salary > 0) then
 	};
 };
 
-(_dialog displayCtrl 7603) ctrlSetStructuredText parseText format["<t align='center' color='#8cff9b' size='1.2'>%1</t><t align='right'>kn</t>", ([g_atm] call public_fnc_numberText)];
-(_dialog displayCtrl 7606) ctrlSetStructuredText parseText format["<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>", ([_salary] call public_fnc_numberText)];
+(_dialog displayCtrl 7603) ctrlSetStructuredText parseText format["<t align='center' color='#8cff9b' size='1.2'>%1</t><t align='right'>kn</t>", ([g_atm] call AlysiaClient_fnc_numberText)];
+(_dialog displayCtrl 7606) ctrlSetStructuredText parseText format["<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>", ([_salary] call AlysiaClient_fnc_numberText)];
 (_dialog displayCtrl 7609) ctrlSetStructuredText parseText format["<t align='center'>%1 minutes</t>", getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary_timer")];
 (_dialog displayCtrl 7612) ctrlSetStructuredText parseText format["<t align='center'>%1 minutes</t>", round((g_nextPay - time) / 60)];
 

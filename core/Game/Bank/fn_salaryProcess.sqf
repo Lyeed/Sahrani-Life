@@ -24,14 +24,14 @@ if (!(player getVariable ["arrested", false])) then
 			_salary = _salary * (player getVariable ["rank", 0]);
 		};
 		
-		[true, _salary, "Salaire"] call public_fnc_handleATM;
+		[true, _salary, "Salaire"] call AlysiaClient_fnc_handleATM;
 		_price_add = _price_add + _salary;
 
 		_taxe = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary_tax");
 		if (_taxe > 0) then
 		{
 			_price = _salary * _taxe;
-			[false, _price, "Cotisation salariale"] call public_fnc_handleATM;
+			[false, _price, "Cotisation salariale"] call AlysiaClient_fnc_handleATM;
 			_price_remove = _price_remove - _price;
 			switch (g_choice) do
 			{
@@ -53,8 +53,8 @@ if (!(isNull g_company)) then
 		if (_price_employees > 0) then
 		{
 			_price = (count(g_company getVariable ["company_members", []]) - 1) * _price_employees;
-			if (!([false, _price, "Taxe salariale"] call public_fnc_handleATM)) then {
-				["Vous n'avez pas assez d'argent pour payer votre taxe salariale. Régulez votre situation dans les plus brefs délais ou des huissiers passeront !", "BANQUE"] call public_fnc_phone_message_receive;
+			if (!([false, _price, "Taxe salariale"] call AlysiaClient_fnc_handleATM)) then {
+				["Vous n'avez pas assez d'argent pour payer votre taxe salariale. Régulez votre situation dans les plus brefs délais ou des huissiers passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
 			};
 			_price_remove = _price_remove - _price;
 		};
@@ -62,7 +62,7 @@ if (!(isNull g_company)) then
 		_price_building = getNumber(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2) >> "tax" >> "price_building");
 		if (_price_building > 0) then
 		{
-			[false, _price, "Taxe foncière"] call public_fnc_handleATM;
+			[false, _price, "Taxe foncière"] call AlysiaClient_fnc_handleATM;
 			_price_remove = _price_remove - _price_building;
 		};
 	};
@@ -83,8 +83,8 @@ if (count(g_houses) > 0) then
 
 		if (_price > 0) then
 		{
-			if (!([false, _price, "Taxe d'habitation"] call public_fnc_handleATM)) then {
-				["Vous n'avez pas assez d'argent pour payer votre taxe d'habitation. Régulez votre situation dans les plus brefs délais ou des huissiers passeront !", "BANQUE"] call public_fnc_phone_message_receive;
+			if (!([false, _price, "Taxe d'habitation"] call AlysiaClient_fnc_handleATM)) then {
+				["Vous n'avez pas assez d'argent pour payer votre taxe d'habitation. Régulez votre situation dans les plus brefs délais ou des huissiers passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
 			};
 			_price_remove = _price_remove - _price;
 		};
@@ -98,21 +98,21 @@ if (g_phone_forfait != "none") then
 	_price = getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> g_phone_forfait >> "bill");
 	if (_price > 0) then
 	{
-		if (!([false, _price, "Forfait téléphonique"] call public_fnc_handleATM)) then
+		if (!([false, _price, "Forfait téléphonique"] call AlysiaClient_fnc_handleATM)) then
 		{
-			["Vous n'avez plus assez d'argent dans votre compte en banque pour payer votre forfait téléphonique.<br/>Vous avez été rétrogradé au forfait lite.", "FORFAIT"] call public_fnc_phone_message_receive;
-			["lite"] call public_fnc_phone_forfait_change;
+			["Vous n'avez plus assez d'argent dans votre compte en banque pour payer votre forfait téléphonique.<br/>Vous avez été rétrogradé au forfait lite.", "FORFAIT"] call AlysiaClient_fnc_phone_message_receive;
+			["lite"] call AlysiaClient_fnc_phone_forfait_change;
 		};
 		_price_remove = _price_remove - _price;
 	};
 };
 
 if (_add_to_north > 0) then {
-	[civilian, true, _add_to_north] remoteExecCall ["TON_fnc_factionBankHandle", 2];
+	[civilian, true, _add_to_north] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
 };
 
 if (_add_to_south > 0) then {
-	[east, true, _add_to_south] remoteExecCall ["TON_fnc_factionBankHandle", 2];
+	[east, true, _add_to_south] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
 };
 
 [
@@ -122,8 +122,8 @@ if (_add_to_south > 0) then {
 		+	"+ <t color='#8cff9b'>%1</t>kn<br/>"
 		+	"- <t color='#ff8c8c'>%2</t>kn<br/>"
 		+	"Pour plus d'informations rendez-vous dans l'application <t color='#00FF80'>solde</t> de votre tablette",
-		([_price_add] call public_fnc_numberText),
-		([_price_remove] call public_fnc_numberText)
+		([_price_add] call AlysiaClient_fnc_numberText),
+		([_price_remove] call AlysiaClient_fnc_numberText)
 	],
 	"BANQUE"
-] call public_fnc_phone_message_receive;
+] call AlysiaClient_fnc_phone_message_receive;

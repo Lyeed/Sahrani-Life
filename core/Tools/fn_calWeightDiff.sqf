@@ -13,7 +13,7 @@ _mWeight = [_this, 3, -1, [0]] call BIS_fnc_param;
 
 if ((_item isEqualTo "") || (_value isEqualTo -1) || (_cweight isEqualTo -1) || (_mWeight isEqualTo -1)) exitWith {0};
 
-_weight = ([_item] call public_fnc_itemGetWeight);
+_weight = ([_item] call AlysiaClient_fnc_itemGetWeight);
 _cWeight = _cweight + (_weight * _value);
 while {(_cweight > _mWeight)} do
 {

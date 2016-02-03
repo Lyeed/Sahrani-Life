@@ -30,7 +30,7 @@ while {visibleMap} do
 				_marker setMarkerTextLocal format
 				[
 					"%1. %2",
-					([playerSide, (_x getVariable ["rank", 0]), true] call public_fnc_rankToStr),
+					([playerSide, (_x getVariable ["rank", 0]), true] call AlysiaClient_fnc_rankToStr),
 					(_x getVariable ["realname", (name _x)])
 				];
 				_markers pushBack _marker;

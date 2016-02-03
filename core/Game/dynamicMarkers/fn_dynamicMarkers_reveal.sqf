@@ -11,7 +11,7 @@ _marker = [_this, 0, "", [""]] call BIS_fnc_param;
 if (_marker isEqualTo "") exitWith {};
 if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _marker >> "shown")) exitWith {};
 
-_index = [_marker, g_dynamic_markers_discovered] call public_fnc_index;
+_index = [_marker, g_dynamic_markers_discovered] call AlysiaClient_fnc_index;
 if (_index isEqualTo -1) then {
 	g_dynamic_markers_discovered pushBack [_marker, getMarkerPos _marker];
 } else {

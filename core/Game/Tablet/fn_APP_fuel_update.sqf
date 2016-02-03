@@ -57,14 +57,14 @@ if ("ItemGPS" in (assignedItems player)) then
 		if (_distance > 1) then {"s"} else {""}
 	];
 
-	[9409, true] call public_fnc_tabletShow;
-	[9410, false] call public_fnc_tabletShow;
+	[9409, true] call AlysiaClient_fnc_tabletShow;
+	[9410, false] call AlysiaClient_fnc_tabletShow;
 
 	waitUntil {((isNull _display) || (g_app != "FUEL") || ((lbCurSel _list) != _sel))};
 
 	deleteMarkerLocal _marker;
 } else {
 	(_display displayCtrl 9408) ctrlSetStructuredText parseText "<t align='center'>Inconnu</t>";
-	[9410, true] call public_fnc_tabletShow;
-	[9409, false] call public_fnc_tabletShow;
+	[9410, true] call AlysiaClient_fnc_tabletShow;
+	[9409, false] call AlysiaClient_fnc_tabletShow;
 };

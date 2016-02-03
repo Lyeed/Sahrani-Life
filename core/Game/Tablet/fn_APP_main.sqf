@@ -19,19 +19,19 @@ _apps_more = false;
 _apps = [];
 _global_apps = 
 [
-	["lyeed_IMG\data\tablet\app_main\app_staff.paa", "lyeed_IMG\data\tablet\app_main\app_staff_select.paa", "['staff'] spawn public_fnc_tabletApp;", "Staff", "count(""getText(_x >> 'uid') isEqualTo (getPlayerUID player)"" configClasses (missionConfigFile >> 'ALYSIA_STAFF' >> 'members')) != 0"],
-	["lyeed_IMG\data\tablet\app_main\app_bank.paa", "lyeed_IMG\data\tablet\app_main\app_bank_select.paa", "['solde'] spawn public_fnc_tabletApp;", "Solde", "true"],
-	["lyeed_IMG\data\tablet\app_main\app_gps.paa", "lyeed_IMG\data\tablet\app_main\app_gps_select.paa", "['vehicles'] spawn public_fnc_tabletApp;", "Véhicules", "true"],
-	["lyeed_IMG\data\tablet\app_main\app_setting.paa", "lyeed_IMG\data\tablet\app_main\app_setting_select.paa", "['settings'] spawn public_fnc_tabletApp;", "Réglages", "true"],
-	["lyeed_IMG\data\tablet\app_main\app_server.paa", "lyeed_IMG\data\tablet\app_main\app_server_select.paa", "['server'] spawn public_fnc_tabletApp;", "Serveur", "true"],
-	["lyeed_IMG\data\tablet\app_main\app_store.paa", "lyeed_IMG\data\tablet\app_main\app_store_select.paa", "['store'] spawn public_fnc_tabletApp;", "Boutique", "true"],
-	["lyeed_IMG\data\tablet\app_main\app_help.paa", "lyeed_IMG\data\tablet\app_main\app_help_select.paa", "['help'] spawn public_fnc_tabletApp;", "Aide", "true"],
-	["lyeed_IMG\data\tablet\app_main\app_phone.paa", "lyeed_IMG\data\tablet\app_main\app_phone_select.paa", "['PHONE_CATEGORY'] spawn public_fnc_tabletApp;", "Téléphone", "((player getVariable ['number', '']) != '')"],
-	[getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "icon"), "", "['faction'] spawn public_fnc_tabletApp;", getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "name"), "playerSide in [east,west,independent]"],
-	["lyeed_IMG\data\tablet\app_main\app_licences.paa", "lyeed_IMG\data\tablet\app_main\app_licences_select.paa", "['LICENSES'] spawn public_fnc_tabletApp;", "Licenses", "playerSide isEqualTo civilian"],
-	["lyeed_IMG\data\tablet\app_main\app_market.paa", "lyeed_IMG\data\tablet\app_main\app_market_select.paa", "['MARKET'] spawn public_fnc_tabletApp;","Bourse","'MARKET' in g_apps"],
-	["lyeed_IMG\data\tablet\app_main\app_fuel.paa", "lyeed_IMG\data\tablet\app_main\app_fuel_select.paa", "['FUEL'] spawn public_fnc_tabletApp;", "Stations service", "'FUEL' in g_apps"],
-	["lyeed_IMG\data\tablet\app_main\app_announces.paa", "lyeed_IMG\data\tablet\app_main\app_announces_select.paa", "['ANNOUNCES'] spawn public_fnc_tabletApp;", "Annonces", "'ANNOUNCES' in g_apps"]
+	["lyeed_IMG\data\tablet\app_main\app_staff.paa", "lyeed_IMG\data\tablet\app_main\app_staff_select.paa", "['staff'] spawn AlysiaClient_fnc_tabletApp;", "Staff", "count(""getText(_x >> 'uid') isEqualTo (getPlayerUID player)"" configClasses (missionConfigFile >> 'ALYSIA_STAFF' >> 'members')) != 0"],
+	["lyeed_IMG\data\tablet\app_main\app_bank.paa", "lyeed_IMG\data\tablet\app_main\app_bank_select.paa", "['solde'] spawn AlysiaClient_fnc_tabletApp;", "Solde", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_gps.paa", "lyeed_IMG\data\tablet\app_main\app_gps_select.paa", "['vehicles'] spawn AlysiaClient_fnc_tabletApp;", "Véhicules", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_setting.paa", "lyeed_IMG\data\tablet\app_main\app_setting_select.paa", "['settings'] spawn AlysiaClient_fnc_tabletApp;", "Réglages", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_server.paa", "lyeed_IMG\data\tablet\app_main\app_server_select.paa", "['server'] spawn AlysiaClient_fnc_tabletApp;", "Serveur", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_store.paa", "lyeed_IMG\data\tablet\app_main\app_store_select.paa", "['store'] spawn AlysiaClient_fnc_tabletApp;", "Boutique", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_help.paa", "lyeed_IMG\data\tablet\app_main\app_help_select.paa", "['help'] spawn AlysiaClient_fnc_tabletApp;", "Aide", "true"],
+	["lyeed_IMG\data\tablet\app_main\app_phone.paa", "lyeed_IMG\data\tablet\app_main\app_phone_select.paa", "['PHONE_CATEGORY'] spawn AlysiaClient_fnc_tabletApp;", "Téléphone", "((player getVariable ['number', '']) != '')"],
+	[getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "icon"), "", "['faction'] spawn AlysiaClient_fnc_tabletApp;", getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "name"), "playerSide in [east,west,independent]"],
+	["lyeed_IMG\data\tablet\app_main\app_licences.paa", "lyeed_IMG\data\tablet\app_main\app_licences_select.paa", "['LICENSES'] spawn AlysiaClient_fnc_tabletApp;", "Licenses", "playerSide isEqualTo civilian"],
+	["lyeed_IMG\data\tablet\app_main\app_market.paa", "lyeed_IMG\data\tablet\app_main\app_market_select.paa", "['MARKET'] spawn AlysiaClient_fnc_tabletApp;","Bourse","'MARKET' in g_apps"],
+	["lyeed_IMG\data\tablet\app_main\app_fuel.paa", "lyeed_IMG\data\tablet\app_main\app_fuel_select.paa", "['FUEL'] spawn AlysiaClient_fnc_tabletApp;", "Stations service", "'FUEL' in g_apps"],
+	["lyeed_IMG\data\tablet\app_main\app_announces.paa", "lyeed_IMG\data\tablet\app_main\app_announces_select.paa", "['ANNOUNCES'] spawn AlysiaClient_fnc_tabletApp;", "Annonces", "'ANNOUNCES' in g_apps"]
 ];
 
 {
@@ -75,23 +75,23 @@ _global_apps =
 
 for "_i" from _actual_idc to 7533 do
 {
-	[_i, false] call public_fnc_tabletShow;
+	[_i, false] call AlysiaClient_fnc_tabletShow;
 };
 
 if (_apps_more || (_status > 0)) then
 {
-	[7544, true] call public_fnc_tabletShow;
+	[7544, true] call AlysiaClient_fnc_tabletShow;
 	
 	if (_apps_more) then
 	{
-		[7540, true] call public_fnc_tabletShow;
-		[7541, true] call public_fnc_tabletShow;
+		[7540, true] call AlysiaClient_fnc_tabletShow;
+		[7541, true] call AlysiaClient_fnc_tabletShow;
 	};
 
 	if (_status > 0) then
 	{
-		[7542, true] call public_fnc_tabletShow;
-		[7543, true] call public_fnc_tabletShow;
+		[7542, true] call AlysiaClient_fnc_tabletShow;
+		[7543, true] call AlysiaClient_fnc_tabletShow;
 	};
 };
 
@@ -103,10 +103,10 @@ _newSMS = 0;
 } forEach (g_phone_messages);
 
 if (_newSMS isEqualTo 0) then {
-	[[7503, 7504, 7505], false] call public_fnc_tabletShow;
+	[[7503, 7504, 7505], false] call AlysiaClient_fnc_tabletShow;
 } else {
 	(_display displayCtrl 7505) ctrlSetStructuredText parseText format["<t align='center' size='1.2' font='PuristaSemiBold'>%1</t>", _newSMS];
-	[7503, true] call public_fnc_tabletShow;
-	[7504, true] call public_fnc_tabletShow;
-	[7505, true] call public_fnc_tabletShow;
+	[7503, true] call AlysiaClient_fnc_tabletShow;
+	[7504, true] call AlysiaClient_fnc_tabletShow;
+	[7505, true] call AlysiaClient_fnc_tabletShow;
 };

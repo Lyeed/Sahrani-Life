@@ -10,7 +10,7 @@ private["_display"];
 if (isNull g_interaction_target) exitWith {};
 
 if ((g_interaction_target getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
-	["L'inventaire est déjà en cours d'utilisation"] call public_fnc_error;
+	["L'inventaire est déjà en cours d'utilisation"] call AlysiaClient_fnc_error;
 };
 
 if (dialog) then
@@ -28,7 +28,7 @@ if (isNull _display) exitWith {};
 g_interaction_target setVariable ["trunk_in_use_ID", (getPlayerUID player), true];
 g_interaction_require = g_interaction_target getVariable ["construction_require", []];
 
-[] call public_fnc_company_construction_update;
+[] call AlysiaClient_fnc_company_construction_update;
 
 while {!(isNull _display)} do
 {

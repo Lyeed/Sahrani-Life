@@ -113,7 +113,7 @@ class RscDisplayDefaultInteraction: RscDisplayDefault
 		class OPTION_BACK_BUTTON: RscButtonSilent
 		{
 			idc = 19506;
-			action = "[] call public_fnc_interactions_recall;";
+			action = "[] call AlysiaClient_fnc_interactions_recall;";
 			tooltip = "Retour";
 			onMouseEnter = "((uinamespace getvariable 'current_interaction_dialog') displayCtrl 19504) ctrlSetBackgroundColor [1,1,1,1]; ctrlSetText[19505,""lyeed_IMG\data\global\option_back_select.paa""]; ctrlShow[19503, false];";
 			onMouseExit = "((uinamespace getvariable 'current_interaction_dialog') displayCtrl 19504) ctrlSetBackgroundColor [0,0,0,0.6]; ctrlSetText[19505,""lyeed_IMG\data\global\option_back.paa""]; ctrlShow[19503, true];";

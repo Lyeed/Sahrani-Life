@@ -13,7 +13,7 @@ _amount = [_this, 3, 1, [1]] call BIS_fnc_param;
 
 if (_item isEqualTo "") exitWith {};
 
-_index = [_item, _trunk] call public_fnc_index;
+_index = [_item, _trunk] call AlysiaClient_fnc_index;
 if (_type) then
 {
 	if (_index isEqualTo -1) then {

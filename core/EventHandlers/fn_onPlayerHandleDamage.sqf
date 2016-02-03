@@ -25,7 +25,7 @@ if (g_connected && !g_staff_god && (_damage > 0)) then
 	};
 
 	if (!(isNull g_dragingBody)) then {
-		[false] call public_fnc_action_body_drop;
+		[false] call AlysiaClient_fnc_action_body_drop;
 	};
 
 	if (!(isNull (player getVariable ["escorting", objNull]))) then
@@ -36,8 +36,8 @@ if (g_connected && !g_staff_god && (_damage > 0)) then
 		player setVariable ["escorting", objNull, true];
 	};
 
-	[(_damage * -1)] call public_fnc_handleBlood;
-	[(_damage / 8)] call public_fnc_handleBleed;
+	[(_damage * -1)] call AlysiaClient_fnc_handleBlood;
+	[(_damage / 8)] call AlysiaClient_fnc_handleBleed;
 };
 
 0;

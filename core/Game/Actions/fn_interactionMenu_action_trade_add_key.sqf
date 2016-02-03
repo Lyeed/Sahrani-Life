@@ -17,5 +17,5 @@ if (_vehicle in g_interaction_trade_keys) exitWith {};
 
 g_interaction_trade_active = true;
 g_interaction_trade_keys pushBack _vehicle;
-[] call public_fnc_interactionMenu_action_trade_update;
+[] call AlysiaClient_fnc_interactionMenu_action_trade_update;
 g_interaction_trade_active = false;

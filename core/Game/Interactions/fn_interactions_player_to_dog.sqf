@@ -24,4 +24,4 @@ if (isNull _target) exitWith {};
 	true,
 	false,
 	true
-] spawn public_fnc_interactions_create;
+] spawn AlysiaClient_fnc_interactions_create;

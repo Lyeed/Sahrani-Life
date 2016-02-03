@@ -10,6 +10,6 @@ _items = [_this, 0, [], [[]]] call BIS_fnc_param;
 
 _weight = 0;
 {
-	_weight = _weight + (([_x select 0] call public_fnc_itemGetWeight) * (_x select 1));
+	_weight = _weight + (([_x select 0] call AlysiaClient_fnc_itemGetWeight) * (_x select 1));
 } forEach (_items);
 _weight;

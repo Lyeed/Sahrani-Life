@@ -12,7 +12,7 @@ if (_sel isEqualTo -1) exitWith {};
 
 _index = lbValue[2802, (lbCurSel 2802)];
 if (_index isEqualTo -1) exitWith {
-	["Vous n'avez pas sélectionné de véhicule"] call public_fnc_error;
+	["Vous n'avez pas sélectionné de véhicule"] call AlysiaClient_fnc_error;
 };
 
 _data = g_garage_vehicles select _index;
@@ -51,4 +51,4 @@ deleteMarkerLocal "MyCar";
 	};
 } forEach (allMapMarkers);
 
-[g_garage_vehicles] call public_fnc_garageOpen;
+[g_garage_vehicles] call AlysiaClient_fnc_garageOpen;

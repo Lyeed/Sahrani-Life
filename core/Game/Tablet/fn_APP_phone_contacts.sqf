@@ -31,9 +31,9 @@ if (count(g_phone_contacts) > 0) then
 	} forEach (g_phone_contacts);
 	_list lbSetCurSel 0;
 
-	[[8375, 8378], true] call public_fnc_tabletShow;
+	[[8375, 8378], true] call AlysiaClient_fnc_tabletShow;
 };
 
 if ((count g_phone_contacts) < _max) then {
-	[[8379, 8386], true] call public_fnc_tabletShow;
+	[[8379, 8386], true] call AlysiaClient_fnc_tabletShow;
 };

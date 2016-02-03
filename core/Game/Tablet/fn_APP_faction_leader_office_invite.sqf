@@ -8,19 +8,19 @@
 private["_player", "_sel"];
 _sel = lbCurSel 8732;
 if (_sel isEqualTo -1) exitWith {
-	["Vous n'avez pas sélectionné de civil"] call public_fnc_error;
+	["Vous n'avez pas sélectionné de civil"] call AlysiaClient_fnc_error;
 };
 
 _player = lbData[8732, _sel];
 _player = call compile format["%1", _player];
 
 if (isNil "_player") exitWith {
-	["Cible invalide"] call public_fnc_error;
+	["Cible invalide"] call AlysiaClient_fnc_error;
 };
 
 if (isNull _player) exitWith {
-	["Cible invalide"] call public_fnc_error;
+	["Cible invalide"] call AlysiaClient_fnc_error;
 };
 
-[player] remoteExec ["public_fnc_APP_faction_leader_office_invitePropose", _player, false];
-[format["Vous avez proposé à %1 de rejoindre <t color='#01DF3A'>%2</t>", (_player getVariable "realname"), ([playerSide] call public_fnc_sideToStr)]] call public_fnc_info;
+[player] remoteExec ["AlysiaClient_fnc_APP_faction_leader_office_invitePropose", _player, false];
+[format["Vous avez proposé à %1 de rejoindre <t color='#01DF3A'>%2</t>", (_player getVariable "realname"), ([playerSide] call AlysiaClient_fnc_sideToStr)]] call AlysiaClient_fnc_info;

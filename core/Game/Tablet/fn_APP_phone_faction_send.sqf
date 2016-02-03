@@ -12,17 +12,17 @@ _faction = [_this, 1, sideUnknown, [sideUnknown]] call BIS_fnc_param;
 if ((_faction isEqualTo sideUnknown) || (_faction isEqualTo civilian)) exitWith {};
 
 if (_msg isEqualTo "") exitWith {
-	["Vous ne pouvez pas envoyer de message vide"] call public_fnc_error;
+	["Vous ne pouvez pas envoyer de message vide"] call AlysiaClient_fnc_error;
 };
-_bad = [_msg, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè "] call public_fnc_TextAllowed;
+_bad = [_msg, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè "] call AlysiaClient_fnc_TextAllowed;
 if (!(_bad isEqualTo "")) exitWith {
-	["Vous utilisez un caractère interdit dans votre message<br/>Caractères autorisés :<br/>(ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè)"] call public_fnc_error;
+	["Vous utilisez un caractère interdit dans votre message<br/>Caractères autorisés :<br/>(ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè)"] call AlysiaClient_fnc_error;
 };
 if (count(toArray(_msg)) > 160) exitWith {
-	["Votre message ne doit pas dépasser 160 caractères"] call public_fnc_error;
+	["Votre message ne doit pas dépasser 160 caractères"] call AlysiaClient_fnc_error;
 };
 if ((time - g_action_delay) < 2) exitWith { 
-	["Veuillez ralentir dans vos actions"] call public_fnc_error;
+	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error;
 };
 
 g_action_delay = time;
@@ -33,6 +33,6 @@ _from = switch (_faction) do
 	case west: {"WEST"};
 };
 
-[_msg, _from] remoteExecCall ["public_fnc_phone_message_receive", -2, false];
+[_msg, _from] remoteExecCall ["AlysiaClient_fnc_phone_message_receive", -2, false];
 ((findDisplay 7500) displayCtrl 8393) ctrlSetText "";
 playSound "message_sent";

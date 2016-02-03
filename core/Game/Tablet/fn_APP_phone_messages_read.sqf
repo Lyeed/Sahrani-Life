@@ -24,7 +24,7 @@ lbClear _list;
 if (!(g_phone_messages isEqualTo [])) then
 {
 	{
-		_index = _list lbAdd format["%1 - %2", [(_x select 0)] call public_fnc_phone_number_to_name, (_x select 1)];
+		_index = _list lbAdd format["%1 - %2", [(_x select 0)] call AlysiaClient_fnc_phone_number_to_name, (_x select 1)];
 		if ((_x select 2) isEqualTo 1) then {
 			_list lbSetPicture [_index, "lyeed_IMG\data\phone\read\sms_old.paa"];
 		} else {
@@ -34,6 +34,6 @@ if (!(g_phone_messages isEqualTo [])) then
 	} forEach (g_phone_messages);
 	_list lbSetCurSel -1;
 
-	[8325, true] call public_fnc_tabletShow;
-	[8326, true] call public_fnc_tabletShow;
+	[8325, true] call AlysiaClient_fnc_tabletShow;
+	[8326, true] call AlysiaClient_fnc_tabletShow;
 };

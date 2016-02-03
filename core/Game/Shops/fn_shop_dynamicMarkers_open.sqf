@@ -8,4 +8,4 @@
 
 if (!(createDialog "RscDisplayShopDynMarkers")) exitWith {};
 
-[] call public_fnc_shop_dynamicMarkers_update_list;
+[] call AlysiaClient_fnc_shop_dynamicMarkers_update_list;

@@ -11,19 +11,19 @@ _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 if (isNull _target) exitWith {};
 
 if (_target in g_houses) then {
-	[_target] call public_fnc_interactions_player_to_house_owner;
+	[_target] call AlysiaClient_fnc_interactions_player_to_house_owner;
 } else {
 	if ((_target getVariable ["house_owner", []]) isEqualTo []) then {
 		if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_HOUSES" >> (typeOf _target) >> "sides")) then {
-			[_target] call public_fnc_house_menu_open_buy;
+			[_target] call AlysiaClient_fnc_house_menu_open_buy;
 		} else {
-			["Vous n'êtes pas autorisé à acheter ce type de bâtiment"] call public_fnc_info;
+			["Vous n'êtes pas autorisé à acheter ce type de bâtiment"] call AlysiaClient_fnc_info;
 		};
 	} else {
 		if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "house_search") isEqualTo 1) then {
-			[_target] spawn public_fnc_interactions_player_to_house_search;
+			[_target] spawn AlysiaClient_fnc_interactions_player_to_house_search;
 		} else {
-			["Ce bâtiment n'est pas en vente"] call public_fnc_error;
+			["Ce bâtiment n'est pas en vente"] call AlysiaClient_fnc_error;
 		};
 	};
 };

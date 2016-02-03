@@ -147,7 +147,7 @@ class RscDisplaySkullInventory: RscDisplayDefaultInteraction
 		class ACTION_BUTTON: RscButtonSilent
 		{
 			idc = 69007;
-			action = "[] call public_fnc_skullMenu_search_take";
+			action = "[] call AlysiaClient_fnc_skullMenu_search_take";
 			onMouseEnter = "			ctrlSetText[69005,""lyeed_IMG\data\skull\take_select.paa""];			ctrlShow[69003, false];			((findDisplay 69000) displayCtrl 69004) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 69000) displayCtrl 69006) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Prendre</t>"";";
 			onMouseExit = "			ctrlSetText[69005,""lyeed_IMG\data\skull\take.paa""];			ctrlShow[69003, true];			((findDisplay 69000) displayCtrl 69004) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 69000) displayCtrl 69006) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Prendre</t>"";";
 

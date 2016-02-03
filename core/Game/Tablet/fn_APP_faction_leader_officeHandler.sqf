@@ -12,7 +12,7 @@ disableSerialization;
 _display = uiNamespace getVariable["tablet", displayNull];
 if (isNull _display) exitWith {};
 
-_handle = ["FACTION_LEADER_OFFICE"] spawn public_fnc_tabletApp;
+_handle = ["FACTION_LEADER_OFFICE"] spawn AlysiaClient_fnc_tabletApp;
 waitUntil {scriptDone _handle};
 
 _list_faction = _display displayCtrl 8736;
@@ -20,7 +20,7 @@ lbClear _list_faction;
 {
 	_level = parseNumber(_x select 0);
 	_uid = _x select 2;
-	_index = _list_faction lbAdd format["[%1] - %2. %3", _level, ([playerSide, _level, true] call public_fnc_rankToStr), (_x select 1)];
+	_index = _list_faction lbAdd format["[%1] - %2. %3", _level, ([playerSide, _level, true] call AlysiaClient_fnc_rankToStr), (_x select 1)];
 	_list_faction lbSetdata [_index, _uid];
 	_list_faction lbSetValue [_index, _level];
 } forEach (_members);

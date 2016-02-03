@@ -9,5 +9,5 @@
 if (isNull (findDisplay 16000)) exitWith {};
 
 player setVariable ["typeRefuel", (lbData[16004, (lbCurSel 16004)])];
-["Veuillez maintenant insérer le pistolet dans le réservoir de votre véhicule<br/>Pour annuler rangez le pistolet dans la pompe."] call public_fnc_info;
+["Veuillez maintenant insérer le pistolet dans le réservoir de votre véhicule<br/>Pour annuler rangez le pistolet dans la pompe."] call AlysiaClient_fnc_info;
 closeDialog 0;

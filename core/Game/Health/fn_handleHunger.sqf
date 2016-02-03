@@ -18,13 +18,13 @@ if (g_hunger > 100) then
 } else {
 	if (g_hunger <= 0) then 
 	{
-		["Vous mourrez de faim"] call public_fnc_info;
+		["Vous mourrez de faim"] call AlysiaClient_fnc_info;
 		g_hunger = 0;
 		[] spawn
 		{
 			while {(g_hunger <= 0)} do 
 			{
-				[-40] call public_fnc_handleBlood;
+				[-40] call AlysiaClient_fnc_handleBlood;
 				player setFatigue 1;
 				sleep 4;
 			};
@@ -34,17 +34,17 @@ if (g_hunger > 100) then
 		{
 			case (g_hunger > 20 && g_hunger <= 30): 
 			{
-				["Vous avez très faim"] call public_fnc_info;
+				["Vous avez très faim"] call AlysiaClient_fnc_info;
 				[player, "hunger_1", 7] call CBA_fnc_globalSay3d;
 			};
 			case (g_hunger > 10 && g_hunger <= 20): 
 			{
-				["Vous êtes affamé"] call public_fnc_info;
+				["Vous êtes affamé"] call AlysiaClient_fnc_info;
 				[player, "hunger_1", 7] call CBA_fnc_globalSay3d;
 			};
 			case (g_hunger > 0 && g_hunger <= 10): 
 			{ 
-				["Vous êtes sur le point de mourir de faim"] call public_fnc_info;
+				["Vous êtes sur le point de mourir de faim"] call AlysiaClient_fnc_info;
 				[player, "hunger_1", 7] call CBA_fnc_globalSay3d;
 			};
 		};

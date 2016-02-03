@@ -18,10 +18,10 @@ if (missionNamespace getVariable [format["license_%1", _license], false]) then
 		format
 		[
 			"Votre licence <t color='#DF7401'>%1</t> vous a été retirée par <t color='#2E64FE'>%2 %3</t>",
-			([_license] call public_fnc_licenseGetName),
-			([(side _from), (_from getVariable["rank", 0])] call public_fnc_rankToStr),
+			([_license] call AlysiaClient_fnc_licenseGetName),
+			([(side _from), (_from getVariable["rank", 0])] call AlysiaClient_fnc_rankToStr),
 			(_from getVariable ["realname", (name _from)])
 		]
-	] call public_fnc_info;
-	[format["La licence <t color='#DF7401'>%1</t> a été retirée", ([_license] call public_fnc_licenseGetName)]] remoteExecCall ["public_fnc_info", _from];
+	] call AlysiaClient_fnc_info;
+	[format["La licence <t color='#DF7401'>%1</t> a été retirée", ([_license] call AlysiaClient_fnc_licenseGetName)]] remoteExecCall ["AlysiaClient_fnc_info", _from];
 };

@@ -61,7 +61,7 @@ class RscDisplayAuctionHouse: RscDisplayDefault
 		class STOCK_LIST: RscListbox
 		{
 			idc = 45602;
-			onLBSelChanged = "_this call public_fnc_auctionHouse_menu_update;";
+			onLBSelChanged = "_this call AlysiaClient_fnc_auctionHouse_menu_update;";
 			
 			x = 0.340156 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
@@ -185,7 +185,7 @@ class RscDisplayAuctionHouse: RscDisplayDefault
 		class ACTION_BUY_BUTTON: RscButtonSilent
 		{
 			idc = 45613;
-			action = "[] spawn public_fnc_auctionHouse_action_buy;";
+			action = "[] spawn AlysiaClient_fnc_auctionHouse_action_buy;";
 			onMouseEnter = "ctrlSetText[45612,""lyeed_IMG\data\auctionHouse\actions\action_buy_select.paa""];ctrlShow[45610, false];((findDisplay 45600) displayCtrl 45609) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 45600) displayCtrl 45611) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
 			onMouseExit = "ctrlSetText[45612,""lyeed_IMG\data\auctionHouse\actions\action_buy.paa""];if (ctrlVisible 45612) then {ctrlShow[45610, true];};((findDisplay 45600) displayCtrl 45609) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 45600) displayCtrl 45611) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>"";";
 
@@ -209,7 +209,7 @@ class RscDisplayAuctionHouse: RscDisplayDefault
 		class TYPE_BUY_BUTTON: RscButtonSilent
 		{
 			idc = -1;
-			action = "[0] call public_fnc_auctionHouse_menu_filter;";
+			action = "[0] call AlysiaClient_fnc_auctionHouse_menu_filter;";
 			onMouseEnter = "if ((uiNamespace getVariable ['AH_selected', -1]) != 0) then {((findDisplay 45600) displayCtrl 45615) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 45600) displayCtrl 45615) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#000000'>Acheter</t>"";};";
 			onMouseExit = "if ((uiNamespace getVariable ['AH_selected', -1]) != 0) then {((findDisplay 45600) displayCtrl 45615) ctrlSetBackgroundColor [0,0,0,1];((findDisplay 45600) displayCtrl 45615) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#FFFFFF'>Acheter</t>"";};";
 
@@ -233,7 +233,7 @@ class RscDisplayAuctionHouse: RscDisplayDefault
 		class TYPE_SELL_BUTTON: RscButtonSilent
 		{
 			idc = -1;
-			action = "[1] call public_fnc_auctionHouse_menu_filter;";
+			action = "[1] call AlysiaClient_fnc_auctionHouse_menu_filter;";
 			onMouseEnter = "if ((uiNamespace getVariable ['AH_selected', -1]) != 1) then {((findDisplay 45600) displayCtrl 45617) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 45600) displayCtrl 45617) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#000000'>Vendre</t>"";};";
 			onMouseExit = "if ((uiNamespace getVariable ['AH_selected', -1]) != 1) then {((findDisplay 45600) displayCtrl 45617) ctrlSetBackgroundColor [0,0,0,1];((findDisplay 45600) displayCtrl 45617) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#FFFFFF'>Vendre</t>"";};";
 
@@ -257,7 +257,7 @@ class RscDisplayAuctionHouse: RscDisplayDefault
 		class TYPE_MY_BUTTON: RscButtonSilent
 		{
 			idc = -1;
-			action = "[2] call public_fnc_auctionHouse_menu_filter;";
+			action = "[2] call AlysiaClient_fnc_auctionHouse_menu_filter;";
 			onMouseEnter = "if ((uiNamespace getVariable ['AH_selected', -1]) != 2) then {((findDisplay 45600) displayCtrl 45614) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 45600) displayCtrl 45614) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#000000'>Mes ventes</t>"";};";
 			onMouseExit = "if ((uiNamespace getVariable ['AH_selected', -1]) != 2) then {((findDisplay 45600) displayCtrl 45614) ctrlSetBackgroundColor [0,0,0,1];((findDisplay 45600) displayCtrl 45614) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#FFFFFF'>Mes ventes</t>"";};";
 
@@ -281,7 +281,7 @@ class RscDisplayAuctionHouse: RscDisplayDefault
 		class TYPE_INFOS_BUTTON: RscButtonSilent
 		{
 			idc = -1;
-			action = "[-1] call public_fnc_auctionHouse_menu_filter;";
+			action = "[-1] call AlysiaClient_fnc_auctionHouse_menu_filter;";
 			onMouseEnter = "if ((uiNamespace getVariable ['AH_selected', -1]) != -1) then {((findDisplay 45600) displayCtrl 45644) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 45600) displayCtrl 45644) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#000000'>Infos</t>"";};";
 			onMouseExit = "if ((uiNamespace getVariable ['AH_selected', -1]) != -1) then {((findDisplay 45600) displayCtrl 45644) ctrlSetBackgroundColor [0,0,0,1];((findDisplay 45600) displayCtrl 45644) ctrlSetStructuredText parseText ""<t align='center' size='1.3' color='#FFFFFF'>Infos</t>"";};";
 
@@ -354,7 +354,7 @@ class RscDisplayAuctionHouse: RscDisplayDefault
 		class ACTION_RECUP_BUTTON: RscButtonSilent
 		{
 			idc = 45626;
-			action = "[] spawn public_fnc_auctionHouse_action_cancel;";
+			action = "[] spawn AlysiaClient_fnc_auctionHouse_action_cancel;";
 			onMouseEnter = "ctrlSetText[45625,""lyeed_IMG\data\auctionHouse\actions\action_recup_select.paa""];ctrlShow[45623, false];			((findDisplay 45600) displayCtrl 45622) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 45600) displayCtrl 45624) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Récup.</t>"";";
 			onMouseExit = "ctrlSetText[45625,""lyeed_IMG\data\auctionHouse\actions\action_recup.paa""];if (ctrlVisible 45625) then {				ctrlShow[45623, true];			};			((findDisplay 45600) displayCtrl 45622) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 45600) displayCtrl 45624) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Récup.</t>"";";
 
@@ -407,7 +407,7 @@ class RscDisplayAuctionHouse: RscDisplayDefault
 		class ACTION_SELL_BUTTON: RscButtonSilent
 		{
 			idc = 45631;
-			action = "[] spawn public_fnc_auctionHouse_action_sell;";
+			action = "[] spawn AlysiaClient_fnc_auctionHouse_action_sell;";
 			onMouseEnter = "ctrlSetText[45630,""lyeed_IMG\data\auctionHouse\actions\action_buy_select.paa""];ctrlShow[45628, false];			((findDisplay 45600) displayCtrl 45627) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 45600) displayCtrl 45629) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Vendre</t>"";";
 			onMouseExit = "ctrlSetText[45630,""lyeed_IMG\data\auctionHouse\actions\action_buy.paa""];if (ctrlVisible 45630) then {				ctrlShow[45628, true];			};			((findDisplay 45600) displayCtrl 45627) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 45600) displayCtrl 45629) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Vendre</t>"";";
 
@@ -430,7 +430,7 @@ class RscDisplayAuctionHouse: RscDisplayDefault
 		class ACTION_REFRESH_BUTTON: RscButtonSilent
 		{
 			idc = 45633;
-			action = "[0] call public_fnc_auctionHouse_menu_filter;";
+			action = "[0] call AlysiaClient_fnc_auctionHouse_menu_filter;";
 			onMouseEnter = "ctrlSetText[45632,""lyeed_IMG\data\auctionHouse\actions\action_refresh_select.paa""];";
 			onMouseExit = "ctrlSetText[45632,""lyeed_IMG\data\auctionHouse\actions\action_refresh.paa""];";
 			

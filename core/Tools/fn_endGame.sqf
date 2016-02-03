@@ -14,7 +14,7 @@ if (missionNamespace getVariable ["g_connected", false]) then
 	sleep 94;
 	closeDialog 0;
 	sleep 1;
-	[] call MySQL_fnc_query_update_disconnect;
+	[] call AlysiaDB_fnc_query_update_disconnect;
 	sleep 1;
 	"Bye" call BIS_fnc_endMission;
 } else {

@@ -30,15 +30,15 @@ _list_require = _display displayCtrl 53005;
 lbClear _list_require;
 _require_weight = 0;
 {
-	_index = _list_require lbAdd format["%1x %2", (_maxAmount * (_x select 1)), [(_x select 0)] call public_fnc_itemGetName];
-	if ([(_x select 0)] call public_fnc_itemCount >= (_maxAmount * (_x select 1))) then {
+	_index = _list_require lbAdd format["%1x %2", (_maxAmount * (_x select 1)), [(_x select 0)] call AlysiaClient_fnc_itemGetName];
+	if ([(_x select 0)] call AlysiaClient_fnc_itemCount >= (_maxAmount * (_x select 1))) then {
 		_list_require lbSetPicture [_index, "lyeed_IMG\data\process\items_ok.paa"];
 	} else {
 		_list_require lbSetPicture [_index, "lyeed_IMG\data\process\items_missing.paa"];
 		_can = false;
 	};
 
-	_require_weight = _require_weight + ((([(_x select 0)] call public_fnc_itemGetWeight) * (_x select 1)) * _maxAmount);
+	_require_weight = _require_weight + ((([(_x select 0)] call AlysiaClient_fnc_itemGetWeight) * (_x select 1)) * _maxAmount);
 } forEach getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "require");
 
 _list_receive = _display displayCtrl 53014;
@@ -48,14 +48,14 @@ _receive = getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_proce
 
 _receive_weight = 0;
 {
-	_index = _list_receive lbAdd format["%1x %2", (_maxAmount * (_x select 1)), [(_x select 0)] call public_fnc_itemGetName];
-	_list_receive lbSetPicture [_index, [(_x select 0)] call public_fnc_itemGetImage];
+	_index = _list_receive lbAdd format["%1x %2", (_maxAmount * (_x select 1)), [(_x select 0)] call AlysiaClient_fnc_itemGetName];
+	_list_receive lbSetPicture [_index, [(_x select 0)] call AlysiaClient_fnc_itemGetImage];
 
-	_receive_weight = _receive_weight + ((([(_x select 0)] call public_fnc_itemGetWeight) * (_x select 1)) * _maxAmount);
+	_receive_weight = _receive_weight + ((([(_x select 0)] call AlysiaClient_fnc_itemGetWeight) * (_x select 1)) * _maxAmount);
 } forEach (_receive select 0);
 
 {
-	_info = [_x] call public_fnc_fetchcfgDetails;
+	_info = [_x] call AlysiaClient_fnc_fetchcfgDetails;
 	for "_i" from 1 to _maxAmount do
 	{
 		_index = _list_receive lbAdd (_info select 1);
@@ -65,7 +65,7 @@ _receive_weight = 0;
 
 if ((_receive select 3) > 0) then
 {
-	_index = _list_receive lbAdd format["%1kn", [((_receive select 3) * _maxAmount)] call public_fnc_numberText];
+	_index = _list_receive lbAdd format["%1kn", [((_receive select 3) * _maxAmount)] call AlysiaClient_fnc_numberText];
 	_list_receive lbSetPicture [_index, "alysia_items_virtual\data\money.paa"];
 };
 

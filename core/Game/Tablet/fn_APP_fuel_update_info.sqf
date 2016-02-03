@@ -30,6 +30,6 @@ _station = (nearestObjects [_data select 1, [_data select 0], 15]) select 0;
 	+	"<t align='left'>Prix/L</t><t align='right'><t color='#8cff9b'>%1</t>kn</t><br/>"
 	+	"<t align='left'>Disponibilité</t><t align='right'>%2L</t>"
 	+	"</t>",
-	[([_station, _fuel] call public_fnc_fuelStation_price_buy)] call public_fnc_numberText,
+	[([_station, _fuel] call AlysiaClient_fnc_fuelStation_price_buy)] call AlysiaClient_fnc_numberText,
 	((_station getVariable [_fuel, 250]) / 250)
 ];

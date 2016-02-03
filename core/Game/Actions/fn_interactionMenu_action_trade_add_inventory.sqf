@@ -21,9 +21,9 @@ if (_type) then {
 };
 
 _item = lbData[10019, _sel];
-if ([false, _item, _amount] call public_fnc_handleInv) then
+if ([false, _item, _amount] call AlysiaClient_fnc_handleInv) then
 {
-	_index = [_item, g_interaction_trade_inventory] call public_fnc_index;
+	_index = [_item, g_interaction_trade_inventory] call AlysiaClient_fnc_index;
 	if (_index isEqualTo -1) then {
 		g_interaction_trade_inventory pushBack [_item, _amount];
 	} else {
@@ -31,5 +31,5 @@ if ([false, _item, _amount] call public_fnc_handleInv) then
 	};
 };
 
-[] call public_fnc_interactionMenu_action_trade_update;
+[] call AlysiaClient_fnc_interactionMenu_action_trade_update;
 g_interaction_trade_active = false;

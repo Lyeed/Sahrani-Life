@@ -66,7 +66,7 @@ if ((_rank isEqualTo 0) || ((_rank > 0) && ((player getVariable ["rank", 0]) >= 
 };
 
 _license = getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _item >> format["buy_license_%1", playerSide]);
-if ((_license isEqualTo "") || ((_license != "") && ([_license] call public_fnc_hasLicense))) then {
+if ((_license isEqualTo "") || ((_license != "") && ([_license] call AlysiaClient_fnc_hasLicense))) then {
 	_license_condition = true;
 } else {
 	_license_condition = false;	
@@ -87,11 +87,11 @@ if ((_license isEqualTo "") || ((_license != "") && ([_license] call public_fnc_
 	+	"<t align='left'>Prix</t><t align='right' color='%5'>%6kn</t><br/>"
 	+	"</t>",
 	if (_rank_condition) then {"#31B404"} else {"#DF0101"},
-	[playerSide, _rank] call public_fnc_sideToStr,
+	[playerSide, _rank] call AlysiaClient_fnc_sideToStr,
 	if (_license_condition) then {"#31B404"} else {"#DF0101"},
 	if (_license isEqualTo "") then {"Aucune"} else {getText(missionConfigFile >> "ALYSIA_LICENSES" >> _license >> "name")},
 	if (_price_condition) then {"#31B404"} else {"#DF0101"},
-	[_price] call public_fnc_numberText
+	[_price] call AlysiaClient_fnc_numberText
 ];
 
 if (_price_condition && _rank_condition && _license_condition) then {

@@ -1588,7 +1588,7 @@ _flag_south_3 = ["FlagPole_F","[10567.205078,9554.953125,0]",720,-100,1,0,[]] ca
 	_x addAction ["=====[Alarme]=====", "", "", 9990, false, false, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]))"];
 	_x addAction ["<img image='lyeed_IMG\data\actions_menu\alarm.paa'/> <t color='#01DF01'>Activer</t>",
 	{
-		[true] remoteExec ["TON_fnc_border_alarm_south", 2];
+		[true] remoteExec ["AlysiaServer_fnc_border_alarm_south", 2];
 
 		if ((border_sign_south_north animationPhase "sign_anim1") != 0) then {border_sign_south_north animate ["sign_anim1", 0]};
 		if ((border_sign_south_north animationPhase "sign_anim4") != 0) then {border_sign_south_north animate ["sign_anim4", 0]};
@@ -1606,7 +1606,7 @@ _flag_south_3 = ["FlagPole_F","[10567.205078,9554.953125,0]",720,-100,1,0,[]] ca
 
 	_x addAction ["<img image='lyeed_IMG\data\actions_menu\alarm.paa'/> <t color='#FF0000'>Désactiver</t>",
 	{
-		[false] remoteExec ["TON_fnc_border_alarm_south", 2];
+		[false] remoteExec ["AlysiaServer_fnc_border_alarm_south", 2];
 		
 		if ((border_sign_south_north animationPhase "sign_anim1") != 0) then {border_sign_south_north animate ["sign_anim1", 0]};
 		if ((border_sign_south_north animationPhase "sign_anim4") != 0) then {border_sign_south_north animate ["sign_anim4", 0]};

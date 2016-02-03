@@ -8,14 +8,14 @@
 
 private ["_infos","_owners","_caution","_prison","_prisonName","_cells"];
 _infos = [_this, 0, [], [[]]] call BIS_fnc_param;
-_prison = (([player] call public_fnc_prisonNearest) select 0);
+_prison = (([player] call AlysiaClient_fnc_prisonNearest) select 0);
 _prisonName = vehicleVarName _prison;
 _owners = "";
 _cells = 0;
 
 if (isNull g_interaction_target) exitWith {};
-if (_prison isEqualTo []) exitWith {["Vous n'êtes pas dans une prison"] call public_fnc_error};
-if (!(g_interaction_target getVariable ["arrested", false])) exitWith {["Cette personne n'est plus en prison"] call public_fnc_error};
+if (_prison isEqualTo []) exitWith {["Vous n'êtes pas dans une prison"] call AlysiaClient_fnc_error};
+if (!(g_interaction_target getVariable ["arrested", false])) exitWith {["Cette personne n'est plus en prison"] call AlysiaClient_fnc_error};
 
 if (dialog) then
 {

@@ -7,7 +7,7 @@
 */
 
 if (((player getVariable ["number", ""]) isEqualTo "") || (g_phone_forfait in ["none", ""])) then {
-	["store_forfait"] spawn public_fnc_tabletApp;
+	["store_forfait"] spawn AlysiaClient_fnc_tabletApp;
 } else {
 	
 	disableSerialization;
@@ -21,8 +21,8 @@ if (((player getVariable ["number", ""]) isEqualTo "") || (g_phone_forfait in ["
 	{
 		if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "phone_send_global_message_rank") <= (player getVariable ["rank", 0])) then
 		{
-			[8516, true] call public_fnc_tabletShow;
-			[8517, true] call public_fnc_tabletShow;
+			[8516, true] call AlysiaClient_fnc_tabletShow;
+			[8517, true] call AlysiaClient_fnc_tabletShow;
 		};
 	};
 };

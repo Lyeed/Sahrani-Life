@@ -48,4 +48,4 @@ _access = switch (playerSide) do
 
 if (!_access) exitWith {};
 
-[player] remoteExec ["TON_fnc_factionMemberList", 2, false];
+[player] remoteExec ["AlysiaServer_fnc_factionMemberList", 2, false];

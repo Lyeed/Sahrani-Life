@@ -18,7 +18,7 @@ if (dialog) then
 _info = g_interaction_target getVariable ["info", []];
 if (_info isEqualTo []) exitWith {};
 
-if (!(["Analyse", 10, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress)) exitWith {};
+if (!(["Analyse", 10, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {};
 
 if (!(createDialog "RscDisplaySkullOwner")) exitWith {};
 

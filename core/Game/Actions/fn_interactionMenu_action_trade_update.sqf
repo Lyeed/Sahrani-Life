@@ -17,12 +17,12 @@ _ctrl_list_inventory = _display displayCtrl 10019;
 lbClear _ctrl_list_inventory;
 
 {
-	_amount = [_x] call public_fnc_itemCount;
+	_amount = [_x] call AlysiaClient_fnc_itemCount;
 	if (_amount > 0) then
 	{
-		_index = _ctrl_list_inventory lbAdd format["%1x %2", ([_amount] call public_fnc_numberText), ([_x] call public_fnc_itemGetName)];
+		_index = _ctrl_list_inventory lbAdd format["%1x %2", ([_amount] call AlysiaClient_fnc_numberText), ([_x] call AlysiaClient_fnc_itemGetName)];
 		_ctrl_list_inventory lbSetData [_index, _x];
-		_ctrl_list_inventory lbSetPicture [_index, ([_x] call public_fnc_itemGetImage)];
+		_ctrl_list_inventory lbSetPicture [_index, ([_x] call AlysiaClient_fnc_itemGetImage)];
 		_ctrl_list_inventory lbSetValue [_index, _amount];
 	};
 } forEach g_inv_items;
@@ -88,8 +88,8 @@ if (g_interaction_trade_money > 0) then
 };
 
 {
-	_index = _ctrl_list_trade lbAdd format["%1x %2", ([(_x select 1)] call public_fnc_numberText), ([(_x select 0)] call public_fnc_itemGetName)];
-	_ctrl_list_trade lbSetPicture [_index, ([(_x select 0)] call public_fnc_itemGetImage)];
+	_index = _ctrl_list_trade lbAdd format["%1x %2", ([(_x select 1)] call AlysiaClient_fnc_numberText), ([(_x select 0)] call AlysiaClient_fnc_itemGetName)];
+	_ctrl_list_trade lbSetPicture [_index, ([(_x select 0)] call AlysiaClient_fnc_itemGetImage)];
 	_ctrl_list_trade lbSetData [_index, "inventory"];
 	_ctrl_list_trade lbSetValue [_index, _forEachIndex];
 } forEach g_interaction_trade_inventory;

@@ -5,10 +5,10 @@ private["_position", "_objPut", "_action", "_item", "_itemClassname"];
 _item = _this select 0;
 
 if (!isNull g_objPut) exitWith {
-	["Vous deployez déjà un élèment"] call public_fnc_error; 
+	["Vous deployez déjà un élèment"] call AlysiaClient_fnc_error; 
 };
 
-if (!([false, _item, 1] call public_fnc_handleInv)) exitWith {};
+if (!([false, _item, 1] call AlysiaClient_fnc_handleInv)) exitWith {};
 
 _itemClassname = switch(_item) do
 {
@@ -69,7 +69,7 @@ if (!(isNull _objPut)) then
 	_objPut setPos [(getPos _objPut) select 0, (getPos _objPut) select 1, _posZ];	
 	if (_itemClassname == "Land_Razorwire_F") then {
 		_objPut setDamage 1;
-		[[_objPut], "TON_fnc_spikeStrip", false, false] spawn life_fnc_MP;
+		[[_objPut], "AlysiaServer_fnc_spikeStrip", false, false] spawn life_fnc_MP;
 	};
 	if (_itemClassname in ["Land_CncWall4_F", "Land_BagBunker_Tower_F", "Land_HBarrierWall6_F", "Land_HBarrierWall_corridor_F", "Land_Canal_Wall_Stairs_F", "Land_HBarrierTower_F", "Land_Canal_Wall_10m_F", "Land_HBarrierWall_corner_F"]) then {
 		_objPut setVariable["owner", (getPlayerUID player), true];

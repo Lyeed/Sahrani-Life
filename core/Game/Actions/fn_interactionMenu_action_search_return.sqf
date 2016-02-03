@@ -25,15 +25,15 @@ if (isNull _display) exitWith {};
 _array = [];
 
 if (_money > 0) then {
-	_array pushBack [format["%1kn", [_money] call public_fnc_numberText], "alysia_items_virtual\data\money.paa"];
+	_array pushBack [format["%1kn", [_money] call AlysiaClient_fnc_numberText], "alysia_items_virtual\data\money.paa"];
 };
 
 {
-	_array pushBack [format["%1x %2", ([(_x select 1)] call public_fnc_numberText), ([(_x select 0)] call public_fnc_itemGetName)], ([(_x select 0)] call public_fnc_itemGetImage)];
+	_array pushBack [format["%1x %2", ([(_x select 1)] call AlysiaClient_fnc_numberText), ([(_x select 0)] call AlysiaClient_fnc_itemGetName)], ([(_x select 0)] call AlysiaClient_fnc_itemGetImage)];
 } forEach (_inv_virtual);
 
 {
-	_info = [_x] call public_fnc_fetchCfgDetails;
+	_info = [_x] call AlysiaClient_fnc_fetchCfgDetails;
 	_array pushBack [(_info select 1), (_info select 2)];
 } forEach (_inv_arma);
 

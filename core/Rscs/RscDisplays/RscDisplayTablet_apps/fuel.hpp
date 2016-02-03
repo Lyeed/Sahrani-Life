@@ -21,7 +21,7 @@ FUEL_IDCS[] =
 class FUEL_STATIONS_LIST: RscCombo
 {
 	idc = FUEL_STATIONS_LIST_IDC;
-	onLBSelChanged = "_this spawn public_fnc_APP_fuel_update;";
+	onLBSelChanged = "_this spawn AlysiaClient_fnc_APP_fuel_update;";
 	colorBackground[] = {0,0,0,1};
 
 	x = 0.324687 * safezoneW + safezoneX;
@@ -96,7 +96,7 @@ class FUEL_SELECT_DATA_HEADER: RscStructuredText
 class FUEL_SELECT_DATA_INFO: RscCombo
 {
 	idc = FUEL_SELECT_DATA_INFO_IDC;
-	onLBSelChanged = "_this call public_fnc_APP_fuel_update_info;";
+	onLBSelChanged = "_this call AlysiaClient_fnc_APP_fuel_update_info;";
 	colorBackground[] = {0,0,0,1};
 
 	x = 0.525781 * safezoneW + safezoneX;

@@ -39,7 +39,7 @@ lbClear _list_duty;
 {
 	if ((side _x) isEqualTo playerSide) then
 	{
-		_list_duty lbAdd format["%1 - %2", ([playerSide, (_x getVariable["rank", 0])] call public_fnc_rankToStr), (_x getVariable["realname", (name _x)])];
+		_list_duty lbAdd format["%1 - %2", ([playerSide, (_x getVariable["rank", 0])] call AlysiaClient_fnc_rankToStr), (_x getVariable["realname", (name _x)])];
 	};
 } forEach (allPlayers);
 _list_duty lbSetCurSel -1;

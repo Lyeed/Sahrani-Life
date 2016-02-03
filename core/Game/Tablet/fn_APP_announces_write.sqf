@@ -13,7 +13,7 @@ if (isNull _display) exitWith {};
 
 if (g_atm >= 40) then
 {
-	[9526, true] call public_fnc_tabletShow;
-	[9527, true] call public_fnc_tabletShow;
-	[9528, true] call public_fnc_tabletShow;
+	[9526, true] call AlysiaClient_fnc_tabletShow;
+	[9527, true] call AlysiaClient_fnc_tabletShow;
+	[9528, true] call AlysiaClient_fnc_tabletShow;
 };

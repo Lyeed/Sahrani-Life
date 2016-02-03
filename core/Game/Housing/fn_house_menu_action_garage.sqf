@@ -9,9 +9,9 @@
 if (isNull g_interaction_target) exitWith {};
 
 if (g_action_inUse) exitWith {
-	["Vous avez l'air occupé<br/>Revenez plus tard"] call public_fnc_error;
+	["Vous avez l'air occupé<br/>Revenez plus tard"] call AlysiaClient_fnc_error;
 };
 
 g_action_inUse = true;
 g_garage_info = ["Chez vous", getArray(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >> "garage_type"), []];
-[player, (g_garage_info select 1)] remoteExec ["TON_fnc_garageVehicles", 2, false];
+[player, (g_garage_info select 1)] remoteExec ["AlysiaServer_fnc_garageVehicles", 2, false];

@@ -18,8 +18,8 @@ g_trigger_frontiere setTriggerStatements
 			[
 				[
 					[""Frontière"", ""<t align='center' size='1'>%1</t><br/>""], ["""", """"],
-					[([] call public_fnc_strDate), ""<t align = 'center' size = '0.7'>%1</t><br/>""], ["""", """"],
-					[([] call public_fnc_strTime), ""<t align = 'center' size = '0.7'>%1</t>""], ["""", """"], ["""", """"], ["""", """"]
+					[([] call AlysiaClient_fnc_strDate), ""<t align = 'center' size = '0.7'>%1</t><br/>""], ["""", """"],
+					[([] call AlysiaClient_fnc_strTime), ""<t align = 'center' size = '0.7'>%1</t>""], ["""", """"], ["""", """"], ["""", """"]
 				]
 			] spawn BIS_fnc_typeText;
 		};

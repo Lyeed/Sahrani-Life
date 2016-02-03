@@ -43,7 +43,7 @@ _license = getText(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> _type >
 	+	"<t align='left'>Licence</t><t align='right'>%3</t><br/>"
 	+	"</t>",
 	if (_price_condition) then {"#31B404"} else {"#DF0101"},
-	[_price] call public_fnc_numberText,
+	[_price] call AlysiaClient_fnc_numberText,
 	if (_license isEqualTo "") then {"Aucune"} else {getText(missionConfigFile >> "ALYSIA_LICENSES" >> _license >> "name")}
 ];
 

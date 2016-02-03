@@ -10,14 +10,14 @@ _inv = [_this, 0, [], [[]]] call BIS_fnc_param;
 _keys = [_this, 1, [], [[]]] call BIS_fnc_param;
 _money = [_this, 2, 0, [0]] call BIS_fnc_param;
 
-[true, _money] call public_fnc_handleCash;
+[true, _money] call AlysiaClient_fnc_handleCash;
 
 {
 	g_vehicles pushBack _x;
 } forEach (_keys);
 
 {
-	[true, (_x select 0), (_x select 1)] call public_fnc_handleInv;
+	[true, (_x select 0), (_x select 1)] call AlysiaClient_fnc_handleInv;
 } forEach (_inv);
 
-["L'échange a été refusé"] call public_fnc_info;
+["L'échange a été refusé"] call AlysiaClient_fnc_info;

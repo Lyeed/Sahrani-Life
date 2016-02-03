@@ -29,18 +29,18 @@ switch (_type) do
 			_amount = 1;
 		};
 
-		if ([false, _item, _amount] call public_fnc_handleInv) then
+		if ([false, _item, _amount] call AlysiaClient_fnc_handleInv) then
 		{
-			_index = [_item, g_shop_tmp_sell] call public_fnc_index;
+			_index = [_item, g_shop_tmp_sell] call AlysiaClient_fnc_index;
 			if (_index isEqualTo -1) then {
 				g_shop_tmp_sell pushBack [_item, _amount];
 			} else {
 				g_shop_tmp_sell set [_index, [_item, (_amount + ((g_shop_tmp_sell select _index) select 1))]];
 			};
-			g_shop_weight_actual = g_shop_weight_actual - (([_item] call public_fnc_itemGetWeight) * _amount);
+			g_shop_weight_actual = g_shop_weight_actual - (([_item] call AlysiaClient_fnc_itemGetWeight) * _amount);
 		};
 
-		[] call public_fnc_shop_virtual_update;
+		[] call AlysiaClient_fnc_shop_virtual_update;
 		g_shop_active = false;
 	};
 
@@ -55,21 +55,21 @@ switch (_type) do
 		if (g_shop_active) exitWith {};
 		g_shop_active = true;
 
-		_amount = [_item, 1, g_shop_weight_actual, g_maxWeight] call public_fnc_calWeightDiff;
+		_amount = [_item, 1, g_shop_weight_actual, g_maxWeight] call AlysiaClient_fnc_calWeightDiff;
 		if (_amount > 0) then
 		{
-			_index = [_item, g_shop_tmp_buy] call public_fnc_index;
+			_index = [_item, g_shop_tmp_buy] call AlysiaClient_fnc_index;
 			if (_index isEqualTo -1) then {
 				g_shop_tmp_buy pushBack [_item, _amount];
 			} else {
 				g_shop_tmp_buy set [_index, [_item, (_amount + ((g_shop_tmp_buy select _index) select 1))]];
 			};
-			g_shop_weight_actual = g_shop_weight_actual + ([_item] call public_fnc_itemGetWeight);
+			g_shop_weight_actual = g_shop_weight_actual + ([_item] call AlysiaClient_fnc_itemGetWeight);
 		} else {
-			["Vous n'avez pas assez de place"] call public_fnc_error;
+			["Vous n'avez pas assez de place"] call AlysiaClient_fnc_error;
 		};
 
-		[] call public_fnc_shop_virtual_update;
+		[] call AlysiaClient_fnc_shop_virtual_update;
 		g_shop_active = false;
 	};
 };

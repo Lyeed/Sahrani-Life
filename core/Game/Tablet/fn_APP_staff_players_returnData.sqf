@@ -15,7 +15,7 @@ _atm = [_this, 4, 0, [0]] call BIS_fnc_param;
 _config = ("getText(_x >> 'uid') isEqualTo (getPlayerUID player)" configClasses (missionConfigFile >> "ALYSIA_STAFF" >> "members")) select 0;
 if (isNil "_config") exitWith {closeDialog 0};
 
-_handle = ["STAFF_DATA"] spawn public_fnc_tabletApp;
+_handle = ["STAFF_DATA"] spawn AlysiaClient_fnc_tabletApp;
 waitUntil {scriptDone _handle};
 
 disableSerialization;
@@ -33,23 +33,23 @@ lbClear _list;
 
 if (_cash > 0) then
 {
-	_index = _list lbAdd format["%1kn (porte-feuille)", [_cash] call public_fnc_numberText];
+	_index = _list lbAdd format["%1kn (porte-feuille)", [_cash] call AlysiaClient_fnc_numberText];
 	_list lbSetPicture [_index, "alysia_items_virtual\data\money.paa"];
 };
 
 if (_atm > 0) then
 {
-	_index = _list lbAdd format["%1kn (compte)", [_atm] call public_fnc_numberText];
+	_index = _list lbAdd format["%1kn (compte)", [_atm] call AlysiaClient_fnc_numberText];
 	_list lbSetPicture [_index, "alysia_items_virtual\data\money.paa"];
 };
 
 {
-	_index = _list lbAdd format["%1x %2", ([(_x select 1)] call public_fnc_numberText), ([(_x select 0)] call public_fnc_itemGetName)];
-	_list lbSetPicture [_index, ([(_x select 0)] call public_fnc_itemGetImage)];
+	_index = _list lbAdd format["%1x %2", ([(_x select 1)] call AlysiaClient_fnc_numberText), ([(_x select 0)] call AlysiaClient_fnc_itemGetName)];
+	_list lbSetPicture [_index, ([(_x select 0)] call AlysiaClient_fnc_itemGetImage)];
 } forEach _inv_virtual;
 
 {
-	_info = [_x] call public_fnc_fetchCfgDetails;
+	_info = [_x] call AlysiaClient_fnc_fetchCfgDetails;
 	_index = _list lbAdd (_info select 1);
 	_list lbSetPicture [_index, (_info select 2)];
 } forEach _inv_arma;

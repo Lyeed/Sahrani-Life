@@ -18,24 +18,24 @@ if (_type isEqualTo "") exitWith {};
 
 _name = ctrlText 90011;
 if (_name isEqualTo "") exitWith {
-	["Vous n'avez pas entré le nom de l'entreprise"] call public_fnc_error;
+	["Vous n'avez pas entré le nom de l'entreprise"] call AlysiaClient_fnc_error;
 };
-_bad = [_name, getText(missionConfigFile >> "ALYSIA_COMPANIES" >> "characters_allowed")] call public_fnc_TextAllowed;
+_bad = [_name, getText(missionConfigFile >> "ALYSIA_COMPANIES" >> "characters_allowed")] call AlysiaClient_fnc_TextAllowed;
 if (_bad != "") exitWith {
-	[format["Vous utilisez un caractère interdit dans le nom de l'entreprise (%1)", _bad]] call public_fnc_error;
+	[format["Vous utilisez un caractère interdit dans le nom de l'entreprise (%1)", _bad]] call AlysiaClient_fnc_error;
 };
 if (([_name] call CBA_fnc_strLen) > getNumber(missionConfigFile >> "ALYSIA_COMPANIES" >> "characters_max")) exitWith {
-	[format["Votre message ne doit pas dépasser %1 caractères", getNumber(missionConfigFile >> "ALYSIA_COMPANIES" >> "characters_max")]] call public_fnc_error;
+	[format["Votre message ne doit pas dépasser %1 caractères", getNumber(missionConfigFile >> "ALYSIA_COMPANIES" >> "characters_max")]] call AlysiaClient_fnc_error;
 };
 
 closeDialog 0;
 
 if (isNull g_interaction_target) exitWith {
-	["Impossible de récupérer les informations du propriétaire de l'entreprise"] call public_fnc_error;
+	["Impossible de récupérer les informations du propriétaire de l'entreprise"] call AlysiaClient_fnc_error;
 };
 
 if (!(isNull g_objPut)) exitWith {
-	["Vous deployez déjà un élèment"] call public_fnc_error;
+	["Vous deployez déjà un élèment"] call AlysiaClient_fnc_error;
 };
 
 _object = getText(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> _type >> "building") createVehicle [0, 0, 0];
@@ -63,11 +63,11 @@ if (isNull _object) exitWith {};
 
 if (isNull g_interaction_target) exitWith
 {
-	["Impossible de récupérer les informations du propriétaire de l'entreprise"] call public_fnc_error;
+	["Impossible de récupérer les informations du propriétaire de l'entreprise"] call AlysiaClient_fnc_error;
 	deleteVehicle _object;
 };
 
 _object setPos [((getPos _object) select 0), ((getPos _object) select 1), 0];
 playSound "buy";
-[false, _price, "Création d'entreprise"] call public_fnc_handleATM;
-[_type, _object, g_interaction_target, _name] remoteExec ["TON_fnc_company_insert", 2];
+[false, _price, "Création d'entreprise"] call AlysiaClient_fnc_handleATM;
+[_type, _object, g_interaction_target, _name] remoteExec ["AlysiaServer_fnc_company_insert", 2];

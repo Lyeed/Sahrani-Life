@@ -26,7 +26,7 @@ if (isNull _display) exitWith {};
 
 _data = call compile format["%1", _data];
 _className = _data select 0;
-_vehicleInfo = [_className] call public_fnc_fetchVehInfo;
+_vehicleInfo = [_className] call AlysiaClient_fnc_fetchVehInfo;
 
 _price = _list_vehicles lbValue _sel_vehicles;
 if ((g_cash >= _price) && (_price > 0)) then {
@@ -49,10 +49,10 @@ if (count(_licenses) > 0) then
 	_license_condition = true;
 
 	{
-		if ([_x] call public_fnc_hasLicense) then {
-			_licenses_text = _licenses_text + format["<t color='#31B404'>%1</t><br/>", [_x] call public_fnc_licenseGetName];
+		if ([_x] call AlysiaClient_fnc_hasLicense) then {
+			_licenses_text = _licenses_text + format["<t color='#31B404'>%1</t><br/>", [_x] call AlysiaClient_fnc_licenseGetName];
 		} else {
-			_licenses_text = _licenses_text + format["<t color='#DF0101'>%1</t><br/>", [_x] call public_fnc_licenseGetName];
+			_licenses_text = _licenses_text + format["<t color='#DF0101'>%1</t><br/>", [_x] call AlysiaClient_fnc_licenseGetName];
 			_license_condition = false;
 		};
 	} forEach _licenses;
@@ -85,19 +85,19 @@ if (count(_licenses) > 0) then
 	+	"<t align='left'>Capacité du réservoir</t><t align='right'>%8L</t><br/>"
 	+   "<t align='left'>Carburant</t><t align='right'>%9</t>"
 	+	"</t>",
-	[[_className] call public_fnc_getVehGaragePrice] call public_fnc_numberText,
-	[[_className] call public_fnc_getVehAssurancePrice] call public_fnc_numberText,
-	[[_className] call public_fnc_getVehSellPrice] call public_fnc_numberText,
+	[[_className] call AlysiaClient_fnc_getVehGaragePrice] call AlysiaClient_fnc_numberText,
+	[[_className] call AlysiaClient_fnc_getVehAssurancePrice] call AlysiaClient_fnc_numberText,
+	[[_className] call AlysiaClient_fnc_getVehSellPrice] call AlysiaClient_fnc_numberText,
 	(_vehicleInfo select 8),
 	(_vehicleInfo select 11),
 	(_vehicleInfo select 10),
-	[_className] call public_fnc_getVehVirtual,
+	[_className] call AlysiaClient_fnc_getVehVirtual,
 	round (_vehicleInfo select 12),
 	getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name"),
 	if (_price_condition) then {"#31B404"} else {"#DF0101"},
-	[_price] call public_fnc_numberText,
+	[_price] call AlysiaClient_fnc_numberText,
 	_licenses_text,
-	[playerSide, _rank] call public_fnc_sideToStr,
+	[playerSide, _rank] call AlysiaClient_fnc_sideToStr,
 	if (_rank_condition) then {"#31B404"} else {"#DF0101"}
 ];
 

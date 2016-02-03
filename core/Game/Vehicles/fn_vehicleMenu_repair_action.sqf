@@ -21,7 +21,7 @@ _part = lbData[2907, _sel];
 
 _tool = getText(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "tool");
 if ((_tool != "") && !(_tool in (magazines player))) exitWith {
-	[format["Vous n'avez pas l'outil requis (<t color='#8cff9b'>%1</t>) pour effectuer cette réparation", getText(configFile >> "CfgMagazines" >> _tool >> "displayName")]] call public_fnc_error;
+	[format["Vous n'avez pas l'outil requis (<t color='#8cff9b'>%1</t>) pour effectuer cette réparation", getText(configFile >> "CfgMagazines" >> _tool >> "displayName")]] call AlysiaClient_fnc_error;
 };
 
 _item = getText(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "item");
@@ -46,18 +46,18 @@ if (_dmg <= _heal) exitWith
 			lbText[2907, _sel],
 			getText(configFile >> "CfgMagazines" >> _item >> "displayName"),
 			getText(configFile >> "CfgMagazines" >> _tool >> "displayName"),
-			([40] call public_fnc_vehicleMenu_repair_getColor) select 1,
+			([40] call AlysiaClient_fnc_vehicleMenu_repair_getColor) select 1,
 			floor((1 - _dmg) * 100),
-			([floor((1 - _dmg) * 100)] call public_fnc_vehicleMenu_repair_getColor) select 1,
+			([floor((1 - _dmg) * 100)] call AlysiaClient_fnc_vehicleMenu_repair_getColor) select 1,
 			"%"
 		]
-	] call public_fnc_error;
+	] call AlysiaClient_fnc_error;
 };
 
-if (!([format["Réparation : %1", (lbText[2907, _sel])], _time, g_interaction_target, "repair", "InBaseMoves_repairVehicleKnl"] call public_fnc_showProgress)) exitWith {};
+if (!([format["Réparation : %1", (lbText[2907, _sel])], _time, g_interaction_target, "repair", "InBaseMoves_repairVehicleKnl"] call AlysiaClient_fnc_showProgress)) exitWith {};
 
 if ((_tool != "") && !(_tool in (magazines player))) exitWith {
-	[format["Vous n'avez pas l'outil requis (<t color='#8cff9b'>%1</t>) pour effectuer cette réparation", getText(configFile >> "CfgMagazines" >> _tool >> "displayName")]] call public_fnc_error;
+	[format["Vous n'avez pas l'outil requis (<t color='#8cff9b'>%1</t>) pour effectuer cette réparation", getText(configFile >> "CfgMagazines" >> _tool >> "displayName")]] call AlysiaClient_fnc_error;
 };
 
 if ((_item != "") && _useItem) then
@@ -66,10 +66,10 @@ if ((_item != "") && _useItem) then
 		player removeMagazine _item;
 	} else {
 		_error = true;
-		["Vous devez garder les pièces de rechange sur vous pendant la réparation"] call public_fnc_error;
+		["Vous devez garder les pièces de rechange sur vous pendant la réparation"] call AlysiaClient_fnc_error;
 	};
 };
 
 if (!_error) then {
-	[g_interaction_target, _part, _heal] call public_fnc_setHitPointDamage;
+	[g_interaction_target, _part, _heal] call AlysiaClient_fnc_setHitPointDamage;
 };

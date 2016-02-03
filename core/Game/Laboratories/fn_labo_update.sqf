@@ -16,7 +16,7 @@ deleteMarkerLocal "laboratory";
 [format
 	[
 		"Votre <t color='#FF8000'>%1</t> a été détruit par la faction <t color='#01DF3A'>%2</t>.",
-		[_item] call public_fnc_itemGetName,
-		[_sideFrom] call public_fnc_sideToStr
+		[_item] call AlysiaClient_fnc_itemGetName,
+		[_sideFrom] call AlysiaClient_fnc_sideToStr
 	]
-] call public_fnc_info;
+] call AlysiaClient_fnc_info;

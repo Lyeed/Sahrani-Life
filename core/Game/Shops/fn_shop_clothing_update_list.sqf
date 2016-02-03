@@ -105,7 +105,7 @@ lbClear _list;
 {
 	if (isClass(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x)) then
 	{
-		_details = [_x] call public_fnc_fetchCfgDetails;
+		_details = [_x] call AlysiaClient_fnc_fetchCfgDetails;
 		if (_details isEqualTo []) then
 		{
 			diag_log format["ERROR: %1 does not exist in Arma", _x];

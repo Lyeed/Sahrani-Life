@@ -17,11 +17,11 @@ _text = "";
 
 if (_money > 0) then
 {
-	_text = _text + format["- %1kn<br/>", ([_money] call public_fnc_numberText)];
+	_text = _text + format["- %1kn<br/>", ([_money] call AlysiaClient_fnc_numberText)];
 };
 
 {
-	_text = _text + format["- %1x %2<br/>", ([(_x select 1)] call public_fnc_numberText), ([(_x select 0)] call public_fnc_itemGetName)];
+	_text = _text + format["- %1x %2<br/>", ([(_x select 1)] call AlysiaClient_fnc_numberText), ([(_x select 0)] call AlysiaClient_fnc_itemGetName)];
 } forEach (_inv);
 
 {
@@ -41,7 +41,7 @@ _action =
 ] call BIS_fnc_guiMessage;
 if (_action) then
 {
-	[true, _money] call public_fnc_handleCash;
+	[true, _money] call AlysiaClient_fnc_handleCash;
 
 	{
 		if ((alive _x) && !(_x in g_vehicles)) then {
@@ -50,25 +50,25 @@ if (_action) then
 	} forEach (_keys);
 
 	{
-		_amount = [(_x select 0), (_x select 1), g_carryWeight, g_maxWeight] call public_fnc_calWeightDiff;
+		_amount = [(_x select 0), (_x select 1), g_carryWeight, g_maxWeight] call AlysiaClient_fnc_calWeightDiff;
 		if (_amount isEqualTo (_x select 1)) then
 		{
-			[true, (_x select 0), _amount] call public_fnc_handleInv;
+			[true, (_x select 0), _amount] call AlysiaClient_fnc_handleInv;
 			_inv deleteAt _forEachIndex;
 		} else {
 			if (_amount > 0) then
 			{
-				[true, (_x select 0), _amount] call public_fnc_handleInv;
+				[true, (_x select 0), _amount] call AlysiaClient_fnc_handleInv;
 				(_inv select _forEachIndex) set [1, (_x select 1) - _amount];
 			};
 		}
 	} forEach (_inv);
 	if (_inv isEqualTo []) then {
-		["L'échange a été accepté"] remoteExecCall ["public_fnc_info", _from];
+		["L'échange a été accepté"] remoteExecCall ["AlysiaClient_fnc_info", _from];
 	} else {
-		["Vous n'avez pas assez de place pour tout récupérer"] call public_fnc_info;
-		[_inv] remoteExecCall ["public_fnc_interactionMenu_action_trade_space", _from];
+		["Vous n'avez pas assez de place pour tout récupérer"] call AlysiaClient_fnc_info;
+		[_inv] remoteExecCall ["AlysiaClient_fnc_interactionMenu_action_trade_space", _from];
 	};
 } else {
-	[_inv, _keys, _money] remoteExecCall ["public_fnc_interactionMenu_action_trade_refuse", _from];
+	[_inv, _keys, _money] remoteExecCall ["AlysiaClient_fnc_interactionMenu_action_trade_refuse", _from];
 };

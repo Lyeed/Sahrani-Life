@@ -8,7 +8,7 @@
 
 private ["_prison","_prisonName","_infos","_cellule","_time","_timeMin","_timeMax","_bail","_bailMin","_bailMax","_bailEnable","_reason","_error"];
 _error = false;
-_prison = (([player] call public_fnc_prisonNearest) select 0);
+_prison = (([player] call AlysiaClient_fnc_prisonNearest) select 0);
 _prisonName = vehicleVarName _prison;
 _timeMin = getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "time" >> "min");
 _timeMax = getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "time" >> "max");
@@ -21,15 +21,15 @@ _bail = parseNumber (ctrlText 20011);
 _reason = ctrlText 20012;
 
 if (isNull g_interaction_target) exitWith {};
-if (_prison isEqualTo []) exitWith {["Vous n'êtes pas dans une prison"] call public_fnc_error};
-if (g_interaction_target getVariable ["arrested", false]) exitWith {["Cette personne est déjà en prison."] call public_fnc_error};
+if (_prison isEqualTo []) exitWith {["Vous n'êtes pas dans une prison"] call AlysiaClient_fnc_error};
+if (g_interaction_target getVariable ["arrested", false]) exitWith {["Cette personne est déjà en prison."] call AlysiaClient_fnc_error};
 
 disableSerialization;
 _display = findDisplay 20000;
 if (isNull _display) exitWith {};
 
 {
-	if (!([ctrlText _x] call public_fnc_isNumber)) then {
+	if (!([ctrlText _x] call AlysiaClient_fnc_isNumber)) then {
 		(_display displayCtrl _x) ctrlSetBackgroundColor [153, 0, 0, 0.5];
 		_error = true;
 	};
@@ -46,8 +46,8 @@ if (_bailEnable isEqualTo 1) then {
 	};
 };
 
-if (_error) exitWith {[(format ["Temps minimum: %1<br/>Temps maximum: %2<br/>Caution: %3<br/>Caution minimum: %4<br/>Caution maximum: %5", _timeMin, _timeMax, (if (_bailEnable isEqualTo 1) then {"Autorisée"} else {"Prohibée"}), _bailMin, _bailMax])] call public_fnc_error};
-if (g_interaction_target getVariable ["arrested", false]) exitWith {["Cette personne est déjà en prison"] call public_fnc_error};
+if (_error) exitWith {[(format ["Temps minimum: %1<br/>Temps maximum: %2<br/>Caution: %3<br/>Caution minimum: %4<br/>Caution maximum: %5", _timeMin, _timeMax, (if (_bailEnable isEqualTo 1) then {"Autorisée"} else {"Prohibée"}), _bailMin, _bailMax])] call AlysiaClient_fnc_error};
+if (g_interaction_target getVariable ["arrested", false]) exitWith {["Cette personne est déjà en prison"] call AlysiaClient_fnc_error};
 
 _infos = [_cellule, _time, _bail, _reason];
-[player, _infos] remoteExecCall ["public_fnc_prisonPutInJail", g_interaction_target];
+[player, _infos] remoteExecCall ["AlysiaClient_fnc_prisonPutInJail", g_interaction_target];

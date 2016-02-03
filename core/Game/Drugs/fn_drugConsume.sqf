@@ -10,10 +10,10 @@ _type = [_this, 0, "", [""]] call BIS_fnc_param;
 
 if (_type == "") exitWith {};
 if ((time - g_action_delay) < 5) exitWith {
-	["Veuillez ralentir dans vos actions"] call public_fnc_error; 
+	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error; 
 };
 
-if ([false, _type, 1] call public_fnc_handleInv) then
+if ([false, _type, 1] call AlysiaClient_fnc_handleInv) then
 {
 	private["_oldConsume", "_sound", "_duration"];
 
@@ -38,7 +38,7 @@ if ([false, _type, 1] call public_fnc_handleInv) then
 	};
 
 	missionNamespace setVariable[format["drug_stats_%1", _type], ((missionNamespace getVariable[format["drug_stats_%1", _type], 0]) + 1)];
-	[format["<t align='center'>Vous avez consommé<br/>1x %1</t>", ([_type] call public_fnc_itemGetName)] call public_fnc_varToStr] call public_fnc_info;
+	[format["<t align='center'>Vous avez consommé<br/>1x %1</t>", ([_type] call AlysiaClient_fnc_itemGetName)] call AlysiaClient_fnc_varToStr] call AlysiaClient_fnc_info;
 	if (_sound != "") then {
 		[player, _sound, 20] call CBA_fnc_globalSay3d;
 	};

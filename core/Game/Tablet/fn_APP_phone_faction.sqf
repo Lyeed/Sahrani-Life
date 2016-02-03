@@ -7,5 +7,5 @@
 */
 
 if (playerSide isEqualTo civilian) exitWith {
-	["PHONE_CATEGORY"] spawn public_fnc_tabletApp;
+	["PHONE_CATEGORY"] spawn AlysiaClient_fnc_tabletApp;
 };

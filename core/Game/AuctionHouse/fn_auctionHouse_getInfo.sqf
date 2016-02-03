@@ -12,6 +12,6 @@ _item = [_this, 1, "", [""]] call BIS_fnc_param;
 switch (_type) do
 {
 	case 0: {[getText(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "name"), getText(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "image")]};
-	case 1: {[([_item] call public_fnc_fetchCfgDetails) select 1, ([_item] call public_fnc_fetchCfgDetails) select 2]};
+	case 1: {[([_item] call AlysiaClient_fnc_fetchCfgDetails) select 1, ([_item] call AlysiaClient_fnc_fetchCfgDetails) select 2]};
 	case 2: {[getText(configFile >> "CfgVehicles" >> _item >> "displayName"), getText(configFile >> "CfgVehicles" >> _item >> "picture")]};
 };

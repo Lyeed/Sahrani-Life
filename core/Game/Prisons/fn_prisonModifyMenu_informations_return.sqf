@@ -15,13 +15,13 @@ if (player getVariable ["arrested", false]) then
 	[
 		(_from getVariable ["realname", ""]),
 		g_sexe,
-		player call public_fnc_age,
+		player call AlysiaClient_fnc_age,
 		g_nationality,
 		g_arrest_Cellule,
 		g_arrest_Time,
 		g_arrest_Caution,
 		g_arrest_Reason
-	] remoteExecCall ["public_fnc_prisonModifyMenu_open", _from];
+	] remoteExecCall ["AlysiaClient_fnc_prisonModifyMenu_open", _from];
 } else {
-	["Cette personne n'est plus en prison"] remoteExecCall ["public_fnc_info", _from];
+	["Cette personne n'est plus en prison"] remoteExecCall ["AlysiaClient_fnc_info", _from];
 };

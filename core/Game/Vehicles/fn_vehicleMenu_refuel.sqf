@@ -13,8 +13,8 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
-if (!(["Plein", 7, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call public_fnc_showProgress)) exitWith {};
-if (!([false, "fuelF", 1] call public_fnc_handleInv)) exitWith {};
+if (!(["Plein", 7, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {};
+if (!([false, "fuelF", 1] call AlysiaClient_fnc_handleInv)) exitWith {};
 
 _fuel = switch (true) do
 {
@@ -32,4 +32,4 @@ if (local g_interaction_target) then {
 	[g_interaction_target, (Fuel g_interaction_target) + _fuel] remoteExecCall ["setFuel", g_interaction_target, false];
 };
 
-[true, "fuelE", 1] call public_fnc_handleInv;
+[true, "fuelE", 1] call AlysiaClient_fnc_handleInv;

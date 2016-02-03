@@ -14,7 +14,7 @@ _ret = 0;
 if (isClass(missionConfigFile >> "ALYSIA_ITEMS" >> _item)) then
 {
 	if (isClass(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market")) then {
-		_ret = [_item] call public_fnc_market_getPrice;
+		_ret = [_item] call AlysiaClient_fnc_market_getPrice;
 	} else {
 		_ret = getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "price_sell");
 		if (_ret isEqualTo 0) then {

@@ -11,25 +11,25 @@ g_interaction_process_type = [_this, 3, "", [""]] call BIS_fnc_param;
 
 if (!isClass(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type)) exitWith
 {
-	[format["Impossible de trouver les informations concernant le traitement <color='#FF8000'>%1</t>", g_interaction_process_type]] call public_fnc_error;
+	[format["Impossible de trouver les informations concernant le traitement <color='#FF8000'>%1</t>", g_interaction_process_type]] call AlysiaClient_fnc_error;
 	diag_log format["[ALYSIA:ERROR] Process %1 not defined in ALYSIA_PROCESS (class not found)", g_interaction_process_type];
 };
 
 if (g_action_inUse) exitWith {
-	["Vous avez l'air occupé<br>Revenez plus tard"] call public_fnc_error;
+	["Vous avez l'air occupé<br>Revenez plus tard"] call AlysiaClient_fnc_error;
 };
 if ((player getVariable["restrained", false]) || (player getVariable["surrender", false])) exitWith {
-	["Vous ne pouvez pas traiter lorsque vous êtes menotté ou avez les mains sur la tête"] call public_fnc_error;
+	["Vous ne pouvez pas traiter lorsque vous êtes menotté ou avez les mains sur la tête"] call AlysiaClient_fnc_error;
 };
 if ((vehicle player) != player) exitWith {
-	["Vous devez être à pied pour traiter"] call public_fnc_error;
+	["Vous devez être à pied pour traiter"] call AlysiaClient_fnc_error;
 };
 
 if ((isClass(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "target")) && (isNull g_interaction_target)) exitWith {
-	["Le traitement à besoin d'émaner d'une entité"] call public_fnc_error;
+	["Le traitement à besoin d'émaner d'une entité"] call AlysiaClient_fnc_error;
 };
 if ((isClass(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "target")) && ((player distance g_interaction_target) > 5)) exitWith {
-	["Le traitement à besoin d'émaner d'une entité"] call public_fnc_error;
+	["Le traitement à besoin d'émaner d'une entité"] call AlysiaClient_fnc_error;
 };
 
 if (dialog) then {
@@ -53,7 +53,7 @@ if (!(isClass(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_typ
 	(_display displayCtrl 53015) ctrlSetStructuredText parseText format
 	[
 		"<t align='center' font='PuristaBold'><t size='1.5'>Votre faction<br/><t color='#04B404'>%1</t> n'est pas autorisé à traiter ici",
-		([playerSide] call public_fnc_sideToStr)
+		([playerSide] call AlysiaClient_fnc_sideToStr)
 	];
 };
 
@@ -64,9 +64,9 @@ if (count(_processLicenses) > 0) then
 	_license_condition = true;
 
 	{
-		if (!([_x] call public_fnc_hasLicense)) then
+		if (!([_x] call AlysiaClient_fnc_hasLicense)) then
 		{
-			_licenses_text = _licenses_text + format["%1<br/>", [_x] call public_fnc_licenseGetName];
+			_licenses_text = _licenses_text + format["%1<br/>", [_x] call AlysiaClient_fnc_licenseGetName];
 			_license_condition = false;
 		};
 	} forEach _processLicenses;
@@ -97,7 +97,7 @@ if ((player getVariable ["rank", 0]) < _rank) exitWith
 	(_display displayCtrl 53015) ctrlSetStructuredText parseText format
 	[
 		"<t align='center' font='PuristaBold'><t size='1.5'>Vous n'avez pas le rank suffisant dans votre faction pour traider<br/><br/>Vous avez besoin de<br/></t><t size='2' color='#FF8000'>%1</t></t>",
-		([playerSide, _rank] call public_fnc_rankToStr)
+		([playerSide, _rank] call AlysiaClient_fnc_rankToStr)
 	];
 };
 
@@ -105,7 +105,7 @@ ctrlShow[53015, false];
 
 {
 	private["_varMaxAmount", "_varAmount"];
-	_varAmount = [(_x select 0)] call public_fnc_itemCount;
+	_varAmount = [(_x select 0)] call AlysiaClient_fnc_itemCount;
 	_varMaxAmount = floor(_varAmount / (_x select 1));
 
 	if (isNil "_maxAmount") then {
@@ -127,7 +127,7 @@ _display spawn
 	disableSerialization;
 	while {!(isNull _this)} do
 	{
-		[] call public_fnc_process_update;
+		[] call AlysiaClient_fnc_process_update;
 		_data = ctrlText 53006;
 		waitUntil {((_data != (ctrlText 53006)) || (isNull _this))};
 	};

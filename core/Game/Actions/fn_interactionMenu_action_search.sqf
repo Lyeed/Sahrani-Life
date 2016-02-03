@@ -9,7 +9,7 @@
 if (isNull g_interaction_target) exitWith {};
 
 if (!(g_interaction_target getVariable ["restrained", false]) && !(g_interaction_target getVariable ["surrender", false])) exitWith {
-	["La cible ne peut pas être fouillé"] call public_fnc_error;
+	["La cible ne peut pas être fouillé"] call AlysiaClient_fnc_error;
 };
 
 if (dialog) then
@@ -18,10 +18,10 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
-if (!(["Fouille", 6, g_interaction_target] call public_fnc_showProgress)) exitWith {};
+if (!(["Fouille", 6, g_interaction_target] call AlysiaClient_fnc_showProgress)) exitWith {};
 
 if (!(g_interaction_target getVariable ["restrained", false]) && !(g_interaction_target getVariable ["surrender", false])) exitWith {
-	["La cible ne peut pas être fouillé"] call public_fnc_error;
+	["La cible ne peut pas être fouillé"] call AlysiaClient_fnc_error;
 };
 
-[player] remoteExecCall ["public_fnc_interactionMenu_action_search_get", g_interaction_target];
+[player] remoteExecCall ["AlysiaClient_fnc_interactionMenu_action_search_get", g_interaction_target];

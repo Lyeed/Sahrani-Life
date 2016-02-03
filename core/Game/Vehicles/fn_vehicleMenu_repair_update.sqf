@@ -52,10 +52,10 @@ if ((_tool isEqualTo "") || ((_tool != "") && (_tool in (magazines player)))) th
     "%",
 	if (_tool isEqualTo "") then {"Aucun"} else {getText(configFile >> "CfgMagazines" >> _tool >> "displayName")},
 	if (_item isEqualTo "") then {"Aucune"} else {getText(configFile >> "CfgMagazines" >> _item >> "displayName")},
-	([_health] call public_fnc_vehicleMenu_repair_getColor) select 1,
+	([_health] call AlysiaClient_fnc_vehicleMenu_repair_getColor) select 1,
 	if (_hasTool) then {"#8cff9b"} else {"#ff8c8c"},
 	if (_hasItem) then {"#8cff9b"} else {"#ff8c8c"},
-	([_repair] call public_fnc_vehicleMenu_repair_getColor) select 1,
+	([_repair] call AlysiaClient_fnc_vehicleMenu_repair_getColor) select 1,
 	_repair
 ];
 

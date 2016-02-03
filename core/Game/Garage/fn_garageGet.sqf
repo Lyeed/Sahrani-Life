@@ -11,10 +11,10 @@ _garage = [_this, 3, "", [""]] call BIS_fnc_param;
 
 if ((_garage isEqualTo "") || (isNull _PNJ)) exitWith {};
 if (!(isClass (missionConfigFile >> "ALYSIA_GARAGES" >> _garage))) exitWith {
-	[format["Impossible de trouver les informations concernant le garage [%1]", _garage]] call public_fnc_error;
+	[format["Impossible de trouver les informations concernant le garage [%1]", _garage]] call AlysiaClient_fnc_error;
 };
 if (g_action_inUse) exitWith {
-	["Vous avez l'air occupé<br/>Revenez plus tard"] call public_fnc_error;
+	["Vous avez l'air occupé<br/>Revenez plus tard"] call AlysiaClient_fnc_error;
 };
 
 g_action_inUse = true;
@@ -25,4 +25,4 @@ g_garage_info =
 	getArray(missionConfigFile >> "ALYSIA_GARAGES" >> _garage >> "spawns")
 ];
 
-[player, (g_garage_info select 1)] remoteExec ["TON_fnc_garageVehicles", 2];
+[player, (g_garage_info select 1)] remoteExec ["AlysiaServer_fnc_garageVehicles", 2];

@@ -34,10 +34,10 @@ switch {g_arrest_time >= 1} do
 				player getVariable ["realname", ""],
 				getText(missionConfigFile >> "ALYSIA_PRISONS" >> g_arrest_Prison >> "name")
 			], getText(missionConfigFile >> "ALYSIA_PRISONS" >> g_arrest_Prison >> "name")
-		] remoteExecCall ["public_fnc_phone_message_receive", [getArray(missionConfigFile >> "ALYSIA_PRISONS" >> g_arrest_Prison >> "side") select 0] call public_fnc_strToSide];
+		] remoteExecCall ["AlysiaClient_fnc_phone_message_receive", [getArray(missionConfigFile >> "ALYSIA_PRISONS" >> g_arrest_Prison >> "side") select 0] call AlysiaClient_fnc_strToSide];
 	};
 };
 
 if (g_arrest_Escape) then {
-	[] spawn public_fnc_prisonRelease;
+	[] spawn AlysiaClient_fnc_prisonRelease;
 };

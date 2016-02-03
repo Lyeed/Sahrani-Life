@@ -18,10 +18,10 @@ lbClear _list;
 	_data = switch (_x select 0) do
 	{
 		case "money": {[format["%1kn", (_x select 1)], "alysia_items_virtual\data\money.paa"]};
-		case "virtual": {[format["%1x %2", (_x select 1) select 1, ([(_x select 1) select 0] call public_fnc_itemGetName)], ([(_x select 1) select 0] call public_fnc_itemGetImage)]};
+		case "virtual": {[format["%1x %2", (_x select 1) select 1, ([(_x select 1) select 0] call AlysiaClient_fnc_itemGetName)], ([(_x select 1) select 0] call AlysiaClient_fnc_itemGetImage)]};
 		case "arma":
 		{
-			_info = [(_x select 1)] call public_fnc_fetchCfgDetails;
+			_info = [(_x select 1)] call AlysiaClient_fnc_fetchCfgDetails;
 			[(_info select 1), (_info select 2)]
 		};
 	};

@@ -53,7 +53,7 @@ class ALYSIA_STAFF
 			class heal
 			{
 				name = "Soins";
-				statement = "g_bleed = 0; [4000] call public_fnc_handleBlood;";
+				statement = "g_bleed = 0; [4000] call AlysiaClient_fnc_handleBlood;";
 				condition = "(true)";
 				allow[] = {"76561198007960495"};
 			};
@@ -125,7 +125,7 @@ class ALYSIA_STAFF
 			class data
 			{
 				name = "Informations";
-				statement = "[player] remoteExecCall ['public_fnc_APP_staff_players_getData', (lbData[9000, lbCurSel 9000])];";
+				statement = "[player] remoteExecCall ['AlysiaClient_fnc_APP_staff_players_getData', (lbData[9000, lbCurSel 9000])];";
 				condition = "(true)";
 				allow[] = {"76561198007960495"};
 			};

@@ -16,8 +16,8 @@ if ((_item isEqualTo "") || (_price isEqualTo 0) || (_type isEqualTo -1)) exitWi
 	format
 	[
 		"Vous avez vendu <t color='#FF8000'>%1</t> à l'hôtel des ventes.<br/>Prix: <t color='#8cff9b'>%2kn</t>",
-		([_type, _item] call public_fnc_auctionHouse_getInfo) select 0,
-		([_price] call public_fnc_numberText)
+		([_type, _item] call AlysiaClient_fnc_auctionHouse_getInfo) select 0,
+		([_price] call AlysiaClient_fnc_numberText)
 	], "buy"
-] call public_fnc_info;
-[true, _price] call public_fnc_handleATM;
+] call AlysiaClient_fnc_info;
+[true, _price] call AlysiaClient_fnc_handleATM;

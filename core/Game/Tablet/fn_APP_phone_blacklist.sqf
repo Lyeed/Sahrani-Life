@@ -30,9 +30,9 @@ if (count(g_phone_blacklist) > 0) then
 	} forEach g_phone_blacklist;
 	_list lbSetCurSel 0;
 
-	[[8533, 8534], true] call public_fnc_tabletShow;
+	[[8533, 8534], true] call AlysiaClient_fnc_tabletShow;
 };
 
 if ((count g_phone_blacklist) < _max) then {
-	[[8535, 8540], true] call public_fnc_tabletShow;
+	[[8535, 8540], true] call AlysiaClient_fnc_tabletShow;
 };

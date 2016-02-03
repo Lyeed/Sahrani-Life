@@ -116,7 +116,7 @@ class RscDisplayInteraction: RscDisplayDefault
 		class OPTION_REFRESH_BUTTON: RscButtonSilent
 		{
 			idc = 5009;
-			action = "[] call public_fnc_interactions_recall;";
+			action = "[] call AlysiaClient_fnc_interactions_recall;";
 			tooltip = "Rafraichir";
 			onMouseEnter = "((findDisplay 5000) displayCtrl 5007) ctrlSetBackgroundColor [1,1,1,1];			ctrlSetText[5008,""lyeed_IMG\data\interactions\option_refresh_select.paa""];			ctrlShow[5006, false];";
 			onMouseExit = "((findDisplay 5000) displayCtrl 5007) ctrlSetBackgroundColor [0,0,0,0.6];			ctrlSetText[5008,""lyeed_IMG\data\interactions\option_refresh.paa""];			ctrlShow[5006, true];";

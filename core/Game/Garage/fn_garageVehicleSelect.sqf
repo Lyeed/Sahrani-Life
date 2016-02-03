@@ -43,15 +43,15 @@ _fuel = _data select 3;
 _trunkList = _display displayCtrl 2804;
 lbClear _trunkList;
 {
-    _index = _trunkList lbAdd format["%1x %2", [(_x select 1)] call public_fnc_numberText, [(_x select 0)] call public_fnc_itemGetName];
-    _trunkList lbSetPicture [_index, ([(_x select 0)] call public_fnc_itemGetImage)];
+    _index = _trunkList lbAdd format["%1x %2", [(_x select 1)] call AlysiaClient_fnc_numberText, [(_x select 0)] call AlysiaClient_fnc_itemGetName];
+    _trunkList lbSetPicture [_index, ([(_x select 0)] call AlysiaClient_fnc_itemGetImage)];
 } forEach (_data select 4);
 if ((lbSize _trunkList) isEqualTo 0) then {
 	_trunkList lbAdd "Coffre vide";
 };
 _trunkList lbSetCurSel -1;
 
-_vehicleInfo = [_className] call public_fnc_fetchVehInfo;
+_vehicleInfo = [_className] call AlysiaClient_fnc_fetchVehInfo;
 
 (_display displayCtrl 2825) ctrlSetStructuredText parseText format
 [
@@ -67,13 +67,13 @@ _vehicleInfo = [_className] call public_fnc_fetchVehInfo;
     +	"<t align='left'>Réservoir</t><t align='right'>%10/%11L - %12</t><br/>",
     (_data select 1),
     if ((_data select 2) isEqualTo 1) then {"<t color='#8cff9b'>Oui</t>"} else {"<t color='#ff8c8c'>Non</t>"},
-    ([[_className] call public_fnc_getVehAssurancePrice] call public_fnc_numberText),
-    ([[_className] call public_fnc_getVehGaragePrice] call public_fnc_numberText),
-  	([[_className] call public_fnc_getVehSellPrice] call public_fnc_numberText),
+    ([[_className] call AlysiaClient_fnc_getVehAssurancePrice] call AlysiaClient_fnc_numberText),
+    ([[_className] call AlysiaClient_fnc_getVehGaragePrice] call AlysiaClient_fnc_numberText),
+  	([[_className] call AlysiaClient_fnc_getVehSellPrice] call AlysiaClient_fnc_numberText),
   	(_vehicleInfo select 8),
   	(_vehicleInfo select 11),
   	(_vehicleInfo select 10),
-  	([_className] call public_fnc_getVehVirtual),
+  	([_className] call AlysiaClient_fnc_getVehVirtual),
     (round (_fuel * ((_vehicleInfo select 12)) / 100)),
   	(round (_vehicleInfo select 12)),
     (if ((getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")) in ["Essence Sans Plomb 95","Essence Sans Plomb 98"]) then
@@ -108,7 +108,7 @@ if (_storePos isEqualTo [0, 0, 0]) then
     ctrlSetText[2818, "lyeed_IMG\data\garage\action_import_disable.paa"];
     ctrlShow[2819, false];
     
-    if (([getPos player] call public_fnc_posNearFourriere) isEqualTo "") then
+    if (([getPos player] call AlysiaClient_fnc_posNearFourriere) isEqualTo "") then
     {
         ctrlSetText[2810, "lyeed_IMG\data\garage\action_get.paa"];
         ctrlShow[2811, true];
@@ -124,7 +124,7 @@ if (_storePos isEqualTo [0, 0, 0]) then
         ctrlSetText[2810, "lyeed_IMG\data\garage\action_get_disable.paa"];
         ctrlShow[2811, false];
 
-        if (([_storePos] call public_fnc_posNearFourriere) isEqualTo "") then
+        if (([_storePos] call AlysiaClient_fnc_posNearFourriere) isEqualTo "") then
       	{
             ctrlSetText[2814, "lyeed_IMG\data\garage\action_localize.paa"];
             ctrlShow[2815, true];
@@ -150,7 +150,7 @@ if (_storePos isEqualTo [0, 0, 0]) then
   	};
 };
 
-if (([getPos player] call public_fnc_posNearFourriere) != "") then
+if (([getPos player] call AlysiaClient_fnc_posNearFourriere) != "") then
 {
     ctrlSetText[2814, "lyeed_IMG\data\garage\action_localize_disable.paa"];
     ctrlShow[2815, false];

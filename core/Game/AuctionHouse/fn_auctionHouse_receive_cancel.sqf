@@ -11,5 +11,5 @@ _item = [_this, 1, "", [""]] call BIS_fnc_param;
 
 if ((_item isEqualTo "") || (_type isEqualTo -1)) exitWith {};
 
-[_type, _item] call public_fnc_auctionHouse_addItem;
-[format["Vous avez récupéré <t color='#FF8000'>%1</t>", ([_type, _item] call public_fnc_auctionHouse_getInfo) select 0]] call public_fnc_info;
+[_type, _item] call AlysiaClient_fnc_auctionHouse_addItem;
+[format["Vous avez récupéré <t color='#FF8000'>%1</t>", ([_type, _item] call AlysiaClient_fnc_auctionHouse_getInfo) select 0]] call AlysiaClient_fnc_info;

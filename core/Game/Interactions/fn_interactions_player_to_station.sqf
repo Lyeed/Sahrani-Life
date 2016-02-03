@@ -10,8 +10,8 @@
 	[_this, 0, objNull, [objNull]] call BIS_fnc_param,
 	"player_to_station",
 	[
-		["refuel_veh", "Plein Véhicule", "[g_interaction_target] call public_fnc_fuelStation_use_refuel_veh;", "true"],
-		["refuel_jerry", "Plein Jerrican", "[g_interaction_target] spawn public_fnc_fuelMenu_use_refuel_jerry;", "('Fuel_E' in (magazines player))"]
+		["refuel_veh", "Plein Véhicule", "[g_interaction_target] call AlysiaClient_fnc_fuelStation_use_refuel_veh;", "true"],
+		["refuel_jerry", "Plein Jerrican", "[g_interaction_target] spawn AlysiaClient_fnc_fuelMenu_use_refuel_jerry;", "('Fuel_E' in (magazines player))"]
 	],
 	"Station Essence"
-] spawn public_fnc_interactions_create;
+] spawn AlysiaClient_fnc_interactions_create;

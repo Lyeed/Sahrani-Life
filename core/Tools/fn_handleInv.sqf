@@ -13,12 +13,12 @@ _num = [_this, 2, 0, [0]] call BIS_fnc_param;
 if ((_item isEqualTo "") || (_num isEqualTo 0)) exitWith {false};
 
 _return = false;
-_weight = ([_item] call public_fnc_itemGetWeight) * _num;
+_weight = ([_item] call AlysiaClient_fnc_itemGetWeight) * _num;
 _value = missionNamespace getVariable[format["inv_%1", _item], 0];
 
 if (_math) then
 {
-	_num = [_item, _num, g_carryWeight, g_maxWeight] call public_fnc_calWeightDiff;
+	_num = [_item, _num, g_carryWeight, g_maxWeight] call AlysiaClient_fnc_calWeightDiff;
 	if (_num > 0) then
 	{
 		if ((g_carryWeight + _weight) <= g_maxWeight) then
@@ -55,8 +55,8 @@ if (_return) then
 
 	_list = _display displayCtrl 900;
 
-	_index = _list lbAdd format["%1 %2 x %3", if (_math) then {"+"} else {"-"}, _num, ([_item] call public_fnc_itemGetName)];
-	_list lbSetPicture [_index, ([_item] call public_fnc_itemGetImage)];
+	_index = _list lbAdd format["%1 %2 x %3", if (_math) then {"+"} else {"-"}, _num, ([_item] call AlysiaClient_fnc_itemGetName)];
+	_list lbSetPicture [_index, ([_item] call AlysiaClient_fnc_itemGetImage)];
 	_list lbSetValue [_index, (time + 4)];
 	
 	if (_loop) then
