@@ -50,6 +50,7 @@ class CfgFunctions
 			class init_eventHandlers {};
 			class init_keys {};
 			class init_triggers {};
+			class init_hud {};
 			class preInit {
 				preInit = 1;
 			};
@@ -129,15 +130,11 @@ class CfgFunctions
 			class handleATM {};
 			class handleCash {};
 			class holdsterSwitch {};
-			class hudSetup {};
 			class index {};
 			class info {};
 			class isNumber {};
 			class loadGear {};
 			class numberText {};
-			class objPut {};
-			class packupObjPut {};
-			class pushObject {};
 			class saveGear {};
 			class seizeObjects {};
 			class showProgress {};
@@ -173,7 +170,6 @@ class CfgFunctions
 			class applyBandeau {};
 			class telecommande {};
 			class sifflet {};
-			class dropItems {};
 			class getBaillon {};
 			class getBaillonSelf {};
 			class getBandeau {};
@@ -185,7 +181,6 @@ class CfgFunctions
 			class radar {};
 			class removeItem {};
 			class silence {};
-			class spikeStripEffect {};
 			class useBaillon {};
 			class useBandeau {};
 			class useItem {};
@@ -246,6 +241,13 @@ class CfgFunctions
 			class dynamicMarkers_destroy {};
 			class dynamicMarkers_update {};
 			class dynamicMarkers_reveal {};
+		};
+
+		class dynamicObjects
+		{
+			file = "core\Game\dynamicObjects";
+			class dynamicObject_packup {};
+			class dynamicObject_deploy {};
 		};
 
 		class Garage

@@ -140,4 +140,12 @@ with missionNamespace do
 	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_LABORATORIES"));
 
 	g_laboratories = compileFinal str(g_laboratories);
+	/* =================[Dynamic Objects]=================== */
+	g_dynamic_objects = [];
+
+	{
+		g_dynamic_objects pushBack configName(_x);
+	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_DYN_OBJECTS"));
+
+	g_dynamic_objects = compileFinal str(g_dynamic_objects);
 };

@@ -33,7 +33,7 @@ g_dev = false;
 [["(DEV) +100 soif", {[100] call AlysiaClient_fnc_handleThirst;}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
 [["(DEV) Tp marché noir", {player setPos (getMarkerPos "black_market_1_marker");}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
 [["(DEV) Cacher HUD", {8 cutText ["", "PLAIN"];}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
-[["(DEV) Afficher HUD", {[] spawn AlysiaClient_fnc_hudSetup;}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
+[["(DEV) Afficher HUD", {[] spawn AlysiaClient_fnc_init_hud;}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
 [["===================", {}, "", 0, false, false, "", "g_dev"]] call CBA_fnc_addPlayerAction;
 
 /* ==================[CONFIG]===================*/

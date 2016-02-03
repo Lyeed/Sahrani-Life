@@ -185,7 +185,7 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\barriere.paa";
 		class use
 		{
-			action = "['barriere'] spawn AlysiaClient_fnc_objPut;";
+			action = "['barriere'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
 		};
 	};
 
@@ -200,7 +200,7 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\cone.paa";
 		class use
 		{
-			action = "['cone'] spawn AlysiaClient_fnc_objPut;";
+			action = "['cone'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
 		};
 	};
 
@@ -215,7 +215,7 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\herse.paa";
 		class use
 		{
-			action = "['spikeStrip'] spawn AlysiaClient_fnc_objPut;";
+			action = "['spikeStrip'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
 		};
 	};
 

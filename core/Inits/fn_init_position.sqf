@@ -45,7 +45,7 @@ cutText ["", "BLACK IN", 6, false];
 
 player setVariable ["tf_globalVolume", 1];
 player setVariable ["realname", profileName, true];
-[] spawn AlysiaClient_fnc_hudSetup;
+[] spawn AlysiaClient_fnc_init_hud;
 
 g_connected = true;
 g_is_alive = true;

@@ -264,6 +264,15 @@ if ((vehicle player) isEqualTo player) then
 					[_target] call AlysiaClient_fnc_interactions_player_to_dog;
 					true breakOut "main";
 				};
+
+				if (typeOf(_target) in (call g_dynamic_objects)) then
+				{
+					if (_target getVariable ["isPackable", false]) then
+					{
+						[_target] spawn AlysiaClient_fnc_dynamicObject_packup;
+						true breakOut "main";
+					};
+				};
 			};
 		};
 		
