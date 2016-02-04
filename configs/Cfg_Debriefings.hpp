@@ -17,7 +17,7 @@ class CfgDebriefing// Define custom mission endings or override the default endi
 	class Bye
 	{
 		title = "Alysia";
-		description = "A bientôt !";
+		description = "À bientôt !";
 		pictureColor[] = {0, 0.3, 0.6, 1};
 	};
 

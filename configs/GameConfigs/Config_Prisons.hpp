@@ -34,7 +34,7 @@ class ALYSIA_PRISONS
 			};
 			class item_2
 			{
-				name = "Trafique de Tabacs";
+				name = "Trafic de Tabac";
 				time = 0;
 				money = 0;
 			};

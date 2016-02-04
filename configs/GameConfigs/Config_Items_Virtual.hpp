@@ -1012,7 +1012,7 @@ class ALYSIA_ITEMS
 
 	class alu
 	{
-		name        = "Lingot d'aliminium";
+		name        = "Lingot d'aluminium";
 		weight      = 4;
 		illegal     = 0;
 		removable   = 1;
@@ -1682,6 +1682,155 @@ class ALYSIA_ITEMS
 		name        = "Kit (Laboratoire)";
 		weight      = 6;
 		illegal     = 1;
+		removable   = 1;
+		image       = "";
+	};
+
+	class acier
+	{
+		name        = "Acier";
+		weight      = 5;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+		class market
+		{
+			max = 200;
+			min = 165;
+			mult = 2;
+			affect[] = {"ironp", "soufre", "platinep", "souffre", "hsoufre", "copperp", "alu"};
+		};
+	};
+
+
+	class balle
+	{
+		name        = "Balle";
+		weight      = 1;
+		price_buy   = 0;
+		price_sell  = 1;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+	};
+
+	class chargeur
+	{
+		name        = "Chargeur vide";
+		weight      = 1;
+		price_buy   = 0;
+		price_sell  = 1;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+	};
+
+	class canon
+	{
+		name        = "Canon (pièce)";
+		weight      = 1;
+		price_buy   = 0;
+		price_sell  = 3;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+	};
+
+	class crosse
+	{
+		name        = "Crosse (pièce)";
+		weight      = 1;
+		price_buy   = 0;
+		price_sell  = 2;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+	};
+
+	class garde_main
+	{
+		name        = "Garde-main (pièce)";
+		weight      = 1;
+		price_buy   = 0;
+		price_sell  = 2;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+	};
+
+	class poignee
+	{
+		name        = "Poignée (pièce)";
+		weight      = 1;
+		price_buy   = 0;
+		price_sell  = 2;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+	};
+
+	class detente
+	{
+		name        = "Détente (pièce)";
+		weight      = 1;
+		price_buy   = 0;
+		price_sell  = 2;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+	};
+
+	class percuteur
+	{
+		name        = "Percuteur (pièce)";
+		weight      = 1;
+		price_buy   = 0;
+		price_sell  = 2;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+	};
+
+	class carcasse
+	{
+		name        = "Carcasse (pièce)";
+		weight      = 1;
+		price_buy   = 0;
+		price_sell  = 2;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+	};
+
+	class bloc_culasse
+	{
+		name        = "Bloc culasse (pièce)";
+		weight      = 1;
+		price_buy   = 0;
+		price_sell  = 2;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+	};
+
+	class levier
+	{
+		name        = "Levier (pièce)";
+		weight      = 1;
+		price_buy   = 0;
+		price_sell  = 2;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+	};
+
+	class marteau
+	{
+		name        = "Marteau (pièce)";
+		weight      = 1;
+		price_buy   = 0;
+		price_sell  = 2;
+		illegal     = 0;
 		removable   = 1;
 		image       = "";
 	};

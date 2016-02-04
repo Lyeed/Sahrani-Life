@@ -768,13 +768,48 @@ class ALYSIA_PROCESS
 		};
 	};
 
+	class steel
+	{
+		name = "Fonte de l'acier";
+		sound = "smelting";
+		require[] =
+		{
+			{"ironp", 1}, {"coal", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"acier", 1}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 12;
+		time_default = 8;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
 	class weapon_thompson
 	{
 		name = "Arme : Thompson";
 		sound = "smelting";
 		require[] =
 		{
-			{"woodp", 3}
+			{"canon", 1},
+			{"crosse", 1},
+			{"garde_main", 1},
+			{"poignee", 1},
+			{"detente", 1},
+			{"percuteur", 1},
+			{"levier", 1},
+			{"woodp", 10},
+			{"ironp", 10}
 		};
 		receive[] =
 		{
@@ -782,8 +817,8 @@ class ALYSIA_PROCESS
 			{"wc_us_smg_m1a1"},
 			0
 		};
-		time_per_item = 20;
-		time_default = 10;
+		time_per_item = 60;
+		time_default = 30;
 		class target {};
 		class factions
 		{
@@ -799,7 +834,8 @@ class ALYSIA_PROCESS
 		name = "Munitions : Thompson";
 		require[] =
 		{
-			{"ironp", 2}
+			{"balle", 30},
+			{"chargeur", 1}
 		};
 		receive[] =
 		{
@@ -808,7 +844,8 @@ class ALYSIA_PROCESS
 			0
 		};
 		time_per_item = 5;
-		time_default = 3;
+		time_default = 5;
+		time_default = 1;
 	};
 
 	class weapon_cz: weapon_thompson
