@@ -134,7 +134,7 @@ if ((vehicle player) isEqualTo player) then
 			{
 				if ((player distance g_company) < 30) then
 				{
-					[] call AlysiaClient_fnc_plantSeed;
+					[] spawn AlysiaClient_fnc_plantSeed;
 					true breakOut "main";
 				};
 			};

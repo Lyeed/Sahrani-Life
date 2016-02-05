@@ -19,7 +19,8 @@ _data = g_garage_vehicles select _index;
 _vehicleClassname = _data select 0;
 
 _vehicleGaragePosition = [_data select 6, _data select 7, _data select 8];
-_price = [_vehicleClassname] call AlysiaClient_fnc_getVehGaragePrice;
+_price = ([_vehicleClassname] call AlysiaClient_fnc_fetchVehInfo) select 17;
+
 if (
 		!(_vehicleGaragePosition isEqualTo [0, 0, 0]) && 
 		(

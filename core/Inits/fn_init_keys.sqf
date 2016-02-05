@@ -46,6 +46,6 @@ if (getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "sirene
 if ((getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "faction_markers_on_map") isEqualTo 1) || (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "faction_markers_deaths") isEqualTo 1)) then
 {
 	{
-		[_x, [true, true, true], {[] spawn AlysiaEvent_fnc_onPlayerMapOpen}, "keydown", "actionMap", false] call CBA_fnc_addKeyHandler;
+		[_x, [false, false, false], {[] spawn AlysiaEvent_fnc_onPlayerMapOpen}, "keydown", "actionMap", false] call CBA_fnc_addKeyHandler;
 	} forEach (actionKeys "ShowMap");
 };

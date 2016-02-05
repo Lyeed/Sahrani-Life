@@ -135,7 +135,6 @@ class CfgFunctions
 			class isNumber {};
 			class loadGear {};
 			class numberText {};
-			class saveGear {};
 			class seizeObjects {};
 			class showProgress {};
 			class stripDownPlayer {};
@@ -145,10 +144,6 @@ class CfgFunctions
 			class age {};
 			class getRegion {};
 			class getLicenses {};
-			class getVehAssurancePrice {};
-			class getVehBuyPrice {};
-			class getVehGaragePrice {};
-			class getVehSellPrice {};
 			class getVehVirtual {};
 			class licenseGetName {};
 			class rankToStr {};

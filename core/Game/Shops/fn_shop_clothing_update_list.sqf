@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_type", "_display", "_list", "_sel"];
+private["_type", "_display", "_list", "_sel", "_itemType"];
 disableSerialization;
 
 _list = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
@@ -67,6 +67,7 @@ switch (_type) do
 		g_shop_camera camSetTarget (player modelToWorld [0, 0, 1.6]);
 		g_shop_camera camSetPos (player modelToWorld [0.7, 1, 1.6]);
 		g_shop_camera camCommit 1;
+		_itemType = "Headgear";
 	};
 	case "goggles":
 	{
@@ -74,6 +75,7 @@ switch (_type) do
 		g_shop_camera camSetTarget (player modelToWorld [0, 0, 1.6]);
 		g_shop_camera camSetPos (player modelToWorld [0.7, 1, 1.6]);
 		g_shop_camera camCommit 1;
+		_itemType = "Glasses";
 	};
 	case "backpacks":
 	{
@@ -81,6 +83,7 @@ switch (_type) do
 		g_shop_camera camSetTarget (player modelToWorld [0, -0.15, 1.3]);
 		g_shop_camera camSetPos (player modelToWorld [1, -3, 2]);
 		g_shop_camera camCommit 1;
+		_itemType = "Backpack";
 	};
 	case "uniforms":
 	{
@@ -88,6 +91,7 @@ switch (_type) do
 		g_shop_camera camSetTarget (player modelToWorld [0, 0, 1]);
 		g_shop_camera camSetPos (player modelToWorld [1, 4, 2]);
 		g_shop_camera camCommit 1;
+		_itemType = "Uniform";
 	};
 	case "vests":
 	{
@@ -95,6 +99,7 @@ switch (_type) do
 		g_shop_camera camSetTarget (player modelToWorld [0, 0, 1]);
 		g_shop_camera camSetPos (player modelToWorld [1, 4, 2]);
 		g_shop_camera camCommit 1;
+		_itemType = "Vest";
 	};
 };
 
@@ -111,19 +116,24 @@ lbClear _list;
 			diag_log format["ERROR: %1 does not exist in Arma", _x];
 			systemChat format["ERROR: %1 does not exist in Arma", _x];
 		} else {
-			_displayName = getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "name");
-			if (_displayName isEqualTo "") then {
-				_displayName = _details select 1;
+			if ((([_x] call BIS_fnc_itemType) select 1) isEqualTo _itemType) then
+			{
+				_displayName = getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "name");
+				if (_displayName isEqualTo "") then {_displayName = _details select 1};
+				
+				_index = _list lbAdd _displayName;
+				_list lbSetData [_index, _x];
+				_list lbSetValue [_index, getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_price")];
+				_list lbSetPicture [_index, (_details select 2)];
+				_list lbSetTooltip [_index, (_list lbText _index)];
+			} else {
+				diag_log format["ERROR: %1 is a %2 (not a %3)", _x, ([_x] call BIS_fnc_itemType) select 1, _itemType];
+				systemChat format["ERROR: %1 is a %2 (not a %3)", _x, ([_x] call BIS_fnc_itemType) select 1, _itemType];
 			};
-			
-			_index = _list lbAdd _displayName;
-			_list lbSetData [_index, _x];
-			_list lbSetValue [_index, getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_price")];
-			_list lbSetPicture [_index, (_details select 2)];
-			_list lbSetTooltip [_index, (_list lbText _index)];
 		};
 	} else {
 		diag_log format["ERROR: %1 not defined in ALYSIA_ITEMS_ARMA", _x];
+		systemChat format["ERROR: %1 not defined in ALYSIA_ITEMS_ARMA", _x];
 	};
 } forEach (getArray(missionConfigFile >> "ALYSIA_SHOPS_CLOTHING" >> g_shop_clothing_type >> _type));
 if ((lbSize _list) isEqualTo 0) then

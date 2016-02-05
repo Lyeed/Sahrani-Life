@@ -5,7 +5,8 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_importPrice", "_action", "_vehicleName", "_tmpPos", "_curSel", "_vehicleID"];
+private["_importPrice", "_action", "_vehicleName", "_sel", "_index", "_data"];
+
 _sel = lbCurSel 2802;
 if (_sel isEqualTo -1) exitWith {};
 
@@ -15,9 +16,7 @@ if (_index isEqualTo -1) exitWith {
 };
 
 _data = g_garage_vehicles select _index;
-_vehicleClassname = _data select 0;
-
-_importPrice = ([_vehicleClassname] call AlysiaClient_fnc_getVehBuyPrice) * getNumber(missionConfigFile >> "ALYSIA_VEHICLES_INFO" >> "transfert_percentage");
+_importPrice = ([_data select 0] call AlysiaClient_fnc_fetchVehInfo) select 20
 if (_importPrice > g_atm) exitWith {
 	[format["Il vous faut <t color='#ff8c8c'>%1kn</t> pour rapatrier ce véhicule", [_importPrice] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
 };

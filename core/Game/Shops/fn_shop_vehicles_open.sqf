@@ -45,13 +45,13 @@ lbClear _list;
 			_index = _list lbAdd getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "realname");
 			_vList = getArray(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "colors");
 			if (_vList isEqualTo []) then {
-				_list lbSetPicture [_index, (getText(configFile >> "CfgVehicles" >> _x >> "picture"))];
+				_list lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> _x >> "picture")];
 				_list lbSetData [_index, str([_x])];
-				_list lbSetValue [_index, ([_x] call AlysiaClient_fnc_getVehBuyPrice)];
+				_list lbSetValue [_index, getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "buyPrice")];
 			} else {
-				_list lbSetPicture [_index, (getText(configFile >> "CfgVehicles" >> (_vList select 0) >> "picture"))];
+				_list lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> (_vList select 0) >> "picture")];
 				_list lbSetData [_index, str(_vList)];
-				_list lbSetValue [_index, ([(_vList select 0)] call AlysiaClient_fnc_getVehBuyPrice)];
+				_list lbSetValue [_index, getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> (_vList select 0) >> "buyPrice")];
 			};
 			_list lbSetTooltip [_index, (_list lbText _index)];
 		} else {

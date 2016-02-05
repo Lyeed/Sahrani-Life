@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display", "_sel", "_type", "_vehicle", "_price", "_info"];
+private["_display", "_sel", "_type", "_vehicle", "_info", "_vehicleInfo"];
 
 disableSerialization;
 _display = findDisplay 99000;
@@ -44,8 +44,8 @@ if ((speed _vehicle) > 0) exitWith {
 	["Le véhicule doit être à l'arrêt pour pouvoir être vendu"] call AlysiaClient_fnc_error;
 };
 
-_price = [_type] call AlysiaClient_fnc_getVehBuyPrice;
-if (_price isEqualTo 0) exitWith {
+_vehicleInfo = [_type] call AlysiaClient_fnc_fetchVehInfo;
+if ((_vehicleInfo select 9) isEqualTo 0) exitWith {
 	["Ce véhicule n'a pas de prix de vente"] call AlysiaClient_fnc_error;
 };
 
@@ -65,7 +65,7 @@ if (!(isNil "_info")) then {
 };
 
 deleteVehicle _vehicle;
-[true, "illegal_money", round(_price * getNumber(missionConfigFile >> "ALYSIA_VEHICLES_INFO" >> "steal_percentage"))] call AlysiaClient_fnc_handleInv;
+[true, "illegal_money", (_vehicleInfo select 21)] call AlysiaClient_fnc_handleInv;
 playSound "buy";
 
 g_action_inUse = false;

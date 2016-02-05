@@ -35,14 +35,14 @@ if ((g_cash >= _price) && (_price > 0)) then {
 	_price_condition = false;
 };
 
-_rank = getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "rank");
+_rank = _vehicleInfo select 15;
 if ((_rank isEqualTo 0) || ((_rank > 0) && ((player getVariable ["rank", 0]) >= _rank))) then {
 	_rank_condition = true;
 } else {
 	_rank_condition = false;
 };
 
-_licenses = getArray(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "licenses");
+_licenses = _vehicleInfo select 13;
 if (count(_licenses) > 0) then
 {
 	_licenses_text = "";
@@ -64,7 +64,7 @@ if (count(_licenses) > 0) then
 (_display displayCtrl 2306) ctrlSetStructuredText parseText format
 [
 	"<t align='center'>%1</t>",
-	getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "realname")
+	_vehicleInfo select 8
 ];
 
 (_display displayCtrl 2308) ctrlSetStructuredText parseText format
@@ -85,15 +85,15 @@ if (count(_licenses) > 0) then
 	+	"<t align='left'>Capacité du réservoir</t><t align='right'>%8L</t><br/>"
 	+   "<t align='left'>Carburant</t><t align='right'>%9</t>"
 	+	"</t>",
-	[[_className] call AlysiaClient_fnc_getVehGaragePrice] call AlysiaClient_fnc_numberText,
-	[[_className] call AlysiaClient_fnc_getVehAssurancePrice] call AlysiaClient_fnc_numberText,
-	[[_className] call AlysiaClient_fnc_getVehSellPrice] call AlysiaClient_fnc_numberText,
-	(_vehicleInfo select 8),
-	(_vehicleInfo select 11),
-	(_vehicleInfo select 10),
-	[_className] call AlysiaClient_fnc_getVehVirtual,
-	round (_vehicleInfo select 12),
-	getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name"),
+	[_vehicleInfo select 17] call AlysiaClient_fnc_numberText,
+	[_vehicleInfo select 18] call AlysiaClient_fnc_numberText,
+	[_vehicleInfo select 19] call AlysiaClient_fnc_numberText,
+	_vehicleInfo select 3,
+	_vehicleInfo select 6,
+	_vehicleInfo select 5,
+	_vehicleInfo select 10,
+	round(_vehicleInfo select 7),
+	getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> (_vehicleInfo select 14) >> "name"),
 	if (_price_condition) then {"#31B404"} else {"#DF0101"},
 	[_price] call AlysiaClient_fnc_numberText,
 	_licenses_text,

@@ -67,17 +67,17 @@ _vehicleInfo = [_className] call AlysiaClient_fnc_fetchVehInfo;
     +	"<t align='left'>Réservoir</t><t align='right'>%10/%11L - %12</t><br/>",
     (_data select 1),
     if ((_data select 2) isEqualTo 1) then {"<t color='#8cff9b'>Oui</t>"} else {"<t color='#ff8c8c'>Non</t>"},
-    ([[_className] call AlysiaClient_fnc_getVehAssurancePrice] call AlysiaClient_fnc_numberText),
-    ([[_className] call AlysiaClient_fnc_getVehGaragePrice] call AlysiaClient_fnc_numberText),
-  	([[_className] call AlysiaClient_fnc_getVehSellPrice] call AlysiaClient_fnc_numberText),
-  	(_vehicleInfo select 8),
-  	(_vehicleInfo select 11),
-  	(_vehicleInfo select 10),
-  	([_className] call AlysiaClient_fnc_getVehVirtual),
-    (round (_fuel * ((_vehicleInfo select 12)) / 100)),
-  	(round (_vehicleInfo select 12)),
-    (if ((getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")) in ["Essence Sans Plomb 95","Essence Sans Plomb 98"]) then
-    {"Essence"} else {getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _className >> "fuel") >> "name")})
+    [_vehicleInfo select 18] call AlysiaClient_fnc_numberText,
+    [_vehicleInfo select 17] call AlysiaClient_fnc_numberText,
+  	[_vehicleInfo select 19] call AlysiaClient_fnc_numberText,
+  	_vehicleInfo select 3,
+  	_vehicleInfo select 6,
+  	_vehicleInfo select 5,
+  	_vehicleInfo select 10,
+    round(_fuel * ((_vehicleInfo select 7)) / 100),
+  	round(_vehicleInfo select 7),
+    (if ((getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> (_vehicleInfo select 14) >> "name")) in ["Essence Sans Plomb 95","Essence Sans Plomb 98"]) then
+    {"Essence"} else {getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> (_vehicleInfo select 14) >> "name")})
 ];
 
 if ((_data select 2) isEqualTo 1) then

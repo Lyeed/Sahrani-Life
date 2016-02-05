@@ -25,9 +25,6 @@ if ((isNull _target) || !(alive _target)) then {
 };
 
 /*
-
-~0.0863 ms <- new fn_getGear function by Lyeed
-~1.1776 ms <- old fn_saveGear function by Tonic
  
 [
     [
