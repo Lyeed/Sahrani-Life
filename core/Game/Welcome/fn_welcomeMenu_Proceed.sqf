@@ -44,7 +44,7 @@ if (format["%1 %2", _firstname, _lastName] != profileName) exitWith {
 };
 
 // birth
-_birth = [lbValue[1503, (lbCurSel 1503)], lbValue[1509, (lbCurSel 1509)], lbValue[1510, (lbCurSel 1510)]];
+_birth = [lbValue[1510, (lbCurSel 1510)], lbValue[1509, (lbCurSel 1509)], lbValue[1503, (lbCurSel 1503)]];
 _origin = lbText[1504, (lbCurSel 1504)];
 _sexe = lbText[1505, (lbCurSel 1505)];
 _action = 
@@ -67,7 +67,7 @@ if (_action) then
 	g_firstName = _firstname;
 	g_lastName = _lastName;
 	g_birth = _birth;
-	g_nationality = lbData[1504, (lbCurSel 1504)];
+	g_nationality = _origin;
 	g_sexe = _sexe;
 	closeDialog 0;
 };

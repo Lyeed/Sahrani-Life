@@ -27,7 +27,10 @@ if (isNull _target) exitWith {};
 		["farm_gather", "Récolter", "[g_interaction_target] spawn AlysiaClient_fnc_vehicleMenu_farm_gather;", "((typeOf(g_interaction_target) isEqualTo 'madsa_mtz_F') && ((vehicle player) isEqualTo g_interaction_target) && ((driver g_interaction_target) isEqualTo player))"],
 		["farm_plant", "Planter", "[g_interaction_target] spawn AlysiaClient_fnc_vehicleMenu_farm_plant;", "((typeOf(g_interaction_target) isEqualTo 'madsa_mtz_F') && ((vehicle player) isEqualTo g_interaction_target) && ((driver g_interaction_target) isEqualTo player))"],
 		["fishingpool", "Pêche", "[g_interaction_target] spawn AlysiaClient_fnc_vehicleMenu_farm_fish;", "((g_interaction_target isKindOf 'Ship') && ((vehicle player) isEqualTo g_interaction_target) && ((driver g_interaction_target) isEqualTo player))"],
-		["dog", "Chercher", "[g_interaction_target] spawn AlysiaClient_fnc_vehicleMenu_dog;", "(!(isNull g_dog) && {g_dog getVariable ['follow', false]})"]
+		["dog", "Chercher", "[g_interaction_target] spawn AlysiaClient_fnc_vehicleMenu_dog;", "(!(isNull g_dog) && {g_dog getVariable ['follow', false]})"],
+		["money_transfer", "Sac", "", "false"],/* type véhicule transfert argent */
+		["money_bomb", "Braquer", "", "false"]/* type véhicule transfert argent */
+
 	],
 	getText(configFile >> "CfgVehicles" >> typeOf(_target) >> "displayName"),
 	"lyeed_IMG\data\vehicle\background.jpg",

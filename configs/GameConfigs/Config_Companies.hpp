@@ -27,6 +27,7 @@
 		-> Assurance
 		-> Agence immobilière
 		-> Restauration
+		-> Trader
 */
 
 class ALYSIA_COMPANIES
