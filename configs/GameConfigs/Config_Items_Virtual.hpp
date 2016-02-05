@@ -1747,7 +1747,7 @@ class ALYSIA_ITEMS
 	class chargeur
 	{
 		name        = "Chargeur vide";
-		weight      = 1;
+		weight      = 2;
 		price_buy   = 0;
 		price_sell  = 1;
 		illegal     = 0;
@@ -1857,6 +1857,17 @@ class ALYSIA_ITEMS
 	class marteau
 	{
 		name        = "Marteau (pièce)";
+		weight      = 1;
+		price_buy   = 0;
+		price_sell  = 2;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+	};
+
+	class culasse
+	{
+		name        = "Culasse (pièce)";
 		weight      = 1;
 		price_buy   = 0;
 		price_sell  = 2;

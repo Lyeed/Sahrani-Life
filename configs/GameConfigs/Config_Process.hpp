@@ -795,6 +795,60 @@ class ALYSIA_PROCESS
 		};
 	};
 
+	class bullet
+	{
+		name = "Moulage de balles";
+		sound = "smelting";
+		require[] =
+		{
+			{"acier", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"balle", 5}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class chargeur
+	{
+		name = "Moulage de chargeurs";
+		sound = "smelting";
+		require[] =
+		{
+			{"acier", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"chargeur", 2}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 12;
+		time_default = 8;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
 	class weapon_thompson
 	{
 		name = "Arme : Thompson";
@@ -809,7 +863,8 @@ class ALYSIA_PROCESS
 			{"percuteur", 1},
 			{"levier", 1},
 			{"woodp", 10},
-			{"ironp", 10}
+			{"ironp", 3},
+			{"acier", 5}
 		};
 		receive[] =
 		{
@@ -850,10 +905,18 @@ class ALYSIA_PROCESS
 
 	class weapon_cz: weapon_thompson
 	{
-		name = "Arme : CZ";
+		name = "Arme : CZ550";
 		require[] =
 		{
-			{"ironp", 2}
+			{"canon", 1},
+			{"crosse", 1},
+			{"garde_main", 1},
+			{"detente", 1},
+			{"percuteur", 1},
+			{"culasse",1},
+			{"woodp", 15},
+			{"ironp", 2},
+			{"acier", 3}
 		};
 		receive[] =
 		{
@@ -866,10 +929,10 @@ class ALYSIA_PROCESS
 	};
 	class magazine_cz: weapon_thompson
 	{
-		name = "Munitions : CZ";
+		name = "Munitions : CZ550";
 		require[] =
 		{
-			{"ironp", 2}
+			{"balle", 5}
 		};
 		receive[] =
 		{
