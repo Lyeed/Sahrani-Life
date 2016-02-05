@@ -6,16 +6,12 @@ class ALYSIA_SHOPS_CLOTHING
 		side = "CIV";
 		uniforms[] =
 		{
-			"U_C_DolceGabbana_01",
 			"U_C_HunterBody_grn",
-			"U_C_Hello_Kitty_01",
 			"U_OrestesBody",
-			"fbi_light_uniform",
-			"fbi_light2_uniform",
-			"fbi_light3_uniform",
-			"fbi_light4_uniform",
-			"fbi_light5_uniform",
-			"fbi_light6_uniform",
+			"rds_uniform_citizen1",
+			"rds_uniform_citizen2",
+			"rds_uniform_citizen3",
+			"rds_uniform_citizen4",
 			"skull_gang",
 			"TRYK_U_B_PCUGs_BLK_R",
 			"TRYK_U_B_PCUGs_gry_R",
@@ -250,10 +246,6 @@ class ALYSIA_SHOPS_CLOTHING
 		side = "CIV";
 		uniforms[] =
 		{
-			"rds_uniform_citizen1",
-			"rds_uniform_citizen2",
-			"rds_uniform_citizen3",
-			"rds_uniform_citizen4",
 			"rds_uniform_Profiteer1",
 			"rds_uniform_Profiteer2",
 			"rds_uniform_Profiteer3",

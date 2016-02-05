@@ -801,11 +801,11 @@ class ALYSIA_PROCESS
 		sound = "smelting";
 		require[] =
 		{
-			{"acier", 1}
+			{"steel", 1}
 		};
 		receive[] =
 		{
-			/* VIRTUAL */{{"balle", 5}},
+			/* VIRTUAL */{{"bullet", 10}},
 			/* ARMA */{},
 			/* CASH */0
 		};
@@ -822,17 +822,44 @@ class ALYSIA_PROCESS
 		};
 	};
 
-	class chargeur
+	class buckshot
+	{
+		name = "Moulage de la chevrotine";
+		sound = "smelting";
+		require[] =
+		{
+			{"steel", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"buckshot", 5}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class magazine
 	{
 		name = "Moulage de chargeurs";
 		sound = "smelting";
 		require[] =
 		{
-			{"acier", 1}
+			{"steel", 1}
 		};
 		receive[] =
 		{
-			/* VIRTUAL */{{"chargeur", 2}},
+			/* VIRTUAL */{{"magazine", 2}},
 			/* ARMA */{},
 			/* CASH */0
 		};
@@ -864,7 +891,7 @@ class ALYSIA_PROCESS
 			{"levier", 1},
 			{"woodp", 10},
 			{"ironp", 3},
-			{"acier", 5}
+			{"steel", 5}
 		};
 		receive[] =
 		{
@@ -872,8 +899,8 @@ class ALYSIA_PROCESS
 			{"wc_us_smg_m1a1"},
 			0
 		};
-		time_per_item = 60;
-		time_default = 30;
+		time_per_item = 50;
+		time_default = 10;
 		class target {};
 		class factions
 		{
@@ -884,13 +911,14 @@ class ALYSIA_PROCESS
 			};
 		};
 	};
+
 	class magazine_thompson: weapon_thompson
 	{
 		name = "Munitions : Thompson";
 		require[] =
 		{
-			{"balle", 30},
-			{"chargeur", 1}
+			{"bullet", 30},
+			{"magazine", 1}
 		};
 		receive[] =
 		{
@@ -916,7 +944,7 @@ class ALYSIA_PROCESS
 			{"culasse",1},
 			{"woodp", 15},
 			{"ironp", 2},
-			{"acier", 3}
+			{"steel", 3}
 		};
 		receive[] =
 		{
@@ -924,15 +952,16 @@ class ALYSIA_PROCESS
 			{"Trixie_CZ550"},
 			0
 		};
-		time_per_item = 7;
-		time_default = 5;
+		time_per_item = 50;
+		time_default = 10;
 	};
 	class magazine_cz: weapon_thompson
 	{
 		name = "Munitions : CZ550";
 		require[] =
 		{
-			{"balle", 5}
+			{"balle", 5},
+			{"magazine", 1}
 		};
 		receive[] =
 		{
@@ -946,10 +975,17 @@ class ALYSIA_PROCESS
 
 	class weapon_sawed: weapon_thompson
 	{
-		name = "Arme : Canons scié";
+		name = "Arme : Fusil scié";
 		require[] =
 		{
-			{"ironp", 2}
+			{"canon", 2},
+			{"crosse", 1},
+			{"detente", 1},
+			{"percuteur", 1},
+			{"levier",1},
+			{"woodp", 8},
+			{"ironp", 1},
+			{"steel", 2}
 		};
 		receive[] =
 		{
@@ -957,15 +993,16 @@ class ALYSIA_PROCESS
 			{"Sawed_Off_Shotgun"},
 			0
 		};
-		time_per_item = 11;
-		time_default = 4;
+		time_per_item = 30;
+		time_default = 10;
 	};
 	class magazine_sawed: weapon_thompson
 	{
-		name = "Munitions : Canons scié";
+		name = "Munitions : Fusil scié";
 		require[] =
 		{
-			{"ironp", 2}
+			{"buckshot", 10},
+			{"chargeur",1}
 		};
 		receive[] =
 		{
@@ -973,8 +1010,8 @@ class ALYSIA_PROCESS
 			{"2Rnd_Sawed_Off_Shotgun_Pellets"},
 			0
 		};
-		time_per_item = 4;
-		time_default = 2;
+		time_per_item = 5;
+		time_default = 4;
 	};
 
 	class magazine_tec: weapon_thompson
@@ -982,7 +1019,8 @@ class ALYSIA_PROCESS
 		name = "Munitions : Tec9";
 		require[] =
 		{
-			{"ironp", 2}
+			{"balle", 32},
+			{"magazine", 1}
 		};
 		receive[] =
 		{
@@ -990,15 +1028,23 @@ class ALYSIA_PROCESS
 			{"RH_32Rnd_9x19_tec"},
 			0
 		};
-		time_per_item = 4;
-		time_default = 3;
+		time_per_item = 5;
+		time_default = 6;
 	};
 	class weapon_tec: weapon_thompson
 	{
 		name = "Arme : Tec9";
 		require[] =
 		{
-			{"ironp", 2}
+			{"canon", 1},
+			{"poignee", 1},
+			{"detente", 1},
+			{"percuteur", 1},
+			{"carcasse", 1},
+			{"bloc_culasse", 1},
+			{"levier", 1},
+			{"ironp", 2},
+			{"steel", 3}
 		};
 		receive[] =
 		{
@@ -1006,8 +1052,8 @@ class ALYSIA_PROCESS
 			{"RH_tec9"},
 			0
 		};
-		time_per_item = 10;
-		time_default = 5;
+		time_per_item = 30;
+		time_default = 10;
 	};
 
 	class magazine_tracker: weapon_thompson
@@ -1015,7 +1061,8 @@ class ALYSIA_PROCESS
 		name = "Munitions : Tracker";
 		require[] =
 		{
-			{"ironp", 2}
+			{"balle", 6},
+			{"magazine", 1}
 		};
 		receive[] =
 		{
@@ -1023,7 +1070,7 @@ class ALYSIA_PROCESS
 			{"RH_6Rnd_45ACP_Mag"},
 			0
 		};
-		time_per_item = 7;
+		time_per_item = 5;
 		time_default = 5;
 	};
 	class weapon_tracker: weapon_thompson
@@ -1031,7 +1078,13 @@ class ALYSIA_PROCESS
 		name = "Arme : Tracker";
 		require[] =
 		{
-			{"ironp", 2}
+			{"canon", 1},
+			{"poignee", 1},
+			{"detente", 1},
+			{"marteau", 1},
+			{"barillet", 1},
+			{"ironp", 2},
+			{"steel", 3}
 		};
 		receive[] =
 		{
@@ -1039,15 +1092,21 @@ class ALYSIA_PROCESS
 			{"RH_ttracker"},
 			0
 		};
-		time_per_item = 7;
-		time_default = 5;
+		time_per_item = 30;
+		time_default = 10;
 	};
 	class weapon_tracker_gold: weapon_thompson
 	{
 		name = "Arme : Tracker or";
 		require[] =
 		{
-			{"ironp", 2}
+			{"canon", 1},
+			{"poignee", 1},
+			{"detente", 1},
+			{"marteau", 1},
+			{"barillet", 1},
+			{"ironp", 2},
+			{"goldbar", 1}
 		};
 		receive[] =
 		{
@@ -1055,7 +1114,7 @@ class ALYSIA_PROCESS
 			{"RH_ttracker_g"},
 			0
 		};
-		time_per_item = 7;
-		time_default = 5;
+		time_per_item = 30;
+		time_default = 20;
 	};
 };

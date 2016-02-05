@@ -71,6 +71,13 @@ class ALYSIA_SHOPS_VIRTUAL
 		items[] = {{}, {"glass"}};
 	};
 
+	class steel
+	{
+		name = "Commerçant d'acier";
+		side = "CIV";
+		items[] = {{}, {"steel"}};
+	};
+
 	class iron
 	{
 		name = "Commerçant de fer";

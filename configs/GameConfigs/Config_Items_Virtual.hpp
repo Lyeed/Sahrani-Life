@@ -49,7 +49,7 @@ class ALYSIA_ITEMS
 			max = 2500;
 			min = 1500;
 			mult = 2;
-			affect[] = {"ironp", "soufre", "platinep", "souffre", "hsoufre", "copperp", "alu"};
+			affect[] = {"ironp", "soufre", "platinep", "souffre", "hsoufre", "copperp", "alu","steel"};
 		};
 	};
 
@@ -423,7 +423,7 @@ class ALYSIA_ITEMS
 			max = 155;
 			min = 125;
 			mult = 3;
-			affect[] = {"goldbar", "soufre", "platinep", "souffre", "hsoufre", "copperp", "alu"};
+			affect[] = {"goldbar", "soufre", "platinep", "souffre", "hsoufre", "copperp", "alu","steel"};
 		};
 	};
 
@@ -998,7 +998,7 @@ class ALYSIA_ITEMS
 			max = 200;
 			min = 160;
 			mult = 2;
-			affect[] = {"goldbar", "ironp", "soufre", "platinep", "hsoufre", "alu"};
+			affect[] = {"goldbar", "ironp", "soufre", "platinep", "hsoufre", "alu","steel"};
 		};
 	};
 
@@ -1052,7 +1052,7 @@ class ALYSIA_ITEMS
 			max = 220;
 			min = 170;
 			mult = 2;
-			affect[] = {"goldbar", "ironp", "soufre", "platinep", "hsoufre", "copperp"};
+			affect[] = {"goldbar", "ironp", "soufre", "platinep", "hsoufre", "copperp","steel"};
 		};
 	};
 
@@ -1716,7 +1716,7 @@ class ALYSIA_ITEMS
 		image       = "";
 	};
 
-	class acier
+	class steel
 	{
 		name        = "Acier";
 		weight      = 5;
@@ -1732,8 +1732,18 @@ class ALYSIA_ITEMS
 		};
 	};
 
+	class buckshot
+	{
+		name        = "Chevrotine";
+		weight      = 1;
+		price_buy   = 0;
+		price_sell  = 1;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+	};
 
-	class balle
+	class bullet
 	{
 		name        = "Balle";
 		weight      = 1;
@@ -1744,12 +1754,23 @@ class ALYSIA_ITEMS
 		image       = "";
 	};
 
-	class chargeur
+	class magazine
 	{
 		name        = "Chargeur vide";
 		weight      = 2;
 		price_buy   = 0;
 		price_sell  = 1;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+	};
+
+	class barillet
+	{
+		name        = "Barillet (pièce)";
+		weight      = 1;
+		price_buy   = 0;
+		price_sell  = 3;
 		illegal     = 0;
 		removable   = 1;
 		image       = "";
