@@ -204,6 +204,36 @@ class ALYSIA_ITEMS
 		};
 	};
 
+	class table_bois
+	{
+		name        = "Table en bois";
+		weight      = 40;
+		price_buy   = 100;
+		price_sell  = 100;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+		class use
+		{
+			action = "['table_bois'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
+		};
+	};
+
+	class chaise_bois
+	{
+		name        = "Chaise en bois";
+		weight      = 10;
+		price_buy   = 10;
+		price_sell  = 10;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+		class use
+		{
+			action = "['chaise_bois'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
+		};
+	};
+
 	class spikeStrip
 	{
 		name        = "Herse";

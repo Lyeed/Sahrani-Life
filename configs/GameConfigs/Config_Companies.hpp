@@ -178,7 +178,7 @@ class ALYSIA_COMPANIES
 			building = "Land_Factory_Main_F";
 			license = "company_foundry";
 			image = "lyeed_IMG\data\companies\types\foundry.paa";
-			process[] = {};
+			process[] = {"steel"};
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";

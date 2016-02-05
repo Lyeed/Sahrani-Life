@@ -21,4 +21,20 @@ class ALYSIA_DYN_OBJECTS
 		direction = 90;
 		setDamage = 1;
 	};
+
+	class Land_ChairWood_F
+	{
+		item = "chaise_bois";
+		attachTo[] = {0, 2.5, 0};
+		direction = 90;
+		setDamage = 1;
+	};
+
+	class Land_WoodenTable_large_F
+	{
+		item = "table_bois";
+		attachTo[] = {0, 3.5, 0};
+		direction = 90;
+		setDamage = 1;
+	};
 };
