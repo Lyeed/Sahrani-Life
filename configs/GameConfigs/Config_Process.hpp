@@ -927,7 +927,6 @@ class ALYSIA_PROCESS
 			0
 		};
 		time_per_item = 5;
-		time_default = 5;
 		time_default = 1;
 	};
 
