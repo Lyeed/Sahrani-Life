@@ -122,7 +122,7 @@
         "AlysiaClient_fnc_border_south_speaker_destroy",
         "AlysiaClient_fnc_border_south_speaker_repair",
         "AlysiaClient_fnc_virtual_menu_exhange_open",
-        "AlysiaClient_fnc_virtual_menu_exhange_update",
+        "AlysiaClient_fnc_virtual_menu_exhange_update_lists",
         "AlysiaClient_fnc_virtual_menu_exhange_store",
         "AlysiaClient_fnc_virtual_menu_exhange_take",
         "AlysiaClient_fnc_virtual_menu_update",

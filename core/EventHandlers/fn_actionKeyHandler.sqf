@@ -38,7 +38,7 @@ if ((vehicle player) isEqualTo player) then
 		_storage = (nearestObjects [player, (call g_houses_storages), 2]) select 0;
 		if (!(isNil "_storage")) then
 		{
-			[_storage] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
+			[_storage, "Trunk", true, true, false, false] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
 			true breakOut "main";
 		};
 
@@ -180,7 +180,7 @@ if ((vehicle player) isEqualTo player) then
 
 				if (typeOf(_target) in (call g_houses_storages)) then
 				{
-					[_target] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
+					[_target, "Trunk", true, true, false, false] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
 					true breakOut "main";
 				};
 

@@ -5,17 +5,20 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display", "_isCar"];
+private["_display", "_target", "_inventory", "_can_store", "_can_take", "_playSound", "_back_button"];
 _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-
-if (!(isNull _target)) then {
-	g_interaction_target = _target;
-};
+_inventory = [_this, 1, "Trunk", ["Trunk"]] call BIS_fnc_param;
+_can_store = [_this, 2, true, [true]] call BIS_fnc_param;
+_can_take = [_this, 3, true, [true]] call BIS_fnc_param;
+_playSound = [_this, 4, true, [true]] call BIS_fnc_param;
+_back_button = [_this, 5, true, [true]] call BIS_fnc_param;
 
 if (isNull g_interaction_target) exitWith {};
 if ((g_interaction_target getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
 	["Le coffre est déjà en cours d'utilisation"] call AlysiaClient_fnc_error;
 };
+
+g_interaction_target = _target;
 
 if (dialog) then
 {
@@ -23,28 +26,9 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
-_isCar = true;
-g_interaction_target_trunk = g_interaction_target getVariable ["Trunk", []];
-g_interaction_target_trunk_weight_actual = [g_interaction_target_trunk] call AlysiaClient_fnc_weightGenerate;
-g_interaction_target_trunk_transfer = false;
-
-g_interaction_target_trunk_weight_max = switch (true) do
-{
-	case (typeOf(g_interaction_target) in ["Bank_Sahrani_N", "Bank_Sahrani_S"]):
-	{
-		_isCar = false;
-		5000
-	};
-	case (isClass(missionConfigFile >> "ALYSIA_STORAGES" >> typeOf(g_interaction_target))):
-	{
-		_isCar = false;
-		getNumber(missionConfigFile >> "ALYSIA_STORAGES" >> typeOf(g_interaction_target) >> "inventory")
-	};
-	default {[typeOf(g_interaction_target)] call AlysiaClient_fnc_getVehVirtual};
-};
-
+g_interaction_target_trunk_weight_max = [g_interaction_target] call AlysiaClient_fnc_getVehicleWeightMax;
 if (g_interaction_target_trunk_weight_max isEqualTo 0) exitWith {
-	["Impossible de déterminer l'inventaire du véhicule"] call AlysiaClient_fnc_error;
+	["Impossible de déterminer l'inventaire maximum du véhicule"] call AlysiaClient_fnc_error;
 };
 
 if (!(createDialog "RscDisplayVirtualExhange")) exitWith {};
@@ -53,11 +37,17 @@ disableSerialization;
 _display = findDisplay 500;
 if (isNull _display) exitWith {};
 
-if ((vehicle player) isEqualTo player) then {player playAction "Gear";};
+if ((vehicle player) isEqualTo player) then {
+	player playAction "Gear";
+};
 
+g_interaction_target_trunk_type = _inventory;
+g_interaction_target_trunk_store = _can_store;
+g_interaction_target_trunk_take = _can_take;
+g_interaction_target_trunk_transfer = false;
 g_interaction_target setVariable ["trunk_in_use_ID", (getPlayerUID player), true];
 
-if (!_isCar) then
+if (!_back_button) then
 {
 	ctrlShow[19503, false];
 	ctrlShow[19504, false];
@@ -65,18 +55,32 @@ if (!_isCar) then
 	ctrlShow[19506, false];
 };
 
-(_display displayCtrl 501) ctrlSetStructuredText parseText format["<t align='center' size='1.8'>%1</t>", getText(configFile >> "CfgVehicles" >> typeOf(g_interaction_target) >> "displayName")];
-(_display displayCtrl 515) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", g_maxWeight];
-(_display displayCtrl 514) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", g_interaction_target_trunk_weight_max];
+(_display displayCtrl 501) ctrlSetStructuredText parseText format
+[
+	"<t align='center' size='1.8'>%1</t>",
+	getText(configFile >> "CfgVehicles" >> typeOf(g_interaction_target) >> "displayName")
+];
 
-[] call AlysiaClient_fnc_virtual_menu_exhange_update;
+(_display displayCtrl 515) ctrlSetStructuredText parseText format
+[
+	"<t align='center'>%1</t>",
+	g_maxWeight
+];
+
+(_display displayCtrl 514) ctrlSetStructuredText parseText format
+[
+	"<t align='center'>%1</t>",
+	g_interaction_target_trunk_weight_max
+];
+
+[] call AlysiaClient_fnc_virtual_menu_exhange_update_lists;
 
 while {!(isNull _display)} do
 {
 	if ((g_interaction_target getVariable ["trunk_in_use_ID", ""]) != (getPlayerUID player)) exitWith {
 		closeDialog 0;
 	};
-	if ((player distance g_interaction_target) > ((((boundingBox g_interaction_target) select 1) select 0) + 2)) exitWith {
+	if ((player distance g_interaction_target) > ((((boundingBox g_interaction_target) select 1) select 0) + 2.5)) exitWith {
 		closeDialog 0;
 	};
 	if (((locked g_interaction_target) isEqualTo 2) && !(g_interaction_target in g_vehicles)) exitWith {
@@ -97,9 +101,9 @@ while {!(isNull _display)} do
 	sleep 0.5;
 };
 
-g_interaction_target setVariable ["Trunk", g_interaction_target_trunk, true];
+g_interaction_target setVariable [g_interaction_target_trunk_type, (g_interaction_target getVariable [g_interaction_target_trunk_type, []]), true];
 
-if (_isCar) then {
+if (_playSound) then {
 	[g_interaction_target, "trunk_close", 20] call CBA_fnc_globalSay3d;
 };
 

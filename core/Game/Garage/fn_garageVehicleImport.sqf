@@ -16,7 +16,7 @@ if (_index isEqualTo -1) exitWith {
 };
 
 _data = g_garage_vehicles select _index;
-_importPrice = ([_data select 0] call AlysiaClient_fnc_fetchVehInfo) select 20
+_importPrice = ([_data select 0] call AlysiaClient_fnc_fetchVehInfo) select 20;
 if (_importPrice > g_atm) exitWith {
 	[format["Il vous faut <t color='#ff8c8c'>%1kn</t> pour rapatrier ce véhicule", [_importPrice] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
 };

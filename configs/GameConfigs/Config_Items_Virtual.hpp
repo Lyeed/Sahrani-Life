@@ -1981,4 +1981,13 @@ class ALYSIA_ITEMS
 			action = "['lab_clothing'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
+
+	class money_transfer
+	{
+		name = "Sac de billets de banque";
+		weight = 18;
+		illegal = 0;
+		removable = 0;
+		image = "";
+	};
 };

@@ -26,8 +26,6 @@ _display = findDisplay 91000;
 if (isNull _display) exitWith {};
 
 g_interaction_target setVariable ["trunk_in_use_ID", (getPlayerUID player), true];
-g_interaction_require = g_interaction_target getVariable ["construction_require", []];
-
 [] call AlysiaClient_fnc_company_construction_update;
 
 while {!(isNull _display)} do
@@ -51,4 +49,4 @@ if ((g_interaction_target getVariable ["trunk_in_use_ID", ""]) isEqualTo (getPla
 	g_interaction_target setVariable ["trunk_in_use_ID", "", true];
 };
 
-g_interaction_target setVariable ["construction_require", g_interaction_require, true];
+g_interaction_target setVariable ["construction_require", (g_interaction_target getVariable ["construction_require", []]), true];

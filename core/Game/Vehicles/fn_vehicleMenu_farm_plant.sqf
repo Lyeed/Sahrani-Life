@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_zone", "_plant", "_seed", "_trunk", "_weight_actual", "_weight_max", "_vehicle"];
+private["_zone", "_plant", "_seed", "_vehicle"];
 _vehicle = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 if (isNull _vehicle) exitWith {};
@@ -40,10 +40,6 @@ closeDialog 0;
 _plant = getText(missionConfigFile >> "ALYSIA_FARMING_PLANT_MARKERS" >> _zone >> "plant");
 _seed = getText(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "seed");
 
-_trunk = _vehicle getVariable ["Trunk", []];
-_weight_actual = [_trunk] call AlysiaClient_fnc_weightGenerate;
-_weight_max = [typeOf(_vehicle)] call AlysiaClient_fnc_getVehVirtual;
-
 _vehicle setVariable ["farm_plant", true];
 _vehicle setVariable ["trunk_in_use_ID", "FARMING", true];
 
@@ -55,7 +51,7 @@ while {(_vehicle getVariable ["farm_plant", false])} do
 	if ((_vehicle distance (getMarkerPos _zone)) > 40) exitWith {
 		[format["Plantaison terminé<br/>Trop loin de %1", markerText _zone]] call AlysiaClient_fnc_error;
 	};
-	if (([_trunk, _seed] call AlysiaClient_fnc_itemTrunk) isEqualTo 0) exitWith {
+	if (([(_vehicle getVariable ["Trunk", []]), _seed] call AlysiaClient_fnc_itemTrunk) isEqualTo 0) exitWith {
 		["Plantaison terminé<br/>Aucune graine dans le coffre du véhicule"] call AlysiaClient_fnc_error;
 	};
 	if ((driver _vehicle) != player) exitWith {
@@ -70,22 +66,24 @@ while {(_vehicle getVariable ["farm_plant", false])} do
 
 	if (count (nearestObjects [_vehicle, [_plant], getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "distance")]) isEqualTo 0) then
 	{
-		[false, _trunk, _seed, 1] call AlysiaClient_fnc_handleTrunk;
-		_pos = getPos _vehicle;
-		_object = createVehicle [_plant, [(_pos select 0), (_pos select 1), ((_pos select 2) - getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "groundLevel"))], [], 0, "CAN_COLLIDE"];
-		
-		_plantGrowingtime = getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "growingTime") + round(random(getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "extraGrow")));
-		if (([_trunk, "engrais"] call AlysiaClient_fnc_itemTrunk) > 0) then {
-			_plantGrowingtime = round(_plantGrowingtime * 0.7);
-		};
+		if ([false, _vehicle, "Trunk", _seed, 1, false] call AlysiaClient_fnc_handleTrunk) then
+		{
+			_pos = getPos _vehicle;
+			_object = createVehicle [_plant, [(_pos select 0), (_pos select 1), ((_pos select 2) - getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "groundLevel"))], [], 0, "CAN_COLLIDE"];
+			
+			_plantGrowingtime = getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "growingTime") + round(random(getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "extraGrow")));
+			if ([false, _vehicle, "Trunk", "engrais", 1, false] call AlysiaClient_fnc_handleTrunk) then {
+				_plantGrowingtime = round(_plantGrowingtime * 0.7);
+			};
 
-		[(_plantGrowingtime / 10), getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "upLevel") / 10, _object] spawn AlysiaClient_fnc_plantGrow;
+			[(_plantGrowingtime / 10), getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "upLevel") / 10, _object] spawn AlysiaClient_fnc_plantGrow;
+		};
 	};
 
 	sleep 0.5;
 };
 
-_vehicle setVariable ["Trunk", _trunk, true];
+_vehicle setVariable ["Trunk", (_vehicle getVariable ["Trunk", []]), true];
 
 if ((_vehicle getVariable ["trunk_in_use_ID", ""]) isEqualTo "FARMING") then {
 	_vehicle setVariable ["trunk_in_use_ID", "", true];
