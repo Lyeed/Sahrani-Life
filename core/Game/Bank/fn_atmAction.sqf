@@ -10,7 +10,7 @@ _action = [_this, 0, "", [""]] call BIS_fnc_param;
 
 disableSerialization;
 _display = findDisplay 15000;
-if (isNull _display) then {};
+if (isNull _display) exitWith {};
 
 _amount = ctrlText 15019;
 if (!([_amount] call AlysiaClient_fnc_isNumber)) exitWith {
@@ -20,6 +20,10 @@ if (!([_amount] call AlysiaClient_fnc_isNumber)) exitWith {
 _amount = parseNumber _amount;
 if (_amount <= 0) exitWith {
 	["Erreur dans le montant"] call AlysiaClient_fnc_error;
+};
+
+if (g_interaction_target getVariable ["inUse", false]) exitWith {
+	["Le DAB est en cours de réapprovisionnement, veuillez patienter"] call AlysiaClient_fnc_error;
 };
 
 switch (_action) do

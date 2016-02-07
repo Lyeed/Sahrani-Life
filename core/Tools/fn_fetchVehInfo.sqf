@@ -55,7 +55,6 @@ if (!isClass(_missionConfigFile_Vehicles)) exitWith
 };
 
 [
-	_class,
 	getText(_configFile >> "picture"),
 	getText(_configFile >> "displayName"),
 	getText(_configFile >> "vehicleClass"),

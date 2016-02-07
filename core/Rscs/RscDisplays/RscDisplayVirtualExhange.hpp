@@ -217,6 +217,7 @@ class RscDisplayVirtualExhange: RscDisplayDefaultInteraction
 		{
 			idc = 503;
 			colorBackground[] = {0,0,0,0.6};
+			onLBSelChanged = "_this call AlysiaClient_fnc_virtual_menu_exhange_update_target;";
 			
 			x = 0.329844 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;
@@ -327,6 +328,7 @@ class RscDisplayVirtualExhange: RscDisplayDefaultInteraction
 		class PLAYER_INVENTORY_LIST: RscListbox
 		{
 			idc = 505;
+			onLBSelChanged = "_this call AlysiaClient_fnc_virtual_menu_exhange_update_player;";
 			
 			x = 0.494844 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;

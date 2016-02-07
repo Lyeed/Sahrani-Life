@@ -83,7 +83,7 @@ for "_i" from 0 to (round(random(30)) + 10) do
 				_vehicle addItemCargoGlobal [_item, 1];
 			};
 			case "Virtual": {
-				_vehicle setVariable ["Trunk", [true, (_vehicle getVariable ["Trunk", []]), _item, (round(random(2)) + 1)] call AlysiaClient_fnc_handleTrunk, true];
+				[true, _vehicle, "Trunk", _item, round(random(2)) + 1] call AlysiaClient_fnc_handleTrunk;
 			};
 		};
 	};

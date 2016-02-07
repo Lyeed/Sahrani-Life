@@ -77,7 +77,9 @@ class CfgFunctions
 		{
 			file = "core\Game\VirtualInventory";
 			class virtual_menu_exhange_open {};
-			class virtual_menu_exhange_update {};
+			class virtual_menu_exhange_update_lists {};
+			class virtual_menu_exhange_update_player {};
+			class virtual_menu_exhange_update_target {};
 			class virtual_menu_exhange_store {};
 			class virtual_menu_exhange_take {};
 			class virtual_menu_update_list {};
@@ -95,11 +97,14 @@ class CfgFunctions
 			class company_construction_action {};
 			class company_construction_build {};
 			class company_info_open {};
+			class company_bank_handle {};
 		};
 
 		class Tools
 		{
 			file = "core\Tools";
+			class getVehicleWeightMax {};
+			class transfertVirtualItem {};
 			class hideAllMarkers {};
 			class showAllMarkers {};
 			class sitDown {};
@@ -293,6 +298,8 @@ class CfgFunctions
 			class vehicleMenu_farm_plant {};
 			class vehicleMenu_farm_fish {};
 			class vehicleMenu_dog {};
+			class vehicleMenu_money_bag_take {};
+			class vehicleMenu_money_bag_deposit {};
 		};
 
 		class FuelStations

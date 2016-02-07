@@ -3780,6 +3780,7 @@ class ALYSIA_VEHICLES
 		fuel = "Diesel";
 		rank = 0;
 		colors[] = {};
+		tactor = 1;
 	};
 
 	class Skyline_VW_Touareg

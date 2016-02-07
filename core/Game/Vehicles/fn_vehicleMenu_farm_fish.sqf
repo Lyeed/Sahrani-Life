@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_vehicle", "_trunk", "_weight_max", "_weight_actual"];
+private "_vehicle";
 _vehicle = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 if (isNull _vehicle) exitWith {};
@@ -26,11 +26,7 @@ if ((_vehicle getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
 	["Vous ne pouvez pas commencer la pêche alors que le coffre est en cours d'utilisation"] call AlysiaClient_fnc_error;
 };
 
-_trunk = _vehicle getVariable ["Trunk", []];
-_weight_actual = [_trunk] call AlysiaClient_fnc_weightGenerate;
-_weight_max = [typeOf(_vehicle)] call AlysiaClient_fnc_getVehVirtual;
-
-if (([_trunk, "fishingpoles"] call AlysiaClient_fnc_itemTrunk) isEqualTo 0) exitWith {
+if (([(_vehicle getVariable ["Trunk", []]), "fishingpoles"] call AlysiaClient_fnc_itemTrunk) isEqualTo 0) exitWith {
 	["Vous devez avoir un filet de pêche dans le coffre du bateau"] call AlysiaClient_fnc_error;
 };
 
@@ -66,20 +62,17 @@ while {(_vehicle getVariable ["fishing", false])} do
 				_fish = ["daurade", "sardine", "merlu", "maquereau", "bar", "anchois"] call BIS_fnc_selectRandom;
 				if (random(100) <= 4) then
 				{
-					[false, _trunk, "fishingpoles", 1] call AlysiaClient_fnc_handleTrunk;
-					if (([_trunk, "fishingpoles"] call AlysiaClient_fnc_itemTrunk) isEqualTo 0) then
+					[false, _vehicle, "Trunk", "fishingpoles", 1, false] call AlysiaClient_fnc_handleTrunk;
+					if (([(_vehicle getVariable ["Trunk", []]), "fishingpoles"] call AlysiaClient_fnc_itemTrunk) isEqualTo 0) then
 					{
 						["Pêche annulée<br/>Le filet s'est fissuré et vous n'en avez pas d'autre dans le coffre du bateau"] call AlysiaClient_fnc_error;
 						breakOut "loop";
 					};
 				} else {
-					if (([_fish, 1, _weight_actual, _weight_max] call AlysiaClient_fnc_calWeightDiff) isEqualTo 0) then
+					if (!([true, _vehicle, "Trunk", _fish, 1, false] call AlysiaClient_fnc_handleTrunk)) then
 					{
 						["Pêche annulée<br/>L'inventaire du véhicule est plein"] call AlysiaClient_fnc_error;
 						breakOut "loop";
-					} else {
-						[true, _trunk, _fish, 1] call AlysiaClient_fnc_handleTrunk;
-						_weight_actual = _weight_actual + ([_fish] call AlysiaClient_fnc_itemGetWeight);
 					};
 				};
 			};
@@ -87,8 +80,7 @@ while {(_vehicle getVariable ["fishing", false])} do
 	};
 };
 
-_vehicle setVariable ["Trunk", _trunk, true];
-
+_vehicle setVariable ["Trunk", (_vehicle getVariable ["Trunk", []]), true];
 if ((_vehicle getVariable ["trunk_in_use_ID", ""]) isEqualTo "FISHING") then {
 	_vehicle setVariable ["trunk_in_use_ID", "", true];
 };
