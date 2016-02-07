@@ -8,7 +8,7 @@
 
 private ["_infos","_owners","_caution","_prison","_prisonName","_cells"];
 _infos = [_this, 0, [], [[]]] call BIS_fnc_param;
-_prison = (([player] call AlysiaClient_fnc_prisonNearest) select 0);
+_prison = g_arrest_prison;
 _prisonName = vehicleVarName _prison;
 _owners = "";
 _cells = 0;
