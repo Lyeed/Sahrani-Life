@@ -19,6 +19,6 @@ if ([false, "baillon", 1] call life_fnc_handleInv) then {
 		titleText["* Vous avez bailloné la personne *", "PLAIN DOWN"];
 		[[], "ALYSIA_fnc_applyBaillon", _target, false] spawn life_fnc_MP;
 	}
-	else { ["La cible porte déjà de baillon"] call ALYSIA_fnc_error; };
+	else { ["La cible porte déjà un baillon"] call ALYSIA_fnc_error; };
 }
 else { ["Vous n'avez pas de baillon"] call ALYSIA_fnc_error; };

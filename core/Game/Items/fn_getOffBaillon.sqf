@@ -7,5 +7,5 @@
 */
 
 player setVariable["baillon", false, true];
-titleText["Quelqu'un vous a enlever votre baillon", "PLAIN"];
+titleText["Quelqu'un vous a enlevé votre baillon", "PLAIN"];
 player setVariable ["tf_voiceVolume", 1, true];

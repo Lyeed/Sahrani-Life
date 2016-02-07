@@ -1725,7 +1725,7 @@ class ALYSIA_ITEMS
 		image       = "";
 		class market
 		{
-			max = 200;
+			max = 190;
 			min = 165;
 			mult = 2;
 			affect[] = {"ironp", "soufre", "platinep", "souffre", "hsoufre", "copperp", "alu"};
@@ -1757,7 +1757,7 @@ class ALYSIA_ITEMS
 	class magazine
 	{
 		name        = "Chargeur vide";
-		weight      = 2;
+		weight      = 1;
 		price_buy   = 0;
 		price_sell  = 1;
 		illegal     = 0;

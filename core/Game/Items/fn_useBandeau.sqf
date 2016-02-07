@@ -19,6 +19,6 @@ if ([false, "bandeau", 1] call life_fnc_handleInv) then {
 		titleText["* Vous avez bandé les yeux de la personne *", "PLAIN DOWN"];
 		[[], "ALYSIA_fnc_applyBandeau", _target, false] spawn life_fnc_MP;
 	}
-	else { ["La cible porte déjà de bandeau"] call ALYSIA_fnc_error; };
+	else { ["La cible porte déjà un bandeau"] call ALYSIA_fnc_error; };
 }
 else { ["Vous n'avez pas de bandeau"] call ALYSIA_fnc_error; };

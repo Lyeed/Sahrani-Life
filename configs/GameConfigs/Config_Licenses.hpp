@@ -297,7 +297,7 @@ class ALYSIA_LICENSES
 
 	class gov_company
 	{
-		name = "Investisseur gouvernementale";
+		name = "Investisseur gouvernemental";
 		class factions
 		{
 			class CIV

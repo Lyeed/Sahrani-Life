@@ -16,7 +16,7 @@ if ((["sifflet"] call AlysiaClient_fnc_itemCount) > 0) then
 		player setFatigue ((getFatigue player) + 0.05);
 		g_action_delay = time;
 	} else {
-		["Vous devez être à pieds pour utiliser le sifflet"] call AlysiaClient_fnc_error;
+		["Vous devez être à pied pour utiliser le sifflet"] call AlysiaClient_fnc_error;
 	};
 } else {
 	["Vous n'avez pas de sifflet"] call AlysiaClient_fnc_error;

@@ -7,4 +7,4 @@
 */
 
 player setVariable["bandeau", false, true];
-titleText["* Quelqu'un vous a enlever votre bandeau *", "PLAIN DOWN"];
+titleText["* Quelqu'un vous a enlevé votre bandeau *", "PLAIN DOWN"];

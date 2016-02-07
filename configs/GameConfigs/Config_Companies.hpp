@@ -43,7 +43,7 @@ class ALYSIA_COMPANIES
 			building = "Land_Ind_vysypka";
 			license = "company_weapon";
 			image = "lyeed_IMG\data\companies\types\weapon.paa";
-			process[] = {};
+			process[] = {"bullet","buckshot","magazine","barillet","canon","crosse","garde_main","poignee","detente","percuteur","carcasse","bloc_culasse","levier","marteau","culasse"};
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";

@@ -25,7 +25,7 @@ if ((lbData[45602, _index_stock]) isEqualTo (getPlayerUID player)) exitWith {};
 
 _data = ([g_AH_type, g_AH_location] call AlysiaClient_fnc_auctionHouse_getStock) select _index_stock;
 if (isNil "_data") then {
-	["Impossible de trouver les informations de vente<br/>La vente est peut être fini ou a été annulée"] call AlysiaClient_fnc_error;
+	["Impossible de trouver les informations de vente<br/>La vente est peut être finie ou a été annulée"] call AlysiaClient_fnc_error;
 } else {
 	g_action_delay = time;
 	_handle = [g_AH_type, (_data select 0)] call AlysiaClient_fnc_auctionHouse_canAdd;

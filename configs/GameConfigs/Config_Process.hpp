@@ -805,7 +805,7 @@ class ALYSIA_PROCESS
 		};
 		receive[] =
 		{
-			/* VIRTUAL */{{"bullet", 10}},
+			/* VIRTUAL */{{"bullet", 30}},
 			/* ARMA */{},
 			/* CASH */0
 		};
@@ -865,6 +865,332 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 12;
 		time_default = 8;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class barillet
+	{
+		name = "Moulage de barillets";
+		sound = "smelting";
+		require[] =
+		{
+			{"steel", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"barillet", 2}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class canon
+	{
+		name = "Moulage de canons";
+		sound = "smelting";
+		require[] =
+		{
+			{"steel", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"canon", 2}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class crosse
+	{
+		name = "Fabrication de crosses";
+		sound = "smelting";
+		require[] =
+		{
+			{"steel", 1},
+			{"woodp", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"crosse", 2}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class garde_main
+	{
+		name = "Fabrication de gardes-mains";
+		sound = "smelting";
+		require[] =
+		{
+			{"woodp", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"garde_main", 2}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class poignee
+	{
+		name = "Fabrication de poignées";
+		sound = "smelting";
+		require[] =
+		{
+			{"steel", 1},
+			{"woodp", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"poignee", 2}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class detente
+	{
+		name = "Moulage de détentes";
+		sound = "smelting";
+		require[] =
+		{
+			{"steel", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"detente", 2}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class percuteur
+	{
+		name = "Moulage de percuteurs";
+		sound = "smelting";
+		require[] =
+		{
+			{"steel", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"percuteur", 2}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class carcasse
+	{
+		name = "Moulage de carcasses";
+		sound = "smelting";
+		require[] =
+		{
+			{"steel", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"carcasse", 2}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class bloc_culasse
+	{
+		name = "Moulage de blocs culasse";
+		sound = "smelting";
+		require[] =
+		{
+			{"steel", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"bloc_culasse", 2}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class levier
+	{
+		name = "Moulage de leviers";
+		sound = "smelting";
+		require[] =
+		{
+			{"steel", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"levier", 2}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class marteau
+	{
+		name = "Moulage de marteaux";
+		sound = "smelting";
+		require[] =
+		{
+			{"steel", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"marteau", 2}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class culasse
+	{
+		name = "Moulage de culasses";
+		sound = "smelting";
+		require[] =
+		{
+			{"steel", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"culasse", 2}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
 		class target {};
 		class factions
 		{

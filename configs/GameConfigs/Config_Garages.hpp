@@ -2,7 +2,7 @@ class ALYSIA_GARAGES
 {
 	class garage_paraiso
 	{
-		name = "Garage de Paraiso";
+		name = "Garage de Brajvagrad";
 		spawns[] =
 		{
 			"garage_paraiso_1",
@@ -18,7 +18,7 @@ class ALYSIA_GARAGES
 
 	class garage_bagongo
 	{
-		name = "Garage de Bagongo";
+		name = "Garage de Slobodagrad";
 		spawns[] =
 		{
 			"garage_bagongo_1",
