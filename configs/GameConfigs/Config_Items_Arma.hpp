@@ -3430,4 +3430,9 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
+	
+	class Fett_backpack_milice
+	{
+		buy_price = 20;
+	};
 };

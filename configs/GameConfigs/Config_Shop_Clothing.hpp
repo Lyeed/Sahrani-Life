@@ -530,7 +530,8 @@ class ALYSIA_SHOPS_CLOTHING
 		};
 		backpacks[] =
 		{
-			"Fett_tf_mr3000_milice"
+			"Fett_tf_mr3000_milice",
+			"Fett_backpack_milice"
 		};
 	};
 
