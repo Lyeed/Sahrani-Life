@@ -165,6 +165,8 @@ class CfgFunctions
 		class Items
 		{
 			file = "core\Game\Items";
+			class moneyBag {};
+			class moneyBagHandle {};
 			class activateNitro {};
 			class applyBaillon {};
 			class applyBandeau {};
@@ -300,6 +302,16 @@ class CfgFunctions
 			class vehicleMenu_dog {};
 			class vehicleMenu_money_bag_take {};
 			class vehicleMenu_money_bag_deposit {};
+			class vehicleMenu_money_bomb {};
+		};
+
+		class C4
+		{
+			file = "core\Game\C4";
+			class c4_open {};
+			class c4_update {};
+			class c4_timer {};
+			class c4_activate {};
 		};
 
 		class FuelStations

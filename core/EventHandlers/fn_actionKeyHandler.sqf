@@ -273,6 +273,21 @@ if ((vehicle player) isEqualTo player) then
 						true breakOut "main";
 					};
 				};
+
+				if (typeOf(_target) isEqualTo "Land_Bag_EP1") then
+				{
+					if (_target getVariable ["money_bank", false]) then
+					{
+						[_target] spawn AlysiaClient_fnc_moneyBag;
+						true breakOut "main";
+					};
+				};
+
+				if (typeOf(_target) isEqualTo "Bank_Bomb") then
+				{
+					[_target] spawn AlysiaClient_fnc_c4_open;
+					true breakOut "main";
+				};
 			};
 		};
 		

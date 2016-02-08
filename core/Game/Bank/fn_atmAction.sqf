@@ -54,7 +54,7 @@ switch (_action) do
 		[false, _amount, "Retrait DAB"] call AlysiaClient_fnc_handleATM;
 		[false, _tax, "Taxe prélèvenement DAB"] call AlysiaClient_fnc_handleATM;
 		[true, _amount] call AlysiaClient_fnc_handleCash;
-		["home"] call AlysiaClient_fnc_atmScreen;
+		closeDialog 0;
 	};
 
 	case "deposit":
@@ -72,7 +72,7 @@ switch (_action) do
 		g_interaction_target setVariable ["money", ((g_interaction_target getVariable ["money", getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "money_stock")]) + _amount), true];
 		[false, _amount] call AlysiaClient_fnc_handleCash;
 		[true, _amount, "Dépot DAB"] call AlysiaClient_fnc_handleATM;
-		["home"] call AlysiaClient_fnc_atmScreen;
+		closeDialog 0;
 	};
 
 	case "deposit_faction":
@@ -90,7 +90,7 @@ switch (_action) do
 		g_interaction_target setVariable ["money", ((g_interaction_target getVariable ["money", getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "money_stock")]) + _amount), true];
 		[false, _amount] call AlysiaClient_fnc_handleCash;
 		[playerSide, true, _amount] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
-		["home_faction"] call AlysiaClient_fnc_atmScreen;
+		closeDialog 0;
 	};
 
 	case "withdraw_faction":
@@ -124,7 +124,7 @@ switch (_action) do
 			["Solde insuffisant"] call AlysiaClient_fnc_error;
 		};
 		
-		["home_faction"] call AlysiaClient_fnc_atmScreen;
+		closeDialog 0;
 	};
 	
 	default {["Action non reconnue"] call AlysiaClient_fnc_error};

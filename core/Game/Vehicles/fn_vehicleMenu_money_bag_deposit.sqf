@@ -11,7 +11,7 @@ _vehicle = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 if (isNull _vehicle) exitWith {};
 if (g_action_inUse) exitWith {};
 
-_obj = player getVariable ["money_transfert", objNull];
+_obj = player getVariable ["money_transfer", objNull];
 if (isNull _obj) exitWith {
 	["Vous ne transportez pas de sac de billets"] call AlysiaClient_fnc_error;
 };
@@ -21,7 +21,7 @@ if ((_vehicle getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
 };
 
 closeDialog 0;
-if ([true, _vehicle, "Trunk", "money_transfert", 1] call AlysiaClient_fnc_handleTrunk) then
+if ([true, _vehicle, "Trunk", "money_transfer", 1] call AlysiaClient_fnc_handleTrunk) then
 {
 	g_action_inUse = true;
 	deleteVehicle _obj;

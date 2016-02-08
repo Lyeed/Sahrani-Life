@@ -26,4 +26,8 @@ if (_type) then
 	};
 };
 
+if (_ret) then {
+	g_company setVariable ["company_bank", _amount, true];
+};
+
 _ret;

@@ -74,7 +74,7 @@ for "_i" from 0 to (round(random(30)) + 10) do
 				_vehicle addWeaponCargoGlobal [_item, 1];
 			};
 			case "Magazines": {
-				_vehicle addMagazineCargoGlobal [_item, 3];
+				_vehicle addMagazineCargoGlobal [_item, round(random(3)) + 1];
 			};
 			case "Backpacks": {
 				_vehicle addBackpackCargoGlobal [_item, 1];

@@ -37,7 +37,7 @@ if (isClass(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food")) then
 	if (isClass(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "use")) then
 	{
 		_button_1 ctrlSetText "Utiliser";
-		_button_1 buttonSetAction format["['%1'] call AlysiaClient_fnc_AlysiaClient_fnc_useItem;", _item];
+		_button_1 buttonSetAction format["['%1'] call AlysiaClient_fnc_useItem;", _item];
 		_button_1 ctrlShow true;
 	} else {
 		_button_1 ctrlShow false;

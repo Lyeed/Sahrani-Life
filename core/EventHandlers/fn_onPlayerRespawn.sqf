@@ -26,15 +26,18 @@ if (player getVariable ["arrested", false]) then {
 	[] spawn AlysiaClient_fnc_init_loadout;
 
 	_price = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "respawn_price");
-	if (g_atm < _price) then {
-		["Vous n'avez pas assez d'argent pour payer vos frais d'hospitalisation<br/>Ces derniers on été payé par l'Etat", "buy"] call AlysiaClient_fnc_info;
-	} else {
-		[format["Vos frais d'<t color='#FE2EF7'>hospitalisation</t> s'élèvent à <t color='#8cff9b'>%1kn</t>", ([_price] call AlysiaClient_fnc_numberText)], "buy"] call AlysiaClient_fnc_info;
-		[false, _price, "Soins hôpital"] call AlysiaClient_fnc_handleATM;
+	if (_price > 0) then
+	{
+		if (g_atm < _price) then {
+			["Vous n'avez pas assez d'argent pour payer vos frais d'hospitalisation<br/>Ces derniers on été payé par l'Etat", "buy"] call AlysiaClient_fnc_info;
+		} else {
+			[format["Vos frais d'<t color='#FE2EF7'>hospitalisation</t> s'élèvent à <t color='#8cff9b'>%1kn</t>", ([_price] call AlysiaClient_fnc_numberText)], "buy"] call AlysiaClient_fnc_info;
+			[false, _price, "Soins hôpital"] call AlysiaClient_fnc_handleATM;
+		};
 	};
 
 	if (count(g_houses) > 0) then {
-		player setPosATL (getPosATL g_houses);
+		player setPosATL (getPosATL (g_houses select 0));
 	} else {
 		_respawn = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "respawn_marker");
 		if (playerSide isEqualTo civilian) then {
