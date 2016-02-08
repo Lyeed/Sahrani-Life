@@ -280,7 +280,8 @@ class ALYSIA_SHOPS_VEHICLES
 			"max_towtruck",
 			"Jonzie_Tow_Truck",
 			"shounka_limo_civ",
-			"shounka_a3_mantgs"
+			"shounka_a3_mantgs",
+			"shounka_a3_brinks_noir"
 		};
 	};
 };

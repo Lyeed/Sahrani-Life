@@ -65,6 +65,8 @@ class CfgRemoteExec
 		//- Laboratories
 		class AlysiaServer_fnc_laboratory_insert {allowTargets = SERVER;};
 		class AlysiaServer_fnc_laboratory_destroy {allowTargets = SERVER;};
+		//- C4
+		class AlysiaServer_fnc_c4_bomb {allowTargets = SERVER;};
 		
 		/*
 		**		CLIENT FUNCTIONS

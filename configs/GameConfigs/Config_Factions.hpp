@@ -60,7 +60,8 @@ class ALYSIA_FACTIONS
 					"RH_17Rnd_9x19_g17",
 					"Fett_20Rnd_556x45_UW_mag",
 					"RH_7Rnd_50_AE",
-					"20Rnd_762x51_Mag"
+					"20Rnd_762x51_Mag",
+					"Bank_DefuseKit"
 				}
 			},
 			{"Items",
@@ -238,7 +239,8 @@ class ALYSIA_FACTIONS
 					"Trixie_Enfield_Mag",
 					"Fett_20Rnd_556x45_UW_mag",
 					"wc_32Rnd_9x19_mag",
-					"hlc_20Rnd_762x51_B_M14"
+					"hlc_20Rnd_762x51_B_M14",
+					"Bank_DefuseKit"
 				}
 			},
 			{"Items",

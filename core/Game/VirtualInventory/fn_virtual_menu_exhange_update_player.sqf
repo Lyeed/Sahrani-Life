@@ -22,13 +22,12 @@ _item = _list lbData _sel;
 if (_item isEqualTo "") exitWith {};
 
 _amount = _list lbValue _sel;
-
 if (g_interaction_target_trunk_store) then
 {
 	_count = [_item, 2, ([(g_interaction_target getVariable [g_interaction_target_trunk_type, []])] call AlysiaClient_fnc_weightGenerate), g_interaction_target_trunk_weight_max] call AlysiaClient_fnc_calWeightDiff;
 	if (_count > 0) then
 	{
-		if (_count >= 2) then
+		if ((_count >= 2) && (_amount > 1)) then
 		{
 			ctrlShow[510, true];
 			ctrlShow[511, true];

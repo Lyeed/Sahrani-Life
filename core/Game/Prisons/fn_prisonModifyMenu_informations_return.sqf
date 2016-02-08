@@ -13,7 +13,7 @@ if (isNull _from) exitWith {};
 if (player getVariable ["arrested", false]) then
 {
 	[
-		(_from getVariable ["realname", ""]),
+		(player getVariable ["realname", ""]),
 		g_sexe,
 		player call AlysiaClient_fnc_age,
 		g_nationality,

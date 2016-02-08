@@ -45,6 +45,8 @@ if ((lbSize _ctrl_player) isEqualTo 0) then {
 };
 if ((lbCurSel _ctrl_player) isEqualTo -1) then {
 	_ctrl_player lbSetCurSel 0;
+} else {
+	_ctrl_player lbSetCurSel (lbCurSel _ctrl_player);
 };
 
 _trunk = g_interaction_target getVariable [g_interaction_target_trunk_type, []];
@@ -83,4 +85,6 @@ if ((lbSize _ctrl_vehicle) isEqualTo 0) then {
 };
 if ((lbCurSel _ctrl_vehicle) isEqualTo -1) then {
 	_ctrl_vehicle lbSetCurSel 0;
+} else {
+	_ctrl_vehicle lbSetCurSel (lbCurSel _ctrl_vehicle);
 };

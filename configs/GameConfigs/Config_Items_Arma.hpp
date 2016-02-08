@@ -1852,10 +1852,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class SkylineItems_Coutea
-	{
-		buy_price = 20;
-	};
 	class SkylineItems_Crochetage
 	{
 		buy_price = 20;
@@ -3427,6 +3423,14 @@ class ALYSIA_ITEMS_ARMA
 	class wc_us_smg_m1a1 {};
 	class wc_30Rnd_45acp {};
 	class rhs_6b23_digi_6sh92_radio
+	{
+		buy_price = 20;
+	};
+	class Fett_backpack_milice
+	{
+		buy_price = 20;
+	};
+	class Bank_Bomb
 	{
 		buy_price = 20;
 	};

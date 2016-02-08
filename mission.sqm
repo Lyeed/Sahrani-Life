@@ -35838,14 +35838,14 @@ class Mission
 		};
 		class Item53
 		{
-			position[]={11918.389,152.99004,15357.648};
+			position[]={8180.6665,176.97188,7838.748};
 			name="west_spawn";
 			text="west_spawn";
 			type="Empty";
 		};
 		class Item54
 		{
-			position[]={8180.6665,176.97188,7838.748};
+			position[]={11918.389,152.99004,15357.648};
 			name="east_spawn";
 			text="east_spawn";
 			type="Empty";

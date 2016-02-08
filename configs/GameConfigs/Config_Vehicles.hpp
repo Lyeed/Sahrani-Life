@@ -3951,4 +3951,18 @@ class ALYSIA_VEHICLES
 	class Skyline_Peugeot_308_10_F: Skyline_Peugeot_308 {};
 	class Skyline_Peugeot_308_11_F: Skyline_Peugeot_308 {};
 	class Skyline_Peugeot_308_12_F: Skyline_Peugeot_308 {};
-};	
+
+	class shounka_a3_brinks_noir
+	{
+		realname = "Camion de transport de fond";
+		buyPrice = 160000;// BEN A FAIRE
+		inventory = 150;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"truck", "company_money_tranfer"};
+		fuel = "Diesel";
+		rank = 0;
+		colors[] = {};
+		money_transfer = 1;
+	};
+};

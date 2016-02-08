@@ -29,6 +29,7 @@
 #include "RscDisplays\RscDisplayArrest.hpp"
 #include "RscDisplays\RscDisplayCompanies.hpp"
 #include "RscDisplays\RscDisplayStealVehicle.hpp"
+#include "RscDisplays\RscDisplayC4.hpp"
 
 class RscTitles
 {

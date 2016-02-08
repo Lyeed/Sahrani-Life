@@ -28,7 +28,7 @@ if (g_interaction_target_trunk_take) then
 	_count = [_item, 2, g_carryWeight, g_maxWeight] call AlysiaClient_fnc_calWeightDiff;
 	if (_count > 0) then
 	{
-		if (_count >= 2) then
+		if ((_count >= 2) && (_amount > 1)) then
 		{
 			ctrlShow[506, true];
 			ctrlShow[507, true];
