@@ -6,8 +6,6 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (!hasInterface) exitWith {};
-
 {
 	_x hideObject true;
 	_x enableSimulation false;

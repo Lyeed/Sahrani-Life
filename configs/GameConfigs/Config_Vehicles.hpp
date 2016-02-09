@@ -3965,4 +3965,18 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		money_transfer = 1;
 	};
+
+	class Skyline_GMC_Vandura_Propagande_01_F
+	{
+		realname = "GMC haut parleurs";
+		buyPrice = 35000;
+		inventory = 30;
+		side = "EAST";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP98";
+		rank = 0;
+		colors[] = {};
+		speaker = 1;
+	};
 };

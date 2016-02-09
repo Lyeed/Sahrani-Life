@@ -53,7 +53,8 @@ class ALYSIA_SHOPS_VEHICLES
 			"gac_JMSDF_SKW475",
 			"gac_jsdf_klx",
 			"gac_JGSDF_V16",
-			"I_mas_T34_AAF_01"
+			"I_mas_T34_AAF_01",
+			"Skyline_GMC_Vandura_Propagande_01_F"
 		};
 	};
 	class EAST_vehicles_air
