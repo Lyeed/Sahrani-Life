@@ -1022,10 +1022,7 @@ class ALYSIA_SHOPS_CLOTHING
 			"TRYK_H_Booniehat_MARPAT_WOOD",
 			"TRYK_H_Booniehat_WOOD",
 			"TRYK_H_EARMUFF",
-			"TRYK_H_LHS_HEL_G",
-			"TRYK_H_Booniehat_3CD",
-			"TRYK_H_Booniehat_3CD",
-			"TRYK_H_Booniehat_3CD",
+			"TRYK_H_LHS_HEL_G"
 			
 		};
 
@@ -1063,8 +1060,7 @@ class ALYSIA_SHOPS_CLOTHING
 			"Tact_HoodMC",
 			"Tact_HoodOD",
 			"Tact_HoodTAN",
-			"Tact_HoodWhite",
-			"shemagh_faceD"
+			"Tact_HoodWhite"
 		};
 		vests[] =
 		{
