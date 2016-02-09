@@ -176,8 +176,6 @@ class ALYSIA_SHOPS_ARMA
 		stocks[] = 
 		{
 			"B_Parachute",
-			"FLAY_HangGlider_Bag",
-			"FLAY_HangGliderBlack_Bag"
 		};
 	};
 	

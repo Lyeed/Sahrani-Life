@@ -490,7 +490,6 @@ class ALYSIA_SHOPS_CLOTHING
 		};
 		headgear[] =
 		{
-			"Skyline_Army_PatroopLevel",
 			"H_Beret_blk"
 		};
 		goggles[] =
@@ -544,7 +543,8 @@ class ALYSIA_SHOPS_CLOTHING
 			"combi_plonge_civ1",
 			"combi_plonge_civ2",
 			"combi_plonge_civ3",
-			"combi_plonge_civ4"
+			"combi_plonge_civ4",
+			"U_B_Wetsuit"
 		};
 		headgear[] = {};
 		goggles[] =
@@ -582,9 +582,6 @@ class ALYSIA_SHOPS_CLOTHING
 			"casquette_Basique",
 			"rds_Woodlander_cap3",
 			"TRYK_H_Helmet_ACU",
-			"wc_gr_h_m35_feldgrau_1",
-			"wc_gr_h_m35_feldgrau_1_over",
-			"wc_gr_h_m35_feldgrau_1_open",
 			"H_LIB_GER_TankOfficerCap",
 			"H_LIB_GER_Helmet",
 			"H_LIB_GER_HelmetCamo",
@@ -657,7 +654,9 @@ class ALYSIA_SHOPS_CLOTHING
 		};
 		headgear[] = 
 		{
-			"usm_helmet_safety"
+			"usm_helmet_safety",
+			"H_Cap_press",
+			"H_Cap_Securite_01"
 		};
 		goggles[] = {};
 		vests[] = 
@@ -802,8 +801,6 @@ class ALYSIA_SHOPS_CLOTHING
 		vests[] = {};
 		backpacks[] =
 		{
-			"FLAY_HangGliderBlack_Bag",
-			"FLAY_HangGlider_Bag",
 			"B_Parachute" 
 		};
 	};
@@ -991,16 +988,83 @@ class ALYSIA_SHOPS_CLOTHING
 			"oreh_uniform",
 			"Pompier_uniform",
 			"surpat_uniform",
-			"gac_JGSDF_BDU"
+			"U_BG_Guerilla2_1",
+			"U_BG_Guerilla2_2",
+			"U_BG_Guerilla2_3",
+			"U_C_SonsofAnarchy_01"
 		};
 		headgear[] =
 		{
-			"H_mas_afr_Bandana_e_civ_rebel"
+			"H_mas_afr_Bandana_e_civ_rebel",
+			"H_Shemag_olive",
+			"H_ShemagOpen_khk",
+			"H_Shemag_olive_hs",
+			"H_ShemagOpen_khk",
+			"H_ShemagOpen_tan",
+			"H_ShemagOpen_tan",
+			"H_ShemagOpen_tan",
+			"H_ShemagOpen_tan",
+			"H_ShemagOpen_tan",
+			"Head_Wrap",
+			"Head_WrapTAN",
+			"TRYK_ESS_CAP",
+			"TRYK_ESS_CAP_OD",
+			"TRYK_ESS_CAP_tan",
+			"TRYK_H_Bandana_H",
+			"TRYK_H_Bandana_wig",
+			"TRYK_H_Bandana_wig_g",
+			"TRYK_H_Booniehat_3CD",
+			"TRYK_H_Booniehat_AOR1",
+			"TRYK_H_Booniehat_AOR2",
+			"TRYK_H_Booniehat_CC",
+			"TRYK_H_Booniehat_JSDF",
+			"TRYK_H_Booniehat_MARPAT_Desert",
+			"TRYK_H_Booniehat_MARPAT_WOOD",
+			"TRYK_H_Booniehat_WOOD",
+			"TRYK_H_EARMUFF",
+			"TRYK_H_LHS_HEL_G",
+			"TRYK_H_Booniehat_3CD",
+			"TRYK_H_Booniehat_3CD",
+			"TRYK_H_Booniehat_3CD",
+			
 		};
 
 		goggles[] =
 		{
-			"T_HoodACUBLK"
+			"G_Balaclava_bloodhands",
+			"G_Balaclava_combat",
+			"G_Balaclava_lowprofile",
+			"G_Balaclava_oli",
+			"G_Balaclava_Unitedsates",
+			"G_Balaclava_whitecross",
+			"G_Balaclava_Whitehand",
+			"G_Bandanna_aviator",
+			"G_Bandanna_beast",
+			"G_Bandanna_blk",
+			"G_Bandanna_khk",
+			"G_Bandanna_oli",
+			"G_Bandanna_shades",
+			"G_Bandanna_sport",
+			"G_Bandanna_tan",
+			"Ghost_ReconOD",
+			"Mask_M40_OD",
+			"Recon_MskullBLK",
+			"Recon_MskullGRY",
+			"Recon_MskullTAN",
+			"shemagh_faceD",
+			"shemagh_faceOD",
+			"shemagh_neckOD",
+			"Skyline_GasMask",
+			"Tact_HoodACU",
+			"Tact_HoodAOR1",
+			"Tact_HoodBlack",
+			"Tact_HoodMAR",
+			"Tact_HoodMARPAT",
+			"Tact_HoodMC",
+			"Tact_HoodOD",
+			"Tact_HoodTAN",
+			"Tact_HoodWhite",
+			"shemagh_faceD"
 		};
 		vests[] =
 		{
