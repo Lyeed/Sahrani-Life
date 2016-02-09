@@ -65,6 +65,9 @@ g_action_delay = time;
 playSound "buy";
 [_item, true] call AlysiaClient_fnc_handleItem;
 
-if (_item in getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "leader_bord_history")) then {
-	[(player getVariable["realname", profileName]), _item, playerSide] remoteExecCall ["AlysiaServer_fnc_factionHistoryAdd", 2];
+if (isClass(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "board")) then
+{
+	if (_item in getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "board" >> "history_items")) then {
+		[(player getVariable["realname", profileName]), _item, playerSide] remoteExecCall ["AlysiaServer_fnc_factionHistoryAdd", 2];
+	};
 };

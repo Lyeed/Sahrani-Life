@@ -9,7 +9,6 @@ private["_price_add", "_price_remove", "_add_to_north", "_add_to_south"];
 
 _price_add = 0;
 _price_remove = 0;
-
 _add_to_north = 0;
 _add_to_south = 0;
 
@@ -30,14 +29,22 @@ if (!(player getVariable ["arrested", false])) then
 		_taxe = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary_tax");
 		if (_taxe > 0) then
 		{
-			_price = _salary * _taxe;
-			[false, _price, "Cotisation salariale"] call AlysiaClient_fnc_handleATM;
-			_price_remove = _price_remove - _price;
 			switch (g_choice) do
 			{
-				case "NORTH": {_add_to_north = _add_to_north + _price;};
-				case "SOUTH": {_add_to_south = _add_to_south + _price;};
+				case "NORTH":
+				{
+					_price = _salary * (_taxe * gServer_tax_north_salary_multiplier);
+					_add_to_north = _add_to_north + _price;
+				};
+				case "SOUTH":
+				{
+					_price = _salary * (_taxe * gServer_tax_south_salary_multiplier);
+					_add_to_south = _add_to_south + _price;
+				};
 			};
+
+			_price_remove = _price_remove + _price;
+			[false, _price, "Cotisation salariale"] call AlysiaClient_fnc_handleATM;
 		};
 	};
 };
@@ -52,18 +59,49 @@ if (!(isNull g_company)) then
 		_price_employees = getNumber(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2) >> "tax" >> "price_per_employee");
 		if (_price_employees > 0) then
 		{
-			_price = (count(g_company getVariable ["company_members", []]) - 1) * _price_employees;
-			if (!([false, _price, "Taxe salariale"] call AlysiaClient_fnc_handleATM)) then {
+			switch (_info select 5) do
+			{
+				case "NORTH":
+				{
+					_price = (count(g_company getVariable ["company_members", []]) - 1) * (_price_employees * gServer_tax_north_companies_employee_multiplier);
+					_add_to_north = _add_to_north + _price;
+				};
+				case "SOUTH":
+				{
+					_price = (count(g_company getVariable ["company_members", []]) - 1) * (_price_employees * gServer_tax_south_companies_employee_multiplier);
+					_add_to_south = _add_to_south + _price;
+				};
+			};
+
+			_price_remove = _price_remove + _price;
+			if (!([false, _price, "Taxe salariale"] call AlysiaClient_fnc_handleATM)) then
+			{
 				["Vous n'avez pas assez d'argent pour payer votre taxe salariale. Régulez votre situation dans les plus brefs délais ou des huissiers passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
 			};
-			_price_remove = _price_remove - _price;
 		};
 
 		_price_building = getNumber(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2) >> "tax" >> "price_building");
 		if (_price_building > 0) then
 		{
-			[false, _price, "Taxe foncière"] call AlysiaClient_fnc_handleATM;
-			_price_remove = _price_remove - _price_building;
+			switch (_info select 5) do
+			{
+				case "NORTH":
+				{
+					_price_building = _price_building * gServer_tax_north_companies_building_multiplier;
+					_add_to_north = _add_to_north + _price_building;
+				};
+				case "SOUTH":
+				{
+					_price_building = _price_building * gServer_tax_south_companies_building_multiplier;
+					_add_to_south = _add_to_south + _price_building;
+				};
+			};
+
+			_price_remove = _price_remove + _price_building;
+			if (!([false, _price_building, "Taxe foncière"] call AlysiaClient_fnc_handleATM)) then
+			{
+				["Vous n'avez pas assez d'argent pour payer votre taxe foncière. Régulez votre situation dans les plus brefs délais ou des huissiers passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
+			};
 		};
 	};
 };
@@ -76,17 +114,28 @@ if (count(g_houses) > 0) then
 	if (_percentage > 0) then
 	{
 		_price = 0;
-
+		switch (g_choice) do
 		{
-			_price = _price + (getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(_x) >> "price") * _percentage);
-		} forEach g_houses;
-
-		if (_price > 0) then
-		{
-			if (!([false, _price, "Taxe d'habitation"] call AlysiaClient_fnc_handleATM)) then {
-				["Vous n'avez pas assez d'argent pour payer votre taxe d'habitation. Régulez votre situation dans les plus brefs délais ou des huissiers passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
+			case "NORTH":
+			{
+				{
+					_price = _price + (getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(_x) >> "price") * (_percentage * gServer_tax_north_house_multiplier));
+				} forEach g_houses;
+				_add_to_north = _add_to_north + _price;
 			};
-			_price_remove = _price_remove - _price;
+			case "SOUTH":
+			{
+				{
+					_price = _price + (getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(_x) >> "price") * (_percentage * gServer_tax_south_house_multiplier));
+				} forEach g_houses;
+				_add_to_south = _add_to_south + _price;
+			};
+		};
+
+		_price_remove = _price_remove + _price;
+		if (!([false, _price, "Taxe d'habitation"] call AlysiaClient_fnc_handleATM)) then
+		{
+			["Vous n'avez pas assez d'argent pour payer votre taxe d'habitation. Régulez votre situation dans les plus brefs délais ou des huissiers passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
 		};
 	};
 };
@@ -103,15 +152,17 @@ if (g_phone_forfait != "none") then
 			["Vous n'avez plus assez d'argent dans votre compte en banque pour payer votre forfait téléphonique.<br/>Vous avez été rétrogradé au forfait lite.", "FORFAIT"] call AlysiaClient_fnc_phone_message_receive;
 			["lite"] call AlysiaClient_fnc_phone_forfait_change;
 		};
-		_price_remove = _price_remove - _price;
+		_price_remove = _price_remove + _price;
 	};
 };
 
-if (_add_to_north > 0) then {
+if (_add_to_north > 0) then
+{
 	[civilian, true, _add_to_north] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
 };
 
-if (_add_to_south > 0) then {
+if (_add_to_south > 0) then
+{
 	[east, true, _add_to_south] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
 };
 

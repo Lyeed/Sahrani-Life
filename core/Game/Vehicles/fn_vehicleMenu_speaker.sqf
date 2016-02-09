@@ -8,6 +8,8 @@
 private["_ids", "_target"];
 _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
+closeDialog 0;
+
 if (isNull _target) exitWith {};
 
 _ids = [];

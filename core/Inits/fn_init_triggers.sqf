@@ -26,3 +26,8 @@ g_trigger_frontiere setTriggerStatements
 	",
 	""
 ];
+
+g_trigger_region = createTrigger ["EmptyDetector", [9887.92,7570.05,2.23596], false];
+g_trigger_region setTriggerArea [3200, 3200, -221.42799, true];
+g_trigger_region setTriggerActivation ["ANY", "PRESENT", true];
+g_trigger_region setTriggerStatements ["(vehicle player) in thislist", "", ""];

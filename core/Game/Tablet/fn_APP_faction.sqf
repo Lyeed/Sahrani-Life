@@ -16,10 +16,15 @@ if (isNull _display) exitWith {};
 ctrlSetText[8700, getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "icon")];
 (_display displayCtrl 8701) ctrlSetStructuredText parseText format["<t align='center' size='1.2'>%1</t>", getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "name")];
 
-if ((player getVariable["rank", 0]) < getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "leader_board_rank_require")) then {
-	ctrlEnable[8710, false];
+if (isClass(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "board" >> "leader_board")) then
+{
+	if ((player getVariable["rank", 0]) >= getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "board" >> "leader_board" >> "access_rank")) then {
+		ctrlEnable[8710, true];
+	} else {
+		ctrlEnable[8710, false];
+	};
 } else {
-	ctrlEnable[8710, true];
+	ctrlshow[8710, false];
 };
 
 _list_ranks = _display displayCtrl 8704;

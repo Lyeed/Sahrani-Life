@@ -33,7 +33,7 @@ if (_rank < 0) exitWith {
 	["Le rang ne peut pas être négatif"] call AlysiaClient_fnc_error;
 };
 
-_max = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "leader_rank");
+_max = count(getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "ranks" >> "ranks_complet")) - 1;
 if (_rank > _max) exitWith {
 	[format["Le rang doit être compris entre<br/><t align='center'>0 : %1<br/>et<br/>%2 : %3</t>", ([playerSide, 0] call AlysiaClient_fnc_rankToStr), ([playerSide, _max] call AlysiaClient_fnc_rankToStr)]] call AlysiaClient_fnc_error;
 };

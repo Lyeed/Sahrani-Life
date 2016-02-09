@@ -7,6 +7,9 @@
 */
 private["_vehicle", "_data", "_position", "_time", "_try"];
 
+_config = missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "mission";
+if (!(isClass _config)) exitWith {};
+
 if (call compile format["!(isNil ""gServer_faction_%1_mission"")", str(playerSide)]) exitWith {
 	["Votre faction a déja effectuée une mission"] call AlysiaClient_fnc_error;
 };
@@ -20,7 +23,7 @@ if (((gServer_rebootHour * 60) - serverTime) < _time) exitWith {
 	]] call AlysiaClient_fnc_error;
 };
 
-_data = getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "mission_start") call BIS_fnc_selectRandom;
+_data = getArray(_config >> "positions") call BIS_fnc_selectRandom;
 _position = _data select 0;
 call compile format["gServer_faction_%1_mission=true; publicVariable""gServer_faction_%1_mission"";", str(playerSide)];
 
@@ -52,7 +55,7 @@ while {(count(nearestObjects[_position, ["Car", "Air", "Ship", "Truck", "Tank"],
 	"LIVRAISON"
 ] call AlysiaClient_fnc_phone_message_receive;
 
-_vehicle = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "mission_vehicle") createVehicle _position;
+_vehicle = getText(_config >> "vehicle") createVehicle _position;
 _vehicle setDir (_data select 1);
 [_vehicle] call AlysiaClient_fnc_clearVehicleAmmo;
 
@@ -64,7 +67,7 @@ if (local _vehicle) then {
 
 for "_i" from 0 to (round(random(30)) + 10) do
 {
-	_type = getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "mission_items") call BIS_fnc_selectRandom;
+	_type = getArray(_config >> "items") call BIS_fnc_selectRandom;
 	if (!((_type select 1) isEqualTo [])) then
 	{
 		_item = (_type select 1) call BIS_fnc_selectRandom;

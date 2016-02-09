@@ -23,6 +23,12 @@ switch (side _from) do
 			_hud = uiNameSpace getVariable ["RscTitleIdentityCIV_NORTH", displayNull];
 			if (isNull _hud) exitWith {};
 
+			(_hud displayCtrl 79000) ctrlSetText format
+			[
+				"lyeed_faces\data\%1.paa",
+				(face _from)
+			];
+
 			(_hud displayCtrl 79001) ctrlSetStructuredText parseText format
 			[
 				"<t color='#000000' size='1.1' font='EtelkaMonospacePro'>%1</t>",
@@ -47,6 +53,12 @@ switch (side _from) do
 			_hud = uiNameSpace getVariable ["RscTitleIdentityCIV_SOUTH", displayNull];
 			if (isNull _hud) exitWith {};
 
+			(_hud displayCtrl 79040) ctrlSetText format
+			[
+				"lyeed_faces\data\%1.paa",
+				(face _from)
+			];
+			
 			(_hud displayCtrl 79041) ctrlSetStructuredText parseText format
 			[
 				"<t color='#000000' size='1.1' font='EtelkaMonospacePro'>%1</t>",
@@ -74,6 +86,12 @@ switch (side _from) do
 		_hud = uiNameSpace getVariable ["RscTitleIdentityWEST", displayNull];
 		if (isNull _hud) exitWith {};
 
+		(_hud displayCtrl 79020) ctrlSetText format
+		[
+			"lyeed_faces\data\%1.paa",
+			(face _from)
+		];
+
 		(_hud displayCtrl 79021) ctrlSetStructuredText parseText format
 		[
 			"<t color='#000000' size='1' font='EtelkaMonospacePro'>%1</t>",
@@ -93,6 +111,12 @@ switch (side _from) do
 		_hud = uiNameSpace getVariable ["RscTitleIdentityEAST", displayNull];
 		if (isNull _hud) exitWith {};
 
+		(_hud displayCtrl 79010) ctrlSetText format
+		[
+			"lyeed_faces\data\%1.paa",
+			(face _from)
+		];
+
 		(_hud displayCtrl 79011) ctrlSetStructuredText parseText format
 		[
 			"<t size='1.1' color='#000000' font='EtelkaMonospacePro' align='center'>%1</t>",
@@ -111,6 +135,12 @@ switch (side _from) do
 
 		_hud = uiNameSpace getVariable ["RscTitleIdentityGUER", displayNull];
 		if (isNull _hud) exitWith {};
+
+		(_hud displayCtrl 79030) ctrlSetText format
+		[
+			"lyeed_faces\data\%1.paa",
+			(face _from)
+		];
 
 		(_hud displayCtrl 79031) ctrlSetStructuredText parseText format
 		[

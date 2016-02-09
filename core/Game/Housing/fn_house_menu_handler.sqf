@@ -15,15 +15,19 @@ if (_target in g_houses) then {
 } else {
 	if ((_target getVariable ["house_owner", []]) isEqualTo []) then {
 		if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_HOUSES" >> (typeOf _target) >> "sides")) then {
-			[_target] call AlysiaClient_fnc_house_menu_open_buy;
+			if (g_choice isEqualTo ([] call AlysiaClient_fnc_getRegion)) then {
+				[_target] call AlysiaClient_fnc_house_menu_open_buy;
+			} else {
+				["Vous devez avoir le passeport de la région pour acheter ce bâtiment."] call AlysiaClient_fnc_info;
+			};
 		} else {
-			["Vous n'êtes pas autorisé à acheter ce type de bâtiment"] call AlysiaClient_fnc_info;
+			["Vous n'êtes pas autorisé à acheter ce type de bâtiment."] call AlysiaClient_fnc_info;
 		};
 	} else {
 		if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "house_search") isEqualTo 1) then {
 			[_target] spawn AlysiaClient_fnc_interactions_player_to_house_search;
 		} else {
-			["Ce bâtiment n'est pas en vente"] call AlysiaClient_fnc_error;
+			["Ce bâtiment n'est pas en vente."] call AlysiaClient_fnc_error;
 		};
 	};
 };

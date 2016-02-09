@@ -29,80 +29,85 @@ class ALYSIA_FACTIONS
 		company_own = 0;
 
 		/*** GEAR MISSION ***/
-		mission_vehicle = "Fett_truck_milice";
-		mission_items[] =
+		class mission
 		{
-			{"Weapons",
-				{
-					"SMG_01_F",
-					"RH_fnp45",
-					"Skyline_HK_SL8",
-					"hlc_rifle_aks74u",
-					"hlc_rifle_akm",
-					"hlc_rifle_rpk",
-					"hlc_rifle_rpk74n",
-					"hlc_rifle_RPK12",
-					"RH_g19",
-					"Fett_SDAR",
-					"RH_Deagle",
-					"srifle_EBR_F"
-				}
-			},
-			{"Magazines",
-				{
-					"30Rnd_45ACP_Mag_SMG_01_Tracer_Red",
-					"hlc_30Rnd_545x39_B_AK",
-					"RH_15Rnd_45cal_fnp",
-					"30Rnd_556x45_Stanag",
-					"hlc_30Rnd_762x39_b_ak",
-					"hlc_75Rnd_762x39_m_rpk",
-					"hlc_45Rnd_545x39_t_rpk",
-					"RH_17Rnd_9x19_g17",
-					"Fett_20Rnd_556x45_UW_mag",
-					"RH_7Rnd_50_AE",
-					"20Rnd_762x51_Mag",
-					"Bank_DefuseKit"
-				}
-			},
-			{"Items",
-				{
-					"SmokeShellWhite",
-					"Rangefinder",
-					"optic_Aco",
-					"optic_Hamr",
-					"hlc_optic_kobra",
-					"optic_DMS",
-					"optic_LRPS",
-					"optic_Holosight",
-					"TRYK_HRPIGEAR_NV",
-					"Skyline_NVGoogle"
-				}
-			},
-			{"Backpacks",
-				{
+			vehicle = "Fett_truck_milice";
+			positions[] =
+			{
+				{{17742.5,12402.9,0.00144196}, 265.788},
+				{{10818.1,12604.2,0.00143814}, 289.467},
+				{{8186.99,17044.1,0.00143814}, 20.2156}
+			};
+			items[] =
+			{
+				{"Weapons",
+					{
+						"SMG_01_F",
+						"RH_fnp45",
+						"Skyline_HK_SL8",
+						"hlc_rifle_aks74u",
+						"hlc_rifle_akm",
+						"hlc_rifle_rpk",
+						"hlc_rifle_rpk74n",
+						"hlc_rifle_RPK12",
+						"RH_g19",
+						"Fett_SDAR",
+						"RH_Deagle",
+						"srifle_EBR_F"
+					}
+				},
+				{"Magazines",
+					{
+						"30Rnd_45ACP_Mag_SMG_01_Tracer_Red",
+						"hlc_30Rnd_545x39_B_AK",
+						"RH_15Rnd_45cal_fnp",
+						"30Rnd_556x45_Stanag",
+						"hlc_30Rnd_762x39_b_ak",
+						"hlc_75Rnd_762x39_m_rpk",
+						"hlc_45Rnd_545x39_t_rpk",
+						"RH_17Rnd_9x19_g17",
+						"Fett_20Rnd_556x45_UW_mag",
+						"RH_7Rnd_50_AE",
+						"20Rnd_762x51_Mag",
+						"Bank_DefuseKit"
+					}
+				},
+				{"Items",
+					{
+						"SmokeShellWhite",
+						"Rangefinder",
+						"optic_Aco",
+						"optic_Hamr",
+						"hlc_optic_kobra",
+						"optic_DMS",
+						"optic_LRPS",
+						"optic_Holosight",
+						"TRYK_HRPIGEAR_NV",
+						"Skyline_NVGoogle"
+					}
+				},
+				{"Backpacks",
+					{
 
+					}
+				},
+				{"Virtual",
+					{
+						"destroy_archeo",
+						"destroy_stand",
+						"destroy_field"
+					}
 				}
-			},
-			{"Virtual",
-				{
-					"destroy_archeo",
-					"destroy_stand",
-					"destroy_field"
-				}
-			}
-		};
-		mission_start[] =
-		{
-			{{17742.5,12402.9,0.00144196}, 265.788},
-			{{10818.1,12604.2,0.00143814}, 289.467},
-			{{8186.99,17044.1,0.00143814}, 20.2156}
+			};
 		};
 
 		/*** MAP ***/
-		faction_markers_on_map = 1;
-		faction_markers_color = "ColorBlue";
-		faction_markers_type = "Mil_dot";
-		faction_markers_deaths = 0;
+		class map_team_markers
+		{
+			color = "ColorBlue";
+			type = "Mil_dot";
+			shape = "ICON";
+		};
 
 		/*** SIRENE ***/
 		sirene_sound = "sirene_west";
@@ -135,9 +140,21 @@ class ALYSIA_FACTIONS
 		interaction_ticket = 1;// can put ticket
 
 		/*** LEADER BOARD ***/
-		leader_rank = 9;
-		leader_board_rank_require = 9;
-		leader_bord_history[] = {};
+		class board
+		{
+			history_items[] =
+			{
+				"hlc_rifle_ak74_dirty2",
+				"hlc_rifle_ak74_dirty",
+				"hlc_rifle_ak74",
+				"RH_g17",
+				"RH_m9"
+			};
+			class leader_board
+			{
+				access_rank = 9;
+			};
+		};
 
 		/*** LOADOUT ***/
 		class Loadout
@@ -218,66 +235,71 @@ class ALYSIA_FACTIONS
 		company_own = 0;
 
 		/*** GEAR MISSION ***/
-		mission_vehicle = "Fett_truck_army";
-		mission_items[] =
+		class mission
 		{
-			{"Weapons",
-				{
-					"hlc_rifle_M14_Bipod",
-					"hlc_rifle_M14_Bipod",
-					"hlc_rifle_m14dmr",
-					"hlc_rifle_m14sopmod",
-					"Trixie_Enfield_Rail",
-					"hlc_rifle_aughbar_B",
-					"Fett_SDAR",
-					"wc_gr_smg_mp40",
-					"hlc_rifle_M14"
-				}
-			},
-			{"Magazines",
-				{
-					"Trixie_Enfield_Mag",
-					"Fett_20Rnd_556x45_UW_mag",
-					"wc_32Rnd_9x19_mag",
-					"hlc_20Rnd_762x51_B_M14",
-					"Bank_DefuseKit"
-				}
-			},
-			{"Items",
-				{
-					"DemoCharge_Remote_Mag",
-					"optic_DMS",
-					"SmokeShellWhite",
-					"Rangefinder",
-					"optic_ACO_grn_smg",
-					"Skyline_NVGoogle"
-				}
-			},
-			{"Backpacks",
-				{
+			vehicle = "Fett_truck_army";
+			positions[] =
+			{
+				{{6354.66,7456.13,0.00125122}, 39.8453},
+				{{10400.8,5252.98,0.00162888}, 0.137371},
+				{{13366.3,6887.15,0.00107718}, 264.853}
+			};
+			items[] =
+			{
+				{"Weapons",
+					{
+						"hlc_rifle_M14_Bipod",
+						"hlc_rifle_M14_Bipod",
+						"hlc_rifle_m14dmr",
+						"hlc_rifle_m14sopmod",
+						"Trixie_Enfield_Rail",
+						"hlc_rifle_aughbar_B",
+						"Fett_SDAR",
+						"wc_gr_smg_mp40",
+						"hlc_rifle_M14"
+					}
+				},
+				{"Magazines",
+					{
+						"Trixie_Enfield_Mag",
+						"Fett_20Rnd_556x45_UW_mag",
+						"wc_32Rnd_9x19_mag",
+						"hlc_20Rnd_762x51_B_M14",
+						"Bank_DefuseKit"
+					}
+				},
+				{"Items",
+					{
+						"DemoCharge_Remote_Mag",
+						"optic_DMS",
+						"SmokeShellWhite",
+						"Rangefinder",
+						"optic_ACO_grn_smg",
+						"Skyline_NVGoogle"
+					}
+				},
+				{"Backpacks",
+					{
 
+					}
+				},
+				{"Virtual",
+					{
+						"destroy_archeo",
+						"destroy_stand",
+						"destroy_field"
+					}
 				}
-			},
-			{"Virtual",
-				{
-					"destroy_archeo",
-					"destroy_stand",
-					"destroy_field"
-				}
-			}
-		};
-		mission_start[] =
-		{
-			{{6354.66,7456.13,0.00125122}, 39.8453},
-			{{10400.8,5252.98,0.00162888}, 0.137371},
-			{{13366.3,6887.15,0.00107718}, 264.853}
+			};
 		};
 
 		/*** MAP ***/
-		faction_markers_on_map = 1;
-		faction_markers_color = "ColorWhite";
-		faction_markers_type = "Mil_dot";
-		faction_markers_deaths = 0;
+		class map_team_markers
+		{
+			color = "ColorWhite";
+			type = "Mil_dot";
+			shape = "ICON";
+		};
 
 		/*** SIRENE ***/
 		sirene_sound = "sirene_east";
@@ -310,10 +332,23 @@ class ALYSIA_FACTIONS
 		interaction_ticket = 1;
 
 		/*** LEADER BOARD ***/
-		leader_rank = 5;
-		leader_board_rank_require = 5;
-		leader_bord_history[] = {};
-		
+		class board
+		{
+			history_items[] =
+			{
+				"RH_fn57",
+				"RH_20Rnd_57x28_FN",
+				"RH_m1911",
+				"RH_7Rnd_45cal_m1911",
+				"hlc_rifle_auga2_b",
+				"hlc_30Rnd_556x45_B_AUG"
+			};
+			class leader_board
+			{
+				access_rank = 5;
+			};
+		};
+
 		/*** LOADOUT ***/
 		class Loadout
 		{
@@ -384,44 +419,6 @@ class ALYSIA_FACTIONS
 		companies_search = 0;
 		company_own = 1;
 
-		/*** GEAR MISSION ***/
-		mission_vehicle = "";
-		mission_items[] =
-		{
-			{"Weapons",
-				{
-
-				}
-			},
-			{"Magazines",
-				{
-
-				}
-			},
-			{"Items",
-				{
-
-				}
-			},
-			{"Backpacks",
-				{
-
-				}
-			},
-			{"Virtual",
-				{
-
-				}
-			}
-		};
-		mission_start[] = {};
-
-		/*** MAP ***/
-		faction_markers_on_map = 0;
-		faction_markers_color = "";
-		faction_markers_type = "";
-		faction_markers_deaths = 0;
-
 		/*** SIRENE ***/
 		sirene_sound = "";
 		sirene_sleep = 0;
@@ -489,11 +486,6 @@ class ALYSIA_FACTIONS
 		interaction_seize_gear = 0;
 		interaction_ticket = 0;
 
-		/*** LEADER BOARD ***/
-		leader_rank = -1;// MUST BE -1
-		leader_board_rank_require = -1;// MUST BE -1
-		leader_bord_history[] = {};
-
 		/*** LOADOUT ***/
 		class Loadout
 		{
@@ -555,42 +547,48 @@ class ALYSIA_FACTIONS
 		company_own = 0;
 
 		/*** GEAR MISSION ***/
-		mission_vehicle = "";
-		mission_items[] = 
+		class mission
 		{
-			{"Weapons",
-				{
+			vehicle = "";
+			items[] = 
+			{
+				{"Weapons",
+					{
 
-				}
-			},
-			{"Magazines",
-				{
+					}
+				},
+				{"Magazines",
+					{
 
-				}
-			},
-			{"Items",
-				{
+					}
+				},
+				{"Items",
+					{
 
-				}
-			},
-			{"Backpacks",
-				{
+					}
+				},
+				{"Backpacks",
+					{
 
-				}
-			},
-			{"Virtual",
-				{
+					}
+				},
+				{"Virtual",
+					{
 
+					}
 				}
-			}
+			};
+			positions[] = {};
 		};
-		mission_start[] = {};
 
 		/*** MAP ***/
-		faction_markers_on_map = 1;
-		faction_markers_color = "ColorPink";
-		faction_markers_type = "Mil_dot";
-		faction_markers_deaths = 1;
+		class map_coma_markers {};
+		class map_team_markers
+		{
+			color = "ColorPink";
+			type = "Mil_dot";
+			shape = "ICON";
+		};
 
 		/*** SIRENE ***/
 		sirene_sound = "sirene_guer";
@@ -623,9 +621,14 @@ class ALYSIA_FACTIONS
 		interaction_ticket = 1;// can put ticket
 
 		/*** LEADER BOARD ***/
-		leader_rank = 6;
-		leader_board_rank_require = 6;
-		leader_bord_history[] = {};
+		class board
+		{
+			history_items[] = {};
+			class leader_board
+			{
+				access_rank = 6;
+			};
+		};
 
 		/*** LOADOUT ***/
 		class Loadout

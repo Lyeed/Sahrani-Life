@@ -70,4 +70,4 @@ if (isNull g_interaction_target) exitWith
 _object setPos [((getPos _object) select 0), ((getPos _object) select 1), 0];
 playSound "buy";
 [false, _price, "Création d'entreprise"] call AlysiaClient_fnc_handleATM;
-[_type, _object, g_interaction_target, _name] remoteExec ["AlysiaServer_fnc_company_insert", 2];
+[_type, _object, g_interaction_target, _name, ([] call AlysiaClient_fnc_getRegion)] remoteExec ["AlysiaServer_fnc_company_insert", 2];
