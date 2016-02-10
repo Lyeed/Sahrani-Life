@@ -379,7 +379,7 @@ class ALYSIA_ITEMS
 			max = 23;
 			min = 15;
 			mult = 1;
-			affect[] = {"furniture", "glass", "pottery", "saltp", "cottonp", "ciment", "coal"};
+			affect[] = {"furniture", "glass", "brique", "saltp", "cottonp", "ciment", "coal"};
 		};
 	};
 
@@ -395,7 +395,7 @@ class ALYSIA_ITEMS
 			max = 660;
 			min = 500;
 			mult = 2;
-			affect[] = {"woodp", "glass", "pottery", "saltp", "cottonp", "ciment", "coal"};
+			affect[] = {"woodp", "glass", "brique", "saltp", "cottonp", "ciment", "coal"};
 		};
 	};
 
@@ -834,7 +834,7 @@ class ALYSIA_ITEMS
 			max = 154;
 			min = 110;
 			mult = 3;
-			affect[] = {"woodp", "furniture", "pottery", "saltp", "cottonp", "ciment", "coal"};
+			affect[] = {"woodp", "furniture", "brique", "saltp", "cottonp", "ciment", "coal"};
 		};
 	};
 
@@ -1015,14 +1015,14 @@ class ALYSIA_ITEMS
 	class brique
 	{
 		name        = "Brique";
-		weight      = 5;
+		weight      = 3;
 		illegal     = 0;
 		removable   = 1;
 		image       = "alysia_items_virtual\data\poterie.paa";
 		class market
 		{
-			max = 132;
-			min = 90;
+			max = 112;
+			min = 70;
 			mult = 2;
 			affect[] = {"woodp", "furniture", "glass", "saltp", "cottonp", "ciment", "coal"};
 		};
@@ -1210,7 +1210,7 @@ class ALYSIA_ITEMS
 			max = 165;
 			min = 115;
 			mult = 2;
-			affect[] = {"woodp", "furniture", "glass", "pottery", "cottonp", "ciment", "coal"};
+			affect[] = {"woodp", "furniture", "glass", "brique", "cottonp", "ciment", "coal"};
 		};
 	};
 
@@ -1291,7 +1291,7 @@ class ALYSIA_ITEMS
 			max = 99;
 			min = 65;
 			mult = 2;
-			affect[] = {"woodp", "furniture", "glass", "pottery", "saltp", "ciment", "coal"};
+			affect[] = {"woodp", "furniture", "glass", "brique", "saltp", "ciment", "coal"};
 		};
 	};
 
@@ -1353,7 +1353,7 @@ class ALYSIA_ITEMS
 			max = 33;
 			min = 20;
 			mult = 2;
-			affect[] = {"woodp", "furniture", "glass", "pottery", "saltp", "cottonp", "ciment"};
+			affect[] = {"woodp", "furniture", "glass", "brique", "saltp", "cottonp", "ciment"};
 		};
 	};
 
@@ -1418,7 +1418,7 @@ class ALYSIA_ITEMS
 			max = 165;
 			min = 115;
 			mult = 2;
-			affect[] = {"woodp", "furniture", "glass", "pottery", "saltp", "cottonp", "coal"};
+			affect[] = {"woodp", "furniture", "glass", "brique", "saltp", "cottonp", "coal"};
 		};
 	};
 
@@ -1611,7 +1611,7 @@ class ALYSIA_ITEMS
 			max = 825;
 			min = 600;
 			mult = 2;
-			affect[] = {"woodp", "furniture", "glass", "pottery", "saltp", "cottonp", "coal"};
+			affect[] = {"woodp", "furniture", "glass", "brique", "saltp", "cottonp", "coal"};
 		};
 	};
 
