@@ -52,7 +52,7 @@ class ALYSIA_VEHICLES
 	class madsa_hummer_h2
 	{
 		buyPrice = 134000;
-		inventory = 75;
+		inventory = 85;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -87,7 +87,7 @@ class ALYSIA_VEHICLES
 	class DAR_FusionCiv
 	{
 		buyPrice = 22500;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -109,7 +109,7 @@ class ALYSIA_VEHICLES
   	class DAR_TaurusCiv
 	{
 		buyPrice = 30000;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -142,7 +142,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_Alfa_Romeo_civ
 	{
 		buyPrice = 22500;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -173,7 +173,7 @@ class ALYSIA_VEHICLES
 	class shounka_a3_rs5_civ
 	{
 		buyPrice = 105000;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -205,7 +205,7 @@ class ALYSIA_VEHICLES
 	class shounka_rs6
 	{
 		buyPrice = 96000;
-		inventory = 55;
+		inventory = 60;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -237,7 +237,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_bmwm1_civ
 	{
 		buyPrice = 75300;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -269,7 +269,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_bmwm6_civ
 	{
 		buyPrice = 145000;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -301,7 +301,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_Bowler_c
 	{
 		buyPrice = 195000;
-		inventory = 75;
+		inventory = 85;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -429,7 +429,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_a3_ds3_civ
 	{
 		buyPrice = 15950;
-		inventory = 32;
+		inventory = 38;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -461,7 +461,7 @@ class ALYSIA_VEHICLES
 	class shounka_a3_ds4_civ
 	{
 		buyPrice = 23700;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -493,7 +493,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_c4_p_civ
 	{
 		buyPrice = 19900;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -525,7 +525,7 @@ class ALYSIA_VEHICLES
 	class shounka_nemo
 	{
 		buyPrice = 16000;
-		inventory = 105;
+		inventory = 125;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -557,7 +557,7 @@ class ALYSIA_VEHICLES
 	class shounka_a3_cliors_civ
 	{
 		buyPrice = 13500;
-		inventory = 32;
+		inventory = 38;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -589,7 +589,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_a3_dodge15_civ
 	{
 		buyPrice = 38500;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -723,7 +723,7 @@ class ALYSIA_VEHICLES
 	class ADM_GMC_Vandura
 	{
 		buyPrice = 26000;
-		inventory = 120;
+		inventory = 165;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -753,7 +753,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_golfvi_civ
 	{
 		buyPrice = 12500;
-		inventory = 32;
+		inventory = 38;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -785,7 +785,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_hummer_civ
 	{
 		buyPrice = 145000;
-		inventory = 75;
+		inventory = 85;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -849,7 +849,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_cherokee_noir
 	{
 		buyPrice = 43000;
-		inventory = 75;
+		inventory = 85;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -905,7 +905,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_evox_civ
 	{
 		buyPrice = 23400;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1033,7 +1033,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_mercedes_190_p_civ
 	{
 		buyPrice = 45250;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1065,7 +1065,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_c63_2015_civ
 	{
 		buyPrice = 96000;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1103,7 +1103,7 @@ class ALYSIA_VEHICLES
 	class shounka_clk
 	{
 		buyPrice = 67500;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1134,8 +1134,8 @@ class ALYSIA_VEHICLES
 
 	class shounka_a3_spr_civ
 	{
-		buyPrice = 61500;
-		inventory = 150;
+		buyPrice = 41500;
+		inventory = 200;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1167,7 +1167,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_a3_gtr_civ
 	{
 		buyPrice = 95300;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1219,7 +1219,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_207_civ
 	{
 		buyPrice = 12000;
-		inventory = 32;
+		inventory = 38;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1251,7 +1251,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_a3_308_rcz
 	{
 		buyPrice = 36100;
-		inventory = 32;
+		inventory = 38;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1283,7 +1283,7 @@ class ALYSIA_VEHICLES
 	class shounka_a3_peugeot508_civ
 	{
 		buyPrice = 28000;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1379,7 +1379,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_cayenne_p_civ
 	{
 		buyPrice = 85000;
-		inventory = 55;
+		inventory = 60;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1411,7 +1411,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_r5_civ
 	{
 		buyPrice = 8000;
-		inventory = 32;
+		inventory = 38;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1443,7 +1443,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_megane_rs_2015_civ
 	{
 		buyPrice = 28000;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1475,7 +1475,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_twingo_p
 	{
 		buyPrice = 10900;
-		inventory = 32;
+		inventory = 38;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1527,7 +1527,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_subaru08_civ
 	{
 		buyPrice = 37000;
-		inventory = 55;
+		inventory = 60;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1630,7 +1630,7 @@ class ALYSIA_VEHICLES
 	class max_H3
 	{
 		buyPrice = 135000;
-		inventory = 75;
+		inventory = 85;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1655,7 +1655,7 @@ class ALYSIA_VEHICLES
 	class max_impala
 	{
 		buyPrice = 44500;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1678,7 +1678,7 @@ class ALYSIA_VEHICLES
 	class DAR_TahoeCiv
 	{
 		buyPrice = 51300;
-		inventory = 75;
+		inventory = 85;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1743,7 +1743,7 @@ class ALYSIA_VEHICLES
 	class SAL_AudiCiv
 	{
 		buyPrice = 60000;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1765,7 +1765,7 @@ class ALYSIA_VEHICLES
   	class max_BMW
 	{
 		buyPrice = 45000;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1785,7 +1785,7 @@ class ALYSIA_VEHICLES
   	class max_charger
 	{
 		buyPrice = 95000;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1808,7 +1808,7 @@ class ALYSIA_VEHICLES
     class max_CrownVic
 	{
 		buyPrice = 10000;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1829,7 +1829,7 @@ class ALYSIA_VEHICLES
   	class max_jeep
 	{
 		buyPrice = 85000;
-		inventory = 75;
+		inventory = 85;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1852,7 +1852,7 @@ class ALYSIA_VEHICLES
     class max_suv
 	{
 		buyPrice = 45000;
-		inventory = 75;
+		inventory = 85;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1877,7 +1877,7 @@ class ALYSIA_VEHICLES
     class max_van
 	{
 		buyPrice = 21000;
-		inventory = 120;
+		inventory = 165;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1943,7 +1943,7 @@ class ALYSIA_VEHICLES
   	class DAR_ChallengerCiv
 	{
 		buyPrice = 35350;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1966,7 +1966,7 @@ class ALYSIA_VEHICLES
   	class Skyline_G65_01_F
 	{
 		buyPrice = 237000;
-		inventory = 75;
+		inventory = 85;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -1992,7 +1992,7 @@ class ALYSIA_VEHICLES
 	class O_Truck_02_transport_F
 	{
 		buyPrice = 25000;
-		inventory = 250;
+		inventory = 275;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"truck"};
@@ -2095,7 +2095,7 @@ class ALYSIA_VEHICLES
 	class max_impala_security
 	{
 		buyPrice = 12000;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver", "company_security"};
@@ -2108,7 +2108,7 @@ class ALYSIA_VEHICLES
 	class max_towtruck
 	{
 		buyPrice = 12000;
-		inventory = 75;
+		inventory = 85;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver", "company_garagist"};
@@ -2158,7 +2158,7 @@ class ALYSIA_VEHICLES
   	class DAR_M3Civ
 	{
 		buyPrice = 48000;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -2179,7 +2179,7 @@ class ALYSIA_VEHICLES
     class C_Van_01_transport_F
 	{
 		buyPrice = 53250;
-		inventory = 140;
+		inventory = 175;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -2192,7 +2192,7 @@ class ALYSIA_VEHICLES
     class C_Van_01_box_F
 	{
 		buyPrice = 48000;
-		inventory = 140;
+		inventory = 185;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -2204,8 +2204,7 @@ class ALYSIA_VEHICLES
 
     class RDS_Gaz24_Civ
 	{
-		buyPrice = 800;
-		inventory = 32;
+		buyPrice = 800;8		inventory = 32;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -2226,7 +2225,7 @@ class ALYSIA_VEHICLES
   	class RDS_Golf4_Civ_01
 	{
 		buyPrice = 1800;
-		inventory = 32;
+		inventory = 38;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -2281,7 +2280,7 @@ class ALYSIA_VEHICLES
 	class RDS_S1203_Civ_01
 	{
 		buyPrice = 900;
-		inventory = 55;
+		inventory = 60;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -2294,7 +2293,7 @@ class ALYSIA_VEHICLES
 	class RDS_Octavia_Civ_01
 	{
 		buyPrice = 1800;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -2307,7 +2306,7 @@ class ALYSIA_VEHICLES
 	class RDS_Lada_Civ
 	{
 		buyPrice = 800;
-		inventory = 32;
+		inventory = 38;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -2731,7 +2730,7 @@ class ALYSIA_VEHICLES
 	class Jonzie_30CSL
 	{
 		buyPrice = 22500;
-		inventory = 32;
+		inventory = 38;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -2760,7 +2759,7 @@ class ALYSIA_VEHICLES
 	class Jonzie_Ceed
 	{
 		buyPrice = 12500;
-		inventory = 32;
+		inventory = 38;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -2789,7 +2788,7 @@ class ALYSIA_VEHICLES
 	class Jonzie_Corolla
 	{
 		buyPrice = 6000;
-		inventory = 32;
+		inventory = 38;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -2818,7 +2817,7 @@ class ALYSIA_VEHICLES
 	class Jonzie_Datsun_510
 	{
 		buyPrice = 7500;
-		inventory = 32;
+		inventory = 38;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -2847,7 +2846,7 @@ class ALYSIA_VEHICLES
 	class Jonzie_Datsun_Z432
 	{
 		buyPrice = 22000;
-		inventory = 32;
+		inventory = 38;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -2876,7 +2875,7 @@ class ALYSIA_VEHICLES
 	class Jonzie_Escalade
 	{
 		buyPrice = 97500;
-		inventory = 75;
+		inventory = 85;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -2905,7 +2904,7 @@ class ALYSIA_VEHICLES
 	class Jonzie_Galant
 	{
 		buyPrice = 10000;
-		inventory = 32;
+		inventory = 38;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -3021,7 +3020,7 @@ class ALYSIA_VEHICLES
 	class Jonzie_STI
 	{
 		buyPrice = 47500;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -3050,7 +3049,7 @@ class ALYSIA_VEHICLES
 	class Jonzie_Ute
 	{
 		buyPrice = 27500;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -3079,7 +3078,7 @@ class ALYSIA_VEHICLES
 	class Jonzie_VE
 	{
 		buyPrice = 29500;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -3154,7 +3153,7 @@ class ALYSIA_VEHICLES
 	class DAR_TaurusPolice
 	{
 		buyPrice = 70000;
-		inventory = 40;
+		inventory = 45;
 		side = "WEST";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -3166,7 +3165,7 @@ class ALYSIA_VEHICLES
 	class DAR_CVPIAux
 	{
 		buyPrice = 16000;
-		inventory = 40;
+		inventory = 45;
 		side = "WEST";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -3202,7 +3201,7 @@ class ALYSIA_VEHICLES
 	class DAR_ChargerPoliceState
 	{
 		buyPrice = 85000;
-		inventory = 40;
+		inventory = 45;
 		side = "WEST";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -3433,7 +3432,7 @@ class ALYSIA_VEHICLES
 	*/
 	class Jonzie_Ambulance
 	{
-		buyPrice = 14000;
+		buyPrice = 45000;
 		inventory = 100;
 		side = "GUER";
 		insurance = 1;
@@ -3446,8 +3445,8 @@ class ALYSIA_VEHICLES
 	
 	class Mrshounka_corbillard_base_p
 	{
-		buyPrice = 45000;
-		inventory = 40;
+		buyPrice = 65000;
+		inventory = 45;
 		side = "GUER";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -3491,8 +3490,8 @@ class ALYSIA_VEHICLES
 
 	class DAR_TaurusPoliceState
 	{
-		buyPrice = 45000;
-		inventory = 40;
+		buyPrice = 75250;
+		inventory = 45;
 		side = "GUER";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -3504,7 +3503,7 @@ class ALYSIA_VEHICLES
 
 	class Fett_zamak_repair_samu
 	{
-		buyPrice = 80000;
+		buyPrice = 120000;
 		inventory = 450;
 		side = "GUER";
 		insurance = 1;
@@ -3517,7 +3516,7 @@ class ALYSIA_VEHICLES
 
 	class Fett_zamak_covered_samu
 	{
-		buyPrice = 80000;
+		buyPrice = 120000;
 		inventory = 150;
 		side = "GUER";
 		insurance = 1;
@@ -3530,7 +3529,7 @@ class ALYSIA_VEHICLES
 
 	class DAR_TahoeEMS
 	{
-		buyPrice = 17000;
+		buyPrice = 52520;
 		inventory = 90;
 		side = "GUER";
 		insurance = 1;
@@ -3543,7 +3542,7 @@ class ALYSIA_VEHICLES
 
 	class DAR_ExplorerMedic
 	{
-		buyPrice = 26000;
+		buyPrice = 62500;
 		inventory = 90;
 		side = "GUER";
 		insurance = 1;
@@ -3556,7 +3555,7 @@ class ALYSIA_VEHICLES
 
 	class EC635_SAR
 	{
-		buyPrice = 125000;
+		buyPrice = 385000;
 		inventory = 70;
 		side = "GUER";
 		insurance = 1;
@@ -3569,7 +3568,7 @@ class ALYSIA_VEHICLES
 
 	class dezkit_b206ems
 	{
-		buyPrice = 185000;
+		buyPrice = 425000;
 		inventory = 70;
 		side = "GUER";
 		insurance = 1;
@@ -3796,7 +3795,7 @@ class ALYSIA_VEHICLES
 	{
 		realname = "VW Touareg";
 		buyPrice = 36500;
-		inventory = 75;
+		inventory = 85;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -3873,8 +3872,8 @@ class ALYSIA_VEHICLES
 	class Skyline_Ford_Transit
 	{
 		realname = "Ford Transit";
-		buyPrice = 26000;
-		inventory = 120;
+		buyPrice = 34200;
+		inventory = 180;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
@@ -3913,7 +3912,7 @@ class ALYSIA_VEHICLES
 	{
 		realname = "Peugeot 308";
 		buyPrice = 25250;
-		inventory = 40;
+		inventory = 45;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
