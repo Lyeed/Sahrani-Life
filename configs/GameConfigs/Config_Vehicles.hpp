@@ -3681,7 +3681,7 @@ class ALYSIA_VEHICLES
 	class ADM_Ford_F100
 	{
 		buyPrice = 3500;
-		inventory = 65;
+		inventory = 70;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
