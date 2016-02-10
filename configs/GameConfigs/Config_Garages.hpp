@@ -77,6 +77,7 @@ class ALYSIA_GARAGES
 			"Air"
 		};
 	};
+
 	class garage_east_4
 	{
 		name = "Garage de la Garde";
