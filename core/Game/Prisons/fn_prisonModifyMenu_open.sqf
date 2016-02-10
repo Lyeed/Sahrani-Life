@@ -51,7 +51,7 @@ if ((getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prison >> "bail" >> "en
 (_display displayCtrl 19017) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1</t>", _caution];
 (_display displayCtrl 19018) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1Kn</t>", getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prison >> "bail" >> "min")];
 (_display displayCtrl 19019) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1Kn</t>", getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prison >> "bail" >> "max")];
-(_display displayCtrl 19029) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1</t>", _infos select 0];
+(_display displayCtrl 19029) ctrlSetStructuredText parseText format["<t align='right' size='0.8'>%1</t>", _infos select 0];
 (_display displayCtrl 19030) ctrlSetStructuredText parseText format["<t align='right' size='1'>(%1) %2</t>", _infos select 1, _info select 2];
 (_display displayCtrl 19031) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1</t>", _infos select 3];
 (_display displayCtrl 19032) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1</t>", _info select 4];

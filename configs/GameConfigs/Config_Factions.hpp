@@ -426,7 +426,7 @@ class ALYSIA_FACTIONS
 
 		/*** SPAWN/RESPAWN ***/
 		respawn_marker = "civ_spawn";
-		respawn_price = 10000;
+		respawn_price = 800;
 
 		/*** HOUSING ***/
 		house_search = 0;
@@ -540,8 +540,8 @@ class ALYSIA_FACTIONS
 
 		/*** PHONE ***/
 		phone_change_number_price = 1000;
-		phone_send_global_message = 0;
-		phone_send_global_message_rank = 1;
+		phone_send_global_message = 1;
+		phone_send_global_message_rank = 5;
 		phone_send_to_faction_price = 0;
 
 		/*** COMPANIES ***/
@@ -604,7 +604,7 @@ class ALYSIA_FACTIONS
 		/*** HOUSING ***/
 		house_search = 0;
 		house_max = 1;
-		house_tax_per_house_per_salary = 180;
+		house_tax_per_house_per_salary = 0;
 		house_tax_percentage_buyPrice_per_house = 0.003;
 
 		/*** HEAL ***/
