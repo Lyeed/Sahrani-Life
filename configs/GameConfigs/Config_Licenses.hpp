@@ -7,7 +7,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 1000;
+				price = 900;
 				pad_store = 1;
 				illegal = 0;
 			};
@@ -71,7 +71,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 80000;
+				price = 50000;
 				pad_store = 1;
 				illegal = 0;
 			};
@@ -87,7 +87,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 600;
+				price = 400;
 				pad_store = 1;
 				illegal = 0;
 			};
@@ -118,7 +118,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 120000;
+				price = 75000;
 				pad_store = 1;
 				illegal = 0;
 			};
@@ -132,7 +132,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 50000;
+				price = 25000;
 				pad_store = 1;
 				illegal = 1;
 			};
@@ -145,7 +145,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 45000;
+				price = 20000;
 				pad_store = 1;
 				illegal = 0;
 			};
@@ -184,7 +184,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 25000;
+				price = 18000;
 				pad_store = 1;
 				illegal = 0;
 			};
@@ -197,7 +197,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 5000;
+				price = 8000;
 				pad_store = 1;
 				illegal = 0;
 			};
@@ -236,7 +236,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 45000;
+				price = 25000;
 				pad_store = 1;
 				illegal = 0;
 			};
@@ -249,13 +249,13 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 8000;
+				price = 6000;
 				pad_store = 1;
 				illegal = 0;
 			};
 		};
 	};
-	class pottery
+	class brique
 	{
 		name = "Traitement de l'argile";
 		class factions
@@ -288,7 +288,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 25000;
+				price = 6500;
 				pad_store = 1;
 				illegal = 0;
 			};

@@ -562,7 +562,7 @@ class ALYSIA_PROCESS
 		};
 		receive[] =
 		{
-			/* VIRTUAL */{{"pottery", 1}},
+			/* VIRTUAL */{{"brique", 1}},
 			/* ARMA */{},
 			/* CASH */0
 		};
@@ -574,7 +574,7 @@ class ALYSIA_PROCESS
 			class CIV
 			{
 				rank = 0;
-				licenses[] = {"pottery"};
+				licenses[] = {"brique"};
 			};
 		};
 	};
