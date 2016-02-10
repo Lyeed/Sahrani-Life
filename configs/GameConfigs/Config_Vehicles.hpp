@@ -2204,7 +2204,8 @@ class ALYSIA_VEHICLES
 
     class RDS_Gaz24_Civ
 	{
-		buyPrice = 800;8		inventory = 32;
+		buyPrice = 800;
+		inventory = 38;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
