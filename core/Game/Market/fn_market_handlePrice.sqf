@@ -31,7 +31,7 @@ if (_type) then
 	{
 		_affected = getArray(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market" >> "affect");
 		if (!(_affected isEqualTo [])) then {
-			[true, _affected, round(random(_amount)), false] call AlysiaClient_fnc_market_handlePrice;
+			[true, _affected, _amount, false] call AlysiaClient_fnc_market_handlePrice;
 		};
 	};
 };

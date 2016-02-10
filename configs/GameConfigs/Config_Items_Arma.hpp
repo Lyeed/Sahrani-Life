@@ -24,6 +24,7 @@ class ALYSIA_ITEMS_ARMA
 	class SkylineItems_Couteau
 	{
 		buy_price = 350;
+		buy_condition_WEST = 4;
 	};
 	class Skyline_Hache_01
 	{
@@ -31,7 +32,9 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class 1Rnd_FlashBall_Mag
 	{
-		buy_price = 5;
+		buy_price = 50;
+		buy_condition_WEST = 1;
+		buy_condition_EAST = 1;
 	};
 	class 2Rnd_762x51_Mag_B95
 	{
@@ -265,6 +268,7 @@ class ALYSIA_ITEMS_ARMA
 	class combi_plonge_milice
 	{
 		buy_price = 200;
+		buy_condition_WEST = 5;
 	};
 	class combi_plonge_samu
 	{
@@ -336,6 +340,7 @@ class ALYSIA_ITEMS_ARMA
 	class G_Aviator
 	{
 		buy_price = 20;
+		buy_condition_WEST = 8;
 	};
 	class G_Balaclava_blk
 	{
@@ -679,23 +684,21 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class hgun_FlashBall_F
 	{
-		buy_price = 20;
+		buy_price = 500;
+		buy_condition_WEST = 1;
+		buy_condition_EAST = 1;
 	};
 	class hgun_Pistol_Signal_F
 	{
 		buy_price = 1500;
 	};
-	class hlc_10rnd_12g_buck_S12
-	{
-	};
-	class hlc_20Rnd_762x51_B_M14
-	{
-	};
-	class hlc_25Rnd_9x19mm_M882_AUG
-	{
-	};
+	class hlc_10rnd_12g_buck_S12 {};
+	class hlc_20Rnd_762x51_B_M14 {};
+	class hlc_25Rnd_9x19mm_M882_AUG {};
 	class hlc_30Rnd_545x39_B_AK
 	{
+		buy_price = 300;
+		buy_condition_WEST = 2;
 	};
 	class hlc_30Rnd_556x45_B_AUG
 	{
@@ -705,171 +708,75 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class hlc_75Rnd_762x39_m_rpk
-	{
-	};
-	class hlc_rifle_aek971
-	{
-	};
-	class hlc_rifle_aek971worn
-	{
-	};
-	class hlc_rifle_ak12
-	{
-	};
+	class hlc_75Rnd_762x39_m_rpk {};
+	class hlc_rifle_aek971 {};
+	class hlc_rifle_aek971worn {};
+	class hlc_rifle_ak12 {};
 	class hlc_rifle_ak74
 	{
-		buy_price = 20;
+		buy_price = 5000;
+		buy_condition_WEST = 2;
 	};
 	class hlc_rifle_ak74_dirty
 	{
-		buy_price = 20;
+		buy_price = 4300;
+		buy_condition_WEST = 2;
 	};
 	class hlc_rifle_ak74_dirty2
 	{
-		buy_price = 20;
+		buy_price = 4300;
+		buy_condition_WEST = 2;
 	};
-	class hlc_rifle_akm
-	{
-	};
-	class hlc_rifle_aks74
-	{
-	};
-	class hlc_rifle_aku12
-	{
-	};
-	class hlc_rifle_aug
-	{
-	};
-	class hlc_rifle_auga1_b
-	{
-	};
-	class hlc_rifle_auga1_t
-	{
-	};
-	class hlc_rifle_auga1carb
-	{
-	};
-	class hlc_rifle_auga1carb_B
-	{
-	};
-	class hlc_rifle_auga1carb_t
-	{
-	};
-	class hlc_rifle_auga2
-	{
-	};
+	class hlc_rifle_akm {};
+	class hlc_rifle_aks74 {};
+	class hlc_rifle_aku12 {};
+	class hlc_rifle_aug {};
+	class hlc_rifle_auga1_b {};
+	class hlc_rifle_auga1_t {};
+	class hlc_rifle_auga1carb {};
+	class hlc_rifle_auga1carb_B {};
+	class hlc_rifle_auga1carb_t {};
+	class hlc_rifle_auga2 {};
 	class hlc_rifle_auga2_b
 	{
+		buy_price = 20;
 	};
-	class hlc_rifle_auga2_t
-	{
-	};
-	class hlc_rifle_auga2carb
-	{
-	};
-	class hlc_rifle_auga2carb_b
-	{
-	};
-	class hlc_rifle_auga2carb_t
-	{
-	};
-	class hlc_rifle_auga2lsw
-	{
-	};
-	class hlc_rifle_auga2lsw_b
-	{
-	};
-	class hlc_rifle_auga2lsw_t
-	{
-	};
-	class hlc_rifle_auga2para
-	{
-	};
-	class hlc_rifle_auga2para_b
-	{
-	};
-	class hlc_rifle_auga2para_t
-	{
-	};
-	class hlc_rifle_auga3
-	{
-	};
-	class hlc_rifle_auga3_b
-	{
-	};
-	class hlc_rifle_auga3_bl
-	{
-	};
-	class hlc_rifle_aughbar
-	{
-	};
-	class hlc_rifle_aughbar_B
-	{
-	};
-	class hlc_rifle_aughbar_t
-	{
-	};
-	class hlc_rifle_augpara
-	{
-	};
-	class hlc_rifle_augpara_b
-	{
-	};
-	class hlc_rifle_augpara_t
-	{
-	};
-	class hlc_rifle_augsr
-	{
-	};
-	class hlc_rifle_augsr_b
-	{
-	};
-	class hlc_rifle_augsr_t
-	{
-	};
-	class hlc_rifle_augsrcarb
-	{
-	};
-	class hlc_rifle_augsrcarb_b
-	{
-	};
-	class hlc_rifle_augsrcarb_t
-	{
-	};
-	class hlc_rifle_augsrhbar
-	{
-	};
-	class hlc_rifle_augsrhbar_b
-	{
-	};
-	class hlc_rifle_augsrhbar_t
-	{
-	};
-	class hlc_rifle_M14
-	{
-	};
-	class hlc_rifle_M14_Bipod
-	{
-	};
-	class hlc_rifle_M14_Rail
-	{
-	};
-	class hlc_rifle_m14dmr
-	{
-	};
-	class hlc_rifle_M21
-	{
-	};
-	class hlc_rifle_rpk74n
-	{
-	};
-	class hlc_rifle_saiga12k
-	{
-	};
-	class ItemCompass
-	{
-	};
+	class hlc_rifle_auga2_t {};
+	class hlc_rifle_auga2carb {};
+	class hlc_rifle_auga2carb_b {};
+	class hlc_rifle_auga2carb_t {};
+	class hlc_rifle_auga2lsw {};
+	class hlc_rifle_auga2lsw_b {};
+	class hlc_rifle_auga2lsw_t {};
+	class hlc_rifle_auga2para {};
+	class hlc_rifle_auga2para_b {};
+	class hlc_rifle_auga2para_t {};
+	class hlc_rifle_auga3 {};
+	class hlc_rifle_auga3_b {};
+	class hlc_rifle_auga3_bl {};
+	class hlc_rifle_aughbar {};
+	class hlc_rifle_aughbar_B {};
+	class hlc_rifle_aughbar_t {};
+	class hlc_rifle_augpara {};
+	class hlc_rifle_augpara_b {};
+	class hlc_rifle_augpara_t {};
+	class hlc_rifle_augsr {};
+	class hlc_rifle_augsr_b {};
+	class hlc_rifle_augsr_t {};
+	class hlc_rifle_augsrcarb {};
+	class hlc_rifle_augsrcarb_b {};
+	class hlc_rifle_augsrcarb_t {};
+	class hlc_rifle_augsrhbar {};
+	class hlc_rifle_augsrhbar_b {};
+	class hlc_rifle_augsrhbar_t {};
+	class hlc_rifle_M14 {};
+	class hlc_rifle_M14_Bipod {};
+	class hlc_rifle_M14_Rail {};
+	class hlc_rifle_m14dmr {};
+	class hlc_rifle_M21 {};
+	class hlc_rifle_rpk74n {};
+	class hlc_rifle_saiga12k {};
+	class ItemCompass {};
 	class ItemGPS
 	{
 		buy_price = 250;
@@ -878,9 +785,7 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 15;
 	};
-	class ItemWatch
-	{
-	};
+	class ItemWatch {};
 	class Killer_uniform_new
 	{
 		buy_price = 3000;
@@ -1121,48 +1026,20 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class mgsr_headbag
-	{
-	};
-	class NVGoggles_OPFOR
-	{
-	};
-	class optic_ACO_grn
-	{
-	};
-	class optic_ACO_grn_smg
-	{
-	};
-	class optic_Aco_smg
-	{
-	};
-	class optic_AMS
-	{
-	};
-	class optic_AMS_khk
-	{
-	};
-	class optic_AMS_snd
-	{
-	};
-	class optic_Arco
-	{
-	};
-	class optic_Holosight_smg
-	{
-	};
-	class optic_KHS_blk
-	{
-	};
-	class optic_KHS_hex
-	{
-	};
-	class optic_KHS_old
-	{
-	};
-	class optic_KHS_tan
-	{
-	};
+	class mgsr_headbag {};
+	class NVGoggles_OPFOR {};
+	class optic_ACO_grn {};
+	class optic_ACO_grn_smg {};
+	class optic_Aco_smg {};
+	class optic_AMS {};
+	class optic_AMS_khk {};
+	class optic_AMS_snd {};
+	class optic_Arco {};
+	class optic_Holosight_smg {};
+	class optic_KHS_blk {};
+	class optic_KHS_hex {};
+	class optic_KHS_old {};
+	class optic_KHS_tan {};
 	class oreh_uniform
 	{
 		buy_price = 20;
@@ -1171,29 +1048,19 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class pilot_black_uniform
-	{
-	};
+	class pilot_black_uniform {};
 	class pilot_blue_helmet
 	{
 		buy_price = 20;
 	};
-	class pilot_blue_uniform
-	{
-	};
-	class pilot_green_uniform
-	{
-	};
+	class pilot_blue_uniform {};
+	class pilot_green_uniform {};
 	class pilot_red_helmet
 	{
 		buy_price = 20;
 	};
-	class pilot_red_uniform
-	{
-	};
-	class pilot_yellow_uniform
-	{
-	};
+	class pilot_red_uniform {};
+	class pilot_yellow_uniform {};
 	class Pompier_uniform
 	{
 		buy_price = 20;
@@ -1402,191 +1269,96 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Respirateur_milice
 	{
-		buy_price = 20;
+		buy_price = 350;
+		buy_condition_WEST = 5;
 	};
 	class Respirateur_samu
 	{
 		buy_price = 20;
 	};
-	class RH_10Rnd_22LR_mk2
-	{
-	};
-	class RH_12Rnd_45cal_usp
-	{
-	};
-	class RH_14Rnd_9x19_sw
-	{
-	};
-	class RH_15Rnd_45cal_fnp
-	{
-	};
+	class RH_10Rnd_22LR_mk2 {};
+	class RH_12Rnd_45cal_usp {};
+	class RH_14Rnd_9x19_sw {};
+	class RH_15Rnd_45cal_fnp {};
 	class RH_15Rnd_9x19_M9
 	{
+		buy_price = 100;
+		buy_condition_WEST = 1;
 	};
-	class RH_15Rnd_9x19_SIG
-	{
-	};
-	class RH_16Rnd_40cal_usp
-	{
-	};
-	class RH_16Rnd_9x19_CZ
-	{
-	};
+	class RH_15Rnd_9x19_SIG {};
+	class RH_16Rnd_40cal_usp {};
+	class RH_16Rnd_9x19_CZ {};
 	class RH_17Rnd_9x19_g17
 	{
+		buy_price = 150;
+		buy_condition_WEST = 5;
 	};
-	class RH_18Rnd_9x19_gsh
-	{
-	};
-	class RH_18Rnd_9x19_VP
-	{
-	};
-	class RH_19Rnd_9x19_g18
-	{
-	};
-	class RH_20Rnd_32cal_vz61
-	{
-	};
+	class RH_18Rnd_9x19_gsh {};
+	class RH_18Rnd_9x19_VP {};
+	class RH_19Rnd_9x19_g18 {};
+	class RH_20Rnd_32cal_vz61 {};
 	class RH_20Rnd_57x28_FN
 	{
+		buy_price = 20;
 	};
-	class RH_30Rnd_9x19_UZI
-	{
-	};
-	class RH_32Rnd_9x19_tec
-	{
-	};
-	class RH_6Rnd_357_Mag
-	{
-	};
-	class RH_6Rnd_44_Mag
-	{
-	};
-	class RH_6Rnd_454_Mag
-	{
-	};
-	class RH_6Rnd_45ACP_Mag
-	{
-	};
+	class RH_30Rnd_9x19_UZI {};
+	class RH_32Rnd_9x19_tec {};
+	class RH_6Rnd_357_Mag {};
+	class RH_6Rnd_44_Mag {};
+	class RH_6Rnd_454_Mag {};
+	class RH_6Rnd_45ACP_Mag {};
 	class RH_7Rnd_45cal_m1911
 	{
+		buy_price = 20;
 	};
-	class RH_7Rnd_50_AE
-	{
-	};
-	class RH_8Rnd_762_tt33
-	{
-	};
-	class RH_8Rnd_9x18_Mak
-	{
-	};
-	class RH_bull
-	{
-	};
-	class RH_bullb
-	{
-	};
-	class RH_cz75
-	{
-	};
+	class RH_7Rnd_50_AE {};
+	class RH_8Rnd_762_tt33 {};
+	class RH_8Rnd_9x18_Mak {};
+	class RH_bull {};
+	class RH_bullb {};
+	class RH_cz75 {};
 	class RH_Deaglem
 	{
 		buy_price = 20;
 		buy_condition_WEST = 9;
 	};
-	class RH_deagle
-	{
-	};
-	class RH_Deagleg
-	{
-	};
-	class RH_Deagles
-	{
-	};
+	class RH_deagle {};
+	class RH_Deagleg {};
+	class RH_Deagles {};
 	class RH_fn57
 	{
+		buy_price = 20;
 	};
-	class RH_fn57_g
-	{
-	};
-	class RH_fn57_t
-	{
-	};
-	class RH_fnp45t
-	{
-	};
-	class RH_g18
-	{
-	};
-	class RH_g19t
-	{
-	};
-	class RH_gsh18
-	{
-	};
-	class RH_kimber
-	{
-	};
-	class RH_kimber_nw
-	{
-	};
+	class RH_fn57_g {};
+	class RH_fn57_t {};
+	class RH_fnp45t {};
+	class RH_g18 {};
+	class RH_g19t {};
+	class RH_gsh18 {};
+	class RH_kimber {};
+	class RH_kimber_nw {};
 	class RH_m1911
 	{
+		buy_price = 20;
 	};
-	class RH_m9c
-	{
-	};
-	class RH_mak
-	{
-	};
-	class RH_mateba
-	{
-	};
-	class RH_mk2
-	{
-	};
-	class RH_mp412
-	{
-	};
-	class RH_muzi
-	{
-	};
-	class RH_p226
-	{
-	};
-	class RH_p226s
-	{
-	};
-	class RH_python
-	{
-	};
-	class RH_sw659
-	{
-	};
-	class RH_tec9
-	{
-	};
-	class RH_tt33
-	{
-	};
-	class RH_ttracker
-	{
-	};
-	class RH_ttracker_g
-	{
-	};
-	class RH_usp
-	{
-	};
-	class RH_uspm
-	{
-	};
-	class RH_vp70
-	{
-	};
-	class RH_vz61
-	{
-	};
+	class RH_m9c {};
+	class RH_mak {};
+	class RH_mateba {};
+	class RH_mk2 {};
+	class RH_mp412 {};
+	class RH_muzi {};
+	class RH_p226 {};
+	class RH_p226s {};
+	class RH_python {};
+	class RH_sw659 {};
+	class RH_tec9 {};
+	class RH_tt33 {};
+	class RH_ttracker {};
+	class RH_ttracker_g {};
+	class RH_usp {};
+	class RH_uspm {};
+	class RH_vp70 {};
+	class RH_vz61 {};
 	class Robber_uniform_new
 	{
 		buy_price = 3000;
@@ -1699,40 +1471,26 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class SkylineItems_Adrenaline
-	{
-		buy_price = 20;
-	};
+	class SkylineItems_Adrenaline {};
 	class SkylineItems_Bandage
 	{
 		buy_price = 20;
 	};
-	class SkylineItems_Crochetage
-	{
-	};
-	class SkylineItems_Defibrilateur
-	{
-	};
-	class SkylineItems_Morphine
-	{
-		buy_price = 20;
-	};
-	class SkylineItems_Passeport
-	{
-	};
-	class Skylineitems_Penicilline
-	{
-	};
+	class SkylineItems_Crochetage {};
+	class SkylineItems_Defibrilateur {};
+	class SkylineItems_Morphine {};
+	class SkylineItems_Passeport {};
 	class SkylineItems_PlaqueMilitaire
 	{
 		buy_price = 20;
+		buy_condition_WEST = 1;
+		buy_condition_EAST = 1;
 	};
-	class SkylineItems_PocheSang
-	{
-	};
+	class SkylineItems_PocheSang {};
 	class SkylineItems_RadarGun
 	{
-		buy_price = 20;
+		buy_price = 400;
+		buy_condition_WEST = 1;
 	};
 	class SmokeShellGreen
 	{
@@ -1786,37 +1544,16 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class tenue_Alysia
-	{
-		buy_price = 20;
-	};
-	class ToolKit
-	{
-	};
-	class Trixie_CZ550
-	{
-	};
-	class Trixie_CZ550_Mag
-	{
-	};
-	class Trixie_CZ550_Rail
-	{
-	};
-	class Trixie_Enfield
-	{
-	};
-	class Trixie_Enfield_Mag
-	{
-	};
-	class Trixie_Enfield_Rail
-	{
-	};
-	class Trixie_FNFAL_Mag
-	{
-	};
-	class Trixie_FNFAL_Rail
-	{
-	};
+	class tenue_Alysia {};
+	class ToolKit {};
+	class Trixie_CZ550 {};
+	class Trixie_CZ550_Mag {};
+	class Trixie_CZ550_Rail {};
+	class Trixie_Enfield {};
+	class Trixie_Enfield_Mag {};
+	class Trixie_Enfield_Rail {};
+	class Trixie_FNFAL_Mag {};
+	class Trixie_FNFAL_Rail {};
 	class TRYK_B_Alicepack
 	{
 		buy_price = 80;
@@ -2780,9 +2517,7 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class U_Competitor
-	{
-	};
+	class U_Competitor {};
 	class U_O_CombatUniform_ocamo
 	{
 		buy_price = 20;
@@ -2835,9 +2570,7 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class DemoCharge_Remote_Mag
-	{
-	};
+	class DemoCharge_Remote_Mag {};
 	class TRYK_V_Sheriff_BA_TB
 	{
 		buy_price = 20;
@@ -2856,7 +2589,8 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class rhs_6b23_sniper
 	{
-		buy_price = 20;
+		buy_price = 2000;
+		buy_condition_WEST = 4;
 	};
 	class Garde_Veste
 	{
@@ -2872,83 +2606,103 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class tenue_de_garde_commandant
 	{
-		buy_price = 150;
+		buy_price = 300;
+		buy_condition_EAST = 5;
 	};
 	class tenue_de_garde_lieutenant
 	{
-		buy_price = 150;
+		buy_price = 300;
+		buy_condition_EAST = 4;
 	};
 	class tenue_de_garde_sergent
 	{
-		buy_price = 150;
+		buy_price = 300;
+		buy_condition_EAST = 3;
 	};
 	class tenue_de_garde_caporal
 	{
-		buy_price = 150;
+		buy_price = 300;
+		buy_condition_EAST = 2;
 	};
 	class tenue_de_garde_basique
 	{
-		buy_price = 150;
+		buy_price = 300;
+		buy_condition_EAST = 1;
 	};
 	class tenue_de_milice_commandant
 	{
-		buy_price = 150;
+		buy_price = 300;
+		buy_condition_WEST = 9;
 	};
 	class tenue_de_milice_capitaine
 	{
-		buy_price = 150;
+		buy_price = 300;
+		buy_condition_WEST = 8;
 	};
 	class tenue_de_milice_lieutenant
 	{
-		buy_price = 150;
+		buy_price = 300;
+		buy_condition_WEST = 7;
 	};
 	class tenue_de_milice_major
 	{
-		buy_price = 150;
+		buy_price = 300;
+		buy_condition_WEST = 6;
 	};
 	class tenue_de_milice_adjudant
 	{
-		buy_price = 150;
+		buy_price = 300;
+		buy_condition_WEST = 5;
 	};
 	class tenue_de_milice_sergent
 	{
-		buy_price = 150;
+		buy_price = 300;
+		buy_condition_WEST = 4;
 	};
 	class tenue_de_milice_caporal
 	{
-		buy_price = 150;
+		buy_price = 300;
+		buy_condition_WEST = 3;
 	};
 	class tenue_de_milice_milicien
 	{
-		buy_price = 150;
+		buy_price = 300;
+		buy_condition_WEST = 2;
 	};
 	class tenue_de_milice_cadet
 	{
-		buy_price = 150;
+		buy_price = 300;
+		buy_condition_WEST = 1;
 	};
 	class EWK_Cig1
 	{		
 		buy_price = 20;
+		buy_condition_WEST = 2;
 	};
 	class EWK_Cig2
 	{		
 		buy_price = 20;
+		buy_condition_WEST = 2;
 	};
 	class EWK_Cig3
 	{		
 		buy_price = 20;
+		buy_condition_WEST = 2;
 	};
 	class EWK_Cig4
 	{		
 		buy_price = 20;
+		buy_condition_WEST = 2;
 	};
 	class EWK_Cig6
 	{		
 		buy_price = 20;
+		buy_condition_WEST = 2;
 	};
 	class EWK_Cigar1
 	{		
 		buy_price = 20;
+		buy_condition_WEST = 9;
 	};
 	class vietsh_Head
 	{		
@@ -2956,9 +2710,9 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class H_Beret_blk
 	{
-		buy_price = 20;
+		buy_price = 100;
+		buy_condition_WEST = 2;
 	};
-
 	class Alysia_repair_toolbox
 	{
 		buy_price = 20;
@@ -3003,90 +2757,43 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class SMG_01_F
-	{
-	};
-	class optic_Aco
-	{
-	};
+	class SMG_01_F {};
+	class optic_Aco {};
 	class RH_m9
 	{
-		buy_price = 20;
+		buy_price = 700;
 		buy_condition_WEST = 1;
 	};
-	class hlc_rifle_aks74u
-	{
-	};
-	class optic_MRCO
-	{
-	};
+	class hlc_rifle_aks74u {};
+	class optic_MRCO {};
 	class optic_Holosight
 	{
 	};	
-	class RH_fnp45
-	{
-	};
-	class Skyline_HK_SL8
-	{
-	};
-	class TRYK_HRPIGEAR_NV
-	{
-	};
-	class optic_Hamr
-	{
-		buy_price = 20;
-		buy_condition_WEST = 3;
-	};
-	class RH_g19
-	{
-	};
-	class hlc_rifle_ak47
-	{
-	};
-	class hlc_optic_kobra
-	{
-	};
-	class hlc_45Rnd_545x39_t_rpk
-	{
-	};
+	class RH_fnp45 {};
+	class Skyline_HK_SL8 {};
+	class TRYK_HRPIGEAR_NV {};
+	class RH_g19 {};
+	class hlc_rifle_ak47 {};
+	class hlc_optic_kobra {};
+	class hlc_45Rnd_545x39_t_rpk {};
 	class RH_g17
 	{
-		buy_price = 20;
+		buy_price = 2100;
 		buy_condition_WEST = 5;
 	};
-	class hlc_rifle_RPK12
-	{
-	};
-	class gac_JSDF_W_MG_MINIMI
-	{
-	};
-	class Rangefinder
-	{
-	};
-	class hlc_rifle_m14sopmod
-	{
-	};
-	class hlc_rifle_rpk
-	{
-	};
-	class optic_LRPS
-	{
-	};
-	class srifle_DMR_03_F
-	{
-	};
-	class srifle_GM6_F
-	{
-	};
-	class optic_DMS
-	{
-	};
-	class hlc_rifle_akmgl
-	{
-	};
+	class hlc_rifle_RPK12 {};
+	class gac_JSDF_W_MG_MINIMI {};
+	class Rangefinder {};
+	class hlc_rifle_m14sopmod {};
+	class hlc_rifle_rpk {};
+	class optic_LRPS {};
+	class srifle_DMR_03_F {};
+	class srifle_GM6_F {};
+	class optic_DMS {};
+	class hlc_rifle_akmgl {};
 	class Fett_tf_mr3000_milice
 	{
-		buy_price = 20;
+		buy_price = 800;
 		buy_condition_WEST = 4;
 	};
 	class tf_anprc148jem_2
@@ -3145,7 +2852,8 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Fett_backpack_milice
 	{
-		buy_price = 20;
+		buy_price = 250;
+		buy_condition_WEST = 1;
 	};
 	class Bank_Bomb
 	{

@@ -78,5 +78,6 @@ class RscDisplayTablet: RscDisplayDefault
 		#include "RscDisplayTablet_apps\staff.hpp"
 		#include "RscDisplayTablet_apps\fuel.hpp"
 		#include "RscDisplayTablet_apps\announces.hpp"
+		#include "RscDisplayTablet_apps\company.hpp"
 	};
 };

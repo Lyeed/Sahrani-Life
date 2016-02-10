@@ -3137,74 +3137,47 @@ class ALYSIA_VEHICLES
   	/*
 	**				WEST VEHICLES
 	*/
-	class DAR_TahoePolice
+
+	/* CARS */
+	class Fett_Audi_RS4_12_milice_F
 	{
+		realname = "Audi RS4";
 		buyPrice = 75000;
-		inventory = 90;
+		inventory = 25;
 		side = "WEST";
 		insurance = 1;
 		licenses[] = {"driver"};
-		fuel = "SP95";
-		rank = 3;
+		fuel = "SP98";
+		rank = 7;
 		colors[] = {};
-		realname = "Chevrolet Tahoe Milice";
 	};
-
-	class Fett_truck_milice
+	class DAR_TaurusPolice
 	{
-		buyPrice = 150000;
-		inventory = 300;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"truck"};
-		fuel = "Diesel";
-		rank = 3;
-		colors[] = {};
-		realname = "Camion milice";
-	};
-	
-	class Fett_boat_milice
-	{
-		buyPrice = 75000;
-		inventory = 30;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"boat"};
-		fuel = "SP95";
-		rank = 3;
-		colors[] = {};
-		realname = "Bateau à moteur";
-	};
-
-	class DAR_ImpalaPolice
-	{
-		buyPrice = 75000;
+		buyPrice = 70000;
 		inventory = 40;
 		side = "WEST";
 		insurance = 1;
 		licenses[] = {"driver"};
-		fuel = "SP95";
-		rank = 2;
-		colors[] = {};
-		realname = "Impala Milice";
-	};
-
-	class DAR_ChargerPoliceState
-	{
-		buyPrice = 75000;
-		inventory = 40;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
+		fuel = "SP98";
 		rank = 6;
 		colors[] = {};
-		realname = "Dodge Charger Milice";
+		realname = "Ford Taurus Milice";
 	};
-
-	class DAR_ExplorerPolice
+	class DAR_CVPIAux
 	{
-		buyPrice = 75000;
+		buyPrice = 16000;
+		inventory = 40;
+		side = "WEST";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP98";
+		rank = 2;
+		colors[] = {};
+		realname = "Crown Victoria Milice";
+	};
+	class DAR_TahoePolice
+	{
+		buyPrice = 40000;
 		inventory = 90;
 		side = "WEST";
 		insurance = 1;
@@ -3212,54 +3185,92 @@ class ALYSIA_VEHICLES
 		fuel = "SP95";
 		rank = 4;
 		colors[] = {};
+		realname = "Chevrolet Tahoe Milice";
+	};
+	class DAR_ImpalaPolice
+	{
+		buyPrice = 20500;
+		inventory = 15;
+		side = "WEST";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP95";
+		rank = 3;
+		colors[] = {};
+		realname = "Impala Milice";
+	};
+	class DAR_ChargerPoliceState
+	{
+		buyPrice = 85000;
+		inventory = 40;
+		side = "WEST";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP95";
+		rank = 7;
+		colors[] = {};
+		realname = "Dodge Charger Milice";
+	};
+	class DAR_ExplorerPolice
+	{
+		buyPrice = 60000;
+		inventory = 90;
+		side = "WEST";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP95";
+		rank = 5;
+		colors[] = {};
 		realname = "Ford Explorer Milice";
 	};
 
-	class DAR_TaurusPolice
+	/* TRUCKS */
+	class Fett_truck_milice
 	{
-		buyPrice = 75000;
-		inventory = 40;
+		buyPrice = 350000;
+		inventory = 300;
 		side = "WEST";
 		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		rank = 5;
+		licenses[] = {"truck"};
+		fuel = "Diesel";
+		rank = 6;
 		colors[] = {};
-		realname = "Ford Taurus Milice";
+		realname = "Camion Milice";
 	};
-
-	class DAR_CVPIAux
+	
+	/* SEA */
+	class Fett_boat_milice
 	{
-		buyPrice = 75000;
-		inventory = 40;
+		buyPrice = 65000;
+		inventory = 30;
 		side = "WEST";
 		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		rank = 1;
+		licenses[] = {"boat"};
+		fuel = "SP95";
+		rank = 4;
 		colors[] = {};
-		realname = "Crown Victoria Milice";
+		realname = "Bateau à moteur";
 	};
 
+	/* AIRS */
 	class EC635_Unarmed
 	{
-		buyPrice = 75000;
+		buyPrice = 800000;
 		inventory = 38;
 		side = "WEST";
-		insurance = 1;
+		insurance = 0;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
-		rank = 6;
+		rank = 8;
 		colors[] = {};
 		realname = "EC635 Milice";
 	};
-
 	class dezkit_b206mi
 	{
-		buyPrice = 75000;
+		buyPrice = 450000;
 		inventory = 70;
 		side = "WEST";
-		insurance = 1;
+		insurance = 0;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 6;
@@ -3272,19 +3283,6 @@ class ALYSIA_VEHICLES
 	};
 	class dezkit_b206_police: dezkit_b206mi {};
 	class dezkit_b206_fbi: dezkit_b206mi {};
-
-	class Skyline_Audi_RS4_Police_01_F
-	{
-		buyPrice = 25000;
-		inventory = 90;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		rank = 3;
-		colors[] = {};
-		realname = "Audi RS4 Milice";
-	};
 
   	/*
 	**				EAST VEHICLES
@@ -3860,19 +3858,6 @@ class ALYSIA_VEHICLES
 	class Skyline_Audi_RS4_10_F: Skyline_Audi_RS4 {};
 	class Skyline_Audi_RS4_11_F: Skyline_Audi_RS4 {};
 	class Skyline_Audi_RS4_12_F: Skyline_Audi_RS4 {};
-	
-	class Fett_Audi_RS4_12_milice_F
-	{
-		realname = "Audi RS4";
-		buyPrice = 75000;
-		inventory = 25;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		rank = 2;
-		colors[] ={};
-	};
 
 	class Skyline_Ford_Transit
 	{
@@ -3955,7 +3940,7 @@ class ALYSIA_VEHICLES
 	class shounka_a3_brinks_noir
 	{
 		realname = "Camion de transport de fond";
-		buyPrice = 160000;// BEN A FAIRE
+		buyPrice = 160000;
 		inventory = 150;
 		side = "CIV";
 		insurance = 1;

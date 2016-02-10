@@ -13,15 +13,15 @@ class ALYSIA_FACTIONS
 		laboratory_destroy = 1;
 
 		/*** SALARY ***/
-		salary = 750;
+		salary = 500;
 		salary_tax = 0.05;
 		salary_apply_rank = 1;
 		salary_timer = 15;
 
 		/*** PHONE ***/
-		phone_change_number_price = 1000;
+		phone_change_number_price = -1;
 		phone_send_global_message = 1;
-		phone_send_global_message_rank = 4;
+		phone_send_global_message_rank = 7;
 		phone_send_to_faction_price = 0;
 		
 		/*** COMPANIES ***/
@@ -95,7 +95,8 @@ class ALYSIA_FACTIONS
 					{
 						"destroy_archeo",
 						"destroy_stand",
-						"destroy_field"
+						"destroy_field",
+						"destroy_labo"
 					}
 				}
 			};
@@ -169,7 +170,8 @@ class ALYSIA_FACTIONS
 				"ItemCompass",
 				"ItemWatch",
 				"ItemGPS",
-				"tf_anprc152"
+				"tf_anprc152",
+				"Skyline_tl122_blanche"
 			};
 		};
 
@@ -287,7 +289,8 @@ class ALYSIA_FACTIONS
 					{
 						"destroy_archeo",
 						"destroy_stand",
-						"destroy_field"
+						"destroy_field",
+						"destroy_labo"
 					}
 				}
 			};
@@ -362,7 +365,8 @@ class ALYSIA_FACTIONS
 				"ItemCompass",
 				"ItemWatch",
 				"ItemGPS",
-				"tf_anprc152"
+				"tf_anprc152",
+				"Skyline_tl122_blanche"
 			};
 		};
 
@@ -401,7 +405,7 @@ class ALYSIA_FACTIONS
 		faction_bank_handle_rank = 1;
 
 		/*** SALARY ***/
-		salary = 700;
+		salary = 600;
 		salary_tax = 0.05;
 		salary_apply_rank = 0;
 		salary_timer = 15;
@@ -498,7 +502,8 @@ class ALYSIA_FACTIONS
 				"ItemMap",
 				"ItemCompass",
 				"ItemWatch",
-				"tf_anprc152"
+				"tf_anprc152",
+				"Skyline_tl122_blanche"
 			};
 		};
 
@@ -528,8 +533,8 @@ class ALYSIA_FACTIONS
 		faction_bank_handle_rank = 6;
 
 		/*** SALARY ***/
-		salary = 600;
-		salary_tax = 0.05;
+		salary = 50;
+		salary_tax = 0;
 		salary_apply_rank = 1;
 		salary_timer = 15;
 
@@ -559,7 +564,8 @@ class ALYSIA_FACTIONS
 				},
 				{"Magazines",
 					{
-
+						"SkylineItems_Adrenaline",
+						"SkylineItems_Morphine"
 					}
 				},
 				{"Items",
@@ -644,7 +650,8 @@ class ALYSIA_FACTIONS
 				"ItemWatch",
 				"ItemGPS",
 				"Badge_samu",
-				"tf_anprc152"
+				"tf_anprc152",
+				"Skyline_tl122_blanche"
 			};
 		};
 

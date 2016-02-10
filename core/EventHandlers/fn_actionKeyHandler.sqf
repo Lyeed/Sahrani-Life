@@ -56,6 +56,16 @@ if ((vehicle player) isEqualTo player) then
 			true breakOut "main";
 		};
 
+		_obj = (nearestObjects [player, (call g_dynamic_objects), 2]) select 0;
+		if (!(isNil "_obj")) then
+		{
+			if (_obj getVariable ["isPackable", false]) then
+			{
+				[_obj] spawn AlysiaClient_fnc_dynamicObject_packup;
+				true breakOut "main";
+			};
+		};
+
 		_laboratory = (nearestObjects [player, (call g_laboratories), 2]) select 0;
 		if (!(isNil "_laboratory")) then
 		{

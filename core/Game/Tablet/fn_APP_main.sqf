@@ -15,7 +15,6 @@ _status = uiNamespace getVariable ["main_status", 0];
 _actual_idc = 7510;
 _apps_done = 0;
 _apps_more = false;
-
 _apps = [];
 _global_apps = 
 [
@@ -31,7 +30,8 @@ _global_apps =
 	["lyeed_IMG\data\tablet\app_main\app_licences.paa", "lyeed_IMG\data\tablet\app_main\app_licences_select.paa", "['LICENSES'] spawn AlysiaClient_fnc_tabletApp;", "Licenses", "playerSide isEqualTo civilian"],
 	["lyeed_IMG\data\tablet\app_main\app_market.paa", "lyeed_IMG\data\tablet\app_main\app_market_select.paa", "['MARKET'] spawn AlysiaClient_fnc_tabletApp;","Bourse","'MARKET' in g_apps"],
 	["lyeed_IMG\data\tablet\app_main\app_fuel.paa", "lyeed_IMG\data\tablet\app_main\app_fuel_select.paa", "['FUEL'] spawn AlysiaClient_fnc_tabletApp;", "Stations service", "'FUEL' in g_apps"],
-	["lyeed_IMG\data\tablet\app_main\app_announces.paa", "lyeed_IMG\data\tablet\app_main\app_announces_select.paa", "['ANNOUNCES'] spawn AlysiaClient_fnc_tabletApp;", "Annonces", "'ANNOUNCES' in g_apps"]
+	["lyeed_IMG\data\tablet\app_main\app_announces.paa", "lyeed_IMG\data\tablet\app_main\app_announces_select.paa", "['ANNOUNCES'] spawn AlysiaClient_fnc_tabletApp;", "Annonces", "'ANNOUNCES' in g_apps"],
+	["lyeed_IMG\data\tablet\app_main\app_company.paa", "lyeed_IMG\data\tablet\app_main\app_company_select.paa", "['COMPANY'] spawn AlysiaClient_fnc_tabletApp;", "Entreprise", "!(isNull g_company)"]
 ];
 
 {
@@ -59,8 +59,11 @@ _global_apps =
 		_image ctrlSetText (_x select 0);
 		_button buttonSetAction (_x select 2);
 
-		if ((_x select 1) != "") then
+		if ((_x select 1) isEqualTo "") then
 		{
+			_button ctrlRemoveAllEventHandlers "MouseEnter";
+			_button ctrlRemoveAllEventHandlers "MouseExit";
+		} else {
 			_button ctrlSetEventHandler ["MouseEnter", format["((uiNamespace getVariable 'tablet') displayCtrl %1) ctrlSetText '%2';", _actual_idc, (_x select 1)]];
 			_button ctrlSetEventHandler ["MouseExit", format["((uiNamespace getVariable 'tablet') displayCtrl %1) ctrlSetText '%2';", _actual_idc, (_x select 0)]];
 		};

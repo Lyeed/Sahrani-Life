@@ -77,6 +77,33 @@ class ALYSIA_GARAGES
 			"Air"
 		};
 	};
+	class garage_east_4
+	{
+		name = "Garage de la Garde";
+		spawns[] =
+		{
+			"garage_east_4_1"
+		};
+		types[] =
+		{
+			"Car",
+			"Truck",
+			"Tank"
+		};
+	};
+	class garage_east_5
+	{
+		name = "Garage de la Garde";
+		spawns[] =
+		{
+			"garage_east_5_1",
+			"garage_east_5_2"
+		};
+		types[] =
+		{
+			"Air"
+		};
+	};
 
 	class garage_west_1
 	{
@@ -105,6 +132,32 @@ class ALYSIA_GARAGES
 		{
 			"Car",
 			"Truck",
+			"Air"
+		};
+	};
+	class garage_west_3
+	{
+		name = "Garage Milice";
+		spawns[] =
+		{
+			"garage_west_3_1"
+		};
+		types[] =
+		{
+			"Car",
+			"Truck"
+		};
+	};
+	class garage_west_4
+	{
+		name = "Garage Milice";
+		spawns[] =
+		{
+			"garage_west_4_1",
+			"garage_west_4_2"
+		};
+		types[] =
+		{
 			"Air"
 		};
 	};

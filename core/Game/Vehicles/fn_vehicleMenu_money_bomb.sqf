@@ -27,6 +27,7 @@ if (!("Bank_Bomb" in (magazines player))) exitWith
 	g_action_inUse = false;
 };
 
+player removeMagazine "Bank_Bomb";
 _bomb = "Bank_Bomb" createVehicle (getPos player);
 _bomb attachTo [_vehicle, [0,-3.14,-0.80]];
 _bomb setVectorUp [0,-14,1];

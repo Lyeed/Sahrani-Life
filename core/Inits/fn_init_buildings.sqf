@@ -2044,3 +2044,48 @@ _border_screen_north_2 setVariable ["camera_target_id", 506878];
 	}, "", 9998, false, true, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]) && (_target getVariable ['camera_night',false]) && (_target getVariable ['camera_ON',false]))"];
 
 } forEach ([_border_screen_south_1, _border_screen_south_2, _border_screen_north_1, _border_screen_north_2, _border_screen_south_3, _border_screen_south_4]);
+
+if (playerSide != west) then
+{
+	{
+		if (isNil "_x") then {
+			diag_log ["[ALYSIA:ERROR] Can't find west standInfo at index %1", _forEachIndex];
+		} else {
+			removeAllActions _x;
+		};
+	} forEach
+	([
+		stand_info_west_1,
+		stand_info_west_2,
+		stand_info_west_3,
+		stand_info_west_4,
+		stand_info_west_5,
+		stand_info_west_6,
+		stand_info_west_7,
+		stand_info_west_8,
+		stand_info_west_9
+	]);
+};
+
+if (playerSide != east) then
+{
+	{
+		if (isNil "_x") then {
+			diag_log ["[ALYSIA:ERROR] Can't find east standInfo at index %1", _forEachIndex];
+		} else {
+			removeAllActions _x;
+		};
+	} forEach
+	([
+		stand_info_east_1,
+		stand_info_east_2,
+		stand_info_east_3,
+		stand_info_east_4,
+		stand_info_east_5,
+		stand_info_east_6,
+		stand_info_east_7,
+		stand_info_east_8,
+		stand_info_east_9,
+		stand_info_east_10
+	]);
+};

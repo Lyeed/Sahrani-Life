@@ -97,7 +97,7 @@ if (count(_licenses) > 0) then
 	if (_price_condition) then {"#31B404"} else {"#DF0101"},
 	[_price] call AlysiaClient_fnc_numberText,
 	_licenses_text,
-	[playerSide, _rank] call AlysiaClient_fnc_sideToStr,
+	([playerSide, _rank] call AlysiaClient_fnc_rankToStr),
 	if (_rank_condition) then {"#31B404"} else {"#DF0101"}
 ];
 

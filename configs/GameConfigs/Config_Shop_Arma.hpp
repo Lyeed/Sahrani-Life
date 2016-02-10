@@ -144,8 +144,6 @@ class ALYSIA_SHOPS_ARMA
 		stocks[] = 
 		{
 			"SkylineItems_Bandage",
-			"SkylineItems_Adrenaline",
-			"SkylineItems_Morphine",
 			"ItemMap",
 			"ItemGPS",
 			"Binocular",
@@ -175,7 +173,7 @@ class ALYSIA_SHOPS_ARMA
 		side = "";
 		stocks[] = 
 		{
-			"B_Parachute",
+			"B_Parachute"
 		};
 	};
 	

@@ -514,7 +514,6 @@ class ALYSIA_SHOPS_CLOTHING
 			"Bear_RoundGlasses",
 			"Bear_RoundGlasses_blk",
 			"Bear_RoundGlasses_gold",
-			"Skyline_NioshFace",
 			"EWK_Cig1",
 			"EWK_Cig2",
 			"EWK_Cig3",
@@ -995,7 +994,6 @@ class ALYSIA_SHOPS_CLOTHING
 		};
 		headgear[] =
 		{
-			"H_mas_afr_Bandana_e_civ_rebel",
 			"H_Shemag_olive",
 			"H_ShemagOpen_khk",
 			"H_Shemag_olive_hs",

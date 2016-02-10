@@ -13,7 +13,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"DAR_TaurusPolice", 
 			"DAR_CVPIAux", 
 			"DAR_ImpalaPolice",
-			"Skyline_Audi_RS4_Police_01_F",
 			"Fett_truck_milice",
 			"Fett_Audi_RS4_12_milice_F"
 		};

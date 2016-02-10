@@ -20,12 +20,14 @@ if (_info isEqualTo []) exitWith {};
 
 if (!(["Analyse", 10, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {};
 
-if (!(createDialog "RscDisplaySkullOwner")) exitWith {};
+if (!(createDialog "RscDisplayDefaultText")) exitWith {};
 
 disableSerialization;
 _display = findDisplay 68000;
 if (isNull _display) exitWith {};
 
+(_display displayCtrl 68002) ctrlSetText "lyeed_IMG\data\skull\background.jpg";
+(_display displayCtrl 68003) ctrlSetStructuredText parseText "<t size='1.5' align='center'>Analyses</t>";
 (_display displayCtrl 68001) ctrlSetStructuredText parseText format
 [
 		"<t align='left'>Date</t><t align='right'>%1</t><br/>"

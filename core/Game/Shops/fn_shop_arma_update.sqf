@@ -64,7 +64,7 @@ _desc = ([_item] call AlysiaClient_fnc_fetchCfgDetails) select 9;
 	+	"<t align='center'>%7</t>"
 	+	"</t>",
 	if (_rank_condition) then {"#31B404"} else {"#DF0101"},
-	[playerSide, _rank] call AlysiaClient_fnc_sideToStr,
+	([playerSide, _rank] call AlysiaClient_fnc_rankToStr),
 	if (_license_condition) then {"#31B404"} else {"#DF0101"},
 	if (_license isEqualTo "") then {"Aucune"} else {getText(missionConfigFile >> "ALYSIA_LICENSES" >> _license >> "name")},
 	if (_price_condition) then {"#31B404"} else {"#DF0101"},

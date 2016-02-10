@@ -3,6 +3,7 @@
 
 #include "RscDisplays\RscDisplayDefault.hpp"
 #include "RscDisplays\RscDisplayDefaultInteraction.hpp"
+#include "RscDisplays\RscDisplayDefaultText.hpp"
 #include "RscDisplays\RscDisplayAuctionHouse.hpp"
 #include "RscDisplays\RscDisplayShopClothing.hpp"
 #include "RscDisplays\RscDisplayShopArma.hpp"

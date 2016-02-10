@@ -98,6 +98,11 @@ class CfgFunctions
 			class company_construction_build {};
 			class company_info_open {};
 			class company_bank_handle {};
+			class company_member_handle {};
+			class company_member_join {};
+			class company_member_propose {};
+			class company_member_kick {};
+			class company_member_data {};
 		};
 
 		class Tools
@@ -506,6 +511,8 @@ class CfgFunctions
 			class pickupMoney {};
 			class restrain {};
 			class surrender {};
+			class alcootest_get {};
+			class alcootest_return {};
 			class interactionMenu_action_restrain {};
 			class interactionMenu_action_unrestrain {};
 			class interactionMenu_action_lockpick {};
@@ -529,6 +536,7 @@ class CfgFunctions
 			class interactionMenu_action_license_get {};
 			class interactionMenu_action_license_return {};
 			class interactionMenu_action_license_revoke {};
+			class interactionMenu_action_alcootest {};
 		};
 
 		class Welcome

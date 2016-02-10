@@ -108,6 +108,10 @@ class CfgRemoteExec
 		class AlysiaClient_fnc_APP_staff_players_getData {allowTargets = CLIENT;};
 		//- Identity
 		class AlysiaClient_fnc_identityOpen {allowTargets = CLIENT;};
+		// - Company
+		class AlysiaClient_fnc_company_member_join {allowTargets = CLIENT;};
+		// - interactions
+		class AlysiaClient_fnc_alcootest_return {allowTargets = CLIENT;};
 
 		//- Arma
 		class setFuel {allowTargets = EVERYONE;};

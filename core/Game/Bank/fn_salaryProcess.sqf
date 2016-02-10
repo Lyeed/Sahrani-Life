@@ -54,53 +54,56 @@ if (!(isNull g_company)) then
 {
 	private["_info", "_price", "_price_employees", "_price_building"];
 	_info = g_company getVariable ["company_info", []];
-	if ((_info select 1) isEqualTo (getPlayerUID player)) then
+	if (!(g_company getVariable ['construction', false])) then
 	{
-		_price_employees = getNumber(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2) >> "tax" >> "price_per_employee");
-		if (_price_employees > 0) then
+		if ((_info select 1) isEqualTo (getPlayerUID player)) then
 		{
-			switch (_info select 5) do
+			_price_employees = getNumber(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2) >> "tax" >> "price_per_employee");
+			if (_price_employees > 0) then
 			{
-				case "NORTH":
+				switch (_info select 5) do
 				{
-					_price = (count(g_company getVariable ["company_members", []]) - 1) * (_price_employees * gServer_tax_north_companies_employee_multiplier);
-					_add_to_north = _add_to_north + _price;
+					case "NORTH":
+					{
+						_price = (count((g_company getVariable "company_members") select 0) - 1) * (_price_employees * gServer_tax_north_companies_employee_multiplier);
+						_add_to_north = _add_to_north + _price;
+					};
+					case "SOUTH":
+					{
+						_price = (count((g_company getVariable "company_members") select 0) - 1) * (_price_employees * gServer_tax_south_companies_employee_multiplier);
+						_add_to_south = _add_to_south + _price;
+					};
 				};
-				case "SOUTH":
+
+				_price_remove = _price_remove + _price;
+				if (!([false, _price, "Taxe salariale"] call AlysiaClient_fnc_handleATM)) then
 				{
-					_price = (count(g_company getVariable ["company_members", []]) - 1) * (_price_employees * gServer_tax_south_companies_employee_multiplier);
-					_add_to_south = _add_to_south + _price;
+					["Vous n'avez pas assez d'argent pour payer votre taxe salariale. Régulez votre situation dans les plus brefs délais ou des huissiers passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
 				};
 			};
 
-			_price_remove = _price_remove + _price;
-			if (!([false, _price, "Taxe salariale"] call AlysiaClient_fnc_handleATM)) then
+			_price_building = getNumber(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2) >> "tax" >> "price_building");
+			if (_price_building > 0) then
 			{
-				["Vous n'avez pas assez d'argent pour payer votre taxe salariale. Régulez votre situation dans les plus brefs délais ou des huissiers passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
-			};
-		};
-
-		_price_building = getNumber(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2) >> "tax" >> "price_building");
-		if (_price_building > 0) then
-		{
-			switch (_info select 5) do
-			{
-				case "NORTH":
+				switch (_info select 5) do
 				{
-					_price_building = _price_building * gServer_tax_north_companies_building_multiplier;
-					_add_to_north = _add_to_north + _price_building;
+					case "NORTH":
+					{
+						_price_building = _price_building * gServer_tax_north_companies_building_multiplier;
+						_add_to_north = _add_to_north + _price_building;
+					};
+					case "SOUTH":
+					{
+						_price_building = _price_building * gServer_tax_south_companies_building_multiplier;
+						_add_to_south = _add_to_south + _price_building;
+					};
 				};
-				case "SOUTH":
-				{
-					_price_building = _price_building * gServer_tax_south_companies_building_multiplier;
-					_add_to_south = _add_to_south + _price_building;
-				};
-			};
 
-			_price_remove = _price_remove + _price_building;
-			if (!([false, _price_building, "Taxe foncière"] call AlysiaClient_fnc_handleATM)) then
-			{
-				["Vous n'avez pas assez d'argent pour payer votre taxe foncière. Régulez votre situation dans les plus brefs délais ou des huissiers passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
+				_price_remove = _price_remove + _price_building;
+				if (!([false, _price_building, "Taxe foncière"] call AlysiaClient_fnc_handleATM)) then
+				{
+					["Vous n'avez pas assez d'argent pour payer votre taxe foncière. Régulez votre situation dans les plus brefs délais ou des huissiers passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
+				};
 			};
 		};
 	};

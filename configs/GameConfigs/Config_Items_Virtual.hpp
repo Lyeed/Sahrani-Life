@@ -971,7 +971,6 @@ class ALYSIA_ITEMS
 			thirst = 40;
 			hunger = 0;
 			sound = "drink";
-			alcool = 0.30;
 		};
 	};
 
@@ -1310,6 +1309,13 @@ class ALYSIA_ITEMS
 			mult = 2;
 			affect[] = {};
 		};
+		class food
+		{
+			alcool = 0.55;
+			thirst = 50;
+			hunger = 0;
+			sound = "drink";
+		};
 	};
 
 	class slivovica
@@ -1325,6 +1331,13 @@ class ALYSIA_ITEMS
 			min = 220;
 			mult = 2;
 			affect[] = {};
+		};
+		class food
+		{
+			alcool = 0.50;
+			thirst = 40;
+			hunger = 0;
+			sound = "drink";
 		};
 	};
 
@@ -1988,6 +2001,17 @@ class ALYSIA_ITEMS
 		weight = 18;
 		illegal = 0;
 		removable = 0;
+		image = "";
+	};
+
+	class alcool_test
+	{
+		name = "Alcootest";
+		price_buy = 15;
+		price_sell = 0;
+		weight = 1;
+		illegal = 0;
+		removable = 1;
 		image = "";
 	};
 };

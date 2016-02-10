@@ -25,4 +25,10 @@ if (((player getVariable ["number", ""]) isEqualTo "") || (g_phone_forfait in ["
 			[8517, true] call AlysiaClient_fnc_tabletShow;
 		};
 	};
+
+	if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "phone_change_number_price") isEqualTo -1) then
+	{
+		[8510, false] call AlysiaClient_fnc_tabletShow;
+		[8511, false] call AlysiaClient_fnc_tabletShow;
+	};
 };

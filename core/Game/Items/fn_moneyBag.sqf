@@ -25,10 +25,19 @@ if (!(isNull g_company) && {(((g_company getVariable 'company_info') select 2) i
 	] call BIS_fnc_guiMessage;
 	if (_action) then
 	{
-		deleteVehicle _object;
-		player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-		waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
-		[true, "illegal_money", 2000] call AlysiaClient_fnc_handleInv;
+		if (isNull _object) then
+		{
+			deleteVehicle _object;
+			player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+			waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
+			if (isNull _object) then {
+				["Impossible de trouver le sac. Quelqu'un l'a surement ramasser avant vous."] call AlysiaClient_fnc_error;
+			} else {
+				[true, "illegal_money", 2000] call AlysiaClient_fnc_handleInv;
+			};
+		} else {
+			["Impossible de trouver le sac. Quelqu'un l'a surement ramasser avant vous."] call AlysiaClient_fnc_error;
+		};
 	};
 };
 

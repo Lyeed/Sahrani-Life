@@ -103,7 +103,6 @@ class FACTION_RANK_HEADER: RscStructuredText
 class FACTION_DUTY_FRAME: RscFrame
 {
 	idc = FACTION_DUTY_FRAME_IDC;
-	colorText[] = {0,0,0,0.8};
 
 	x = 0.479375 * safezoneW + safezoneX;
 	y = 0.489 * safezoneH + safezoneY;
@@ -124,7 +123,6 @@ class FACTION_DUTY_HEADER: RscStructuredText
 class FACTION_DUTY_LIST: RscListbox
 {
 	idc = FACTION_DUTY_LIST_IDC;
-	colorBackground[] = {0,0,0,0.6};
 
 	x = 0.479375 * safezoneW + safezoneX;
 	y = 0.511 * safezoneH + safezoneY;
