@@ -6,10 +6,9 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-private ["_infos","_owners","_caution","_prison","_prisonName","_cells"];
+private ["_infos","_owners","_caution","_prison","_prison","_cells"];
 _infos = [_this, 0, [], [[]]] call BIS_fnc_param;
 _prison = g_arrest_prison;
-_prisonName = vehicleVarName _prison;
 _owners = "";
 _cells = 0;
 
@@ -35,23 +34,23 @@ _list = _display displayCtrl 19044;
 	_index = _list lbAdd getText(_x >> "name");
 	_list lbSetData [_index, (configName _x)];
 	
-} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "cells"));
+} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_PRISONS" >> _prison >> "cells"));
 _list lbSetCurSel 0;
 
 {
 	_owners = _owners + " - " + (getText (missionConfigFile	>> "ALYSIA_FACTIONS" >> _x >> "name"));
-} forEach getArray(missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "side");
+} forEach getArray(missionConfigFile >> "ALYSIA_PRISONS" >> _prison >> "side");
 
-if ((getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "bail" >> "enable")) isEqualTo 1) then {_caution = "<t color='#688A08'>Oui</t>"} else {_caution = "<t color='#8A0808'>Non</t>"};
+if ((getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prison >> "bail" >> "enable")) isEqualTo 1) then {_caution = "<t color='#688A08'>Oui</t>"} else {_caution = "<t color='#8A0808'>Non</t>"};
 
-(_display displayCtrl 19012) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1</t>", getText(missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "name")];
+(_display displayCtrl 19012) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1</t>", getText(missionConfigFile >> "ALYSIA_PRISONS" >> _prison >> "name")];
 (_display displayCtrl 19013) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1</t>", _owners];
 (_display displayCtrl 19014) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1</t>", _cells];
-(_display displayCtrl 19015) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1 M.</t>", getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "time" >> "min") / 60];
-(_display displayCtrl 19016) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1 M.</t>", getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "time" >> "max")];
+(_display displayCtrl 19015) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1 M.</t>", getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prison >> "time" >> "min") / 60];
+(_display displayCtrl 19016) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1 M.</t>", getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prison >> "time" >> "max")];
 (_display displayCtrl 19017) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1</t>", _caution];
-(_display displayCtrl 19018) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1Kn</t>", getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "bail" >> "min")];
-(_display displayCtrl 19019) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1Kn</t>", getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prisonName >> "bail" >> "max")];
+(_display displayCtrl 19018) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1Kn</t>", getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prison >> "bail" >> "min")];
+(_display displayCtrl 19019) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1Kn</t>", getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prison >> "bail" >> "max")];
 (_display displayCtrl 19029) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1</t>", _infos select 0];
 (_display displayCtrl 19030) ctrlSetStructuredText parseText format["<t align='right' size='1'>(%1) %2</t>", _infos select 1, _info select 2];
 (_display displayCtrl 19031) ctrlSetStructuredText parseText format["<t align='right' size='1'>%1</t>", _infos select 3];
