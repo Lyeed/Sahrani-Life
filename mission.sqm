@@ -35296,7 +35296,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="stand_info_west_7";
-			init="this enableSimulation true;this setdir 180;this setposATL [13484.416016,8840.993164,0.290866];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""WEST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == WEST'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""West_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == WEST'];";
+			init="this enableSimulation true;this setdir 180;this setposATL [13484.416016,8840.993164,0.290866];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""WEST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""West_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item3108
 		{
@@ -35331,7 +35331,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="stand_info_east_8";
-			init="this enableSimulation true;this setdir 450;this setposATL [13256.250977,8871.951172,0.274411];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""east"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""EAST_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && playerSide == EAST'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""EAST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation true;this setdir 450;this setposATL [13256.250977,8871.951172,0.274411];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""east"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""EAST_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""EAST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item3111
 		{
