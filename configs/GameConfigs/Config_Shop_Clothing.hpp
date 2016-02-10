@@ -519,7 +519,8 @@ class ALYSIA_SHOPS_CLOTHING
 			"EWK_Cig3",
 			"EWK_Cig4",
 			"EWK_Cig6",
-			"EWK_Cigar1"
+			"EWK_Cigar1",
+			"G_B_Diving"
 		};
 		vests[] =
 		{
@@ -617,7 +618,8 @@ class ALYSIA_SHOPS_CLOTHING
 			"EWK_Cig3",
 			"EWK_Cig4",
 			"EWK_Cig6",
-			"EWK_Cigar1"
+			"EWK_Cigar1",
+			"G_B_Diving"
 		};
 		vests[] =
 		{

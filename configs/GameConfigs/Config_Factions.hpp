@@ -218,8 +218,8 @@ class ALYSIA_FACTIONS
 		faction_bank_handle_rank = 5;
 
 		/*** SALARY ***/
-		salary = 750;
-		salary_tax = 0.05;
+		salary = 900;
+		salary_tax = 0;
 		salary_apply_rank = 1;
 		salary_timer = 15;
 
@@ -227,9 +227,9 @@ class ALYSIA_FACTIONS
 		laboratory_destroy = 1;
 
 		/*** PHONE ***/
-		phone_change_number_price = 1000;
+		phone_change_number_price = 5000;
 		phone_send_global_message = 1;
-		phone_send_global_message_rank = 3;
+		phone_send_global_message_rank = 4;
 		phone_send_to_faction_price = 0;
 
 		/*** COMPANIES ***/
@@ -328,7 +328,7 @@ class ALYSIA_FACTIONS
 
 		/*** SKULL ***/
 		skull_who = 0;
-		skull_take = 0;
+		skull_take = 1;
 
 		/*** INTERACTIONS ***/
 		interaction_seize_gear = 1;
@@ -340,15 +340,12 @@ class ALYSIA_FACTIONS
 			history_items[] =
 			{
 				"RH_fn57",
-				"RH_20Rnd_57x28_FN",
 				"RH_m1911",
-				"RH_7Rnd_45cal_m1911",
-				"hlc_rifle_auga2_b",
-				"hlc_30Rnd_556x45_B_AUG"
+				"hlc_rifle_auga2_b"
 			};
 			class leader_board
 			{
-				access_rank = 5;
+				access_rank = 4;
 			};
 		};
 
