@@ -7276,7 +7276,7 @@ class Mission
 		};
 		class Item371
 		{
-			position[]={10245.016,123.3483,9307.2061};<img image='lyeed_IMG\data\actions_menu\shop.paa'/> 
+			position[]={10245.016,123.3483,9307.2061};
 			azimut=76.6548;
 			id=524;
 			side="EMPTY";

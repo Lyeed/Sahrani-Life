@@ -77,6 +77,28 @@ class ALYSIA_GARAGES
 			"Air"
 		};
 	};
+	
+	class garage_frontiere_east
+	{
+		name = "Garage de la Garde";
+		spawns[] =
+		{
+		};
+		types[] =
+		{
+		};
+	};
+	
+	class garage_frontiere_west
+	{
+		name = "Garage de la Garde";
+		spawns[] =
+		{
+		};
+		types[] =
+		{
+		};
+	};
 
 	class garage_west_1
 	{
