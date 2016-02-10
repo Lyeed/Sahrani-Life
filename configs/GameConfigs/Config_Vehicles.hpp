@@ -3227,7 +3227,7 @@ class ALYSIA_VEHICLES
 	/* TRUCKS */
 	class Fett_truck_milice
 	{
-		buyPrice = 350000;
+		buyPrice = 280000;
 		inventory = 300;
 		side = "WEST";
 		insurance = 1;
@@ -3287,74 +3287,22 @@ class ALYSIA_VEHICLES
   	/*
 	**				EAST VEHICLES
 	*/
-	class Cha_BTR60_Cuba
+	/* CARS */
+	class gac_JGSDF_BXD10_MG
 	{
-		buyPrice = 75000;
+		buyPrice = 69000;
 		inventory = 90;
 		side = "EAST";
 		insurance = 1;
 		licenses[] = {"driver"};
-		fuel = "Diesel";
-		rank = 5;
-		colors[] = {};
-		realname = "BTR60 Cuba";
-	};
-	
-	class I_mas_T34_AAF_01
-	{
-		buyPrice = 750000;
-		inventory = 90;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		rank = 5;
-		colors[] = {};
-		realname = "T34";
-	};
-	
-	class Fett_truck_army
-	{
-		buyPrice = 75000;
-		inventory = 300;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"truck"};
 		fuel = "Diesel";
 		rank = 3;
 		colors[] = {};
-		realname = "HEMTT cargo";
+		realname = "BXD10 Armé";
 	};
-
-	class sfp_bo105_unarmed
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"pilot"};
-		fuel = "Kerosene";
-		rank = 4;
-		colors[] = {};
-		realname = "bo105";
-	};
-
-	class gac_JGSDF_BXD10_MG
-	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		rank = 4;
-		colors[] = {};
-		realname = "BXD10_MG";
-	};
-
 	class gac_JGSDF_V16_Rcn
 	{
-		buyPrice = 75000;
+		buyPrice = 48000;
 		inventory = 90;
 		side = "EAST";
 		insurance = 1;
@@ -3364,23 +3312,9 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		realname = "V16 Rcn";
 	};
-
 	class gac_JGSDF_BXD10
 	{
-		buyPrice = 75000;
-		inventory = 90;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		rank = 3;
-		colors[] = {};
-		realname = "BXD10";
-	};
-
-	class gac_JMSDF_SKW475
-	{
-		buyPrice = 75000;
+		buyPrice = 18000;
 		inventory = 90;
 		side = "EAST";
 		insurance = 1;
@@ -3388,25 +3322,23 @@ class ALYSIA_VEHICLES
 		fuel = "Diesel";
 		rank = 2;
 		colors[] = {};
-		realname = "SKW475";
+		realname = "BXD10";
 	};
-
 	class gac_jsdf_klx
 	{
-		buyPrice = 75000;
+		buyPrice = 8000;
 		inventory = 90;
 		side = "EAST";
 		insurance = 1;
-		licenses[] = {"driver"};
+		licenses[] = {"moto"};
 		fuel = "Diesel";
 		rank = 1;
 		colors[] = {};
 		realname = "moto";
 	};
-
 	class gac_JGSDF_V16
 	{
-		buyPrice = 75000;
+		buyPrice = 16000;
 		inventory = 90;
 		side = "EAST";
 		insurance = 1;
@@ -3415,6 +3347,85 @@ class ALYSIA_VEHICLES
 		rank = 1;
 		colors[] = {};
 		realname = "V16";
+	};
+	class Skyline_GMC_Vandura_Propagande_01_F
+	{
+		realname = "GMC haut parleurs";
+		buyPrice = 13500;
+		inventory = 70;
+		side = "EAST";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP98";
+		rank = 1;
+		colors[] = {};
+		speaker = 1;
+	};
+
+	/* TANKS */
+	class Cha_BTR60_Cuba
+	{
+		buyPrice = 360000;
+		inventory = 30;
+		side = "EAST";
+		insurance = 0;
+		licenses[] = {"driver"};
+		fuel = "Diesel";
+		rank = 3;
+		colors[] = {};
+		realname = "BTR60 Cuba";
+	};
+	class I_mas_T34_AAF_01
+	{
+		buyPrice = 370000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 0;
+		licenses[] = {"driver"};
+		fuel = "Diesel";
+		rank = 4;
+		colors[] = {};
+		realname = "T34";
+	};
+	
+	/* TRUCKS */
+	class gac_JMSDF_SKW475
+	{
+		buyPrice = 75000;
+		inventory = 225;
+		side = "EAST";
+		insurance = 1;
+		licenses[] = {"truck"};
+		fuel = "Diesel";
+		rank = 3;
+		colors[] = {};
+		realname = "SKW475";
+	};
+	class Fett_truck_army
+	{
+		buyPrice = 280000;
+		inventory = 425;
+		side = "EAST";
+		insurance = 1;
+		licenses[] = {"truck"};
+		fuel = "Diesel";
+		rank = 3;
+		colors[] = {};
+		realname = "HEMTT cargo";
+	};
+
+	/* AIRS */
+	class sfp_bo105_unarmed
+	{
+		buyPrice = 395000;
+		inventory = 90;
+		side = "EAST";
+		insurance = 0;
+		licenses[] = {"pilot"};
+		fuel = "Kerosene";
+		rank = 3;
+		colors[] = {};
+		realname = "bo105";
 	};
 
   	/*
@@ -3949,19 +3960,5 @@ class ALYSIA_VEHICLES
 		rank = 0;
 		colors[] = {};
 		money_transfer = 1;
-	};
-
-	class Skyline_GMC_Vandura_Propagande_01_F
-	{
-		realname = "GMC haut parleurs";
-		buyPrice = 35000;
-		inventory = 30;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		rank = 0;
-		colors[] = {};
-		speaker = 1;
 	};
 };
