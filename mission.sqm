@@ -3554,7 +3554,7 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={13173.486,19.485607,8844.7549};
+					position[]={9770.7998,2.9671168,11122.593};
 					azimut=-6835.98;
 					offsetY=-38;
 					id=151;
@@ -8388,7 +8388,7 @@ class Mission
 		};
 		class Item474
 		{
-			position[]={10576.296,122.9685,9551.3564};
+			position[]={10559.321,122.9685,9571.835};
 			azimut=177.97037;
 			offsetY=2.99579;
 			id=627;
@@ -14261,7 +14261,7 @@ class Mission
 		{
 			position[]={9771.418,1.0033728,11163.741};
 			azimut=0.78918099;
-			offsetY=3.2;
+			offsetY=2.3499999;
 			id=1230;
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
@@ -35382,7 +35382,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=180;
+		items=181;
 		class Item0
 		{
 			position[]={10960.932,139.97812,9459.1475};
@@ -35447,7 +35447,7 @@ class Mission
 		};
 		class Item7
 		{
-			position[]={10492.225,122.9685,9592.2021};
+			position[]={10492.764,122.9685,9609.2686};
 			name="Quincaillerie";
 			type="Fett_hardpoint";
 			colorName="ColorGreen";
@@ -36369,7 +36369,7 @@ class Mission
 		};
 		class Item109
 		{
-			position[]={10576.242,122.9685,9551.4082};
+			position[]={10559.268,122.9685,9571.8867};
 			name="Poissonnerie";
 			text="Poissonnerie";
 			type="Fett_boat";
@@ -36933,6 +36933,16 @@ class Mission
 			name="Gymnase_2";
 			type="Fett_viewpoint";
 			colorName="ColorGreen";
+			a=0.5;
+			b=0.5;
+		};
+		class Item180
+		{
+			position[]={10492.038,122.9685,9592.3848};
+			name="restaurant_3";
+			text="Restaurant";
+			type="Fett_food";
+			colorName="ColorOrange";
 			a=0.5;
 			b=0.5;
 		};
