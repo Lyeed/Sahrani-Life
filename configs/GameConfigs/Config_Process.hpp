@@ -1524,6 +1524,24 @@ class ALYSIA_PROCESS
 		};
 	};
 
+	class magazine_cz75: weapon_thompson
+	{
+		name = "Munitions : Pistolet CZ 75";
+		require[] =
+		{
+			{"balle", 16},
+			{"magazine", 1}
+		};
+		receive[] =
+		{
+			{},
+			{"RH_16Rnd_9x19_CZ"},
+			0
+		};
+		time_per_item = 5;
+		time_default = 5;
+	};
+
 	class weapon_p226: weapon_cz75
 	{
 		name = "Arme : Pistolet Sig-Sauer P226";
@@ -1535,6 +1553,24 @@ class ALYSIA_PROCESS
 		};
 	};
 
+	class magazine_p226: weapon_thompson
+	{
+		name = "Munitions : Pistolet Sig-Sauer P226";
+		require[] =
+		{
+			{"balle", 15},
+			{"magazine", 1}
+		};
+		receive[] =
+		{
+			{},
+			{"RH_15Rnd_9x19_SIG"},
+			0
+		};
+		time_per_item = 5;
+		time_default = 5;
+	};
+
 	class weapon_gsh18: weapon_cz75
 	{
 		name = "Arme : Pistolet GSh-18";
@@ -1544,6 +1580,24 @@ class ALYSIA_PROCESS
 			{"RH_gsh18"},
 			0
 		};
+	};
+
+	class magazine_gsh18: weapon_thompson
+	{
+		name = "Munitions : Pistolet GSh-18";
+		require[] =
+		{
+			{"balle", 18},
+			{"magazine", 1}
+		};
+		receive[] =
+		{
+			{},
+			{"RH_18Rnd_9x19_gsh"},
+			0
+		};
+		time_per_item = 5;
+		time_default = 5;
 	};
 
 	class weapon_sdar : weapon_thompson
@@ -1570,5 +1624,23 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 50;
 		time_default = 10;
+	};
+
+	class magazine_sdar: weapon_thompson
+	{
+		name = "Munitions : SDAR";
+		require[] =
+		{
+			{"balle", 20},
+			{"magazine", 1}
+		};
+		receive[] =
+		{
+			{},
+			{"Fett_20Rnd_556x45_UW_mag"},
+			0
+		};
+		time_per_item = 5;
+		time_default = 5;
 	};
 };
