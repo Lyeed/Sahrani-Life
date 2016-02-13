@@ -3952,7 +3952,7 @@ class ALYSIA_VEHICLES
 	{
 		realname = "Camion de transport de fond";
 		buyPrice = 160000;
-		inventory = 150;
+		inventory = 230;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"truck", "company_money_tranfer"};

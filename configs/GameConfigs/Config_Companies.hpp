@@ -44,6 +44,7 @@ class ALYSIA_COMPANIES
 			license = "company_weapon";
 			image = "lyeed_IMG\data\companies\types\weapon.paa";
 			process[] = {"bullet","buckshot","magazine","barillet","canon","crosse","garde_main","poignee","detente","percuteur","carcasse","bloc_culasse","levier","marteau","culasse","weapon_b95","magazine_b95","weapon_cz75","magazine_cz75","weapon_p226","magazine_p226","weapon_gsh18","magazine_gsh18","weapon_sdar","magazine_sdar"};
+			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -52,7 +53,7 @@ class ALYSIA_COMPANIES
 			};
 			class marker
 			{
-				type = "Fett_canteen";
+				type = "Fett_company_weapon";
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
@@ -71,6 +72,7 @@ class ALYSIA_COMPANIES
 			license = "company_farming_bio";
 			image = "lyeed_IMG\data\companies\types\farming_bio.paa";
 			process[] = {};
+			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -79,7 +81,7 @@ class ALYSIA_COMPANIES
 			};
 			class marker
 			{
-				type = "Fett_canteen";
+				type = "Fett_company_farming_bio";
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
@@ -98,6 +100,7 @@ class ALYSIA_COMPANIES
 			license = "company_farming_industrial";
 			image = "lyeed_IMG\data\companies\types\farming_industrial.paa";
 			process[] = {};
+			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -106,7 +109,7 @@ class ALYSIA_COMPANIES
 			};
 			class marker
 			{
-				type = "Fett_canteen";
+				type = "Fett_company_farming_industrial";
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
@@ -125,6 +128,7 @@ class ALYSIA_COMPANIES
 			license = "company_garagist";
 			image = "lyeed_IMG\data\companies\types\garagist.paa";
 			process[] = {};
+			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -133,7 +137,7 @@ class ALYSIA_COMPANIES
 			};
 			class marker
 			{
-				type = "Fett_canteen";
+				type = "Fett_company_garagist";
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
@@ -152,6 +156,7 @@ class ALYSIA_COMPANIES
 			license = "company_money_tranfer";
 			image = "lyeed_IMG\data\companies\types\money_transfer.paa";
 			process[] = {};
+			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -160,7 +165,7 @@ class ALYSIA_COMPANIES
 			};
 			class marker
 			{
-				type = "Fett_canteen";
+				type = "Fett_company_money_transfer";
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
@@ -179,6 +184,7 @@ class ALYSIA_COMPANIES
 			license = "company_foundry";
 			image = "lyeed_IMG\data\companies\types\foundry.paa";
 			process[] = {"steel"};
+			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -187,7 +193,7 @@ class ALYSIA_COMPANIES
 			};
 			class marker
 			{
-				type = "Fett_canteen";
+				type = "Fett_company_foundry";
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
@@ -206,6 +212,7 @@ class ALYSIA_COMPANIES
 			license = "company_fuel";
 			image = "lyeed_IMG\data\companies\types\fuel.paa";
 			process[] = {};
+			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -214,7 +221,7 @@ class ALYSIA_COMPANIES
 			};
 			class marker
 			{
-				type = "Fett_canteen";
+				type = "Fett_company_fuel";
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
@@ -233,6 +240,7 @@ class ALYSIA_COMPANIES
 			license = "company_construction";
 			image = "lyeed_IMG\data\companies\types\construction.paa";
 			process[] = {};
+			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -241,7 +249,7 @@ class ALYSIA_COMPANIES
 			};
 			class marker
 			{
-				type = "Fett_canteen";
+				type = "Fett_company_construction";
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
@@ -260,6 +268,7 @@ class ALYSIA_COMPANIES
 			license = "company_transport";
 			image = "lyeed_IMG\data\companies\types\transport.paa";
 			process[] = {};
+			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -268,7 +277,7 @@ class ALYSIA_COMPANIES
 			};
 			class marker
 			{
-				type = "Fett_canteen";
+				type = "Fett_company_transport";
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
@@ -287,6 +296,7 @@ class ALYSIA_COMPANIES
 			license = "company_security";
 			image = "lyeed_IMG\data\companies\types\security.paa";
 			process[] = {};
+			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -295,7 +305,7 @@ class ALYSIA_COMPANIES
 			};
 			class marker
 			{
-				type = "Fett_canteen";
+				type = "Fett_company_security";
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
@@ -314,6 +324,7 @@ class ALYSIA_COMPANIES
 			license = "company_service";
 			image = "lyeed_IMG\data\companies\types\service.paa";
 			process[] = {};
+			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -322,7 +333,7 @@ class ALYSIA_COMPANIES
 			};
 			class marker
 			{
-				type = "Fett_canteen";
+				type = "Fett_company_service";
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
@@ -341,6 +352,7 @@ class ALYSIA_COMPANIES
 			license = "company_car_dealer";
 			image = "lyeed_IMG\data\companies\types\car_dealer.paa";
 			process[] = {};
+			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -349,7 +361,7 @@ class ALYSIA_COMPANIES
 			};
 			class marker
 			{
-				type = "Fett_canteen";
+				type = "Fett_company_car_dealer";
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
@@ -368,6 +380,7 @@ class ALYSIA_COMPANIES
 			license = "company_shop";
 			image = "lyeed_IMG\data\companies\types\shop.paa";
 			process[] = {};
+			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -376,7 +389,7 @@ class ALYSIA_COMPANIES
 			};
 			class marker
 			{
-				type = "Fett_canteen";
+				type = "Fett_company_shop";
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;
@@ -395,6 +408,7 @@ class ALYSIA_COMPANIES
 			license = "company_news";
 			image = "lyeed_IMG\data\companies\types\news.paa";
 			process[] = {};
+			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -403,7 +417,7 @@ class ALYSIA_COMPANIES
 			};
 			class marker
 			{
-				type = "Fett_canteen";
+				type = "Fett_company_news";
 				color = "ColorWhite";
 				shape = "ICON";
 				size = 0.4;

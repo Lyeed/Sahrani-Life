@@ -25,8 +25,12 @@ class ALYSIA_FACTIONS
 		phone_send_to_faction_price = 0;
 		
 		/*** COMPANIES ***/
-		companies_search = 1;
-		company_own = 0;
+		class companies
+		{
+			search = 1;
+			owner = 0;
+			employee = 0;
+		};
 
 		/*** GEAR MISSION ***/
 		class mission
@@ -233,8 +237,12 @@ class ALYSIA_FACTIONS
 		phone_send_to_faction_price = 0;
 
 		/*** COMPANIES ***/
-		companies_search = 1;
-		company_own = 0;
+		class companies
+		{
+			search = 1;
+			owner = 0;
+			employee = 0;
+		};
 
 		/*** GEAR MISSION ***/
 		class mission
@@ -417,8 +425,12 @@ class ALYSIA_FACTIONS
 		phone_send_to_faction_price = 0;
 
 		/*** COMPANIES ***/
-		companies_search = 0;
-		company_own = 1;
+		class companies
+		{
+			search = 0;
+			owner = 1;
+			employee = 1;
+		};
 
 		/*** SIRENE ***/
 		sirene_sound = "";
@@ -545,8 +557,12 @@ class ALYSIA_FACTIONS
 		phone_send_to_faction_price = 0;
 
 		/*** COMPANIES ***/
-		companies_search = 0;
-		company_own = 0;
+		class companies
+		{
+			search = 0;
+			owner = 0;
+			employee = 0;
+		};
 
 		/*** GEAR MISSION ***/
 		class mission

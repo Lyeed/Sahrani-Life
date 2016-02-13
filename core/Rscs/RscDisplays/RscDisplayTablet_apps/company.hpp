@@ -40,7 +40,6 @@ class COMPANY_HEADER_BACKGROUND: RscText
 class COMPANY_HEADER_IMAGE: RscPicture
 {
 	idc = COMPANY_HEADER_IMAGE_IDC;
-	text = "lyeed_IMG\data\tablet\app_main\app_company.paa";
 	
 	x = 0.335 * safezoneW + safezoneX;
 	y = 0.357 * safezoneH + safezoneY;

@@ -11,7 +11,7 @@ if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "laun
 {
 	if (createDialog "RscDisplayLaunder") then
 	{
-		_amount = ["illega_money"] call AlysiaClient_fnc_itemCount;
+		_amount = ["illegal_money"] call AlysiaClient_fnc_itemCount;
 		((findDisplay 29000) displayCtrl 29001) ctrlSetStructuredText parseText format
 		[
 				"Blanchir de l'argent vous fait perdre un pourcentage sur la somme totale, variant selon la quantité d'argent à blanchir<br/>"

@@ -11,7 +11,7 @@ if (!(isNil "gServer_soonReboot")) exitWith {
 	["Veuillez attendre le <t color='#B40404'>redémarrage</t> du serveur pour blanchir votre argent"] call AlysiaClient_fnc_error;
 };
 
-_amount = ["illega_money"] call AlysiaClient_fnc_itemCount;
+_amount = ["illegal_money"] call AlysiaClient_fnc_itemCount;
 if (_amount isEqualTo 0) exitWith {
 	["Vous n'avez pas d'argent à blanchir"] call AlysiaClient_fnc_error;
 };
@@ -47,5 +47,5 @@ if (_action) then
 		sleep _this;
 		[] call AlysiaClient_fnc_launder_receive;
 	};
-	[false, "illega_money", _amount] call AlysiaClient_fnc_handleInv;
+	[false, "illegal_money", _amount] call AlysiaClient_fnc_handleInv;
 };

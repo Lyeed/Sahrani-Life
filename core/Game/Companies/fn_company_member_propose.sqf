@@ -14,6 +14,10 @@ if ((isNull _company) || (isNull _from)) exitWith {};
 _info = _company getVariable "company_info";
 if (isNil "_info") exitWith {};
 
+if (!(isNull g_company)) exitWith {
+	[format["<t color='#045FB4'>%1</t> est déjà employé d'une entreprise." (player getVariable ["realname", profileName])]] remoteExecCall ["AlysiaClient_fnc_info", _from];
+};
+
 _action = 
 [
 	format["<t color='#045FB4'>%1</t> vous propose de rejoindre son entreprise : <t color='#74DF00'>%2</t>.", (_info select 0), (_info select 4)],

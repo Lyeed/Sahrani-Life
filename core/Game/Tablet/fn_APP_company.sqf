@@ -21,6 +21,8 @@ if (isNil "_info") exitWith {};
 _uids = _members select 0;
 _names = _members select 1;
 
+(_display displayCtrl 9602) ctrlSetText getText(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2) >> "image");
+
 (_display displayCtrl 9603) ctrlSetStructuredText parseText format
 [
 	"<t align='center' size='1.1'>%1</t>",

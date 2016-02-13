@@ -110,6 +110,8 @@ class CfgRemoteExec
 		class AlysiaClient_fnc_identityOpen {allowTargets = CLIENT;};
 		// - Company
 		class AlysiaClient_fnc_company_member_join {allowTargets = CLIENT;};
+		class AlysiaClient_fnc_company_member_propose {allowTargets = CLIENT;};
+		class AlysiaClient_fnc_company_member_leave {allowTargets = CLIENT;};
 		// - interactions
 		class AlysiaClient_fnc_alcootest_return {allowTargets = CLIENT;};
 
