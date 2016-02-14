@@ -326,7 +326,7 @@ class ALYSIA_HOUSES
 		price = 50;
 		storage = "R3F_WeaponStock";
 		storage_building_pos_index = 5;
-		garage = 10;
+		garage = 0;
 		garage_type[] = {};
 		sides[] = {"EAST"};
 		rank = 5;
@@ -338,10 +338,10 @@ class ALYSIA_HOUSES
 		price = 50;
 		storage = "R3F_WeaponStock";
 		storage_building_pos_index = 1;
-		garage = 10;
+		garage = 0;
 		garage_type[] = {};
 		sides[] = {"WEST"};
-		rank = 5;
+		rank = 9;
 		license = "";
 	};
 	

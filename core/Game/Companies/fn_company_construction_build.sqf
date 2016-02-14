@@ -6,8 +6,6 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-closeDialog 0;
-
 if (isNull g_interaction_target) exitWith {};
 
 if (!(g_interaction_target getVariable ["construction", false])) exitWith {

@@ -105,6 +105,7 @@ class CfgFunctions
 			class company_member_data {};
 			class company_member_invite {};
 			class company_member_leave {};
+			class company_member_promote {};
 		};
 
 		class Tools
@@ -614,6 +615,7 @@ class CfgFunctions
 			class APP_announces_show {};
 			class APP_announces_show_update {};
 			class APP_company {};
+			class APP_company_update {};
 		};
 	};
 };

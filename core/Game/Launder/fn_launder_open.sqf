@@ -5,12 +5,12 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_amount"];
 
 if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "launder") isEqualTo 1) then
 {
 	if (createDialog "RscDisplayLaunder") then
 	{
+		private["_amount"];
 		_amount = ["illegal_money"] call AlysiaClient_fnc_itemCount;
 		((findDisplay 29000) displayCtrl 29001) ctrlSetStructuredText parseText format
 		[
@@ -21,5 +21,5 @@ if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "laun
 		];
 	};
 } else {
-	[format["Votre faction <t color='#04B404'>%1</t> n'est pas autorisé blanchir de l'argent sale.", ([playerSide] call AlysiaClient_fnc_sideToStr)]] call AlysiaClient_fnc_error;	
+	[format["Votre faction <t color='#04B404'>%1</t> n'est pas autorisé à blanchir de l'argent sale.", ([playerSide] call AlysiaClient_fnc_sideToStr)]] call AlysiaClient_fnc_error;	
 };

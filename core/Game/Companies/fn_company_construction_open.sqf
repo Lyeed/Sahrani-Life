@@ -13,12 +13,6 @@ if ((g_interaction_target getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
 	["L'inventaire est déjà en cours d'utilisation"] call AlysiaClient_fnc_error;
 };
 
-if (dialog) then
-{
-	closeDialog 0;
-	waitUntil {!dialog};
-};
-
 if (!(createDialog "RscDisplayCompanyConstruction")) exitWith {};
 
 disableSerialization;

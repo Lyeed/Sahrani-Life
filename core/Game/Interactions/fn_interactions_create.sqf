@@ -59,7 +59,8 @@ _idc_actual = 5010;
 	(_display displayCtrl (_idc_actual + 3)) ctrlSetStructuredText parseText format["<t align='left' size='1.3'>%1</t>", (_x select 1)];
 
 	_ctrl_btn = _display displayCtrl (_idc_actual + 4);
-	_ctrl_btn buttonSetAction (_x select 2);
+	_ctrl_btn buttonSetAction format["closeDialog 0; %1", (_x select 2)];
+
 	_ctrl_btn ctrlSetEventHandler["MouseEnter",
 	format
 	[

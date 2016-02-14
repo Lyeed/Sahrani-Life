@@ -29,12 +29,47 @@ _names = _members select 1;
 	(_info select 0)
 ];
 
+(_display displayCtrl 9605) ctrlSetStructuredText parseText format
+[
+	"<t align='left'>Membres</t><t align='right'>%1/%2</t>",
+	count(_uids),
+	getNumber(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2) >> "members_max")
+];
+
 _list = _display displayCtrl 9606;
 lbClear _list;
 
 {
-	_index = _list lbAdd _x;
+	_index = _list lbAdd format
+	[
+		"%1%2",
+		_x,
+		if (_x isEqualTo (player getVariable ["realname", profileName])) then {" (Vous)"} else {""}
+	];
 	_list lbSetData [_index, (_uids select _forEachIndex)];
 } forEach _names;
 
-_list lbSetCurSel -1;
+_list lbSetCurSel 0;
+
+if ((_info select 1) isEqualTo (getPlayerUID player)) then
+{
+	[9607, true] call AlysiaClient_fnc_tabletShow;
+	[9608, true] call AlysiaClient_fnc_tabletShow;
+	[9609, true] call AlysiaClient_fnc_tabletShow;
+	[9610, true] call AlysiaClient_fnc_tabletShow;
+	[9611, true] call AlysiaClient_fnc_tabletShow;
+	[9612, true] call AlysiaClient_fnc_tabletShow;
+	[9613, true] call AlysiaClient_fnc_tabletShow;
+	[9614, true] call AlysiaClient_fnc_tabletShow;
+	[9615, true] call AlysiaClient_fnc_tabletShow;
+
+	(_display displayCtrl 9615) ctrlSetStructuredText parseText format
+	[
+		"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
+		[(_company getVariable ["company_bank", 0])] call AlysiaClient_fnc_numberText
+	];
+
+	_list ctrlSetEventHandler ["LBSelChanged", "_this call AlysiaClient_fnc_APP_company_update;"];
+} else {
+	_list ctrlRemoveAllEventHandlers "LBSelChanged";
+};

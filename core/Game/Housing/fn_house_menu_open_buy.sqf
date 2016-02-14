@@ -53,7 +53,7 @@ _storage = getText(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_
 	+	"<t align='left'>Possède un garage</t><t align='right'>%8</t><br/>"
 	+	"</t>",
 	if (_rank_condition) then {"#31B404"} else {"#DF0101"},
-	[playerSide, _rank] call AlysiaClient_fnc_sideToStr,
+	[playerSide, _rank] call AlysiaClient_fnc_rankToStr,
 	if (_license_condition) then {"#31B404"} else {"#DF0101"},
 	if (_license isEqualTo "") then {"Aucune"} else {getText(missionConfigFile >> "ALYSIA_LICENSES" >> _license >> "name")},
 	if (_price_condition) then {"#31B404"} else {"#DF0101"},

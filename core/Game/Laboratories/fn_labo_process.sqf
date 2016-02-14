@@ -8,12 +8,6 @@
 private["_target", "_info"];
 _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if (dialog) then
-{
-	closeDialog 0;
-	waitUntil {!dialog};
-};
-
 if (isNull _target) exitWith {};
 
 _info = _target getVariable "laboratory_info";
