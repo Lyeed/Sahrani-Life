@@ -2,22 +2,22 @@ class ALYSIA_STORAGES
 {
 	class Skyline_Coffre_Small 
 	{
-		inventory = 500;//virtual space
+		inventory = 350;//virtual space
 		item = "storage_small";
 	};
 	class Skyline_Coffre_Medium 
 	{
-		inventory = 1000;
+		inventory = 800;
 		item = "storage_medium";
 	};	
 	class Skyline_Coffre_Large 
 	{
-		inventory = 2000;
+		inventory = 1500;
 		item = "storage_large";
 	};
 	class R3F_WeaponStock
 	{
-		inventory = 5000;
+		inventory = 1000;
 		item = "storage_stock";
 	};
 };
@@ -57,59 +57,12 @@ class ALYSIA_HOUSES
 	garage_type[]                      = {};
 	  --------------------------------- */
 
-	class Land_Dum_olez_istan2
-	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
-		storage_building_pos_index = 1;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};
-
-	class Land_Dum_olez_istan2_maly
-	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
-		storage_building_pos_index = 1;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};
-
-	class Land_Dum_olez_istan1
-	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
-		storage_building_pos_index = 3;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};	
 
 	class Land_Cihlovej_Dum_mini
 	{
 		price = 135000;
 		storage = "Skyline_Coffre_Small";
 		storage_building_pos_index = 3;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};	
-
-	class Land_Dum_olezlina
-	{
-		price = 15000;
-		storage = "Skyline_Coffre_Small";
-		storage_building_pos_index = 4;
 		garage = 0;
 		garage_type[] = {};
 		sides[] = {"CIV", "GUER"};
@@ -129,7 +82,7 @@ class ALYSIA_HOUSES
 		license = "home";
 	};	
 
-	class Land_Dum_mesto2
+	class Land_smd_dum_olezlina_open
 	{
 		price = 585000;
 		storage = "Skyline_Coffre_Large";
@@ -143,8 +96,8 @@ class ALYSIA_HOUSES
 
 	class Land_Army_hut3_long_int
 	{
-		price = 50;
-		storage = "Skyline_Coffre_Small";
+		price = 220000;
+		storage = "R3F_WeaponStock";
 		storage_building_pos_index = 1;
 		garage = 0;
 		garage_type[] = {};
@@ -155,8 +108,8 @@ class ALYSIA_HOUSES
 
 	class Land_Army_hut2_int
 	{
-		price = 50;
-		storage = "Skyline_Coffre_Small";
+		price = 155000;
+		storage = "R3F_WeaponStock";
 		storage_building_pos_index = 1;
 		garage = 0;
 		garage_type[] = {};
@@ -165,7 +118,7 @@ class ALYSIA_HOUSES
 		license = "";
 	};	
 
-	class Land_House_y
+	class Land_smd_house_y_open
 	{
 		price = 325000;
 		storage = "Skyline_Coffre_Medium";
@@ -189,7 +142,7 @@ class ALYSIA_HOUSES
 		license = "home";
 	};	
 
-	class Land_Budova3
+	class Land_smd_budova3_open
 	{
 		price = 190000;
 		storage = "Skyline_Coffre_Small";
@@ -201,19 +154,7 @@ class ALYSIA_HOUSES
 		license = "home";
 	};	
 
-	class Land_Budova2
-	{
-		price = 15000;
-		storage = "";
-		storage_building_pos_index = 3;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};	
-
-	class Land_Sara_zluty_statek_in
+	class Land_smd_sara_zluty_statek_in
 	{
 		price = 605000;
 		storage = "Skyline_Coffre_Large";
@@ -237,19 +178,7 @@ class ALYSIA_HOUSES
 		license = "home";
 	};	
 
-	class Land_Budova4_in
-	{
-		price = 50;
-		storage = "Skyline_Coffre_Medium";
-		storage_building_pos_index = 1;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"EAST", "WEST"};
-		rank = 0;
-		license = "home";
-	};
-
-	class Land_Panelak2
+	class Land_smd_Panelak2
 	{
 		price = 625000;
 		storage = "Skyline_Coffre_Large";
@@ -261,7 +190,7 @@ class ALYSIA_HOUSES
 		license = "home";
 	};	
 
-	class Land_Panelak
+	class Land_smd_Panelak
 	{
 		price = 287500;
 		storage = "Skyline_Coffre_Large";
@@ -275,8 +204,8 @@ class ALYSIA_HOUSES
 	
 	class CampEast_EP1
 	{
-		price = 50;
-		storage = "Skyline_Coffre_Large";
+		price = 45000;
+		storage = "R3F_WeaponStock";
 		storage_building_pos_index = 2;
 		garage = 0;
 		garage_type[] = {};
@@ -287,8 +216,8 @@ class ALYSIA_HOUSES
 	
 	class Barrack2
 	{
-		price = 50;
-		storage = "Skyline_Coffre_Medium";
+		price = 65000;
+		storage = "R3F_WeaponStock";
 		storage_building_pos_index = 4;
 		garage = 0;
 		garage_type[] = {};
@@ -299,8 +228,8 @@ class ALYSIA_HOUSES
 	
 	class Land_tent_east
 	{
-		price = 50;
-		storage = "Skyline_Coffre_Large";
+		price = 49500;
+		storage = "R3F_WeaponStock";
 		storage_building_pos_index = 6;
 		garage = 10;
 		garage_type[] = {};
@@ -311,8 +240,8 @@ class ALYSIA_HOUSES
 	
 	class Land_Barrack2_EP1
 	{
-		price = 50;
-		storage = "Skyline_Coffre_Medium";
+		price = 45000;
+		storage = "R3F_WeaponStock";
 		storage_building_pos_index = 5;
 		garage = 10;
 		garage_type[] = {};
@@ -323,7 +252,7 @@ class ALYSIA_HOUSES
 	
 	class Fett_Land_Dum_mesto_in_east
 	{
-		price = 50;
+		price = 595000;
 		storage = "R3F_WeaponStock";
 		storage_building_pos_index = 5;
 		garage = 0;
@@ -335,7 +264,7 @@ class ALYSIA_HOUSES
 	
 	class Fett_Land_Cihlovej_Dum_in_west
 	{
-		price = 50;
+		price = 475000;
 		storage = "R3F_WeaponStock";
 		storage_building_pos_index = 1;
 		garage = 0;
@@ -356,17 +285,7 @@ class ALYSIA_HOUSES
 		rank = 0;
 		license = "home";
 	};
-	class Land_smd_dum_olezlina_open
-	{
-		price = 585000;
-		storage = "Skyline_Coffre_Large";
-		storage_building_pos_index = 2;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};
+
 	class Land_smd_dum_olez_istan2_open
 	{
 		price = 245000;
@@ -455,28 +374,7 @@ class ALYSIA_HOUSES
 		rank = 0;
 		license = "home";
 	};
-	class Land_smd_house_y_open
-	{
-		price = 325000;
-		storage = "Skyline_Coffre_Small";
-		storage_building_pos_index = 5;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};
-	class Land_smd_budova3_open
-	{
-		price = 325000;
-		storage = "Skyline_Coffre_Small";
-		storage_building_pos_index = 1;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};
+
 	/*
 	A DEBATTRE QU EST CE QU ON EN FAIT: "Land_smd_Panelak" "Land_smd_Panelak2"
 	*/
