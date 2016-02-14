@@ -932,18 +932,17 @@ class ALYSIA_PROCESS
 		};
 	};
 
-	class crosse
+	class crosse_wood
 	{
-		name = "Fabrication de crosses";
+		name = "Fabrication de crosses (bois)";
 		sound = "smelting";
 		require[] =
 		{
-			{"steel", 1},
 			{"woodp", 1}
 		};
 		receive[] =
 		{
-			/* VIRTUAL */{{"crosse", 2}},
+			/* VIRTUAL */{{"crosse_wood", 2}},
 			/* ARMA */{},
 			/* CASH */0
 		};
@@ -960,9 +959,36 @@ class ALYSIA_PROCESS
 		};
 	};
 
-	class garde_main
+	class crosse_steel
 	{
-		name = "Fabrication de gardes-mains";
+		name = "Fabrication de crosses (acier)";
+		sound = "smelting";
+		require[] =
+		{
+			{"steel", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"crosse_steel", 2}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class garde_main_wood
+	{
+		name = "Fabrication de gardes-mains (bois)";
 		sound = "smelting";
 		require[] =
 		{
@@ -970,7 +996,34 @@ class ALYSIA_PROCESS
 		};
 		receive[] =
 		{
-			/* VIRTUAL */{{"garde_main", 2}},
+			/* VIRTUAL */{{"garde_main_wood", 2}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class garde_main_steel
+	{
+		name = "Fabrication de gardes-mains (acier)";
+		sound = "smelting";
+		require[] =
+		{
+			{"steel", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"garde_main_steel", 2}},
 			/* ARMA */{},
 			/* CASH */0
 		};
@@ -1123,33 +1176,6 @@ class ALYSIA_PROCESS
 		};
 	};
 
-	class levier
-	{
-		name = "Moulage de leviers";
-		sound = "smelting";
-		require[] =
-		{
-			{"steel", 1}
-		};
-		receive[] =
-		{
-			/* VIRTUAL */{{"levier", 2}},
-			/* ARMA */{},
-			/* CASH */0
-		};
-		time_per_item = 8;
-		time_default = 2;
-		class target {};
-		class factions
-		{
-			class CIV
-			{
-				rank = 0;
-				licenses[] = {};
-			};
-		};
-	};
-
 	class marteau
 	{
 		name = "Moulage de marteaux";
@@ -1213,12 +1239,11 @@ class ALYSIA_PROCESS
 		require[] =
 		{
 			{"canon", 1},
-			{"crosse", 1},
+			{"crosse_wood", 1},
 			{"garde_main", 1},
 			{"poignee", 1},
 			{"detente", 1},
 			{"percuteur", 1},
-			{"levier", 1},
 			{"woodp", 10},
 			{"ironp", 3},
 			{"steel", 5}
@@ -1266,7 +1291,7 @@ class ALYSIA_PROCESS
 		require[] =
 		{
 			{"canon", 1},
-			{"crosse", 1},
+			{"crosse_wood", 1},
 			{"garde_main", 1},
 			{"detente", 1},
 			{"percuteur", 1},
@@ -1308,10 +1333,9 @@ class ALYSIA_PROCESS
 		require[] =
 		{
 			{"canon", 2},
-			{"crosse", 1},
+			{"crosse_wood", 1},
 			{"detente", 1},
 			{"percuteur", 1},
-			{"levier",1},
 			{"woodp", 8},
 			{"ironp", 1},
 			{"steel", 2}
@@ -1371,7 +1395,6 @@ class ALYSIA_PROCESS
 			{"percuteur", 1},
 			{"carcasse", 1},
 			{"bloc_culasse", 1},
-			{"levier", 1},
 			{"ironp", 2},
 			{"steel", 3}
 		};
@@ -1454,7 +1477,7 @@ class ALYSIA_PROCESS
 		require[] =
 		{
 			{"canon", 2},
-			{"crosse", 1},
+			{"crosse_wood", 1},
 			{"garde_main", 1},
 			{"detente", 1},
 			{"percuteur", 2},
@@ -1607,12 +1630,11 @@ class ALYSIA_PROCESS
 		require[] =
 		{
 			{"canon", 1},
-			{"crosse", 1},
+			{"crosse_steel", 1},
 			{"garde_main", 1},
 			{"poignee", 1},
 			{"detente", 1},
 			{"percuteur", 1},
-			{"levier", 1},
 			{"ironp", 5},
 			{"steel", 5}
 		};

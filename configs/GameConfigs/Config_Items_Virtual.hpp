@@ -1800,9 +1800,20 @@ class ALYSIA_ITEMS
 		image       = "";
 	};
 
-	class crosse
+	class crosse_wood
 	{
-		name        = "Crosse (pièce)";
+		name        = "Crosse (bois)(pièce)";
+		weight      = 1;
+		price_buy   = 0;
+		price_sell  = 2;
+		illegal     = 0;
+		removable   = 1;
+		image       = "";
+	};
+
+	class crosse_steel
+	{
+		name        = "Crosse (acier)(pièce)";
 		weight      = 1;
 		price_buy   = 0;
 		price_sell  = 2;
@@ -1869,17 +1880,6 @@ class ALYSIA_ITEMS
 	class bloc_culasse
 	{
 		name        = "Bloc culasse (pièce)";
-		weight      = 1;
-		price_buy   = 0;
-		price_sell  = 2;
-		illegal     = 0;
-		removable   = 1;
-		image       = "";
-	};
-
-	class levier
-	{
-		name        = "Levier (pièce)";
 		weight      = 1;
 		price_buy   = 0;
 		price_sell  = 2;
