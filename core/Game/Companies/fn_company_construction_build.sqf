@@ -5,9 +5,6 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_info"];
-
-closeDialog 0;
 
 if (isNull g_interaction_target) exitWith {};
 
@@ -29,8 +26,7 @@ if (!(["Construction", 15, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_m
 	g_interaction_target setVariable ["trunk_in_use_ID", "", true];
 };
 
-_info = g_interaction_target getVariable "company_info";
-if (isNil "_info") exitWith {
+if (isNil {g_interaction_target getVariable "company_info"}) exitWith {
 	["Impossible de trouver les informations de l'entreprise"] call AlysiaClient_fnc_error;
 };
 

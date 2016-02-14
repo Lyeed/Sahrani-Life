@@ -80,9 +80,9 @@ class RscDisplayLaunder: RscDisplayDefaultInteraction
 		class ACTION_BUTTON: RscButtonSilent
 		{
 			idc = 69007;
-			action = "[] call AlysiaClient_fnc_launder_action;";
-			onMouseEnter = "			ctrlSetText[29004,""lyeed_IMG\data\global\action_buy_select.paa""];			ctrlShow[29002, false];			((findDisplay 29000) displayCtrl 29003) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 29000) displayCtrl 29005) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Blanchir</t>"";";
-			onMouseExit = "			ctrlSetText[29004,""lyeed_IMG\data\global\action_buy.paa""];			ctrlShow[29002, true];			((findDisplay 29000) displayCtrl 29003) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 29000) displayCtrl 29005) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Blanchir</t>"";";
+			action = "[] spawn AlysiaClient_fnc_launder_action;";
+			onMouseEnter = "ctrlSetText[29004,""lyeed_IMG\data\global\action_buy_select.paa""];ctrlShow[29002,false];((findDisplay 29000) displayCtrl 29003) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 29000) displayCtrl 29005) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Blanchir</t>"";";
+			onMouseExit = "ctrlSetText[29004,""lyeed_IMG\data\global\action_buy.paa""];ctrlShow[29002,true];((findDisplay 29000) displayCtrl 29003) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 29000) displayCtrl 29005) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Blanchir</t>"";";
 
 			x = 0.505156 * safezoneW + safezoneX;
 			y = 0.577 * safezoneH + safezoneY;

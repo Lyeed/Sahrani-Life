@@ -9,12 +9,6 @@ private["_info", "_display"];
 
 if (isNull g_interaction_target) exitWith {};
 
-if (dialog) then
-{
-	closeDialog 0;
-	waitUntil {!dialog};
-};
-
 if (!(createDialog "RscDisplayCompanyInfo")) exitWith {};
 
 disableSerialization;

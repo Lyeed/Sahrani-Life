@@ -1954,7 +1954,7 @@ class ALYSIA_ITEMS
 	};
 	class lab_heroin
 	{
-		name = "Laboratoire d'héroïne'";
+		name = "Laboratoire d'héroïne";
 		price_buy = 10000;
 		price_sell = 0;
 		weight = 30;

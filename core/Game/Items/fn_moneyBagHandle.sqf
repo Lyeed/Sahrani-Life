@@ -8,6 +8,10 @@
 private["_obj", "_action_1"];
 _obj = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
+if (!(isNull _obj) && !(isNull(attachedTo _obj))) exitWith {
+	["Quelqu'un porte déjà ce sac"] call AlysiaClient_fnc_error;
+};
+
 if (isNull _obj) then {
 	_obj = "Land_Bag_EP1" createVehicle (getPos player);
 };
@@ -25,7 +29,7 @@ _action_1 = player addAction [format["Déposer <t color='#FFFF33'>%1</t>", ["mon
 			player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 			waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
 			_obj = player getVariable ["money_transfer", objNull];
-			_obj attachTo [player, [0,1, 0.4, 0.7]];
+			_obj attachTo [player, [0, 0.7, 0.8]];
 			detach _obj;
 			_obj setPosATL (getPosATL _obj);
 			_obj setVariable ["money_bank", true, true];

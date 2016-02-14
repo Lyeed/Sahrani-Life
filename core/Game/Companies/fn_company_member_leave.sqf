@@ -1,0 +1,41 @@
+/*
+		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
+	Code written by Lyeed
+	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
+	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
+	More informations : https://www.bistudio.com/community/game-content-usage-rules
+*/
+private["_hired", "_info", "_license", "_hasLicense"];
+_hired = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+
+if (isNull g_company) exitWith {};
+
+_info = g_company getVariable "company_info";
+if (isNil "_info") exitWith {};
+
+_hasLicense = false;
+_license = getText(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2) >> "license");
+if (_license != "") then {
+	if ([_license] call AlysiaClient_fnc_hasLicense) then
+	{
+		missionNamespace setVariable [format["license_%1", _license], false];
+		_hasLicense = true;
+	};
+};
+
+if (isNull _hired) then {
+	[format[
+		"Vous avez quitté l'entreprise : <t color='#74DF00'>%1</t>%2.",
+		(_info select 0),
+		if (_hasLicense) then {format["<br/>Votre licence %1 vous a été retirée.", ([_license] call AlysiaClient_fnc_licenseGetName)]} else {""}
+	]] call AlysiaClient_fnc_info;
+} else {
+	[format[
+		"Vous avez été renvoyé par <t color='#045FB4'>%1</t> de l'entreprise : <t color='#74DF00'>%2</t>.%3",
+		(_hired getVariable ["realname", (name _hired)]),
+		(_info select 0),
+		if (_hasLicense) then {format["<br/>Votre licence %1 vous a été retirée.", ([_license] call AlysiaClient_fnc_licenseGetName)]} else {""}
+	]] call AlysiaClient_fnc_info;
+};
+
+g_company = objNull;
