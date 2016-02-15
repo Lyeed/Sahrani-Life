@@ -248,7 +248,7 @@ class ALYSIA_HOUSES
 		class storage
 		{
 			type = "Skyline_Coffre_Medium";
-			building_index = 3;// A FAIRE
+			building_index = 0;
 		};
 		class lights {};
 		class factions
@@ -274,7 +274,7 @@ class ALYSIA_HOUSES
 		class storage
 		{
 			type = "Skyline_Coffre_Large";
-			building_index = 3;// A FAIRE
+			building_index = 2;
 		};
 	};
 	class Land_Hut_old02: Land_smd_army_hut_storrage
@@ -283,7 +283,7 @@ class ALYSIA_HOUSES
 		class storage
 		{
 			type = "Skyline_Coffre_Medium";
-			building_index = 3;// A FAIRE
+			building_index = 7;
 		};
 	};
 	class Land_Misc_Cargo1Bo
@@ -292,17 +292,23 @@ class ALYSIA_HOUSES
 		class storage
 		{
 			type = "Skyline_Coffre_Small";
-			building_index = 3;// A FAIRE
+			building_index = 2;
 		};
 	};
-	class Land_Misc_Cargo1Ao: Land_Misc_Cargo1Bo {};
+	class Land_Misc_Cargo1Ao: Land_Misc_Cargo1Bo
+	{
+		class storage
+		{
+			building_index = 3;
+		};		
+	};
 	class Land_Stodola_old_open: Land_smd_army_hut_storrage
 	{
 		price = 310000;
 		class storage
 		{
 			type = "Skyline_Coffre_Large";
-			building_index = 3;// A FAIRE
+			building_index = 5;
 		};
 	};
 	class Land_smd_sara_stodola2: Land_smd_army_hut_storrage
@@ -311,7 +317,7 @@ class ALYSIA_HOUSES
 		class storage
 		{
 			type = "Skyline_Coffre_Medium";
-			building_index = 3;// A FAIRE
+			building_index = 5;
 		};
 	};
 	class Land_smd_budova3_open: : Land_smd_army_hut_storrage
@@ -329,7 +335,7 @@ class ALYSIA_HOUSES
 		class storage
 		{
 			type = "Skyline_Coffre_Large";
-			building_index = 3;// A FAIRE
+			building_index = 2;
 		};
 	};
 
