@@ -734,7 +734,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Graine (haricot)";
 		weight      = 1;
-		price_buy   = 1;
+		price_buy   = 5;
 		price_sell  = 0;
 		illegal     = 0;
 		removable   = 1;
@@ -744,7 +744,7 @@ class ALYSIA_ITEMS
 	class bean
 	{
 		name        = "Haricot";
-		weight      = 1;
+		weight      = 2;
 		removable   = 1;
 		image       = "alysia_items_virtual\data\haricot.paa";
 		class market
@@ -760,7 +760,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Graine (maïs)";
 		weight      = 1;
-		price_buy   = 1;
+		price_buy   = 5;
 		price_sell  = 1;
 		illegal     = 0;
 		removable   = 1;
@@ -770,7 +770,7 @@ class ALYSIA_ITEMS
 	class corn
 	{
 		name        = "Maïs";
-		weight      = 1;
+		weight      = 2;
 		illegal     = 0;
 		removable   = 1;
 		image       = "alysia_items_virtual\data\mais.paa";
@@ -787,7 +787,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Graine (coton)";
 		weight      = 1;
-		price_buy   = 1;
+		price_buy   = 5;
 		price_sell  = 1;
 		illegal     = 0;
 		removable   = 1;
@@ -797,7 +797,7 @@ class ALYSIA_ITEMS
 	class cotton
 	{
 		name        = "Coton";
-		weight      = 1;
+		weight      = 2;
 		illegal     = 0;
 		removable   = 1;
 		image       = "alysia_items_virtual\data\coton.paa";
@@ -1228,7 +1228,7 @@ class ALYSIA_ITEMS
 	class patate
 	{
 		name        = "Patate";
-		weight      = 1;
+		weight      = 2;
 		illegal     = 0;
 		removable   = 1;
 		image       = "alysia_items_virtual\data\patate.paa";
@@ -1246,7 +1246,7 @@ class ALYSIA_ITEMS
 		name        = "Patate germée";
 		weight      = 1;
 		illegal     = 0;
-		price_buy   = 60;
+		price_buy   = 6;
 		price_sell  = 30;
 		removable   = 1;
 		image       = "alysia_items_virtual\data\patategerme.paa";
@@ -1255,7 +1255,7 @@ class ALYSIA_ITEMS
 	class wheat
 	{
 		name        = "Blé";
-		weight      = 1;
+		weight      = 2;
 		illegal     = 0;
 		removable   = 1;
 		image       = "alysia_items_virtual\data\ble.paa";
@@ -1272,7 +1272,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Graine (blé)";
 		weight      = 1;
-		price_buy   = 60;
+		price_buy   = 3;
 		price_sell  = 30;
 		illegal     = 0;
 		removable   = 1;
