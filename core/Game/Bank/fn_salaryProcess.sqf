@@ -78,7 +78,12 @@ if (!(isNull g_company)) then
 				_price_remove = _price_remove + _price;
 				if (!([false, _price, "Taxe salariale"] call AlysiaClient_fnc_handleATM)) then
 				{
-					["Vous n'avez pas assez d'argent pour payer votre taxe salariale. Régulez votre situation dans les plus brefs délais ou des huissiers passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
+					["Vous n'avez pas assez d'argent pour payer votre taxe salariale. Régularisez votre situation dans les plus brefs délais ou les autorités passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
+					switch (g_choice) do
+					{
+						case "NORTH": {[format["%1 n'a pas suffisamment d'argent pour payer sa taxe salariale.", (player getVariable ["realname", profileName])], "BANQUE", false] remoteExecCall ["AlysiaClient_fnc_phone_message_receive", west]};
+						case "SOUTH": {[format["%1 n'a pas suffisamment d'argent pour payer sa taxe salariale.", (player getVariable ["realname", profileName])], "BANQUE", false] remoteExecCall ["AlysiaClient_fnc_phone_message_receive", east]};
+					};
 				};
 			};
 
@@ -102,7 +107,12 @@ if (!(isNull g_company)) then
 				_price_remove = _price_remove + _price_building;
 				if (!([false, _price_building, "Taxe foncière"] call AlysiaClient_fnc_handleATM)) then
 				{
-					["Vous n'avez pas assez d'argent pour payer votre taxe foncière. Régulez votre situation dans les plus brefs délais ou des huissiers passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
+					["Vous n'avez pas assez d'argent pour payer votre taxe foncière. Régularisez votre situation dans les plus brefs délais ou les autorités passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
+					switch (g_choice) do
+					{
+						case "NORTH": {[format["%1 n'a pas suffisamment d'argent pour payer sa taxe foncière.", (player getVariable ["realname", profileName])], "BANQUE", false] remoteExecCall ["AlysiaClient_fnc_phone_message_receive", west]};
+						case "SOUTH": {[format["%1 n'a pas suffisamment d'argent pour payer sa taxe foncière.", (player getVariable ["realname", profileName])], "BANQUE", false] remoteExecCall ["AlysiaClient_fnc_phone_message_receive", east]};
+					};
 				};
 			};
 		};
@@ -138,7 +148,12 @@ if (count(g_houses) > 0) then
 		_price_remove = _price_remove + _price;
 		if (!([false, _price, "Taxe d'habitation"] call AlysiaClient_fnc_handleATM)) then
 		{
-			["Vous n'avez pas assez d'argent pour payer votre taxe d'habitation. Régulez votre situation dans les plus brefs délais ou des huissiers passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
+			["Vous n'avez pas assez d'argent pour payer votre taxe d'habitation. Régularisez votre situation dans les plus brefs délais ou les autorités passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
+			switch (g_choice) do
+			{
+				case "NORTH": {[format["%1 n'a pas suffisamment d'argent pour payer sa taxe d'habitation.", (player getVariable ["realname", profileName])], "BANQUE", false] remoteExecCall ["AlysiaClient_fnc_phone_message_receive", west]};
+				case "SOUTH": {[format["%1 n'a pas suffisamment d'argent pour payer sa taxe d'habitation.", (player getVariable ["realname", profileName])], "BANQUE", false] remoteExecCall ["AlysiaClient_fnc_phone_message_receive", east]};
+			};
 		};
 	};
 };

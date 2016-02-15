@@ -14,7 +14,7 @@ if (_target in g_houses) then {
 	[_target] call AlysiaClient_fnc_interactions_player_to_house_owner;
 } else {
 	if ((_target getVariable ["house_owner", []]) isEqualTo []) then {
-		if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_HOUSES" >> (typeOf _target) >> "sides")) then {
+		if (isClass(missionConfigFile >> "ALYSIA_HOUSES" >> (typeOf _target) >> "factions" >> str(playerSide))) then {
 			if (g_choice isEqualTo ([] call AlysiaClient_fnc_getRegion)) then {
 				[_target] call AlysiaClient_fnc_house_menu_open_buy;
 			} else {

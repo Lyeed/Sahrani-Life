@@ -21,8 +21,8 @@ if (_action) then
 		"player_to_house",
 		[
 			["storage", "Coffre", "[g_interaction_target] call AlysiaClient_fnc_house_menu_action_storage;", "(!(isNil {(g_interaction_target getVariable ""house_storage_out"")}) && (isNil ""gServer_soonReboot""))"],
-			["search", "Propriétaire", "[] call AlysiaClient_fnc_house_menu_action_owner;", "true"],
-			["light", "Lumière", "[] call AlysiaClient_fnc_house_menu_action_light;", "true"]
+			["search", "Propriétaire", "[g_interaction_target] call AlysiaClient_fnc_house_menu_action_owner;", "true"],
+			["light", "Lumière", "[g_interaction_target] call AlysiaClient_fnc_house_menu_action_light;", "true"]
 		],
 		"Perquisition"
 	] spawn AlysiaClient_fnc_interactions_create;

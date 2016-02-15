@@ -5,11 +5,12 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_ownerInfo"];
+private["_ownerInfo", "_target"];
+_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if (isNull g_interaction_target) exitWith {};
+if (isNull _target) exitWith {};
 
-_ownerInfo = g_interaction_target getVariable ["house_owner", []];
+_ownerInfo = _target getVariable ["house_owner", []];
 if (_ownerInfo isEqualTo []) then {
 	["Cette batisse n'a pas de propriétaire"] call AlysiaClient_fnc_error;
 } else {

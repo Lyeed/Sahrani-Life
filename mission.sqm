@@ -246,7 +246,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="GUER_10";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Samu";
 				};
 			};
@@ -268,7 +268,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="GUER_9";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Samu";
 				};
 			};
@@ -290,7 +290,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="GUER_1";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Samu";
 				};
 			};
@@ -312,7 +312,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="GUER_3";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Samu";
 				};
 			};
@@ -334,7 +334,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="GUER_5";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Samu";
 				};
 			};
@@ -356,7 +356,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="GUER_7";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Samu";
 				};
 			};
@@ -378,7 +378,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="GUER_6";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Samu";
 				};
 			};
@@ -400,7 +400,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="GUER_4";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Samu";
 				};
 			};
@@ -422,7 +422,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="GUER_2";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Samu";
 				};
 			};
@@ -444,7 +444,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="GUER_8";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Samu";
 				};
 			};
@@ -466,7 +466,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_21";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -488,7 +488,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_1";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -510,7 +510,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_2";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -532,7 +532,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_3";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -554,7 +554,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_4";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -576,7 +576,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_5";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -598,7 +598,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_10";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -620,7 +620,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_9";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -642,7 +642,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_8";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -664,7 +664,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_7";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -686,7 +686,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_6";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -708,7 +708,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_11";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -730,7 +730,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_12";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -752,7 +752,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_13";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -774,7 +774,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_14";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -796,7 +796,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_15";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -818,7 +818,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_16";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -840,7 +840,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_17";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -862,7 +862,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_19";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -884,7 +884,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_20";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -906,7 +906,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_18";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -928,7 +928,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_24";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -950,7 +950,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_25";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -972,7 +972,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_23";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -994,7 +994,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="WEST_22";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Milice";
 				};
 			};
@@ -1016,7 +1016,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="EAST_15";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Garde";
 				};
 			};
@@ -1038,7 +1038,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="EAST_1";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Garde";
 				};
 			};
@@ -1060,7 +1060,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="EAST_2";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Garde";
 				};
 			};
@@ -1082,7 +1082,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="EAST_3";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Garde";
 				};
 			};
@@ -1104,7 +1104,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="EAST_4";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Garde";
 				};
 			};
@@ -1126,7 +1126,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="EAST_5";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Garde";
 				};
 			};
@@ -1148,7 +1148,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="EAST_10";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Garde";
 				};
 			};
@@ -1170,7 +1170,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="EAST_9";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Garde";
 				};
 			};
@@ -1192,7 +1192,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="EAST_8";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Garde";
 				};
 			};
@@ -1214,7 +1214,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="EAST_7";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Garde";
 				};
 			};
@@ -1236,7 +1236,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="EAST_6";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Garde";
 				};
 			};
@@ -1258,7 +1258,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="EAST_11";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Garde";
 				};
 			};
@@ -1280,7 +1280,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="EAST_12";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Garde";
 				};
 			};
@@ -1302,7 +1302,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="EAST_13";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Garde";
 				};
 			};
@@ -1324,7 +1324,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="EAST_14";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Garde";
 				};
 			};
@@ -1346,7 +1346,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_50";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1368,7 +1368,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_1";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1390,7 +1390,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_2";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1412,7 +1412,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_3";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1434,7 +1434,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_4";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1456,7 +1456,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_5";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1478,7 +1478,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_6";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1500,7 +1500,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_7";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1522,7 +1522,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_9";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1544,7 +1544,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_8";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1566,7 +1566,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_10";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1588,7 +1588,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_20";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1631,7 +1631,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_18";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1653,7 +1653,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_17";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1675,7 +1675,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_16";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1697,7 +1697,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_15";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1719,7 +1719,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_14";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1741,7 +1741,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_13";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1763,7 +1763,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_12";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1785,7 +1785,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_11";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1807,7 +1807,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_21";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1829,7 +1829,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_22";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1851,7 +1851,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_23";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1873,7 +1873,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_24";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1895,7 +1895,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_25";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1917,7 +1917,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_26";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1939,7 +1939,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_27";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1961,7 +1961,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_28";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -1983,7 +1983,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_29";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2005,7 +2005,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_30";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2027,7 +2027,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_40";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2049,7 +2049,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_39";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2071,7 +2071,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_38";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2093,7 +2093,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_36";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2115,7 +2115,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_37";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2137,7 +2137,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_35";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2159,7 +2159,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_34";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2181,7 +2181,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_33";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2203,7 +2203,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_32";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2225,7 +2225,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_31";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2247,7 +2247,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_41";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2269,7 +2269,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_42";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2291,7 +2291,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_43";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2313,7 +2313,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_44";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2335,7 +2335,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_45";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2357,7 +2357,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_46";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2379,7 +2379,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_47";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2401,7 +2401,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_48";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2423,7 +2423,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_49";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2445,7 +2445,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_91";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2467,7 +2467,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_92";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2489,7 +2489,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_84";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2511,7 +2511,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_64";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2533,7 +2533,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_96";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2555,7 +2555,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_97";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2577,7 +2577,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_98";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2599,7 +2599,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_79";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2621,7 +2621,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_100";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2643,7 +2643,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_90";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2665,7 +2665,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_51";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2687,7 +2687,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_52";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2709,7 +2709,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_53";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2731,7 +2731,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_54";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2753,7 +2753,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_55";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2775,7 +2775,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_56";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2797,7 +2797,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_57";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2819,7 +2819,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_58";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2841,7 +2841,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_59";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2863,7 +2863,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_60";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2885,7 +2885,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_70";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2907,7 +2907,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_69";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2929,7 +2929,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_68";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2951,7 +2951,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_66";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2973,7 +2973,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_65";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -2995,7 +2995,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_63";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3017,7 +3017,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_62";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3039,7 +3039,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_61";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3061,7 +3061,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_67";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3083,7 +3083,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_74";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3105,7 +3105,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_73";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3127,7 +3127,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_72";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3149,7 +3149,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_71";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3171,7 +3171,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_81";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3193,7 +3193,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_82";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3215,7 +3215,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_83";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3237,7 +3237,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_93";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3259,7 +3259,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_94";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3281,7 +3281,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_95";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3303,7 +3303,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_75";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3325,7 +3325,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_85";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3347,7 +3347,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_76";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3369,7 +3369,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_86";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3391,7 +3391,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_77";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3413,7 +3413,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_87";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3435,7 +3435,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_88";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3457,7 +3457,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_78";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3479,7 +3479,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_99";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3501,7 +3501,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_89";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -3523,7 +3523,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="CIV_80";
-					init="removeBackpack this; removeAllWeapons this;";
+					init="removeBackpack this;removeAllWeapons this;";
 					description="Civil";
 				};
 			};
@@ -5268,7 +5268,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			leader=1;
 			skill=1;
-			init="this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""civ_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this addAction[""<img image='lyeed_IMG\data\actions_menu\gun.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""civ_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item170
 		{
@@ -7058,7 +7058,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""civ_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this addAction[""<img image='lyeed_IMG\data\actions_menu\gun.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""civ_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item350
 		{
@@ -8147,7 +8147,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 181.883;this setposATL [13544.765625,8683.416992,-0.00290489];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_sea"",[""garage_sea_1_1"",""garage_sea_1_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Milice"",AlysiaClient_fnc_shop_vehicles_open,[""WEST_vehicles_sea"",[""garage_sea_1_1"",""garage_sea_1_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 181.883;this setposATL [13544.765625,8683.416992,-0.00290489];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_sea"",[""garage_sea_1_1"",""garage_sea_1_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Milice"",AlysiaClient_fnc_shop_vehicles_open,[""WEST_vehicles_sea"",[""garage_sea_1_1"",""garage_sea_1_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item452
 		{
@@ -8221,7 +8221,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="stand_info_west_5";
-			init="this enableSimulation false;this allowDamage false;this setdir -435;this setposATL [11860.132813,15377.0361328,-0.0264551];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""WEST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""West_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir -435;this setposATL [11860.132813,15377.0361328,-0.0264551];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""WEST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\gun.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""West_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item459
 		{
@@ -8285,7 +8285,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="stand_info_west_3";
-			init="this enableSimulation false;this allowDamage false;this setdir -700;this setposATL [14666.589844,10557.626953,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""WEST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""West_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir -700;this setposATL [14666.589844,10557.626953,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""WEST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\gun.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""West_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item465
 		{
@@ -8307,7 +8307,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="stand_info_east_7";
-			init="this enableSimulation false;this allowDamage false;this setdir -1170;this setposATL [12345.352539,8443.299805,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""east"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""EAST_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""EAST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir -1170;this setposATL [12345.352539,8443.299805,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""east"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\gun.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""EAST_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""EAST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item467
 		{
@@ -8340,7 +8340,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="stand_info_east_1";
-			init="this enableSimulation false;this allowDamage false;this setdir -1260;this setposATL [9555.845703,9825.814453,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""east"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""EAST_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""EAST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir -1260;this setposATL [9555.845703,9825.814453,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""east"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\gun.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""EAST_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""EAST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item470
 		{
@@ -8362,7 +8362,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="stand_info_east_2";
-			init="this enableSimulation false;this allowDamage false;this setdir -1440;this setposATL [8179.799316,7849.764648,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""east"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""EAST_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""EAST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir -1440;this setposATL [8179.799316,7849.764648,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""east"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\gun.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""EAST_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""EAST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item472
 		{
@@ -13491,7 +13491,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_Bridge_01_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this setdir 73.3252;this setposATL [13667,10540.3,-0.4];this setVectorUp [0,0,1]; [this,3.6,-0.5] call BIS_fnc_setPitchBank;";
+			init="this enableSimulation false;this setdir 73.3252;this setposATL [13667,10540.3,-0.4];this setVectorUp [0,0,1];[this,3.6,-0.5] call BIS_fnc_setPitchBank;";
 		};
 		class Item1000
 		{
@@ -14266,7 +14266,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_sea"",[""garage_sea_2_1"",""garage_sea_2_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_2"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Garde"",AlysiaClient_fnc_shop_vehicles_open,[""EAST_vehicles_sea"",[""garage_sea_2_1"",""garage_sea_2_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_sea"",[""garage_sea_2_1"",""garage_sea_2_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_2"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Garde"",AlysiaClient_fnc_shop_vehicles_open,[""EAST_vehicles_sea"",[""garage_sea_2_1"",""garage_sea_2_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item1078
 		{
@@ -35298,7 +35298,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="stand_info_west_7";
-			init="this enableSimulation true;this setdir 180;this setposATL [13484.416016,8840.993164,0.290866];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""WEST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""West_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation true;this setdir 180;this setposATL [13484.416016,8840.993164,0.290866];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""WEST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\gun.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""West_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item3108
 		{
@@ -35309,7 +35309,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="stand_info_west_8";
-			init="this enableSimulation true;this setdir 255;this setposATL [13479.295898,8869.330078,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",AlysiaClient_fnc_shop_vehicles_open,[""WEST_vehicles_land"", [""garage_west_3_1""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_west_3"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"", ""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""west"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation true;this setdir 255;this setposATL [13479.295898,8869.330078,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",AlysiaClient_fnc_shop_vehicles_open,[""WEST_vehicles_land"",[""garage_west_3_1""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_west_3"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""west"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item3109
 		{
@@ -35321,7 +35321,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="stand_info_west_9";
-			init="this enableSimulation true;this setdir 270;this setposATL [13501.386719,8799.558594,-0.0164553];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",AlysiaClient_fnc_shop_vehicles_open,[""WEST_vehicles_air"", [""garage_west_4_1"",""garage_west_4_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_west_4"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation true;this setdir 270;this setposATL [13501.386719,8799.558594,-0.0164553];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",AlysiaClient_fnc_shop_vehicles_open,[""WEST_vehicles_air"",[""garage_west_4_1"",""garage_west_4_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_west_4"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item3110
 		{
@@ -35333,7 +35333,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="stand_info_east_8";
-			init="this enableSimulation true;this setdir 450;this setposATL [13256.250977,8871.951172,0.274411];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""east"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""EAST_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""EAST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation true;this setdir 450;this setposATL [13256.250977,8871.951172,0.274411];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""east"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\gun.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""EAST_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""EAST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item3111
 		{
@@ -35345,7 +35345,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="stand_info_east_9";
-			init="this enableSimulation true;this setdir 180;this setposATL [13213.544922,8861.283203,-0.0164547];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",AlysiaClient_fnc_shop_vehicles_open,[""EAST_vehicles_land"", [""garage_east_4_1""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4 '];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_east_4"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""east"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation true;this setdir 180;this setposATL [13213.544922,8861.283203,-0.0164547];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",AlysiaClient_fnc_shop_vehicles_open,[""EAST_vehicles_land"",[""garage_east_4_1""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4 '];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_east_4"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""east"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item3112
 		{
@@ -35357,7 +35357,7 @@ class Mission
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
 			text="stand_info_east_10";
-			init="this enableSimulation true;this setdir 720;this setposATL [13225.881836,8840.103516,-0.0164553];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",AlysiaClient_fnc_shop_vehicles_open,[""EAST_vehicles_air"", [""garage_east_5_1"",""garage_east_5_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_east_5"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation true;this setdir 720;this setposATL [13225.881836,8840.103516,-0.0164553];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",AlysiaClient_fnc_shop_vehicles_open,[""EAST_vehicles_air"",[""garage_east_5_1"",""garage_east_5_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_east_5"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item3113
 		{
@@ -35892,14 +35892,14 @@ class Mission
 		};
 		class Item53
 		{
-			position[]={8180.6665,176.97188,7838.748};
+			position[]={11918.389,152.99004,15357.648};
 			name="west_spawn";
 			text="west_spawn";
 			type="Empty";
 		};
 		class Item54
 		{
-			position[]={11918.389,152.99004,15357.648};
+			position[]={8180.6665,176.97188,7838.748};
 			name="east_spawn";
 			text="east_spawn";
 			type="Empty";
