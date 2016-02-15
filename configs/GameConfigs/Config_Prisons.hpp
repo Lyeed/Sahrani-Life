@@ -100,18 +100,19 @@ class ALYSIA_PRISONS
 		class time
 		{
 			min = 600;
-			max = 7200;
+			max = 72000;
 		};
 
 		class bail
 		{
-			min = 0;
-			max = 0;
-			enable = 0;
+			min = 20000;
+			max = 1000000;
+			enable = 1;
 		};
 
 		class works
 		{
+			// Disable //
 			/*
 			class item_1
 			{
@@ -137,7 +138,287 @@ class ALYSIA_PRISONS
 		{
 			class cell_1
 			{
-				name = "Cellule N°1";
+				name = "A - 01";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_2
+			{
+				name = "A - 02";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_3
+			{
+				name = "A - 03";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_4
+			{
+				name = "A - 04";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_5
+			{
+				name = "A - 05";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_6
+			{
+				name = "A - 06";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_7
+			{
+				name = "A - 07";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_8
+			{
+				name = "A - 08";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_9
+			{
+				name = "A - 09";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_10
+			{
+				name = "B - 01";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_11
+			{
+				name = "B - 02";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_12
+			{
+				name = "B - 03";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_13
+			{
+				name = "B - 04";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_14
+			{
+				name = "B - 05";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_15
+			{
+				name = "B - 06";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_16
+			{
+				name = "B - 07";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_17
+			{
+				name = "B - 08";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_18
+			{
+				name = "B - 09";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_19
+			{
+				name = "C - 01";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_20
+			{
+				name = "C - 02";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_21
+			{
+				name = "C - 03";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_22
+			{
+				name = "C - 04";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_23
+			{
+				name = "C - 05";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_24
+			{
+				name = "C - 06";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_25
+			{
+				name = "C - 07";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_26
+			{
+				name = "C - 08";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_27
+			{
+				name = "C - 09";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_28
+			{
+				name = "D - 01";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_29
+			{
+				name = "D - 02";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_30
+			{
+				name = "D - 03";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_31
+			{
+				name = "D - 04";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_32
+			{
+				name = "D - 05";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_33
+			{
+				name = "D - 06";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_34
+			{
+				name = "D - 07";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_35
+			{
+				name = "D - 08";
+				picture = "";
+				door = "";
+				pos[] = {};
+				dir = 0;
+			};
+			class cell_36
+			{
+				name = "D - 09";
 				picture = "";
 				door = "";
 				pos[] = {};

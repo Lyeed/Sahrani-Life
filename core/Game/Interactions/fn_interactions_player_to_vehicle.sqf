@@ -14,6 +14,7 @@ if (isNull _target) exitWith {};
 	_target,
 	"player_to_vehicle",
 	[
+		["refuel", "Plein", "[g_interaction_target, (missionNamespace getVariable ['refuel_station_inUse', objNull])] spawn AlysiaClient_fnc_fuelRefuel_use_refuel_veh;", "(((player getVariable ['typeRefuel', '']) != '') && !(isNull (missionNamespace getVariable ['refuel_station_inUse', objNull])) && ((vehicle player) isEqualTo player))"],
 		["lock", "Verrouiller", "[true] call AlysiaClient_fnc_vehicleMenu_key;", "((g_interaction_target in g_vehicles) || ((playerSide != civilian) && (str(playerSide) isEqualTo getText(missionConfigFile >> 'ALYSIA_VEHICLES' >> typeOf(g_interaction_target) >> 'side'))))"],
 		["unlock", "Déverrouiller", "[false] call AlysiaClient_fnc_vehicleMenu_key;", "((g_interaction_target in g_vehicles) || ((playerSide != civilian) && (str(playerSide) isEqualTo getText(missionConfigFile >> 'ALYSIA_VEHICLES' >> typeOf(g_interaction_target) >> 'side'))))"],
 		["inventory", "Coffre", "[g_interaction_target] spawn AlysiaClient_fnc_virtual_menu_exhange_open;", "(((locked g_interaction_target) != 2) || (g_interaction_target in g_vehicles))"],
@@ -40,4 +41,3 @@ if (isNull _target) exitWith {};
 ] spawn AlysiaClient_fnc_interactions_create;
 
 // ["refuel", "Faire le plein", "[] spawn AlysiaClient_fnc_vehicleMenu_refuel;", "(((['fuelF'] call AlysiaClient_fnc_itemCount) > 0) && ((vehicle player) isEqualTo player))"],
-// ["refuel", "Plein", "[g_interaction_target, (missionNamespace getVariable ['refuel_station_inUse', objNull])] spawn AlysiaClient_fnc_fuelRefuel_use_refuel_veh;", "(((player getVariable ['typeRefuel', '']) != ') && !(isNull (missionNamespace getVariable ['refuel_station_inUse', objNull])) && ((vehicle player) isEqualTo player))"],

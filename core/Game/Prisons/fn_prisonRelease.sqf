@@ -9,7 +9,7 @@
 titleText ["", "BLACK OUT", 5];
 sleep 5;
 titleText["Sortie de cellule..", "BLACK FADED"];
-{
+{z
     missionNamespace setVariable [(format["inv_%1", _x]), 0];
 } forEach (g_inv_items);
 removeHeadgear player;
