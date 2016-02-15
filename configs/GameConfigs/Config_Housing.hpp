@@ -33,7 +33,7 @@ class ALYSIA_HOUSES
 	** A DEBATTRE QU EST CE QU ON EN FAIT: "Land_smd_Panelak" "Land_smd_Panelak2"
 	 --------------------------------- */
 
-	/* CIV GUER */
+	/* HOUSES CIV GUER */
 	class Land_Cihlovej_Dum_mini
 	{
 		price = 135000;
@@ -43,6 +43,7 @@ class ALYSIA_HOUSES
 			building_index = 3;
 		};
 		class lights {};
+		class house {};
 		class factions
 		{
 			class GUER {};
@@ -86,15 +87,6 @@ class ALYSIA_HOUSES
 		{
 			type = "Skyline_Coffre_Medium";
 			building_index = 3;
-		};
-	};
-	class Land_smd_budova3_open: Land_Cihlovej_Dum_mini
-	{
-		price = 190000;
-		class storage
-		{
-			type = "Skyline_Coffre_Small";
-			building_index = 1;
 		};
 	};
 	class Land_Sara_domek_zluty: Land_Cihlovej_Dum_mini
@@ -206,10 +198,145 @@ class ALYSIA_HOUSES
 		};
 	};
 	
+	/* GARAGES */
+	class Land_smd_garaz_open
+	{
+		price = 225000;
+		class garage
+		{
+			types[] = {"Car", "Truck", "Tank"};
+		};
+		class lights {};
+		class factions
+		{
+			class GUER {};
+			class WEST
+			{
+				rank = 2;
+			};
+			class EAST
+			{
+				rank = 1;
+			};
+			class CIV
+			{
+				license = "home";
+			};
+		};
+	};
+	class Land_smd_garaz_long_open: Land_smd_garaz_open
+	{
+		price = 260000;
+	};
+	class Land_smd_garaz_mala_open: Land_smd_garaz_open
+	{
+		price = 180000;
+	};
+	class Land_smd_garaz_bez_tanku: Land_smd_garaz_open
+	{
+		price = 360000;
+	};
+	class Land_Sara_hasic_zbroj: Land_smd_garaz_open
+	{
+		price = 250000;
+	};
+
+	/* STORAGE */
+	class Land_smd_army_hut_storrage
+	{
+		price = 235000;
+		class storage
+		{
+			type = "Skyline_Coffre_Medium";
+			building_index = 3;// A FAIRE
+		};
+		class lights {};
+		class factions
+		{
+			class GUER {};
+			class WEST
+			{
+				rank = 2;
+			};
+			class EAST
+			{
+				rank = 1;
+			};
+			class CIV
+			{
+				license = "home";
+			};
+		};
+	};
+	class Land_Hangar_2: Land_smd_army_hut_storrage
+	{
+		price = 650000;
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 3;// A FAIRE
+		};
+	};
+	class Land_Hut_old02: Land_smd_army_hut_storrage
+	{
+		price = 325000;
+		class storage
+		{
+			type = "Skyline_Coffre_Medium";
+			building_index = 3;// A FAIRE
+		};
+	};
+	class Land_Misc_Cargo1Bo
+	{
+		price = 100000;
+		class storage
+		{
+			type = "Skyline_Coffre_Small";
+			building_index = 3;// A FAIRE
+		};
+	};
+	class Land_Misc_Cargo1Ao: Land_Misc_Cargo1Bo {};
+	class Land_Stodola_old_open: Land_smd_army_hut_storrage
+	{
+		price = 310000;
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 3;// A FAIRE
+		};
+	};
+	class Land_smd_sara_stodola2: Land_smd_army_hut_storrage
+	{
+		price = 240000;
+		class storage
+		{
+			type = "Skyline_Coffre_Medium";
+			building_index = 3;// A FAIRE
+		};
+	};
+	class Land_smd_budova3_open: : Land_smd_army_hut_storrage
+	{
+		price = 190000;
+		class storage
+		{
+			type = "Skyline_Coffre_Small";
+			building_index = 1;
+		};
+	};
+	class Land_Barn_Metal: Land_smd_army_hut_storrage
+	{
+		price = 670000;
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 3;// A FAIRE
+		};
+	};
+
 	/* WEST HOUSES */
 	class CampEast_EP1
 	{
-		price = 500;
+		price = 295000;
 		class storage
 		{
 			type = "Skyline_Coffre_Large";
@@ -226,7 +353,7 @@ class ALYSIA_HOUSES
 	};
 	class Barrack2
 	{
-		price = 500;
+		price = 245000;
 		class storage
 		{
 			type = "Skyline_Coffre_Large";
@@ -243,7 +370,7 @@ class ALYSIA_HOUSES
 	};
 	class Land_smd_budova4_in
 	{
-		price = 500;
+		price = 415000;
 		class storage
 		{
 			type = "Skyline_Coffre_Large";
@@ -260,7 +387,7 @@ class ALYSIA_HOUSES
 	};
 	class Fett_Land_Cihlovej_Dum_in_west
 	{
-		price = 500;
+		price = 515000;
 		class storage
 		{
 			type = "R3F_WeaponStock";
@@ -279,7 +406,7 @@ class ALYSIA_HOUSES
 	/* EAST HOUSES */
 	class Land_tent_east
 	{
-		price = 500;
+		price = 515000;
 		class storage
 		{
 			type = "Skyline_Coffre_Large";
@@ -296,7 +423,7 @@ class ALYSIA_HOUSES
 	};
 	class Land_Barrack2_EP1
 	{
-		price = 500;
+		price = 125000;
 		class storage
 		{
 			type = "Skyline_Coffre_Large";
@@ -313,7 +440,7 @@ class ALYSIA_HOUSES
 	};
 	class Land_Army_hut2_int
 	{
-		price = 500;
+		price = 325000;
 		class storage
 		{
 			type = "Skyline_Coffre_Large";
@@ -328,9 +455,10 @@ class ALYSIA_HOUSES
 			};
 		};
 	};
+	class Land_smd_army_hut2_int: Land_Army_hut2_int {};
 	class Land_Army_hut3_long_int
 	{
-		price = 500;
+		price = 325000;
 		class storage
 		{
 			type = "Skyline_Coffre_Large";
@@ -345,9 +473,10 @@ class ALYSIA_HOUSES
 			};
 		};
 	};
+	class Land_smd_army_hut3_long_int: Land_Army_hut3_long_int {};
 	class Fett_Land_Dum_mesto_in_east
 	{
-		price = 500;
+		price = 325000;
 		class storage
 		{
 			type = "R3F_WeaponStock";

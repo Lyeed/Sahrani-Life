@@ -1,7 +1,6 @@
 /*
 	Batiments disponibles :
 		Land_tovarna2
-		Land_hangar_2
 		Land_A_Office01_ep1
 		Land_a_stationhouse
 		Land_i_Shop_01_V1_F

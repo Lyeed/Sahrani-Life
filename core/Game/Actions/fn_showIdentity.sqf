@@ -28,8 +28,10 @@ g_action_inUse = true;
 player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
 
-if ((player distance _target) > 3) exitWith {
+if ((player distance _target) > 3) exitWith
+{
 	["Vous êtes trop loin"] call AlysiaClient_fnc_error;
+	g_action_inUse = false;
 };
 
 [player, [g_choice, g_birth, g_nationality, g_sexe]] remoteExecCall ["AlysiaClient_fnc_identityOpen", _target];

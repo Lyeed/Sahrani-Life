@@ -40,7 +40,7 @@ if (_type) then
 
 if (_handle) then
 {
-	_company setVariable ["company_members", [_uids, _members], true];
+	_company setVariable ["company_members", [_uids, _names], true];
 };
 
 _handle;

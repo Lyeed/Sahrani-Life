@@ -36,15 +36,21 @@ if (player getVariable ["arrested", false]) then {
 		};
 	};
 
-	if (count(g_houses) > 0) then {
-		player setPosATL (getPosATL (g_houses select 0));
-	} else {
-		_respawn = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "respawn_marker");
-		if (playerSide isEqualTo civilian) then {
-			_respawn = format["%1_%2", _respawn, g_choice];
+	private "_position";
+
+	{
+		if (isClass(missionConfigFile >> "ALYSIA_HOUSES" >> typeof(_x) >> "house")) exitWith {
+			_position = getPos _x;
 		};
-		player setPos (getMarkerPos _respawn);
+	} forEach g_houses;
+	if (isNil "_position") then
+	{
+		_respawn = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "respawn_marker");
+		if (playerSide isEqualTo civilian) then {_respawn = format["%1_%2", _respawn, g_choice]};
+		_position = getMarkerPos _respawn;
 	};
+
+	player setPos _position;
 };
 
 cutText ["", "BLACK IN", 8, false];

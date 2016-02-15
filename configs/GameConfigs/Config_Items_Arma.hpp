@@ -610,6 +610,10 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 15;
 	};
+	class H_Cap_tan
+	{
+		buy_price = 15;
+	};
 	class H_Cap_tan_specops_US
 	{
 		buy_price = 15;

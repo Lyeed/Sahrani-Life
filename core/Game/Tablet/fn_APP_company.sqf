@@ -25,7 +25,8 @@ _names = _members select 1;
 
 (_display displayCtrl 9603) ctrlSetStructuredText parseText format
 [
-	"<t align='center' size='1.1'>%1</t>",
+	"<t align='center' size='1.1'>%1 : %1</t>",
+	getText(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2) >> "name")
 	(_info select 0)
 ];
 
@@ -49,8 +50,6 @@ lbClear _list;
 	_list lbSetData [_index, (_uids select _forEachIndex)];
 } forEach _names;
 
-_list lbSetCurSel 0;
-
 if ((_info select 1) isEqualTo (getPlayerUID player)) then
 {
 	[9607, true] call AlysiaClient_fnc_tabletShow;
@@ -73,3 +72,5 @@ if ((_info select 1) isEqualTo (getPlayerUID player)) then
 } else {
 	_list ctrlRemoveAllEventHandlers "LBSelChanged";
 };
+
+_list lbSetCurSel 0;

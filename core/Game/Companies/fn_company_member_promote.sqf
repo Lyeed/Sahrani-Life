@@ -9,7 +9,7 @@ private["_company", "_uid", "_member", "_info", "_data"];
 _company = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _uid = [_this, 1, "", [""]] call BIS_fnc_param;
 
-if ((isNull _company) || (isNull _uid)) exitWith {};
+if ((isNull _company) || (_uid isEqualTo "")) exitWith {};
 
 _info = _company getVariable "company_info";
 if (isNil "_info") exitWith {};

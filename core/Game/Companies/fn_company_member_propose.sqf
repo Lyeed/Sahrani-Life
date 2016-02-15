@@ -20,7 +20,7 @@ if (!(isNull g_company)) exitWith {
 
 _action = 
 [
-	format["<t color='#045FB4'>%1</t> vous propose de rejoindre son entreprise : <t color='#74DF00'>%2</t>.", (_info select 0), (_info select 4)],
+	format["<t color='#045FB4'>%1</t> vous propose de rejoindre son entreprise : <t color='#74DF00'>%2</t>.", (_info select 4), (_info select 0)],
 	"Offre d'embauche",
 	"Accepter",
 	"Refuser"
