@@ -749,8 +749,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\haricot.paa";
 		class market
 		{
-			max = 74;
-			min = 45;
+			max = 35;
+			min = 23;
 			mult = 3;
 			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine", "corn", "cotton", "wheat", "patate"};
 		};
@@ -776,8 +776,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\mais.paa";
 		class market
 		{
-			max = 79;
-			min = 55;
+			max = 37;
+			min = 26;
 			mult = 3;
 			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine", "bean", "cotton", "wheat", "patate"};
 		};
@@ -803,8 +803,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\coton.paa";
 		class market
 		{
-			max = 73;
-			min = 60;
+			max = 39;
+			min = 31;
 			mult = 2;
 			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine", "bean", "corn", "wheat", "patate"};
 		};
@@ -1234,8 +1234,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\patate.paa";
 		class market
 		{
-			max = 87;
-			min = 60;
+			max = 42;
+			min = 30;
 			mult = 2;
 			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine", "bean", "corn", "cotton", "wheat"};
 		};
@@ -1261,8 +1261,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\ble.paa";
 		class market
 		{
-			max = 77;
-			min = 55;
+			max = 36;
+			min = 25;
 			mult = 2;
 			affect[] = {"moule", "palourde", "saintjacques", "bigorneau", "crabe", "bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine", "bean", "corn", "cotton", "patate"};
 		};
