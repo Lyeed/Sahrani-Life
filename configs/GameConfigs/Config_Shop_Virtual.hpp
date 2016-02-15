@@ -34,13 +34,13 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Milice";
 		side = "WEST";
-		items[] = {{"cone", "barriere", "cafe", "donut", "soda", "handcuffkeys", "handcuffs", "spikeStrip", "bip", "sifflet", "storage_stock", "alcool_test"}, {}};
+		items[] = {{"cone", "barriere", "cafe", "donut", "soda", "handcuffkeys", "handcuffs", "spikeStrip", "bip", "sifflet", "storage_stock", "storage_large", "alcool_test"}, {}};
 	};
 	class east
 	{
 		name = "Garde";
 		side = "EAST";
-		items[] = {{"ragout", "medova", "sifflet", "handcuffs", "handcuffkeys", "barriere", "cone", "bip", "spikeStrip", "storage_stock", "alcool_test"}, {}};
+		items[] = {{"ragout", "medova", "sifflet", "handcuffs", "handcuffkeys", "barriere", "cone", "bip", "spikeStrip", "storage_stock", "storage_large", "alcool_test"}, {}};
 	};
 	class guer
 	{

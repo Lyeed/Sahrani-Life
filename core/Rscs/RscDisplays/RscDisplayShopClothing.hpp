@@ -77,6 +77,7 @@ class RscDisplayShopClothing: RscDisplayDefaultInteraction
 		{
 			idc = 3102;
 			onLBSelChanged = "_this call AlysiaClient_fnc_shop_clothing_update_list;";
+			colorBackground[] = {0,0,0,1};
 
 			x = 0.12875 * safezoneW + safezoneX;
 			y = 0.346 * safezoneH + safezoneY;

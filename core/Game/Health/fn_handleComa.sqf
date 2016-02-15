@@ -108,6 +108,7 @@ if (alive player) then
 		[15] call AlysiaClient_fnc_handleHunger;
 	};
 
+	[10] call AlysiaClient_fnc_handleBlood;
 	player switchCamera "Internal";
 	player setFatigue 1;
 	cutText ["", "BLACK IN", 20, true];

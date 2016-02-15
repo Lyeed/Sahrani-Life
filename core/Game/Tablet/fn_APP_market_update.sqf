@@ -37,9 +37,9 @@ _license = getText(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "license
 [
 	"<t align='center'>%1</t>",
 	if (getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "illegal") isEqualTo 0) then {
-		"<t color='#ff8c8c'>Non</t>"
-	} else {
 		"<t color='#8cff9b'>Oui</t>"
+	} else {
+		"<t color='#ff8c8c'>Non</t>"
 	}
 ];
 

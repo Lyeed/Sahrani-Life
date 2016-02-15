@@ -69,7 +69,10 @@ class ALYSIA_SHOPS_VEHICLES
 	{
 		name = "";
 		side = "EAST";
-		stock[] = {};
+		stock[] = 
+		{
+			"Fett_boat_Garde"
+		};
 	};
 
 	/*** GUER SHOPS ***/

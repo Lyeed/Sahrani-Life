@@ -768,6 +768,40 @@ class ALYSIA_PROCESS
 		};
 	};
 
+	class chair_wood
+	{
+		name = "Fabrication de chaises (bois)";
+		require[] =
+		{
+			{"woodp", 8}
+		};
+		receive[] =
+		{
+			{"chair_wood"},
+			{},
+			0
+		};
+		time_per_item = 5;
+		time_default = 5;
+	};
+
+	class table_wood
+	{
+		name = "Fabrication de tables (bois)";
+		require[] =
+		{
+			{"woodp", 15}
+		};
+		receive[] =
+		{
+			{"table_wood"},
+			{},
+			0
+		};
+		time_per_item = 5;
+		time_default = 5;
+	};
+
 	class steel
 	{
 		name = "Fonte de l'acier";
@@ -794,6 +828,8 @@ class ALYSIA_PROCESS
 			};
 		};
 	};
+
+	/* Crafting des pièces d'armes */
 
 	class bullet
 	{
@@ -930,18 +966,17 @@ class ALYSIA_PROCESS
 		};
 	};
 
-	class crosse
+	class crosse_wood
 	{
-		name = "Fabrication de crosses";
+		name = "Fabrication de crosses (bois)";
 		sound = "smelting";
 		require[] =
 		{
-			{"steel", 1},
 			{"woodp", 1}
 		};
 		receive[] =
 		{
-			/* VIRTUAL */{{"crosse", 2}},
+			/* VIRTUAL */{{"crosse_wood", 2}},
 			/* ARMA */{},
 			/* CASH */0
 		};
@@ -958,9 +993,36 @@ class ALYSIA_PROCESS
 		};
 	};
 
-	class garde_main
+	class crosse_steel
 	{
-		name = "Fabrication de gardes-mains";
+		name = "Fabrication de crosses (acier)";
+		sound = "smelting";
+		require[] =
+		{
+			{"steel", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"crosse_steel", 2}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class garde_main_wood
+	{
+		name = "Fabrication de gardes-mains (bois)";
 		sound = "smelting";
 		require[] =
 		{
@@ -968,7 +1030,34 @@ class ALYSIA_PROCESS
 		};
 		receive[] =
 		{
-			/* VIRTUAL */{{"garde_main", 2}},
+			/* VIRTUAL */{{"garde_main_wood", 2}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 8;
+		time_default = 2;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class garde_main_steel
+	{
+		name = "Fabrication de gardes-mains (acier)";
+		sound = "smelting";
+		require[] =
+		{
+			{"steel", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"garde_main_steel", 2}},
 			/* ARMA */{},
 			/* CASH */0
 		};
@@ -1121,33 +1210,6 @@ class ALYSIA_PROCESS
 		};
 	};
 
-	class levier
-	{
-		name = "Moulage de leviers";
-		sound = "smelting";
-		require[] =
-		{
-			{"steel", 1}
-		};
-		receive[] =
-		{
-			/* VIRTUAL */{{"levier", 2}},
-			/* ARMA */{},
-			/* CASH */0
-		};
-		time_per_item = 8;
-		time_default = 2;
-		class target {};
-		class factions
-		{
-			class CIV
-			{
-				rank = 0;
-				licenses[] = {};
-			};
-		};
-	};
-
 	class marteau
 	{
 		name = "Moulage de marteaux";
@@ -1202,19 +1264,20 @@ class ALYSIA_PROCESS
 		};
 	};
 
+	/* Crafting des armes */
+
 	class weapon_thompson
 	{
-		name = "Arme : Thompson";
+		name = "Arme : Fusil Thompson";
 		sound = "smelting";
 		require[] =
 		{
 			{"canon", 1},
-			{"crosse", 1},
-			{"garde_main", 1},
+			{"crosse_wood", 1},
+			{"garde_main_wood", 1},
 			{"poignee", 1},
 			{"detente", 1},
 			{"percuteur", 1},
-			{"levier", 1},
 			{"woodp", 10},
 			{"ironp", 3},
 			{"steel", 5}
@@ -1240,7 +1303,7 @@ class ALYSIA_PROCESS
 
 	class magazine_thompson: weapon_thompson
 	{
-		name = "Munitions : Thompson";
+		name = "Munitions : Fusil Thompson";
 		require[] =
 		{
 			{"bullet", 30},
@@ -1258,11 +1321,11 @@ class ALYSIA_PROCESS
 
 	class weapon_cz: weapon_thompson
 	{
-		name = "Arme : CZ550";
+		name = "Arme : Fusil CZ550";
 		require[] =
 		{
 			{"canon", 1},
-			{"crosse", 1},
+			{"crosse_wood", 1},
 			{"garde_main", 1},
 			{"detente", 1},
 			{"percuteur", 1},
@@ -1282,7 +1345,7 @@ class ALYSIA_PROCESS
 	};
 	class magazine_cz: weapon_thompson
 	{
-		name = "Munitions : CZ550";
+		name = "Munitions : Fusil CZ550";
 		require[] =
 		{
 			{"balle", 5},
@@ -1304,10 +1367,9 @@ class ALYSIA_PROCESS
 		require[] =
 		{
 			{"canon", 2},
-			{"crosse", 1},
+			{"crosse_wood", 1},
 			{"detente", 1},
 			{"percuteur", 1},
-			{"levier",1},
 			{"woodp", 8},
 			{"ironp", 1},
 			{"steel", 2}
@@ -1341,7 +1403,7 @@ class ALYSIA_PROCESS
 
 	class magazine_tec: weapon_thompson
 	{
-		name = "Munitions : Tec9";
+		name = "Munitions : Pistolet Tec9";
 		require[] =
 		{
 			{"balle", 32},
@@ -1358,7 +1420,7 @@ class ALYSIA_PROCESS
 	};
 	class weapon_tec: weapon_thompson
 	{
-		name = "Arme : Tec9";
+		name = "Arme : Pistolet Tec9";
 		require[] =
 		{
 			{"canon", 1},
@@ -1367,7 +1429,6 @@ class ALYSIA_PROCESS
 			{"percuteur", 1},
 			{"carcasse", 1},
 			{"bloc_culasse", 1},
-			{"levier", 1},
 			{"ironp", 2},
 			{"steel", 3}
 		};
@@ -1383,7 +1444,7 @@ class ALYSIA_PROCESS
 
 	class magazine_tracker: weapon_thompson
 	{
-		name = "Munitions : Tracker";
+		name = "Munitions : Revolver Tracker";
 		require[] =
 		{
 			{"balle", 6},
@@ -1400,7 +1461,7 @@ class ALYSIA_PROCESS
 	};
 	class weapon_tracker: weapon_thompson
 	{
-		name = "Arme : Tracker";
+		name = "Arme : Revolver Tracker";
 		require[] =
 		{
 			{"canon", 1},
@@ -1422,7 +1483,7 @@ class ALYSIA_PROCESS
 	};
 	class weapon_tracker_gold: weapon_thompson
 	{
-		name = "Arme : Tracker or";
+		name = "Arme : Revolver Tracker or";
 		require[] =
 		{
 			{"canon", 1},
@@ -1441,5 +1502,201 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 30;
 		time_default = 20;
+	};
+
+	class weapon_b95 : weapon_thompson
+	{
+		name = "Arme : Fusil B95";
+		sound = "smelting";
+		require[] =
+		{
+			{"canon", 2},
+			{"crosse_wood", 1},
+			{"garde_main", 1},
+			{"detente", 1},
+			{"percuteur", 2},
+			{"woodp", 10},
+			{"ironp", 2},
+			{"steel", 3}
+		};
+		receive[] =
+		{
+			{},
+			{"Skyline_B95"},
+			0
+		};
+		time_per_item = 50;
+		time_default = 10;
+	};
+
+	class magazine_b95 : weapon_thompson
+	{
+		name = "Munitions : Fusil B95";
+		require[] =
+		{
+			{"buckshot", 10},
+			{"chargeur",1}
+		};
+		receive[] =
+		{
+			{},
+			{"2Rnd_762x51_Mag_B95"},
+			0
+		};
+		time_per_item = 5;
+		time_default = 4;
+	};
+
+	class weapon_cz75: weapon_thompson
+	{
+		name = "Arme : Pistolet CZ 75";
+		require[] =
+		{
+			{"canon", 1},
+			{"poignee", 1},
+			{"detente", 1},
+			{"percuteur", 1},
+			{"carcasse", 1},
+			{"bloc_culasse", 1},
+			{"marteau", 1},
+			{"ironp", 2},
+			{"steel", 3}
+		};
+		receive[] =
+		{
+			{},
+			{"RH_cz75"},
+			0
+		};
+		time_per_item = 30;
+		time_default = 10;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				rank = 0;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class magazine_cz75: weapon_thompson
+	{
+		name = "Munitions : Pistolet CZ 75";
+		require[] =
+		{
+			{"balle", 16},
+			{"magazine", 1}
+		};
+		receive[] =
+		{
+			{},
+			{"RH_16Rnd_9x19_CZ"},
+			0
+		};
+		time_per_item = 5;
+		time_default = 5;
+	};
+
+	class weapon_p226: weapon_cz75
+	{
+		name = "Arme : Pistolet Sig-Sauer P226";
+		receive[] =
+		{
+			{},
+			{"RH_p226"},
+			0
+		};
+	};
+
+	class magazine_p226: weapon_thompson
+	{
+		name = "Munitions : Pistolet Sig-Sauer P226";
+		require[] =
+		{
+			{"balle", 15},
+			{"magazine", 1}
+		};
+		receive[] =
+		{
+			{},
+			{"RH_15Rnd_9x19_SIG"},
+			0
+		};
+		time_per_item = 5;
+		time_default = 5;
+	};
+
+	class weapon_gsh18: weapon_cz75
+	{
+		name = "Arme : Pistolet GSh-18";
+		receive[] =
+		{
+			{},
+			{"RH_gsh18"},
+			0
+		};
+	};
+
+	class magazine_gsh18: weapon_thompson
+	{
+		name = "Munitions : Pistolet GSh-18";
+		require[] =
+		{
+			{"balle", 18},
+			{"magazine", 1}
+		};
+		receive[] =
+		{
+			{},
+			{"RH_18Rnd_9x19_gsh"},
+			0
+		};
+		time_per_item = 5;
+		time_default = 5;
+	};
+
+	class weapon_sdar : weapon_thompson
+	{
+		name = "Arme : SDAR";
+		sound = "smelting";
+		require[] =
+		{
+			{"canon", 1},
+			{"crosse_steel", 1},
+			{"garde_main", 1},
+			{"poignee", 1},
+			{"detente", 1},
+			{"percuteur", 1},
+			{"ironp", 5},
+			{"steel", 5}
+		};
+		receive[] =
+		{
+			{},
+			{"Fett_SDAR"},
+			0
+		};
+		time_per_item = 50;
+		time_default = 10;
+	};
+
+	class magazine_sdar: weapon_thompson
+	{
+		name = "Munitions : SDAR";
+		require[] =
+		{
+			{"balle", 20},
+			{"magazine", 1}
+		};
+		receive[] =
+		{
+			{},
+			{"Fett_20Rnd_556x45_UW_mag"},
+			0
+		};
+		time_per_item = 5;
+		time_default = 5;
 	};
 };

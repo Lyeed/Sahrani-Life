@@ -19,7 +19,7 @@ if (player getVariable ["surrender", false]) then {
 			sleep 0.8;
 		};
 		[player, "amovpercmstpssurwnondnon_amovpercmstpsnonwnondnon"] remoteExecCall ["switchMove", -2];
-		player playMove "amovpercmstpssurwnondnon_amovpercmstpsnonwnondnon";  
+		player playMove "amovpercmstpssurwnondnon_amovpercmstpsnonwnondnon";
 	};
 };
 

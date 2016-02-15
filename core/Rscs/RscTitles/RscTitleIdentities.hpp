@@ -26,7 +26,6 @@ class RscTitleIdentityCIV_NORTH
 		class HEAD: RscPicture
 		{
 			idc = 79000;
-			text = "lyeed_faces\data\heads_bw\Athanasiadis_bw.paa";
 
 			x = 0.412344 * safezoneW + safezoneX;
 			y = 0.324 * safezoneH + safezoneY;
@@ -82,7 +81,6 @@ class RscTitleIdentityEAST
 		class HEAD: RscPicture
 		{
 			idc = 79010;
-			text = "lyeed_faces\data\heads_bw\Athanasiadis_bw.paa";
 
 			x = 0.335 * safezoneW + safezoneX;
 			y = 0.357 * safezoneH + safezoneY;
@@ -147,7 +145,6 @@ class RscTitleIdentityWEST
 		class HEAD: RscPicture
 		{
 			idc = 79020;
-			text = "lyeed_faces\data\heads_bw\Athanasiadis_bw.paa";
 
 			x = 0.278281 * safezoneW + safezoneX;
 			y = 0.522 * safezoneH + safezoneY;
@@ -212,7 +209,6 @@ class RscTitleIdentityGUER
 		class HEAD: RscPicture
 		{
 			idc = 79030;
-			text = "lyeed_faces\data\heads_bw\Athanasiadis_bw.paa";
 
 			x = 0.206094 * safezoneW + safezoneX;
 			y = 0.467 * safezoneH + safezoneY;
@@ -268,7 +264,6 @@ class RscTitleIdentityCIV_SOUTH
 		class HEAD: RscPicture
 		{
 			idc = 79040;
-			text = "lyeed_faces\data\heads_bw\Athanasiadis_bw.paa";
 
 			x = 0.422656 * safezoneW + safezoneX;
 			y = 0.357 * safezoneH + safezoneY;

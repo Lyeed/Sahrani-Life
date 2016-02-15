@@ -160,7 +160,7 @@ if (g_launder > 0) then
 		_totalSession = _totalSession + 1;
 		
 		if ((_totalSession % 4) isEqualTo 0) then {
-			[4] call AlysiaDB_fnc_query_update_usual 
+			[] call AlysiaDB_fnc_query_update_usual 
 		};
 
 		if ((_totalSession % 5) isEqualTo 0) then {

@@ -160,11 +160,11 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class B_Secouriste_khk
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class B_Secouriste2_khk
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class B_TacticalPack_blk
 	{
@@ -188,7 +188,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class B_Defibrilateur_khk
 	{
-		buy_price = 1600;
+		buy_price = 1200;
 	};
 	class Bear_RoundGlasses
 	{
@@ -293,7 +293,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class digital_uniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class druglord_uniform_new
 	{
@@ -301,56 +301,56 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class fbi_light_uniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class fbi_light2_uniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class fbi_light3_uniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class fbi_light4_uniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class fbi_light5_uniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class fbi_light6_uniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class Fett_boat_milice
 	{
-		buy_price = 20;
+		buy_price = 22000;
 	};
 	class Fett_boat_samu
 	{
-		buy_price = 20;
+		buy_price = 8000;
 	};
 	class fire_uniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class firestarter_uniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class flora_uniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class G_Aviator
 	{
-		buy_price = 20;
+		buy_price = 120;
 		buy_condition_WEST = 8;
 	};
 	class G_Balaclava_blk
 	{
-		buy_price = 50;
+		buy_price = 250;
 		buy_condition_EAST = 1;
 	};
 	class G_Balaclava_bloodhands
@@ -383,315 +383,320 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class G_Bandanna_aviator
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Bandanna_beast
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Bandanna_blk
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Bandanna_khk
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Bandanna_oli
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Bandanna_shades
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Bandanna_sport
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Bandanna_tan
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Lady_Blue
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Lowprofile
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Shades_Black
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Shades_Blue
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Shades_Green
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Shades_Red
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Spectacles
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Spectacles_Tinted
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Sport_Blackred
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Sport_BlackWhite
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Sport_Blackyellow
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Sport_Checkered
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Sport_Greenblack
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Sport_Red
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Squares
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class G_Squares_Tinted
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class Ghost_ReconOD
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class gris_uniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class H_Bandanna_blu
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Bandanna_camo
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Bandanna_cbr
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Bandanna_gry
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Bandanna_khk
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Bandanna_mcamo
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Bandanna_sand
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Bandanna_sgg
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Bandanna_surfer
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Bandanna_surfer_blk
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Bandanna_surfer_grn
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Booniehat_dgtl
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Booniehat_khk
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Booniehat_khk_hs
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Booniehat_mcamo
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Booniehat_oli
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Booniehat_tan
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Cap_blk
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Cap_blk_CMMG
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Cap_blk_ION
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Cap_blk_Raven
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Cap_blu
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Cap_brn_SPECOPS
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Cap_grn
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Cap_grn_BI
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Cap_khaki_specops_UK
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Cap_oli
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Cap_press
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Cap_red
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Cap_Securite_01
 	{
-		buy_price = 20;
+		buy_price = 15;
+		buy_license_CIV = "company_security";
 	};
 	class H_Cap_surfer
 	{
-		buy_price = 20;
+		buy_price = 15;
+	};
+	class H_Cap_tan
+	{
+		buy_price = 15;
 	};
 	class H_Cap_tan_specops_US
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Cap_usblack
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Hat_blue
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Hat_brown
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Hat_camo
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Hat_checker
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Hat_grey
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Hat_tan
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Shemag_olive
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class H_Shemag_olive_hs
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class H_ShemagOpen_khk
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class H_ShemagOpen_tan
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class H_StrawHat
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class H_StrawHat_dark
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class H_Watchcap_blk
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Watchcap_camo
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Watchcap_cbr
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class H_Watchcap_khk
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class Head_Wrap
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class Head_WrapTAN
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class hgun_FlashBall_F
 	{
-		buy_price = 500;
+		buy_price = 100;
 		buy_condition_WEST = 1;
 		buy_condition_EAST = 1;
 	};
@@ -801,71 +806,71 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Kio_Afro_Hat
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Kio_Balaclava_blk
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Kio_Balaclava_blkSkull
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Kio_Balaclava_des
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Kio_Balaclava_grn
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Kio_Balaclava_hex
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Kio_Balaclava_multicam
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Kio_Balaclava_urbcam
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Kio_Balaclava_wcam
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Kio_Capital_Hat
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Kio_Hat
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Kio_No1_Hat
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Kio_Pirate_Hat
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Kio_Santa_Hat
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Kio_Spinning_Hat
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class klmk_uniform
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class klmk2_uniform
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class mafiaboss_uniform_new
 	{
@@ -873,11 +878,11 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Mask_M40
 	{
-		buy_price = 20;
+		buy_price = 1500;
 	};
 	class Mask_M40_OD
 	{
-		buy_price = 20;
+		buy_price = 1500;
 	};
 	class Masque_Alien1
 	{
@@ -1025,15 +1030,15 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class max_sheriff_Hat
 	{
-		buy_price = 20;
+		buy_price = 300;
 	};
 	class mgsr_civ_01_uniform
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class mgsr_eyepatch
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class mgsr_headbag {};
 	class NVGoggles_OPFOR {};
@@ -1051,7 +1056,7 @@ class ALYSIA_ITEMS_ARMA
 	class optic_KHS_tan {};
 	class oreh_uniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class pilot_black_helmet
 	{
@@ -1096,28 +1101,28 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class rds_uniform_assistant
 	{
-		buy_price = 20;
+		buy_price = 120;
 		buy_condition_GUER = 3;
 	};
 	class rds_uniform_citizen1
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class rds_uniform_citizen2
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class rds_uniform_citizen3
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class rds_uniform_citizen4
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class rds_uniform_doctor
 	{
-		buy_price = 20;
+		buy_price = 120;
 		buy_condition_GUER = 4;
 	};
 	class rds_uniform_Functionary1
@@ -1130,99 +1135,99 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class rds_uniform_priest
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class rds_uniform_Profiteer1
 	{
-		buy_price = 20;
+		buy_price = 95;
 	};
 	class rds_uniform_Profiteer2
 	{
-		buy_price = 20;
+		buy_price = 95;
 	};
 	class rds_uniform_Profiteer3
 	{
-		buy_price = 20;
+		buy_price = 95;
 	};
 	class rds_uniform_Profiteer4
 	{
-		buy_price = 20;
+		buy_price = 95;
 	};
 	class rds_uniform_schoolteacher
 	{
-		buy_price = 20;
+		buy_price = 250;
 	};
 	class rds_uniform_Villager1
 	{
-		buy_price = 20;
+		buy_price = 75;
 	};
 	class rds_uniform_Villager2
 	{
-		buy_price = 20;
+		buy_price = 75;
 	};
 	class rds_uniform_Villager3
 	{
-		buy_price = 20;
+		buy_price = 75;
 	};
 	class rds_uniform_Villager4
 	{
-		buy_price = 20;
+		buy_price = 75;
 	};
 	class rds_uniform_Woodlander1
 	{
-		buy_price = 20;
+		buy_price = 75;
 	};
 	class rds_uniform_Woodlander2
 	{
-		buy_price = 20;
+		buy_price = 75;
 	};
 	class rds_uniform_Woodlander3
 	{
-		buy_price = 20;
+		buy_price = 75;
 	};
 	class rds_uniform_Woodlander4
 	{
-		buy_price = 20;
+		buy_price = 75;
 	};
 	class rds_uniform_Worker1
 	{
-		buy_price = 20;
+		buy_price = 50;
 	};
 	class rds_uniform_Worker2
 	{
-		buy_price = 20;
+		buy_price = 50;
 	};
 	class rds_uniform_Worker3
 	{
-		buy_price = 20;
+		buy_price = 50;
 	};
 	class rds_uniform_Worker4
 	{
-		buy_price = 20;
+		buy_price = 50;
 	};
 	class rds_Villager_cap1
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class rds_Villager_cap2
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class rds_Villager_cap3
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class rds_Villager_cap4
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class rds_Woodlander_cap1
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class rds_Woodlander_cap2
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class rds_Woodlander_cap3
 	{
@@ -1231,23 +1236,23 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class rds_Woodlander_cap4
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class rds_worker_cap1
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class rds_worker_cap2
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class rds_worker_cap3
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class rds_worker_cap4
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class Recon_MskullBLK
 	{
@@ -1263,19 +1268,19 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Respirateur_civ1
 	{
-		buy_price = 20;
+		buy_price = 450;
 	};
 	class Respirateur_civ2
 	{
-		buy_price = 20;
+		buy_price = 450;
 	};
 	class Respirateur_civ3
 	{
-		buy_price = 20;
+		buy_price = 450;
 	};
 	class Respirateur_civ4
 	{
-		buy_price = 20;
+		buy_price = 450;
 	};
 	class Respirateur_milice
 	{
@@ -1284,7 +1289,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Respirateur_samu
 	{
-		buy_price = 20;
+		buy_price = 350;
 	};
 	class RH_10Rnd_22LR_mk2 {};
 	class RH_12Rnd_45cal_usp {};
@@ -1379,59 +1384,59 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class shemagh_faceD
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class shemagh_faceOD
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class shemagh_neckD
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class shemagh_neckOD
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class skull_gang
 	{
-		buy_price = 20;
+		buy_price = 150;
 	};
 	class Skyline_Anonymous
 	{
-		buy_price = 20;
+		buy_price = 250;
 	};
 	class Skyline_B95
 	{
-		buy_price = 20;
+		buy_price = 6500;
 	};
 	class Skyline_B95_Black
 	{
-		buy_price = 20;
+		buy_price = 6500;
 	};
 	class Skyline_B95_Green
 	{
-		buy_price = 20;
+		buy_price = 6500;
 	};
 	class Skyline_Corvo
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Skyline_Dallas
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Skyline_GasMask
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Skyline_Hoxton
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Skyline_Merlin_01
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class Skyline_NioshFace
 	{
@@ -1439,19 +1444,19 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Skyline_NVGoogle
 	{
-		buy_price = 20;
+		buy_price = 2500;
 	};
 	class Skyline_Pelle_01
 	{
-		buy_price = 20;
+		buy_price = 75;
 	};
 	class Skyline_Pioche_01
 	{
-		buy_price = 20;
+		buy_price = 95;
 	};
 	class Skyline_Skyrim
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class Skyline_tl122_blanche
 	{
@@ -1483,12 +1488,12 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Skyline_Wolf
 	{
-		buy_price = 20;
+		buy_price = 500;
 	};
 	class SkylineItems_Adrenaline {};
 	class SkylineItems_Bandage
 	{
-		buy_price = 20;
+		buy_price = 5;
 	};
 	class SkylineItems_Crochetage {};
 	class SkylineItems_Defibrilateur {};
@@ -1509,11 +1514,11 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class SmokeShellGreen
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class SmokeShellRed
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class special_agent_uniform_new
 	{
@@ -1521,7 +1526,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class surpat_uniform
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class Tact_HoodACU
 	{
@@ -1704,87 +1709,87 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class TRYK_ESS_CAP
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_ESS_CAP_OD
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_ESS_CAP_tan
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_Bandana_H
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_Bandana_wig
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_Bandana_wig_g
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_Booniehat_3CD
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_Booniehat_AOR1
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_Booniehat_AOR2
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_Booniehat_CC
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_Booniehat_JSDF
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_Booniehat_MARPAT_Desert
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_Booniehat_MARPAT_WOOD
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_Booniehat_WOOD
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_EARMUFF
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_headsetcap
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_headsetcap_blk
 	{
-		buy_price = 20;
+		buy_price = 38;
 	};
 	class TRYK_H_headsetcap_blk_Glasses
 	{
-		buy_price = 20;
+		buy_price = 38;
 	};
 	class TRYK_H_headsetcap_Glasses
 	{
-		buy_price = 20;
+		buy_price = 38;
 	};
 	class TRYK_H_headsetcap_od
 	{
-		buy_price = 20;
+		buy_price = 35;
 	};
 	class TRYK_H_headsetcap_od_Glasses
 	{
-		buy_price = 20;
+		buy_price = 35;
 	};
 	class TRYK_H_LHS_HEL_G
 	{
@@ -1796,127 +1801,127 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class TRYK_H_woolhat
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_woolhat_br
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_woolhat_cu
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_woolhat_CW
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_woolhat_tan
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_H_woolhat_WH
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_hoodie_FR
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_R_CAP_BLK
 	{
-		buy_price = 20;
+		buy_price = 15;
 	};
 	class TRYK_r_cap_blk_Glasses
 	{
-		buy_price = 20;
+		buy_price = 35;
 	};
 	class TRYK_r_cap_od_Glasses
 	{
-		buy_price = 20;
+		buy_price = 38;
 	};
 	class TRYK_R_CAP_OD_US
 	{
-		buy_price = 20;
+		buy_price = 39;
 	};
 	class TRYK_r_cap_tan_Glasses
 	{
-		buy_price = 20;
+		buy_price = 32;
 	};
 	class TRYK_shirts_BLK_PAD_BK
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_shirts_DENIM_BK
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_shirts_DENIM_BK_Sleeve
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class TRYK_shirts_DENIM_BL
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class TRYK_shirts_DENIM_BL_Sleeve
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class TRYK_shirts_DENIM_BWH
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class TRYK_shirts_DENIM_BWH_Sleeve
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class TRYK_shirts_DENIM_od
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class TRYK_shirts_DENIM_od_Sleeve
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class TRYK_shirts_DENIM_R
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class TRYK_shirts_DENIM_R_Sleeve
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class TRYK_shirts_DENIM_RED2
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class TRYK_shirts_DENIM_RED2_Sleeve
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class TRYK_shirts_DENIM_WH
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class TRYK_shirts_DENIM_WH_Sleeve
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class TRYK_shirts_DENIM_WHB
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class TRYK_shirts_DENIM_ylb
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class TRYK_shirts_DENIM_ylb_Sleeve
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class TRYK_shirts_OD_PAD_BK
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class TRYK_SUITS_BLK_F
 	{
@@ -1928,223 +1933,223 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class TRYK_T_BLK_PAD
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_T_CSAT_PAD
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_T_PAD
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_T_T2_PAD
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_T_TAN_PAD
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_3CD_BLK_BDUTshirt
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_3CD_Delta_BDU
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_ACU
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_ACUTshirt
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_AOR2_BLK_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_AOR2_BLK_R_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_AOR2_GRY_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_AOR2_GRY_R_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_AOR2_OD_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_AOR2_OD_R_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_ARO1_BLK_R_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_ARO1_CBR_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_ARO1_CBR_R_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_ARO1_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_ARO1_GR_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_ARO1_GR_R_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_ARO1_GRY_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_ARO1_GRY_R_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_ARO1R_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_ARO2_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_ARO2R_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_BLK_OD_Rollup_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_BLK_T_BG_BK
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_BLK_T_BG_WH
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_BLK_T_BK
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_BLK_T_WH
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_BLK_TAN_1
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_BLK_tan_Rollup_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_BLKBLK_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_BLKBLK_R_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_BLKOCP_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_BLKOCP_R_CombatUniformTshirt
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_BLKTAN_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_BLKTANR_CombatUniformTshirt
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_BLOD_T
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_BLTAN_T
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_C02_Tsirt
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_Denim_T_BG_BK
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_Denim_T_BG_WH
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_Denim_T_BK
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_Denim_T_WH
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_fleece
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_fleece_UCP
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_GRTAN_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_GRYOCP_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_MARPAT_WOOD_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_MARPAT_WOOD_CombatUniformTshirt
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_MTP_BLK_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_NATO_UCP_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_NATO_UCP_GRY_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 120;
 	};
 	class TRYK_U_B_OD_BLK
 	{
@@ -2402,103 +2407,103 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class U_B_Wetsuit
 	{
-		buy_price = 20;
+		buy_price = 95;
 	};
 	class U_BG_Guerilla1_1
 	{
-		buy_price = 20;
+		buy_price = 95;
 	};
 	class U_BG_Guerilla2_1
 	{
-		buy_price = 20;
+		buy_price = 95;
 	};
 	class U_BG_Guerilla2_2
 	{
-		buy_price = 20;
+		buy_price = 95;
 	};
 	class U_BG_Guerilla2_3
 	{
-		buy_price = 20;
+		buy_price = 95;
 	};
 	class U_BG_Guerilla3_1
 	{
-		buy_price = 20;
+		buy_price = 95;
 	};
 	class U_BG_Guerrilla_6_1
 	{
-		buy_price = 20;
+		buy_price = 95;
 	};
 	class U_BG_leader
 	{
-		buy_price = 20;
+		buy_price = 95;
 	};
 	class U_C_Alysia_01
 	{
-		buy_price = 20;
+		buy_price = 50;
 	};
 	class U_C_Depanneur_01
 	{
-		buy_price = 20;
+		buy_price = 80;
 		buy_license_CIV = "company_garagist";
 	};
 	class U_C_DolceGabbana_01
 	{
-		buy_price = 20;
+		buy_price = 95;
 	};
 	class U_C_Hello_Kitty_01
 	{
-		buy_price = 20;
+		buy_price = 95;
 	};
 	class U_C_HunterBody_grn
 	{
-		buy_price = 20;
+		buy_price = 95;
 	};
 	class U_C_Journalist
 	{
-		buy_price = 200;
+		buy_price = 95;
 		buy_license_CIV = "company_news";
 	};
 	class U_C_Journaliste_01
 	{
-		buy_price = 200;
+		buy_price = 95;
 		buy_license_CIV = "company_news";
 	};
 	class U_C_Journaliste_02
 	{
-		buy_price = 200;
+		buy_price = 95;
 		buy_license_CIV = "company_news";
 	};
 	class U_C_Kick_Me_01
 	{
-		buy_price = 20;
+		buy_price = 70;
 	};
 	class U_C_Poloshirt_blue
 	{
-		buy_price = 20;
+		buy_price = 60;
 	};
 	class U_C_Poloshirt_burgundy
 	{
-		buy_price = 20;
+		buy_price = 60;
 	};
 	class U_C_Poloshirt_redwhite
 	{
-		buy_price = 20;
+		buy_price = 60;
 	};
 	class U_C_Poloshirt_salmon
 	{
-		buy_price = 20;
+		buy_price = 60;
 	};
 	class U_C_Poloshirt_stripped
 	{
-		buy_price = 20;
+		buy_price = 60;
 	};
 	class U_C_Poloshirt_tricolour
 	{
-		buy_price = 20;
+		buy_price = 60;
 	};
 	class U_C_Poor_1
 	{
-		buy_price = 20;
+		buy_price = 60;
 	};
 	class U_C_Prisonnier_01
 	{
@@ -2506,12 +2511,12 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class U_C_Secouriste_01
 	{
-		buy_price = 50;
+		buy_price = 80;
 		buy_condition_GUER = 1;
 	};
 	class U_C_Secouriste_02
 	{
-		buy_price = 50;
+		buy_price = 80;
 		buy_condition_GUER = 1;
 	};
 	class U_C_Securite_01
@@ -2531,7 +2536,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class U_C_SonsofAnarchy_01
 	{
-		buy_price = 20;
+		buy_price = 80;
 	};
 	class U_Competitor {};
 	class U_O_CombatUniform_ocamo
@@ -2779,11 +2784,11 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Fett_SDAR
 	{
-		buy_price = 20;
+		buy_price = 2000;
 	};
 	class Fett_20Rnd_556x45_UW_mag
 	{
-		buy_price = 20;
+		buy_price = 95;
 	};
 	class SMG_01_F {};
 	class optic_Aco {};

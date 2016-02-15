@@ -18,21 +18,21 @@ if (isNull _display) exitWith {};
 
 g_interaction_target = _house;
 
-_rank = getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >> "rank");
+_rank = getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >> "factions" >> str(playerSide) >> "rank");
 if ((_rank isEqualTo 0) || ((_rank > 0) && ((player getVariable ["rank", 0]) >= _rank))) then {
 	_rank_condition = true;
 } else {
 	_rank_condition = false;
 };
 
-_license = getText(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >> "license");
+_license = getText(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >> "factions" >> str(playerSide) >> "license");
 if ((_license isEqualTo "") || ((_license != "") && ([_license] call AlysiaClient_fnc_hasLicense))) then {
 	_license_condition = true;
 } else {
 	_license_condition = false;	
 };
 
-_price = getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >>  "price");
+_price = getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >> "price");
 if ((_price > 0) && (g_atm >= _price)) then {
 	_price_condition = true;
 } else {
@@ -53,12 +53,12 @@ _storage = getText(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_
 	+	"<t align='left'>Possède un garage</t><t align='right'>%8</t><br/>"
 	+	"</t>",
 	if (_rank_condition) then {"#31B404"} else {"#DF0101"},
-	[playerSide, _rank] call AlysiaClient_fnc_sideToStr,
+	[playerSide, _rank] call AlysiaClient_fnc_rankToStr,
 	if (_license_condition) then {"#31B404"} else {"#DF0101"},
 	if (_license isEqualTo "") then {"Aucune"} else {getText(missionConfigFile >> "ALYSIA_LICENSES" >> _license >> "name")},
 	if (_price_condition) then {"#31B404"} else {"#DF0101"},
 	[_price] call AlysiaClient_fnc_numberText,
-	if (_storage isEqualTo "") then {"<t color='#ff8c8c'>Non</t>"} else {format["<t color='#8cff9b'>Oui</t>, %1", ([getText(missionConfigFile >> "ALYSIA_STORAGES" >> _storage >> "item")] call AlysiaClient_fnc_itemGetName)]},
+	if (isClass(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >> "storage")) then {format["<t color='#8cff9b'>Oui</t>, %1", ([getText(missionConfigFile >> "ALYSIA_STORAGES" >> getText(missionConfigFile >> "ALYSIA_HOUSES" >> (typeOf g_interaction_target) >> "storage" >> "type") >> "item")] call AlysiaClient_fnc_itemGetName)]} else {"<t color='#ff8c8c'>Non</t>"},
 	if (getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >> "garage") isEqualTo 1) then {"<t color='#8cff9b'>Oui</t>"} else {"<t color='#ff8c8c'>Non</t>"}
 ];
 
