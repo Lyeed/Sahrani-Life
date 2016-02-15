@@ -1,4 +1,4 @@
-class ALYSIA_ITEMS 
+class ALYSIA_ITEMS
 {
 	class raisin
 	{
@@ -204,22 +204,22 @@ class ALYSIA_ITEMS
 		};
 	};
 
-	class table_bois
+	class table_wood
 	{
 		name        = "Table en bois";
-		weight      = 40;
+		weight      = 30;
 		price_buy   = 100;
 		price_sell  = 100;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\table_wood.paa";
 		class use
 		{
 			action = "['table_bois'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
 		};
 	};
 
-	class chaise_bois
+	class chair_wood
 	{
 		name        = "Chaise en bois";
 		weight      = 10;
@@ -227,7 +227,7 @@ class ALYSIA_ITEMS
 		price_sell  = 10;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\chair_wood.paa";
 		class use
 		{
 			action = "['chaise_bois'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
@@ -1018,7 +1018,7 @@ class ALYSIA_ITEMS
 		weight      = 3;
 		illegal     = 0;
 		removable   = 1;
-		image       = "alysia_items_virtual\data\poterie.paa";
+		image       = "alysia_items_virtual\data\brique.paa";
 		class market
 		{
 			max = 112;
@@ -1702,7 +1702,7 @@ class ALYSIA_ITEMS
 		weight      = 6;
 		illegal     = 1;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\boite1.paa";
 	};
 	class destroy_stand
 	{
@@ -1710,7 +1710,7 @@ class ALYSIA_ITEMS
 		weight      = 6;
 		illegal     = 1;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\boite3.paa";
 	};
 	class destroy_field
 	{
@@ -1718,7 +1718,7 @@ class ALYSIA_ITEMS
 		weight      = 6;
 		illegal     = 1;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\boite4.paa";
 	};
 	class destroy_labo
 	{
@@ -1726,7 +1726,7 @@ class ALYSIA_ITEMS
 		weight      = 6;
 		illegal     = 1;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\boite2.paa";
 	};
 
 	class steel
@@ -1735,7 +1735,7 @@ class ALYSIA_ITEMS
 		weight      = 5;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\steel.paa";
 		class market
 		{
 			max = 210;
@@ -1753,7 +1753,7 @@ class ALYSIA_ITEMS
 		price_sell  = 1;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\buckshot.paa";
 	};
 
 	class bullet
@@ -1764,7 +1764,7 @@ class ALYSIA_ITEMS
 		price_sell  = 1;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\bullet.paa";
 	};
 
 	class magazine
@@ -1775,7 +1775,7 @@ class ALYSIA_ITEMS
 		price_sell  = 1;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\magazine.paa";
 	};
 
 	class barillet
@@ -1786,7 +1786,7 @@ class ALYSIA_ITEMS
 		price_sell  = 3;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\barillet.paa";
 	};
 
 	class canon
@@ -1797,7 +1797,7 @@ class ALYSIA_ITEMS
 		price_sell  = 3;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\canon.paa";
 	};
 
 	class crosse_wood
@@ -1808,7 +1808,7 @@ class ALYSIA_ITEMS
 		price_sell  = 2;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\crosse_wood.paa";
 	};
 
 	class crosse_steel
@@ -1819,18 +1819,29 @@ class ALYSIA_ITEMS
 		price_sell  = 2;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\crosse_steel.paa";
 	};
 
-	class garde_main
+	class garde_main_wood
 	{
-		name        = "Garde-main (pièce)";
+		name        = "Garde-main (bois)(pièce)";
 		weight      = 1;
 		price_buy   = 0;
 		price_sell  = 2;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\garde_main_wood.paa";
+	};
+
+	class garde_main_steel
+	{
+		name        = "Garde-main (acier)(pièce)";
+		weight      = 1;
+		price_buy   = 0;
+		price_sell  = 2;
+		illegal     = 0;
+		removable   = 1;
+		image       = "alysia_items_virtual\data\garde_main_steel.paa";
 	};
 
 	class poignee
@@ -1841,7 +1852,7 @@ class ALYSIA_ITEMS
 		price_sell  = 2;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\poignee.paa";
 	};
 
 	class detente
@@ -1852,7 +1863,7 @@ class ALYSIA_ITEMS
 		price_sell  = 2;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\detente.paa";
 	};
 
 	class percuteur
@@ -1863,7 +1874,7 @@ class ALYSIA_ITEMS
 		price_sell  = 2;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\percuteur.paa";
 	};
 
 	class carcasse
@@ -1874,7 +1885,7 @@ class ALYSIA_ITEMS
 		price_sell  = 2;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\carcasse.paa";
 	};
 
 	class bloc_culasse
@@ -1885,7 +1896,7 @@ class ALYSIA_ITEMS
 		price_sell  = 2;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\bloc_culasse.paa";
 	};
 
 	class marteau
@@ -1896,7 +1907,7 @@ class ALYSIA_ITEMS
 		price_sell  = 2;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\marteau.paa";
 	};
 
 	class culasse
@@ -1907,7 +1918,7 @@ class ALYSIA_ITEMS
 		price_sell  = 2;
 		illegal     = 0;
 		removable   = 1;
-		image       = "";
+		image       = "alysia_items_virtual\data\culasse.paa";
 	};
 
 	class lab_marijuana

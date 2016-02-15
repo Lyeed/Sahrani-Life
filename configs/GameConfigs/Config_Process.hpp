@@ -768,6 +768,40 @@ class ALYSIA_PROCESS
 		};
 	};
 
+	class chair_wood
+	{
+		name = "Fabrication de chaises (bois)";
+		require[] =
+		{
+			{"woodp", 8}
+		};
+		receive[] =
+		{
+			{"chair_wood"},
+			{},
+			0
+		};
+		time_per_item = 5;
+		time_default = 5;
+	};
+
+	class table_wood
+	{
+		name = "Fabrication de tables (bois)";
+		require[] =
+		{
+			{"woodp", 15}
+		};
+		receive[] =
+		{
+			{"table_wood"},
+			{},
+			0
+		};
+		time_per_item = 5;
+		time_default = 5;
+	};
+
 	class steel
 	{
 		name = "Fonte de l'acier";
@@ -1240,7 +1274,7 @@ class ALYSIA_PROCESS
 		{
 			{"canon", 1},
 			{"crosse_wood", 1},
-			{"garde_main", 1},
+			{"garde_main_wood", 1},
 			{"poignee", 1},
 			{"detente", 1},
 			{"percuteur", 1},

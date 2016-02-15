@@ -7188,7 +7188,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de meuble"",AlysiaClient_fnc_process_open,""furniture"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de meuble"",AlysiaClient_fnc_process_open,""furniture"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de chaises (bois)"",AlysiaClient_fnc_process_open,""chair_wood"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de tables (bois)"",AlysiaClient_fnc_process_open,""table_wood"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item363
 		{
