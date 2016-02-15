@@ -2,14 +2,14 @@ class ALYSIA_STORAGES
 {
 	class Skyline_Coffre_Small 
 	{
-		inventory = 350;//virtual space
+		inventory = 350;
 		item = "storage_small";
 	};
 	class Skyline_Coffre_Medium 
 	{
 		inventory = 800;
 		item = "storage_medium";
-	};	
+	};
 	class Skyline_Coffre_Large 
 	{
 		inventory = 1500;
@@ -25,357 +25,341 @@ class ALYSIA_STORAGES
 class ALYSIA_HOUSES
 {
 	/* ---------------------------------
-	**                         BUY
-	**  - price                        : buy price
-	price                              = 150000;
-	**  - sides                         : must be this side to buy
-	          -> Possible: "CIV" - "WEST" - "EAST" - "GUER"
-	sides[]                            = {"CIV"};
-	**  - rank                         : Ranked needed to buy (side must be != CIV)
-	rank                               = 0;
-	**  - license                      : License needed to buy (only for side == CIV)
-	license                            = "home";
-	   --------------------------------- 
-
-	   ---------------------------------
 	**                        STORAGE
-	**  - storage                      : Storage ClassName from ALYSIA_STORAGES; "" to disable
-	storage                            = "Skyline_Coffre_Small";
-	**  - storage_building_pos_index   : Suitable storage emplacement
+	**  - building_index   : Suitable storage emplacement
 	**           -> Debug console : "Skyline_Coffre_Large" createVehicle (cursorTarget buildingPos INDEX_A_TESTER)
 	**           Remplacer INDEX_A_TESTER par un nombre de 0 à n
-	storage_building_pos_index         = 0;
-	   --------------------------------- 
+	**
+	** A DEBATTRE QU EST CE QU ON EN FAIT: "Land_smd_Panelak" "Land_smd_Panelak2"
+	 --------------------------------- */
 
-	   ---------------------------------
-	**                       GARAGE
-	**  - garage                       : Have garage
-	**          -> Possible (1:YES - 0:no)
-	garage                             = 0;
-	**  - garage_type                  : Which vehicles types can handle garage (garage must be 1)
-	**          -> Possible AND/OR ("Car" - "Tank" - "Truck" - "Air" - "Boat")
-	garage_type[]                      = {};
-	  --------------------------------- */
-
-
+	/* CIV GUER */
 	class Land_Cihlovej_Dum_mini
 	{
 		price = 135000;
-		storage = "Skyline_Coffre_Small";
-		storage_building_pos_index = 3;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};	
-
-	class Land_Hospoda_mesto
+		class storage
+		{
+			type = "Skyline_Coffre_Small";
+			building_index = 3;
+		};
+		class lights {};
+		class factions
+		{
+			class GUER {};
+			class CIV
+			{
+				license = "home";
+			};
+		};
+	};
+	class Land_Hospoda_mesto: Land_Cihlovej_Dum_mini
 	{
 		price = 615000;
-		storage = "Skyline_Coffre_Large";
-		storage_building_pos_index = 2;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};	
-
-	class Land_smd_dum_olezlina_open
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 2;
+		};
+	};
+	class Land_smd_dum_olezlina_open: Land_Cihlovej_Dum_mini
 	{
 		price = 585000;
-		storage = "Skyline_Coffre_Large";
-		storage_building_pos_index = 4;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};	
-
-	class Land_Army_hut3_long_int
-	{
-		price = 220000;
-		storage = "R3F_WeaponStock";
-		storage_building_pos_index = 1;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"WEST", "EAST"};
-		rank = 1;
-		license = "";
-	};	
-
-	class Land_Army_hut2_int
-	{
-		price = 155000;
-		storage = "R3F_WeaponStock";
-		storage_building_pos_index = 1;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"WEST", "EAST"};
-		rank = 1;
-		license = "";
-	};	
-
-	class Land_smd_house_y_open
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 4;
+		};
+	};
+	class Land_smd_house_y_open: Land_Cihlovej_Dum_mini
 	{
 		price = 325000;
-		storage = "Skyline_Coffre_Medium";
-		storage_building_pos_index = 5;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};	
-
-	class Land_Sara_Domek_sedy
+		class storage
+		{
+			type = "Skyline_Coffre_Medium";
+			building_index = 5;
+		};
+	};
+	class Land_Sara_Domek_sedy: Land_Cihlovej_Dum_mini
 	{
 		price = 295000;
-		storage = "Skyline_Coffre_Medium";
-		storage_building_pos_index = 3;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};	
-
-	class Land_smd_budova3_open
+		class storage
+		{
+			type = "Skyline_Coffre_Medium";
+			building_index = 3;
+		};
+	};
+	class Land_smd_budova3_open: Land_Cihlovej_Dum_mini
 	{
 		price = 190000;
-		storage = "Skyline_Coffre_Small";
-		storage_building_pos_index = 1;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};	
-
-	class Land_smd_sara_zluty_statek_in
-	{
-		price = 605000;
-		storage = "Skyline_Coffre_Large";
-		storage_building_pos_index = 3;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};	
-
-	class Land_Sara_domek_zluty
+		class storage
+		{
+			type = "Skyline_Coffre_Small";
+			building_index = 1;
+		};
+	};
+	class Land_Sara_domek_zluty: Land_Cihlovej_Dum_mini
 	{
 		price = 575000;
-		storage = "Skyline_Coffre_Large";
-		storage_building_pos_index = 1;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};	
-
-	class Land_smd_Panelak2
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 1;
+		};
+	};
+	class Land_smd_Panelak2: Land_Cihlovej_Dum_mini
 	{
 		price = 625000;
-		storage = "Skyline_Coffre_Large";
-		storage_building_pos_index = 4;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};	
-
-	class Land_smd_Panelak
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 4;
+		};
+	};
+	class Land_smd_Panelak: Land_Cihlovej_Dum_mini
 	{
 		price = 287500;
-		storage = "Skyline_Coffre_Large";
-		storage_building_pos_index = 4;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
-	};	
-	
-	class CampEast_EP1
-	{
-		price = 45000;
-		storage = "R3F_WeaponStock";
-		storage_building_pos_index = 2;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"WEST"};
-		rank = 4;
-		license = "";
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 4;
+		};
 	};
-	
-	class Barrack2
-	{
-		price = 65000;
-		storage = "R3F_WeaponStock";
-		storage_building_pos_index = 4;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"WEST"};
-		rank = 1;
-		license = "";
-	};
-	
-	class Land_tent_east
-	{
-		price = 49500;
-		storage = "R3F_WeaponStock";
-		storage_building_pos_index = 6;
-		garage = 10;
-		garage_type[] = {};
-		sides[] = {"EAST"};
-		rank = 4;
-		license = "";
-	};
-	
-	class Land_Barrack2_EP1
-	{
-		price = 45000;
-		storage = "R3F_WeaponStock";
-		storage_building_pos_index = 5;
-		garage = 10;
-		garage_type[] = {};
-		sides[] = {"EAST"};
-		rank = 1;
-		license = "";
-	};
-	
-	class Fett_Land_Dum_mesto_in_east
-	{
-		price = 595000;
-		storage = "R3F_WeaponStock";
-		storage_building_pos_index = 5;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"EAST"};
-		rank = 5;
-		license = "";
-	};
-	
-	class Fett_Land_Cihlovej_Dum_in_west
-	{
-		price = 475000;
-		storage = "R3F_WeaponStock";
-		storage_building_pos_index = 1;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"WEST"};
-		rank = 9;
-		license = "";
-	};
-	
-	class Land_Deutshe_mini
+	class Land_Deutshe_mini: Land_Cihlovej_Dum_mini
 	{
 		price = 295000;
-		storage = "Skyline_Coffre_Medium";
-		storage_building_pos_index = 2;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
+		class storage
+		{
+			type = "Skyline_Coffre_Medium";
+			building_index = 2;
+		};
 	};
-
-	class Land_smd_dum_olez_istan2_open
+	class Land_smd_dum_olez_istan2_open: Land_Cihlovej_Dum_mini
 	{
 		price = 245000;
-		storage = "Skyline_Coffre_Medium";
-		storage_building_pos_index = 1;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
+		class storage
+		{
+			type = "Skyline_Coffre_Medium";
+			building_index = 1;
+		};
 	};
-	class Land_smd_dum_olez_istan2_maly_open
+	class Land_smd_dum_olez_istan2_maly_open: Land_Cihlovej_Dum_mini
 	{
 		price = 415000;
-		storage = "Skyline_Coffre_Large";
-		storage_building_pos_index = 3;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 3;
+		};
 	};
-	class Land_smd_dum_olez_istan1_open
+	class Land_smd_dum_olez_istan1_open: Land_Cihlovej_Dum_mini
 	{
 		price = 515000;
-		storage = "Skyline_Coffre_Large";
-		storage_building_pos_index = 3;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 3;
+		};
 	};
-	class Land_smd_dum_olez_istan1_open2
+	class Land_smd_dum_olez_istan1_open2: Land_Cihlovej_Dum_mini
 	{
 		price = 515000;
-		storage = "Skyline_Coffre_Large";
-		storage_building_pos_index = 3;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 3;
+		};
 	};
-	class Land_Bouda2_vnitrek
+	class Land_Bouda2_vnitrek: Land_Cihlovej_Dum_mini
 	{
 		price = 125000;
-		storage = "Skyline_Coffre_Small";
-		storage_building_pos_index = 4;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
+		class storage
+		{
+			type = "Skyline_Coffre_Small";
+			building_index = 4;
+		};
 	};
-	class Land_Dum_rasovna
+	class Land_Dum_rasovna: Land_Cihlovej_Dum_mini
 	{
 		price = 325000;
-		storage = "Skyline_Coffre_Small";
-		storage_building_pos_index = 2;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
+		class storage
+		{
+			type = "Skyline_Coffre_Small";
+			building_index = 2;
+		};
 	};
-	class Land_smd_sara_zluty_statek_in
+	class Land_smd_sara_zluty_statek_in: Land_Cihlovej_Dum_mini
 	{
 		price = 325000;
-		storage = "Skyline_Coffre_Small";
-		storage_building_pos_index = 4;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
+		class storage
+		{
+			type = "Skyline_Coffre_Small";
+			building_index = 4;
+		};
 	};
-	class Land_smd_dum_mesto_in_open
+	class Land_smd_dum_mesto_in_open: Land_Cihlovej_Dum_mini
 	{
 		price = 325000;
-		storage = "Skyline_Coffre_Small";
-		storage_building_pos_index = 3;
-		garage = 0;
-		garage_type[] = {};
-		sides[] = {"CIV", "GUER"};
-		rank = 0;
-		license = "home";
+		class storage
+		{
+			type = "Skyline_Coffre_Small";
+			building_index = 3;
+		};
 	};
-
-	/*
-	A DEBATTRE QU EST CE QU ON EN FAIT: "Land_smd_Panelak" "Land_smd_Panelak2"
-	*/
+	
+	/* WEST HOUSES */
+	class CampEast_EP1
+	{
+		price = 500;
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 2;
+		};
+		class lights {};
+		class factions
+		{
+			class WEST
+			{
+				rank = 2;
+			};
+		};
+	};
+	class Barrack2
+	{
+		price = 500;
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 4;
+		};
+		class lights {};
+		class factions
+		{
+			class WEST
+			{
+				rank = 4;
+			};
+		};
+	};
+	class Land_smd_budova4_in
+	{
+		price = 500;
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 0;
+		};
+		class lights {};
+		class factions
+		{
+			class WEST
+			{
+				rank = 6;
+			};
+		};
+	};
+	class Fett_Land_Cihlovej_Dum_in_west
+	{
+		price = 500;
+		class storage
+		{
+			type = "R3F_WeaponStock";
+			building_index = 1;
+		};
+		class lights {};
+		class factions
+		{
+			class WEST
+			{
+				rank = 9;
+			};
+		};
+	};
+	
+	/* EAST HOUSES */
+	class Land_tent_east
+	{
+		price = 500;
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 6;
+		};
+		class lights {};
+		class factions
+		{
+			class EAST
+			{
+				rank = 1;
+			};
+		};
+	};
+	class Land_Barrack2_EP1
+	{
+		price = 500;
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 5;
+		};
+		class lights {};
+		class factions
+		{
+			class EAST
+			{
+				rank = 1;
+			};
+		};
+	};
+	class Land_Army_hut2_int
+	{
+		price = 500;
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 1;
+		};
+		class lights {};
+		class factions
+		{
+			class EAST
+			{
+				rank = 3;
+			};
+		};
+	};
+	class Land_Army_hut3_long_int
+	{
+		price = 500;
+		class storage
+		{
+			type = "Skyline_Coffre_Large";
+			building_index = 1;
+		};
+		class lights {};
+		class factions
+		{
+			class EAST
+			{
+				rank = 4;
+			};
+		};
+	};
+	class Fett_Land_Dum_mesto_in_east
+	{
+		price = 500;
+		class storage
+		{
+			type = "R3F_WeaponStock";
+			building_index = 5;
+		};
+		class lights {};
+		class factions
+		{
+			class EAST
+			{
+				rank = 5;
+			};
+		};
+	};
 };

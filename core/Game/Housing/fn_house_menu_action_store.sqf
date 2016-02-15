@@ -5,15 +5,16 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_vehicle", "_trunk", "_types", "_distance"];
+private["_vehicle", "_trunk", "_types", "_distance", "_target"];
+_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if (isNull g_interaction_target) exitWith {};
+if (isNull _target) exitWith {};
 
 if (g_garage_store) exitWith {
 	["Vous êtes déjà en train de ranger un véhicule<br/>Veuillez patienter"] call AlysiaClient_fnc_error;
 };
 
-_types = getArray(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >> "garage_type");
+_types = getArray(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(_target) >> "garage" >> "types");
 if ("Air" in _types) then {
 	_distance = 95;
 };
@@ -29,12 +30,12 @@ if (isNil "_distance") then {
 	{
 		if (alive _x) then
 		{
-			if ((g_interaction_target distance _x) <= _distance) exitWith {
+			if ((_target distance _x) <= _distance) exitWith {
 				_vehicle = _x;
 			};
 		};
 	};
-} forEach (g_vehicles);
+} forEach g_vehicles;
 if (isNil "_vehicle") exitWith {
 	["Aucun véhicule stationné près du garage ne vous appartient"] call AlysiaClient_fnc_error;
 };
@@ -56,7 +57,7 @@ if (isEngineOn _vehicle) exitWith {
 
 g_garage_store = true;
 
-[_vehicle, (getPos g_interaction_target), false] remoteExec ["AlysiaServer_fnc_garageVehicleStore", 2];
+[_vehicle, (getPos _target), false] remoteExec ["AlysiaServer_fnc_garageVehicleStore", 2];
 if (g_garage_store) then
 {
 	waitUntil {(isNull _vehicle)};

@@ -43,12 +43,8 @@ class ALYSIA_COMPANIES
 			building = "Land_Ind_vysypka";
 			license = "company_weapon";
 			image = "lyeed_IMG\data\companies\types\weapon.paa";
-<<<<<<< HEAD
 			process[] = {"bullet","buckshot","magazine","barillet","canon","crosse_wood","crosse_steel","garde_main","poignee","detente","percuteur","carcasse","bloc_culasse","levier","marteau","culasse","weapon_b95","magazine_b95","weapon_cz75","magazine_cz75","weapon_p226","magazine_p226","weapon_gsh18","magazine_gsh18","weapon_sdar","magazine_sdar"};
-=======
-			process[] = {"bullet","buckshot","magazine","barillet","canon","crosse","garde_main","poignee","detente","percuteur","carcasse","bloc_culasse","levier","marteau","culasse","weapon_b95","magazine_b95","weapon_cz75","magazine_cz75","weapon_p226","magazine_p226","weapon_gsh18","magazine_gsh18","weapon_sdar","magazine_sdar"};
 			members_max = 8;
->>>>>>> 5880429055ba77fd12806ea1f458b7f859d67351
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";

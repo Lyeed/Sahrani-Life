@@ -26,10 +26,20 @@ _action =
 ] call BIS_fnc_guiMessage;
 if (_action) then
 {
-	["Vous avez <t color='#01DF01'>accepté</t> l'invitation<br/>Vous pouvez d'ores et déjà vous reconnecter dans votre nouvelle faction"] call AlysiaClient_fnc_info;
-	[(getPlayerUID player), 1, (side _from)] remoteExec ["AlysiaServer_fnc_factionMemberModify", 2, false];
-	[format["%1 a <t color='#01DF01'>accepté</t> votre invitation", player getVariable ["realname", profileName]]] remoteExecCall ["AlysiaClient_fnc_info", _from];
-	(format["%1 a rejoint votre faction !", (player getVariable ["realname", profileName])]) remoteExecCall ["systemChat", (side _from)];
+	if (g_houses isEqualTo []) then
+	{
+		if (isNull g_company) then
+		{
+			["Vous avez <t color='#01DF01'>accepté</t> l'invitation<br/>Vous pouvez d'ores et déjà vous reconnecter dans votre nouvelle faction"] call AlysiaClient_fnc_info;
+			[(getPlayerUID player), 1, (side _from)] remoteExec ["AlysiaServer_fnc_factionMemberModify", 2, false];
+			[format["%1 a <t color='#01DF01'>accepté</t> votre invitation", player getVariable ["realname", profileName]]] remoteExecCall ["AlysiaClient_fnc_info", _from];
+			(format["%1 a rejoint votre faction !", (player getVariable ["realname", profileName])]) remoteExecCall ["systemChat", (side _from)];
+		} else {
+			["Vous ne pouvez pas changer de faction alors que vous êtes employé ou directeur d'une entreprise"] call AlysiaClient_fnc_error;
+		};
+	} else {
+		["Vous ne pouvez pas changer de faction alors que vous possédez toujours des bâtiments"] call AlysiaClient_fnc_error;
+	};
 } else {
 	["Vous avez <t color='#DF0101'>refusé</t> l'invitation"] call AlysiaClient_fnc_info;
 	(format["%1 a <t color='#01DF01'>refusé</t> votre invitation", player getVariable ["realname", profileName]]) remoteExecCall ["AlysiaClient_fnc_info", _from];
