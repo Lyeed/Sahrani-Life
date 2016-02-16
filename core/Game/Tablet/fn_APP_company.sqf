@@ -26,7 +26,7 @@ _names = _members select 1;
 (_display displayCtrl 9603) ctrlSetStructuredText parseText format
 [
 	"<t align='center' size='1.1'>%1 : %1</t>",
-	getText(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2) >> "name")
+	getText(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2) >> "name"),
 	(_info select 0)
 ];
 

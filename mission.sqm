@@ -32049,7 +32049,7 @@ class Mission
 			side="EMPTY";
 			vehicle="xcam_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 310.139;this setposATL [19126.160156,14008.632813,0.513469];this setVectorUp [0,0,1];this addAction[""Magasin de parachute et parapente"",AlysiaClient_fnc_shop_arma_open,""parachute"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation true;this setdir 310.139;this setposATL [19126.160156,14008.632813,0.513469];this setVectorUp [0,0,1];this addAction[""Magasin de parachute"",AlysiaClient_fnc_shop_arma_open,""parachute"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item2795
 		{
@@ -36380,8 +36380,8 @@ class Mission
 		class Item110
 		{
 			position[]={19125.854,11.953203,14008.925};
-			name="Vendeur de parachute et parapente";
-			text="Vendeur de parachute et parapente";
+			name="Vendeur de parachute";
+			text="Vendeur de parachute";
 			type="Fett_hardpoint";
 			colorName="ColorGreen";
 			a=0.5;

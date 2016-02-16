@@ -9,19 +9,6 @@
 titleText ["", "BLACK OUT", 5];
 
 sleep 5;
-<<<<<<< HEAD
-titleText["Sortie de cellule..", "BLACK FADED"];
-{z
-    missionNamespace setVariable [(format["inv_%1", _x]), 0];
-} forEach (g_inv_items);
-removeHeadgear player;
-removeGoggles player;
-removeVest player;
-removeBackpack player;
-removeUniform player;
-removeAllWeapons player;
-removeAllAssignedItems player;
-=======
 
 titleText ["Sortie de cellule..", "BLACK FADED"];
 
@@ -32,12 +19,10 @@ titleText ["Sortie de cellule..", "BLACK FADED"];
 _handle = [] spawn AlysiaClient_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
->>>>>>> a16a8ac160852237c5bb5b0c7fdf4d3f77fa975b
 sleep 5;
 titleText ["Remise de vos effets personnels..", "BLACK FADED"];
 
 [true, (g_arrest_Gear select 0)] call AlysiaClient_fnc_handleCash;
-
 [(g_arrest_Gear select 1)] spawn AlysiaClient_fnc_loadGear;
 
 {

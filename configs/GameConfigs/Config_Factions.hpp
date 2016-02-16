@@ -285,7 +285,8 @@ class ALYSIA_FACTIONS
 						"SmokeShellWhite",
 						"Rangefinder",
 						"optic_ACO_grn_smg",
-						"Skyline_NVGoogle"
+						"Skyline_NVGoogle",
+						"optic_MRCO"
 					}
 				},
 				{"Backpacks",

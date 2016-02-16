@@ -168,7 +168,6 @@ class ALYSIA_SHOPS_CLOTHING
 			"rds_worker_cap1",
 			"Casque_Moto",
 			"vietsh_Head",
-			"H_LIB_GER_LW_PilotHelmet",
 			"H_LIB_WP_Cap"
 		};
 		goggles[] =
@@ -575,19 +574,19 @@ class ALYSIA_SHOPS_CLOTHING
 		};
 		headgear[] =
 		{
+			"rds_Woodlander_cap3",
 			"casquette_Commandant",
 			"casquette_Lieutenant",
 			"casquette_Sergent",
 			"casquette_Caporal",
 			"casquette_Basique",
-			"rds_Woodlander_cap3",
-			"TRYK_H_Helmet_ACU",
-			"H_LIB_GER_TankOfficerCap",
-			"H_LIB_GER_Helmet",
-			"H_LIB_GER_HelmetCamo",
-			"H_LIB_GER_OfficerCap",
-			"H_LIB_GER_SPGPrivateCap",
-			"H_LIB_GER_TankPrivateCap"
+			"casque_garde_basic",
+			"casque_garde_camo",
+			"casquette_garde_officier",
+			"bonnet_garde_tank",
+			"casquette_garde_officier_tank",
+			"casquette_garde_tank",
+			"casque_garde_special"
 		};
 		goggles[] =
 		{
@@ -623,19 +622,19 @@ class ALYSIA_SHOPS_CLOTHING
 		};
 		vests[] =
 		{
-			"rhs_6b23_digi_rifleman",
 			"TRYK_V_Sheriff_BA_TB",
 			"police_belt_pistol",
 			"Garde_Veste",
 			"Garde_VesteCargo",
-			"rhs_6b23_digi_6sh92_radio"
+			"gilet_garde_1",
+			"gilet_garde_2"
 		};
 		backpacks[] =
 		{
 			"TRYK_B_tube_blk",
 			"TRYK_B_Kitbag_blk",
 			"TRYK_B_Carryall_blk",
-			"tf_mr3000_bwmod"
+			"radio_longue_garde"
 		};
 	};
 
@@ -794,7 +793,7 @@ class ALYSIA_SHOPS_CLOTHING
 
 	class civ_para
 	{
-		name = "Vendeur de parachute et parapente";
+		name = "Vendeur de parachute";
 		side = "CIV";
 		uniforms[] = {};
 		headgear[] = {};

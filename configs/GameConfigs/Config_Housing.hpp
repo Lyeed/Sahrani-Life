@@ -320,7 +320,7 @@ class ALYSIA_HOUSES
 			building_index = 5;
 		};
 	};
-	class Land_smd_budova3_open: : Land_smd_army_hut_storrage
+	class Land_smd_budova3_open: Land_smd_army_hut_storrage
 	{
 		price = 190000;
 		class storage

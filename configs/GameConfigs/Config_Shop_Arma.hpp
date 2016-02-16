@@ -31,7 +31,7 @@ class ALYSIA_SHOPS_ARMA
 			"RH_20Rnd_57x28_FN",
 			"RH_m1911",
 			"RH_7Rnd_45cal_m1911",
-			"hlc_rifle_auga2_b",
+			"hlc_rifle_auga3_b",
 			"hlc_30Rnd_556x45_B_AUG"
 		};
 	};
@@ -169,7 +169,7 @@ class ALYSIA_SHOPS_ARMA
 
 	class parachute
 	{
-		name = "Magasin de parachute et parapente";
+		name = "Magasin de parachute";
 		side = "";
 		stocks[] = 
 		{
