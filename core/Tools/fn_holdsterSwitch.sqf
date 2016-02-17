@@ -19,12 +19,8 @@ if ((vehicle player) isEqualTo player) then
 				g_curWep_h = "";
 			};	
 		} else {
-			if (((handgunWeapon player) isEqualTo (currentWeapon player)) && !(player canAdd (currentWeapon player))) then {
-				["Vous n'avez pas assez de place pour ranger votre arme"] spawn AlysiaClient_fnc_error;
-			} else {
-				g_curWep_h = currentWeapon player;
-				player action ["SwitchWeapon", player, player, 100];
-			};
+			g_curWep_h = currentWeapon player;
+			player action ["SwitchWeapon", player, player, 100];
 		};
 	};
 } else {

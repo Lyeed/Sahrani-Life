@@ -10,6 +10,12 @@ private["_handle", "_display", "_targetPos", "_cameraPos", "_camera", "_action"]
 if (playerSide != civilian) exitWith {
 	["Vous devez être connecté en civil pour votre première connexion"] spawn AlysiaClient_fnc_errorExit;
 };
+
+_bad = [_firstname, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz- "] call AlysiaClient_fnc_TextAllowed;
+if (_bad != "") exitWith {
+	["Vous utilisez un caractère interdit dans votre pseudo (%1)", _bad] call AlysiaClient_fnc_errorExit;
+};
+
 if (([profileName] call CBA_fnc_leftTrim) != profileName) exitWith {
 	["Vous avez un ou plusieurs espaces au début de votre pseudo. Veuillez les retirer pour vous connecter."] spawn AlysiaClient_fnc_errorExit;
 };
@@ -60,10 +66,6 @@ if (_action) then
 	[player, profileName, g_firstName, g_lastName, g_birth, g_nationality, g_sexe, g_choice] remoteExec ["AlysiaServer_fnc_query_insert_inscription", 2];
 	_camera cameraEffect ["terminate", "back"];
 	camDestroy _camera;
-	player addItem "ItemGPS";
-	player assignItem "ItemGPS";
-	player forceAddUniform "U_C_Alysia_01";
-	player addMagazine getText(missionConfigFile >> "ALYSIA_FACTIONS" >> "CIV" >> "identity_item");
 	cutText ["", "BLACK FADED"];
 } else {
 	["Annulation de la création de profil."] spawn AlysiaClient_fnc_errorExit;

@@ -705,9 +705,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 1500;
 	};
-	class hlc_10rnd_12g_buck_S12 {};
-	class hlc_20Rnd_762x51_B_M14 {};
-	class hlc_25Rnd_9x19mm_M882_AUG {};
 	class hlc_30Rnd_545x39_B_AK
 	{
 		buy_price = 300;
@@ -722,10 +719,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class hlc_75Rnd_762x39_m_rpk {};
-	class hlc_rifle_aek971 {};
-	class hlc_rifle_aek971worn {};
-	class hlc_rifle_ak12 {};
 	class hlc_rifle_ak74
 	{
 		buy_price = 5000;
@@ -1283,30 +1276,16 @@ class ALYSIA_ITEMS_ARMA
 		price = 150;
 		buy_license_CIV = "gun";
 	};
-	class RH_18Rnd_9x19_VP {};
-	class RH_19Rnd_9x19_g18 {};
-	class RH_20Rnd_32cal_vz61 {};
 	class RH_20Rnd_57x28_FN
 	{
 		buy_price = 120;
 		buy_condition_EAST = 1;
 	};
-	class RH_30Rnd_9x19_UZI {};
-	class RH_32Rnd_9x19_tec {};
-	class RH_6Rnd_357_Mag {};
-	class RH_6Rnd_44_Mag {};
-	class RH_6Rnd_454_Mag {};
-	class RH_6Rnd_45ACP_Mag {};
 	class RH_7Rnd_45cal_m1911
 	{
 		buy_price = 100;
 		buy_condition_EAST = 1;
 	};
-	class RH_7Rnd_50_AE {};
-	class RH_8Rnd_762_tt33 {};
-	class RH_8Rnd_9x18_Mak {};
-	class RH_bull {};
-	class RH_bullb {};
 	class RH_cz75
 	{
 		buy_price = 3000;
@@ -1317,53 +1296,26 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 20;
 		buy_condition_WEST = 9;
 	};
-	class RH_deagle {};
-	class RH_Deagleg {};
-	class RH_Deagles {};
 	class RH_fn57
 	{
 		buy_price = 1500;
 		buy_condition_EAST = 1;
 	};
-	class RH_fn57_g {};
-	class RH_fn57_t {};
-	class RH_fnp45t {};
-	class RH_g18 {};
-	class RH_g19t {};
 	class RH_gsh18
 	{
 		buy_price = 1600;
 		buy_license_CIV = "gun";
 	};
-	class RH_kimber {};
-	class RH_kimber_nw {};
 	class RH_m1911
 	{
 		buy_price = 100;
 		buy_condition_EAST = 1;
 	};
-	class RH_m9c {};
-	class RH_mak {};
-	class RH_mateba {};
-	class RH_mk2 {};
-	class RH_mp412 {};
-	class RH_muzi {};
 	class RH_p226
 	{
 		buy_price = 1900;
 		buy_license_CIV = "gun";
 	};
-	class RH_p226s {};
-	class RH_python {};
-	class RH_sw659 {};
-	class RH_tec9 {};
-	class RH_tt33 {};
-	class RH_ttracker {};
-	class RH_ttracker_g {};
-	class RH_usp {};
-	class RH_uspm {};
-	class RH_vp70 {};
-	class RH_vz61 {};
 	class Robber_uniform_new
 	{
 		buy_price = 3000;
@@ -1471,22 +1423,22 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 500;
 	};
-	class SkylineItems_Adrenaline {};
 	class SkylineItems_Bandage
 	{
 		buy_price = 5;
 	};
 	class SkylineItems_Crochetage {};
 	class SkylineItems_Defibrilateur {};
-	class SkylineItems_Morphine {};
-	class SkylineItems_Passeport {};
+	class SkylineItems_Passeport
+	{
+		buy_price = 55;
+	};
 	class SkylineItems_PlaqueMilitaire
 	{
 		buy_price = 20;
 		buy_condition_WEST = 1;
 		buy_condition_EAST = 1;
 	};
-	class SkylineItems_PocheSang {};
 	class SkylineItems_RadarGun
 	{
 		buy_price = 400;
@@ -2773,48 +2725,20 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 95;
 		buy_license_CIV = "gun";
 	};
-	class SMG_01_F {};
-	class optic_Aco {};
 	class RH_m9
 	{
 		buy_price = 700;
 		buy_condition_WEST = 1;
 	};
-	class hlc_rifle_aks74u {};
-	class optic_MRCO {};
-	class optic_Holosight
-	{
-	};	
-	class RH_fnp45 {};
-	class Skyline_HK_SL8 {};
-	class TRYK_HRPIGEAR_NV {};
-	class RH_g19 {};
-	class hlc_rifle_ak47 {};
-	class hlc_optic_kobra {};
-	class hlc_45Rnd_545x39_t_rpk {};
 	class RH_g17
 	{
 		buy_price = 2100;
 		buy_condition_WEST = 5;
 	};
-	class hlc_rifle_RPK12 {};
-	class gac_JSDF_W_MG_MINIMI {};
-	class Rangefinder {};
-	class hlc_rifle_m14sopmod {};
-	class hlc_rifle_rpk {};
-	class optic_LRPS {};
-	class srifle_DMR_03_F {};
-	class srifle_GM6_F {};
-	class optic_DMS {};
-	class hlc_rifle_akmgl {};
 	class Fett_tf_mr3000_milice
 	{
 		buy_price = 800;
 		buy_condition_WEST = 4;
-	};
-	class tf_anprc148jem_2
-	{
-		buy_price = 20;
 	};
 	class casquette_garde_officier_tank
 	{
@@ -2860,10 +2784,6 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 20;
 		buy_license_CIV = "company_construction";
 	};
-	class wc_gr_smg_mp40 {};
-	class wc_32Rnd_9x19_mag {};
-	class wc_us_smg_m1a1 {};
-	class wc_30Rnd_45acp {};
 	class gilet_garde_1
 	{
 		buy_price = 2000;
@@ -2877,5 +2797,9 @@ class ALYSIA_ITEMS_ARMA
 	class Bank_Bomb
 	{
 		buy_price = 20;
+	};
+	class tf_anprc148jem_2
+	{
+		buy_price = 125;
 	};
 };

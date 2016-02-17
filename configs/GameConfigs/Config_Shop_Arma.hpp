@@ -11,8 +11,10 @@ class ALYSIA_SHOPS_ARMA
 			"1Rnd_FlashBall_Mag",
 			"ItemGPS",
 			"ItemMap",
-			"tf_anprc148jem_2",
+			"ItemWatch",
+			"ItemCompass",
 			"Binocular",
+			"tf_anprc148jem_2",
 			"Skyline_tl122_blanche",
 			"Skyline_tl122_rouge",
 			"Skyline_tl122_orange",
@@ -47,8 +49,10 @@ class ALYSIA_SHOPS_ARMA
 			"1Rnd_FlashBall_Mag",
 			"ItemGPS",
 			"ItemMap",
-			"tf_anprc148jem_2",
+			"ItemWatch",
+			"ItemCompass",
 			"Binocular",
+			"tf_anprc148jem_2",
 			"Skyline_tl122_blanche",
 			"Skyline_tl122_rouge",
 			"Skyline_tl122_orange",
@@ -117,15 +121,18 @@ class ALYSIA_SHOPS_ARMA
 	{
 		name = "Magasin général";
 		side = "CIV";
-		stocks[] = 
+		stocks[] =
 		{
 			"Skyline_Hache_01",
 			"Skyline_Pioche_01",
 			"Skyline_Pelle_01",
 			"Skyline_Merlin_01",
 			"SkylineItems_Bandage",
+			"tf_anprc148jem_2",
 			"ItemGPS",
+			"ItemWatch",
 			"ItemMap",
+			"ItemCompass",
 			"Binocular",
 			"Skyline_tl122_blanche",
 			"Skyline_tl122_rouge",
@@ -141,7 +148,7 @@ class ALYSIA_SHOPS_ARMA
 	{
 		name = "Magasin général Samu";
 		side = "GUER";
-		stocks[] = 
+		stocks[] =
 		{
 			"SkylineItems_Bandage",
 			"ItemMap",
@@ -171,7 +178,7 @@ class ALYSIA_SHOPS_ARMA
 	{
 		name = "Magasin de parachute";
 		side = "";
-		stocks[] = 
+		stocks[] =
 		{
 			"B_Parachute"
 		};
@@ -181,7 +188,7 @@ class ALYSIA_SHOPS_ARMA
 	{
 		name = "Marché illégal";
 		side = "CIV";
-		stocks[] = 
+		stocks[] =
 		{
 			"SkylineItems_Couteau",
 			"Bank_Bomb"
@@ -192,9 +199,28 @@ class ALYSIA_SHOPS_ARMA
 	{
 		name = "Atelier";
 		side = "CIV";
-		stocks[] = 
+		stocks[] =
 		{
 			"Skyline_Merlin_01"
+		};
+	};
+
+	class gov_north
+	{
+		name = "Parlement";
+		side = "CIV";
+		stocks[] =
+		{
+			"SkylineItems_Passeport"
+		};
+	};
+	class gov_south
+	{
+		name = "Assemblée";
+		side = "CIV";
+		stocks[] =
+		{
+			"SkylineItems_Passeport"
 		};
 	};
 };
