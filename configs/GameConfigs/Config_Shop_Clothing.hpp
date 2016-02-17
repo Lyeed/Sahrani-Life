@@ -814,6 +814,7 @@ class ALYSIA_SHOPS_CLOTHING
 		{
 			"U_C_Secouriste_01",
 			"U_C_Secouriste_02",
+			"max_paramedic_uniform",
 			"combi_plonge_samu",
 			"TRYK_U_B_PCUHsW5",
 			"TRYK_U_B_PCUHsW6",
