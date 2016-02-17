@@ -133,7 +133,8 @@ class ALYSIA_GARAGES
 		{
 			"Car",
 			"Truck",
-			"Air"
+			"Air",
+			"Tank"
 		};
 	};
 	class garage_west_3
@@ -146,7 +147,8 @@ class ALYSIA_GARAGES
 		types[] =
 		{
 			"Car",
-			"Truck"
+			"Truck",
+			"Tank"
 		};
 	};
 	class garage_west_4

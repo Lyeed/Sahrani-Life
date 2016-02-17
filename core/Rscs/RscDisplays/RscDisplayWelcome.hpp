@@ -1,3 +1,11 @@
+#define HEADER_COLOR \
+{ \
+	"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", \
+	"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", \
+	"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", \
+	"(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])" \
+}
+
 class RscDisplayWelcomeCharacter: RscDisplayDefault
 {
 	idd = 1500;
@@ -25,13 +33,7 @@ class RscDisplayWelcomeCharacter: RscDisplayDefault
 		class CHAR_HEADER: RscStructuredText
 		{
 			text = "<t align='center' size='2px'>Informations de votre personnage</t>";
-			colorBackground[] =
-			{
-				"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"
-			};
+			colorBackground[] = HEADER_COLOR;
 
 			x = 0.324687 * safezoneW + safezoneX;
 			y = 0.368 * safezoneH + safezoneY;
@@ -42,13 +44,7 @@ class RscDisplayWelcomeCharacter: RscDisplayDefault
 		class CHAR_FIRSTNAME_HEADER: RscStructuredText
 		{
 			text = "<t align='center'>Prénom</t>";
-			colorBackground[] =
-			{
-				"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"
-			};
+			colorBackground[] = HEADER_COLOR;
 
 			x = 0.360781 * safezoneW + safezoneX;
 			y = 0.434 * safezoneH + safezoneY;
@@ -69,13 +65,7 @@ class RscDisplayWelcomeCharacter: RscDisplayDefault
 		class CHAR_LASTNAME_HEADER: RscStructuredText
 		{
 			text = "<t align='center'>Nom</t>";
-			colorBackground[] =
-			{
-				"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"
-			};
+			colorBackground[] = HEADER_COLOR;
 
 			x = 0.505156 * safezoneW + safezoneX;
 			y = 0.434 * safezoneH + safezoneY;
@@ -96,13 +86,7 @@ class RscDisplayWelcomeCharacter: RscDisplayDefault
 		class CHAR_BIRTH_HEADER: RscStructuredText
 		{
 			text = "<t align='center'>Date de naissance</t>";
-			colorBackground[] =
-			{
-				"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"
-			};
+			colorBackground[] = HEADER_COLOR;
 
 			x = 0.360781 * safezoneW + safezoneX;
 			y = 0.5 * safezoneH + safezoneY;
@@ -143,13 +127,7 @@ class RscDisplayWelcomeCharacter: RscDisplayDefault
 		class CHAR_ORIGIN_HEADER: RscStructuredText
 		{
 			text = "<t align='center'>Origine</t>";
-			colorBackground[] =
-			{
-				"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"
-			};
+			colorBackground[] = HEADER_COLOR;
 
 			x = 0.505156 * safezoneW + safezoneX;
 			y = 0.5 * safezoneH + safezoneY;
@@ -170,13 +148,7 @@ class RscDisplayWelcomeCharacter: RscDisplayDefault
 		class CHAR_SEXE_HEADER: RscStructuredText
 		{
 			text = "<t align='center'>Sexe</t>";
-			colorBackground[] =
-			{
-				"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"
-			};
+			colorBackground[] = HEADER_COLOR;
 
 			x = 0.360781 * safezoneW + safezoneX;
 			y = 0.566 * safezoneH + safezoneY;
@@ -194,24 +166,30 @@ class RscDisplayWelcomeCharacter: RscDisplayDefault
 			w = 0.134062 * safezoneW;
 		};
 
-		class CHAR_BUTTON: RscButtonMenu
+		class VALIDATE_BUTTON: RscButtonMenu
 		{
 			text = "VALIDER";
-			onButtonClick = "[] spawn AlysiaClient_fnc_welcomeMenu_Proceed";
-			colorBackground[] =
-			{
-				"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"
-			};
+			onButtonClick = "[] spawn AlysiaClient_fnc_welcomeMenu_Proceed;";
+			colorBackground[] = HEADER_COLOR;
 
 			x = 0.536094 * safezoneW + safezoneX;
-			y = 0.577 * safezoneH + safezoneY;
+			y = 0.555 * safezoneH + safezoneY;
 			w = 0.0773437 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-		class CHAR_ERROR: RscStructuredText
+		class EXIT_BUTTON: RscButtonMenu
+		{
+			text = "QUITTER";
+			onButtonClick = "['Annulation de la création de profil.'] spawn AlysiaClient_fnc_errorExit;";
+			colorBackground[] = HEADER_COLOR;
+
+			x = 0.536094 * safezoneW + safezoneX;
+			y = 0.588 * safezoneH + safezoneY;
+			w = 0.0773437 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+
+		class ERROR_DISPLAY: RscStructuredText
 		{
 			idc = 1508;
 			colorBackground[] = {0,0,0,0};
@@ -241,13 +219,7 @@ class RscDisplayWelcomeCharacter: RscDisplayDefault
 		class INFO_HEADER: RscStructuredText
 		{
 			text = "<t align='center'>Informations de l'île</t>";
-			colorBackground[] =
-			{
-				"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"
-			};
+			colorBackground[] = HEADER_COLOR;
 
 			x = 0.123594 * safezoneW + safezoneX;
 			y = 0.335 * safezoneH + safezoneY;
@@ -258,13 +230,7 @@ class RscDisplayWelcomeCharacter: RscDisplayDefault
 		class INFO_DATE_HEADER: RscStructuredText
 		{
 			text = "<t align='center'>Date</t>";
-			colorBackground[] =
-			{
-				"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"
-			};
+			colorBackground[] = HEADER_COLOR;
 
 			x = 0.154531 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
@@ -284,13 +250,7 @@ class RscDisplayWelcomeCharacter: RscDisplayDefault
 		class INFO_TIME_HEADER: RscStructuredText
 		{
 			text = "<t align='center'>Heure</t>";
-			colorBackground[] =
-			{
-				"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])",
-				"(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"
-			};
+			colorBackground[] = HEADER_COLOR;
 
 			x = 0.154531 * safezoneW + safezoneX;
 			y = 0.445 * safezoneH + safezoneY;
@@ -317,34 +277,6 @@ class RscDisplayWelcomeFaction: RscDisplayDefault
 	class controlsBackground {};
 	class controls
 	{
-		class HISTORY_HEADER: RscStructuredText
-		{
-			text = "<t align='center' size='2px'>Histoire</t>";
-			colorBackground[] = {0,0,0,1};
-			
-			x = 0.242187 * safezoneW + safezoneX;
-			y = 0.027 * safezoneH + safezoneY;
-			w = 0.53625 * safezoneW;
-			h = 0.044 * safezoneH;
-		};
-		class HISTORY_INFO: RscStructuredText
-		{
-			colorBackground[] = {0,0,0,0.6};
-			text = "<t size='0.8'>L'archipel de Sibranak est un ensemble d'île situé au large de la Bosnie-Herzégovine, dans la mer adriatique.<br/>Peuplé par les grecs durant l'antiquité, cet archipel a toujours gardé son autonomie vis-à-vis de l'Europe. Au XVIeme siècle, au moment de l'expansion de l'Empire Ottoman, les peuples de Sibranak se forgèrent une réputation de peuple indomptable. Durant la bataille de Brujik en 1546, la petite armée locale réussit à repousser un débarquement ottoman dans l'archipel. Au XIXeme siècle, les armées Napoléoniennes en firent un état fantoche au sein de l'Empire. La langue française y est encore parlé. L'archipel resta en dehors des conflits jusqu’à la fin de la seconde guerre mondiale, où un régime démocratique fut installé. Mais l'archipel de Sibranak ne fut en revanche pas épargné par les guerres balkaniques. La convoitise des Bosniak en fit un territoire incertain. Des attentats organisé par la minorité Bosniak secouèrent la population.<br/>Le 2 décembre 1982, le colonel Brajva, protégé par la Garde, organisa un coup d’État. C'est dans un bain de sang que le colonel mit fin à l'instabilité.<br/>Le 16 février 2011, suite à une des bavures policières, une émeute tourne au drame, et des citoyens en colère prennent d'assaut le palais du dictateur. La Garde dirigée par le commandant de Rastignac repoussa l'attaque en tirant à l'obus. Les émeutes devinrent une véritable guerre civile. Le groupe de rebelles fondèrent la Milice, dirigée par le commandant Dexter. Les pays européens essayèrent de soutenir la rébellion, qui s’étendait avec le temps. Mais le soutien de la Russie au colonel freina la progression de la rébellion. Les combats devinrent des escarmouches, autour de la capitale, coupée en deux.<br/>Après sept années de guerre civile, un cessez-le-feu est signé entre les deux parties sous la pression internationale le 8 mars 2018. Mais la guerre a généré d'autres instabilités qui furent à l'origine d'une forte hausse de la criminalité.<br/><br/>Le traité stipule que les deux parties gardent les positions que le combat avait forgé. Aujourd'hui, la situation est la suivante :<br/>- Dans le Nord, une démocratie doit s'installer. La milice va tout faire pour assurer son maintien.<br/>- Dans le Sud, la garde stabilise le régime autoritaire du colonel Brajva, réfugié dans son bunker.<br/>Les deux camps opposés, sont maintenant face à un ennemi commun : Les bandes organisées qui profitèrent de la guerre pour se développer.</t>";
-
-			x = 0.242187 * safezoneW + safezoneX;
-			y = 0.071 * safezoneH + safezoneY;
-			w = 0.53625 * safezoneW;
-			h = 0.44 * safezoneH;
-		};
-		class HISTORY_FRAME: RscFrame
-		{
-			x = 0.242187 * safezoneW + safezoneX;
-			y = 0.027 * safezoneH + safezoneY;
-			w = 0.53625 * safezoneW;
-			h = 0.484 * safezoneH;
-		};
-
 		class LEFT_BACKGROUND: RscText
 		{
 			idc = 850;
@@ -613,3 +545,5 @@ class RscDisplayWelcomeFaction: RscDisplayDefault
 		};
 	};
 };
+
+#undef HEADER_COLOR

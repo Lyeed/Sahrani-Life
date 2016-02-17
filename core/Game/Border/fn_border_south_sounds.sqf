@@ -28,7 +28,9 @@ _objects =
 	speaker_south_16,
 	speaker_south_17,
 	speaker_south_18,
-	speaker_south_19
+	speaker_south_19,
+	speaker_south_20,
+	speaker_south_21
 ];
 
 if (!gServer_border_south_alarm) then {

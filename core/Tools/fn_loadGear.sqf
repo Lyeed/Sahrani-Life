@@ -12,12 +12,17 @@ _gear = [_this, 0, [], [[]]] call BIS_fnc_param;
 _handle = [] spawn AlysiaClient_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
-if ((count _gear) == 0) then
+if (_gear isEqualTo []) then
 {
     [] call AlysiaClient_fnc_init_loadout;
+    player addItem "ItemGPS";
+    player assignItem "ItemGPS";
+    player addMagazine getText(missionConfigFile >> "ALYSIA_FACTIONS" >> "CIV" >> "identity_item");
+    [true, 2000] call AlysiaClient_fnc_handleCash;
 } else {
     _uniformGear = [_gear, 0, [], [["", []]]] call BIS_fnc_param;
-    if ((_uniformGear select 0) != "") then {
+    if ((_uniformGear select 0) != "") then
+    {
         player addUniform (_uniformGear select 0);
         {
             player addItemToUniform _x;
@@ -25,7 +30,8 @@ if ((count _gear) == 0) then
     };
 
     _vestGear = [_gear, 1, [], [["", []]]] call BIS_fnc_param;
-    if ((_vestGear select 0) != "") then {
+    if ((_vestGear select 0) != "") then
+    {
         player addVest (_vestGear select 0);
         {
             player addItemToVest _x;
@@ -33,7 +39,8 @@ if ((count _gear) == 0) then
     };
 
     _backpackGear = [_gear, 2, [], [["", []]]] call BIS_fnc_param;
-    if ((_backpackGear select 0) != "") then {
+    if ((_backpackGear select 0) != "") then
+    {
         player addBackpack (_backpackGear select 0);
         clearAllItemsFromBackpack player;
         {
@@ -42,7 +49,7 @@ if ((count _gear) == 0) then
     };
 
     _goggles = [_gear, 3, "", [""]] call BIS_fnc_param;
-    if (_goggles != "") then {
+    if (_goggles != "") then{
         player addGoggles _goggles;
     };
 

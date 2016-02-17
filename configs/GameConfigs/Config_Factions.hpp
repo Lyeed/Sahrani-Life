@@ -124,7 +124,7 @@ class ALYSIA_FACTIONS
 
 		/*** HOUSING ***/
 		house_search = 1;
-		house_max = 1;
+		house_max = 2;
 		house_tax_per_house_per_salary = 0;
 		house_tax_percentage_buyPrice_per_house = 0;
 
@@ -285,7 +285,8 @@ class ALYSIA_FACTIONS
 						"SmokeShellWhite",
 						"Rangefinder",
 						"optic_ACO_grn_smg",
-						"Skyline_NVGoogle"
+						"Skyline_NVGoogle",
+						"optic_MRCO"
 					}
 				},
 				{"Backpacks",
@@ -322,7 +323,7 @@ class ALYSIA_FACTIONS
 
 		/*** HOUSING ***/
 		house_search = 1;
-		house_max = 1;
+		house_max = 2;
 		house_tax_per_house_per_salary = 0;
 		house_tax_percentage_buyPrice_per_house = 0;
 
@@ -442,7 +443,7 @@ class ALYSIA_FACTIONS
 
 		/*** HOUSING ***/
 		house_search = 0;
-		house_max = 1;
+		house_max = 2;
 		house_tax_per_house_per_salary = 180;
 		house_tax_percentage_buyPrice_per_house = 0.003;
 
@@ -511,7 +512,6 @@ class ALYSIA_FACTIONS
 				"ItemMap",
 				"ItemCompass",
 				"ItemWatch",
-				"tf_anprc152",
 				"Skyline_tl122_blanche"
 			};
 		};
@@ -619,7 +619,7 @@ class ALYSIA_FACTIONS
 
 		/*** HOUSING ***/
 		house_search = 0;
-		house_max = 1;
+		house_max = 2;
 		house_tax_per_house_per_salary = 0;
 		house_tax_percentage_buyPrice_per_house = 0.003;
 

@@ -3,15 +3,15 @@ class ALYSIA_SHOPS_VEHICLES
 	/*** WEST SHOPS ***/
 	class WEST_vehicles_land
 	{
-		name = "Concessionnaire terrestre militaire";
+		name = "Concessionnaire de la Milice";
 		side = "WEST";
-		stock[] = 
+		stock[] =
 		{
 			"DAR_TahoePolice",
-			"DAR_ChargerPoliceState", 
+			"DAR_ChargerPoliceState",
 			"DAR_ExplorerPolice",
-			"DAR_TaurusPolice", 
-			"DAR_CVPIAux", 
+			"DAR_TaurusPolice",
+			"DAR_CVPIAux",
 			"DAR_ImpalaPolice",
 			"Fett_truck_milice",
 			"Fett_Audi_RS4_12_milice_F"
@@ -19,28 +19,21 @@ class ALYSIA_SHOPS_VEHICLES
 	};
 	class WEST_vehicles_air
 	{
-		name = "Concessionnaire aérien militaire";
+		name = "Concessionnaire de la Milice";
 		side = "WEST";
-		stock[] =
-		{
-			"EC635_Unarmed",
-			"dezkit_b206mi"
-		};
+		stock[] = {"EC635_Unarmed", "dezkit_b206mi"};
 	};
 	class WEST_vehicles_sea
 	{
-		name = "Concessionnaire maritime militaire";
+		name = "Concessionnaire de la Milice";
 		side = "WEST";
-		stock[] =
-		{
-			"Fett_boat_milice"
-		};
+		stock[] = {"Fett_boat_milice"};
 	};
 
 	/*** EAST SHOPS ***/
 	class EAST_vehicles_land
 	{
-		name = "";
+		name = "Concessionnaire de la Garde";
 		side = "EAST";
 		stock[] =
 		{
@@ -58,27 +51,21 @@ class ALYSIA_SHOPS_VEHICLES
 	};
 	class EAST_vehicles_air
 	{
-		name = "";
+		name = "Concessionnaire de la Garde";
 		side = "EAST";
-		stock[] =
-		{
-			"sfp_bo105_unarmed"
-		};
+		stock[] = {"sfp_bo105_unarmed"};
 	};
 	class EAST_vehicles_sea
 	{
-		name = "";
+		name = "Concessionnaire de la Garde";
 		side = "EAST";
-		stock[] = 
-		{
-			"Fett_boat_Garde"
-		};
+		stock[] = {"Fett_boat_Garde"};
 	};
 
 	/*** GUER SHOPS ***/
 	class GUER_vehicles_land
 	{
-		name = "Concessionnaire auto SAMU";
+		name = "Concessionnaire SAMU";
 		side = "GUER";
 		stock[] =
 		{
@@ -93,22 +80,15 @@ class ALYSIA_SHOPS_VEHICLES
 	};
 	class GUER_vehicles_air
 	{
-		name = "Concessionaire aérien SAMU";
+		name = "Concessionaire SAMU";
 		side = "GUER";
-		stock[] =
-		{
-			"EC635_SAR",
-			"dezkit_b206ems"
-		};
+		stock[] = {"EC635_SAR", "dezkit_b206ems"};
 	};
 	class GUER_vehicles_sea
 	{
-		name = "Concessionnaire maritime SAMU";
+		name = "Concessionnaire SAMU";
 		side = "GUER";
-		stock[] =
-		{
-			"Fett_boat_samu"
-		};
+		stock[] = {"Fett_boat_samu"};
 	};
 
 	/*** CIV SHOPS ***/

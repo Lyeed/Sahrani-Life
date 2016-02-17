@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_maxHouse", "_price", "_action"];
+private["_maxHouse", "_price", "_action", "_item"];
 
 if (isNull g_interaction_target) exitWith {};
 
@@ -15,6 +15,14 @@ if (!((g_interaction_target getVariable["house_owner", []]) isEqualTo [])) exitW
 
 if (!isNil {(g_interaction_target getVariable "house_sold")}) exitWith { 
 	["Ce bâtiment a récemment été mis en vente et ne peut pas être achetée de suite"] call AlysiaClient_fnc_error;
+};
+
+_item = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "identity_item");
+if ((_item != "") && !(_item in (magazines _who))) exitWith {
+	[format[
+		"Vous n'avez pas l'objet nécessaire pour prouver votre identité (%1).",
+		(([_item] call AlysiaClient_fnc_fetchCfgDetails) select 1)
+	]] call AlysiaClient_fnc_error;
 };
 
 _maxHouse = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "house_max");
@@ -32,16 +40,15 @@ _action =
 	"Acheter",
 	"Annuler"
 ] call BIS_fnc_guiMessage;
-
 if (_action) then 
 {
 	closeDialog 0;
 
 	[(getPlayerUID player), g_interaction_target, playerSide] remoteExec ["AlysiaServer_fnc_house_add", 2];
 	g_interaction_target setVariable["house_owner", [(getPlayerUID player), profileName], true];
-	[false, _price, "Achat maison"] call AlysiaClient_fnc_handleATM;
-	["<t align='center'>Achat<br/><t color='#3ADF00'>effectué</t></t>", "buy"] call AlysiaClient_fnc_info;
 	g_houses pushBack g_interaction_target;
+	[false, _price, "Achat maison"] call AlysiaClient_fnc_handleATM;
+	playSound "buy";
 
 	_marker = createMarkerLocal [format["house_%1", (count g_houses)], (getPosATL g_interaction_target)];
 	_marker setMarkerTextLocal "Chez vous";
