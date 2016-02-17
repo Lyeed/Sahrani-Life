@@ -376,7 +376,7 @@ class ALYSIA_ITEMS
 		license     = "wood";
 		class market
 		{
-			max = 23;
+			max = 36;
 			min = 15;
 			mult = 1;
 			affect[] = {"furniture", "glass", "brique", "saltp", "cottonp", "ciment", "coal"};
