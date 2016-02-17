@@ -1699,4 +1699,112 @@ class ALYSIA_PROCESS
 		time_per_item = 5;
 		time_default = 5;
 	};
+
+	class opium
+	{
+		name = "Traitement du pavot";
+		sound = "salt_process";
+		require[] =
+		{
+			{"heroin", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"opium", 1}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 1;
+		time_default = 3;
+		class target {};
+		class factions
+		{
+			class GUER
+			{
+				rank = 2;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class morphine
+	{
+		name = "Traitement de l'opium";
+		sound = "salt_process";
+		require[] =
+		{
+			{"opium", 1}, {"seringue", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{},
+			/* ARMA */{{"SkylineItems_Morphine", 1}},
+			/* CASH */0
+		};
+		time_per_item = 1;
+		time_default = 3;
+		class target {};
+		class factions
+		{
+			class GUER
+			{
+				rank = 2;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class phenylalanine
+	{
+		name = "Traitement du blé";
+		sound = "salt_process";
+		require[] =
+		{
+			{"wheat", 2}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"phenylalanine", 1}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 1;
+		time_default = 3;
+		class target {};
+		class factions
+		{
+			class GUER
+			{
+				rank = 2;
+				licenses[] = {};
+			};
+		};
+	};
+
+	class epinephrine
+	{
+		name = "Traitement de la phenylalanine";
+		sound = "salt_process";
+		require[] =
+		{
+			{"phenylalanine", 1}, {"seringue", 1}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{},
+			/* ARMA */{{"SkylineItems_Adrenaline", 1}, }},
+			/* CASH */0
+		};
+		time_per_item = 1;
+		time_default = 3;
+		class target {};
+		class factions
+		{
+			class GUER
+			{
+				rank = 2;
+				licenses[] = {};
+			};
+		};
+	};
 };

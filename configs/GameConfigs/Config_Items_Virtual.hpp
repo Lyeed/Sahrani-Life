@@ -1360,17 +1360,10 @@ class ALYSIA_ITEMS
 	class opium
 	{
 		name        = "Opium";
-		weight      = 1;
+		weight      = 4;
 		illegal     = 0;
 		removable   = 1;
 		image       = "alysia_items_virtual\data\opium.paa";
-		class market
-		{
-			max = 60;
-			min = 30;
-			mult = 2;
-			affect[] = {};
-		};
 	};
 
 	class sifflet
@@ -2021,6 +2014,17 @@ class ALYSIA_ITEMS
 		price_buy = 15;
 		price_sell = 0;
 		weight = 1;
+		illegal = 0;
+		removable = 1;
+		image = "";
+	};
+
+	class phenylalanine
+	{
+		name = "Phénylalanine";
+		price_buy = 0;
+		price_sell = 0;
+		weight = 2;
 		illegal = 0;
 		removable = 1;
 		image = "";
