@@ -1378,6 +1378,7 @@ class ALYSIA_ITEMS_ARMA
 	class Skyline_NVGoogle
 	{
 		buy_price = 2500;
+		buy_condition_GUER = 6;
 	};
 	class Skyline_Pelle_01
 	{
