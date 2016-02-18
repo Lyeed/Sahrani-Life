@@ -10,7 +10,7 @@ titleText ["", "BLACK OUT", 5];
 
 sleep 5;
 
-titleText ["Sortie de cellule..", "BLACK FADED"];
+titleText ["Sortie de cellule...", "BLACK FADED"];
 
 {
     missionNamespace setVariable [format["inv_%1", (_x select 0)], 0];
@@ -20,7 +20,8 @@ _handle = [] spawn AlysiaClient_fnc_stripDownPlayer;
 waitUntil {scriptDone _handle};
 
 sleep 5;
-titleText ["Remise de vos effets personnels..", "BLACK FADED"];
+
+titleText ["Remise de vos effets personnels...", "BLACK FADED"];
 
 [true, (g_arrest_Gear select 0)] call AlysiaClient_fnc_handleCash;
 [(g_arrest_Gear select 1)] spawn AlysiaClient_fnc_loadGear;
@@ -31,7 +32,7 @@ titleText ["Remise de vos effets personnels..", "BLACK FADED"];
 
 sleep 5;
 
-titleText ["Sortie de prison..", "BLACK FADED"];
+titleText ["Sortie de prison...", "BLACK FADED"];
 player setPosATL getArray(missionConfigFile >> "ALYSIA_PRISONS" >> g_arrest_Prison >> "exit");
 
 sleep 5;
@@ -40,6 +41,7 @@ g_arrest_Prison = "";
 g_arrest_Cellule = 0;
 g_arrest_Caution = 0;
 g_arrest_Reason = "";
+g_arrest_Gear = [0, [],[]];
 
 titleText ["", "BLACK IN", 5];
 player setVariable ["arrested", false, true];

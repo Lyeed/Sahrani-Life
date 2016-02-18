@@ -49,6 +49,13 @@ if ((vehicle player) isEqualTo player) then
 			true breakOut "main";
 		};
 
+		_suit = (nearestObjects [player, ["Land_Suitcase_F"], 2]) select 0;
+		if (!(isNil "_suit")) then
+		{
+			[_suit, "items", true, true, false, false] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
+			true breakOut "main";
+		};
+
 		_atm = (nearestObjects [player, (call g_atms), 2]) select 0;
 		if (!(isNil "_atm")) then
 		{
@@ -296,6 +303,12 @@ if ((vehicle player) isEqualTo player) then
 				if (typeOf(_target) isEqualTo "Bank_Bomb") then
 				{
 					[_target] spawn AlysiaClient_fnc_c4_open;
+					true breakOut "main";
+				};
+
+				if (typeOf(_target) isEqualTo "Land_Suitcase_F") then
+				{
+					[_target, "items", true, true, false, false] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
 					true breakOut "main";
 				};
 			};

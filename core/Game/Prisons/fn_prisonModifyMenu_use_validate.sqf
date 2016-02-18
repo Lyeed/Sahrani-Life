@@ -7,11 +7,10 @@
 */
 
 private ["_prison","_prisonName","_cell","_time","_bail","_reason","_timeMin","_timeMax","_bailMin","_bailMax","_bailEnable","_checkBox","_cells","_error","_infos"];
-_prison = (([player] call AlysiaClient_fnc_prisonNearest) select 0);
+_prison = [player] call AlysiaClient_fnc_prisonNearest;
 _prisonName = vehicleVarName _prison;
 
 if (isNull g_interaction_target) exitWith {};
-if (_prison isEqualTo []) exitWith {["Vous n'êtes pas dans une prison"] call AlysiaClient_fnc_error};
 if (g_interaction_target getVariable ["arrested", false]) exitWith {["Cette personne est déjà en prison."] call AlysiaClient_fnc_error};
 
 disableSerialization;

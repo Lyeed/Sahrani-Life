@@ -15,7 +15,7 @@ _back_button = [_this, 5, true, [true]] call BIS_fnc_param;
 
 if (isNull g_interaction_target) exitWith {};
 if ((g_interaction_target getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
-	["Le coffre est déjà en cours d'utilisation"] call AlysiaClient_fnc_error;
+	["Le coffre est déjà en cours d'utilisation."] call AlysiaClient_fnc_error;
 };
 
 g_interaction_target = _target;
@@ -28,7 +28,7 @@ if (dialog) then
 
 g_interaction_target_trunk_weight_max = [g_interaction_target] call AlysiaClient_fnc_getVehicleWeightMax;
 if (g_interaction_target_trunk_weight_max isEqualTo 0) exitWith {
-	["Impossible de déterminer l'inventaire maximum du véhicule"] call AlysiaClient_fnc_error;
+	["Impossible de déterminer l'inventaire maximum de la cible."] call AlysiaClient_fnc_error;
 };
 
 if (!(createDialog "RscDisplayVirtualExhange")) exitWith {};

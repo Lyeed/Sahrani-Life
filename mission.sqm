@@ -23434,7 +23434,7 @@ class Mission
 			offsetY=0.48156399;
 			id=2088;
 			side="EMPTY";
-			vehicle="xcam_InfoStand_V2_F";
+			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir -180;this setposATL [14248.518555,12517.600586,0.481564];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_land_normal"",[""garage_bagongo_1"",""garage_bagongo_2"",""garage_bagongo_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];  this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_bagongo"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];  this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];  ";
 		};

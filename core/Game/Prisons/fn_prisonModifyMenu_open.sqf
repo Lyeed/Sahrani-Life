@@ -39,7 +39,7 @@ _list lbSetCurSel 0;
 
 {
 	_owners = _owners + " - " + (getText (missionConfigFile	>> "ALYSIA_FACTIONS" >> _x >> "name"));
-} forEach getArray(missionConfigFile >> "ALYSIA_PRISONS" >> _prison >> "side");
+} forEach getArray(missionConfigFile >> "ALYSIA_PRISONS" >> _prison >> "sides");
 
 if ((getNumber(missionConfigFile >> "ALYSIA_PRISONS" >> _prison >> "bail" >> "enable")) isEqualTo 1) then {_caution = "<t color='#688A08'>Oui</t>"} else {_caution = "<t color='#8A0808'>Non</t>"};
 

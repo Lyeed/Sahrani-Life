@@ -27,7 +27,7 @@
 			"[] spawn AlysiaClient_fnc_interactionMenu_action_trade_open;",
 			"
 				(
-					!(g_interaction_target getVariable ['restrained', false]) &&
+					!(g_interaction_target getVariable ['restrained',false]) &&
 					!(g_interaction_target getVariable ['surrender',false])
 				)
 			"
@@ -38,8 +38,8 @@
 			"[g_interaction_target] spawn AlysiaClient_fnc_escort;",
 			"
 				(
-					(g_interaction_target getVariable ['restrained', false]) &&
-					(isNull (player getVariable ['escorting', objNull])) &&
+					(g_interaction_target getVariable ['restrained',false]) &&
+					(isNull (player getVariable ['escorting',objNull])) &&
 					(isNull (g_interaction_target getVariable ['escorted',objNull]))
 				)
 			"
@@ -50,8 +50,8 @@
 			"[g_interaction_target] spawn AlysiaClient_fnc_stopescort;",
 			"
 				(
-					!(isNull (g_interaction_target getVariable ['escorted', objNull])) ||
-					!(isNull (g_interaction_target getVariable ['escorting', objNull]))
+					!(isNull (g_interaction_target getVariable ['escorted',objNull])) ||
+					!(isNull (g_interaction_target getVariable ['escorting',objNull]))
 				)
 			"
 		],
@@ -61,8 +61,8 @@
 			"[] spawn AlysiaClient_fnc_interactionMenu_action_restrain;",
 			"
 				(
-					(g_interaction_target getVariable ['surrender', false]) &&
-					!(g_interaction_target getVariable['restrained', false]) &&
+					(g_interaction_target getVariable ['surrender',false]) &&
+					!(g_interaction_target getVariable['restrained',false]) &&
 					((['handcuffs'] call AlysiaClient_fnc_itemCount) > 0)
 				)
 			"
@@ -75,7 +75,7 @@
 				(
 					(g_interaction_target getVariable['restrained',false]) &&
 					((['handcuffkeys'] call AlysiaClient_fnc_itemCount) > 0) &&
-					(isNull (g_interaction_target getVariable ['escorted', objNull]))
+					(isNull (g_interaction_target getVariable ['escorted',objNull]))
 				)
 			"
 		],
@@ -85,7 +85,7 @@
 			"[] spawn AlysiaClient_fnc_interactionMenu_action_lockpick;",
 			"
 				(
-					(g_interaction_target getVariable['restrained', false]) &&
+					(g_interaction_target getVariable['restrained',false]) &&
 					((['lockpick'] call AlysiaClient_fnc_itemCount) > 0) &&
 					(isNull (g_interaction_target getVariable ['escorted',objNull]))
 				)
@@ -110,7 +110,7 @@
 			"
 				(
 					(
-						(g_interaction_target getVariable ['surrender', false]) || 
+						(g_interaction_target getVariable ['surrender',false]) || 
 						(g_interaction_target getVariable ['restrained',false])
 					) && (isNull (g_interaction_target getVariable ['escorted',objNull]))
 				)
@@ -124,33 +124,37 @@
 				(
 					(
 						(g_interaction_target getVariable ['surrender',false]) ||
-						(g_interaction_target getVariable ['restrained', false])
-					) && (isNull (g_interaction_target getVariable ['escorted', objNull]))
+						(g_interaction_target getVariable ['restrained',false])
+					) && (isNull (g_interaction_target getVariable ['escorted',objNull]))
 				)
 			"
 		],
 		[
 			"arrest",
-			"Arrêter",
+			"Prison",
 			"[] spawn AlysiaClient_fnc_prisonMenu_open;",
 			"
 				(
-					(!(([player] call AlysiaClient_fnc_prisonNearest) isEqualTo '[]')) &&
-					(!(g_interaction_target getVariable['restrained',false])) &&
-					(!(player getVariable ['arrested',false])) &&
-					(isNull (g_interaction_target getVariable ['escorted',objNull]))
+					!(isNull ([g_interaction_target] call AlysiaClient_fnc_prisonNearest)) &&
+					!(g_interaction_target getVariable ['arrested',false]) &&
+					(isNull (g_interaction_target getVariable ['escorted',objNull])) && 
+					{
+						str(playerSide) in getArray(missionConfigFile >> 'ALYSIA_PRISONS' >> vehicleVarName([g_interaction_target] call AlysiaClient_fnc_prisonNearest) >> 'sides')
+					}
 				)
 			"
 		],
 		[
 			"arrest",
-			"Gestion Peine",
+			"Peine",
 			"[] spawn AlysiaClient_fnc_prisonModifyMenu_informations_get;",
 			"
 				(
-					(!(([player] call AlysiaClient_fnc_prisonNearest) isEqualTo '[]')) &&
-					(!(g_interaction_target getVariable['restrained',false])) &&
-					(player getVariable ['arrested',false])
+					!(isNull ([g_interaction_target] call AlysiaClient_fnc_prisonNearest)) &&
+					(g_interaction_target getVariable ['arrested',false]) &&
+					{
+						str(playerSide) in getArray(missionConfigFile >> 'ALYSIA_PRISONS' >> vehicleVarName([g_interaction_target] call AlysiaClient_fnc_prisonNearest) >> 'sides')
+					}
 				)
 			"
 		],
@@ -160,7 +164,7 @@
 			"[nil,nil,,il,g_interaction_target] spawn AlysiaClient_fnc_item_bandage_use;",
 			"
 				(
-					(g_interaction_target getVariable ['is_bleeding', false]) &&
+					(g_interaction_target getVariable ['is_bleeding',false]) &&
 					('SkylineItems_Bandage' in (magazines player))
 				)
 			"
@@ -168,7 +172,7 @@
 		[
 			"morphine",
 			"Morphine",
-			"[nil, nil, nil, g_interaction_target] spawn AlysiaClient_fnc_item_morphine_use;",
+			"[nil,nil,nil,g_interaction_target] spawn AlysiaClient_fnc_item_morphine_use;",
 			"('SkylineItems_Morphine' in (magazines player))"
 		],
 		[
@@ -185,7 +189,7 @@
 		[
 			"company_recrut",
 			"Recruter",
-			"[g_interaction_target, g_company] call AlysiaClient_fnc_company_member_invite;",
+			"[g_interaction_target,g_company] call AlysiaClient_fnc_company_member_invite;",
 			"
 				(
 					(getNumber(missionConfigFile >> 'ALYSIA_FACTIONS' >> str(side g_interaction_target) >> 'companies' >> 'employee') isEqualTo 1) &&
@@ -201,8 +205,8 @@
 			"
 				(
 					(
-						(g_interaction_target getVariable ['surrender', false]) ||
-						(g_interaction_target getVariable ['restrained', false])
+						(g_interaction_target getVariable ['surrender',false]) ||
+						(g_interaction_target getVariable ['restrained',false])
 					) && 
 					(isNull (g_interaction_target getVariable ['escorted',objNull])) &&
 					((['alcool_test'] call AlysiaClient_fnc_itemCount) > 0)

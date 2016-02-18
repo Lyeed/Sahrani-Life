@@ -6,7 +6,7 @@ class ALYSIA_PRISONS
 	class prison_n
 	{
 		name = "Prison Fédérale du Nord";
-		side[] = {"WEST"};
+		sides[] = {"WEST"};
 		uniform = "";
 		exit[] = {0,0,0};
 		escape_distance = 50;
@@ -92,7 +92,7 @@ class ALYSIA_PRISONS
 	class prison_s
 	{
 		name = "Prison Fédérale du Sud";
-		side[] = {"EAST"};
+		sides[] = {"EAST"};
 		uniform = "";
 		exit[] = {};
 		escape_distance = 100;

@@ -5,21 +5,14 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-private ["_unit","_prison","_dist","_classes"];
+private "_unit";
 _unit = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
-_prison = ObjNull;
-_classes = [];
 
-if (isNull _unit) exitWith {};
+if (isNull _unit) exitWith {objNull};
 
+switch (true) do
 {
-	_classes pushBack (ConfigName _x);
-} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_PRISONS"));
-
-{
-	if ((vehicleVarName _x) in _classes) exitWith {_prison = _x};
-} forEach (_unit nearObjects 25);
-
-if (isNull _prison) exitWith {[]};
-[_prison, (player distance _prison)]
+	case ((_unit distance prison_n) < 25): {prison_n};
+	case ((_unit distance prison_s) < 25): {prison_s};
+	default {objNull};
+};
