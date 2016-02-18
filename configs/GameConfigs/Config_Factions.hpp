@@ -114,6 +114,16 @@ class ALYSIA_FACTIONS
 			shape = "ICON";
 		};
 
+		/* Licenses */
+		class licenses_give
+		{
+			class pilot
+			{
+				rank = 9;
+				same_side_only = 1;
+			};
+		};
+
 		/*** SIRENE ***/
 		sirene_sound = "sirene_west";
 		sirene_sleep = 5;
@@ -305,6 +315,16 @@ class ALYSIA_FACTIONS
 			};
 		};
 
+		/* Licenses */
+		class licenses_give
+		{
+			class pilot
+			{
+				rank = 5;
+				same_side_only = 1;
+			};
+		};
+
 		/*** MAP ***/
 		class map_team_markers
 		{
@@ -463,7 +483,6 @@ class ALYSIA_FACTIONS
 			"prunes_2",
 			"vignes_1",
 			"pillage_1",
-			"pillage_2",
 			"plat_1",
 			"coal_1",
 			"gold_1",
@@ -641,6 +660,16 @@ class ALYSIA_FACTIONS
 		/*** INTERACTIONS ***/
 		interaction_seize_gear = 0;
 		interaction_ticket = 1;// can put ticket
+
+		/* Licenses */
+		class licenses_give
+		{
+			class pilot
+			{
+				rank = 6;
+				same_side_only = 1;
+			};
+		};
 
 		/*** LEADER BOARD ***/
 		class board

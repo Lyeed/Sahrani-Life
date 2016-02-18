@@ -8,9 +8,7 @@
 private["_zone", "_seed", "_plant", "_object", "_plantGrowingtime"];
 _zone = [_this, 0, "", [""]] call BIS_fnc_param;
 
-if ((time - g_action_delay) < 1) exitWith {
-	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error;
-};
+if (g_action_inUse) exitWith {};
 
 scopeName "main";
 
@@ -61,14 +59,13 @@ if (_zone isEqualTo "") then
 	};
 };
 
-g_action_delay = time;
 g_action_inUse = true;
 
 player playMove "AinvPknlMstpSlayWrflDnon_1";
-waitUntil {((animationState player) in ["ainvpknlmstpsnonwnondnon_2", "ainvpknlmstpsnonwnondnon_3"])};
+sleep 2.5;
 player playMove "amovpercmstpsnonwnondnon";
-titleText[format["Vous avez planté : 1x %1", ([_seed] call AlysiaClient_fnc_itemGetName)], "PLAIN"];
 
+titleText[format["Vous avez planté : 1x %1", ([_seed] call AlysiaClient_fnc_itemGetName)], "PLAIN"];
 _object = createVehicle [_plant, [((getPos player) select 0), ((getPos player) select 1), (((getPos player) select 2) - (getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "groundLevel")))], [], 0, "CAN_COLLIDE"];
 _plantGrowingtime = (getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "growingTime")) + round(random(getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "extraGrow")));
 if ([false, "engrais", 1] call AlysiaClient_fnc_handleInv) then {_plantGrowingtime = round(_plantGrowingtime * 0.7)};

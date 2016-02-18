@@ -99,7 +99,7 @@ if (hasInterface) then
 	diag_log "<INIT> Récupération des données de personnage ...";
 	cutText ["Récupération des données de personnage", "BLACK FADED"];
 	0 cutFadeOut 9999999;
-	[player] remoteExec ["AlysiaServer_fnc_query_select_connect", 2, false];
+	[player] remoteExec ["AlysiaServer_fnc_query_select_connect", 2];
 	waitUntil {!(isNil "g_session_query")};
 	diag_log "<INIT> Données de personnage récupéré";
 

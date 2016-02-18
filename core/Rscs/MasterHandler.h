@@ -4,6 +4,8 @@
 #include "RscDisplays\RscDisplayDefault.hpp"
 #include "RscDisplays\RscDisplayDefaultInteraction.hpp"
 #include "RscDisplays\RscDisplayDefaultText.hpp"
+#include "RscDisplays\RscDisplayDefaultChoice.hpp"
+
 #include "RscDisplays\RscDisplayAuctionHouse.hpp"
 #include "RscDisplays\RscDisplayShopClothing.hpp"
 #include "RscDisplays\RscDisplayShopArma.hpp"
@@ -16,7 +18,6 @@
 #include "RscDisplays\RscDisplayVehicle.hpp"
 #include "RscDisplays\RscDisplayComa.hpp"
 #include "RscDisplays\RscDisplayInteraction.hpp"
-#include "RscDisplays\RscDisplaySkull.hpp"
 #include "RscDisplays\RscDisplayPlayerTrade.hpp"
 #include "RscDisplays\RscDisplayPlayerSearch.hpp"
 #include "RscDisplays\RscDisplayPlayerTicket.hpp"

@@ -1,13 +1,13 @@
-class RscDisplaySkullInventory: RscDisplayDefaultInteraction
+class RscDisplayDefaultChoice: RscDisplayDefaultInteraction
 {
 	idd = 69000;
-	name = "RscDisplaySkullInventory";
+	name = "RscDisplayDefaultChoice";
 
 	class controlsBackground: DEFAULT_controlsBackground
 	{
 		class BACKGROUND: BACKGROUND
 		{
-			text = "lyeed_IMG\data\skull\background.jpg";
+			idc = 69008;
 		};
 		class FRAME: FRAME {};
 	};
@@ -16,7 +16,8 @@ class RscDisplaySkullInventory: RscDisplayDefaultInteraction
 	{
 		class TITLE: TITLE
 		{
-			text = "<t size='1.5' align='center'>Inventaire</t>";
+			idc = 69001;
+			text = "<t size='1.5' align='center'>Choix</t>";
 		};
 
 		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME {};
@@ -67,7 +68,7 @@ class RscDisplaySkullInventory: RscDisplayDefaultInteraction
 		class ACTION_IMAGE: RscPicture
 		{
 			idc = 69005;
-			text = "lyeed_IMG\data\skull\take.paa";
+			text = "lyeed_IMG\data\global\validate.paa";
 
 			x = 0.508879 * safezoneW + safezoneX;
 			y = 0.582387 * safezoneH + safezoneY;
@@ -77,7 +78,7 @@ class RscDisplaySkullInventory: RscDisplayDefaultInteraction
 		class ACTION_TEXT: RscStructuredText
 		{
 			idc = 69006;
-			text = "<t align='left' size='1.3'>Prendre</t>";
+			text = "<t align='left' size='1.3'>Valider</t>";
 
 			x = 0.536094 * safezoneW + safezoneX;
 			y = 0.588 * safezoneH + safezoneY;
@@ -87,9 +88,8 @@ class RscDisplaySkullInventory: RscDisplayDefaultInteraction
 		class ACTION_BUTTON: RscButtonSilent
 		{
 			idc = 69007;
-			action = "[] call AlysiaClient_fnc_skullMenu_search_take";
-			onMouseEnter = "			ctrlSetText[69005,""lyeed_IMG\data\skull\take_select.paa""];			ctrlShow[69003, false];			((findDisplay 69000) displayCtrl 69004) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 69000) displayCtrl 69006) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Prendre</t>"";";
-			onMouseExit = "			ctrlSetText[69005,""lyeed_IMG\data\skull\take.paa""];			ctrlShow[69003, true];			((findDisplay 69000) displayCtrl 69004) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 69000) displayCtrl 69006) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Prendre</t>"";";
+			onMouseEnter = "ctrlSetText[69005,""lyeed_IMG\data\global\validate_select.paa""];ctrlShow[69003, false];((findDisplay 69000) displayCtrl 69004) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 69000) displayCtrl 69006) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Valider</t>"";";
+			onMouseExit = "ctrlSetText[69005,""lyeed_IMG\data\global\validate.paa""];ctrlShow[69003, true];((findDisplay 69000) displayCtrl 69004) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 69000) displayCtrl 69006) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Valider</t>"";";
 
 			x = 0.505156 * safezoneW + safezoneX;
 			y = 0.577 * safezoneH + safezoneY;

@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display"];
+private["_display", "_button"];
 
 if (isNull g_interaction_target) exitWith {};
 if ((g_interaction_target getVariable ["inventory_in_use_UID", ""]) != "") exitWith {
@@ -18,16 +18,40 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
-if (!(createDialog "RscDisplaySkullInventory")) exitWith {};
+if (!(createDialog "RscDisplayDefaultChoice")) exitWith {};
 
 disableSerialization;
 _display = findDisplay 69000;
 if (isNull _display) exitWith {};
 
+(_display displayCtrl 69008) ctrlSetText "lyeed_IMG\data\skull\background.jpg";
+(_display displayCtrl 69001) ctrlSetStructuredText parseText "<t size='1.5' align='center'>Inventaire</t>";
+(_display displayCtrl 69005) ctrlSetText "lyeed_IMG\data\skull\take.paa";
+(_display displayCtrl 69006) ctrlSetStructuredText parseText "<t align='left' size='1.3'>Prendre</t>";
+
+_button = _display displayCtrl 69007;
+_button buttonSetAction "[] call AlysiaClient_fnc_skullMenu_search_take;";
+
+_button ctrlSetEventHandler["MouseEnter",
+	"((findDisplay 69000) displayCtrl 69005) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Prendre</t>"";
+	((findDisplay 69000) displayCtrl 69004) ctrlSetBackgroundColor [1,1,1,1];
+	ctrlSetText[69008, ""lyeed_IMG\data\skull\take_select.paa""];
+	ctrlShow[69003, false];"
+];
+
+_button ctrlSetEventHandler["MouseExit",
+	"((findDisplay 69000) displayCtrl 69005) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Prendre</t>"";
+	((findDisplay 69000) displayCtrl 69004) ctrlSetBackgroundColor [0,0,0,0.6]; 
+	ctrlSetText[69008, ""lyeed_IMG\data\skull\take.paa""];
+	ctrlShow[69003, true];"
+];
+
 player playAction "Gear";
+
 g_interaction_target setVariable ["inventory_in_use_UID", (getPlayerUID player), true];
 g_interaction_target_inv = g_interaction_target getVariable ["inv", []];
 g_interaction_target_inv_active = false;
+
 [] call AlysiaClient_fnc_skullMenu_search_update;
 
 while {!(isNull _display)} do

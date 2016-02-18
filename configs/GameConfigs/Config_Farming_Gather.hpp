@@ -13,7 +13,7 @@ class ALYSIA_FARMING_GATHER
 		receive[] = {{"objvaleur", 2, 1}};
 		sound = "mining";
 		water = 1;
-		water_depth = 5;
+		water_depth = 109;
 	};
 
 	class archeologie_1

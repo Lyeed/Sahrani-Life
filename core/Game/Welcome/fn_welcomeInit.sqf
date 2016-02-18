@@ -5,13 +5,13 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_handle", "_display", "_targetPos", "_cameraPos", "_camera", "_action"];
+private["_handle", "_display", "_targetPos", "_cameraPos", "_camera", "_action", "_bad"];
 
 if (playerSide != civilian) exitWith {
 	["Vous devez être connecté en civil pour votre première connexion"] spawn AlysiaClient_fnc_errorExit;
 };
 
-_bad = [_firstname, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz- "] call AlysiaClient_fnc_TextAllowed;
+_bad = [profileName, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz- "] call AlysiaClient_fnc_TextAllowed;
 if (_bad != "") exitWith {
 	["Vous utilisez un caractère interdit dans votre pseudo (%1)", _bad] call AlysiaClient_fnc_errorExit;
 };

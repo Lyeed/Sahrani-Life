@@ -62,12 +62,14 @@
 
 #define G_RESPAWN_ARCHEOLOGIE \
 { \
-	{13003.2,6738.72,0.00143814}, \
 	{16648.9,11888.2,0.0014801}, \
 	{7088.14,7800.87,0.0021286}, \
-	{14761.4,13977.3,0.00151062}, \
-	{9617.63,7413.2,0.00178528}, \
-	{8373.28,5631.12,0.00139189} \
+	{14761.4,13977.3,0.00151062} \
+}
+
+#define G_RESPAWN_PILLAGE \
+{ \
+	{7549.46,11309.5,-109.617} \
 }
 
 class ALYSIA_DYN_MARKERS
@@ -289,9 +291,24 @@ class ALYSIA_DYN_MARKERS
 		destroy_item = "destroy_archeo";
 		positions[] = G_RESPAWN_ARCHEOLOGIE;
 	};
+
+	//- PILLAGE
+	class pillage_1
+	{
+		text        = "Pillage";
+		type        = "Fett_ruins";
+		color       = "ColorRed";
+		shape       = "ICON";
+		size        = 0.5;
+		shop_appear = 1;
+		shop_price  = 1000;
+		discover[]  = {"CIV"};
+		positions[] = G_RESPAWN_PILLAGE;
+	};
 };
 
 #undef G_RESPAWN_FIELD
 #undef G_RESPAWN_GENERAL
 #undef G_RESPAWN_NORTH
 #undef G_RESPAWN_ARCHEOLOGIE
+#undef G_RESPAWN_PILLAGE

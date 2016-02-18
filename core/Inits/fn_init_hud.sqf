@@ -37,7 +37,7 @@ _move_ctrl =
 			{
 				_ctrl ctrlSetPosition [((ctrlPosition _ctrl) select 0) + (_distance / 40), (_default_position select 1)];
 				_ctrl ctrlCommit 0;
-				sleep 0.01;
+				uiSleep 0.01;
 			};
 			if (_hide_end) then {
 				_ctrl ctrlShow false;
@@ -50,7 +50,7 @@ _move_ctrl =
 			{
 				_ctrl ctrlSetPosition [((ctrlPosition _ctrl) select 0) - (_distance / 40), (_default_position select 1)];
 				_ctrl ctrlCommit 0;
-				sleep 0.01;
+				uiSleep 0.01;
 			};
 			if (_hide_end) then {
 				_ctrl ctrlShow false;
@@ -314,6 +314,6 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 			};
 		};
 
-		sleep 0.3;
+		uiSleep 0.3;
 	};
 };

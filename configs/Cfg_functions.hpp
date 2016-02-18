@@ -540,6 +540,8 @@ class CfgFunctions
 			class interactionMenu_action_license_return {};
 			class interactionMenu_action_license_revoke {};
 			class interactionMenu_action_alcootest {};
+			class interactionMenu_action_license_give_open {};
+			class interactionMenu_action_license_give_action {};
 		};
 
 		class Welcome

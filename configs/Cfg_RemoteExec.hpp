@@ -81,6 +81,8 @@ class CfgRemoteExec
 		class AlysiaClient_fnc_phone_message_receive {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_item_knife_apply {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_welcomeInit {allowTargets = CLIENT;};
+
+		//- INTERACTION MENU
 		class AlysiaClient_fnc_interactionMenu_action_trade_receive {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_interactionMenu_action_trade_refuse {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_interactionMenu_action_trade_space {allowTargets = CLIENT;};
@@ -90,11 +92,12 @@ class CfgRemoteExec
 		class AlysiaClient_fnc_interactionMenu_action_license_get {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_interactionMenu_action_license_return {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_interactionMenu_action_license_revoke {allowTargets = CLIENT;};
+		class AlysiaClient_fnc_interactionMenu_action_license_give_action {allowTargets = CLIENT;};
 		
-		class AlysiaClient_fnc_endGame {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_restrain {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_sheepProcess {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_lightOn {allowTargets = CLIENT;};
+		
 		//- AH
 		class AlysiaClient_fnc_auctionHouse_receive_money {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_auctionHouse_receive_buy {allowTargets = CLIENT;};
@@ -124,6 +127,8 @@ class CfgRemoteExec
 		class systemChat {allowTargets = CLIENT;};
 		class BIS_fnc_endMission {allowTargets = CLIENT;};
 		class switchMove {allowTargets = CLIENT;};
+
+		class AlysiaClient_fnc_endGame {allowTargets = CLIENT;};
 	};
 
 	class Commands

@@ -1722,12 +1722,10 @@ class ALYSIA_PROCESS
 			class GUER
 			{
 				rank = 2;
-				licenses[] = {};
 			};
 		};
 	};
-
-	class morphine
+	class morphine: opium
 	{
 		name = "Traitement de l'opium";
 		sound = "salt_process";
@@ -1738,23 +1736,11 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			/* VIRTUAL */{},
-			/* ARMA */{{"SkylineItems_Morphine", 1}},
+			/* ARMA */{"SkylineItems_Morphine"},
 			/* CASH */0
 		};
-		time_per_item = 1;
-		time_default = 3;
-		class target {};
-		class factions
-		{
-			class GUER
-			{
-				rank = 2;
-				licenses[] = {};
-			};
-		};
 	};
-
-	class phenylalanine
+	class phenylalanine: opium
 	{
 		name = "Traitement du blé";
 		sound = "salt_process";
@@ -1768,20 +1754,8 @@ class ALYSIA_PROCESS
 			/* ARMA */{},
 			/* CASH */0
 		};
-		time_per_item = 1;
-		time_default = 3;
-		class target {};
-		class factions
-		{
-			class GUER
-			{
-				rank = 2;
-				licenses[] = {};
-			};
-		};
 	};
-
-	class epinephrine
+	class epinephrine: opium
 	{
 		name = "Traitement de la phenylalanine";
 		sound = "salt_process";
@@ -1792,19 +1766,8 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			/* VIRTUAL */{},
-			/* ARMA */{{"SkylineItems_Adrenaline", 1}, }},
+			/* ARMA */{"SkylineItems_Adrenaline"},
 			/* CASH */0
-		};
-		time_per_item = 1;
-		time_default = 3;
-		class target {};
-		class factions
-		{
-			class GUER
-			{
-				rank = 2;
-				licenses[] = {};
-			};
 		};
 	};
 };

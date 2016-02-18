@@ -12,13 +12,19 @@ closeDialog 0;
 
 if (isNull _target) exitWith {};
 
+if (_target getVariable ["speaker_active", false]) exitWith
+{
+	_target setVariable ["speaker_active", false];
+	["Haut parleurs éteints"] call AlysiaClient_fnc_info;
+};
+
 _ids = [];
 
 {
 	_ids pushBack (player addAction [format["Son : <t color='#FFFF33'>%1</t>", (_x select 0)],
 		{
 			_data = [_this, 3, [], [[]]] call BIS_fnc_param;
-			[(_data select 1), (_data select 0), 600] call CBA_fnc_globalSay3d;
+			[(_data select 1), (_data select 0)] call CBA_fnc_globalSay3d;
 			(_data select 1) setVariable ["speaker_active", false];
 		}, [(_x select 1), _target], 5000, true, true, "", ""]);
 } forEach 
@@ -30,8 +36,20 @@ _ids = [];
 	["Annonce (vitesse)", "EAST_announce_speed"],
 	["Annonce (comportement suspect)", "EAST_announce_suspect_behavior"],
 	["Annonce (armes)", "EAST_announce_weapons"],
-	["Musique", "radio_music_1"],
-	["Annonce du parti", "radio_siovet"]
+	["Annonce du parti", "radio_siovet"],
+	["Musique (red alert)", "radio_music_1"],
+	["Musique (Casta Diva Maria)", "Casta_Diva_Maria"],
+	["Musique (Craonne)", "Craonne"],
+	["Musique (Erika)", "Erika"],
+	["Musique (Katiousha)", "Katiousha"],
+	["Musique (Liy Marlene)", "Liy_Marlene"],
+	["Musique (Wagner crepuscule)", "Wagner_crepuscule"],
+	["Musique (chemin)", "chemin"],
+	["Musique (farewell)", "farewell"],
+	["Musique (guerre civile)", "guerre_civile"],
+	["Musique (marche militaire)", "marche_militaire"],
+	["Musique (plaine)", "plaine"],
+	["Musique (reve passe)", "reve_passe"]
 ]);
 
 _target setVariable ["speaker_active", true];

@@ -25,7 +25,7 @@ if (_old_app isEqualTo "") exitWith
 		{
 			_loading_ctrl ctrlSetFade ((ctrlFade _loading_ctrl) + 0.05);
 			_loading_ctrl ctrlCommit 0;
-			sleep 0.01;
+			uiSleep 0.01;
 		};
 	};
 	ctrlShow[7501, true];
@@ -137,7 +137,7 @@ while {true} do
 		};
 	};
 
-	sleep 0.01;
+	uiSleep 0.01;
 };
 
 if (_old_background_img != _new_background_img) then

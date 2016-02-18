@@ -22,7 +22,7 @@ if (player getVariable ["arrested", false]) then {
 		} else {
 			_pos = getMarkerPos getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "respawn_marker");
 		};
-		_randPos = [_pos, 6] call CBA_fnc_randPos;
+		_randPos = [_pos, 2] call CBA_fnc_randPos;
 		player setPosATL [(_randPos select 0), (_randPos select 1), (_pos select 2)];
 	} else {
 		if (surfaceIsWater _position) then {
