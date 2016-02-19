@@ -146,12 +146,12 @@ class ALYSIA_SHOPS_VEHICLES
 			"RDS_Lada_Civ",
 			"max_CrownVic",
 			"Mrshounka_r5_civ",
-			"Jonzie_Datsun_510",
-			"Jonzie_30CSL",
-			"Jonzie_Galant",
-			"Jonzie_Corolla",
+			"Skyline_Vehicule_Jonzie_Datsun_510",
+			"Skyline_Vehicule_Jonzie_30CSL",
+			"Skyline_Vehicule_Jonzie_Galant",
+			"Skyline_Vehicule_Jonzie_Corolla",
 			"ADM_Ford_F100",
-			"Jonzie_Mini_Cooper"
+			"Skyline_Vehicule_Jonzie_Mini_Cooper"
 		};
 	};
 	class CIV_vehicles_land_moto
@@ -184,7 +184,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"Skyline_Ford_Transit",
 			"shounka_a3_cliors_civ",
 			"max_van",
-			"Jonzie_XB",
+			"Skyline_Vehicule_Jonzie_XB",
 			"C_Van_01_transport_F",
 			"C_Van_01_box_F",
 			"shounka_buggy",
@@ -202,8 +202,8 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_twingo_p",
 			"Mrshounka_a3_smart_civ",
 			"Mrshounka_subaru08_civ",
-			"Jonzie_Ceed",
-			"Jonzie_Raptor",
+			"Skyline_Vehicule_Jonzie_Ceed",
+			"Skyline_Vehicule_Jonzie_Raptor",
 			"Mrshounka_bmwm1_civ",
 			"Mrshounka_bmwm6_civ",
 			"Mrshounka_Bowler_c",
@@ -242,13 +242,13 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_a3_gtr_civ",
 			"shounka_porsche911",
 			"Mrshounka_cayenne_p_civ",
-			"Jonzie_Datsun_Z432",
+			"Skyline_Vehicule_Jonzie_Datsun_Z432",
 			"Mrshounka_mercedes_190_p_civ",
-			"Jonzie_Escalade",
-			"Jonzie_Quattroporte",
-			"Jonzie_STI",
-			"Jonzie_VE",
-			"Jonzie_Viper"
+			"Skyline_Vehicule_Jonzie_Escalade",
+			"Skyline_Vehicule_Jonzie_Quattroporte",
+			"Skyline_Vehicule_Jonzie_STI",
+			"Skyline_Vehicule_Jonzie_VE",
+			"Skyline_Vehicule_Jonzie_Viper"
 		};
 	};
 	class CIV_vehicules_job
