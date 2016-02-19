@@ -24,13 +24,14 @@ if ((getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "removable")) isE
 
 g_action_inUse = true;
 
-_suit = (nearestObjects [player, ["Land_Suitcase_F"], 3]) select 0;
+_suit = (nearestObjects [player, ["Land_Suitcase_F"], 3.2]) select 0;
 if (isNil "_suit") then
 {
 	_suit = "Land_Suitcase_F" createVehicle (player modelToWorld [0, 2.5, 0]);
 	_suit setVariable ["items", [[_item, 1]], true];
 } else {
-	if ((_suit getVariable ["trunk_in_use_ID"]) isEqualTo "") then {
+	if ((_suit getVariable ["trunk_in_use_ID", ""]) isEqualTo "") then
+	{
 		if ([true, _suit, "items", _item, 1, true] call AlysiaClient_fnc_handleTrunk) then
 		{
 			if (!([false, _item, 1] call AlysiaClient_fnc_handleInv)) exitWith

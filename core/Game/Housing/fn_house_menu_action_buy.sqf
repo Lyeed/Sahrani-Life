@@ -44,7 +44,7 @@ if (_action) then
 {
 	closeDialog 0;
 
-	[(getPlayerUID player), g_interaction_target, playerSide] remoteExec ["AlysiaServer_fnc_house_add", 2];
+	[(getPlayerUID player), g_interaction_target, playerSide, g_atm] remoteExec ["AlysiaServer_fnc_house_add", 2];
 	g_interaction_target setVariable["house_owner", [(getPlayerUID player), profileName], true];
 	g_houses pushBack g_interaction_target;
 	[false, _price, "Achat maison"] call AlysiaClient_fnc_handleATM;

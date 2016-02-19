@@ -15,24 +15,30 @@ if ((isNil "g_garage_rename") || {g_garage_rename isEqualTo -1}) exitWith
 
 _val = ctrlText 101001;
 if (_val isEqualTo "") exitWith {
-	["Vous n'avez pas entré de nom pour votre véhicule"] call AlysiaClient_fnc_error;
+	["Vous n'avez pas entré de nom pour votre véhicule."] call AlysiaClient_fnc_error;
 };
 
 if (([_val] call CBA_fnc_strLen) > 25) exitWith {
-	[format["Vous ne pouvez pas dépasser %1 caractères", 25]] call AlysiaClient_fnc_error;
+	["Vous ne pouvez pas dépasser 25 caractères."] call AlysiaClient_fnc_error;
 };
 
 _bad = [_val, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_() -"] call AlysiaClient_fnc_TextAllowed;
 if (_bad != "") exitWith {
-	[format["Vous utilisez un caractère interdit (%1)", _bad]] call AlysiaClient_fnc_error;
+	[format["Vous utilisez un caractère interdit (%1).", _bad]] call AlysiaClient_fnc_error;
 };
 
 if (_val isEqualTo ((g_garage_vehicles select g_garage_rename) select 5)) exitWith {
-	["Le nom entré est identique au précédent"] call AlysiaClient_fnc_error;
+	["Le nom entré est identique au précédent."] call AlysiaClient_fnc_error;
 };
 
-closeDialog 0;
-[((g_garage_vehicles select g_garage_rename) select 0), _val] remoteExec ["AlysiaServer_fnc_vehicle_update_name", 2];
+[((g_garage_vehicles select g_garage_rename) select 1), _val] remoteExec ["AlysiaServer_fnc_vehicle_update_name", 2];
 (g_garage_vehicles select g_garage_rename) set[5, _val];
 g_garage_rename = -1;
+
+waitUntil
+{
+	closeDialog 0;
+	!dialog
+};
+
 [g_garage_vehicles] call AlysiaClient_fnc_garageOpen;

@@ -124,7 +124,6 @@ class CfgFunctions
 			class lightOn {};
 			class lightBug {};
 			class weightGenerate {};
-			class posNearFourriere {};
 			class strToSide {};
 			class errorExit {};
 			class getInv {};

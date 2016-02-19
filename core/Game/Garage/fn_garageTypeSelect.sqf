@@ -5,34 +5,60 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_vList", "_tList", "_sel", "_type", "_display"];
-disableSerialization;
+private["_ctrl_vehicles", "_ctrl_types", "_sel", "_type", "_display"];
 
-_tList = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
+disableSerialization;
+_ctrl_types = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
 _sel = [_this, 1, -1, [-1]] call BIS_fnc_param;
 
-if ((isNull _tList) || (_sel isEqualTo -1)) exitWith {};
+if ((isNull _ctrl_types) || (_sel isEqualTo -1)) exitWith {};
 
-_type = _tList lbData _sel;
 _display = findDisplay 2800;
-_vList = _display displayCtrl 2802;
-lbClear _vList;
+if (isNull _display) exitWith {};
+
+_type = _ctrl_types lbData _sel;
+if (_type isEqualTo "") exitWith {};
+
+_ctrl_vehicles = _display displayCtrl 2802;
+lbClear _ctrl_vehicles;
 
 {
 	if ((_x select 9) isEqualTo _type) then
 	{
-	    _index = _vList lbAdd (_x select 5);
-		_vList lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> (_x select 0) >> "picture")];
-		_vList lbSetValue [_index, _forEachIndex];
+	    _index = _ctrl_vehicles lbAdd (_x select 5);
+		_ctrl_vehicles lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> (_x select 0) >> "picture")];
+		_ctrl_vehicles lbSetValue [_index, _forEachIndex];
 	};
-} forEach (g_garage_vehicles);
+} forEach g_garage_vehicles;
 
-if ((lbSize _vList) isEqualTo 0) then
+if ((lbSize _ctrl_vehicles) isEqualTo 0) then
 {
-	_vList lbAdd "Aucun véhicule";
-	_vList lbSetValue [0, -1];
+	_ctrl_vehicles lbAdd "Aucun véhicule";
+	
+	ctrlShow[2809, false];
+	ctrlShow[2806, false];
+	ctrlShow[2803, false];
+	ctrlShow[2804, false];
+	ctrlShow[2824, false];
+	ctrlShow[2825, false];
+	ctrlShow[2807, false];
+	ctrlshow[2808, false];
+
+	for "_i" from 2810 to 2823 do
+	{
+		ctrlShow[_i, false];
+	};
 } else {
-	lbSort [_vList, "DESC"];
+	lbSort [_ctrl_vehicles, "DESC"];
+
+	ctrlShow[2809, true];
+	ctrlShow[2806, true];
+	ctrlShow[2803, true];
+	ctrlShow[2804, true];
+	ctrlShow[2824, true];
+	ctrlShow[2825, true];
+	ctrlShow[2807, true];
+	ctrlshow[2808, true];
 };
 
-_vList lbSetCurSel 0;
+_ctrl_vehicles lbSetCurSel 0;

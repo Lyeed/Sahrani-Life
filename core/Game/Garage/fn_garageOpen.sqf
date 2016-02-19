@@ -8,17 +8,21 @@
 private["_list", "_display"];
 g_garage_vehicles = [_this, 0, [], [[]]] call BIS_fnc_param;
 
-diag_log format["GARAGE VEHICLE : %1", g_garage_vehicles];
-
 if (!(createDialog "RscDisplayGarageAlysia")) exitWith {};
-disableSerialization;
 
+disableSerialization;
 _display = findDisplay 2800;
 if (isNull _display) exitWith {};
 
-(_display displayCtrl 2805) ctrlSetStructuredText parseText format["<t align='center' size='1.2'>%1</t>", (g_garage_info select 0)];
+(_display displayCtrl 2805) ctrlSetStructuredText parseText format
+[
+	"<t align='center' size='1.5'>%1</t>",
+	(g_garage_info select 0)
+];
 
 _list = _display displayCtrl 2826;
+lbClear _list;
+
 {
 	_data = switch (_x) do
 	{
@@ -29,6 +33,7 @@ _list = _display displayCtrl 2826;
 		case "Tank": {["Tank", "lyeed_IMG\data\garage\type_tank.paa"]};
 		default {[]};
 	};
+	
 	if (_data isEqualTo []) then {
 		systemChat format["Error: unknown vehicle type [%1]", _x];
 	} else {

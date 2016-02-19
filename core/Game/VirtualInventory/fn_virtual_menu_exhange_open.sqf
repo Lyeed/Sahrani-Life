@@ -13,8 +13,8 @@ _can_take = [_this, 3, true, [true]] call BIS_fnc_param;
 _playSound = [_this, 4, true, [true]] call BIS_fnc_param;
 _back_button = [_this, 5, true, [true]] call BIS_fnc_param;
 
-if (isNull g_interaction_target) exitWith {};
-if ((g_interaction_target getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
+if (isNull _target) exitWith {};
+if ((_target getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
 	["Le coffre est déjà en cours d'utilisation."] call AlysiaClient_fnc_error;
 };
 

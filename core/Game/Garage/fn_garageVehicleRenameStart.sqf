@@ -5,17 +5,20 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_index"];
+private "_index";
 
 _index = lbValue[2802, (lbCurSel 2802)];
 if (_index isEqualTo -1) exitWith {
-	["Vous n'avez pas sélectionné de véhicule"] call AlysiaClient_fnc_error;
+	["Vous n'avez pas sélectionné de véhicule."] call AlysiaClient_fnc_error;
 };
 
 g_garage_rename = _index;
 
-closeDialog 0;
-waitUntil {!dialog};
+waitUntil
+{
+	closeDialog 0;
+	!dialog
+};
 
 if (!(createDialog "RscDisplayGarageRename")) exitWith {};
 

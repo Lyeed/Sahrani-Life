@@ -147,7 +147,6 @@
         "AlysiaClient_fnc_lightOn",
         "AlysiaClient_fnc_lightBug",
         "AlysiaClient_fnc_weightGenerate",
-        "AlysiaClient_fnc_posNearFourriere",
         "AlysiaClient_fnc_strToSide",
         "AlysiaClient_fnc_errorExit",
         "AlysiaClient_fnc_getInv",

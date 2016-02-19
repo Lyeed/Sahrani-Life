@@ -5,14 +5,17 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_index", "_data", "_vehicleClassname", "_vehicleGaragePosition", "_price", "_validSpawn", "_vehicle", "_spawnPos", "_weight"];
+private["_index", "_data", "_vehicleClassname", "_vehicleGaragePosition", "_price", "_validSpawn", "_vehicle", "_spawnPos"];
+
+if (!(isNil "gServer_soonReboot")) exitWith
+{
+	["<t align='center'>Veuillez attendre le <t color='#B40404'>redémarrage</t> du serveur pour sortir un véhicule"] call AlysiaClient_fnc_error;
+	closeDialog 0;
+};
 
 _index = lbValue[2802, (lbCurSel 2802)];
 if (_index isEqualTo -1) exitWith {
 	["Vous n'avez pas sélectionné de véhicule"] call AlysiaClient_fnc_error;
-};
-if (!(isNil "gServer_soonReboot")) exitWith {
-	["<t align='center'>Veuillez attendre le <t color='#B40404'>redémarrage</t> du serveur pour sortir un véhicule"] call AlysiaClient_fnc_error;
 };
 
 _data = g_garage_vehicles select _index;
@@ -70,7 +73,18 @@ _vehicle setVectorUp (surfaceNormal _spawnPos);
 _vehicle setDir (markerDir _validSpawn);
 _vehicle lock 2;
 
-[format["<t align='center'>Vous avez récupéré<br/><t color='#FF8000'>%1</t></t>", (lbText[2802, (lbCurSel 2802)])]] call AlysiaClient_fnc_info;
+{
+	if (_x > 0) then
+	{
+		if (local _vehicle) then {
+			_vehicle setHitIndex [_forEachIndex, _x];
+		} else {
+			[_vehicle, [_forEachIndex, _x]] remoteExecCall ["setHitIndex", _vehicle];
+		};
+	};
+} forEach (_data select 10);
+
+[format["Vous avez récupéré : <t color='#FF8000'>%1</t>.", (lbText[2802, (lbCurSel 2802)])]] call AlysiaClient_fnc_info;
 [(_data select 1), _vehicle, player] remoteExec ["AlysiaServer_fnc_garageVehicleSpawn", 2];
 
 if (!((_data select 4) isEqualTo [])) then {

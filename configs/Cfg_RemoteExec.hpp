@@ -122,6 +122,7 @@ class CfgRemoteExec
 		class setFuel {allowTargets = EVERYONE;};
 		class say3D {allowTargets = CLIENT;};
 		class setHitPointDamage {allowTargets = EVERYONE;};
+		class setHitIndex {allowTargets = EVERYONE;};
 		class lock {allowTargets = EVERYONE;};
 		class hintSilent {allowTargets = CLIENT;};
 		class systemChat {allowTargets = CLIENT;};
