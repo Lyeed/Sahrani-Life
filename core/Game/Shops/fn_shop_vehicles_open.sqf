@@ -44,6 +44,7 @@ lbClear _list;
 		{
 			_index = _list lbAdd getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "realname");
 			_vList = getArray(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "colors");
+			_vList append getArray(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "colors_donator");
 			if (_vList isEqualTo []) then {
 				_list lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> _x >> "picture")];
 				_list lbSetData [_index, str([_x])];
