@@ -44,6 +44,7 @@ if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then
 			};
 		} else {
 			["La valise la plus proche est en train d'être fouillée. Ecartez-vous pour déposer une nouvelle valise ou attendez que la fouille soit finie pour la remplir."] call AlysiaClient_fnc_error;
+			[true, _item, 1] call AlysiaClient_fnc_handleInv;
 		};
 	};
 };

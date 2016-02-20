@@ -104,8 +104,6 @@ _idc = 2810;
             (_storePos isEqualTo [0,0,0]) ||
             (
                 !(_storePos isEqualTo [0,0,0]) &&
-                ((_storePos distance (getMarkerPos 'fourriere_NORTH')) > 15) &&
-                ((_storePos distance (getMarkerPos 'fourriere_SOUTH')) > 15) &&
                 ((player distance _storePos) < 20)
             )
         "
@@ -140,7 +138,9 @@ _idc = 2810;
             !(_storePos isEqualTo [0,0,0]) &&
             ((player distance _storePos) > 20) &&
             ((_storePos distance (getMarkerPos 'fourriere_NORTH')) > 15) &&
-            ((_storePos distance (getMarkerPos 'fourriere_SOUTH')) > 15)
+            ((_storePos distance (getMarkerPos 'fourriere_SOUTH')) > 15) &&
+            ((player distance (getMarkerPos 'fourriere_NORTH')) > 15) &&
+            ((player distance (getMarkerPos 'fourriere_SOUTH')) > 15)
         "
     ],
     [

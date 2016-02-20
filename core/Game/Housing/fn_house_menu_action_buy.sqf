@@ -18,7 +18,7 @@ if (!isNil {(g_interaction_target getVariable "house_sold")}) exitWith {
 };
 
 _item = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "identity_item");
-if ((_item != "") && !(_item in (magazines _who))) exitWith {
+if ((_item != "") && !(_item in (magazines player))) exitWith {
 	[format[
 		"Vous n'avez pas l'objet nécessaire pour prouver votre identité (%1).",
 		(([_item] call AlysiaClient_fnc_fetchCfgDetails) select 1)

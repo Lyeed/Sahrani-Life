@@ -1317,6 +1317,8 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 5;
 		time_default = 1;
+		class target {};
+		class factions: factions {};
 	};
 
 	class weapon_cz: weapon_thompson
@@ -1342,6 +1344,8 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 50;
 		time_default = 10;
+		class target {};
+		class factions: factions {};
 	};
 	class magazine_cz: weapon_thompson
 	{
@@ -1359,6 +1363,8 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 5;
 		time_default = 3;
+		class target {};
+		class factions: factions {};
 	};
 
 	class weapon_sawed: weapon_thompson
@@ -1382,6 +1388,8 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 30;
 		time_default = 10;
+		class target {};
+		class factions: factions {};
 	};
 	class magazine_sawed: weapon_thompson
 	{
@@ -1399,6 +1407,8 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 5;
 		time_default = 4;
+		class target {};
+		class factions: factions {};
 	};
 
 	class magazine_tec: weapon_thompson
@@ -1417,6 +1427,8 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 5;
 		time_default = 6;
+		class target {};
+		class factions: factions {};
 	};
 	class weapon_tec: weapon_thompson
 	{
@@ -1440,6 +1452,8 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 30;
 		time_default = 10;
+		class target {};
+		class factions: factions {};
 	};
 
 	class magazine_tracker: weapon_thompson
@@ -1458,6 +1472,8 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 5;
 		time_default = 5;
+		class target {};
+		class factions: factions {};
 	};
 	class weapon_tracker: weapon_thompson
 	{
@@ -1480,6 +1496,8 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 30;
 		time_default = 10;
+		class target {};
+		class factions: factions {};
 	};
 	class weapon_tracker_gold: weapon_thompson
 	{
@@ -1502,9 +1520,11 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 30;
 		time_default = 20;
+		class target {};
+		class factions: factions {};
 	};
 
-	class weapon_b95 : weapon_thompson
+	class weapon_b95: weapon_thompson
 	{
 		name = "Arme : Fusil B95";
 		sound = "smelting";
@@ -1527,9 +1547,11 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 50;
 		time_default = 10;
+		class target {};
+		class factions: factions {};
 	};
 
-	class magazine_b95 : weapon_thompson
+	class magazine_b95: weapon_thompson
 	{
 		name = "Munitions : Fusil B95";
 		require[] =
@@ -1545,6 +1567,8 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 5;
 		time_default = 4;
+		class target {};
+		class factions: factions {};
 	};
 
 	class weapon_cz75: weapon_thompson
@@ -1597,6 +1621,8 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 5;
 		time_default = 5;
+		class target {};
+		class factions: factions {};
 	};
 
 	class weapon_p226: weapon_cz75
@@ -1608,6 +1634,8 @@ class ALYSIA_PROCESS
 			{"RH_p226"},
 			0
 		};
+		class target {};
+		class factions: factions {};
 	};
 
 	class magazine_p226: weapon_thompson
@@ -1626,6 +1654,8 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 5;
 		time_default = 5;
+		class target {};
+		class factions: factions {};
 	};
 
 	class weapon_gsh18: weapon_cz75
@@ -1637,6 +1667,8 @@ class ALYSIA_PROCESS
 			{"RH_gsh18"},
 			0
 		};
+		class target {};
+		class factions: factions {};
 	};
 
 	class magazine_gsh18: weapon_thompson
@@ -1655,9 +1687,11 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 5;
 		time_default = 5;
+		class target {};
+		class factions: factions {};
 	};
 
-	class weapon_sdar : weapon_thompson
+	class weapon_sdar: weapon_thompson
 	{
 		name = "Arme : SDAR";
 		sound = "smelting";
@@ -1680,6 +1714,8 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 50;
 		time_default = 10;
+		class target {};
+		class factions: factions {};
 	};
 
 	class magazine_sdar: weapon_thompson
@@ -1698,6 +1734,8 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 5;
 		time_default = 5;
+		class target {};
+		class factions: factions {};
 	};
 
 	class opium
@@ -1739,6 +1777,8 @@ class ALYSIA_PROCESS
 			/* ARMA */{"SkylineItems_Morphine"},
 			/* CASH */0
 		};
+		class target {};
+		class factions: factions {};
 	};
 	class phenylalanine: opium
 	{
@@ -1754,6 +1794,8 @@ class ALYSIA_PROCESS
 			/* ARMA */{},
 			/* CASH */0
 		};
+		class target {};
+		class factions: factions {};
 	};
 	class epinephrine: opium
 	{
@@ -1769,5 +1811,7 @@ class ALYSIA_PROCESS
 			/* ARMA */{"SkylineItems_Adrenaline"},
 			/* CASH */0
 		};
+		class target {};
+		class factions: factions {};
 	};
 };

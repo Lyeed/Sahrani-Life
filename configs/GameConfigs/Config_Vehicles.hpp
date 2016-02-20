@@ -3543,18 +3543,18 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Dodge Viper";
 	};
-	class Skyline_Vehicule_Jonzie_Viper_01_F : Skyline_Vehicule_Jonzie_Viper {};
-	class Skyline_Vehicule_Jonzie_Viper_02_F : Skyline_Vehicule_Jonzie_Viper {};
-	class Skyline_Vehicule_Jonzie_Viper_03_F : Skyline_Vehicule_Jonzie_Viper {};
-	class Skyline_Vehicule_Jonzie_Viper_04_F : Skyline_Vehicule_Jonzie_Viper {};
-	class Skyline_Vehicule_Jonzie_Viper_05_F : Skyline_Vehicule_Jonzie_Viper {};
-	class Skyline_Vehicule_Jonzie_Viper_06_F : Skyline_Vehicule_Jonzie_Viper {};
-	class Skyline_Vehicule_Jonzie_Viper_07_F : Skyline_Vehicule_Jonzie_Viper {};
-	class Skyline_Vehicule_Jonzie_Viper_08_F : Skyline_Vehicule_Jonzie_Viper {};
-	class Skyline_Vehicule_Jonzie_Viper_09_F : Skyline_Vehicule_Jonzie_Viper {};
-	class Skyline_Vehicule_Jonzie_Viper_10_F : Skyline_Vehicule_Jonzie_Viper {};
-	class Skyline_Vehicule_Jonzie_Viper_11_F : Skyline_Vehicule_Jonzie_Viper {};
-	class Skyline_Vehicule_Jonzie_Viper_12_F : Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_01_F: Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_02_F: Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_03_F: Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_04_F: Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_05_F: Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_06_F: Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_07_F: Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_08_F: Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_09_F: Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_10_F: Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_11_F: Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_12_F: Skyline_Vehicule_Jonzie_Viper {};
 
 	class Skyline_Vehicule_Jonzie_Escalade
 	{
@@ -3582,20 +3582,20 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Ford Escalade";
 	};
-	class Skyline_Vehicule_Jonzie_Escalade_01_F : Skyline_Vehicule_Jonzie_Escalade {};
-  class Skyline_Vehicule_Jonzie_Escalade_02_F : Skyline_Vehicule_Jonzie_Escalade {};
-	class Skyline_Vehicule_Jonzie_Escalade_03_F : Skyline_Vehicule_Jonzie_Escalade {};
-	class Skyline_Vehicule_Jonzie_Escalade_04_F : Skyline_Vehicule_Jonzie_Escalade {};
-  class Skyline_Vehicule_Jonzie_Escalade_05_F : Skyline_Vehicule_Jonzie_Escalade {};
-	class Skyline_Vehicule_Jonzie_Escalade_06_F : Skyline_Vehicule_Jonzie_Escalade {};
-	class Skyline_Vehicule_Jonzie_Escalade_07_F : Skyline_Vehicule_Jonzie_Escalade {};
-	class Skyline_Vehicule_Jonzie_Escalade_08_F : Skyline_Vehicule_Jonzie_Escalade {};
-	class Skyline_Vehicule_Jonzie_Escalade_09_F : Skyline_Vehicule_Jonzie_Escalade {};
-	class Skyline_Vehicule_Jonzie_Escalade_10_F : Skyline_Vehicule_Jonzie_Escalade {};
-	class Skyline_Vehicule_Jonzie_Escalade_11_F : Skyline_Vehicule_Jonzie_Escalade {};
-	class Skyline_Vehicule_Jonzie_Escalade_12_F : Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_01_F: Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_02_F: Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_03_F: Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_04_F: Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_05_F: Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_06_F: Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_07_F: Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_08_F: Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_09_F: Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_10_F: Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_11_F: Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_12_F: Skyline_Vehicule_Jonzie_Escalade {};
   
-  class Skyline_Vehicule_Jonzie_Galant
+  	class Skyline_Vehicule_Jonzie_Galant
 	{
 		buyPrice = 10000;
 		inventory = 38;
@@ -3621,20 +3621,20 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Mitsubishi Galant";
 	};
-  class Skyline_Vehicule_Jonzie_Galant_01_F : Skyline_Vehicule_Jonzie_Galant {};
-	class Skyline_Vehicule_Jonzie_Galant_02_F : Skyline_Vehicule_Jonzie_Galant {};
-	class Skyline_Vehicule_Jonzie_Galant_03_F : Skyline_Vehicule_Jonzie_Galant {};
-	class Skyline_Vehicule_Jonzie_Galant_04_F : Skyline_Vehicule_Jonzie_Galant {};
-	class Skyline_Vehicule_Jonzie_Galant_05_F : Skyline_Vehicule_Jonzie_Galant {};
-	class Skyline_Vehicule_Jonzie_Galant_06_F : Skyline_Vehicule_Jonzie_Galant {};
-	class Skyline_Vehicule_Jonzie_Galant_07_F : Skyline_Vehicule_Jonzie_Galant {};
-	class Skyline_Vehicule_Jonzie_Galant_08_F : Skyline_Vehicule_Jonzie_Galant {};
-	class Skyline_Vehicule_Jonzie_Galant_09_F : Skyline_Vehicule_Jonzie_Galant {};
-	class Skyline_Vehicule_Jonzie_Galant_10_F : Skyline_Vehicule_Jonzie_Galant {};
-	class Skyline_Vehicule_Jonzie_Galant_11_F : Skyline_Vehicule_Jonzie_Galant {};
-	class Skyline_Vehicule_Jonzie_Galant_12_F : Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_01_F: Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_02_F: Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_03_F: Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_04_F: Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_05_F: Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_06_F: Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_07_F: Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_08_F: Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_09_F: Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_10_F: Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_11_F: Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_12_F: Skyline_Vehicule_Jonzie_Galant {};
   
-  class Skyline_Vehicule_Jonzie_Mini_Cooper
+  	class Skyline_Vehicule_Jonzie_Mini_Cooper
 	{
 		buyPrice = 7500;
 		inventory = 20;
@@ -3660,20 +3660,20 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Mini Cooper";
 	};
-	class Skyline_Vehicule_Jonzie_Mini_Cooper_01_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
-	class Skyline_Vehicule_Jonzie_Mini_Cooper_02_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
-	class Skyline_Vehicule_Jonzie_Mini_Cooper_03_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
-	class Skyline_Vehicule_Jonzie_Mini_Cooper_04_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
-	class Skyline_Vehicule_Jonzie_Mini_Cooper_05_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
-	class Skyline_Vehicule_Jonzie_Mini_Cooper_06_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
-	class Skyline_Vehicule_Jonzie_Mini_Cooper_07_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
-	class Skyline_Vehicule_Jonzie_Mini_Cooper_08_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
-	class Skyline_Vehicule_Jonzie_Mini_Cooper_09_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
-	class Skyline_Vehicule_Jonzie_Mini_Cooper_10_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
-	class Skyline_Vehicule_Jonzie_Mini_Cooper_11_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
-	class Skyline_Vehicule_Jonzie_Mini_Cooper_12_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_01_F: Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_02_F: Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_03_F: Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_04_F: Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_05_F: Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_06_F: Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_07_F: Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_08_F: Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_09_F: Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_10_F: Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_11_F: Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_12_F: Skyline_Vehicule_Jonzie_Mini_Cooper {};
 
-  class Skyline_Vehicule_Jonzie_Quattroporte
+  	class Skyline_Vehicule_Jonzie_Quattroporte
 	{
 		buyPrice = 325000;
 		inventory = 20;
@@ -3699,20 +3699,20 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Maserati Quattroporte";
 	};
-	class	Skyline_Vehicule_Jonzie_Quattroporte_01_F : Skyline_Vehicule_Jonzie_Quattroporte {};
-	class Skyline_Vehicule_Jonzie_Quattroporte_02_F : Skyline_Vehicule_Jonzie_Quattroporte {};
-	class Skyline_Vehicule_Jonzie_Quattroporte_03_F : Skyline_Vehicule_Jonzie_Quattroporte {};
-	class Skyline_Vehicule_Jonzie_Quattroporte_04_F : Skyline_Vehicule_Jonzie_Quattroporte {};
-	class Skyline_Vehicule_Jonzie_Quattroporte_05_F : Skyline_Vehicule_Jonzie_Quattroporte {};
-	class Skyline_Vehicule_Jonzie_Quattroporte_06_F : Skyline_Vehicule_Jonzie_Quattroporte {};
-	class Skyline_Vehicule_Jonzie_Quattroporte_07_F : Skyline_Vehicule_Jonzie_Quattroporte {};
-	class Skyline_Vehicule_Jonzie_Quattroporte_08_F : Skyline_Vehicule_Jonzie_Quattroporte {};
-	class Skyline_Vehicule_Jonzie_Quattroporte_09_F : Skyline_Vehicule_Jonzie_Quattroporte {};
-	class Skyline_Vehicule_Jonzie_Quattroporte_10_F : Skyline_Vehicule_Jonzie_Quattroporte {};
-	class Skyline_Vehicule_Jonzie_Quattroporte_11_F : Skyline_Vehicule_Jonzie_Quattroporte {};
-	class Skyline_Vehicule_Jonzie_Quattroporte_12_F : Skyline_Vehicule_Jonzie_Quattroporte {};
+	class	Skyline_Vehicule_Jonzie_Quattroporte_01_F: Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_02_F: Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_03_F: Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_04_F: Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_05_F: Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_06_F: Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_07_F: Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_08_F: Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_09_F: Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_10_F: Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_11_F: Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_12_F: Skyline_Vehicule_Jonzie_Quattroporte {};
   
-  class Skyline_Vehicule_Jonzie_Datsun_510
+  	class Skyline_Vehicule_Jonzie_Datsun_510
 	{
 		buyPrice = 7500;
 		inventory = 38;
@@ -3738,20 +3738,20 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Datsun 510";
 	};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_01_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_02_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_03_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_04_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_05_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_06_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_07_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_08_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_09_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_10_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_11_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_12_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_01_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_02_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_03_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_04_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_05_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_06_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_07_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_08_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_09_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_10_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_11_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_12_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
   
-  class Skyline_Vehicule_Jonzie_Corolla
+  	class Skyline_Vehicule_Jonzie_Corolla
 	{
 		buyPrice = 6000;
 		inventory = 38;
@@ -3777,20 +3777,20 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Toyota Corolla";
 	};
-	class	Skyline_Vehicule_Jonzie_Corolla_01_F : Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_02_F : Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_03_F : Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_04_F : Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_05_F : Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_06_F : Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_07_F : Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_08_F : Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_09_F : Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_10_F : Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_11_F : Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_12_F : Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_01_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_02_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_03_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_04_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_05_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_06_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_07_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_08_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_09_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_10_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_11_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_12_F: Skyline_Vehicule_Jonzie_Corolla {};
   
-  class Skyline_Vehicule_Jonzie_Datsun_Z432
+  	class Skyline_Vehicule_Jonzie_Datsun_Z432
 	{
 		buyPrice = 22000;
 		inventory = 38;
@@ -3816,20 +3816,20 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Datsun Z432";
 	};
-	class Skyline_Vehicule_Jonzie_Datsun_Z432_01_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
-	class Skyline_Vehicule_Jonzie_Datsun_Z432_02_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
-	class Skyline_Vehicule_Jonzie_Datsun_Z432_03_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
-	class Skyline_Vehicule_Jonzie_Datsun_Z432_04_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
-	class Skyline_Vehicule_Jonzie_Datsun_Z432_05_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
-	class Skyline_Vehicule_Jonzie_Datsun_Z432_06_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
-	class Skyline_Vehicule_Jonzie_Datsun_Z432_07_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
-	class Skyline_Vehicule_Jonzie_Datsun_Z432_08_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
-	class Skyline_Vehicule_Jonzie_Datsun_Z432_09_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
-	class Skyline_Vehicule_Jonzie_Datsun_Z432_10_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
-	class Skyline_Vehicule_Jonzie_Datsun_Z432_11_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
-	class Skyline_Vehicule_Jonzie_Datsun_Z432_12_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_01_F: Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_02_F: Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_03_F: Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_04_F: Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_05_F: Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_06_F: Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_07_F: Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_08_F: Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_09_F: Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_10_F: Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_11_F: Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_12_F: Skyline_Vehicule_Jonzie_Datsun_Z432 {};
   
-  class Skyline_Vehicule_Jonzie_Raptor
+  	class Skyline_Vehicule_Jonzie_Raptor
 	{
 		buyPrice = 63500;
 		inventory = 90;
@@ -3855,20 +3855,20 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Ford Raptor";
 	};
-	class	Skyline_Vehicule_Jonzie_Raptor_01_F : Skyline_Vehicule_Jonzie_Raptor {};
-	class Skyline_Vehicule_Jonzie_Raptor_02_F : Skyline_Vehicule_Jonzie_Raptor {};
-	class Skyline_Vehicule_Jonzie_Raptor_03_F : Skyline_Vehicule_Jonzie_Raptor {};
-	class Skyline_Vehicule_Jonzie_Raptor_04_F : Skyline_Vehicule_Jonzie_Raptor {};
-	class Skyline_Vehicule_Jonzie_Raptor_05_F : Skyline_Vehicule_Jonzie_Raptor {};
-	class Skyline_Vehicule_Jonzie_Raptor_06_F : Skyline_Vehicule_Jonzie_Raptor {};
-	class Skyline_Vehicule_Jonzie_Raptor_07_F : Skyline_Vehicule_Jonzie_Raptor {};
-	class Skyline_Vehicule_Jonzie_Raptor_08_F : Skyline_Vehicule_Jonzie_Raptor {};
-	class Skyline_Vehicule_Jonzie_Raptor_09_F : Skyline_Vehicule_Jonzie_Raptor {};
-	class Skyline_Vehicule_Jonzie_Raptor_10_F : Skyline_Vehicule_Jonzie_Raptor {};
-	class Skyline_Vehicule_Jonzie_Raptor_11_F : Skyline_Vehicule_Jonzie_Raptor {};
-	class Skyline_Vehicule_Jonzie_Raptor_12_F : Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_01_F: Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_02_F: Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_03_F: Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_04_F: Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_05_F: Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_06_F: Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_07_F: Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_08_F: Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_09_F: Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_10_F: Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_11_F: Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_12_F: Skyline_Vehicule_Jonzie_Raptor {};
   
-  class Skyline_Vehicule_Jonzie_STI
+  	class Skyline_Vehicule_Jonzie_STI
 	{
 		buyPrice = 47500;
 		inventory = 45;
@@ -3894,20 +3894,20 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Subaru STI";
 	};
-	class	Skyline_Vehicule_Jonzie_STI_01_F : Skyline_Vehicule_Jonzie_STI {};
-	class	Skyline_Vehicule_Jonzie_STI_02_F : Skyline_Vehicule_Jonzie_STI {}; 
-	class	Skyline_Vehicule_Jonzie_STI_03_F : Skyline_Vehicule_Jonzie_STI {};
-	class	Skyline_Vehicule_Jonzie_STI_04_F : Skyline_Vehicule_Jonzie_STI {};
-	class	Skyline_Vehicule_Jonzie_STI_05_F : Skyline_Vehicule_Jonzie_STI {};
-	class	Skyline_Vehicule_Jonzie_STI_06_F : Skyline_Vehicule_Jonzie_STI {};
-	class	Skyline_Vehicule_Jonzie_STI_07_F : Skyline_Vehicule_Jonzie_STI {};
-	class	Skyline_Vehicule_Jonzie_STI_08_F : Skyline_Vehicule_Jonzie_STI {};
-	class	Skyline_Vehicule_Jonzie_STI_09_F : Skyline_Vehicule_Jonzie_STI {};
-	class	Skyline_Vehicule_Jonzie_STI_10_F : Skyline_Vehicule_Jonzie_STI {};
-	class	Skyline_Vehicule_Jonzie_STI_11_F : Skyline_Vehicule_Jonzie_STI {};
-	class	Skyline_Vehicule_Jonzie_STI_12_F : Skyline_Vehicule_Jonzie_STI {};
+	class Skyline_Vehicule_Jonzie_STI_01_F: Skyline_Vehicule_Jonzie_STI {};
+	class Skyline_Vehicule_Jonzie_STI_02_F: Skyline_Vehicule_Jonzie_STI {}; 
+	class Skyline_Vehicule_Jonzie_STI_03_F: Skyline_Vehicule_Jonzie_STI {};
+	class Skyline_Vehicule_Jonzie_STI_04_F: Skyline_Vehicule_Jonzie_STI {};
+	class Skyline_Vehicule_Jonzie_STI_05_F: Skyline_Vehicule_Jonzie_STI {};
+	class Skyline_Vehicule_Jonzie_STI_06_F: Skyline_Vehicule_Jonzie_STI {};
+	class Skyline_Vehicule_Jonzie_STI_07_F: Skyline_Vehicule_Jonzie_STI {};
+	class Skyline_Vehicule_Jonzie_STI_08_F: Skyline_Vehicule_Jonzie_STI {};
+	class Skyline_Vehicule_Jonzie_STI_09_F: Skyline_Vehicule_Jonzie_STI {};
+	class Skyline_Vehicule_Jonzie_STI_10_F: Skyline_Vehicule_Jonzie_STI {};
+	class Skyline_Vehicule_Jonzie_STI_11_F: Skyline_Vehicule_Jonzie_STI {};
+	class Skyline_Vehicule_Jonzie_STI_12_F: Skyline_Vehicule_Jonzie_STI {};
   
-  class Skyline_Vehicule_Jonzie_VE
+  	class Skyline_Vehicule_Jonzie_VE
 	{
 		buyPrice = 29500;
 		inventory = 45;
@@ -3933,20 +3933,20 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Holden Commodore";
 	};
-	class	Skyline_Vehicule_Jonzie_VE_01_F : Skyline_Vehicule_Jonzie_VE {};
-	class	Skyline_Vehicule_Jonzie_VE_02_F : Skyline_Vehicule_Jonzie_VE {};
-	class	Skyline_Vehicule_Jonzie_VE_03_F : Skyline_Vehicule_Jonzie_VE {};
-	class	Skyline_Vehicule_Jonzie_VE_04_F : Skyline_Vehicule_Jonzie_VE {};
-	class	Skyline_Vehicule_Jonzie_VE_05_F : Skyline_Vehicule_Jonzie_VE {};
-	class	Skyline_Vehicule_Jonzie_VE_06_F : Skyline_Vehicule_Jonzie_VE {};
-	class	Skyline_Vehicule_Jonzie_VE_07_F : Skyline_Vehicule_Jonzie_VE {};
-	class	Skyline_Vehicule_Jonzie_VE_08_F : Skyline_Vehicule_Jonzie_VE {};
-	class	Skyline_Vehicule_Jonzie_VE_09_F : Skyline_Vehicule_Jonzie_VE {};
-	class	Skyline_Vehicule_Jonzie_VE_10_F : Skyline_Vehicule_Jonzie_VE {};
-	class	Skyline_Vehicule_Jonzie_VE_11_F : Skyline_Vehicule_Jonzie_VE {};
-	class	Skyline_Vehicule_Jonzie_VE_12_F : Skyline_Vehicule_Jonzie_VE {};
+	class Skyline_Vehicule_Jonzie_VE_01_F: Skyline_Vehicule_Jonzie_VE {};
+	class Skyline_Vehicule_Jonzie_VE_02_F: Skyline_Vehicule_Jonzie_VE {};
+	class Skyline_Vehicule_Jonzie_VE_03_F: Skyline_Vehicule_Jonzie_VE {};
+	class Skyline_Vehicule_Jonzie_VE_04_F: Skyline_Vehicule_Jonzie_VE {};
+	class Skyline_Vehicule_Jonzie_VE_05_F: Skyline_Vehicule_Jonzie_VE {};
+	class Skyline_Vehicule_Jonzie_VE_06_F: Skyline_Vehicule_Jonzie_VE {};
+	class Skyline_Vehicule_Jonzie_VE_07_F: Skyline_Vehicule_Jonzie_VE {};
+	class Skyline_Vehicule_Jonzie_VE_08_F: Skyline_Vehicule_Jonzie_VE {};
+	class Skyline_Vehicule_Jonzie_VE_09_F: Skyline_Vehicule_Jonzie_VE {};
+	class Skyline_Vehicule_Jonzie_VE_10_F: Skyline_Vehicule_Jonzie_VE {};
+	class Skyline_Vehicule_Jonzie_VE_11_F: Skyline_Vehicule_Jonzie_VE {};
+	class Skyline_Vehicule_Jonzie_VE_12_F: Skyline_Vehicule_Jonzie_VE {};
   
-  class Skyline_Vehicule_Jonzie_Ceed
+  	class Skyline_Vehicule_Jonzie_Ceed
 	{
 		buyPrice = 12500;
 		inventory = 38;
@@ -3972,20 +3972,20 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Kia cee'd";
 	};
-	class	Skyline_Vehicule_Jonzie_Ceed_01_F : Skyline_Vehicule_Jonzie_Ceed {};
-	class	Skyline_Vehicule_Jonzie_Ceed_02_F : Skyline_Vehicule_Jonzie_Ceed {};
-	class	Skyline_Vehicule_Jonzie_Ceed_03_F : Skyline_Vehicule_Jonzie_Ceed {};
-	class	Skyline_Vehicule_Jonzie_Ceed_04_F : Skyline_Vehicule_Jonzie_Ceed {};
-	class	Skyline_Vehicule_Jonzie_Ceed_05_F : Skyline_Vehicule_Jonzie_Ceed {};
-	class	Skyline_Vehicule_Jonzie_Ceed_06_F : Skyline_Vehicule_Jonzie_Ceed {};
-	class	Skyline_Vehicule_Jonzie_Ceed_07_F : Skyline_Vehicule_Jonzie_Ceed {};
-	class	Skyline_Vehicule_Jonzie_Ceed_08_F : Skyline_Vehicule_Jonzie_Ceed {};
-	class	Skyline_Vehicule_Jonzie_Ceed_09_F : Skyline_Vehicule_Jonzie_Ceed {};
-	class	Skyline_Vehicule_Jonzie_Ceed_10_F : Skyline_Vehicule_Jonzie_Ceed {};
-	class	Skyline_Vehicule_Jonzie_Ceed_11_F : Skyline_Vehicule_Jonzie_Ceed {};
-	class	Skyline_Vehicule_Jonzie_Ceed_12_F : Skyline_Vehicule_Jonzie_Ceed {};
+	class Skyline_Vehicule_Jonzie_Ceed_01_F: Skyline_Vehicule_Jonzie_Ceed {};
+	class Skyline_Vehicule_Jonzie_Ceed_02_F: Skyline_Vehicule_Jonzie_Ceed {};
+	class Skyline_Vehicule_Jonzie_Ceed_03_F: Skyline_Vehicule_Jonzie_Ceed {};
+	class Skyline_Vehicule_Jonzie_Ceed_04_F: Skyline_Vehicule_Jonzie_Ceed {};
+	class Skyline_Vehicule_Jonzie_Ceed_05_F: Skyline_Vehicule_Jonzie_Ceed {};
+	class Skyline_Vehicule_Jonzie_Ceed_06_F: Skyline_Vehicule_Jonzie_Ceed {};
+	class Skyline_Vehicule_Jonzie_Ceed_07_F: Skyline_Vehicule_Jonzie_Ceed {};
+	class Skyline_Vehicule_Jonzie_Ceed_08_F: Skyline_Vehicule_Jonzie_Ceed {};
+	class Skyline_Vehicule_Jonzie_Ceed_09_F: Skyline_Vehicule_Jonzie_Ceed {};
+	class Skyline_Vehicule_Jonzie_Ceed_10_F: Skyline_Vehicule_Jonzie_Ceed {};
+	class Skyline_Vehicule_Jonzie_Ceed_11_F: Skyline_Vehicule_Jonzie_Ceed {};
+	class Skyline_Vehicule_Jonzie_Ceed_12_F: Skyline_Vehicule_Jonzie_Ceed {};
   
-  class Skyline_Vehicule_Jonzie_30CSL
+  	class Skyline_Vehicule_Jonzie_30CSL
 	{
 		buyPrice = 22500;
 		inventory = 38;
@@ -4011,20 +4011,20 @@ class ALYSIA_VEHICLES
 		};
 		realname = "BMW 3.0 CSL";
 	};
-	class	Skyline_Vehicule_Jonzie_30CSL_01_F : Skyline_Vehicule_Jonzie_30CSL {};
-	class	Skyline_Vehicule_Jonzie_30CSL_02_F : Skyline_Vehicule_Jonzie_30CSL {};
-	class	Skyline_Vehicule_Jonzie_30CSL_03_F : Skyline_Vehicule_Jonzie_30CSL {};
-	class	Skyline_Vehicule_Jonzie_30CSL_04_F : Skyline_Vehicule_Jonzie_30CSL {};
-	class	Skyline_Vehicule_Jonzie_30CSL_05_F : Skyline_Vehicule_Jonzie_30CSL {};
-	class	Skyline_Vehicule_Jonzie_30CSL_06_F : Skyline_Vehicule_Jonzie_30CSL {};
-	class	Skyline_Vehicule_Jonzie_30CSL_07_F : Skyline_Vehicule_Jonzie_30CSL {};
-	class	Skyline_Vehicule_Jonzie_30CSL_08_F : Skyline_Vehicule_Jonzie_30CSL {};
-	class	Skyline_Vehicule_Jonzie_30CSL_09_F : Skyline_Vehicule_Jonzie_30CSL {};
-	class	Skyline_Vehicule_Jonzie_30CSL_10_F : Skyline_Vehicule_Jonzie_30CSL {};
-	class	Skyline_Vehicule_Jonzie_30CSL_11_F : Skyline_Vehicule_Jonzie_30CSL {};
-	class	Skyline_Vehicule_Jonzie_30CSL_12_F : Skyline_Vehicule_Jonzie_30CSL {};
+	class Skyline_Vehicule_Jonzie_30CSL_01_F: Skyline_Vehicule_Jonzie_30CSL {};
+	class Skyline_Vehicule_Jonzie_30CSL_02_F: Skyline_Vehicule_Jonzie_30CSL {};
+	class Skyline_Vehicule_Jonzie_30CSL_03_F: Skyline_Vehicule_Jonzie_30CSL {};
+	class Skyline_Vehicule_Jonzie_30CSL_04_F: Skyline_Vehicule_Jonzie_30CSL {};
+	class Skyline_Vehicule_Jonzie_30CSL_05_F: Skyline_Vehicule_Jonzie_30CSL {};
+	class Skyline_Vehicule_Jonzie_30CSL_06_F: Skyline_Vehicule_Jonzie_30CSL {};
+	class Skyline_Vehicule_Jonzie_30CSL_07_F: Skyline_Vehicule_Jonzie_30CSL {};
+	class Skyline_Vehicule_Jonzie_30CSL_08_F: Skyline_Vehicule_Jonzie_30CSL {};
+	class Skyline_Vehicule_Jonzie_30CSL_09_F: Skyline_Vehicule_Jonzie_30CSL {};
+	class Skyline_Vehicule_Jonzie_30CSL_10_F: Skyline_Vehicule_Jonzie_30CSL {};
+	class Skyline_Vehicule_Jonzie_30CSL_11_F: Skyline_Vehicule_Jonzie_30CSL {};
+	class Skyline_Vehicule_Jonzie_30CSL_12_F: Skyline_Vehicule_Jonzie_30CSL {};
   
-  class Skyline_Vehicule_Jonzie_XB
+  	class Skyline_Vehicule_Jonzie_XB
 	{
 		buyPrice = 59250;
 		inventory = 20;
@@ -4050,16 +4050,16 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Ford Falcon XB";
 	};
-	class	Skyline_Vehicule_Jonzie_XB_01_F : Skyline_Vehicule_Jonzie_XB {};
-	class	Skyline_Vehicule_Jonzie_XB_02_F : Skyline_Vehicule_Jonzie_XB {};
-	class	Skyline_Vehicule_Jonzie_XB_03_F : Skyline_Vehicule_Jonzie_XB {};
-	class	Skyline_Vehicule_Jonzie_XB_04_F : Skyline_Vehicule_Jonzie_XB {};
-	class	Skyline_Vehicule_Jonzie_XB_05_F : Skyline_Vehicule_Jonzie_XB {};
-	class	Skyline_Vehicule_Jonzie_XB_06_F : Skyline_Vehicule_Jonzie_XB {};
-	class	Skyline_Vehicule_Jonzie_XB_07_F : Skyline_Vehicule_Jonzie_XB {};
-	class	Skyline_Vehicule_Jonzie_XB_08_F : Skyline_Vehicule_Jonzie_XB {};
-	class	Skyline_Vehicule_Jonzie_XB_09_F : Skyline_Vehicule_Jonzie_XB {};
-	class	Skyline_Vehicule_Jonzie_XB_10_F : Skyline_Vehicule_Jonzie_XB {};
-	class	Skyline_Vehicule_Jonzie_XB_11_F : Skyline_Vehicule_Jonzie_XB {};
-	class	Skyline_Vehicule_Jonzie_XB_12_F : Skyline_Vehicule_Jonzie_XB {};
+	class Skyline_Vehicule_Jonzie_XB_01_F: Skyline_Vehicule_Jonzie_XB {};
+	class Skyline_Vehicule_Jonzie_XB_02_F: Skyline_Vehicule_Jonzie_XB {};
+	class Skyline_Vehicule_Jonzie_XB_03_F: Skyline_Vehicule_Jonzie_XB {};
+	class Skyline_Vehicule_Jonzie_XB_04_F: Skyline_Vehicule_Jonzie_XB {};
+	class Skyline_Vehicule_Jonzie_XB_05_F: Skyline_Vehicule_Jonzie_XB {};
+	class Skyline_Vehicule_Jonzie_XB_06_F: Skyline_Vehicule_Jonzie_XB {};
+	class Skyline_Vehicule_Jonzie_XB_07_F: Skyline_Vehicule_Jonzie_XB {};
+	class Skyline_Vehicule_Jonzie_XB_08_F: Skyline_Vehicule_Jonzie_XB {};
+	class Skyline_Vehicule_Jonzie_XB_09_F: Skyline_Vehicule_Jonzie_XB {};
+	class Skyline_Vehicule_Jonzie_XB_10_F: Skyline_Vehicule_Jonzie_XB {};
+	class Skyline_Vehicule_Jonzie_XB_11_F: Skyline_Vehicule_Jonzie_XB {};
+	class Skyline_Vehicule_Jonzie_XB_12_F: Skyline_Vehicule_Jonzie_XB {};
 };

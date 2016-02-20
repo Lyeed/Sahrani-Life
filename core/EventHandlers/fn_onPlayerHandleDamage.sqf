@@ -32,6 +32,7 @@ if (g_connected && !g_staff_god && (_damage > 0)) then
 			{
 				[] spawn AlysiaClient_fnc_knockedOut;
 			};
+			_damage = 0;
 		};
 	};
 

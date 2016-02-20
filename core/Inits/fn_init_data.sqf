@@ -26,8 +26,6 @@ g_sexe = _basic select 6;
 		(_x select 0) setMarkerAlphaLocal 1;
 	};
 } forEach (_basic select 7);
-// donator
-g_donator = compileFinal (_basic select 8);
 // blood/bleed/coma
 [(_basic select 9), (_basic select 10), (_basic select 11)] spawn
 {

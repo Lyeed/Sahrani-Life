@@ -61,6 +61,9 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 2;
 		};
+		class lights {};
+		class house {};
+		class factions: factions {};
 	};
 	class Land_smd_dum_olezlina_open: Land_Cihlovej_Dum_mini
 	{
@@ -70,6 +73,9 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 4;
 		};
+		class lights {};
+		class house {};
+		class factions: factions {};
 	};
 	class Land_smd_house_y_open: Land_Cihlovej_Dum_mini
 	{
@@ -79,6 +85,9 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Medium";
 			building_index = 5;
 		};
+		class lights {};
+		class house {};
+		class factions: factions {};
 	};
 	class Land_Sara_Domek_sedy: Land_Cihlovej_Dum_mini
 	{
@@ -88,6 +97,9 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Medium";
 			building_index = 3;
 		};
+		class lights {};
+		class house {};
+		class factions: factions {};
 	};
 	class Land_Sara_domek_zluty: Land_Cihlovej_Dum_mini
 	{
@@ -97,6 +109,9 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 1;
 		};
+		class lights {};
+		class house {};
+		class factions: factions {};
 	};
 	class Land_smd_Panelak2: Land_Cihlovej_Dum_mini
 	{
@@ -106,6 +121,9 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 4;
 		};
+		class lights {};
+		class house {};
+		class factions: factions {};
 	};
 	class Land_smd_Panelak: Land_Cihlovej_Dum_mini
 	{
@@ -115,6 +133,9 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 4;
 		};
+		class lights {};
+		class house {};
+		class factions: factions {};
 	};
 	class Land_Deutshe_mini: Land_Cihlovej_Dum_mini
 	{
@@ -124,6 +145,9 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Medium";
 			building_index = 2;
 		};
+		class lights {};
+		class house {};
+		class factions: factions {};
 	};
 	class Land_smd_dum_olez_istan2_open: Land_Cihlovej_Dum_mini
 	{
@@ -133,6 +157,9 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Medium";
 			building_index = 1;
 		};
+		class lights {};
+		class house {};
+		class factions: factions {};
 	};
 	class Land_smd_dum_olez_istan2_maly_open: Land_Cihlovej_Dum_mini
 	{
@@ -142,6 +169,9 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 3;
 		};
+		class lights {};
+		class house {};
+		class factions: factions {};
 	};
 	class Land_smd_dum_olez_istan1_open: Land_Cihlovej_Dum_mini
 	{
@@ -151,6 +181,9 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 3;
 		};
+		class lights {};
+		class house {};
+		class factions: factions {};
 	};
 	class Land_smd_dum_olez_istan1_open2: Land_Cihlovej_Dum_mini
 	{
@@ -160,6 +193,9 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 3;
 		};
+		class lights {};
+		class house {};
+		class factions: factions {};
 	};
 	class Land_Bouda2_vnitrek: Land_Cihlovej_Dum_mini
 	{
@@ -169,6 +205,9 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Small";
 			building_index = 4;
 		};
+		class lights {};
+		class house {};
+		class factions: factions {};
 	};
 	class Land_Dum_rasovna: Land_Cihlovej_Dum_mini
 	{
@@ -178,6 +217,9 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Small";
 			building_index = 2;
 		};
+		class lights {};
+		class house {};
+		class factions: factions {};
 	};
 	class Land_smd_sara_zluty_statek_in: Land_Cihlovej_Dum_mini
 	{
@@ -187,6 +229,9 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Small";
 			building_index = 4;
 		};
+		class lights {};
+		class house {};
+		class factions: factions {};
 	};
 	class Land_smd_dum_mesto_in_open: Land_Cihlovej_Dum_mini
 	{
@@ -196,6 +241,9 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Small";
 			building_index = 3;
 		};
+		class lights {};
+		class house {};
+		class factions: factions {};
 	};
 	
 	/* GARAGES */
@@ -227,18 +275,30 @@ class ALYSIA_HOUSES
 	class Land_smd_garaz_long_open: Land_smd_garaz_open
 	{
 		price = 260000;
+		class garage: garage {};
+		class lights {};
+		class factions: factions {};
 	};
 	class Land_smd_garaz_mala_open: Land_smd_garaz_open
 	{
 		price = 180000;
+		class garage: garage {};
+		class lights {};
+		class factions: factions {};
 	};
 	class Land_smd_garaz_bez_tanku: Land_smd_garaz_open
 	{
 		price = 360000;
+		class garage: garage {};
+		class lights {};
+		class factions: factions {};
 	};
 	class Land_Sara_hasic_zbroj: Land_smd_garaz_open
 	{
 		price = 250000;
+		class garage: garage {};
+		class lights {};
+		class factions: factions {};
 	};
 
 	/* STORAGE */
@@ -276,6 +336,8 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 2;
 		};
+		class lights {};
+		class factions: factions {};
 	};
 	class Land_Hut_old02: Land_smd_army_hut_storrage
 	{
@@ -285,6 +347,8 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Medium";
 			building_index = 7;
 		};
+		class lights {};
+		class factions: factions {};
 	};
 	class Land_Misc_Cargo1Bo
 	{
@@ -294,13 +358,32 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Small";
 			building_index = 2;
 		};
+		class lights {};
+		class factions
+		{
+			class GUER {};
+			class WEST
+			{
+				rank = 2;
+			};
+			class EAST
+			{
+				rank = 1;
+			};
+			class CIV
+			{
+				license = "home";
+			};
+		};
 	};
 	class Land_Misc_Cargo1Ao: Land_Misc_Cargo1Bo
 	{
 		class storage
 		{
 			building_index = 3;
-		};		
+		};
+		class lights {};
+		class factions: factions {};
 	};
 	class Land_Stodola_old_open: Land_smd_army_hut_storrage
 	{
@@ -310,6 +393,8 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 5;
 		};
+		class lights {};
+		class factions: factions {};
 	};
 	class Land_smd_sara_stodola2: Land_smd_army_hut_storrage
 	{
@@ -319,6 +404,8 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Medium";
 			building_index = 5;
 		};
+		class lights {};
+		class factions: factions {};
 	};
 	class Land_smd_budova3_open: Land_smd_army_hut_storrage
 	{
@@ -328,6 +415,8 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Small";
 			building_index = 1;
 		};
+		class lights {};
+		class factions: factions {};
 	};
 	class Land_Barn_Metal: Land_smd_army_hut_storrage
 	{
@@ -337,6 +426,8 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 2;
 		};
+		class lights {};
+		class factions: factions {};
 	};
 
 	/* WEST HOUSES */
@@ -461,7 +552,12 @@ class ALYSIA_HOUSES
 			};
 		};
 	};
-	class Land_smd_army_hut2_int: Land_Army_hut2_int {};
+	class Land_smd_army_hut2_int: Land_Army_hut2_int
+	{
+		class lights {};
+		class factions: factions {};
+		class storage: storage {};		
+	};
 	class Land_Army_hut3_long_int
 	{
 		price = 325000;
@@ -479,7 +575,12 @@ class ALYSIA_HOUSES
 			};
 		};
 	};
-	class Land_smd_army_hut3_long_int: Land_Army_hut3_long_int {};
+	class Land_smd_army_hut3_long_int: Land_Army_hut3_long_int
+	{
+		class lights {};
+		class factions: factions {};
+		class storage: storage {};
+	};
 	class Fett_Land_Dum_mesto_in_east
 	{
 		price = 325000;

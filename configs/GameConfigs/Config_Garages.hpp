@@ -225,7 +225,6 @@ class ALYSIA_GARAGES
 			"Ship"
 		};
 	};
-
 	class garage_sea_2
 	{
 		name = "Garage Maritime";
@@ -237,6 +236,39 @@ class ALYSIA_GARAGES
 		types[] =
 		{
 			"Ship"
+		};
+	};
+
+	class fourriere_NORTH
+	{
+		name = "Fourrière";
+		spawns[] =
+		{
+			"fourriere_NORTH_spawn_1",
+			"fourriere_NORTH_spawn_2"
+		};
+		types[] =
+		{
+			"Air",
+			"Truck",
+			"Car",
+			"Tank"
+		};
+	};
+	class fourriere_SOUTH
+	{
+		name = "Fourrière";
+		spawns[] =
+		{
+			"fourriere_SOUTH_spawn_1",
+			"fourriere_SOUTH_spawn_2"
+		};
+		types[] =
+		{
+			"Air",
+			"Truck",
+			"Car",
+			"Tank"
 		};
 	};
 };
