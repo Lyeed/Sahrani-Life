@@ -184,8 +184,7 @@ class ALYSIA_FACTIONS
 				"ItemCompass",
 				"ItemWatch",
 				"ItemGPS",
-				"tf_anprc152",
-				"Skyline_tl122_blanche"
+				"tf_anprc152"
 			};
 		};
 
@@ -391,8 +390,7 @@ class ALYSIA_FACTIONS
 				"ItemCompass",
 				"ItemWatch",
 				"ItemGPS",
-				"tf_anprc152",
-				"Skyline_tl122_blanche"
+				"tf_anprc152"
 			};
 		};
 
@@ -530,8 +528,7 @@ class ALYSIA_FACTIONS
 			{
 				"ItemMap",
 				"ItemCompass",
-				"ItemWatch",
-				"Skyline_tl122_blanche"
+				"ItemWatch"
 			};
 		};
 
@@ -695,8 +692,7 @@ class ALYSIA_FACTIONS
 				"ItemWatch",
 				"ItemGPS",
 				"Badge_samu",
-				"tf_anprc152",
-				"Skyline_tl122_blanche"
+				"tf_anprc152"
 			};
 		};
 

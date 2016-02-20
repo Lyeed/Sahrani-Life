@@ -5,9 +5,8 @@ class ALYSIA_GARAGES
 		name = "Garage de Brajvagrad";
 		spawns[] =
 		{
-			"garage_paraiso_1",
-			"garage_paraiso_2",
-			"garage_paraiso_3"
+			"CIV_vehicles_land_occasion_marker_1",
+			"CIV_vehicles_land_occasion_marker_4"
 		};
 		types[] =
 		{

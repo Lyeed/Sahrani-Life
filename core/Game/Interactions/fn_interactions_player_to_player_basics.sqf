@@ -235,5 +235,5 @@
 			"
 		]
 	],
-	"Intéractions"
+	"Interactions"
 ] spawn AlysiaClient_fnc_interactions_create;

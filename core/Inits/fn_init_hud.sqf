@@ -123,7 +123,7 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 		_ctrl_fatigue ctrlSetStructuredText parseText format
 		[
 			"<img size='1.4' image='lyeed_IMG\data\player_hud\fatigue.paa'/><t align='right' font='Impact'><t size='1.7'>%1</t><t size='1.3'>%2</t></t>",
-			round((getFatigue player) * 100), "%"
+			round((1 - (getFatigue player)) * 100), "%"
 		];
 
 		_ctrl_hunger ctrlSetStructuredText parseText format
