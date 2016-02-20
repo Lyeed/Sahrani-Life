@@ -331,7 +331,7 @@ class ALYSIA_ITEMS
 		license     = "archeologie";
 		class market
 		{
-			max = 5632;
+			max = 1100;
 			min = 475;
 			mult = 2;
 			affect[] = {};
@@ -348,8 +348,8 @@ class ALYSIA_ITEMS
 		license     = "archeologie";
 		class market
 		{
-			max = 1100;
-			min = 300;
+			max = 5632;
+			min = 2000;
 			mult = 4;
 			affect[] = {};
 		};
