@@ -126,10 +126,15 @@ if ((lbSize _ctrl_tmp) isEqualTo 0) then
 	lbSort [_ctrl_tmp, "DESC"];
 };
 
-(_display displayCtrl 2422) ctrlSetStructuredText parseText format["<t align='center'>%1/%2</t>", g_shop_weight_actual, g_maxWeight];
 (_display displayCtrl 2411) ctrlSetStructuredText parseText format
 [
-	"<t align='left'>%1</t><t align='center' color='#8cff9b'>%2</t><t align='right'>kn</t>",
+		"<t align='center'>"
+	+	"Poids<br/>"
+	+	"%1/%2<br/>"
+	+	"Montant<br/>"
+	+	"%3 <t color='#8cff9b'>%4</t>kn",
+	g_shop_weight_actual,
+	g_maxWeight,
 	if ((g_shop_bill_dollar + g_shop_bill_illegal) >= 0) then {"+"} else {"-"},
-	([(abs g_shop_bill_dollar) + g_shop_bill_illegal] call AlysiaClient_fnc_numberText)
+	[(abs g_shop_bill_dollar) + g_shop_bill_illegal] call AlysiaClient_fnc_numberText
 ];

@@ -216,7 +216,7 @@ class ALYSIA_SHOPS_ARMA
 	};
 	class gov_south
 	{
-		name = "Assemblée";
+		name = "Administration Centrale";
 		side = "CIV";
 		stocks[] =
 		{

@@ -79,7 +79,7 @@ if (g_launder > 0) then
 		{
 			_target = player getVariable ["escorting", objNull];
 			detach _target;
-			_target moveInCargo _veh;
+			_target action ["getInCargo", _veh];
 			_target setVariable ["escorted", objNull, true];
 			player setVariable ["escorting", objNull, true];
 		};
@@ -88,7 +88,7 @@ if (g_launder > 0) then
 		{
 			detach g_dragingBody;
 			g_dragingBody setVariable ["transporting", false, true];
-			g_dragingBody moveInCargo _veh;
+			g_dragingBody action ["getInCargo", _veh];
 			g_dragingBody = ObjNull;
 		};
 

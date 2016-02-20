@@ -47,9 +47,7 @@ if (_enoughText != "") exitWith {
 if (_requireTarget) then
 {
 	_smoke = getText(missionConfigFile >> "ALYSIA_PROCESS" >> _type >> "target" >> "smoke_type");
-	if (_smoke != "") then {
-		_smoke createVehicle [_smoke, (getPos _target), [], 0, "CAN_COLLIDE"];
-	};
+	if (_smoke != "") then {createVehicle [_smoke, (getPos _target), [], 0, "CAN_COLLIDE"]};
 };
 
 if (!([

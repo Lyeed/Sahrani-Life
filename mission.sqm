@@ -22568,7 +22568,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 180;this setposATL [10649.642578,9250.464844,1.40803];this setVectorUp [0,0,1];this addAction[""Assemblée"",AlysiaClient_fnc_shop_arma_open,""gov_south"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""SOUTH""'];";
+			init="this enableSimulation true;this setdir 180;this setposATL [10649.642578,9250.464844,1.40803];this setVectorUp [0,0,1];this addAction[""Administration Centrale"",AlysiaClient_fnc_shop_arma_open,""gov_south"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""SOUTH""'];";
 		};
 		class Item1842
 		{

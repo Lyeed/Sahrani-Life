@@ -3375,7 +3375,8 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		realname = "BTR60 Cuba";
 	};
-	class I_mas_T34_AAF_01
+	
+	class Skyline_T34_01_F
 	{
 		buyPrice = 370000;
 		inventory = 90;

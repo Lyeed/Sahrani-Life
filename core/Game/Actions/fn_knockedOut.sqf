@@ -1,20 +1,25 @@
 /*
-	File: fn_knockedOut.sqf
-	Author: Bryan "Tonic" Boardwine
+		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
+	Code written by Lyeed
+	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
+	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
+	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_target", "_obj"];
-_target = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 
-if(isNull _target) exitWith {};
-if(_target != player) exitWith {};
+if ((animationState player) != "Incapacitated") then
+{
+	private "_inUse";
+	_inUse = false;
+	if (g_action_inUse) then {
+		_inUse = true
+	} else {
+		g_action_inUse = true;
+	};
+	player playMoveNow "Incapacitated";
+	sleep round(random(7) + 2);
+	player playMoveNow "amovppnemstpsraswrfldnon";
 
-player setVariable["knockedOut", true, true];
-player playMoveNow "Incapacitated";
-_obj = "Land_ClutterCutter_small_F" createVehicle (getPosATL player);
-_obj setPosATL (getPosATL player);
-player attachTo [_obj, [0, 0, 0]];
-sleep 15;
-player playMoveNow "amovppnemstpsraswrfldnon";
-detach player;
-deleteVehicle _obj;
-player setVariable["knockedOut", false, true];
+	if (!_inUse) then {
+		g_action_inUse = false;
+	};
+};

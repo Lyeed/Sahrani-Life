@@ -509,8 +509,6 @@ class CfgFunctions
 			class eatFood {};
 			class knockedOut {};
 			class knockoutAction {};
-			class pickupItem {};
-			class pickupMoney {};
 			class restrain {};
 			class surrender {};
 			class alcootest_get {};

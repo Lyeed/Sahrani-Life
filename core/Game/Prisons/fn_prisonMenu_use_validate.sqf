@@ -25,7 +25,6 @@ if (isClass(_config)) then
 	_bailMin = getNumber(_config >> "bail" >> "min");
 	_bailMax = getNumber(_config >> "bail" >> "max");
 	_bailEnable = getNumber(_config >> "bail" >> "enable");
-	_time = parseNumber(ctrlText 20010);
 
 	disableSerialization;
 	_display = findDisplay 20000;
@@ -33,30 +32,16 @@ if (isClass(_config)) then
 
 	_error = false;
 
-	{
-		if (!([ctrlText _x] call AlysiaClient_fnc_isNumber)) then
-		{
-			(_display displayCtrl _x) ctrlSetBackgroundColor [153, 0, 0, 0.5];
-			_error = true;
-		};
-	} forEach [20010, 20011];
+	if (!([ctrlText 20010] call AlysiaClient_fnc_isNumber)) then {_error = true};
+	if (!([ctrlText 20011] call AlysiaClient_fnc_isNumber)) then {_error = true};
 
-	if ((_time < _timeMin) || (_time > _timeMax)) then
-	{
-		(_display displayCtrl 20010) ctrlSetBackgroundColor [153, 0, 0, 0.5];
-		_error = true;
-	};
+	_time = parseNumber(ctrlText 20010);
+	_bails = parseNumber(ctrlText 20011);
 
-	if (_bailEnable isEqualTo 1) then
-	{
-		if ((_amount < _bailMin) || (_amount > _bailMax)) then
-		{
-			(_display displayCtrl 20011) ctrlSetBackgroundColor [153, 0, 0, 0.5];
-			_error = true;
-		};
-	};
+	if ((_time < _timeMin) || (_time > _timeMax)) then {_error = true};
+	if ((_bailEnable isEqualTo 1) && ((_bails < _bailMin) || (_bails > _bailMax))) then {_error = true};
 
-	if (_error) exitWith
+	if (_error) then
 	{
 		[
 			format
@@ -65,11 +50,12 @@ if (isClass(_config)) then
 				_timeMin,
 				_timeMax,
 				if (_bailEnable isEqualTo 1) then {"Autorisée"} else {"Prohibée"},
-				_bailMin,
-				_bailMax
+				if (_bailEnable isEqualTo 1) then {_bailMin} else {"-"},
+				if (_bailEnable isEqualTo 1) then {_bailMax} else {"-"}
 			]
 		] call AlysiaClient_fnc_error;
-		[(vehicleVarName _prison), [lbData[20006, (lbCurSel 20006)], _time, (parseNumber (ctrlText 20011)), (ctrlText 20012)]] remoteExecCall ["AlysiaClient_fnc_prisonPutInJail", g_interaction_target];
-		["Veuillez dès à présent fournir une tenue à l'individu et l'enfermer dans sa cellule."] call AlysiaClient_fnc_info;
+	} else {
+		[(vehicleVarName _prison), [lbData[20006, (lbCurSel 20006)], _time, (parseNumber (ctrlText 20011)), (ctrlText 20012)]] remoteExec ["AlysiaClient_fnc_prisonPutInJail", g_interaction_target];
+		closeDialog 0;
 	};
 };

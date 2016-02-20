@@ -34,6 +34,7 @@ lbClear _ctrl_vehicles;
 if ((lbSize _ctrl_vehicles) isEqualTo 0) then
 {
 	_ctrl_vehicles lbAdd "Aucun véhicule";
+	_ctrl_vehicles lbSetValue [0, -1];
 	
 	ctrlShow[2809, false];
 	ctrlShow[2806, false];

@@ -109,7 +109,7 @@ class ALYSIA_FACTIONS
 		/*** MAP ***/
 		class map_team_markers
 		{
-			color = "ColorBlue";
+			color = "ColorWEST";
 			type = "Mil_dot";
 			shape = "ICON";
 		};
@@ -328,7 +328,7 @@ class ALYSIA_FACTIONS
 		/*** MAP ***/
 		class map_team_markers
 		{
-			color = "ColorWhite";
+			color = "ColorEAST";
 			type = "Mil_dot";
 			shape = "ICON";
 		};

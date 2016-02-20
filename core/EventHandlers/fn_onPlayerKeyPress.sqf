@@ -12,7 +12,7 @@ if ((_code in (actionKeys "SelectAll") || _code in (actionKeys "ForceCommandingM
 if ((_code in (actionKeys "PersonView")) && g_firstCombatActive && ((vehicle player) isEqualTo player)) exitWith {true};
 if ((_code in (actionKeys "MiniMap")) || (_code in (actionKeys "MiniMapToggle"))) exitWith {true};
 
-if ((player getVariable ["restrained", false]) || (player getVariable ["knockedOut", false])) exitWith {true};
+if (player getVariable ["restrained", false]) exitWith {true};
 if ((player getVariable ["surrender", false]) && !(_code isEqualTo (((["Alysia", "actionSurrender"] call CBA_fnc_getKeybind) select 5) select 0))) exitWith {true};
 
 if (player getVariable ["is_coma", false]) exitWith {true};

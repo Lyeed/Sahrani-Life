@@ -9,6 +9,7 @@ private["_item", "_suit"];
 _item = [_this, 0, "", [""]] call BIS_fnc_param;
 
 if (_item isEqualTo "") exitWith {false};
+if ((time - g_action_delay) < 1) exitWith {};
 
 if (g_action_inUse) exitWith {
 	["Vous êtes déjà en train d'effectuer une action"] call AlysiaClient_fnc_error;
@@ -24,26 +25,26 @@ if ((getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "removable")) isE
 
 g_action_inUse = true;
 
-_suit = (nearestObjects [player, ["Land_Suitcase_F"], 3.2]) select 0;
-if (isNil "_suit") then
+if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then
 {
-	_suit = "Land_Suitcase_F" createVehicle (player modelToWorld [0, 2.5, 0]);
-	_suit setVariable ["items", [[_item, 1]], true];
-} else {
-	if ((_suit getVariable ["trunk_in_use_ID", ""]) isEqualTo "") then
+	_suit = (nearestObjects [player, ["Land_Suitcase_F"], 3.2]) select 0;
+	if (isNil "_suit") then
 	{
-		if ([true, _suit, "items", _item, 1, true] call AlysiaClient_fnc_handleTrunk) then
+		_suit = createVehicle ["Land_Suitcase_F", (player modelToWorld [0, 2, 0]), [], 0, "CAN_COLLIDE"];
+		_suit setVariable ["items", [[_item, 1]], true];
+		g_action_delay = time;
+	} else {
+		if ((_suit getVariable ["trunk_in_use_ID", ""]) isEqualTo "") then
 		{
-			if (!([false, _item, 1] call AlysiaClient_fnc_handleInv)) exitWith
-			{
-				["Impossible de trouver l'objet à supprimer dans votre inventaire."] call AlysiaClient_fnc_error;
-				[false, _suit, "items", _item, 1, true] call AlysiaClient_fnc_handleTrunk;
+			if ([true, _suit, "items", _item, 1, true] call AlysiaClient_fnc_handleTrunk) then {
+				g_action_delay = time;
+			} else {
+				["Impossible de stocker cet objet dans la valise la plus proche : il n'y a pas assez de place. Ecartez-vous pour déposer une nouvelle valide ou faites de la place dedans."] call AlysiaClient_fnc_error;
+				[true, _item, 1] call AlysiaClient_fnc_handleInv;
 			};
 		} else {
-			["Impossible de stocker cet objet dans la valise la plus proche : il n'y a pas assez de place. Ecartez-vous pour déposer une nouvelle valide ou faites de la place dedans."] call AlysiaClient_fnc_error;
+			["La valise la plus proche est en train d'être fouillée. Ecartez-vous pour déposer une nouvelle valise ou attendez que la fouille soit finie pour la remplir."] call AlysiaClient_fnc_error;
 		};
-	} else {
-		["La valise la plus proche est en train d'être fouillée. Ecartez-vous pour déposer une nouvelle valise ou attendez que la fouille soit finie pour la remplir."] call AlysiaClient_fnc_error;
 	};
 };
 

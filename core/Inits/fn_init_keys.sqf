@@ -22,7 +22,7 @@ g_keybinds pushBack "actionTablet";
 ["Alysia", "actionSurrender", "Mains sur la tête", {[] call AlysiaClient_fnc_surrender}, {true}, [DIK_H, [false, false, true]], false, 0, true] call CBA_fnc_addKeybind;
 g_keybinds pushBack "actionSurrender";
 
-["Alysia", "actionKnock", "Tatane", {[cursorTarget] spawn AlysiaClient_fnc_knockoutAction}, {true}, [DIK_G, [true, false, false]], false, 0, true] call CBA_fnc_addKeybind;
+["Alysia", "actionKnock", "Tatane", {[] spawn AlysiaClient_fnc_knockoutAction}, {true}, [DIK_G, [true, false, false]], false, 0, true] call CBA_fnc_addKeybind;
 g_keybinds pushBack "actionKnock";
 
 ["Alysia", "actionCuff", "Menotter", {[cursorTarget] spawn AlysiaClient_fnc_restrainAction}, {true}, [DIK_R, [true, false, false]], false, 0, true] call CBA_fnc_addKeybind;
@@ -43,8 +43,10 @@ if (getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "sirene
 	g_keybinds pushBack "actionSirene";
 };
 
-if ((getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "faction_markers_on_map") isEqualTo 1) || (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "faction_markers_deaths") isEqualTo 1)) then
-{
+if (
+		isClass(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "map_coma_markers") ||
+		isClass(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "map_team_markers")
+	) then {
 	{
 		[_x, [false, false, false], {[] spawn AlysiaEvent_fnc_onPlayerMapOpen}, "keydown", "actionMap", false] call CBA_fnc_addKeyHandler;
 	} forEach (actionKeys "ShowMap");

@@ -43,9 +43,14 @@ class ALYSIA_LICENSES
 				pad_store = 1;
 				illegal = 0;
 			};
-			class EAST: CIV {};
-			class WEST: CIV {};
-			class GUER: CIV {};
+			class EAST
+			{
+				price = 0;
+				pad_store = 0;
+				illegal = 0;
+			};
+			class WEST: EAST {};
+			class GUER: EAST {};
 		};
 	};
 	class boat

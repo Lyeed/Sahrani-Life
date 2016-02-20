@@ -24,6 +24,17 @@ if (g_connected && !g_staff_god && (_damage > 0)) then
 		};
 	};
 
+	if (_source != player) then
+	{
+		if ((currentWeapon _source) isEqualTo "hgun_FlashBall_F") then
+		{
+			if (player distance _source < 50) then 
+			{
+				[] spawn AlysiaClient_fnc_knockedOut;
+			};
+		};
+	};
+
 	if (!(isNull g_dragingBody)) then {
 		[false] call AlysiaClient_fnc_action_body_drop;
 	};

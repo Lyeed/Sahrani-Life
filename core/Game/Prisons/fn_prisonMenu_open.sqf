@@ -55,8 +55,8 @@ if (isClass(_config)) then
 			(g_interaction_target getVariable ["realname", (name g_interaction_target)])
 		];
 
-		(_display displayCtrl 20010) ctrlSetText format["%1", getNumber(_x >> "time" >> "min")];
-		(_display displayCtrl 20011) ctrlSetText format["%1", getNumber(_x >> "bail" >> "min")];
+		(_display displayCtrl 20010) ctrlSetText format["%1", getNumber(_config >> "time" >> "min")];
+		(_display displayCtrl 20011) ctrlSetText format["%1", getNumber(_config >> "bail" >> "min")];
 		(_display displayCtrl 20012) ctrlSetText "Aucune";
 	};
 };

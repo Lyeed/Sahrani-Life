@@ -22,6 +22,17 @@ class RscDisplayGarageAlysia: RscDisplayDefaultInteraction
 			w = 0.495 * safezoneW;
 			h = 0.495 * safezoneH;
 		};
+
+		class SELECT_ACTIONS_BACKGROUND: RscStructuredText
+		{
+			idc = 2808;
+			colorBackground[] = {0,0,0,0.6};
+
+			x = 0.438125 * safezoneW + safezoneX;
+			y = 0.302 * safezoneH + safezoneY;
+			w = 0.103125 * safezoneW;
+			h = 0.385 * safezoneH;
+		};
 	};
 	
 	class controls: DEFAULT_controls
@@ -100,7 +111,7 @@ class RscDisplayGarageAlysia: RscDisplayDefaultInteraction
 			idc = 2802;
 			onLBSelChanged = "_this call AlysiaClient_fnc_garageVehicleSelect;";
 			colorBackground[] = {0,0,0,0.8};
-			rowHeight = 0.5;
+			rowHeight = 0.05;
 
 			x = 0.267969 * safezoneW + safezoneX;
 			y = 0.379 * safezoneH + safezoneY;
@@ -169,16 +180,6 @@ class RscDisplayGarageAlysia: RscDisplayDefaultInteraction
 			y = 0.302 * safezoneH + safezoneY;
 			w = 0.201094 * safezoneW;
 			h = 0.22 * safezoneH;
-		};
-		class SELECT_ACTIONS_BACKGROUND: RscStructuredText
-		{
-			idc = 2808;
-			colorBackground[] = {0,0,0,0.6};
-
-			x = 0.438125 * safezoneW + safezoneX;
-			y = 0.302 * safezoneH + safezoneY;
-			w = 0.103125 * safezoneW;
-			h = 0.385 * safezoneH;
 		};
 		class SELECT_ACTIONS_HEADER: RscStructuredText
 		{

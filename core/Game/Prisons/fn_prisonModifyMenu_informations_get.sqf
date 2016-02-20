@@ -7,6 +7,8 @@
 */
 
 if (isNull g_interaction_target) exitWith {};
-if (!(g_interaction_target getVariable ["arrested", false])) exitWith {["Cette personne n'est plus en prison"] call AlysiaClient_fnc_error};
+if (!(g_interaction_target getVariable ["arrested", false])) exitWith {
+	["Cette personne n'est pas en prison."] call AlysiaClient_fnc_error;
+};
 
 [player] remoteExecCall ["AlysiaClient_fnc_prisonModifyMenu_informations_return", g_interaction_target];

@@ -16,6 +16,8 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
+showMap false;
+
 if (!(createDialog "RscDisplayComa")) exitWith {};
 
 if (player getVariable ["surrender", false]) then {
@@ -46,6 +48,7 @@ _ctrl_suicide = _display displayCtrl 355;
 _time = getNumber(missionConfigFile >> "ALYSIA_MEDICAL" >> "coma" >> "timer");
 
 g_blood = 1;
+g_bleed = 0;
 
 if ((vehicle player) != player) then { 
 	player action ["Eject", (vehicle player)];

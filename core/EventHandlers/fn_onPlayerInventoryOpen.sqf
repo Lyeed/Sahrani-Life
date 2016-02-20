@@ -11,6 +11,13 @@ _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 if (!(isNull _target) && !(_target in g_vehicles) && ((locked _target) isEqualTo 2)) exitWith
 {
 	["Vous ne pouvez pas fouiller de véhicule vérrouillé"] call AlysiaClient_fnc_error;
+
+	waitUntil
+	{
+		closeDialog 0;
+		!dialog
+	};
+
 	true
 };
 
@@ -30,7 +37,7 @@ while {!(isNull _display)} do
 		closeDialog 0;
 	};
 
-	sleep 0.5;
+	uiSleep 0.5;
 };
 
 false

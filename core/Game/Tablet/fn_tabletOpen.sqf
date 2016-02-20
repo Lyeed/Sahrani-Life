@@ -16,9 +16,8 @@ if (dialog) exitWith
 	};
 };
 
-if (player getVariable ["arrested", false]) exitWith {
-	["Vous n'avez pas accès à votre tablette en prison"] call AlysiaClient_fnc_error
-};
+if (player getVariable ["arrested", false]) exitWith {["Vous n'avez pas accès à votre tablette en prison"] call AlysiaClient_fnc_error};
+if ((player getVariable ["restrained", false]) || (player getVariable ["knockedOut", false])) exitWith {};
 
 if (!(createDialog "RscDisplayTablet")) exitWith {};
 
