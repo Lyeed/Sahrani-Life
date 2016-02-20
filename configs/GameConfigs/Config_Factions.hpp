@@ -556,7 +556,7 @@ class ALYSIA_FACTIONS
 		/*** GLOBAL ***/
 		name = "SAMU";
 		icon = "lyeed_IMG\data\faction\GUER_logo.paa";
-		identity_item = "Badge_samu";
+		identity_item = "SkylineItems_Passeport";
 		launder = 0;
 		faction_bank_handle_rank = 6;
 
@@ -586,7 +586,7 @@ class ALYSIA_FACTIONS
 		/*** GEAR MISSION ***/
 		class mission
 		{
-			vehicle = "";
+			vehicle = "Fett_zamak_repair_samu";
 			items[] = 
 			{
 				{"Weapons",

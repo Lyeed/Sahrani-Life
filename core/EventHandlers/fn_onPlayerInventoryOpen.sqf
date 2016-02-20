@@ -8,8 +8,7 @@
 private["_display", "_target"];
 _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-(playerSide != civilian) &&
-if (!(isNull _target) && ((locked _target) isEqualTo 2) && !(_target in g_vehicles) && ((playerSide != civilian)) (str(playerSide) isEqualTo getText(missionConfigFile >> 'ALYSIA_VEHICLES' >> typeOf(_target) >> 'side'))) exitWith
+if (!(isNull _target) && {((locked _target) isEqualTo 2) && !(_target in g_vehicles) && !((playerSide != civilian) && (str(playerSide) isEqualTo getText(missionConfigFile >> 'ALYSIA_VEHICLES' >> typeOf(_target) >> 'side')))}) exitWith
 {
 	["Vous ne pouvez pas fouiller de véhicule vérrouillé"] call AlysiaClient_fnc_error;
 

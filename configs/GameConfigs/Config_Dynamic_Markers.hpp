@@ -305,6 +305,24 @@ class ALYSIA_DYN_MARKERS
 		discover[]  = {"CIV"};
 		positions[] = G_RESPAWN_PILLAGE;
 	};
+
+	//- RENOVATION
+	class renovation_marker
+	{
+		text        = "Rénovation d'artefacts";
+		type        = "Fett_ruins";
+		color       = "ColorRed";
+		shape       = "ICON";
+		size        = 0.5;
+		shop_appear = 1;
+		shop_price  = 1000;
+		linked      = "renovation";
+		discover[]  = {"CIV"};
+		shown[]     = {};
+		destroy[]   = {"WEST", "EAST"};
+		destroy_item = "destroy_stand";
+		positions[] = G_RESPAWN_GENERAL;
+	};
 };
 
 #undef G_RESPAWN_FIELD
