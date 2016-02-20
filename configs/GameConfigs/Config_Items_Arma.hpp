@@ -56,136 +56,136 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class B_AssaultPack_blk
 	{
-		buy_price = 25;
+		buy_price = 250;
 	};
 	class B_AssaultPack_cbr
 	{
-		buy_price = 25;
+		buy_price = 250;
 	};
 	class B_AssaultPack_dgtl
 	{
-		buy_price = 25;
+		buy_price = 250;
 	};
 	class B_AssaultPack_Kerry
 	{
-		buy_price = 25;
+		buy_price = 250;
 	};
 	class B_AssaultPack_khk
 	{
-		buy_price = 25;
+		buy_price = 250;
 	};
 	class B_AssaultPack_mcamo
 	{
-		buy_price = 25;
+		buy_price = 250;
 	};
 	class B_AssaultPack_ocamo
 	{
-		buy_price = 25;
+		buy_price = 250;
 	};
 	class B_AssaultPack_rgr
 	{
-		buy_price = 25;
+		buy_price = 250;
 	};
 	class B_AssaultPack_sgg
 	{
-		buy_price = 25;
+		buy_price = 250;
 	};
 	class B_Carryall_cbr
 	{
-		buy_price = 120;
+		buy_price = 1200;
 	};
 	class B_Carryall_khk
 	{
-		buy_price = 120;
+		buy_price = 1200;
 	};
 	class B_Carryall_mcamo
 	{
-		buy_price = 120;
+		buy_price = 1200;
 	};
 	class B_Carryall_ocamo
 	{
-		buy_price = 120;
+		buy_price = 1200;
 	};
 	class B_Carryall_oli
 	{
-		buy_price = 120;
+		buy_price = 1200;
 	};
 	class B_Carryall_oucamo
 	{
-		buy_price = 120;
+		buy_price = 1200;
 	};
 	class B_FieldPack_blk
 	{
-		buy_price = 50;
+		buy_price = 500;
 	};
 	class B_FieldPack_cbr
 	{
-		buy_price = 50;
+		buy_price = 500;
 	};
 	class B_FieldPack_khk
 	{
-		buy_price = 50;
+		buy_price = 500;
 	};
 	class B_FieldPack_ocamo
 	{
-		buy_price = 50;
+		buy_price = 500;
 	};
 	class B_FieldPack_oli
 	{
-		buy_price = 50;
+		buy_price = 500;
 	};
 	class B_FieldPack_oucamo
 	{
-		buy_price = 50;
+		buy_price = 500;
 	};
 	class B_Kitbag_cbr
 	{
-		buy_price = 80;
+		buy_price = 800;
 	};
 	class B_Kitbag_Depanneur
 	{
-		buy_price = 80;
+		buy_price = 800;
 		buy_license_CIV = "company_garagist";
 	};
 	class B_Kitbag_mcamo
 	{
-		buy_price = 80;
+		buy_price = 800;
 	};
 	class B_Kitbag_rgr
 	{
-		buy_price = 80;
+		buy_price = 800;
 	};
 	class B_Kitbag_sgg
 	{
-		buy_price = 80;
+		buy_price = 800;
 	};
 	class B_Secouriste_khk
 	{
-		buy_price = 80;
+		buy_price = 800;
 	};
 	class B_Secouriste2_khk
 	{
-		buy_price = 80;
+		buy_price = 800;
 	};
 	class B_TacticalPack_blk
 	{
-		buy_price = 80;
+		buy_price = 800;
 	};
 	class B_TacticalPack_mcamo
 	{
-		buy_price = 80;
+		buy_price = 800;
 	};
 	class B_TacticalPack_ocamo
 	{
-		buy_price = 80;
+		buy_price = 800;
 	};
 	class B_TacticalPack_oli
 	{
-		buy_price = 80;
+		buy_price = 800;
 	};
 	class B_TacticalPack_rgr
 	{
-		buy_price = 80;
+		buy_price = 800;
 	};
 	class B_Defibrilateur_khk
 	{
@@ -356,31 +356,31 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class G_Balaclava_bloodhands
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class G_Balaclava_combat
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class G_Balaclava_lowprofile
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class G_Balaclava_oli
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class G_Balaclava_Unitedsates
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class G_Balaclava_whitecross
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class G_Balaclava_Whitehand
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class G_Bandanna_aviator
 	{
@@ -1094,23 +1094,23 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class rds_uniform_Profiteer1
 	{
-		buy_price = 95;
+		buy_price = 195;
 	};
 	class rds_uniform_Profiteer2
 	{
-		buy_price = 95;
+		buy_price = 195;
 	};
 	class rds_uniform_Profiteer3
 	{
-		buy_price = 95;
+		buy_price = 195;
 	};
 	class rds_uniform_Profiteer4
 	{
-		buy_price = 95;
+		buy_price = 195;
 	};
 	class rds_uniform_schoolteacher
 	{
-		buy_price = 250;
+		buy_price =750;
 	};
 	class rds_uniform_Villager1
 	{
@@ -1211,15 +1211,15 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Recon_MskullBLK
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Recon_MskullGRY
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Recon_MskullTAN
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Respirateur_civ1
 	{
@@ -1293,7 +1293,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class RH_Deaglem
 	{
-		buy_price = 20;
+		buy_price = 200;
 		buy_condition_WEST = 9;
 	};
 	class RH_fn57
@@ -1464,39 +1464,39 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Tact_HoodACU
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Tact_HoodAOR1
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Tact_HoodBlack
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Tact_HoodMAR
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Tact_HoodMARPAT
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Tact_HoodMC
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Tact_HoodOD
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Tact_HoodTAN
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class Tact_HoodWhite
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class tenue_Alysia {};
 	class ToolKit {};
@@ -1510,136 +1510,136 @@ class ALYSIA_ITEMS_ARMA
 	class Trixie_FNFAL_Rail {};
 	class TRYK_B_Alicepack
 	{
-		buy_price = 80;
+		buy_price = 800;
 	};
 	class TRYK_B_Carryall_blk
 	{
-		buy_price = 120;
+		buy_price = 1200;
 		buy_condition_EAST = 1;
 	};
 	class TRYK_B_Carryall_wh
 	{
-		buy_price = 120;
+		buy_price = 1200;
 	};
 	class TRYK_B_Carryall_wood
 	{
-		buy_price = 120;
+		buy_price = 1200;
 	};
 	class TRYK_B_Coyotebackpack
 	{
-		buy_price = 110;
+		buy_price = 1100;
 	};
 	class TRYK_B_Coyotebackpack_BLK
 	{
-		buy_price = 110;
+		buy_price = 1100;
 	};
 	class TRYK_B_Coyotebackpack_OD
 	{
-		buy_price = 110;
+		buy_price = 1100;
 	};
 	class TRYK_B_Coyotebackpack_WH
 	{
-		buy_price = 110;
+		buy_price = 1100;
 	};
 	class TRYK_B_FieldPack_Wood
 	{
-		buy_price = 50;
+		buy_price = 500;
 	};
 	class TRYK_B_Kitbag_Base
 	{
-		buy_price = 80;
+		buy_price = 800;
 	};
 	class TRYK_B_Medbag
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_B_Medbag_BK
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_B_Medbag_OD
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_B_Medbag_ucp
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_B_USMC_R
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_Beard
 	{
-		buy_price = 20;
+		buy_price = 180;
 	};
 	class TRYK_Beard_BK
 	{
-		buy_price = 20;
+		buy_price = 180;
 	};
 	class TRYK_Beard_BK2
 	{
-		buy_price = 20;
+		buy_price = 180;
 	};
 	class TRYK_Beard_BK3
 	{
-		buy_price = 20;
+		buy_price = 180;
 	};
 	class TRYK_Beard_BK4
 	{
-		buy_price = 20;
+		buy_price = 180;
 	};
 	class TRYK_Beard_BW
 	{
-		buy_price = 20;
+		buy_price = 180;
 	};
 	class TRYK_Beard_BW2
 	{
-		buy_price = 20;
+		buy_price = 180;
 	};
 	class TRYK_Beard_BW3
 	{
-		buy_price = 20;
+		buy_price = 180;
 	};
 	class TRYK_Beard_BW4
 	{
-		buy_price = 20;
+		buy_price = 180;
 	};
 	class TRYK_Beard_Gr
 	{
-		buy_price = 20;
+		buy_price = 180;
 	};
 	class TRYK_Beard_Gr2
 	{
-		buy_price = 20;
+		buy_price = 180;
 	};
 	class TRYK_Beard_Gr3
 	{
-		buy_price = 20;
+		buy_price = 180;
 	};
 	class TRYK_Beard_Gr4
 	{
-		buy_price = 20;
+		buy_price = 180;
 	};
 	class TRYK_Beard2
 	{
-		buy_price = 20;
+		buy_price = 180;
 	};
 	class TRYK_Beard3
 	{
-		buy_price = 20;
+		buy_price = 180;
 	};
 	class TRYK_Beard4
 	{
-		buy_price = 20;
+		buy_price = 180;
 	};
 	class TRYK_C_AOR2_T
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_DMARPAT_T
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_ESS_CAP
 	{
@@ -1727,11 +1727,11 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class TRYK_H_LHS_HEL_G
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_H_pakol2
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_H_woolhat
 	{
@@ -2087,59 +2087,59 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class TRYK_U_B_OD_BLK
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_OD_BLK_2
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_ODTAN
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_ODTAN_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_ODTAN_Tshirt
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_PCUGHs
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_PCUGs_BLK
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_PCUGs_BLK_R
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_PCUGs_gry
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_PCUGs_gry_R
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_PCUGs_OD_R
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_PCUHs
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_PCUHsW3
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_PCUHsW3nh
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_PCUHsW5
 	{
@@ -2153,191 +2153,191 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class TRYK_U_B_PCUODHs
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_PCUs_R
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_RED_T_BG_BR
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_RED_T_BR
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_Snow_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_Snowt
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_TANTAN_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_WDL_GRY_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_wh_blk_Rollup_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_wh_OD_Rollup_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_wh_tan_Rollup_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_wood_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_WOOD_MARPAT_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_Wood_T
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_wood3c_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_Woodland
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_woodtan_CombatUniform
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_B_woodtanR_CombatUniformTshirt
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_Bts_GRYGRY_PCUs
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_Bts_PCUGs
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_Bts_PCUODs
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_Bts_PCUs
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_Bts_Wood_PCUs
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_denim_hood_3c
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_denim_hood_blk
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_denim_hood_mc
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_denim_jersey_blk
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_denim_jersey_blu
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_hood_mc
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_hood_nc
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_nohoodPcu_gry
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_pad_hood_BKT2
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_pad_hood_CSATBlk
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_pad_hood_odBK
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_pad_j
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_pad_j_blk
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_taki_BL
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_taki_BLK
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_taki_COY
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_taki_G_BL
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_taki_G_BLK
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_taki_G_COY
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_taki_G_WH
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_U_taki_wh
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_ZARATAKI
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_ZARATAKI2
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class TRYK_ZARATAKI3
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class U_B_Wetsuit
 	{
@@ -2475,23 +2475,23 @@ class ALYSIA_ITEMS_ARMA
 	class U_Competitor {};
 	class U_O_CombatUniform_ocamo
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class U_O_CombatUniform_oucamo
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class U_O_OfficerUniform_ocamo
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class U_OrestesBody
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class V_TacVest_Securite_01
 	{
-		buy_price = 20;
+		buy_price = 2000;
 	};
 	class vip1_uniform_new
 	{
@@ -2511,7 +2511,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class TRYK_B_tube_blk
 	{
-		buy_price = 20;
+		buy_price = 200;
 		buy_condition_EAST = 1;
 	};
 	class TRYK_B_Kitbag_blk
@@ -2547,7 +2547,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class TRYK_SPgear_PHC1_NV
 	{
-		buy_price = 20;
+		buy_price = 200;
 	};
 	class rhs_6b23_sniper
 	{
@@ -2566,7 +2566,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class G_B_Diving
 	{
-		buy_price = 20;
+		buy_price = 200;
 		buy_condition_EAST = 1;
 		buy_condition_WEST = 1;
 	};
@@ -2682,7 +2682,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Alysia_repair_toolbox
 	{
-		buy_price = 20;
+		buy_price = 1000;
 	};
 	class Alysia_repair_tireLever
 	{
@@ -2797,7 +2797,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Bank_Bomb
 	{
-		buy_price = 20;
+		buy_price = 20000;
 	};
 	class tf_anprc148jem_2
 	{

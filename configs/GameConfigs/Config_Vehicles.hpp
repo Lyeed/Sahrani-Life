@@ -332,7 +332,7 @@ class ALYSIA_VEHICLES
 
 	class shounka_buggy
 	{
-		buyPrice = 215000;
+		buyPrice = 2150000;
 		inventory = 5;
 		side = "CIV";
 		insurance = 1;
@@ -396,7 +396,7 @@ class ALYSIA_VEHICLES
 
 	class shounka_monsteur
 	{
-		buyPrice = 315200;
+		buyPrice = 3152000;
 		inventory = 10;
 		side = "CIV";
 		insurance = 1;
@@ -3214,7 +3214,7 @@ class ALYSIA_VEHICLES
 	/***motos***/
 	class Mrshounka_ducati_p_base
 	{
-		buyPrice = 35000;
+		buyPrice = 350000;
 		inventory = 5;
 		side = "CIV";
 		insurance = 1;
@@ -3247,7 +3247,7 @@ class ALYSIA_VEHICLES
 	
 	class Mrshounka_yamaha_p_base
 	{
-		buyPrice = 27500;
+		buyPrice = 275000;
 		inventory = 5;
 		side = "CIV";
 		insurance = 1;
