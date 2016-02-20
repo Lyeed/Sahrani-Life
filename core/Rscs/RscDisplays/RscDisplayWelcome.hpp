@@ -453,7 +453,7 @@ class RscDisplayWelcomeFaction: RscDisplayDefault
 
 		class CHOICE_HEADER: RscStructuredText
 		{
-			text = "<t align='center' size='1.8px'>Choississez votre nationalité selon votre région de départ</t>";
+			text = "<t align='center' size='1.8px'>Choisissez votre nationalité selon votre région de départ</t>";
 			colorBackground[] = {0,0,0,1};
 			
 			x = 0.242187 * safezoneW + safezoneX;
@@ -473,7 +473,7 @@ class RscDisplayWelcomeFaction: RscDisplayDefault
 		};
 		class LEFT_CHOICE_HEADER: RscStructuredText
 		{
-			text = "<t align='center'>Sahrani SUD</t>";
+			text = "<t align='center'>Sibranak SUD</t>";
 			colorBackground[] = {0.709804,0.105882,0.105882,1};
 			
 			x = 0.242187 * safezoneW + safezoneX;
@@ -514,7 +514,7 @@ class RscDisplayWelcomeFaction: RscDisplayDefault
 		};
 		class RIGHT_CHOICE_HEADER: RscStructuredText
 		{
-			text = "<t align='center'>Sahrani NORD</t>";
+			text = "<t align='center'>Sibranak NORD</t>";
 			colorBackground[] = {0,0.470588,0.831373,1};
 			
 			x = 0.520625 * safezoneW + safezoneX;
