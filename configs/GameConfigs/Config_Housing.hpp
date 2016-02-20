@@ -2,17 +2,17 @@ class ALYSIA_STORAGES
 {
 	class Skyline_Coffre_Small 
 	{
-		inventory = 350;
+		inventory = 450;
 		item = "storage_small";
 	};
 	class Skyline_Coffre_Medium 
 	{
-		inventory = 800;
+		inventory = 1200;
 		item = "storage_medium";
 	};
 	class Skyline_Coffre_Large 
 	{
-		inventory = 1500;
+		inventory = 3000;
 		item = "storage_large";
 	};
 	class R3F_WeaponStock
@@ -58,7 +58,7 @@ class ALYSIA_HOUSES
 		price = 615000;
 		class storage
 		{
-			type = "Skyline_Coffre_Large";
+			type = "Skyline_Coffre_medium";
 			building_index = 2;
 		};
 		class lights {};
@@ -70,7 +70,7 @@ class ALYSIA_HOUSES
 		price = 585000;
 		class storage
 		{
-			type = "Skyline_Coffre_Large";
+			type = "Skyline_Coffre_medium";
 			building_index = 4;
 		};
 		class lights {};
@@ -106,7 +106,7 @@ class ALYSIA_HOUSES
 		price = 575000;
 		class storage
 		{
-			type = "Skyline_Coffre_Large";
+			type = "Skyline_Coffre_medium";
 			building_index = 1;
 		};
 		class lights {};
@@ -118,7 +118,7 @@ class ALYSIA_HOUSES
 		price = 625000;
 		class storage
 		{
-			type = "Skyline_Coffre_Large";
+			type = "Skyline_Coffre_medium";
 			building_index = 4;
 		};
 		class lights {};
@@ -130,7 +130,7 @@ class ALYSIA_HOUSES
 		price = 287500;
 		class storage
 		{
-			type = "Skyline_Coffre_Large";
+			type = "Skyline_Coffre_medium";
 			building_index = 4;
 		};
 		class lights {};
@@ -166,7 +166,7 @@ class ALYSIA_HOUSES
 		price = 415000;
 		class storage
 		{
-			type = "Skyline_Coffre_Large";
+			type = "Skyline_Coffre_medium";
 			building_index = 3;
 		};
 		class lights {};
@@ -178,7 +178,7 @@ class ALYSIA_HOUSES
 		price = 515000;
 		class storage
 		{
-			type = "Skyline_Coffre_Large";
+			type = "Skyline_Coffre_medium";
 			building_index = 3;
 		};
 		class lights {};
@@ -190,7 +190,7 @@ class ALYSIA_HOUSES
 		price = 515000;
 		class storage
 		{
-			type = "Skyline_Coffre_Large";
+			type = "Skyline_Coffre_medium";
 			building_index = 3;
 		};
 		class lights {};
@@ -295,7 +295,7 @@ class ALYSIA_HOUSES
 	};
 	class Land_Sara_hasic_zbroj: Land_smd_garaz_open
 	{
-		price = 250000;
+		price = 150000;
 		class garage: garage {};
 		class lights {};
 		class factions: factions {};
@@ -344,7 +344,7 @@ class ALYSIA_HOUSES
 		price = 325000;
 		class storage
 		{
-			type = "Skyline_Coffre_Medium";
+			type = "Skyline_Coffre_Large";
 			building_index = 7;
 		};
 		class lights {};
@@ -355,7 +355,7 @@ class ALYSIA_HOUSES
 		price = 100000;
 		class storage
 		{
-			type = "Skyline_Coffre_Small";
+			type = "Skyline_Coffre_small";
 			building_index = 2;
 		};
 		class lights {};
