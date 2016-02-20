@@ -2728,325 +2728,6 @@ class ALYSIA_VEHICLES
 		realname = "Man TGX Box Truck";
 	};
 	
-	class Jonzie_30CSL
-	{
-		buyPrice = 22500;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		rank = 0;
-		colors[] =
-		{
-			"Fett_30CSL_red",
-			"Fett_30CSL_yellow",
-			"Fett_30CSL_green",
-			"Fett_30CSL_blue",
-			"Fett_30CSL_pink",
-			"Fett_30CSL_dark",
-			"Fett_30CSL_white"
-		};
-		realname = "BMW 3.0 CSL";
-	};
-	class Fett_30CSL_red: Jonzie_30CSL {};
-	class Fett_30CSL_yellow: Jonzie_30CSL {};
-	class Fett_30CSL_green: Jonzie_30CSL {};
-	class Fett_30CSL_blue: Jonzie_30CSL {};
-	class Fett_30CSL_pink: Jonzie_30CSL {};
-	class Fett_30CSL_dark: Jonzie_30CSL {};
-	class Fett_30CSL_white: Jonzie_30CSL {};
-	
-	class Jonzie_Ceed
-	{
-		buyPrice = 12500;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		rank = 0;
-		colors[] =
-		{
-			"Fett_Ceed_red",
-			"Fett_Ceed_yellow",
-			"Fett_Ceed_green",
-			"Fett_Ceed_blue",
-			"Fett_Ceed_pink",
-			"Fett_Ceed_dark",
-			"Fett_Ceed_white"
-		};
-		realname = "Kia cee'd";
-	};
-	class Fett_Ceed_red: Jonzie_Ceed {};
-	class Fett_Ceed_yellow: Jonzie_Ceed {};
-	class Fett_Ceed_green: Jonzie_Ceed {};
-	class Fett_Ceed_blue: Jonzie_Ceed {};
-	class Fett_Ceed_pink: Jonzie_Ceed {};
-	class Fett_Ceed_dark: Jonzie_Ceed {};
-	class Fett_Ceed_white: Jonzie_Ceed {};
-	
-	class Jonzie_Corolla
-	{
-		buyPrice = 6000;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		rank = 0;
-		colors[] =
-		{
-			"Fett_Corolla_red",
-			"Fett_Corolla_yellow",
-			"Fett_Corolla_green",
-			"Fett_Corolla_blue",
-			"Fett_Corolla_pink",
-			"Fett_Corolla_dark",
-			"Fett_Corolla_white"
-		};
-		realname = "Toyota Corolla";
-	};
-	class Fett_Corolla_red: Jonzie_Corolla {};
-	class Fett_Corolla_yellow: Jonzie_Corolla {};
-	class Fett_Corolla_green: Jonzie_Corolla {};
-	class Fett_Corolla_blue: Jonzie_Corolla {};
-	class Fett_Corolla_pink: Jonzie_Corolla {};
-	class Fett_Corolla_dark: Jonzie_Corolla {};
-	class Fett_Corolla_white: Jonzie_Corolla {};
-	
-	class Jonzie_Datsun_510
-	{
-		buyPrice = 7500;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		rank = 0;
-		colors[] =
-		{
-			"Fett_Datsun_510_red",
-			"Fett_Datsun_510_yellow",
-			"Fett_Datsun_510_green",
-			"Fett_Datsun_510_blue",
-			"Fett_Datsun_510_pink",
-			"Fett_Datsun_510_dark",
-			"Fett_Datsun_510_white"
-		};
-		realname = "Datsun Bluebird";
-	};
-	class Fett_Datsun_510_red: Jonzie_Datsun_510 {};
-	class Fett_Datsun_510_yellow: Jonzie_Datsun_510 {};
-	class Fett_Datsun_510_green: Jonzie_Datsun_510 {};
-	class Fett_Datsun_510_blue: Jonzie_Datsun_510 {};
-	class Fett_Datsun_510_pink: Jonzie_Datsun_510 {};
-	class Fett_Datsun_510_dark: Jonzie_Datsun_510 {};
-	class Fett_Datsun_510_white: Jonzie_Datsun_510 {};
-	
-	class Jonzie_Datsun_Z432
-	{
-		buyPrice = 22000;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		rank = 0;
-		colors[] =
-		{
-			"Fett_Datsun_Z432_red",
-			"Fett_Datsun_Z432_yellow",
-			"Fett_Datsun_Z432_green",
-			"Fett_Datsun_Z432_blue",
-			"Fett_Datsun_Z432_pink",
-			"Fett_Datsun_Z432_dark",
-			"Fett_Datsun_Z432_white"
-		};
-		realname = "Datsun Fairlady Z432";
-	};
-	class Fett_Datsun_Z432_red: Jonzie_Datsun_Z432 {};
-	class Fett_Datsun_Z432_yellow: Jonzie_Datsun_Z432 {};
-	class Fett_Datsun_Z432_green: Jonzie_Datsun_Z432 {};
-	class Fett_Datsun_Z432_blue: Jonzie_Datsun_Z432 {};
-	class Fett_Datsun_Z432_pink: Jonzie_Datsun_Z432 {};
-	class Fett_Datsun_Z432_dark: Jonzie_Datsun_Z432 {};
-	class Fett_Datsun_Z432_white: Jonzie_Datsun_Z432 {};
-	
-	class Jonzie_Escalade
-	{
-		buyPrice = 97500;
-		inventory = 85;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		rank = 0;
-		colors[] =
-		{
-			"Fett_Escalade_red",
-			"Fett_Escalade_yellow",
-			"Fett_Escalade_green",
-			"Fett_Escalade_blue",
-			"Fett_Escalade_pink",
-			"Fett_Escalade_dark",
-			"Fett_Escalade_white"
-		};
-		realname = "Cadillac Escalade ESV";
-	};
-	class Fett_Escalade_red: Jonzie_Escalade {};
-	class Fett_Escalade_yellow: Jonzie_Escalade {};
-	class Fett_Escalade_green: Jonzie_Escalade {};
-	class Fett_Escalade_blue: Jonzie_Escalade {};
-	class Fett_Escalade_pink: Jonzie_Escalade {};
-	class Fett_Escalade_dark: Jonzie_Escalade {};
-	class Fett_Escalade_white: Jonzie_Escalade {};
-	
-	class Jonzie_Galant
-	{
-		buyPrice = 10000;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		rank = 0;
-		colors[] =
-		{
-			"Fett_Galant_red",
-			"Fett_Galant_yellow",
-			"Fett_Galant_green",
-			"Fett_Galant_blue",
-			"Fett_Galant_pink",
-			"Fett_Galant_dark",
-			"Fett_Galant_white"
-		};
-		realname = "Mitsubishi Galant";
-	};
-	class Fett_Galant_red: Jonzie_Galant {};
-	class Fett_Galant_yellow: Jonzie_Galant {};
-	class Fett_Galant_green: Jonzie_Galant {};
-	class Fett_Galant_blue: Jonzie_Galant {};
-	class Fett_Galant_pink: Jonzie_Galant {};
-	class Fett_Galant_dark: Jonzie_Galant {};
-	class Fett_Galant_white: Jonzie_Galant {};
-	
-	class Jonzie_Mini_Cooper
-	{
-		buyPrice = 7500;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		rank = 0;
-		colors[] =
-		{
-			"Fett_Mini_Cooper_red",
-			"Fett_Mini_Cooper_yellow",
-			"Fett_Mini_Cooper_green",
-			"Fett_Mini_Cooper_blue",
-			"Fett_Mini_Cooper_pink",
-			"Fett_Mini_Cooper_dark",
-			"Fett_Mini_Cooper_white"
-		};
-		realname = "Mini Cooper";
-	};
-	class Fett_Mini_Cooper_red: Jonzie_Mini_Cooper {};
-	class Fett_Mini_Cooper_yellow: Jonzie_Mini_Cooper {};
-	class Fett_Mini_Cooper_green: Jonzie_Mini_Cooper {};
-	class Fett_Mini_Cooper_blue: Jonzie_Mini_Cooper {};
-	class Fett_Mini_Cooper_pink: Jonzie_Mini_Cooper {};
-	class Fett_Mini_Cooper_dark: Jonzie_Mini_Cooper {};
-	class Fett_Mini_Cooper_white: Jonzie_Mini_Cooper {};
-	
-	class Jonzie_Quattroporte
-	{
-		buyPrice = 325000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		rank = 0;
-		colors[] =
-		{
-			"Fett_Quattroporte_red",
-			"Fett_Quattroporte_yellow",
-			"Fett_Quattroporte_green",
-			"Fett_Quattroporte_blue",
-			"Fett_Quattroporte_pink",
-			"Fett_Quattroporte_dark",
-			"Fett_Quattroporte_white"
-		};
-		realname = "Maserati Quattroporte";
-	};
-	class Fett_Quattroporte_red: Jonzie_Quattroporte {};
-	class Fett_Quattroporte_yellow: Jonzie_Quattroporte {};
-	class Fett_Quattroporte_green: Jonzie_Quattroporte {};
-	class Fett_Quattroporte_blue: Jonzie_Quattroporte {};
-	class Fett_Quattroporte_pink: Jonzie_Quattroporte {};
-	class Fett_Quattroporte_dark: Jonzie_Quattroporte {};
-	class Fett_Quattroporte_white: Jonzie_Quattroporte {};
-	
-	class Jonzie_Raptor
-	{
-		buyPrice = 27500;
-		inventory = 90;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		rank = 0;
-		colors[] =
-		{
-			"Fett_Raptor_red",
-			"Fett_Raptor_yellow",
-			"Fett_Raptor_green",
-			"Fett_Raptor_blue",
-			"Fett_Raptor_pink",
-			"Fett_Raptor_dark",
-			"Fett_Raptor_white"
-		};
-		realname = "Ford F150 Raptor";
-	};
-	class Fett_Raptor_red: Jonzie_Raptor {};
-	class Fett_Raptor_yellow: Jonzie_Raptor {};
-	class Fett_Raptor_green: Jonzie_Raptor {};
-	class Fett_Raptor_blue: Jonzie_Raptor {};
-	class Fett_Raptor_pink: Jonzie_Raptor {};
-	class Fett_Raptor_dark: Jonzie_Raptor {};
-	class Fett_Raptor_white: Jonzie_Raptor {};
-	
-	class Jonzie_STI
-	{
-		buyPrice = 47500;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		rank = 0;
-		colors[] =
-		{
-			"Fett_STI_red",
-			"Fett_STI_yellow",
-			"Fett_STI_green",
-			"Fett_STI_blue",
-			"Fett_STI_pink",
-			"Fett_STI_dark",
-			"Fett_STI_white"
-		};
-		realname = "Subaru WRX STI";
-	};
-	class Fett_STI_red: Jonzie_STI {};
-	class Fett_STI_yellow: Jonzie_STI {};
-	class Fett_STI_green: Jonzie_STI {};
-	class Fett_STI_blue: Jonzie_STI {};
-	class Fett_STI_pink: Jonzie_STI {};
-	class Fett_STI_dark: Jonzie_STI {};
-	class Fett_STI_white: Jonzie_STI {};
-	
 	class Jonzie_Ute
 	{
 		buyPrice = 27500;
@@ -3075,64 +2756,6 @@ class ALYSIA_VEHICLES
 	class Fett_Ute_pink: Jonzie_Ute {};
 	class Fett_Ute_dark: Jonzie_Ute {};
 	class Fett_Ute_white: Jonzie_Ute {};
-	
-	class Jonzie_VE
-	{
-		buyPrice = 29500;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		rank = 0;
-		colors[] =
-		{
-			"Fett_VE_red",
-			"Fett_VE_yellow",
-			"Fett_VE_green",
-			"Fett_VE_blue",
-			"Fett_VE_pink",
-			"Fett_VE_dark",
-			"Fett_VE_white"
-		};
-		realname = "Holden Commodore";
-	};
-	class Fett_VE_red: Jonzie_VE {};
-	class Fett_VE_yellow: Jonzie_VE {};
-	class Fett_VE_green: Jonzie_VE {};
-	class Fett_VE_blue: Jonzie_VE {};
-	class Fett_VE_pink: Jonzie_VE {};
-	class Fett_VE_dark: Jonzie_VE {};
-	class Fett_VE_white: Jonzie_VE {};
-	
-	class Jonzie_Viper
-	{
-		buyPrice = 815000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		rank = 0;
-		colors[] =
-		{
-			"Fett_Viper_red",
-			"Fett_Viper_yellow",
-			"Fett_Viper_green",
-			"Fett_Viper_blue",
-			"Fett_Viper_pink",
-			"Fett_Viper_dark",
-			"Fett_Viper_white"
-		};
-		realname = "Dodge Viper";
-	};
-	class Fett_Viper_red: Jonzie_Viper {};
-	class Fett_Viper_yellow: Jonzie_Viper {};
-	class Fett_Viper_green: Jonzie_Viper {};
-	class Fett_Viper_blue: Jonzie_Viper {};
-	class Fett_Viper_pink: Jonzie_Viper {};
-	class Fett_Viper_dark: Jonzie_Viper {};
-	class Fett_Viper_white: Jonzie_Viper {};
 
   	/*
 	**				WEST VEHICLES
@@ -3710,75 +3333,6 @@ class ALYSIA_VEHICLES
 	class ADM_Ford_F100_dark: ADM_Ford_F100 {};
 	class ADM_Ford_F100_white: ADM_Ford_F100 {};
 
-	class Jonzie_Curtain
-	{
-		buyPrice = 9000;
-		inventory = 90;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck"};
-		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
-		realname = "Remorque";
-	};
-
-	class Jonzie_Western
-	{
-		buyPrice = 9000;
-		inventory = 90;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck"};
-		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
-		realname = "Camion Western";
-	};
-
-	class Jonzie_Superliner
-	{
-		buyPrice = 9000;
-		inventory = 90;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck"};
-		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
-		realname = "Camion Superliner";
-	};
-
-	class Jonzie_XB
-	{
-		buyPrice = 9000;
-		inventory = 90;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck"};
-		fuel = "Diesel";
-		rank = 0;
-		colors[] =
-		{
-			"Jonzie_XB_red",
-			"Jonzie_XB_yellow",
-			"Jonzie_XB_green",
-			"Jonzie_XB_blue",
-			"Jonzie_XB_pink",
-			"Jonzie_XB_dark",
-			"Jonzie_XB_white"
-		};
-		realname = "Ford Falcon XB";
-	};
-
-	class Jonzie_XB_red: Jonzie_XB {};
-	class Jonzie_XB_yellow: Jonzie_XB {};
-	class Jonzie_XB_green: Jonzie_XB {};
-	class Jonzie_XB_blue: Jonzie_XB {};
-	class Jonzie_XB_pink: Jonzie_XB {};
-	class Jonzie_XB_dark: Jonzie_XB {};
-	class Jonzie_XB_white: Jonzie_XB {};
-
 	class madsa_mtz_F
 	{
 		realname = "Tracteur MTZ";
@@ -3962,4 +3516,550 @@ class ALYSIA_VEHICLES
 		colors[] = {};
 		money_transfer = 1;
 	};
+
+		class Skyline_Vehicule_Jonzie_Viper
+	{
+		buyPrice = 815000;
+		inventory = 25;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP98";
+		rank = 0;
+		colors[] =
+		{
+			"Skyline_Vehicule_Jonzie_Viper_01_F",
+			"Skyline_Vehicule_Jonzie_Viper_02_F",
+			"Skyline_Vehicule_Jonzie_Viper_03_F",
+			"Skyline_Vehicule_Jonzie_Viper_04_F",
+			"Skyline_Vehicule_Jonzie_Viper_05_F",
+			"Skyline_Vehicule_Jonzie_Viper_06_F",
+			"Skyline_Vehicule_Jonzie_Viper_07_F",
+			"Skyline_Vehicule_Jonzie_Viper_08_F",
+			"Skyline_Vehicule_Jonzie_Viper_09_F",
+			"Skyline_Vehicule_Jonzie_Viper_10_F",
+			"Skyline_Vehicule_Jonzie_Viper_11_F",
+			"Skyline_Vehicule_Jonzie_Viper_12_F"
+		};
+		realname = "Dodge Viper";
+	};
+	class Skyline_Vehicule_Jonzie_Viper_01_F : Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_02_F : Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_03_F : Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_04_F : Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_05_F : Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_06_F : Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_07_F : Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_08_F : Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_09_F : Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_10_F : Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_11_F : Skyline_Vehicule_Jonzie_Viper {};
+	class Skyline_Vehicule_Jonzie_Viper_12_F : Skyline_Vehicule_Jonzie_Viper {};
+
+	class Skyline_Vehicule_Jonzie_Escalade
+	{
+		buyPrice = 97500;
+		inventory = 85;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP98";
+		rank = 0;
+		colors[] =
+		{
+			"Skyline_Vehicule_Jonzie_Escalade_01_F",
+			"Skyline_Vehicule_Jonzie_Escalade_02_F",
+			"Skyline_Vehicule_Jonzie_Escalade_03_F",
+			"Skyline_Vehicule_Jonzie_Escalade_04_F",
+			"Skyline_Vehicule_Jonzie_Escalade_05_F",
+			"Skyline_Vehicule_Jonzie_Escalade_06_F",
+			"Skyline_Vehicule_Jonzie_Escalade_07_F",
+			"Skyline_Vehicule_Jonzie_Escalade_08_F",
+			"Skyline_Vehicule_Jonzie_Escalade_09_F",
+			"Skyline_Vehicule_Jonzie_Escalade_10_F",
+			"Skyline_Vehicule_Jonzie_Escalade_11_F",
+			"Skyline_Vehicule_Jonzie_Escalade_12_F"
+		};
+		realname = "Ford Escalade";
+	};
+	class Skyline_Vehicule_Jonzie_Escalade_01_F : Skyline_Vehicule_Jonzie_Escalade {};
+  class Skyline_Vehicule_Jonzie_Escalade_02_F : Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_03_F : Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_04_F : Skyline_Vehicule_Jonzie_Escalade {};
+  class Skyline_Vehicule_Jonzie_Escalade_05_F : Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_06_F : Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_07_F : Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_08_F : Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_09_F : Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_10_F : Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_11_F : Skyline_Vehicule_Jonzie_Escalade {};
+	class Skyline_Vehicule_Jonzie_Escalade_12_F : Skyline_Vehicule_Jonzie_Escalade {};
+  
+  class Skyline_Vehicule_Jonzie_Galant
+	{
+		buyPrice = 10000;
+		inventory = 38;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP95";
+		rank = 0;
+		colors[] =
+		{
+			"Skyline_Vehicule_Jonzie_Galant_01_F",
+			"Skyline_Vehicule_Jonzie_Galant_02_F",
+			"Skyline_Vehicule_Jonzie_Galant_03_F",
+			"Skyline_Vehicule_Jonzie_Galant_04_F",
+			"Skyline_Vehicule_Jonzie_Galant_05_F",
+			"Skyline_Vehicule_Jonzie_Galant_06_F",
+			"Skyline_Vehicule_Jonzie_Galant_07_F",
+			"Skyline_Vehicule_Jonzie_Galant_08_F",
+			"Skyline_Vehicule_Jonzie_Galant_09_F",
+			"Skyline_Vehicule_Jonzie_Galant_10_F",
+			"Skyline_Vehicule_Jonzie_Galant_11_F",
+			"Skyline_Vehicule_Jonzie_Galant_12_F"
+		};
+		realname = "Mitsubishi Galant";
+	};
+  class Skyline_Vehicule_Jonzie_Galant_01_F : Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_02_F : Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_03_F : Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_04_F : Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_05_F : Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_06_F : Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_07_F : Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_08_F : Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_09_F : Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_10_F : Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_11_F : Skyline_Vehicule_Jonzie_Galant {};
+	class Skyline_Vehicule_Jonzie_Galant_12_F : Skyline_Vehicule_Jonzie_Galant {};
+  
+  class Skyline_Vehicule_Jonzie_Mini_Cooper
+	{
+		buyPrice = 7500;
+		inventory = 20;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP95";
+		rank = 0;
+		colors[] =
+		{
+			"Skyline_Vehicule_Jonzie_Mini_Cooper_01_F",
+			"Skyline_Vehicule_Jonzie_Mini_Cooper_02_F",
+			"Skyline_Vehicule_Jonzie_Mini_Cooper_03_F",
+			"Skyline_Vehicule_Jonzie_Mini_Cooper_04_F",
+			"Skyline_Vehicule_Jonzie_Mini_Cooper_05_F",
+			"Skyline_Vehicule_Jonzie_Mini_Cooper_06_F",
+			"Skyline_Vehicule_Jonzie_Mini_Cooper_07_F",
+			"Skyline_Vehicule_Jonzie_Mini_Cooper_08_F",
+			"Skyline_Vehicule_Jonzie_Mini_Cooper_09_F",
+			"Skyline_Vehicule_Jonzie_Mini_Cooper_10_F",
+			"Skyline_Vehicule_Jonzie_Mini_Cooper_11_F",
+			"Skyline_Vehicule_Jonzie_Mini_Cooper_12_F"
+		};
+		realname = "Mini Cooper";
+	};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_01_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_02_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_03_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_04_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_05_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_06_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_07_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_08_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_09_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_10_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_11_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
+	class Skyline_Vehicule_Jonzie_Mini_Cooper_12_F : Skyline_Vehicule_Jonzie_Mini_Cooper {};
+
+  class Skyline_Vehicule_Jonzie_Quattroporte
+	{
+		buyPrice = 325000;
+		inventory = 20;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP98";
+		rank = 0;
+		colors[] =
+		{
+			"Skyline_Vehicule_Jonzie_Quattroporte_01_F",
+			"Skyline_Vehicule_Jonzie_Quattroporte_02_F",
+			"Skyline_Vehicule_Jonzie_Quattroporte_03_F",
+			"Skyline_Vehicule_Jonzie_Quattroporte_04_F",
+			"Skyline_Vehicule_Jonzie_Quattroporte_05_F",
+			"Skyline_Vehicule_Jonzie_Quattroporte_06_F",
+			"Skyline_Vehicule_Jonzie_Quattroporte_07_F",
+			"Skyline_Vehicule_Jonzie_Quattroporte_08_F",
+			"Skyline_Vehicule_Jonzie_Quattroporte_09_F",
+			"Skyline_Vehicule_Jonzie_Quattroporte_10_F",
+			"Skyline_Vehicule_Jonzie_Quattroporte_11_F",
+			"Skyline_Vehicule_Jonzie_Quattroporte_12_F"
+		};
+		realname = "Maserati Quattroporte";
+	};
+	class	Skyline_Vehicule_Jonzie_Quattroporte_01_F : Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_02_F : Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_03_F : Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_04_F : Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_05_F : Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_06_F : Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_07_F : Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_08_F : Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_09_F : Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_10_F : Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_11_F : Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_12_F : Skyline_Vehicule_Jonzie_Quattroporte {};
+  
+  class Skyline_Vehicule_Jonzie_Datsun_510
+	{
+		buyPrice = 7500;
+		inventory = 38;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP95";
+		rank = 0;
+		colors[] =
+		{
+			"Skyline_Vehicule_Jonzie_Datsun_510_01_F",
+			"Skyline_Vehicule_Jonzie_Datsun_510_02_F",
+			"Skyline_Vehicule_Jonzie_Datsun_510_03_F",
+			"Skyline_Vehicule_Jonzie_Datsun_510_04_F",
+			"Skyline_Vehicule_Jonzie_Datsun_510_05_F",
+			"Skyline_Vehicule_Jonzie_Datsun_510_06_F",
+			"Skyline_Vehicule_Jonzie_Datsun_510_07_F",
+			"Skyline_Vehicule_Jonzie_Datsun_510_08_F",
+			"Skyline_Vehicule_Jonzie_Datsun_510_09_F",
+			"Skyline_Vehicule_Jonzie_Datsun_510_10_F",
+			"Skyline_Vehicule_Jonzie_Datsun_510_11_F",
+			"Skyline_Vehicule_Jonzie_Datsun_510_12_F"
+		};
+		realname = "Datsun 510";
+	};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_01_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_02_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_03_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_04_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_05_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_06_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_07_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_08_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_09_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_10_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_11_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class	Skyline_Vehicule_Jonzie_Datsun_510_12_F : Skyline_Vehicule_Jonzie_Datsun_510 {};
+  
+  class Skyline_Vehicule_Jonzie_Corolla
+	{
+		buyPrice = 6000;
+		inventory = 38;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "diesel";
+		rank = 0;
+		colors[] =
+		{
+			"Skyline_Vehicule_Jonzie_Corolla_01_F",
+			"Skyline_Vehicule_Jonzie_Corolla_02_F",
+			"Skyline_Vehicule_Jonzie_Corolla_03_F",
+			"Skyline_Vehicule_Jonzie_Corolla_04_F",
+			"Skyline_Vehicule_Jonzie_Corolla_05_F",
+			"Skyline_Vehicule_Jonzie_Corolla_06_F",
+			"Skyline_Vehicule_Jonzie_Corolla_07_F",
+			"Skyline_Vehicule_Jonzie_Corolla_08_F",
+			"Skyline_Vehicule_Jonzie_Corolla_09_F",
+			"Skyline_Vehicule_Jonzie_Corolla_10_F",
+			"Skyline_Vehicule_Jonzie_Corolla_11_F",
+			"Skyline_Vehicule_Jonzie_Corolla_12_F"
+		};
+		realname = "Toyota Corolla";
+	};
+	class	Skyline_Vehicule_Jonzie_Corolla_01_F : Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_02_F : Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_03_F : Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_04_F : Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_05_F : Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_06_F : Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_07_F : Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_08_F : Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_09_F : Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_10_F : Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_11_F : Skyline_Vehicule_Jonzie_Corolla {};
+	class	Skyline_Vehicule_Jonzie_Corolla_12_F : Skyline_Vehicule_Jonzie_Corolla {};
+  
+  class Skyline_Vehicule_Jonzie_Datsun_Z432
+	{
+		buyPrice = 22000;
+		inventory = 38;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP95";
+		rank = 0;
+		colors[] =
+		{
+			"Skyline_Vehicule_Jonzie_Datsun_Z432_01_F",
+			"Skyline_Vehicule_Jonzie_Datsun_Z432_02_F",
+			"Skyline_Vehicule_Jonzie_Datsun_Z432_03_F",
+			"Skyline_Vehicule_Jonzie_Datsun_Z432_04_F",
+			"Skyline_Vehicule_Jonzie_Datsun_Z432_05_F",
+			"Skyline_Vehicule_Jonzie_Datsun_Z432_06_F",
+			"Skyline_Vehicule_Jonzie_Datsun_Z432_07_F",
+			"Skyline_Vehicule_Jonzie_Datsun_Z432_08_F",
+			"Skyline_Vehicule_Jonzie_Datsun_Z432_09_F",
+			"Skyline_Vehicule_Jonzie_Datsun_Z432_10_F",
+			"Skyline_Vehicule_Jonzie_Datsun_Z432_11_F",
+			"Skyline_Vehicule_Jonzie_Datsun_Z432_12_F"
+		};
+		realname = "Datsun Z432";
+	};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_01_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_02_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_03_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_04_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_05_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_06_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_07_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_08_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_09_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_10_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_11_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+	class Skyline_Vehicule_Jonzie_Datsun_Z432_12_F : Skyline_Vehicule_Jonzie_Datsun_Z432 {};
+  
+  class Skyline_Vehicule_Jonzie_Raptor
+	{
+		buyPrice = 63500;
+		inventory = 90;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP98";
+		rank = 0;
+		colors[] =
+		{
+			"Skyline_Vehicule_Jonzie_Raptor_01_F",
+			"Skyline_Vehicule_Jonzie_Raptor_02_F",
+			"Skyline_Vehicule_Jonzie_Raptor_03_F",
+			"Skyline_Vehicule_Jonzie_Raptor_04_F",
+			"Skyline_Vehicule_Jonzie_Raptor_05_F",
+			"Skyline_Vehicule_Jonzie_Raptor_06_F",
+			"Skyline_Vehicule_Jonzie_Raptor_07_F",
+			"Skyline_Vehicule_Jonzie_Raptor_08_F",
+			"Skyline_Vehicule_Jonzie_Raptor_09_F",
+			"Skyline_Vehicule_Jonzie_Raptor_10_F",
+			"Skyline_Vehicule_Jonzie_Raptor_11_F",
+			"Skyline_Vehicule_Jonzie_Raptor_12_F"
+		};
+		realname = "Ford Raptor";
+	};
+	class	Skyline_Vehicule_Jonzie_Raptor_01_F : Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_02_F : Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_03_F : Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_04_F : Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_05_F : Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_06_F : Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_07_F : Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_08_F : Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_09_F : Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_10_F : Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_11_F : Skyline_Vehicule_Jonzie_Raptor {};
+	class Skyline_Vehicule_Jonzie_Raptor_12_F : Skyline_Vehicule_Jonzie_Raptor {};
+  
+  class Skyline_Vehicule_Jonzie_STI
+	{
+		buyPrice = 47500;
+		inventory = 45;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP98";
+		rank = 0;
+		colors[] =
+		{
+			"Skyline_Vehicule_Jonzie_STI_01_F",
+			"Skyline_Vehicule_Jonzie_STI_02_F",
+			"Skyline_Vehicule_Jonzie_STI_03_F",
+			"Skyline_Vehicule_Jonzie_STI_04_F",
+			"Skyline_Vehicule_Jonzie_STI_05_F",
+			"Skyline_Vehicule_Jonzie_STI_06_F",
+			"Skyline_Vehicule_Jonzie_STI_07_F",
+			"Skyline_Vehicule_Jonzie_STI_08_F",
+			"Skyline_Vehicule_Jonzie_STI_09_F",
+			"Skyline_Vehicule_Jonzie_STI_10_F",
+			"Skyline_Vehicule_Jonzie_STI_11_F",
+			"Skyline_Vehicule_Jonzie_STI_12_F"
+		};
+		realname = "Subaru STI";
+	};
+	class	Skyline_Vehicule_Jonzie_STI_01_F : Skyline_Vehicule_Jonzie_STI {};
+	class	Skyline_Vehicule_Jonzie_STI_02_F : Skyline_Vehicule_Jonzie_STI {}; 
+	class	Skyline_Vehicule_Jonzie_STI_03_F : Skyline_Vehicule_Jonzie_STI {};
+	class	Skyline_Vehicule_Jonzie_STI_04_F : Skyline_Vehicule_Jonzie_STI {};
+	class	Skyline_Vehicule_Jonzie_STI_05_F : Skyline_Vehicule_Jonzie_STI {};
+	class	Skyline_Vehicule_Jonzie_STI_06_F : Skyline_Vehicule_Jonzie_STI {};
+	class	Skyline_Vehicule_Jonzie_STI_07_F : Skyline_Vehicule_Jonzie_STI {};
+	class	Skyline_Vehicule_Jonzie_STI_08_F : Skyline_Vehicule_Jonzie_STI {};
+	class	Skyline_Vehicule_Jonzie_STI_09_F : Skyline_Vehicule_Jonzie_STI {};
+	class	Skyline_Vehicule_Jonzie_STI_10_F : Skyline_Vehicule_Jonzie_STI {};
+	class	Skyline_Vehicule_Jonzie_STI_11_F : Skyline_Vehicule_Jonzie_STI {};
+	class	Skyline_Vehicule_Jonzie_STI_12_F : Skyline_Vehicule_Jonzie_STI {};
+  
+  class Skyline_Vehicule_Jonzie_VE
+	{
+		buyPrice = 29500;
+		inventory = 45;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "diesel";
+		rank = 0;
+		colors[] =
+		{
+			"Skyline_Vehicule_Jonzie_VE_01_F",
+			"Skyline_Vehicule_Jonzie_VE_02_F",
+			"Skyline_Vehicule_Jonzie_VE_03_F",
+			"Skyline_Vehicule_Jonzie_VE_04_F",
+			"Skyline_Vehicule_Jonzie_VE_05_F",
+			"Skyline_Vehicule_Jonzie_VE_06_F",
+			"Skyline_Vehicule_Jonzie_VE_07_F",
+			"Skyline_Vehicule_Jonzie_VE_08_F",
+			"Skyline_Vehicule_Jonzie_VE_09_F",
+			"Skyline_Vehicule_Jonzie_VE_10_F",
+			"Skyline_Vehicule_Jonzie_VE_11_F",
+			"Skyline_Vehicule_Jonzie_VE_12_F"
+		};
+		realname = "Holden Commodore";
+	};
+	class	Skyline_Vehicule_Jonzie_VE_01_F : Skyline_Vehicule_Jonzie_VE {};
+	class	Skyline_Vehicule_Jonzie_VE_02_F : Skyline_Vehicule_Jonzie_VE {};
+	class	Skyline_Vehicule_Jonzie_VE_03_F : Skyline_Vehicule_Jonzie_VE {};
+	class	Skyline_Vehicule_Jonzie_VE_04_F : Skyline_Vehicule_Jonzie_VE {};
+	class	Skyline_Vehicule_Jonzie_VE_05_F : Skyline_Vehicule_Jonzie_VE {};
+	class	Skyline_Vehicule_Jonzie_VE_06_F : Skyline_Vehicule_Jonzie_VE {};
+	class	Skyline_Vehicule_Jonzie_VE_07_F : Skyline_Vehicule_Jonzie_VE {};
+	class	Skyline_Vehicule_Jonzie_VE_08_F : Skyline_Vehicule_Jonzie_VE {};
+	class	Skyline_Vehicule_Jonzie_VE_09_F : Skyline_Vehicule_Jonzie_VE {};
+	class	Skyline_Vehicule_Jonzie_VE_10_F : Skyline_Vehicule_Jonzie_VE {};
+	class	Skyline_Vehicule_Jonzie_VE_11_F : Skyline_Vehicule_Jonzie_VE {};
+	class	Skyline_Vehicule_Jonzie_VE_12_F : Skyline_Vehicule_Jonzie_VE {};
+  
+  class Skyline_Vehicule_Jonzie_Ceed
+	{
+		buyPrice = 12500;
+		inventory = 38;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP98";
+		rank = 0;
+		colors[] =
+		{
+		  "Skyline_Vehicule_Jonzie_Ceed_01_F",
+		  "Skyline_Vehicule_Jonzie_Ceed_02_F",
+		  "Skyline_Vehicule_Jonzie_Ceed_03_F",
+		  "Skyline_Vehicule_Jonzie_Ceed_04_F",
+		  "Skyline_Vehicule_Jonzie_Ceed_05_F",
+		  "Skyline_Vehicule_Jonzie_Ceed_06_F",
+		  "Skyline_Vehicule_Jonzie_Ceed_07_F",
+		  "Skyline_Vehicule_Jonzie_Ceed_08_F",
+		  "Skyline_Vehicule_Jonzie_Ceed_09_F",
+		  "Skyline_Vehicule_Jonzie_Ceed_10_F",
+		  "Skyline_Vehicule_Jonzie_Ceed_11_F",
+		  "Skyline_Vehicule_Jonzie_Ceed_12_F"
+		};
+		realname = "Kia cee'd";
+	};
+	class	Skyline_Vehicule_Jonzie_Ceed_01_F : Skyline_Vehicule_Jonzie_Ceed {};
+	class	Skyline_Vehicule_Jonzie_Ceed_02_F : Skyline_Vehicule_Jonzie_Ceed {};
+	class	Skyline_Vehicule_Jonzie_Ceed_03_F : Skyline_Vehicule_Jonzie_Ceed {};
+	class	Skyline_Vehicule_Jonzie_Ceed_04_F : Skyline_Vehicule_Jonzie_Ceed {};
+	class	Skyline_Vehicule_Jonzie_Ceed_05_F : Skyline_Vehicule_Jonzie_Ceed {};
+	class	Skyline_Vehicule_Jonzie_Ceed_06_F : Skyline_Vehicule_Jonzie_Ceed {};
+	class	Skyline_Vehicule_Jonzie_Ceed_07_F : Skyline_Vehicule_Jonzie_Ceed {};
+	class	Skyline_Vehicule_Jonzie_Ceed_08_F : Skyline_Vehicule_Jonzie_Ceed {};
+	class	Skyline_Vehicule_Jonzie_Ceed_09_F : Skyline_Vehicule_Jonzie_Ceed {};
+	class	Skyline_Vehicule_Jonzie_Ceed_10_F : Skyline_Vehicule_Jonzie_Ceed {};
+	class	Skyline_Vehicule_Jonzie_Ceed_11_F : Skyline_Vehicule_Jonzie_Ceed {};
+	class	Skyline_Vehicule_Jonzie_Ceed_12_F : Skyline_Vehicule_Jonzie_Ceed {};
+  
+  class Skyline_Vehicule_Jonzie_30CSL
+	{
+		buyPrice = 22500;
+		inventory = 38;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP98";
+		rank = 0;
+		colors[] =
+		{
+			"Skyline_Vehicule_Jonzie_30CSL_01_F",
+			"Skyline_Vehicule_Jonzie_30CSL_02_F",
+			"Skyline_Vehicule_Jonzie_30CSL_03_F",
+			"Skyline_Vehicule_Jonzie_30CSL_04_F",
+			"Skyline_Vehicule_Jonzie_30CSL_05_F",
+			"Skyline_Vehicule_Jonzie_30CSL_06_F",
+			"Skyline_Vehicule_Jonzie_30CSL_07_F",
+			"Skyline_Vehicule_Jonzie_30CSL_08_F",
+			"Skyline_Vehicule_Jonzie_30CSL_09_F",
+			"Skyline_Vehicule_Jonzie_30CSL_10_F",
+			"Skyline_Vehicule_Jonzie_30CSL_11_F",
+			"Skyline_Vehicule_Jonzie_30CSL_12_F"
+		};
+		realname = "BMW 3.0 CSL";
+	};
+	class	Skyline_Vehicule_Jonzie_30CSL_01_F : Skyline_Vehicule_Jonzie_30CSL {};
+	class	Skyline_Vehicule_Jonzie_30CSL_02_F : Skyline_Vehicule_Jonzie_30CSL {};
+	class	Skyline_Vehicule_Jonzie_30CSL_03_F : Skyline_Vehicule_Jonzie_30CSL {};
+	class	Skyline_Vehicule_Jonzie_30CSL_04_F : Skyline_Vehicule_Jonzie_30CSL {};
+	class	Skyline_Vehicule_Jonzie_30CSL_05_F : Skyline_Vehicule_Jonzie_30CSL {};
+	class	Skyline_Vehicule_Jonzie_30CSL_06_F : Skyline_Vehicule_Jonzie_30CSL {};
+	class	Skyline_Vehicule_Jonzie_30CSL_07_F : Skyline_Vehicule_Jonzie_30CSL {};
+	class	Skyline_Vehicule_Jonzie_30CSL_08_F : Skyline_Vehicule_Jonzie_30CSL {};
+	class	Skyline_Vehicule_Jonzie_30CSL_09_F : Skyline_Vehicule_Jonzie_30CSL {};
+	class	Skyline_Vehicule_Jonzie_30CSL_10_F : Skyline_Vehicule_Jonzie_30CSL {};
+	class	Skyline_Vehicule_Jonzie_30CSL_11_F : Skyline_Vehicule_Jonzie_30CSL {};
+	class	Skyline_Vehicule_Jonzie_30CSL_12_F : Skyline_Vehicule_Jonzie_30CSL {};
+  
+  class Skyline_Vehicule_Jonzie_XB
+	{
+		buyPrice = 59250;
+		inventory = 20;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP98";
+		rank = 0;
+		colors[] =
+		{
+			"Skyline_Vehicule_Jonzie_XB_01_F",
+			"Skyline_Vehicule_Jonzie_XB_02_F",
+			"Skyline_Vehicule_Jonzie_XB_03_F",
+			"Skyline_Vehicule_Jonzie_XB_04_F",
+			"Skyline_Vehicule_Jonzie_XB_05_F",
+			"Skyline_Vehicule_Jonzie_XB_06_F",
+			"Skyline_Vehicule_Jonzie_XB_07_F",
+			"Skyline_Vehicule_Jonzie_XB_08_F",
+			"Skyline_Vehicule_Jonzie_XB_09_F",
+			"Skyline_Vehicule_Jonzie_XB_10_F",
+			"Skyline_Vehicule_Jonzie_XB_11_F",
+			"Skyline_Vehicule_Jonzie_XB_12_F"
+		};
+		realname = "Ford Falcon XB";
+	};
+	class	Skyline_Vehicule_Jonzie_XB_01_F : Skyline_Vehicule_Jonzie_XB {};
+	class	Skyline_Vehicule_Jonzie_XB_02_F : Skyline_Vehicule_Jonzie_XB {};
+	class	Skyline_Vehicule_Jonzie_XB_03_F : Skyline_Vehicule_Jonzie_XB {};
+	class	Skyline_Vehicule_Jonzie_XB_04_F : Skyline_Vehicule_Jonzie_XB {};
+	class	Skyline_Vehicule_Jonzie_XB_05_F : Skyline_Vehicule_Jonzie_XB {};
+	class	Skyline_Vehicule_Jonzie_XB_06_F : Skyline_Vehicule_Jonzie_XB {};
+	class	Skyline_Vehicule_Jonzie_XB_07_F : Skyline_Vehicule_Jonzie_XB {};
+	class	Skyline_Vehicule_Jonzie_XB_08_F : Skyline_Vehicule_Jonzie_XB {};
+	class	Skyline_Vehicule_Jonzie_XB_09_F : Skyline_Vehicule_Jonzie_XB {};
+	class	Skyline_Vehicule_Jonzie_XB_10_F : Skyline_Vehicule_Jonzie_XB {};
+	class	Skyline_Vehicule_Jonzie_XB_11_F : Skyline_Vehicule_Jonzie_XB {};
+	class	Skyline_Vehicule_Jonzie_XB_12_F : Skyline_Vehicule_Jonzie_XB {};
 };
