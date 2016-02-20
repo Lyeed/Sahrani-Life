@@ -302,26 +302,32 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class fbi_light_uniform
 	{
+		name = "Vêtement civil 1";
 		buy_price = 120;
 	};
 	class fbi_light2_uniform
 	{
+		name = "Vêtement civil 2";
 		buy_price = 120;
 	};
 	class fbi_light3_uniform
 	{
+		name = "Vêtement civil 3";
 		buy_price = 120;
 	};
 	class fbi_light4_uniform
 	{
+		name = "Vêtement civil 4";
 		buy_price = 120;
 	};
 	class fbi_light5_uniform
 	{
+		name = "Vêtement civil 5";
 		buy_price = 120;
 	};
 	class fbi_light6_uniform
 	{
+		name = "Vêtement civil 6";
 		buy_price = 120;
 	};
 	class Fett_boat_milice
