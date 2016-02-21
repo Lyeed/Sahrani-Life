@@ -645,7 +645,8 @@ class ALYSIA_FACTIONS
 
 		/*** FARM ***/
 		farming_markers_gather[] = {};
-		farming_markers_plant[] = {
+		farming_markers_plant[] =
+		{
 			"wheat_1",
 			"heroin_1"
 		};

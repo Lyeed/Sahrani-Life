@@ -113,16 +113,6 @@ class RscDisplayFuelStation: RscDisplayDefaultInteraction
 			w = 0.061875 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-		/*class STOCK_TEXT3: RscStructuredText
-		{
-			idc = 16012;
-			text = "<t align='right'>L</t>";
-
-			x = 21.41 * safezoneW + safezoneX;
-			y = 10.57 * safezoneH + safezoneY;
-			w = 1.50001 * safezoneW;
-			h = 1 * safezoneH;
-		};*/
 		class VALIDATE_BACKGROUND: RscStructuredText
 		{
 			idc = 16013;
@@ -162,7 +152,6 @@ class RscDisplayFuelStation: RscDisplayDefaultInteraction
 			w = 0.0216146 * safezoneW;
 			h = 0.0375186 * safezoneH;
 		};
-
 		class VALIDATE_BUTTON: RscButtonSilent
 		{
 			idc = 16017;
@@ -354,8 +343,8 @@ class RscDisplayFuelRefuel: RscDisplayDefaultInteraction
 		{
 			idc = 17019;
 			action = "closedialog 0;";
-			onMouseEnter = "			ctrlShow[17016, false];			ctrlSetText[17017,""lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""];			((findDisplay 17000) displayCtrl 17015) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 17000) displayCtrl 17017) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Arrêter</t>"";";
-			onMouseExit = "			ctrlShow[17016, true];			ctrlSetText[17017,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];			((findDisplay 17000) displayCtrl 17015) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 17000) displayCtrl 17017) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Arrêter</t>"";";
+			onMouseEnter = "ctrlShow[17016, false];ctrlSetText[17017,""lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""];((findDisplay 17000) displayCtrl 17015) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 17000) displayCtrl 17017) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Arrêter</t>"";";
+			onMouseExit = "ctrlShow[17016, true];ctrlSetText[17017,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];((findDisplay 17000) displayCtrl 17015) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 17000) displayCtrl 17017) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Arrêter</t>"";";
 
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.522 * safezoneH + safezoneY;

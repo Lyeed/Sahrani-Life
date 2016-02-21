@@ -15,7 +15,7 @@ if (isNull _unit) exitWith {
 if (g_action_inUse) exitWith {
 	["Vous êtes déjà en train d'effectuer une action"] call AlysiaClient_fnc_error;
 };
-if ((_type isEqualTo "debif") && ((backpack player) != "B_Defibrilateur_khk")) exitWith {
+if ((_type isEqualTo "debif") && ("SkylineItems_Defibrilateur" in (magazines player))) exitWith {
 	["Vous n'avez pas de défibrilateur"] call AlysiaClient_fnc_error;
 };
 if ((_type isEqualTo "debif") && (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "can_use_debrif") isEqualTo 0)) exitWith {

@@ -45,7 +45,8 @@ if (getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "sirene
 
 if (
 		isClass(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "map_coma_markers") ||
-		isClass(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "map_team_markers")
+		isClass(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "map_team_markers") ||
+		((getPlayerUID player) in getArray(missionConfigFile >> "ALYSIA_STAFF" >> "commands" >> "buttons" >> "TP_ON" >> "allow"))
 	) then {
 	{
 		[_x, [false, false, false], {[] spawn AlysiaEvent_fnc_onPlayerMapOpen}, "keydown", "actionMap", false] call CBA_fnc_addKeyHandler;

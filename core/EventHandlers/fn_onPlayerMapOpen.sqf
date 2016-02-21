@@ -14,7 +14,7 @@ if (isClass _factionMarkers) then
 {
 	[getText(_factionMarkers >> "shape"), getText(_factionMarkers >> "type"), getText(_factionMarkers >> "color")] spawn
 	{
-		private["_markers"];
+		private "_markers";
 		_markers = [];
 		while {visibleMap} do
 		{
@@ -41,7 +41,7 @@ if (isClass _factionMarkers) then
 					};
 				};
 			} forEach allPlayers;
-			sleep 1;
+			uiSleep 1;
 		};
 
 		{
@@ -54,7 +54,7 @@ if (isClass(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "map_co
 {
 	[] spawn
 	{
-		private["_markers"];
+		private "_markers";
 		_markers = [];
 		while {visibleMap} do
 		{
@@ -81,7 +81,38 @@ if (isClass(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "map_co
 					};
 				};
 			} forEach allPlayers;
-			sleep 1;
+			uiSleep 1;
+		};
+
+		{
+			deleteMarkerLocal _x;
+		} forEach _markers;
+	};
+};
+
+if (g_staff_markers) then
+{
+	[] spawn
+	{
+		private "_markers";
+		_markers = [];
+		while {visibleMap} do
+		{
+			{
+				_marker = format["%1_admin_marker", (getPlayerUID _x)];
+				if (_marker in _markers) then {
+					_marker setMarkerPosLocal (getPos _x);
+				} else {
+					_new = createMarkerLocal [_marker, (getPos _x)];
+					_new setMarkerShapeLocal "ICON";
+					_new setMarkerColorLocal "ColorRed";
+					_new setMarkerTypeLocal "Mil_dot";
+					_new setMarkerTextLocal (_x getVariable ["realname", (name _x)]);
+					_markers pushBack _new;
+				};
+			} forEach allPlayers;
+
+			uiSleep 1;
 		};
 
 		{

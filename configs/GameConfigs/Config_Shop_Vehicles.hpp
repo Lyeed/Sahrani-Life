@@ -37,18 +37,17 @@ class ALYSIA_SHOPS_VEHICLES
 		side = "EAST";
 		stock[] =
 		{
+			"LandRover_ACR",
+			"LandRover_TK_CIV_EP1",
+			"ACR_LandRover_AMB",
+			"ACR_Offroad_HMG",
 			"Cha_BTR60_Cuba",
 			"Fett_truck_army",
-			"gac_JGSDF_BXD10_MG",
-			"gac_JGSDF_V16_Rcn",
-			"gac_JGSDF_BXD10",
-			"gac_JMSDF_SKW475",
-			"gac_jsdf_klx",
-			"gac_JGSDF_V16",
 			"Skyline_T34_01_F",
 			"Skyline_GMC_Vandura_Propagande_01_F"
 		};
 	};
+
 	class EAST_vehicles_air
 	{
 		name = "Concessionnaire de la Garde";

@@ -24,18 +24,11 @@ if (_hide) then {
 };
 
 g_phone_messages pushBack [_from, (format["Le %1 à %2", ([] call AlysiaClient_fnc_strDate), ([] call AlysiaClient_fnc_strTime)]), 0, _msg];
-
 if (alive player) then
 {
 	if (profileNamespace getVariable ["ALYSIA_phone_SILENT", false]) then {
 		playSound "message_rcv_silent";
 	} else {
-		_sound = profileNamespace getVariable ["ALYSIA_phone_recv", 1];
-		if ((_sound < 1) || (_sound > 10)) then
-		{
-			profileNamespace setVariable ["ALYSIA_phone_recv", 1];
-			_sound = 1;
-		};
-		[player, (format["message_rcv_%1", _sound]), 20] call CBA_fnc_globalSay3d;
+		[player, ([] call AlysiaClient_fnc_phone_get_ring), 20] call CBA_fnc_globalSay3d;
 	};
 };

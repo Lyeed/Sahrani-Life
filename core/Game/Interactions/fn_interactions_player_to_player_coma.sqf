@@ -13,7 +13,7 @@
 		["kill", "Achever", "[g_interaction_target] spawn AlysiaClient_fnc_item_knife_use;", "('SkylineItems_Couteau' in (magazines player))"],
 		["massage", "Stabiliser", "[g_interaction_target, 'main'] spawn AlysiaClient_fnc_action_stabilize;", "true"],
 		["bandage", "Bandage", "[nil,nil,nil,g_interaction_target] spawn AlysiaClient_fnc_item_bandage_use;", "((g_interaction_target getVariable ['is_bleeding', false]) && ('SkylineItems_Bandage' in (magazines player)))"],
-		["defib", "Defib.", "[g_interaction_target, 'debif'] spawn AlysiaClient_fnc_action_stabilize;", "((backpack player) isEqualTo 'B_Defibrilateur_khk')"],
+		["defib", "Defib.", "[g_interaction_target, 'debif'] spawn AlysiaClient_fnc_action_stabilize;", "('SkylineItems_Defibrilateur' in (magazines player))"],
 		["morphine", "Morphine", "[g_interaction_target] spawn AlysiaClient_fnc_item_morphine_use;","('SkylineItems_Morphine' in (magazines player))"],
 		["adrenaline", "Adrenaline", "[g_interaction_target] spawn AlysiaClient_fnc_item_adrenaline_use;","('SkylineItems_Adrenaline' in (magazines player))"],
 		["drag", "Trainer", "[g_interaction_target] call AlysiaClient_fnc_action_body_drag;","!(g_interaction_target getVariable ['transporting',false])"]

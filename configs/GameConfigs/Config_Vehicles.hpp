@@ -35,7 +35,7 @@ class ALYSIA_VEHICLES
     Ex: rank = 4;
     ----------------------------
 		colors 						-ARRAT-		(vehicle's color classnames)
-    Ex: colors[] = {"className_color1", "className_color2", ...};
+    Ex: colors[] = {"className_color1","className_color2",...};
     ----------------------------
 		realname 					-TXT-			(vehicle name in shop)
     Ex: realname = "Camion Ben";
@@ -57,7 +57,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"madsa_hummer_h2_black_F",
@@ -92,7 +91,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"DAR_FusionCiv",
@@ -114,7 +112,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"DAR_TaurusCiv",
@@ -132,10 +129,8 @@ class ALYSIA_VEHICLES
 		inventory = 500;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck", "company_foundry"};
+		licenses[] = {"truck","company_foundry"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Renault Magnum";
 	};
 
@@ -147,7 +142,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_Alfa_Romeo_noir",
@@ -178,7 +172,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_a3_rs5_civ_noir",
@@ -192,7 +185,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Audi RS5";
 	};
-	
 	class shounka_a3_rs5_civ_noir: shounka_a3_rs5_civ {};
 	class shounka_a3_rs5_civ_bleufonce: shounka_a3_rs5_civ {};
 	class shounka_a3_rs5_civ_rouge: shounka_a3_rs5_civ {};
@@ -210,7 +202,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_rs6_noir",
@@ -224,7 +215,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Audi RS6";
 	};
-	
 	class shounka_rs6_noir: shounka_rs6 {};
 	class shounka_rs6_bleufonce: shounka_rs6 {};
 	class shounka_rs6_rouge: shounka_rs6 {};
@@ -242,7 +232,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_bmwm1_civ_noir",
@@ -256,7 +245,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "BMW 1";
 	};
-	
 	class Mrshounka_bmwm1_civ_noir: Mrshounka_bmwm1_civ {};
 	class Mrshounka_bmwm1_civ_bleufonce: Mrshounka_bmwm1_civ {};
 	class Mrshounka_bmwm1_civ_rouge: Mrshounka_bmwm1_civ {};
@@ -274,7 +262,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_bmwm6_noir",
@@ -288,7 +275,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "BMW M6";
 	};
-	
 	class Mrshounka_bmwm6_noir: Mrshounka_bmwm6_civ {};
 	class Mrshounka_bmwm6_bleufonce: Mrshounka_bmwm6_civ {};
 	class Mrshounka_bmwm6_rouge: Mrshounka_bmwm6_civ {};
@@ -306,7 +292,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_Bowler_c_noir",
@@ -320,7 +305,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Bowler";
 	};
-	
 	class Mrshounka_Bowler_c_noir: Mrshounka_Bowler_c {};
 	class Mrshounka_Bowler_c_bleufonce: Mrshounka_Bowler_c {};
 	class Mrshounka_Bowler_c_rouge: Mrshounka_Bowler_c {};
@@ -338,7 +322,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_buggy_noir",
@@ -352,7 +335,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Buggy";
 	};
-	
 	class shounka_buggy_noir: shounka_buggy {};
 	class shounka_buggy_bleufonce: shounka_buggy {};
 	class shounka_buggy_rouge: shounka_buggy {};
@@ -370,7 +352,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_avalanche_noir",
@@ -384,7 +365,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Chevrolet Avalanche";
 	};
-	
 	class shounka_avalanche_noir: shounka_avalanche {};
 	class shounka_avalanche_bleufonce: shounka_avalanche {};
 	class shounka_avalanche_rouge: shounka_avalanche {};
@@ -402,7 +382,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_monsteur_noir",
@@ -416,7 +395,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Chevrolet Monster";
 	};
-	
 	class shounka_monsteur_noir: shounka_monsteur {};
 	class shounka_monsteur_bleufonce: shounka_monsteur {};
 	class shounka_monsteur_rouge: shounka_monsteur {};
@@ -434,7 +412,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_a3_ds3_civ_noir",
@@ -448,7 +425,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Citroen DS3";
 	};
-
 	class Mrshounka_a3_ds3_civ_noir: Mrshounka_a3_ds3_civ {};
 	class Mrshounka_a3_ds3_civ_bleufonce: Mrshounka_a3_ds3_civ {};
 	class Mrshounka_a3_ds3_civ_civ_rouge: Mrshounka_a3_ds3_civ {};
@@ -466,7 +442,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_a3_ds4_noir",
@@ -480,7 +455,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Citroen DS4";
 	};
-
 	class shounka_a3_ds4_noir: shounka_a3_ds4_civ {};
 	class shounka_a3_ds4_bleufonce: shounka_a3_ds4_civ {};
 	class shounka_a3_ds4_rouge: shounka_a3_ds4_civ {};
@@ -498,7 +472,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_c4_p_bleufonce",
@@ -512,7 +485,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Citroen C4";
 	};
-
 	class Mrshounka_c4_p_bleufonce: Mrshounka_c4_p_civ {};
 	class Mrshounka_c4_p_grise: Mrshounka_c4_p_civ {};
 	class Mrshounka_c4_p_jaune: Mrshounka_c4_p_civ {};
@@ -530,7 +502,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_nemo_bleufonce",
@@ -544,7 +515,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Citroen Nemo";
 	};
-
 	class shounka_nemo_bleufonce: shounka_nemo {};
 	class shounka_nemo_grise: shounka_nemo {};
 	class shounka_nemo_jaune: shounka_nemo {};
@@ -562,7 +532,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_a3_cliors_civ_bleufonce",
@@ -576,7 +545,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Renault Clio";
 	};
-
 	class shounka_a3_cliors_civ_bleufonce: shounka_a3_cliors_civ {};
 	class shounka_a3_cliors_civ_grise: shounka_a3_cliors_civ {};
 	class shounka_a3_cliors_civ_jaune: shounka_a3_cliors_civ {};
@@ -594,7 +562,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_a3_dodge15_civ_bleufonce",
@@ -608,7 +575,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Dodge Charger";
 	};
-
 	class Mrshounka_a3_dodge15_civ_bleufonce: Mrshounka_a3_dodge15_civ {};
 	class Mrshounka_a3_dodge15_civ_grise: Mrshounka_a3_dodge15_civ {};
 	class Mrshounka_a3_dodge15_civ_jaune: Mrshounka_a3_dodge15_civ {};
@@ -626,7 +592,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_f430_spider_bleufonce",
@@ -640,7 +605,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Ferrari 430 Spider";
 	};
-
 	class shounka_f430_spider_bleufonce: shounka_f430_spider {};
 	class shounka_f430_spider_grise: shounka_f430_spider {};
 	class shounka_f430_spider_jaune: shounka_f430_spider {};
@@ -658,7 +622,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_gt_bleufonce",
@@ -672,7 +635,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Ford GT";
 	};
-
 	class shounka_gt_bleufonce: shounka_gt {};
 	class shounka_gt_grise: shounka_gt {};
 	class shounka_gt_jaune: shounka_gt {};
@@ -690,7 +652,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_mustang_mat",
@@ -707,7 +668,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Ford Mustang";
 	};
-
 	class Mrshounka_mustang_mat: Mrshounka_mustang_civ {};
 	class Mrshounka_mustang_noir: Mrshounka_mustang_civ {};
 	class Mrshounka_mustang_mat_n: Mrshounka_mustang_civ {};
@@ -728,7 +688,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"ADM_GMC_Vandura_red",
@@ -741,7 +700,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "GMC Vendura";
 	};
-
 	class ADM_GMC_Vandura_red: ADM_GMC_Vandura {};
 	class ADM_GMC_Vandura_yellow: ADM_GMC_Vandura {};
 	class ADM_GMC_Vandura_green: ADM_GMC_Vandura {};
@@ -758,7 +716,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_golfvi_bleufonce",
@@ -772,7 +729,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Golf VI";
 	};
-
 	class Mrshounka_golfvi_bleufonce: Mrshounka_golfvi_civ {};
 	class Mrshounka_golfvi_grise: Mrshounka_golfvi_civ {};
 	class Mrshounka_golfvi_jaune: Mrshounka_golfvi_civ {};
@@ -790,7 +746,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_hummer_civ_bleufonce",
@@ -804,9 +759,8 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Hummer H1";
 	};
-
 	class Mrshounka_hummer_civ_bleufonce: Mrshounka_hummer_civ {};
-	class Mrshounka_hummer_civ_grise :Mrshounka_hummer_civ {};
+	class Mrshounka_hummer_civ_grise: Mrshounka_hummer_civ {};
 	class Mrshounka_hummer_civ_jaune: Mrshounka_hummer_civ {};
 	class Mrshounka_hummer_civ_noir: Mrshounka_hummer_civ {};
 	class Mrshounka_hummer_civ_orange: Mrshounka_hummer_civ {};
@@ -820,9 +774,8 @@ class ALYSIA_VEHICLES
 		inventory = 600;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck", "company_foundry"};
+		licenses[] = {"truck","company_foundry"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_ivceco_bleufonce",
@@ -836,7 +789,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Iveco";
 	};
-
 	class shounka_ivceco_bleufonce: Mrshounka_a3_iveco_f {};
 	class shounka_ivceco_grise: Mrshounka_a3_iveco_f {};
 	class shounka_ivceco_jaune: Mrshounka_a3_iveco_f {};
@@ -854,7 +806,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_cherokee_noir_mat",
@@ -888,7 +839,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_veneno_c_noir",
@@ -910,7 +860,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_evox_bleufonce",
@@ -940,9 +889,8 @@ class ALYSIA_VEHICLES
 		inventory = 20;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"driver", "company_transport"};
+		licenses[] = {"driver","company_transport"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_limo_civ_bleufonce",
@@ -974,7 +922,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_lykan_c_bleufonce",
@@ -1006,7 +953,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_mp4_bleufonce",
@@ -1038,7 +984,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_mercedes_190_p_bleufonce",
@@ -1070,7 +1015,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_c63_2015_mat",
@@ -1108,7 +1052,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_clk_bleufonce",
@@ -1140,7 +1083,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_a3_spr_civ_bleufonce",
@@ -1172,7 +1114,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_a3_gtr_civ_noir",
@@ -1192,7 +1133,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_pagani_c_bleufonce",
@@ -1224,7 +1164,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_207_bleufonce",
@@ -1256,7 +1195,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_a3_308_rcz_bleufonce",
@@ -1288,7 +1226,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_a3_peugeot508_civ_bleufonce",
@@ -1320,7 +1257,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_porsche911_bleufonce",
@@ -1352,7 +1288,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"mrshounka_92_civ_bleufonce",
@@ -1384,7 +1319,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_cayenne_p_bleufonce",
@@ -1416,7 +1350,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_r5_bleufonce",
@@ -1448,7 +1381,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_megane_rs_2015_bleufonce",
@@ -1480,7 +1412,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_twingo_p_noir",
@@ -1512,7 +1443,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_a3_smart_civ_noir",
@@ -1532,7 +1462,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_subaru08_bleufonce",
@@ -1564,7 +1493,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"shounka_transam_bleufonce",
@@ -1596,8 +1524,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"truck"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Daf euro 6";
 	};
 
@@ -1607,10 +1533,8 @@ class ALYSIA_VEHICLES
 		inventory = 150;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck", "company_garagist"};
+		licenses[] = {"truck","company_garagist"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Man TGS dépannage";
 	};
 
@@ -1622,8 +1546,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
-		colors[] = {};
 		realname = "Pontiak";
 	};
 
@@ -1635,7 +1557,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"max_H3_red",
@@ -1660,7 +1581,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"max_impala_black",
@@ -1683,7 +1603,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"DAR_TahoeCiv",
@@ -1707,7 +1626,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Tal_Murci_Red",
@@ -1748,7 +1666,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"SAL_AudiCiv",
@@ -1770,7 +1687,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"max_BMW",
@@ -1790,7 +1706,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"max_charger_black",
@@ -1813,7 +1728,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"max_CrownVic_blue",
@@ -1834,7 +1748,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"max_jeep_green",
@@ -1857,7 +1770,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"max_suv_black",
@@ -1882,7 +1794,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"max_van_white",
@@ -1909,7 +1820,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Tal_Maserati_Red",
@@ -1948,7 +1858,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"DAR_ChallengerCivWhite",
@@ -1971,8 +1880,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
-		colors[] = {};
 		realname = "Mercedes G65 AMG";
 	};
 
@@ -1984,8 +1891,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"truck"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "HEMTT Transport";
 	};
 
@@ -1997,8 +1902,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"truck"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Zamak Transport";
 	};
 
@@ -2010,8 +1913,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"truck"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "HEMTT Couvert";
 	};
 
@@ -2021,10 +1922,8 @@ class ALYSIA_VEHICLES
 		inventory = 300;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck", "company_foundry"};
+		licenses[] = {"truck","company_foundry"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Zamak Couvert";
 	};
 
@@ -2036,8 +1935,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"truck"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "HEMTT Box";
 	};
 
@@ -2047,10 +1944,8 @@ class ALYSIA_VEHICLES
 		inventory = 150;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck", "company_fuel"};
+		licenses[] = {"truck","company_fuel"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Camionette Fuel";
 	};
 
@@ -2062,8 +1957,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"truck"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "HEMTT Fuel";
 	};
 
@@ -2073,9 +1966,7 @@ class ALYSIA_VEHICLES
 		inventory = 150;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck", "company_fuel"};
-		rank = 0;
-		colors[] = {};
+		licenses[] = {"truck","company_fuel"};
 		realname = "Zamak Fuel";
 	};
 
@@ -2087,8 +1978,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Money Truck";
 	};
 
@@ -2098,10 +1987,8 @@ class ALYSIA_VEHICLES
 		inventory = 45;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"driver", "company_security"};
+		licenses[] = {"driver","company_security"};
 		fuel = "SP95";
-		rank = 0;
-		colors[] = {};
 		realname = "Impala Secu";
 	};
 
@@ -2111,10 +1998,8 @@ class ALYSIA_VEHICLES
 		inventory = 85;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"driver", "company_garagist"};
+		licenses[] = {"driver","company_garagist"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Pick Up dépannage";
 	};
 
@@ -2126,7 +2011,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"max_BMW_M3_GTR",
@@ -2148,10 +2032,8 @@ class ALYSIA_VEHICLES
 		inventory = 50;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"taxi", "company_transport"};
+		licenses[] = {"taxi","company_transport"};
 		fuel = "SP98";
-		rank = 0;
-		colors[] = {};
 		realname = "Crown Victoria Taxi";
 	};
 
@@ -2163,7 +2045,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"DAR_M3CivBlack",
@@ -2184,8 +2065,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Camionnette";
 	};
 
@@ -2197,8 +2076,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Camionnette Caisse";
 	};
 
@@ -2210,7 +2087,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "GPL";
-		rank = 0;
 		colors[] =
 		{
 			"RDS_Gaz24_Civ_01",
@@ -2231,8 +2107,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
-		colors[] = {};
 		realname = "Golf IV";
 	};
 
@@ -2242,9 +2116,8 @@ class ALYSIA_VEHICLES
 		inventory = 80;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck", "company_transport"};
+		licenses[] = {"truck","company_transport"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"RDS_Ikarus_Civ_01",
@@ -2263,7 +2136,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"C_Quadbike_01_black_F",
@@ -2286,8 +2158,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Skoda 1203";
 	};
 
@@ -2299,8 +2169,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Skoda Octavia";
 	};
 
@@ -2312,7 +2180,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "GPL";
-		rank = 0;
 		colors[] =
 		{
 			"RDS_Lada_Civ_01",
@@ -2335,7 +2202,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
-		rank = 0;
 		colors[] =
 		{
 			"sab_BI_An2",
@@ -2374,8 +2240,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
-		rank = 0;
-		colors[] = {};
 		realname = "DC3";
 	};
 	
@@ -2387,8 +2251,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
-		rank = 0;
-		colors[] = {};
 		realname = "DC3 long-courrier";
 	};
 	
@@ -2398,9 +2260,8 @@ class ALYSIA_VEHICLES
 		inventory = 80;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck", "company_transport"};
+		licenses[] = {"truck","company_transport"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Bus_11_F",
@@ -2435,7 +2296,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"boat"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"B_Boat_Transport_01_F",
@@ -2459,8 +2319,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"boat"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Bateau à moteur civil";
 	};
 	class CUP_C_Fishing_Boat_Chernarus
@@ -2471,8 +2329,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"boat"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Bateau de pêche";
 	};
 
@@ -2484,7 +2340,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
-		rank = 0;
 		colors[] =
 		{
 			"C_Heli_light_01_blue_F",
@@ -2537,7 +2392,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
-		rank = 0;
 		colors[] =
 		{
 			"Fett_orca_white",
@@ -2574,7 +2428,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
-		rank = 0;
 		colors[] =
 		{
 			"Fett_mohawk_matrix",
@@ -2613,7 +2466,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
-		rank = 0;
 		colors[] =
 		{
 			"dezkit_b206_ls",
@@ -2632,8 +2484,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
-		colors[] = {};
 		realname = "Agera";
 	};
 	
@@ -2643,9 +2493,8 @@ class ALYSIA_VEHICLES
 		inventory = 150;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck", "company_garagist"};
+		licenses[] = {"truck","company_garagist"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Depanneuse_Jonzie_01_F",
@@ -2684,8 +2533,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"truck"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Man TGX Flat Bed Truck";
 	};
 	
@@ -2697,8 +2544,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"truck"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Man TGX Log Truck";
 	};
 	
@@ -2708,10 +2553,8 @@ class ALYSIA_VEHICLES
 		inventory = 150;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck", "company_fuel"};
+		licenses[] = {"truck","company_fuel"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Man TGX Tanker Truck";
 	};
 	
@@ -2721,10 +2564,8 @@ class ALYSIA_VEHICLES
 		inventory = 400;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck", "company_foundry"};
+		licenses[] = {"truck","company_foundry"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		realname = "Man TGX Box Truck";
 	};
 	
@@ -2736,7 +2577,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Fett_Ute_red",
@@ -2772,7 +2612,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 7;
-		colors[] = {};
 	};
 	class DAR_TaurusPolice
 	{
@@ -2783,7 +2622,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 6;
-		colors[] = {};
 		realname = "Ford Taurus Milice";
 	};
 	class DAR_CVPIAux
@@ -2795,7 +2633,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 2;
-		colors[] = {};
 		realname = "Crown Victoria Milice";
 	};
 	class DAR_TahoePolice
@@ -2807,7 +2644,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 4;
-		colors[] = {};
 		realname = "Chevrolet Tahoe Milice";
 	};
 	class DAR_ImpalaPolice
@@ -2819,7 +2655,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 3;
-		colors[] = {};
 		realname = "Impala Milice";
 	};
 	class DAR_ChargerPoliceState
@@ -2831,7 +2666,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 7;
-		colors[] = {};
 		realname = "Dodge Charger Milice";
 	};
 	class DAR_ExplorerPolice
@@ -2843,7 +2677,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP95";
 		rank = 5;
-		colors[] = {};
 		realname = "Ford Explorer Milice";
 	};
 
@@ -2857,7 +2690,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"truck"};
 		fuel = "Diesel";
 		rank = 6;
-		colors[] = {};
 		realname = "Camion Milice";
 	};
 	
@@ -2871,7 +2703,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"boat"};
 		fuel = "SP95";
 		rank = 4;
-		colors[] = {};
 		realname = "Bateau à moteur";
 	};
 
@@ -2885,7 +2716,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 8;
-		colors[] = {};
 		realname = "EC635 Milice";
 	};
 	class dezkit_b206mi
@@ -2911,65 +2741,42 @@ class ALYSIA_VEHICLES
 	**				EAST VEHICLES
 	*/
 	/* CARS */
-	class gac_JGSDF_BXD10_MG
+	class LandRover_ACR
 	{
-		buyPrice = 69000;
-		inventory = 90;
+		buyPrice = 23000;
+		inventory = 70;
 		side = "EAST";
 		insurance = 1;
 		licenses[] = {"driver"};
-		fuel = "Diesel";
-		rank = 3;
-		colors[] = {};
-		realname = "BXD10 Armé";
-	};
-	class gac_JGSDF_V16_Rcn
-	{
-		buyPrice = 48000;
-		inventory = 90;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		rank = 3;
-		colors[] = {};
-		realname = "V16 Rcn";
-	};
-	class gac_JGSDF_BXD10
-	{
-		buyPrice = 18000;
-		inventory = 90;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		rank = 2;
-		colors[] = {};
-		realname = "BXD10";
-	};
-	class gac_jsdf_klx
-	{
-		buyPrice = 8000;
-		inventory = 90;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"moto"};
 		fuel = "Diesel";
 		rank = 1;
-		colors[] = {};
-		realname = "moto";
+		realname = "Land Rover Garde";
 	};
-	class gac_JGSDF_V16
+	class LandRover_TK_CIV_EP1: LandRover_ACR
 	{
-		buyPrice = 16000;
+		realname = "Land Rover Administration";
+	};
+	class ACR_LandRover_AMB
+	{
+		buyPrice = 11000;
 		inventory = 90;
 		side = "EAST";
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 1;
-		colors[] = {};
-		realname = "V16";
+		realname = "Fourgon Garde";
+	};
+	class ACR_Offroad_HMG
+	{
+		buyPrice = 55000;
+		inventory = 40;
+		side = "EAST";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "Diesel";
+		rank = 3;
+		realname = "Land Rover armé Garde";
 	};
 	class Skyline_GMC_Vandura_Propagande_01_F
 	{
@@ -2981,7 +2788,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 1;
-		colors[] = {};
 		speaker = 1;
 	};
 
@@ -2994,11 +2800,9 @@ class ALYSIA_VEHICLES
 		insurance = 0;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 3;
-		colors[] = {};
+		rank = 4;
 		realname = "BTR60 Cuba";
 	};
-	
 	class Skyline_T34_01_F
 	{
 		buyPrice = 370000;
@@ -3007,24 +2811,11 @@ class ALYSIA_VEHICLES
 		insurance = 0;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 4;
-		colors[] = {};
+		rank = 5;
 		realname = "T34";
 	};
 	
 	/* TRUCKS */
-	class gac_JMSDF_SKW475
-	{
-		buyPrice = 75000;
-		inventory = 225;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"truck"};
-		fuel = "Diesel";
-		rank = 3;
-		colors[] = {};
-		realname = "SKW475";
-	};
 	class Fett_truck_army
 	{
 		buyPrice = 280000;
@@ -3034,7 +2825,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"truck"};
 		fuel = "Diesel";
 		rank = 3;
-		colors[] = {};
 		realname = "HEMTT cargo";
 	};
 
@@ -3048,7 +2838,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 3;
-		colors[] = {};
 		realname = "bo105";
 	};
 
@@ -3064,7 +2853,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 1;
-		colors[] = {};
 		realname = "Ambulance avec civière";
 	};
 	
@@ -3109,7 +2897,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"boat"};
 		fuel = "Diesel";
 		rank = 1;
-		colors[] = {};
 		realname = "Bateau à moteur";
 	};
 
@@ -3122,7 +2909,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 5;
-		colors[] = {};
 		realname = "Ford Taurus SAMU";
 	};
 
@@ -3135,7 +2921,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"truck"};
 		fuel = "Diesel";
 		rank = 2;
-		colors[] = {};
 		realname = "Zamak Transport de médicament";
 	};
 
@@ -3148,7 +2933,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"truck"};
 		fuel = "Diesel";
 		rank = 3;
-		colors[] = {};
 		realname = "Zamak Stand SAMU";
 	};
 
@@ -3161,7 +2945,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 2;
-		colors[] = {};
 		realname = "Chevrolet Tahoe SAMU";
 	};
 
@@ -3174,7 +2957,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 3;
-		colors[] = {};
 		realname = "Ford Explorer SAMU";
 	};
 
@@ -3187,7 +2969,6 @@ class ALYSIA_VEHICLES
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 3;
-		colors[] = {};
 		realname = "EC635 SAMU";
 	};
 
@@ -3220,7 +3001,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"moto"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_ducati_p",
@@ -3253,7 +3033,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"moto"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Mrshounka_yamaha_p",
@@ -3286,7 +3065,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"moto"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"max_bike",
@@ -3311,7 +3089,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "GPL";
-		rank = 0;
 		colors[] =
 		{
 			"ADM_Ford_F100_red",
@@ -3340,10 +3117,8 @@ class ALYSIA_VEHICLES
 		inventory = 300;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"driver", "company_farming_industrial"};
+		licenses[] = {"driver","company_farming_industrial"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		tactor = 1;
 	};
 
@@ -3356,7 +3131,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_VW_TouaregR50_01_F",
@@ -3395,18 +3169,17 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Audi_RS4_01_F",
-			"Skyline_Audi_RS4_02_F", 
-			"Skyline_Audi_RS4_03_F", 
+			"Skyline_Audi_RS4_02_F",
+			"Skyline_Audi_RS4_03_F",
 			"Skyline_Audi_RS4_04_F",
-			"Skyline_Audi_RS4_05_F",  
-			"Skyline_Audi_RS4_06_F",  
-			"Skyline_Audi_RS4_07_F",   
+			"Skyline_Audi_RS4_05_F", 
+			"Skyline_Audi_RS4_06_F", 
+			"Skyline_Audi_RS4_07_F",  
 			"Skyline_Audi_RS4_08_F",
-			"Skyline_Audi_RS4_09_F", 
+			"Skyline_Audi_RS4_09_F",
 			"Skyline_Audi_RS4_10_F",
 			"Skyline_Audi_RS4_11_F",
 			"Skyline_Audi_RS4_12_F"
@@ -3434,7 +3207,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Ford_Transit_01_F",
@@ -3473,7 +3245,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Peugeot_308_01_F",
@@ -3510,10 +3281,8 @@ class ALYSIA_VEHICLES
 		inventory = 230;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck", "company_money_tranfer"};
+		licenses[] = {"truck","company_money_tranfer"};
 		fuel = "Diesel";
-		rank = 0;
-		colors[] = {};
 		money_transfer = 1;
 	};
 
@@ -3525,7 +3294,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Vehicule_Jonzie_Viper_01_F",
@@ -3564,7 +3332,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Vehicule_Jonzie_Escalade_01_F",
@@ -3603,7 +3370,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Vehicule_Jonzie_Galant_01_F",
@@ -3642,7 +3408,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Vehicule_Jonzie_Mini_Cooper_01_F",
@@ -3681,7 +3446,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Vehicule_Jonzie_Quattroporte_01_F",
@@ -3720,7 +3484,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Vehicule_Jonzie_Datsun_510_01_F",
@@ -3759,7 +3522,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "diesel";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Vehicule_Jonzie_Corolla_01_F",
@@ -3798,7 +3560,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP95";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Vehicule_Jonzie_Datsun_Z432_01_F",
@@ -3837,7 +3598,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Vehicule_Jonzie_Raptor_01_F",
@@ -3876,7 +3636,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Vehicule_Jonzie_STI_01_F",
@@ -3915,7 +3674,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "diesel";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Vehicule_Jonzie_VE_01_F",
@@ -3954,7 +3712,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 		  "Skyline_Vehicule_Jonzie_Ceed_01_F",
@@ -3993,7 +3750,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Vehicule_Jonzie_30CSL_01_F",
@@ -4032,7 +3788,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 0;
 		colors[] =
 		{
 			"Skyline_Vehicule_Jonzie_XB_01_F",

@@ -51,7 +51,7 @@ class RscDisplayComa : RscDisplayDefault
 		class MEDIC_BUTTON: RscButtonSilent
 		{
 			idc = 357;
-			action = "ctrlShow[356,false]; ctrlShow[357,false]; player setVariable ['medic_request',true,true];";
+			action = "[] call AlysiaClient_fnc_medic_request;";
 			onMouseEnter = "ctrlSetText[356,'lyeed_IMG\data\death\samu_select.paa'];";
 			onMouseExit = "ctrlSetText[356,'lyeed_IMG\data\death\samu.paa'];";
 

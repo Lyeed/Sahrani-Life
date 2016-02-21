@@ -331,10 +331,6 @@ class CfgFunctions
 			class fuelStation_price_buy {};
 			class fuelStation_price_sell {};
 			class fuelRefuel_use_refuel_veh {};
-			//class fuelStation_use_refuel_jerry {};
-			//class fuelStation_refuel_jerry_update {};
-			//class fuelStation_refuel_jerry_validate {};
-			//class fuelRefuel_use_refuel_jerry {};
 		};
 
 		class Housing
@@ -360,6 +356,8 @@ class CfgFunctions
 			class phone_message_receive {};
 			class phone_forfait_change {};
 			class phone_number_to_name {};
+			class phone_get_rings {};
+			class phone_get_ring {};
 		};
 
 		class Health
@@ -384,6 +382,7 @@ class CfgFunctions
 			class item_adrenaline_apply {};
 			class item_adrenaline_use {};
 			class item_bandage_use {};
+			class medic_request {};
 		};
 
 		class Process

@@ -801,7 +801,7 @@ class PHONE_SETTINGS_SILENT_HEADER: RscStructuredText
 class PHONE_SETTINGS_SILENT_CHECK: RscCheckBox
 {
 	idc = PHONE_SETTINGS_SILENT_CHECK_IDC;
-	onCheckedChanged = "	if ((_this select 1) isEqualTo 0) then {		profileNamespace setVariable[""ALYSIA_phone_SILENT"", false];	} else {		profileNamespace setVariable[""ALYSIA_phone_SILENT"", true];		playSound ""message_rcv_silent"";	};";
+	onCheckedChanged = "if ((_this select 1) isEqualTo 0) then {profileNamespace setVariable[""ALYSIA_phone_SILENT"", false]} else {profileNamespace setVariable[""ALYSIA_phone_SILENT"", true];playSound ""message_rcv_silent"";};";
 
 	x = 0.62375 * safezoneW + safezoneX;
 	y = 0.39 * safezoneH + safezoneY;

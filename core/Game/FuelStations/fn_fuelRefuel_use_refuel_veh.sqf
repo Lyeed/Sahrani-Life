@@ -5,15 +5,11 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-private["_veh", "_station", "_typeRefuel", "_bill", "_display", "_fuelmax", "_addvalue", "_timer", "_liters", "_currentLiters"];
+private["_veh", "_station", "_typeRefuel", "_bill", "_display", "_fuelmax", "_addvalue", "_liters", "_currentLiters"];
 _veh = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 _station = [_this, 1, ObjNull, [ObjNull]] call BIS_fnc_param;
 
 if ((isNull _station) || (isNull _veh)) exitWith {};
-
-_typeRefuel = player getVariable ["typeRefuel", ""];
-_currentLiters = _station getVariable [_typeRefuel, 250];
 
 if (dialog) then
 {
@@ -24,12 +20,17 @@ if (dialog) then
 if (_veh getVariable ["refueling", false]) exitWith {
 	["Une autre personne effectue actuellement le plein du véhicule."] call AlysiaClient_fnc_error;
 };
+
+_typeRefuel = player getVariable ["typeRefuel", ""];
 if (_typeRefuel isEqualTo "") exitWith {
 	["Impossible de trouver l'essence que vous avez selectionné."] call AlysiaClient_fnc_error;
 };
+
+_currentLiters = _station getVariable [_typeRefuel, getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _typeRefuel >> "max")];
 if (_currentLiters <= 1) exitWith {
 	[format["Cette station ne possède plus l'essence que vous désirez (%1).", getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _typeRefuel >> "name")]] call AlysiaClient_fnc_error;
 };
+
 if ((fuel _veh) isEqualTo 1) exitWith {
 	["Le réservoir du véhicule est déjà plein."] call AlysiaClient_fnc_error;
 };
@@ -58,12 +59,11 @@ _bill = 0;
 _liters = 0;
 _addvalue = 0;
 _fuelmax = getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "fuelCapacity");
-_timer = getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "config" >> "timer");
 
 while {(!(isNull _display) && ((_currentLiters - _liters) > 1) && (((fuel _veh) + _addvalue) < 1) && (_bill <= g_atm)) && (!(isEngineOn _veh)) && (!((locked _veh) isEqualTo 2)) && (player distance _station < 5) && (player distance _veh <5) && (speed player < 1)} do
 {
 	_addvalue = (_addvalue + (1 / _fuelmax));
-	_bill = (_bill + ([_station, _typeRefuel] call AlysiaClient_fnc_fuelStation_price_buy));
+	_bill = (_bill + ([_station, _typeRefuel] call AlysiaClient_fnc_fuelStation_price));
 	_liters = (_liters + 1);
 	
 	(_display displayCtrl 17006) ctrlSetStructuredText parseText _typeRefuel;
@@ -72,7 +72,7 @@ while {(!(isNull _display) && ((_currentLiters - _liters) > 1) && (((fuel _veh) 
 	(_display displayCtrl 17013) progressSetPosition ((fuel _veh) + _addvalue);
 	(_display displayCtrl 17014) ctrlSetStructuredText parseText format ["<t size='1.5' align='center>%1/%2 Litres</t>", ((fuel _veh) * _fuelmax), _fuelmax];
 
-	sleep _timer;
+	sleep 0.5;
 };
 
 if (local _veh) then {
@@ -85,7 +85,7 @@ if ((getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf (_veh) >> "fuel"))
 	_veh setVariable ["typeRefuel", _typeRefuel, true];
 };
 
-_station setVariable [_typeRefuel, ((_station getVariable [_typeRefuel, 250]) - _liters), true];
+_station setVariable [_typeRefuel, (_currentLiters - _liters), true];
 _veh setVariable ["refueling", false, true];
 player setVariable ["typeRefuel", ""];
 

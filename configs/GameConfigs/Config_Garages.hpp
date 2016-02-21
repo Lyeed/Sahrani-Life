@@ -270,4 +270,21 @@ class ALYSIA_GARAGES
 			"Tank"
 		};
 	};
+
+	class garage_epiona
+	{
+		name = "Garage d'Epiona";
+		spawns[] =
+		{
+			"CIV_vehicles_land_luxe_marker_1",
+			"CIV_vehicles_land_luxe_marker_2",
+			"CIV_vehicles_land_luxe_marker_3"
+		};
+		types[] =
+		{
+			"Truck",
+			"Car",
+			"Tank"
+		};
+	};
 };

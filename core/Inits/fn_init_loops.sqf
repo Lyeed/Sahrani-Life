@@ -99,7 +99,7 @@ if (g_launder > 0) then
 				_curentfuel = _veh getVariable ["typeRefuel", ""];
 				if ((_fuel != _curentfuel) && (_curentfuel != "")) then
 				{
-					if (!((_curentfuel in ["SP95","SP98"]) && (_fuel in ["SP95","SP98"]))) then
+					if (!((_curentfuel in ["SP95", "SP98"]) && (_fuel in ["SP95", "SP98"]))) then
 					{
 						[_veh, "motorexplose", 20] call CBA_fnc_globalSay3d;
 						[_veh, "HitEngine", 1] call AlysiaClient_fnc_setHitPointDamage;
@@ -111,8 +111,10 @@ if (g_launder > 0) then
 				} else {
 					_conso = getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _curentfuel >> "conso");
 				};
-				_veh setFuel ((fuel _veh) - (((speed _veh) / _conso) + (([_veh getVariable ["Trunk", []]] call AlysiaClient_fnc_weightGenerate) / 100000)));
+				
+				_veh setFuel ((fuel _veh) - ((((speed _veh) + 10) / _conso) + (([_veh getVariable ["Trunk", []]] call AlysiaClient_fnc_weightGenerate) / 100000)));
 			};
+
 			sleep 2;
 		};
 
@@ -176,8 +178,7 @@ if (g_launder > 0) then
 	       	g_nextPay = time + (_salary_time * 60);
 		};
 
-		if (false) then
-		// if (("(getText(_x >> 'uid') isEqualTo (getPlayerUID player)) && (getNumber(_x >> 'teamspeak') isEqualTo 1)" configClasses (missionConfigFile >> "ALYSIA_STAFF" >> "members")) isEqualTo []) then
+		if (("(getText(_x >> 'uid') isEqualTo (getPlayerUID player)) && (getNumber(_x >> 'teamspeak') isEqualTo 1)" configClasses (missionConfigFile >> "ALYSIA_STAFF" >> "members")) isEqualTo []) then
 		{
 			if (["Alysia", (call TFAR_fnc_getTeamSpeakServerName)] call BIS_fnc_inString) then
 			{

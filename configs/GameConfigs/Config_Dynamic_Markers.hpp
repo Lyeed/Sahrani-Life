@@ -14,7 +14,7 @@
 	{10195.1,16966.5,0} \
 }
 
-#define G_RESPAWN_GENERAL\
+#define G_RESPAWN_GENERAL \
 { \
 	{11678.3,5944.3,0.00143862}, \
 	{10807,5009.23,0.00143909}, \
@@ -317,6 +317,23 @@ class ALYSIA_DYN_MARKERS
 		shop_appear = 1;
 		shop_price  = 1000;
 		linked      = "renovation";
+		discover[]  = {"CIV"};
+		shown[]     = {};
+		destroy[]   = {"WEST", "EAST"};
+		destroy_item = "destroy_stand";
+		positions[] = G_RESPAWN_GENERAL;
+	};
+
+	class hydration_soufre_marker
+	{
+		text        = "Hydratation du soufre";
+		type        = "Fett_campingsite";
+		color       = "ColorRed";
+		shape       = "ICON";
+		size        = 0.5;
+		shop_appear = 1;
+		shop_price  = 1000;
+		linked      = "hydration_soufre";
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};

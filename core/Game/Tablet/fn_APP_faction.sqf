@@ -18,7 +18,7 @@ ctrlSetText[8700, getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSi
 
 if (isClass(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "board" >> "leader_board")) then
 {
-	if ((player getVariable["rank", 0]) >= getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "board" >> "leader_board" >> "access_rank")) then {
+	if ((player getVariable ["rank", 0]) >= getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "board" >> "leader_board" >> "access_rank")) then {
 		ctrlEnable[8710, true];
 	} else {
 		ctrlEnable[8710, false];
