@@ -1435,7 +1435,10 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 5;
 	};
 	class SkylineItems_Crochetage {};
-	class SkylineItems_Defibrilateur {};
+	class SkylineItems_Defibrilateur {
+		buy_condition_guer = 1;
+		buy_price = 1500;
+	};
 	class SkylineItems_Passeport
 	{
 		buy_price = 55;

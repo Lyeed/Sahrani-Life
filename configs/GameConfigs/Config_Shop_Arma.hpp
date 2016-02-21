@@ -155,6 +155,7 @@ class ALYSIA_SHOPS_ARMA
 			"ItemGPS",
 			"Binocular",
 			"tf_anprc148jem_2",
+			"SkylineItems_Defibrilateur",
 			"SmokeShellGreen",
 			"SkylineItems_Passeport",
 			"SmokeShellRed",
