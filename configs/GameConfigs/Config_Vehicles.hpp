@@ -2778,10 +2778,10 @@ class ALYSIA_VEHICLES
 		buyPrice = 13500;
 		inventory = 70;
 		side = "EAST";
-		insurance = 4;
+		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "SP98";
-		rank = 1;
+		rank = 4;
 		speaker = 1;
 	};
 
