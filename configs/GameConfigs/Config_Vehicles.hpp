@@ -2272,8 +2272,7 @@ class ALYSIA_VEHICLES
 			"Skyline_Bus_06_F",
 			"Skyline_Bus_07_F",
 			"Skyline_Bus_08_F",
-			"Skyline_Bus_09_F",
-			"Skyline_Bus_10_F"
+			"Skyline_Bus_09_F"
 		};
 		realname = "Bus";
 	};
@@ -2286,7 +2285,6 @@ class ALYSIA_VEHICLES
   	class Skyline_Bus_07_F: Skyline_Bus {};
   	class Skyline_Bus_08_F: Skyline_Bus {};
   	class Skyline_Bus_09_F: Skyline_Bus {};
-  	class Skyline_Bus_10_F: Skyline_Bus {};
 
   	class B_Boat_Transport_01_F
 	{
@@ -2741,42 +2739,38 @@ class ALYSIA_VEHICLES
 	**				EAST VEHICLES
 	*/
 	/* CARS */
-	class LandRover_ACR
+	class max_FBI_tahoe_undercover
 	{
-		buyPrice = 23000;
-		inventory = 70;
+		name = "Taheo noir";
+		buyPrice = 40000;
+		inventory = 50;
 		side = "EAST";
 		insurance = 1;
 		licenses[] = {"driver"};
-		fuel = "Diesel";
-		rank = 1;
-		realname = "Land Rover Garde";
-	};
-	class LandRover_TK_CIV_EP1: LandRover_ACR
-	{
-		realname = "Land Rover Administration";
-	};
-	class ACR_LandRover_AMB
-	{
-		buyPrice = 11000;
-		inventory = 90;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		rank = 1;
-		realname = "Fourgon Garde";
-	};
-	class ACR_Offroad_HMG
-	{
-		buyPrice = 55000;
-		inventory = 40;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
+		fuel = "SP98";
 		rank = 3;
-		realname = "Land Rover armé Garde";
+	};
+	class Skyline_Bus_10_F
+	{
+		name = "Bus";
+		buyPrice = 55000;
+		inventory = 80;
+		side = "EAST";
+		insurance = 1;
+		licenses[] = {"truck"};
+		fuel = "SP98";
+		rank = 4;
+	};
+	class RDS_Lada_Civ_05
+	{
+		name = "Lada Garde";
+		buyPrice = 2000;
+		inventory = 30;
+		side = "EAST";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP98";
+		rank = 1;
 	};
 	class Skyline_GMC_Vandura_Propagande_01_F
 	{
@@ -2784,7 +2778,7 @@ class ALYSIA_VEHICLES
 		buyPrice = 13500;
 		inventory = 70;
 		side = "EAST";
-		insurance = 1;
+		insurance = 4;
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 1;

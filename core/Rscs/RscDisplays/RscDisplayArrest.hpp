@@ -643,7 +643,7 @@ class RscDisplayModifyArrest: RscDisplayDefaultInteraction
 		class RELEASE_IMAGE: RscPicture
 		{
 			idc = 19055;
-			text = "lyeed_IMG\data\housing\actions\action_exit.paa";
+			text = "lyeed_IMG\data\global\validate.paa";
 
 			x = 0.588042 * safezoneW + safezoneX;
 			y = 0.595955 * safezoneH + safezoneY;
@@ -654,8 +654,8 @@ class RscDisplayModifyArrest: RscDisplayDefaultInteraction
 		{
 			idc = 19056;
 			action = "[] spawn AlysiaClient_fnc_prisonModifyMenu_use_release;";
-			onMouseEnter = "			ctrlShow[19053, false];			ctrlSetText[19055,""lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""];			((findDisplay 19000) displayCtrl 19052) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 19000) displayCtrl 19054) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Libérer</t>"";";
-			onMouseExit = "			ctrlShow[19053, true];			ctrlSetText[19055,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];			((findDisplay 19000) displayCtrl 19052) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 19000) displayCtrl 19054) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Libérer</t>"";";
+			onMouseEnter = "ctrlShow[19053, false];ctrlSetText[19055,""lyeed_IMG\data\global\validate_select.paa""];((findDisplay 19000) displayCtrl 19052) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 19000) displayCtrl 19054) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Libérer</t>"";";
+			onMouseExit = "ctrlShow[19053, true];ctrlSetText[19055,""lyeed_IMG\data\global\validate.paa""];((findDisplay 19000) displayCtrl 19052) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 19000) displayCtrl 19054) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Libérer</t>"";";
 
 			x = 0.582475 * safezoneW + safezoneX;
 			y = 0.588032 * safezoneH + safezoneY;

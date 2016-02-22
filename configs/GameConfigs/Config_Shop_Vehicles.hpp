@@ -37,13 +37,13 @@ class ALYSIA_SHOPS_VEHICLES
 		side = "EAST";
 		stock[] =
 		{
-			"LandRover_ACR",
-			"LandRover_TK_CIV_EP1",
-			"ACR_LandRover_AMB",
-			"ACR_Offroad_HMG",
+			"RDS_Lada_Civ_05",
+			"Skyline_Bus_10_F",
+			"max_FBI_tahoe_undercover",
 			"Cha_BTR60_Cuba",
 			"Fett_truck_army",
 			"Skyline_T34_01_F",
+			"max_FBI_tahoe_undercover",
 			"Skyline_GMC_Vandura_Propagande_01_F"
 		};
 	};

@@ -21,6 +21,10 @@ if (!(isNil "gServer_soonReboot")) exitWith {
 	["Veuillez attendre le <t color='#B40404'>redémarrage</t> du serveur pour interagir avec l'hôtel des ventes"] call AlysiaClient_fnc_error;
 };
 
+if (true) exitWith {
+	["L'hôtel des ventes ouvrira ses portes le <t color='#01DF01'>05/03</t> (date mondiale)."] call AlysiaClient_fnc_info;
+};
+
 if (createDialog "RscDisplayAuctionHouse") then
 {
 	disableSerialization;

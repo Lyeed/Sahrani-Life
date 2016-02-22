@@ -69,7 +69,7 @@ switch (_action) do
 
 		if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "faction_bank_handle_rank") isEqualTo (player getVariable ["rank", 0])) then
 		{
-			if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> typeOf(g_interaction_target) >> "money_faction") isEqualTo 1) then
+			if (getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "money_faction") isEqualTo 1) then
 			{
 				_txtL4 ctrlSetStructuredText parseText "<t align='right'>Faction</t>";
 				_btnL4 buttonSetAction "[""home_faction"", g_interaction_target] call AlysiaClient_fnc_atmScreen";

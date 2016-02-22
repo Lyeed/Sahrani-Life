@@ -56,6 +56,20 @@ class ALYSIA_STAFF
 	{
 		class buttons
 		{
+			class Invisible_ON
+			{
+				name = "Invisible ON";
+				statement = "g_staff_invisible = true; [player, true] remoteExecCall ['hideObjetGlobal', 2];";
+				condition = "!g_staff_invisible";
+				allow[] = {"76561198007960495", "76561198099211957"};
+			};
+			class Invisible_OFF: Invisible_ON
+			{
+				name = "Invisible ON";
+				statement = "g_staff_invisible = false; [player, false] remoteExecCall ['hideObjetGlobal', 2];";
+				condition = "g_staff_invisible";
+			};
+
 			class TP_ON
 			{
 				name = "TP ON";
@@ -67,7 +81,7 @@ class ALYSIA_STAFF
 			{
 				name = "TP OFF";
 				statement = "g_staff_tp = false; onMapSingleClick '';";
-				condition = "!g_staff_tp";
+				condition = "g_staff_tp";
 			};
 
 			class god_ON

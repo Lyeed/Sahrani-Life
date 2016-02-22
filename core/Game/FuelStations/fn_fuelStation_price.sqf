@@ -16,5 +16,5 @@ if (!isClass(_config)) exitWith {0};
 
 round
 (
-	(((_station distance (markerPos "oilu")) / 100) / ((_station getVariable [getNumber(_config >> "max"), 250]) / 10))
+	(((_station distance (markerPos "oil_1")) / 100) / ((_station getVariable [_fuel, getNumber(_config >> "max")]) / 10))
 );

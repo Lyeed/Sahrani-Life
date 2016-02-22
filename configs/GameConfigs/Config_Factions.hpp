@@ -274,7 +274,6 @@ class ALYSIA_FACTIONS
 						"Trixie_Enfield_Rail",
 						"hlc_rifle_aughbar_B",
 						"Fett_SDAR",
-						"wc_gr_smg_mp40",
 						"hlc_rifle_M14"
 					}
 				},
@@ -282,7 +281,6 @@ class ALYSIA_FACTIONS
 					{
 						"Trixie_Enfield_Mag",
 						"Fett_20Rnd_556x45_UW_mag",
-						"wc_32Rnd_9x19_mag",
 						"hlc_20Rnd_762x51_B_M14",
 						"Bank_DefuseKit"
 					}

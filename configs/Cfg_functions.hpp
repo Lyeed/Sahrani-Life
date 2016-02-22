@@ -328,8 +328,7 @@ class CfgFunctions
 			class fuelStation_use_refuel_veh {};
 			class fuelStation_refuel_veh_update {};
 			class fuelStation_refuel_veh_validate {};
-			class fuelStation_price_buy {};
-			class fuelStation_price_sell {};
+			class fuelStation_price {};
 			class fuelRefuel_use_refuel_veh {};
 		};
 

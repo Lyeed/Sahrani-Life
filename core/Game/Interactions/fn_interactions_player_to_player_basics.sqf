@@ -161,7 +161,7 @@
 		[
 			"bandage",
 			"Bandage",
-			"[nil,nil,,il,g_interaction_target] spawn AlysiaClient_fnc_item_bandage_use;",
+			"[nil,nil,nil,g_interaction_target] spawn AlysiaClient_fnc_item_bandage_use;",
 			"
 				(
 					(g_interaction_target getVariable ['is_bleeding',false]) &&

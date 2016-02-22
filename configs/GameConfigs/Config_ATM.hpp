@@ -2,7 +2,7 @@ class ALYSIA_ATM
 {
 	class Land_Atm_01_F
 	{
-		money_stock = 50000;
+		money_stock = 100000;
 		money_faction = 0;
 		withdraw_max = 5000;
 		withdraw_min = 50;

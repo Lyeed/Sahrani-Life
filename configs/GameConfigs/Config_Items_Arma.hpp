@@ -2750,40 +2750,6 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 800;
 		buy_condition_WEST = 4;
 	};
-	class casquette_garde_officier_tank
-	{
-		buy_price = 90;
-		buy_condition_EAST = 3;
-	};
-	class casque_garde_basic
-	{
-		buy_price = 80;
-		buy_condition_EAST = 1;
-	};
-	class casque_garde_camo
-	{
-		buy_price = 80;
-		buy_condition_EAST = 1;
-	};
-	class casquette_garde_officier
-	{
-		buy_price = 90;
-		buy_condition_EAST = 4;
-	};
-	class H_LIB_WP_Cap
-	{
-		buy_price = 20;
-	};
-	class bonnet_garde_tank
-	{
-		buy_price = 20;
-		buy_condition_EAST = 1;
-	};
-	class casquette_garde_tank
-	{
-		buy_price = 80;
-		buy_condition_EAST = 1;
-	};
 	class usm_helmet_safety
 	{
 		buy_price = 20;
@@ -2812,4 +2778,9 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 125;
 	};
+	class max_paramedic_uniform
+    {
+        buy_price = 250;
+        buy_condition_GUER = 1;
+    };
 };

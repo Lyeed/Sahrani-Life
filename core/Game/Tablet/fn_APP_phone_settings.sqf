@@ -17,7 +17,7 @@ lbClear _list;
 _ring = profileNamespace getVariable ["ALYSIA_phone_recv", "message_rcv_1"];
 
 {
-	_index = _list lbAdd format["Sonnerie %1 %2", (_forEachIndex + 1), if (_ring isEqualTo (_forEachIndex + 1)) then {"(Actuelle)"} else {""}];
+	_index = _list lbAdd format["Sonnerie %1 %2", (_forEachIndex + 1), if (_ring isEqualTo _x) then {"(Actuelle)"} else {""}];
 	_list lbSetData [_index, _x];
 } forEach ([] call AlysiaClient_fnc_phone_get_rings);
 

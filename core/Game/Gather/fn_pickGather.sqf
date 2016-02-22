@@ -17,7 +17,7 @@ if (!isClass(missionConfigFile >> "ALYSIA_FARMING_GATHER" >> _marker)) exitWith
 	diag_log format["[ALYSIA:ERROR] Marker %1 not defined in ALYSIA_FARMING_GATHER (class not found)", _marker];
 };
 
-_tool = getText(missionConfigFile >> "ALYSIA_FARMING_GATHER" >> _marker >> "tool");
+_tool = "";//getText(missionConfigFile >> "ALYSIA_FARMING_GATHER" >> _marker >> "tool");
 
 if ((_tool != "") && ((currentWeapon player) != _tool)) exitWith {
 	[format["Vous n'avez pas le bon outil<br/>Vous avez besoin de <t color='#FF8000'>%1</t> pour commencer la récolte", getText(configFile >> "CfgWeapons" >> _tool >> "displayName")]] call AlysiaClient_fnc_error;

@@ -11,7 +11,7 @@ if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "inte
 {
 	[[
 		"<img image='lyeed_IMG\data\actions_menu\seize.paa'/> <t color='#3F51B5'>Saisir</t> les objets proches</t>",
-		AlysiaClient_fnc_seizeObjects, cursorTarget, 0, false, false, "", '((count(nearestObjects [player, ["WeaponHolder"], 3]) > 0) || (count(nearestObjects [player, ["GroundWeaponHolder"], 3]) > 0) || (count(nearestObjects [player, ["WeaponHolderSimulated"], 3]) > 0))'
+		AlysiaClient_fnc_seizeObjects, "", 0, false, false, "", '((count(nearestObjects [player, ["WeaponHolder"], 3]) > 0) || (count(nearestObjects [player, ["GroundWeaponHolder"], 3]) > 0) || (count(nearestObjects [player, ["WeaponHolderSimulated"], 3]) > 0))'
 	]] call CBA_fnc_addPlayerAction;
 };
 

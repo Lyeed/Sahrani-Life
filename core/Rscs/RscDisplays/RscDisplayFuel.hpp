@@ -145,7 +145,7 @@ class RscDisplayFuelStation: RscDisplayDefaultInteraction
 		class VALIDATE_IMAGE: RscPicture
 		{
 			idc = 16015;
-			text = "lyeed_IMG\data\housing\actions\action_exit.paa";
+			text = "lyeed_IMG\data\global\validate.paa";
 
 			x = 0.453594 * safezoneW + safezoneX;
 			y = 0.53014 * safezoneH + safezoneY;
@@ -262,16 +262,6 @@ class RscDisplayFuelRefuel: RscDisplayDefaultInteraction
 			w = 0.0290625 * safezoneW;
 			h = 0.022926 * safezoneH;
 		};
-		/*class STOCK_TEXT3: RscStructuredText
-		{
-			idc = 17011;
-			text = "<t align='right'>L</t>";
-
-			x = 0.514541 * safezoneW + safezoneX;
-			y = 0.45754 * safezoneH + safezoneY;
-			w = 0.0154689 * safezoneW;
-			h = 0.022 * safezoneH;
-		};*/
 		class PRICE_TEXT3: RscStructuredText
 		{
 			idc = 17012;
@@ -322,7 +312,7 @@ class RscDisplayFuelRefuel: RscDisplayDefaultInteraction
 		class VALIDATE_IMAGE: RscPicture
 		{
 			idc = 17017;
-			text = "lyeed_IMG\data\housing\actions\action_exit.paa";
+			text = "lyeed_IMG\data\global\validate.paa";
 
 			x = 0.453594 * safezoneW + safezoneX;
 			y = 0.53014 * safezoneH + safezoneY;
@@ -343,8 +333,8 @@ class RscDisplayFuelRefuel: RscDisplayDefaultInteraction
 		{
 			idc = 17019;
 			action = "closedialog 0;";
-			onMouseEnter = "ctrlShow[17016, false];ctrlSetText[17017,""lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""];((findDisplay 17000) displayCtrl 17015) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 17000) displayCtrl 17017) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Arrêter</t>"";";
-			onMouseExit = "ctrlShow[17016, true];ctrlSetText[17017,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];((findDisplay 17000) displayCtrl 17015) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 17000) displayCtrl 17017) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Arrêter</t>"";";
+			onMouseEnter = "ctrlShow[17016, false];ctrlSetText[17017,""lyeed_IMG\data\global\validate_select.paa""];((findDisplay 17000) displayCtrl 17015) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 17000) displayCtrl 17017) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Arrêter</t>"";";
+			onMouseExit = "ctrlShow[17016, true];ctrlSetText[17017,""lyeed_IMG\data\global\validate.paa""];((findDisplay 17000) displayCtrl 17015) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 17000) displayCtrl 17017) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Arrêter</t>"";";
 
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.522 * safezoneH + safezoneY;

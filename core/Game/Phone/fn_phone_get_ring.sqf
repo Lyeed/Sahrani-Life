@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_ring"];
+private "_ring";
 
 _ring = profileNamespace getVariable ["ALYSIA_phone_recv", "message_rcv_1"];
 if (((call g_donator) isEqualTo 0) && !(_ring in ["message_rcv_1", "message_rcv_2"])) then
@@ -15,4 +15,4 @@ if (((call g_donator) isEqualTo 0) && !(_ring in ["message_rcv_1", "message_rcv_
 	saveProfileNamespace;
 };
 
-message_rcv_1;
+_ring;

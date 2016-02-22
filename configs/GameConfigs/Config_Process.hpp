@@ -824,7 +824,7 @@ class ALYSIA_PROCESS
 			class CIV
 			{
 				rank = 0;
-				licenses[] = {};
+				licenses[] = {"company_foundry"};
 			};
 		};
 	};
@@ -1265,7 +1265,6 @@ class ALYSIA_PROCESS
 	};
 
 	/* Crafting des armes */
-
 	class weapon_thompson
 	{
 		name = "Arme : Fusil Thompson";

@@ -45,7 +45,7 @@ switch (side _from) do
 				(_info select 1) select 0,
 				(_info select 1) select 1,
 				(_info select 1) select 2,
-				getText(missionConfigFile >> "ALYSIA_NATIONALITIES" >> (_info select 2) >> "name")
+				getText(missionConfigFile >> "ALYSIA_NATIONALITIES" >> (_info select 3) >> "name")
 			];
 		} else {
 			15 cutRsc ["RscTitleIdentityCIV_SOUTH", "PLAIN"];
@@ -75,7 +75,7 @@ switch (side _from) do
 				(_info select 1) select 0,
 				(_info select 1) select 1,
 				(_info select 1) select 2,
-				getText(missionConfigFile >> "ALYSIA_NATIONALITIES" >> (_info select 2) >> "name")
+				getText(missionConfigFile >> "ALYSIA_NATIONALITIES" >> (_info select 3) >> "name")
 			];
 		};
 	};

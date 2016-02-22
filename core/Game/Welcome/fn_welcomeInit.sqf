@@ -38,7 +38,7 @@ _camera camCommit 0;
 cutText ["", "PLAIN"];
 
 profileNamespace setVariable ["ALYSIA_phone_recv", "message_rcv_1"];
-profileNamespace setVariable ["ALYSIA_phone_recv", false];
+profileNamespace setVariable ["ALYSIA_phone_SILENT", false];
 saveProfileNamespace;
 
 _action = 

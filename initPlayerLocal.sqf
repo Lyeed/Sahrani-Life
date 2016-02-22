@@ -8,7 +8,7 @@
 
 if (hasInterface) then
 {
-	private["_handle", "_timeStamp"];
+	private["_handle", "_timeStamp", "_check"];
 	diag_log "------------------------------------------------------------------------------------------------------";
 	diag_log "---------------------------------------- Starting Client Init ----------------------------------------";
 	diag_log "------------------------------------------------------------------------------------------------------";
@@ -32,11 +32,24 @@ if (hasInterface) then
 	diag_log "<INIT> En attente de réponse du serveur ...";
 	cutText ["En attente de réponse du serveur", "BLACK FADED"];
 	0 cutFadeOut 9999999;
-	waitUntil {!(isNil "gServer_server_isReady")};
+	waitUntil {!(isNil "gServer_server_isReady") && !(isNil "gServer_mods")};
 	if (!(isNil "gServer_soonReboot")) exitWith {
 		["Le serveur redémarre dans moins de 4 minutes, veuillez vous reconnecter après."] spawn AlysiaClient_fnc_errorExit;
 	};
 	setDate [gServer_year, (date select 1), (date select 2), (date select 3), (date select 4)];
+
+	diag_log "<INIT> Vérification des mods @Alysia ...";
+	cutText ["Vérification de la résolution ...", "BLACK FADED"];
+	0 cutFadeOut 9999999;
+	{
+		if (!(isClass(configFile >> "CfgPatches" >> _x))) exitWith
+		{
+			[format["Le pbo [%1] est nécessaire pour vous connecter.", _x]] spawn AlysiaClient_fnc_errorExit;
+			_check = false;
+		};
+	} forEach gServer_mods;
+	if (!(isNil "_check")) exitWith {};
+	diag_log "<INIT> Mods vérifiés";
 
 	diag_log "<INIT> Initialisation des variables ...";
 	cutText ["Vérification de la résolution ...", "BLACK FADED"];

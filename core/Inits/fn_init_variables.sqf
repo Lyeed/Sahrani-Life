@@ -32,6 +32,7 @@ with missionNamespace do
 	g_staff_markers = false;
 	g_staff_spec = false;
 	g_staff_tp = false;
+	g_staff_invisible = false;
 	/* ===================[Tablet]==========================*/
 	g_apps = [];
 	/* ===================[Phone]======================= */

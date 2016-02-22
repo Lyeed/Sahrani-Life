@@ -32,6 +32,7 @@ if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then
 	{
 		_suit = createVehicle ["Land_Suitcase_F", (player modelToWorld [0, 2, 0]), [], 0, "CAN_COLLIDE"];
 		_suit setVariable ["items", [[_item, 1]], true];
+		["Vous avez crée une <t color='#FF8000'>valise</t>. Vous pouvez accéder à son <t color='#01DF3A'>inventaire</t> avec votre touche WINDOWS. Une valise reste <t color='#DF0101'>30 minutes</t> avant de se faire supprimer par le serveur."] call AlysiaClient_fnc_info;
 		g_action_delay = time;
 	} else {
 		if ((_suit getVariable ["trunk_in_use_ID", ""]) isEqualTo "") then

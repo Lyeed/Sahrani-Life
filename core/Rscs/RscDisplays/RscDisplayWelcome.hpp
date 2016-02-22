@@ -493,9 +493,9 @@ class RscDisplayWelcomeFaction: RscDisplayDefault
 		};
 		class LEFT_CHOICE_BUTTON: RscButtonSilent
 		{
-			onMouseEnter = "			ctrlShow[850,true];			ctrlShow[851,true];			ctrlShow[852,true];			ctrlShow[853,true];			ctrlShow[854,true];			ctrlShow[855,true];			ctrlShow[856,true];			ctrlShow[857,true];			ctrlSetText[810,""lyeed_IMG\data\welcome\welcome_faction_left.jpg""];			playMusic [""welcome_EAST"", random 220];			";
-			onMouseExit = "			ctrlShow[850,false];			ctrlShow[851,false];			ctrlShow[852,false];			ctrlShow[853,false];			ctrlShow[854,false];			ctrlShow[855,false];			ctrlShow[856,false];			ctrlShow[857,false];			ctrlSetText[810,""lyeed_IMG\data\welcome\welcome_faction_left_fade.jpg""];			playMusic """";			";
-			action = "			[] spawn			{				_action =				[					""Êtes-vous bien sûr ? Une fois validé vous devrez vous rendre dans une préfecture du Nord pour changer de nationalité"",					""Validation"",					""Valider"",					""Annuler""				] call BIS_fnc_guiMessage;				if (_action) then {					g_choice = ""SOUTH"";					playMusic """";				};			};";
+			onMouseEnter = "ctrlShow[850,true];ctrlShow[851,true];ctrlShow[852,true];ctrlShow[853,true];ctrlShow[854,true];ctrlShow[855,true];ctrlShow[856,true];ctrlShow[857,true];ctrlSetText[810,""lyeed_IMG\data\welcome\welcome_faction_left.jpg""];playMusic [""welcome_EAST"", random 220];";
+			onMouseExit = "ctrlShow[850,false];ctrlShow[851,false];ctrlShow[852,false];ctrlShow[853,false];ctrlShow[854,false];ctrlShow[855,false];ctrlShow[856,false];ctrlShow[857,false];ctrlSetText[810,""lyeed_IMG\data\welcome\welcome_faction_left_fade.jpg""];playMusic """";";
+			action = "[] spawn{_action =[""Êtes-vous bien sûr ?"",""Validation"",""Valider"",""Annuler""] call BIS_fnc_guiMessage;if (_action) then {g_choice = ""SOUTH"";playMusic """";};};";
 
 			x = 0.242187 * safezoneW + safezoneX;
 			y = 0.599 * safezoneH + safezoneY;
@@ -534,9 +534,9 @@ class RscDisplayWelcomeFaction: RscDisplayDefault
 		};
 		class RIGHT_CHOICE_BUTTON: RscButtonSilent
 		{
-			onMouseEnter = "			ctrlShow[860,true];			ctrlShow[861,true];			ctrlShow[862,true];			ctrlShow[863,true];			ctrlShow[864,true];			ctrlShow[865,true];			ctrlShow[866,true];			ctrlShow[867,true];			ctrlSetText[811,""lyeed_IMG\data\welcome\welcome_faction_right.jpg""];			playMusic [""welcome_WEST"", random 200];			";
-			onMouseExit = "			ctrlShow[860,false];			ctrlShow[861,false];			ctrlShow[862,false];			ctrlShow[863,false];			ctrlShow[864,false];			ctrlShow[865,false];			ctrlShow[866,false];			ctrlShow[867,false];			ctrlSetText[811,""lyeed_IMG\data\welcome\welcome_faction_right_fade.jpg""];			playMusic """";			";
-			action = "			[] spawn			{				_action =				[					""Êtes-vous bien sûr ? Une fois validé vous devrez vous rendre dans une préfecture du Sud pour changer de nationalité"",					""Validation"",					""Valider"",					""Annuler""				] call BIS_fnc_guiMessage;				if (_action) then {					g_choice = ""NORTH"";					playMusic """";				};			};";
+			onMouseEnter = "ctrlShow[860,true];ctrlShow[861,true];ctrlShow[862,true];ctrlShow[863,true];ctrlShow[864,true];ctrlShow[865,true];ctrlShow[866,true];ctrlShow[867,true];ctrlSetText[811,""lyeed_IMG\data\welcome\welcome_faction_right.jpg""];playMusic [""welcome_WEST"", random 200];";
+			onMouseExit = "ctrlShow[860,false];ctrlShow[861,false];ctrlShow[862,false];ctrlShow[863,false];ctrlShow[864,false];ctrlShow[865,false];ctrlShow[866,false];ctrlShow[867,false];ctrlSetText[811,""lyeed_IMG\data\welcome\welcome_faction_right_fade.jpg""];playMusic """";";
+			action = "[] spawn{_action =[""Êtes-vous bien sûr ?"",""Validation"",""Valider"",""Annuler""] call BIS_fnc_guiMessage;if (_action) then {g_choice = ""NORTH"";playMusic """";};};";
 
 			x = 0.520625 * safezoneW + safezoneX;
 			y = 0.599 * safezoneH + safezoneY;

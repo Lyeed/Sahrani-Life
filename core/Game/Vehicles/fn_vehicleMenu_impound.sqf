@@ -7,13 +7,11 @@
 */
 
 if (isNull g_interaction_target) exitWith {};
-if (!((crew g_interaction_target) isEqualTo [])) exitWith
-{
+if (!((crew g_interaction_target) isEqualTo [])) exitWith {
 	["Le véhicule doit être vide"] call AlysiaClient_fnc_error;
 };
 
-if ((speed g_interaction_target) > 0) exitWith
-{
+if ((speed g_interaction_target) > 0) exitWith {
 	["Le véhicule doit être à l'arrêt"] call AlysiaClient_fnc_error;	
 };
 
@@ -23,16 +21,18 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
-if (!(["Mise en fourrière", 8, g_interaction_target] call AlysiaClient_fnc_showProgress)) exitWith {};
-
-if ((g_interaction_target getVariable["vehicle_info_owners", []]) isEqualTo []) then {
-	deleteVehicle g_interaction_target;
-} else {
-	private["_storePos"];
-	if ((g_interaction_target isKindOf "Ship") || (g_interaction_target isKindOf "Air")) then { 
-		_storePos = [];
+if (["Mise en fourrière", 8, g_interaction_target] call AlysiaClient_fnc_showProgress) then
+{
+	private "_storePos";
+	if (g_interaction_target isKindOf "Ship") then { 
+		_storePos = [0,0,0];
 	} else {
-		_storePos = getMarkerPos "fourriere";
+		if (g_choice isEqualTo "NORTH") then {
+			_storePos = getMarkerPos "fourriere_NORTH";
+		} else {
+			_storePos = getMarkerPos "fourriere_SOUTH";
+		};
 	};
-	[_vehicle, _storePos, true] remoteExec ["AlysiaServer_fnc_garageVehicleStore", 2, false];
+	
+	[g_interaction_target, _storePos, false] remoteExec ["AlysiaServer_fnc_garageVehicleStore", 2];
 };

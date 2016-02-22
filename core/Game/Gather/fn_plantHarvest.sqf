@@ -38,7 +38,7 @@ if (_object getVariable ["ready", false]) then
 		private["_amount"];
 		_amount = 0;
 		if ((_x select 2) isEqualTo 1) then {
-			_amount = [(_x select 0), round(random(_x select 1)), g_carryWeight, g_maxWeight] call AlysiaClient_fnc_calWeightDiff;
+			_amount = [(_x select 0), round(random(_x select 1)) + 1, g_carryWeight, g_maxWeight] call AlysiaClient_fnc_calWeightDiff;
 		} else {
 			_amount = [(_x select 0), (_x select 1), g_carryWeight, g_maxWeight] call AlysiaClient_fnc_calWeightDiff;
 		};
@@ -54,7 +54,7 @@ if (_object getVariable ["ready", false]) then
 		} else {
 			[true, (_x select 0), _amount] call AlysiaClient_fnc_handleInv;
 		};
-	} forEach (getArray(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> typeOf(_object) >> "receive"));
+	} forEach getArray(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> typeOf(_object) >> "receive");
 
 	if (_space) then
 	{
@@ -68,7 +68,7 @@ if (_object getVariable ["ready", false]) then
 				]
 			] call AlysiaClient_fnc_info;
 		};
-		deleteVehicle _object;		
+		deleteVehicle _object;
 	} else {
 		["Votre inventaire est plein"] call AlysiaClient_fnc_error;
 	};
