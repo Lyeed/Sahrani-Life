@@ -27,6 +27,34 @@ if (isNull _target) exitWith {};
 			"
 		],
 		[
+			"refuel",
+			"Jerrican",
+			"[g_interaction_target] spawn AlysiaClient_fnc_vehicleMenu_refuel_open;",
+			"
+				(
+					((vehicle player) isEqualTo player)	&&
+					(
+						('Alysia_jerrycan_sp98' in (magazines player)) ||
+						('Alysia_jerrycan_sp95' in (magazines player)) ||
+						('Alysia_jerrycan_diesel' in (magazines player)) ||
+						('Alysia_jerrycan_gpl' in (magazines player)) ||
+						('Alysia_jerrycan_kerosene' in (magazines player))
+					)
+				)
+			"
+		],
+		[
+			"siphon",
+			"Siphon",
+			"[g_interaction_target] spawn AlysiaClient_fnc_vehicleMenu_siphon;",
+			"
+				(
+					((vehicle player) isEqualTo player)	&&
+					('Alysia_siphon' in (magazines player))
+				)
+			"
+		],
+		[
 			"lock",
 			"Verrouiller",
 			"[true] call AlysiaClient_fnc_vehicleMenu_key;",

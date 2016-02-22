@@ -293,7 +293,8 @@ class CfgFunctions
 			class vehicleMenu_flip {};
 			class vehicleMenu_key {};
 			class vehicleMenu_owner {};
-			class vehicleMenu_refuel {};
+			class vehicleMenu_refuel_open {};
+			class vehicleMenu_refuel_action {};
 			class vehicleMenu_repair_action {};
 			class vehicleMenu_repair_fill {};
 			class vehicleMenu_repair_open {};

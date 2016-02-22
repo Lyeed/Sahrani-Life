@@ -17,7 +17,7 @@ if (g_action_inUse) exitWith {
 };
 
 if (!("SkylineItems_Adrenaline" in (magazines player))) exitWith {
-	["Vous n'avez pas de morphine"] call AlysiaClient_fnc_error;
+	["Vous n'avez pas d'adrenaline."] call AlysiaClient_fnc_error;
 };
 
 g_action_inUse = true;
@@ -26,7 +26,7 @@ player playAction "medic";
 sleep 2;
 
 if (!("SkylineItems_Adrenaline" in (magazines player))) exitWith {
-	["Vous n'avez pas de morphine"] call AlysiaClient_fnc_error;
+	["Vous n'avez pas d'adrenaline.'"] call AlysiaClient_fnc_error;
 };
 
 player removeMagazine "SkylineItems_Adrenaline";

@@ -5,19 +5,54 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+private["_target", "_type", "_item", "_count"];
+_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-private["_veh","_fuel","_currentfuel"];
-_veh = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
-_fuel = (getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf (_veh) >> "fuel"));
-_currentfuel = _veh getVariable ["typeRefuel", ""];
-
-if (_fuel != _currentfuel) then {
-	_fuel = _currentfuel;
+if (dialog) then
+{
+	closeDialog 0;
+	waitUntil {!dialog};
 };
 
-if (["Siphonnage du véhicule", 30 , objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress) then
+if (isNull _target) exitWith {
+	["Cible invalide."] call AlysiaClient_fnc_error;
+};
+if ((speed _target) > 0) exitWith {
+	["Vous ne pouvez pas faire le plein d'un véhicule qui se déplace."] call AlysiaClient_fnc_error;
+};
+if (isEngineOn _target) exitWith {
+	["Vous ne pouvez pas faire le plein d'un véhicule ayant le moteur allumé."] call AlysiaClient_fnc_error;
+};
+
+if (!(["Siphonnage", 10, _target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {};
+
+_type = _target getVariable ["typeRefuel", ""];
+if (_type isEqualTo "") then {_type = getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf(_target) >> "fuel")};
+
+_item = switch (_type) do
 {
-	player removeItem "jerrican_empty";
-	player addMagazine format ["jerrican_%1", _fuel];
-	_veh setFuel 0;
+	case "Diesel": {"Alysia_jerrycan_diesel"};
+	case "SP95": {"Alysia_jerrycan_sp95"};
+	case "SP98": {"Alysia_jerrycan_sp98"};
+	case "Kerosene": {"Alysia_jerrycan_kerozene"};
+	case "GPL": {"Alysia_jerrycan_gpl"};
+};
+
+_count = floor(((fuel _target) * getNumber(configFile >> "CfgVehicles" >> typeof(_target) >> "fuelCapacity")) / 20);
+if (_count >= 1) then
+{
+	for "_i" from 1 to _count do
+	{
+		player addMagazine _item;
+	};
+};
+
+if (local g_interaction_target) then {
+	g_interaction_target setFuel 0;
+} else {
+	[g_interaction_target, 0] remoteExecCall ["setFuel", g_interaction_target];
+};
+
+if (_type != "") then {
+	_target setVariable ["typeRefuel", "", true];
 };

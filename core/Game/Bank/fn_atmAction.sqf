@@ -40,7 +40,7 @@ switch (_action) do
 			["Solde insuffisant"] call AlysiaClient_fnc_error;
 		};
 		
-		_tax = _amount * (getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "withdraw_min") / 100);
+		_tax = _amount * (getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "withdraw_tax") / 100);
 		if (g_atm < _tax) exitWith {
 			[format["Vous n'avez pas assez d'argent dans votre compte pour payer la taxe de prélèvement de ce DAB s'élevant à <t color='#8cff9b'>%1</t>kn", [_tax] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
 		};

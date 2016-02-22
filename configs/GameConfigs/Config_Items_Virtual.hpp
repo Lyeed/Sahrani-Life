@@ -4,8 +4,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Raisin";
 		weight      = 1;
-		price_buy   = 10;
-		price_sell  = 8;
+		price_buy   = 7;
+		price_sell  = 6;
 		illegal     = 0;
 		removable   = 1;
 		image       = "alysia_items_virtual\data\raisin.paa";
@@ -876,8 +876,8 @@ class ALYSIA_ITEMS
 	{
 		name        = "Prune";
 		weight      = 1;
-		price_buy   = 9;
-		price_sell  = 8;
+		price_buy   = 5;
+		price_sell  = 3;
 		illegal     = 0;
 		removable   = 1;
 		image       = "alysia_items_virtual\data\prune.paa";

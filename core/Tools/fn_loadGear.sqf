@@ -23,7 +23,7 @@ if (_gear isEqualTo []) then
     _uniformGear = [_gear, 0, [], [["", []]]] call BIS_fnc_param;
     if ((_uniformGear select 0) != "") then
     {
-        player addUniform (_uniformGear select 0);
+        player forceAddUniform (_uniformGear select 0);
         {
             player addItemToUniform _x;
         } forEach (_uniformGear select 1);

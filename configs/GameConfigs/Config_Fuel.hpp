@@ -7,7 +7,7 @@ class ALYSIA_FUEL
 			name = "Diesel";
 			picture = "Devilz80_Images\Data\Menu\fuelStations\Diesel.paa";
 			conso = 70000;
-			max = 460;
+			max = 600;
 		};
 		
 		class SP95
@@ -15,7 +15,7 @@ class ALYSIA_FUEL
 			name = "Essence Sans Plomb 95";
 			picture = "Devilz80_Images\Data\Menu\fuelStations\SP95.paa";
 			conso = 60000;
-			max = 330;
+			max = 600;
 		};
 		
 		class SP98
@@ -23,7 +23,7 @@ class ALYSIA_FUEL
 			name = "Essence Sans Plomb 98";
 			picture = "Devilz80_Images\Data\Menu\fuelStations\SP98.paa";
 			conso = 80000;
-			max = 330;
+			max = 600;
 		};
 
 		class Kerosene
@@ -39,7 +39,7 @@ class ALYSIA_FUEL
 			name = "Gaz de pétrole liquéfié";
 			picture = "Devilz80_Images\Data\Menu\fuelStations\GPL.paa";
 			conso = 100000;
-			max = 300;
+			max = 600;
 		};
 	};
 };

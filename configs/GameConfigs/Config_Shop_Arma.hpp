@@ -113,7 +113,12 @@ class ALYSIA_SHOPS_ARMA
 			"Alysia_repair_track",
 			"Alysia_repair_tire",
 			"Alysia_repair_glass",
-			"Alysia_repair_rotor"
+			"Alysia_repair_rotor",
+			"Alysia_jerrycan_sp98",
+			"Alysia_jerrycan_sp95",
+			"Alysia_jerrycan_diesel",
+			"Alysia_jerrycan_gpl",
+			"Alysia_jerrycan_kerosene"
 		};
 	};
 

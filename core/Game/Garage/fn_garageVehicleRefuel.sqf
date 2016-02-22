@@ -17,7 +17,7 @@ if (_fuel >= 100) exitWith {
 	["Ce véhicule possède déja tout son carburant."] call AlysiaClient_fnc_error;
 };
 
-_price = (100 - _fuel) * 15;
+_price = (100 - _fuel) * 2.5;
 if (_price > g_atm) exitWith {
 	[format["Vous n'avez pas assez d'argent, il vous manque <t color='#ff8c8c'>%1kn</t>.", [(_price - g_atm)] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
 };
@@ -29,7 +29,7 @@ waitUntil
 };
 
 playSound "buy";
-[false, _importPrice, format["Plein véhicule (%1)", ((g_garage_vehicles select _index) select 5)]] call AlysiaClient_fnc_handleATM;
+[false, _price, format["Plein véhicule (%1)", ((g_garage_vehicles select _index) select 5)]] call AlysiaClient_fnc_handleATM;
 [(g_garage_vehicles select _index) select 1, 100] remoteExec ["AlysiaServer_fnc_vehicle_update_fuel", 2];
 (g_garage_vehicles select _index) set[3, 100];
 
