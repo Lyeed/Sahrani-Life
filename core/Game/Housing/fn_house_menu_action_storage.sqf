@@ -19,7 +19,7 @@ if (isNil "_storage") exitWith {};
 
 if (isNull _storage) then
 {
-	_storage = createVehicle[getText(missionConfigFile >> "ALYSIA_HOUSES" >> (typeOf _target) >> "storage"), [0, 0, 0], [], 0, "NONE"];
+	_storage = createVehicle[getText(missionConfigFile >> "ALYSIA_HOUSES" >> (typeOf _target) >> "storage" >> "type"), [0, 0, 0], [], 0, "NONE"];
 	_storage setPosATL (_target buildingPos getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(_target) >> "storage_building_pos_index"));
 	_storage allowDamage false;
 
@@ -69,13 +69,13 @@ if (isNull _storage) then
 
 	_target setVariable ["house_storage_out", _storage, true];
 	if (hasInterface) then {
-		["<t color='#FF8000'>coffre</t> sortie"] call AlysiaClient_fnc_info;
+		["<t color='#FF8000'>Coffre</t> sortie"] call AlysiaClient_fnc_info;
 	};
 } else {
 	_target setVariable ["house_inv_virtual", (_storage getVariable ["Trunk", []]), true];
 	_target setVariable ["house_inv_arma", ([getWeaponCargo _storage, getMagazineCargo _storage, getItemCargo _storage, getBackpackCargo _storage]), true];
 	deleteVehicle _storage;
 	if (hasInterface) then {
-		["<t color='#FF8000'>coffre</t> rangé"] call AlysiaClient_fnc_info;
+		["<t color='#FF8000'>Coffre</t> rangé"] call AlysiaClient_fnc_info;
 	};
 };

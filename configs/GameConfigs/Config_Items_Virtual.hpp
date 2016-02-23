@@ -994,8 +994,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\lingot_cuivre.paa";
 		class market
 		{
-			max = 220;
-			min = 160;
+			max = 190;
+			min = 130;
 			mult = 2;
 			affect[] = {"goldbar", "ironp", "soufre", "platinep", "hsoufre", "alu","steel"};
 		};
@@ -1593,7 +1593,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Viande de tortue";
 		weight      = 4;
-		illegal     = 0;
+		illegal     = 1;
 		removable   = 1;
 		price_buy   = 8;
 		price_sell  = 0;

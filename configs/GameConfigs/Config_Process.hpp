@@ -552,7 +552,7 @@ class ALYSIA_PROCESS
 		};
 	};
 
-	class pottery
+	class brique
 	{
 		name = "Traitement de l'argile";
 		sound = "salt_process";

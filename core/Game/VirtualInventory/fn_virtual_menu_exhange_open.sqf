@@ -12,13 +12,9 @@ _can_store = [_this, 2, true, [true]] call BIS_fnc_param;
 _can_take = [_this, 3, true, [true]] call BIS_fnc_param;
 _playSound = [_this, 4, true, [true]] call BIS_fnc_param;
 _back_button = [_this, 5, true, [true]] call BIS_fnc_param;
+_delete_on_empty = [_this, 6, false, [false]] call BIS_fnc_param;
 
 if (isNull _target) exitWith {};
-if ((_target getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
-	["Le coffre est déjà en cours d'utilisation."] call AlysiaClient_fnc_error;
-};
-
-g_interaction_target = _target;
 
 if (dialog) then
 {
@@ -26,6 +22,13 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
+sleep((random(1)) + 0.5);
+
+if ((_target getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
+	["Le coffre est déjà en cours d'utilisation."] call AlysiaClient_fnc_error;
+};
+
+g_interaction_target = _target;
 g_interaction_target_trunk_weight_max = [g_interaction_target] call AlysiaClient_fnc_getVehicleWeightMax;
 if (g_interaction_target_trunk_weight_max isEqualTo 0) exitWith {
 	["Impossible de déterminer l'inventaire maximum de la cible."] call AlysiaClient_fnc_error;
@@ -44,6 +47,7 @@ if ((vehicle player) isEqualTo player) then {
 g_interaction_target_trunk_type = _inventory;
 g_interaction_target_trunk_store = _can_store;
 g_interaction_target_trunk_take = _can_take;
+g_interaction_target_trunk_delete = _delete_on_empty;
 g_interaction_target_trunk_transfer = false;
 g_interaction_target setVariable ["trunk_in_use_ID", (getPlayerUID player), true];
 

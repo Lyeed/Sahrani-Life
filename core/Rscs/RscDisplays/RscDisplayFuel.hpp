@@ -245,7 +245,7 @@ class RscDisplayFuelRefuel: RscDisplayDefaultInteraction
 		class STOCK_TEXT: RscStructuredText
 		{
 			idc = 17009;
-			text = "<t align='right'>Disponnibilité</t>";
+			text = "<t align='right'>Disponibilité</t>";
 
 			x = 0.394812 * safezoneW + safezoneX;
 			y = 0.45886 * safezoneH + safezoneY;

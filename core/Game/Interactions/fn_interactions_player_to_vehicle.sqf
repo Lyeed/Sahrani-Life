@@ -88,8 +88,11 @@ if (isNull _target) exitWith {};
 			"[g_interaction_target] spawn AlysiaClient_fnc_virtual_menu_exhange_open;",
 			"
 				(
-					((locked g_interaction_target) != 2) ||
-					(g_interaction_target in g_vehicles)
+					((vehicle player) isEqualTo player) &&
+					(
+						((locked g_interaction_target) != 2) ||
+						(g_interaction_target in g_vehicles)
+					)
 				)
 			"
 		],

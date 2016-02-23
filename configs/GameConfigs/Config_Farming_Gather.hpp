@@ -77,7 +77,7 @@ class ALYSIA_FARMING_GATHER
 
 	class clay_1
 	{
-		receive[] = {{"clay", 6, 1}};
+		receive[] = {{"clay", 5, 1}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
 	};

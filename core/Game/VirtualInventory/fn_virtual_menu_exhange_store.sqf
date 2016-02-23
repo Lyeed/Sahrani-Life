@@ -12,9 +12,6 @@ if (isNull g_interaction_target) exitWith {};
 
 _sel = lbCurSel 505;
 if (_sel isEqualTo -1) exitWith {};
-
-
-if (g_interaction_target_trunk_transfer) exitWith {};
 if (!g_interaction_target_trunk_store) exitWith {};
 
 _item = lbData[505, _sel];
@@ -23,10 +20,11 @@ if (!(_storeType isEqualTo []) && !(typeOf(g_interaction_target) in _storeType))
 	[format["%1 ne peut pas être entreposer dans %2", ([_item] call AlysiaClient_fnc_itemGetName), getText(configFile >> "CfgVehicles" >> typeOf(g_interaction_target) >> "displayName")]] call AlysiaClient_fnc_error;
 };
 
+if (g_interaction_target_trunk_transfer) exitWith {};
 g_interaction_target_trunk_transfer = true;
 
 if (_type) then {
-	_amount = lbValue[505, _sel];
+	_amount = [_item, (lbValue[505, _sel]), ([(g_interaction_target getVariable [g_interaction_target_trunk_type, []])] call AlysiaClient_fnc_weightGenerate), g_interaction_target_trunk_weight_max] call AlysiaClient_fnc_calWeightDiff; 
 } else {
 	_amount = 1;
 };

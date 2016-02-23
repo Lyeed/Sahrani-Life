@@ -163,7 +163,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 2000;
+				price = 6500;
 				pad_store = 1;
 				illegal = 0;
 			};

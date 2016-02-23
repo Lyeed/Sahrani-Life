@@ -69,7 +69,7 @@ _storePos = [_data select 6, _data select 7, _data select 8];
   	_vehicleInfo select 6,
   	_vehicleInfo select 5,
   	_vehicleInfo select 10,
-    round(_fuel * (_vehicleInfo select 7)),
+    (round(_fuel * (_vehicleInfo select 7))) / 100,
   	round(_vehicleInfo select 7),
     getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> (_vehicleInfo select 14) >> "name")
 ];

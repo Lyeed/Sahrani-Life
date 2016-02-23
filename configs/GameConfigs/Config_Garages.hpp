@@ -179,6 +179,21 @@ class ALYSIA_GARAGES
 			"Air"
 		};
 	};
+	class garage_guer_2
+	{
+		name = "Garage Samu";
+		spawns[] =
+		{
+			"garage_guer_2_1",
+			"garage_guer_2_2"
+		};
+		types[] =
+		{
+			"Car",
+			"Truck",
+			"Air"
+		};
+	};
 
 	class garage_air_nord_1
 	{

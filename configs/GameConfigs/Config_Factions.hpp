@@ -184,7 +184,7 @@ class ALYSIA_FACTIONS
 				"ItemCompass",
 				"ItemWatch",
 				"ItemGPS",
-				"tf_anprc152"
+				"tf_anprc152_2"
 			};
 		};
 
@@ -388,7 +388,7 @@ class ALYSIA_FACTIONS
 				"ItemCompass",
 				"ItemWatch",
 				"ItemGPS",
-				"tf_anprc152"
+				"tf_anprc152_2"
 			};
 		};
 
@@ -464,7 +464,7 @@ class ALYSIA_FACTIONS
 		house_tax_percentage_buyPrice_per_house = 0.003;
 
 		/*** HEAL ***/
-		price_heal_hopital = 500;
+		price_heal_hopital = 120;
 		can_use_debrif = 0;
 
 		/*** FARM ***/
@@ -518,7 +518,7 @@ class ALYSIA_FACTIONS
 		/*** LOADOUT ***/
 		class Loadout
 		{
-			uniform = "U_C_Alysia_01";
+			uniform = "U_C_Poloshirt_blue";
 			headgear = "";
 			vest = "";
 			backpack = "";
@@ -680,7 +680,7 @@ class ALYSIA_FACTIONS
 		/*** LOADOUT ***/
 		class Loadout
 		{
-			uniform = "max_paramedic_uniform";
+			uniform = "rds_uniform_assistant";
 			headgear = "";
 			vest = "";
 			backpack = "";
@@ -691,7 +691,7 @@ class ALYSIA_FACTIONS
 				"ItemWatch",
 				"ItemGPS",
 				"Badge_samu",
-				"tf_anprc152"
+				"tf_anprc152_2"
 			};
 		};
 

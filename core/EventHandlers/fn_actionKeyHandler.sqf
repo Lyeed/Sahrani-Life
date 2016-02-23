@@ -52,7 +52,7 @@ if ((vehicle player) isEqualTo player) then
 		_suit = (nearestObjects [player, ["Land_Suitcase_F"], 2]) select 0;
 		if (!(isNil "_suit")) then
 		{
-			[_suit, "items", true, true, false, false] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
+			[_suit, "items", true, true, false, false, true] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
 			true breakOut "main";
 		};
 
@@ -161,21 +161,22 @@ if ((vehicle player) isEqualTo player) then
 		{
 			if (isPlayer _target) then
 			{
-				if (alive _target) then
+				if ((_target isKindOf "Car") || (_target isKindOf "Ship") || (_target isKindOf "Air") || (_target isKindOf "Tank") || (_target isKindOf "Truck")) then
 				{
-					if ((_target isKindOf "Car") || (_target isKindOf "Ship") || (_target isKindOf "Air") || (_target isKindOf "Tank") || (_target isKindOf "Truck")) then
+					if (alive _target) then
 					{
 						[(vehicle _target)] call AlysiaClient_fnc_interactions_player_to_vehicle;
 						true breakOut "main";
 					};
-
+				} else {
 					if (_target getVariable ["is_coma", false]) then {
 						[_target] call AlysiaClient_fnc_interactions_player_to_player_coma;
 					} else {
 						[_target] call AlysiaClient_fnc_interactions_player_to_player_basics;
 					};
-					true breakOut "main";
 				};
+				
+				true breakOut "main";
 			} else {
 				if ((alive _target) && ((_target isKindOf "Car") || (_target isKindOf "Ship") || (_target isKindOf "Air") || (_target isKindOf "Tank") || (_target isKindOf "Truck"))) then
 				{
@@ -308,7 +309,7 @@ if ((vehicle player) isEqualTo player) then
 
 				if (typeOf(_target) isEqualTo "Land_Suitcase_F") then
 				{
-					[_target, "items", true, true, false, false] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
+					[_target, "items", true, true, false, false, true] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
 					true breakOut "main";
 				};
 			};

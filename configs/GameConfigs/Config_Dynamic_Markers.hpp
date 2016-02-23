@@ -93,7 +93,7 @@ class ALYSIA_DYN_MARKERS
 		shape       = "ICON";
 		size        = 0.5;
 		shop_appear = 1;
-		shop_price  = 4000;
+		shop_price  = 14000;
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
@@ -108,7 +108,7 @@ class ALYSIA_DYN_MARKERS
 		shape       = "ICON";
 		size        = 0.5;
 		shop_appear = 1;
-		shop_price  = 1500;
+		shop_price  = 11000;
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
@@ -123,7 +123,7 @@ class ALYSIA_DYN_MARKERS
 		shape       = "ICON";
 		size        = 0.5;
 		shop_appear = 1;
-		shop_price  = 15000;
+		shop_price  = 25000;
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
@@ -138,7 +138,7 @@ class ALYSIA_DYN_MARKERS
 		shape       = "ICON";
 		size        = 0.5;
 		shop_appear = 1;
-		shop_price  = 8000;
+		shop_price  = 16000;
 		discover[]  = {"CIV", "GUER"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
@@ -155,7 +155,7 @@ class ALYSIA_DYN_MARKERS
 		shape       = "ICON";
 		size        = 0.5;
 		shop_appear = 1;
-		shop_price  = 1000;
+		shop_price  = 25000;
 		linked      = "black_market_1";
 		discover[]  = {"CIV"};
 		shown[]     = {};
@@ -171,7 +171,7 @@ class ALYSIA_DYN_MARKERS
 		shape       = "ICON";
 		size        = 0.5;
 		shop_appear = 1;
-		shop_price  = 1000;
+		shop_price  = 25000;
 		linked      = "black_market_2";
 		discover[]  = {"CIV"};
 		shown[]     = {};
@@ -189,7 +189,7 @@ class ALYSIA_DYN_MARKERS
 		shape       = "ICON";
 		size        = 0.5;
 		shop_appear = 1;
-		shop_price  = 1000;
+		shop_price  = 15000;
 		linked      = "dealer_alcool";
 		discover[]  = {"CIV"};
 		shown[]     = {};
@@ -207,7 +207,7 @@ class ALYSIA_DYN_MARKERS
 		shape       = "ICON";
 		size        = 0.5;
 		shop_appear = 1;
-		shop_price  = 1000;
+		shop_price  = 40000;
 		linked      = "launder";
 		discover[]  = {"CIV"};
 		shown[]     = {};
@@ -225,7 +225,7 @@ class ALYSIA_DYN_MARKERS
 		shape       = "ICON";
 		size        = 0.5;
 		shop_appear = 1;
-		shop_price  = 1000;
+		shop_price  = 22500;
 		linked      = "cardealer_1";
 		discover[]  = {"CIV"};
 		shown[]     = {};
@@ -241,7 +241,7 @@ class ALYSIA_DYN_MARKERS
 		shape       = "ICON";
 		size        = 0.5;
 		shop_appear = 1;
-		shop_price  = 1000;
+		shop_price  = 22500;
 		linked      = "cardealer_2";
 		discover[]  = {"CIV"};
 		shown[]     = {};
@@ -259,7 +259,7 @@ class ALYSIA_DYN_MARKERS
 		shape       = "ICON";
 		size        = 0.5;
 		shop_appear = 1;
-		shop_price  = 1000;
+		shop_price  = 23000;
 		linked      = "drugs_dealer_1";
 		discover[]  = {"CIV"};
 		shown[]     = {};
@@ -275,7 +275,7 @@ class ALYSIA_DYN_MARKERS
 		shape       = "ICON";
 		size        = 0.5;
 		shop_appear = 1;
-		shop_price  = 1000;
+		shop_price  = 23000;
 		linked      = "drugs_dealer_2";
 		discover[]  = {"CIV"};
 		shown[]     = {};
@@ -293,7 +293,7 @@ class ALYSIA_DYN_MARKERS
 		shape       = "ICON";
 		size        = 0.5;
 		shop_appear = 1;
-		shop_price  = 1000;
+		shop_price  = 12500;
 		linked      = "";
 		discover[]  = {"CIV"};
 		shown[]     = {};
@@ -311,7 +311,7 @@ class ALYSIA_DYN_MARKERS
 		shape       = "ICON";
 		size        = 0.5;
 		shop_appear = 1;
-		shop_price  = 1000;
+		shop_price  = 7500;
 		discover[]  = {"CIV"};
 		positions[] = G_RESPAWN_PILLAGE;
 	};
@@ -325,7 +325,7 @@ class ALYSIA_DYN_MARKERS
 		shape       = "ICON";
 		size        = 0.5;
 		shop_appear = 1;
-		shop_price  = 1000;
+		shop_price  = 10000;
 		linked      = "renovation";
 		discover[]  = {"CIV"};
 		shown[]     = {};
@@ -342,7 +342,7 @@ class ALYSIA_DYN_MARKERS
 		shape       = "ICON";
 		size        = 0.5;
 		shop_appear = 1;
-		shop_price  = 1000;
+		shop_price  = 7500;
 		linked      = "hydration_soufre";
 		discover[]  = {"CIV"};
 		shown[]     = {};

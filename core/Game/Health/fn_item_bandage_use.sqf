@@ -39,6 +39,6 @@ if (!("SkylineItems_Bandage" in (magazines player))) exitWith {
 	["Vous n'avez pas de bandage"] call AlysiaClient_fnc_error;
 };
 
-["<t align='center'>Bandage <br/><t color='#3ADF00'>appliqué</t></t>"] call AlysiaClient_fnc_info;
+["Bandage <t color='#3ADF00'>appliqué</t>."] call AlysiaClient_fnc_info;
 player removeMagazine "SkylineItems_Bandage";
 _target setVariable ["is_bleeding", false, true];

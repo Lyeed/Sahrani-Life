@@ -188,11 +188,11 @@ class ALYSIA_SHOPS_VIRTUAL
 		items[] = {{}, {"grozdova","slivovica"}};
 	};
 	
-	class poterie
+	class brique
 	{
-		name = "Commerçant de poterie";
+		name = "Commerçant de briques";
 		side = "CIV";
-		items[] = {{}, {"pottery"}};
+		items[] = {{}, {"brique"}};
 	};
 	
 	class cime
