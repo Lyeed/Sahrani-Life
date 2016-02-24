@@ -2106,7 +2106,7 @@ class ALYSIA_VEHICLES
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
-		fuel = "SP98";
+		fuel = "Diesel";
 		realname = "Golf IV";
 	};
 
@@ -3457,7 +3457,7 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Maserati Quattroporte";
 	};
-	class	Skyline_Vehicule_Jonzie_Quattroporte_01_F: Skyline_Vehicule_Jonzie_Quattroporte {};
+	class Skyline_Vehicule_Jonzie_Quattroporte_01_F: Skyline_Vehicule_Jonzie_Quattroporte {};
 	class Skyline_Vehicule_Jonzie_Quattroporte_02_F: Skyline_Vehicule_Jonzie_Quattroporte {};
 	class Skyline_Vehicule_Jonzie_Quattroporte_03_F: Skyline_Vehicule_Jonzie_Quattroporte {};
 	class Skyline_Vehicule_Jonzie_Quattroporte_04_F: Skyline_Vehicule_Jonzie_Quattroporte {};
@@ -3495,18 +3495,18 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Datsun 510";
 	};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_01_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_02_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_03_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_04_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_05_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_06_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_07_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_08_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_09_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_10_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_11_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
-	class	Skyline_Vehicule_Jonzie_Datsun_510_12_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class Skyline_Vehicule_Jonzie_Datsun_510_01_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class Skyline_Vehicule_Jonzie_Datsun_510_02_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class Skyline_Vehicule_Jonzie_Datsun_510_03_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class Skyline_Vehicule_Jonzie_Datsun_510_04_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class Skyline_Vehicule_Jonzie_Datsun_510_05_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class Skyline_Vehicule_Jonzie_Datsun_510_06_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class Skyline_Vehicule_Jonzie_Datsun_510_07_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class Skyline_Vehicule_Jonzie_Datsun_510_08_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class Skyline_Vehicule_Jonzie_Datsun_510_09_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class Skyline_Vehicule_Jonzie_Datsun_510_10_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class Skyline_Vehicule_Jonzie_Datsun_510_11_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
+	class Skyline_Vehicule_Jonzie_Datsun_510_12_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
   
   	class Skyline_Vehicule_Jonzie_Corolla
 	{
@@ -3515,7 +3515,7 @@ class ALYSIA_VEHICLES
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
-		fuel = "diesel";
+		fuel = "Diesel";
 		colors[] =
 		{
 			"Skyline_Vehicule_Jonzie_Corolla_01_F",
@@ -3533,18 +3533,18 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Toyota Corolla";
 	};
-	class	Skyline_Vehicule_Jonzie_Corolla_01_F: Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_02_F: Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_03_F: Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_04_F: Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_05_F: Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_06_F: Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_07_F: Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_08_F: Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_09_F: Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_10_F: Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_11_F: Skyline_Vehicule_Jonzie_Corolla {};
-	class	Skyline_Vehicule_Jonzie_Corolla_12_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class Skyline_Vehicule_Jonzie_Corolla_01_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class Skyline_Vehicule_Jonzie_Corolla_02_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class Skyline_Vehicule_Jonzie_Corolla_03_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class Skyline_Vehicule_Jonzie_Corolla_04_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class Skyline_Vehicule_Jonzie_Corolla_05_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class Skyline_Vehicule_Jonzie_Corolla_06_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class Skyline_Vehicule_Jonzie_Corolla_07_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class Skyline_Vehicule_Jonzie_Corolla_08_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class Skyline_Vehicule_Jonzie_Corolla_09_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class Skyline_Vehicule_Jonzie_Corolla_10_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class Skyline_Vehicule_Jonzie_Corolla_11_F: Skyline_Vehicule_Jonzie_Corolla {};
+	class Skyline_Vehicule_Jonzie_Corolla_12_F: Skyline_Vehicule_Jonzie_Corolla {};
   
   	class Skyline_Vehicule_Jonzie_Datsun_Z432
 	{
@@ -3667,7 +3667,7 @@ class ALYSIA_VEHICLES
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver"};
-		fuel = "diesel";
+		fuel = "Diesel";
 		colors[] =
 		{
 			"Skyline_Vehicule_Jonzie_VE_01_F",

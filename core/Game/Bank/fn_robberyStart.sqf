@@ -6,6 +6,8 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
+if (true) exitWith {["Braquage en cours de dev"] call AlysiaClient_fnc_error};
+
 private["_bank", "_door"];
 _bank = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 _door = [_this, 1, "", [""]] call BIS_fnc_param;
@@ -18,7 +20,7 @@ if (!(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item") 
 	[(format["Vous avez besoin de %1", ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")] call AlysiaClient_fnc_fetchCfgDetails) select 1])] call AlysiaClient_fnc_error;
 };
 
-/*if (!(_bank getVariable ["robStarted", false])) then
+if (!(_bank getVariable ["robStarted", false])) then
 {
 	if ((getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf(cursorTarget) >> "required")) >= (([getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf(_bank) >> "owner")] call AlysiaClient_fnc_strToSide) countSide allPlayers)) exitWith
 	{
@@ -34,7 +36,7 @@ if (!(getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item") 
 		] call AlysiaClient_fnc_error;
 		breakOut "main";
 	};
-};*/
+};
 
 if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), getNumber(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "time"), objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress) exitWith {};
 

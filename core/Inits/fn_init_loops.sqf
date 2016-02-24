@@ -107,9 +107,9 @@ if (g_launder > 0) then
 				};
 
 				if (_curentfuel isEqualTo "") then {
-					_conso = getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _fuel >> "conso");
+					_conso = getNumber(missionConfigFile >> "ALYSIA_FUEL" >> _fuel >> "conso");
 				} else {
-					_conso = getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _curentfuel >> "conso");
+					_conso = getNumber(missionConfigFile >> "ALYSIA_FUEL" >> _curentfuel >> "conso");
 				};
 				
 				_veh setFuel ((fuel _veh) - (((abs(speed _veh) + 10) / _conso) + (([_veh getVariable ["Trunk", []]] call AlysiaClient_fnc_weightGenerate) / 100000)));

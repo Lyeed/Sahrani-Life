@@ -26,9 +26,9 @@ if (_typeRefuel isEqualTo "") exitWith {
 	["Impossible de trouver l'essence que vous avez selectionné."] call AlysiaClient_fnc_error;
 };
 
-_currentLiters = _station getVariable [_typeRefuel, getNumber(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _typeRefuel >> "max")];
+_currentLiters = _station getVariable [_typeRefuel, getNumber(missionConfigFile >> "ALYSIA_FUEL" >> _typeRefuel >> "max")];
 if (_currentLiters <= 1) exitWith {
-	[format["Cette station ne possède plus l'essence que vous désirez (%1).", getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> _typeRefuel >> "name")]] call AlysiaClient_fnc_error;
+	[format["Cette station ne possède plus l'essence que vous désirez (%1).", getText(missionConfigFile >> "ALYSIA_FUEL" >> _typeRefuel >> "name")]] call AlysiaClient_fnc_error;
 };
 
 if ((fuel _veh) isEqualTo 1) exitWith {

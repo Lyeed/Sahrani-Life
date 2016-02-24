@@ -59,7 +59,7 @@ if (isClass(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "map_co
 		while {visibleMap} do
 		{
 			{
-				if ((alive _x) && (_x getVariable ["medic_request", false])) then
+				if (_x getVariable ["medic_request", false]) then
 				{
 					_marker = format["%1_dead_marker", (getPlayerUID _x)];
 					if (_marker in _markers) then {

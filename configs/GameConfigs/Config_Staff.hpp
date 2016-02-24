@@ -50,6 +50,13 @@ class ALYSIA_STAFF
 			requests = 1;
 			teamspeak = 1;
 		};
+		class Khaled
+		{
+			uid = "76561198089708821";
+			rank = "modo";
+			requests = 1;
+			teamspeak = 1;
+		};
 	};
 
 	class commands
@@ -61,7 +68,7 @@ class ALYSIA_STAFF
 				name = "Invisible ON";
 				statement = "g_staff_invisible = true; [player, true] remoteExecCall ['hideObject', 0];";
 				condition = "!g_staff_invisible";
-				allow[] = {"76561198007960495", "76561198099211957"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521"};
 			};
 			class Invisible_OFF: Invisible_ON
 			{
@@ -75,7 +82,7 @@ class ALYSIA_STAFF
 				name = "TP ON";
 				statement = "g_staff_tp = true; onMapSingleClick '(vehicle player) setPos _pos';";
 				condition = "!g_staff_tp";
-				allow[] = {"76561198007960495", "76561198099211957"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521"};
 			};
 			class TP_OFF: TP_ON
 			{
@@ -89,7 +96,7 @@ class ALYSIA_STAFF
 				name = "God ON";
 				statement = "g_staff_god = true;";
 				condition = "!g_staff_god";
-				allow[] = {"76561198007960495", "76561198099211957"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521"};
 			};
 			class god_OFF: god_ON
 			{
@@ -126,7 +133,7 @@ class ALYSIA_STAFF
 				name = "Markers ON";
 				statement = "g_staff_markers = true;";
 				condition = "!g_staff_markers";
-				allow[] = {"76561198007960495", "76561197977519424", "76561198026418521", "76561198099211957"};
+				allow[] = {"76561198007960495", "76561197977519424", "76561198026418521", "76561198099211957", "76561198089708821"};
 			};
 			class markers_OFF: markers_ON
 			{
@@ -152,15 +159,13 @@ class ALYSIA_STAFF
 				condition = "(true)";
 				allow[] = {"76561198007960495", "76561198099211957"};
 			};
-
 			class spec
 			{
 				name = "Spec";
 				statement = "(call compile (lbData[9000, lbCurSel 9000])) switchCamera 'INTERNAL'; g_staff_spec = true; closeDialog 0;";
 				condition = "(true)";
-				allow[] = {"76561198007960495", "76561197977519424", "76561198026418521", "76561198099211957"};
+				allow[] = {"76561198007960495", "76561197977519424", "76561198026418521", "76561198099211957", "76561198089708821"};
 			};
-			
 			class res
 			{
 				name = "Rez";
@@ -168,13 +173,12 @@ class ALYSIA_STAFF
 				condition = "(call compile (lbData[9000, lbCurSel 9000])) getVariable ['is_coma',false]";
 				allow[] = {"76561198007960495", "76561198099211957"};
 			};
-
 			class data
 			{
 				name = "Informations";
 				statement = "[player] remoteExecCall ['AlysiaClient_fnc_APP_staff_players_getData', (lbData[9000, lbCurSel 9000])];";
 				condition = "(true)";
-				allow[] = {"76561198007960495", "76561197977519424", "76561198026418521", "76561198099211957"};
+				allow[] = {"76561198007960495", "76561197977519424", "76561198026418521", "76561198099211957", "76561198089708821"};
 			};
 		};
 	};

@@ -49,8 +49,9 @@ _time = getNumber(missionConfigFile >> "ALYSIA_MEDICAL" >> "coma" >> "timer");
 
 g_blood = 1;
 g_bleed = 0;
+g_coma_dead = false;
 
-if ((vehicle player) != player) then { 
+if ((vehicle player) != player) then {
 	player action ["Eject", (vehicle player)];
 };
 
@@ -58,7 +59,7 @@ player setVariable ["tf_globalVolume", 0];
 player setVariable ["tf_voiceVolume", 0, true];
 player setVariable ["is_coma", true, true];
 
-while {(_time > 0) && (alive player) && (player getVariable ["is_coma", false])} do
+while {(_time > 0) && !g_coma_dead && (player getVariable ["is_coma", false])} do
 {
 	if ((animationState player) != "acts_InjuredLookingRifle01") then {
 		[player, "acts_InjuredLookingRifle01"] remoteExecCall ["switchMove", -2];
@@ -96,16 +97,18 @@ while {(_time > 0) && (alive player) && (player getVariable ["is_coma", false])}
 	if (g_adrenaline isEqualTo 0) then
 	{
 		_time = _time - 1;
-		if (_time isEqualTo 1) then {
-			player setDamage 1; 
+		if (_time isEqualTo 1) then
+		{
+			g_coma_dead = true;
+			player setDamage 1;
 		};
 	};
 };
 
-if (alive player) then 
+if (!g_coma_dead) then
 {
 	if (g_thirst < 10) then {
-		[15] call AlysiaClient_fnc_handleThirst; 
+		[15] call AlysiaClient_fnc_handleThirst;
 	};
 	if (g_hunger < 10) then {
 		[15] call AlysiaClient_fnc_handleHunger;

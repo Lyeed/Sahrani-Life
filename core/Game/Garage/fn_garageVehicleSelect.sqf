@@ -71,7 +71,7 @@ _storePos = [_data select 6, _data select 7, _data select 8];
   	_vehicleInfo select 10,
     (round(_fuel * (_vehicleInfo select 7))) / 100,
   	round(_vehicleInfo select 7),
-    getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> (_vehicleInfo select 14) >> "name")
+    getText(missionConfigFile >> "ALYSIA_FUEL" >> (_vehicleInfo select 14) >> "name")
 ];
 
 _idc = 2810;

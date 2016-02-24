@@ -7,7 +7,7 @@
 */
 private["_msg", "_sound", "_hud", "_info", "_frame"];
 
-if (isDedicated) exitWith {};
+if (!hasInterface) exitWith {};
 
 _msg = [_this, 0, "", [""]] call BIS_fnc_param;
 _sound = [_this, 1, "", [""]] call BIS_fnc_param;

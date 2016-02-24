@@ -8,14 +8,18 @@
 private["_storage", "_target"];
 _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if (isNull _target) exitWith {};
+if (isNull _target) exitWith {
+	["Cible invalide"] call AlysiaClient_fnc_error;
+};
 
 if (!(isNil "gServer_soonReboot") && hasInterface) exitWith {
 	["<t align='center'>Vous ne pouvez pas interagir avec votre coffre juste avant le <t color='#B40404'>redémarrage</t> du serveur</t>"] call AlysiaClient_fnc_error;
 };
 
 _storage = _target getVariable "house_storage_out";
-if (isNil "_storage") exitWith {};
+if (isNil "_storage") exitWith {
+	["Votre maison n'est pas équipée d'un coffre."] call AlysiaClient_fnc_error;
+};
 
 if (isNull _storage) then
 {
@@ -68,14 +72,10 @@ if (isNull _storage) then
 	};
 
 	_target setVariable ["house_storage_out", _storage, true];
-	if (hasInterface) then {
-		["<t color='#FF8000'>Coffre</t> sortie"] call AlysiaClient_fnc_info;
-	};
+	["<t color='#FF8000'>Coffre</t> sortie"] call AlysiaClient_fnc_info;
 } else {
 	_target setVariable ["house_inv_virtual", (_storage getVariable ["Trunk", []]), true];
 	_target setVariable ["house_inv_arma", ([getWeaponCargo _storage, getMagazineCargo _storage, getItemCargo _storage, getBackpackCargo _storage]), true];
 	deleteVehicle _storage;
-	if (hasInterface) then {
-		["<t color='#FF8000'>Coffre</t> rangé"] call AlysiaClient_fnc_info;
-	};
+	["<t color='#FF8000'>Coffre</t> rangé"] call AlysiaClient_fnc_info;
 };

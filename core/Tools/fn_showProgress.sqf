@@ -68,7 +68,7 @@ while {g_action_inUse} do
 	if (_curVeh != (vehicle player)) exitWith {_ret_reason = "Vous êtes entré ou sorti de votre véhicule"};
 };
 
-if (_anim != "") then {
+if ((_anim != "") && ((vehicle player) isEqualTo player)) then {
 	[player, ""] remoteExecCall ["switchMove", -2];
 };
 

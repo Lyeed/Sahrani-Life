@@ -93,7 +93,7 @@ if (count(_licenses) > 0) then
 	_vehicleInfo select 5,
 	_vehicleInfo select 10,
 	round(_vehicleInfo select 7),
-	getText(missionConfigFile >> "ALYSIA_FUEL" >> "fuels" >> (_vehicleInfo select 14) >> "name"),
+	getText(missionConfigFile >> "ALYSIA_FUEL" >> (_vehicleInfo select 14) >> "name"),
 	if (_price_condition) then {"#31B404"} else {"#DF0101"},
 	[_price] call AlysiaClient_fnc_numberText,
 	_licenses_text,

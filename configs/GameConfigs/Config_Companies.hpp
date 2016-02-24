@@ -32,7 +32,7 @@
 class ALYSIA_COMPANIES
 {
 	giver_license_needed = "gov_company";
-	characters_allowed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè?!,.ù_à ";
+	characters_allowed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-éè?!,.ù_à ";
 	characters_max = 30;
 	class types
 	{

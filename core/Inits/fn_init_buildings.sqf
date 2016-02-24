@@ -2063,7 +2063,7 @@ _cString =
 ["Land_PowLines_ConcL","[10575.59668,8992.710938,0.414382]",-2239.62,-100,1,0,[]] call _cString;
 ["Land_PowLines_ConcL","[10432.131836,8994.537109,0.414382]",-2094.62,-100,1,0,[]] call _cString;
 
-// Hopital
+// Hopital Nord
 ["xcam_Concrete_SmallWall_8m_F","[13737.482422,10567.31543,-0.502525]",255,-100,0,0,[]] call _cString;
 ["xcam_Concrete_SmallWall_8m_F","[13738.660156,10562.920898,-0.505892]",255,-100,0,0,[]] call _cString;
 ["xcam_Concrete_SmallWall_8m_F","[13738.836914,10562.953125,-0.590067]",255,-100,0,0,[]] call _cString;
@@ -2071,6 +2071,11 @@ _cString =
 ["xcam_Concrete_SmallWall_8m_F","[13737.783203,10567.863281,-0.698652]",255,-100,0,0,[]] call _cString;
 ["xcam_Concrete_SmallWall_8m_F","[13739.657227,10563.216797,-0.698652]",255,-100,0,0,[]] call _cString;
 ["Land_Lampa_sidl_3","[13736.947266,10571.479492,0]",165,-100,1,0,[]] call _cString;
+
+//Bank Nord
+["Land_FurnitureA","[14275.234375,12561.94043,-0.89394]",0,-100,0,0,[]] call _cString;
+["Land_FurnitureD","[14276.964844,12561.913086,-0.989899]",0,-100,0,0,[]] call _cString;
+["Land_FurnitureB","[14274.151367,12566.676758,-0.876263]",0,-100,0,0,[]] call _cString;
 
 //Panneaux
 _signBoard_north_1 = ["Land_Billboard_F","[14416.770508,12246.360352,0]",22.2853,-100,0,0,[]] call _cString;

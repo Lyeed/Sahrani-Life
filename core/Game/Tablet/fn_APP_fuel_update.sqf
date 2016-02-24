@@ -30,7 +30,7 @@ lbClear _ctrl_fuels;
 	_index = _ctrl_fuels lbAdd getText(_x >> "name");
 	_ctrl_fuels lbSetPicture [_index, getText(_x >> "picture")];
 	_ctrl_fuels lbSetData [_index, configName _x];
-} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL" >> "fuels"));
+} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL"));
 if ((lbSize _ctrl_fuels) isEqualTo 0) then {
 	_ctrl_fuels lbAdd "Aucune";
 };

@@ -69,7 +69,7 @@ class ALYSIA_PROCESS
 			/* ARMA */{},
 			/* CASH */0
 		};
-		time_per_item = 1;
+		time_per_item = 2;
 		time_default = 3;
 		class target {};
 		class factions
@@ -378,7 +378,7 @@ class ALYSIA_PROCESS
 			/* ARMA */{},
 			/* CASH */0
 		};
-		time_per_item = 1;
+		time_per_item = 2;
 		time_default = 5;
 		class factions
 		{
@@ -512,7 +512,7 @@ class ALYSIA_PROCESS
 			/* ARMA */{},
 			/* CASH */0
 		};
-		time_per_item = 1;
+		time_per_item = 2;
 		time_default = 3;
 		class target {};
 		class factions
@@ -539,8 +539,8 @@ class ALYSIA_PROCESS
 			/* ARMA */{},
 			/* CASH */0
 		};
-		time_per_item = 1;
-		time_default = 3;
+		time_per_item = 2;
+		time_default = 6;
 		class target {};
 		class factions
 		{
@@ -566,7 +566,7 @@ class ALYSIA_PROCESS
 			/* ARMA */{},
 			/* CASH */0
 		};
-		time_per_item = 1;
+		time_per_item = 2;
 		time_default = 3;
 		class target {};
 		class factions
@@ -593,7 +593,7 @@ class ALYSIA_PROCESS
 			/* ARMA */{},
 			/* CASH */0
 		};
-		time_per_item = 1;
+		time_per_item = 2;
 		time_default = 3;
 		class target {};
 		class factions
@@ -737,33 +737,6 @@ class ALYSIA_PROCESS
 			{
 				rank = 0;
 				licenses[] = {"sand"};
-			};
-		};
-	};
-
-	class artefact
-	{
-		name = "Reconstitution d'artefact";
-		sound = "salt_process";
-		require[] =
-		{
-			{"frag_1", 1}, {"frag_2", 1}, {"frag_3", 1}, {"frag_4", 1}, {"frag_5", 1}, {"frag_6", 1}, {"frag_7", 1}, {"frag_8", 1}
-		};
-		receive[] =
-		{
-			/* VIRTUAL */{{"artefact_R", 1}},
-			/* ARMA */{},
-			/* CASH */0
-		};
-		time_per_item = 1;
-		time_default = 3;
-		class target {};
-		class factions
-		{
-			class CIV
-			{
-				rank = 0;
-				licenses[] = {};
 			};
 		};
 	};
@@ -1751,7 +1724,7 @@ class ALYSIA_PROCESS
 			/* ARMA */{},
 			/* CASH */0
 		};
-		time_per_item = 1;
+		time_per_item = 2;
 		time_default = 3;
 		class target {};
 		class factions

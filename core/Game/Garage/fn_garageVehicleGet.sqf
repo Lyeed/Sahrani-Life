@@ -65,7 +65,6 @@ closeDialog 0;
 _spawnPos = getMarkerPos _validSpawn;
 _vehicle = createVehicle [_vehicleClassname, _spawnPos, [], 0, "NONE"];
 waitUntil {!isNil "_vehicle" && {!isNull _vehicle}};
-_vehicle allowDamage false;
 [_vehicle] call AlysiaClient_fnc_clearVehicleAmmo;
 
 _vehicle setPos _spawnPos;
@@ -95,4 +94,3 @@ _vehicle setVariable ["info", [(getPlayerUID player), (player getVariable ["real
 _vehicle setFuel ((_data select 3) / 100);
 
 g_vehicles pushBack _vehicle;
-_vehicle allowDamage true;

@@ -2,14 +2,14 @@ class ALYSIA_PHONE
 {
 	class CONTACTS
 	{
-		characters_allowed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè?!,.ù_à ";
+		characters_allowed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-éè?!,.ù_à ";
 		characters_max = 25;
 	};
 
 	class SMS
 	{
-		characters_allowed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè?!,.ù_à ";
-		characters_max = 100;
+		characters_allowed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-éè?!,.ù_à ";
+		characters_max = 125;
 		send_max = 5;
 	};
 

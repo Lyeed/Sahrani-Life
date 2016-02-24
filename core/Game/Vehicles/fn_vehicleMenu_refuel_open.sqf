@@ -52,7 +52,7 @@ if ((lbSize _list) isEqualTo 0) then
 	ctrlShow[69006, false];
 	ctrlShow[69007, false];
 } else {
-	(_display displayCtrl 69007) buttonSetAction "[] call AlysiaClient_fnc_vehicleMenu_refuel_action;";
+	(_display displayCtrl 69007) buttonSetAction "[] spawn AlysiaClient_fnc_vehicleMenu_refuel_action;";
 };
 
 _list lbSetCurSel 0;

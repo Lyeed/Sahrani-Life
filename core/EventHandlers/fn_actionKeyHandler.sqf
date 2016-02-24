@@ -35,6 +35,13 @@ if ((vehicle player) isEqualTo player) then
 			true breakOut "main";
 		};
 
+		_suit = (nearestObjects [player, ["Land_Suitcase_F"], 1.5]) select 0;
+		if (!(isNil "_suit")) then
+		{
+			[_suit, "items", true, true, false, false, true] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
+			true breakOut "main";
+		};
+
 		_storage = (nearestObjects [player, (call g_houses_storages), 2]) select 0;
 		if (!(isNil "_storage")) then
 		{
@@ -46,13 +53,6 @@ if ((vehicle player) isEqualTo player) then
 		if (!(isNil "_skull")) then
 		{
 			[_skull] call AlysiaClient_fnc_interactions_player_to_skull;
-			true breakOut "main";
-		};
-
-		_suit = (nearestObjects [player, ["Land_Suitcase_F"], 2]) select 0;
-		if (!(isNil "_suit")) then
-		{
-			[_suit, "items", true, true, false, false, true] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
 			true breakOut "main";
 		};
 

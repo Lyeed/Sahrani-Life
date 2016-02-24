@@ -564,13 +564,6 @@ class ALYSIA_ITEMS
 		illegal     = 1;
 		removable   = 1;
 		image       = "alysia_items_virtual\data\heroine.paa";
-		class market
-		{
-			max = 550;
-			min = 400;
-			mult = 2;
-			affect[] = {"methp", "cocainep", "cocainepc", "heroinps", "marijuana", "opium"};
-		};
 	};
 
 	class heroinps
@@ -1207,8 +1200,8 @@ class ALYSIA_ITEMS
 		image       = "alysia_items_virtual\data\sel_traiter.paa";
 		class market
 		{
-			max = 165;
-			min = 115;
+			max = 145;
+			min = 95;
 			mult = 2;
 			affect[] = {"woodp", "furniture", "glass", "brique", "cottonp", "ciment", "coal"};
 		};
@@ -1299,7 +1292,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Bouteille de Grozdova";
 		weight      = 3;
-		illegal     = 0;
+		illegal     = 1;
 		removable   = 1;
 		image       = "alysia_items_virtual\data\bouteille_eau_de_vie_raisin.paa";
 		class market
@@ -1322,7 +1315,7 @@ class ALYSIA_ITEMS
 	{
 		name        = "Bouteille de Slivovica";
 		weight      = 3;
-		illegal     = 0;
+		illegal     = 1;
 		removable   = 1;
 		image       = "alysia_items_virtual\data\bouteille_eau_de_vie_prune.paa";
 		class market
@@ -1917,7 +1910,7 @@ class ALYSIA_ITEMS
 	class lab_marijuana
 	{
 		name = "Laboratoire de marijuana";
-		price_buy = 10000;
+		price_buy = 255000;
 		price_sell = 0;
 		weight = 15;
 		illegal = 1;
@@ -1931,7 +1924,7 @@ class ALYSIA_ITEMS
 	class lab_meth
 	{
 		name = "Laboratoire de methamphetamine";
-		price_buy = 10000;
+		price_buy = 286000;
 		price_sell = 0;
 		weight = 40;
 		illegal = 1;
@@ -1945,7 +1938,7 @@ class ALYSIA_ITEMS
 	class lab_cocaine
 	{
 		name = "Laboratoire de cocaïne";
-		price_buy = 10000;
+		price_buy = 269000;
 		price_sell = 0;
 		weight = 30;
 		illegal = 1;
@@ -1959,7 +1952,7 @@ class ALYSIA_ITEMS
 	class lab_heroin
 	{
 		name = "Laboratoire d'héroïne";
-		price_buy = 10000;
+		price_buy = 272000;
 		price_sell = 0;
 		weight = 30;
 		illegal = 1;
@@ -1973,7 +1966,7 @@ class ALYSIA_ITEMS
 	class lab_weapon
 	{
 		name = "Usine d'armes illégales";
-		price_buy = 10000;
+		price_buy = 525000;
 		price_sell = 0;
 		weight = 40;
 		illegal = 1;
@@ -1987,7 +1980,7 @@ class ALYSIA_ITEMS
 	class lab_clothing
 	{
 		name = "Usine de vêtements illégaux";
-		price_buy = 10000;
+		price_buy = 285000;
 		price_sell = 0;
 		weight = 35;
 		illegal = 1;

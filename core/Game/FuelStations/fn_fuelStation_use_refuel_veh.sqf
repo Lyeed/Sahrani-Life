@@ -27,6 +27,6 @@ lbClear _list;
 	_index = _list lbAdd getText(_x >> "name");
 	_list lbSetData [_index, (configName _x)];
 	_list lbSetPicture [_index, getText(_x >> "picture")];
-} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL" >> "fuels"));
+} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL"));
 
 _list lbSetCurSel 0;

@@ -175,7 +175,7 @@ if (!(g_shop_clothing_oldList isEqualTo [])) then
 	{
 		_action = 
 		[
-			format["Vous-vous récupérer vos anciens articles ?<br/><t align='center' color='#3ADF00'>%1</t>", _txt],
+			format["Voulez-vous récupérer vos anciens articles ?<br/><t align='center' color='#3ADF00'>%1</t>", _txt],
 			"Friperie",
 			"Oui",
 			"Non"
