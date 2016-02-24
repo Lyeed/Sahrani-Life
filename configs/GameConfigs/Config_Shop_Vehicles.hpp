@@ -190,7 +190,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"shounka_a3_ds4_civ",
 			"shounka_nemo",
 			"Skyline_VW_Touareg",
-			"ADM_GMC_Vandura",
+			"Skyline_GMC_Vandura",
 			"shounka_a3_spr_civ",
 			"Mrshounka_207_civ",
 			"Skyline_Peugeot_308",

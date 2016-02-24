@@ -83,6 +83,18 @@ class ALYSIA_VEHICLES
 	class madsa_hummer_h2_white_F: madsa_hummer_h2 {};
 	class madsa_hummer_h2_yellow_F: madsa_hummer_h2 {};
 
+	class RDS_Zetor6945_Base
+	{
+		buyPrice = 85000;
+		inventory = 85;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP98";
+		colors[] = {};
+		realname = "Tracteur";
+	};
+
 	class DAR_FusionCiv
 	{
 		buyPrice = 22500;
@@ -680,7 +692,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_mustang_violet: Mrshounka_mustang_civ {};
 	class Mrshounka_mustang_orange: Mrshounka_mustang_civ {};
 
-	class ADM_GMC_Vandura
+	class Skyline_GMC_Vandura
 	{
 		buyPrice = 26000;
 		inventory = 165;
@@ -690,23 +702,34 @@ class ALYSIA_VEHICLES
 		fuel = "Diesel";
 		colors[] =
 		{
-			"ADM_GMC_Vandura_red",
-			"ADM_GMC_Vandura_yellow",
-			"ADM_GMC_Vandura_green",
-			"ADM_GMC_Vandura_blue",
-			"ADM_GMC_Vandura_pink",
-			"ADM_GMC_Vandura_dark",
-			"ADM_GMC_Vandura_white"
+			"Skyline_GMC_Vandura_01_F",
+			"Skyline_GMC_Vandura_02_F",
+			"Skyline_GMC_Vandura_03_F",
+			"Skyline_GMC_Vandura_04_F",
+			"Skyline_GMC_Vandura_05_F",
+			"Skyline_GMC_Vandura_06_F",
+			"Skyline_GMC_Vandura_07_F",
+			"Skyline_GMC_Vandura_08_F",
+			"Skyline_GMC_Vandura_09_F",
+			"Skyline_GMC_Vandura_10_F",
+			"Skyline_GMC_Vandura_11_F",
+			"Skyline_GMC_Vandura_12_F"
 		};
 		realname = "GMC Vendura";
 	};
-	class ADM_GMC_Vandura_red: ADM_GMC_Vandura {};
-	class ADM_GMC_Vandura_yellow: ADM_GMC_Vandura {};
-	class ADM_GMC_Vandura_green: ADM_GMC_Vandura {};
-	class ADM_GMC_Vandura_blue: ADM_GMC_Vandura {};
-	class ADM_GMC_Vandura_pink: ADM_GMC_Vandura {};
-	class ADM_GMC_Vandura_dark: ADM_GMC_Vandura {};
-	class ADM_GMC_Vandura_white: ADM_GMC_Vandura {};
+	class ADM_GMC_Vandura_red: Skyline_GMC_Vandura {};
+	class Skyline_GMC_Vandura_01_F: Skyline_GMC_Vandura {};
+	class Skyline_GMC_Vandura_02_F: Skyline_GMC_Vandura {};
+	class Skyline_GMC_Vandura_03_F: Skyline_GMC_Vandura {};
+	class Skyline_GMC_Vandura_04_F: Skyline_GMC_Vandura {};
+	class Skyline_GMC_Vandura_05_F: Skyline_GMC_Vandura {};
+	class Skyline_GMC_Vandura_06_F: Skyline_GMC_Vandura {};
+	class Skyline_GMC_Vandura_07_F: Skyline_GMC_Vandura {};
+	class Skyline_GMC_Vandura_08_F: Skyline_GMC_Vandura {};
+	class Skyline_GMC_Vandura_09_F: Skyline_GMC_Vandura {};
+	class Skyline_GMC_Vandura_10_F: Skyline_GMC_Vandura {};
+	class Skyline_GMC_Vandura_11_F: Skyline_GMC_Vandura {};
+	class Skyline_GMC_Vandura_12_F: Skyline_GMC_Vandura {};
 
 	class Mrshounka_golfvi_civ
 	{
@@ -2845,7 +2868,7 @@ class ALYSIA_VEHICLES
 		side = "GUER";
 		insurance = 1;
 		licenses[] = {"driver"};
-		fuel = "SP98";
+		fuel = "diesel";
 		rank = 1;
 		realname = "Ambulance avec civière";
 	};
@@ -2857,7 +2880,7 @@ class ALYSIA_VEHICLES
 		side = "GUER";
 		insurance = 1;
 		licenses[] = {"driver"};
-		fuel = "SP98";
+		fuel = "diesel";
 		rank = 6;
 		colors[] =
 		{
@@ -2901,7 +2924,7 @@ class ALYSIA_VEHICLES
 		side = "GUER";
 		insurance = 1;
 		licenses[] = {"driver"};
-		fuel = "SP98";
+		fuel = "diesel";
 		rank = 5;
 		realname = "Ford Taurus SAMU";
 	};
