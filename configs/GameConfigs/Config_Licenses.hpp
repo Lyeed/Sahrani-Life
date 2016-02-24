@@ -182,19 +182,6 @@ class ALYSIA_LICENSES
 			};
 		};
 	};
-	class oil
-	{
-		name = "Traitement du pétrole";
-		class factions
-		{
-			class CIV
-			{
-				price = 18000;
-				pad_store = 1;
-				illegal = 0;
-			};
-		};
-	};
 	class iron
 	{
 		name = "Traitement du fer";
@@ -229,7 +216,7 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				price = 15000;
-				pad_store = 1;
+				pad_store = 0;
 				illegal = 0;
 			};
 		};

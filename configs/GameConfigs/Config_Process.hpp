@@ -22,7 +22,6 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
 				licenses[] = {"wood"};
 			};
 		};
@@ -49,7 +48,6 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
 				licenses[] = {"wood"};
 			};
 		};
@@ -76,7 +74,6 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
 				licenses[] = {"sand"};
 			};
 		};
@@ -103,7 +100,6 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
 				licenses[] = {"sand"};
 			};
 		};
@@ -130,7 +126,6 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
 				licenses[] = {"iron"};
 			};
 		};
@@ -157,7 +152,6 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
 				licenses[] = {"platine"};
 			};
 		};
@@ -184,7 +178,6 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
 				licenses[] = {"platine"};
 			};
 		};
@@ -209,11 +202,7 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions
 		{
-			class CIV
-			{
-				rank = 0;
-				licenses[] = {};
-			};
+			class CIV {};
 		};
 	};
 
@@ -239,11 +228,7 @@ class ALYSIA_PROCESS
 		};
 		class factions
 		{
-			class CIV
-			{
-				rank = 0;
-				licenses[] = {};
-			};
+			class CIV {};
 		};
 	};
 
@@ -266,11 +251,7 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions
 		{
-			class CIV
-			{
-				rank = 0;
-				licenses[] = {};
-			};
+			class CIV {};
 		};
 	};
 	
@@ -296,11 +277,7 @@ class ALYSIA_PROCESS
 		};
 		class factions
 		{
-			class CIV
-			{
-				rank = 0;
-				licenses[] = {};
-			};
+			class CIV {};
 		};
 	};
 
@@ -326,11 +303,7 @@ class ALYSIA_PROCESS
 		};
 		class factions
 		{
-			class CIV
-			{
-				rank = 0;
-				licenses[] = {};
-			};
+			class CIV {};
 		};
 	};
 
@@ -356,11 +329,7 @@ class ALYSIA_PROCESS
 		};
 		class factions
 		{
-			class CIV
-			{
-				rank = 0;
-				licenses[] = {};
-			};
+			class CIV {};
 		};
 	};
 
@@ -382,11 +351,7 @@ class ALYSIA_PROCESS
 		time_default = 5;
 		class factions
 		{
-			class CIV
-			{
-				rank = 0;
-				licenses[] = {};
-			};
+			class CIV {};
 		};
 	};
 
@@ -411,7 +376,6 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
 				licenses[] = {"archeologie"};
 			};
 		};
@@ -436,11 +400,30 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions
 		{
-			class CIV
-			{
-				rank = 0;
-				licenses[] = {"tabac"};
-			};
+			class CIV {};
+		};
+	};
+
+	class cigare
+	{
+		name = "Fabrication de cigare";
+		sound = "smelting";
+		require[] =
+		{
+			{"tabac", 2}
+		};
+		receive[] =
+		{
+			/* VIRTUAL */{{"cigare", 1}},
+			/* ARMA */{},
+			/* CASH */0
+		};
+		time_per_item = 6;
+		time_default = 1;
+		class target {};
+		class factions
+		{
+			class CIV {};
 		};
 	};	
 
@@ -465,7 +448,6 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
 				licenses[] = {"copper"};
 			};
 		};
@@ -490,11 +472,7 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions
 		{
-			class CIV
-			{
-				rank = 0;
-				licenses[] = {};
-			};
+			class CIV {};
 		};
 	};
 
@@ -519,7 +497,6 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
 				licenses[] = {"gold"};
 			};
 		};
@@ -546,7 +523,6 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
 				licenses[] = {"salt"};
 			};
 		};
@@ -573,7 +549,6 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
 				licenses[] = {"brique"};
 			};
 		};
@@ -600,7 +575,6 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
 				licenses[] = {"bauxite"};
 			};
 		};
@@ -625,11 +599,7 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions
 		{
-			class CIV
-			{
-				rank = 0;
-				licenses[] = {};
-			};
+			class CIV {};
 		};
 	};
 	
@@ -652,11 +622,7 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions
 		{
-			class CIV
-			{
-				rank = 0;
-				licenses[] = {};
-			};
+			class CIV {};
 		};
 	};
 	
@@ -681,7 +647,6 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
 				licenses[] = {"Pierretr", "company_construction"};
 			};
 		};
@@ -708,8 +673,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
-				licenses[] = {"oil", "company_fuel"};
+				licenses[] = {"company_fuel"};
 			};
 		};
 	};
@@ -735,7 +699,6 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
 				licenses[] = {"sand"};
 			};
 		};
@@ -756,6 +719,14 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 5;
 		time_default = 5;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				licenses[] = {"wood"};
+			};
+		};
 	};
 
 	class table_wood
@@ -773,6 +744,14 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 5;
 		time_default = 5;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				licenses[] = {"wood"};
+			};
+		};
 	};
 
 	class steel
@@ -796,7 +775,6 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
 				licenses[] = {"company_foundry"};
 			};
 		};
@@ -825,8 +803,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
-				licenses[] = {};
+				licenses[] = {"company_weapon"};
 			};
 		};
 	};
@@ -852,8 +829,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
-				licenses[] = {};
+				licenses[] = {"company_weapon"};
 			};
 		};
 	};
@@ -879,8 +855,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
-				licenses[] = {};
+				licenses[] = {"company_weapon"};
 			};
 		};
 	};
@@ -906,8 +881,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
-				licenses[] = {};
+				licenses[] = {"company_weapon"};
 			};
 		};
 	};
@@ -933,8 +907,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
-				licenses[] = {};
+				licenses[] = {"company_weapon"};
 			};
 		};
 	};
@@ -960,8 +933,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
-				licenses[] = {};
+				licenses[] = {"company_weapon"};
 			};
 		};
 	};
@@ -987,8 +959,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
-				licenses[] = {};
+				licenses[] = {"company_weapon"};
 			};
 		};
 	};
@@ -1014,8 +985,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
-				licenses[] = {};
+				licenses[] = {"company_weapon"};
 			};
 		};
 	};
@@ -1041,8 +1011,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
-				licenses[] = {};
+				licenses[] = {"company_weapon"};
 			};
 		};
 	};
@@ -1069,8 +1038,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
-				licenses[] = {};
+				licenses[] = {"company_weapon"};
 			};
 		};
 	};
@@ -1096,8 +1064,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
-				licenses[] = {};
+				licenses[] = {"company_weapon"};
 			};
 		};
 	};
@@ -1123,8 +1090,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
-				licenses[] = {};
+				licenses[] = {"company_weapon"};
 			};
 		};
 	};
@@ -1150,8 +1116,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
-				licenses[] = {};
+				licenses[] = {"company_weapon"};
 			};
 		};
 	};
@@ -1177,8 +1142,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
-				licenses[] = {};
+				licenses[] = {"company_weapon"};
 			};
 		};
 	};
@@ -1204,8 +1168,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
-				licenses[] = {};
+				licenses[] = {"company_weapon"};
 			};
 		};
 	};
@@ -1231,8 +1194,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				rank = 0;
-				licenses[] = {};
+				licenses[] = {"company_weapon"};
 			};
 		};
 	};
@@ -1265,11 +1227,7 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions
 		{
-			class CIV
-			{
-				rank = 0;
-				licenses[] = {};
-			};
+			class CIV {};
 		};
 	};
 
@@ -1569,11 +1527,7 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions
 		{
-			class CIV
-			{
-				rank = 0;
-				licenses[] = {};
-			};
+			class CIV {};
 		};
 	};
 

@@ -7,6 +7,7 @@ class ALYSIA_FARMING_GATHER
 		tool = "Skyline_Hache_01";
 		sound = "axe";
 	};
+	class wood_2: wood_1 {};
 
 	class pillage_1
 	{

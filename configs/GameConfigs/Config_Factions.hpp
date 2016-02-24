@@ -473,6 +473,7 @@ class ALYSIA_FACTIONS
 			"iron_1",
 			"sand_1",
 			"wood_1",
+			"wood_2",
 			"oil_1",
 			"archeologie_1",
 			"prunes_1",
@@ -502,8 +503,6 @@ class ALYSIA_FACTIONS
 			"meth_1",
 			"cocaine_1",
 			"tabac_1",
-			"tabac_2", 
-			"tabac_3",
 			"potato_1"
 		};
 

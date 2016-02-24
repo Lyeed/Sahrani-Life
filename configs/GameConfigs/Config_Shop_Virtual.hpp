@@ -112,7 +112,8 @@ class ALYSIA_SHOPS_VIRTUAL
 				"lab_cocaine",
 				"lab_heroin",
 				"lab_weapon",
-				"lab_clothing"
+				"lab_clothing",
+				"lab_cigare"
 			},
 			{"artefact_R", "artefact", "objvaleur"}
 		};
@@ -127,9 +128,9 @@ class ALYSIA_SHOPS_VIRTUAL
 
 	class tabac
 	{
-		name = "Buraliste";
+		name = "Commerçant de tabac";
 		side = "CIV";
-		items[] = {{}, {"cigarette", "tabac_seed"}};
+		items[] = {{}, {"cigarette", "cigare"}};
 	};
 
 	class furniture
