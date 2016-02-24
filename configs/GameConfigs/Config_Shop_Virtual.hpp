@@ -209,4 +209,11 @@ class ALYSIA_SHOPS_VIRTUAL
 		side = "CIV";
 		items[] = {{}, {"pierre"}};
 	};
+
+	class tabac_seed
+	{
+		name = "Marchand de graines";
+		side = "CIV";
+		items[] = {{"tabac_seed"}, {}};
+	};
 };

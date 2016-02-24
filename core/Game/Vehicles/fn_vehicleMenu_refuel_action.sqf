@@ -17,15 +17,15 @@ if (isEngineOn g_interaction_target) exitWith {
 	["Vous ne pouvez pas faire le plein d'un véhicule ayant le moteur allumé."] call AlysiaClient_fnc_error;
 };
 
+_item = lbData[69002, lbCurSel 69002];
+if (_item isEqualTo "") exitWith {
+	["Vous n'avez pas choisi de jerrican."] call AlysiaClient_fnc_error;
+};
+
 if (dialog) then
 {
 	closeDialog 0;
 	waitUntil {!dialog};
-};
-
-_item = lbData[69002, lbCurSel 69002];
-if (_item isEqualTo "") exitWith {
-	["Vous n'avez pas choisi de jerrican."] call AlysiaClient_fnc_error;
 };
 
 if (!(["Jerrican", 5, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {};

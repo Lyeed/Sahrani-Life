@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_sel", "_vehicle", "_checked"];
+private["_sel", "_vehicle"];
 
 _sel = lbCurSel 35001;
 if (_sel isEqualTo -1) exitWith {};
@@ -15,6 +15,5 @@ _vehicle = g_vehicles select (lbValue[35001, _sel]);
 if (isNil "_vehicle") exitWith {};
 if (isNull _vehicle) exitWith {};
 
-_checked = cbChecked ((findDisplay 35000) displayCtrl 35002);
+[_vehicle, cbChecked ((findDisplay 35000) displayCtrl 35002), (getPos g_garage_PNJ), true, g_garage_distance] spawn AlysiaClient_fnc_garageVehicleStore;
 closeDialog 0;
-[_vehicle, _checked, (getPos g_garage_PNJ), true, g_garage_distance] spawn AlysiaClient_fnc_garageVehicleStore;

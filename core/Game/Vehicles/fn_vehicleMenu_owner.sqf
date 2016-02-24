@@ -43,6 +43,7 @@ if (_action) then
 	(_display displayCtrl 601) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", (_info select 2)];
 	(_display displayCtrl 602) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", (_info select 1)];
 	(_display displayCtrl 603) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", if ((_info select 3) isEqualTo 1) then {"<t color='#8cff9b'>Oui</t>"} else {"<t color='#ff8c8c'>Non</t>"}];
+	(_display displayCtrl 604) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", getText(missionConfigFile >> "ALYSIA_FUEL" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf(g_interaction_target) >> "fuel") >> "name")];
 
 	while {!(isNull _display)} do
 	{

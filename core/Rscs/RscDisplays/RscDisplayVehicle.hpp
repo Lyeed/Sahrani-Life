@@ -111,6 +111,34 @@ class RscDisplayVehicleOwner: RscDisplayDefaultInteraction
 			w = 0.103125 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
+
+		class FUEL_HEADER: RscStructuredText
+		{
+			text = "<t align='center'>Carburant</t>";
+			colorBackground[] = {0,0,0,0.8};
+
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.401 * safezoneH + safezoneY;
+			w = 0.103125 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class FUEL_INFO: RscStructuredText
+		{
+			idc = 604;
+			colorBackground[] = {0,0,0,0.6};
+
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.103125 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class FUEL_FRAME: RscFrame
+		{
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.401 * safezoneH + safezoneY;
+			w = 0.103125 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
 	};
 };
 

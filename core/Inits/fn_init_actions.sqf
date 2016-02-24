@@ -16,7 +16,6 @@ if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "inte
 };
 
 /* ==================[MEDICAL]===================*/
-
 [[
 	"<img image='lyeed_IMG\data\actions_menu\morphine.paa'/> Se faire une <t color='#FF5722'>piqure d'adrénaline</t>",
 	AlysiaClient_fnc_item_adrenaline_use, player, 0, false, true, "", '(("SkylineItems_Adrenaline" in (magazines player)) && !(player getVariable ["is_coma",false]) && !g_action_inUse)'

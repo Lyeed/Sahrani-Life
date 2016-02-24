@@ -68,7 +68,7 @@ class ALYSIA_STAFF
 				name = "Invisible ON";
 				statement = "g_staff_invisible = true; [player, true] remoteExecCall ['hideObject', 0];";
 				condition = "!g_staff_invisible";
-				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424"};
 			};
 			class Invisible_OFF: Invisible_ON
 			{
@@ -82,7 +82,7 @@ class ALYSIA_STAFF
 				name = "TP ON";
 				statement = "g_staff_tp = true; onMapSingleClick '(vehicle player) setPos _pos';";
 				condition = "!g_staff_tp";
-				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424"};
 			};
 			class TP_OFF: TP_ON
 			{
@@ -96,7 +96,7 @@ class ALYSIA_STAFF
 				name = "God ON";
 				statement = "g_staff_god = true;";
 				condition = "!g_staff_god";
-				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424"};
 			};
 			class god_OFF: god_ON
 			{
@@ -150,14 +150,14 @@ class ALYSIA_STAFF
 				name = "TP à";
 				statement = "(vehicle player) setPosATL (getPosATL (call compile (lbData[9000, lbCurSel 9000])));";
 				condition = "(true)";
-				allow[] = {"76561198007960495", "76561198099211957"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561197977519424", "76561198026418521"};
 			};
 			class tphere
 			{
 				name = "TP ici";
 				statement = "(call compile (lbData[9000, lbCurSel 9000])) setPosATL (getPosATL player);";
 				condition = "(true)";
-				allow[] = {"76561198007960495", "76561198099211957"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561197977519424", "76561198026418521"};
 			};
 			class spec
 			{

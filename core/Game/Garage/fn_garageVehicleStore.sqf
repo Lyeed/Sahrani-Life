@@ -46,7 +46,7 @@ if (_storeInventory) then
 				[false, _price, format["Inventaire véhicule (%1)", getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")]] call AlysiaClient_fnc_handleATM;
 				playSound "buy";
 				g_garage_store = true;
-				[_vehicle, _storePos, false] remoteExec ["AlysiaServer_fnc_garageVehicleStore", 2];
+				[_vehicle, _storePos, true] remoteExec ["AlysiaServer_fnc_garageVehicleStore", 2];
 			} else {
 				[format["Vous n'avez pas assez d'argent sur votre compte pour payer la facture du garage, vous demandant <t color='#8cff9b'>%1</t>kn pour stocker vos objets", ([_price] call AlysiaClient_fnc_numberText)]] call AlysiaClient_fnc_error;
 			};
@@ -60,7 +60,7 @@ if (_storeInventory) then
 	};
 } else {
 	g_garage_store = true;
-	[_vehicle, _storePos, true] remoteExec ["AlysiaServer_fnc_garageVehicleStore", 2];	
+	[_vehicle, _storePos, false] remoteExec ["AlysiaServer_fnc_garageVehicleStore", 2];
 };
 
 if (g_garage_store) then

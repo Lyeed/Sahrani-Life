@@ -14,7 +14,7 @@ if (_fuel isEqualTo "") exitWith {0};
 _config = missionConfigFile >> "ALYSIA_FUEL" >> _fuel;
 if (!isClass(_config)) exitWith {0};
 
-_price = round(((_station getVariable [_fuel, getNumber(_config >> "max")]) / (_station distance (markerPos "oil_1"))) * 100);
+_price = round(((getNumber(_config >> "max") - (_station getVariable [_fuel, getNumber(_config >> "max")]) + 3) / (_station distance (markerPos "oil_1"))) * 100);
 if (_price < 3) then {_price = 3};
 
 _price;

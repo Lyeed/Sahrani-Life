@@ -395,8 +395,8 @@ class ALYSIA_PROCESS
 			/* ARMA */{},
 			/* CASH */0
 		};
-		time_per_item = 4;
-		time_default = 6;
+		time_per_item = 3;
+		time_default = 4;
 		class target {};
 		class factions
 		{
@@ -407,7 +407,7 @@ class ALYSIA_PROCESS
 	class cigare
 	{
 		name = "Fabrication de cigare";
-		sound = "smelting";
+		sound = "salt_process";
 		require[] =
 		{
 			{"tabac", 2}

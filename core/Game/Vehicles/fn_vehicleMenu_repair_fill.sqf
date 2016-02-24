@@ -50,7 +50,7 @@ if ((lbSize _list) isEqualTo 0) then
 } else {
 	ctrlShow[2909, true];
 	ctrlShow[2916, true];
-	ctrlShow[2917, true];	
+	ctrlShow[2917, true];
 };
 
 _list lbSetCurSel 0;

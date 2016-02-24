@@ -25,31 +25,31 @@ if ((_tool != "") && !(_tool in (magazines player))) exitWith {
 };
 
 _item = getText(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "item");
-if ((_item isEqualTo "") || ((_item != "") && (_item in (magazines player)))) then {
-	_heal = 0;
+if ((_item isEqualTo "") || ((_item != "") && (_item in (magazines player)))) then
+{
+	_heal = 100;
 	_useItem = true;
 	_time = getNumber(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "time") * 1.5;
 } else {
-	_heal = 0.6;
+	_heal = 40;
 	_useItem = false;
 	_time = getNumber(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "time");
 };
 
+_life = lbValue[2907, _sel];
 _error = false;
-_dmg = floor(g_interaction_target getHitPointDamage _part);
-if (_dmg <= _heal) exitWith
+if (_life >= _heal) exitWith
 {
 	[
 		format
 		[
-			"L'état actuel de <t color='#0174DF'>%1</t> est de <t color='%6'>%5</t>%7 et ne peut être amélioré.<br/>Vous avez besoin de <t color='#ff8c8c'>%2</t>.<br/><t color='#8cff9b'>%3</t> vous permet d'effectuer des réparations jusqu'à <t color='%4'>50</t>%7 de <t color='#0174DF'>%1</t>",
+			"L'état actuel de <t color='#0174DF'>%1</t> est de <t color='%2'>%3</t>%4 et ne peut être réparé qu'à <t color='%5'>%6</t>%4."
 			lbText[2907, _sel],
-			getText(configFile >> "CfgMagazines" >> _item >> "displayName"),
-			getText(configFile >> "CfgMagazines" >> _tool >> "displayName"),
-			([40] call AlysiaClient_fnc_vehicleMenu_repair_getColor) select 1,
-			floor((1 - _dmg) * 100),
-			([floor((1 - _dmg) * 100)] call AlysiaClient_fnc_vehicleMenu_repair_getColor) select 1,
-			"%"
+			([_life] call AlysiaClient_fnc_vehicleMenu_repair_getColor) select 1,
+			_life,
+			"%",
+			([_heal] call AlysiaClient_fnc_vehicleMenu_repair_getColor) select 1,
+			_heal
 		]
 	] call AlysiaClient_fnc_error;
 };
@@ -71,5 +71,5 @@ if ((_item != "") && _useItem) then
 };
 
 if (!_error) then {
-	[g_interaction_target, _part, _heal] call AlysiaClient_fnc_setHitPointDamage;
+	[g_interaction_target, _part, ((100 - _heal) / 100)] call AlysiaClient_fnc_setHitPointDamage;
 };
