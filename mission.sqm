@@ -3738,7 +3738,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1783;
+		items=1784;
 		class Item0
 		{
 			position[]={12129.837,0,17612.104};
@@ -5200,13 +5200,13 @@ class Mission
 		};
 		class Item148
 		{
-			position[]={9815.917,139.98311,9980.3574};
+			position[]={9821.5439,139.98311,9983.7393};
 			azimut=181.836;
 			id=309;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this allowDamage false;this setdir 181.836;this setposATL [9815.916992,9980.357422,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_air"",[""garage_air_sud_1_1"",""garage_air_sud_1_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage aérien"",AlysiaClient_fnc_garageGet,""garage_air_sud_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Air"",""Truck"",""Car""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_air"",[""garage_air_sud_1_1"",""garage_air_sud_1_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage aérien"",AlysiaClient_fnc_garageGet,""garage_air_sud_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Air"",""Truck"",""Car""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item149
 		{
@@ -21921,10 +21921,21 @@ class Mission
 			skill=0.60000002;
 			init="this allowDamage false;this addAction[""Administration Centrale"",AlysiaClient_fnc_shop_arma_open,""gov_south"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""SOUTH""'];";
 		};
+		class Item1783
+		{
+			position[]={9240.2998,45.981857,5885.333};
+			azimut=269.104;
+			offsetY=-0.00168228;
+			id=1944;
+			side="EMPTY";
+			vehicle="Land_InfoStand_V2_F";
+			skill=0.60000002;
+			init="this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de meuble"",AlysiaClient_fnc_process_open,""furniture"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de chaises (bois)"",AlysiaClient_fnc_process_open,""chair_wood"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de tables (bois)"",AlysiaClient_fnc_process_open,""table_wood"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+		};
 	};
 	class Markers
 	{
-		items=177;
+		items=178;
 		class Item0
 		{
 			position[]={14101.226,39.941086,12528.942};
@@ -22000,7 +22011,7 @@ class Mission
 		};
 		class Item8
 		{
-			position[]={9815.0059,139.98311,9980.4209};
+			position[]={9821.5527,139.98311,9983.6953};
 			name="Concessionaire Aérien";
 			type="Fett_explosives";
 			colorName="ColorPink";
@@ -22381,8 +22392,8 @@ class Mission
 		};
 		class Item48
 		{
-			position[]={14204.858,54.970428,11865.687};
-			name="Menuiserie";
+			position[]={14205.763,54.970428,11864.239};
+			name="process_woodp_1";
 			text="Menuiserie";
 			type="Fett_industrial";
 			colorName="ColorOrange";
@@ -23465,6 +23476,16 @@ class Mission
 			name="gov_south_2";
 			text="Administration Centrale";
 			type="Fett_ammunition";
+			a=0.5;
+			b=0.5;
+		};
+		class Item177
+		{
+			position[]={9240.2715,45.981857,5885.3677};
+			name="process_woodp_2";
+			text="Menuiserie";
+			type="Fett_industrial";
+			colorName="ColorOrange";
 			a=0.5;
 			b=0.5;
 		};

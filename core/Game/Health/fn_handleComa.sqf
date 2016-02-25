@@ -20,21 +20,16 @@ showMap false;
 
 if (!(createDialog "RscDisplayComa")) exitWith {};
 
-if (player getVariable ["surrender", false]) then {
-	player setVariable ["surrender", false, true];
-};
-if (player getVariable ["restrained", false]) then {
-	player setVariable ["restrained", false, true];
-};
+if (player getVariable ["surrender", false]) then {player setVariable ["surrender", false, true]};
+if (player getVariable ["restrained", false]) then {player setVariable ["restrained", false, true]};
+if (!(isNull g_dragingBody)) then {[false] call AlysiaClient_fnc_action_body_drop};
+
 if (!(isNull (player getVariable ["escorted", objNull]))) then
 {
 	_target = player getVariable ["escorted", objNull];
 	detach player;
 	_target setVariable ["escorting", objNull, true];
 	_target setVariable ["escorted", objNull, true];
-};
-if (!(isNull g_dragingBody)) then {
-	[false] call AlysiaClient_fnc_action_body_drop;
 };
 
 disableSerialization;
@@ -119,16 +114,12 @@ if (!g_coma_dead) then
 	player setFatigue 1;
 	cutText ["", "BLACK IN", 20, true];
 	player setVariable ["tf_voiceVolume", 1, true];
+	player setVariable ["tf_globalVolume", 1];
 	[player, ""] remoteExecCall ["switchMove", -2];
 };
 
-if (player getVariable ["is_coma", false]) then {
-	player setVariable ["is_coma", false, true];
-};
-
-if (player getVariable ["medic_request", false]) then {
-	player setVariable ["medic_request", false, true];
-};
+if (player getVariable ["is_coma", false]) then {player setVariable ["is_coma", false, true]};
+if (player getVariable ["medic_request", false]) then {player setVariable ["medic_request", false, true]};
 
 _display displayRemoveEventHandler ["KeyDown", _id];
 closeDialog 0;

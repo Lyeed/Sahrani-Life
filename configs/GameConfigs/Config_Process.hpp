@@ -621,7 +621,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				licenses[] = {"Pierretr", "company_construction"};
+				licenses[] = {"company_construction"};
 			};
 		};
 	};

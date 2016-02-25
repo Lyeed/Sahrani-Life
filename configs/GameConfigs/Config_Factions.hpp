@@ -167,7 +167,7 @@ class ALYSIA_FACTIONS
 			};
 			class leader_board
 			{
-				access_rank = 9;
+				access_rank = 8;
 			};
 		};
 

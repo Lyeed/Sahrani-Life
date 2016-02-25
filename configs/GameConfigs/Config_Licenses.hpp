@@ -260,19 +260,6 @@ class ALYSIA_LICENSES
 			};
 		};
 	};
-	class Pierretr
-	{
-		name = "Traitement de la pierre";
-		class factions
-		{
-			class CIV
-			{
-				price = 6500;
-				pad_store = 1;
-				illegal = 0;
-			};
-		};
-	};
 
 	class gov_company
 	{

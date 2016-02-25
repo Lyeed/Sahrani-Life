@@ -89,7 +89,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Bijoutier";
 		side = "CIV";
-		items[] = {{}, {"goldbar", "platinep"}};
+		items[] = {{}, {"goldbar"}};
 	};
 
 	class black_market
@@ -123,7 +123,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Commerçant de platine";
 		side = "CIV";
-		items[] = {{}, {"platinep", "platinepa"}};
+		items[] = {{}, {"platinep"}};
 	};
 
 	class tabac

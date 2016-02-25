@@ -122,6 +122,7 @@
 			"[] spawn AlysiaClient_fnc_interactionMenu_action_license;",
 			"
 				(
+					(playerSide in [east,independent]) &&
 					(
 						(g_interaction_target getVariable ['surrender',false]) ||
 						(g_interaction_target getVariable ['restrained',false])

@@ -391,13 +391,6 @@ class ALYSIA_ITEMS
 		illegal = 1;
 		removable = 1;
 		image = "alysia_items_virtual\data\soufre_hydrate.paa";
-		class market
-		{
-			max = 25;
-			min = 15;
-			mult = 2;
-			affect[] = {"goldbar","ironp","soufre","platinep","copperp","alu"};
-		};
 	};
 
 	class platine
@@ -609,16 +602,6 @@ class ALYSIA_ITEMS
 		{
 			action = "['marijuana'] call AlysiaClient_fnc_drugConsume;";
 		};
-	};
-
-	class oilu
-	{
-		name = "Pétrole";
-		weight = 10;
-		illegal = 0;
-		removable = 1;
-		image = "alysia_items_virtual\data\petrole.paa";
-		store[] = {"B_G_Van_01_fuel_F","B_Truck_01_fuel_F","O_Truck_02_fuel_F"};
 	};
 
 	class fishingpoles
@@ -922,6 +905,7 @@ class ALYSIA_ITEMS
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\brique.paa";
+		license = "company_construction";
 		class market
 		{
 			max = 112;
@@ -1265,6 +1249,7 @@ class ALYSIA_ITEMS
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\ciment.paa";
+		license = "company_construction";
 		class market
 		{
 			max = 165;
@@ -1281,6 +1266,7 @@ class ALYSIA_ITEMS
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\steel.paa";
+		license = "company_foundry";
 		class market
 		{
 			max = 210;
@@ -1295,7 +1281,6 @@ class ALYSIA_ITEMS
 		name = "Bouteille de Medova";
 		weight = 1;
 		price_buy = 8;
-		price_sell  = 0;
 		illegal = 1;
 		removable = 1;
 		image = "alysia_items_virtual\data\medova.paa";
@@ -1386,8 +1371,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Pizza";
 		weight = 1;
-		price_buy = 18;
-		price_sell  = 0;
+		price_buy = 8;
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\pizza.paa";
@@ -1399,6 +1383,15 @@ class ALYSIA_ITEMS
 		};
 	};
 
+	class oilu
+	{
+		name = "Pétrole";
+		weight = 10;
+		illegal = 0;
+		removable = 1;
+		image = "alysia_items_virtual\data\petrole.paa";
+		store[] = {"B_G_Van_01_fuel_F","B_Truck_01_fuel_F","O_Truck_02_fuel_F"};
+	};
 	class sp98
 	{
 		name = "SansPlomb 98";
@@ -1406,7 +1399,7 @@ class ALYSIA_ITEMS
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\sp98.paa";
-		license = "oil";
+		license = "company_fuel";
 		store[] = {"B_G_Van_01_fuel_F","B_Truck_01_fuel_F","O_Truck_02_fuel_F"};
 	};
 	class sp95
@@ -1416,7 +1409,7 @@ class ALYSIA_ITEMS
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\sp95.paa";
-		license = "oil";
+		license = "company_fuel";
 		store[] = {"B_G_Van_01_fuel_F","B_Truck_01_fuel_F","O_Truck_02_fuel_F"};
 	};
 	class gazole
@@ -1426,7 +1419,7 @@ class ALYSIA_ITEMS
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\gazole.paa";
-		license = "oil";
+		license = "company_fuel";
 		store[] = {"B_G_Van_01_fuel_F","B_Truck_01_fuel_F","O_Truck_02_fuel_F"};
 	};
 	class gpl
@@ -1436,7 +1429,7 @@ class ALYSIA_ITEMS
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\gpl.paa";
-		license = "oil";
+		license = "company_fuel";
 		store[] = {"B_G_Van_01_fuel_F","B_Truck_01_fuel_F","O_Truck_02_fuel_F"};
 	};
 	class kerosene
@@ -1446,7 +1439,7 @@ class ALYSIA_ITEMS
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\kerosene.paa";
-		license = "oil";
+		license = "company_fuel";
 		store[] = {"B_G_Van_01_fuel_F","B_Truck_01_fuel_F","O_Truck_02_fuel_F"};
 	};
 	
@@ -1457,7 +1450,6 @@ class ALYSIA_ITEMS
 		illegal = 1;
 		removable = 1;
 		image = "alysia_items_virtual\data\tortue.paa";
-		license = "";
 		class market
 		{
 			max = 825;
