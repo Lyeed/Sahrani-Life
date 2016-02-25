@@ -131,7 +131,7 @@ class ALYSIA_PROCESS
 		};
 	};
 
-	class platine1
+	class platine
 	{
 		name = "Fonte du platine";
 		sound = "smelting";
@@ -145,34 +145,8 @@ class ALYSIA_PROCESS
 			/* ARMA */{},
 			/* CASH */0
 		};
-		time_per_item = 2;
+		time_per_item = 5;
 		time_default = 4;
-		class target {};
-		class factions
-		{
-			class CIV
-			{
-				licenses[] = {"platine"};
-			};
-		};
-	};
-
-	class platine2
-	{
-		name = "Enrichissement du platine";
-		sound = "smelting";
-		require[] =
-		{
-			{"platinep", 1}, {"soufre", 1}
-		};
-		receive[] =
-		{
-			/* VIRTUAL */{{"platinepa", 1}},
-			/* ARMA */{},
-			/* CASH */0
-		};
-		time_per_item = 3;
-		time_default = 5;
 		class target {};
 		class factions
 		{

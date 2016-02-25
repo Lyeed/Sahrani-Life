@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_index", "_data", "_vehicleClassname", "_vehicleGaragePosition", "_price", "_validSpawn", "_vehicle", "_spawnPos"];
+private["_index", "_data", "_vehicleClassname", "_vehicleGaragePosition", "_price", "_validSpawn", "_vehicle", "_spawnPos", "_action"];
 
 if (!(isNil "gServer_soonReboot")) exitWith
 {
@@ -32,11 +32,43 @@ if (
 			((_vehicleGaragePosition distance (getMarkerPos "fourriere_SOUTH")) < 10)
 		)
 	) then {
-	_price = _price + (_price * 0.4);
+	private "_price_fourrière";
+	_price_fourrière = _price * 2.5;
+	_action =
+	[
+		format
+		[
+				"Votre véhicule se trouve à la <t color='#FF8000'>fourrière</t>. Vous devez payer <t color='#8cff9b'>%1</t>kn pour le récupérer.<br/>",
+			+	"Details :"
+			+	"Price de garage initial - <t color='#8cff9b'>%2</t>kn"
+			+	"Supplément de la fourrière - <t color='#8cff9b'>%3</t>kn",
+			[_price + _price_fourrière] call AlysiaClient_fnc_numberText,
+			[_price] call AlysiaClient_fnc_numberText,
+			[_price_fourrière] call AlysiaClient_fnc_numberText
+		],
+		"Fourrière",
+		"Payer",
+		"Quitter"
+	] call BIS_fnc_guiMessage;
+	_price = _price + _price_fourrière;
+} else {
+	_action = true;
 };
 
-if (g_atm < _price) exitWith {
-	[format["<t align='center'>Vous n'avez pas assez d'argent dans votre compte en banque</t><br/><br/><t align='left'>Manquant</t><t align='right' color='#ff8c8c'>%1kn</t>", [(_price - g_atm)] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
+if (!_action) exitWith {};
+
+if (g_atm < _price) exitWith
+{
+	[
+		format
+		[
+				"Vous n'avez pas assez d'argent dans votre compte en banque<br/>"
+			+	"Prix : <t color='#ff8c8c'>%1</t>kn"
+			+	"Manquant : <t color='#ff8c8c'>%2</t>kn",
+			[_price] call AlysiaClient_fnc_numberText
+			[_price - g_atm] call AlysiaClient_fnc_numberText
+		]
+	] call AlysiaClient_fnc_error;
 };
 
 if ((g_garage_info select 2) isEqualTo []) then

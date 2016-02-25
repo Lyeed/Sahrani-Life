@@ -24,7 +24,7 @@ if (!([false, "lockpick", 1] call AlysiaClient_fnc_handleInv)) exitWith {};
 [g_interaction_target, "lockpick", 100] call CBA_fnc_globalSay3d;
 if ((random(100)) < 25) then 
 {
-	g_vehicles pushBack _curTarget;
+	g_vehicles pushBack g_interaction_target;
 	titleText["Réussi !", "PLAIN DOWN"];
 } else {
 	titleText["Echoué !", "PLAIN DOWN"];	

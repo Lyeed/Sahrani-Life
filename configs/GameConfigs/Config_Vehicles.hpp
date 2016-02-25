@@ -2219,7 +2219,7 @@ class ALYSIA_VEHICLES
 
 	class sab_a2
 	{
-		buyPrice = 125000;
+		buyPrice = 325000;
 		inventory = 150;
 		side = "CIV";
 		insurance = 1;
@@ -2443,7 +2443,7 @@ class ALYSIA_VEHICLES
 
   	class Fett_mohawk
 	{
-		buyPrice = 1125000;
+		buyPrice = 2125000;
 		inventory = 150;
 		side = "CIV";
 		insurance = 1;

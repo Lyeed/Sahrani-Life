@@ -13,32 +13,32 @@ _pay = [_this, 3, true, [true]] call BIS_fnc_param;
 _distance = [_this, 4, 10, [10]] call BIS_fnc_param;
 
 if (g_garage_store) exitWith {
-	["Vous êtes déjà en train de ranger un véhicule<br/>Veuillez patienter"] call AlysiaClient_fnc_error;
+	["Vous êtes déjà en train de ranger un véhicule."] call AlysiaClient_fnc_error;
 };
 if (isNull _vehicle) exitWith {
-	["Impossible de récupérer les informations de votre véhicule"] call AlysiaClient_fnc_error;
+	["Impossible de récupérer les informations de votre véhicule."] call AlysiaClient_fnc_error;
 };
 if ((_storePos distance _vehicle) > _distance) exitWith {
-	["Le véhicule est trop loin pour être rangé au garage"] call AlysiaClient_fnc_error;
+	["Le véhicule est trop loin pour être rangé au garage."] call AlysiaClient_fnc_error;
 };
 if (_vehicle getVariable ["trunk_in_use", false]) exitWith {
-	["Vous ne pouvez pas ranger un véhicule lorsque son coffre est en train d'être fouillé"] call AlysiaClient_fnc_error;
+	["Vous ne pouvez pas ranger un véhicule lorsque son coffre est en train d'être fouillé."] call AlysiaClient_fnc_error;
 };
 if (!((crew _vehicle) isEqualTo [])) exitWith {
-	["Vous ne pouvez pas ranger un véhicule contenant des passagers ou un conducteur"] call AlysiaClient_fnc_error;
+	["Vous ne pouvez pas ranger un véhicule contenant des passagers ou un conducteur."] call AlysiaClient_fnc_error;
 };
 if ((speed _vehicle) > 0) exitWith {
-	["Vous ne pouvez pas ranger un véhicule qui se déplace"] call AlysiaClient_fnc_error;
+	["Vous ne pouvez pas ranger un véhicule qui se déplace."] call AlysiaClient_fnc_error;
 };
 if (isEngineOn _vehicle) exitWith {
-	["Vous ne pouvez pas ranger un véhicule ayant le moteur allumé"] call AlysiaClient_fnc_error;
+	["Vous ne pouvez pas ranger un véhicule ayant le moteur allumé."] call AlysiaClient_fnc_error;
 };
 
 if (_storeInventory) then
 {
 	if (_pay) then
 	{
-		_price = round(([(_vehicle getVariable ["Trunk", []])] call AlysiaClient_fnc_weightGenerate) * 75);
+		_price = round((([(_vehicle getVariable ["Trunk", []])] call AlysiaClient_fnc_weightGenerate) + 2) * 75);
 		if (_price > 0) then
 		{
 			if (g_atm > _price) then
@@ -52,11 +52,11 @@ if (_storeInventory) then
 			};
 		} else {
 			g_garage_store = true;
-			[_vehicle, _storePos, false] remoteExec ["AlysiaServer_fnc_garageVehicleStore", 2];
+			[_vehicle, _storePos, true] remoteExec ["AlysiaServer_fnc_garageVehicleStore", 2];
 		};
 	} else {
 		g_garage_store = true;
-		[_vehicle, _storePos, false] remoteExec ["AlysiaServer_fnc_garageVehicleStore", 2];
+		[_vehicle, _storePos, true] remoteExec ["AlysiaServer_fnc_garageVehicleStore", 2];
 	};
 } else {
 	g_garage_store = true;
@@ -66,6 +66,6 @@ if (_storeInventory) then
 if (g_garage_store) then
 {
 	waitUntil {(isNull _vehicle)};
-	["Vous avez rangé votre véhicule"] call AlysiaClient_fnc_info;
+	["Vous avez rangé votre véhicule."] call AlysiaClient_fnc_info;
 	g_garage_store = false;
 };

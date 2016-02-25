@@ -2451,7 +2451,7 @@ if (playerSide != west) then
 		} else {
 			removeAllActions _x;
 		};
-	} forEach ([stand_info_west_1, stand_info_west_2, stand_info_west_3, stand_info_west_4, stand_info_west_6, stand_info_west_7, stand_info_west_8, stand_info_west_9]);
+	} forEach ([stand_info_west_1, stand_info_west_3, stand_info_west_4, stand_info_west_6, stand_info_west_7, stand_info_west_8, stand_info_west_9]);
 };
 
 if (playerSide != independent) then

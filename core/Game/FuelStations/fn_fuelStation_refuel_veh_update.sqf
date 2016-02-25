@@ -18,12 +18,12 @@ if (isNull _display) exitWith {};
 
 _station = missionNamespace getVariable ["refuel_station_inUse", objNull];
 if (isNull _station) exitWith {
-	["Impossible de trouver la station cible"] call AlysiaClient_fnc_error;
+	["Impossible de trouver la station."] call AlysiaClient_fnc_error;
 };
 
 _fuel = _list lbData _sel;
 if (_fuel isEqualTo "") exitWith {
-	["Impossible de trouver l'essence sélectionné"] call AlysiaClient_fnc_error;
+	["Impossible de trouver l'essence sélectionnée."] call AlysiaClient_fnc_error;
 };
 
 (_display displayCtrl 16008) ctrlSetStructuredText parseText format

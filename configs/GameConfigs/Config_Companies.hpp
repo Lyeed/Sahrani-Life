@@ -42,13 +42,40 @@ class ALYSIA_COMPANIES
 			building = "Land_Ind_vysypka";
 			license = "company_weapon";
 			image = "lyeed_IMG\data\companies\types\weapon.paa";
-			process[] = {"bullet","buckshot","magazine","barillet","canon","crosse_wood","crosse_steel","garde_main","poignee","detente","percuteur","carcasse","bloc_culasse","levier","marteau","culasse","weapon_b95","magazine_b95","weapon_cz75","magazine_cz75","weapon_p226","magazine_p226","weapon_gsh18","magazine_gsh18","weapon_sdar","magazine_sdar"};
+			process[] =
+			{
+				"bullet","buckshot",
+				"magazine",
+				"barillet",
+				"canon",
+				"crosse_wood",
+				"crosse_steel",
+				"garde_main",
+				"poignee",
+				"detente",
+				"percuteur",
+				"carcasse",
+				"bloc_culasse",
+				"levier",
+				"marteau",
+				"culasse",
+				"weapon_b95",
+				"magazine_b95",
+				"weapon_cz75",
+				"magazine_cz75",
+				"weapon_p226",
+				"magazine_p226",
+				"weapon_gsh18",
+				"magazine_gsh18",
+				"weapon_sdar",
+				"magazine_sdar"
+			};
 			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
 				require[] = {{"woodp", 150}, {"ciment", 300}, {"goldbar", 15}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}, {"acier", 300}, {"brique", 150}};
-				price = 10000;
+				price = 980000;
 			};
 			class marker
 			{
@@ -76,7 +103,7 @@ class ALYSIA_COMPANIES
 			{
 				building = "Misc_palletsfoiled_heap";
 				require[] = {{"woodp", 200}, {"ciment", 100}, {"goldbar", 20}, {"furniture", 4}, {"ironp", 50}, {"sand", 80}, {"glass", 4}, {"copperp", 50}, {"alu", 20}, {"pierre", 200}, {"acier", 40}, {"brique", 200}};
-				price = 10000;
+				price = 275000;
 			};
 			class marker
 			{
@@ -104,7 +131,7 @@ class ALYSIA_COMPANIES
 			{
 				building = "Misc_palletsfoiled_heap";
 				require[] = {{"woodp", 10}, {"ciment", 200}, {"goldbar", 20}, {"furniture", 20}, {"ironp", 30}, {"sand", 50}, {"glass", 40}, {"copperp", 50}, {"alu", 120}, {"pierre", 150}, {"acier", 300}, {"brique", 50}};
-				price = 10000;
+				price = 325000;
 			};
 			class marker
 			{
@@ -132,7 +159,7 @@ class ALYSIA_COMPANIES
 			{
 				building = "Misc_palletsfoiled_heap";
 				require[] = {{"woodp", 40}, {"ciment", 250}, {"goldbar", 15}, {"furniture", 5}, {"ironp", 80}, {"sand", 40}, {"glass", 50}, {"copperp", 20}, {"alu", 20}, {"pierre", 200}, {"acier", 20}};
-				price = 10000;
+				price = 295000;
 			};
 			class marker
 			{
@@ -160,7 +187,7 @@ class ALYSIA_COMPANIES
 			{
 				building = "Misc_palletsfoiled_heap";
 				require[] = {{"woodp", 20}, {"ciment", 100}, {"goldbar", 20}, {"furniture", 20}, {"ironp", 150}, {"sand", 50}, {"glass", 50}, {"copperp", 50}, {"alu", 20}, {"pierre", 100}, {"acier", 220}};
-				price = 10000;
+				price = 875000;
 			};
 			class marker
 			{
@@ -182,13 +209,13 @@ class ALYSIA_COMPANIES
 			building = "Land_Factory_Main_F";
 			license = "company_foundry";
 			image = "lyeed_IMG\data\companies\types\foundry.paa";
-			process[] = {"steel"};
+			process[] = {"steel", "soufre"};
 			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
 				require[] = {{"woodp", 80}, {"ciment", 250}, {"goldbar", 75}, {"furniture", 10}, {"ironp", 50}, {"sand", 100}, {"glass", 80}, {"copperp", 20}, {"alu", 20}, {"pierre", 50}, {"acier", 150}, {"brique", 400}};
-				price = 10000;
+				price = 650000;
 			};
 			class marker
 			{
@@ -210,13 +237,13 @@ class ALYSIA_COMPANIES
 			building = "";//?
 			license = "company_fuel";
 			image = "lyeed_IMG\data\companies\types\fuel.paa";
-			process[] = {};
+			process[] = {"oil"};
 			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
 				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
-				price = 10000;
+				price = 649000;
 			};
 			class marker
 			{
@@ -238,13 +265,13 @@ class ALYSIA_COMPANIES
 			building = "Land_WIP_F";
 			license = "company_construction";
 			image = "lyeed_IMG\data\companies\types\construction.paa";
-			process[] = {};
+			process[] = {"brique", "Cimenttr"};
 			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
 				require[] = {{"woodp", 150}, {"ciment", 800}, {"goldbar", 35}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}, {"acier", 150}, {"brique", 200}};
-				price = 25000;
+				price = 382000;
 			};
 			class marker
 			{
@@ -272,7 +299,7 @@ class ALYSIA_COMPANIES
 			{
 				building = "Misc_palletsfoiled_heap";
 				require[] = {{"woodp", 40}, {"ciment", 200}, {"goldbar", 20}, {"furniture", 10}, {"ironp", 250}, {"sand", 50}, {"glass", 20}, {"copperp", 20}, {"alu", 100}, {"pierre", 50}, {"acier", 300}};
-				price = 10000;
+				price = 470000;
 			};
 			class marker
 			{
@@ -300,7 +327,7 @@ class ALYSIA_COMPANIES
 			{
 				building = "Misc_palletsfoiled_heap";
 				require[] = {{"woodp", 10}, {"ciment", 100}, {"goldbar", 40}, {"furniture", 10}, {"ironp", 50}, {"sand", 50}, {"glass", 20}, {"copperp", 10}, {"alu", 20}, {"pierre", 20}, {"acier", 300}};
-				price = 10000;
+				price = 495000;
 			};
 			class marker
 			{
@@ -328,7 +355,7 @@ class ALYSIA_COMPANIES
 			{
 				building = "Misc_palletsfoiled_heap";
 				require[] = {{"woodp", 20}, {"ciment", 380}, {"goldbar", 10}, {"furniture", 50}, {"ironp", 50}, {"sand", 50}, {"glass", 90}, {"copperp", 20}, {"alu", 20}, {"pierre", 200}, {"acier", 100}};
-				price = 10000;
+				price = 250000;
 			};
 			class marker
 			{
@@ -356,7 +383,7 @@ class ALYSIA_COMPANIES
 			{
 				building = "Misc_palletsfoiled_heap";
 				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
-				price = 10000;
+				price = 425000;
 			};
 			class marker
 			{
@@ -384,7 +411,7 @@ class ALYSIA_COMPANIES
 			{
 				building = "Misc_palletsfoiled_heap";
 				require[] = {{"woodp", 20}, {"ciment", 380}, {"goldbar", 10}, {"furniture", 80}, {"ironp", 80}, {"sand", 50}, {"glass", 50}, {"copperp", 20}, {"alu", 20}, {"pierre", 200}, {"acier", 100}, {"brique", 100}};
-				price = 10000;
+				price = 215000;
 			};
 			class marker
 			{
@@ -412,7 +439,7 @@ class ALYSIA_COMPANIES
 			{
 				building = "Misc_palletsfoiled_heap";
 				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
-				price = 10000;
+				price = 128000;
 			};
 			class marker
 			{

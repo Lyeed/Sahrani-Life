@@ -247,19 +247,6 @@ class ALYSIA_LICENSES
 			};
 		};
 	};
-	class brique
-	{
-		name = "Traitement de l'argile";
-		class factions
-		{
-			class CIV
-			{
-				price = 5000;
-				pad_store = 1;
-				illegal = 0;
-			};
-		};
-	};
 	class bauxite
 	{
 		name = "Traitement du bauxite";

@@ -118,14 +118,14 @@ class ALYSIA_STAFF
 				name = "Clef Cible";
 				statement = "g_vehicles pushBack cursorTarget;";
 				condition = "(!(isNull cursorTarget) && ((cursorTarget isKindOf 'Car') || (cursorTarget isKindOf 'Ship') || (cursorTarget isKindOf 'Air') || (cursorTarget isKindOf 'Tank') || (cursorTarget isKindOf 'Truck')))";
-				allow[] = {"76561198007960495", "76561198099211957"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424"};
 			};
 			class target_delete
 			{
 				name = "Supp Cible";
 				statement = "deleteVehicle cursorTarget;";
 				condition = "!(isNull cursorTarget)";
-				allow[] = {"76561198007960495", "76561198099211957"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424"};
 			};
 
 			class markers_ON

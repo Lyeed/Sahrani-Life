@@ -2795,4 +2795,9 @@ class ALYSIA_ITEMS_ARMA
         buy_price = 250;
         buy_condition_GUER = 1;
     };
+    class Alysia_siphon
+    {
+    	buy_price = 950;
+    	buy_license_CIV = "company_garagist";
+    };
 };

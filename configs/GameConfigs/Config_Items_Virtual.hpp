@@ -337,8 +337,8 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\meuble.paa";
 		class market
 		{
-			max = 660;
-			min = 500;
+			max = 600;
+			min = 300;
 			mult = 2;
 			affect[] = {"woodp","glass","brique","saltp","cottonp","ciment","coal"};
 		};
@@ -403,7 +403,7 @@ class ALYSIA_ITEMS
 	class platine
 	{
 		name = "Minerai de platine";
-		weight = 7;
+		weight = 6;
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\minerai_platine.paa";
@@ -418,8 +418,8 @@ class ALYSIA_ITEMS
 		license = "platine";
 		class market
 		{
-			max = 286;
-			min = 200;
+			max = 753;
+			min = 500;
 			mult = 4;
 			affect[] = {"goldbar","ironp","soufre","hsoufre","copperp","alu"};
 		};

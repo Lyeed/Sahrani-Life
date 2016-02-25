@@ -21,7 +21,13 @@ _display = findDisplay 2900;
 if (isNull _display) exitWith {};
 
 _health = floor((1 - (damage g_interaction_target)) * 100);
-(_display displayCtrl 2910) ctrlSetStructuredText parseText format["<t align='center'><t color='%2'>%3</t>%1</t>", "%", ([_health] call AlysiaClient_fnc_vehicleMenu_repair_getColor) select 1, _health];
+(_display displayCtrl 2910) ctrlSetStructuredText parseText format
+[
+	"<t align='center'><t color='%2'>%3</t>%1</t>",
+	"%",
+	([_health] call AlysiaClient_fnc_vehicleMenu_repair_getColor) select 1,
+	_health
+];
 
 [] call AlysiaClient_fnc_vehicleMenu_repair_fill;
 
