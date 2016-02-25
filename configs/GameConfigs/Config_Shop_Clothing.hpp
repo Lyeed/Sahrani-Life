@@ -812,6 +812,7 @@ class ALYSIA_SHOPS_CLOTHING
 			"TRYK_U_B_PCUHsW5",
 			"TRYK_U_B_PCUHsW6",
 			"SAMU_combi",
+			"Teodor Leko",
 			"rds_uniform_assistant",
 			"rds_uniform_doctor"
 		};
