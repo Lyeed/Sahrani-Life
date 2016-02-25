@@ -30,7 +30,7 @@ class ALYSIA_ITEMS
 	class goldbar
 	{
 		name = "Lingot d'or";
-		weight = 40;
+		weight = 30;
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\lingot_or.paa";
@@ -331,7 +331,7 @@ class ALYSIA_ITEMS
 	class furniture
 	{
 		name = "Meuble";
-		weight = 10;
+		weight = 8;
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\meuble.paa";
@@ -716,7 +716,7 @@ class ALYSIA_ITEMS
 	class glass
 	{
 		name = "Verre";
-		weight = 3;
+		weight = 2;
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\verre.paa";
@@ -934,7 +934,7 @@ class ALYSIA_ITEMS
 	class baux
 	{
 		name = "Minerai de bauxite";
-		weight = 5;
+		weight = 4;
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\minerai_bauxite.paa";
@@ -942,13 +942,13 @@ class ALYSIA_ITEMS
 	class alu
 	{
 		name = "Lingot d'aluminium";
-		weight = 4;
+		weight = 3;
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\alluminium.paa";
 		class market
 		{
-			max = 242;
+			max = 262;
 			min = 170;
 			mult = 2;
 			affect[] = {"goldbar","ironp","soufre","platinep","hsoufre","copperp","steel"};
@@ -1068,7 +1068,7 @@ class ALYSIA_ITEMS
 	class salt
 	{
 		name = "Sel";
-		weight = 3;
+		weight = 4;
 		price_buy = 60;
 		price_sell  = 30;
 		illegal = 0;
@@ -1253,7 +1253,7 @@ class ALYSIA_ITEMS
 	class pierre
 	{
 		name = "Pierre";
-		weight = 5;
+		weight = 4;
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\pierre.paa";
@@ -1261,7 +1261,7 @@ class ALYSIA_ITEMS
 	class ciment
 	{
 		name = "Ciment";
-		weight = 4;
+		weight = 3;
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\ciment.paa";
@@ -1277,7 +1277,7 @@ class ALYSIA_ITEMS
 	class steel
 	{
 		name = "Acier";
-		weight = 5;
+		weight = 4;
 		illegal = 0;
 		removable = 1;
 		image = "alysia_items_virtual\data\steel.paa";
