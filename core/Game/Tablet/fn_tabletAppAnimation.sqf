@@ -12,11 +12,12 @@ _new_app = [_this, 2, "", [""]] call BIS_fnc_param;
 _old_app = [_this, 3, "", [""]] call BIS_fnc_param;
 
 disableSerialization;
-_display = uiNamespace getVariable["tablet", displayNull];
+_display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
+
 if (_old_app isEqualTo "") exitWith
 {
-	private["_loading_ctrl"];
+	private "_loading_ctrl";
 	ctrlSetText[7502, getText(missionConfigFile >> "RscDisplayTablet" >> "controls" >> format["%1_BACKGROUND", _new_app])];
 	_loading_ctrl = _display displayCtrl 7506;
 	if (!(isNull _loading_ctrl)) then
@@ -25,23 +26,26 @@ if (_old_app isEqualTo "") exitWith
 		{
 			_loading_ctrl ctrlSetFade ((ctrlFade _loading_ctrl) + 0.05);
 			_loading_ctrl ctrlCommit 0;
-			uiSleep 0.01;
+			uiSleep 0.05;
 		};
 	};
+
 	ctrlShow[7501, true];
 
 	{
 		ctrlShow[_x, true];
-	} forEach (_new_idcs);
+	} forEach _new_idcs;
 };
-if (_old_app isEqualTo _new_app) exitWith
+
+if ((_old_app isEqualTo _new_app) || !(profileNamespace getVariable ["ALYSIA_tablet_animation", true])) exitWith
 {
 	{
 		ctrlShow[_x, false];
-	} forEach (_old_idcs);
+	} forEach _old_idcs;
+	
 	{
 		ctrlShow[_x, true];
-	} forEach (_new_idcs);
+	} forEach _new_idcs;
 };
 
 _handleValue = ctrlPosition (_display displayCtrl 7501);
@@ -50,19 +54,17 @@ _maxValue = _minValue + (_handleValue select 2);
 
 _new_ctrls = [];
 {
-	private["_ctrl"];
 	_ctrl = _display displayCtrl _x;
 	_new_ctrls pushBack [_ctrl, (ctrlPosition _ctrl) select 0];
 	_ctrl ctrlSetPosition [_maxValue, (ctrlPosition _ctrl) select 1];
 	_ctrl ctrlCommit 0;
-} forEach (_new_idcs);
+} forEach _new_idcs;
 
 _old_ctrls = [];
 {
-	private["_ctrl"];
 	_ctrl = _display displayCtrl _x;
 	_old_ctrls pushBack [_ctrl, (ctrlPosition _ctrl) select 0];
-} forEach (_old_idcs);
+} forEach _old_idcs;
 
 _old_background_img = getText(missionConfigFile >> "RscDisplayTablet" >> "controls" >> format["%1_BACKGROUND", _old_app]);
 _new_background_img = getText(missionConfigFile >> "RscDisplayTablet" >> "controls" >> format["%1_BACKGROUND", _new_app]);
@@ -79,16 +81,14 @@ if (_old_background_img != _new_background_img) then
 	_old_background_ctrl ctrlCommit 0;
 };
 
-while {true} do
+while {!(isNull _display) && (!(_new_ctrls isEqualTo []) || !(_old_ctrls isEqualTo []) || ((ctrlFade _new_background_ctrl) > 0))} do
 {
-
-	if (((_new_ctrls isEqualTo []) && (_old_ctrls isEqualTo []) && ((ctrlFade _new_background_ctrl) <= 0)) || (isNull _display)) exitWith {};
 
 	{
 		_ctrl = _x select 0;
 		_position_global = ctrlPosition _ctrl;
 
-		_position_x = (_position_global select 0) - 0.02;
+		_position_x = (_position_global select 0) - 0.05;
 		if (_position_x <= _minValue) then
 		{
 			_old_ctrls deleteAt _forEachIndex;
@@ -98,14 +98,14 @@ while {true} do
 
 		_ctrl ctrlSetPosition [_position_x, _position_global select 1];
 		_ctrl ctrlCommit 0;
-	} forEach (_old_ctrls);
+	} forEach _old_ctrls;
 
 	{
 		_ctrl = _x select 0;
 		_default_x = _x select 1;
 		_position_global = ctrlPosition _ctrl;
 
-		_position_x = (_position_global select 0) - 0.02;
+		_position_x = (_position_global select 0) - 0.05;
 		if (_position_x <= _default_x) then
 		{
 			_new_ctrls deleteAt _forEachIndex;
@@ -120,7 +120,7 @@ while {true} do
 		} else {
 			_ctrl ctrlShow true;
 		};
-	} forEach (_new_ctrls);
+	} forEach _new_ctrls;
 
 	if (_old_background_img != _new_background_img) then
 	{
@@ -137,7 +137,7 @@ while {true} do
 		};
 	};
 
-	uiSleep 0.01;
+	uiSleep 0.05;
 };
 
 if (_old_background_img != _new_background_img) then

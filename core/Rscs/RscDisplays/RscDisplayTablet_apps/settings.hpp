@@ -21,6 +21,12 @@
 #define SETTINGS_TASKFORCE_HEADER_IDC			7820
 #define SETTINGS_TASKFORCE_INFO_IDC				7821
 #define SETTINGS_FPS_FRAME_IDC					7825
+#define SETTINGS_TABLET_ANIMATION_HEADER_IDC    7826
+#define SETTINGS_TABLET_ANIMATION_CHECKBOX_IDC  7827
+#define SETTINGS_TABLET_ANIMATION_FRAME_IDC     7828
+#define SETTINGS_HUD_ANIMATION_HEADER_IDC       7829
+#define SETTINGS_HUD_ANIMATION_CHECKBOX_IDC     7830
+#define SETTINGS_HUD_ANIMATION_FRAME_IDC        7831
 
 SETTINGS_BACKGROUND = "lyeed_IMG\data\tablet\backgrounds\back.jpg";
 SETTINGS_IDCS[] =
@@ -47,7 +53,13 @@ SETTINGS_IDCS[] =
 	SETTINGS_TASKFORCE_FRAME_IDC,
 	SETTINGS_TASKFORCE_SLIDER_IDC,
 	SETTINGS_TASKFORCE_HEADER_IDC,
-	SETTINGS_TASKFORCE_INFO_IDC
+	SETTINGS_TASKFORCE_INFO_IDC,
+	SETTINGS_TABLET_ANIMATION_HEADER_IDC,
+	SETTINGS_TABLET_ANIMATION_CHECKBOX_IDC,
+	SETTINGS_TABLET_ANIMATION_FRAME_IDC,
+	SETTINGS_HUD_ANIMATION_HEADER_IDC,
+	SETTINGS_HUD_ANIMATION_CHECKBOX_IDC,
+	SETTINGS_HUD_ANIMATION_FRAME_IDC
 };
 
 class SETTINGS_FPS_HEADER: RscStructuredText
@@ -301,4 +313,68 @@ class SETTINGS_TASKFORCE_INFO: RscStructuredText
 	y = 0.588 * safezoneH + safezoneY;
 	w = 0.04125 * safezoneW;
 	h = 0.022 * safezoneH;
+};
+
+class SETTINGS_TABLET_ANIMATION_HEADER: RscStructuredText
+{
+	idc = SETTINGS_TABLET_ANIMATION_HEADER_IDC;
+	text = "<t align='center'>Animations tablette</t>";
+	colorBackground[] = {0,0,0,0.8};
+
+	x = 0.324687 * safezoneW + safezoneX;
+	y = 0.555 * safezoneH + safezoneY;
+	w = 0.0876563 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class SETTINGS_TABLET_ANIMATION_CHECKBOX: RscCheckBox
+{
+	idc = SETTINGS_TABLET_ANIMATION_CHECKBOX_IDC;
+	tooltip = "Activer/désactiver les animations sur la tablette";
+	onCheckedChanged = "if ((_this select 1) isEqualTo 0) then {profileNamespace setVariable [""ALYSIA_tablet_animation"", false]} else {profileNamespace setVariable [""ALYSIA_tablet_animation"", true]};";
+
+	x = 0.355625 * safezoneW + safezoneX;
+	y = 0.577 * safezoneH + safezoneY;
+	w = 0.020625 * safezoneW;
+	h = 0.033 * safezoneH;
+};
+class SETTINGS_TABLET_ANIMATION_FRAME: RscFrame
+{
+	idc = SETTINGS_TABLET_ANIMATION_FRAME_IDC;
+
+	x = 0.324687 * safezoneW + safezoneX;
+	y = 0.555 * safezoneH + safezoneY;
+	w = 0.0876563 * safezoneW;
+	h = 0.055 * safezoneH;
+};
+
+class SETTINGS_HUD_ANIMATION_HEADER: RscStructuredText
+{
+	idc = SETTINGS_HUD_ANIMATION_HEADER_IDC;
+	text = "<t align='center'>Animations interface</t>";
+	colorBackground[] = {0,0,0,0.8};
+
+	x = 0.324687 * safezoneW + safezoneX;
+	y = 0.621 * safezoneH + safezoneY;
+	w = 0.0876563 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class SETTINGS_HUD_ANIMATION_CHECKBOX: RscCheckBox
+{
+	idc = SETTINGS_HUD_ANIMATION_CHECKBOX_IDC;
+	tooltip = "Activer/désactiver les animations de l'interface";
+	onCheckedChanged = "if ((_this select 1) isEqualTo 0) then {profileNamespace setVariable [""ALYSIA_hud_animation"", false]} else {profileNamespace setVariable [""ALYSIA_hud_animation"", true]};";
+
+	x = 0.355625 * safezoneW + safezoneX;
+	y = 0.643 * safezoneH + safezoneY;
+	w = 0.020625 * safezoneW;
+	h = 0.033 * safezoneH;
+};
+class SETTINGS_HUD_ANIMATION_FRAME: RscFrame
+{
+	idc = SETTINGS_HUD_ANIMATION_FRAME_IDC;
+
+	x = 0.324687 * safezoneW + safezoneX;
+	y = 0.621 * safezoneH + safezoneY;
+	w = 0.0876563 * safezoneW;
+	h = 0.055 * safezoneH;
 };

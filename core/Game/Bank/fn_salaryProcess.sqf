@@ -184,15 +184,18 @@ if (_add_to_south > 0) then
 	[east, true, _add_to_south] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
 };
 
-[
-	format
+if (profileNamespace getVariable ["ALYSIA_phone_salary", true]) then
+{
 	[
-			"Vous avez reçu votre salaire et vos factures<br/>"
-		+	"+ <t color='#8cff9b'>%1</t>kn<br/>"
-		+	"- <t color='#ff8c8c'>%2</t>kn<br/>"
-		+	"Pour plus d'informations rendez-vous dans l'application <t color='#00FF80'>solde</t> de votre tablette",
-		([_price_add] call AlysiaClient_fnc_numberText),
-		([_price_remove] call AlysiaClient_fnc_numberText)
-	],
-	"BANQUE"
-] call AlysiaClient_fnc_phone_message_receive;
+		format
+		[
+				"Vous avez reçu votre salaire et vos factures<br/>"
+			+	"+ <t color='#8cff9b'>%1</t>kn<br/>"
+			+	"- <t color='#ff8c8c'>%2</t>kn<br/>"
+			+	"Pour plus d'informations rendez-vous dans l'application <t color='#00FF80'>solde</t> de votre tablette",
+			([_price_add] call AlysiaClient_fnc_numberText),
+			([_price_remove] call AlysiaClient_fnc_numberText)
+		],
+		"BANQUE"
+	] call AlysiaClient_fnc_phone_message_receive;
+};

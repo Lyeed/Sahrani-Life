@@ -2786,7 +2786,7 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 125;
 	};
-	class tf_anprc152_2
+	class tf_anprc152
 	{
 		buy_price = 150;
 	};

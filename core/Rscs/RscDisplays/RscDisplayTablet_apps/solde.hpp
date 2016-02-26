@@ -14,6 +14,9 @@
 #define SOLDE_BILLS_HEADER_IDC         7613
 #define SOLDE_BILLS_FRAME_IDC          7614
 #define SOLDE_BILLS_INFO_IDC           7615
+#define SOLDE_SMS_HEADER               7616
+#define SOLDE_SMS_CHECKBOX             7617
+#define SOLDE_SMS_FRAME                7618
 
 SOLDE_BACKGROUND = "lyeed_IMG\data\tablet\backgrounds\back_bank.jpg";
 SOLDE_IDCS[] =
@@ -196,4 +199,36 @@ class SOLDE_BILLS_INFO: RscListbox
 	y = 0.368 * safezoneH + safezoneY;
 	w = 0.221719 * safezoneW;
 	h = 0.319 * safezoneH;
+};
+
+class SOLDE_SMS_HEADER: RscStructuredText
+{
+	idc = SOLDE_SMS_HEADER_IDC;
+	text = "<t align='center'>Envoie SMS</t>";
+	colorBackground[] = {0,0,0,0.8};
+
+	x = 0.381406 * safezoneW + safezoneX;
+	y = 0.588 * safezoneH + safezoneY;
+	w = 0.0979687 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class SOLDE_SMS_CHECKBOX: RscCheckbox
+{
+	idc = SOLDE_SMS_CHECKBOX_IDC;
+	tooltip = "Recevoir un SMS lors du salaire";
+	onCheckedChanged = "if ((_this select 1) isEqualTo 0) then {profileNamespace setVariable [""ALYSIA_phone_salary"", false]} else {profileNamespace setVariable [""ALYSIA_phone_salary"", true]};";
+
+	x = 0.4175 * safezoneW + safezoneX;
+	y = 0.61 * safezoneH + safezoneY;
+	w = 0.020625 * safezoneW;
+	h = 0.033 * safezoneH;
+};
+class SOLDE_SMS_FRAME: RscFrame
+{
+	idc = SOLDE_SMS_FRAME_IDC;
+
+	x = 0.381406 * safezoneW + safezoneX;
+	y = 0.588 * safezoneH + safezoneY;
+	w = 0.0979687 * safezoneW;
+	h = 0.055 * safezoneH;
 };

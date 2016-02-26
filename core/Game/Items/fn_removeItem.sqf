@@ -19,10 +19,6 @@ if ((vehicle player) != player) exitWith {
 	["Action impossible en véhicule"] call AlysiaClient_fnc_error;
 };
 
-if ((getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "removable")) isEqualTo 0) exitWith {
-	["Vous ne pouvez pas supprimer cet objet"] call AlysiaClient_fnc_error;
-};
-
 g_action_inUse = true;
 
 if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then

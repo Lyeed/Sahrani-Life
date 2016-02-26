@@ -40,13 +40,13 @@ _allowed = switch (playerSide) do
 			["Vous n'êtes pas autorisé à changer de faction"] spawn AlysiaClient_fnc_errorExit;
 			false;
 		};
-
+/*
 		if ((str(player) in ["CIV_71","CIV_72","CIV_73","CIV_74","CIV_75","CIV_76","CIV_77","CIV_78","CIV_79","CIV_80","CIV_81","CIV_82","CIV_83","CIV_84","CIV_85","CIV_86","CIV_87","CIV_88","CIV_89","CIV_90","CIV_91","CIV_92","CIV_93","CIV_94","CIV_95","CIV_96","CIV_97","CIV_98","CIV_99","CIV_100"]) && ((call g_donator) isEqualTo 0)) exitWith
 		{
 			["Ce slot est réservé aux donateurs"] spawn AlysiaClient_fnc_errorExit;
 			false;
 		};
-
+*/
 		true;
 	};
 	case west:
@@ -62,13 +62,13 @@ _allowed = switch (playerSide) do
 			["Vous n'êtes pas autorisé à changer de faction"] spawn AlysiaClient_fnc_errorExit;
 			false;
 		};
-
+/*
 		if ((str(player) in ["WEST_16","WEST_17","WEST_18","WEST_19","WEST_20","WEST_21","WEST_22","WEST_23","WEST_24","WEST_25"]) && ((call g_donator) isEqualTo 0)) exitWith
 		{
 			["Ce slot est réservé aux donateurs"] spawn AlysiaClient_fnc_errorExit;
 			false;
 		};
-
+*/
 		true;
 	};
 	case east:
@@ -84,13 +84,13 @@ _allowed = switch (playerSide) do
 			["Vous n'êtes pas autorisé à changer de faction"] spawn AlysiaClient_fnc_errorExit;
 			false;
 		};
-
+/*
 		if ((str(player) in ["EAST_16","EAST_17","EAST_18","EAST_19","EAST_20","EAST_21","EAST_22","EAST_23","EAST_24","EAST_25"]) && ((call g_donator) isEqualTo 0)) exitWith
 		{
 			["Ce slot est réservé aux donateurs"] spawn AlysiaClient_fnc_errorExit;
 			false;
 		};
-
+*/
 		true;
 	};
 	case independent:
@@ -106,13 +106,13 @@ _allowed = switch (playerSide) do
 			["Vous n'êtes pas autorisé à changer de faction"] spawn AlysiaClient_fnc_errorExit;
 			false;
 		};
-
+/*
 		if ((str(player) in ["GUER_7","GUER_8","GUER_9","GUER_10"]) && ((call g_donator) isEqualTo 0)) exitWith
 		{
 			["Ce slot est réservé aux donateurs"] spawn AlysiaClient_fnc_errorExit;
 			false;
 		};
-
+*/
 		true;
 	};
 	default {false};

@@ -184,7 +184,7 @@ class ALYSIA_FACTIONS
 				"ItemCompass",
 				"ItemWatch",
 				"ItemGPS",
-				"tf_anprc152_2"
+				"tf_anprc152"
 			};
 		};
 
@@ -388,7 +388,7 @@ class ALYSIA_FACTIONS
 				"ItemCompass",
 				"ItemWatch",
 				"ItemGPS",
-				"tf_anprc152_2"
+				"tf_anprc152"
 			};
 		};
 
@@ -690,7 +690,7 @@ class ALYSIA_FACTIONS
 				"ItemWatch",
 				"ItemGPS",
 				"Badge_samu",
-				"tf_anprc152_2"
+				"tf_anprc152"
 			};
 		};
 

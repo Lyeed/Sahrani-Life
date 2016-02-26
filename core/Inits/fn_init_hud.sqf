@@ -5,10 +5,10 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_move_ctrl"];
+private "_move_ctrl";
 _move_ctrl =
 {
-	private["_ctrl", "_type", "_distance", "_default_position"];
+	private["_ctrl", "_type", "_distance", "_default_position", "_math", "_hide_end", "_position_end"];
 	
 	disableSerialization;
 	_ctrl = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
@@ -17,46 +17,48 @@ _move_ctrl =
 
 	_type = [_this, 1, "", [""]] call BIS_fnc_param;
 	_hide_end = [_this, 2, true, [true]] call BIS_fnc_param;
-	_distance = [_this, 3, 0, [0]] call BIS_fnc_param;
 
 	_default_position = ctrlPosition _ctrl;
-	if (_distance isEqualTo 0) then {
-		_distance = _default_position select 2;
-	};
+	_distance = [_this, 3, (_default_position select 2), [0]] call BIS_fnc_param;
+	_math = _distance / 13;
 
-	if (!(ctrlShown _ctrl)) then {
-		_ctrl ctrlShow true;
-	};
-
-	switch (_type) do
+	if (!(ctrlShown _ctrl)) then {_ctrl ctrlShow true};
+	if (profileNamespace getVariable ["ALYSIA_hud_animation", true]) then
 	{
-		case "right":
+		switch (_type) do
 		{
-			_position_end = (_default_position select 0) + _distance;
-			while {((ctrlPosition _ctrl) select 0) < _position_end} do
+			case "right":
 			{
-				_ctrl ctrlSetPosition [((ctrlPosition _ctrl) select 0) + (_distance / 40), (_default_position select 1)];
-				_ctrl ctrlCommit 0;
-				uiSleep 0.01;
+				_position_end = (_default_position select 0) + _distance;
+				while {((((ctrlPosition _ctrl) select 0) + _math) < _position_end)} do
+				{
+					_ctrl ctrlSetPosition [((ctrlPosition _ctrl) select 0) + _math, (_default_position select 1)];
+					_ctrl ctrlCommit 0;
+					uiSleep 0.1;
+				};
 			};
-			if (_hide_end) then {
-				_ctrl ctrlShow false;
+			case "left":
+			{
+				_position_end = (_default_position select 0) - _distance;
+				while {((((ctrlPosition _ctrl) select 0) - _math) > _position_end)} do
+				{
+					_ctrl ctrlSetPosition [((ctrlPosition _ctrl) select 0) - _math, (_default_position select 1)];
+					_ctrl ctrlCommit 0;
+					uiSleep 0.1;
+				};
 			};
 		};
-		case "left":
+	} else {
+		switch (_type) do
 		{
-			_position_end = (_default_position select 0) - _distance;
-			while {((ctrlPosition _ctrl) select 0) > _position_end} do
-			{
-				_ctrl ctrlSetPosition [((ctrlPosition _ctrl) select 0) - (_distance / 40), (_default_position select 1)];
-				_ctrl ctrlCommit 0;
-				uiSleep 0.01;
-			};
-			if (_hide_end) then {
-				_ctrl ctrlShow false;
-			};
+			case "right": {_position_end = (_default_position select 0) + _distance};
+			case "left": {_position_end = (_default_position select 0) - _distance};
 		};
 	};
+
+	_ctrl ctrlSetPosition [_position_end, (_default_position select 1)];
+	_ctrl ctrlCommit 0;
+	if (_hide_end) then {_ctrl ctrlShow false};
 };
 
 if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then

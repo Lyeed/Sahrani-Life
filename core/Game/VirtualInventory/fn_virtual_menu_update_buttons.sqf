@@ -45,11 +45,6 @@ if (isClass(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food")) then
 };
 
 _button_2 = _display displayCtrl 85003;
-if (getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "removable") isEqualTo 1) then
-{
-	_button_2 ctrlSetText "Supprimer";
-	_button_2 buttonSetAction format["['%1'] call AlysiaClient_fnc_removeItem;", _item];
-	_button_2 ctrlShow true;
-} else {
-	_button_2 ctrlShow false;
-};
+_button_2 ctrlSetText "Supprimer";
+_button_2 buttonSetAction format["['%1'] call AlysiaClient_fnc_removeItem;", _item];
+_button_2 ctrlShow true;
