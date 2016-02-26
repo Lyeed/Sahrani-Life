@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_index", "_data", "_vehicleClassname", "_vehicleGaragePosition", "_price", "_validSpawn", "_vehicle", "_spawnPos", "_action"];
+private["_index", "_data", "_vehicleClassname", "_vehicleGaragePosition", "_price", "_validSpawn", "_vehicle", "_spawnPos", "_action", "_hitpoints"];
 
 if (!(isNil "gServer_soonReboot")) exitWith
 {
@@ -104,8 +104,10 @@ _vehicle setVectorUp (surfaceNormal _spawnPos);
 _vehicle setDir (markerDir _validSpawn);
 _vehicle lock 2;
 
+_hitpoints = (getAllHitPointsDamage _vehicle) select 1;
+
 {
-	if (_x > 0) then
+	if ((_x > 0) && ((_hitpoints select _forEachIndex) != "")) then
 	{
 		if (local _vehicle) then {
 			_vehicle setHitIndex [_forEachIndex, _x];

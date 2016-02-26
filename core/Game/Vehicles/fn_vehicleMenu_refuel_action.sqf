@@ -38,7 +38,7 @@ player removeMagazine _item;
 player addMagazine "Alysia_jerrycan_empty";
 
 _max = getNumber(configFile >> "CfgVehicles" >> typeof(g_interaction_target) >> "fuelCapacity");
-_actual = (_max - ((fuel g_interaction_target) * _max)) + 20;
+_actual = _max - (((fuel g_interaction_target) * _max) + 20);
 if (_actual > _max) then {_actual = _max;};
 _actual = floor(_actual / _max);
 

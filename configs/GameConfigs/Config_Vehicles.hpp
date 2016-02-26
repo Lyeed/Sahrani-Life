@@ -2265,11 +2265,10 @@ class ALYSIA_VEHICLES
 		fuel = "Kerosene";
 		realname = "DC3";
 	};
-	
 	class CUP_C_C47_CIV
 	{
 		buyPrice = 145000;
-		inventory = 220;
+		inventory = 150;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"pilot"};
@@ -2408,7 +2407,7 @@ class ALYSIA_VEHICLES
   	class Fett_orca
 	{
 		buyPrice = 925000;
-		inventory = 50;
+		inventory = 30;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"pilot"};
@@ -2444,7 +2443,7 @@ class ALYSIA_VEHICLES
   	class Fett_mohawk
 	{
 		buyPrice = 2125000;
-		inventory = 150;
+		inventory = 40;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"pilot"};

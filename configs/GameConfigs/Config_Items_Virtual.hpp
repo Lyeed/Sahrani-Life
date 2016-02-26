@@ -355,8 +355,8 @@ class ALYSIA_ITEMS
 		license = "platine";
 		class market
 		{
-			max = 753;
-			min = 500;
+			max = 653;
+			min = 400;
 			mult = 4;
 			affect[] = {"goldbar","ironp","soufre","hsoufre","copperp","alu"};
 		};

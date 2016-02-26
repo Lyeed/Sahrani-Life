@@ -24,6 +24,12 @@ if (player getVariable ["surrender", false]) then
 				player action ["eject", (vehicle player)];
 			};
 		};
+
+		if (cameraView isEqualTo "EXTERNAL") then
+		{
+			player switchCamera "Internal";
+		};
 	};
+	
 	player switchmove "AMOVPERCMSTPSNONWNONDNON_EASEOUT";
 };

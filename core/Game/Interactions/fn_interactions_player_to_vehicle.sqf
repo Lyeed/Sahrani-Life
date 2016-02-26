@@ -33,6 +33,7 @@ if (isNull _target) exitWith {};
 			"
 				(
 					((vehicle player) isEqualTo player)	&&
+					((locked g_interaction_target) != 2) &&
 					(
 						('Alysia_jerrycan_sp98' in (magazines player)) ||
 						('Alysia_jerrycan_sp95' in (magazines player)) ||

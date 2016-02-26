@@ -702,7 +702,6 @@ class ALYSIA_PROCESS
 			};
 		};
 	};
-
 	class table_wood
 	{
 		name = "Fabrication de tables (bois)";

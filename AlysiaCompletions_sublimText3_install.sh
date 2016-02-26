@@ -2,12 +2,12 @@
 # writen by Lyeed
 # /!\ Must be launch in the same folder as Alysia.sublime-completions & CBA.sublime-completions /!\
 
-if [ ! -d "$APPDATA\Sublime Text 3" ];then
+if [ ! -d "$APPDATA\Sublime Text 3" ]; then
 	read -p "Error: Can't find SublimText 3 folder in $APPDATA. Press 'ENTER' to exit"
 	exit 1
 fi
 
-if [ ! -d "$APPDATA\Sublime Text 3\Packages\User" ];then
+if [ ! -d "$APPDATA\Sublime Text 3\Packages\User" ]; then
 	read -p "Error: Can't find User folder in $APPDATA/Sublime Text 3. Press 'ENTER' to exit"
 	exit 1
 fi
