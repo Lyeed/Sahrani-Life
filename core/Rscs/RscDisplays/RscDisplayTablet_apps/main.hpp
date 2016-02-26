@@ -360,7 +360,7 @@ class APP_PREV_IMAGE: RscPicture
 class APP_PREV_BUTTON: RscButtonSilent
 {
 	idc = APP_PREV_BUTTON_IDC;
-	action = "uiNamespace setVariable ['main_status', (uiNamespace getVariable ['main_status', 0]) - 1]; ['MAIN'] spawn AlysiaClient_fnc_tabletApp;";
+	action = "uiNamespace setVariable ['main_status', (uiNamespace getVariable ['main_status', 0]) - 1];['MAIN'] spawn AlysiaClient_fnc_tabletApp;";
 	onMouseEnter = "ctrlSetText[7542,""lyeed_IMG\data\tablet\app_main\left_arrow_select.paa""];";
 	onMouseExit = "ctrlSetText[7542,""lyeed_IMG\data\tablet\app_main\left_arrow.paa""];";
 
@@ -372,7 +372,7 @@ class APP_PREV_BUTTON: RscButtonSilent
 class APP_NEXT_BUTTON: RscButtonSilent
 {
 	idc = APP_NEXT_BUTTON_IDC;
-	action = "uiNamespace setVariable ['main_status', (uiNamespace getVariable ['main_status', 0]) + 1]; ['MAIN'] spawn AlysiaClient_fnc_tabletApp;";
+	action = "uiNamespace setVariable ['main_status', (uiNamespace getVariable ['main_status', 0]) + 1];['MAIN'] spawn AlysiaClient_fnc_tabletApp;";
 	onMouseEnter = "ctrlSetText[7540,""lyeed_IMG\data\tablet\app_main\right_arrow_select.paa""];";
 	onMouseExit = "ctrlSetText[7540,""lyeed_IMG\data\tablet\app_main\right_arrow.paa""];";
 

@@ -8,9 +8,9 @@
 private["_unit"];
 _unit = cursorTarget;
 
-if ((isNull _unit) || !(_unit isKindOf "Car")) exitWith { ["Cible invalide"] call ALYSIA_fnc_error; };
-if ((vehicle player) != player) exitWith { ["Vous devez être à pied pour utiliser cet objet"] call ALYSIA_fnc_error; };
-if (dialog) then { closeDialog 0; };
+if ((isNull _unit) || !(_unit isKindOf "Car")) exitWith {["Cible invalide"] call ALYSIA_fnc_error;};
+if ((vehicle player) != player) exitWith {["Vous devez être à pied pour utiliser cet objet"] call ALYSIA_fnc_error;};
+if (dialog) then {closeDialog 0;};
 
 if ([false, "nitro", 1] call life_fnc_handleInv) then
 {
@@ -24,6 +24,6 @@ if ([false, "nitro", 1] call life_fnc_handleInv) then
 			_unit setVariable["nitro", 3, true];
 			["Injecteur Nitro fixé au véhicule (3 injections). Appuyez sur 6 lorsque vous conduisez pour l'activer"] call ALYSIA_fnc_info;
 		}
-		else { ["Vous êtes trop loin"] call ALYSIA_fnc_error; };
+		else {["Vous êtes trop loin"] call ALYSIA_fnc_error;};
 	};
 };

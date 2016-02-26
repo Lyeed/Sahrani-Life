@@ -15,9 +15,9 @@ if (isNull _target) exitWith {};
 	"player_to_dog",
 	[
 		["search", "Chercher", "[player, 'whistle', 30] call CBA_fnc_globalSay3d;", "((g_dog isEqualTo g_interaction_target) && (isNull (g_dog getVariable ['search', objNull])))"],
-		["hire", "Renvoyer", "deleteVehicle g_dog; [player, 'whistle', 30] call CBA_fnc_globalSay3d;", "(g_dog isEqualTo g_interaction_target)"],
-		["stop", "Stop", "g_dog setVariable ['follow', false]; [player, 'whistle', 30] call CBA_fnc_globalSay3d;", "((g_dog isEqualTo g_interaction_target) && (g_dog getVariable ['follow', false]))"],
-		["follow", "Suis-moi", "g_dog setVariable ['follow', true]; [player, 'whistle', 30] call CBA_fnc_globalSay3d;", "((g_dog isEqualTo g_interaction_target) && !(g_dog getVariable ['follow', false]) && (isNull (g_dog getVariable ['search', objNull])))"]
+		["hire", "Renvoyer", "deleteVehicle g_dog;[player, 'whistle', 30] call CBA_fnc_globalSay3d;", "(g_dog isEqualTo g_interaction_target)"],
+		["stop", "Stop", "g_dog setVariable ['follow', false];[player, 'whistle', 30] call CBA_fnc_globalSay3d;", "((g_dog isEqualTo g_interaction_target) && (g_dog getVariable ['follow', false]))"],
+		["follow", "Suis-moi", "g_dog setVariable ['follow', true];[player, 'whistle', 30] call CBA_fnc_globalSay3d;", "((g_dog isEqualTo g_interaction_target) && !(g_dog getVariable ['follow', false]) && (isNull (g_dog getVariable ['search', objNull])))"]
 	],
 	"Chien",
 	"lyeed_IMG\data\interactions\background.jpg",

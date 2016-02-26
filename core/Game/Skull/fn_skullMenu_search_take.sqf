@@ -18,7 +18,7 @@ _sel = lbCurSel 69002;
 if (_sel isEqualTo -1) exitWith {};
 
 if ((time - g_action_delay) < 1) exitWith {
-	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error; 
+	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error;
 };
 
 g_interaction_target_inv_active = true;

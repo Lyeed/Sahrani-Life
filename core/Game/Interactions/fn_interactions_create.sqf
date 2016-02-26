@@ -59,7 +59,7 @@ _idc_actual = 5010;
 	(_display displayCtrl (_idc_actual + 3)) ctrlSetStructuredText parseText format["<t align='left' size='1.3'>%1</t>", (_x select 1)];
 
 	_ctrl_btn = _display displayCtrl (_idc_actual + 4);
-	_ctrl_btn buttonSetAction format["closeDialog 0; %1", (_x select 2)];
+	_ctrl_btn buttonSetAction format["closeDialog 0;%1", (_x select 2)];
 
 	_ctrl_btn ctrlSetEventHandler["MouseEnter",
 	format
@@ -75,7 +75,7 @@ _idc_actual = 5010;
 	format
 	[
 		"((findDisplay 5000) displayCtrl %4) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>%5</t>"";
-		((findDisplay 5000) displayCtrl %3) ctrlSetBackgroundColor [0,0,0,0.6]; 
+		((findDisplay 5000) displayCtrl %3) ctrlSetBackgroundColor [0,0,0,0.6];
 		ctrlSetText[%1, ""lyeed_IMG\data\interactions\%7\action_%2.paa""];
 		ctrlShow[%6, true];",
 		(_idc_actual + 2), (_x select 0), (_idc_actual + 1), (_idc_actual + 3), (_x select 1), _idc_actual, _path

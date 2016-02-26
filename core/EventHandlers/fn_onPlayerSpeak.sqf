@@ -9,7 +9,7 @@
 if (!(alive player) || (player getVariable ["is_coma", false])) exitWith 
 {
 	g_speaking = false;
-	true; 
+	true;
 };
 
 if (player getVariable ["baillon", false]) exitWith

@@ -107,7 +107,7 @@ class COMPANY_ACTION_HIRE_IMAGE: RscPicture
 class COMPANY_ACTION_HIRE_BUTTON: RscButtonSilent
 {
 	idc = COMPANY_ACTION_HIRE_BUTTON_IDC;
-	action = "ctrlShow[9607,false]; ctrlShow[9608,false];[g_company, lbData[9606, lbCurSel 9606]] call AlysiaClient_fnc_company_member_kick;['COMPANY'] spawn AlysiaClient_fnc_tabletApp;";
+	action = "ctrlShow[9607,false];ctrlShow[9608,false];[g_company, lbData[9606, lbCurSel 9606]] call AlysiaClient_fnc_company_member_kick;['COMPANY'] spawn AlysiaClient_fnc_tabletApp;";
 	onMouseEnter = "ctrlSetText[9607,'lyeed_IMG\data\tablet\company\action_company_hire_select.paa'];";
 	onMouseExit = "ctrlSetText[9607,'lyeed_IMG\data\tablet\company\action_company_hire.paa'];";
 	tooltip = "Renvoyer";
@@ -131,7 +131,7 @@ class COMPANY_ACTION_LICENSE_IMAGE: RscPicture
 class COMPANY_ACTION_LICENSE_BUTTON: RscButtonSilent
 {
 	idc = COMPANY_ACTION_LICENSE_BUTTON_IDC;
-	action = "ctrlShow[9609,false]; ctrlShow[9610,false];['COMPANY'] spawn AlysiaClient_fnc_tabletApp;";
+	action = "ctrlShow[9609,false];ctrlShow[9610,false];['COMPANY'] spawn AlysiaClient_fnc_tabletApp;";
 	onMouseEnter = "ctrlSetText[9609,'lyeed_IMG\data\tablet\company\action_company_license_select.paa'];";
 	onMouseExit = "ctrlSetText[9609,'lyeed_IMG\data\tablet\company\action_company_license.paa'];";
 	tooltip = "Payer la license d'entreprise";
@@ -155,7 +155,7 @@ class COMPANY_ACTION_PROMOTE_IMAGE: RscPicture
 class COMPANY_ACTION_PROMOTE_BUTTON: RscButtonSilent
 {
 	idc = COMPANY_ACTION_PROMOTE_BUTTON_IDC;
-	action = "ctrlShow[9611,false]; ctrlShow[9612,false];[g_company, lbData[9606, lbCurSel 9606]] call AlysiaClient_fnc_company_member_promote;['COMPANY'] spawn AlysiaClient_fnc_tabletApp;";
+	action = "ctrlShow[9611,false];ctrlShow[9612,false];[g_company, lbData[9606, lbCurSel 9606]] call AlysiaClient_fnc_company_member_promote;['COMPANY'] spawn AlysiaClient_fnc_tabletApp;";
 	onMouseEnter = "ctrlSetText[9611,'lyeed_IMG\data\tablet\company\action_company_promote_select.paa'];";
 	onMouseExit = "ctrlSetText[9611,'lyeed_IMG\data\tablet\company\action_company_promote.paa'];";
 	tooltip = "Nommer DPG de l'entreprise";

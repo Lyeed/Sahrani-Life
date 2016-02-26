@@ -43,8 +43,8 @@ with missionNamespace do
 	/* ===================[First Person View]======================= */
 	g_firstCombatActive = false;
 	/* ===================[Weight system]======================= */
-	g_maxWeight = 24; // Identifies the max carrying weight (gets adjusted throughout game when wearing different types of clothing).
-	g_carryWeight = 0; // Represents the players current inventory weight (MUST START AT 0).
+	g_maxWeight = 24;// Identifies the max carrying weight (gets adjusted throughout game when wearing different types of clothing).
+	g_carryWeight = 0;// Represents the players current inventory weight (MUST START AT 0).
 	/* ===================[Money]======================= */
 	g_cash = 0;
 	g_atm = 0;
@@ -80,11 +80,11 @@ with missionNamespace do
 	g_regen_active = false;
 	g_dragingBody = ObjNull;
 	/* =================[Drugs]=================== */
-	g_drugs_patched = 0; // time before anti-addiction patch effect disappears (scale in seconds)
-	g_drugs_consuming = 0; // time before all drugs effects and after effects stop (scale in seconds)
+	g_drugs_patched = 0;// time before anti-addiction patch effect disappears (scale in seconds)
+	g_drugs_consuming = 0;// time before all drugs effects and after effects stop (scale in seconds)
 	g_drugs = [];
 
-	"g_drugs pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_DRUG");
+	"g_drugs pushBack (configName _x);true" configClasses (missionConfigFile >> "ALYSIA_DRUG");
 
 	{
 		missionNamespace setVariable [format["drug_stats_%1", _x], 0];
@@ -92,23 +92,23 @@ with missionNamespace do
 	} forEach (g_drugs);
 	/* =================[Plants]=================== */
 	g_plants = [];
-	"g_plants pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS");
+	"g_plants pushBack (configName _x);true" configClasses (missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS");
 	g_plants = compileFinal str(g_plants);
 	/* =================[Housing]=================== */
 	g_houses_list = [];
-	"g_houses_list pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_HOUSES");
+	"g_houses_list pushBack (configName _x);true" configClasses (missionConfigFile >> "ALYSIA_HOUSES");
 	g_houses_list = compileFinal str(g_houses_list);
 
 	g_houses_storages = [];
-	"g_houses_storages pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_STORAGES");
+	"g_houses_storages pushBack (configName _x);true" configClasses (missionConfigFile >> "ALYSIA_STORAGES");
 	g_houses_storages = compileFinal str(g_houses_storages);
 	/* =================[Dynamic Markers]=================== */
 	g_dynamic_markers_discovered = [];
 	g_dynamic_markers = [];
-	"g_dynamic_markers pushBack (configName _x); true" configClasses (missionConfigFile >> "ALYSIA_DYN_MARKERS");
+	"g_dynamic_markers pushBack (configName _x);true" configClasses (missionConfigFile >> "ALYSIA_DYN_MARKERS");
 	/* =================[Items]=================== */
 	g_inv_items = [];
-	"g_inv_items pushBack(configName _x); true" configClasses (missionConfigFile >> "ALYSIA_ITEMS");
+	"g_inv_items pushBack(configName _x);true" configClasses (missionConfigFile >> "ALYSIA_ITEMS");
 
 	{
 		missionNamespace setVariable[format["inv_%1", _x], 0];

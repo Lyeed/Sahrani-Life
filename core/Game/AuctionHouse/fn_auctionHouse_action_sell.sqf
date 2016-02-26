@@ -12,7 +12,7 @@ if (!(isNil "gServer_soonReboot")) exitWith {
 };
 
 if ((time - g_action_delay) < 2) exitWith {
-	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error; 
+	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error;
 };
 
 _sel = lbCurSel 45621;

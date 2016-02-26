@@ -13,7 +13,7 @@ if (isNull _target) exitWith {
 };
 
 if (g_action_inUse) exitWith {
-	["Vous êtes déjà en train d'effectuer une action"] call AlysiaClient_fnc_error; 
+	["Vous êtes déjà en train d'effectuer une action"] call AlysiaClient_fnc_error;
 };
 
 if (!("SkylineItems_Adrenaline" in (magazines player))) exitWith {

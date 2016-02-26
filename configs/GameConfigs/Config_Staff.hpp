@@ -66,28 +66,28 @@ class ALYSIA_STAFF
 			class Invisible_ON
 			{
 				name = "Invisible ON";
-				statement = "g_staff_invisible = true; [player, true] remoteExecCall ['hideObject', 0];";
+				statement = "g_staff_invisible = true;[player, true] remoteExecCall ['hideObject', 0];";
 				condition = "!g_staff_invisible";
 				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424"};
 			};
 			class Invisible_OFF: Invisible_ON
 			{
 				name = "Invisible ON";
-				statement = "g_staff_invisible = false; [player, false] remoteExecCall ['hideObject', 0];";
+				statement = "g_staff_invisible = false;[player, false] remoteExecCall ['hideObject', 0];";
 				condition = "g_staff_invisible";
 			};
 
 			class TP_ON
 			{
 				name = "TP ON";
-				statement = "g_staff_tp = true; onMapSingleClick '(vehicle player) setPos _pos';";
+				statement = "g_staff_tp = true;onMapSingleClick '(vehicle player) setPos _pos';";
 				condition = "!g_staff_tp";
 				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424"};
 			};
 			class TP_OFF: TP_ON
 			{
 				name = "TP OFF";
-				statement = "g_staff_tp = false; onMapSingleClick '';";
+				statement = "g_staff_tp = false;onMapSingleClick '';";
 				condition = "g_staff_tp";
 			};
 
@@ -108,7 +108,7 @@ class ALYSIA_STAFF
 			class heal
 			{
 				name = "Soins";
-				statement = "g_bleed = 0; [4000] call AlysiaClient_fnc_handleBlood;";
+				statement = "g_bleed = 0;[4000] call AlysiaClient_fnc_handleBlood;";
 				condition = "(true)";
 				allow[] = {"76561198007960495", "76561198099211957"};
 			};
@@ -162,14 +162,14 @@ class ALYSIA_STAFF
 			class spec
 			{
 				name = "Spec";
-				statement = "(call compile (lbData[9000, lbCurSel 9000])) switchCamera 'INTERNAL'; g_staff_spec = true; closeDialog 0;";
+				statement = "(call compile (lbData[9000, lbCurSel 9000])) switchCamera 'INTERNAL';g_staff_spec = true;closeDialog 0;";
 				condition = "(true)";
 				allow[] = {"76561198007960495", "76561197977519424", "76561198026418521", "76561198099211957", "76561198089708821"};
 			};
 			class res
 			{
 				name = "Rez";
-				statement = "((call compile (lbData[9000, lbCurSel 9000])) setVariable ['is_bleeding',false,true]); ((call compile (lbData[9000, lbCurSel 9000])) setVariable ['is_coma',false,true]);";
+				statement = "((call compile (lbData[9000, lbCurSel 9000])) setVariable ['is_bleeding',false,true]);((call compile (lbData[9000, lbCurSel 9000])) setVariable ['is_coma',false,true]);";
 				condition = "(call compile (lbData[9000, lbCurSel 9000])) getVariable ['is_coma',false]";
 				allow[] = {"76561198007960495", "76561198099211957"};
 			};

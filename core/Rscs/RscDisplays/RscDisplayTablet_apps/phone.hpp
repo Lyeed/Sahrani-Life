@@ -752,7 +752,7 @@ class PHONE_SETTINGS_RING_VALIDATE_IMAGE: RscPicture
 class PHONE_SETTINGS_RING_VALIDATE_BUTTON : RscButtonSilent
 {
 	idc = PHONE_SETTINGS_RING_VALIDATE_BUTTON_IDC;
-	action = "profileNamespace setVariable ['ALYSIA_phone_recv', (lbData[8351, lbCurSel 8351])]; [] call AlysiaClient_fnc_APP_phone_settings;";
+	action = "profileNamespace setVariable ['ALYSIA_phone_recv', (lbData[8351, lbCurSel 8351])];[] call AlysiaClient_fnc_APP_phone_settings;";
 	tooltip = "Sauvegarder la sonnerie";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\settings\validate_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\settings\validate.paa""];";

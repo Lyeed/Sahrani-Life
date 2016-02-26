@@ -24,7 +24,7 @@ switch ([_this, 0, 0, [0]] call BIS_fnc_param) do
 	{
 		{
 			if (_x != "") then {
-				_ret pushBack _x; 
+				_ret pushBack _x;
 			};
 		} forEach ([
 			primaryWeapon player,

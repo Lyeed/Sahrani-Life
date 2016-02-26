@@ -31,12 +31,12 @@ if (g_thirst > 100) then {
 		switch (true) do 
 		{
 			case (g_thirst > 20 && g_thirst <= 30): 
-			{ 
+			{
 				["Vous avez très soif"] call AlysiaClient_fnc_info;
 				[player, "thirst_1", 7] call CBA_fnc_globalSay3d;				
 			};
 			case (g_thirst > 10 && g_thirst <= 20): 
-			{ 
+			{
 				["Vous êtes assoiffé"] call AlysiaClient_fnc_info;
 				[player, "thirst_1", 7] call CBA_fnc_globalSay3d;				
 			};

@@ -10,7 +10,7 @@ _type = [_this, 0, "", [""]] call BIS_fnc_param;
 
 if (_type == "") exitWith {};
 if ((time - g_action_delay) < 5) exitWith {
-	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error; 
+	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error;
 };
 
 if ([false, _type, 1] call AlysiaClient_fnc_handleInv) then

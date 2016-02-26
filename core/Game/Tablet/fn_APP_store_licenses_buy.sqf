@@ -7,8 +7,8 @@
 */
 private["_sel", "_license", "_price", "_formatLicense"];
 
-if ((time - g_action_delay) < 1) exitWith { 
-	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error; 
+if ((time - g_action_delay) < 1) exitWith {
+	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error;
 };
 
 _sel = lbCurSel 8110;

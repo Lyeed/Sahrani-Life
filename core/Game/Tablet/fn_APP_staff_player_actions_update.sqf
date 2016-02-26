@@ -18,7 +18,7 @@ _idc = 9020;
 	{
 		_btn = _display displayCtrl _idc;
 		_btn ctrlSetText getText(_x >> "name");
-		_btn buttonSetAction format["%1 [] call AlysiaClient_fnc_APP_staff_player_actions_update; ", getText(_x >> "statement")];
+		_btn buttonSetAction format["%1 [] call AlysiaClient_fnc_APP_staff_player_actions_update;", getText(_x >> "statement")];
 
 		[_idc, true] call AlysiaClient_fnc_tabletShow;
 		_idc = _idc + 1;

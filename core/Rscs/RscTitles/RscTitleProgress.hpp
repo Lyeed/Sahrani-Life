@@ -16,7 +16,7 @@ class RscTitleProgress
 
 			x = 0.38140 * safezoneW + safezoneX;
 			y = 0.06 * safezoneH + safezoneY;
-			w = 0.65; h = 0.05;
+			w = 0.65;h = 0.05;
 		};
 		class ProgressBar : RscProgress
 		{
@@ -24,7 +24,7 @@ class RscTitleProgress
 
 			x = 0.38140 * safezoneW + safezoneX;
 			y = 0.06 * safezoneH + safezoneY;
-			w = 0.65; h = 0.05;
+			w = 0.65;h = 0.05;
 		};
 		
 		class ProgressText : RscText

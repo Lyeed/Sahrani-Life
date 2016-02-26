@@ -10,8 +10,8 @@ _bool = [_this,1,false,[false]] call BIS_fnc_param;
 _ispack = [_this,2,false,[false]] call BIS_fnc_param;
 _ongun = [_this,3,false,[false]] call BIS_fnc_param;
 _override = [_this,4,false,[false]] call BIS_fnc_param;
-_toUniform = [_this,5,false,[false]] call BIS_fnc_param; //Manual override to send items specifically to a uniform.
-_toVest = [_this,6,false,[false]] call BIS_fnc_param; //Manual override to send items specifically to a vest
+_toUniform = [_this,5,false,[false]] call BIS_fnc_param;//Manual override to send items specifically to a uniform.
+_toVest = [_this,6,false,[false]] call BIS_fnc_param;//Manual override to send items specifically to a vest
 _preview = [_this,7,false,[true]] call BIS_fnc_param;
 
 //Some checks
@@ -61,8 +61,8 @@ if(_bool) then
 			player addBackpack _item;
 			clearAllItemsFromBackpack player;
 			if(!isNil {_items}) then 
-			{ 
-				{[_x,true,true,false,true] spawn AlysiaClient_fnc_handleItem; } foreach _items;
+			{
+				{[_x,true,true,false,true] spawn AlysiaClient_fnc_handleItem;} foreach _items;
 			};
 		};
 
@@ -99,7 +99,7 @@ if(_bool) then
 
 			if(_isgun) then
 			{
-				if(!_ispack && _override) exitWith {}; //It was in the vest/uniform, try to close to prevent it overriding stuff... (Actual weapon and not an item)
+				if(!_ispack && _override) exitWith {};//It was in the vest/uniform, try to close to prevent it overriding stuff... (Actual weapon and not an item)
 				if(_item == "MineDetector") then
 				{
 					player addItem _item;
@@ -133,7 +133,7 @@ if(_bool) then
 								} 
 									else 
 								{
-									player addItem _item; 
+									player addItem _item;
 									player assignItem _item;
 								};
 							};
@@ -265,9 +265,9 @@ if(_bool) then
 							{
 								switch (_type) do
 								{
-									case 1: { player addPrimaryWeaponItem _item; };
-									case 2: { player addSecondaryWeaponItem _item; };
-									case 3: { player addHandgunItem _item; };
+									case 1: {player addPrimaryWeaponItem _item;};
+									case 2: {player addSecondaryWeaponItem _item;};
+									case 3: {player addHandgunItem _item;};
 								};
 							}
 								else
@@ -279,7 +279,7 @@ if(_bool) then
 									else
 								{
 									private["_wepItems","_action","_slotTaken"];
-										_wepItems = switch(_type) do {case 1:{primaryWeaponItems player}; case 2:{secondaryWeaponItems player}; case 3:{handgunItems player}; default {["","",""]};};
+										_wepItems = switch(_type) do {case 1:{primaryWeaponItems player};case 2:{secondaryWeaponItems player};case 3:{handgunItems player};default {["","",""]};};
 										_slotTaken = false;
 
 										if(_wepItems select 2 != "") then {_slotTaken = true;};
@@ -294,7 +294,7 @@ if(_bool) then
 													default {player addItem _item;};
 												};
 											} else {
-												player addItem _item; //Add it to any available container
+												player addItem _item;//Add it to any available container
 											};
 										} else {
 											switch(_type) do {
@@ -321,12 +321,12 @@ if(_bool) then
 							_type = [_item,301] call AlysiaClient_fnc_accType;
 
 							if(_ongun) then
-							{ 
+							{
 								switch (_type) do
 								{
-									case 1: { player addPrimaryWeaponItem _item; };
-									case 2: { player addSecondaryWeaponItem _item; };
-									case 3: { player addHandgunItem _item; };
+									case 1: {player addPrimaryWeaponItem _item;};
+									case 2: {player addSecondaryWeaponItem _item;};
+									case 3: {player addHandgunItem _item;};
 								};
 							}
 								else
@@ -338,7 +338,7 @@ if(_bool) then
 									else
 								{
 									private["_wepItems","_action","_slotTaken"];
-										_wepItems = switch(_type) do {case 1:{primaryWeaponItems player}; case 2:{secondaryWeaponItems player}; case 3:{handgunItems player}; default {["","",""]};};
+										_wepItems = switch(_type) do {case 1:{primaryWeaponItems player};case 2:{secondaryWeaponItems player};case 3:{handgunItems player};default {["","",""]};};
 										_slotTaken = false;
 
 										if(_wepItems select 1 != "") then {_slotTaken = true;};
@@ -353,7 +353,7 @@ if(_bool) then
 													default {player addItem _item;};
 												};
 											} else {
-												player addItem _item; //Add it to any available container
+												player addItem _item;//Add it to any available container
 											};
 										} else {
 											switch(_type) do {
@@ -383,9 +383,9 @@ if(_bool) then
 							{
 								switch (_type) do
 								{
-									case 1: { player addPrimaryWeaponItem _item; };
-									case 2: { player addSecondaryWeaponItem _item; };
-									case 3: { player addHandgunItem _item; };
+									case 1: {player addPrimaryWeaponItem _item;};
+									case 2: {player addSecondaryWeaponItem _item;};
+									case 3: {player addHandgunItem _item;};
 								};
 							}
 								else
@@ -397,7 +397,7 @@ if(_bool) then
 									else
 								{
 									private["_wepItems","_action","_slotTaken"];
-										_wepItems = switch(_type) do {case 1:{primaryWeaponItems player}; case 2:{secondaryWeaponItems player}; case 3:{handgunItems player}; default {["","",""]};};
+										_wepItems = switch(_type) do {case 1:{primaryWeaponItems player};case 2:{secondaryWeaponItems player};case 3:{handgunItems player};default {["","",""]};};
 										_slotTaken = false;
 
 										if(_wepItems select 0 != "") then {_slotTaken = true;};
@@ -412,7 +412,7 @@ if(_bool) then
 													default {player addItem _item;};
 												};
 											} else {
-												player addItem _item; //Add it to any available container
+												player addItem _item;//Add it to any available container
 											};
 										} else {
 											switch(_type) do {
@@ -468,7 +468,7 @@ if(_bool) then
 					};
 
 					default 
-					{ 
+					{
 						if(_ispack) then 
 						{
 							player addItemToBackpack _item;
@@ -558,7 +558,7 @@ if(_bool) then
 									_numVestWeps = _tWeaponCount select _forEachIndex;
 									if(_x == _this) then
 									{
-										_numVestWeps = _numVestWeps - 1;                        
+										_numVestWeps = _numVestWeps - 1;                       
 									};
 									(uniformContainer player) addWeaponCargo [ _x,_numVestWeps];
 								}forEach _tWeapons;
@@ -573,7 +573,7 @@ if(_bool) then
 									_numVestWeps = _tWeaponCount select _forEachIndex;
 									if(_x == _this) then
 									{
-										_numVestWeps = _numVestWeps - 1;                        
+										_numVestWeps = _numVestWeps - 1;                       
 									};
 									(vestContainer player) addWeaponCargo [ _x,_numVestWeps];
 								}forEach _tWeapons;
@@ -588,7 +588,7 @@ if(_bool) then
 									_numVestWeps = _tWeaponCount select _forEachIndex;
 									if(_x == _this) then
 									{
-										_numVestWeps = _numVestWeps - 1;                        
+										_numVestWeps = _numVestWeps - 1;                       
 									};
 									(backpackContainer player) addWeaponCargo [ _x,_numVestWeps];
 								}forEach _tWeapons;
@@ -616,12 +616,12 @@ if(_bool) then
 			{
 				switch((_details select 5)) do
 				{
-					case 0: {player unassignItem _item; player removeItem _item;};
+					case 0: {player unassignItem _item;player removeItem _item;};
 					case 605: {if(headGear player == _item) then {removeHeadgear player} else {player removeItem _item};};
 					case 801: {if(uniform player == _item) then {removeUniform player} else {player removeItem _item};};
 					case 701: {if(vest player == _item) then {removeVest player} else {player removeItem _item};};
-					case 621: {player unassignItem _item; player removeItem _item;};
-					case 616: {player unassignItem _item; player removeItem _item;};
+					case 621: {player unassignItem _item;player removeItem _item;};
+					case 616: {player unassignItem _item;player removeItem _item;};
 					default 
 					{
 						switch (true) do

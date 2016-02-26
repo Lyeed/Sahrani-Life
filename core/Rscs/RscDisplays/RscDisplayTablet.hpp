@@ -2,7 +2,7 @@ class RscDisplayTablet: RscDisplayDefault
 {
 	idd = 7500;
 	name = "RscDisplayTablet";
-	onLoad = "uiNamespace setVariable[""tablet"", _this select 0]; uiNamespace setVariable[""main_status"", 0];";
+	onLoad = "uiNamespace setVariable[""tablet"", _this select 0];uiNamespace setVariable[""main_status"", 0];";
 	
 	class controlsBackground
 	{

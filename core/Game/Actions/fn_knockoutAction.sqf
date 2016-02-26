@@ -16,7 +16,7 @@ if ((_target getVariable ["surrender", false]) || (_target getVariable ["restrai
 if ((animationState player) isEqualTo "Incapacitated") exitWith {};
 if ((animationState _target) isEqualTo "Incapacitated") exitWith {};
 if ((currentWeapon player != primaryWeapon player) && (currentWeapon player != handgunWeapon player)) exitWith {};
-if ((currentWeapon player isEqualTo "") || ((currentWeapon player) in ["Skyline_Hache_01", "Skyline_Pioche_01", "Skyline_Pelle_01", "Skyline_Merlin_01", "Skyline_tl122_blanche", "Skyline_tl122_rouge", "Skyline_tl122_orange", "Skyline_tl122_verte", "Skyline_tl122_bleu", "Skyline_tl122_rose", "Skyline_tl122_jaune"])) exitWith {}; 
+if ((currentWeapon player isEqualTo "") || ((currentWeapon player) in ["Skyline_Hache_01", "Skyline_Pioche_01", "Skyline_Pelle_01", "Skyline_Merlin_01", "Skyline_tl122_blanche", "Skyline_tl122_rouge", "Skyline_tl122_orange", "Skyline_tl122_verte", "Skyline_tl122_bleu", "Skyline_tl122_rose", "Skyline_tl122_jaune"])) exitWith {};
 if ((player getVariable ["surrender", false]) || (player getVariable ["restrained", false])) exitWith {};
 if ((getFatigue player) > 85) exitWith {["Vous êtes trop fatigué pour pouvoir effectuer cette action"] call AlysiaClient_fnc_error};
 if ((time - g_action_delay) < 3) exitWith {};

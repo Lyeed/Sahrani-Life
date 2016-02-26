@@ -132,7 +132,7 @@ if (g_launder > 0) then
 
 	_fnc_channel =
 	{
-		["Vous devez être dans le channel TaskForceRadio pour pouvoir jouer sur le serveur. Vous allez être expulsé dans 20 secondes"] call AlysiaClient_fnc_error; 
+		["Vous devez être dans le channel TaskForceRadio pour pouvoir jouer sur le serveur. Vous allez être expulsé dans 20 secondes"] call AlysiaClient_fnc_error;
 		sleep 20;
 		if ((call TFAR_fnc_getTeamSpeakChannelName) != "TaskForceRadio") then
 		{
@@ -144,7 +144,7 @@ if (g_launder > 0) then
 
 	_fnc_server =
 	{
-		["Vous n'êtes pas connecté sur le Teamspeak du serveur. Vous allez être expulsé dans 20 secondes."] call AlysiaClient_fnc_error; 
+		["Vous n'êtes pas connecté sur le Teamspeak du serveur. Vous allez être expulsé dans 20 secondes."] call AlysiaClient_fnc_error;
 		sleep 20;
 		if (!(["Alysia", (call TFAR_fnc_getTeamSpeakServerName)] call BIS_fnc_inString)) then
 		{

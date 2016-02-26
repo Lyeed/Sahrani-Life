@@ -12,7 +12,7 @@ if (_item isEqualTo "") exitWith {false};
 
 if (player getVariable ["is_coma", false]) exitWith
 {
-	["Vous ne pouvez pas utiliser d'objet dans le coma"] call AlysiaClient_fnc_error; 
+	["Vous ne pouvez pas utiliser d'objet dans le coma"] call AlysiaClient_fnc_error;
 	false;
 };
 

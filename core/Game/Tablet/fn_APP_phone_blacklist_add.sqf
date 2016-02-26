@@ -9,7 +9,7 @@ private["_number"];
 _number = [_this, 0, "", [""]] call BIS_fnc_param;
 
 if ((time - g_action_delay) < 2) exitWith {
-	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error; 
+	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error;
 };
 
 if (!([_number] call AlysiaClient_fnc_isNumber)) exitWith {

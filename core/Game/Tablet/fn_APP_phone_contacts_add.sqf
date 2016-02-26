@@ -10,7 +10,7 @@ _name = [_this, 0, "", [""]] call BIS_fnc_param;
 _number = [_this, 1, "", [""]] call BIS_fnc_param;
 
 if ((time - g_action_delay) < 2) exitWith {
-	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error; 
+	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error;
 };
 
 if (_name isEqualTo "") exitWith {

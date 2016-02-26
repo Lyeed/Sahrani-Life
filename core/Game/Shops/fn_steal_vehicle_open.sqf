@@ -14,7 +14,7 @@ _display = findDisplay 99000;
 if (isNull _display) exitWith {};
 
 _list = _display displayCtrl 99001;
-lbClear _list; 
+lbClear _list;
 
 g_interaction_steal_list = nearestObjects [(_this select 0), ["Car", "Truck", "Ship", "Air", "Tank"], 20];
 

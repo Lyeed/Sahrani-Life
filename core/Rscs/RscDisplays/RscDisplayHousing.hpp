@@ -86,8 +86,8 @@ class RscDisplayHousingBuy: RscDisplayDefaultInteraction
 		{
 			idc = 45005;
 			action = "[] spawn AlysiaClient_fnc_house_menu_action_buy;";
-			onMouseEnter = "ctrlSetText[45003,""lyeed_IMG\data\global\action_buy_select.paa""]; ctrlShow[45002, false];((findDisplay 45000) displayCtrl 45001) ctrlSetBackgroundColor [1,1,1,1]; ((findDisplay 45000) displayCtrl 45004) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
-			onMouseExit = "ctrlSetText[45003,""lyeed_IMG\data\global\action_buy.paa""]; ctrlShow[45002, true]; ((findDisplay 45000) displayCtrl 45001) ctrlSetBackgroundColor [0,0,0,0.6]; ((findDisplay 45000) displayCtrl 45004) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>"";";
+			onMouseEnter = "ctrlSetText[45003,""lyeed_IMG\data\global\action_buy_select.paa""];ctrlShow[45002, false];((findDisplay 45000) displayCtrl 45001) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 45000) displayCtrl 45004) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Acheter</t>"";";
+			onMouseExit = "ctrlSetText[45003,""lyeed_IMG\data\global\action_buy.paa""];ctrlShow[45002, true];((findDisplay 45000) displayCtrl 45001) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 45000) displayCtrl 45004) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Acheter</t>"";";
 
 			x = 0.443281 * safezoneW + safezoneX;
 			y = 0.61 * safezoneH + safezoneY;

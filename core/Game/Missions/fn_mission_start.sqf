@@ -25,7 +25,7 @@ if (((gServer_rebootHour * 60) - serverTime) < _time) exitWith {
 
 _data = getArray(_config >> "positions") call BIS_fnc_selectRandom;
 _position = _data select 0;
-call compile format["gServer_faction_%1_mission=true; publicVariable""gServer_faction_%1_mission"";", str(playerSide)];
+call compile format["gServer_faction_%1_mission=true;publicVariable""gServer_faction_%1_mission"";", str(playerSide)];
 
 [
 	format

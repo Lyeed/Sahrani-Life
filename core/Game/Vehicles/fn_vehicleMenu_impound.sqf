@@ -24,7 +24,7 @@ if (dialog) then
 if (["Mise en fourrière", 8, g_interaction_target] call AlysiaClient_fnc_showProgress) then
 {
 	private "_storePos";
-	if (g_interaction_target isKindOf "Ship") then { 
+	if (g_interaction_target isKindOf "Ship") then {
 		_storePos = [0,0,0];
 	} else {
 		if (g_choice isEqualTo "NORTH") then {

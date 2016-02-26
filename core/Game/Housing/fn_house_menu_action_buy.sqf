@@ -13,7 +13,7 @@ if (!((g_interaction_target getVariable["house_owner", []]) isEqualTo [])) exitW
 	["Ce bâtiment est déjà acheté"] call AlysiaClient_fnc_error;
 };
 
-if (!isNil {(g_interaction_target getVariable "house_sold")}) exitWith { 
+if (!isNil {(g_interaction_target getVariable "house_sold")}) exitWith {
 	["Ce bâtiment a récemment été mis en vente et ne peut pas être achetée de suite"] call AlysiaClient_fnc_error;
 };
 
@@ -26,8 +26,8 @@ if ((_item != "") && !(_item in (magazines player))) exitWith {
 };
 
 _maxHouse = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "house_max");
-if ((count g_houses) >= _maxHouse) exitWith { 
-	[format["Vous possedez déjà %1 propriétés", _maxHouse]] call AlysiaClient_fnc_error; 
+if ((count g_houses) >= _maxHouse) exitWith {
+	[format["Vous possedez déjà %1 propriétés", _maxHouse]] call AlysiaClient_fnc_error;
 };
 
 _price = getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> (typeOf g_interaction_target) >> "price");

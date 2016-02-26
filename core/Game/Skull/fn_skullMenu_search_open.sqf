@@ -41,7 +41,7 @@ _button ctrlSetEventHandler["MouseEnter",
 
 _button ctrlSetEventHandler["MouseExit",
 	"((findDisplay 69000) displayCtrl 69005) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Prendre</t>"";
-	((findDisplay 69000) displayCtrl 69004) ctrlSetBackgroundColor [0,0,0,0.6]; 
+	((findDisplay 69000) displayCtrl 69004) ctrlSetBackgroundColor [0,0,0,0.6];
 	ctrlSetText[69008, ""lyeed_IMG\data\skull\take.paa""];
 	ctrlShow[69003, true];"
 ];

@@ -25,7 +25,7 @@ _ret = 0;
 
 _weaponArray = [primaryWeapon player, secondaryWeapon player, handgunWeapon player];
 {
-	if(_ret != 0) exitWith {}; //Make sure we exit the loop since there was already a match.
+	if(_ret != 0) exitWith {};//Make sure we exit the loop since there was already a match.
 	if(_x != "") then
 	{
 		_weapon = _x;
@@ -57,7 +57,7 @@ _weaponArray = [primaryWeapon player, secondaryWeapon player, handgunWeapon play
 					_ret = switch(_weapon) do {case (primaryWeapon player): {1};case (secondaryWeapon player) : {2};case (handgunWeapon player): {3};default {0};};
 				};
 			} foreach _newItems;
-			if(_ret != 0) exitWith {}; //Make sure we exit the loop
+			if(_ret != 0) exitWith {};//Make sure we exit the loop
 		};
 	};
 } foreach _weaponArray;

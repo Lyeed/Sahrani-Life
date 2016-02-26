@@ -17,7 +17,7 @@ if ((player distance _unit) > 3) exitWith {
 };
 
 if (g_action_inUse) exitWith {
-	["Vous êtes déjà en train d'effectuer une action"] call AlysiaClient_fnc_error; 
+	["Vous êtes déjà en train d'effectuer une action"] call AlysiaClient_fnc_error;
 };
 
 if (!("SkylineItems_Couteau" in (magazines player))) exitWith {
@@ -45,7 +45,7 @@ if (_unit getVariable["is_coma", false]) then
 				["La personne n'est pas dans le coma"] call AlysiaClient_fnc_error;
 			};			
 		} else {
-			["Vous n'avez pas de couteau"] call AlysiaClient_fnc_error; 
+			["Vous n'avez pas de couteau"] call AlysiaClient_fnc_error;
 		};	
 	};
 } else {

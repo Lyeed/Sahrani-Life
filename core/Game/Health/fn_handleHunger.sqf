@@ -43,7 +43,7 @@ if (g_hunger > 100) then
 				[player, "hunger_1", 7] call CBA_fnc_globalSay3d;
 			};
 			case (g_hunger > 0 && g_hunger <= 10): 
-			{ 
+			{
 				["Vous êtes sur le point de mourir de faim"] call AlysiaClient_fnc_info;
 				[player, "hunger_1", 7] call CBA_fnc_globalSay3d;
 			};

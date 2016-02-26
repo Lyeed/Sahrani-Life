@@ -12,7 +12,7 @@ if (player getVariable ["arrested", false]) exitWith {["Vous n'avez pas acc√®s √
 if ((player getVariable ["restrained", false]) || (player getVariable ["knockedOut", false])) exitWith {};
 if (dialog) exitWith {if (!(isNull (uiNamespace getVariable ["tablet", displayNull]))) then {closeDialog 0};};
 
-if ((vehicle player) isEqualTo player) then { 
+if ((vehicle player) isEqualTo player) then {
 	player playAction "Gear";
 };
 

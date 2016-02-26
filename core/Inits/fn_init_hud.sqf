@@ -75,7 +75,7 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 	_ctrl_blood = _hud displayCtrl 23500;
 	_ctrl_fatigue = _hud displayCtrl 23501;
 	_ctrl_hunger = _hud displayCtrl 23502;
-	_ctrl_thirst = _hud displayCtrl 23503; 
+	_ctrl_thirst = _hud displayCtrl 23503;
 
 	/*===========================
 	  ===       WEAPONS       ===

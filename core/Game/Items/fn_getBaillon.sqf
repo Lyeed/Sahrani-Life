@@ -8,9 +8,9 @@
 private["_target"];
 _target = cursorTarget;
 
-if (isNull _target) exitWith { ["Cible invalide"] call ALYSIA_fnc_error; };
-if (life_coma) exitWith { ["Vous êtes dans le coma"] call ALYSIA_fnc_error; };
-if (player distance _target > 4) exitWith { ["Vous êtes trop loin"] call ALYSIA_fnc_error; };
+if (isNull _target) exitWith {["Cible invalide"] call ALYSIA_fnc_error;};
+if (life_coma) exitWith {["Vous êtes dans le coma"] call ALYSIA_fnc_error;};
+if (player distance _target > 4) exitWith {["Vous êtes trop loin"] call ALYSIA_fnc_error;};
 
 if (_target getVariable["baillon", false]) then {
 	if ([true, "baillon", 1] call life_fnc_handleInv) then
@@ -19,6 +19,6 @@ if (_target getVariable["baillon", false]) then {
 		titleText["* Vous avez enlevé le baillon de la personne *", "PLAIN DOWN"];
 		[[], "ALYSIA_fnc_getOffBaillon", _target] spawn life_fnc_MP;
 	}
-	else { ["Vous n'avez pas assez de place"] call ALYSIA_fnc_error; };
+	else {["Vous n'avez pas assez de place"] call ALYSIA_fnc_error;};
 }
-else { ["La cible ne porte pas de baillon"] call ALYSIA_fnc_error; };
+else {["La cible ne porte pas de baillon"] call ALYSIA_fnc_error;};

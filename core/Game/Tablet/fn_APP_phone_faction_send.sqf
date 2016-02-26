@@ -21,7 +21,7 @@ if (!(_bad isEqualTo "")) exitWith {
 if (count(toArray(_msg)) > 160) exitWith {
 	["Votre message ne doit pas dépasser 160 caractères"] call AlysiaClient_fnc_error;
 };
-if ((time - g_action_delay) < 2) exitWith { 
+if ((time - g_action_delay) < 2) exitWith {
 	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error;
 };
 

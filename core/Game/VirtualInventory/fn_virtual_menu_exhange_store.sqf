@@ -24,7 +24,7 @@ if (g_interaction_target_trunk_transfer) exitWith {};
 g_interaction_target_trunk_transfer = true;
 
 if (_type) then {
-	_amount = [_item, (lbValue[505, _sel]), ([(g_interaction_target getVariable [g_interaction_target_trunk_type, []])] call AlysiaClient_fnc_weightGenerate), g_interaction_target_trunk_weight_max] call AlysiaClient_fnc_calWeightDiff; 
+	_amount = [_item, (lbValue[505, _sel]), ([(g_interaction_target getVariable [g_interaction_target_trunk_type, []])] call AlysiaClient_fnc_weightGenerate), g_interaction_target_trunk_weight_max] call AlysiaClient_fnc_calWeightDiff;
 } else {
 	_amount = 1;
 };

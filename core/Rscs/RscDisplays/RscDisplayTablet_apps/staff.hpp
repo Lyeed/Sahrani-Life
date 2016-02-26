@@ -73,7 +73,7 @@ class STAFF_PLAYERS_ACTION_BUTTON: RscButtonMenu
 {
 	idc = STAFF_PLAYERS_ACTION_BUTTON_IDC;
 	text = "Executer";
-	action = "_this ctrlEnable false; call compile lbData[9001, (lbCurSel 9001)]; [(uiNamespace getVariable ['tablet', displayNull]) displayCtrl 9000, (lbCurSel 9000)] call AlysiaClient_fnc_APP_staff_players_actions_update;";
+	action = "_this ctrlEnable false;call compile lbData[9001, (lbCurSel 9001)];[(uiNamespace getVariable ['tablet', displayNull]) displayCtrl 9000, (lbCurSel 9000)] call AlysiaClient_fnc_APP_staff_players_actions_update;";
 
 	x = 0.608281 * safezoneW + safezoneX;
 	y = 0.401 * safezoneH + safezoneY;

@@ -134,8 +134,8 @@ class RscDisplayAuctionHouse: RscDisplayDefault
 		class ACTION_EXIT_BUTTON: RscButtonSilent
 		{
 			action = "closeDialog 0;";
-			onMouseEnter = "ctrlSetText[45608,""lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""]; ctrlShow[45606, false]; ((findDisplay 45600) displayCtrl 45605) ctrlSetBackgroundColor [1,1,1,1]; ((findDisplay 45600) displayCtrl 45607) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
-			onMouseExit = "ctrlSetText[45608,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""]; ctrlShow[45606, true]; ((findDisplay 45600) displayCtrl 45605) ctrlSetBackgroundColor [0,0,0,0.6]; ((findDisplay 45600) displayCtrl 45607) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";
+			onMouseEnter = "ctrlSetText[45608,""lyeed_IMG\data\auctionHouse\actions\action_exit_select.paa""];ctrlShow[45606, false];((findDisplay 45600) displayCtrl 45605) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 45600) displayCtrl 45607) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Quitter</t>"";";
+			onMouseExit = "ctrlSetText[45608,""lyeed_IMG\data\auctionHouse\actions\action_exit.paa""];ctrlShow[45606, true];((findDisplay 45600) displayCtrl 45605) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 45600) displayCtrl 45607) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Quitter</t>"";";
 
 			x = 0.567031 * safezoneW + safezoneX;
 			y = 0.676 * safezoneH + safezoneY;

@@ -7,5 +7,5 @@
 */
 
 if ((player getVariable ["restrained", false]) || (player getVariable ["surrender", false]) || !(alive player) || (player getVariable ["is_coma", false])) exitWith {
-	true; 
+	true;
 };

@@ -110,7 +110,7 @@ class ALYSIA_DRUG
 				if ((vehicle player) != player) then {\
 					_smoke attachTo [(vehicle player), [-0.6, -1, 0]];\
 				} else {\
-					_smoke attachTo [player, [0, -0.1, 1.5]]; \
+					_smoke attachTo [player, [0, -0.1, 1.5]];\
 				};\
 				sleep 4;\
 				if (missionNamespace getVariable ""STATS_marijuana"" < 7) then {\

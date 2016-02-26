@@ -15,7 +15,7 @@ if (_sel isEqualTo -1) exitWith {
 
 _uid = lbData[8736, _sel];
 if (_uid isEqualTo (getplayerUID player)) exitWith {
-	["Vous ne pouvez pas effectuer cette action sur vous même"] call AlysiaClient_fnc_error; 
+	["Vous ne pouvez pas effectuer cette action sur vous même"] call AlysiaClient_fnc_error;
 };
 
 _rank = ctrlText 8737;

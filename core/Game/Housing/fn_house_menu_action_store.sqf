@@ -18,7 +18,7 @@ _types = getArray(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(_target) >> "ga
 if ("Air" in _types) then {
 	_distance = 95;
 };
-if ("Ship" in _types) then { 
+if ("Ship" in _types) then {
 	_distance = 130;
 };
 if (isNil "_distance") then {
