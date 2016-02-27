@@ -142,7 +142,7 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 800;
 	};
-	class B_Kitbag_Depanneur
+	class Skyline_Sac_Depanneur_01_F
 	{
 		buy_price = 800;
 		buy_license_CIV = "company_garagist";
@@ -159,11 +159,11 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 800;
 	};
-	class B_Secouriste_khk
+	class Skyline_Sac_Secouriste_01_F
 	{
 		buy_price = 800;
 	};
-	class B_Secouriste2_khk
+	class Skyline_Sac_Secouriste_02_F
 	{
 		buy_price = 800;
 	};
@@ -187,7 +187,7 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 800;
 	};
-	class B_Defibrilateur_khk
+	class Skyline_Sac_Secouriste_01_2_F
 	{
 		buy_price = 1200;
 	};
@@ -215,6 +215,31 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
+	class bonnet_garde_tank
+	{
+		buy_price = 55;
+		buy_condition_EAST = 2;
+	};
+	class casquette_garde_tank
+	{
+		buy_price = 50;
+		buy_condition_EAST = 1;
+	};
+	class casquette_garde
+	{
+		buy_price = 50;
+		buy_condition_EAST = 1;
+	};
+	class casque_garde_basic
+	{
+		buy_price = 200;
+		buy_condition_EAST = 1;
+	};
+	class casque_garde_camo
+	{
+		buy_price = 250;
+		buy_condition_EAST = 1;
+	};
 	class casquette_Basique
 	{
 		buy_price = 75;
@@ -224,6 +249,16 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 75;
 		buy_condition_EAST = 2;
+	};
+	class casquette_garde_officier_tank
+	{
+		buy_price = 95;
+		buy_condition_EAST = 4;
+	};
+	class casquette_garde_officier
+	{
+		buy_price = 95;
+		buy_condition_EAST = 4;
 	};
 	class casquette_Commandant
 	{
@@ -2380,20 +2415,20 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 95;
 	};
-	class U_C_Alysia_01
+	class Skyline_Uniforme_Alysia_01_F
 	{
 		buy_price = 50;
 	};
-	class U_C_Depanneur_01
+	class Skyline_Uniforme_Depanneur_01_F
 	{
 		buy_price = 80;
 		buy_license_CIV = "company_garagist";
 	};
-	class U_C_DolceGabbana_01
+	class Skyline_Uniforme_DolceGabbana_01_F
 	{
 		buy_price = 95;
 	};
-	class U_C_Hello_Kitty_01
+	class Skyline_Uniforme_Hello_Kitty_01_F
 	{
 		buy_price = 95;
 	};
@@ -2452,27 +2487,27 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class U_C_Secouriste_01
+	class Skyline_Uniforme_Secouriste_01_F
 	{
 		buy_price = 80;
 		buy_condition_GUER = 1;
 	};
-	class U_C_Secouriste_02
+	class Skyline_Uniforme_Secouriste_02_F
 	{
 		buy_price = 80;
 		buy_condition_GUER = 1;
 	};
-	class U_C_Securite_01
+	class Skyline_Uniforme_Securite_01_F
 	{
 		buy_price = 150;
 		buy_license_CIV = "company_security";
 	};
-	class U_C_Securite_02
+	class Skyline_Uniforme_Securite_02_F
 	{
 		buy_price = 150;
 		buy_license_CIV = "company_security";
 	};
-	class U_C_Securite_03
+	class Skyline_Uniforme_Securite_03_F
 	{
 		buy_price = 150;
 		buy_license_CIV = "company_security";
@@ -2780,7 +2815,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Bank_Bomb
 	{
-		buy_price = 65000;
+		buy_price = 95000;
 	};
 	class tf_anprc148jem_2
 	{
@@ -2799,5 +2834,14 @@ class ALYSIA_ITEMS_ARMA
     {
     	buy_price = 950;
     	buy_license_CIV = "company_garagist";
+    };
+    class SkylineItems_TelephoneTactile
+    {
+    	buy_price = 250;
+    };
+    class tf_rt1523g_black
+    {
+    	buy_price = 500;
+    	buy_condition_GUER = 1;
     };
 };

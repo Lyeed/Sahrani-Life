@@ -46,6 +46,8 @@ if ((_old_app isEqualTo _new_app) || !(profileNamespace getVariable ["ALYSIA_tab
 	{
 		ctrlShow[_x, true];
 	} forEach _new_idcs;
+
+	(_display displayCtrl 7502) ctrlSetText getText(missionConfigFile >> "RscDisplayTablet" >> "controls" >> format["%1_BACKGROUND", _new_app]);
 };
 
 _handleValue = ctrlPosition (_display displayCtrl 7501);

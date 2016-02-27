@@ -26,12 +26,13 @@ disableSerialization;
 _display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
 
+g_ctrl_shown = [];
 if (player getVariable ["tablet_on", false]) then
 {
 	g_app = "MAIN";
 	["MAIN"] spawn AlysiaClient_fnc_tabletApp;
 } else {
-	private["_loading_ctrl", "_loading_ctrl_white"]
+	private["_loading_ctrl", "_loading_ctrl_white"];
 	
 	g_CTRL_inUse = true;
 	g_app = "";

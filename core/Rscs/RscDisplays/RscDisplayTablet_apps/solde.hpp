@@ -14,9 +14,9 @@
 #define SOLDE_BILLS_HEADER_IDC         7613
 #define SOLDE_BILLS_FRAME_IDC          7614
 #define SOLDE_BILLS_INFO_IDC           7615
-#define SOLDE_SMS_HEADER               7616
-#define SOLDE_SMS_CHECKBOX             7617
-#define SOLDE_SMS_FRAME                7618
+#define SOLDE_SMS_HEADER_IDC           7616
+#define SOLDE_SMS_CHECKBOX_IDC         7617
+#define SOLDE_SMS_FRAME_IDC            7618
 
 SOLDE_BACKGROUND = "lyeed_IMG\data\tablet\backgrounds\back_bank.jpg";
 SOLDE_IDCS[] =
@@ -189,7 +189,7 @@ class SOLDE_BILLS_FRAME: RscFrame
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.346 * safezoneH + safezoneY;
 	w = 0.221719 * safezoneW;
-	h = 0.341 * safezoneH;
+	h = 0.187 * safezoneH;
 };
 class SOLDE_BILLS_INFO: RscListbox
 {
@@ -198,7 +198,7 @@ class SOLDE_BILLS_INFO: RscListbox
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.368 * safezoneH + safezoneY;
 	w = 0.221719 * safezoneW;
-	h = 0.319 * safezoneH;
+	h = 0.165 * safezoneH;
 };
 
 class SOLDE_SMS_HEADER: RscStructuredText

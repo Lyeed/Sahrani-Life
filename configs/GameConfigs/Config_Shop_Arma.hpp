@@ -128,6 +128,7 @@ class ALYSIA_SHOPS_ARMA
 		side = "CIV";
 		stocks[] =
 		{
+			"SkylineItems_TelephoneTactile",
 			"Skyline_Hache_01",
 			"Skyline_Pioche_01",
 			"Skyline_Pelle_01",
@@ -198,8 +199,8 @@ class ALYSIA_SHOPS_ARMA
 		side = "CIV";
 		stocks[] =
 		{
-			"SkylineItems_Couteau",
-			"Bank_Bomb"
+			"SkylineItems_Couteau"/*,
+			"Bank_Bomb"*/
 		};
 	};
 	

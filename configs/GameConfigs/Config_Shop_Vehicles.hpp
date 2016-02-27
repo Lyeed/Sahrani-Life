@@ -38,13 +38,15 @@ class ALYSIA_SHOPS_VEHICLES
 		stock[] =
 		{
 			"RDS_Lada_Civ_05",
-			"Skyline_Bus_10_F",
-			"max_FBI_tahoe_undercover",
-			"Cha_BTR60_Cuba",
+			"LandRover_ACR",
+			"LandRover_TK_CIV_EP1",
+			"ACR_LandRover_AMB",
+			"ACR_Offroad_HMG",
+			"Skyline_GMC_Vandura_Propagande_01_F",
+			"RDS_Ikarus_Civ",
 			"Fett_truck_army",
-			"Skyline_T34_01_F",
-			"max_FBI_tahoe_undercover",
-			"Skyline_GMC_Vandura_Propagande_01_F"
+			"Cha_BTR60_Cuba",
+			"Skyline_T34_01_F"
 		};
 	};
 
@@ -247,7 +249,8 @@ class ALYSIA_SHOPS_VEHICLES
 			"Skyline_Vehicule_Jonzie_Quattroporte",
 			"Skyline_Vehicule_Jonzie_STI",
 			"Skyline_Vehicule_Jonzie_VE",
-			"Skyline_Vehicule_Jonzie_Viper"
+			"Skyline_Vehicule_Jonzie_Viper",
+			"Skyline_Jeep_Wrangler_Rubicon"
 		};
 	};
 	class CIV_vehicules_job
@@ -257,13 +260,13 @@ class ALYSIA_SHOPS_VEHICLES
 		stock[] =
 		{
 			"max_CrownVic_taxi",
-			"RDS_Ikarus_Civ",
 			"Skyline_Bus",
 			"max_towtruck",
 			"Jonzie_Tow_Truck",
 			"shounka_limo_civ",
 			"shounka_a3_mantgs",
-			"shounka_a3_brinks_noir"
+			"shounka_a3_brinks_noir",
+			"Skyline_Jeep_Wrangler_Rubicon_Depannage_01_F"
 		};
 	};
 };

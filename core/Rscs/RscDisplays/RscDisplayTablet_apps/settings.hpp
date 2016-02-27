@@ -318,7 +318,7 @@ class SETTINGS_TASKFORCE_INFO: RscStructuredText
 class SETTINGS_TABLET_ANIMATION_HEADER: RscStructuredText
 {
 	idc = SETTINGS_TABLET_ANIMATION_HEADER_IDC;
-	text = "<t align='center'>Animations tablette</t>";
+	text = "<t align='center' size='0.8'>Animations tablette</t>";
 	colorBackground[] = {0,0,0,0.8};
 
 	x = 0.324687 * safezoneW + safezoneX;
@@ -350,7 +350,7 @@ class SETTINGS_TABLET_ANIMATION_FRAME: RscFrame
 class SETTINGS_HUD_ANIMATION_HEADER: RscStructuredText
 {
 	idc = SETTINGS_HUD_ANIMATION_HEADER_IDC;
-	text = "<t align='center'>Animations interface</t>";
+	text = "<t align='center' size='0.8'>Animations interface</t>";
 	colorBackground[] = {0,0,0,0.8};
 
 	x = 0.324687 * safezoneW + safezoneX;

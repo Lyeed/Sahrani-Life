@@ -5,12 +5,15 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+private "_target";
+_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if (isNull g_interaction_target) exitWith {};
-if (!(g_interaction_target getVariable ["restrained", false])) exitWith {
+if (isNull _target) exitWith {};
+
+if (!(_target getVariable ["restrained", false])) exitWith {
 	["La cible n'est pas menottée"] call AlysiaClient_fnc_error;
 };
-if (g_interaction_target getVariable ["escorting", false]) exitWith {
+if (!(isNull (_target getVariable ["escorted", objNull]))) exitWith {
 	["Quelqu'un escorte la cible"] call AlysiaClient_fnc_error;
 };
 
@@ -18,13 +21,12 @@ closeDialog 0;
 g_action_inUse = true;
 player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
-
 g_action_inUse = false;
 
-if (!(g_interaction_target getVariable ["restrained", false])) exitWith {
+if (!(_target getVariable ["restrained", false])) exitWith {
 	["La cible n'est pas menottée"] call AlysiaClient_fnc_error;
 };
-if (g_interaction_target getVariable ["escorting", false]) exitWith {
+if (_target getVariable ["escorting", false]) exitWith {
 	["Quelqu'un escorte la cible"] call AlysiaClient_fnc_error;
 };
 
@@ -32,5 +34,5 @@ if (!([true, "handcuffs", 1] call AlysiaClient_fnc_handleInv)) then {
 	["Vous n'avez pas récupéré les menottes car vous n'avez pas assez de place"] call AlysiaClient_fnc_error;
 };
 
-g_interaction_target setVariable ["restrained", false, true];
+_target setVariable ["restrained", false, true];
 [player, "cuffout", 10] call CBA_fnc_globalSay3d;

@@ -70,7 +70,7 @@
 		[
 			"unrestrain",
 			"Démenotter",
-			"[] spawn AlysiaClient_fnc_interactionMenu_action_unrestrain;",
+			"[g_interaction_target] spawn AlysiaClient_fnc_interactionMenu_action_unrestrain;",
 			"
 				(
 					(g_interaction_target getVariable['restrained',false]) &&

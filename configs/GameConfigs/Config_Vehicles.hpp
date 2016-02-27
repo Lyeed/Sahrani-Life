@@ -2133,24 +2133,6 @@ class ALYSIA_VEHICLES
 		realname = "Golf IV";
 	};
 
-	class RDS_Ikarus_Civ
-	{
-		buyPrice = 25000;
-		inventory = 80;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck","company_transport"};
-		fuel = "Diesel";
-		colors[] =
-		{
-			"RDS_Ikarus_Civ_01",
-			"RDS_Ikarus_Civ_02"
-		};
-		realname = "Bus Ikarus";
-	};
-  	class RDS_Ikarus_Civ_01: RDS_Ikarus_Civ {};
-  	class RDS_Ikarus_Civ_02: RDS_Ikarus_Civ {};
-
 	class C_Quadbike_01_F
 	{
 		buyPrice = 800;
@@ -2294,7 +2276,8 @@ class ALYSIA_VEHICLES
 			"Skyline_Bus_06_F",
 			"Skyline_Bus_07_F",
 			"Skyline_Bus_08_F",
-			"Skyline_Bus_09_F"
+			"Skyline_Bus_09_F",
+			"Skyline_Bus_10_F"
 		};
 		realname = "Bus";
 	};
@@ -2760,32 +2743,11 @@ class ALYSIA_VEHICLES
   	/*
 	**				EAST VEHICLES
 	*/
+	
 	/* CARS */
-	class max_FBI_tahoe_undercover
-	{
-		name = "Taheo noir";
-		buyPrice = 40000;
-		inventory = 50;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		rank = 3;
-	};
-	class Skyline_Bus_10_F
-	{
-		name = "Bus";
-		buyPrice = 55000;
-		inventory = 80;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"truck"};
-		fuel = "SP98";
-		rank = 4;
-	};
 	class RDS_Lada_Civ_05
 	{
-		name = "Lada Garde";
+		realname = "Lada Garde";
 		buyPrice = 2000;
 		inventory = 30;
 		side = "EAST";
@@ -2793,6 +2755,34 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "SP98";
 		rank = 1;
+	};
+	class LandRover_ACR
+	{
+		realname = "Pickup Garde";
+		buyPrice = 16800;
+		inventory = 50;
+		side = "EAST";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "Diesel";
+		rank = 1;
+	};
+	class LandRover_TK_CIV_EP1: LandRover_ACR {};
+	class ACR_LandRover_AMB: LandRover_ACR
+	{
+		realname = "Pickup Garde (box)";
+		buyPrice = 21600;
+		inventory = 98;
+		rank = 2;
+	};
+	class ACR_Offroad_HMG: LandRover_ACR
+	{
+		realname = "Pickup Garde (armé)";
+		buyPrice = 95500;
+		inventory = 30;
+		insurance = 0;
+		fuel = "SP95";
+		rank = 4;
 	};
 	class Skyline_GMC_Vandura_Propagande_01_F
 	{
@@ -2817,31 +2807,41 @@ class ALYSIA_VEHICLES
 		licenses[] = {"driver"};
 		fuel = "Diesel";
 		rank = 4;
-		realname = "BTR60 Cuba";
+		realname = "BTR60 Cuba Garde";
 	};
-	class Skyline_T34_01_F
+	class Skyline_T34_01_F: Cha_BTR60_Cuba
 	{
 		buyPrice = 370000;
 		inventory = 90;
-		side = "EAST";
-		insurance = 0;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
 		rank = 5;
-		realname = "T34";
+		realname = "T34 Garde";
 	};
 	
 	/* TRUCKS */
-	class Fett_truck_army
+	class RDS_Ikarus_Civ
 	{
-		buyPrice = 280000;
-		inventory = 425;
+		buyPrice = 38000;
+		inventory = 80;
 		side = "EAST";
 		insurance = 1;
 		licenses[] = {"truck"};
 		fuel = "Diesel";
 		rank = 3;
-		realname = "HEMTT cargo";
+		colors[] =
+		{
+			"RDS_Ikarus_Civ_01",
+			"RDS_Ikarus_Civ_02"
+		};
+		realname = "Bus Ikarus";
+	};
+  	class RDS_Ikarus_Civ_01: RDS_Ikarus_Civ {};
+  	class RDS_Ikarus_Civ_02: RDS_Ikarus_Civ {};
+	class Fett_truck_army: RDS_Ikarus_Civ
+	{
+		buyPrice = 280000;
+		inventory = 425;
+		rank = 4;
+		realname = "HEMTT cargo Garde";
 	};
 
 	/* AIRS */
@@ -3833,4 +3833,53 @@ class ALYSIA_VEHICLES
 	class Skyline_Vehicule_Jonzie_XB_10_F: Skyline_Vehicule_Jonzie_XB {};
 	class Skyline_Vehicule_Jonzie_XB_11_F: Skyline_Vehicule_Jonzie_XB {};
 	class Skyline_Vehicule_Jonzie_XB_12_F: Skyline_Vehicule_Jonzie_XB {};
+
+	class Skyline_Jeep_Wrangler_Rubicon_Depannage_01_F
+	{
+		realname = "Jeep Wrangler Depannage";
+		buyPrice = 63299;
+		inventory = 30;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver", "company_garagist"};
+		fuel = "Diesel";
+	};
+
+	class Skyline_Jeep_Wrangler_Rubicon
+	{
+		realname = "Jeep Wrangler";
+		buyPrice = 53299;
+		inventory = 80;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP98";
+		colors[] =
+		{
+			"Skyline_Jeep_Wrangler_Rubicon_01_F",
+			"Skyline_Jeep_Wrangler_Rubicon_02_F",
+			"Skyline_Jeep_Wrangler_Rubicon_03_F",
+			"Skyline_Jeep_Wrangler_Rubicon_04_F",
+			"Skyline_Jeep_Wrangler_Rubicon_05_F",
+			"Skyline_Jeep_Wrangler_Rubicon_06_F",
+			"Skyline_Jeep_Wrangler_Rubicon_07_F",
+			"Skyline_Jeep_Wrangler_Rubicon_08_F",
+			"Skyline_Jeep_Wrangler_Rubicon_09_F",
+			"Skyline_Jeep_Wrangler_Rubicon_10_F",
+			"Skyline_Jeep_Wrangler_Rubicon_11_F",
+			"Skyline_Jeep_Wrangler_Rubicon_12_F"
+		};
+	};
+	class Skyline_Jeep_Wrangler_Rubicon_01_F: Skyline_Jeep_Wrangler_Rubicon {};
+	class Skyline_Jeep_Wrangler_Rubicon_02_F: Skyline_Jeep_Wrangler_Rubicon {};
+	class Skyline_Jeep_Wrangler_Rubicon_03_F: Skyline_Jeep_Wrangler_Rubicon {};
+	class Skyline_Jeep_Wrangler_Rubicon_04_F: Skyline_Jeep_Wrangler_Rubicon {};
+	class Skyline_Jeep_Wrangler_Rubicon_05_F: Skyline_Jeep_Wrangler_Rubicon {};
+	class Skyline_Jeep_Wrangler_Rubicon_06_F: Skyline_Jeep_Wrangler_Rubicon {};
+	class Skyline_Jeep_Wrangler_Rubicon_07_F: Skyline_Jeep_Wrangler_Rubicon {};
+	class Skyline_Jeep_Wrangler_Rubicon_08_F: Skyline_Jeep_Wrangler_Rubicon {};
+	class Skyline_Jeep_Wrangler_Rubicon_09_F: Skyline_Jeep_Wrangler_Rubicon {};
+	class Skyline_Jeep_Wrangler_Rubicon_10_F: Skyline_Jeep_Wrangler_Rubicon {};
+	class Skyline_Jeep_Wrangler_Rubicon_11_F: Skyline_Jeep_Wrangler_Rubicon {};
+	class Skyline_Jeep_Wrangler_Rubicon_12_F: Skyline_Jeep_Wrangler_Rubicon {};
 };

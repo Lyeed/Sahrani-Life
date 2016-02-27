@@ -7,9 +7,9 @@ class ALYSIA_SHOPS_CLOTHING
 		uniforms[] =
 		{
 			"U_C_HunterBody_grn",
-			"U_C_DolceGabbana_01",
+			"Skyline_Uniforme_DolceGabbana_01_F",
 			"U_OrestesBody",
-			"U_C_Hello_Kitty_01",
+			"Skyline_Uniforme_Hello_Kitty_01_F",
 			"rds_uniform_citizen1",
 			"rds_uniform_citizen2",
 			"rds_uniform_citizen3",
@@ -52,7 +52,7 @@ class ALYSIA_SHOPS_CLOTHING
 			"TRYK_U_B_Denim_T_BG_WH",
 			"TRYK_U_B_Denim_T_BK",
 			"TRYK_U_B_Denim_T_WH",
-			"U_C_Alysia_01",
+			"Skyline_Uniforme_Alysia_01_F",
 			"U_C_Poloshirt_blue",
 			"U_C_Poloshirt_burgundy",
 			"U_C_Poloshirt_stripped",
@@ -275,7 +275,7 @@ class ALYSIA_SHOPS_CLOTHING
 			"TRYK_U_pad_j_blk",
 			"TRYK_U_pad_j",
 			"mgsr_civ_01_uniform",
-			"U_C_Alysia_01",
+			"Skyline_Uniforme_Alysia_01_F",
 			"U_C_Poloshirt_blue",
 			"U_C_Poloshirt_burgundy",
 			"U_C_Poloshirt_stripped",
@@ -580,7 +580,14 @@ class ALYSIA_SHOPS_CLOTHING
 			"casquette_Sergent",
 			"casquette_Caporal",
 			"casquette_Basique",
-			"casque_garde_special"
+			"casque_garde_basic",
+			"casque_garde_camo",
+			"casque_garde_special",
+			"casquette_garde",
+			"casquette_garde_tank",
+			"bonnet_garde_tank",
+			"casquette_garde_officier_tank",
+			"casquette_garde_officier"
 		};
 		goggles[] =
 		{
@@ -638,13 +645,13 @@ class ALYSIA_SHOPS_CLOTHING
 		side = "CIV";
 		uniforms[] =
 		{
-			"U_C_Depanneur_01",
+			"Skyline_Uniforme_Depanneur_01_F",
 			"U_C_Journalist",
 			"U_C_Journaliste_01",
 			"U_C_Journaliste_02",
-			"U_C_Securite_03",
-			"U_C_Securite_02",
-			"U_C_Securite_01"
+			"Skyline_Uniforme_Securite_03_F",
+			"Skyline_Uniforme_Securite_02_F",
+			"Skyline_Uniforme_Securite_01_F"
 		};
 		headgear[] = 
 		{
@@ -660,7 +667,7 @@ class ALYSIA_SHOPS_CLOTHING
 		};
 		backpacks[] =
 		{
-			"B_Kitbag_Depanneur"
+			"Skyline_Sac_Depanneur_01_F"
 		};
 	};
 
@@ -805,8 +812,8 @@ class ALYSIA_SHOPS_CLOTHING
 		side = "GUER";
 		uniforms[] =
 		{
-			"U_C_Secouriste_01",
-			"U_C_Secouriste_02",
+			"Skyline_Uniforme_Secouriste_01_F",
+			"Skyline_Uniforme_Secouriste_02_F",
 			"max_paramedic_uniform",
 			"combi_plonge_samu",
 			"TRYK_U_B_PCUHsW5",
@@ -864,13 +871,14 @@ class ALYSIA_SHOPS_CLOTHING
 			"B_AssaultPack_blk",
 			"B_FieldPack_blk",
 			"B_TacticalPack_blk",
-			"B_Defibrilateur_khk",
-			"B_Secouriste_khk",
-			"B_Secouriste2_khk",
+			"Skyline_Sac_Secouriste_01_2_F",
+			"Skyline_Sac_Secouriste_01_F",
+			"Skyline_Sac_Secouriste_01_F",
 			"TRYK_B_Medbag",
 			"TRYK_B_Medbag_BK",
 			"TRYK_B_Medbag_OD",
-			"TRYK_B_Medbag_ucp"
+			"TRYK_B_Medbag_ucp",
+			"tf_rt1523g_black"
 		};
 	};
 

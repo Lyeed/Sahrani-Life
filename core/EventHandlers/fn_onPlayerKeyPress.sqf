@@ -20,7 +20,7 @@ if (
 if (
 		(player getVariable ["surrender", false]) &&
 		!(_code isEqualTo (((["Alysia", "actionSurrender"] call CBA_fnc_getKeybind) select 5) select 0)) &&
-		!(_code isEqualTo (((["Alysia", "actionSilent"] call CBA_fnc_getKeybind) select 5) select 0)) &&
+		!(_code isEqualTo (((["Alysia", "actionSilent"] call CBA_fnc_getKeybind) select 5) select 0))
 ) exitWith {true};
 
 if (player getVariable ["is_coma", false]) exitWith {true};

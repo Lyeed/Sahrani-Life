@@ -5,11 +5,11 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_dialog", "_list", "_salary"];
+private["_display", "_list", "_salary"];
 
 disableSerialization;
-_dialog = uiNamespace getVariable ["tablet", displayNull];
-if (isNull _dialog) exitWith {};
+_display = uiNamespace getVariable ["tablet", displayNull];
+if (isNull _display) exitWith {};
 
 _salary = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary");
 if (_salary > 0) then
@@ -28,31 +28,31 @@ if ((player getVariable ["number", ""]) != "") then
 	(_display displayCtrl 7617) cbSetChecked (profileNamespace getVariable ["ALYSIA_phone_salary", true]);
 };
 
-(_dialog displayCtrl 7603) ctrlSetStructuredText parseText format
+(_display displayCtrl 7603) ctrlSetStructuredText parseText format
 [
 	"<t align='center' color='#8cff9b' size='1.2'>%1</t><t align='right'>kn</t>",
 	[g_atm] call AlysiaClient_fnc_numberText
 ];
 
-(_dialog displayCtrl 7606) ctrlSetStructuredText parseText format
+(_display displayCtrl 7606) ctrlSetStructuredText parseText format
 [
 	"<t align='center' color='#8cff9b'>%1</t><t align='right'>kn</t>",
 	[_salary] call AlysiaClient_fnc_numberText
 ];
 
-(_dialog displayCtrl 7609) ctrlSetStructuredText parseText format
+(_display displayCtrl 7609) ctrlSetStructuredText parseText format
 [
 	"<t align='center'>%1 minutes</t>",
 	getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary_timer")
 ];
 
-(_dialog displayCtrl 7612) ctrlSetStructuredText parseText format
+(_display displayCtrl 7612) ctrlSetStructuredText parseText format
 [
 	"<t align='center'>%1 minutes</t>",
 	round((g_nextPay - time) / 60)
 ];
 
-_list = _dialog displayCtrl 7615;
+_list = _display displayCtrl 7615;
 lbClear _list;
 
 {
