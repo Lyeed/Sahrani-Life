@@ -26,9 +26,12 @@ if (_hide) then {
 g_phone_messages pushBack [_from, (format["Le %1 à %2", ([] call AlysiaClient_fnc_strDate), ([] call AlysiaClient_fnc_strTime)]), 0, _msg];
 if (alive player) then
 {
-	if (profileNamespace getVariable ["ALYSIA_phone_SILENT", false]) then {
-		playSound "message_rcv_silent";
-	} else {
-		[player, ([] call AlysiaClient_fnc_phone_get_ring), 20] call CBA_fnc_globalSay3d;
+	if ("SkylineItems_TelephoneTactile" in (magazines player)) then
+	{
+		if (profileNamespace getVariable ["ALYSIA_phone_SILENT", false]) then {
+			playSound "message_rcv_silent";
+		} else {
+			[player, ([] call AlysiaClient_fnc_phone_get_ring), 20] call CBA_fnc_globalSay3d;
+		};
 	};
 };

@@ -517,7 +517,7 @@ class ALYSIA_FACTIONS
 		/*** LOADOUT ***/
 		class Loadout
 		{
-			uniform = "U_C_Poloshirt_blue";
+			uniform = "Skyline_Uniforme_Alysia_01_F";
 			headgear = "";
 			vest = "";
 			backpack = "";
