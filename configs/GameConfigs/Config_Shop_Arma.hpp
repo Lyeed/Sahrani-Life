@@ -6,6 +6,7 @@ class ALYSIA_SHOPS_ARMA
 		side = "EAST";
 		stocks[] =
 		{
+			"SkylineItems_TelephoneTactile",
 			"SkylineItems_PlaqueMilitaire",
 			"hgun_FlashBall_F",
 			"1Rnd_FlashBall_Mag",
@@ -44,6 +45,7 @@ class ALYSIA_SHOPS_ARMA
 		side = "WEST";
 		stocks[] =
 		{
+			"SkylineItems_TelephoneTactile",
 			"SkylineItems_PlaqueMilitaire",
 			"hgun_FlashBall_F",
 			"1Rnd_FlashBall_Mag",
@@ -157,6 +159,7 @@ class ALYSIA_SHOPS_ARMA
 		stocks[] =
 		{
 			"SkylineItems_Bandage",
+			"SkylineItems_TelephoneTactile",
 			"ItemMap",
 			"ItemGPS",
 			"Binocular",
