@@ -182,6 +182,19 @@ class ALYSIA_LICENSES
 			};
 		};
 	};
+	class furniture
+	{
+		name = "Traitement des planches";
+		class factions
+		{
+			class CIV
+			{
+				price = 11000;
+				pad_store = 1;
+				illegal = 0;
+			};
+		};
+	};
 	class iron
 	{
 		name = "Traitement du fer";

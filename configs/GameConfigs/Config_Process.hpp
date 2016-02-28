@@ -48,7 +48,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				licenses[] = {"wood"};
+				licenses[] = {"furniture"};
 			};
 		};
 	};
@@ -698,7 +698,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				licenses[] = {"wood"};
+				licenses[] = {"furniture"};
 			};
 		};
 	};
@@ -722,7 +722,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				licenses[] = {"wood"};
+				licenses[] = {"furniture"};
 			};
 		};
 	};

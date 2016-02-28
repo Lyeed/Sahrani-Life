@@ -290,10 +290,11 @@ class ALYSIA_ITEMS
 		name = "Meuble";
 		weight = 8;
 		image = "alysia_items_virtual\data\meuble.paa";
+		license = "furniture";
 		class market
 		{
-			max = 600;
-			min = 300;
+			max = 450;
+			min = 190;
 			mult = 2;
 			affect[] = {"woodp","glass","brique","saltp","cottonp","ciment","coal"};
 		};

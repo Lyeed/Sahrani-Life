@@ -96,7 +96,7 @@ _idc = 2810;
 ([
     [
         "Récupérer",
-        "[] call AlysiaClient_fnc_garageVehicleGet;",
+        "[] spawn AlysiaClient_fnc_garageVehicleGet;",
         "lyeed_IMG\data\garage\action_get.paa",
         "lyeed_IMG\data\garage\action_get_select.paa",
         "
