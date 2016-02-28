@@ -820,7 +820,8 @@ class ALYSIA_SHOPS_CLOTHING
 			"TRYK_U_B_PCUHsW6",
 			"SAMU_combi",
 			"rds_uniform_assistant",
-			"rds_uniform_doctor"
+			"rds_uniform_doctor",
+			"rds_uniform_Functionary1"
 		};
 		headgear[] =
 		{

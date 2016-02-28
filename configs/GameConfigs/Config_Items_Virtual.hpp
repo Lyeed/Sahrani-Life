@@ -509,20 +509,20 @@ class ALYSIA_ITEMS
 	class cannabis
 	{
 		name = "Cannabis";
-		weight = 5;
+		weight = 4;
 		illegal = 1;
 		image = "alysia_items_virtual\data\canabis.paa";
 	};
 	class marijuana
 	{
 		name = "Marijuana";
-		weight = 4;
+		weight = 3;
 		illegal = 1;
 		image = "alysia_items_virtual\data\marijuana.paa";
 		license = "marijuana";
 		class market
 		{
-			max = 588;
+			max = 628;
 			min = 400;
 			mult = 3;
 			affect[] = {"methp","cocainep","cocainepc","heroinp","heroinps","opium"};

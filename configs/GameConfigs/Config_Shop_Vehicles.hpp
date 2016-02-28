@@ -101,7 +101,8 @@ class ALYSIA_SHOPS_VEHICLES
 		{
 			"CUP_C_Fishing_Boat_Chernarus",
 			"B_Boat_Transport_01_F",
-			"C_Boat_Civil_01_F"
+			"C_Boat_Civil_01_F",
+			"D41_Trawler"
 		};
 	};
 	class CIV_vehicles_air

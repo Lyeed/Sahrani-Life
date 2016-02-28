@@ -3845,6 +3845,17 @@ class ALYSIA_VEHICLES
 		fuel = "Diesel";
 	};
 
+	class D41_Trawler
+	{
+		realname = "D41 Trawler";
+		buyPrice = 145000;
+		inventory = 320;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "Diesel";
+	};
+
 	class Skyline_Jeep_Wrangler_Rubicon
 	{
 		realname = "Jeep Wrangler";
