@@ -3847,7 +3847,7 @@ class ALYSIA_VEHICLES
 		inventory = 320;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"driver"};
+		licenses[] = {"boat"};
 		fuel = "Diesel";
 	};
 

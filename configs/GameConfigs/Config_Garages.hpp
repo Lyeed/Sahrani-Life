@@ -14,6 +14,66 @@ class ALYSIA_GARAGES
 			"Truck"
 		};
 	};
+	
+	class garage_Brajdovi
+	{
+		name = "Garage Brajdovi";
+		spawns[] =
+		{
+			"CIV_vehicles_Brajdovi_1",
+			"CIV_vehicles_Brajdovi_2"
+		};
+		types[] =
+		{
+			"Car",
+			"Truck"
+		};
+	};
+	
+	class garage_Cabovi
+	{
+		name = "Garage Cabovi";
+		spawns[] =
+		{
+			"CIV_vehicles_Cabovi_1",
+			"CIV_vehicles_Cabovi_2"
+		};
+		types[] =
+		{
+			"Car",
+			"Truck"
+		};
+	};
+	
+	class garage_Promajna
+	{
+		name = "Garage Promajna";
+		spawns[] =
+		{
+			"garage_Promajna_1",
+			"garage_Promajna_2"
+		};
+		types[] =
+		{
+			"Car",
+			"Truck"
+		};
+	};
+	
+	class garage_Eponia	
+	{
+		name = "Garage Eponia	";
+		spawns[] =
+		{
+			"garage_Eponia_1",
+			"garage_Eponia_2"
+		};
+		types[] =
+		{
+			"Car",
+			"Truck"
+		};
+	};
 
 	class garage_bagongo
 	{
