@@ -104,7 +104,7 @@ _vehicle setVectorUp (surfaceNormal _spawnPos);
 _vehicle setDir (markerDir _validSpawn);
 _vehicle lock 2;
 
-_hitpoints = (getAllHitPointsDamage _vehicle) select 1;
+_hitpoints = ([_vehicle] call AlysiaClient_fnc_getAllHitPointsDamage) select 0;
 
 {
 	if ((_x > 0) && ((_hitpoints select _forEachIndex) != "")) then

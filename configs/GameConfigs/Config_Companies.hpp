@@ -44,7 +44,8 @@ class ALYSIA_COMPANIES
 			image = "lyeed_IMG\data\companies\types\weapon.paa";
 			process[] =
 			{
-				"bullet","buckshot",
+				"bullet",
+				"buckshot",
 				"magazine",
 				"barillet",
 				"canon",

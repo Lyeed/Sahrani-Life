@@ -335,7 +335,7 @@ class ALYSIA_PROCESS
 		sound = "cooking";
 		require[] =
 		{
-			{"frag_1", 1}, {"frag_2", 1}, {"frag_3", 1}, {"frag_4", 1}, {"frag_5", 1}, {"frag_6", 1}, {"frag_7", 1}, {"frag_8", 1}
+			{"frag_1", 1}, {"frag_2", 1}, {"frag_3", 1}, {"frag_4", 1}, {"frag_5", 1}, {"frag_6", 1}
 		};
 		receive[] =
 		{

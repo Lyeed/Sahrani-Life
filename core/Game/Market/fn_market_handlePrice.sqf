@@ -10,26 +10,28 @@ _type = [_this, 0, false, [false]] call BIS_fnc_param;
 _item = [_this, 1, "", [""]] call BIS_fnc_param;
 _amount = [_this, 2, 1, [1]] call BIS_fnc_param;
 
+if (_item isEqualTo "") exitWith {};
+if (_amount isEqualTo 0) exitWith {};
+
+_weight = [_item] call AlysiaClient_fnc_itemGetWeight;
 _oldPrice = [_item] call AlysiaClient_fnc_market_getPrice;
 if (_type) then
 {//buy
-	_newPrice = _oldPrice + (_amount * getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market" >> "mult"));
+	_newprice = _oldprice + ((_oldprice * ((_amount * _weight) * 0.2)) / 100);
 	_maxPrice = getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market" >> "max");
 	if (_newPrice > _maxPrice) then {_newPrice = _maxPrice};
 } else
 {// sell
 	_affect = [_this, 3, false, [false]] call BIS_fnc_param;
 
-	_newPrice = _oldPrice - (_amount * getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market" >> "mult"));
+	_newprice = _oldprice - ((_oldprice * ((_amount * _weight) * 0.2)) / 100);
 	_minPrice = getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market" >> "min");
 	if (_newPrice < _minPrice) then {_newPrice = _minPrice};
 
 	if (_affect) then
 	{
 		_affected = getArray(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market" >> "affect");
-		if (!(_affected isEqualTo [])) then {
-			[true, _affected, _amount, false] call AlysiaClient_fnc_market_handlePrice;
-		};
+		if (!(_affected isEqualTo [])) then {[true, _affected, _amount, false] call AlysiaClient_fnc_market_handlePrice};
 	};
 };
 

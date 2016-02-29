@@ -35,7 +35,7 @@ if (_fuel isEqualTo "") exitWith {
 (_display displayCtrl 16011) ctrlSetStructuredText parseText format
 [
 	"<t align='right'> %1L</t>",
-	(_station getVariable [_fuel, getNumber(missionConfigFile >> "ALYSIA_FUEL" >> _fuel >> "max")])
+	(_station getVariable [_fuel, getNumber(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeof(_station) >> _fuel >> "max")])
 ];
 
 (_display displayCtrl 16015) ctrlSetText getText(missionConfigFile >> "ALYSIA_FUEL" >> _fuel >> "picture");

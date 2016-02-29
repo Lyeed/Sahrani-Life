@@ -247,15 +247,9 @@ if ((vehicle player) isEqualTo player) then
 					};
 				};
 
-				if (typeOf(_target) isEqualTo "Land_FuelStation_Feed_F") then
+				if (isClass(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_target))) then
 				{
-					if ((player getVariable ["typeRefuel", ""]) isEqualTo "") then {
-						[_target] call AlysiaClient_fnc_interactions_player_to_station;
-					} else {
-						["Plein annulé"] call AlysiaClient_fnc_info;
-						player setVariable ["typeRefuel", "", false];
-					};
-
+					[_target] call AlysiaClient_fnc_interactions_player_to_station;
 					true breakOut "main";
 				};
 

@@ -34,9 +34,6 @@ g_keybinds pushBack "actionHoldster";
 ["Alysia", "actionSifflet", "Utiliser (sifflet)", {[] call AlysiaClient_fnc_sifflet}, {true}, [DIK_F, [false, false, true]], false, 0, true] call CBA_fnc_addKeybind;
 g_keybinds pushBack "actionSifflet";
 
-["Alysia", "actionBip", "Utiliser (télécommande)", {[] call AlysiaClient_fnc_telecommande}, {true}, [DIK_F, [false, true, false]], false, 0, true] call CBA_fnc_addKeybind;
-g_keybinds pushBack "actionBip";
-
 if (getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "sirene_sound") != "") then
 {
 	["Alysia", "actionSirene", "Sirène", {[] call AlysiaClient_fnc_sirene}, {true}, [DIK_F, [true, false, false]], false, 0, true] call CBA_fnc_addKeybind;

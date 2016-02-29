@@ -7,17 +7,19 @@ class RscDisplayFuelStation: RscDisplayDefaultInteraction
 	{
 		class BACKGROUND: BACKGROUND
 		{
+			text = "lyeed_IMG\data\vehicle\background.jpg";
+
 			x = 0.37625 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
 			w = 0.2475 * safezoneW;
-			h = 0.210519 * safezoneH;
+			h = 0.165 * safezoneH;
 		};
 		class FRAME: FRAME
 		{
 			x = 0.37625 * safezoneW + safezoneX;
 			y = 0.357 * safezoneH + safezoneY;
 			w = 0.248542 * safezoneW;
-			h = 0.244816 * safezoneH;
+			h = 0.198 * safezoneH;
 		};
 	};
 
@@ -33,93 +35,90 @@ class RscDisplayFuelStation: RscDisplayDefaultInteraction
 		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE {};
 		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON {};
 
-		class FUEL_COMBO: RscCombo
+		class FUEL_HEADER: RscStructuredText
+		{
+			text = "Choix du carburant";
+			colorBackground[] = {0,0,0,0.8};
+
+			x = 0.391718 * safezoneW + safezoneX;
+			y = 0.412 * safezoneH + safezoneY;
+			w = 0.139219 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class FUEL_LIST: RscCombo
 		{
 			idc = 16004;
 			onLBSelChanged = "_this call AlysiaClient_fnc_fuelStation_refuel_veh_update;";
 
-			x = 0.400484 * safezoneW + safezoneX;
-			y = 0.42762 * safezoneH + safezoneY;
-			w = 0.128906 * safezoneW;
+			x = 0.391718 * safezoneW + safezoneX;
+			y = 0.434 * safezoneH + safezoneY;
+			w = 0.139219 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-		class FRAME_PRICE: RscFrame
-		{
-			idc = 16005;
 
-			x = 0.560328 * safezoneW + safezoneX;
-			y = 0.42652 * safezoneH + safezoneY;
-			w = 0.0360937 * safezoneW;
-			h = 0.055 * safezoneH;
-		};
-		class FUEL_TEXT: RscStructuredText
+		class PRICE_FRAME: RscFrame
 		{
-			idc = 16006;
-			text = "Choix du carburant";
-
-			x = 0.396875 * safezoneW + safezoneX;
-			y = 0.400074 * safezoneH + safezoneY;
-			w = 0.0928125 * safezoneW;
-			h = 0.022 * safezoneH;
+			x = 0.546406 * safezoneW + safezoneX;
+			y = 0.401 * safezoneH + safezoneY;
+			w = 0.0670312 * safezoneW;
+			h = 0.066 * safezoneH;
 		};
 		class PRICE_TEXT: RscStructuredText
 		{
-			idc = 16007;
 			text = "Prix/L";
+			colorBackground[] = {0,0,0,0.8};
 
-			x = 0.561354 * safezoneW + safezoneX;
+			x = 0.546406 * safezoneW + safezoneX;
 			y = 0.401 * safezoneH + safezoneY;
-			w = 0.0360937 * safezoneW;
+			w = 0.0670312 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-		class PRICE_TEXT2: RscStructuredText
+		class PRICE_INFO: RscStructuredText
 		{
 			idc = 16008;
-			text = "<t size ='2' align='center'>0</t>";
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.560844 * safezoneW + safezoneX;
-			y = 0.42806 * safezoneH + safezoneY;
-			w = 0.0341666 * safezoneW;
-			h = 0.0522223 * safezoneH;
+			x = 0.546406 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.0670312 * safezoneW;
+			h = 0.044 * safezoneH;
 		};
-		class PRICE_TEXT3: RscStructuredText
-		{
-			idc = 16009;
-			text = "<t size ='0.7' align='center'>kn</t>";
 
-			x = 0.579999 * safezoneW + safezoneX;
-			y = 0.463111 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.022 * safezoneH;
-		};
-		class STOCK_TEXT: RscStructuredText
+		class STOCK_FRAME: RscFrame
 		{
-			idc = 16010;
+			x = 0.546406 * safezoneW + safezoneX;
+			y = 0.478 * safezoneH + safezoneY;
+			w = 0.0670312 * safezoneW;
+			h = 0.066 * safezoneH;
+		};
+		class STOCK_HEADER: RscStructuredText
+		{
 			text = "<t align='right'>Disponibilité</t>";
+			colorBackground[] = {0,0,0,0.8};
 
-			x = 0.394812 * safezoneW + safezoneX;
-			y = 0.45886 * safezoneH + safezoneY;
-			w = 0.061875 * safezoneW;
+			x = 0.546406 * safezoneW + safezoneX;
+			y = 0.478 * safezoneH + safezoneY;
+			w = 0.0670312 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-		class STOCK_TEXT2: RscStructuredText
+		class STOCK_INFO: RscStructuredText
 		{
 			idc = 16011;
-			text = "<t align='right'>0</t>";
+			colorBackground[] = {0,0,0,0.6};
 
 			x = 0.461741 * safezoneW + safezoneX;
 			y = 0.45776 * safezoneH + safezoneY;
 			w = 0.061875 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
+
 		class VALIDATE_BACKGROUND: RscStructuredText
 		{
 			idc = 16013;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.448438 * safezoneW + safezoneX;
-			y = 0.522 * safezoneH + safezoneY;
+			x = 0.407187 * safezoneW + safezoneX;
+			y = 0.478 * safezoneH + safezoneY;
 			w = 0.108281 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
@@ -127,8 +126,8 @@ class RscDisplayFuelStation: RscDisplayDefaultInteraction
 		{
 			idc = 16014;
 
-			x = 0.448438 * safezoneW + safezoneX;
-			y = 0.522 * safezoneH + safezoneY;
+			x = 0.407187 * safezoneW + safezoneX;
+			y = 0.478 * safezoneH + safezoneY;
 			w = 0.108281 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
@@ -137,8 +136,8 @@ class RscDisplayFuelStation: RscDisplayDefaultInteraction
 			idc = 16016;
 			text = "<t align='center' size='1.5'>Remplir</t>";
 
-			x = 0.484531 * safezoneW + safezoneX;
-			y = 0.533 * safezoneH + safezoneY;
+			x = 0.438125 * safezoneW + safezoneX;
+			y = 0.489 * safezoneH + safezoneY;
 			w = 0.0567187 * safezoneW;
 			h = 0.033 * safezoneH;
 		};
@@ -147,8 +146,8 @@ class RscDisplayFuelStation: RscDisplayDefaultInteraction
 			idc = 16015;
 			text = "lyeed_IMG\data\global\validate.paa";
 
-			x = 0.453594 * safezoneW + safezoneX;
-			y = 0.53014 * safezoneH + safezoneY;
+			x = 0.413385 * safezoneW + safezoneX;
+			y = 0.486 * safezoneH + safezoneY;
 			w = 0.0216146 * safezoneW;
 			h = 0.0375186 * safezoneH;
 		};
@@ -156,11 +155,11 @@ class RscDisplayFuelStation: RscDisplayDefaultInteraction
 		{
 			idc = 16017;
 			action = "[] call AlysiaClient_fnc_fuelStation_refuel_veh_validate;";
-			onMouseEnter = "ctrlShow[16014, false];((findDisplay 16000) displayCtrl 16013) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Remplir</t>"";";
-			onMouseExit = "ctrlShow[16014, true];((findDisplay 16000) displayCtrl 16013) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Remplir</t>"";";
+			onMouseEnter = "ctrlShow[16014, false];ctrlSetText[16015, ""lyeed_IMG\data\global\validate_select.paa""];((findDisplay 16000) displayCtrl 16013) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Remplir</t>"";";
+			onMouseExit = "ctrlShow[16014, true];ctrlSetText[16015, ""lyeed_IMG\data\global\validate.paa""];((findDisplay 16000) displayCtrl 16013) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 16000) displayCtrl 16016) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Remplir</t>"";";
 
-			x = 0.448438 * safezoneW + safezoneX;
-			y = 0.522 * safezoneH + safezoneY;
+			x = 0.407187 * safezoneW + safezoneX;
+			y = 0.478 * safezoneH + safezoneY;
 			w = 0.108281 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
@@ -176,17 +175,19 @@ class RscDisplayFuelRefuel: RscDisplayDefaultInteraction
 	{
 		class BACKGROUND: BACKGROUND
 		{
+			text = "lyeed_IMG\data\vehicle\background.jpg";
+
 			x = 0.37625 * safezoneW + safezoneX;
 			y = 0.39 * safezoneH + safezoneY;
 			w = 0.2475 * safezoneW;
-			h = 0.210519 * safezoneH;
+			h = 0.11 * safezoneH;
 		};
 		class FRAME: FRAME
 		{
 			x = 0.37625 * safezoneW + safezoneX;
 			y = 0.357 * safezoneH + safezoneY;
-			w = 0.249062 * safezoneW;
-			h = 0.242926 * safezoneH;
+			w = 0.2475 * safezoneW;
+			h = 0.143 * safezoneH;
 		};
 	};
 	
@@ -197,87 +198,92 @@ class RscDisplayFuelRefuel: RscDisplayDefaultInteraction
 			text = "<t size='1.5' align='center'>Pompe à essence</t>";
 		};
 
-		class FRAME_PRICE: RscFrame
+		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME
 		{
-			idc = 17005;
-
-			x = 0.542591 * safezoneW + safezoneX;
-			y = 0.42762 * safezoneH + safezoneY;
-			w = 0.0619791 * safezoneW;
-			h = 0.0568517 * safezoneH;
+			x = 0.345312 * safezoneW + safezoneX;
+			y = 0.379 * safezoneH + safezoneY;
+		};
+		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND
+		{
+			x = 0.345312 * safezoneW + safezoneX;
+			y = 0.379 * safezoneH + safezoneY;
+		};
+		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE
+		{
+			x = 0.352031 * safezoneW + safezoneX;
+			y = 0.389074 * safezoneH + safezoneY;
+		};
+		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON
+		{
+			x = 0.345312 * safezoneW + safezoneX;
+			y = 0.379 * safezoneH + safezoneY;
 		};
 
-		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME {};
-		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND {};
-		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE {};
-		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON {};
-
-		class FUEL_TEXT: RscStructuredText
+		class PRICE_FRAME: RscFrame
 		{
-			idc = 17006;
-
-			x = 0.396875 * safezoneW + safezoneX;
-			y = 0.40012 * safezoneH + safezoneY;
-			w = 0.0928125 * safezoneW;
-			h = 0.022 * safezoneH;
+			x = 0.54125 * safezoneW + safezoneX;
+			y = 0.412 * safezoneH + safezoneY;
+			w = 0.061875 * safezoneW;
+			h = 0.066 * safezoneH;
 		};
 		class PRICE_TEXT: RscStructuredText
 		{
-			idc = 17007;
-			text = "Montant Total";
+			text = "<t align='center'>Montant Total</t>";
+			colorBackground[] = {0,0,0,0.8};
 
-			x = 0.540834 * safezoneW + safezoneX;
-			y = 0.401 * safezoneH + safezoneY;
-			w = 0.0670312 * safezoneW;
-			h = 0.022 * safezoneH;
-		};
-		class PRICE_TEXT2: RscStructuredText
-		{
-			idc = 17008;
-			text = "<t size ='2' align='center'>250</t>";
-			colorBackground[] = {0,0,0,0.6};
-
-			x = 0.543416 * safezoneW + safezoneX;
-			y = 0.42806 * safezoneH + safezoneY;
-			w = 0.0604167 * safezoneW;
-			h = 0.055 * safezoneH;
-		};
-		class STOCK_TEXT: RscStructuredText
-		{
-			idc = 17009;
-			text = "<t align='right'>Disponibilité</t>";
-
-			x = 0.394812 * safezoneW + safezoneX;
-			y = 0.45886 * safezoneH + safezoneY;
+			x = 0.54125 * safezoneW + safezoneX;
+			y = 0.412 * safezoneH + safezoneY;
 			w = 0.061875 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-		class STOCK_TEXT2: RscStructuredText
+		class PRICE_INFO: RscStructuredText
 		{
-			idc = 17010;
-			text = "<t align='right'>0</t>";
+			idc = 17008;
+			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.502269 * safezoneW + safezoneX;
-			y = 0.45776 * safezoneH + safezoneY;
-			w = 0.0290625 * safezoneW;
-			h = 0.022926 * safezoneH;
+			x = 0.54125 * safezoneW + safezoneX;
+			y = 0.434 * safezoneH + safezoneY;
+			w = 0.061875 * safezoneW;
+			h = 0.044 * safezoneH;
 		};
-		class PRICE_TEXT3: RscStructuredText
-		{
-			idc = 17012;
-			text = "<t size ='0.7' align='center'>kn</t>";
 
-			x = 0.587347 * safezoneW + safezoneX;
-			y = 0.46304 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
+		class FUEL_HEADER: RscStructuredText
+		{
+			idc = 17006;
+			colorBackground[] = {0,0,0,0.8};
+
+			x = 0.396875 * safezoneW + safezoneX;
+			y = 0.401 * safezoneH + safezoneY;
+			w = 0.128906 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
+		class STOCK_HEADER: RscStructuredText
+		{
+			text = "Disponibilité";
+			colorBackground[] = {0,0,0,0.8};
+
+			x = 0.396875 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.061875 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class STOCK_INFO: RscStructuredText
+		{
+			idc = 17010;
+			colorBackground[] = {0,0,0,0.6};
+
+			x = 0.45875 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.0670312 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		
 		class PROGRESS_BAR: RscProgress
 		{
 			idc = 17013;
 
-			x = 0.400522 * safezoneW + safezoneX;
-			y = 0.42963 * safezoneH + safezoneY;
+			x = 0.396875 * safezoneW + safezoneX;
+			y = 0.467 * safezoneH + safezoneY;
 			w = 0.130989 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
@@ -285,61 +291,10 @@ class RscDisplayFuelRefuel: RscDisplayDefaultInteraction
 		{
 			idc = 17014;
 
-			x = 0.400522 * safezoneW + safezoneX;
-			y = 0.42963 * safezoneH + safezoneY;
+			x = 0.396875 * safezoneW + safezoneX;
+			y = 0.467 * safezoneH + safezoneY;
 			w = 0.130989 * safezoneW;
 			h = 0.022 * safezoneH;
-		};
-		class VALIDATE_BACKGROUND: RscStructuredText
-		{
-			idc = 17015;
-			colorBackground[] = {0,0,0,0.6};
-
-			x = 0.448438 * safezoneW + safezoneX;
-			y = 0.522 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
-			h = 0.055 * safezoneH;
-		};
-		class VALIDATE_FRAME: RscFrame
-		{
-			idc = 17016;
-
-			x = 0.448438 * safezoneW + safezoneX;
-			y = 0.522 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
-			h = 0.055 * safezoneH;
-		};
-		class VALIDATE_IMAGE: RscPicture
-		{
-			idc = 17017;
-			text = "lyeed_IMG\data\global\validate.paa";
-
-			x = 0.453594 * safezoneW + safezoneX;
-			y = 0.53014 * safezoneH + safezoneY;
-			w = 0.0216146 * safezoneW;
-			h = 0.0375186 * safezoneH;
-		};
-		class VALIDATE_TEXT: RscStructuredText
-		{
-			idc = 17018;
-			text = "<t align='center' size='1.5'>Arrêter</t>";
-
-			x = 0.484531 * safezoneW + safezoneX;
-			y = 0.533 * safezoneH + safezoneY;
-			w = 0.0567187 * safezoneW;
-			h = 0.033 * safezoneH;
-		};
-		class VALIDATE_BUTTON: RscButtonSilent
-		{
-			idc = 17019;
-			action = "closedialog 0;";
-			onMouseEnter = "ctrlShow[17016, false];ctrlSetText[17017,""lyeed_IMG\data\global\validate_select.paa""];((findDisplay 17000) displayCtrl 17015) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 17000) displayCtrl 17017) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#000000'>Arrêter</t>"";";
-			onMouseExit = "ctrlShow[17016, true];ctrlSetText[17017,""lyeed_IMG\data\global\validate.paa""];((findDisplay 17000) displayCtrl 17015) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 17000) displayCtrl 17017) ctrlSetStructuredText parseText ""<t align='center' size='1.5' color='#FFFFFF'>Arrêter</t>"";";
-
-			x = 0.448438 * safezoneW + safezoneX;
-			y = 0.522 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
-			h = 0.055 * safezoneH;
 		};
 	};
 };

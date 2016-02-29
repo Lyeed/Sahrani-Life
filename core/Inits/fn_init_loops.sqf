@@ -17,39 +17,6 @@ if (g_launder > 0) then
 
 [] spawn
 {
-	private["_old_vehicle"];
-	sleep 8;
-	_old_vehicle = vehicle player;
-	while {true} do
-	{
-		if ((g_carryWeight > g_maxWeight) && !(isForcedWalk player)) then 
-		{
-			player forceWalk true;
-			titleText["Vous êtes surchargé", "PLAIN"];
-			player setFatigue 1;
-		} else {
-			if (isForcedWalk player) then {
-				player forceWalk false;
-			};
-		};
-		
-		if ((vehicle player) != _old_vehicle) then 
-		{
-			_old_vehicle = vehicle player;
-			switch (true) do
-			{
-				case (_old_vehicle isKindOf "Man"): {setViewDistance tawvd_foot};
-				case (_old_vehicle isKindOf "LandVehicle"): {setViewDistance tawvd_car};
-				case (_old_vehicle isKindOf "Air"): {setViewDistance tawvd_air};
-			};
-		};
-		
-		sleep 1;
-	};
-};
-
-[] spawn
-{
 	private["_bp", "_default"];
 	_default = 24;
 	while {true} do
@@ -58,9 +25,7 @@ if (g_launder > 0) then
 		_bp = backpack player;
 		g_maxWeight = _default + round(getNumber(configFile >> "CfgVehicles" >> (backpack player) >> "maximumload") / 8);
 		waitUntil {backpack player != _bp};
-		if ((backpack player) isEqualTo "") then {
-			g_maxWeight = _default;
-		};
+		if ((backpack player) isEqualTo "") then {g_maxWeight = _default};
 	};
 };
 
@@ -69,6 +34,28 @@ if (g_launder > 0) then
 	private["_veh", "_fuel", "_curentfuel", "_conso"];
 	while {true} do
 	{
+		waitUntil {((vehicle player) isEqualTo player)};
+
+		setViewDistance tawvd_foot;
+		while {(vehicle player) isEqualTo player} do
+		{
+			if (g_carryWeight > g_maxWeight) then 
+			{
+				if (!(isForcedWalk player)) then
+				{
+					player forceWalk true;
+					titleText["Vous êtes surchargé", "PLAIN"];
+					player setFatigue 1;
+				};
+			} else {
+				if (isForcedWalk player) then {
+					player forceWalk false;
+				};
+			};
+
+			uiSleep 1;
+		};
+
 		waitUntil {((vehicle player) != player)};
 
 		g_seatbelt = false;
@@ -83,7 +70,7 @@ if (g_launder > 0) then
 			_target setVariable ["escorted", objNull, true];
 			player setVariable ["escorting", objNull, true];
 		};
-		
+
 		if (!(isNull g_dragingBody)) then
 		{
 			detach g_dragingBody;
@@ -92,30 +79,46 @@ if (g_launder > 0) then
 			g_dragingBody = ObjNull;
 		};
 
+		if (_veh isKindOf "LandVehicle") then {
+			setViewDistance tawvd_car;
+		} else {
+			setViewDistance tawvd_air
+		};
+
 		while {((vehicle player) isEqualTo _veh)} do
 		{
 			if (((driver _veh) isEqualTo player) && (isEngineOn _veh)) then
 			{
 				_curentfuel = _veh getVariable ["typeRefuel", ""];
-				if ((_fuel != _curentfuel) && (_curentfuel != "")) then
-				{
-					if (!((_curentfuel in ["SP95", "SP98"]) && (_fuel in ["SP95", "SP98"]))) then
-					{
-						[_veh, "motorexplose", 20] call CBA_fnc_globalSay3d;
-						[_veh, "HitEngine", 1] call AlysiaClient_fnc_setHitPointDamage;
-					};
-				};
-
 				if (_curentfuel isEqualTo "") then {
 					_conso = getNumber(missionConfigFile >> "ALYSIA_FUEL" >> _fuel >> "conso");
 				} else {
 					_conso = getNumber(missionConfigFile >> "ALYSIA_FUEL" >> _curentfuel >> "conso");
+					if (_fuel != _curentfuel) then
+					{
+						if (!((_curentfuel in ["SP95", "SP98"]) && (_fuel in ["SP95", "SP98"]))) then
+						{
+							[_veh, "HitEngine", 1] call AlysiaClient_fnc_setHitPointDamage;
+						};
+					};
 				};
-				
-				_veh setFuel ((fuel _veh) - (((abs(speed _veh) + 10) / _conso) + (([_veh getVariable ["Trunk", []]] call AlysiaClient_fnc_weightGenerate) / 100000)));
+
+				_veh setFuel 
+				(
+					(fuel _veh) -
+					(
+						(((abs(speed _veh) + 10) / 350000) * _conso) +
+						(
+							(
+								getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf(_veh) >> "inventory") +
+								[(_veh getVariable ["Trunk", []])] call AlysiaClient_fnc_weightGenerate
+							) / 100000
+						)
+					)
+				);
 			};
 
-			sleep 2;
+			uiSleep 2;
 		};
 
 		if (g_seatbelt) then
@@ -133,11 +136,11 @@ if (g_launder > 0) then
 	_fnc_channel =
 	{
 		["Vous devez être dans le channel TaskForceRadio pour pouvoir jouer sur le serveur. Vous allez être expulsé dans 20 secondes"] call AlysiaClient_fnc_error;
-		sleep 20;
+		uiSleep 20;
 		if ((call TFAR_fnc_getTeamSpeakChannelName) != "TaskForceRadio") then
 		{
 			[] call AlysiaDB_fnc_query_update_disconnect;
-			sleep 2;
+			uiSleep 2;
 			["Teamspeak", false, true] call BIS_fnc_endMission;
 		};
 	};
@@ -145,11 +148,11 @@ if (g_launder > 0) then
 	_fnc_server =
 	{
 		["Vous n'êtes pas connecté sur le Teamspeak du serveur. Vous allez être expulsé dans 20 secondes."] call AlysiaClient_fnc_error;
-		sleep 20;
+		uiSleep 20;
 		if (!(["Alysia", (call TFAR_fnc_getTeamSpeakServerName)] call BIS_fnc_inString)) then
 		{
 			[] call AlysiaDB_fnc_query_update_disconnect;
-			sleep 2;
+			uiSleep 2;
 			["Teamspeak", false, true] call BIS_fnc_endMission;
 		};
 	};
@@ -158,7 +161,7 @@ if (g_launder > 0) then
 	_salary_time = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary_timer");
 	while {true} do
 	{
-		sleep (60 * 1);
+		uiSleep 60;
 		_totalSession = _totalSession + 1;
 		
 		if ((_totalSession % 4) isEqualTo 0) then {

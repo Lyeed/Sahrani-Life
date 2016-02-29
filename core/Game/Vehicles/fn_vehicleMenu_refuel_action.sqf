@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_item", "_max", "_actual", "_fuel"];
+private["_item", "_config"];
 
 if (isNull g_interaction_target) exitWith {
 	["Cible invalide."] call AlysiaClient_fnc_error;
@@ -34,29 +34,11 @@ if (!(_item in (magazines player))) exitWith {
 	["Vous devez garder le jerrican sur vous durant toute l'action."] call AlysiaClient_fnc_error;
 };
 
+_config = (format["getText(_x >> 'jerrycan') isEqualTo %1", _item] configClasses (missionConfigFile >> "ALYSIA_FUEL")) select 0;
+if (isNil "_config") exitWith {
+	[format["Impossible de trouver le fuel correspondant à l'item [%1]", _item]] call AlysiaClient_fnc_error;
+};
+
 player removeMagazine _item;
 player addMagazine "Alysia_jerrycan_empty";
-
-_max = getNumber(configFile >> "CfgVehicles" >> typeof(g_interaction_target) >> "fuelCapacity");
-_actual = ((fuel g_interaction_target) * _max) + 20;
-if (_actual > _max) then {_actual = _max;};
-_actual = _actual / _max;
-
-if (local g_interaction_target) then {
-	g_interaction_target setFuel _actual;
-} else {
-	[g_interaction_target, _actual] remoteExecCall ["setFuel", g_interaction_target];
-};
-
-_fuel = switch (_item) do
-{
-	case "Alysia_jerrycan_sp98": {"SP98"};
-	case "Alysia_jerrycan_sp95": {"SP95"};
-	case "Alysia_jerrycan_diesel": {"Diesel"};
-	case "Alysia_jerrycan_gpl": {"GPL"};
-	case "Alysia_jerrycan_kerosene": {"Kerosene"};
-};
-
-if (_fuel != getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf(g_interaction_target) >> "fuel")) then {
-	g_interaction_target setVariable ["typeRefuel", _fuel];
-};
+[true, g_interaction_target, 20, (configName _config)] call ALysiaClient_fnc_handleFuel;

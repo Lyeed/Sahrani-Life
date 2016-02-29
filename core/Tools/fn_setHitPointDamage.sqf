@@ -11,6 +11,7 @@ _part = [_this, 1, "", [""]] call BIS_fnc_param;
 _dmg = [_this, 2, 0, [0]] call BIS_fnc_param;
 
 if ((isNull _veh) || (_part isEqualTo "")) exitWith {};
+if ((_veh getHitPointDamage _part) isEqualTo _dmg) exitWith {};
 
 if (local _veh) then {
 	_veh setHitPointDamage [_part, _dmg];

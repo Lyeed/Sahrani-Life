@@ -6,12 +6,21 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
+if ((player getVariable ["typeRefuel", ""]) != "") exitWith
+{
+	["Plein annulé."] call AlysiaClient_fnc_info;
+	player setVariable ["typeRefuel", ""];
+};
+
 [
 	[_this, 0, objNull, [objNull]] call BIS_fnc_param,
 	"player_to_station",
 	[
-		["refuel_veh", "Plein Véhicule", "[g_interaction_target] call AlysiaClient_fnc_fuelStation_use_refuel_veh;", "true"],
-		["refuel_jerry", "Plein Jerrican", "[g_interaction_target] spawn AlysiaClient_fnc_fuelMenu_use_refuel_jerry;", "('Fuel_E' in (magazines player))"]
+		["refuel_veh", "Véhicule", "[g_interaction_target] call AlysiaClient_fnc_fuelStation_use_refuel_veh;", "true"],
+		["refuel_jerry", "Jerrycan", "[g_interaction_target] spawn AlysiaClient_fnc_fuelStation_jerrycan_open;", "('Alysia_jerrycan_empty' in (magazines player))"]
 	],
-	"Station Essence"
+	"Station Essence",
+	"lyeed_IMG\data\vehicle\background.jpg",
+	true,
+	false
 ] spawn AlysiaClient_fnc_interactions_create;

@@ -111,6 +111,7 @@ class CfgFunctions
 		class Tools
 		{
 			file = "core\Tools";
+			class getAllHitPointsDamage {};
 			class getVehicleWeightMax {};
 			class transfertVirtualItem {};
 			class hideAllMarkers {};
@@ -177,7 +178,6 @@ class CfgFunctions
 			class activateNitro {};
 			class applyBaillon {};
 			class applyBandeau {};
-			class telecommande {};
 			class sifflet {};
 			class getBaillon {};
 			class getBaillonSelf {};
@@ -331,6 +331,8 @@ class CfgFunctions
 			class fuelStation_refuel_veh_validate {};
 			class fuelStation_price {};
 			class fuelRefuel_use_refuel_veh {};
+			class fuelStation_jerrycan_open {};
+			class fuelStation_jerrycan_action {};
 		};
 
 		class Housing

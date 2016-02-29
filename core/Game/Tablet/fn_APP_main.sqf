@@ -99,11 +99,14 @@ if (_apps_more || (_status > 0)) then
 };
 
 _newSMS = 0;
+if ("SkylineItems_TelephoneTactile" in (magazines player)) then
 {
-	if ((_x select 2) isEqualTo 0) then {
-		_newSMS = _newSMS + 1;
-	};
-} forEach (g_phone_messages);
+	{
+		if ((_x select 2) isEqualTo 0) then {
+			_newSMS = _newSMS + 1;
+		};
+	} forEach g_phone_messages;
+};
 
 if (_newSMS isEqualTo 0) then {
 	[[7503, 7504, 7505], false] call AlysiaClient_fnc_tabletShow;

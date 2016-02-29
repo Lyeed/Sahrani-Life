@@ -18,7 +18,7 @@ disableSerialization;
 _display = findDisplay 16000;
 if (isNull _display) exitWith {};
 
-refuel_station_inUse = _station;
+missionNamespace setVariable ["refuel_station_inUse", _station];
 
 _list = _display displayCtrl 16004;
 lbClear _list;
@@ -27,6 +27,6 @@ lbClear _list;
 	_index = _list lbAdd getText(_x >> "name");
 	_list lbSetData [_index, (configName _x)];
 	_list lbSetPicture [_index, getText(_x >> "picture")];
-} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL"));
+} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_station)));
 
 _list lbSetCurSel 0;

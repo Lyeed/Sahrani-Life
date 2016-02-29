@@ -20,7 +20,7 @@ if (!(createDialog "RscDisplayTablet")) exitWith {};
 
 {
 	ctrlShow[getNumber(_x >> "IDC"), false];
-} forEach ("!(getNumber(_x >> 'IDC') in [-1, 7506, 7502, 7507])" configClasses (missionConfigFile >> "RscDisplayTablet" >> "controls"));
+} forEach ("!(getNumber(_x >> 'IDC') in [-1, 7506, 7502, 7507, 7501])" configClasses (missionConfigFile >> "RscDisplayTablet" >> "controls"));
 
 disableSerialization;
 _display = uiNamespace getVariable ["tablet", displayNull];
@@ -84,6 +84,7 @@ while {!(isNull _display)} do
 		(date select 1),
 		(date select 0)
 	];
+
 	uiSleep 0.5;
 };
 

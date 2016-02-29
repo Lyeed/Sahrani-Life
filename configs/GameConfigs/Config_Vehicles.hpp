@@ -1020,7 +1020,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Mercedes 190";
 	};
-
 	class Mrshounka_mercedes_190_p_bleufonce: Mrshounka_mercedes_190_p_civ {};
 	class Mrshounka_mercedes_190_p_grise: Mrshounka_mercedes_190_p_civ {};
 	class Mrshounka_mercedes_190_p_jaune: Mrshounka_mercedes_190_p_civ {};
@@ -1054,7 +1053,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Mercedes C63";
 	};
-
 	class Mrshounka_c63_2015_mat: Mrshounka_c63_2015_civ {};
 	class Mrshounka_c63_2015_noir: Mrshounka_c63_2015_civ {};
 	class Mrshounka_c63_2015_mat_n: Mrshounka_c63_2015_civ {};
@@ -1088,7 +1086,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Mercedes CLK";
 	};
-
 	class shounka_clk_bleufonce: shounka_clk {};
 	class shounka_clk_grise: shounka_clk {};
 	class shounka_clk_jaune: shounka_clk {};
@@ -1119,7 +1116,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Mercedes Sprinter";
 	};
-
 	class shounka_a3_spr_civ_bleufonce: shounka_a3_spr_civ {};
 	class shounka_a3_spr_civ_grise: shounka_a3_spr_civ {};
 	class shounka_a3_spr_civ_jaune: shounka_a3_spr_civ {};
@@ -1144,7 +1140,6 @@ class ALYSIA_VEHICLES
 		};
 		realname = "Nissan GTR";
 	};
-
 	class Mrshounka_a3_gtr_civ_noir: Mrshounka_a3_gtr_civ {};
 	class Mrshounka_a3_gtr_civ_bleu: Mrshounka_a3_gtr_civ {};
 

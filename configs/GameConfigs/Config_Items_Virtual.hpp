@@ -31,7 +31,6 @@ class ALYSIA_ITEMS
 		{
 			max = 2750;
 			min = 1500;
-			mult = 2;
 			affect[] = {"ironp","soufre","platinep","souffre","hsoufre","copperp","alu","steel"};
 		};
 	};
@@ -205,7 +204,6 @@ class ALYSIA_ITEMS
 		{
 			max = 176;
 			min = 120;
-			mult = 2;
 		};
 	};
 	class cigarette
@@ -218,7 +216,6 @@ class ALYSIA_ITEMS
 		{
 			max = 57;
 			min = 32;
-			mult = 2;
 		};
 	};
 
@@ -232,7 +229,6 @@ class ALYSIA_ITEMS
 		{
 			max = 308;
 			min = 200;
-			mult = 4;
 		};
 	};
 
@@ -247,7 +243,6 @@ class ALYSIA_ITEMS
 		{
 			max = 800;
 			min = 375;
-			mult = 4;
 		};
 	};
 	class artefact_R
@@ -261,7 +256,6 @@ class ALYSIA_ITEMS
 		{
 			max = 4032;
 			min = 2000;
-			mult = 4;
 		};
 	};
 
@@ -281,7 +275,6 @@ class ALYSIA_ITEMS
 		{
 			max = 36;
 			min = 15;
-			mult = 1;
 			affect[] = {"furniture","glass","brique","saltp","cottonp","ciment","coal"};
 		};
 	};
@@ -295,7 +288,6 @@ class ALYSIA_ITEMS
 		{
 			max = 450;
 			min = 190;
-			mult = 2;
 			affect[] = {"woodp","glass","brique","saltp","cottonp","ciment","coal"};
 		};
 	};
@@ -316,7 +308,6 @@ class ALYSIA_ITEMS
 		{
 			max = 170;
 			min = 125;
-			mult = 3;
 			affect[] = {"goldbar","soufre","platinep","souffre","hsoufre","copperp","alu","steel"};
 		};
 	};
@@ -330,7 +321,6 @@ class ALYSIA_ITEMS
 		{
 			max = 19;
 			min = 10;
-			mult = 2;
 			affect[] = {"goldbar","ironp","platinep","hsoufre","copperp","alu"};
 		};
 	};
@@ -358,7 +348,6 @@ class ALYSIA_ITEMS
 		{
 			max = 653;
 			min = 400;
-			mult = 4;
 			affect[] = {"goldbar","ironp","soufre","hsoufre","copperp","alu"};
 		};
 	};
@@ -388,7 +377,6 @@ class ALYSIA_ITEMS
 		{
 			max = 468;
 			min = 350;
-			mult = 3;
 			affect[] = {"methp","cocainepc","heroinp","heroinps","marijuana","opium"};
 		};
 		class use
@@ -406,7 +394,6 @@ class ALYSIA_ITEMS
 		{
 			max = 330;
 			min = 210;
-			mult = 4;
 			affect[] = {"methp","cocainep","heroinp","heroinps","marijuana","opium"};
 		};
 		class use
@@ -447,7 +434,6 @@ class ALYSIA_ITEMS
 		{
 			max = 358;
 			min = 250;
-			mult = 5;
 			affect[] = {"methp","cocainep","cocainepc","heroinp","marijuana","opium"};
 		};
 		class use
@@ -489,7 +475,6 @@ class ALYSIA_ITEMS
 		{
 			max = 990;
 			min = 650;
-			mult = 4;
 			affect[] = {"cocainep","cocainepc","heroinp","heroinps","marijuana","opium"};
 		};
 		class use
@@ -524,7 +509,6 @@ class ALYSIA_ITEMS
 		{
 			max = 628;
 			min = 400;
-			mult = 3;
 			affect[] = {"methp","cocainep","cocainepc","heroinp","heroinps","opium"};
 		};
 		class use
@@ -557,7 +541,6 @@ class ALYSIA_ITEMS
 		{
 			max = 35;
 			min = 23;
-			mult = 3;
 			affect[] = {"moule","palourde","saintjacques","bigorneau","crabe","bulot","anchois","bar","daurade","maquereau","merlu","sardine","corn","cotton","wheat","patate"};
 		};
 	};
@@ -578,7 +561,6 @@ class ALYSIA_ITEMS
 		{
 			max = 37;
 			min = 26;
-			mult = 3;
 			affect[] = {"moule","palourde","saintjacques","bigorneau","crabe","bulot","anchois","bar","daurade","maquereau","merlu","sardine","bean","cotton","wheat","patate"};
 		};
 	};
@@ -599,7 +581,6 @@ class ALYSIA_ITEMS
 		{
 			max = 39;
 			min = 31;
-			mult = 2;
 			affect[] = {"moule","palourde","saintjacques","bigorneau","crabe","bulot","anchois","bar","daurade","maquereau","merlu","sardine","bean","corn","wheat","patate"};
 		};
 	};
@@ -612,7 +593,6 @@ class ALYSIA_ITEMS
 		{
 			max = 99;
 			min = 65;
-			mult = 2;
 			affect[] = {"woodp","furniture","glass","brique","saltp","ciment","coal"};
 		};
 	};
@@ -633,7 +613,6 @@ class ALYSIA_ITEMS
 		{
 			max = 154;
 			min = 110;
-			mult = 3;
 			affect[] = {"woodp","furniture","brique","saltp","cottonp","ciment","coal"};
 		};
 	};
@@ -786,7 +765,6 @@ class ALYSIA_ITEMS
 		{
 			max = 190;
 			min = 130;
-			mult = 2;
 			affect[] = {"goldbar","ironp","soufre","platinep","hsoufre","alu","steel"};
 		};
 	};
@@ -807,7 +785,6 @@ class ALYSIA_ITEMS
 		{
 			max = 112;
 			min = 70;
-			mult = 2;
 			affect[] = {"woodp","furniture","glass","saltp","cottonp","ciment","coal"};
 		};
 	};
@@ -827,7 +804,6 @@ class ALYSIA_ITEMS
 		{
 			max = 262;
 			min = 170;
-			mult = 2;
 			affect[] = {"goldbar","ironp","soufre","platinep","hsoufre","copperp","steel"};
 		};
 	};
@@ -936,7 +912,6 @@ class ALYSIA_ITEMS
 		{
 			max = 145;
 			min = 95;
-			mult = 2;
 			affect[] = {"woodp","furniture","glass","brique","cottonp","ciment","coal"};
 		};
 	};
@@ -950,7 +925,6 @@ class ALYSIA_ITEMS
 		{
 			max = 42;
 			min = 30;
-			mult = 2;
 			affect[] = {"moule","palourde","saintjacques","bigorneau","crabe","bulot","anchois","bar","daurade","maquereau","merlu","sardine","bean","corn","cotton","wheat"};
 		};
 	};
@@ -972,7 +946,6 @@ class ALYSIA_ITEMS
 		{
 			max = 36;
 			min = 25;
-			mult = 2;
 			affect[] = {"moule","palourde","saintjacques","bigorneau","crabe","bulot","anchois","bar","daurade","maquereau","merlu","sardine","bean","corn","cotton","patate"};
 		};
 	};
@@ -995,7 +968,6 @@ class ALYSIA_ITEMS
 		{
 			max = 330;
 			min = 220;
-			mult = 2;
 		};
 		class food
 		{
@@ -1016,7 +988,6 @@ class ALYSIA_ITEMS
 		{
 			max = 347;
 			min = 220;
-			mult = 2;
 		};
 		class food
 		{
@@ -1036,7 +1007,6 @@ class ALYSIA_ITEMS
 		{
 			max = 33;
 			min = 20;
-			mult = 2;
 			affect[] = {"woodp","furniture","glass","brique","saltp","cottonp","ciment"};
 		};
 	};
@@ -1047,13 +1017,6 @@ class ALYSIA_ITEMS
 		weight = 1;
 		price_buy = 3;
 		image = "alysia_items_virtual\data\sifflet.paa";
-	};
-	class bip
-	{
-		name = "Télécommande (barrière)";
-		weight = 1;
-		price_buy = 15;
-		image = "alysia_items_virtual\data\telecommande_portail.paa";
 	};
 	class alcool_test
 	{
@@ -1079,7 +1042,6 @@ class ALYSIA_ITEMS
 		{
 			max = 165;
 			min = 115;
-			mult = 2;
 			affect[] = {"woodp","furniture","glass","brique","saltp","cottonp","coal"};
 		};
 	};
@@ -1094,7 +1056,6 @@ class ALYSIA_ITEMS
 		{
 			max = 210;
 			min = 150;
-			mult = 2;
 			affect[] = {"ironp","soufre","platinep","souffre","hsoufre","copperp","alu"};
 		};
 	};
@@ -1251,7 +1212,6 @@ class ALYSIA_ITEMS
 		{
 			max = 825;
 			min = 600;
-			mult = 2;
 			affect[] = {"woodp","furniture","glass","brique","saltp","cottonp","coal"};
 		};
 	};
@@ -1304,20 +1264,6 @@ class ALYSIA_ITEMS
 		weight = 1;
 		illegal = 1;
 		image = "alysia_items_virtual\data\frag_6.paa";
-	};
-	class frag_7
-	{
-		name = "Fragment (7)";
-		weight = 1;
-		illegal = 1;
-		image = "alysia_items_virtual\data\frag_7.paa";
-	};
-	class frag_8
-	{
-		name = "Fragment (8)";
-		weight = 1;
-		illegal = 1;
-		image = "alysia_items_virtual\data\frag_8.paa";
 	};
 
 	class destroy_archeo

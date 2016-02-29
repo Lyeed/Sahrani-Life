@@ -285,5 +285,3 @@ if (isNull _target) exitWith {};
 	true,
 	false
 ] spawn AlysiaClient_fnc_interactions_create;
-
-// ["refuel", "Faire le plein", "[] spawn AlysiaClient_fnc_vehicleMenu_refuel;", "(((['fuelF'] call AlysiaClient_fnc_itemCount) > 0) && ((vehicle player) isEqualTo player))"],
