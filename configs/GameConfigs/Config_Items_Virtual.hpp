@@ -375,7 +375,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\cocaine.paa";
 		class market
 		{
-			max = 468;
+			max = 490;
 			min = 350;
 			affect[] = {"methp","cocainepc","heroinp","heroinps","marijuana","opium"};
 		};
@@ -432,7 +432,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\seringue_heroine.paa";
 		class market
 		{
-			max = 358;
+			max = 450;
 			min = 250;
 			affect[] = {"methp","cocainep","cocainepc","heroinp","marijuana","opium"};
 		};
@@ -473,8 +473,8 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\methamphetamine.paa";
 		class market
 		{
-			max = 990;
-			min = 650;
+			max = 1020;
+			min = 550;
 			affect[] = {"cocainep","cocainepc","heroinp","heroinps","marijuana","opium"};
 		};
 		class use
@@ -494,7 +494,7 @@ class ALYSIA_ITEMS
 	class cannabis
 	{
 		name = "Cannabis";
-		weight = 4;
+		weight = 3;
 		illegal = 1;
 		image = "alysia_items_virtual\data\canabis.paa";
 	};
@@ -507,7 +507,7 @@ class ALYSIA_ITEMS
 		license = "marijuana";
 		class market
 		{
-			max = 628;
+			max = 648;
 			min = 400;
 			affect[] = {"methp","cocainep","cocainepc","heroinp","heroinps","opium"};
 		};
