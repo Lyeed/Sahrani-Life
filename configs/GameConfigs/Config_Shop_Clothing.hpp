@@ -704,7 +704,9 @@ class ALYSIA_SHOPS_CLOTHING
 		name = "Barbier";
 		side = "";
 		uniforms[] = {};
-		headgear[] = {};
+		headgear[] = {
+			"TRYK_H_wig"
+		};
 		goggles[] =
 		{
 			"TRYK_Beard_BK",
