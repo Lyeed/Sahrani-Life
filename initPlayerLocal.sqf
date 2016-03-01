@@ -23,6 +23,7 @@ if (hasInterface) then
 	0 fadeRadio 0;
 	0 fadeSpeech 0;
 	enableSentences false;
+	disableRemoteSensors true;
 
 	waitUntil {(!(isNull player) && (player isEqualTo player))};
 	waitUntil {!(isNull (findDisplay 46))};

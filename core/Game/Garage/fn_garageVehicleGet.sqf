@@ -91,7 +91,6 @@ if (isNil "_validSpawn") exitWith {
 	["Aucun emplacement de sortie de véhicule n'est libre"] call AlysiaClient_fnc_error;
 };
 
-closeDialog 0;
 [false, _price, format["Sortie véhicule (%1)", (_data select 5)]] call AlysiaClient_fnc_handleATM;
 
 _spawnPos = getMarkerPos _validSpawn;
@@ -128,3 +127,4 @@ _vehicle setVariable ["info", [(getPlayerUID player), (player getVariable ["real
 _vehicle setFuel ((_data select 3) / 100);
 
 g_vehicles pushBack _vehicle;
+closeDialog 0;

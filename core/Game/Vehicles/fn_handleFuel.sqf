@@ -36,9 +36,9 @@ if (local _vehicle) then {
 	[_vehicle, _actual] remoteExecCall ["setFuel", _vehicle];
 };
 
-if (_fuel != getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf(_vehicle) >> "fuel")) then
+if (_carburant != getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf(_vehicle) >> "fuel")) then
 {
-	if ((_vehicle getVariable ["typeRefuel", ""]) != _fuel) then {
-		_vehicle setVariable ["typeRefuel", _fuel, true];
+	if ((_vehicle getVariable ["typeRefuel", ""]) != _carburant) then {
+		_vehicle setVariable ["typeRefuel", _carburant, true];
 	};
 };

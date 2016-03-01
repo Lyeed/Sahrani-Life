@@ -2724,14 +2724,10 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 100;
 		buy_condition_WEST = 2;
 	};
-	class Alysia_jerrycan_sp98
+	class Alysia_jerrycan_empty
 	{
-		buy_price = 420;
+		buy_price = 120;
 	};
-	class Alysia_jerrycan_sp95: Alysia_jerrycan_sp98 {};
-	class Alysia_jerrycan_diesel: Alysia_jerrycan_sp98 {};
-	class Alysia_jerrycan_gpl: Alysia_jerrycan_sp98 {};
-	class Alysia_jerrycan_kerosene: Alysia_jerrycan_sp98 {};
 	class Alysia_repair_toolbox
 	{
 		buy_price = 1000;

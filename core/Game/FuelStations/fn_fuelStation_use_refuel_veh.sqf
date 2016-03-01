@@ -24,9 +24,9 @@ _list = _display displayCtrl 16004;
 lbClear _list;
 
 {
-	_index = _list lbAdd getText(_x >> "name");
+	_index = _list lbAdd getText(missionConfigFile >> "ALYSIA_FUEL" >> (configName _x) >> "name");
 	_list lbSetData [_index, (configName _x)];
-	_list lbSetPicture [_index, getText(_x >> "picture")];
+	_list lbSetPicture [_index, getText(missionConfigFile >> "ALYSIA_FUEL" >> (configName _x) >> "picture")];
 } foreach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_station)));
 
 _list lbSetCurSel 0;

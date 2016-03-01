@@ -44,7 +44,7 @@ if (player distance _veh > 5) exitWith {
 	["Vous êtes trop loin du véhicule."] call AlysiaClient_fnc_error;
 };
 
-_currentLiters = _station getVariable [_type, getNumber(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeof(_station) >> _fuel >> "max")];
+_currentLiters = _station getVariable [_type, getNumber(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeof(_station) >> _type >> "max")];
 if (_currentLiters < 1) exitWith
 {
 	[
@@ -81,8 +81,9 @@ while {
 		((player distance _veh) < 5)
 	} do
 {
-	_bill = _bill + ([_station, _type] call AlysiaClient_fnc_fuelStation_price);
 	_liters = _liters + 1;
+	_station setVariable [_type, (_currentLiters - _liters)];
+	_bill = _bill + ([_station, _type] call AlysiaClient_fnc_fuelStation_price);
 	
 	(_display displayCtrl 17008) ctrlSetStructuredText parseText format
 	[

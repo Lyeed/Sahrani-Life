@@ -26,6 +26,7 @@ disableSerialization;
 _display = findDisplay 69000;
 if (isNull _display) exitWith {};
 
+(_display displayCtrl 69008) ctrlSetText "lyeed_IMG\data\vehicle\background.jpg";
 (_display displayCtrl 69001) ctrlSetStructuredText parseText "<t size='1.5' align='center'>Jerrican</t>";
 
 _list = _display displayCtrl 69002;

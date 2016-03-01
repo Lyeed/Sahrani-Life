@@ -235,8 +235,7 @@ class ALYSIA_GARAGES
 		types[] =
 		{
 			"Car",
-			"Truck",
-			"Air"
+			"Truck"
 		};
 	};
 	class garage_guer_2
@@ -251,6 +250,18 @@ class ALYSIA_GARAGES
 		{
 			"Car",
 			"Truck",
+			"Air"
+		};
+	};
+	class garage_guer_3
+	{
+		name = "Garage Samu";
+		spawns[] =
+		{
+			"garage_guer_3_1"
+		};
+		types[] =
+		{
 			"Air"
 		};
 	};

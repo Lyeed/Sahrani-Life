@@ -4,23 +4,23 @@ class ALYSIA_FUEL_STATION
 	{
 		class Diesel
 		{
-			max = 600;
+			max = 800;
 		};
 		class SP95
 		{
-			max = 600;
+			max = 800;
 		};
 		class SP98
 		{
-			max = 600;
+			max = 800;
 		};
 		class Kerosene
 		{
-			max = 1000;
+			max = 1200;
 		};
 		class GPL
 		{
-			max = 600;
+			max = 800;
 		};
 	};
 };
@@ -32,7 +32,7 @@ class ALYSIA_FUEL
 		name = "Diesel";
 		picture = "Devilz80_Images\Data\Menu\fuelStations\Diesel.paa";
 		conso = 0.8;
-		jerrycan = "Alysia_jerrycan_diesel"
+		jerrycan = "Alysia_jerrycan_diesel";
 	};
 	
 	class SP95

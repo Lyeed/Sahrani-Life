@@ -28,13 +28,13 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
-if (!(["Jerrican", 5, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {};
+if (!(["Jerrycan", 5, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {};
 
 if (!(_item in (magazines player))) exitWith {
-	["Vous devez garder le jerrican sur vous durant toute l'action."] call AlysiaClient_fnc_error;
+	["Vous devez garder le jerrycan sur vous durant toute l'action."] call AlysiaClient_fnc_error;
 };
 
-_config = (format["getText(_x >> 'jerrycan') isEqualTo %1", _item] configClasses (missionConfigFile >> "ALYSIA_FUEL")) select 0;
+_config = (format["getText(_x >> 'jerrycan') isEqualTo '%1'", _item] configClasses (missionConfigFile >> "ALYSIA_FUEL")) select 0;
 if (isNil "_config") exitWith {
 	[format["Impossible de trouver le fuel correspondant à l'item [%1]", _item]] call AlysiaClient_fnc_error;
 };

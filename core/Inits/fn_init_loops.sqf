@@ -103,19 +103,7 @@ if (g_launder > 0) then
 					};
 				};
 
-				_veh setFuel 
-				(
-					(fuel _veh) -
-					(
-						(((abs(speed _veh) + 10) / 350000) * _conso) +
-						(
-							(
-								getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf(_veh) >> "inventory") +
-								[(_veh getVariable ["Trunk", []])] call AlysiaClient_fnc_weightGenerate
-							) / 100000
-						)
-					)
-				);
+				_veh setFuel ((fuel _veh) - (((abs(speed _veh) + 10) / 300000) * _conso));
 			};
 
 			uiSleep 2;

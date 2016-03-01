@@ -30,7 +30,7 @@ if (!("Alysia_jerrycan_empty" in (magazines player))) exitWith {
 	["Vous n'avez pas de jerrycan vide."] call AlysiaClient_fnc_error;
 };
 
-_currentLiters = _station getVariable [_type, getNumber(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeof(_station) >> _fuel >> "max")];
+_currentLiters = _station getVariable [_type, getNumber(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeof(_station) >> _type >> "max")];
 if (_currentLiters < 20) exitWith {
 	[
 		format
@@ -54,9 +54,10 @@ _liters = 0;
 (_display displayCtrl 17006) ctrlSetStructuredText parseText getText(missionConfigFile >> "ALYSIA_FUEL" >> _type >> "name");
 
 while {!(isNull _display) && ((_bill + ([_station, _type] call AlysiaClient_fnc_fuelStation_price)) <= g_atm) && ((player distance _station) < 4) && (_liters < 20)} do
-{	
-	_bill = _bill + ([_station, _type] call AlysiaClient_fnc_fuelStation_price);
+{
 	_liters = _liters + 1;
+	_station setVariable [_type, (_currentLiters - _liters)];
+	_bill = _bill + ([_station, _type] call AlysiaClient_fnc_fuelStation_price);
 	
 	(_display displayCtrl 17008) ctrlSetStructuredText parseText format
 	[
@@ -97,7 +98,7 @@ if (g_atm >= _bill) then
 			player addMagazine getText(missionConfigFile >> "ALYSIA_FUEL" >> _type >> "jerrycan");
 			_station setVariable [_type, (_currentLiters - _liters), true];
 			[false, _bill, "Station Essence"] call AlysiaClient_fnc_handleATM;
-			[format["<t color='#8cff9b'%1</t>kn ont été prélevés de votre compte en banque.", ([_bill] call AlysiaClient_fnc_numberText)], "buy"] call AlysiaClient_fnc_info;	
+			[format["<t color='#8cff9b'>%1</t>kn ont été prélevés de votre compte en banque.", ([_bill] call AlysiaClient_fnc_numberText)], "buy"] call AlysiaClient_fnc_info;	
 		} else {
 			["Le transfert n'a pas pu aboutir.<br/>Vous n'avez pas de jerrycan vide."] call AlysiaClient_fnc_error;
 		};

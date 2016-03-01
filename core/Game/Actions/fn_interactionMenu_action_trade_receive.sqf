@@ -22,11 +22,11 @@ if (_money > 0) then
 
 {
 	_text = _text + format["- %1x %2<br/>", ([(_x select 1)] call AlysiaClient_fnc_numberText), ([(_x select 0)] call AlysiaClient_fnc_itemGetName)];
-} forEach (_inv);
+} forEach _inv;
 
 {
 	_text = _text + format["- Clef (%1)<br/>", getText(configFile >> "CfgVehicles" >> typeOf(_x) >> "displayName")];
-} forEach (_keys);
+} forEach _keys;
 
 _action = 
 [
@@ -44,10 +44,8 @@ if (_action) then
 	[true, _money] call AlysiaClient_fnc_handleCash;
 
 	{
-		if ((alive _x) && !(_x in g_vehicles)) then {
-			g_vehicles pushBack _x;
-		};
-	} forEach (_keys);
+		if ((alive _x) && !(_x in g_vehicles)) then {g_vehicles pushBack _x};
+	} forEach _keys;
 
 	{
 		_amount = [(_x select 0), (_x select 1), g_carryWeight, g_maxWeight] call AlysiaClient_fnc_calWeightDiff;
@@ -62,7 +60,8 @@ if (_action) then
 				(_inv select _forEachIndex) set [1, (_x select 1) - _amount];
 			};
 		}
-	} forEach (_inv);
+	} forEach _inv;
+	
 	if (_inv isEqualTo []) then {
 		["L'échange a été accepté"] remoteExecCall ["AlysiaClient_fnc_info", _from];
 	} else {

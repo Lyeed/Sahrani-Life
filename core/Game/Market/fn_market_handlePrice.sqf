@@ -31,7 +31,10 @@ if (_type) then
 	if (_affect) then
 	{
 		_affected = getArray(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market" >> "affect");
-		if (!(_affected isEqualTo [])) then {[true, _affected, _amount, false] call AlysiaClient_fnc_market_handlePrice};
+		if (count(_affected) > 0) then
+		{
+			[true, (_affected call BIS_fnc_selectRandom), _amount, false] call AlysiaClient_fnc_market_handlePrice;
+		};
 	};
 };
 

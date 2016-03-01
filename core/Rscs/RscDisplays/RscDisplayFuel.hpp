@@ -49,6 +49,7 @@ class RscDisplayFuelStation: RscDisplayDefaultInteraction
 		{
 			idc = 16004;
 			onLBSelChanged = "_this call AlysiaClient_fnc_fuelStation_refuel_veh_update;";
+			colorBackground[] = {0,0,0,1};
 
 			x = 0.391718 * safezoneW + safezoneX;
 			y = 0.434 * safezoneH + safezoneY;
@@ -93,7 +94,7 @@ class RscDisplayFuelStation: RscDisplayDefaultInteraction
 		};
 		class STOCK_HEADER: RscStructuredText
 		{
-			text = "<t align='right'>Disponibilité</t>";
+			text = "Disponibilité";
 			colorBackground[] = {0,0,0,0.8};
 
 			x = 0.546406 * safezoneW + safezoneX;
@@ -106,10 +107,10 @@ class RscDisplayFuelStation: RscDisplayDefaultInteraction
 			idc = 16011;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.461741 * safezoneW + safezoneX;
-			y = 0.45776 * safezoneH + safezoneY;
-			w = 0.061875 * safezoneW;
-			h = 0.022 * safezoneH;
+			x = 0.546406 * safezoneW + safezoneX;
+			y = 0.5 * safezoneH + safezoneY;
+			w = 0.0670312 * safezoneW;
+			h = 0.044 * safezoneH;
 		};
 
 		class VALIDATE_BACKGROUND: RscStructuredText

@@ -9,7 +9,7 @@ private["_sel", "_vehicle", "_find"];
 
 if (g_interaction_trade_active) exitWith {};
 
-_sel = lbCurSel 10019;
+_sel = lbCurSel 10005;
 if (_sel isEqualTo -1) exitWith {};
 
 _vehicle = g_vehicles select (lbValue[10005, _sel]);

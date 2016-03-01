@@ -46,7 +46,7 @@ if (!(_market_sell isEqualTo []) || !(_market_buy isEqualTo [])) then
 {
 	[_market_sell, _market_buy] spawn
 	{
-		sleep 20;
+		uiSleep (60 * 2);
 
 		{
 			[false, (_x select 0), (_x select 1), true] call AlysiaClient_fnc_market_handlePrice;
