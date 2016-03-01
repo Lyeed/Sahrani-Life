@@ -118,6 +118,8 @@ class CfgRemoteExec
 		// - interactions
 		class AlysiaClient_fnc_alcootest_return {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_knockedOut {allowTargets = CLIENT;};
+		// - missions
+		class AlysiaClient_fnc_mission_prevent {allowTargets = CLIENT;};
 
 		//- Arma
 		class setFuel {allowTargets = EVERYONE;};

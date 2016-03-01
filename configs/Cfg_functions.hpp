@@ -284,6 +284,7 @@ class CfgFunctions
 		{
 			file = "core\Game\Missions";
 			class mission_start {};
+			class mission_prevent {};
 		};
 
 		class Vehicles

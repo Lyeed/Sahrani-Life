@@ -1317,6 +1317,18 @@ _cString =
 ["Land_ecke_075_025_300_cnc","[13530.662109,10473.0185547,0.138046]",259.078,-100,0,0,[]] call _cString;
 ["Land_ecke_075_025_300_cnc","[13530.439453,10489.726563,0]",349.078,-100,0,0,[]] call _cString;
 
+// Archéologie
+["xcam_A_Mosque_small_2_dam_EP1","[10607.753906,7946.375977,1.61461]",0,-100,0,0,[]] call _cString;
+["xcam_A_Mosque_big_wall_corner_EP1","[10619.420898,7953.761719,-0.972222]",0,-100,0,0,[]] call _cString;
+["xcam_A_Mosque_big_wall_gate_dam_EP1","[10606.536133,7913.913574,-5.45926]",-141.288,-100,0,0,[]] call _cString;
+["xcam_A_Castle_Bergfrit","[5987.131348,7609.231445,-10.1012]",218.712,-100,0,0,[]] call _cString;
+["xcam_A_Castle_Wall2_End_2_ruins","[5988.623047,7577.619629,-0.313973]",253.712,-100,0,0,[]] call _cString;
+["xcam_A_Castle_Wall1_End_2_ruins","[6021.157715,7590.889648,-0.164141]",-146.288,-100,0,0,[]] call _cString;
+["xcam_A_Castle_Wall1_20_ruins","[6033.587402,7543.0507813,-0.164141]",-187.702,-100,0,0,[]] call _cString;
+["xcam_A_Castle_Gate_ruins","[6060.242676,7570.837891,-0.151515]",-69.394,-100,0,0,[]] call _cString;
+["xcam_Castle_01_wall_09_F","[7554.78125,14294.0810547,-0.807239]",-130.556,-100,0,0,[]] call _cString;
+["xcam_Castle_01_tower_F","[7599.83252,14301.976563,-1.02755]",54.4443,-100,0,0,[]] call _cString;
+
 // PLACE NORD
 ["xcam_Tribune_F","[14185.703125,12522.542969,-0.559765]",270,-100,0,0,[]] call _cString;
 ["xcam_GarbageBarrel_01_F","[14189.262695,12517.291992,-0.0193596]",270,-100,0,0,[]] call _cString;

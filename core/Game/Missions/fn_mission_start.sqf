@@ -23,6 +23,8 @@ if (((gServer_rebootHour * 60) - serverTime) < _time) exitWith {
 	]] call AlysiaClient_fnc_error;
 };
 
+[playerSide] remoteExecCall ["AlysiaClient_fnc_mission_prevent", civilian];
+
 _data = getArray(_config >> "positions") call BIS_fnc_selectRandom;
 _position = _data select 0;
 call compile format["gServer_faction_%1_mission=true;publicVariable""gServer_faction_%1_mission"";", str(playerSide)];
@@ -77,7 +79,7 @@ for "_i" from 0 to (round(random(30)) + 10) do
 				_vehicle addWeaponCargoGlobal [_item, 1];
 			};
 			case "Magazines": {
-				_vehicle addMagazineCargoGlobal [_item, round(random(3)) + 1];
+				_vehicle addMagazineCargoGlobal [_item, round(random(6)) + 1];
 			};
 			case "Backpacks": {
 				_vehicle addBackpackCargoGlobal [_item, 1];

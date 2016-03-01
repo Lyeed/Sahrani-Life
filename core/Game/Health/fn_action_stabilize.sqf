@@ -24,8 +24,8 @@ if ((_type isEqualTo "debif") && (getNumber(missionConfigFile >> "ALYSIA_FACTION
 
 _chance = switch (_type) do
 {
-	case "main": {5};
-	case "debif": {61};
+	case "main": {3};
+	case "debif": {50};
 };
 if (isNil "_chance") exitWith {
 	["Impossible de déterminer vos chances de réaminer"] call AlysiaClient_fnc_error;

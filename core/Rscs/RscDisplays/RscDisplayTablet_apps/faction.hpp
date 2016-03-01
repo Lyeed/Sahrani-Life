@@ -371,7 +371,7 @@ class FACTION_LEADER_HISTORY_DELETEALL: RscButtonMenu
 {
 	idc = FACTION_LEADER_HISTORY_DELETEALL_IDC;
 	text = "Tout supprimer";
-	onButtonClick = "[""FACTION""] spawn AlysiaClient_fnc_tabletApp;[player] remoteExecCall [""AlysiaServer_fnc_factionHistoryGet"", 2, false];";
+	onButtonClick = "[""FACTION""] spawn AlysiaClient_fnc_tabletApp;[player] remoteExecCall [""AlysiaServer_fnc_factionHistoryClean"", 2];";
 	
 	x = 0.463906 * safezoneW + safezoneX;
 	y = 0.643 * safezoneH + safezoneY;

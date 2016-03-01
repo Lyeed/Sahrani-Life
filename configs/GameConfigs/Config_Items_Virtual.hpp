@@ -197,14 +197,14 @@ class ALYSIA_ITEMS
 	class cigare
 	{
 		name = "Cigare";
-		weight = 3;
+		weight = 2;
 		illegal = 1;
 		image = "alysia_items_virtual\data\cigare.paa";
 		license = "tabac";
 		class market
 		{
-			max = 176;
-			min = 120;
+			max = 216;
+			min = 98;
 			affect[] = {"cigarette", "cocainep", "cocainepc", "heroinps", "methp", "marijuana"};
 		};
 	};
@@ -212,12 +212,13 @@ class ALYSIA_ITEMS
 	{
 		name = "Cigarette";
 		weight = 2;
+		illegal = 1;
 		image = "alysia_items_virtual\data\cigarette.paa";
 		license = "tabac";
 		class market
 		{
-			max = 57;
-			min = 32;
+			max = 105;
+			min = 15;
 			affect[] = {"cigare", "cocainep", "cocainepc", "heroinps", "methp", "marijuana"};
 		};
 	};
