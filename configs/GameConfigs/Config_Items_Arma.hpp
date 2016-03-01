@@ -23,7 +23,7 @@ class ALYSIA_ITEMS_ARMA
 	*/
 	class SkylineItems_Couteau
 	{
-		buy_price = 350;
+		buy_price = 550;
 		buy_condition_WEST = 4;
 		buy_condition_EAST = 2;
 	};
@@ -205,7 +205,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Binocular
 	{
-		buy_price = 20;
+		buy_price = 50;
 	};
 	class bodyguard_uniform_new
 	{
@@ -1410,7 +1410,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Skyline_Merlin_01
 	{
-		buy_price = 120;
+		buy_price = 250;
 	};
 	class Skyline_NioshFace
 	{
@@ -1433,50 +1433,35 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 500;
 	};
+
 	class Skyline_tl122_blanche
 	{
-		buy_price = 20;
+		buy_price = 85;
 	};
-	class Skyline_tl122_bleu
-	{
-		buy_price = 20;
-	};
-	class Skyline_tl122_jaune
-	{
-		buy_price = 20;
-	};
-	class Skyline_tl122_orange
-	{
-		buy_price = 20;
-	};
-	class Skyline_tl122_rose
-	{
-		buy_price = 20;
-	};
-	class Skyline_tl122_rouge
-	{
-		buy_price = 20;
-	};
-	class Skyline_tl122_verte
-	{
-		buy_price = 20;
-	};
+	class Skyline_tl122_bleu: Skyline_tl122_blanche {};
+	class Skyline_tl122_jaune: Skyline_tl122_blanche {};
+	class Skyline_tl122_orange: Skyline_tl122_blanche {};
+	class Skyline_tl122_rose: Skyline_tl122_blanche {};
+	class Skyline_tl122_rouge: Skyline_tl122_blanche {};
+	class Skyline_tl122_verte: Skyline_tl122_blanche {};
+	
 	class Skyline_Wolf
 	{
 		buy_price = 500;
 	};
 	class SkylineItems_Bandage
 	{
-		buy_price = 5;
+		buy_price = 15;
 	};
 	class SkylineItems_Crochetage {};
-	class SkylineItems_Defibrilateur {
+	class SkylineItems_Defibrilateur
+	{
 		buy_condition_guer = 1;
 		buy_price = 1500;
 	};
 	class SkylineItems_Passeport
 	{
-		buy_price = 55;
+		buy_price = 75;
 	};
 	class SkylineItems_PlaqueMilitaire
 	{
@@ -1542,16 +1527,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 200;
 	};
-	class tenue_Alysia {};
-	class ToolKit {};
-	class Trixie_CZ550 {};
-	class Trixie_CZ550_Mag {};
-	class Trixie_CZ550_Rail {};
-	class Trixie_Enfield {};
-	class Trixie_Enfield_Mag {};
-	class Trixie_Enfield_Rail {};
-	class Trixie_FNFAL_Mag {};
-	class Trixie_FNFAL_Rail {};
 	class TRYK_B_Alicepack
 	{
 		buy_price = 800;
@@ -2502,21 +2477,9 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 150;
 		buy_license_CIV = "company_security";
 	};
-	class Skyline_Uniforme_Securite_02_F
-	{
-		buy_price = 150;
-		buy_license_CIV = "company_security";
-	};
-	class Skyline_Uniforme_Securite_03_F
-	{
-		buy_price = 150;
-		buy_license_CIV = "company_security";
-	};
-	class U_C_SonsofAnarchy_01
-	{
-		buy_price = 80;
-	};
-	class U_Competitor {};
+	class Skyline_Uniforme_Securite_02_F: Skyline_Uniforme_Securite_01_F {};
+	class Skyline_Uniforme_Securite_03_F: Skyline_Uniforme_Securite_01_F {};
+
 	class U_O_CombatUniform_ocamo
 	{
 		buy_price = 200;
@@ -2579,11 +2542,6 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 2000;
 		buy_condition_EAST = 1;
 	};
-	class gilet_garde_2
-	{
-		buy_price = 2000;
-		buy_condition_EAST = 1;
-	};
 	class police_belt_pistol
 	{
 		buy_price = 500;
@@ -2598,6 +2556,18 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 2000;
 		buy_condition_WEST = 4;
 	};
+	class G_B_Diving
+	{
+		buy_price = 200;
+		buy_condition_EAST = 1;
+		buy_condition_WEST = 1;
+	};
+
+	class gilet_garde_2
+	{
+		buy_price = 2000;
+		buy_condition_EAST = 1;
+	};
 	class Garde_Veste
 	{
 		buy_price = 2000;
@@ -2608,122 +2578,110 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 2000;
 		buy_condition_EAST = 1;
 	};
-	class G_B_Diving
+	class gilet_garde_1
 	{
-		buy_price = 200;
+		buy_price = 2000;
 		buy_condition_EAST = 1;
-		buy_condition_WEST = 1;
 	};
+
 	class tenue_de_garde_commandant
 	{
 		buy_price = 300;
 		buy_condition_EAST = 5;
 	};
-	class tenue_de_garde_lieutenant
+	class tenue_de_garde_lieutenant: tenue_de_garde_commandant
 	{
-		buy_price = 300;
 		buy_condition_EAST = 4;
 	};
-	class tenue_de_garde_sergent
+	class tenue_de_garde_sergent: tenue_de_garde_commandant
 	{
-		buy_price = 300;
 		buy_condition_EAST = 3;
 	};
-	class tenue_de_garde_caporal
+	class tenue_de_garde_caporal: tenue_de_garde_commandant
 	{
-		buy_price = 300;
 		buy_condition_EAST = 2;
 	};
-	class tenue_de_garde_basique
+	class tenue_de_garde_basique: tenue_de_garde_commandant
 	{
-		buy_price = 300;
 		buy_condition_EAST = 1;
 	};
+	
 	class tenue_de_milice_commandant
 	{
 		buy_price = 300;
 		buy_condition_WEST = 9;
 	};
-	class tenue_de_milice_capitaine
+	class tenue_de_milice_capitaine: tenue_de_milice_commandant
 	{
-		buy_price = 300;
 		buy_condition_WEST = 8;
 	};
-	class tenue_de_milice_lieutenant
+	class tenue_de_milice_lieutenant: tenue_de_milice_commandant
 	{
-		buy_price = 300;
 		buy_condition_WEST = 7;
 	};
-	class tenue_de_milice_major
+	class tenue_de_milice_major: tenue_de_milice_commandant
 	{
-		buy_price = 300;
 		buy_condition_WEST = 6;
 	};
-	class tenue_de_milice_adjudant
+	class tenue_de_milice_adjudant: tenue_de_milice_commandant
 	{
-		buy_price = 300;
 		buy_condition_WEST = 5;
 	};
-	class tenue_de_milice_sergent
+	class tenue_de_milice_sergent: tenue_de_milice_commandant
 	{
-		buy_price = 300;
 		buy_condition_WEST = 4;
 	};
-	class tenue_de_milice_caporal
+	class tenue_de_milice_caporal: tenue_de_milice_commandant
 	{
-		buy_price = 300;
 		buy_condition_WEST = 3;
 	};
-	class tenue_de_milice_milicien
+	class tenue_de_milice_milicien: tenue_de_milice_commandant
 	{
-		buy_price = 300;
 		buy_condition_WEST = 2;
 	};
-	class tenue_de_milice_cadet
+	class tenue_de_milice_cadet: tenue_de_milice_commandant
 	{
-		buy_price = 300;
 		buy_condition_WEST = 1;
 	};
+
+	class Fett_tf_mr3000_milice
+	{
+		buy_price = 800;
+		buy_condition_WEST = 4;
+	};
+	class Fett_backpack_milice
+	{
+		buy_price = 250;
+		buy_condition_WEST = 1;
+	};
+
 	class EWK_Cig1
-	{		
-		buy_price = 20;
+	{
+		buy_price = 100;
 		buy_condition_WEST = 2;
 	};
-	class EWK_Cig2
-	{		
-		buy_price = 20;
-		buy_condition_WEST = 2;
-	};
-	class EWK_Cig3
-	{		
-		buy_price = 20;
-		buy_condition_WEST = 2;
-	};
-	class EWK_Cig4
-	{		
-		buy_price = 20;
-		buy_condition_WEST = 2;
-	};
-	class EWK_Cig6
-	{		
-		buy_price = 20;
-		buy_condition_WEST = 2;
-	};
+	class EWK_Cig2: EWK_Cig1 {};
+	class EWK_Cig3: EWK_Cig1 {};
+	class EWK_Cig4: EWK_Cig1 {};
+	class EWK_Cig6: EWK_Cig1 {};
+	
 	class EWK_Cigar1
-	{		
-		buy_price = 20;
+	{
+		buy_price = 200;
 		buy_condition_WEST = 9;
 		buy_condition_EAST = 4;
 	};
+	
 	class vietsh_Head
-	{		
-		buy_price = 20;
+	{
+		buy_price = 35;
 	};
 	class H_Beret_blk
 	{
 		buy_price = 100;
 		buy_condition_WEST = 2;
 	};
+	
 	class Alysia_jerrycan_empty
 	{
 		buy_price = 120;
@@ -2734,36 +2692,42 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Alysia_repair_tireLever
 	{
-		buy_price = 20;
+		buy_price = 225;
 	};
 	class Alysia_repair_fuel
 	{
-		buy_price = 20;
+		buy_price = 475;
 	};
 	class Alysia_repair_engine
 	{
-		buy_price = 20;
+		buy_price = 2100;
 	};
 	class Alysia_repair_body
 	{
-		buy_price = 20;
+		buy_price = 300;
 	};
 	class Alysia_repair_track
 	{
-		buy_price = 20;
+		buy_price = 1600;
 	};
 	class Alysia_repair_tire
 	{
-		buy_price = 20;
+		buy_price = 100;
 	};
 	class Alysia_repair_glass
 	{
-		buy_price = 20;
+		buy_price = 135;
 	};
 	class Alysia_repair_rotor
 	{
-		buy_price = 20;
+		buy_price = 6000;
 	};
+    class Alysia_siphon
+    {
+    	buy_price = 3950;
+    	buy_license_CIV = "company_garagist";
+    };
+
 	class Fett_SDAR
 	{
 		buy_price = 2000;
@@ -2784,11 +2748,6 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 2100;
 		buy_condition_WEST = 5;
 	};
-	class Fett_tf_mr3000_milice
-	{
-		buy_price = 800;
-		buy_condition_WEST = 4;
-	};
 	class usm_helmet_safety
 	{
 		buy_price = 20;
@@ -2798,16 +2757,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 		buy_license_CIV = "company_construction";
-	};
-	class gilet_garde_1
-	{
-		buy_price = 2000;
-		buy_condition_EAST = 1;
-	};
-	class Fett_backpack_milice
-	{
-		buy_price = 250;
-		buy_condition_WEST = 1;
 	};
 	class Bank_Bomb
 	{
@@ -2826,14 +2775,9 @@ class ALYSIA_ITEMS_ARMA
         buy_price = 250;
         buy_condition_GUER = 1;
     };
-    class Alysia_siphon
-    {
-    	buy_price = 950;
-    	buy_license_CIV = "company_garagist";
-    };
     class SkylineItems_TelephoneTactile
     {
-    	buy_price = 250;
+    	buy_price = 350;
     };
     class tf_rt1523g_black
     {
