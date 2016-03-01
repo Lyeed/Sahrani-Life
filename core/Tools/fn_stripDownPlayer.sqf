@@ -4,6 +4,7 @@
 */
 
 RemoveAllWeapons player;
+
 {
 	player removeMagazine _x;
 } forEach (magazines player);
@@ -19,6 +20,4 @@ removeHeadGear player;
 	player removeItem _x;
 } foreach (assignedItems player);
 
-if (hmd player != "") then {
-	player unlinkItem (hmd player);
-};
+if (hmd player != "") then {player unlinkItem (hmd player)};

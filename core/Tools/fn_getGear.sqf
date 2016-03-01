@@ -12,15 +12,15 @@ if ((isNull _target) || !(alive _target)) then {
     [];
 } else {
     [
-        [(uniform _target), (uniformItems _target)],
-        [(vest _target), (vestItems _target)],
-        [(backpack _target), (backpackItems _target)],
-        (goggles _target),
-        (headgear _target),
-        (assignedItems _target),
-        [(primaryWeapon _target), (primaryWeaponMagazine _target), (primaryWeaponItems _target), (_target ammo (primaryWeapon _target))],
-        [(secondaryWeapon _target), (secondaryWeaponMagazine _target), (secondaryWeaponItems _target)],
-        [(handgunWeapon _target), (handgunMagazine _target), (handGunItems _target), (_target ammo (handgunWeapon _target))]
+        [(uniform player), (uniformItems player)],
+        [(vest player), (vestItems player)],
+        [(backpack player), (backpackItems player)],
+        (goggles player),
+        (headgear player),
+        (assignedItems player),
+        [(primaryWeapon player), (primaryWeaponMagazine player), (primaryWeaponItems player), (player ammo (primaryWeapon player))],
+        [(secondaryWeapon player), (secondaryWeaponMagazine player), (secondaryWeaponItems player)],
+        [(handgunWeapon player), (handgunMagazine player), (handGunItems player), (player ammo (handgunWeapon player))]
     ];
 };
 

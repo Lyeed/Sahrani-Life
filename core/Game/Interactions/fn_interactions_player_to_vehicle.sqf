@@ -51,7 +51,8 @@ if (isNull _target) exitWith {};
 			"
 				(
 					((vehicle player) isEqualTo player)	&&
-					('Alysia_siphon' in (magazines player))
+					('Alysia_siphon' in (magazines player)) &&
+					(['company_garagist'] call AlysiaClient_fnc_hasLicense)
 				)
 			"
 		],
@@ -160,8 +161,14 @@ if (isNull _target) exitWith {};
 			"[] spawn AlysiaClient_fnc_vehicleMenu_impound;",
 			"
 				(
-					(playerSide in [east,west]) &&
-					((vehicle player) isEqualTo player)
+					((playerSide in [east,west]) ||
+					(
+						(['company_garagist'] call AlysiaClient_fnc_hasLicense) &&
+						(
+				            ((g_interaction_target distance (getMarkerPos 'fourriere_NORTH')) < 15) ||
+				            ((g_interaction_target distance (getMarkerPos 'fourriere_SOUTH')) < 15)
+						)
+					)) && ((vehicle player) isEqualTo player)
 				)
 			"
 		],

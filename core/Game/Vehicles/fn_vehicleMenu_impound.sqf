@@ -5,14 +5,17 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+private["_target"];
+_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if (isNull g_interaction_target) exitWith {};
-if (!((crew g_interaction_target) isEqualTo [])) exitWith {
-	["Le véhicule doit être vide"] call AlysiaClient_fnc_error;
+if (isNull _target) exitWith {
+	["Cible invalide."] call AlysiaClient_fnc_error;
 };
-
-if ((speed g_interaction_target) > 0) exitWith {
-	["Le véhicule doit être à l'arrêt"] call AlysiaClient_fnc_error;	
+if (!((crew _target) isEqualTo [])) exitWith {
+	["Il ne doit pas y avoir de passager à bord du véhicule pendant la mise en fourrièrre."] call AlysiaClient_fnc_error;
+};
+if ((speed _target) > 0) exitWith {
+	["Le véhicule doit être à l'arrêt."] call AlysiaClient_fnc_error;
 };
 
 if (dialog) then
@@ -21,10 +24,10 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
-if (["Mise en fourrière", 8, g_interaction_target] call AlysiaClient_fnc_showProgress) then
+if (["Mise en fourrière", 8, _target] call AlysiaClient_fnc_showProgress) then
 {
 	private "_storePos";
-	if (g_interaction_target isKindOf "Ship") then {
+	if (_target isKindOf "Ship") then {
 		_storePos = [0,0,0];
 	} else {
 		if (g_choice isEqualTo "NORTH") then {
@@ -34,5 +37,5 @@ if (["Mise en fourrière", 8, g_interaction_target] call AlysiaClient_fnc_showPr
 		};
 	};
 	
-	[g_interaction_target, _storePos, false] remoteExec ["AlysiaServer_fnc_garageVehicleStore", 2];
+	[_target, _storePos, false] remoteExec ["AlysiaServer_fnc_garageVehicleStore", 2];
 };

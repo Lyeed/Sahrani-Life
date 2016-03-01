@@ -12,8 +12,7 @@ if (_faction isEqualTo sideUnknown) exitWith {};
 
 _condition = false;
 {
-	_index = [_x, g_dynamic_markers_discovered] call AlysiaClient_fnc_index;
-	if (_index != -1) exitWith {_condition = true}
+	if (([_x, g_dynamic_markers_discovered] call AlysiaClient_fnc_index) != -1) exitWith {_condition = true}
 } forEach (["black_market_1_marker", "black_market_2_marker"]);
 if (_condition) then
 {
@@ -21,7 +20,7 @@ if (_condition) then
 		format
 		[
 				"Hep, j'ai entendu dire que ce genre d'info pourrait t'interesser.<br/>"
-			+	"La faction <t color='#00FF80'>%1</t> prépare un convois avec de l'équipement...",
+			+	"La faction <t color='#00FF80'>%1</t> prépare un convois avec pas mal d'équipements...",
 			[_faction] call AlysiaClient_fnc_sideToStr
 		],
 		"BLACK_MARKET",
