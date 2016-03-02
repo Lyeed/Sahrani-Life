@@ -2681,7 +2681,12 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 100;
 		buy_condition_WEST = 2;
 	};
-	
+
+	class Alysia_jerrycan_diesel {};
+	class Alysia_jerrycan_sp95 {};
+	class Alysia_jerrycan_sp98 {};
+	class Alysia_jerrycan_kerosene {};
+	class Alysia_jerrycan_gpl {};
 	class Alysia_jerrycan_empty
 	{
 		buy_price = 120;
@@ -2694,33 +2699,39 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 225;
 	};
-	class Alysia_repair_fuel
-	{
-		buy_price = 475;
-	};
-	class Alysia_repair_engine
-	{
-		buy_price = 2100;
-	};
-	class Alysia_repair_body
-	{
-		buy_price = 300;
-	};
-	class Alysia_repair_track
-	{
-		buy_price = 1600;
-	};
 	class Alysia_repair_tire
 	{
 		buy_price = 100;
 	};
+	class Alysia_repair_fuel
+	{
+		buy_price = 475;
+		buy_license_CIV = "company_garagist";
+	};
+	class Alysia_repair_engine
+	{
+		buy_price = 2100;
+		buy_license_CIV = "company_garagist";
+	};
+	class Alysia_repair_body
+	{
+		buy_price = 300;
+		buy_license_CIV = "company_garagist";
+	};
+	class Alysia_repair_track
+	{
+		buy_price = 1600;
+		buy_license_CIV = "company_garagist";
+	};
 	class Alysia_repair_glass
 	{
 		buy_price = 135;
+		buy_license_CIV = "company_garagist";
 	};
 	class Alysia_repair_rotor
 	{
 		buy_price = 6000;
+		buy_license_CIV = "company_garagist";
 	};
     class Alysia_siphon
     {

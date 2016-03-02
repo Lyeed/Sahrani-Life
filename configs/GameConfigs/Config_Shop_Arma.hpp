@@ -109,13 +109,7 @@ class ALYSIA_SHOPS_ARMA
 		{
 			"Alysia_repair_toolbox",
 			"Alysia_repair_tireLever",
-			"Alysia_repair_fuel",
-			"Alysia_repair_engine",
-			"Alysia_repair_body",
-			"Alysia_repair_track",
 			"Alysia_repair_tire",
-			"Alysia_repair_glass",
-			"Alysia_repair_rotor",
 			"Alysia_jerrycan_empty"
 		};
 	};
@@ -229,6 +223,22 @@ class ALYSIA_SHOPS_ARMA
 		stocks[] =
 		{
 			"SkylineItems_Passeport"
+		};
+	};
+
+	class companies
+	{
+		name = "Réserve d'entreprises";
+		side = "CIV";
+		stocks[] =
+		{
+			"Alysia_repair_glass",
+			"Alysia_repair_rotor",
+			"Alysia_repair_fuel",
+			"Alysia_repair_engine",
+			"Alysia_repair_body",
+			"Alysia_repair_track",
+			"Alysia_siphon"
 		};
 	};
 };

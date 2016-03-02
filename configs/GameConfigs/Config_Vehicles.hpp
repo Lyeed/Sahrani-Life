@@ -2012,8 +2012,8 @@ class ALYSIA_VEHICLES
 
 	class max_towtruck
 	{
-		buyPrice = 12000;
-		inventory = 85;
+		buyPrice = 12900;
+		inventory = 65;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver","company_garagist"};
@@ -2487,8 +2487,8 @@ class ALYSIA_VEHICLES
 	
 	class Jonzie_Tow_Truck
 	{
-		buyPrice = 25000;
-		inventory = 150;
+		buyPrice = 29500;
+		inventory = 120;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"truck","company_garagist"};

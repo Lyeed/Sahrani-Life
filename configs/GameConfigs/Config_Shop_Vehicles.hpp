@@ -256,7 +256,7 @@ class ALYSIA_SHOPS_VEHICLES
 	};
 	class CIV_vehicules_job
 	{
-		name = "Concessionnaire automobiles métier civils";
+		name = "Concessionnaire entreprises";
 		side = "CIV";
 		stock[] =
 		{
@@ -265,7 +265,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"max_towtruck",
 			"Jonzie_Tow_Truck",
 			"shounka_limo_civ",
-			"shounka_a3_mantgs",
 			"shounka_a3_brinks_noir",
 			"Skyline_Jeep_Wrangler_Rubicon_Depannage_01_F"
 		};

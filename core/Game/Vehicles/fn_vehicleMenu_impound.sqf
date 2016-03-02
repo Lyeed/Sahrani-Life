@@ -30,10 +30,19 @@ if (["Mise en fourrière", 8, _target] call AlysiaClient_fnc_showProgress) then
 	if (_target isKindOf "Ship") then {
 		_storePos = [0,0,0];
 	} else {
-		if (g_choice isEqualTo "NORTH") then {
-			_storePos = getMarkerPos "fourriere_NORTH";
+		if (playerSide in [east,west]) then
+		{
+			if (g_choice isEqualTo "NORTH") then {
+				_storePos = getMarkerPos "fourriere_NORTH";
+			} else {
+				_storePos = getMarkerPos "fourriere_SOUTH";
+			};
 		} else {
-			_storePos = getMarkerPos "fourriere_SOUTH";
+			if ((_target distance (getMarkerPos "fourriere_NORTH")) < (_target distance (getMarkerPos "fourriere_SOUTH"))) then {
+				_storePos = getMarkerPos "fourriere_NORTH";
+			} else {
+				_storePos = getMarkerPos "fourriere_SOUTH";
+			};
 		};
 	};
 	

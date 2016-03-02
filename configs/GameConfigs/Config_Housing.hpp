@@ -344,7 +344,7 @@ class ALYSIA_HOUSES
 		price = 325000;
 		class storage
 		{
-			type = "Skyline_Coffre_Large";
+			type = "Skyline_Coffre_Medium";
 			building_index = 7;
 		};
 		class lights {};
@@ -390,7 +390,7 @@ class ALYSIA_HOUSES
 		price = 310000;
 		class storage
 		{
-			type = "Skyline_Coffre_Large";
+			type = "Skyline_Coffre_Medium";
 			building_index = 5;
 		};
 		class lights {};
