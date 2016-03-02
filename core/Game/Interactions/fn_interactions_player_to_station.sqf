@@ -16,7 +16,7 @@ if ((player getVariable ["typeRefuel", ""]) != "") exitWith
 	[_this, 0, objNull, [objNull]] call BIS_fnc_param,
 	"player_to_station",
 	[
-		["refuel_veh", "Véhicule", "[g_interaction_target] call AlysiaClient_fnc_fuelStation_use_refuel_veh;", "true"],
+		["refuel_veh", "Véhicule", "[g_interaction_target] call AlysiaClient_fnc_fuelStation_refuel_open;", "true"],
 		["refuel_jerry", "Jerrycan", "[g_interaction_target] spawn AlysiaClient_fnc_fuelStation_jerrycan_open;", "('Alysia_jerrycan_empty' in (magazines player))"]
 	],
 	"Station Essence",

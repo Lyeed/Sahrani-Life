@@ -25,9 +25,6 @@ g_keybinds pushBack "actionSurrender";
 ["Alysia", "actionKnock", "Tatane", {[] spawn AlysiaClient_fnc_knockoutAction}, {true}, [DIK_G, [true, false, false]], false, 0, true] call CBA_fnc_addKeybind;
 g_keybinds pushBack "actionKnock";
 
-["Alysia", "actionCuff", "Menotter", {[cursorTarget] spawn AlysiaClient_fnc_restrainAction}, {true}, [DIK_R, [true, false, false]], false, 0, true] call CBA_fnc_addKeybind;
-g_keybinds pushBack "actionCuff";
-
 ["Alysia", "actionHoldster", "Holster", {[] call AlysiaClient_fnc_holdsterSwitch}, {true}, [DIK_H, [true, false, false]], false, 0, true] call CBA_fnc_addKeybind;
 g_keybinds pushBack "actionHoldster";
 

@@ -2132,7 +2132,7 @@ _flag_south_3 = ["FlagPole_F","[10567.205078,9554.953125,0]",720,-100,1,0,[]] ca
 		_marker setMarkerColorLocal "ColorGreen";
 		_marker setMarkerSizeLocal [0.5, 0.5];
 	} else {
-		if (typeOf(_x) isEqualTo "Land_FuelStation_Feed_F") then
+		if (typeOf(_x) in ["Land_FuelStation_Feed_F", "B_SlingLoad_01_Fuel_F"]) then
 		{
 			_marker = createMarkerLocal [format["station_%1", _forEachIndex], (getPos _x)];
 			_marker setMarkerShapeLocal "ICON";

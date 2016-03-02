@@ -2,25 +2,37 @@ class ALYSIA_FUEL_STATION
 {
 	class Land_FuelStation_Feed_F
 	{
-		class Diesel
+		max_distance_allowed = 10;
+		class stock
 		{
-			max = 800;
+			class Diesel
+			{
+				max = 800;
+			};
+			class SP95
+			{
+				max = 800;
+			};
+			class SP98
+			{
+				max = 800;
+			};
+			class GPL
+			{
+				max = 800;
+			};
 		};
-		class SP95
+	};
+
+	class B_SlingLoad_01_Fuel_F
+	{
+		max_distance_allowed = 75;
+		class stock
 		{
-			max = 800;
-		};
-		class SP98
-		{
-			max = 800;
-		};
-		class Kerosene
-		{
-			max = 1200;
-		};
-		class GPL
-		{
-			max = 800;
+			class Kerosene
+			{
+				max = 2000;
+			};
 		};
 	};
 };
@@ -33,8 +45,7 @@ class ALYSIA_FUEL
 		picture = "Devilz80_Images\Data\Menu\fuelStations\Diesel.paa";
 		conso = 0.8;
 		jerrycan = "Alysia_jerrycan_diesel";
-	};
-	
+	};	
 	class SP95
 	{
 		name = "Essence Sans Plomb 95";
@@ -42,7 +53,6 @@ class ALYSIA_FUEL
 		conso = 1.2;
 		jerrycan = "Alysia_jerrycan_sp95";
 	};
-	
 	class SP98
 	{
 		name = "Essence Sans Plomb 98";
@@ -50,15 +60,13 @@ class ALYSIA_FUEL
 		conso = 1;
 		jerrycan = "Alysia_jerrycan_sp98";
 	};
-
 	class Kerosene
 	{
 		name = "Kerosene";
 		picture = "Devilz80_Images\Data\Menu\fuelStations\Kerosene.paa";
-		conso = 0.3;
+		conso = 0.4;
 		jerrycan = "Alysia_jerrycan_kerosene";
 	};
-
 	class GPL
 	{
 		name = "Gaz de pétrole liquéfié";

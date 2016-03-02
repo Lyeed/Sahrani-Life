@@ -66,9 +66,9 @@ while {(_time > 0) && !g_coma_dead && (player getVariable ["is_coma", false])} d
 
 	if (g_adrenaline isEqualTo 0) then
 	{
-		if (_time > (getNumber(missionConfigFile >> "ALYSIA_MEDICAL" >> "coma" >> "timer") - (60 * 2))) then
+		if (_time > (getNumber(missionConfigFile >> "ALYSIA_MEDICAL" >> "coma" >> "timer") - (60 * 3))) then
 		{
-			_ctrl_suicide ctrlSetStructuredText parseText format["<t align='center' size='1.5'>Vous pouvez vous suicider dans %1 secondes</t>", (_time - (1000 - (60 * 2)))];
+			_ctrl_suicide ctrlSetStructuredText parseText format["<t align='center' size='1.5'>Vous pouvez vous suicider dans %1 secondes</t>", (_time - (1000 - (60 * 3)))];
 			ctrlShow[352, false];
 			ctrlShow[353, false];
 			ctrlShow[354, false];

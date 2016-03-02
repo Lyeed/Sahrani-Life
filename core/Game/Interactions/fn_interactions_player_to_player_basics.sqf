@@ -58,10 +58,13 @@
 		[
 			"restrain",
 			"Menotter",
-			"[] spawn AlysiaClient_fnc_interactionMenu_action_restrain;",
+			"[g_interaction_target] spawn AlysiaClient_fnc_interactionMenu_action_restrain;",
 			"
 				(
-					(g_interaction_target getVariable ['surrender',false]) &&
+					(
+						(g_interaction_target getVariable ['surrender',false]) ||
+						((animationState g_interaction_target) isEqualTo 'Incapacitated')
+					) && 
 					!(g_interaction_target getVariable['restrained',false]) &&
 					((['handcuffs'] call AlysiaClient_fnc_itemCount) > 0)
 				)

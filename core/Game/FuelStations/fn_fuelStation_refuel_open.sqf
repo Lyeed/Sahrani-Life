@@ -10,7 +10,9 @@ _station = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 
 closeDialog 0;
 
-if (isNull _station) exitWith {};
+if (isNull _station) exitWith {
+	["Cible invalide."] call AlysiaClient_fnc_error;
+};
 
 if (!(createDialog "RscDisplayFuelStation")) exitWith {};
 
@@ -27,6 +29,6 @@ lbClear _list;
 	_index = _list lbAdd getText(missionConfigFile >> "ALYSIA_FUEL" >> (configName _x) >> "name");
 	_list lbSetData [_index, (configName _x)];
 	_list lbSetPicture [_index, getText(missionConfigFile >> "ALYSIA_FUEL" >> (configName _x) >> "picture")];
-} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_station)));
+} foreach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_station) >> "stock"));
 
 _list lbSetCurSel 0;

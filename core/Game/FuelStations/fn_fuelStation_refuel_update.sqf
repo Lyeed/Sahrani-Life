@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_list", "_sel", "_display", "_station", "_fuel"];
+private["_list", "_sel", "_display", "_station", "_fuel", "_amount"];
 disableSerialization;
 
 _list = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
@@ -29,13 +29,29 @@ if (_fuel isEqualTo "") exitWith {
 (_display displayCtrl 16008) ctrlSetStructuredText parseText format
 [
 	"<t align='center' size='2'>%1</t>",
-	([_station, _fuel] call AlysiaClient_fnc_fuelStation_price)
-];
-
-(_display displayCtrl 16011) ctrlSetStructuredText parseText format
-[
-	"<t align='center' size='1.6'> %1L</t>",
-	(_station getVariable [_fuel, getNumber(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeof(_station) >> _fuel >> "max")])
+	([_station, _fuel] call AlysiaClient_fnc_fuelStation_fuel_getPrice)
 ];
 
 (_display displayCtrl 16015) ctrlSetText getText(missionConfigFile >> "ALYSIA_FUEL" >> _fuel >> "picture");
+
+_amount = [_station, _fuel] call AlysiaClient_fnc_fuelStation_fuel_getStock;
+(_display displayCtrl 16011) ctrlSetStructuredText parseText format
+[
+	"<t align='center' size='1.6'> %1L</t>",
+	_amount
+];
+
+if (_amount <= 0) then
+{
+	ctrlShow[16013, false];
+	ctrlShow[16014, false];
+	ctrlShow[16016, false];
+	ctrlShow[16015, false];
+	ctrlShow[16017, false];
+} else {
+	ctrlShow[16013, true];
+	ctrlShow[16014, true];
+	ctrlShow[16016, true];
+	ctrlShow[16015, true];
+	ctrlShow[16017, true];	
+};

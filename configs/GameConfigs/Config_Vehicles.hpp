@@ -2199,7 +2199,7 @@ class ALYSIA_VEHICLES
 		buyPrice = 325000;
 		inventory = 150;
 		side = "CIV";
-		insurance = 1;
+		insurance = 0;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		colors[] =
@@ -2237,7 +2237,7 @@ class ALYSIA_VEHICLES
 		buyPrice = 145000;
 		inventory = 220;
 		side = "CIV";
-		insurance = 1;
+		insurance = 0;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		realname = "DC3";
@@ -2247,7 +2247,7 @@ class ALYSIA_VEHICLES
 		buyPrice = 145000;
 		inventory = 150;
 		side = "CIV";
-		insurance = 1;
+		insurance = 0;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		realname = "DC3 long-courrier";
@@ -2710,7 +2710,7 @@ class ALYSIA_VEHICLES
 		buyPrice = 800000;
 		inventory = 38;
 		side = "WEST";
-		insurance = 0;
+		insurance = 1;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 8;
@@ -2721,7 +2721,7 @@ class ALYSIA_VEHICLES
 		buyPrice = 450000;
 		inventory = 70;
 		side = "WEST";
-		insurance = 0;
+		insurance = 1;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 6;
@@ -2845,7 +2845,7 @@ class ALYSIA_VEHICLES
 		buyPrice = 395000;
 		inventory = 90;
 		side = "EAST";
-		insurance = 0;
+		insurance = 1;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		rank = 3;

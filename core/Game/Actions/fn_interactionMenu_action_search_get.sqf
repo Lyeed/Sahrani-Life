@@ -20,10 +20,9 @@ if ((backpack player) != "") then {_inv_arma pushBack (backpack player);};
 if ((goggles player) != "") then {_inv_arma pushBack (goggles player);};
 if ((headgear player) != "") then {_inv_arma pushBack (headgear player);};
 if ((binocular player) != "") then {_inv_arma pushBack (binocular player);};
+
 {
-	if (_x != "") then {
-		_inv_arma pushBack _x;
-	};
-} forEach ((primaryWeaponItems player) + (assignedItems player) + (uniformItems player) + (vestItems player));
+	if (_x != "") then {_inv_arma pushBack _x};
+} forEach ((primaryWeaponItems player) + (assignedItems player) + (uniformItems player) + (vestItems player) + (backpackItems player));
 
 [([] call AlysiaClient_fnc_getInv), _inv_arma, g_cash] remoteExec ["AlysiaClient_fnc_interactionMenu_action_search_return", _from];

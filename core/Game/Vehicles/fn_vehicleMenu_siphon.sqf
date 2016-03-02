@@ -29,21 +29,24 @@ if (!(["Siphonnage", 10, _target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call A
 _type = _target getVariable ["typeRefuel", ""];
 if (_type isEqualTo "") then {_type = getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf(_target) >> "fuel")};
 
-_item = switch (_type) do
+if ("Alysia_jerrycan_empty" in (magazines player)) then
 {
-	case "Diesel": {"Alysia_jerrycan_diesel"};
-	case "SP95": {"Alysia_jerrycan_sp95"};
-	case "SP98": {"Alysia_jerrycan_sp98"};
-	case "Kerosene": {"Alysia_jerrycan_kerozene"};
-	case "GPL": {"Alysia_jerrycan_gpl"};
-};
-
-_count = floor(((fuel _target) * getNumber(configFile >> "CfgVehicles" >> typeof(_target) >> "fuelCapacity")) / 20);
-if (_count >= 1) then
-{
-	for "_i" from 1 to _count do
+	_item = switch (_type) do
 	{
-		player addMagazine _item;
+		case "Diesel": {"Alysia_jerrycan_diesel"};
+		case "SP95": {"Alysia_jerrycan_sp95"};
+		case "SP98": {"Alysia_jerrycan_sp98"};
+		case "Kerosene": {"Alysia_jerrycan_kerozene"};
+		case "GPL": {"Alysia_jerrycan_gpl"};
+	};
+
+	_count = floor(((fuel _target) * getNumber(configFile >> "CfgVehicles" >> typeof(_target) >> "fuelCapacity")) / 20);
+	if (_count >= 1) then
+	{
+		for "_i" from 1 to _count do
+		{
+			player addMagazine _item;
+		};
 	};
 };
 

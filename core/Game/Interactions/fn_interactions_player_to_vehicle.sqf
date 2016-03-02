@@ -17,7 +17,7 @@ if (isNull _target) exitWith {};
 		[
 			"refuel",
 			"Plein",
-			"[g_interaction_target, (missionNamespace getVariable ['refuel_station_inUse', objNull])] spawn AlysiaClient_fnc_fuelRefuel_use_refuel_veh;",
+			"[g_interaction_target, (missionNamespace getVariable ['refuel_station_inUse', objNull])] spawn AlysiaClient_fnc_fuelStation_refuel_progress;",
 			"
 				(
 					((player getVariable ['typeRefuel', '']) != '') &&
@@ -158,7 +158,7 @@ if (isNull _target) exitWith {};
 		[
 			"impound",
 			"Fourrière",
-			"[] spawn AlysiaClient_fnc_vehicleMenu_impound;",
+			"[g_interaction_target] spawn AlysiaClient_fnc_vehicleMenu_impound;",
 			"
 				(
 					((playerSide in [east,west]) ||

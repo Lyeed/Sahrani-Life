@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_station", "_type", "_currentLiters", "_display", "_bill", "_liters"];
+private["_station", "_type", "_currentLiters", "_display", "_bill", "_liters", "_fill"];
 _station = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 
 if (isNull _station) exitWith {
@@ -13,25 +13,16 @@ if (isNull _station) exitWith {
 };
 
 _type = lbData[16004, lbCurSel 16004];
-if (_type isEqualTo "") exitWith {
-	["Impossible de trouver l'essence que vous avez selectionné."] call AlysiaClient_fnc_error;
-};
+if (_type isEqualTo "") exitWith {["Impossible de trouver l'essence que vous avez selectionné."] call AlysiaClient_fnc_error};
 
-if (dialog) then
+closeDialog 0;
+
+if (player distance _station > 5) exitWith {["Vous êtes trop loin de la station."] call AlysiaClient_fnc_error};
+if (!("Alysia_jerrycan_empty" in (magazines player))) exitWith {["Vous n'avez pas de jerrycan vide."] call AlysiaClient_fnc_error};
+
+_currentLiters = [_station, _type] call AlysiaClient_fnc_fuelStation_fuel_getStock;
+if (_currentLiters < 20) exitWith
 {
-	closeDialog 0;
-	waitUntil {!dialog};
-};
-
-if (player distance _station > 5) exitWith {
-	["Vous êtes trop loin de la station."] call AlysiaClient_fnc_error;
-};
-if (!("Alysia_jerrycan_empty" in (magazines player))) exitWith {
-	["Vous n'avez pas de jerrycan vide."] call AlysiaClient_fnc_error;
-};
-
-_currentLiters = _station getVariable [_type, getNumber(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeof(_station) >> _type >> "max")];
-if (_currentLiters < 20) exitWith {
 	[
 		format
 		[
@@ -42,22 +33,38 @@ if (_currentLiters < 20) exitWith {
 	] call AlysiaClient_fnc_error;
 };
 
+if (_station getVariable ["fuel_inUse", false]) exitWith {["Plein impossible.<br/>Quelqu'un est déjà en train d'utiliser la pompe."] call AlysiaClient_fnc_error};
+_station setVariable ["fuel_inUse", true, true];
+
 if (!(createDialog "RscDisplayFuelRefuel")) exitWith {};
 
 disableSerialization;
 _display = findDisplay 17000;
 if (isNull _display) exitWith {};
 
-_bill = 0;
-_liters = 0;
-
 (_display displayCtrl 17006) ctrlSetStructuredText parseText getText(missionConfigFile >> "ALYSIA_FUEL" >> _type >> "name");
 
-while {!(isNull _display) && ((_bill + ([_station, _type] call AlysiaClient_fnc_fuelStation_price)) <= g_atm) && ((player distance _station) < 4) && (_liters < 20)} do
+_bill = 0;
+_liters = 0;
+_fill = false;
+
+while {true} do
 {
+	if (isNull _display) exitWith {
+		["Le transfert n'a pas pu aboutir.<br/>Fenêtre fermée."] call AlysiaClient_fnc_error;
+	};
+	if (_bill > g_atm) exitWith {
+		["Le transfert n'a pas pu aboutir.<br/>Vous n'avez pas assez d'argent sur votre compte pour payer le plein d'un jerrycan."] call AlysiaClient_fnc_error;
+	};
+	if ((player distance _station) > 4) exitWith {
+		["Le transfert n'a pas pu aboutir.<br/>Vous êtes trop loin de la station."] call AlysiaClient_fnc_error;
+	};
+
+	if (_liters isEqualTo 20) exitWith {_fill = true};
+
+	_bill = _bill + ([_station, _type] call AlysiaClient_fnc_fuelStation_fuel_getPrice);
 	_liters = _liters + 1;
 	_station setVariable [_type, (_currentLiters - _liters)];
-	_bill = _bill + ([_station, _type] call AlysiaClient_fnc_fuelStation_price);
 	
 	(_display displayCtrl 17008) ctrlSetStructuredText parseText format
 	[
@@ -82,29 +89,21 @@ while {!(isNull _display) && ((_bill + ([_station, _type] call AlysiaClient_fnc_
 	uiSleep 0.5;
 };
 
-if (dialog) then
+if (dialog) then {closeDialog 0};
+if (_fill) then
 {
-	closeDialog 0;
-	waitUntil {!dialog};
+	if ("Alysia_jerrycan_empty" in (magazines player)) then
+	{
+		player removeMagazine "Alysia_jerrycan_empty";
+		player addMagazine getText(missionConfigFile >> "ALYSIA_FUEL" >> _type >> "jerrycan");
+		_station setVariable [_type, (_currentLiters - _liters), true];
+		[false, _bill, "Station Essence"] call AlysiaClient_fnc_handleATM;
+		[format["<t color='#8cff9b'>%1</t>kn ont été prélevés de votre compte en banque.", ([_bill] call AlysiaClient_fnc_numberText)], "buy"] call AlysiaClient_fnc_info;	
+	} else {
+		["Le transfert n'a pas pu aboutir.<br/>Vous n'avez pas de jerrycan vide."] call AlysiaClient_fnc_error;
+	};
+} else {
+	_station setVariable [_type, _currentLiters];	
 };
 
-if (g_atm >= _bill) then
-{
-	if (_liters isEqualTo 20) then
-	{
-		if ("Alysia_jerrycan_empty" in (magazines player)) then
-		{
-			player removeMagazine "Alysia_jerrycan_empty";
-			player addMagazine getText(missionConfigFile >> "ALYSIA_FUEL" >> _type >> "jerrycan");
-			_station setVariable [_type, (_currentLiters - _liters), true];
-			[false, _bill, "Station Essence"] call AlysiaClient_fnc_handleATM;
-			[format["<t color='#8cff9b'>%1</t>kn ont été prélevés de votre compte en banque.", ([_bill] call AlysiaClient_fnc_numberText)], "buy"] call AlysiaClient_fnc_info;	
-		} else {
-			["Le transfert n'a pas pu aboutir.<br/>Vous n'avez pas de jerrycan vide."] call AlysiaClient_fnc_error;
-		};
-	} else {
-		["Le transfert n'a pas pu aboutir.<br/>Vous devez rester proche de la station."] call AlysiaClient_fnc_error;	
-	};	
-} else {
-	["Le transfert n'a pas pu aboutir.<br/>Vous n'avez pas assez d'argent sur votre compte pour payer le plein d'un jerrycan."] call AlysiaClient_fnc_error;
-};
+_station setVariable ["fuel_inUse", false, true];

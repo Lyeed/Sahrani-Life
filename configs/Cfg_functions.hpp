@@ -328,13 +328,15 @@ class CfgFunctions
 		class FuelStations
 		{
 			file = "core\Game\FuelStations";
-			class fuelStation_use_refuel_veh {};
-			class fuelStation_refuel_veh_update {};
-			class fuelStation_refuel_veh_validate {};
-			class fuelStation_price {};
-			class fuelRefuel_use_refuel_veh {};
+			class fuelStation_refuel_open {};
+			class fuelStation_refuel_update {};
+			class fuelStation_refuel_action {};
+			class fuelStation_refuel_progress {};
 			class fuelStation_jerrycan_open {};
 			class fuelStation_jerrycan_action {};
+			class fuelStation_fuel_getPrice {};
+			class fuelStation_fuel_getStock {};
+			class fuelStation_fuel_handle {};
 		};
 
 		class Housing

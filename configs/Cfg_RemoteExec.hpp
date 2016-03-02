@@ -131,7 +131,7 @@ class CfgRemoteExec
 		class systemChat {allowTargets = CLIENT;};
 		class BIS_fnc_endMission {allowTargets = CLIENT;};
 		class switchMove {allowTargets = CLIENT;};
-		class hideObjet {allowTargets = EVERYONE;};
+		class hideObject {allowTargets = EVERYONE;};
 
 		class AlysiaClient_fnc_endGame {allowTargets = CLIENT;};
 	};
