@@ -24,7 +24,7 @@ class ALYSIA_FUEL_STATION
 		};
 	};
 
-	class B_SlingLoad_01_Fuel_F
+	class Land_A_FuelStation_Feed
 	{
 		max_distance_allowed = 75;
 		class stock

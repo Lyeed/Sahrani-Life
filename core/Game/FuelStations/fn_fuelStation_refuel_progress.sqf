@@ -73,7 +73,7 @@ while {true} do
 	};
 
 	if (((fuel _veh) + (_liters / _fuelmax)) >= 1) exitWith {_fill = true};
-	if ((_currentLiters - _liters) <= 0) exitWith {_fill = true}
+	if ((_currentLiters - _liters) <= 0) exitWith {_fill = true};
 
 	_liters = _liters + 1;
 	_station setVariable [_type, (_currentLiters - _liters)];

@@ -79,8 +79,7 @@ class Mission
 		"A3_Structures_F_Households_House_Small02",
 		"A3_Structures_F_Households_House_Big01",
 		"A3_Structures_F_Households_House_Big02",
-		"fett_map",
-		"A3_Supplies_F_Heli_Slingload"
+		"fett_map"
 	};
 	addOnsAuto[]=
 	{
@@ -160,7 +159,6 @@ class Mission
 		"A3_Structures_F_Households_House_Small02",
 		"A3_Structures_F_Households_House_Big01",
 		"A3_Structures_F_Households_House_Big02",
-		"A3_Supplies_F_Heli_Slingload",
 		"fett_map"
 	};
 	randomSeed=13763187;
@@ -20699,32 +20697,33 @@ class Mission
 		};
 		class Item1650
 		{
-			position[]={9979.0566,139.98311,9996.6406};
-			id=1821;
-			side="EMPTY";
-			vehicle="B_Slingload_01_Fuel_F";
-			skill=0.60000002;
-			init="this enableSimulation true;this setdir 0;this setposATL [9979.0566406,9996.640625,0];this setVectorUp [0,0,1];this allowDamage false;this setFuelCargo 0;";
-		};
-		class Item1651
-		{
 			position[]={9973.7139,139.98311,9995.4902};
 			azimut=180;
-			id=1822;
+			id=1821;
 			side="EMPTY";
 			vehicle="Land_FuelStation_Build_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this allowDamage false;this setdir 180;this setposATL [9973.713867,9995.490234,0];this setVectorUp [0,0,1]";
 		};
+		class Item1651
+		{
+			position[]={19287.021,11.945813,13890.865};
+			offsetY=-0.056397401;
+			id=1822;
+			side="EMPTY";
+			vehicle="Land_A_FuelStation_Feed";
+			skill=0.60000002;
+			init="this enableSimulation true;this setdir 0;this setposATL [19287.0214844,13890.865234,-0.0563974];this setVectorUp [0,0,1];this setFuelCargo 0;";
+		};
 		class Item1652
 		{
-			position[]={19276.596,11.952834,13880.897};
-			azimut=220;
+			position[]={9978.998,139.98311,10003.315};
+			offsetY=-0.0563973;
 			id=1823;
 			side="EMPTY";
-			vehicle="B_Slingload_01_Fuel_F";
+			vehicle="Land_A_FuelStation_Feed";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 220;this setposATL [19276.595703,13880.897461,0];this setVectorUp [0,0,1];this allowDamage false;this setFuelCargo 0;";
+			init="this enableSimulation true;this setdir 0;this setposATL [9978.998047,10003.31543,-0.0563973];this setVectorUp [0,0,1];this setFuelCargo 0;";
 		};
 	};
 	class Markers

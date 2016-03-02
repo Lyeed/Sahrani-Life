@@ -104,12 +104,6 @@ if (hasInterface) then
 	waitUntil {((call TFAR_fnc_getTeamSpeakChannelName) isEqualTo "TaskForceRadio")};
 	diag_log "<INIT> Présence dans le channel TaskForceRadio validé";
 
-	diag_log "<INIT> Ajouts des actions au joueur ...";
-	cutText ["Ajouts des actions au joueur", "BLACK FADED"];
-	0 cutFadeOut 9999999;
-	[] call AlysiaClient_fnc_init_actions;
-	diag_log "<INIT> Actions ajoutés";
-
 	diag_log "<INIT> Récupération des données de personnage ...";
 	cutText ["Récupération des données de personnage", "BLACK FADED"];
 	0 cutFadeOut 9999999;

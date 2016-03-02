@@ -8,6 +8,8 @@
 private["_position","_dir"];
 _position = [_this, 0, [], [[]]] call BIS_fnc_param;
 
+[] call AlysiaClient_fnc_init_actions;
+
 if (player getVariable ["arrested", false]) then {
 	_position = getArray (missionConfigFile >> "ALYSIA_PRISONS" >> g_arrest_Prison >> "cells" >> g_arrest_Cellule >> "position");
 	_dir = getNumber (missionConfigFile >> "ALYSIA_PRISONS" >> g_arrest_Prison >> "cells" >> g_arrest_Cellule >> "dir");

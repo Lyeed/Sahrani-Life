@@ -15,6 +15,7 @@ if (!(isNull (player getVariable ["escorting", objNull]))) then {player setVaria
 if (!(isNull (player getVariable ["escorted", objNull]))) then {player setVariable ["escorted", objNull, true]};
 
 [4000] call AlysiaClient_fnc_handleBlood;
+[] call AlysiaClient_fnc_init_actions;
 
 g_carryWeight = 0;
 g_is_alive = true;
