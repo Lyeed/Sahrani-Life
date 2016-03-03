@@ -570,7 +570,8 @@ class ALYSIA_SHOPS_CLOTHING
 			"tenue_de_garde_lieutenant",
 			"tenue_de_garde_sergent",
 			"tenue_de_garde_caporal",
-			"tenue_de_garde_basique"
+			"tenue_de_garde_basique",
+			"U_B_Wetsuit"
 		};
 		headgear[] =
 		{
