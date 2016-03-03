@@ -5280,7 +5280,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>véhicules</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""SOUTH"",2],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Hôtel des ventes (<t color='#01DF3A'>véhicules</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""SOUTH"",2],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item136
 		{
@@ -5290,7 +5290,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>équipements</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""SOUTH"",1],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Hôtel des ventes (<t color='#01DF3A'>équipements</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""SOUTH"",1],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item137
 		{
@@ -5300,7 +5300,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>objets</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""SOUTH"",0],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Hôtel des ventes (<t color='#01DF3A'>objets</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""SOUTH"",0],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item138
 		{
@@ -19911,7 +19911,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowdamage false;this setdir -95;this setposATL [14089.617188,12526.408203,0.0210436];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>objets</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""NORTH"",0],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowdamage false;this setdir -95;this setposATL [14089.617188,12526.408203,0.0210436];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Hôtel des ventes (<t color='#01DF3A'>objets</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""NORTH"",0],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item1577
 		{
@@ -19921,7 +19921,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowdamage false;this setdir 0;this setposATL [14101.831055,12538.620117,0.0210436];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>véhicules</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""NORTH"",2],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowdamage false;this setdir 0;this setposATL [14101.831055,12538.620117,0.0210436];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Hôtel des ventes (<t color='#01DF3A'>véhicules</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""NORTH"",2],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item1578
 		{
@@ -19932,7 +19932,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowdamage false;this setdir 90;this setposATL [14114.15332,12526.332031,0.0210436];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\hv.paa'/> Hôtel des ventes (<t color='#01DF3A'>équipements</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""NORTH"",1],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
+			init="this enableSimulation false;this allowdamage false;this setdir 90;this setposATL [14114.15332,12526.332031,0.0210436];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Hôtel des ventes (<t color='#01DF3A'>équipements</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""NORTH"",1],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
 		class Item1579
 		{

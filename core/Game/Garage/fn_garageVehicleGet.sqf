@@ -38,9 +38,10 @@ if (
 	[
 		format
 		[
-				"Votre véhicule se trouve à la <t color='#FF8000'>fourrière</t>. Vous devez payer <t color='#8cff9b'>%1</t>kn pour le récupérer.<br/>"
-			+	"Details :"
-			+	"Price de garage initial - <t color='#8cff9b'>%2</t>kn"
+				"Votre véhicule se trouve à la <t color='#FF8000'>fourrière</t>.<br/>"
+			+	"Vous devez payer <t color='#8cff9b'>%1</t>kn pour le récupérer.<br/>"
+			+	"Details :<br/>"
+			+	"Price de garage initial - <t color='#8cff9b'>%2</t>kn<br/>"
 			+	"Supplément de la fourrière - <t color='#8cff9b'>%3</t>kn",
 			[_price + _price_fourriere] call AlysiaClient_fnc_numberText,
 			[_price] call AlysiaClient_fnc_numberText,
@@ -76,13 +77,13 @@ if ((g_garage_info select 2) isEqualTo []) then
 	if (!(isNull g_interaction_target)) then
 	{
 		_position = (position g_interaction_target) findEmptyPosition [((((boundingBox g_interaction_target) select 1) select 0) + 3), ((((boundingBox g_interaction_target) select 1) select 0) + 35), _vehicleClassname];
-		if ((nearestObjects[_position, ["Car", "Air", "Ship", "Truck", "Tank"], 10]) isEqualTo []) exitWith {
+		if ((nearestObjects[_position, ["Car", "Air", "Ship", "Truck", "Tank"], 7]) isEqualTo []) exitWith {
 			_validSpawn = _x;
 		};
 	};
 } else {
 	{
-		if ((nearestObjects[(getMarkerPos _x), ["Car", "Air", "Ship", "Truck", "Tank"], 10]) isEqualTo []) exitWith {
+		if ((nearestObjects[(getMarkerPos _x), ["Car", "Air", "Ship", "Truck", "Tank"], 7]) isEqualTo []) exitWith {
 			_validSpawn = _x;
 		};
 	} forEach (g_garage_info select 2);	

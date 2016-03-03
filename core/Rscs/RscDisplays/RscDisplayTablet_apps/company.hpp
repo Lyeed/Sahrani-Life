@@ -121,7 +121,7 @@ class COMPANY_ACTION_HIRE_BUTTON: RscButtonSilent
 class COMPANY_ACTION_LICENSE_IMAGE: RscPicture
 {
 	idc = COMPANY_ACTION_LICENSE_IMAGE_IDC;
-	text = "lyeed_IMG\data\tablet\company\action_company_license.paa";
+	text = "lyeed_IMG\data\tablet\company\action_license.paa";
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.522 * safezoneH + safezoneY;
@@ -131,9 +131,9 @@ class COMPANY_ACTION_LICENSE_IMAGE: RscPicture
 class COMPANY_ACTION_LICENSE_BUTTON: RscButtonSilent
 {
 	idc = COMPANY_ACTION_LICENSE_BUTTON_IDC;
-	action = "ctrlShow[9609,false];ctrlShow[9610,false];['COMPANY'] spawn AlysiaClient_fnc_tabletApp;";
-	onMouseEnter = "ctrlSetText[9609,'lyeed_IMG\data\tablet\company\action_company_license_select.paa'];";
-	onMouseExit = "ctrlSetText[9609,'lyeed_IMG\data\tablet\company\action_company_license.paa'];";
+	action = "ctrlShow[9609,false];ctrlShow[9610,false];[g_company, lbData[9606, lbCurSel 9606]] call AlysiaClient_fnc_company_member_license_give;['COMPANY'] spawn AlysiaClient_fnc_tabletApp;";
+	onMouseEnter = "ctrlSetText[9609,'lyeed_IMG\data\tablet\company\action_license_select.paa'];";
+	onMouseExit = "ctrlSetText[9609,'lyeed_IMG\data\tablet\company\action_license.paa'];";
 	tooltip = "Payer la license d'entreprise";
 
 	x = 0.324687 * safezoneW + safezoneX;
@@ -145,7 +145,7 @@ class COMPANY_ACTION_LICENSE_BUTTON: RscButtonSilent
 class COMPANY_ACTION_PROMOTE_IMAGE: RscPicture
 {
 	idc = COMPANY_ACTION_PROMOTE_IMAGE_IDC;
-	text = "lyeed_IMG\data\tablet\company\action_company_promote.paa";
+	text = "lyeed_IMG\data\tablet\company\action_promote.paa";
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.577 * safezoneH + safezoneY;
@@ -156,8 +156,8 @@ class COMPANY_ACTION_PROMOTE_BUTTON: RscButtonSilent
 {
 	idc = COMPANY_ACTION_PROMOTE_BUTTON_IDC;
 	action = "ctrlShow[9611,false];ctrlShow[9612,false];[g_company, lbData[9606, lbCurSel 9606]] call AlysiaClient_fnc_company_member_promote;['COMPANY'] spawn AlysiaClient_fnc_tabletApp;";
-	onMouseEnter = "ctrlSetText[9611,'lyeed_IMG\data\tablet\company\action_company_promote_select.paa'];";
-	onMouseExit = "ctrlSetText[9611,'lyeed_IMG\data\tablet\company\action_company_promote.paa'];";
+	onMouseEnter = "ctrlSetText[9611,'lyeed_IMG\data\tablet\company\action_promote_select.paa'];";
+	onMouseExit = "ctrlSetText[9611,'lyeed_IMG\data\tablet\company\action_promote.paa'];";
 	tooltip = "Nommer DPG de l'entreprise";
 
 	x = 0.324687 * safezoneW + safezoneX;

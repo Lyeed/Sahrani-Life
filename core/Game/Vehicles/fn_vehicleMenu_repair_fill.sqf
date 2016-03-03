@@ -19,20 +19,24 @@ lbClear _list;
 
 {
 	_part = configName _x;
-	if (isClass(missionConfigFile >> "ALYSIA_REPAIR" >> _part)) then
+	_config = missionConfigFile >> "ALYSIA_REPAIR" >> _part;
+	if (isClass(_config)) then
 	{
-		_value = floor((1 - (g_interaction_target getHitPointDamage _part)) * 100);
-		if (!_type || (_type && (_value < 100))) then
+		if ((getNumber(_config >> "skilled") isEqualTo 0) || ((getNumber(_config >> "skilled") isEqualTo 1) && (["garagist"] call AlysiaClient_fnc_hasLicense))) then
 		{
-			_index = _list lbAdd getText(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "name");
-			_list lbSetTooltip [_index, getText(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "name")];
-			_list lbSetData [_index, _part];
-			_list lbSetValue [_index, _value];
-			_list lbSetPicture [_index, getText(missionConfigFile >> "ALYSIA_REPAIR" >> _part >> "picture")];
-			_list lbSetPictureColor [_index, ([_value] call AlysiaClient_fnc_vehicleMenu_repair_getColor) select 0];
+			_value = floor((1 - (g_interaction_target getHitPointDamage _part)) * 100);
+			if (!_type || (_type && (_value < 100))) then
+			{
+				_index = _list lbAdd getText(_config >> "name");
+				_list lbSetTooltip [_index, getText(_config >> "name")];
+				_list lbSetData [_index, _part];
+				_list lbSetValue [_index, _value];
+				_list lbSetPicture [_index, getText(_config >> "picture")];
+				_list lbSetPictureColor [_index, ([_value] call AlysiaClient_fnc_vehicleMenu_repair_getColor) select 0];
+			};
 		};
 	} else {
-		systemChat format["[ERROR] %1 is not defined in ALYSIA_REPAIR", _part];
+		diag_log format["[ERROR] %1 is not defined in ALYSIA_REPAIR", _part];
 	};
 } foreach ("true" configClasses (configFile >> "CfgVehicles" >> typeOf(g_interaction_target) >> "HitPoints"));
 

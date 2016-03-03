@@ -512,7 +512,6 @@ class ALYSIA_ITEMS
 		weight = 3;
 		illegal = 1;
 		image = "alysia_items_virtual\data\marijuana.paa";
-		license = "marijuana";
 		class market
 		{
 			max = 648;

@@ -25,6 +25,7 @@ if (!([false, "lockpick", 1] call AlysiaClient_fnc_handleInv)) exitWith {};
 if ((random(100)) < 25) then 
 {
 	g_vehicles pushBack g_interaction_target;
+	[(getPlayerUID player), playerSide, g_interaction_target] call AlysiaServer_fnc_keyManagement;
 	titleText["Réussi !", "PLAIN DOWN"];
 } else {
 	titleText["Echoué !", "PLAIN DOWN"];	

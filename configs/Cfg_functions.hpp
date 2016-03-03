@@ -106,6 +106,8 @@ class CfgFunctions
 			class company_member_invite {};
 			class company_member_leave {};
 			class company_member_promote {};
+			class company_member_license_give {};
+			class company_member_license_receive {};
 		};
 
 		class Tools

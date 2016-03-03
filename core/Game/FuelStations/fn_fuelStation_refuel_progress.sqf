@@ -17,9 +17,10 @@ if (_type isEqualTo "") exitWith {["Plein impossible.<br/>Impossible de trouver 
 if ((fuel _veh) isEqualTo 1) exitWith {["Plein impossible.<br/>Le réservoir du véhicule est déjà plein."] call AlysiaClient_fnc_error};
 if (isEngineOn _veh) exitWith {["Plein impossible.<br/>Le véhicule doit avoir le moteur éteint pour effectuer un plein."] call AlysiaClient_fnc_error};
 if (((locked _veh) isEqualTo 2)) exitWith {["Plein impossible.<br/>Le véhicule doit être ouvert pour effectuer un plein."] call AlysiaClient_fnc_error};
-if (player distance _station > 5) exitWith {["Plein impossible.<br/>Vous êtes trop loin de la station."] call AlysiaClient_fnc_error};
-if (player distance _veh > 5) exitWith {["Plein impossible.<br/>Vous êtes trop loin du véhicule."] call AlysiaClient_fnc_error};
 if (_veh getVariable ["refueling", false]) exitWith {["Plein impossible.<br/>Une autre personne effectue actuellement le plein du véhicule."] call AlysiaClient_fnc_error};
+if (player distance _station > getNumber(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_station) >> "max_distance_allowed")) exitWith {
+	["Plein impossible.<br/>Vous êtes trop loin de la station."] call AlysiaClient_fnc_error;
+};
 
 _currentLiters = [_station, _type] call AlysiaClient_fnc_fuelStation_fuel_getStock;
 if (_currentLiters < 1) exitWith

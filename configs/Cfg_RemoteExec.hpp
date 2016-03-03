@@ -26,6 +26,7 @@ class CfgRemoteExec
 		class AlysiaServer_fnc_vehicle_update_insurrance {allowTargets = SERVER;};
 		class AlysiaServer_fnc_vehicle_update_name {allowTargets = SERVER;};
 		class AlysiaServer_fnc_vehicle_update_storePos {allowTargets = SERVER;};
+		class AlysiaServer_fnc_keyManagement {allowTargets = SERVER;};
 		//- Garage
 		class AlysiaServer_fnc_garageVehicles {allowTargets = SERVER;};
 		class AlysiaServer_fnc_garageVehicleStore {allowTargets = SERVER;};
@@ -115,6 +116,7 @@ class CfgRemoteExec
 		class AlysiaClient_fnc_company_member_join {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_company_member_propose {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_company_member_leave {allowTargets = CLIENT;};
+		class AlysiaClient_fnc_company_member_license_receive {allowTargets = CLIENT;};
 		// - interactions
 		class AlysiaClient_fnc_alcootest_return {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_knockedOut {allowTargets = CLIENT;};

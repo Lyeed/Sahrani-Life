@@ -19,7 +19,5 @@ if (_crew isEqualTo []) exitWith {
 };
 
 {
-	if ((_x getVariable["restrained", false]) || !(alive _x)) then {
-		_x action ["Eject", (vehicle _x)];
-	};
-} forEach (_crew);
+	if ((_x getVariable["restrained", false]) || !(alive _x) || (_x getVariable ["is_coma", false])) then {_x action ["Eject", (vehicle _x)]};
+} forEach _crew;

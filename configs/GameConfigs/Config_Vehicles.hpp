@@ -2050,7 +2050,7 @@ class ALYSIA_VEHICLES
 		inventory = 50;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"taxi","company_transport"};
+		licenses[] = {"driver","company_transport"};
 		fuel = "SP98";
 		realname = "Crown Victoria Taxi";
 	};
@@ -2285,6 +2285,7 @@ class ALYSIA_VEHICLES
   	class Skyline_Bus_07_F: Skyline_Bus {};
   	class Skyline_Bus_08_F: Skyline_Bus {};
   	class Skyline_Bus_09_F: Skyline_Bus {};
+  	class Skyline_Bus_10_F: Skyline_Bus {};
 
   	class B_Boat_Transport_01_F
 	{
@@ -2487,7 +2488,7 @@ class ALYSIA_VEHICLES
 	
 	class Jonzie_Tow_Truck
 	{
-		buyPrice = 29500;
+		buyPrice = 229500;
 		inventory = 120;
 		side = "CIV";
 		insurance = 1;

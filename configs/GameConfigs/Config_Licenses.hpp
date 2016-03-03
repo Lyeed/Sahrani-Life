@@ -298,7 +298,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 0;
+				price = 65000;
 				pad_store = 0;
 				illegal = 0;
 			};
@@ -311,7 +311,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 0;
+				price = 9000;
 				pad_store = 0;
 				illegal = 0;
 			};
@@ -324,7 +324,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 0;
+				price = 12000;
 				pad_store = 0;
 				illegal = 0;
 			};
@@ -337,7 +337,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 0;
+				price = 13000;
 				pad_store = 0;
 				illegal = 0;
 			};
@@ -350,7 +350,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 0;
+				price = 41000;
 				pad_store = 0;
 				illegal = 0;
 			};
@@ -363,7 +363,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 0;
+				price = 39000;
 				pad_store = 0;
 				illegal = 0;
 			};
@@ -376,7 +376,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 0;
+				price = 28500;
 				pad_store = 0;
 				illegal = 0;
 			};
@@ -389,7 +389,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 0;
+				price = 16900;
 				pad_store = 0;
 				illegal = 0;
 			};
@@ -402,7 +402,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 0;
+				price = 13500;
 				pad_store = 0;
 				illegal = 0;
 			};
@@ -415,7 +415,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 0;
+				price = 23500;
 				pad_store = 0;
 				illegal = 0;
 			};
@@ -428,7 +428,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 0;
+				price = 13500;
 				pad_store = 0;
 				illegal = 0;
 			};
@@ -441,7 +441,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 0;
+				price = 15000;
 				pad_store = 0;
 				illegal = 0;
 			};
@@ -454,7 +454,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 0;
+				price = 9800;
 				pad_store = 0;
 				illegal = 0;
 			};
@@ -467,7 +467,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 0;
+				price = 11000;
 				pad_store = 0;
 				illegal = 0;
 			};

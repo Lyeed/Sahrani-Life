@@ -6,14 +6,15 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private["_value", "_type", "_amount", "_ret"];
-_type = [_this, 0, false, [false]] call BIS_fnc_param;
-_value = round([_this, 1, 0, [0]] call BIS_fnc_param);
+_company = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+_type = [_this, 1, false, [false]] call BIS_fnc_param;
+_value = round([_this, 2, 0, [0]] call BIS_fnc_param);
 _ret = false;
 
-if (isNull g_company) exitWith {false};
+if (isNull _company) exitWith {false};
 if (_value isEqualTo 0) exitWith {true};
 
-_amount = g_company getVariable ["company_bank", 0];
+_amount = _company getVariable ["company_bank", 0];
 if (_type) then
 {
 	_amount = _amount + _value;
@@ -27,7 +28,7 @@ if (_type) then
 };
 
 if (_ret) then {
-	g_company setVariable ["company_bank", _amount, true];
+	_company setVariable ["company_bank", _amount, true];
 };
 
 _ret;

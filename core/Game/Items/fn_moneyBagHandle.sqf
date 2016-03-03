@@ -64,7 +64,7 @@ while {!(isNull _obj) && !(isNull (attachedTo _obj))} do
 				waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
 				playSound "buy";
 				deleteVehicle _obj;
-				[true, 2000 + ((_max - _amount) / 50)] call AlysiaClient_fnc_company_bank_handle;
+				[g_company, true, 2000 + ((_max - _amount) / 50)] call AlysiaClient_fnc_company_bank_handle;
 				_amount = _amount + 2000;
 				if (_amount > _max) then {
 					_amount = _max;

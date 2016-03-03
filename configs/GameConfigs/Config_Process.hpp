@@ -523,7 +523,7 @@ class ALYSIA_PROCESS
 		{
 			class CIV
 			{
-				licenses[] = {"brique"};
+				licenses[] = {"company_construction"};
 			};
 		};
 	};

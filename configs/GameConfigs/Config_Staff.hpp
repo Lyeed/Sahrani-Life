@@ -72,7 +72,7 @@ class ALYSIA_STAFF
 			};
 			class Invisible_OFF: Invisible_ON
 			{
-				name = "Invisible ON";
+				name = "Invisible OFF";
 				statement = "g_staff_invisible = false;[player, false] remoteExecCall ['hideObject', 0];";
 				condition = "g_staff_invisible";
 			};

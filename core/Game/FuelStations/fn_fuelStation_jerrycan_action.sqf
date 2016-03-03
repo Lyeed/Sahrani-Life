@@ -17,7 +17,10 @@ if (_type isEqualTo "") exitWith {["Impossible de trouver l'essence que vous ave
 
 closeDialog 0;
 
-if (player distance _station > 5) exitWith {["Vous êtes trop loin de la station."] call AlysiaClient_fnc_error};
+if (player distance _station > getNumber(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_station) >> "max_distance_allowed")) exitWith {
+	["Vous êtes trop loin de la station."] call AlysiaClient_fnc_error;
+};
+
 if (!("Alysia_jerrycan_empty" in (magazines player))) exitWith {["Vous n'avez pas de jerrycan vide."] call AlysiaClient_fnc_error};
 
 _currentLiters = [_station, _type] call AlysiaClient_fnc_fuelStation_fuel_getStock;

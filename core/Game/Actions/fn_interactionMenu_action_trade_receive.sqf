@@ -44,7 +44,11 @@ if (_action) then
 	[true, _money] call AlysiaClient_fnc_handleCash;
 
 	{
-		if ((alive _x) && !(_x in g_vehicles)) then {g_vehicles pushBack _x};
+		if ((alive _x) && !(_x in g_vehicles)) then
+		{
+			g_vehicles pushBack _x;
+			[(getPlayerUID player), playerSide, _x] call AlysiaServer_fnc_keyManagement;
+		};
 	} forEach _keys;
 
 	{

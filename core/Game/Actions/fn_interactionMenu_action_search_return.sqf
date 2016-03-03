@@ -24,18 +24,16 @@ if (isNull _display) exitWith {};
 
 _array = [];
 
-if (_money > 0) then {
-	_array pushBack [format["%1kn", [_money] call AlysiaClient_fnc_numberText], "alysia_items_virtual\data\money.paa"];
-};
+if (_money > 0) then {_array pushBack [format["%1kn", [_money] call AlysiaClient_fnc_numberText], "alysia_items_virtual\data\money.paa"]};
 
 {
 	_array pushBack [format["%1x %2", ([(_x select 1)] call AlysiaClient_fnc_numberText), ([(_x select 0)] call AlysiaClient_fnc_itemGetName)], ([(_x select 0)] call AlysiaClient_fnc_itemGetImage)];
-} forEach (_inv_virtual);
+} forEach _inv_virtual;
 
 {
 	_info = [_x] call AlysiaClient_fnc_fetchCfgDetails;
 	_array pushBack [(_info select 1), (_info select 2)];
-} forEach (_inv_arma);
+} forEach _inv_arma;
 
 _list = _display displayCtrl 16001;
 lbClear _list;
@@ -46,6 +44,6 @@ if (_array isEqualTo []) then {
 	{
 		_index = _list lbAdd (_x select 0);
 		_list lbSetPicture [_index, (_x select 1)];	
-		sleep (count(_array) / 10);
-	} forEach (_array);	
+		sleep (count(_array) / 30);
+	} forEach _array;
 };

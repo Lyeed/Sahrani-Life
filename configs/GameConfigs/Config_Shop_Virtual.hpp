@@ -40,7 +40,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Garde";
 		side = "EAST";
-		items[] = {{"ragout", "medova", "sifflet", "handcuffs", "handcuffkeys", "barriere", "cone", "spikeStrip", "storage_stock", "storage_large", "alcool_test"}, {}};
+		items[] = {{"ragout", "medova", "sifflet", "handcuffs", "handcuffkeys", "barriere", "cone", "spikeStrip", "storage_stock", "storage_large"}, {}};
 	};
 	class guer
 	{
