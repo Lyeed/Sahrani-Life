@@ -310,6 +310,63 @@ class ALYSIA_GARAGES
 			"Ship"
 		};
 	};
+	
+	class garage_sea_Promajna
+	{
+		name = "Garage Maritime";
+		spawns[] =
+		{
+			"garage_sea_Promajna_1",
+			"garage_sea_Promajna_2"
+		};
+		types[] =
+		{
+			"Ship"
+		};
+	};
+	
+	class garage_sea_Prison_north
+	{
+		name = "Garage Maritime";
+		spawns[] =
+		{
+			"garage_sea_Prison_north_1",
+			"garage_sea_Prison_north_2"
+		};
+		types[] =
+		{
+			"Ship"
+		};
+	};
+		
+	class garage_sea_hvarenoj
+	{
+		name = "Garage Maritime";
+		spawns[] =
+		{
+			"garage_sea_hvarenoj_1",
+			"garage_sea_hvarenoj_2"
+		};
+		types[] =
+		{
+			"Ship"
+		};
+	};
+	
+	class garage_sea_sucuraj
+	{
+		name = "Garage Maritime";
+		spawns[] =
+		{
+			"garage_sea_sucuraj_1",
+			"garage_sea_sucuraj_2"
+		};
+		types[] =
+		{
+			"Ship"
+		};
+	};
+	
 	class garage_sea_2
 	{
 		name = "Garage Maritime";
