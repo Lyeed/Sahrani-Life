@@ -371,19 +371,19 @@ class ALYSIA_ITEMS
 	class cocaine
 	{
 		name = "Feuille de coca";
-		weight = 5;
+		weight = 4;
 		illegal = 1;
 		image = "alysia_items_virtual\data\coca.paa";
 	};
 	class cocainep
 	{
 		name = "Cocaïne pure";
-		weight = 4;
+		weight = 3;
 		illegal = 1;
 		image = "alysia_items_virtual\data\cocaine.paa";
 		class market
 		{
-			max = 490;
+			max = 530;
 			min = 350;
 			affect[] = {"cigarette", "cigare", "cocainepc", "heroinps", "methp", "marijuana"};
 		};
@@ -400,7 +400,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\cocaine_coupe.paa";
 		class market
 		{
-			max = 330;
+			max = 450;
 			min = 210;
 			affect[] = {"cigarette", "cigare", "cocainep", "heroinps", "methp", "marijuana"};
 		};
@@ -421,14 +421,14 @@ class ALYSIA_ITEMS
 	class heroin
 	{
 		name = "Fleur de pavot";
-		weight = 6;
+		weight = 4;
 		illegal = 1;
 		image = "alysia_items_virtual\data\pavot.paa";
 	};
 	class heroinp
 	{
 		name = "Heroïne pure";
-		weight = 4;
+		weight = 3;
 		illegal = 1;
 		image = "alysia_items_virtual\data\heroine.paa";
 	};
@@ -440,7 +440,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\seringue_heroine.paa";
 		class market
 		{
-			max = 450;
+			max = 610;
 			min = 250;
 			affect[] = {"cigarette", "cigare", "cocainep", "cocainepc", "methp", "marijuana"};
 		};
