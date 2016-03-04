@@ -25,7 +25,11 @@ _price = _list lbValue _index;
 	if (g_cash >= _price) then {"8cff9b"} else {"ff8c8c"}
 ];
 
-if (((getPlayerUID player) != (_list lbData _index)) && (g_cash >= _price)) then {
+if (
+		((getPlayerUID player) != (_list lbData _index)) &&
+		(g_cash >= _price) &&
+		(getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "auction_house" >> "can_buy") isEqualTo 1)
+	) then {
 	ctrlShow[45609, true];
 	ctrlShow[45610, true];
 	ctrlShow[45611, true];

@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_new"];
+private "_new";
 _new = [_this, 0 , "none", [""]] call BIS_fnc_param;
 
 if (g_phone_forfait != "none") then

@@ -71,11 +71,11 @@ class ALYSIA_COMPANIES
 				"weapon_sdar",
 				"magazine_sdar"
 			};
-			members_max = 8;
+			members_max = 6;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 150}, {"ciment", 300}, {"goldbar", 15}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}, {"acier", 300}, {"brique", 150}};
+				require[] = {{"woodp", 150}, {"ciment", 300}, {"goldbar", 15}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}, {"steel", 300}, {"brique", 150}};
 				price = 980000;
 			};
 			class marker
@@ -87,8 +87,8 @@ class ALYSIA_COMPANIES
 			};
 			class tax
 			{
-				price_per_employee = 100;
-				price_building = 100;
+				price_per_employee = 70;
+				price_building = 200;
 			};
 		};
 
@@ -103,7 +103,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 200}, {"ciment", 100}, {"goldbar", 20}, {"furniture", 4}, {"ironp", 50}, {"sand", 80}, {"glass", 4}, {"copperp", 50}, {"alu", 20}, {"pierre", 200}, {"acier", 40}, {"brique", 200}};
+				require[] = {{"woodp", 200}, {"ciment", 100}, {"goldbar", 20}, {"furniture", 4}, {"ironp", 50}, {"sand", 80}, {"glass", 4}, {"copperp", 50}, {"alu", 20}, {"pierre", 200}, {"steel", 40}, {"brique", 200}};
 				price = 275000;
 			};
 			class marker
@@ -131,7 +131,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 10}, {"ciment", 200}, {"goldbar", 20}, {"furniture", 20}, {"ironp", 30}, {"sand", 50}, {"glass", 40}, {"copperp", 50}, {"alu", 120}, {"pierre", 150}, {"acier", 300}, {"brique", 50}};
+				require[] = {{"woodp", 10}, {"ciment", 200}, {"goldbar", 20}, {"furniture", 20}, {"ironp", 30}, {"sand", 50}, {"glass", 40}, {"copperp", 50}, {"alu", 120}, {"pierre", 150}, {"steel", 300}, {"brique", 50}};
 				price = 325000;
 			};
 			class marker
@@ -159,7 +159,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 40}, {"ciment", 250}, {"goldbar", 15}, {"furniture", 5}, {"ironp", 80}, {"sand", 40}, {"glass", 50}, {"copperp", 20}, {"alu", 20}, {"pierre", 200}, {"acier", 20}};
+				require[] = {{"woodp", 40}, {"ciment", 250}, {"goldbar", 15}, {"furniture", 5}, {"ironp", 80}, {"sand", 40}, {"glass", 50}, {"copperp", 20}, {"alu", 20}, {"pierre", 200}, {"steel", 20}};
 				price = 295000;
 			};
 			class marker
@@ -183,11 +183,11 @@ class ALYSIA_COMPANIES
 			license = "company_money_tranfer";
 			image = "lyeed_IMG\data\companies\types\money_transfer.paa";
 			process[] = {};
-			members_max = 8;
+			members_max = 6;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 20}, {"ciment", 100}, {"goldbar", 20}, {"furniture", 20}, {"ironp", 150}, {"sand", 50}, {"glass", 50}, {"copperp", 50}, {"alu", 20}, {"pierre", 100}, {"acier", 220}};
+				require[] = {{"woodp", 20}, {"ciment", 100}, {"goldbar", 20}, {"furniture", 20}, {"ironp", 150}, {"sand", 50}, {"glass", 50}, {"copperp", 50}, {"alu", 20}, {"pierre", 100}, {"steel", 220}};
 				price = 875000;
 			};
 			class marker
@@ -199,8 +199,8 @@ class ALYSIA_COMPANIES
 			};
 			class tax
 			{
-				price_per_employee = 100;
-				price_building = 100;
+				price_per_employee = 140;
+				price_building = 230;
 			};
 		};
 
@@ -215,7 +215,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 80}, {"ciment", 250}, {"goldbar", 75}, {"furniture", 10}, {"ironp", 50}, {"sand", 100}, {"glass", 80}, {"copperp", 20}, {"alu", 20}, {"pierre", 50}, {"acier", 150}, {"brique", 400}};
+				require[] = {{"woodp", 80}, {"ciment", 250}, {"goldbar", 75}, {"furniture", 10}, {"ironp", 50}, {"sand", 100}, {"glass", 80}, {"copperp", 20}, {"alu", 20}, {"pierre", 50}, {"steel", 150}, {"brique", 400}};
 				price = 650000;
 			};
 			class marker
@@ -271,7 +271,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 150}, {"ciment", 800}, {"goldbar", 35}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}, {"acier", 150}, {"brique", 200}};
+				require[] = {{"woodp", 150}, {"ciment", 800}, {"goldbar", 35}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}, {"steel", 150}, {"brique", 200}};
 				price = 382000;
 			};
 			class marker
@@ -299,7 +299,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 40}, {"ciment", 200}, {"goldbar", 20}, {"furniture", 10}, {"ironp", 250}, {"sand", 50}, {"glass", 20}, {"copperp", 20}, {"alu", 100}, {"pierre", 50}, {"acier", 300}};
+				require[] = {{"woodp", 40}, {"ciment", 200}, {"goldbar", 20}, {"furniture", 10}, {"ironp", 250}, {"sand", 50}, {"glass", 20}, {"copperp", 20}, {"alu", 100}, {"pierre", 50}, {"steel", 300}};
 				price = 470000;
 			};
 			class marker
@@ -327,7 +327,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 10}, {"ciment", 100}, {"goldbar", 40}, {"furniture", 10}, {"ironp", 50}, {"sand", 50}, {"glass", 20}, {"copperp", 10}, {"alu", 20}, {"pierre", 20}, {"acier", 300}};
+				require[] = {{"woodp", 10}, {"ciment", 100}, {"goldbar", 40}, {"furniture", 10}, {"ironp", 50}, {"sand", 50}, {"glass", 20}, {"copperp", 10}, {"alu", 20}, {"pierre", 20}, {"steel", 300}};
 				price = 495000;
 			};
 			class marker
@@ -355,7 +355,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 20}, {"ciment", 380}, {"goldbar", 10}, {"furniture", 50}, {"ironp", 50}, {"sand", 50}, {"glass", 90}, {"copperp", 20}, {"alu", 20}, {"pierre", 200}, {"acier", 100}};
+				require[] = {{"woodp", 20}, {"ciment", 380}, {"goldbar", 10}, {"furniture", 50}, {"ironp", 50}, {"sand", 50}, {"glass", 90}, {"copperp", 20}, {"alu", 20}, {"pierre", 200}, {"steel", 100}};
 				price = 250000;
 			};
 			class marker
@@ -411,7 +411,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 20}, {"ciment", 380}, {"goldbar", 10}, {"furniture", 80}, {"ironp", 80}, {"sand", 50}, {"glass", 50}, {"copperp", 20}, {"alu", 20}, {"pierre", 200}, {"acier", 100}, {"brique", 100}};
+				require[] = {{"woodp", 20}, {"ciment", 380}, {"goldbar", 10}, {"furniture", 80}, {"ironp", 80}, {"sand", 50}, {"glass", 50}, {"copperp", 20}, {"alu", 20}, {"pierre", 200}, {"steel", 100}, {"brique", 100}};
 				price = 215000;
 			};
 			class marker

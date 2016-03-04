@@ -51,9 +51,6 @@ if ((lbCurSel _ctrl_player) isEqualTo -1) then {
 
 _trunk = g_interaction_target getVariable [g_interaction_target_trunk_type, []];
 _weight = [_trunk] call AlysiaClient_fnc_weightGenerate;
-if ((_weight isEqualTo 0) && g_interaction_target_trunk_delete) exitWith {
-	deleteVehicle g_interaction_target;
-};
 
 (_display displayCtrl 502) ctrlSetStructuredText parseText format
 [
@@ -85,6 +82,9 @@ lbClear _ctrl_vehicle;
 
 if ((lbSize _ctrl_vehicle) isEqualTo 0) then {
 	_ctrl_vehicle lbAdd "Vide";
+	if (g_interaction_target_trunk_delete) then {
+		deleteVehicle g_interaction_target;
+	};
 };
 if ((lbCurSel _ctrl_vehicle) isEqualTo -1) then {
 	_ctrl_vehicle lbSetCurSel 0;

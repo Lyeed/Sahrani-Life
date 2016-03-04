@@ -9,6 +9,10 @@ private "_factionMarkers";
 
 waitUntil {visibleMap};
 
+if ((vehicle player) isEqualTo player) then {
+	player playAction "Gear";
+};
+
 _factionMarkers = missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "map_team_markers";
 if (isClass _factionMarkers) then
 {

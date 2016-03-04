@@ -2243,23 +2243,27 @@ _flag_south_3 = ["FlagPole_F","[10567.205078,9554.953125,0]",720,-100,1,0,[]] ca
 	}, "", 9991, true, false, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]))"];
 
 	_x addAction ["=====[Alarme]=====", "", "", 9990, false, false, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]))"];
-	_x addAction ["<img image='lyeed_IMG\data\actions_menu\alarm.paa'/> <t color='#01DF01'>Activer</t>",
+
+	if (playerSide isEqualTo east) then
 	{
-		[true] remoteExec ["AlysiaServer_fnc_border_alarm_south", 2];
+		_x addAction ["<img image='lyeed_IMG\data\actions_menu\alarm.paa'/> <t color='#01DF01'>Activer</t>",
+		{
+			[true] remoteExec ["AlysiaServer_fnc_border_alarm_south", 2];
 
-		if ((border_sign_south_north animationPhase "sign_anim1") != 0) then {border_sign_south_north animate ["sign_anim1", 0]};
-		if ((border_sign_south_north animationPhase "sign_anim4") != 0) then {border_sign_south_north animate ["sign_anim4", 0]};
-		if ((border_sign_south_north animationPhase "sign_anim3") != 1) then {border_sign_south_north animate ["sign_anim3", 1]};
-		if ((border_sign_south_north animationPhase "sign_anim6") != 0) then {border_sign_south_north animate ["sign_anim6", 0]};
-		if ((border_sign_south_north animationPhase "sign_anim7") != 0) then {border_sign_south_north animate ["sign_anim7", 0]};
-		
-		if ((border_sign_south_south animationPhase "sign_anim1") != 0) then {border_sign_south_south animate ["sign_anim1", 0]};
-		if ((border_sign_south_south animationPhase "sign_anim4") != 0) then {border_sign_south_south animate ["sign_anim4", 0]};
-		if ((border_sign_south_south animationPhase "sign_anim3") != 1) then {border_sign_south_south animate ["sign_anim3", 1]};
-		if ((border_sign_south_south animationPhase "sign_anim6") != 0) then {border_sign_south_south animate ["sign_anim6", 0]};
-		if ((border_sign_south_south animationPhase "sign_anim7") != 0) then {border_sign_south_south animate ["sign_anim7", 0]};
+			if ((border_sign_south_north animationPhase "sign_anim1") != 0) then {border_sign_south_north animate ["sign_anim1", 0]};
+			if ((border_sign_south_north animationPhase "sign_anim4") != 0) then {border_sign_south_north animate ["sign_anim4", 0]};
+			if ((border_sign_south_north animationPhase "sign_anim3") != 1) then {border_sign_south_north animate ["sign_anim3", 1]};
+			if ((border_sign_south_north animationPhase "sign_anim6") != 0) then {border_sign_south_north animate ["sign_anim6", 0]};
+			if ((border_sign_south_north animationPhase "sign_anim7") != 0) then {border_sign_south_north animate ["sign_anim7", 0]};
+			
+			if ((border_sign_south_south animationPhase "sign_anim1") != 0) then {border_sign_south_south animate ["sign_anim1", 0]};
+			if ((border_sign_south_south animationPhase "sign_anim4") != 0) then {border_sign_south_south animate ["sign_anim4", 0]};
+			if ((border_sign_south_south animationPhase "sign_anim3") != 1) then {border_sign_south_south animate ["sign_anim3", 1]};
+			if ((border_sign_south_south animationPhase "sign_anim6") != 0) then {border_sign_south_south animate ["sign_anim6", 0]};
+			if ((border_sign_south_south animationPhase "sign_anim7") != 0) then {border_sign_south_south animate ["sign_anim7", 0]};
 
-	}, "", 9989, true, false, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]) && !gServer_border_south_alarm)"];
+		}, "", 9989, true, false, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]) && !gServer_border_south_alarm)"];
+	};
 
 	_x addAction ["<img image='lyeed_IMG\data\actions_menu\alarm.paa'/> <t color='#FF0000'>Désactiver</t>",
 	{

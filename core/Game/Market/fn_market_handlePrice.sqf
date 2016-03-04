@@ -32,20 +32,17 @@ if (_type) then
 
 	if (_affect) then
 	{
+		private["_ressource", "_affected"];
 		_affected = getArray(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market" >> "affect");
-		if (count(_affected) > 0) then
+
 		{
-			private["_ressource", "_i", "_max"];
-			_ressource = _affected call BIS_fnc_selectRandom;
-			_i = 0;
-			_max = count _affected;
-			while {(([_ressource] call AlysiaClient_fnc_market_getPrice) >= getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _ressource >> "market" >> "max"))} do
-			{
-				if (_i >= (_max * 2)) exitWith {_ressource = nil};
-				_ressource = _affected call BIS_fnc_selectRandom;
-				_i = _i + 1;
-			};
-			if (!(isNil "_ressource")) then {[true, _ressource, _amount, false] call AlysiaClient_fnc_market_handlePrice};
+			if (
+					(([_x] call AlysiaClient_fnc_market_getPrice) < getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _x >> "market" >> "max")) &&
+					(_x != _item)
+				) exitWith {_ressource = _x};
+		} forEach ([_affected] call CBA_fnc_shuffle);
+		if (!(isNil "_ressource")) then {
+			[true, _ressource, _amount, false] call AlysiaClient_fnc_market_handlePrice;
 		};
 	};
 };

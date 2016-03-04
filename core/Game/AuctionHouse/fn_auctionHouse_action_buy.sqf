@@ -15,6 +15,10 @@ if ((time - g_action_delay) < 2) exitWith {
 	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error;
 };
 
+if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "auction_house" >> "can_buy") isEqualTo 0) exitWith {
+	["Votre faction n'est pas autorisé à acheter à l'hôtel des ventes."] call AlysiaClient_fnc_error;
+};
+
 _index_stock = lbCurSel 45602;
 if (_index_stock isEqualTo -1) exitWith {};
 

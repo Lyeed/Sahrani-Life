@@ -7,20 +7,18 @@
 */
 private["_sel", "_forfait", "_price"];
 
-if ((time - g_action_delay) < 1) exitWith {
-	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error;
-};
-
 _sel = lbCurSel 8110;
 if (_sel isEqualTo -1) exitWith {};
 
 _forfait = lbData[8110, _sel];
-if (_forfait isEqualTo g_phone_forfait) exitWith {};
+if (_forfait isEqualTo g_phone_forfait) exitWith {
+	["Vous possedez déjà ce forfait."] call AlysiaClient_fnc_error;
+};
 
 _price = getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> _forfait >> "bill");
-if (g_atm < _price) exitWith {};
-
-g_action_delay = time;
+if (g_atm < _price) exitWith {
+	["Vous n'avez pas assez d'argent."] call AlysiaClient_fnc_error;
+};
 
 [_forfait] call AlysiaClient_fnc_phone_forfait_change;
 [false, _price, "Forfait téléphonique"] call AlysiaClient_fnc_handleATM;

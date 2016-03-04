@@ -7,7 +7,6 @@ class ALYSIA_REPAIR
 		item = "Alysia_repair_fuel";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitFuel.paa";
 		time = 8;
-		skilled = 1;
 	};
 	class HitFuelTank: HitFuel {};
 
@@ -18,7 +17,6 @@ class ALYSIA_REPAIR
 		item = "Alysia_repair_engine";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitEngine.paa";
 		time = 17;
-		skilled = 1;
 	};
 	class HitEngine1: HitEngine {};
 	class HitEngine2: HitEngine {};
@@ -31,7 +29,6 @@ class ALYSIA_REPAIR
 		item = "Alysia_repair_body";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitBody.paa";
 		time = 15;
-		skilled = 1;
 	};
 
 	class HitLTrack
@@ -41,7 +38,6 @@ class ALYSIA_REPAIR
 		item = "Alysia_repair_track";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitLTrack.paa";
 		time = 13;
-		skilled = 1;
 	};
 	class HitRTrack: HitLTrack {
 		name = "Chenille droite";
@@ -91,7 +87,6 @@ class ALYSIA_REPAIR
 		item = "Alysia_repair_glass";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitGlass1.paa";
 		time = 7;
-		skilled = 1;
 	};
 	class HitGlass2: HitGlass1 {};
 	class HitGlass3: HitGlass1 {};
@@ -112,7 +107,6 @@ class ALYSIA_REPAIR
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitTurret.paa";
 		time = 17;
-		skilled = 1;
 	};
 
 	class HitGun
@@ -122,7 +116,6 @@ class ALYSIA_REPAIR
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitGun.paa";
 		time = 20;
-		skilled = 1;
 	};
 
 	class HitAmmo
@@ -132,7 +125,6 @@ class ALYSIA_REPAIR
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitGun.paa";
 		time = 20;
-		skilled = 1;
 	};
 
 	class HitHull
@@ -142,7 +134,6 @@ class ALYSIA_REPAIR
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitHull.paa";
 		time = 14;
-		skilled = 1;
 	};
 
 	class HitAvionics
@@ -152,7 +143,6 @@ class ALYSIA_REPAIR
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitAvionics.paa";
 		time = 13;
-		skilled = 1;
 	};
 
 	class HitHRotor
@@ -162,7 +152,6 @@ class ALYSIA_REPAIR
 		item = "Alysia_repair_rotor";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitRotor.paa";
 		time = 21;
-		skilled = 1;
 	};
 	class HitVRotor: HitHRotor {
 		name = "Rotor secondaire";
@@ -175,7 +164,6 @@ class ALYSIA_REPAIR
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitMissiles.paa";
 		time = 21;
-		skilled = 1;
 	};
 
 	class HitWinch
@@ -185,7 +173,6 @@ class ALYSIA_REPAIR
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitWinch.paa";
 		time = 11;
-		skilled = 1;
 	};
 
 	class HitTransmission
@@ -195,7 +182,6 @@ class ALYSIA_REPAIR
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitTransmission.paa";
 		time = 9;
-		skilled = 1;
 	};
 
 	class HitLight
@@ -205,7 +191,6 @@ class ALYSIA_REPAIR
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitLight.paa";
 		time = 7;
-		skilled = 1;
 	};
 
 	class HitHydraulics
@@ -215,7 +200,6 @@ class ALYSIA_REPAIR
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitHydraulics.paa";
 		time = 11;
-		skilled = 1;
 	};
 
 	class HitGear
@@ -225,7 +209,6 @@ class ALYSIA_REPAIR
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitGear.paa";
 		time = 11;
-		skilled = 1;
 	};
 
 	class HitHStabilizerL1
@@ -235,7 +218,6 @@ class ALYSIA_REPAIR
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitHStabilizerL1.paa";
 		time = 13;
-		skilled = 1;
 	};
 	class HitHStabilizerR1: HitHStabilizerL1 {
 		name = "Stabilisateur droit";
@@ -251,7 +233,6 @@ class ALYSIA_REPAIR
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitTail.paa";
 		time = 11;
-		skilled = 1;
 	};
 
 	class HitPitotTube
@@ -261,7 +242,6 @@ class ALYSIA_REPAIR
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitPitotTube.paa";
 		time = 10;
-		skilled = 1;
 	};
 
 	class HitStaticPort
@@ -271,7 +251,6 @@ class ALYSIA_REPAIR
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitStaticPort.paa";
 		time = 11;
-		skilled = 1;
 	};
 
 	class HitStarter1
@@ -281,7 +260,6 @@ class ALYSIA_REPAIR
 		item = "";
 		picture = "lyeed_IMG\data\vehicle\repair\parts\HitStarter1.paa";
 		time = 9;
-		skilled = 1;
 	};
 	class HitStarter2: HitStarter1 {};
 	class HitStarter3: HitStarter1 {};

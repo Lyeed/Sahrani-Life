@@ -57,6 +57,13 @@ class ALYSIA_STAFF
 			requests = 1;
 			teamspeak = 1;
 		};
+		class Pandanym
+		{
+			uid = "76561198162606615";
+			rank = "support";
+			requests = 1;
+			teamspeak = 1;
+		};
 	};
 
 	class commands

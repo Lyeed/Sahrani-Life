@@ -12,7 +12,11 @@ if (!(isNil "gServer_soonReboot")) exitWith {
 };
 
 if ((time - g_action_delay) < 2) exitWith {
-	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error;
+	["Veuillez ralentir dans vos actions."] call AlysiaClient_fnc_error;
+};
+
+if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "auction_house" >> "can_sell") isEqualTo 0) exitWith {
+	["Votre faction n'est pas autorisé à vendre à l'hôtel des ventes."] call AlysiaClient_fnc_error;
 };
 
 _sel = lbCurSel 45621;

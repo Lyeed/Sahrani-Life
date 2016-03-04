@@ -32,6 +32,13 @@ class ALYSIA_FACTIONS
 			employee = 0;
 		};
 
+		class auction_house
+		{
+			can_buy = 0;
+			can_sell = 0;
+			can_search = 1;
+		};
+
 		/*** GEAR MISSION ***/
 		class mission
 		{
@@ -253,6 +260,13 @@ class ALYSIA_FACTIONS
 			employee = 0;
 		};
 
+		class auction_house
+		{
+			can_buy = 0;
+			can_sell = 0;
+			can_search = 1;
+		};
+
 		/*** GEAR MISSION ***/
 		class mission
 		{
@@ -449,6 +463,13 @@ class ALYSIA_FACTIONS
 			employee = 1;
 		};
 
+		class auction_house
+		{
+			can_buy = 1;
+			can_sell = 1;
+			can_search = 0;
+		};
+
 		/*** SIRENE ***/
 		sirene_sound = "";
 		sirene_sleep = 0;
@@ -575,6 +596,13 @@ class ALYSIA_FACTIONS
 			search = 0;
 			owner = 0;
 			employee = 0;
+		};
+
+		class auction_house
+		{
+			can_buy = 1;
+			can_sell = 0;
+			can_search = 0;
 		};
 
 		/*** GEAR MISSION ***/

@@ -12,7 +12,7 @@ _list = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
 _index = [_this, 1, -1, [-1]] call BIS_fnc_param;
 
 if ((_index isEqualTo -1) || (isNull _list)) exitWith {};
-if ((_list lbText _index) isEqualTo "Aucune") exitWith {};
+if ((_list lbText _index) isEqualTo "Aucun") exitWith {};
 
 _display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};

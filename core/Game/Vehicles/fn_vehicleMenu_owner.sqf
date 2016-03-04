@@ -27,40 +27,30 @@ if (isNil "_info") exitWith {
 _action = true;
 if (!(g_interaction_target in g_vehicles)) then
 {
-	if (!(["Inspection", 5, g_interaction_target] call AlysiaClient_fnc_showProgress)) then {
-		_action = false;
-	};
+	if (!(["Inspection", 5, g_interaction_target] call AlysiaClient_fnc_showProgress)) then {_action = false};
 };
 
 if (_action) then
 {
-	if (!(createDialog "RscDisplayVehicleOwner")) exitWith {};
+	if (!(createDialog "RscDisplayDefaultText")) exitWith {};
 
 	disableSerialization;
-	_display = findDisplay 600;
+	_display = findDisplay 68000;
 	if (isNull _display) exitWith {};
 
-	(_display displayCtrl 601) ctrlSetStructuredText parseText format
-	[
-		"<t align='center' font='EtelkaMonospacePro' size='0.7'>%1</t>",
-		(_info select 2)
-	];
+	(_display displayCtrl 68002) ctrlSetText "lyeed_IMG\data\vehicle\background.jpg";
 	
-	(_display displayCtrl 602) ctrlSetStructuredText parseText format
-	[
-		"<t align='center' font='EtelkaMonospacePro' size='0.7'>%1</t>",
-		(_info select 1)
-	];
+	(_display displayCtrl 68003) ctrlSetStructuredText parseText "<t size='1.5' align='center'>Carte grise</t>";
 	
-	(_display displayCtrl 603) ctrlSetStructuredText parseText format
+	(_display displayCtrl 68001) ctrlSetStructuredText parseText format
 	[
-		"<t align='center' font='EtelkaMonospacePro' size='0.7'>%1</t>",
-		if ((_info select 3) isEqualTo 1) then {"<t color='#8cff9b'>Oui</t>"} else {"<t color='#ff8c8c'>Non</t>"}
-	];
-	
-	(_display displayCtrl 604) ctrlSetStructuredText parseText format
-	[
-		"<t align='center' font='EtelkaMonospacePro' size='0.7'>%1</t>",
+			"<t align='left'>Immatriculation</t><t align='right'>%1</t><br/>"
+		+	"<t align='left'>Propriétaire</t><t align='right'>%2</t><br/>"
+		+	"<t align='left'>Assuré</t><t align='right'>%3</t><br/>"
+		+	"<t align='left'>Carburant</t><t align='right'>%4</t>",
+		(_info select 2),
+		(_info select 1),
+		if ((_info select 3) isEqualTo 1) then {"<t color='#8cff9b'>Oui</t>"} else {"<t color='#ff8c8c'>Non</t>"},
 		getText(missionConfigFile >> "ALYSIA_FUEL" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf(g_interaction_target) >> "fuel") >> "name")
 	];
 
@@ -73,6 +63,6 @@ if (_action) then
 			(player getVariable ["restrained", false]) ||
 			(player getVariable ["surrender", false])
 		) exitWith {closeDialog 0};
-		sleep 0.5;
+		uiSleep 0.5;
 	};
 };

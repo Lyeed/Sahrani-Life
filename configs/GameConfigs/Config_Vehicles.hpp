@@ -1097,7 +1097,7 @@ class ALYSIA_VEHICLES
 
 	class shounka_a3_spr_civ
 	{
-		buyPrice = 41500;
+		buyPrice = 69500;
 		inventory = 200;
 		side = "CIV";
 		insurance = 1;
@@ -2077,7 +2077,7 @@ class ALYSIA_VEHICLES
 
     class C_Van_01_transport_F
 	{
-		buyPrice = 53250;
+		buyPrice = 48000;
 		inventory = 175;
 		side = "CIV";
 		insurance = 1;
@@ -2088,7 +2088,7 @@ class ALYSIA_VEHICLES
 
     class C_Van_01_box_F
 	{
-		buyPrice = 48000;
+		buyPrice = 53250;
 		inventory = 185;
 		side = "CIV";
 		insurance = 1;

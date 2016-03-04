@@ -47,13 +47,13 @@ switch (_action) do
 
 		_atm_money = g_interaction_target getVariable ["money", getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "money_stock")];
 		if (_amount > _atm_money) exitWith {
-			[format["Il n'y à pas assez d'argent dans le DAB pour retirer <t color='8cff9b'>%1</t>kn.<br/>Max : <t color='8cff9b'>%2</t>kn", [_amount] call AlysiaClient_fnc_numberText, [_atm_money] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
+			[format["Il n'y à pas assez d'argent dans le DAB pour retirer <t color='#8cff9b'>%1</t>kn.<br/>Max : <t color='#8cff9b'>%2</t>kn", [_amount] call AlysiaClient_fnc_numberText, [_atm_money] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
 		};
 
 		[
 			format
 			[
-				"Vous avez retiré <t color='8cff9b'>%1</t>kn de votre compte.<br/>Vous avez payé <t color='8cff9b'>%1</t>kn de taxe.",
+				"Vous avez retiré <t color='#8cff9b'>%1</t>kn de votre compte.<br/>Vous avez payé <t color='#8cff9b'>%2</t>kn de taxe.",
 				[_amount] call AlysiaClient_fnc_numberText,
 				[_tax] call AlysiaClient_fnc_numberText
 			]
@@ -77,7 +77,7 @@ switch (_action) do
 			["Vous n'avez pas assez de fonds sur vous"] call AlysiaClient_fnc_error;
 		};
 
-		[format["Vous avez déposé <t color='8cff9b'>%1</t>kn sur votre compte.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
+		[format["Vous avez déposé <t color='#8cff9b'>%1</t>kn sur votre compte.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
 		g_interaction_target setVariable ["money", ((g_interaction_target getVariable ["money", getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "money_stock")]) + _amount), true];
 		[false, _amount] call AlysiaClient_fnc_handleCash;
 		[true, _amount, "Dépot DAB"] call AlysiaClient_fnc_handleATM;
@@ -96,7 +96,7 @@ switch (_action) do
 			["Vous n'avez pas assez de fonds sur vous"] call AlysiaClient_fnc_error;
 		};
 
-		[format["Vous avez déposé <t color='8cff9b'>%1</t>kn le compte de votre faction.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
+		[format["Vous avez déposé <t color='#8cff9b'>%1</t>kn le compte de votre faction.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
 		g_interaction_target setVariable ["money", ((g_interaction_target getVariable ["money", getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "money_stock")]) + _amount), true];
 		[false, _amount] call AlysiaClient_fnc_handleCash;
 		[playerSide, true, _amount] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
@@ -114,7 +114,7 @@ switch (_action) do
 
 		_atm_money = g_interaction_target getVariable ["money", getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "money_stock")];
 		if (_amount > _atm_money) exitWith {
-			[format["Il n'y à pas assez d'argent dans le DAB pour retirer <t color='8cff9b'>%1</t>kn.<br/>Max : <t color='8cff9b'>%2</t>kn", [_amount] call AlysiaClient_fnc_numberText, [_atm_money] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
+			[format["Il n'y à pas assez d'argent dans le DAB pour retirer <t color='#8cff9b'>%1</t>kn.<br/>Max : <t color='#8cff9b'>%2</t>kn", [_amount] call AlysiaClient_fnc_numberText, [_atm_money] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
 		};
 
 		_handle = switch (playerSide) do
@@ -127,7 +127,7 @@ switch (_action) do
 		
 		if (_handle) then
 		{
-			[format["Vous avez retiré <t color='8cff9b'>%1</t>kn du compte votre faction.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
+			[format["Vous avez retiré <t color='#8cff9b'>%1</t>kn du compte votre faction.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
 			[true, _amount] call AlysiaClient_fnc_handleCash;
 			[playerSide, false, _amount] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
 			g_interaction_target setVariable ["money", (_atm_money - _amount), true];
