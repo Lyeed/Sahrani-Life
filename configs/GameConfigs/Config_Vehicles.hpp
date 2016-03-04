@@ -1097,7 +1097,7 @@ class ALYSIA_VEHICLES
 
 	class shounka_a3_spr_civ
 	{
-		buyPrice = 69500;
+		buyPrice = 59500;
 		inventory = 200;
 		side = "CIV";
 		insurance = 1;
@@ -2199,7 +2199,7 @@ class ALYSIA_VEHICLES
 		buyPrice = 325000;
 		inventory = 150;
 		side = "CIV";
-		insurance = 0;
+		insurance = 1;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		colors[] =
@@ -2237,7 +2237,7 @@ class ALYSIA_VEHICLES
 		buyPrice = 145000;
 		inventory = 220;
 		side = "CIV";
-		insurance = 0;
+		insurance = 1;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		realname = "DC3";
@@ -2247,7 +2247,7 @@ class ALYSIA_VEHICLES
 		buyPrice = 145000;
 		inventory = 150;
 		side = "CIV";
-		insurance = 0;
+		insurance = 1;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		realname = "DC3 long-courrier";

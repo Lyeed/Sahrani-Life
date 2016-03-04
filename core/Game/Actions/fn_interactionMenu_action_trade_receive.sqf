@@ -32,7 +32,7 @@ _action =
 [
 	format
 	[
-		"<t align='center'><img size='7' image='lyeed_IMG\data\player_interactions\actions\action_trade.paa'/><br/><t color='#DA81F5'>ECHANGE</t><br/><br/>Un échange vous a été proposé. En acceptant vous recevrez :</t><br/><br/>%1", 
+		"<t align='center'><img size='7' image='lyeed_IMG\data\interactions\player_to_player_basics\action_trade.paa'/><br/><t color='#DA81F5'>ECHANGE</t><br/><br/>Un échange vous a été proposé. En acceptant vous recevrez :</t><br/><br/>%1", 
 		_text
 	],
 	"Echange reçu",

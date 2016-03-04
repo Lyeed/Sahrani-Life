@@ -149,10 +149,6 @@ class ALYSIA_FACTIONS
 		price_heal_hopital = 0;
 		can_use_debrif = 0;
 
-		/*** FARM ***/
-		farming_markers_plant[] = {};
-		farming_markers_gather[] = {};
-
 		/*** SKULL ***/
 		skull_who = 0;// can check skull owner's identity
 		skull_take = 0;// can pack-up skull
@@ -362,10 +358,6 @@ class ALYSIA_FACTIONS
 		price_heal_hopital = 0;
 		can_use_debrif = 0;
 
-		/*** FARM ***/
-		farming_markers[] = {};
-		farming_markers_plant[] = {};
-
 		/*** SKULL ***/
 		skull_who = 0;
 		skull_take = 1;
@@ -487,45 +479,6 @@ class ALYSIA_FACTIONS
 		/*** HEAL ***/
 		price_heal_hopital = 120;
 		can_use_debrif = 0;
-
-		/*** FARM ***/
-		farming_markers_gather[] = 
-		{
-			"iron_1",
-			"sand_1",
-			"wood_1",
-			"wood_2",
-			"oil_1",
-			"archeologie_1",
-			"prunes_1",
-			"prunes_2",
-			"vignes_1",
-			"pillage_1",
-			"plat_1",
-			"coal_1",
-			"gold_1",
-			"salt_1",
-			"baux_1",
-			"copper_1",
-			"shell_1",
-			"clay_1",
-			"pierre_1",
-			"prison_farm",
-			"prison_farm_1"
-		};
-		farming_markers_plant[] = 
-		{
-			"corn_1",
-			"bean_1",
-			"cotton_1",
-			"wheat_1",
-			"heroin_1",
-			"cannabis_1",
-			"meth_1",
-			"cocaine_1",
-			"tabac_1",
-			"potato_1"
-		};
 
 		/*** SKULL ***/
 		skull_who = 0;
@@ -667,14 +620,6 @@ class ALYSIA_FACTIONS
 		/*** HEAL ***/
 		price_heal_hopital = 0;
 		can_use_debrif = 1;
-
-		/*** FARM ***/
-		farming_markers_gather[] = {};
-		farming_markers_plant[] =
-		{
-			"wheat_1",
-			"heroin_1"
-		};
 
 		/*** SKULL ***/
 		skull_who = 1;

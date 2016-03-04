@@ -129,20 +129,31 @@ if ((vehicle player) isEqualTo player) then
 		} forEach g_dynamic_markers;
 
 		{
-			if (player distance (getMarkerPos _x) < 40) then
+			_marker = configName _x;
+			if (player distance (getMarkerPos _marker) < getNumber(_x >> "area")) then
 			{
-				[_x] spawn AlysiaClient_fnc_plantSeed;
+				[_marker] spawn AlysiaClient_fnc_plantSeed;
 				true breakOut "main";
 			};
-		} forEach getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "farming_markers_plant");
+		} forEach ("str(playerSide) in getArray(_x >> 'sides')" configClasses (missionConfigFile >> "ALYSIA_FARMING_PLANT_MARKERS"));
 
 		{
-			if (player distance (getMarkerPos _x) < 40) then
+			_marker = configName _x;
+			if (getNumber(_x >> "water") isEqualTo 0) then
 			{
-				[_x] spawn AlysiaClient_fnc_pickGather;
-				true breakOut "main";
+				if (player distance (getMarkerPos _marker) < getNumber(_x >> "area")) then
+				{
+					[_marker] spawn AlysiaClient_fnc_pickGather;
+					true breakOut "main";
+				};
+			} else {
+				if (player distance (getMarkerPos _marker) < (getNumber(_x >> "area") + getNumber(_x >> "water_depth"))) then
+				{
+					[_marker] spawn AlysiaClient_fnc_pickGather;
+					true breakOut "main";
+				};
 			};
-		} forEach getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "farming_markers_gather");
+		} forEach ("str(playerSide) in getArray(_x >> 'sides')" configClasses (missionConfigFile >> "ALYSIA_FARMING_GATHER"));
 
 		if (!(isNull g_company)) then
 		{

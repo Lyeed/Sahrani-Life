@@ -5,40 +5,59 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_marker", "_tool", "_water", "_water_depth", "_receive", "_extra", "_sound", "_extraAll"];
+private["_marker", "_tool", "_water", "_water_depth", "_receive", "_extra", "_sound", "_extraAll", "_area", "_config"];
 _marker = [_this, 0, "", [""]] call BIS_fnc_param;
 
 if (_marker isEqualTo "") exitWith {};
 if (g_action_inUse) exitWith {};
 if ((vehicle player) != player) exitWith {};
-if (!isClass(missionConfigFile >> "ALYSIA_FARMING_GATHER" >> _marker)) exitWith
+
+_config = missionConfigFile >> "ALYSIA_FARMING_GATHER" >> _marker;
+if (!isClass(_config)) exitWith
 {
 	[format["Impossible de trouver les informations concernant la zone <t align='center' color='#FF8000'>%1</t>", _marker]] call AlysiaClient_fnc_error;
 	diag_log format["[ALYSIA:ERROR] Marker %1 not defined in ALYSIA_FARMING_GATHER (class not found)", _marker];
 };
 
-_tool = getText(missionConfigFile >> "ALYSIA_FARMING_GATHER" >> _marker >> "tool");
+_tool = getText(_config >> "tool");
+_water = getNumber(_config >> "water");
+_water_depth = getNumber(_config >> "water_depth");
+_receive = getArray(_config >> "receive");
+_extra = getArray(_config >> "extra");
+_extraAll = getNumber(_config >> "extra_all");
+_sound = getText(_config >> "sound");
+_area = getNumber(_config >> "area");
 
-if ((_tool != "") && ((currentWeapon player) != _tool)) exitWith {
-	[format["Vous n'avez pas le bon outil<br/>Vous avez besoin de <t color='#FF8000'>%1</t> pour commencer la récolte", getText(configFile >> "CfgWeapons" >> _tool >> "displayName")]] call AlysiaClient_fnc_error;
+if ((_tool != "") && ((currentWeapon player) != _tool)) exitWith
+{
+	[
+		format
+		[
+			"Vous n'avez pas le bon outil<br/>Vous avez besoin de <t color='#FF8000'>%1</t> pour commencer la récolte.",
+			getText(configFile >> "CfgWeapons" >> _tool >> "displayName")
+		]
+	] call AlysiaClient_fnc_error;
 };
 if ((_tool isEqualTo "") && ((currentWeapon player) != "")) exitWith {
-	["Vous devez avoir les mains vides pour commencer la récolte"] call AlysiaClient_fnc_error;
+	["Vous devez avoir les mains vides pour commencer la récolte."] call AlysiaClient_fnc_error;
 };
 
-_water = getNumber(missionConfigFile >> "ALYSIA_FARMING_GATHER" >> _marker >> "water");
-_water_depth = getNumber(missionConfigFile >> "ALYSIA_FARMING_GATHER" >> _marker >> "water_depth");
 if ((_water isEqualTo 1) && !(surfaceIsWater (getPos player))) exitWith {
-	["Vous devez être sous l'eau pour commencer la récolte"] call AlysiaClient_fnc_error;
+	["Vous devez être <t color='#FFFF00'>sous l'eau</t> pour commencer la récolte."] call AlysiaClient_fnc_error;
 };
-if ((_water isEqualTo 1) && (((getPosASLW player) select 2) > (_water_depth * -1))) exitWith {
-	[format["Vous devez être à %1 de profondeur pour commencer la récolte", _water_depth]] call AlysiaClient_fnc_error;
+if ((_water isEqualTo 1) && (((getPosASLW player) select 2) > (_water_depth * -1))) exitWith
+{
+	[
+		format
+		[
+			"Vous devez être à <t color='#00FF00'>%1</t> mètres de profondeur pour commencer la récolte.<br/>Vous êtes actuellement à <t color='#FFFF00'>%2</t> mètres.",
+			_water_depth,
+			(((getPosASLW player) select 2) * -1)
+		]
+	] call AlysiaClient_fnc_error;
 };
 
-_receive = getArray(missionConfigFile >> "ALYSIA_FARMING_GATHER" >> _marker >> "receive");
-_extra = getArray(missionConfigFile >> "ALYSIA_FARMING_GATHER" >> _marker >> "extra");
-_extraAll = getNumber(missionConfigFile >> "ALYSIA_FARMING_GATHER" >> _marker >> "extra_all");
-_sound = getText(missionConfigFile >> "ALYSIA_FARMING_GATHER" >> _marker >> "sound");
+if (_water isEqualTo 1) then {_area = _area + _water_depth};
 
 titleText["* Déplacez-vous pour annuler la récolte *", "PLAIN DOWN"];
 g_action_inUse = true;
@@ -52,7 +71,7 @@ while {(g_action_inUse && !g_interrupted)} do
 			!(alive player) ||
 			(player getVariable ["is_coma", false]) ||
 			((vehicle player) != player) ||
-			(player distance (getMarkerPos _marker) > 40) ||
+			(player distance (getMarkerPos _marker) > _area) ||
 			((speed player) > 1) ||
 			(player getVariable ["restrained", false]) ||
 			(player getVariable ["surrender", false]) ||

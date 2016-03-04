@@ -6,6 +6,8 @@ class ALYSIA_FARMING_GATHER
 		receive[] = {{"wood", 3, 0}};
 		tool = "Skyline_Hache_01";
 		sound = "axe";
+		sides[] = {"CIV"};
+		area = 40;
 	};
 	class wood_2: wood_1 {};
 
@@ -15,15 +17,19 @@ class ALYSIA_FARMING_GATHER
 		sound = "mining";
 		water = 1;
 		water_depth = 109;
+		sides[] = {"CIV"};
+		area = 30;
 	};
 
 	class archeologie_1
 	{
 		receive[] = {{"artefact", 3, 1}};
-		extra[] = {{"frag_1", 2}, {"frag_2", 2}, {"frag_3", 2}, {"frag_4", 4}, {"frag_5", 2}, {"frag_6", 2}, {"frag_7", 2}, {"frag_8", 1}};
+		extra[] = {{"frag_1", 2}, {"frag_2", 2}, {"frag_3", 2}, {"frag_4", 4}, {"frag_5", 2}, {"frag_6", 2}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
 		extra_all = 1;
+		sides[] = {"CIV"};
+		area = 40;
 	};
 
 	class iron_1
@@ -31,6 +37,8 @@ class ALYSIA_FARMING_GATHER
 		receive[] = {{"iron", 4, 1}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
+		sides[] = {"CIV"};
+		area = 40;
 	};
 
 	class sand_1
@@ -38,6 +46,8 @@ class ALYSIA_FARMING_GATHER
 		receive[] = {{"sand", 4, 1}};
 		tool = "Skyline_Pelle_01";
 		sound = "shovel";
+		sides[] = {"CIV"};
+		area = 40;
 	};
 
 	class oil_1
@@ -45,21 +55,25 @@ class ALYSIA_FARMING_GATHER
 		receive[] = {{"oilu", 1, 0}};
 		tool = "Skyline_Pioche_01";
 		sound = "oil";
+		sides[] = {"CIV"};
+		area = 40;
 	};
 
 	class prunes_1
 	{
 		receive[] = {{"prune", 3, 1}};
-		tool = "";
 		sound = "gather1";
+		sides[] = {"CIV"};
+		area = 40;
 	};
 	class prunes_2: prunes_1 {};
 
 	class vignes_1
 	{
 		receive[] = {{"raisin", 3, 1}};
-		tool = "";
 		sound = "gather1";
+		sides[] = {"CIV"};
+		area = 40;
 	};
 
 	class plat_1
@@ -67,6 +81,8 @@ class ALYSIA_FARMING_GATHER
 		receive[] = {{"platine", 1, 0}};
 		tool = "Skyline_Merlin_01";
 		sound = "mining";
+		sides[] = {"CIV"};
+		area = 40;
 	};
 
 	class gold_1
@@ -74,6 +90,8 @@ class ALYSIA_FARMING_GATHER
 		receive[] = {{"goldnuggets", 3, 1}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
+		sides[] = {"CIV"};
+		area = 40;
 	};
 
 	class clay_1
@@ -81,6 +99,8 @@ class ALYSIA_FARMING_GATHER
 		receive[] = {{"clay", 5, 1}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
+		sides[] = {"CIV"};
+		area = 40;
 	};
 
 	class coal_1
@@ -88,6 +108,8 @@ class ALYSIA_FARMING_GATHER
 		receive[] = {{"coal", 6, 1}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
+		sides[] = {"CIV"};
+		area = 40;
 	};
 
 	class salt_1
@@ -95,6 +117,8 @@ class ALYSIA_FARMING_GATHER
 		receive[] = {{"salt", 5, 1}};
 		tool = "Skyline_Pelle_01";
 		sound = "shovel";
+		sides[] = {"CIV"};
+		area = 40;
 	};
 
 	class baux_1
@@ -102,17 +126,19 @@ class ALYSIA_FARMING_GATHER
 		receive[] = {{"baux", 4, 1}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
+		sides[] = {"CIV"};
+		area = 40;
 	};
 
 	class shell_1
 	{
 		receive[] = {{"moule", 2, 0}};
 		extra[] = {{"palourde", 10}, {"saintjacques", 25}, {"bigorneau", 12}, {"crabe", 15}, {"bulot", 8}};
-		tool = "";
-		sound = "";
 		water = 1;
 		water_depth = 21;
 		extra_all = 1;
+		sides[] = {"CIV"};
+		area = 40;
 	};
 
 	class copper_1
@@ -120,6 +146,8 @@ class ALYSIA_FARMING_GATHER
 		receive[] = {{"copper", 4, 1}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
+		sides[] = {"CIV"};
+		area = 40;
 	};
 	
 	class pierre_1
@@ -127,6 +155,8 @@ class ALYSIA_FARMING_GATHER
 		receive[] = {{"pierre", 5, 1}};
 		tool = "Skyline_Merlin_01";
 		sound = "mining";
+		sides[] = {"CIV"};
+		area = 40;
 	};
 	
 	class prison_farm
@@ -134,12 +164,15 @@ class ALYSIA_FARMING_GATHER
 		receive[] = {{"pierre", 1, 0}};
 		tool = "Skyline_Merlin_01";
 		sound = "mining";
+		sides[] = {"CIV", "GUER", "EAST", "WEST"};
+		area = 40;
 	};
-	
 	class prison_farm_1
 	{
 		receive[] = {{"pierre", 1, 0}};
 		tool = "Skyline_Merlin_01";
 		sound = "mining";
+		sides[] = {"CIV", "GUER", "EAST", "WEST"};
+		area = 40;
 	};
 };

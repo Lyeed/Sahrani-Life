@@ -135,50 +135,70 @@ class ALYSIA_FARMING_PLANT_MARKERS
 	class corn_1
 	{
 		plant = "Skyline_Corn";
+		area = 40;
+		sides[] = {"CIV"};
 	};
 
 	class bean_1
 	{
 		plant = "Skyline_Beans";
+		area = 40;
+		sides[] = {"CIV"};
 	};
 
 	class cotton_1
 	{
 		plant = "Skyline_Cotton";
+		area = 40;
+		sides[] = {"CIV"};
 	};
 
 	class wheat_1
 	{
 		plant = "Skyline_Wheat";
+		area = 40;
+		sides[] = {"CIV", "GUER"};
 	};
 
 	class heroin_1
 	{
 		plant = "Oleander2";
+		area = 40;
+		sides[] = {"CIV", "GUER"};
 	};
 
 	class cannabis_1
 	{
 		plant = "Skyline_Cannabis";
+		area = 40;
+		sides[] = {"CIV"};
 	};
 
 	class meth_1
 	{
 		plant = "Reeds";
+		area = 40;
+		sides[] = {"CIV"};
 	};
 
 	class cocaine_1
 	{
 		plant = "Ficus_1";
+		area = 40;
+		sides[] = {"CIV"};
 	};
 
 	class tabac_1
 	{
 		plant = "Skyline_Tabac";
+		area = 40;
+		sides[] = {"CIV"};
 	};
 
 	class potato_1
 	{
 		plant = "Potato_Plant_F";
+		area = 40;
+		sides[] = {"CIV"};
 	};
 };

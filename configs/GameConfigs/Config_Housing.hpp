@@ -55,7 +55,7 @@ class ALYSIA_HOUSES
 	};
 	class Land_Hospoda_mesto: Land_Cihlovej_Dum_mini
 	{
-		price = 615000;
+		price = 915000;
 		class storage
 		{
 			type = "Skyline_Coffre_medium";
@@ -355,7 +355,7 @@ class ALYSIA_HOUSES
 		price = 100000;
 		class storage
 		{
-			type = "Skyline_Coffre_small";
+			type = "Skyline_Coffre_Small";
 			building_index = 2;
 		};
 		class lights {};
@@ -378,7 +378,7 @@ class ALYSIA_HOUSES
 	};
 	class Land_Misc_Cargo1Ao: Land_Misc_Cargo1Bo
 	{
-		class storage
+		class storage: storage
 		{
 			building_index = 3;
 		};
