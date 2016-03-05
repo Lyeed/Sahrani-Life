@@ -21838,7 +21838,7 @@ class Mission
 		};
 		class Item111
 		{
-			position[]={9771.9766,0.99658191,11189.638};
+			position[]={9771.9453,0.55059153,11272.069};
 			name="garage_sea_2_1";
 			type="Empty";
 			angle=0.456184;
@@ -22019,7 +22019,7 @@ class Mission
 		};
 		class Item135
 		{
-			position[]={9782.2168,1.0048208,11189.189};
+			position[]={9782.1855,0.55059153,11271.621};
 			name="garage_sea_2_2";
 			type="Empty";
 			angle=0.456184;
