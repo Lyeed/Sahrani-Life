@@ -111,11 +111,22 @@ if (isNull _target) exitWith {};
 		[
 			"flip",
 			"Retourner",
-			"[] spawn AlysiaClient_fnc_vehicleMenu_flip;",
+			"[g_interaction_target] spawn AlysiaClient_fnc_vehicleMenu_flip;",
 			"
 				(
 					!(g_interaction_target isKindOf 'Ship') &&
 					!(g_interaction_target isKindOf 'Air') &&
+					((vehicle player) isEqualTo player)
+				)
+			"
+		],
+		[
+			"flip",
+			"Pousser",
+			"[g_interaction_target] spawn AlysiaClient_fnc_vehicleMenu_push;",
+			"
+				(
+					(g_interaction_target isKindOf 'Ship') &&
 					((vehicle player) isEqualTo player)
 				)
 			"
@@ -277,7 +288,7 @@ if (isNull _target) exitWith {};
 		[
 			"speaker",
 			"Haut-parleurs",
-			 "[g_interaction_target] spawn AlysiaClient_fnc_vehicleMenu_speaker;",
+			"[g_interaction_target] spawn AlysiaClient_fnc_vehicleMenu_speaker;",
 			"
 				(
 					(getNumber(missionConfigFile >> 'ALYSIA_VEHICLES' >> typeOf(g_interaction_target) >> 'speaker') isEqualTo 1) &&

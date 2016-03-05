@@ -315,6 +315,7 @@ class CfgFunctions
 			class vehicleMenu_money_bag_deposit {};
 			class vehicleMenu_money_bomb {};
 			class vehicleMenu_speaker {};
+			class vehicleMenu_push {};
 			class handleFuel {};
 		};
 

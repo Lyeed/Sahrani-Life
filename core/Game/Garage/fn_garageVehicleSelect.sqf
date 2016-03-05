@@ -139,7 +139,8 @@ _idc = 2810;
             ((_storePos distance (getMarkerPos 'fourriere_NORTH')) > 15) &&
             ((_storePos distance (getMarkerPos 'fourriere_SOUTH')) > 15) &&
             ((player distance (getMarkerPos 'fourriere_NORTH')) > 15) &&
-            ((player distance (getMarkerPos 'fourriere_SOUTH')) > 15)
+            ((player distance (getMarkerPos 'fourriere_SOUTH')) > 15) &&
+            ((lbSize _ctrl_trunk) isEqualTo 0)
         "
     ],
     [

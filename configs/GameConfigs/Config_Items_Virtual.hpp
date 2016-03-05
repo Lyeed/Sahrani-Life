@@ -240,13 +240,13 @@ class ALYSIA_ITEMS
 	class artefact
 	{
 		name = "Artefact";
-		weight = 3;
+		weight = 4;
 		illegal = 1;
 		image = "alysia_items_virtual\data\artefact.paa";
 		license = "archeologie";
 		class market
 		{
-			max = 950;
+			max = 800;
 			min = 375;
 			affect[] = {"grozdova", "slivovica", "turtle", "objvaleur", "artefact_R"};
 		};
@@ -632,7 +632,6 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\barre_de_cereale.paa";
 		class food
 		{
-			thirst = 0;
 			hunger = 50;
 			sound = "eat";
 		};
@@ -642,7 +641,7 @@ class ALYSIA_ITEMS
 		name = "Raisin";
 		weight = 1;
 		price_buy = 9;
-		price_sell  = 6;
+		price_sell  = 7;
 		image = "alysia_items_virtual\data\raisin.paa";
 		class food
 		{
@@ -660,7 +659,6 @@ class ALYSIA_ITEMS
 		class food
 		{
 			thirst = 50;
-			hunger = 0;
 			sound = "eat";
 		};
 	};
@@ -669,7 +667,7 @@ class ALYSIA_ITEMS
 		name = "Prune";
 		weight = 1;
 		price_buy = 7;
-		price_sell  = 3;
+		price_sell = 5;
 		image = "alysia_items_virtual\data\prune.paa";
 		class food
 		{
@@ -686,7 +684,6 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\sandwich_jambon.paa";
 		class food
 		{
-			thirst = 0;
 			hunger = 40;
 			sound = "eat";
 		};
@@ -699,7 +696,6 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\beignet.paa";
 		class food
 		{
-			thirst = 0;
 			hunger = 40;
 			sound = "eat";
 		};
@@ -713,7 +709,6 @@ class ALYSIA_ITEMS
 		class food
 		{
 			thirst = 40;
-			hunger = 0;
 			sound = "drink";
 		};
 	};
@@ -726,7 +721,6 @@ class ALYSIA_ITEMS
 		class food
 		{
 			thirst = 40;
-			hunger = 0;
 			sound = "drink";
 		};
 	};
@@ -738,7 +732,6 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\ragout.paa";
 		class food
 		{
-			thirst = 0;
 			hunger = 40;
 			sound = "eat";
 		};
@@ -752,7 +745,6 @@ class ALYSIA_ITEMS
 		class food
 		{
 			thirst = 40;
-			hunger = 0;
 			sound = "drink";
 		};
 	};
@@ -978,7 +970,6 @@ class ALYSIA_ITEMS
 		{
 			alcool = 0.55;
 			thirst = 50;
-			hunger = 0;
 			sound = "drink";
 		};
 	};
@@ -998,7 +989,6 @@ class ALYSIA_ITEMS
 		{
 			alcool = 0.50;
 			thirst = 40;
-			hunger = 0;
 			sound = "drink";
 		};
 	};
@@ -1089,7 +1079,6 @@ class ALYSIA_ITEMS
 		class food
 		{
 			thirst = 40;
-			hunger = 0;
 			sound = "drink";
 		};
 	};
@@ -1101,7 +1090,6 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\ravioli.paa";
 		class food
 		{
-			thirst = 0;
 			hunger = 40;
 			sound = "eat";
 		};
@@ -1114,7 +1102,6 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\cookie.paa";
 		class food
 		{
-			thirst = 0;
 			hunger = 20;
 			sound = "eat";
 		};
@@ -1127,7 +1114,6 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\petitbeurre.paa";
 		class food
 		{
-			thirst = 0;
 			hunger = 40;
 			sound = "eat";
 		};
@@ -1140,7 +1126,6 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\croissant.paa";
 		class food
 		{
-			thirst = 0;
 			hunger = 20;
 			sound = "eat";
 		};
@@ -1153,7 +1138,6 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\pizza.paa";
 		class food
 		{
-			thirst = 0;
 			hunger = 70;
 			sound = "eat";
 		};
