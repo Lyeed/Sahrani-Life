@@ -20687,7 +20687,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 72.2853;this setposATL [11396.439453,5196.875,4.48277];this setVectorUp [0,0,1]; this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_sucuraj"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Garde"",AlysiaClient_fnc_shop_vehicles_open,[""EAST_vehicles_sea"",[""garage_sea_sucuraj_1"",""garage_sea_sucuraj_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Samu"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_sea"",[""garage_sea_sucuraj_1"",""garage_sea_sucuraj_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation true;this setdir 72.2853;this setposATL [11396.439453,5196.875,4.48277];this setVectorUp [0,0,1]; this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_sucuraj"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Garde"",AlysiaClient_fnc_shop_vehicles_open,[""EAST_vehicles_sea"",[""garage_sea_sucuraj_1"",""garage_sea_sucuraj_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Samu"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_sea"",[""garage_sea_sucuraj_1"",""garage_sea_sucuraj_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_sea"",[""garage_sea_sucuraj_1"",""garage_sea_sucuraj_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item1649
 		{
@@ -20720,7 +20720,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 272.916;this setposASL [11087.932617,17614.638672,2.11202];this setVectorUp [0,0,1]; this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_Prison_north"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Milice"",AlysiaClient_fnc_shop_vehicles_open,[""WEST_vehicles_sea"",[""garage_sea_Prison_north_1"",""garage_sea_Prison_north_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Samu"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_sea"",[""garage_sea_Prison_north_1"",""garage_sea_Prison_north_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation true;this setdir 272.916;this setposASL [11087.932617,17614.638672,2.11202];this setVectorUp [0,0,1]; this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_Prison_north"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Milice"",AlysiaClient_fnc_shop_vehicles_open,[""WEST_vehicles_sea"",[""garage_sea_Prison_north_1"",""garage_sea_Prison_north_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Samu"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_sea"",[""garage_sea_Prison_north_1"",""garage_sea_Prison_north_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_sea"",[""garage_sea_Prison_north_1"",""garage_sea_Prison_north_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item1652
 		{
@@ -20753,7 +20753,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 308.307;this setposASL [17770.753906,14581.775391,1.18925];this setVectorUp [0,0,1]; this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_Promajna"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Milice"",AlysiaClient_fnc_shop_vehicles_open,[""WEST_vehicles_sea"",[""garage_sea_Promajna_1"",""garage_sea_Promajna_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Samu"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_sea"",[""garage_sea_Promajna_1"",""garage_sea_Promajna_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation true;this setdir 308.307;this setposASL [17770.753906,14581.775391,1.18925];this setVectorUp [0,0,1]; this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_Promajna"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Milice"",AlysiaClient_fnc_shop_vehicles_open,[""WEST_vehicles_sea"",[""garage_sea_Promajna_1"",""garage_sea_Promajna_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Samu"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_sea"",[""garage_sea_Promajna_1"",""garage_sea_Promajna_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];  this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_sea"",[""garage_sea_Promajna_1"",""garage_sea_Promajna_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; ";
 		};
 		class Item1655
 		{
@@ -20830,7 +20830,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation true;this setdir 224.832;this setposATL [7285.459961,6177.0390625,6.92515];this setVectorUp [0,0,1]; this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_hvarenoj"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Garde"",AlysiaClient_fnc_shop_vehicles_open,[""EAST_vehicles_sea"",[""garage_sea_hvarenoj_1"",""garage_sea_hvarenoj_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Samu"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_sea"",[""garage_sea_hvarenoj_1"",""garage_sea_hvarenoj_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation true;this setdir 224.832;this setposATL [7285.459961,6177.0390625,6.92515];this setVectorUp [0,0,1]; this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_hvarenoj"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Garde"",AlysiaClient_fnc_shop_vehicles_open,[""EAST_vehicles_sea"",[""garage_sea_hvarenoj_1"",""garage_sea_hvarenoj_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Samu"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_sea"",[""garage_sea_hvarenoj_1"",""garage_sea_hvarenoj_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_sea"",[""garage_sea_hvarenoj_1"",""garage_sea_hvarenoj_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 	};
 	class Markers
@@ -22556,17 +22556,17 @@ class Mission
 		};
 		class Item199
 		{
-			position[]={7244.1797,0.55076987,6151.5342};
+			position[]={7193.1924,0.55057245,6135.5425};
 			name="garage_sea_hvarenoj_2";
 			type="Empty";
-			angle=-135.24001;
+			angle=-123.51321;
 		};
 		class Item200
 		{
-			position[]={7225.0122,0.55076987,6166.8047};
+			position[]={7177.7993,0.55057186,6154.751};
 			name="garage_sea_hvarenoj_1";
 			type="Empty";
-			angle=-135.24001;
+			angle=-123.51321;
 		};
 		class Item201
 		{
@@ -22602,14 +22602,14 @@ class Mission
 		};
 		class Item205
 		{
-			position[]={11050.823,0.55058116,17620.063};
+			position[]={11043.058,0.55060482,17623.506};
 			name="garage_sea_Prison_north_2";
 			type="Empty";
 			angle=-84.084297;
 		};
 		class Item206
 		{
-			position[]={11052.244,0.55058116,17630.223};
+			position[]={11044.479,0.55060482,17633.666};
 			name="garage_sea_Prison_north_1";
 			type="Empty";
 			angle=-84.084297;
@@ -22625,14 +22625,14 @@ class Mission
 		};
 		class Item208
 		{
-			position[]={17736.002,0.55059636,14606.179};
+			position[]={17732.518,0.55060482,14620.313};
 			name="garage_sea_Promajna_2";
 			type="Empty";
 			angle=-56.611599;
 		};
 		class Item209
 		{
-			position[]={17741.945,0.55059636,14614.535};
+			position[]={17738.461,0.55060482,14628.669};
 			name="garage_sea_Promajna_1";
 			type="Empty";
 			angle=-56.611599;
