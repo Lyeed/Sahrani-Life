@@ -93,25 +93,23 @@ switch (playerSide) do
 {
 	case west: 
 	{
-		player setVariable ["rank", (call g_WESTLevel), true];
+		if ((call g_WESTLevel) > 0) then {player setVariable["rank", (call g_WESTLevel), true]};
 	};
 	
 	case east:
 	{
-		player setVariable ["rank", (call g_EASTLevel), true];
+		if ((call g_EASTLevel) > 0) then {player setVariable["rank", (call g_EASTLevel), true]};
 	};
 
 	case civilian:
 	{
+		if ((call g_CIVLevel) > 0) then {player setVariable["rank", (call g_CIVLevel), true]};
 		g_launder = _basic select 43;
-		if ((call g_CIVLevel) > 0) then {
-			player setVariable["rank", (call g_CIVLevel), true];
-		};
 	};
 
 	case independent:
 	{
-		player setVariable["rank", (call g_GUERLevel), true];
+		if ((call g_GUERLevel) > 0) then {player setVariable["rank", (call g_GUERLevel), true]};
 	};
 };
 

@@ -8,3 +8,4 @@
 
 g_killer = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 player setDamage 1;
+g_coma_dead = true;

@@ -38,8 +38,8 @@ _cfg = switch (true) do
 	case (isClass (configFile >> "CfgGlasses" >> _entity)) : {"CfgGlasses"};
 	default {""};
 };
-
 if (_cfg isEqualTo "") exitWith {[]};
+
 if (!isClass (configFile >> _cfg >> _entity)) exitWith {[]};
 
 _type = -1;

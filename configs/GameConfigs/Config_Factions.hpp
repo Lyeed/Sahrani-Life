@@ -6,8 +6,6 @@ class ALYSIA_FACTIONS
 		name = "Milice";
 		icon = "lyeed_IMG\data\faction\WEST_logo.paa";
 		identity_item = "SkylineItems_PlaqueMilitaire";
-		launder = 0;
-		faction_bank_handle_rank = 9;
 
 		/*** LABORATORIES ***/
 		laboratory_destroy = 1;
@@ -38,6 +36,12 @@ class ALYSIA_FACTIONS
 			can_sell = 0;
 			can_search = 1;
 		};
+
+		class launder_transfer
+		{
+			rank = 9;
+		};
+		class bank_faction: launder_transfer {};
 
 		/*** GEAR MISSION ***/
 		class mission
@@ -230,8 +234,6 @@ class ALYSIA_FACTIONS
 		name = "Garde";
 		icon = "lyeed_IMG\data\faction\EAST_logo.paa";
 		identity_item = "SkylineItems_PlaqueMilitaire";
-		launder = 0;
-		faction_bank_handle_rank = 5;
 
 		/*** SALARY ***/
 		salary = 900;
@@ -262,6 +264,12 @@ class ALYSIA_FACTIONS
 			can_sell = 0;
 			can_search = 1;
 		};
+
+		class launder_transfer
+		{
+			rank = 5;
+		};
+		class bank_faction: launder_transfer {};
 
 		/*** GEAR MISSION ***/
 		class mission
@@ -429,8 +437,6 @@ class ALYSIA_FACTIONS
 		name = "Civil";
 		icon = "lyeed_IMG\data\faction\CIV_logo.paa";
 		identity_item = "SkylineItems_Passeport";
-		launder = 1;
-		faction_bank_handle_rank = 1;
 
 		/*** SALARY ***/
 		salary = 600;
@@ -462,9 +468,11 @@ class ALYSIA_FACTIONS
 			can_search = 0;
 		};
 
-		/*** SIRENE ***/
-		sirene_sound = "";
-		sirene_sleep = 0;
+		class launder {};
+		class bank_faction
+		{
+			rank = 1;
+		};
 
 		/*** SPAWN/RESPAWN ***/
 		respawn_marker = "civ_spawn";
@@ -525,8 +533,6 @@ class ALYSIA_FACTIONS
 		name = "SAMU";
 		icon = "lyeed_IMG\data\faction\GUER_logo.paa";
 		identity_item = "SkylineItems_Passeport";
-		launder = 0;
-		faction_bank_handle_rank = 6;
 
 		/*** SALARY ***/
 		salary = 50;
@@ -556,6 +562,11 @@ class ALYSIA_FACTIONS
 			can_buy = 1;
 			can_sell = 0;
 			can_search = 0;
+		};
+		
+		class bank_faction
+		{
+			rank = 6;
 		};
 
 		/*** GEAR MISSION ***/

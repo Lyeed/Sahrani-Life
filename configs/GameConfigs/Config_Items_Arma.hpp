@@ -638,6 +638,12 @@ class ALYSIA_ITEMS_ARMA
 	class H_Cap_press
 	{
 		buy_price = 15;
+		buy_license_CIV = "company_news";
+	};
+	class V_Press_F
+	{
+		buy_price = 1900;
+		buy_license_CIV = "company_news";
 	};
 	class H_Cap_red
 	{
@@ -2394,9 +2400,14 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 50;
 	};
+	class U_C_WorkerCoveralls
+	{
+		buy_price = 60;
+		buy_license_CIV = "company_garagist";
+	};
 	class Skyline_Uniforme_Depanneur_01_F
 	{
-		buy_price = 80;
+		buy_price = 105;
 		buy_license_CIV = "company_garagist";
 	};
 	class Skyline_Uniforme_DolceGabbana_01_F

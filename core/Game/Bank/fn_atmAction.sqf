@@ -93,7 +93,7 @@ switch (_action) do
 			[format["Vous ne pouvez pas déposer moins de <t color='#8cff9b'>%1</t>kn.", [getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "deposit_min")] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
 		};
 		if (g_cash < _amount) exitWith {
-			["Vous n'avez pas assez de fonds sur vous"] call AlysiaClient_fnc_error;
+			["Vous n'avez pas assez d'argent sur vous."] call AlysiaClient_fnc_error;
 		};
 
 		[format["Vous avez déposé <t color='#8cff9b'>%1</t>kn le compte de votre faction.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
@@ -127,6 +127,7 @@ switch (_action) do
 		
 		if (_handle) then
 		{
+			closeDialog 0;
 			[format["Vous avez retiré <t color='#8cff9b'>%1</t>kn du compte votre faction.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
 			[true, _amount] call AlysiaClient_fnc_handleCash;
 			[playerSide, false, _amount] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
@@ -134,8 +135,51 @@ switch (_action) do
 		} else {
 			["Solde insuffisant"] call AlysiaClient_fnc_error;
 		};
-		
+	};
+
+	case "deposit_company":
+	{
+		if (_amount > getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "deposit_max")) exitWith {
+			[format["Vous ne pouvez pas déposer plus de <t color='#8cff9b'>%1</t>kn.", [getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "deposit_max")] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
+		};
+		if (_amount < getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "deposit_min")) exitWith {
+			[format["Vous ne pouvez pas déposer moins de <t color='#8cff9b'>%1</t>kn.", [getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "deposit_min")] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
+		};
+		if (g_cash < _amount) exitWith {
+			["Vous n'avez pas assez d'argent sur vous."] call AlysiaClient_fnc_error;
+		};
+
+		[format["Vous avez déposé <t color='#8cff9b'>%1</t>kn le compte de votre entreprise.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
+		g_interaction_target setVariable ["money", ((g_interaction_target getVariable ["money", getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "money_stock")]) + _amount), true];
+		[false, _amount] call AlysiaClient_fnc_handleCash;
+		[g_company, true, _amount] call AlysiaClient_fnc_company_bank_handle;
 		closeDialog 0;
+	};
+
+	case "withdraw_company":
+	{
+		if (_amount > getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "withdraw_max")) exitWith {
+			[format["Vous ne pouvez pas retirer plus de <t color='#8cff9b'>%1</t>kn.", [getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "withdraw_max")] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
+		};
+		if (_amount < getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "withdraw_min")) exitWith {
+			[format["Vous ne pouvez pas retirer moins de <t color='#8cff9b'>%1</t>kn.", [getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "withdraw_min")] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
+		};
+
+		_atm_money = g_interaction_target getVariable ["money", getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "money_stock")];
+		if (_amount > _atm_money) exitWith {
+			[format["Il n'y à pas assez d'argent dans le DAB pour retirer <t color='#8cff9b'>%1</t>kn.<br/>Max : <t color='#8cff9b'>%2</t>kn", [_amount] call AlysiaClient_fnc_numberText, [_atm_money] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
+		};
+
+		if ([g_company, false, _amount] call AlysiaClient_fnc_company_bank_handle) then
+		{
+			closeDialog 0;
+			[format["Vous avez retiré <t color='#8cff9b'>%1</t>kn du compte votre faction.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
+			[true, _amount] call AlysiaClient_fnc_handleCash;
+			[playerSide, false, _amount] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
+			g_interaction_target setVariable ["money", (_atm_money - _amount), true];
+		} else {
+			["Solde insuffisant"] call AlysiaClient_fnc_error;
+		};
 	};
 	
 	default {["Action non reconnue"] call AlysiaClient_fnc_error};

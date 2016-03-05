@@ -124,3 +124,12 @@ if (g_staff_markers) then
 		} forEach _markers;
 	};
 };
+
+while {visibleMap} do
+{
+	waitUntil {!visibleMap || !(isNull (uiNamespace getVariable ["RscDisplayInsertMarker", displayNull]))};
+	if (!(isNull (uiNamespace getVariable ["RscDisplayInsertMarker", displayNull]))) then
+	{
+		(uiNamespace getVariable ["RscDisplayInsertMarker", displayNull]) closeDisplay 0;
+	};
+};

@@ -41,7 +41,7 @@ if (_action) then
 		[format["Vous recevrez <t color='#8cff9b'>%1</t>kn sur votre compte bancaire dans quelques minutes", ([_receive] call AlysiaClient_fnc_numberText)]] call AlysiaClient_fnc_info;
 		g_launder = _receive;
 		[13] call AlysiaDB_fnc_query_update_partial;
-		sleep (60 * (random(7) + 3));
+		uiSleep (60 * round(random(7) + 3));
 		[] call AlysiaClient_fnc_launder_receive;
 	};
 };

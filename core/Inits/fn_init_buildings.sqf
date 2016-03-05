@@ -9,11 +9,10 @@ private "_cString";
 
 _cString =
 {
-	_obj = (_this select 0) createVehicleLocal [0,0,0];
-	if((_this select 4) isEqualTo 0) then {
-		_obj enableSimulation false;
-		_obj allowDamage false;
-	};
+	_obj = (_this select 0) createVehicleLocal [0, 0, 0];
+	_obj allowDamage false;
+
+	if ((_this select 4) isEqualTo 0) then {_obj enableSimulation false};
 	_obj setdir (_this select 2);
 	if((_this select 3) isEqualTo -100) then {
 		_obj setposATL (call compile (_this select 1));
@@ -56,7 +55,6 @@ _cString =
 ["xcam_W_sharpStones_erosion","[14975.649414,7414.941406,0]",0,-100,0,0,[]] call _cString;
 ["xcam_W_sharpStones_erosion","[14968.568359,7411.347656,0]",0,-100,0,0,[]] call _cString;
 ["xcam_W_sharpStones_erosion","[14957.985352,7410.351563,0]",0,-100,0,0,[]] call _cString;
-["Land_UWreck_FishingBoat_F","[14961.930664,7438.669922,0]",0,-100,0,0,[]] call _cString;
 
 // Parlement
 ["xcam_podesta_10","[14263.605469,12439.649414,0.00856018]",0,-100,0,0,[]] call _cString;

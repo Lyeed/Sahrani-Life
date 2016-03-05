@@ -428,6 +428,7 @@ class CfgFunctions
 			class launder_action {};
 			class launder_open {};
 			class launder_receive {};
+			class launder_reverse {};
 		};
 
 		class Drugs

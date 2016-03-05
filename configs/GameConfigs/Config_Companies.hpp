@@ -283,8 +283,8 @@ class ALYSIA_COMPANIES
 			};
 			class tax
 			{
-				price_per_employee = 100;
-				price_building = 100;
+				price_per_employee = 70;
+				price_building = 150;
 			};
 		};
 

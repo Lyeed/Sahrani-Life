@@ -67,14 +67,55 @@ switch (_action) do
 		_btnR4 ctrlShow true;
 		_txtR4 ctrlShow true;
 
-		if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "faction_bank_handle_rank") isEqualTo (player getVariable ["rank", 0])) then
+		_config_atm = missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target);
+		if (getNumber(_config_atm >> "company") isEqualTo 1) then
 		{
-			if (getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "money_faction") isEqualTo 1) then
+			if (!(isNull g_company)) then
 			{
-				_txtL4 ctrlSetStructuredText parseText "<t align='right'>Faction</t>";
-				_btnL4 buttonSetAction "[""home_faction"", g_interaction_target] call AlysiaClient_fnc_atmScreen";
-				_btnL4 ctrlShow true;
-				_txtL4 ctrlShow true;
+				_info = g_company getVariable ["company_info", []];
+				if (!(g_company getVariable ['construction', false])) then
+				{
+					if ((_info select 1) isEqualTo (getPlayerUID player)) then
+					{
+						_txtL2 ctrlSetStructuredText parseText "<t align='left'>Compte Entreprise</t>";
+						_btnL2 buttonSetAction "[""home_company"", g_interaction_target] call AlysiaClient_fnc_atmScreen";
+						_btnL2 ctrlShow true;
+						_txtL2 ctrlShow true;
+					};
+				};
+			};
+		};
+
+		if (getNumber(_config_atm >> "money_faction") isEqualTo 1) then
+		{
+			_config_bank_faction = missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "bank_faction";
+			if (isClass(_config_bank_faction)) then
+			{
+				if ((player getVariable ["rank", 0]) >= getNumber(_config_bank_faction >> "rank")) then
+				{
+					_txtL4 ctrlSetStructuredText parseText "<t align='right'>Compte Faction</t>";
+					_btnL4 buttonSetAction "[""home_faction"", g_interaction_target] call AlysiaClient_fnc_atmScreen";
+					_btnL4 ctrlShow true;
+					_txtL4 ctrlShow true;
+				};
+			};
+		};
+
+		if (getNumber(_config_atm >> "launder_transfer") isEqualTo 1) then
+		{
+			if ((["illegal_money"] call AlysiaClient_fnc_itemCount) > 0) then
+			{
+				_config_launder = missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "launder_transfer";
+				if (isClass(_config_launder)) then
+				{
+					if ((player getVariable ["rank", 0]) >= getNumber(_config_launder >> "rank")) then
+					{
+						_txtL3 ctrlSetStructuredText parseText "<t align='right'>Saisie d'argent sale</t>";
+						_btnL3 buttonSetAction "[] spawn AlysiaClient_fnc_launder_reverse";
+						_btnL3 ctrlShow true;
+						_txtL3 ctrlShow true;
+					};
+				};
 			};
 		};
 	};
@@ -188,12 +229,12 @@ switch (_action) do
 		};
 		_balance ctrlSetStructuredText parseText format["<t align ='left' size='1.2'>Solde </t><t align='center' size='1.2'><t color='#74DF00'>%1</t>kn</t>", [_value] call AlysiaClient_fnc_numberText];
 
-		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Retrait faction</t>";
+		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Retrait</t>";
 		_btnL1 buttonSetAction "[""withdraw_faction"", g_interaction_target] call AlysiaClient_fnc_atmScreen";
 		_txtL1 ctrlShow true;
 		_btnL1 ctrlShow true;
 
-		_txtR1 ctrlSetStructuredText parseText "<t align='right'>Dépôt faction</t>";
+		_txtR1 ctrlSetStructuredText parseText "<t align='right'>Dépôt</t>";
 		_btnR1 buttonSetAction "[""deposit_faction"", g_interaction_target] call AlysiaClient_fnc_atmScreen";
 		_btnR1 ctrlShow true;
 		_txtR1 ctrlShow true;
@@ -207,6 +248,85 @@ switch (_action) do
 		_btnL4 buttonSetAction "[""home"", g_interaction_target] call AlysiaClient_fnc_atmScreen";
 		_btnL4 ctrlShow true;
 		_txtL4 ctrlShow true;
+	};
+
+	case "home_company":
+	{
+		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Distributeur Entreprise</t>";
+		
+		_balance ctrlSetStructuredText parseText format
+		[
+			"<t align ='left' size='1.2'>Solde </t><t align='center' size='1.2'><t color='#74DF00'>%1</t>kn</t>",
+			[(g_company getVariable ["company_bank", 0])] call AlysiaClient_fnc_numberText
+		];
+
+		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Retrait</t>";
+		_btnL1 buttonSetAction "[""withdraw_company"", g_interaction_target] call AlysiaClient_fnc_atmScreen";
+		_txtL1 ctrlShow true;
+		_btnL1 ctrlShow true;
+
+		_txtR1 ctrlSetStructuredText parseText "<t align='right'>Dépôt</t>";
+		_btnR1 buttonSetAction "[""deposit_company"", g_interaction_target] call AlysiaClient_fnc_atmScreen";
+		_btnR1 ctrlShow true;
+		_txtR1 ctrlShow true;
+
+		_txtR4 ctrlSetStructuredText parseText "<t align='right'>Récupérer Carte</t>";
+		_btnR4 buttonSetAction "closeDialog 0";
+		_btnR4 ctrlShow true;
+		_txtR4 ctrlShow true;
+
+		_txtL4 ctrlSetStructuredText parseText "<t align='left'>Retour</t>";
+		_btnL4 buttonSetAction "[""home"", g_interaction_target] call AlysiaClient_fnc_atmScreen";
+		_btnL4 ctrlShow true;
+		_txtL4 ctrlShow true;
+	};
+
+	case "withdraw_company":
+	{
+		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Retrait Entreprise</t>";
+		_balance ctrlSetStructuredText parseText format["<t align ='left' size='1.2'>Montant</t>"];
+
+		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Retirer</t>";
+		_btnL1 buttonSetAction "[""withdraw_company"", g_interaction_target] call AlysiaClient_fnc_atmAction";
+		_btnL1 ctrlShow true;
+		_txtL1 ctrlShow true;
+
+		_txtR1 ctrlSetStructuredText parseText "<t align='right'>Retour</t>";
+		_btnR1 buttonSetAction "[""home_company"", g_interaction_target] call AlysiaClient_fnc_atmScreen";
+		_btnR1 ctrlShow true;
+		_txtR1 ctrlShow true;
+
+		_txtR4 ctrlSetStructuredText parseText "<t align='right'>Récupérer Carte</t>";
+		_btnR4 buttonSetAction "closeDialog 0";		
+		_btnR4 ctrlShow true;
+		_txtR4 ctrlShow true;
+
+		_edit ctrlSetText str(getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "withdraw_min"));
+		_edit ctrlShow true;
+	};
+
+	case "deposit_company":
+	{
+		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Dépôt Entreprise</t>";
+		_balance ctrlSetStructuredText parseText format["<t align ='left' size='1.2'>Montant</t>"];
+		
+		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Déposer</t>";
+		_btnL1 buttonSetAction "[""deposit_company"", g_interaction_target] call AlysiaClient_fnc_atmAction";
+		_btnL1 ctrlShow true;
+		_txtL1 ctrlShow true;
+
+		_txtR1 ctrlSetStructuredText parseText "<t align='right'>Retour</t>";
+		_btnR1 buttonSetAction "[""home_company"", g_interaction_target] call AlysiaClient_fnc_atmScreen";
+		_btnR1 ctrlShow true;
+		_txtR1 ctrlShow true;
+
+		_txtR4 ctrlSetStructuredText parseText "<t align='right'>Récupérer Carte</t>";
+		_btnR4 buttonSetAction "closeDialog 0";
+		_btnR4 ctrlShow true;
+		_txtR4 ctrlShow true;
+
+		_edit ctrlSetText str(getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(g_interaction_target) >> "deposit_min"));
+		_edit ctrlShow true;
 	};
 	
 	default {["Action non reconnue"] call AlysiaClient_fnc_error};

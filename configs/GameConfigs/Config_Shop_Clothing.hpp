@@ -896,4 +896,15 @@ class ALYSIA_SHOPS_CLOTHING
 		vests[] = {};
 		backpacks[] = {};
 	};
+
+	class companies
+	{
+		name = "Réserve d'entreprises";
+		side = "CIV";
+		uniforms[] = {"U_C_WorkerCoveralls", "Skyline_Uniforme_Depanneur_01_F"};
+		headgear[] = {"H_Cap_press"};
+		goggles[] = {};
+		vests[] = {"V_Press_F"};
+		backpacks[] = {};
+	};
 };
