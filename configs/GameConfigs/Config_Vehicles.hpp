@@ -3845,7 +3845,7 @@ class ALYSIA_VEHICLES
 	{
 		realname = "D41 Trawler";
 		buyPrice = 145000;
-		inventory = 320;
+		inventory = 620;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"boat"};
