@@ -30,7 +30,7 @@ lbClear _list;
 	_list lbSetData [_index, _company];
 	_list lbSetValue [_index, getNumber(_x >> "construction" >> "price")];
 	_list lbSetPicture [_index, getText(_x >> "image")];
-} forEach ("isClass(_x >> 'construction')" configClasses (missionConfigFile >> "ALYSIA_COMPANIES" >> "types"));
+} forEach ("isClass(_x >> 'construction') && (getNumber(_x >> 'ready') isEqualTo 1)" configClasses (missionConfigFile >> "ALYSIA_COMPANIES" >> "types"));
 if ((lbSize _list) isEqualTo 0) then
 {
 	_list lbAdd "Aucun";

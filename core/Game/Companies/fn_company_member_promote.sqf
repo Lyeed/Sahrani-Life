@@ -19,7 +19,7 @@ _data = [_company, _uid] call AlysiaClient_fnc_company_member_data;
 if (_data isEqualTo []) exitWith {};
 
 _company setVariable ["company_info", [(_info select 0), (_data select 0), (_info select 2), (_info select 3), (_data select 1), (_info select 5)], true];
-[format["<t color='#045FB4'>%1</t> a été nommé à la tête de l'entreprise : <t color='#74DF00'>%1</t>.", (_data select 1), (_info select 0)]] call AlysiaClient_fnc_info;
+[format["<t color='#045FB4'>%1</t> a été nommé à la tête de l'entreprise : <t color='#74DF00'>%2</t>.", (_data select 1), (_info select 0)]] call AlysiaClient_fnc_info;
 
 _member = [_uid] call AlysiaClient_fnc_getPlayerFromUID;
 if (!(isNull _member)) then {

@@ -77,7 +77,7 @@ switch (_action) do
 				{
 					if ((_info select 1) isEqualTo (getPlayerUID player)) then
 					{
-						_txtL2 ctrlSetStructuredText parseText "<t align='left'>Compte Entreprise</t>";
+						_txtL2 ctrlSetStructuredText parseText "<t align='left'>Entreprise</t>";
 						_btnL2 buttonSetAction "[""home_company"", g_interaction_target] call AlysiaClient_fnc_atmScreen";
 						_btnL2 ctrlShow true;
 						_txtL2 ctrlShow true;
@@ -93,7 +93,7 @@ switch (_action) do
 			{
 				if ((player getVariable ["rank", 0]) >= getNumber(_config_bank_faction >> "rank")) then
 				{
-					_txtL4 ctrlSetStructuredText parseText "<t align='right'>Compte Faction</t>";
+					_txtL4 ctrlSetStructuredText parseText "<t align='right'>Faction</t>";
 					_btnL4 buttonSetAction "[""home_faction"", g_interaction_target] call AlysiaClient_fnc_atmScreen";
 					_btnL4 ctrlShow true;
 					_txtL4 ctrlShow true;
@@ -170,7 +170,7 @@ switch (_action) do
 
 	case "withdraw_faction":
 	{
-		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Retrait Faction</t>";
+		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Retrait</t>";
 		_balance ctrlSetStructuredText parseText format["<t align ='left' size='1.2'>Montant</t>"];
 
 		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Retirer</t>";
@@ -194,7 +194,7 @@ switch (_action) do
 
 	case "deposit_faction":
 	{
-		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Dépôt Faction</t>";
+		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Dépôt</t>";
 		_balance ctrlSetStructuredText parseText format["<t align ='left' size='1.2'>Montant</t>"];
 		
 		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Déposer</t>";

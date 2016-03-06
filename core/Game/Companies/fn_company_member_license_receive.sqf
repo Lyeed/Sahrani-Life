@@ -10,7 +10,7 @@ _from = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _license = [_this, 1, "", [""]] call BIS_fnc_param;
 _company = [_this, 2, objNull, [objNull]] call BIS_fnc_param;
 
-if ((isNull _from) || (_license isEqualTo "")) exitWith {};
+if ((isNull _from) || (_license isEqualTo "") || (isNull _company)) exitWith {};
 
 if ([_license] call AlysiaClient_fnc_hasLicense) exitWith {
 	[format["Cette personne possède déjà la license : <t color='#DF3A01'>%1</t>.", [_license] call AlysiaClient_fnc_licenseGetName]] remoteExecCall ["AlysiaClient_fnc_info", _from];

@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_veh", "_station", "_type", "_bill", "_display", "_fuelmax", "_liters", "_currentLiters", "_fill"];
+private["_veh", "_station", "_type", "_bill", "_display", "_fuelmax", "_liters", "_currentLiters", "_fill", "_maxDistance", "_distanceBegin"];
 _veh = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 _station = [_this, 1, ObjNull, [ObjNull]] call BIS_fnc_param;
 
@@ -18,7 +18,9 @@ if ((fuel _veh) isEqualTo 1) exitWith {["Plein impossible.<br/>Le réservoir du 
 if (isEngineOn _veh) exitWith {["Plein impossible.<br/>Le véhicule doit avoir le moteur éteint pour effectuer un plein."] call AlysiaClient_fnc_error};
 if (((locked _veh) isEqualTo 2)) exitWith {["Plein impossible.<br/>Le véhicule doit être ouvert pour effectuer un plein."] call AlysiaClient_fnc_error};
 if (_veh getVariable ["refueling", false]) exitWith {["Plein impossible.<br/>Une autre personne effectue actuellement le plein du véhicule."] call AlysiaClient_fnc_error};
-if (player distance _station > getNumber(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_station) >> "max_distance_allowed")) exitWith {
+
+_maxDistance = getNumber(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_station) >> "max_distance_allowed");
+if ((player distance _station) > _maxDistance) exitWith {
 	["Plein impossible.<br/>Vous êtes trop loin de la station."] call AlysiaClient_fnc_error;
 };
 
@@ -51,19 +53,17 @@ _bill = 0;
 _liters = 0;
 _fuelmax = getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "fuelCapacity");
 _fill = false;
+_distanceBegin = player distance _veh;
 
 while {true} do
 {
-	if (isNull _display) exitWith {
-		["Plein interrompu.<br/>Fenêtre d'intéraction fermée."] call AlysiaClient_fnc_error;
-	};
 	if (_bill > g_atm) exitWith {
 		["Plein interrompu.<br/>Vous n'avez pas assez d'argent sur votre compte pour payer le plein d'un jerrycan."] call AlysiaClient_fnc_error;
 	};
-	if ((player distance _station) > 4) exitWith {
+	if ((player distance _station) > _maxDistance) exitWith {
 		["Plein interrompu.<br/>Vous êtes trop loin de la station."] call AlysiaClient_fnc_error;
 	};
-	if ((player distance _veh) > 5) exitWith {
+	if ((player distance _veh) > (_distanceBegin + 2)) exitWith {
 		["Plein interrompu.<br/>Vous êtes trop loin du véhicule."] call AlysiaClient_fnc_error;
 	};
 	if ((locked _veh) isEqualTo 2) exitWith {
@@ -75,6 +75,11 @@ while {true} do
 
 	if (((fuel _veh) + (_liters / _fuelmax)) >= 1) exitWith {_fill = true};
 	if ((_currentLiters - _liters) <= 0) exitWith {_fill = true};
+	if ((isNull _display) && (_liters > 0)) exitWith {_fill = true};
+
+	if (isNull _display) exitWith {
+		["Plein interrompu.<br/>Fenêtre d'intéraction fermée."] call AlysiaClient_fnc_error;
+	};
 
 	_liters = _liters + 1;
 	_station setVariable [_type, (_currentLiters - _liters)];

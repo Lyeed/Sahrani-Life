@@ -13,9 +13,12 @@ switch ([_this, 0, 0, [0]] call BIS_fnc_param) do
 	case 0:
 	{
 		{
-			for "_i" from 0 to (([_x] call AlysiaClient_fnc_itemCount) - 1) do
+			if (!(_x in ["illegal_money", "money_transfer"])) then
 			{
-				_ret pushBack _x;
+				for "_i" from 0 to (([_x] call AlysiaClient_fnc_itemCount) - 1) do
+				{
+					_ret pushBack _x;
+				};
 			};
 		} forEach (missionNamespace getVariable ["g_inv_items", []]);
 	};

@@ -473,7 +473,7 @@ class RscDisplayAuctionHouse: RscDisplayDefault
 		class STATS_GLOBAL_INFO: RscStructuredText
 		{
 			idc = 45637;
-			text = "objets et véhicules en vente dans le pays";
+			text = "vente(s) dans le pays";
 			colorBackground[] = {0,0,0,0.8};
 			
 			x = 0.386562 * safezoneW + safezoneX;
@@ -504,7 +504,7 @@ class RscDisplayAuctionHouse: RscDisplayDefault
 		class STATS_NORTH_INFO: RscStructuredText
 		{
 			idc = 45640;
-			text = "ventes dans le Nord";
+			text = "vente(s) dans le Nord";
 			colorBackground[] = {0,0,0,0.8};
 			
 			x = 0.386562 * safezoneW + safezoneX;
@@ -535,7 +535,7 @@ class RscDisplayAuctionHouse: RscDisplayDefault
 		class STATS_SOUTH_INFO: RscStructuredText
 		{
 			idc = 45643;
-			text = "ventes dans le Sud";
+			text = "vente(s) dans le Sud";
 			colorBackground[] = {0,0,0,0.8};
 			
 			x = 0.386562 * safezoneW + safezoneX;

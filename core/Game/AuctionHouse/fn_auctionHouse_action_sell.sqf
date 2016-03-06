@@ -90,6 +90,7 @@ if (_action) then
 			true;
 		};
 	};
+	
 	if (_condition) then
 	{
 		[g_AH_type, g_AH_location, _item, _price, player, _vehicle] remoteExec ["AlysiaServer_fnc_auctionHouse_add", 2];

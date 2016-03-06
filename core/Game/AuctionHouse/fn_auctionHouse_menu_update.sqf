@@ -30,15 +30,15 @@ if (
 		(g_cash >= _price) &&
 		(getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "auction_house" >> "can_buy") isEqualTo 1)
 	) then {
-	ctrlShow[45609, true];
-	ctrlShow[45610, true];
-	ctrlShow[45611, true];
-	ctrlShow[45612, true];
-	ctrlShow[45613, true];
-} else {
 	ctrlShow[45609, false];
 	ctrlShow[45610, false];
 	ctrlShow[45611, false];
 	ctrlShow[45612, false];
 	ctrlShow[45613, false];
+} else {
+	ctrlShow[45609, true];
+	ctrlShow[45610, true];
+	ctrlShow[45611, true];
+	ctrlShow[45612, true];
+	ctrlShow[45613, true];
 };

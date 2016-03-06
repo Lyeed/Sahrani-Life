@@ -137,7 +137,7 @@ class COMPANY_ACTION_LICENSE_BUTTON: RscButtonSilent
 	tooltip = "Payer la license d'entreprise";
 
 	x = 0.324687 * safezoneW + safezoneX;
-	y = 0.467 * safezoneH + safezoneY;
+	y = 0.522 * safezoneH + safezoneY;
 	w = 0.0257812 * safezoneW;
 	h = 0.044 * safezoneH;
 };
@@ -161,7 +161,7 @@ class COMPANY_ACTION_PROMOTE_BUTTON: RscButtonSilent
 	tooltip = "Nommer DPG de l'entreprise";
 
 	x = 0.324687 * safezoneW + safezoneX;
-	y = 0.467 * safezoneH + safezoneY;
+	y = 0.577 * safezoneH + safezoneY;
 	w = 0.0257812 * safezoneW;
 	h = 0.044 * safezoneH;
 };

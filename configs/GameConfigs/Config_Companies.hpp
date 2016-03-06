@@ -38,6 +38,7 @@ class ALYSIA_COMPANIES
 	{
 		class weapon
 		{
+			ready = 1;
 			name = "Industrie d'armement";
 			building = "Land_Ind_vysypka";
 			license = "company_weapon";
@@ -71,7 +72,7 @@ class ALYSIA_COMPANIES
 				"weapon_sdar",
 				"magazine_sdar"
 			};
-			members_max = 6;
+			members_max = 8;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -87,19 +88,20 @@ class ALYSIA_COMPANIES
 			};
 			class tax
 			{
-				price_per_employee = 70;
-				price_building = 200;
+				price_per_employee = 150;
+				price_building = 450;
 			};
 		};
 
 		class farming_bio
 		{
+			ready = 1;
 			name = "Ferme bio";
 			building = "Land_i_Windmill01_F";
 			license = "company_farming_bio";
 			image = "lyeed_IMG\data\companies\types\farming_bio.paa";
 			process[] = {};
-			members_max = 8;
+			members_max = 12;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -115,13 +117,14 @@ class ALYSIA_COMPANIES
 			};
 			class tax
 			{
-				price_per_employee = 100;
-				price_building = 100;
+				price_per_employee = 90;
+				price_building = 50;
 			};
 		};
 
 		class farming_industrial
 		{
+			ready = 0;
 			name = "Industrie agricole";
 			building = "Land_Shed_Ind02";
 			license = "company_farming_industrial";
@@ -150,6 +153,7 @@ class ALYSIA_COMPANIES
 
 		class garagist
 		{
+			ready = 1;
 			name = "Garagiste";
 			building = "Land_CarService_F";
 			license = "company_garagist";
@@ -178,6 +182,7 @@ class ALYSIA_COMPANIES
 
 		class money_transfer
 		{
+			ready = 0;
 			name = "Transport de fonds";
 			building = "Land_i_Shed_Ind_F";
 			license = "company_money_tranfer";
@@ -206,12 +211,13 @@ class ALYSIA_COMPANIES
 
 		class foundry
 		{
+			ready = 1;
 			name = "Fonderie";
 			building = "Land_Factory_Main_F";
 			license = "company_foundry";
 			image = "lyeed_IMG\data\companies\types\foundry.paa";
 			process[] = {"steel", "soufre"};
-			members_max = 8;
+			members_max = 10;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -227,13 +233,14 @@ class ALYSIA_COMPANIES
 			};
 			class tax
 			{
-				price_per_employee = 100;
-				price_building = 100;
+				price_per_employee = 125;
+				price_building = 190;
 			};
 		};
 
 		class fuel
 		{
+			ready = 0;
 			name = "Exploitation du pétrole";
 			building = "";//?
 			license = "company_fuel";
@@ -262,12 +269,13 @@ class ALYSIA_COMPANIES
 
 		class construction
 		{
+			ready = 1;
 			name = "Construction";
 			building = "Land_WIP_F";
 			license = "company_construction";
 			image = "lyeed_IMG\data\companies\types\construction.paa";
 			process[] = {"brique", "Cimenttr"};
-			members_max = 8;
+			members_max = 15;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -283,13 +291,14 @@ class ALYSIA_COMPANIES
 			};
 			class tax
 			{
-				price_per_employee = 70;
-				price_building = 150;
+				price_per_employee = 30;
+				price_building = 225;
 			};
 		};
 
 		class transport
 		{
+			ready = 0;
 			name = "Transport de personnes";
 			building = "Land_Hangar_F";
 			license = "company_transport";
@@ -318,6 +327,7 @@ class ALYSIA_COMPANIES
 
 		class security
 		{
+			ready = 0;
 			name = "Sécurité";
 			building = "Land_Cargo_HQ_V1_F";
 			license = "company_security";
@@ -346,6 +356,7 @@ class ALYSIA_COMPANIES
 
 		class service
 		{
+			ready = 0;
 			name = "Service";
 			building = "Land_Entreprise01_F";
 			license = "company_service";
@@ -374,6 +385,7 @@ class ALYSIA_COMPANIES
 
 		class car_dealer
 		{
+			ready = 0;
 			name = "Concesionnaire";
 			building = "";
 			license = "company_car_dealer";
@@ -402,6 +414,7 @@ class ALYSIA_COMPANIES
 
 		class shop
 		{
+			ready = 0;
 			name = "Magasin";
 			building = "Land_A_GeneralStore_01";
 			license = "company_shop";
@@ -430,6 +443,7 @@ class ALYSIA_COMPANIES
 
 		class news
 		{
+			ready = 0;
 			name = "Journaliste";
 			building = "";//?
 			license = "company_news";

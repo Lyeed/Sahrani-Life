@@ -103,7 +103,7 @@ if (g_launder > 0) then
 					};
 				};
 
-				_veh setFuel ((fuel _veh) - (((abs(speed _veh) + 10) / 220000) * _conso));
+				_veh setFuel ((fuel _veh) - (((abs(speed _veh) + 10) / 200000) * _conso));
 			};
 
 			uiSleep 2;
