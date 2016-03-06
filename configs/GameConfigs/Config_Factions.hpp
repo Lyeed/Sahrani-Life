@@ -32,7 +32,7 @@ class ALYSIA_FACTIONS
 
 		class auction_house
 		{
-			can_buy = 0;
+			can_buy = 1;
 			can_sell = 0;
 			can_search = 1;
 		};
@@ -335,7 +335,7 @@ class ALYSIA_FACTIONS
 		{
 			class pilot
 			{
-				rank = 5;
+				rank = 4;
 				same_side_only = 1;
 			};
 		};
@@ -381,7 +381,7 @@ class ALYSIA_FACTIONS
 			{
 				"RH_fn57",
 				"RH_m1911",
-				"hlc_rifle_auga2_b"
+				"hlc_rifle_auga3_b"
 			};
 			class leader_board
 			{
@@ -656,7 +656,7 @@ class ALYSIA_FACTIONS
 			history_items[] = {};
 			class leader_board
 			{
-				access_rank = 6;
+				access_rank = 5;
 			};
 		};
 

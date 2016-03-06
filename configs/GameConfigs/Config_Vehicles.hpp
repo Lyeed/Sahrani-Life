@@ -2,7 +2,7 @@ class ALYSIA_VEHICLES_INFO
 {
 	/* MASTER VEHICLES CONFIG */
 	insurance_percentage = 0.29;
-	garage_percentage = 0.03;
+	garage_percentage = 0.02;
 	steal_percentage = 0.20;
 	sell_percentage = 0.40;
 	transfert_percentage = 0.05;

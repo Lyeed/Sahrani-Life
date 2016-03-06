@@ -244,7 +244,7 @@ if (isNull _target) exitWith {};
 					{(((g_company getVariable 'company_info') select 2) isEqualTo 'money_transfer')}
 				)
 			 "
-			],
+		],
 		[
 			"money_transfer",
 			"Déposer sac",
@@ -257,7 +257,7 @@ if (isNull _target) exitWith {};
 					!(isNull (player getVariable ['money_transfer', objNull]))
 				)
 			 "
-			],
+		],
 		[
 			"money_bomb",
 			"Braquer",

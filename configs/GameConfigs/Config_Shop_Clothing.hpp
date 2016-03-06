@@ -704,8 +704,8 @@ class ALYSIA_SHOPS_CLOTHING
 	{
 		name = "Barbier";
 		side = "";
-		uniforms[] = {};
-		headgear[] = {
+		headgear[] =
+		{
 			"TRYK_H_wig"
 		};
 		goggles[] =
@@ -727,8 +727,6 @@ class ALYSIA_SHOPS_CLOTHING
 			"TRYK_Beard_BW4",
 			"TRYK_Beard_Gr4"
 		};
-		vests[] = {};
-		backpacks[] = {};
 	};
 
 	class civ_masque
