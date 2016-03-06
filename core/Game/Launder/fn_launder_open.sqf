@@ -9,7 +9,7 @@
 if (isClass(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "launder")) then
 {
 	private "_amount";
-	createDialog "RscDisplayLaunder"
+	createDialog "RscDisplayLaunder";
 	_amount = ["illegal_money"] call AlysiaClient_fnc_itemCount;
 	((findDisplay 29000) displayCtrl 29001) ctrlSetStructuredText parseText format
 	[

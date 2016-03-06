@@ -59,10 +59,11 @@ _storage = getText(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_
 	if (_price_condition) then {"#31B404"} else {"#DF0101"},
 	[_price] call AlysiaClient_fnc_numberText,
 	if (isClass(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >> "storage")) then {format["<t color='#8cff9b'>Oui</t>, %1", ([getText(missionConfigFile >> "ALYSIA_STORAGES" >> getText(missionConfigFile >> "ALYSIA_HOUSES" >> (typeOf g_interaction_target) >> "storage" >> "type") >> "item")] call AlysiaClient_fnc_itemGetName)]} else {"<t color='#ff8c8c'>Non</t>"},
-	if (getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >> "garage") isEqualTo 1) then {"<t color='#8cff9b'>Oui</t>"} else {"<t color='#ff8c8c'>Non</t>"}
+	if (isClass(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(g_interaction_target) >> "garage")) then {"<t color='#8cff9b'>Oui</t>"} else {"<t color='#ff8c8c'>Non</t>"}
 ];
 
-if (_price_condition && _rank_condition && _license_condition) then {
+if (_price_condition && _rank_condition && _license_condition) then
+{
 	ctrlShow[45001, true];
 	ctrlShow[45002, true];
 	ctrlShow[45003, true];

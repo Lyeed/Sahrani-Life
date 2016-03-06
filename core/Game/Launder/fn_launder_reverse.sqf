@@ -17,7 +17,7 @@ _action =
 [
 	format
 	[
-		"Vous avez <t color='#8cff9b'>%1</t>kn d'argent sale.<br/>Transférer l'argent à la banque permettra de débloquer <t color='#8cff9b'>%1</t>kn dans le compte de votre faction.",
+		"Vous avez <t color='#8cff9b'>%1</t>kn d'argent sale.<br/>Transférer l'argent à la banque permettra de débloquer <t color='#8cff9b'>%2</t>kn dans le compte de votre faction.",
 		[_money] call AlysiaClient_fnc_numberText,
 		[_receive] call AlysiaClient_fnc_numberText
 	],

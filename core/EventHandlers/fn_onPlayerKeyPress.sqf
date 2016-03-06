@@ -41,4 +41,8 @@ if (g_staff_spec) exitWith
 	true;
 };
 
+if (_code in (actionKeys "ShowMap")) then {
+	[] spawn AlysiaEvent_fnc_onPlayerMapOpen;
+};
+
 false;

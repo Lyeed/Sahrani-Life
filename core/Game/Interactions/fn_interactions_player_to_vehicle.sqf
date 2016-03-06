@@ -123,7 +123,7 @@ if (isNull _target) exitWith {};
 		[
 			"flip",
 			"Pousser",
-			"[g_interaction_target] spawn AlysiaClient_fnc_vehicleMenu_push;",
+			"[g_interaction_target] call AlysiaClient_fnc_vehicleMenu_push;",
 			"
 				(
 					(g_interaction_target isKindOf 'Ship') &&

@@ -144,6 +144,11 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Skyline_Sac_Depanneur_01_F
 	{
+		buy_price = 150;
+		buy_license_CIV = "company_garagist";
+	};
+	class SDNS_depannage
+	{
 		buy_price = 800;
 		buy_license_CIV = "company_garagist";
 	};

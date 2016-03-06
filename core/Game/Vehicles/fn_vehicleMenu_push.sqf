@@ -18,16 +18,6 @@ if ((speed _target) > 0) exitWith {
 };
 
 closeDialog 0;
-
-if (!(["Pousser", 2, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {};
-
-if (!((crew _target) isEqualTo [])) exitWith {
-	["Le véhicule doit être vide."] call AlysiaClient_fnc_error;
-};
-if ((speed _target) > 0) exitWith {
-	["Le véhicule doit être à l'arrêt."] call AlysiaClient_fnc_error;	
-};
-
 _vel = velocity _target;
 _dir = direction _target;
 if (local _target) then {

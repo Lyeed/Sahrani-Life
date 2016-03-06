@@ -899,10 +899,10 @@ class ALYSIA_SHOPS_CLOTHING
 	{
 		name = "Réserve d'entreprises";
 		side = "CIV";
-		uniforms[] = {"U_C_WorkerCoveralls", "Skyline_Uniforme_Depanneur_01_F"};
+		uniforms[] = {"U_C_WorkerCoveralls", "Skyline_Uniforme_Depanneur_01_F", "SDNS_depannage"};
 		headgear[] = {"H_Cap_press"};
 		goggles[] = {};
 		vests[] = {"V_Press_F"};
-		backpacks[] = {};
+		backpacks[] = {"Skyline_Sac_Depanneur_01_F"};
 	};
 };

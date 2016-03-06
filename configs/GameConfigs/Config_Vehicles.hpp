@@ -17,10 +17,10 @@ class ALYSIA_VEHICLES
 		buy price 				-NUMBER-	(vehicle shop buy price)
     Ex: buyPrice = 1910000;
     ----------------------------
-		virtual inventory	-NUMBER-	(virtual inventory space)
+		virtual inventory	    -NUMBER-	(virtual inventory space)
     Ex: inventory = 45;
     ----------------------------
-		side 							-TXT-			(allow vehicles defined as WEST,EAST,GUER to be opened by faction member without having keys) 
+		side 					-TXT- (allow vehicles defined as WEST,EAST,GUER to be opened by faction member without having keys) 
     possible: [WEST,EAST,GUER,CIV]
     Ex: side = "WEST";
     ----------------------------
