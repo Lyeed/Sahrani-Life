@@ -6,15 +6,6 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (g_launder > 0) then
-{
-	[] spawn
-	{
-		sleep ((60 * random(15)) + 3);
-		[] call AlysiaClient_fnc_launderReceive;
-	};
-};
-
 [] spawn
 {
 	private["_bp", "_default"];

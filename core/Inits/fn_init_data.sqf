@@ -93,23 +93,32 @@ switch (playerSide) do
 {
 	case west: 
 	{
-		if ((call g_WESTLevel) > 0) then {player setVariable["rank", (call g_WESTLevel), true]};
+		if ((call g_WESTLevel) > 0) then {player setVariable ["rank", (call g_WESTLevel), true]};
 	};
 	
 	case east:
 	{
-		if ((call g_EASTLevel) > 0) then {player setVariable["rank", (call g_EASTLevel), true]};
+		if ((call g_EASTLevel) > 0) then {player setVariable ["rank", (call g_EASTLevel), true]};
 	};
 
 	case civilian:
 	{
-		if ((call g_CIVLevel) > 0) then {player setVariable["rank", (call g_CIVLevel), true]};
+		if ((call g_CIVLevel) > 0) then {player setVariable ["rank", (call g_CIVLevel), true]};
 		g_launder = _basic select 43;
+		if (g_launder > 0) then
+		{
+			[] spawn
+			{
+				waitUntil {missionNamespace getVariable ["g_connected", false]};
+				uiSleep ((round(random(15)) + 3) * 60);
+				[] call AlysiaClient_fnc_launderReceive;
+			};
+		};
 	};
 
 	case independent:
 	{
-		if ((call g_GUERLevel) > 0) then {player setVariable["rank", (call g_GUERLevel), true]};
+		if ((call g_GUERLevel) > 0) then {player setVariable ["rank", (call g_GUERLevel), true]};
 	};
 };
 
