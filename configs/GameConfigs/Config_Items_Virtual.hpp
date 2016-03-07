@@ -1,4 +1,4 @@
-cclass ALYSIA_ITEMS
+class ALYSIA_ITEMS
 {
 	class illegal_money
 	{
