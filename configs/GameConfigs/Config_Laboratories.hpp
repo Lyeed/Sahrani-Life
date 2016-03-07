@@ -28,7 +28,7 @@ class ALYSIA_LABORATORIES
 	class lab_clothing
 	{
 		object = "Land_DieselGroundPowerUnit_01_F";
-		process[] = {};
+		process[] = {"bulletproofvest_criminal","clothing_criminal1","clothing_criminal2","clothing_criminal3","clothing_criminal4","clothing_criminal5","clothing_criminal6","clothing_criminal7","clothing_criminal8","clothing_criminal9","clothing_criminal10","goggles_criminal1","goggles_criminal2","goggles_criminal3"};
 	};
 	class lab_cigare
 	{
