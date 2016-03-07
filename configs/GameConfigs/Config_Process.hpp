@@ -1714,30 +1714,6 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 
-	class gilet_criminel
-	{
-		name = "Fabrication de gilet barre-balles";
-		sound = "smelting";
-		require[] =
-		{
-			{"cottonp", 10},
-			{"steel",4}
-		};
-		receive[] =
-		{
-			/* VIRTUAL */{},
-			/* ARMA */{TRYK_V_IOTV_BLK},
-			/* CASH */0
-		};
-		time_per_item = 30;
-		time_default = 30;
-		class target {};
-		class factions
-		{
-			class CIV {};
-		};
-	};
-
 	class bulletproofvest_criminal
 	{
 		name = "Fabrication de gilet barre-balles";
@@ -1750,7 +1726,7 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			/* VIRTUAL */{},
-			/* ARMA */{TRYK_V_IOTV_BLK},
+			/* ARMA */{"TRYK_V_IOTV_BLK"},
 			/* CASH */0
 		};
 		time_per_item = 30;
@@ -1773,7 +1749,7 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			/* VIRTUAL */{},
-			/* ARMA */{TRYK_ZARATAKI},
+			/* ARMA */{"TRYK_ZARATAKI"},
 			/* CASH */0
 		};
 		time_per_item = 20;
@@ -1791,7 +1767,7 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			/* VIRTUAL */{},
-			/* ARMA */{TRYK_ZARATAKI2},
+			/* ARMA */{"TRYK_ZARATAKI2"},
 			/* CASH */0
 		};
 	};
@@ -1802,7 +1778,7 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			/* VIRTUAL */{},
-			/* ARMA */{TRYK_ZARATAKI3},
+			/* ARMA */{"TRYK_ZARATAKI3"},
 			/* CASH */0
 		};
 	};
@@ -1813,7 +1789,7 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			/* VIRTUAL */{},
-			/* ARMA */{TRYK_U_taki_BL},
+			/* ARMA */{"TRYK_U_taki_BL"},
 			/* CASH */0
 		};
 	};
@@ -1824,7 +1800,7 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			/* VIRTUAL */{},
-			/* ARMA */{TRYK_U_taki_COY},
+			/* ARMA */{"TRYK_U_taki_COY"},
 			/* CASH */0
 		};
 	};
@@ -1835,7 +1811,7 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			/* VIRTUAL */{},
-			/* ARMA */{TRYK_U_taki_wh},
+			/* ARMA */{"TRYK_U_taki_wh"},
 			/* CASH */0
 		};
 	};
@@ -1846,7 +1822,7 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			/* VIRTUAL */{},
-			/* ARMA */{TRYK_T_camo_3c_BG},
+			/* ARMA */{"TRYK_T_camo_3c_BG"},
 			/* CASH */0
 		};
 	};
@@ -1857,7 +1833,7 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			/* VIRTUAL */{},
-			/* ARMA */{TRYK_T_camo_desert_marpat_BG},
+			/* ARMA */{"TRYK_T_camo_desert_marpat_BG"},
 			/* CASH */0
 		};
 	};
@@ -1868,7 +1844,7 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			/* VIRTUAL */{},
-			/* ARMA */{TRYK_T_camo_Wood_BG},
+			/* ARMA */{"TRYK_T_camo_Wood_BG"},
 			/* CASH */0
 		};
 	};
@@ -1879,7 +1855,7 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			/* VIRTUAL */{},
-			/* ARMA */{TRYK_U_B_PCUHsW3},
+			/* ARMA */{"TRYK_U_B_PCUHsW3"},
 			/* CASH */0
 		};
 	};
@@ -1890,7 +1866,7 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			/* VIRTUAL */{},
-			/* ARMA */{G_Balaclava_blk},
+			/* ARMA */{"G_Balaclava_blk"},
 			/* CASH */0
 		};
 	};
@@ -1901,7 +1877,7 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			/* VIRTUAL */{},
-			/* ARMA */{Mask_M40},
+			/* ARMA */{"Mask_M40"},
 			/* CASH */0
 		};
 	};
@@ -1912,7 +1888,7 @@ class ALYSIA_PROCESS
 		receive[] =
 		{
 			/* VIRTUAL */{},
-			/* ARMA */{Masque_Solitaire},
+			/* ARMA */{"Masque_Solitaire"},
 			/* CASH */0
 		};
 	};
