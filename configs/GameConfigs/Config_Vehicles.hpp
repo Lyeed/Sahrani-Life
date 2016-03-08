@@ -2299,8 +2299,8 @@ class ALYSIA_VEHICLES
 
 	class CUP_C_Fishing_Boat_Chernarus
 	{
-		buyPrice = 18500;
-		inventory = 200;
+		buyPrice = 48500;
+		inventory = 300;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"boat"};
