@@ -100,9 +100,15 @@
 			"[] spawn AlysiaClient_fnc_interactionMenu_action_ticket;",
 			"
 				(
-					(getNumber(missionConfigFile >> 'ALYSIA_FACTIONS' >> str(playerSide) >> 'interaction_ticket') isEqualTo 1) &&
-					(isNull (g_interaction_target getVariable ['escorted',objNull])) &&
-					(playerSide != (side g_interaction_target))
+					(
+						(playerSide in [independent,east,west]) || 
+						(
+							(playerSide isEqualTo civilian) &&
+							!(isNull g_company) &&
+							{isClass(missionConfigFile >> 'ALYSIA_COMPANIES' >> 'types' >> ((g_company getVariable['company_info', '','']) select 2) >> 'ticket')}
+						)
+					) &&
+					(isNull (g_interaction_target getVariable ['escorted',objNull]))
 				)
 			"
 		],

@@ -160,6 +160,7 @@ class ALYSIA_COMPANIES
 			image = "lyeed_IMG\data\companies\types\garagist.paa";
 			process[] = {};
 			members_max = 8;
+			ticket = 1;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -276,6 +277,7 @@ class ALYSIA_COMPANIES
 			image = "lyeed_IMG\data\companies\types\construction.paa";
 			process[] = {"brique", "Cimenttr"};
 			members_max = 15;
+			ticket = 1;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -305,6 +307,7 @@ class ALYSIA_COMPANIES
 			image = "lyeed_IMG\data\companies\types\transport.paa";
 			process[] = {};
 			members_max = 8;
+			ticket = 1;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -334,6 +337,7 @@ class ALYSIA_COMPANIES
 			image = "lyeed_IMG\data\companies\types\security.paa";
 			process[] = {};
 			members_max = 8;
+			ticket = 1;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -363,6 +367,7 @@ class ALYSIA_COMPANIES
 			image = "lyeed_IMG\data\companies\types\service.paa";
 			process[] = {};
 			members_max = 8;
+			ticket = 1;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -392,6 +397,7 @@ class ALYSIA_COMPANIES
 			image = "lyeed_IMG\data\companies\types\car_dealer.paa";
 			process[] = {};
 			members_max = 8;
+			ticket = 1;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";

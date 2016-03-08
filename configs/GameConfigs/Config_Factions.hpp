@@ -159,7 +159,6 @@ class ALYSIA_FACTIONS
 
 		/*** INTERACTIONS ***/
 		interaction_seize_gear = 1;// can size near gear
-		interaction_ticket = 1;// can put ticket
 
 		/*** LEADER BOARD ***/
 		class board
@@ -267,9 +266,12 @@ class ALYSIA_FACTIONS
 
 		class launder_transfer
 		{
+			rank = 1;
+		};
+		class bank_faction
+		{
 			rank = 5;
 		};
-		class bank_faction: launder_transfer {};
 
 		/*** GEAR MISSION ***/
 		class mission
@@ -372,7 +374,6 @@ class ALYSIA_FACTIONS
 
 		/*** INTERACTIONS ***/
 		interaction_seize_gear = 1;
-		interaction_ticket = 1;
 
 		/*** LEADER BOARD ***/
 		class board
@@ -494,7 +495,6 @@ class ALYSIA_FACTIONS
 
 		/*** INTERACTIONS ***/
 		interaction_seize_gear = 0;
-		interaction_ticket = 0;
 
 		/*** LOADOUT ***/
 		class Loadout
@@ -638,7 +638,6 @@ class ALYSIA_FACTIONS
 
 		/*** INTERACTIONS ***/
 		interaction_seize_gear = 0;
-		interaction_ticket = 1;// can put ticket
 
 		/* Licenses */
 		class licenses_give

@@ -40,5 +40,6 @@ while {!(isNull _display)} do
 	if (g_interaction_target getVariable ["is_coma", false]) exitWith {
 		closeDialog 0;
 	};
-	sleep 0.5;
+
+	uiSleep 0.5;
 };

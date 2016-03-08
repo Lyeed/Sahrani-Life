@@ -6,6 +6,8 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
+if (playerSide != civilian) exitWith {};
+
 if (!(createDialog "RscDisplayShopDynMarkers")) exitWith {};
 
 [] call AlysiaClient_fnc_shop_dynamicMarkers_update_list;

@@ -18,9 +18,7 @@ if ((player distance (getMarkerPos _marker)) < 20) then
 		{
 			if ((player distance (getMarkerPos _marker)) < 20) then
 			{
-				if (_item != "") then {
-					[false, _item, 1] call AlysiaClient_fnc_handleInv;
-				};
+				if (_item != "") then {[false, _item, 1] call AlysiaClient_fnc_handleInv};
 				(format["La faction %1 a détruit %2.", getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "name"), (markerText _marker)]) remoteExecCall ["systemChat", -2];
 				(format[
 					"%1 %2 a détruit %3.",

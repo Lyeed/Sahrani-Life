@@ -19,6 +19,7 @@ lbClear _list;
 	{
 		_index = _list lbAdd format["Station service - %1", (mapGridPosition _x)];
 		_list lbSetData [_index, str([typeOf(_x), (getPos _x)])];
+		_list lbSetValue [_index, (player distance _x)];
 	};
 } forEach (allMissionObjects "All");
 
@@ -33,6 +34,7 @@ if ((lbSize _list) isEqualTo 0) then {
 	[9407, true] call AlysiaClient_fnc_tabletShow;
 	[9408, true] call AlysiaClient_fnc_tabletShow;
 	[9411, true] call AlysiaClient_fnc_tabletShow;
+	lbSortByValue _list;
 };
 
 _list lbSetCurSel 0;

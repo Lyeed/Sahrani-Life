@@ -41,9 +41,7 @@ if (_type) then
 					(_x != _item)
 				) exitWith {_ressource = _x};
 		} forEach ([_affected] call CBA_fnc_shuffle);
-		if (!(isNil "_ressource")) then {
-			[true, _ressource, _amount, false] call AlysiaClient_fnc_market_handlePrice;
-		};
+		if (!(isNil "_ressource")) then {[true, _ressource, _amount, false] call AlysiaClient_fnc_market_handlePrice};
 	};
 };
 

@@ -110,7 +110,7 @@ switch (_action) do
 				{
 					if ((player getVariable ["rank", 0]) >= getNumber(_config_launder >> "rank")) then
 					{
-						_txtL3 ctrlSetStructuredText parseText "<t align='right'>Saisie d'argent sale</t>";
+						_txtL3 ctrlSetStructuredText parseText "<t align='right'>Saisie</t>";
 						_btnL3 buttonSetAction "[] spawn AlysiaClient_fnc_launder_reverse";
 						_btnL3 ctrlShow true;
 						_txtL3 ctrlShow true;

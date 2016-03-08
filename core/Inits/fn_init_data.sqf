@@ -55,7 +55,8 @@ g_arrest_Caution = _basic select 26;
 g_arrest_Reason = _basic select 27;
 g_arrest_Escape = _basic select 28;
 g_arrest_Gear = _basic select 29;
-if (g_arrest_Time > 0) then {
+if (g_arrest_Time > 0) then
+{
 	if (g_arrest_Time isEqualTo -1) then {
 		g_arrest_Escape = true;
 	} else {
@@ -70,6 +71,9 @@ if ((_basic select 30) != "") then {
 g_phone_contacts = _basic select 31;
 [g_phone_messages, (_basic select 32)] call BIS_fnc_arrayPushStack;
 g_phone_forfait = _basic select 33;
+if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> g_phone_forfait >> "sides"))) then {
+	["lite"] call AlysiaClient_fnc_phone_forfait_change;
+};
 g_phone_blacklist = _basic select 34;
 g_apps = _basic select 35;
 g_choice = _basic select 36;

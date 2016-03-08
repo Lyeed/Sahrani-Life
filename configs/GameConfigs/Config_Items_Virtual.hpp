@@ -153,7 +153,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\table_wood.paa";
 		class use
 		{
-			action = "['table_bois'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
+			action = "['table_wood'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
 		};
 	};
 	class chair_wood
@@ -163,7 +163,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\chair_wood.paa";
 		class use
 		{
-			action = "['chaise_bois'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
+			action = "['chair_wood'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
 		};
 	};
 
