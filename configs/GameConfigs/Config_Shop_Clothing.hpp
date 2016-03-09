@@ -167,7 +167,6 @@ class ALYSIA_SHOPS_CLOTHING
 			"rds_worker_cap4",
 			"rds_worker_cap1",
 			"Casque_Moto",
-			"vietsh_Head",
 			"H_LIB_WP_Cap"
 		};
 		goggles[] =
@@ -390,7 +389,6 @@ class ALYSIA_SHOPS_CLOTHING
 			"rds_worker_cap4",
 			"rds_worker_cap1",
 			"Casque_Moto",
-			"vietsh_Head",
 			"H_LIB_SOV_PilotHelmet"
 		};
 		goggles[] =

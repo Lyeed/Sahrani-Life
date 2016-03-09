@@ -28,9 +28,6 @@ if ((vehicle player) != player) exitWith {
 if ((isClass(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "target")) && (isNull g_interaction_target)) exitWith {
 	["Le traitement à besoin d'émaner d'une entité"] call AlysiaClient_fnc_error;
 };
-if ((isClass(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_process_type >> "target")) && ((player distance g_interaction_target) > 5)) exitWith {
-	["Le traitement à besoin d'émaner d'une entité"] call AlysiaClient_fnc_error;
-};
 
 if (dialog) then {
 	closeDialog 0;

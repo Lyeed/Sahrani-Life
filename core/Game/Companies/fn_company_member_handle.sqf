@@ -12,10 +12,10 @@ _uid = [_this, 2, "", [""]] call BIS_fnc_param;
 _name = [_this, 3, "", [""]] call BIS_fnc_param;
 _handle = false;
 
-if (isNull _company) exitWith {};
+if (isNull _company) exitWith {false};
 
 _members = _company getVariable "company_members";
-if (isNil "_members") exitWith {};
+if (isNil "_members") exitWith {false};
 
 _uids = _members select 0;
 _names = _members select 1;

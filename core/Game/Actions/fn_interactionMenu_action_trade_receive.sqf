@@ -47,7 +47,7 @@ if (_action) then
 		if ((alive _x) && !(_x in g_vehicles)) then
 		{
 			g_vehicles pushBack _x;
-			[(getPlayerUID player), playerSide, _x] call AlysiaServer_fnc_keyManagement;
+			[(getPlayerUID player), playerSide, _x] remoteExecCall ["AlysiaServer_fnc_keyManagement", 2];
 		};
 	} forEach _keys;
 

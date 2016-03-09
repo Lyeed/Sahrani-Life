@@ -687,7 +687,7 @@ class ALYSIA_PROCESS
 		};
 		receive[] =
 		{
-			{"chair_wood"},
+			{{"chair_wood", 1}},
 			{},
 			0
 		};
@@ -711,7 +711,7 @@ class ALYSIA_PROCESS
 		};
 		receive[] =
 		{
-			{"table_wood"},
+			{{"table_wood", 1}},
 			{},
 			0
 		};
@@ -1770,6 +1770,8 @@ class ALYSIA_PROCESS
 			/* ARMA */{"TRYK_ZARATAKI2"},
 			/* CASH */0
 		};
+		class target {};
+		class factions: factions {};
 	};
 
 	class clothing_criminal3 : clothing_criminal1
@@ -1781,6 +1783,9 @@ class ALYSIA_PROCESS
 			/* ARMA */{"TRYK_ZARATAKI3"},
 			/* CASH */0
 		};
+		class target {};
+		class factions: factions {};
+
 	};
 
 	class clothing_criminal4 : clothing_criminal1
@@ -1792,6 +1797,8 @@ class ALYSIA_PROCESS
 			/* ARMA */{"TRYK_U_taki_BL"},
 			/* CASH */0
 		};
+		class target {};
+		class factions: factions {};
 	};
 
 	class clothing_criminal5 : clothing_criminal1
@@ -1803,6 +1810,8 @@ class ALYSIA_PROCESS
 			/* ARMA */{"TRYK_U_taki_COY"},
 			/* CASH */0
 		};
+		class target {};
+		class factions: factions {};
 	};
 
 	class clothing_criminal6 : clothing_criminal1
@@ -1814,6 +1823,8 @@ class ALYSIA_PROCESS
 			/* ARMA */{"TRYK_U_taki_wh"},
 			/* CASH */0
 		};
+		class target {};
+		class factions: factions {};
 	};
 
 	class clothing_criminal7 : clothing_criminal1
@@ -1825,6 +1836,8 @@ class ALYSIA_PROCESS
 			/* ARMA */{"TRYK_T_camo_3c_BG"},
 			/* CASH */0
 		};
+		class target {};
+		class factions: factions {};
 	};
 
 	class clothing_criminal8 : clothing_criminal1
@@ -1836,6 +1849,8 @@ class ALYSIA_PROCESS
 			/* ARMA */{"TRYK_T_camo_desert_marpat_BG"},
 			/* CASH */0
 		};
+		class target {};
+		class factions: factions {};
 	};
 
 	class clothing_criminal9 : clothing_criminal1
@@ -1847,6 +1862,8 @@ class ALYSIA_PROCESS
 			/* ARMA */{"TRYK_T_camo_Wood_BG"},
 			/* CASH */0
 		};
+		class target {};
+		class factions: factions {};
 	};
 
 	class clothing_criminal10 : clothing_criminal1
@@ -1858,6 +1875,8 @@ class ALYSIA_PROCESS
 			/* ARMA */{"TRYK_U_B_PCUHsW3"},
 			/* CASH */0
 		};
+		class target {};
+		class factions: factions {};
 	};
 	
 	class goggles_criminal1 : clothing_criminal1
@@ -1869,6 +1888,8 @@ class ALYSIA_PROCESS
 			/* ARMA */{"G_Balaclava_blk"},
 			/* CASH */0
 		};
+		class target {};
+		class factions: factions {};
 	};
 
 	class goggles_criminal2 : clothing_criminal1
@@ -1880,6 +1901,8 @@ class ALYSIA_PROCESS
 			/* ARMA */{"Mask_M40"},
 			/* CASH */0
 		};
+		class target {};
+		class factions: factions {};
 	};
 
 	class goggles_criminal3 : clothing_criminal1
@@ -1891,6 +1914,8 @@ class ALYSIA_PROCESS
 			/* ARMA */{"Masque_Solitaire"},
 			/* CASH */0
 		};
+		class target {};
+		class factions: factions {};
 	};
 
 };

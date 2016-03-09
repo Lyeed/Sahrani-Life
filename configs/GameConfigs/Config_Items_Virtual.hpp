@@ -232,7 +232,7 @@ class ALYSIA_ITEMS
 		class market
 		{
 			max = 408;
-			min = 200;
+			min = 100;
 			affect[] = {"grozdova", "slivovica", "turtle", "artefact", "artefact_R"};
 		};
 	};
@@ -243,12 +243,11 @@ class ALYSIA_ITEMS
 		weight = 4;
 		illegal = 1;
 		image = "alysia_items_virtual\data\artefact.paa";
-		license = "archeologie";
 		class market
 		{
 			max = 800;
-			min = 375;
-			affect[] = {"grozdova", "slivovica", "turtle", "objvaleur", "artefact_R"};
+			min = 200;
+			affect[] = {"grozdova", "slivovica", "turtle", "objvaleur"};
 		};
 	};
 	class artefact_R
@@ -262,7 +261,7 @@ class ALYSIA_ITEMS
 		{
 			max = 8032;
 			min = 2000;
-			affect[] = {"grozdova", "slivovica", "turtle", "objvaleur", "artefact"};
+			affect[] = {"grozdova", "slivovica", "turtle", "objvaleur"};
 		};
 	};
 
@@ -385,7 +384,7 @@ class ALYSIA_ITEMS
 		{
 			max = 630;
 			min = 350;
-			affect[] = {"cigarette", "cigare", "cocainepc", "heroinps", "methp", "marijuana"};
+			affect[] = {"cigarette", "cigare", "heroinps", "methp", "marijuana"};
 		};
 		class use
 		{
@@ -402,7 +401,7 @@ class ALYSIA_ITEMS
 		{
 			max = 550;
 			min = 210;
-			affect[] = {"cigarette", "cigare", "cocainep", "heroinps", "methp", "marijuana"};
+			affect[] = {"cigarette", "cigare", "heroinps", "methp", "marijuana"};
 		};
 		class use
 		{

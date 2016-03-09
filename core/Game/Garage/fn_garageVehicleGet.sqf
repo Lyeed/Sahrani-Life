@@ -88,9 +88,7 @@ if ((g_garage_info select 2) isEqualTo []) then
 		};
 	} forEach (g_garage_info select 2);	
 };
-if (isNil "_validSpawn") exitWith {
-	["Aucun emplacement de sortie de véhicule n'est libre"] call AlysiaClient_fnc_error;
-};
+if (isNil "_validSpawn") exitWith {["Aucun emplacement de sortie de véhicule n'est libre"] call AlysiaClient_fnc_error};
 
 [false, _price, format["Sortie véhicule (%1)", (_data select 5)]] call AlysiaClient_fnc_handleATM;
 
@@ -122,6 +120,10 @@ _hitpoints = ([_vehicle] call AlysiaClient_fnc_getAllHitPointsDamage) select 0;
 
 if (!((_data select 4) isEqualTo [])) then {
 	_vehicle setVariable ["Trunk", (_data select 4), true];
+};
+
+if ((_data select 11) != "") then {
+	_vehicle setVariable ["typeRefuel", (_data select 11), true];
 };
 
 _vehicle setVariable ["info", [(getPlayerUID player), (player getVariable ["realname", profileName]), (_data select 1), (_data select 2)], true];

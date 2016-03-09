@@ -87,7 +87,7 @@
 					_conso = getNumber(missionConfigFile >> "ALYSIA_FUEL" >> _curentfuel >> "conso");
 					if (_fuel != _curentfuel) then
 					{
-						if (!((_curentfuel in ["SP95", "SP98"]) && (_fuel in ["SP95", "SP98"]))) then
+						if (!(_fuel in ["SP95", "SP98"]) || ((_fuel in ["SP95", "SP98"]) && !(_curentfuel in ["SP95", "SP98"]))) then
 						{
 							[_veh, "HitEngine", 1] call AlysiaClient_fnc_setHitPointDamage;
 						};

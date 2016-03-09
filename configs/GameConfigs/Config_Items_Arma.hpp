@@ -2687,11 +2687,6 @@ class ALYSIA_ITEMS_ARMA
 		buy_condition_WEST = 9;
 		buy_condition_EAST = 4;
 	};
-	
-	class vietsh_Head
-	{
-		buy_price = 35;
-	};
 	class H_Beret_blk
 	{
 		buy_price = 100;
