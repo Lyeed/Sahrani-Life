@@ -37,7 +37,7 @@ if (_price > g_atm) exitWith {
 
 [(_data select 1), 1] remoteExec ["AlysiaServer_fnc_vehicle_update_insurrance", 2];
 [false, _price, format["Assurance véhicule (%1)", (_data select 5)]] call AlysiaClient_fnc_handleATM;
-[format["Vous avez assuré votre véhicule pour <t color='#8cff9b' align='center'>%1</t>kn.", [_price] call AlysiaClient_fnc_numberText], "buy"] call AlysiaClient_fnc_info;
+[format["Vous avez assuré votre véhicule pour <t color='#8cff9b'>%1</t>kn.", [_price] call AlysiaClient_fnc_numberText], "buy"] call AlysiaClient_fnc_info;
 (g_garage_vehicles select _index) set [2, 1];
 
 waitUntil

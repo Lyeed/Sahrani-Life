@@ -35,7 +35,6 @@
 				if (!(isForcedWalk player)) then
 				{
 					player forceWalk true;
-					titleText["Vous êtes surchargé", "PLAIN"];
 					player setFatigue 1;
 				};
 			} else {

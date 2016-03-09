@@ -105,7 +105,7 @@
 						(
 							(playerSide isEqualTo civilian) &&
 							!(isNull g_company) &&
-							{isClass(missionConfigFile >> 'ALYSIA_COMPANIES' >> 'types' >> ((g_company getVariable['company_info', '','']) select 2) >> 'ticket')}
+							{isClass(missionConfigFile >> 'ALYSIA_COMPANIES' >> 'types' >> ((g_company getVariable ['company_info', ['','']]) select 2) >> 'ticket')}
 						)
 					) &&
 					(isNull (g_interaction_target getVariable ['escorted',objNull]))
