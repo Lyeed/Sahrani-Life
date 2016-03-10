@@ -148,7 +148,7 @@ class ALYSIA_VEHICLES
 		inventory = 500;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck","company_foundry"};
+		licenses[] = {"truck","company_transport"};
 		fuel = "Diesel";
 	};
 
@@ -804,7 +804,7 @@ class ALYSIA_VEHICLES
 		inventory = 600;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck","company_foundry"};
+		licenses[] = {"truck","company_transport"};
 		fuel = "Diesel";
 		colors[] =
 		{
