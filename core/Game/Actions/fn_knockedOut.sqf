@@ -8,18 +8,21 @@
 
 if ((animationState player) != "Incapacitated") then
 {
-	private "_inUse";
-	_inUse = false;
-	if (g_action_inUse) then {
-		_inUse = true
-	} else {
-		g_action_inUse = true;
-	};
-	player playMoveNow "Incapacitated";
-	sleep round(random(7) + 2);
-	player playMoveNow "amovppnemstpsraswrfldnon";
+	if (!g_staff_god) then
+	{
+		private "_inUse";
+		_inUse = false;
+		if (g_action_inUse) then {
+			_inUse = true
+		} else {
+			g_action_inUse = true;
+		};
+		player playMoveNow "Incapacitated";
+		sleep round(random(7) + 2);
+		player playMoveNow "amovppnemstpsraswrfldnon";
 
-	if (!_inUse) then {
-		g_action_inUse = false;
+		if (!_inUse) then {
+			g_action_inUse = false;
+		};
 	};
 };

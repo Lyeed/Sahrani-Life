@@ -86,7 +86,9 @@ if (_action) then
 			_vehicle = g_vehicles select (lbValue[45621, _sel]);
 			if (isNil "_vehicle") exitWith {false};
 			if (isNull _vehicle) exitWith {false};
-			if ((player distance _vehicle) > 15) exitWith {false};
+			if ((player distance _vehicle) > 20) exitWith {false};
+			if (!(alive _x)) exitWith {false};
+			if (!(((_x getVariable ["info", [""]]) select 0) isEqualTo (getPlayerUID player))) exitWith {false};
 			true;
 		};
 	};

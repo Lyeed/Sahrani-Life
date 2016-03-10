@@ -21473,7 +21473,7 @@ class Mission
 		{
 			position[]={12087.686,25.951591,17717.045};
 			name="prison_nord_marker";
-			text="Centre de réabilitation";
+			text="Centre de réhabilitation";
 			type="Fett_handgrenade";
 			colorName="ColorWEST";
 			a=0.60000002;

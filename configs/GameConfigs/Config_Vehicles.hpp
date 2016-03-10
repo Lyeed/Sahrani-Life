@@ -3264,7 +3264,7 @@ class ALYSIA_VEHICLES
 		money_transfer = 1;
 	};
 
-		class Skyline_Vehicule_Jonzie_Viper
+	class Skyline_Vehicule_Jonzie_Viper
 	{
 		buyPrice = 815000;
 		inventory = 25;

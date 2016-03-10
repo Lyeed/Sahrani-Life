@@ -45,16 +45,7 @@ switch ([_this, 0, 0, [0]] call BIS_fnc_param) do
 	case 2:
 	{
 		{
-			if (alive _x) then
-			{
-				if ((player distance _x) < 20) then
-				{
-					if (((_x getVariable ["info", [""]]) select 0) isEqualTo (getPlayerUID player)) then
-					{
-						_ret pushBack (typeOf _x);
-					};
-				};
-			};
+			_ret pushBack (typeOf _x);
 		} forEach g_vehicles;
 	};
 

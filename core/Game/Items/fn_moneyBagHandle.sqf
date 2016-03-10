@@ -41,42 +41,43 @@ _action_1 = player addAction [format["Déposer <t color='#FFFF33'>%1</t>", ["mon
 
 while {!(isNull _obj) && !(isNull (attachedTo _obj))} do
 {
-	if (
-		(player getVariable ["is_coma", false]) ||
-		(player getVariable ["restrained", false]) ||
-		(player getVariable ["surrender", false])
-	) exitWith {
-		detach _obj;
-	};
+	if ((player getVariable ["is_coma", false]) || (player getVariable ["restrained", false]) || (player getVariable ["surrender", false])) exitWith {detach _obj};
 
 	_atm = (nearestObjects [player, (call g_atms), 2]) select 0;
 	if (!(isNil "_atm")) then
 	{
-		if (!(_atm getVariable ["inUse", false]) && !g_action_inUse) then
+		_config = missionConfigFile >> "ALYSIA_ATM" >> typeOf(_atm);
+		if (isClass(_config)) then
 		{
-			_max = getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(_atm) >> "money_stock");
-			_amount = _atm getVariable ["money", _max];
-			if ((_max - _amount) > 0) then
+			if (getNumber(_config >> "company_money_transfert") isEqualTo 1) then
 			{
-				_atm setVariable ["inUse", true, true];
-				g_action_inUse = true;
-				player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-				waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
-				playSound "buy";
-				deleteVehicle _obj;
-				[g_company, true, 2000 + ((_max - _amount) / 50)] call AlysiaClient_fnc_company_bank_handle;
-				_amount = _amount + 2000;
-				if (_amount > _max) then {
-					_amount = _max;
+				if (!(_atm getVariable ["inUse", false]) && !g_action_inUse) then
+				{
+					_max = getNumber(_config >> "money_stock");
+					_amount = _atm getVariable ["money", _max];
+					if ((_max - _amount) > 0) then
+					{
+						_atm setVariable ["inUse", true, true];
+						g_action_inUse = true;
+
+						player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+						waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
+						playSound "buy";
+						deleteVehicle _obj;
+						[g_company, true, 2000 + ((_max - _amount) / 50)] call AlysiaClient_fnc_company_bank_handle;
+						_amount = _amount + 2000;
+						if (_amount > _max) then {_amount = _max};
+						_atm setVariable ["money", _amount, true];
+						
+						_atm setVariable ["inUse", false, true];
+						g_action_inUse = false;
+					};
 				};
-				_atm setVariable ["money", _amount, true];
-				_atm setVariable ["inUse", false, true];
-				g_action_inUse = false;
 			};
 		};
 	};
 
-	sleep 1;
+	uiSleep 1;
 };
 
 player removeAction _action_1;

@@ -91,7 +91,7 @@ switch (_action) do
 			_config_bank_faction = missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "bank_faction";
 			if (isClass(_config_bank_faction)) then
 			{
-				if ((player getVariable ["rank", 0]) >= getNumber(_config_bank_faction >> "rank")) then
+				if (((player getVariable ["rank", 0]) >= getNumber(_config_bank_faction >> "rank")) || (["gov_money"] call AlysiaClient_fnc_hasLicense)) then
 				{
 					_txtL4 ctrlSetStructuredText parseText "<t align='right'>Faction</t>";
 					_btnL4 buttonSetAction "[""home_faction"", g_interaction_target] call AlysiaClient_fnc_atmScreen";
@@ -220,14 +220,11 @@ switch (_action) do
 	{
 		_title ctrlSetStructuredText parseText "<t align='center' size='1.5'>Distributeur Faction</t>";
 		
-		_value = switch (playerSide) do
-		{
-			case east: {gServer_faction_EAST_bank};
-			case west: {gServer_faction_WEST_bank};
-			case independent: {gServer_faction_GUER_bank};
-			case civilian: {gServer_faction_CIV_bank};
-		};
-		_balance ctrlSetStructuredText parseText format["<t align ='left' size='1.2'>Solde </t><t align='center' size='1.2'><t color='#74DF00'>%1</t>kn</t>", [_value] call AlysiaClient_fnc_numberText];
+		_balance ctrlSetStructuredText parseText format
+		[
+			"<t align ='left' size='1.2'>Solde </t><t align='center' size='1.2'><t color='#74DF00'>%1</t>kn</t>",
+			[[playerSide] call AlysiaClient_fnc_atmFactionGet] call AlysiaClient_fnc_numberText
+		];
 
 		_txtL1 ctrlSetStructuredText parseText "<t align='left'>Retrait</t>";
 		_btnL1 buttonSetAction "[""withdraw_faction"", g_interaction_target] call AlysiaClient_fnc_atmScreen";

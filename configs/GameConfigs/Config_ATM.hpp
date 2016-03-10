@@ -4,6 +4,7 @@ class ALYSIA_ATM
 	{
 		money_stock = 100000;
 		money_faction = 0;
+		company_money_transfert = 1;
 		withdraw_max = 5000;
 		withdraw_min = 50;
 		withdraw_tax = 3;
@@ -11,6 +12,7 @@ class ALYSIA_ATM
 		deposit_min = 50;
 		launder_transfer = 0;
 		company = 0;
+		save = 1;
 	};
 	
 	class Land_Atm_02_F: Land_Atm_01_F {};
@@ -21,6 +23,7 @@ class ALYSIA_ATM
 	{
 		money_stock = 900000000;
 		money_faction = 1;
+		company_money_transfert = 0;
 		withdraw_max = 1000000;
 		withdraw_min = 10;
 		withdraw_tax = 0;
@@ -28,5 +31,6 @@ class ALYSIA_ATM
 		deposit_min = 10;
 		launder_transfer = 1;
 		company = 1;
+		save = 0;
 	};
 };

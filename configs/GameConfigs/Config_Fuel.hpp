@@ -2,6 +2,7 @@ class ALYSIA_FUEL_STATION
 {
 	class Land_FuelStation_Feed_F
 	{
+		save = 0;
 		max_distance_allowed = 10;
 		class stock
 		{
@@ -26,6 +27,7 @@ class ALYSIA_FUEL_STATION
 
 	class Land_A_FuelStation_Feed
 	{
+		save = 0;
 		max_distance_allowed = 75;
 		class stock
 		{

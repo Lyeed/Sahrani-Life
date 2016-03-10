@@ -2,7 +2,7 @@ class ALYSIA_PRISONS
 {
 	class prison_n
 	{
-		name = "Centre de réabilitation";
+		name = "Centre de réhabilitation";
 		sides[] = {"WEST"};
 		uniform = "U_C_Prisonnier_01";
 		exit[] = {12140.4,17777.6,0.00143814};

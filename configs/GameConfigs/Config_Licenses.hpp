@@ -276,15 +276,21 @@ class ALYSIA_LICENSES
 
 	class gov_company
 	{
-		name = "Investisseur gouvernemental";
+		name = "Ministre du travail";
 		class factions
 		{
-			class CIV
-			{
-				price = 0;
-				pad_store = 0;
-				illegal = 0;
-			};
+			class CIV {};
+			class EAST: CIV {};
+			class WEST: CIV {};
+			class GUER: CIV {};
+		};
+	};
+	class gov_money
+	{
+		name = "Ministre des finances";
+		class factions
+		{
+			class CIV {};
 			class EAST: CIV {};
 			class WEST: CIV {};
 			class GUER: CIV {};

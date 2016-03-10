@@ -142,8 +142,6 @@ class CfgFunctions
 			class getGear {};
 			class getPlayerFromUID {};
 			class handleInv {};
-			class handleATM {};
-			class handleCash {};
 			class holdsterSwitch {};
 			class index {};
 			class info {};
@@ -445,10 +443,14 @@ class CfgFunctions
 			file = "core\Game\Bank";
 			class atmAction {};
 			class atmScreen {};
+			class atmFactionGet {};
+			class atmFactionHandle {};
 			class robberyStart {};
 			class robberyProcess {};
 			class robberyTools {};
 			class salaryProcess {};
+			class handleATM {};
+			class handleCash {};
 		};
 
 		class AuctionHouse
