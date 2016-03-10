@@ -124,16 +124,7 @@ class ALYSIA_SHOPS_VEHICLES
 	{
 		name = "Concessionnaire poids lourds civil";
 		side = "CIV";
-		stock[] = 
-		{
-			"O_Truck_02_covered_F",
-			"shounka_a3_renaultmagnum_f",
-			"Mrshounka_a3_iveco_f",
-			"B_G_Van_01_fuel_F",
-			"O_Truck_02_fuel_F",
-			"Jonzie_Tanker_Truck",
-			"Jonzie_Box_Truck"
-		};
+		stock[] = {};
 	};
 	class CIV_vehicles_land_occasion
 	{
@@ -262,11 +253,19 @@ class ALYSIA_SHOPS_VEHICLES
 		{
 			"max_CrownVic_taxi",
 			"Skyline_Bus",
+			"shounka_limo_civ",
 			"max_towtruck",
 			"Jonzie_Tow_Truck",
-			"shounka_limo_civ",
+			"Skyline_Jeep_Wrangler_Rubicon_Depannage_01_F",
 			"shounka_a3_brinks_noir",
-			"Skyline_Jeep_Wrangler_Rubicon_Depannage_01_F"
+			"madsa_mtz_F",
+			"RDS_Zetor6945_Base",
+			"shounka_a3_renaultmagnum_f",
+			"Mrshounka_a3_iveco_f",
+			"B_G_Van_01_fuel_F",
+			"O_Truck_02_fuel_F",
+			"Jonzie_Tanker_Truck",
+			"Jonzie_Box_Truck"
 		};
 	};
 };

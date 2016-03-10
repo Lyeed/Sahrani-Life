@@ -93,7 +93,7 @@ switch (_action) do
 			{
 				if (((player getVariable ["rank", 0]) >= getNumber(_config_bank_faction >> "rank")) || (["gov_money"] call AlysiaClient_fnc_hasLicense)) then
 				{
-					_txtL4 ctrlSetStructuredText parseText "<t align='right'>Faction</t>";
+					_txtL4 ctrlSetStructuredText parseText "<t align='left'>Faction</t>";
 					_btnL4 buttonSetAction "[""home_faction"", g_interaction_target] call AlysiaClient_fnc_atmScreen";
 					_btnL4 ctrlShow true;
 					_txtL4 ctrlShow true;
@@ -110,7 +110,7 @@ switch (_action) do
 				{
 					if ((player getVariable ["rank", 0]) >= getNumber(_config_launder >> "rank")) then
 					{
-						_txtL3 ctrlSetStructuredText parseText "<t align='right'>Saisie</t>";
+						_txtL3 ctrlSetStructuredText parseText "<t align='left'>Saisie</t>";
 						_btnL3 buttonSetAction "[] spawn AlysiaClient_fnc_launder_reverse";
 						_btnL3 ctrlShow true;
 						_txtL3 ctrlShow true;

@@ -71,9 +71,6 @@ if ((_basic select 30) != "") then {
 g_phone_contacts = _basic select 31;
 [g_phone_messages, (_basic select 32)] call BIS_fnc_arrayPushStack;
 g_phone_forfait = _basic select 33;
-if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> g_phone_forfait >> "sides"))) then {
-	["lite"] call AlysiaClient_fnc_phone_forfait_change;
-};
 g_phone_blacklist = _basic select 34;
 g_apps = _basic select 35;
 g_choice = _basic select 36;
@@ -127,6 +124,10 @@ switch (playerSide) do
 };
 
 g_nextPay = time + (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary_timer") * 60);
+
+if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> g_phone_forfait >> "sides"))) then {
+	["lite"] call AlysiaClient_fnc_phone_forfait_change;
+};
 
 [] call AlysiaClient_fnc_init_loops;
 [[(_basic select 12), (_basic select 13), (_basic select 14)]] call AlysiaClient_fnc_init_position;

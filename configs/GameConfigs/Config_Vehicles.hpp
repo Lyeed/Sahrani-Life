@@ -148,7 +148,7 @@ class ALYSIA_VEHICLES
 		inventory = 500;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck","company_transport"};
+		licenses[] = {"truck","company_transport_goods"};
 		fuel = "Diesel";
 	};
 
@@ -804,7 +804,7 @@ class ALYSIA_VEHICLES
 		inventory = 600;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck","company_transport"};
+		licenses[] = {"truck","company_transport_goods"};
 		fuel = "Diesel";
 		colors[] =
 		{
@@ -916,7 +916,7 @@ class ALYSIA_VEHICLES
 		inventory = 20;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"driver","company_transport"};
+		licenses[] = {"driver","company_transport_people"};
 		fuel = "Diesel";
 		colors[] =
 		{
@@ -2027,7 +2027,7 @@ class ALYSIA_VEHICLES
 		inventory = 50;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"driver","company_transport"};
+		licenses[] = {"driver","company_transport_people"};
 		fuel = "SP95";
 	};
 
@@ -2236,7 +2236,7 @@ class ALYSIA_VEHICLES
 		inventory = 80;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"truck","company_transport"};
+		licenses[] = {"truck","company_transport_people"};
 		fuel = "Diesel";
 		colors[] =
 		{

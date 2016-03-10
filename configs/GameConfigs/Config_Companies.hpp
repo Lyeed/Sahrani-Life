@@ -124,13 +124,13 @@ class ALYSIA_COMPANIES
 
 		class farming_industrial
 		{
-			ready = 0;
+			ready = 1;
 			name = "Industrie agricole";
 			building = "Land_Shed_Ind02";
 			license = "company_farming_industrial";
 			image = "lyeed_IMG\data\companies\types\farming_industrial.paa";
 			process[] = {};
-			members_max = 8;
+			members_max = 10;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -146,8 +146,8 @@ class ALYSIA_COMPANIES
 			};
 			class tax
 			{
-				price_per_employee = 100;
-				price_building = 100;
+				price_per_employee = 110;
+				price_building = 120;
 			};
 		};
 
@@ -183,13 +183,13 @@ class ALYSIA_COMPANIES
 
 		class money_transfer
 		{
-			ready = 0;
+			ready = 1;
 			name = "Transport de fonds";
 			building = "Land_i_Shed_Ind_F";
 			license = "company_money_tranfer";
 			image = "lyeed_IMG\data\companies\types\money_transfer.paa";
 			process[] = {};
-			members_max = 6;
+			members_max = 7;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -212,7 +212,7 @@ class ALYSIA_COMPANIES
 
 		class foundry
 		{
-			ready = 1;
+			ready = 0;
 			name = "Fonderie";
 			building = "Land_Factory_Main_F";
 			license = "company_foundry";
@@ -298,12 +298,12 @@ class ALYSIA_COMPANIES
 			};
 		};
 
-		class transport
+		class transport_goods
 		{
-			ready = 0;
+			ready = 1;
 			name = "Transport de personnes";
 			building = "Land_Hangar_F";
-			license = "company_transport";
+			license = "company_transport_goods";
 			image = "lyeed_IMG\data\companies\types\transport.paa";
 			process[] = {};
 			members_max = 8;
@@ -360,7 +360,7 @@ class ALYSIA_COMPANIES
 
 		class service
 		{
-			ready = 0;
+			ready = 1;
 			name = "Service";
 			building = "Land_Entreprise01_F";
 			license = "company_service";
@@ -383,7 +383,7 @@ class ALYSIA_COMPANIES
 			};
 			class tax
 			{
-				price_per_employee = 100;
+				price_per_employee = 80;
 				price_building = 100;
 			};
 		};

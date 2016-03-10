@@ -33,4 +33,4 @@ if (([_desc] call CBA_fnc_strLen) > 90) exitWith {
 
 closeDialog 0;
 ["Paiement <t color='#01DF01'>proposé</t>."] call AlysiaClient_fnc_info;
-[_price, _desc, player] remoteExec ["AlysiaClient_fnc_interactionMenu_action_ticket_receive", g_interaction_target];
+[_price, _desc, player, g_company] remoteExec ["AlysiaClient_fnc_interactionMenu_action_ticket_receive", g_interaction_target];

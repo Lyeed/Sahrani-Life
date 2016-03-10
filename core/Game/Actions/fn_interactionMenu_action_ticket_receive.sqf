@@ -52,7 +52,7 @@ if (_action) then
 			case west: {[civilian, true, _price] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2]};
 			case east: {[east, true, _price] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2]};
 			case independent: {[independent, true, _price] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2]};
-			case civilian: {[g_company, true, _price] call AlysiaClient_fnc_company_bank_handle};
+			case civilian: {[[_this, 3, objNull, [objNull]] call BIS_fnc_param, true, _price] call AlysiaClient_fnc_company_bank_handle};
 		};
 	} else {
 		["La personne n'a <t color='#DF0101'>pas assez</t> d'argent pour payer."] remoteExecCall ["AlysiaClient_fnc_info", _from];

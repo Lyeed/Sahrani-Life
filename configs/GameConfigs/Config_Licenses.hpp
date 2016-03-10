@@ -276,7 +276,7 @@ class ALYSIA_LICENSES
 
 	class gov_company
 	{
-		name = "Ministre du travail";
+		name = "Député chargé du travail";
 		class factions
 		{
 			class CIV {};
@@ -287,7 +287,18 @@ class ALYSIA_LICENSES
 	};
 	class gov_money
 	{
-		name = "Ministre des finances";
+		name = "Député chargé des finances";
+		class factions
+		{
+			class CIV {};
+			class EAST: CIV {};
+			class WEST: CIV {};
+			class GUER: CIV {};
+		};
+	};
+	class gov_justice
+	{
+		name = "Député chargé de la Justice";
 		class factions
 		{
 			class CIV {};
@@ -401,14 +412,27 @@ class ALYSIA_LICENSES
 			};
 		};
 	};
-	class company_transport
+	class company_transport_goods
+	{
+		name = "Licence de transporteur";
+		class factions
+		{
+			class CIV
+			{
+				price = 13500;
+				pad_store = 0;
+				illegal = 0;
+			};
+		};
+	};
+	class company_transport_people
 	{
 		name = "Licence de chauffeur";
 		class factions
 		{
 			class CIV
 			{
-				price = 13500;
+				price = 7500;
 				pad_store = 0;
 				illegal = 0;
 			};
