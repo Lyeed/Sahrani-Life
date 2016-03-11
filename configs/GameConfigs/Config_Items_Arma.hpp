@@ -645,9 +645,9 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 15;
 		buy_license_CIV = "company_news";
 	};
-	class V_Press_F
+	class U_C_Journalist
 	{
-		buy_price = 1900;
+		buy_price = 98;
 		buy_license_CIV = "company_news";
 	};
 	class H_Cap_red
@@ -2749,7 +2749,6 @@ class ALYSIA_ITEMS_ARMA
     	buy_price = 3950;
     	buy_license_CIV = "company_garagist";
     };
-
 	class Fett_SDAR
 	{
 		buy_price = 2000;
@@ -2777,7 +2776,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class usm_vest_safety
 	{
-		buy_price = 20;
+		buy_price = 80;
 		buy_license_CIV = "company_construction";
 	};
 	class Bank_Bomb

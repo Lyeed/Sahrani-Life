@@ -70,7 +70,10 @@ class ALYSIA_COMPANIES
 				"weapon_gsh18",
 				"magazine_gsh18",
 				"weapon_sdar",
-				"magazine_sdar"
+				"magazine_sdar",
+				"bulletproofvest_news",
+				"bulletproofvest_security",
+				"bulletproofvest_transfer"
 			};
 			members_max = 8;
 			class construction

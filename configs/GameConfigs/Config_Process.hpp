@@ -1622,7 +1622,7 @@ class ALYSIA_PROCESS
 		name = "Munitions : SDAR";
 		require[] =
 		{
-			{"balle", 20},
+			{"bullet", 20},
 			{"magazine", 1}
 		};
 		receive[] =
@@ -1737,8 +1737,29 @@ class ALYSIA_PROCESS
 			class CIV {};
 		};
 	};
+	class bulletproofvest_news: bulletproofvest_criminal
+	{
+		name = "Fabrication de gilet Presse";
+		receive[] = {{}, {"V_Press_F"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class bulletproofvest_security: bulletproofvest_criminal
+	{
+		name = "Fabrication de gilet Sécurité";
+		receive[] = {{}, {"TRYK_V_Bulletproof_BLK"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class bulletproofvest_transfer: bulletproofvest_criminal
+	{
+		name = "Fabrication de gilet Convoyeur";
+		receive[] = {{}, {"TRYK_V_Bulletproof_BL"}, 0};
+		class target {};
+		class factions: factions {};
+	};
 
-	class clothing_criminal1
+	class clothing_criminal_1
 	{
 		name = "Fabrication de tenue criminelle 1";
 		sound = "smelting";
@@ -1761,7 +1782,7 @@ class ALYSIA_PROCESS
 		};
 	};
 
-	class clothing_criminal2 : clothing_criminal1
+	class clothing_criminal_2: clothing_criminal1
 	{
 		name = "Fabrication de tenue criminelle 2";
 		receive[] =
@@ -1774,7 +1795,7 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 
-	class clothing_criminal3 : clothing_criminal1
+	class clothing_criminal_3: clothing_criminal1
 	{
 		name = "Fabrication de tenue criminelle 3";
 		receive[] =
@@ -1788,7 +1809,7 @@ class ALYSIA_PROCESS
 
 	};
 
-	class clothing_criminal4 : clothing_criminal1
+	class clothing_criminal_4: clothing_criminal1
 	{
 		name = "Fabrication de tenue criminelle 4";
 		receive[] =
@@ -1801,7 +1822,7 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 
-	class clothing_criminal5 : clothing_criminal1
+	class clothing_criminal_5: clothing_criminal1
 	{
 		name = "Fabrication de tenue criminelle 5";
 		receive[] =
@@ -1814,7 +1835,7 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 
-	class clothing_criminal6 : clothing_criminal1
+	class clothing_criminal_6: clothing_criminal1
 	{
 		name = "Fabrication de tenue criminelle 6";
 		receive[] =
@@ -1827,7 +1848,7 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 
-	class clothing_criminal7 : clothing_criminal1
+	class clothing_criminal_7: clothing_criminal1
 	{
 		name = "Fabrication de tenue criminelle 7";
 		receive[] =
@@ -1840,7 +1861,7 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 
-	class clothing_criminal8 : clothing_criminal1
+	class clothing_criminal_8: clothing_criminal1
 	{
 		name = "Fabrication de tenue criminelle 8";
 		receive[] =
@@ -1853,7 +1874,7 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 
-	class clothing_criminal9 : clothing_criminal1
+	class clothing_criminal_9: clothing_criminal1
 	{
 		name = "Fabrication de tenue criminelle 9";
 		receive[] =
@@ -1866,7 +1887,7 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 
-	class clothing_criminal10 : clothing_criminal1
+	class clothing_criminal_10: clothing_criminal1
 	{
 		name = "Fabrication de tenue criminelle 10";
 		receive[] =
@@ -1879,7 +1900,7 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 	
-	class goggles_criminal1 : clothing_criminal1
+	class goggles_criminal_1: clothing_criminal1
 	{
 		name = "Fabrication cagoule criminelle 1";
 		receive[] =
@@ -1892,7 +1913,7 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 
-	class goggles_criminal2 : clothing_criminal1
+	class goggles_criminal_2: clothing_criminal1
 	{
 		name = "Fabrication masque à gaz";
 		receive[] =
@@ -1905,7 +1926,7 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 
-	class goggles_criminal3 : clothing_criminal1
+	class goggles_criminal_3: clothing_criminal1
 	{
 		name = "Fabrication masque de voleur";
 		receive[] =
@@ -1917,5 +1938,4 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions: factions {};
 	};
-
 };

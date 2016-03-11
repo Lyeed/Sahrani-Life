@@ -638,38 +638,6 @@ class ALYSIA_SHOPS_CLOTHING
 		};
 	};
 
-	class civ_job
-	{
-		name = "Friperie métier civils";
-		side = "CIV";
-		uniforms[] =
-		{
-			"Skyline_Uniforme_Depanneur_01_F",
-			"U_C_Journalist",
-			"U_C_Journaliste_01",
-			"U_C_Journaliste_02",
-			"Skyline_Uniforme_Securite_03_F",
-			"Skyline_Uniforme_Securite_02_F",
-			"Skyline_Uniforme_Securite_01_F"
-		};
-		headgear[] = 
-		{
-			"usm_helmet_safety",
-			"H_Cap_press",
-			"H_Cap_Securite_01"
-		};
-		goggles[] = {};
-		vests[] = 
-		{
-			"usm_vest_safety",
-			"V_TacVest_Securite_01"
-		};
-		backpacks[] =
-		{
-			"Skyline_Sac_Depanneur_01_F"
-		};
-	};
-
 	class civ_luxe
 	{
 		name = "Friperie de luxe";
@@ -897,10 +865,24 @@ class ALYSIA_SHOPS_CLOTHING
 	{
 		name = "Réserve d'entreprises";
 		side = "CIV";
-		uniforms[] = {"U_C_WorkerCoveralls", "Skyline_Uniforme_Depanneur_01_F", "SDNS_depannage"};
-		headgear[] = {"H_Cap_press"};
+		uniforms[] =
+		{
+			"U_C_WorkerCoveralls",
+			"Skyline_Uniforme_Depanneur_01_F",
+			"SDNS_depannage",
+			"U_C_Journalist",
+			"Skyline_Uniforme_Securite_01_F",
+			"Skyline_Uniforme_Securite_02_F",
+			"Skyline_Uniforme_Securite_03_F"
+		};
+		headgear[] =
+		{
+			"H_Cap_press",
+			"usm_helmet_safety",
+			"H_Cap_Securite_01"
+		};
 		goggles[] = {};
-		vests[] = {"V_Press_F"};
+		vests[] = {"usm_vest_safety"};
 		backpacks[] = {"Skyline_Sac_Depanneur_01_F"};
 	};
 };
