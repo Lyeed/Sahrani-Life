@@ -14,5 +14,6 @@ switch (true) do
 	case (typeOf(_vehicle) in ["Bank_Sahrani_N", "Bank_Sahrani_S"]): {5000};
 	case (isClass(missionConfigFile >> "ALYSIA_STORAGES" >> typeOf(_vehicle))): {getNumber(missionConfigFile >> "ALYSIA_STORAGES" >> typeOf(_vehicle) >> "inventory")};
 	case ((_vehicle isKindOf "Car") || (_vehicle isKindOf "Ship") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Tank") || (_vehicle isKindOf "Truck")): {[typeOf(_vehicle)] call AlysiaClient_fnc_getVehVirtual};
+	case (_vehicle isEqualTo g_company):{getNumber(missionConfigFile >> 'ALYSIA_COMPANIES' >> 'types' >> ((g_company getVariable 'company_info') select 2) >> 'storage' >> 'inventory')};
 	default {0};
 };

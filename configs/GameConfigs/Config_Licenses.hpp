@@ -280,9 +280,6 @@ class ALYSIA_LICENSES
 		class factions
 		{
 			class CIV {};
-			class EAST: CIV {};
-			class WEST: CIV {};
-			class GUER: CIV {};
 		};
 	};
 	class gov_money
@@ -291,9 +288,6 @@ class ALYSIA_LICENSES
 		class factions
 		{
 			class CIV {};
-			class EAST: CIV {};
-			class WEST: CIV {};
-			class GUER: CIV {};
 		};
 	};
 	class gov_justice
@@ -302,9 +296,6 @@ class ALYSIA_LICENSES
 		class factions
 		{
 			class CIV {};
-			class EAST: CIV {};
-			class WEST: CIV {};
-			class GUER: CIV {};
 		};
 	};
 
@@ -321,27 +312,14 @@ class ALYSIA_LICENSES
 			};
 		};
 	};
-	class company_farming_bio
+	class company_farming
 	{
-		name = "Licence d'Agriculture Bio";
+		name = "Licence d'Agriculture";
 		class factions
 		{
 			class CIV
 			{
 				price = 9000;
-				pad_store = 0;
-				illegal = 0;
-			};
-		};
-	};
-	class company_farming_industrial
-	{
-		name = "Licence d'Agriculture industrielle";
-		class factions
-		{
-			class CIV
-			{
-				price = 12000;
 				pad_store = 0;
 				illegal = 0;
 			};

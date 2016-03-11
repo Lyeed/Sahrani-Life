@@ -158,7 +158,7 @@ if ((vehicle player) isEqualTo player) then
 		if (!(isNull g_company)) then
 		{
 			_info = g_company getVariable "company_info";
-			if ((_info select 2) isEqualTo "farming_bio") then
+			if ((_info select 2) isEqualTo "farming") then
 			{
 				if ((player distance g_company) < 30) then
 				{

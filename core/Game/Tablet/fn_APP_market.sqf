@@ -11,7 +11,7 @@ disableSerialization;
 _display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
 
-_list = _display displayCtrl 8802;
+_list = _display displayCtrl 8803;
 lbClear _list;
 
 {
@@ -20,5 +20,12 @@ lbClear _list;
 	_list lbSetData [_index, _item];
 	_list lbSetPicture [_index, ([_item] call AlysiaClient_fnc_itemGetImage)];
 } foreach ("isClass(_x >> 'market')" configClasses (missionConfigFile >> "ALYSIA_ITEMS"));
+lbSort [_list, "ASC"];
 
-_list lbSetCurSel 0;
+_list lbSetCurSel (missionNamespace getVariable ["market_sync_id", 0]);
+
+waitUntil {(g_app != "MARKET")};
+
+{
+	missionNamespace setVariable [format["market_sync_%1", (configName _x)], ([(configName _x)] call AlysiaClient_fnc_market_getPrice)];
+} foreach ("isClass(_x >> 'market')" configClasses (missionConfigFile >> "ALYSIA_ITEMS"));

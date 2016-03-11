@@ -41,7 +41,7 @@ switch (_app) do
 	case "FACTION": {[] call AlysiaClient_fnc_APP_faction};
 	case "FACTION_LEADER_OFFICE": {};
 	case "FACTION_LEADER_HISTORY": {};
-	case "MARKET": {[] call AlysiaClient_fnc_APP_market};
+	case "MARKET": {[] spawn AlysiaClient_fnc_APP_market};
 	case "STAFF": {[] call AlysiaClient_fnc_APP_staff};
 	case "STAFF_DATA": {};
 	case "FUEL": {[] spawn AlysiaClient_fnc_APP_fuel};

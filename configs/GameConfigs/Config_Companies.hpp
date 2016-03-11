@@ -91,14 +91,18 @@ class ALYSIA_COMPANIES
 				price_per_employee = 150;
 				price_building = 450;
 			};
+			class storage
+			{
+				inventory = 220;
+			};
 		};
 
-		class farming_bio
+		class farming
 		{
 			ready = 1;
-			name = "Ferme bio";
+			name = "Ferme agricole";
 			building = "Land_i_Windmill01_F";
-			license = "company_farming_bio";
+			license = "company_farming";
 			image = "lyeed_IMG\data\companies\types\farming_bio.paa";
 			process[] = {};
 			members_max = 12;
@@ -120,34 +124,9 @@ class ALYSIA_COMPANIES
 				price_per_employee = 90;
 				price_building = 50;
 			};
-		};
-
-		class farming_industrial
-		{
-			ready = 1;
-			name = "Industrie agricole";
-			building = "Land_Shed_Ind02";
-			license = "company_farming_industrial";
-			image = "lyeed_IMG\data\companies\types\farming_industrial.paa";
-			process[] = {};
-			members_max = 10;
-			class construction
+			class storage
 			{
-				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 10}, {"ciment", 200}, {"goldbar", 20}, {"furniture", 20}, {"ironp", 30}, {"sand", 50}, {"glass", 40}, {"copperp", 50}, {"alu", 120}, {"pierre", 150}, {"steel", 300}, {"brique", 50}};
-				price = 325000;
-			};
-			class marker
-			{
-				type = "Fett_company_farming_industrial";
-				color = "ColorWhite";
-				shape = "ICON";
-				size = 0.4;
-			};
-			class tax
-			{
-				price_per_employee = 110;
-				price_building = 120;
+				inventory = 150;
 			};
 		};
 
@@ -179,6 +158,10 @@ class ALYSIA_COMPANIES
 				price_per_employee = 100;
 				price_building = 100;
 			};
+			class storage
+			{
+				inventory = 50;
+			};
 		};
 
 		class money_transfer
@@ -207,6 +190,10 @@ class ALYSIA_COMPANIES
 			{
 				price_per_employee = 140;
 				price_building = 230;
+			};
+			class storage
+			{
+				inventory = 50;
 			};
 		};
 
@@ -237,6 +224,10 @@ class ALYSIA_COMPANIES
 				price_per_employee = 125;
 				price_building = 190;
 			};
+			class storage
+			{
+				inventory = 250;
+			};
 		};
 
 		class fuel
@@ -265,6 +256,10 @@ class ALYSIA_COMPANIES
 			{
 				price_per_employee = 100;
 				price_building = 100;
+			};
+			class storage
+			{
+				inventory = 250;
 			};
 		};
 
@@ -296,12 +291,16 @@ class ALYSIA_COMPANIES
 				price_per_employee = 30;
 				price_building = 225;
 			};
+			class storage
+			{
+				inventory = 250;
+			};
 		};
 
 		class transport_goods
 		{
 			ready = 1;
-			name = "Transport de personnes";
+			name = "Transport de matériaux";
 			building = "Land_Hangar_F";
 			license = "company_transport_goods";
 			image = "lyeed_IMG\data\companies\types\transport.paa";
@@ -325,6 +324,10 @@ class ALYSIA_COMPANIES
 			{
 				price_per_employee = 100;
 				price_building = 100;
+			};
+			class storage
+			{
+				inventory = 250;
 			};
 		};
 
@@ -356,6 +359,10 @@ class ALYSIA_COMPANIES
 				price_per_employee = 100;
 				price_building = 100;
 			};
+			class storage
+			{
+				inventory = 50;
+			};
 		};
 
 		class service
@@ -385,6 +392,10 @@ class ALYSIA_COMPANIES
 			{
 				price_per_employee = 80;
 				price_building = 100;
+			};
+			class storage
+			{
+				inventory = 50;
 			};
 		};
 
@@ -416,6 +427,10 @@ class ALYSIA_COMPANIES
 				price_per_employee = 100;
 				price_building = 100;
 			};
+			class storage
+			{
+				inventory = 50;
+			};
 		};
 
 		class shop
@@ -445,6 +460,10 @@ class ALYSIA_COMPANIES
 				price_per_employee = 100;
 				price_building = 100;
 			};
+			class storage
+			{
+				inventory = 50;
+			};
 		};
 
 		class news
@@ -473,6 +492,10 @@ class ALYSIA_COMPANIES
 			{
 				price_per_employee = 100;
 				price_building = 100;
+			};
+			class storage
+			{
+				inventory = 50;
 			};
 		};
 	};

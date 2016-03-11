@@ -18,28 +18,61 @@ if (isNull _object) exitWith {};
 			"info",
 			"Infos",
 			"[] spawn AlysiaClient_fnc_company_info_open;",
-			"!(g_interaction_target getVariable ['construction', false])"
+			"
+				!(g_interaction_target getVariable ['construction', false])
+			"
 		],
 		[
 			"construction",
 			"Matériaux",
 			"[] spawn AlysiaClient_fnc_company_construction_open;",
-			"(g_interaction_target getVariable ['construction', false])"],
+			"
+				(g_interaction_target getVariable ['construction', false])
+			"
+		],
 		[
 			"finish",
 			"Construire",
 			"[] spawn AlysiaClient_fnc_company_construction_build;",
-			"((g_interaction_target getVariable ['construction', false]) && ((g_interaction_target getVariable ['construction_require', []]) isEqualTo []) && (['company_construction'] call AlysiaClient_fnc_hasLicense))"],
+			"
+				(
+					(g_interaction_target getVariable ['construction', false]) && 
+					((g_interaction_target getVariable ['construction_require', []]) isEqualTo []) && 
+					(['company_construction'] call AlysiaClient_fnc_hasLicense)
+				)
+			"
+		],
 		[
 			"search",
 			"Fouille",
 			"",
-			"(getNumber(missionConfigFile >> 'ALYSIA_COMPANIES' >> str(playerSide) >> 'companies' >> 'search') isEqualTo 1)"],
+			"
+				(getNumber(missionConfigFile >> 'ALYSIA_FACTIONS' >> str(playerSide) >> 'companies' >> 'search') isEqualTo 1)
+			"
+		],
 		[
 			"process",
 			"Traiter",
 			"[g_interaction_target, getArray(missionConfigFile >> 'ALYSIA_COMPANIES' >> 'types' >> ((g_interaction_target getVariable 'company_info') select 2) >> 'process')] call AlysiaClient_fnc_process_choice_open;",
-			"((g_company isEqualTo g_interaction_target) && (count(getArray(missionConfigFile >> 'ALYSIA_COMPANIES' >> 'types' >> ((g_interaction_target getVariable 'company_info') select 2) >> 'process')) > 0) && !(g_interaction_target getVariable ['construction', false]))"
+			"
+				(
+					(g_company isEqualTo g_interaction_target) &&
+					(count(getArray(missionConfigFile >> 'ALYSIA_COMPANIES' >> 'types' >> ((g_interaction_target getVariable 'company_info') select 2) >> 'process')) > 0) &&
+					!(g_interaction_target getVariable ['construction', false])
+				)
+			"
+		],
+		[
+			"inventory",
+			"Stockage",
+			"[g_interaction_target, 'company_inventory', true, true, false, true, false] spawn AlysiaClient_fnc_virtual_menu_exhange_open;",
+			"
+				(
+					(g_company isEqualTo g_interaction_target) &&
+					isClass(missionConfigFile >> 'ALYSIA_COMPANIES' >> 'types' >> ((g_interaction_target getVariable 'company_info') select 2) >> 'storage') &&
+					!(g_interaction_target getVariable ['construction', false])
+				)
+			"
 		]
 	],
 	(_object getVariable "company_info") select 0,

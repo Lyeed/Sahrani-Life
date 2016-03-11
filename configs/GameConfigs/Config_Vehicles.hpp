@@ -90,7 +90,7 @@ class ALYSIA_VEHICLES
 		inventory = 98;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"driver","company_farming_industrial"};
+		licenses[] = {"driver","company_farming"};
 		fuel = "Diesel";
 		tactor = 1;
 	};

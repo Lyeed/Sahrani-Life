@@ -14,28 +14,19 @@ scopeName "main";
 
 if (_zone isEqualTo "") then
 {
-	_seeds = [];
 	{
-		if (!(getText(_x >> "seed") in _seeds)) then {
-			_seeds pushBack [getText(_x >> "seed"), (configName _x)];
+		if (([getText(_x >> "seed")] call AlysiaClient_fnc_itemCount) > 0) exitWith
+		{
+			_plant = configName _x;
+			_seed = getText(_x >> "seed");
 		};
 	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS"));
-
-	{
-		_count = [_x select 0] call AlysiaClient_fnc_itemCount;
-		if (_count > 0) exitWith
-		{
-			_seed = _x select 0;
-			_plant = _x select 1;
-		};
-	} forEach _seeds;
-
 	if ((isNil "_seed") || (isNil "_plant")) then
 	{
 		["Vous n'avez pas de graine"] call AlysiaClient_fnc_error;
 		false breakOut "main";
 	};
-
+	[false, _seed, 1] call AlysiaClient_fnc_handleInv;
 } else {
 
 	if (_zone isEqualTo "") then
