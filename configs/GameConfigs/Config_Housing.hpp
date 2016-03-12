@@ -350,6 +350,17 @@ class ALYSIA_HOUSES
 		class lights {};
 		class factions: factions {};
 	};
+	class Land_Stodola_open: Land_smd_army_hut_storrage
+	{
+		price = 300000;
+		class storage
+		{
+			type = "Skyline_Coffre_Medium";
+			building_index = 0;
+		};
+		class lights {};
+		class factions: factions {};
+	};
 	class Land_Misc_Cargo1Bo
 	{
 		price = 100000;

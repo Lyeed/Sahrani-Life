@@ -158,7 +158,7 @@ class COMPANY_ACTION_PROMOTE_BUTTON: RscButtonSilent
 	action = "ctrlShow[9611,false];ctrlShow[9612,false];[g_company, lbData[9606, lbCurSel 9606]] call AlysiaClient_fnc_company_member_promote;['COMPANY'] spawn AlysiaClient_fnc_tabletApp;";
 	onMouseEnter = "ctrlSetText[9611,'lyeed_IMG\data\tablet\company\action_promote_select.paa'];";
 	onMouseExit = "ctrlSetText[9611,'lyeed_IMG\data\tablet\company\action_promote.paa'];";
-	tooltip = "Nommer DPG de l'entreprise";
+	tooltip = "Nommer PDG de l'entreprise";
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.577 * safezoneH + safezoneY;

@@ -399,7 +399,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\cocaine_coupe.paa";
 		class market
 		{
-			max = 7200;
+			max = 720;
 			min = 210;
 			affect[] = {"cigarette", "cigare", "heroinps", "methp", "marijuana"};
 		};

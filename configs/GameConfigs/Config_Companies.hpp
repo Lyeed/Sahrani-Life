@@ -202,13 +202,13 @@ class ALYSIA_COMPANIES
 
 		class foundry
 		{
-			ready = 0;
+			ready = 1;
 			name = "Fonderie";
 			building = "Land_Factory_Main_F";
 			license = "company_foundry";
 			image = "lyeed_IMG\data\companies\types\foundry.paa";
 			process[] = {"steel", "soufre"};
-			members_max = 10;
+			members_max = 9;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -382,7 +382,7 @@ class ALYSIA_COMPANIES
 			{
 				building = "Misc_palletsfoiled_heap";
 				require[] = {{"woodp", 20}, {"ciment", 380}, {"goldbar", 10}, {"furniture", 50}, {"ironp", 50}, {"sand", 50}, {"glass", 90}, {"copperp", 20}, {"alu", 20}, {"pierre", 200}, {"steel", 100}};
-				price = 250000;
+				price = 150000;
 			};
 			class marker
 			{
