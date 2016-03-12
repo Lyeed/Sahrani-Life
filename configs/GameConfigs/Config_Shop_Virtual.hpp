@@ -14,7 +14,15 @@ class ALYSIA_SHOPS_VIRTUAL
 		side = "CIV";
 		items[] = {{"corn_seed", "bean_seed", "cotton_seed", "wheatseed", "patate_seed", "engrais"}, {}};
 	};
-	
+
+	class station
+	{
+		name = "Commerçant station";
+		side = "CIV";
+		items[] = {{"chips", "chocolat", "villagoise", "eau50"}, {}};
+	};
+
+
 	class market
 	{
 		name = "Marché";
