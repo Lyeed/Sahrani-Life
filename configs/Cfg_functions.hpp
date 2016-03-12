@@ -445,6 +445,7 @@ class CfgFunctions
 			class atmScreen {};
 			class atmFactionGet {};
 			class atmFactionHandle {};
+			class atmMoneyHandle {};
 			class robberyStart {};
 			class robberyProcess {};
 			class robberyTools {};

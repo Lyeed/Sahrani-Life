@@ -8,13 +8,8 @@
 private["_obj", "_action_1"];
 _obj = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if (!(isNull _obj) && !(isNull(attachedTo _obj))) exitWith {
-	["Quelqu'un porte déjà ce sac"] call AlysiaClient_fnc_error;
-};
-
-if (isNull _obj) then {
-	_obj = "Land_Bag_EP1" createVehicle (getPos player);
-};
+if (!(isNull _obj) && !(isNull(attachedTo _obj))) exitWith {["Quelqu'un porte déjà ce sac."] call AlysiaClient_fnc_error};
+if (isNull _obj) then {_obj = "Land_Bag_EP1" createVehicle (getPos player)};
 
 _obj attachTo [player, [0, 0.4, 0.7]];
 player setVariable ["money_transfer", _obj];
@@ -57,19 +52,13 @@ while {!(isNull _obj) && !(isNull (attachedTo _obj))} do
 					_amount = _atm getVariable ["money", _max];
 					if ((_max - _amount) > 0) then
 					{
-						_atm setVariable ["inUse", true, true];
 						g_action_inUse = true;
-
 						player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 						waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
 						playSound "buy";
 						deleteVehicle _obj;
-						[g_company, true, 2000 + ((_max - _amount) / 50)] call AlysiaClient_fnc_company_bank_handle;
-						_amount = _amount + 2000;
-						if (_amount > _max) then {_amount = _max};
-						_atm setVariable ["money", _amount, true];
-						
-						_atm setVariable ["inUse", false, true];
+						[g_company, true, 5000 + ((_max - _amount) / 50)] call AlysiaClient_fnc_company_bank_handle;
+						[_atm, true, 5000] call AlysiaClient_fnc_atmMoneyHandle;
 						g_action_inUse = false;
 					};
 				};

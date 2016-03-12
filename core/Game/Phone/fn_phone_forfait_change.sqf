@@ -6,7 +6,7 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private "_new";
-_new = [_this, 0 , "none", [""]] call BIS_fnc_param;
+_new = [_this, 0, "none", [""]] call BIS_fnc_param;
 
 if (g_phone_forfait != "none") then
 {

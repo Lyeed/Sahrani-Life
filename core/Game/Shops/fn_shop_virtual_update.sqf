@@ -44,10 +44,22 @@ if ((lbSize _ctrl_player) isEqualTo 0) then
 _ctrl_target = _display displayCtrl 2407;
 lbClear _ctrl_target;
 {
-	_index = _ctrl_target lbAdd format["%1 (%2kn)", ([_x] call AlysiaClient_fnc_itemGetName), ([_x] call AlysiaClient_fnc_itemGetBuyPrice)];
-	_ctrl_target lbSetTooltip [_index, (_ctrl_target lbText _index)];
-	_ctrl_target lbSetData [_index, _x];
-	_ctrl_target lbSetPicture [_index, ([_x] call AlysiaClient_fnc_itemGetImage)];
+	_config = missionConfigFile >> "ALYSIA_ITEMS" >> _x;
+	if (isClass _config) then
+	{
+		_license = getText(_config >> format["buy_license_%1", playerSide]);
+		_rank = getNumber(_config >> format["buy_condition_%1", playerSide]);
+		if ((_license isEqualTo "") || ([_license] call AlysiaClient_fnc_hasLicense)) then
+		{
+			if ((_rank isEqualTo 0) || ((_rank > 0) && ((player getVariable ["rank", 0]) >= _rank))) then
+			{
+				_index = _ctrl_target lbAdd format["%1 (%2kn)", ([_x] call AlysiaClient_fnc_itemGetName), ([_x] call AlysiaClient_fnc_itemGetBuyPrice)];
+				_ctrl_target lbSetTooltip [_index, (_ctrl_target lbText _index)];
+				_ctrl_target lbSetData [_index, _x];
+				_ctrl_target lbSetPicture [_index, ([_x] call AlysiaClient_fnc_itemGetImage)];
+			};
+		};
+	};
 } forEach (g_shop_list select 0);
 if ((lbSize _ctrl_target) isEqualTo 0) then
 {

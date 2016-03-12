@@ -49,7 +49,7 @@ _diff = _price - _sync;
 	[getNumber(_config >> "market" >> "max")] call AlysiaClient_fnc_numberText,
 	[getNumber(_config >> "market" >> "min")] call AlysiaClient_fnc_numberText,
 	if (_license isEqualTo "") then {"Aucune"} else {format["<t size='0.6'>%1</t>", [_license] call AlysiaClient_fnc_licenseGetName]},
-	if (getNumber(_config >> "illegal") isEqualTo 0) then {"Non"} else {"Non"},
+	if (getNumber(_config >> "illegal") isEqualTo 1) then {"Non"} else {"Oui"},
 	if (_diff >= 0) then {"+"} else {"-"},
 	if (_diff >= 0) then {"#3ADF00"} else {"#DF0101"},
 	[_diff] call AlysiaClient_fnc_numberText

@@ -1718,17 +1718,8 @@ class ALYSIA_PROCESS
 	{
 		name = "Fabrication de gilet barre-balles";
 		sound = "smelting";
-		require[] =
-		{
-			{"cottonp", 10},
-			{"steel",4}
-		};
-		receive[] =
-		{
-			/* VIRTUAL */{},
-			/* ARMA */{"TRYK_V_IOTV_BLK"},
-			/* CASH */0
-		};
+		require[] = {{"cottonp", 10}, {"steel",4}};
+		receive[] = {{}, {"TRYK_V_IOTV_BLK"}, 0};
 		time_per_item = 30;
 		time_default = 30;
 		class target {};
@@ -1763,16 +1754,8 @@ class ALYSIA_PROCESS
 	{
 		name = "Fabrication de tenue criminelle 1";
 		sound = "smelting";
-		require[] =
-		{
-			{"cottonp", 10}
-		};
-		receive[] =
-		{
-			/* VIRTUAL */{},
-			/* ARMA */{"TRYK_ZARATAKI"},
-			/* CASH */0
-		};
+		require[] = {{"cottonp", 10}};
+		receive[] = {{}, {"TRYK_ZARATAKI"}, 0};
 		time_per_item = 20;
 		time_default = 20;
 		class target {};
@@ -1781,160 +1764,87 @@ class ALYSIA_PROCESS
 			class CIV {};
 		};
 	};
-
-	class clothing_criminal_2: clothing_criminal1
+	class clothing_criminal_2: clothing_criminal_1
 	{
 		name = "Fabrication de tenue criminelle 2";
-		receive[] =
-		{
-			/* VIRTUAL */{},
-			/* ARMA */{"TRYK_ZARATAKI2"},
-			/* CASH */0
-		};
+		receive[] = {{}, {"TRYK_ZARATAKI2"}, 0};
 		class target {};
 		class factions: factions {};
 	};
-
-	class clothing_criminal_3: clothing_criminal1
+	class clothing_criminal_3: clothing_criminal_1
 	{
 		name = "Fabrication de tenue criminelle 3";
-		receive[] =
-		{
-			/* VIRTUAL */{},
-			/* ARMA */{"TRYK_ZARATAKI3"},
-			/* CASH */0
-		};
+		receive[] = {{}, {"TRYK_ZARATAKI3"}, 0};
 		class target {};
 		class factions: factions {};
-
 	};
-
-	class clothing_criminal_4: clothing_criminal1
+	class clothing_criminal_4: clothing_criminal_1
 	{
 		name = "Fabrication de tenue criminelle 4";
-		receive[] =
-		{
-			/* VIRTUAL */{},
-			/* ARMA */{"TRYK_U_taki_BL"},
-			/* CASH */0
-		};
+		receive[] = {{}, {"TRYK_U_taki_BL"}, 0};
 		class target {};
 		class factions: factions {};
 	};
-
-	class clothing_criminal_5: clothing_criminal1
+	class clothing_criminal_5: clothing_criminal_1
 	{
 		name = "Fabrication de tenue criminelle 5";
-		receive[] =
-		{
-			/* VIRTUAL */{},
-			/* ARMA */{"TRYK_U_taki_COY"},
-			/* CASH */0
-		};
+		receive[] = {{}, {"TRYK_U_taki_COY"}, 0};
 		class target {};
 		class factions: factions {};
 	};
-
-	class clothing_criminal_6: clothing_criminal1
+	class clothing_criminal_6: clothing_criminal_1
 	{
 		name = "Fabrication de tenue criminelle 6";
-		receive[] =
-		{
-			/* VIRTUAL */{},
-			/* ARMA */{"TRYK_U_taki_wh"},
-			/* CASH */0
-		};
+		receive[] = {{}, {"TRYK_U_taki_wh"}, 0};
 		class target {};
 		class factions: factions {};
 	};
-
-	class clothing_criminal_7: clothing_criminal1
+	class clothing_criminal_7: clothing_criminal_1
 	{
 		name = "Fabrication de tenue criminelle 7";
-		receive[] =
-		{
-			/* VIRTUAL */{},
-			/* ARMA */{"TRYK_T_camo_3c_BG"},
-			/* CASH */0
-		};
+		receive[] = {{}, {"TRYK_T_camo_3c_BG"}, 0};
 		class target {};
 		class factions: factions {};
 	};
-
-	class clothing_criminal_8: clothing_criminal1
+	class clothing_criminal_8: clothing_criminal_1
 	{
 		name = "Fabrication de tenue criminelle 8";
-		receive[] =
-		{
-			/* VIRTUAL */{},
-			/* ARMA */{"TRYK_T_camo_desert_marpat_BG"},
-			/* CASH */0
-		};
+		receive[] = {{}, {"TRYK_T_camo_desert_marpat_BG"}, 0};
 		class target {};
 		class factions: factions {};
 	};
-
-	class clothing_criminal_9: clothing_criminal1
+	class clothing_criminal_9: clothing_criminal_1
 	{
 		name = "Fabrication de tenue criminelle 9";
-		receive[] =
-		{
-			/* VIRTUAL */{},
-			/* ARMA */{"TRYK_T_camo_Wood_BG"},
-			/* CASH */0
-		};
+		receive[] = {{}, {"TRYK_T_camo_Wood_BG"}, 0};
 		class target {};
 		class factions: factions {};
 	};
-
-	class clothing_criminal_10: clothing_criminal1
+	class clothing_criminal_10: clothing_criminal_1
 	{
 		name = "Fabrication de tenue criminelle 10";
-		receive[] =
-		{
-			/* VIRTUAL */{},
-			/* ARMA */{"TRYK_U_B_PCUHsW3"},
-			/* CASH */0
-		};
+		receive[] = {{}, {"TRYK_U_B_PCUHsW3"}, 0};
 		class target {};
 		class factions: factions {};
 	};
-	
-	class goggles_criminal_1: clothing_criminal1
+	class goggles_criminal_1: clothing_criminal_1
 	{
 		name = "Fabrication cagoule criminelle 1";
-		receive[] =
-		{
-			/* VIRTUAL */{},
-			/* ARMA */{"G_Balaclava_blk"},
-			/* CASH */0
-		};
+		receive[] = {{}, {"G_Balaclava_blk"}, 0};
 		class target {};
 		class factions: factions {};
 	};
-
-	class goggles_criminal_2: clothing_criminal1
+	class goggles_criminal_2: clothing_criminal_1
 	{
 		name = "Fabrication masque à gaz";
-		receive[] =
-		{
-			/* VIRTUAL */{},
-			/* ARMA */{"Mask_M40"},
-			/* CASH */0
-		};
+		receive[] = {{}, {"Mask_M40"}, 0};
 		class target {};
 		class factions: factions {};
 	};
-
-	class goggles_criminal_3: clothing_criminal1
+	class goggles_criminal_3: clothing_criminal_1
 	{
 		name = "Fabrication masque de voleur";
-		receive[] =
-		{
-			/* VIRTUAL */{},
-			/* ARMA */{"Masque_Solitaire"},
-			/* CASH */0
-		};
+		receive[] = {{}, {"Masque_Solitaire"}, 0};
 		class target {};
 		class factions: factions {};
 	};

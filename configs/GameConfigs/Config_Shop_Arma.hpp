@@ -192,8 +192,8 @@ class ALYSIA_SHOPS_ARMA
 		side = "CIV";
 		stocks[] =
 		{
-			"SkylineItems_Couteau"/*,
-			"Bank_Bomb"*/
+			"SkylineItems_Couteau",
+			"Bank_Bomb"
 		};
 	};
 	

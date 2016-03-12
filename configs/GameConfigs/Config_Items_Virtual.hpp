@@ -1498,8 +1498,10 @@ class ALYSIA_ITEMS
 	class money_transfer
 	{
 		name = "Sac de billets de banque";
-		weight = 18;
+		weight = 10;
 		image = "";
+		buy_license_CIV = "company_money_tranfer";
+		price_buy = 5000;
 	};
 
 	class opium

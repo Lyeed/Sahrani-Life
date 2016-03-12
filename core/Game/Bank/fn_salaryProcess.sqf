@@ -23,7 +23,7 @@ if (!(player getVariable ["arrested", false])) then
 			_salary = _salary * (player getVariable ["rank", 0]);
 		};
 		
-		[true, _salary, "Aides"] call AlysiaClient_fnc_handleATM;
+		[true, _salary, "Salaire"] call AlysiaClient_fnc_handleATM;
 		_price_add = _price_add + _salary;
 
 		_taxe = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary_tax");

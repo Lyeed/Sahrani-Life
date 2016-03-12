@@ -645,11 +645,6 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 15;
 		buy_license_CIV = "company_news";
 	};
-	class U_C_Journalist
-	{
-		buy_price = 98;
-		buy_license_CIV = "company_news";
-	};
 	class H_Cap_red
 	{
 		buy_price = 15;
@@ -2432,16 +2427,6 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 95;
 		buy_license_CIV = "company_news";
 	};
-	class U_C_Journaliste_01
-	{
-		buy_price = 95;
-		buy_license_CIV = "company_news";
-	};
-	class U_C_Journaliste_02
-	{
-		buy_price = 95;
-		buy_license_CIV = "company_news";
-	};
 	class U_C_Kick_Me_01
 	{
 		buy_price = 70;
@@ -2781,7 +2766,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Bank_Bomb
 	{
-		buy_price = 95000;
+		buy_price = 65000;
 	};
 	class tf_anprc152
 	{

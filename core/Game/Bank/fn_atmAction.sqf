@@ -62,7 +62,7 @@ switch (_action) do
 				[_tax] call AlysiaClient_fnc_numberText
 			]
 		] call AlysiaClient_fnc_info;
-		g_interaction_target setVariable ["money", (_atm_money - _amount), true];
+		[g_interaction_target, false, _amount] call AlysiaClient_fnc_atmMoneyHandle;
 		[false, _amount, "Retrait DAB"] call AlysiaClient_fnc_handleATM;
 		[false, _tax, "Taxe prélèvenement DAB"] call AlysiaClient_fnc_handleATM;
 		[true, _amount] call AlysiaClient_fnc_handleCash;
@@ -82,7 +82,7 @@ switch (_action) do
 
 		closeDialog 0;
 		[format["Vous avez déposé <t color='#8cff9b'>%1</t>kn sur votre compte.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
-		g_interaction_target setVariable ["money", ((g_interaction_target getVariable ["money", getNumber(_config >> "money_stock")]) + _amount), true];
+		[g_interaction_target, true, _amount] call AlysiaClient_fnc_atmMoneyHandle;
 		[false, _amount] call AlysiaClient_fnc_handleCash;
 		[true, _amount, "Dépot DAB"] call AlysiaClient_fnc_handleATM;
 	};
@@ -103,7 +103,7 @@ switch (_action) do
 		{
 			closeDialog 0;
 			[format["Vous avez déposé <t color='#8cff9b'>%1</t>kn le compte de votre faction.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
-			g_interaction_target setVariable ["money", ((g_interaction_target getVariable ["money", getNumber(_config >> "money_stock")]) + _amount), true];
+			[g_interaction_target, true, _amount] call AlysiaClient_fnc_atmMoneyHandle;
 			[false, _amount] call AlysiaClient_fnc_handleCash;
 		};
 	};
@@ -127,7 +127,7 @@ switch (_action) do
 			closeDialog 0;
 			[format["Vous avez retiré <t color='#8cff9b'>%1</t>kn du compte votre faction.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
 			[true, _amount] call AlysiaClient_fnc_handleCash;
-			g_interaction_target setVariable ["money", (_atm_money - _amount), true];
+			[g_interaction_target, false, _amount] call AlysiaClient_fnc_atmMoneyHandle;
 		} else {
 			["Solde insuffisant"] call AlysiaClient_fnc_error;
 		};
@@ -147,7 +147,8 @@ switch (_action) do
 
 		closeDialog 0;
 		[format["Vous avez déposé <t color='#8cff9b'>%1</t>kn le compte de votre entreprise.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
-		g_interaction_target setVariable ["money", ((g_interaction_target getVariable ["money", getNumber(_config >> "money_stock")]) + _amount), true];
+		
+		[g_interaction_target, true, _amount] call AlysiaClient_fnc_atmMoneyHandle;
 		[false, _amount] call AlysiaClient_fnc_handleCash;
 		[g_company, true, _amount] call AlysiaClient_fnc_company_bank_handle;
 	};
@@ -171,8 +172,8 @@ switch (_action) do
 			closeDialog 0;
 			[format["Vous avez retiré <t color='#8cff9b'>%1</t>kn du compte votre faction.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
 			[true, _amount] call AlysiaClient_fnc_handleCash;
+			[g_interaction_target, false, _amount] call AlysiaClient_fnc_atmMoneyHandle;
 			[playerSide, false, _amount] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
-			g_interaction_target setVariable ["money", (_atm_money - _amount), true];
 		} else {
 			["Solde insuffisant"] call AlysiaClient_fnc_error;
 		};

@@ -216,4 +216,11 @@ class ALYSIA_SHOPS_VIRTUAL
 		side = "CIV";
 		items[] = {{"tabac_seed"}, {}};
 	};
+
+	class companies
+	{
+		name = "Réserve d'entreprises";
+		side = "CIV";
+		items[] = {{"money_transfer"}, {}};
+	};
 };

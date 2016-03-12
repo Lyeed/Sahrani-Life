@@ -120,12 +120,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"CUP_C_C47_CIV"
 		};
 	};
-	class CIV_vehicles_land_truck
-	{
-		name = "Concessionnaire poids lourds civil";
-		side = "CIV";
-		stock[] = {};
-	};
 	class CIV_vehicles_land_occasion
 	{
 		name = "Concessionnaire d'occassions civil";
