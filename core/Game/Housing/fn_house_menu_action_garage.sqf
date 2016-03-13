@@ -15,4 +15,4 @@ if (g_action_inUse) exitWith {
 
 g_action_inUse = true;
 g_garage_info = ["Chez vous", getArray(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(_target) >> "garage" >> "types"), []];
-[player, (g_garage_info select 1)] remoteExec ["AlysiaServer_fnc_garageVehicles", 2, false];
+[player, (g_garage_info select 1)] remoteExec ["AlysiaServer_fnc_garageVehicles", 2];

@@ -737,7 +737,7 @@ class ALYSIA_PROCESS
 		};
 		receive[] =
 		{
-			/* VIRTUAL */{{"acier", 1}},
+			/* VIRTUAL */{{"steel", 1}},
 			/* ARMA */{},
 			/* CASH */0
 		};

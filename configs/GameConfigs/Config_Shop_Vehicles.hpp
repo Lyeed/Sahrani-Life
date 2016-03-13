@@ -258,8 +258,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_a3_iveco_f",
 			"B_G_Van_01_fuel_F",
 			"O_Truck_02_fuel_F",
-			"Jonzie_Tanker_Truck",
-			"Jonzie_Box_Truck"
+			"Jonzie_Tanker_Truck"
 		};
 	};
 };

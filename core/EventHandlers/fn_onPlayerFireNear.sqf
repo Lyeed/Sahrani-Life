@@ -18,7 +18,7 @@ if (!g_firstCombatActive) then
 			{
 				player switchCamera "Internal";
 			};
-			sleep 0.2;
+			uiSleep 0.2;
 		};
 		g_firstCombatActive = false;
 	};

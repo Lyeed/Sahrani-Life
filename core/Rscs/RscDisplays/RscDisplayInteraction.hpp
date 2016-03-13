@@ -1,527 +1,629 @@
-class RscDisplayInteraction: RscDisplayDefault
+#define BACKGROUND_IDC                5001
+#define TITLE_IDC                     5002
+#define OPTION_REFRESH_FRAME_IDC      5003
+#define OPTION_REFRESH_BACKGROUND_IDC 5004
+#define OPTION_REFRESH_IMAGE_IDC      5005
+#define OPTION_REFRESH_BUTTON_IDC     5006
+#define ACTION_1_FRAME_IDC            5010
+#define ACTION_1_BACKGROUND_IDC       5011
+#define ACTION_1_IMAGE_IDC            5012
+#define ACTION_1_TITLE_IDC            5013
+#define ACTION_1_BUTTON_IDC           5014
+#define ACTION_2_FRAME_IDC            5015
+#define ACTION_2_BACKGROUND_IDC       5016
+#define ACTION_2_IMAGE_IDC            5017
+#define ACTION_2_TITLE_IDC            5018
+#define ACTION_2_BUTTON_IDC           5019
+#define ACTION_3_FRAME_IDC            5020
+#define ACTION_3_BACKGROUND_IDC       5021
+#define ACTION_3_IMAGE_IDC            5022
+#define ACTION_3_TITLE_IDC            5023
+#define ACTION_3_BUTTON_IDC           5024
+#define ACTION_4_FRAME_IDC            5025
+#define ACTION_4_BACKGROUND_IDC       5026
+#define ACTION_4_IMAGE_IDC            5027
+#define ACTION_4_TITLE_IDC            5028
+#define ACTION_4_BUTTON_IDC           5029
+#define ACTION_5_FRAME_IDC            5030
+#define ACTION_5_BACKGROUND_IDC       5031
+#define ACTION_5_IMAGE_IDC            5032
+#define ACTION_5_TITLE_IDC            5033
+#define ACTION_5_BUTTON_IDC           5034
+#define ACTION_6_FRAME_IDC            5035
+#define ACTION_6_BACKGROUND_IDC       5036
+#define ACTION_6_IMAGE_IDC            5037
+#define ACTION_6_TITLE_IDC            5038
+#define ACTION_6_BUTTON_IDC           5039
+#define ACTION_7_FRAME_IDC            5040
+#define ACTION_7_BACKGROUND_IDC       5041
+#define ACTION_7_IMAGE_IDC            5042
+#define ACTION_7_TITLE_IDC            5043
+#define ACTION_7_BUTTON_IDC           5044
+#define ACTION_8_FRAME_IDC            5045
+#define ACTION_8_BACKGROUND_IDC       5046
+#define ACTION_8_IMAGE_IDC            5047
+#define ACTION_8_TITLE_IDC            5048
+#define ACTION_8_BUTTON_IDC           5049
+#define ACTION_9_FRAME_IDC            5050
+#define ACTION_9_BACKGROUND_IDC       5051
+#define ACTION_9_IMAGE_IDC            5052
+#define ACTION_9_TITLE_IDC            5053
+#define ACTION_9_BUTTON_IDC           5054
+#define ACTION_10_FRAME_IDC           5055
+#define ACTION_10_BACKGROUND_IDC      5056
+#define ACTION_10_IMAGE_IDC           5057
+#define ACTION_10_TITLE_IDC           5058
+#define ACTION_10_BUTTON_IDC          5059
+
+class RscDisplayInteraction: RscDisplayDefaultInteraction
 {
 	idd = 5000;
 	name = "RscDisplayInteraction";
 	
-	class controlsBackground
+	class controlsBackground: DEFAULT_controlsBackground
 	{
-		class BACKGROUND: RscPicture
+		class BACKGROUND: BACKGROUND
 		{
-			idc = 5050;
+			idc = BACKGROUND_IDC;
 
-			x = 0.37625 * safezoneW + safezoneX;
-			y = 0.39 * safezoneH + safezoneY;
-			w = 0.2475 * safezoneW;
-			h = 0.297 * safezoneH;
+			x = 0.304062 * safezoneW + safezoneX;
+			y = 0.324 * safezoneH + safezoneY;
+			w = 0.391875 * safezoneW;
+			h = 0.407 * safezoneH;
 		};
-
-		class FRAME: RscFrame
+		class FRAME: FRAME
 		{
-			colorText[] = {0,0,0,1};
-			
-			x = 0.37625 * safezoneW + safezoneX;
-			y = 0.357 * safezoneH + safezoneY;
-			w = 0.248542 * safezoneW;
-			h = 0.33 * safezoneH;
+			x = 0.304062 * safezoneW + safezoneX;
+			y = 0.291 * safezoneH + safezoneY;
+			w = 0.391875 * safezoneW;
+			h = 0.44 * safezoneH;
 		};
 	};
 	
-	class controls
+	class controls: DEFAULT_controls
 	{
-		class TITLE: RscStructuredText
+		class TITLE: TITLE
 		{
-			idc = 5001;
-			colorBackground[] = {0,0,0,1};
-			
-			x = 0.37625 * safezoneW + safezoneX;
-			y = 0.357 * safezoneH + safezoneY;
-			w = 0.248021 * safezoneW;
+			idc = TITLE_IDC;
+
+			x = 0.304062 * safezoneW + safezoneX;
+			y = 0.291 * safezoneH + safezoneY;
+			w = 0.391875 * safezoneW;
 			h = 0.033 * safezoneH;
 		};
 
-		class OPTION_EXIT_FRAME: RscFrame
+		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME
 		{
-			idc = 5002;
-			colorText[] = {0,0,0,1};
-
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
+			x = 0.273125 * safezoneW + safezoneX;
+			y = 0.313 * safezoneH + safezoneY;
 		};
-		class OPTION_EXIT_BACKGROUND: RscText
+		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND
 		{
-			idc = 5003;
-			colorBackground[] = {0,0,0,0.6};
-
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
+			x = 0.273125 * safezoneW + safezoneX;
+			y = 0.313 * safezoneH + safezoneY;
 		};
-		class OPTION_EXIT_IMAGE: RscPicture
+		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE
 		{
-			idc = 5004;
-			text = "lyeed_IMG\data\interactions\option_exit.paa";
-
-			x = 0.352605 * safezoneW + safezoneX;
-			y = 0.424074 * safezoneH + safezoneY;
-			w = 0.0154688 * safezoneW;
-			h = 0.022 * safezoneH;
+			x = 0.280364 * safezoneW + safezoneX;
+			y = 0.324 * safezoneH + safezoneY;
 		};
-		class OPTION_EXIT_BUTTON: RscButtonSilent
+		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON
 		{
-			idc = 5005;
-			action = "closedialog 0;";
-			tooltip = "Quitter";
-			onMouseEnter = "((findDisplay 5000) displayCtrl 5003) ctrlSetBackgroundColor [1,1,1,1];			ctrlSetText[5004,""lyeed_IMG\data\interactions\option_exit_select.paa""];			ctrlShow[5002, false];";
-			onMouseExit = "((findDisplay 5000) displayCtrl 5003) ctrlSetBackgroundColor [0,0,0,0.6];			ctrlSetText[5004,""lyeed_IMG\data\interactions\option_exit.paa""];			ctrlShow[5002, true];";
-
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.0309375 * safezoneW;
-			h = 0.044 * safezoneH;
+			x = 0.273125 * safezoneW + safezoneX;
+			y = 0.313 * safezoneH + safezoneY;
 		};
 
 		class OPTION_REFRESH_FRAME: RscFrame
 		{
-			idc = 5006;
+			idc = OPTION_REFRESH_FRAME_IDC;
 			colorText[] = {0,0,0,1};
 
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.467 * safezoneH + safezoneY;
+			x = 0.273125 * safezoneW + safezoneX;
+			y = 0.368 * safezoneH + safezoneY;
 			w = 0.0309375 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
 		class OPTION_REFRESH_BACKGROUND: RscText
 		{
-			idc = 5007;
+			idc = OPTION_REFRESH_BACKGROUND_IDC;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.467 * safezoneH + safezoneY;
+			x = 0.273125 * safezoneW + safezoneX;
+			y = 0.368 * safezoneH + safezoneY;
 			w = 0.0309375 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
 		class OPTION_REFRESH_IMAGE: RscPicture
 		{
-			idc = 5008;
+			idc = OPTION_REFRESH_IMAGE_IDC;
 			text = "lyeed_IMG\data\interactions\option_refresh.paa";
 
-			x = 0.352343 * safezoneW + safezoneX;
-			y = 0.477593 * safezoneH + safezoneY;
+			x = 0.279479 * safezoneW + safezoneX;
+			y = 0.378333 * safezoneH + safezoneY;
 			w = 0.0154688 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 		class OPTION_REFRESH_BUTTON: RscButtonSilent
 		{
-			idc = 5009;
+			idc = OPTION_REFRESH_BUTTON_IDC;
 			action = "[] call AlysiaClient_fnc_interactions_recall;";
 			tooltip = "Rafraichir";
-			onMouseEnter = "((findDisplay 5000) displayCtrl 5007) ctrlSetBackgroundColor [1,1,1,1];			ctrlSetText[5008,""lyeed_IMG\data\interactions\option_refresh_select.paa""];			ctrlShow[5006, false];";
-			onMouseExit = "((findDisplay 5000) displayCtrl 5007) ctrlSetBackgroundColor [0,0,0,0.6];			ctrlSetText[5008,""lyeed_IMG\data\interactions\option_refresh.paa""];			ctrlShow[5006, true];";
+			onMouseEnter = "((findDisplay 5000) displayCtrl 5004) ctrlSetBackgroundColor [1,1,1,1];ctrlSetText[5005,""lyeed_IMG\data\interactions\option_refresh_select.paa""];ctrlShow[5003, false];";
+			onMouseExit = "((findDisplay 5000) displayCtrl 5004) ctrlSetBackgroundColor [0,0,0,0.6];ctrlSetText[5005,""lyeed_IMG\data\interactions\option_refresh.paa""];ctrlShow[5003, true];";
 
-			x = 0.345312 * safezoneW + safezoneX;
-			y = 0.467 * safezoneH + safezoneY;
+			x = 0.273125 * safezoneW + safezoneX;
+			y = 0.368 * safezoneH + safezoneY;
 			w = 0.0309375 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
 
 		class ACTION_1_FRAME: RscFrame
 		{
-			idc = 5010;
-			colorText[] = {0,0,0,0.8};
-			
-			x = 0.386562 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			idc = ACTION_1_FRAME_IDC;
+
+			x = 0.324687 * safezoneW + safezoneX;
+			y = 0.346 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_1_BACKGROUND: RscStructuredText
 		{
-			idc = 5011;
+			idc = ACTION_1_BACKGROUND_IDC;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.386562 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.324687 * safezoneW + safezoneX;
+			y = 0.346 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_1_IMAGE: RscPicture
 		{
-			idc = 5012;
+			idc = ACTION_1_IMAGE_IDC;
 
-			x = 0.389063 * safezoneW + safezoneX;
-			y = 0.416667 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
-			h = 0.044 * safezoneH;
+			x = 0.329844 * safezoneW + safezoneX;
+			y = 0.357 * safezoneH + safezoneY;
+			w = 0.020625 * safezoneW;
+			h = 0.033 * safezoneH;
 		};
 		class ACTION_1_TITLE: RscStructuredText
 		{
-			idc = 5013;
-			colorBackground[] = {0,0,0,0};
-			
-			x = 0.4175 * safezoneW + safezoneX;
-			y = 0.423 * safezoneH + safezoneY;
-			w = 0.0721875 * safezoneW;
+			idc = ACTION_1_TITLE_IDC;
+
+			x = 0.355625 * safezoneW + safezoneX;
+			y = 0.357 * safezoneH + safezoneY;
+			w = 0.12375 * safezoneW;
 			h = 0.033 * safezoneH;
 		};
 		class ACTION_1_BUTTON: RscButtonSilent
 		{
-			idc = 5014;
-			action = "";
+			idc = ACTION_1_BUTTON_IDC;
 
-			x = 0.386562 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.324687 * safezoneW + safezoneX;
+			y = 0.346 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 
 		class ACTION_2_FRAME: RscFrame
 		{
-			idc = 5015;
-			colorText[] = {0,0,0,0.8};
-			
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			idc = ACTION_2_FRAME_IDC;
+
+			x = 0.515469 * safezoneW + safezoneX;
+			y = 0.346 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_2_BACKGROUND: RscStructuredText
 		{
-			idc = 5016;
+			idc = ACTION_2_BACKGROUND_IDC;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.515469 * safezoneW + safezoneX;
+			y = 0.346 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_2_IMAGE: RscPicture
 		{
-			idc = 5017;
+			idc = ACTION_2_IMAGE_IDC;
 
-			x = 0.508802 * safezoneW + safezoneX;
-			y = 0.416519 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
-			h = 0.044 * safezoneH;
+			x = 0.520625 * safezoneW + safezoneX;
+			y = 0.357 * safezoneH + safezoneY;
+			w = 0.020625 * safezoneW;
+			h = 0.033 * safezoneH;
 		};
 		class ACTION_2_TITLE: RscStructuredText
 		{
-			idc = 5018;
-			colorBackground[] = {0,0,0,0};
-			
-			x = 0.536094 * safezoneW + safezoneX;
-			y = 0.423 * safezoneH + safezoneY;
-			w = 0.0721875 * safezoneW;
+			idc = ACTION_2_TITLE_IDC;
+
+			x = 0.546406 * safezoneW + safezoneX;
+			y = 0.357 * safezoneH + safezoneY;
+			w = 0.12375 * safezoneW;
 			h = 0.033 * safezoneH;
 		};
 		class ACTION_2_BUTTON: RscButtonSilent
 		{
-			idc = 5019;
-			action = "";
+			idc = ACTION_2_BUTTON_IDC;
 
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.412 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.515469 * safezoneW + safezoneX;
+			y = 0.346 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 
 		class ACTION_3_FRAME: RscFrame
 		{
-			idc = 5020;
-			colorText[] = {0,0,0,0.8};
-			
-			x = 0.386562 * safezoneW + safezoneX;
-			y = 0.478 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			idc = ACTION_3_FRAME_IDC;
+
+			x = 0.324687 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_3_BACKGROUND: RscStructuredText
 		{
-			idc = 5021;
+			idc = ACTION_3_BACKGROUND_IDC;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.386562 * safezoneW + safezoneX;
-			y = 0.478 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.324687 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_3_IMAGE: RscPicture
 		{
-			idc = 5022;
+			idc = ACTION_3_IMAGE_IDC;
 
-			x = 0.389062 * safezoneW + safezoneX;
-			y = 0.483333 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
-			h = 0.044 * safezoneH;
+			x = 0.329844 * safezoneW + safezoneX;
+			y = 0.434 * safezoneH + safezoneY;
+			w = 0.020625 * safezoneW;
+			h = 0.033 * safezoneH;
 		};
 		class ACTION_3_TITLE: RscStructuredText
 		{
-			idc = 5023;
-			colorBackground[] = {0,0,0,0};
-			
-			x = 0.4175 * safezoneW + safezoneX;
-			y = 0.489 * safezoneH + safezoneY;
-			w = 0.0721875 * safezoneW;
+			idc = ACTION_3_TITLE_IDC;
+
+			x = 0.355625 * safezoneW + safezoneX;
+			y = 0.434 * safezoneH + safezoneY;
+			w = 0.12375 * safezoneW;
 			h = 0.033 * safezoneH;
 		};
 		class ACTION_3_BUTTON: RscButtonSilent
 		{
-			idc = 5024;
-			action = "";
+			idc = ACTION_3_BUTTON_IDC;
 
-			x = 0.386562 * safezoneW + safezoneX;
-			y = 0.478 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.324687 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 
 		class ACTION_4_FRAME: RscFrame
 		{
-			idc = 5025;
-			colorText[] = {0,0,0,0.8};
-			
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.478 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			idc = ACTION_4_FRAME_IDC;
+
+			x = 0.515469 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_4_BACKGROUND: RscStructuredText
 		{
-			idc = 5026;
+			idc = ACTION_4_BACKGROUND_IDC;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.478 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.515469 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_4_IMAGE: RscPicture
 		{
-			idc = 5027;
+			idc = ACTION_4_IMAGE_IDC;
 
-			x = 0.507812 * safezoneW + safezoneX;
-			y = 0.484259 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
-			h = 0.044 * safezoneH;
+			x = 0.520625 * safezoneW + safezoneX;
+			y = 0.434 * safezoneH + safezoneY;
+			w = 0.020625 * safezoneW;
+			h = 0.033 * safezoneH;
 		};
 		class ACTION_4_TITLE: RscStructuredText
 		{
-			idc = 5028;
-			colorBackground[] = {0,0,0,0};
-			
-			x = 0.536094 * safezoneW + safezoneX;
-			y = 0.489 * safezoneH + safezoneY;
-			w = 0.0721875 * safezoneW;
+			idc = ACTION_4_TITLE_IDC;
+
+			x = 0.546406 * safezoneW + safezoneX;
+			y = 0.434 * safezoneH + safezoneY;
+			w = 0.12375 * safezoneW;
 			h = 0.033 * safezoneH;
 		};
 		class ACTION_4_BUTTON: RscButtonSilent
 		{
-			idc = 5029;
-			action = "";
+			idc = ACTION_4_BUTTON_IDC;
 
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.478 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.515469 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 
 		class ACTION_5_FRAME: RscFrame
 		{
-			idc = 5030;
-			colorText[] = {0,0,0,0.8};
-			
-			x = 0.386562 * safezoneW + safezoneX;
-			y = 0.544 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			idc = ACTION_5_FRAME_IDC;
+
+			x = 0.324687 * safezoneW + safezoneX;
+			y = 0.5 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_5_BACKGROUND: RscStructuredText
 		{
-			idc = 5031;
+			idc = ACTION_5_BACKGROUND_IDC;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.386562 * safezoneW + safezoneX;
-			y = 0.544 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.324687 * safezoneW + safezoneX;
+			y = 0.5 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_5_IMAGE: RscPicture
 		{
-			idc = 5032;
+			idc = ACTION_5_IMAGE_IDC;
 
-			x = 0.388541 * safezoneW + safezoneX;
-			y = 0.55 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
-			h = 0.044 * safezoneH;
+			x = 0.329844 * safezoneW + safezoneX;
+			y = 0.511 * safezoneH + safezoneY;
+			w = 0.020625 * safezoneW;
+			h = 0.033 * safezoneH;
 		};
 		class ACTION_5_TITLE: RscStructuredText
 		{
-			idc = 5033;
-			colorBackground[] = {0,0,0,0};
-			
-			x = 0.4175 * safezoneW + safezoneX;
-			y = 0.555 * safezoneH + safezoneY;
-			w = 0.0721875 * safezoneW;
+			idc = ACTION_5_TITLE_IDC;
+
+			x = 0.355625 * safezoneW + safezoneX;
+			y = 0.511 * safezoneH + safezoneY;
+			w = 0.12375 * safezoneW;
 			h = 0.033 * safezoneH;
 		};
 		class ACTION_5_BUTTON: RscButtonSilent
 		{
-			idc = 5034;
-			action = "";
+			idc = ACTION_5_BUTTON_IDC;
 
-			x = 0.386562 * safezoneW + safezoneX;
-			y = 0.544 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.324687 * safezoneW + safezoneX;
+			y = 0.5 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 
 		class ACTION_6_FRAME: RscFrame
 		{
-			idc = 5035;
-			colorText[] = {0,0,0,0.8};
+			idc = ACTION_6_FRAME_IDC;
 
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.544 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.515469 * safezoneW + safezoneX;
+			y = 0.5 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_6_BACKGROUND: RscStructuredText
 		{
-			idc = 5036;
+			idc = ACTION_6_BACKGROUND_IDC;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.544 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.515469 * safezoneW + safezoneX;
+			y = 0.5 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_6_IMAGE: RscPicture
 		{
-			idc = 5037;
+			idc = ACTION_6_IMAGE_IDC;
 
-			x = 0.507292 * safezoneW + safezoneX;
-			y = 0.549074 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
-			h = 0.044 * safezoneH;
+			x = 0.520625 * safezoneW + safezoneX;
+			y = 0.511 * safezoneH + safezoneY;
+			w = 0.020625 * safezoneW;
+			h = 0.033 * safezoneH;
 		};
 		class ACTION_6_TITLE: RscStructuredText
 		{
-			idc = 5038;
-			colorBackground[] = {0,0,0,0};
+			idc = ACTION_6_TITLE_IDC;
 
-			x = 0.536094 * safezoneW + safezoneX;
-			y = 0.555 * safezoneH + safezoneY;
-			w = 0.0721875 * safezoneW;
+			x = 0.546406 * safezoneW + safezoneX;
+			y = 0.511 * safezoneH + safezoneY;
+			w = 0.12375 * safezoneW;
 			h = 0.033 * safezoneH;
 		};
 		class ACTION_6_BUTTON: RscButtonSilent
 		{
-			idc = 5039;
-			action = "";
+			idc = ACTION_6_BUTTON_IDC;
 
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.544 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.515469 * safezoneW + safezoneX;
+			y = 0.5 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 
 		class ACTION_7_FRAME: RscFrame
 		{
-			idc = 5040;
-			colorText[] = {0,0,0,0.8};
+			idc = ACTION_7_FRAME_IDC;
 
-			x = 0.386562 * safezoneW + safezoneX;
-			y = 0.61 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.324687 * safezoneW + safezoneX;
+			y = 0.577 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_7_BACKGROUND: RscStructuredText
 		{
-			idc = 5041;
+			idc = ACTION_7_BACKGROUND_IDC;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.386562 * safezoneW + safezoneX;
-			y = 0.61 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.324687 * safezoneW + safezoneX;
+			y = 0.577 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_7_IMAGE: RscPicture
 		{
-			idc = 5042;
+			idc = ACTION_7_IMAGE_IDC;
 
-			x = 0.38963 * safezoneW + safezoneX;
-			y = 0.615831 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
-			h = 0.044 * safezoneH;
+			x = 0.329844 * safezoneW + safezoneX;
+			y = 0.588 * safezoneH + safezoneY;
+			w = 0.020625 * safezoneW;
+			h = 0.033 * safezoneH;
 		};
-		class ACTION_7_TEXT: RscStructuredText
+		class ACTION_7_TITLE: RscStructuredText
 		{
-			idc = 5043;
-			colorBackground[] = {0,0,0,0};
+			idc = ACTION_7_TITLE_IDC;
 
-			x = 0.4175 * safezoneW + safezoneX;
-			y = 0.621 * safezoneH + safezoneY;
-			w = 0.0721875 * safezoneW;
+			x = 0.355625 * safezoneW + safezoneX;
+			y = 0.588 * safezoneH + safezoneY;
+			w = 0.12375 * safezoneW;
 			h = 0.033 * safezoneH;
 		};
 		class ACTION_7_BUTTON: RscButtonSilent
 		{
-			idc = 5044;
+			idc = ACTION_7_BUTTON_IDC;
 
-			x = 0.386562 * safezoneW + safezoneX;
-			y = 0.61 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.324687 * safezoneW + safezoneX;
+			y = 0.577 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 
 		class ACTION_8_FRAME: RscFrame
 		{
-			idc = 5045;
-			colorText[] = {0,0,0,0.8};
+			idc = ACTION_8_FRAME_IDC;
 
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.61 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.515469 * safezoneW + safezoneX;
+			y = 0.577 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_8_BACKGROUND: RscStructuredText
 		{
-			idc = 5046;
+			idc = ACTION_8_BACKGROUND_IDC;
 			colorBackground[] = {0,0,0,0.6};
 
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.61 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.515469 * safezoneW + safezoneX;
+			y = 0.577 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 		class ACTION_8_IMAGE: RscPicture
 		{
-			idc = 5047;
+			idc = ACTION_8_IMAGE_IDC;
 
-			x = 0.507812 * safezoneW + safezoneX;
-			y = 0.615741 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
-			h = 0.044 * safezoneH;
+			x = 0.520625 * safezoneW + safezoneX;
+			y = 0.588 * safezoneH + safezoneY;
+			w = 0.020625 * safezoneW;
+			h = 0.033 * safezoneH;
 		};
-		class ACTION_8_TEXT: RscStructuredText
+		class ACTION_8_TITLE: RscStructuredText
 		{
-			idc = 5048;
-			colorBackground[] = {0,0,0,0};
+			idc = ACTION_8_TITLE_IDC;
 
-			x = 0.536094 * safezoneW + safezoneX;
-			y = 0.621 * safezoneH + safezoneY;
-			w = 0.0721875 * safezoneW;
+			x = 0.546406 * safezoneW + safezoneX;
+			y = 0.588 * safezoneH + safezoneY;
+			w = 0.12375 * safezoneW;
 			h = 0.033 * safezoneH;
 		};
 		class ACTION_8_BUTTON: RscButtonSilent
 		{
-			idc = 5049;
+			idc = ACTION_8_BUTTON_IDC;
 
-			x = 0.505156 * safezoneW + safezoneX;
-			y = 0.61 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
+			x = 0.515469 * safezoneW + safezoneX;
+			y = 0.577 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+
+		class ACTION_9_FRAME: RscFrame
+		{
+			idc = ACTION_9_FRAME_IDC;
+
+			x = 0.324687 * safezoneW + safezoneX;
+			y = 0.654 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+		class ACTION_9_BACKGROUND: RscStructuredText
+		{
+			idc = ACTION_9_BACKGROUND_IDC;
+			colorBackground[] = {0,0,0,0.6};
+
+			x = 0.324687 * safezoneW + safezoneX;
+			y = 0.654 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+		class ACTION_9_IMAGE: RscPicture
+		{
+			idc = ACTION_9_IMAGE_IDC;
+
+			x = 0.329844 * safezoneW + safezoneX;
+			y = 0.665 * safezoneH + safezoneY;
+			w = 0.020625 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+		class ACTION_9_TITLE: RscStructuredText
+		{
+			idc = ACTION_9_TITLE_IDC;
+
+			x = 0.355625 * safezoneW + safezoneX;
+			y = 0.665 * safezoneH + safezoneY;
+			w = 0.12375 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+		class ACTION_9_BUTTON: RscButtonSilent
+		{
+			idc = ACTION_9_BUTTON_IDC;
+
+			x = 0.324687 * safezoneW + safezoneX;
+			y = 0.654 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+
+		class ACTION_10_FRAME: RscFrame
+		{
+			idc = ACTION_10_FRAME_IDC;
+
+			x = 0.515469 * safezoneW + safezoneX;
+			y = 0.654 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+		class ACTION_10_BACKGROUND: RscStructuredText
+		{
+			idc = ACTION_10_BACKGROUND_IDC;
+			colorBackground[] = {0,0,0,0.6};
+
+			x = 0.515469 * safezoneW + safezoneX;
+			y = 0.654 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
+			h = 0.055 * safezoneH;
+		};
+		class ACTION_10_IMAGE: RscPicture
+		{
+			idc = ACTION_10_IMAGE_IDC;
+
+			x = 0.520625 * safezoneW + safezoneX;
+			y = 0.665 * safezoneH + safezoneY;
+			w = 0.020625 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+		class ACTION_10_TITLE: RscStructuredText
+		{
+			idc = ACTION_10_TITLE_IDC;
+
+			x = 0.546406 * safezoneW + safezoneX;
+			y = 0.665 * safezoneH + safezoneY;
+			w = 0.12375 * safezoneW;
+			h = 0.033 * safezoneH;
+		};
+		class ACTION_10_BUTTON: RscButtonSilent
+		{
+			idc = ACTION_10_BUTTON_IDC;
+
+			x = 0.515469 * safezoneW + safezoneX;
+			y = 0.654 * safezoneH + safezoneY;
+			w = 0.159844 * safezoneW;
 			h = 0.055 * safezoneH;
 		};
 	};

@@ -76,16 +76,17 @@ if ((g_garage_info select 2) isEqualTo []) then
 {
 	if (!(isNull g_interaction_target)) then
 	{
-		_position = (position g_interaction_target) findEmptyPosition [((((boundingBox g_interaction_target) select 1) select 0) + 3), ((((boundingBox g_interaction_target) select 1) select 0) + 35), _vehicleClassname];
-		if ((nearestObjects[_position, ["Car", "Air", "Ship", "Truck", "Tank"], 7]) isEqualTo []) exitWith {
-			_validSpawn = _x;
+		_position = (position g_interaction_target) findEmptyPosition [(((boundingBox g_interaction_target) select 1) select 0), ((((boundingBox g_interaction_target) select 1) select 0) + 75), _vehicleClassname];
+		if (count(_position) > 0) then
+		{
+			if ((nearestObjects [_position, ["Car", "Air", "Ship", "Truck", "Tank"], 7]) isEqualTo []) then {
+				_validSpawn = _x;
+			};
 		};
 	};
 } else {
 	{
-		if ((nearestObjects[(getMarkerPos _x), ["Car", "Air", "Ship", "Truck", "Tank"], 7]) isEqualTo []) exitWith {
-			_validSpawn = _x;
-		};
+		if ((nearestObjects [(getMarkerPos _x), ["Car", "Air", "Ship", "Truck", "Tank"], 7]) isEqualTo []) exitWith {_validSpawn = _x};
 	} forEach (g_garage_info select 2);	
 };
 if (isNil "_validSpawn") exitWith {["Aucun emplacement de sortie de véhicule n'est libre"] call AlysiaClient_fnc_error};

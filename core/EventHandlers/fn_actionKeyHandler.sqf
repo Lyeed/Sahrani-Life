@@ -337,7 +337,7 @@ if ((vehicle player) isEqualTo player) then
 	
 	if ((_vehicle isKindOf "Car") || (_vehicle isKindOf "Ship") || (_vehicle isKindOf "Air") || (_vehicle isKindOf "Truck") || (_vehicle isKindOf "Tank")) then
 	{
-		if ((alive _vehicle) && ((damage _vehicle) < 1)) then
+		if (alive _vehicle) then
 		{
 			[_vehicle] call AlysiaClient_fnc_interactions_player_to_vehicle;
 			true breakOut "main";

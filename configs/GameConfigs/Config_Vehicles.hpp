@@ -92,7 +92,7 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver","company_farming"};
 		fuel = "Diesel";
-		tactor = 1;
+		tractor = 1;
 	};
 	class RDS_Zetor6945_Base: madsa_mtz_F
 	{
@@ -1921,17 +1921,6 @@ class ALYSIA_VEHICLES
 		fuel = "Diesel";
 	};
 
-	class O_Truck_02_covered_F
-	{
-		realname = "Zamak Couvert";
-		buyPrice = 185250;
-		inventory = 300;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck","company_foundry"};
-		fuel = "Diesel";
-	};
-
 	class B_Truck_01_box_F
 	{
 		realname = "HEMTT Box";
@@ -2534,18 +2523,7 @@ class ALYSIA_VEHICLES
 		fuel = "Diesel";
 		realname = "Man TGX Tanker Truck";
 	};
-	
-	class Jonzie_Box_Truck
-	{
-		buyPrice = 265000;
-		inventory = 400;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck","company_foundry"};
-		fuel = "Diesel";
-		realname = "Man TGX Box Truck";
-	};
-	
+
 	class Jonzie_Ute
 	{
 		buyPrice = 27500;
