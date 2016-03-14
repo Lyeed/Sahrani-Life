@@ -27,6 +27,7 @@ class ALYSIA_ITEMS
 		name = "Lingot d'or";
 		weight = 30;
 		image = "alysia_items_virtual\data\lingot_or.paa";
+		license = "gold";
 		class market
 		{
 			max = 4900;
@@ -759,6 +760,7 @@ class ALYSIA_ITEMS
 		name = "Lingot de cuivre";
 		weight = 3;
 		image = "alysia_items_virtual\data\lingot_cuivre.paa";
+		license = "copper";
 		class market
 		{
 			max = 315;
@@ -798,6 +800,7 @@ class ALYSIA_ITEMS
 		name = "Lingot d'aluminium";
 		weight = 3;
 		image = "alysia_items_virtual\data\alluminium.paa";
+		license = "bauxite";
 		class market
 		{
 			max = 352;

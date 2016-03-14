@@ -63,7 +63,7 @@
 				(
 					(
 						(g_interaction_target getVariable ['surrender',false]) ||
-						((animationState g_interaction_target) isEqualTo 'Incapacitated')
+						((animationState g_interaction_target) isEqualTo 'incapacitated')
 					) && 
 					!(g_interaction_target getVariable['restrained',false]) &&
 					((['handcuffs'] call AlysiaClient_fnc_itemCount) > 0)

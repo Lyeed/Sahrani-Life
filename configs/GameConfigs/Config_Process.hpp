@@ -518,7 +518,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 2;
 		time_default = 3;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -616,7 +615,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 5;
 		time_default = 8;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -642,7 +640,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 12;
 		time_default = 8;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -743,7 +740,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 12;
 		time_default = 8;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -771,7 +767,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 8;
 		time_default = 2;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -797,7 +792,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 8;
 		time_default = 2;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -823,7 +817,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 12;
 		time_default = 8;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -849,7 +842,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 8;
 		time_default = 2;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -875,7 +867,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 8;
 		time_default = 2;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -901,7 +892,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 8;
 		time_default = 2;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -927,7 +917,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 8;
 		time_default = 2;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -953,7 +942,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 8;
 		time_default = 2;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -979,7 +967,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 8;
 		time_default = 2;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -1006,7 +993,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 8;
 		time_default = 2;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -1032,7 +1018,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 8;
 		time_default = 2;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -1058,7 +1043,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 8;
 		time_default = 2;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -1084,7 +1068,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 8;
 		time_default = 2;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -1110,7 +1093,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 8;
 		time_default = 2;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -1136,7 +1118,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 8;
 		time_default = 2;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -1162,7 +1143,6 @@ class ALYSIA_PROCESS
 		};
 		time_per_item = 8;
 		time_default = 2;
-		class target {};
 		class factions
 		{
 			class CIV

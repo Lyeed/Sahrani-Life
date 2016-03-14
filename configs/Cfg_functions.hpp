@@ -627,6 +627,7 @@ class CfgFunctions
 			class APP_announces_show_update {};
 			class APP_company {};
 			class APP_company_update {};
+			class APP_gov {};
 		};
 	};
 };

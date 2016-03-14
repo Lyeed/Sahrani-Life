@@ -7,10 +7,12 @@
 */
 
 if (isNull g_interaction_target) exitWith {};
+
 if (g_interaction_target getVariable ["restrained", false]) exitWith {
 	["La cible est déjà menotté"] call AlysiaClient_fnc_error;
 };
-if (!(g_interaction_target getVariable ["surrender", false])) exitWith {
+
+if (!(g_interaction_target getVariable ["surrender", false]) && ((animationState player) != "incapacitated")) exitWith {
 	["La cible ne peut pas être menottée"] call AlysiaClient_fnc_error;
 };
 
@@ -24,8 +26,8 @@ g_action_inUse = false;
 if (g_interaction_target getVariable ["restrained", false]) exitWith {
 	["La cible est déjà menotté"] call AlysiaClient_fnc_error;
 };
-if (!(g_interaction_target getVariable ["surrender", false])) exitWith {
-	["La cible ne peut pas être menotté"] call AlysiaClient_fnc_error;
+if (!(g_interaction_target getVariable ["surrender", false]) && ((animationState player) != "incapacitated")) exitWith {
+	["La cible ne peut pas être menottée"] call AlysiaClient_fnc_error;
 };
 
 if (!([false, "handcuffs", 1] call AlysiaClient_fnc_handleInv)) exitWith {

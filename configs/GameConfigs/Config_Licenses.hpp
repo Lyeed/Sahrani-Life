@@ -298,6 +298,14 @@ class ALYSIA_LICENSES
 			class CIV {};
 		};
 	};
+	class central_com
+	{
+		name = "Commissaire au Parti Central";
+		class factions
+		{
+			class CIV {};
+		};		
+	};
 
 	class company_weapon
 	{

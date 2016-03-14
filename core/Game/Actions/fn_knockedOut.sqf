@@ -6,7 +6,7 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if ((animationState player) != "Incapacitated") then
+if ((animationState player) != "incapacitated") then
 {
 	if (!g_staff_god) then
 	{
@@ -17,7 +17,7 @@ if ((animationState player) != "Incapacitated") then
 		} else {
 			g_action_inUse = true;
 		};
-		player playMoveNow "Incapacitated";
+		player playMoveNow "incapacitated";
 		sleep round(random(7) + 2);
 		player playMoveNow "amovppnemstpsraswrfldnon";
 

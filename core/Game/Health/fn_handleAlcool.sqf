@@ -32,6 +32,17 @@ if (g_alcool isEqualTo 0) then
 
 		while {g_alcool > 0} do
 		{
+			if (!(player getVariable ["is_coma", false])) then
+			{
+				if (g_alcool > 7) then
+				{
+					if ((animationState player) != "incapacitated") then {player PlayMove "incapacitated"};
+					if (random(100) <= 30) then {[player, "vomit", 30] call CBA_fnc_globalSay3d};
+				} else {
+					if ((animationState player) isEqualTo "incapacitated") then {player playMoveNow "amovppnemstpsraswrfldnon"};
+				};
+			};
+
 			_calc = 0.005 + (exp(g_alcool * 3) / 90);
 			_effect ppEffectAdjust [_calc, _calc, true];
 			_effect ppEffectCommit ((round(random(3)) + 1) * 60);
