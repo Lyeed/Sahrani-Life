@@ -2786,4 +2786,15 @@ class ALYSIA_ITEMS_ARMA
     	buy_price = 500;
     	buy_condition_GUER = 1;
     };
+
+    class Bank_Key1_N
+    {
+    	buy_price = 300;
+    	buy_condition_WEST = 8;
+    };
+    class Bank_Key1_S
+    {
+    	buy_price = 300;
+    	buy_condition_EAST = 4;
+    };
 };

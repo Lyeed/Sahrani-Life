@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_zone", "_plant", "_seed", "_vehicle"];
+private["_zone", "_plant", "_seed", "_vehicle", "_max"];
 _vehicle = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 if (isNull _vehicle) exitWith {};
@@ -17,21 +17,20 @@ if (_vehicle getVariable ["farm_plant", false]) exitWith
 };
 
 if (!(isEngineOn _vehicle)) exitWith {
-	["Vous devez avoir le moteur démarré pour débuter la procédure de plantaison"] call AlysiaClient_fnc_error;
+	["Vous devez avoir le moteur démarré pour débuter la procédure de plantaison."] call AlysiaClient_fnc_error;
 };
 if ((driver _vehicle) != player) exitWith {
-	["Seul le conducteur peut débuter la procédure de plantaison"] call AlysiaClient_fnc_error;
+	["Seul le conducteur peut débuter la procédure de plantaison."] call AlysiaClient_fnc_error;
 };
 if ((_vehicle getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
-	["Vous ne pouvez pas commencer la plantaison alors que le coffre est en cours d'utilisation"] call AlysiaClient_fnc_error;
+	["Vous ne pouvez pas commencer la plantaison alors que le coffre est en cours d'utilisation."] call AlysiaClient_fnc_error;
 };
 
 _zone = "";
 {
-	if (_vehicle distance (getMarkerPos _x) < 40) exitWith {
-		_zone = _x;
-	};
-} forEach getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "farming_markers_plant");
+	_marker = configName _x;
+	if (_vehicle distance (getMarkerPos _marker) < getNumber(_x >> "area")) exitWith {_zone = _marker};
+} forEach ("str(playerSide) in getArray(_x >> 'sides')" configClasses (missionConfigFile >> "ALYSIA_FARMING_PLANT_MARKERS"));
 if (_zone isEqualTo "") exitWith {
 	["Vous n'êtes près d'aucune zone agricole"] call AlysiaClient_fnc_error;
 };
@@ -39,6 +38,7 @@ if (_zone isEqualTo "") exitWith {
 closeDialog 0;
 _plant = getText(missionConfigFile >> "ALYSIA_FARMING_PLANT_MARKERS" >> _zone >> "plant");
 _seed = getText(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _plant >> "seed");
+_max = getNumber(missionConfigFile >> "ALYSIA_FARMING_PLANT_MARKERS" >> _zone >> "area");
 
 _vehicle setVariable ["farm_plant", true];
 _vehicle setVariable ["trunk_in_use_ID", "FARMING", true];
@@ -48,7 +48,7 @@ sleep 2;
 
 while {(_vehicle getVariable ["farm_plant", false])} do
 {
-	if ((_vehicle distance (getMarkerPos _zone)) > 40) exitWith {
+	if ((_vehicle distance (getMarkerPos _zone)) > _max) exitWith {
 		[format["Plantaison terminé<br/>Trop loin de %1", markerText _zone]] call AlysiaClient_fnc_error;
 	};
 	if (([(_vehicle getVariable ["Trunk", []]), _seed] call AlysiaClient_fnc_itemTrunk) isEqualTo 0) exitWith {

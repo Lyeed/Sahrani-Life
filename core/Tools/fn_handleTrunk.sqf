@@ -17,7 +17,6 @@ _ret = false;
 if (_variable isEqualTo "") exitWith {false};
 if (_item isEqualTo "") exitWith {false};
 if (isNull _target) exitWith {false};
-if (isPlayer _target) exitWith {false};
 
 _trunk = _target getVariable [_variable, []];
 _index = [_item, _trunk] call AlysiaClient_fnc_index;

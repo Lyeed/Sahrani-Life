@@ -100,8 +100,11 @@ if ((vehicle player) isEqualTo player) then
 		_house = (nearestObjects [player, (call g_houses_list), 7]) select 0;
 		if (!(isNil "_house")) then
 		{
-			[_house] call AlysiaClient_fnc_house_menu_handler;
-			true breakOut "main";
+			if (!(isObjectHidden _house)) then
+			{
+				[_house] call AlysiaClient_fnc_house_menu_handler;
+				true breakOut "main";
+			};
 		};
 
 		{
@@ -207,7 +210,7 @@ if ((vehicle player) isEqualTo player) then
 					true breakOut "main";
 				};
 
-				if (typeOf(_target) in (call g_houses_storages)) then
+				if ((typeOf(_target) in (call g_houses_storages)) && !(isObjectHidden _target)) then
 				{
 					[_target, "Trunk", true, true, false, false] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
 					true breakOut "main";

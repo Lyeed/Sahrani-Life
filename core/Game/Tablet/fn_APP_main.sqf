@@ -19,7 +19,7 @@ _apps = [];
 _global_apps = 
 [
 	["lyeed_IMG\data\tablet\app_main\app_staff.paa", "lyeed_IMG\data\tablet\app_main\app_staff_select.paa", "['staff'] spawn AlysiaClient_fnc_tabletApp;", "Staff", "count(""getText(_x >> 'uid') isEqualTo (getPlayerUID player)"" configClasses (missionConfigFile >> 'ALYSIA_STAFF' >> 'members')) != 0"],
-	["lyeed_IMG\data\tablet\app_main\app_gov.paa", "lyeed_IMG\data\tablet\app_main\app_gov_select.paa", "['gov'] spawn AlysiaClient_fnc_tabletApp;", "Gouvernement", "(['gov_company'] call AlysiaClient_fnc_hasLicense) || (['gov_money'] call AlysiaClient_fnc_hasLicense) || (['gov_justice'] call AlysiaClient_fnc_hasLicense) || (['central_com'] call AlysiaClient_fnc_hasLicense)"],
+	["lyeed_IMG\data\tablet\app_main\app_gov.paa", "lyeed_IMG\data\tablet\app_main\app_gov_select.paa", "['gov'] spawn AlysiaClient_fnc_tabletApp;", "Gouv", "(['gov_company'] call AlysiaClient_fnc_hasLicense) || (['gov_money'] call AlysiaClient_fnc_hasLicense) || (['gov_justice'] call AlysiaClient_fnc_hasLicense) || (['central_com'] call AlysiaClient_fnc_hasLicense)"],
 	["lyeed_IMG\data\tablet\app_main\app_bank.paa", "lyeed_IMG\data\tablet\app_main\app_bank_select.paa", "['solde'] spawn AlysiaClient_fnc_tabletApp;", "Solde", "true"],
 	["lyeed_IMG\data\tablet\app_main\app_gps.paa", "lyeed_IMG\data\tablet\app_main\app_gps_select.paa", "['vehicles'] spawn AlysiaClient_fnc_tabletApp;", "Véhicules", "true"],
 	["lyeed_IMG\data\tablet\app_main\app_setting.paa", "lyeed_IMG\data\tablet\app_main\app_setting_select.paa", "['settings'] spawn AlysiaClient_fnc_tabletApp;", "Réglages", "true"],

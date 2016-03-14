@@ -13,7 +13,7 @@ if (isNull _vehicle) exitWith {};
 if (_vehicle getVariable ["farm_gather", false]) exitWith
 {
 	_vehicle setVariable ["farm_gather", false];
-	["Récolte terminé"] call AlysiaClient_fnc_error;
+	["Récolte terminé"] call AlysiaClient_fnc_info;
 };
 
 if ((_vehicle getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
@@ -32,7 +32,7 @@ _vehicle setVariable ["farm_gather", true];
 _vehicle setVariable ["trunk_in_use_ID", "FARMING", true];
 
 ["Début de la procédure de récolte dans deux secondes..."] call AlysiaClient_fnc_info;
-sleep 2;
+uiSleep 2;
 
 while {(_vehicle getVariable ["farm_gather", false])} do
 {
@@ -58,14 +58,10 @@ while {(_vehicle getVariable ["farm_gather", false])} do
 				_amount = 0;
 				_item = _x select 0;
 
-				if ((_x select 2) isEqualTo 1) then
-				{
-					_amount = round(random(_x select 1));
-					if (_amount < 1) then {
-						_amount = 1;
-					};
+				if ((_x select 2) isEqualTo 1) then {
+					_amount = round(random(_x select 1)) + 1;
 				} else {
-					_amount = (_x select 1);
+					_amount = _x select 1;
 				};
 
 				if (!([true, _vehicle, "Trunk", _item, _amount, false] call AlysiaClient_fnc_handleTrunk)) then
@@ -78,7 +74,7 @@ while {(_vehicle getVariable ["farm_gather", false])} do
 	 	};
 	};
 
-	sleep 0.5;
+	uiSleep 0.5;
 };
 
 _vehicle setVariable ["Trunk", (_vehicle getVariable ["Trunk", []]), true];

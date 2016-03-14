@@ -57,7 +57,7 @@ while {!(isNull _obj) && !(isNull (attachedTo _obj))} do
 						waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
 						playSound "buy";
 						deleteVehicle _obj;
-						[g_company, true, 5000 + ((_max - _amount) / 30)] call AlysiaClient_fnc_company_bank_handle;
+						[g_company, true, 5000 + ((_max - _amount) / 18)] call AlysiaClient_fnc_company_bank_handle;
 						[_atm, true, 5000] call AlysiaClient_fnc_atmMoneyHandle;
 						g_action_inUse = false;
 					};

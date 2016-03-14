@@ -13,10 +13,29 @@ if (isNull _display) exitWith {};
 
 _info = switch (true) do
 {
-	case ((["gov_company"] call AlysiaClient_fnc_hasLicense) || (["gov_money"] call AlysiaClient_fnc_hasLicense) || (["gov_justice"] call AlysiaClient_fnc_hasLicense)):
+	case (("gov_company"] call AlysiaClient_fnc_hasLicense):
 	{
 		[
 			["gov_company"] call AlysiaClient_fnc_licenseGetName,
+			"<t align='left' size='2' font='PuristaMedium'>Nouvelle République de Sibranak</t>",
+			"lyeed_IMG\data\faction\CIV_logo.paa",
+			[gServer_tax_north_companies_employee_multiplier, gServer_tax_north_companies_building_multiplier, gServer_tax_north_salary_multiplier, gServer_tax_north_house_multiplier]
+		]
+
+	};
+	case (["gov_money"] call AlysiaClient_fnc_hasLicense):
+	{
+		[
+			["gov_money"] call AlysiaClient_fnc_licenseGetName,
+			"<t align='left' size='2' font='PuristaMedium'>Nouvelle République de Sibranak</t>",
+			"lyeed_IMG\data\faction\CIV_logo.paa",
+			[gServer_tax_north_companies_employee_multiplier, gServer_tax_north_companies_building_multiplier, gServer_tax_north_salary_multiplier, gServer_tax_north_house_multiplier]
+		]
+	};
+	case (["gov_justice"] call AlysiaClient_fnc_hasLicense):
+	{
+		[
+			["gov_justice"] call AlysiaClient_fnc_licenseGetName,
 			"<t align='left' size='2' font='PuristaMedium'>Nouvelle République de Sibranak</t>",
 			"lyeed_IMG\data\faction\CIV_logo.paa",
 			[gServer_tax_north_companies_employee_multiplier, gServer_tax_north_companies_building_multiplier, gServer_tax_north_salary_multiplier, gServer_tax_north_house_multiplier]
