@@ -25,12 +25,11 @@ _list = _display displayCtrl 90006;
 lbClear _list;
 
 {
-	_company = configName _x;
 	_index = _list lbAdd getText(_x >> "name");
-	_list lbSetData [_index, _company];
+	_list lbSetData [_index, (configName _x)];
 	_list lbSetValue [_index, getNumber(_x >> "construction" >> "price")];
 	_list lbSetPicture [_index, getText(_x >> "image")];
-} forEach ("isClass(_x >> 'construction') && (getNumber(_x >> 'ready') isEqualTo 1)" configClasses (missionConfigFile >> "ALYSIA_COMPANIES" >> "types"));
+} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_COMPANIES" >> "types"));
 if ((lbSize _list) isEqualTo 0) then
 {
 	_list lbAdd "Aucun";

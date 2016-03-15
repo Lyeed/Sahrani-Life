@@ -13,13 +13,14 @@ if (isNull _display) exitWith {};
 
 _info = switch (true) do
 {
-	case (("gov_company"] call AlysiaClient_fnc_hasLicense):
+	case (["gov_company"] call AlysiaClient_fnc_hasLicense):
 	{
 		[
 			["gov_company"] call AlysiaClient_fnc_licenseGetName,
 			"<t align='left' size='2' font='PuristaMedium'>Nouvelle République de Sibranak</t>",
 			"lyeed_IMG\data\faction\CIV_logo.paa",
-			[gServer_tax_north_companies_employee_multiplier, gServer_tax_north_companies_building_multiplier, gServer_tax_north_salary_multiplier, gServer_tax_north_house_multiplier]
+			[gServer_tax_north_companies_employee_multiplier, gServer_tax_north_companies_building_multiplier, gServer_tax_north_salary_multiplier, gServer_tax_north_house_multiplier],
+			false
 		]
 
 	};
@@ -29,7 +30,8 @@ _info = switch (true) do
 			["gov_money"] call AlysiaClient_fnc_licenseGetName,
 			"<t align='left' size='2' font='PuristaMedium'>Nouvelle République de Sibranak</t>",
 			"lyeed_IMG\data\faction\CIV_logo.paa",
-			[gServer_tax_north_companies_employee_multiplier, gServer_tax_north_companies_building_multiplier, gServer_tax_north_salary_multiplier, gServer_tax_north_house_multiplier]
+			[gServer_tax_north_companies_employee_multiplier, gServer_tax_north_companies_building_multiplier, gServer_tax_north_salary_multiplier, gServer_tax_north_house_multiplier],
+			true
 		]
 	};
 	case (["gov_justice"] call AlysiaClient_fnc_hasLicense):
@@ -38,7 +40,8 @@ _info = switch (true) do
 			["gov_justice"] call AlysiaClient_fnc_licenseGetName,
 			"<t align='left' size='2' font='PuristaMedium'>Nouvelle République de Sibranak</t>",
 			"lyeed_IMG\data\faction\CIV_logo.paa",
-			[gServer_tax_north_companies_employee_multiplier, gServer_tax_north_companies_building_multiplier, gServer_tax_north_salary_multiplier, gServer_tax_north_house_multiplier]
+			[gServer_tax_north_companies_employee_multiplier, gServer_tax_north_companies_building_multiplier, gServer_tax_north_salary_multiplier, gServer_tax_north_house_multiplier],
+			false
 		]
 	};
 	case (["central_com"] call AlysiaClient_fnc_hasLicense):
@@ -47,7 +50,8 @@ _info = switch (true) do
 			["central_com"] call AlysiaClient_fnc_licenseGetName,
 			"<t align='left' size='2' font='PuristaMedium'>République Populaire de Sibranak</t>",
 			"lyeed_IMG\data\faction\EAST_logo.paa",
-			[gServer_tax_south_companies_employee_multiplier, gServer_tax_south_companies_building_multiplier, gServer_tax_south_salary_multiplier, gServer_tax_south_house_multiplier]
+			[gServer_tax_south_companies_employee_multiplier, gServer_tax_south_companies_building_multiplier, gServer_tax_south_salary_multiplier, gServer_tax_south_house_multiplier],
+			true
 		]
 	};
 };
@@ -75,3 +79,7 @@ if (isNil "_info") exitWith {closeDialog 0};
 	((_info select 3) select 1) * 100,
 	((_info select 3) select 3) * 100
 ];
+
+// if (_info select 4) then {
+// 	[9703, true] call AlysiaClient_fnc_tabletShow;
+// };

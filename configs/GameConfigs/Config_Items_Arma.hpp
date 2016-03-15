@@ -2797,4 +2797,17 @@ class ALYSIA_ITEMS_ARMA
     	buy_price = 300;
     	buy_condition_EAST = 4;
     };
+
+    class TRYK_U_B_BLK3CD
+    {
+    	name = "Tenue Convoyeur";
+    	buy_price = 250;
+    	buy_license_CIV = "company_money_tranfer";
+    };
+    class TRYK_kio_balaclava_BLK
+    {
+    	name = "Masque Convoyeur";
+    	buy_price = 90;
+    	buy_license_CIV = "company_money_tranfer";
+    };
 };

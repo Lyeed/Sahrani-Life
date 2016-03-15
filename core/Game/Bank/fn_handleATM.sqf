@@ -7,7 +7,7 @@
 */
 private["_value", "_type", "_from", "_ret"];
 _type = [_this, 0, false, [false]] call BIS_fnc_param;
-_value = round([_this, 1, 0, [0]] call BIS_fnc_param);
+_value = abs(round([_this, 1, 0, [0]] call BIS_fnc_param));
 _from = [_this, 2, "", [""]] call BIS_fnc_param;
 _ret = false;
 

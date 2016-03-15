@@ -1,32 +1,29 @@
 /*
-	Batiments disponibles :
-		Land_tovarna2
-		Land_A_Office01_ep1
-		Land_a_stationhouse
-		Land_i_Shop_01_V1_F
-		Land_i_House_Small_03_V1_F
-	
-	Types d'entreprises :
-		-> Fuel
-		-> Agricol bio
-		-> Agricol industriel
-		-> Construction - batiment (ciment)
-		-> Fonderie (Métaux lourds)
-		-> Armement
-		-> Transport en commun (taxi/bus)
-		-> Sécurité
-		-> Service
-		-> dépannage
-		-> Transport de fond
-		-> Concesionnaire
-		-> Boutique
-		-> Journaliste
-
-	+ tard :
-		-> Assurance
-		-> Agence immobilière
-		-> Restauration
-		-> Trader
+	BATIMENTS DISPONIBLES:
+		"Land_a_stationhouse"
+		"Land_i_Shop_01_V1_F"
+		"Land_i_House_Small_03_V1_F"
+	FINI:
+		"Industrie d'armement"
+		"Ferme agricole"
+		"Garagiste"
+		"Transport de fonds"
+		"Fonderie"
+		"Construction"
+		"Transport de personnes"
+		"Transport de matériaux"
+		"Sécurité"
+		"Service"
+	PAS FINI:
+		"Concesionnaire"
+		"Magasin"
+		"Journaliste"
+		"Exploitation du pétrole"
+	PREVU:
+		"Assurance"
+		"Agence immobilière"
+		"Restauration"
+		"Trader"
 */
 
 class ALYSIA_COMPANIES
@@ -38,7 +35,6 @@ class ALYSIA_COMPANIES
 	{
 		class weapon
 		{
-			ready = 1;
 			name = "Industrie d'armement";
 			building = "Land_Ind_vysypka";
 			license = "company_weapon";
@@ -71,6 +67,8 @@ class ALYSIA_COMPANIES
 				"magazine_gsh18",
 				"weapon_sdar",
 				"magazine_sdar",
+				"weapon_vermin",
+				"magazine_vermin",
 				"bulletproofvest_news",
 				"bulletproofvest_security",
 				"bulletproofvest_transfer"
@@ -102,11 +100,10 @@ class ALYSIA_COMPANIES
 
 		class farming
 		{
-			ready = 1;
 			name = "Ferme agricole";
 			building = "Land_i_Windmill01_F";
 			license = "company_farming";
-			image = "lyeed_IMG\data\companies\types\farming_bio.paa";
+			image = "lyeed_IMG\data\companies\types\farming.paa";
 			process[] = {};
 			members_max = 12;
 			class construction
@@ -135,7 +132,6 @@ class ALYSIA_COMPANIES
 
 		class garagist
 		{
-			ready = 1;
 			name = "Garagiste";
 			building = "Land_CarService_F";
 			license = "company_garagist";
@@ -169,7 +165,6 @@ class ALYSIA_COMPANIES
 
 		class money_transfer
 		{
-			ready = 1;
 			name = "Transport de fonds";
 			building = "Land_i_Shed_Ind_F";
 			license = "company_money_tranfer";
@@ -202,9 +197,8 @@ class ALYSIA_COMPANIES
 
 		class foundry
 		{
-			ready = 1;
 			name = "Fonderie";
-			building = "Land_Factory_Main_F";
+			building = "Land_tovarna2";
 			license = "company_foundry";
 			image = "lyeed_IMG\data\companies\types\foundry.paa";
 			process[] = {"steel", "soufre"};
@@ -212,7 +206,7 @@ class ALYSIA_COMPANIES
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 80}, {"ciment", 250}, {"goldbar", 75}, {"furniture", 10}, {"ironp", 50}, {"sand", 100}, {"glass", 80}, {"copperp", 20}, {"alu", 20}, {"pierre", 50}, {"steel", 150}, {"brique", 400}};
+				require[] = {{"woodp", 80}, {"ciment", 350}, {"goldbar", 50}, {"furniture", 10}, {"ironp", 50}, {"sand", 100}, {"glass", 80}, {"copperp", 20}, {"alu", 20}, {"pierre", 50}, {"steel", 150}, {"brique", 400}};
 				price = 650000;
 			};
 			class marker
@@ -233,42 +227,8 @@ class ALYSIA_COMPANIES
 			};
 		};
 
-		class fuel
-		{
-			ready = 0;
-			name = "Exploitation du pétrole";
-			building = "";//?
-			license = "company_fuel";
-			image = "lyeed_IMG\data\companies\types\fuel.paa";
-			process[] = {"oil"};
-			members_max = 8;
-			class construction
-			{
-				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
-				price = 649000;
-			};
-			class marker
-			{
-				type = "Fett_company_fuel";
-				color = "ColorWhite";
-				shape = "ICON";
-				size = 0.4;
-			};
-			class tax
-			{
-				price_per_employee = 100;
-				price_building = 100;
-			};
-			class storage
-			{
-				inventory = 250;
-			};
-		};
-
 		class construction
 		{
-			ready = 1;
 			name = "Construction";
 			building = "Land_WIP_F";
 			license = "company_construction";
@@ -300,20 +260,52 @@ class ALYSIA_COMPANIES
 			};
 		};
 
+		class transport_people
+		{
+			name = "Transport de personnes";
+			building = "Land_Hangar_F";
+			license = "company_transport_people";
+			image = "lyeed_IMG\data\companies\types\transport_people.paa";
+			process[] = {};
+			members_max = 9;
+			ticket = 1;
+			class construction
+			{
+				building = "Misc_palletsfoiled_heap";
+				require[] = {{"woodp", 140}, {"ciment", 150}, {"goldbar", 20}, {"furniture", 30}, {"ironp", 250}, {"sand", 50}, {"glass", 20}, {"copperp", 20}, {"alu", 100}, {"pierre", 50}, {"steel", 300}};
+				price = 375000;
+			};
+			class marker
+			{
+				type = "Fett_company_transport";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
+			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
+			};
+			class storage
+			{
+				inventory = 250;
+			};
+		};
+
 		class transport_goods
 		{
-			ready = 1;
 			name = "Transport de matériaux";
-			building = "Land_Hangar_F";
+			building = "Land_A_Office01_ep1";
 			license = "company_transport_goods";
-			image = "lyeed_IMG\data\companies\types\transport.paa";
+			image = "lyeed_IMG\data\companies\types\transport_goods.paa";
 			process[] = {};
 			members_max = 8;
 			ticket = 1;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 40}, {"ciment", 200}, {"goldbar", 20}, {"furniture", 10}, {"ironp", 250}, {"sand", 50}, {"glass", 20}, {"copperp", 20}, {"alu", 100}, {"pierre", 50}, {"steel", 300}};
+				require[] = {{"woodp", 20}, {"ciment", 300}, {"goldbar", 20}, {"furniture", 10}, {"ironp", 150}, {"sand", 75}, {"glass", 20}, {"copperp", 20}, {"alu", 90}, {"pierre", 250}, {"steel", 300}};
 				price = 470000;
 			};
 			class marker
@@ -336,7 +328,6 @@ class ALYSIA_COMPANIES
 
 		class security
 		{
-			ready = 0;
 			name = "Sécurité";
 			building = "Land_Cargo_HQ_V1_F";
 			license = "company_security";
@@ -370,7 +361,6 @@ class ALYSIA_COMPANIES
 
 		class service
 		{
-			ready = 1;
 			name = "Service";
 			building = "Land_Entreprise01_F";
 			license = "company_service";
@@ -401,6 +391,10 @@ class ALYSIA_COMPANIES
 				inventory = 50;
 			};
 		};
+	};
+};
+
+/*
 
 		class car_dealer
 		{
@@ -501,5 +495,40 @@ class ALYSIA_COMPANIES
 				inventory = 50;
 			};
 		};
-	};
-};
+
+
+		class fuel
+		{
+			ready = 0;
+			name = "Exploitation du pétrole";
+			building = "";//?
+			license = "company_fuel";
+			image = "lyeed_IMG\data\companies\types\fuel.paa";
+			process[] = {"oil"};
+			members_max = 8;
+			class construction
+			{
+				building = "Misc_palletsfoiled_heap";
+				require[] = {{"woodp", 80}, {"ciment", 150}, {"goldbar", 5}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 90}, {"copperp", 30}, {"alu", 25}, {"pierre", 50}};
+				price = 649000;
+			};
+			class marker
+			{
+				type = "Fett_company_fuel";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
+			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
+			};
+			class storage
+			{
+				inventory = 250;
+			};
+		};
+
+
+*/

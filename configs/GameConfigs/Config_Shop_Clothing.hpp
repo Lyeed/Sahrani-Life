@@ -873,7 +873,8 @@ class ALYSIA_SHOPS_CLOTHING
 			"U_C_Journalist",
 			"Skyline_Uniforme_Securite_01_F",
 			"Skyline_Uniforme_Securite_02_F",
-			"Skyline_Uniforme_Securite_03_F"
+			"Skyline_Uniforme_Securite_03_F",
+			"TRYK_U_B_BLK3CD"
 		};
 		headgear[] =
 		{
@@ -881,7 +882,7 @@ class ALYSIA_SHOPS_CLOTHING
 			"usm_helmet_safety",
 			"H_Cap_Securite_01"
 		};
-		goggles[] = {};
+		goggles[] = {"TRYK_kio_balaclava_BLK"};
 		vests[] = {"usm_vest_safety"};
 		backpacks[] = {"Skyline_Sac_Depanneur_01_F"};
 	};

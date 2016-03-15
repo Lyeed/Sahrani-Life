@@ -628,6 +628,9 @@ class CfgFunctions
 			class APP_company {};
 			class APP_company_update {};
 			class APP_gov {};
+			class APP_gov_taxes {};
+			class APP_gov_taxes_update {};
+			class APP_gov_taxes_modify {};
 		};
 	};
 };

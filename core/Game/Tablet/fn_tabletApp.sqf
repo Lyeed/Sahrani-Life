@@ -50,6 +50,7 @@ switch (_app) do
 	case "ANNOUNCES_SHOW": {[] call AlysiaClient_fnc_APP_announces_show};
 	case "COMPANY": {[g_company] call AlysiaClient_fnc_APP_company};
 	case "GOV": {[] call AlysiaClient_fnc_APP_gov};
+	case "GOV_TAXES": {[] call AlysiaClient_fnc_APP_gov_taxes};
 };
 
 g_CTRL_inUse = false;

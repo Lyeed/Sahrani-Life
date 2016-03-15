@@ -542,24 +542,14 @@ class ALYSIA_PROCESS
 	/*************                   ******************
 	**************  	GILETS       ******************
 	**************                   *******************/
-	class bulletproofvest_criminal
-	{
-		name = "Fabrication de gilet barre-balles";
-		sound = "smelting";
-		require[] = {{"cottonp",10},{"steel",4}};
-		receive[] = {{},{"TRYK_V_IOTV_BLK"},0};
-		time_per_item = 30;
-		time_default = 30;
-		class target {};
-		class factions
-		{
-			class CIV {};
-		};
-	};
-	class bulletproofvest_news: bulletproofvest_criminal
+	class bulletproofvest_news
 	{
 		name = "Fabrication de gilet Presse";
+		sound = "smelting";
+		require[] = {{"cottonp",10},{"steel",4}};
 		receive[] = {{},{"V_Press_F"},0};
+		time_per_item = 30;
+		time_default = 30;
 		class factions
 		{
 			class CIV
@@ -568,7 +558,7 @@ class ALYSIA_PROCESS
 			};
 		};
 	};
-	class bulletproofvest_security: bulletproofvest_criminal
+	class bulletproofvest_security: bulletproofvest_news
 	{
 		name = "Fabrication de gilet Sécurité";
 		receive[] = {{},{"TRYK_V_Bulletproof_BLK"},0};
@@ -580,7 +570,7 @@ class ALYSIA_PROCESS
 			};
 		};
 	};
-	class bulletproofvest_transfer: bulletproofvest_criminal
+	class bulletproofvest_transfer: bulletproofvest_news
 	{
 		name = "Fabrication de gilet Convoyeur";
 		receive[] = {{},{"TRYK_V_Bulletproof_BL"},0};
@@ -590,6 +580,16 @@ class ALYSIA_PROCESS
 			{
 				licenses[] = {"company_weapon"};
 			};
+		};
+	};
+	class bulletproofvest_criminal: bulletproofvest_news
+	{
+		name = "Fabrication de gilet barre-balles";
+		receive[] = {{},{"TRYK_V_IOTV_BLK"},0};
+		class target {};
+		class factions
+		{
+			class CIV {};
 		};
 	};
 
@@ -1081,7 +1081,7 @@ class ALYSIA_PROCESS
 	/*************                        ******************
 	**************  	ARMES LEGALES     ******************
 	**************                        *******************/
-	class weapon_b95: weapon_thompson
+	class weapon_b95
 	{
 		name = "Arme : Fusil B95";
 		sound = "smelting";
@@ -1097,138 +1097,102 @@ class ALYSIA_PROCESS
 			};
 		};
 	};
-	class magazine_b95: weapon_thompson
+	class magazine_b95: weapon_b95
 	{
 		name = "Munitions : Fusil B95";
 		require[] = {{"buckshot",10},{"magazine",1}};
 		receive[] = {{},{"2Rnd_762x51_Mag_B95"},0};
 		time_per_item = 5;
 		time_default = 4;
-		class factions
-		{
-			class CIV
-			{
-				licenses[] = {"company_weapon"};
-			};
-		};
+		class factions: factions {};
 	};
 
-	class weapon_cz75: weapon_thompson
+	class weapon_cz75: weapon_b95
 	{
 		name = "Arme : Pistolet CZ 75";
 		require[] = {{"canon",1},{"poignee",1},{"detente",1},{"percuteur",1},{"carcasse",1},{"bloc_culasse",1},{"marteau",1},{"ironp",2},{"steel",3}};
 		receive[] = {{},{"RH_cz75"},0};
 		time_per_item = 30;
 		time_default = 10;
-		class factions
-		{
-			class CIV
-			{
-				licenses[] = {"company_weapon"};
-			};
-		};
+		class factions: factions {};
 	};
-	class magazine_cz75: weapon_thompson
+	class magazine_cz75: weapon_b95
 	{
 		name = "Munitions : Pistolet CZ 75";
 		require[] = {{"bullet",16},{"magazine",1}};
 		receive[] = {{},{"RH_16Rnd_9x19_CZ"},0};
 		time_per_item = 5;
 		time_default = 5;
-		class factions
-		{
-			class CIV
-			{
-				licenses[] = {"company_weapon"};
-			};
-		};
+		class factions: factions {};
 	};
 
 	class weapon_p226: weapon_cz75
 	{
 		name = "Arme : Pistolet Sig-Sauer P226";
 		receive[] = {{},{"RH_p226"},0};
-		class factions
-		{
-			class CIV
-			{
-				licenses[] = {"company_weapon"};
-			};
-		};
+		class factions: factions {};
 	};
-	class magazine_p226: weapon_thompson
+	class magazine_p226: weapon_b95
 	{
 		name = "Munitions : Pistolet Sig-Sauer P226";
 		require[] = {{"bullet",15},{"magazine",1}};
 		receive[] = {{},{"RH_15Rnd_9x19_SIG"},0};
 		time_per_item = 5;
 		time_default = 5;
-		class factions
-		{
-			class CIV
-			{
-				licenses[] = {"company_weapon"};
-			};
-		};
+		class factions: factions {};
 	};
 
 	class weapon_gsh18: weapon_cz75
 	{
 		name = "Arme : Pistolet GSh-18";
 		receive[] = {{},{"RH_gsh18"},0};
-		class factions
-		{
-			class CIV
-			{
-				licenses[] = {"company_weapon"};
-			};
-		};
+		class factions: factions {};
 	};
-	class magazine_gsh18: weapon_thompson
+	class magazine_gsh18: weapon_b95
 	{
 		name = "Munitions : Pistolet GSh-18";
 		require[] = {{"bullet",18},{"magazine",1}};
 		receive[] = {{},{"RH_18Rnd_9x19_gsh"},0};
 		time_per_item = 5;
 		time_default = 5;
-		class factions
-		{
-			class CIV
-			{
-				licenses[] = {"company_weapon"};
-			};
-		};
+		class factions: factions {};
 	};
 
-	class weapon_sdar: weapon_thompson
+	class weapon_sdar: weapon_b95
 	{
 		name = "Arme : SDAR";
-		sound = "smelting";
 		require[] = { {"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"poignee",1},{"detente",1},{"percuteur",1},{"ironp",5},{"steel",5}};
 		receive[] = {{},{"Fett_SDAR"},0};
 		time_per_item = 50;
 		time_default = 10;
-		class factions
-		{
-			class CIV
-			{
-				licenses[] = {"company_weapon"};
-			};
-		};
+		class factions: factions {};
 	};
-	class magazine_sdar: weapon_thompson
+	class magazine_sdar: weapon_b95
 	{
 		name = "Munitions : SDAR";
 		require[] = {{"bullet",20},{"magazine",1}};
 		receive[] = {{},{"Fett_20Rnd_556x45_UW_mag"},0};
 		time_per_item = 5;
 		time_default = 5;
-		class factions
-		{
-			class CIV
-			{
-				licenses[] = {"company_weapon"};
-			};
-		};
+		class factions: factions {};
+	};
+
+	class weapon_vermin: weapon_b95
+	{
+		name = "Arme : Vermin";
+		require[] = { {"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"poignee",1},{"detente",1},{"percuteur",1},{"ironp",5},{"steel",5}};
+		receive[] = {{},{"SMG_01_F"},0};
+		time_per_item = 40;
+		time_default = 10;
+		class factions: factions {};
+	};
+	class magazine_vermin: weapon_b95
+	{
+		name = "Munitions : Vermin";
+		require[] = {{"bullet",30},{"magazine",1}};
+		receive[] = {{},{"30Rnd_45ACP_Mag_SMG_01"},0};
+		time_per_item = 6;
+		time_default = 5;
+		class factions: factions {};
 	};
 };
