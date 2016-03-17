@@ -75,9 +75,12 @@ lbClear _ctrl_list_keys_buildings;
 {
 	if (!(isNull _x) && (alive _x) && !(_x in g_interaction_trade_keys_buildings)) then 
 	{
-		_index = _ctrl_list_keys_buildings lbAdd format["Clé (%1)", getText(configFile >> "CfgVehicles" >> (typeOf _x) >> "displayName")];
-		_ctrl_list_keys_buildings lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> (typeOf _x) >> "picture")];
-		_ctrl_list_keys_buildings lbSetValue [_index, _forEachIndex];
+		if (((_x getVariable ['house_owner', ['', '']]) select 0) isEqualTo (getPlayerUID player)) then
+		{
+			_index = _ctrl_list_keys_buildings lbAdd format["Clé (%1)", getText(configFile >> "CfgVehicles" >> (typeOf _x) >> "displayName")];
+			_ctrl_list_keys_buildings lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> (typeOf _x) >> "picture")];
+			_ctrl_list_keys_buildings lbSetValue [_index, _forEachIndex];
+		};
 	};
 } forEach g_houses;
 if ((lbSize _ctrl_list_keys_buildings) isEqualTo 0) then

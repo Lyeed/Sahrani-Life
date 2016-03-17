@@ -11,5 +11,5 @@ _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 if (isNull _target) exitWith {};
 
 _target setVariable ["house_tenants", [], true];
-["<t color='#FF8000'>Serrures</t> changées.<br/>Toutes les clefs que vous avez donné de ce bâtiment ne sont plus utilisables."] call AlysiaClient_fnc_info;
+["<t color='#FF8000'>Serrures</t> changées<br/>."] call AlysiaClient_fnc_info;
 [_target] remoteExecCall ["AlysiaClient_fnc_house_menu_action_keys_change_update", -2];

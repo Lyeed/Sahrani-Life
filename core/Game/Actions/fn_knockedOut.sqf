@@ -17,6 +17,8 @@ if ((animationState player) != "incapacitated") then
 		} else {
 			g_action_inUse = true;
 		};
+
+		[] call AlysiaEvent_fnc_onPlayerFireNear;
 		player playMoveNow "incapacitated";
 		sleep round(random(7) + 2);
 		player playMoveNow "amovppnemstpsraswrfldnon";

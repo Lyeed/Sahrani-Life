@@ -13,7 +13,10 @@ if ((_code in (actionKeys "PersonView")) && g_firstCombatActive && ((vehicle pla
 if ((_code in (actionKeys "MiniMap")) || (_code in (actionKeys "MiniMapToggle"))) exitWith {true};
 
 if (
-		(player getVariable ["restrained", false]) &&
+		(
+			(player getVariable ["restrained", false]) ||
+			((animationState player) isEqualTo "incapacitated")
+		) &&
 		!(_code isEqualTo (((["Alysia", "actionSilent"] call CBA_fnc_getKeybind) select 5) select 0))
 ) exitWith {true};
 

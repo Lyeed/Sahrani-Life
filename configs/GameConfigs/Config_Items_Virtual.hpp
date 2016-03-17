@@ -91,7 +91,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\coffre.paa";
 		class use
 		{
-			action = "['storage_small'] spawn AlysiaClient_fnc_storageBox;";
+			action = "['storage_small'] spawn AlysiaClient_fnc_item_chest;";
 		};
 	};
 	class storage_medium: storage_small
@@ -101,7 +101,7 @@ class ALYSIA_ITEMS
 		price_buy = 31000;
 		class use
 		{
-			action = "['storage_medium'] spawn AlysiaClient_fnc_storageBox;";
+			action = "['storage_medium'] spawn AlysiaClient_fnc_item_chest;";
 		};
 	};
 	class storage_large: storage_small
@@ -111,7 +111,7 @@ class ALYSIA_ITEMS
 		price_buy = 43000;
 		class use
 		{
-			action = "['storage_large'] spawn AlysiaClient_fnc_storageBox;";
+			action = "['storage_large'] spawn AlysiaClient_fnc_item_chest;";
 		};
 	};
 	class storage_stock: storage_small
@@ -121,7 +121,7 @@ class ALYSIA_ITEMS
 		price_buy = 50000;
 		class use
 		{
-			action = "['storage_stock'] spawn AlysiaClient_fnc_storageBox;";
+			action = "['storage_stock'] spawn AlysiaClient_fnc_item_chest;";
 		};
 	};
 	
@@ -624,6 +624,59 @@ class ALYSIA_ITEMS
 		};
 	};
 
+
+	class chips
+	{
+		name = "Paquet de chips";
+		weight = 1;
+		price_buy = 12;
+		image = "alysia_items_virtual\data\chips.paa";
+		class food
+		{
+			hunger = 30;
+			thirst = -10;
+			sound = "eat";
+		};
+	};
+	class chocolat
+	{
+		name = "Barre chocolaté";
+		weight = 1;
+		price_buy = 9;
+		image = "alysia_items_virtual\data\chocolat.paa";
+		class food
+		{
+			hunger = 10;
+			thirst = 0;
+			sound = "eat";
+		};
+	};
+	class villagoise
+	{
+		name = "Villagoise";
+		weight = 1;
+		price_buy = 6;
+		image = "alysia_items_virtual\data\villagoise.paa";
+		class food
+		{
+			hunger = -5;
+			thirst = 15;
+			sound = "eat";
+		};
+	};
+	class eau50
+	{
+		name = "Bouteille d'eau de 50cl";
+		weight = 1;
+		price_buy = 9;
+		image = "alysia_items_virtual\data\bouteille_eau50.paa";
+		class food
+		{
+			hunger = 0;
+			thirst = 15;
+			sound = "eat";
+		};
+	};
 	class cerealbar
 	{
 		name = "Barre de céréale";
@@ -1020,7 +1073,7 @@ class ALYSIA_ITEMS
 		name = "Alcootest";
 		price_buy = 15;
 		weight = 1;
-		image = "";
+		image = "alysia_items_virtual\data\alcool_test.paa";
 	};
 
 	class pierre
@@ -1419,7 +1472,7 @@ class ALYSIA_ITEMS
 		price_buy = 185000;
 		weight = 15;
 		illegal = 1;
-		image = "";
+		image = "alysia_items_virtual\data\lab_marijuana.paa";
 		class use
 		{
 			action = "['lab_marijuana'] spawn AlysiaClient_fnc_labo_deploy;";
@@ -1431,7 +1484,7 @@ class ALYSIA_ITEMS
 		price_buy = 226000;
 		weight = 40;
 		illegal = 1;
-		image = "";
+		image = "alysia_items_virtual\data\lab_meth.paa";
 		class use
 		{
 			action = "['lab_meth'] spawn AlysiaClient_fnc_labo_deploy;";
@@ -1443,7 +1496,7 @@ class ALYSIA_ITEMS
 		price_buy = 209000;
 		weight = 30;
 		illegal = 1;
-		image = "";
+		image = "alysia_items_virtual\data\lab_cocaine.paa";
 		class use
 		{
 			action = "['lab_cocaine'] spawn AlysiaClient_fnc_labo_deploy;";
@@ -1455,7 +1508,7 @@ class ALYSIA_ITEMS
 		price_buy = 192000;
 		weight = 30;
 		illegal = 1;
-		image = "";
+		image = "alysia_items_virtual\data\lab_heroin.paa";
 		class use
 		{
 			action = "['lab_heroin'] spawn AlysiaClient_fnc_labo_deploy;";
@@ -1467,7 +1520,7 @@ class ALYSIA_ITEMS
 		price_buy = 325000;
 		weight = 40;
 		illegal = 1;
-		image = "";
+		image = "alysia_items_virtual\data\lab_weapon.paa";
 		class use
 		{
 			action = "['lab_weapon'] spawn AlysiaClient_fnc_labo_deploy;";
@@ -1479,7 +1532,7 @@ class ALYSIA_ITEMS
 		price_buy = 185000;
 		weight = 35;
 		illegal = 1;
-		image = "";
+		image = "alysia_items_virtual\data\lab_clothing.paa";
 		class use
 		{
 			action = "['lab_clothing'] spawn AlysiaClient_fnc_labo_deploy;";
@@ -1491,7 +1544,7 @@ class ALYSIA_ITEMS
 		price_buy = 90000;
 		weight = 25;
 		illegal = 1;
-		image = "";
+		image = "alysia_items_virtual\data\lab_cigare.paa";
 		class use
 		{
 			action = "['lab_cigare'] spawn AlysiaClient_fnc_labo_deploy;";
@@ -1502,7 +1555,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Sac de billets de banque";
 		weight = 10;
-		image = "";
+		image = "alysia_items_virtual\data\money_transfer.paa";
 		buy_license_CIV = "company_money_tranfer";
 		price_buy = 5000;
 	};
@@ -1517,62 +1570,32 @@ class ALYSIA_ITEMS
 	{
 		name = "Phénylalanine";
 		weight = 2;
-		image = "";
+		image = "alysia_items_virtual\data\phenylalanine.paa";
 	};
 
-	class chips
+	class serrure
 	{
-		name = "Paquet de chips";
-		weight = 1;
-		price_buy = 12;
-		image = "alysia_items_virtual\data\chips.paa";
-		class food
+		name = "Serrure neuve";
+		weight = 2;
+		price_buy = 1750;
+		image = "alysia_items_virtual\data\serrure.paa";
+		buy_license_CIV = "company_construction";
+		class use
 		{
-			hunger = 30;
-			thirst = -10;
-			sound = "eat";
+			action = "[] spawn AlysiaClient_fnc_item_serrure;";
 		};
 	};
 
-	class chocolat
+	class electric_system
 	{
-		name = "Barre chocolaté";
-		weight = 1;
-		price_buy = 9;
-		image = "alysia_items_virtual\data\chocolat.paa";
-		class food
+		name = "Installation électrique";
+		weight = 8;
+		price_buy = 9500;
+		image = "alysia_items_virtual\data\electric_system.paa";
+		buy_license_CIV = "company_construction";
+		class use
 		{
-			hunger = 10;
-			thirst = 0;
-			sound = "eat";
-		};
-	};
-
-	class villagoise
-	{
-		name = "Bouteille de vin";
-		weight = 1;
-		price_buy = 6;
-		image = "alysia_items_virtual\data\bouteille_vin.paa";
-		class food
-		{
-			hunger = -5;
-			thirst = 15;
-			sound = "eat";
-		};
-	};
-
-	class eau50
-	{
-		name = "Bouteille de vin";
-		weight = 1;
-		price_buy = 9;
-		image = "alysia_items_virtual\data\bouteille_eau50.paa";
-		class food
-		{
-			hunger = 0;
-			thirst = 15;
-			sound = "eat";
+			action = "[] spawn AlysiaClient_fnc_item_electricSystem;";
 		};
 	};
 };

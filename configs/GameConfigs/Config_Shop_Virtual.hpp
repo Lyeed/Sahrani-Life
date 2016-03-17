@@ -229,6 +229,6 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Réserve d'entreprises";
 		side = "CIV";
-		items[] = {{"money_transfer"}, {}};
+		items[] = {{"money_transfer", "serrure", "electric_system"}, {}};
 	};
 };

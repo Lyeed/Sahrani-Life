@@ -10,15 +10,21 @@ private "_target";
 _target = cursorTarget;
 if (isNull _target) exitWith {};
 if (!(isPlayer _target)) exitWith {};
-if ((player distance _target) > 4) exitWith {};
+if ((player distance _target) > 3) exitWith {};
 if (speed _target > 1) exitWith {};
+if (((vehicle player) != player) || ((vehicle _target) != _target)) exitWith {};
 if ((_target getVariable ["surrender", false]) || (_target getVariable ["restrained", false]) || (_target getVariable ["is_coma", false])) exitWith {};
+if ((player getVariable ["surrender", false]) || (player getVariable ["restrained", false])) exitWith {};
 if ((animationState player) isEqualTo "incapacitated") exitWith {};
 if ((animationState _target) isEqualTo "incapacitated") exitWith {};
-if ((currentWeapon player != primaryWeapon player) && (currentWeapon player != handgunWeapon player)) exitWith {};
-if ((currentWeapon player isEqualTo "") || ((currentWeapon player) in ["Skyline_Hache_01", "Skyline_Pioche_01", "Skyline_Pelle_01", "Skyline_Merlin_01", "Skyline_tl122_blanche", "Skyline_tl122_rouge", "Skyline_tl122_orange", "Skyline_tl122_verte", "Skyline_tl122_bleu", "Skyline_tl122_rose", "Skyline_tl122_jaune"])) exitWith {};
-if ((player getVariable ["surrender", false]) || (player getVariable ["restrained", false])) exitWith {};
-if ((getFatigue player) > 85) exitWith {["Vous êtes trop fatigué pour pouvoir effectuer cette action"] call AlysiaClient_fnc_error};
+
+_weapon = currentWeapon player;
+if (_weapon isEqualTo "") exitWith {};
+if ((_weapon != primaryWeapon player) && (_weapon != handgunWeapon player)) exitWith {};
+if (getNumber(configFile >> "ALYSIA_ITEMS_ARMA" >> _weapon >> "disableKnockout") isEqualTo 1) exitWith {};
+
+if ((getFatigue player) > 85) exitWith {["Vous êtes trop fatigué pour pouvoir effectuer cette action."] call AlysiaClient_fnc_error};
+
 if ((time - g_action_delay) < 3) exitWith {};
 
 g_action_inUse = true;

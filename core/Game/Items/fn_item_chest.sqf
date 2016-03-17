@@ -49,7 +49,7 @@ if (_action) then
 	if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then
 	{
 		["Vous avez posé un <t color='#FF8000'>Coffre</t> dans votre maison."] call AlysiaClient_fnc_info;
-		[_house] remoteExec ["AlysiaServer_fnc_house_storage_install", 2];
+		[_house] remoteExec ["AlysiaServer_fnc_house_update_storage", 2];
 		_house setVariable ["house_storage_out", objNull, true];
 	};
 };

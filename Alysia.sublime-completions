@@ -232,7 +232,7 @@
         "AlysiaClient_fnc_useBaillon",
         "AlysiaClient_fnc_useBandeau",
         "AlysiaClient_fnc_useItem",
-        "AlysiaClient_fnc_storageBox",
+        "AlysiaClient_fnc_item_chest",
         "AlysiaClient_fnc_patch",
         "AlysiaClient_fnc_labo_deploy",
         "AlysiaClient_fnc_labo_destroy",

@@ -42,7 +42,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Small";
 			building_index = 3;
 		};
-		class lights {};
 		class house {};
 		class factions
 		{
@@ -61,7 +60,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_medium";
 			building_index = 2;
 		};
-		class lights {};
 		class house {};
 		class factions: factions {};
 	};
@@ -73,7 +71,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_medium";
 			building_index = 4;
 		};
-		class lights {};
 		class house {};
 		class factions: factions {};
 	};
@@ -85,7 +82,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Medium";
 			building_index = 5;
 		};
-		class lights {};
 		class house {};
 		class factions: factions {};
 	};
@@ -97,7 +93,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Medium";
 			building_index = 3;
 		};
-		class lights {};
 		class house {};
 		class factions: factions {};
 	};
@@ -109,7 +104,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_medium";
 			building_index = 1;
 		};
-		class lights {};
 		class house {};
 		class factions: factions {};
 	};
@@ -121,7 +115,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_medium";
 			building_index = 4;
 		};
-		class lights {};
 		class house {};
 		class factions: factions {};
 	};
@@ -133,7 +126,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_medium";
 			building_index = 4;
 		};
-		class lights {};
 		class house {};
 		class factions: factions {};
 	};
@@ -145,7 +137,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Medium";
 			building_index = 2;
 		};
-		class lights {};
 		class house {};
 		class factions: factions {};
 	};
@@ -157,7 +148,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Medium";
 			building_index = 1;
 		};
-		class lights {};
 		class house {};
 		class factions: factions {};
 	};
@@ -169,7 +159,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_medium";
 			building_index = 3;
 		};
-		class lights {};
 		class house {};
 		class factions: factions {};
 	};
@@ -181,7 +170,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_medium";
 			building_index = 3;
 		};
-		class lights {};
 		class house {};
 		class factions: factions {};
 	};
@@ -193,7 +181,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_medium";
 			building_index = 3;
 		};
-		class lights {};
 		class house {};
 		class factions: factions {};
 	};
@@ -205,7 +192,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Small";
 			building_index = 4;
 		};
-		class lights {};
 		class house {};
 		class factions: factions {};
 	};
@@ -217,7 +203,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Small";
 			building_index = 2;
 		};
-		class lights {};
 		class house {};
 		class factions: factions {};
 	};
@@ -229,7 +214,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Small";
 			building_index = 4;
 		};
-		class lights {};
 		class house {};
 		class factions: factions {};
 	};
@@ -241,7 +225,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Small";
 			building_index = 3;
 		};
-		class lights {};
 		class house {};
 		class factions: factions {};
 	};
@@ -254,7 +237,6 @@ class ALYSIA_HOUSES
 		{
 			types[] = {"Car", "Truck", "Tank"};
 		};
-		class lights {};
 		class factions
 		{
 			class GUER {};
@@ -276,28 +258,24 @@ class ALYSIA_HOUSES
 	{
 		price = 260000;
 		class garage: garage {};
-		class lights {};
 		class factions: factions {};
 	};
 	class Land_smd_garaz_mala_open: Land_smd_garaz_open
 	{
 		price = 180000;
 		class garage: garage {};
-		class lights {};
 		class factions: factions {};
 	};
 	class Land_smd_garaz_bez_tanku: Land_smd_garaz_open
 	{
 		price = 360000;
 		class garage: garage {};
-		class lights {};
 		class factions: factions {};
 	};
 	class Land_Sara_hasic_zbroj: Land_smd_garaz_open
 	{
 		price = 150000;
 		class garage: garage {};
-		class lights {};
 		class factions: factions {};
 	};
 
@@ -310,7 +288,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Medium";
 			building_index = 0;
 		};
-		class lights {};
 		class factions
 		{
 			class GUER {};
@@ -336,7 +313,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 2;
 		};
-		class lights {};
 		class factions: factions {};
 	};
 	class Land_Hut_old02: Land_smd_army_hut_storrage
@@ -347,7 +323,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Medium";
 			building_index = 7;
 		};
-		class lights {};
 		class factions: factions {};
 	};
 	class Land_Stodola_open: Land_smd_army_hut_storrage
@@ -358,7 +333,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Medium";
 			building_index = 0;
 		};
-		class lights {};
 		class factions: factions {};
 	};
 	class Land_Misc_Cargo1Bo
@@ -369,7 +343,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Small";
 			building_index = 2;
 		};
-		class lights {};
 		class factions
 		{
 			class GUER {};
@@ -393,7 +366,6 @@ class ALYSIA_HOUSES
 		{
 			building_index = 3;
 		};
-		class lights {};
 		class factions: factions {};
 	};
 	class Land_Stodola_old_open: Land_smd_army_hut_storrage
@@ -404,7 +376,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Medium";
 			building_index = 5;
 		};
-		class lights {};
 		class factions: factions {};
 	};
 	class Land_smd_sara_stodola2: Land_smd_army_hut_storrage
@@ -415,7 +386,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Medium";
 			building_index = 5;
 		};
-		class lights {};
 		class factions: factions {};
 	};
 	class Land_smd_budova3_open: Land_smd_army_hut_storrage
@@ -426,7 +396,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Small";
 			building_index = 1;
 		};
-		class lights {};
 		class factions: factions {};
 	};
 	class Land_Barn_Metal: Land_smd_army_hut_storrage
@@ -437,7 +406,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 2;
 		};
-		class lights {};
 		class factions: factions {};
 	};
 
@@ -450,7 +418,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 2;
 		};
-		class lights {};
 		class factions
 		{
 			class WEST
@@ -467,7 +434,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 4;
 		};
-		class lights {};
 		class factions
 		{
 			class WEST
@@ -484,7 +450,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 0;
 		};
-		class lights {};
 		class factions
 		{
 			class WEST
@@ -501,7 +466,6 @@ class ALYSIA_HOUSES
 			type = "R3F_WeaponStock";
 			building_index = 1;
 		};
-		class lights {};
 		class factions
 		{
 			class WEST
@@ -520,7 +484,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 6;
 		};
-		class lights {};
 		class factions
 		{
 			class EAST
@@ -537,7 +500,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 5;
 		};
-		class lights {};
 		class factions
 		{
 			class EAST
@@ -554,7 +516,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 1;
 		};
-		class lights {};
 		class factions
 		{
 			class EAST
@@ -565,7 +526,6 @@ class ALYSIA_HOUSES
 	};
 	class Land_smd_army_hut2_int: Land_Army_hut2_int
 	{
-		class lights {};
 		class factions: factions {};
 		class storage: storage {};		
 	};
@@ -577,7 +537,6 @@ class ALYSIA_HOUSES
 			type = "Skyline_Coffre_Large";
 			building_index = 1;
 		};
-		class lights {};
 		class factions
 		{
 			class EAST
@@ -588,7 +547,6 @@ class ALYSIA_HOUSES
 	};
 	class Land_smd_army_hut3_long_int: Land_Army_hut3_long_int
 	{
-		class lights {};
 		class factions: factions {};
 		class storage: storage {};
 	};
@@ -600,7 +558,6 @@ class ALYSIA_HOUSES
 			type = "R3F_WeaponStock";
 			building_index = 5;
 		};
-		class lights {};
 		class factions
 		{
 			class EAST

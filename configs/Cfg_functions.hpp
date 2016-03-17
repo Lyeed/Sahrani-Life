@@ -193,7 +193,9 @@ class CfgFunctions
 			class useBaillon {};
 			class useBandeau {};
 			class useItem {};
-			class storageBox {};
+			class item_chest {};
+			class item_serrure {};
+			class item_electricSystem {};
 			class patch {};
 		};
 

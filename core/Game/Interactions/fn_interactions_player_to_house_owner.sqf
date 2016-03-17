@@ -14,8 +14,7 @@
 		["storage", "Coffre", "[g_interaction_target] call AlysiaClient_fnc_house_menu_action_storage;", "(!(isNil {(g_interaction_target getVariable 'house_storage_out')}) && (isNil 'gServer_soonReboot'))"],
 		["garage", "Garage", "[g_interaction_target] call AlysiaClient_fnc_house_menu_action_garage;", "isClass(missionConfigFile >> 'ALYSIA_HOUSES' >> typeOf(g_interaction_target) >> 'garage')"],
 		["store", "Rentrer", "[g_interaction_target] spawn AlysiaClient_fnc_house_menu_action_store;", "isClass(missionConfigFile >> 'ALYSIA_HOUSES' >> typeOf(g_interaction_target) >> 'garage')"],
-		["light", "Lumière", "[g_interaction_target] call AlysiaClient_fnc_house_menu_action_light;", "isClass(missionConfigFile >> 'ALYSIA_HOUSES' >> typeOf(g_interaction_target) >> 'lights')"],
-		["lock", "Changer serrure", "[g_interaction_target] call AlysiaClient_fnc_house_menu_action_keys_change;", "(((g_interaction_target getVariable ['house_owner', ['', '']]) select 0) isEqualTo (getPlayerUID player))"]
+		["light", "Lumière", "[g_interaction_target] call AlysiaClient_fnc_house_menu_action_light;", "(g_interaction_target getVariable ['house_update_lights',false])"]
 	],
 	"Chez vous"
 ] spawn AlysiaClient_fnc_interactions_create;

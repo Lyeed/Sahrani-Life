@@ -47,7 +47,8 @@ class CfgRemoteExec
 		//- housing
 		class AlysiaServer_fnc_house_add {allowTargets = SERVER;};
 		class AlysiaServer_fnc_house_sell {allowTargets = SERVER;};
-		class AlysiaServer_fnc_house_storage_install {allowTargets = SERVER;};
+		class AlysiaServer_fnc_house_update_storage {allowTargets = SERVER;};
+		class AlysiaServer_fnc_house_update_lights {allowTargets = SERVER;};
 		class AlysiaServer_fnc_house_tenants_add {allowTargets = SERVER;};
 		//- Sheep
 		class AlysiaServer_fnc_sheepGenerate {allowTargets = SERVER;};

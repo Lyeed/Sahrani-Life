@@ -15,12 +15,9 @@ class ALYSIA_ITEMS_ARMA
 		buy_license_GUER = "";//(optional) license needed to buy <only for independent>
 		buy_license_EAST = "";//(optional) license needed to buy <only for opfort>
 		buy_license_WEST = "";//(optional) license needed to buy <only for bluefor>
+		disableKnockout = 0;
 	};
 	/*==================*/
-
-	/*
-	**    ITEMS
-	*/
 	class SkylineItems_Couteau
 	{
 		buy_price = 550;
@@ -30,6 +27,7 @@ class ALYSIA_ITEMS_ARMA
 	class Skyline_Hache_01
 	{
 		buy_price = 100;
+		disableKnockout = 1;
 	};
 	class 1Rnd_FlashBall_Mag
 	{
@@ -1417,6 +1415,7 @@ class ALYSIA_ITEMS_ARMA
 	class Skyline_Merlin_01
 	{
 		buy_price = 250;
+		disableKnockout = 1;
 	};
 	class Skyline_NioshFace
 	{
@@ -1430,10 +1429,12 @@ class ALYSIA_ITEMS_ARMA
 	class Skyline_Pelle_01
 	{
 		buy_price = 75;
+		disableKnockout = 1;
 	};
 	class Skyline_Pioche_01
 	{
 		buy_price = 95;
+		disableKnockout = 1;
 	};
 	class Skyline_Skyrim
 	{
@@ -1443,6 +1444,7 @@ class ALYSIA_ITEMS_ARMA
 	class Skyline_tl122_blanche
 	{
 		buy_price = 85;
+		disableKnockout = 1;
 	};
 	class Skyline_tl122_bleu: Skyline_tl122_blanche {};
 	class Skyline_tl122_jaune: Skyline_tl122_blanche {};
@@ -2810,4 +2812,14 @@ class ALYSIA_ITEMS_ARMA
     	buy_price = 90;
     	buy_license_CIV = "company_money_tranfer";
     };
+
+    class Skyline_Pancarte_01_F
+    {
+    	disableKnockout = 1;
+    };
+    class Skyline_Pancarte_brajva: Skyline_Pancarte_01_F {};
+	class Skyline_Pancarte_clochard: Skyline_Pancarte_01_F {};
+	class Skyline_Pancarte_garde: Skyline_Pancarte_01_F {};
+	class Skyline_Pancarte_marijuana: Skyline_Pancarte_01_F {};
+	class Skyline_Pancarte_novak: Skyline_Pancarte_01_F {};
 };
