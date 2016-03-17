@@ -5,15 +5,13 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_value", "_type"];
-_type = [_this, 0, false, [false]] call BIS_fnc_param;
-_value = abs(round([_this, 1, 0, [0]] call BIS_fnc_param));
+private "_house";
+_house = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if (_value isEqualTo 0) exitWith {};
+if (isNull _house) exitWith {};
 
-if (_type) then {
-	g_cash = g_cash + _value;
-} else {
-	g_cash = g_cash - _value;
-	if (g_cash < 0) then {g_cash = 0};
+_index = g_houses find _house;
+if (_index != -1) then
+{
+	if (((_house getVariable ['house_owner', ['', '']]) select 0) != (getPlayerUID player)) then {g_houses deleteAt _index};
 };

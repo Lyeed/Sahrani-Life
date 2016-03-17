@@ -28,10 +28,15 @@ switch (lbData[10011, _sel]) do
 		[true, (_inv select 0), (_inv select 1)] call AlysiaClient_fnc_handleInv;
 		g_interaction_trade_inventory deleteAt _value;
 	};
-	case "key":
+	case "key_vehicle":
 	{
 		_value = lbValue[10011, _sel];
-		g_interaction_trade_keys deleteAt _value;
+		g_interaction_trade_keys_vehicles deleteAt _value;
+	};
+	case "key_building":
+	{
+		_value = lbValue[10020, _sel];
+		g_interaction_trade_keys_buildings deleteAt _value;
 	};
 };
 

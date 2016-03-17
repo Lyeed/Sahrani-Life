@@ -32,7 +32,7 @@ class ALYSIA_ITEMS
 		{
 			max = 4900;
 			min = 2100;
-			affect[] = {"steel", "ironp", "platinep", "copperp", "alu", "sp98", "sp95", "gazole", "gpl", "kerosene"};
+			affect[] = {"steel","ironp","platinep","copperp","alu","sp98","sp95","gazole","gpl","kerosene"};
 		};
 	};
 
@@ -206,7 +206,7 @@ class ALYSIA_ITEMS
 		{
 			max = 506;
 			min = 98;
-			affect[] = {"cigarette", "cocainep", "cocainepc", "heroinps", "methp", "marijuana"};
+			affect[] = {"cigarette","cocainep","cocainepc","heroinps","methp","marijuana"};
 		};
 	};
 	class cigarette
@@ -220,7 +220,7 @@ class ALYSIA_ITEMS
 		{
 			max = 425;
 			min = 15;
-			affect[] = {"cigare", "cocainep", "cocainepc", "heroinps", "methp", "marijuana"};
+			affect[] = {"cigare","cocainep","cocainepc","heroinps","methp","marijuana"};
 		};
 	};
 
@@ -234,7 +234,7 @@ class ALYSIA_ITEMS
 		{
 			max = 408;
 			min = 100;
-			affect[] = {"grozdova", "slivovica", "turtle", "artefact", "artefact_R"};
+			affect[] = {"grozdova","slivovica","turtle","artefact","artefact_R"};
 		};
 	};
 
@@ -248,7 +248,7 @@ class ALYSIA_ITEMS
 		{
 			max = 950;
 			min = 200;
-			affect[] = {"grozdova", "slivovica", "turtle", "objvaleur"};
+			affect[] = {"grozdova","slivovica","turtle","objvaleur"};
 		};
 	};
 	class artefact_R
@@ -262,7 +262,7 @@ class ALYSIA_ITEMS
 		{
 			max = 8032;
 			min = 2000;
-			affect[] = {"grozdova", "slivovica", "turtle", "objvaleur"};
+			affect[] = {"grozdova","slivovica","turtle","objvaleur"};
 		};
 	};
 
@@ -282,7 +282,7 @@ class ALYSIA_ITEMS
 		{
 			max = 56;
 			min = 15;
-			affect[] = {"brique", "soufre", "saltp", "glass", "coal", "ciment", "furniture"};
+			affect[] = {"brique","soufre","saltp","glass","coal","ciment","furniture"};
 		};
 	};
 
@@ -296,7 +296,7 @@ class ALYSIA_ITEMS
 		{
 			max = 620;
 			min = 190;
-			affect[] = {"brique", "soufre", "saltp", "glass", "coal", "ciment", "woodp"};
+			affect[] = {"brique","soufre","saltp","glass","coal","ciment","woodp"};
 		};
 	};
 
@@ -316,7 +316,7 @@ class ALYSIA_ITEMS
 		{
 			max = 350;
 			min = 125;
-			affect[] = {"steel", "platinep", "goldbar", "copperp", "alu", "sp98", "sp95", "gazole", "gpl", "kerosene"};
+			affect[] = {"steel","platinep","goldbar","copperp","alu","sp98","sp95","gazole","gpl","kerosene"};
 		};
 	};
 
@@ -329,7 +329,7 @@ class ALYSIA_ITEMS
 		{
 			max = 49;
 			min = 10;
-			affect[] = {"brique", "saltp", "glass", "coal", "ciment", "woodp", "furniture"};
+			affect[] = {"brique","saltp","glass","coal","ciment","woodp","furniture"};
 		};
 	};
 	class hsoufre
@@ -356,7 +356,7 @@ class ALYSIA_ITEMS
 		{
 			max = 823;
 			min = 300;
-			affect[] = {"steel", "ironp", "goldbar", "copperp", "alu", "sp98", "sp95", "gazole", "gpl", "kerosene"};
+			affect[] = {"steel","ironp","goldbar","copperp","alu","sp98","sp95","gazole","gpl","kerosene"};
 		};
 	};
 
@@ -385,7 +385,7 @@ class ALYSIA_ITEMS
 		{
 			max = 930;
 			min = 350;
-			affect[] = {"cigarette", "cigare", "heroinps", "methp", "marijuana"};
+			affect[] = {"cigarette","cigare","heroinps","methp","marijuana"};
 		};
 		class use
 		{
@@ -402,7 +402,7 @@ class ALYSIA_ITEMS
 		{
 			max = 720;
 			min = 210;
-			affect[] = {"cigarette", "cigare", "heroinps", "methp", "marijuana"};
+			affect[] = {"cigarette","cigare","heroinps","methp","marijuana"};
 		};
 		class use
 		{
@@ -442,7 +442,7 @@ class ALYSIA_ITEMS
 		{
 			max = 910;
 			min = 250;
-			affect[] = {"cigarette", "cigare", "cocainep", "cocainepc", "methp", "marijuana"};
+			affect[] = {"cigarette","cigare","cocainep","cocainepc","methp","marijuana"};
 		};
 		class use
 		{
@@ -483,7 +483,7 @@ class ALYSIA_ITEMS
 		{
 			max = 1320;
 			min = 550;
-			affect[] = {"cigarette", "cigare", "cocainep", "cocainepc", "heroinps", "marijuana"};
+			affect[] = {"cigarette","cigare","cocainep","cocainepc","heroinps","marijuana"};
 		};
 		class use
 		{
@@ -516,7 +516,7 @@ class ALYSIA_ITEMS
 		{
 			max = 885;
 			min = 300;
-			affect[] = {"cigarette", "cigare", "cocainep", "cocainepc", "heroinps", "methp"};
+			affect[] = {"cigarette","cigare","cocainep","cocainepc","heroinps","methp"};
 		};
 		class use
 		{
@@ -548,7 +548,7 @@ class ALYSIA_ITEMS
 		{
 			max = 45;
 			min = 23;
-			affect[] = {"corn", "cotton", "patate", "wheat", "cottonp"};
+			affect[] = {"corn","cotton","patate","wheat","cottonp"};
 		};
 	};
 
@@ -568,7 +568,7 @@ class ALYSIA_ITEMS
 		{
 			max = 47;
 			min = 26;
-			affect[] = {"bean", "cotton", "patate", "wheat", "cottonp"};
+			affect[] = {"bean","cotton","patate","wheat","cottonp"};
 		};
 	};
 
@@ -588,7 +588,7 @@ class ALYSIA_ITEMS
 		{
 			max = 59;
 			min = 31;
-			affect[] = {"bean", "corn", "patate", "wheat", "cottonp"};
+			affect[] = {"bean","corn","patate","wheat","cottonp"};
 		};
 	};
 	class cottonp
@@ -600,7 +600,7 @@ class ALYSIA_ITEMS
 		{
 			max = 195;
 			min = 65;
-			affect[] = {"bean", "corn", "patate", "wheat", "cotton"};
+			affect[] = {"bean","corn","patate","wheat","cotton"};
 		};
 	};
 
@@ -620,7 +620,7 @@ class ALYSIA_ITEMS
 		{
 			max = 315;
 			min = 110;
-			affect[] = {"brique", "soufre", "saltp", "coal", "ciment", "woodp", "furniture"};
+			affect[] = {"brique","soufre","saltp","coal","ciment","woodp","furniture"};
 		};
 	};
 
@@ -765,7 +765,7 @@ class ALYSIA_ITEMS
 		{
 			max = 315;
 			min = 130;
-			affect[] = {"steel", "ironp", "platinep", "goldbar", "alu", "sp98", "sp95", "gazole", "gpl", "kerosene"};
+			affect[] = {"steel","ironp","platinep","goldbar","alu","sp98","sp95","gazole","gpl","kerosene"};
 		};
 	};
 
@@ -785,7 +785,7 @@ class ALYSIA_ITEMS
 		{
 			max = 282;
 			min = 70;
-			affect[] = {"soufre", "saltp", "glass", "coal", "ciment", "woodp", "furniture"};
+			affect[] = {"soufre","saltp","glass","coal","ciment","woodp","furniture"};
 		};
 	};
 
@@ -805,7 +805,7 @@ class ALYSIA_ITEMS
 		{
 			max = 352;
 			min = 120;
-			affect[] = {"steel", "ironp", "platinep", "goldbar", "copperp", "sp98", "sp95", "gazole", "gpl", "kerosene"};
+			affect[] = {"steel","ironp","platinep","goldbar","copperp","sp98","sp95","gazole","gpl","kerosene"};
 		};
 	};
 
@@ -912,7 +912,7 @@ class ALYSIA_ITEMS
 		{
 			max = 245;
 			min = 95;
-			affect[] = {"brique", "soufre", "glass", "coal", "ciment", "woodp", "furniture"};
+			affect[] = {"brique","soufre","glass","coal","ciment","woodp","furniture"};
 		};
 	};
 
@@ -925,7 +925,7 @@ class ALYSIA_ITEMS
 		{
 			max = 52;
 			min = 30;
-			affect[] = {"bean", "corn", "cotton", "wheat"};
+			affect[] = {"bean","corn","cotton","wheat"};
 		};
 	};
 	class patate_seed
@@ -945,7 +945,7 @@ class ALYSIA_ITEMS
 		{
 			max = 46;
 			min = 25;
-			affect[] = {"bean", "corn", "cotton", "patate"};
+			affect[] = {"bean","corn","cotton","patate"};
 		};
 	};
 	class wheatseed
@@ -966,7 +966,7 @@ class ALYSIA_ITEMS
 		{
 			max = 580;
 			min = 220;
-			affect[] = {"slivovica", "turtle", "objvaleur", "artefact", "artefact_R"};
+			affect[] = {"slivovica","turtle","objvaleur","artefact","artefact_R"};
 		};
 		class food
 		{
@@ -985,7 +985,7 @@ class ALYSIA_ITEMS
 		{
 			max = 567;
 			min = 220;
-			affect[] = {"grozdova", "turtle", "objvaleur", "artefact", "artefact_R"};
+			affect[] = {"grozdova","turtle","objvaleur","artefact","artefact_R"};
 		};
 		class food
 		{
@@ -1004,7 +1004,7 @@ class ALYSIA_ITEMS
 		{
 			max = 72;
 			min = 20;
-			affect[] = {"brique", "soufre", "saltp", "glass", "ciment", "woodp", "furniture"};
+			affect[] = {"brique","soufre","saltp","glass","ciment","woodp","furniture"};
 		};
 	};
 
@@ -1039,7 +1039,7 @@ class ALYSIA_ITEMS
 		{
 			max = 305;
 			min = 115;
-			affect[] = {"brique", "soufre", "saltp", "glass", "coal", "woodp", "furniture"};
+			affect[] = {"brique","soufre","saltp","glass","coal","woodp","furniture"};
 		};
 	};
 
@@ -1053,7 +1053,7 @@ class ALYSIA_ITEMS
 		{
 			max = 320;
 			min = 150;
-			affect[] = {"ironp", "platinep", "goldbar", "copperp", "alu", "sp98", "sp95", "gazole", "gpl", "kerosene"};
+			affect[] = {"ironp","platinep","goldbar","copperp","alu","sp98","sp95","gazole","gpl","kerosene"};
 		};
 	};
 
@@ -1163,7 +1163,7 @@ class ALYSIA_ITEMS
 		{
 			max = 390;
 			min = 250;
-			affect[] = {"steel", "ironp", "platinep", "goldbar", "copperp", "alu", "sp95", "gazole", "gpl", "kerosene"};
+			affect[] = {"steel","ironp","platinep","goldbar","copperp","alu","sp95","gazole","gpl","kerosene"};
 		};
 	};
 	class sp95
@@ -1177,7 +1177,7 @@ class ALYSIA_ITEMS
 		{
 			max = 390;
 			min = 250;
-			affect[] = {"steel", "ironp", "platinep", "goldbar", "copperp", "alu", "sp98", "gazole", "gpl", "kerosene"};
+			affect[] = {"steel","ironp","platinep","goldbar","copperp","alu","sp98","gazole","gpl","kerosene"};
 		};
 	};
 	class gazole
@@ -1191,7 +1191,7 @@ class ALYSIA_ITEMS
 		{
 			max = 390;
 			min = 250;
-			affect[] = {"steel", "ironp", "platinep", "goldbar", "copperp", "alu", "sp98", "sp95", "gpl", "kerosene"};
+			affect[] = {"steel","ironp","platinep","goldbar","copperp","alu","sp98","sp95","gpl","kerosene"};
 		};
 	};
 	class gpl
@@ -1205,7 +1205,7 @@ class ALYSIA_ITEMS
 		{
 			max = 390;
 			min = 250;
-			affect[] = {"steel", "ironp", "platinep", "goldbar", "copperp", "alu", "sp98", "sp95", "gazole", "kerosene"};
+			affect[] = {"steel","ironp","platinep","goldbar","copperp","alu","sp98","sp95","gazole","kerosene"};
 		};
 	};
 	class kerosene
@@ -1219,7 +1219,7 @@ class ALYSIA_ITEMS
 		{
 			max = 390;
 			min = 250;
-			affect[] = {"steel", "ironp", "platinep", "goldbar", "copperp", "alu", "sp98", "sp95", "gazole", "gpl"};
+			affect[] = {"steel","ironp","platinep","goldbar","copperp","alu","sp98","sp95","gazole","gpl"};
 		};
 	};
 	
@@ -1233,7 +1233,7 @@ class ALYSIA_ITEMS
 		{
 			max = 925;
 			min = 600;
-			affect[] = {"grozdova", "slivovica", "objvaleur", "artefact", "artefact_R"};
+			affect[] = {"grozdova","slivovica","objvaleur","artefact","artefact_R"};
 		};
 	};
 

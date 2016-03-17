@@ -87,7 +87,7 @@ class ALYSIA_VEHICLES
 	{
 		realname = "Tracteur MTZ";
 		buyPrice = 90000;
-		inventory = 98;
+		inventory = 140;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver","company_farming"};
@@ -98,7 +98,7 @@ class ALYSIA_VEHICLES
 	{
 		realname = "Tracteur Zetor6945";
 		buyPrice = 85000;
-		inventory = 85;
+		inventory = 130;
 	};
 
 	class DAR_FusionCiv

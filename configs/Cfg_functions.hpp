@@ -353,6 +353,8 @@ class CfgFunctions
 			class house_menu_action_owner {};
 			class house_menu_action_buy {};
 			class house_menu_action_storage {};
+			class house_menu_action_keys_change {};
+			class house_menu_action_keys_change_update {};
 		};
 
 		class Phone
@@ -532,7 +534,8 @@ class CfgFunctions
 			class interactionMenu_action_trade_update {};
 			class interactionMenu_action_trade_add_inventory {};
 			class interactionMenu_action_trade_add_money {};
-			class interactionMenu_action_trade_add_key {};
+			class interactionMenu_action_trade_add_key_vehicles {};
+			class interactionMenu_action_trade_add_key_buildings {};
 			class interactionMenu_action_trade_remove {};
 			class interactionMenu_action_trade_propose {};
 			class interactionMenu_action_trade_receive {};

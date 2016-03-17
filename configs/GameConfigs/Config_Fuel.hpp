@@ -4,6 +4,13 @@ class ALYSIA_FUEL_STATION
 	{
 		save = 0;
 		max_distance_allowed = 10;
+		class marker
+		{
+			ShapeLocal = "ICON";
+			TypeLocal = "Fett_maptools";
+			ColorLocal = "ColorGreen";
+			SizeLocal[] = {0.5, 0.5};
+		};
 		class stock
 		{
 			class Diesel
@@ -29,6 +36,13 @@ class ALYSIA_FUEL_STATION
 	{
 		save = 0;
 		max_distance_allowed = 75;
+		class marker
+		{
+			ShapeLocal = "ICON";
+			TypeLocal = "Fett_maptools";
+			ColorLocal = "ColorGreen";
+			SizeLocal[] = {0.5, 0.5};
+		};
 		class stock
 		{
 			class Kerosene

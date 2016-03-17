@@ -54,6 +54,7 @@ while {(_vehicle getVariable ["fishing", false])} do
 				};
 			};
 		} else {
+			_fish = ["bulot", "anchois", "bar", "daurade", "maquereau", "merlu", "sardine"] call BIS_fnc_selectRandom;
 			if (!([true, _vehicle, "Trunk", _fish, 1, false] call AlysiaClient_fnc_handleTrunk)) then
 			{
 				["Pêche annulée<br/>L'inventaire du véhicule est plein"] call AlysiaClient_fnc_error;

@@ -24,6 +24,7 @@
 		"Agence immobilière"
 		"Restauration"
 		"Trader"
+		"Usine de textile"
 */
 
 class ALYSIA_COMPANIES

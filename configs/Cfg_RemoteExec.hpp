@@ -48,6 +48,7 @@ class CfgRemoteExec
 		class AlysiaServer_fnc_house_add {allowTargets = SERVER;};
 		class AlysiaServer_fnc_house_sell {allowTargets = SERVER;};
 		class AlysiaServer_fnc_house_storage_install {allowTargets = SERVER;};
+		class AlysiaServer_fnc_house_tenants_add {allowTargets = SERVER;};
 		//- Sheep
 		class AlysiaServer_fnc_sheepGenerate {allowTargets = SERVER;};
 		//- Bank
@@ -105,6 +106,7 @@ class CfgRemoteExec
 		class AlysiaClient_fnc_auctionHouse_receive_cancel {allowTargets = CLIENT;};
 		//- Housing
 		class AlysiaClient_fnc_house_menu_owner_action_light_update {allowTargets = CLIENT;};
+		class AlysiaClient_fnc_house_menu_action_keys_change_update {allowTargets = CLIENT;};
 		//- dynamicMarkers
 		class AlysiaClient_fnc_dynamicMarkers_update {allowTargets = CLIENT;};
 		//- staff

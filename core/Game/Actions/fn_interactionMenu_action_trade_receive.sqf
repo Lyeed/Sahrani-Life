@@ -5,11 +5,12 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_action", "_text", "_from", "_inv", "_keys", "_money"];
+private["_action", "_text", "_from", "_inv", "_keys_vehicles", "_money", "_keys_buildings"];
 _from = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _inv = [_this, 1, [], [[]]] call BIS_fnc_param;
-_keys = [_this, 2, [], [[]]] call BIS_fnc_param;
+_keys_vehicles = [_this, 2, [], [[]]] call BIS_fnc_param;
 _money = [_this, 3, 0, [0]] call BIS_fnc_param;
+_keys_buildings = [_this, 4, [], [[]]] call BIS_fnc_param;
 
 if (isNull _from) exitWith {};
 
@@ -25,10 +26,14 @@ if (_money > 0) then
 } forEach _inv;
 
 {
-	_text = _text + format["- Clef (%1)<br/>", getText(configFile >> "CfgVehicles" >> typeOf(_x) >> "displayName")];
-} forEach _keys;
+	_text = _text + format["- Clef de véhicule (%1)<br/>", getText(configFile >> "CfgVehicles" >> typeOf(_x) >> "displayName")];
+} forEach _keys_vehicles;
 
-_action = 
+{
+	_text = _text + format["- Clef de bâtiment (%1)<br/>", getText(configFile >> "CfgVehicles" >> typeOf(_x) >> "displayName")];
+} forEach _keys_buildings;
+
+_action =
 [
 	format
 	[
@@ -43,13 +48,24 @@ if (_action) then
 {
 	[true, _money] call AlysiaClient_fnc_handleCash;
 
+	if ((count _keys_buildings) > 0) then
+	{
+		{
+			if ((alive _x) && !(_x in g_houses)) then
+			{
+				g_houses pushBack _x;
+			};
+		} forEach _keys_buildings;
+		[_keys_buildings, (getPlayerUID player), playerSide] remoteExecCall ["AlysiaServer_fnc_house_tenants_add", 2];
+	};
+
 	{
 		if ((alive _x) && !(_x in g_vehicles)) then
 		{
 			g_vehicles pushBack _x;
 			[(getPlayerUID player), playerSide, _x] remoteExecCall ["AlysiaServer_fnc_keyManagement", 2];
 		};
-	} forEach _keys;
+	} forEach _keys_vehicles;
 
 	{
 		_amount = [(_x select 0), (_x select 1), g_carryWeight, g_maxWeight] call AlysiaClient_fnc_calWeightDiff;
@@ -63,15 +79,15 @@ if (_action) then
 				[true, (_x select 0), _amount] call AlysiaClient_fnc_handleInv;
 				(_inv select _forEachIndex) set [1, (_x select 1) - _amount];
 			};
-		}
+		};
 	} forEach _inv;
 	
 	if (_inv isEqualTo []) then {
-		["L'échange a été accepté"] remoteExecCall ["AlysiaClient_fnc_info", _from];
+		["L'échange a été <t color='#74DF00'>accepté</t>."] remoteExecCall ["AlysiaClient_fnc_info", _from];
 	} else {
-		["Vous n'avez pas assez de place pour tout récupérer"] call AlysiaClient_fnc_info;
+		["Vous n'avez pas assez de place pour tout récupérer."] call AlysiaClient_fnc_info;
 		[_inv] remoteExecCall ["AlysiaClient_fnc_interactionMenu_action_trade_space", _from];
 	};
 } else {
-	[_inv, _keys, _money] remoteExecCall ["AlysiaClient_fnc_interactionMenu_action_trade_refuse", _from];
+	[_inv, _money] remoteExecCall ["AlysiaClient_fnc_interactionMenu_action_trade_refuse", _from];
 };

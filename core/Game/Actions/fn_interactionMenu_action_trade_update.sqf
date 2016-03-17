@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display", "_ctrl_list_inventory", "_ctrl_list_trade", "_ctrl_list_keys"];
+private["_display", "_ctrl_list_inventory", "_ctrl_list_trade", "_ctrl_list_keys_vehicles", "_ctrl_list_keys_buildings"];
 
 disableSerialization;
 _display = findDisplay 10000;
@@ -44,20 +44,20 @@ if ((lbCurSel _ctrl_list_inventory) isEqualTo -1) then {
 	_ctrl_list_inventory lbSetCurSel 0;
 };
 
-_ctrl_list_keys = _display displayCtrl 10005;
-lbClear _ctrl_list_keys;
+_ctrl_list_keys_vehicles = _display displayCtrl 10005;
+lbClear _ctrl_list_keys_vehicles;
 
 {
-	if (!(isNull _x) && (alive _x) && !(_x in g_interaction_trade_keys)) then 
+	if (!(isNull _x) && (alive _x) && !(_x in g_interaction_trade_keys_vehicles)) then 
 	{
-		_index = _ctrl_list_keys lbAdd format["Clé (%1)", getText(configFile >> "CfgVehicles" >> (typeOf _x) >> "displayName")];
-		_ctrl_list_keys lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> (typeOf _x) >> "picture")];
-		_ctrl_list_keys lbSetValue [_index, _forEachIndex];
+		_index = _ctrl_list_keys_vehicles lbAdd format["Clé (%1)", getText(configFile >> "CfgVehicles" >> (typeOf _x) >> "displayName")];
+		_ctrl_list_keys_vehicles lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> (typeOf _x) >> "picture")];
+		_ctrl_list_keys_vehicles lbSetValue [_index, _forEachIndex];
 	};
 } forEach g_vehicles;
-if ((lbSize _ctrl_list_keys) isEqualTo 0) then
+if ((lbSize _ctrl_list_keys_vehicles) isEqualTo 0) then
 {
-	_ctrl_list_keys lbAdd "Aucune";
+	_ctrl_list_keys_vehicles lbAdd "Aucune";
 	ctrlShow[10006, false];
 	ctrlShow[10007, false];
 } else {
@@ -65,8 +65,29 @@ if ((lbSize _ctrl_list_keys) isEqualTo 0) then
 	ctrlShow[10007, true];
 };
 
-if ((lbCurSel _ctrl_list_keys) isEqualTo -1) then {
-	_ctrl_list_keys lbSetCurSel 0;
+if ((lbCurSel _ctrl_list_keys_vehicles) isEqualTo -1) then {
+	_ctrl_list_keys_vehicles lbSetCurSel 0;
+};
+
+_ctrl_list_keys_buildings = _display displayCtrl 10020;
+lbClear _ctrl_list_keys_buildings;
+
+{
+	if (!(isNull _x) && (alive _x) && !(_x in g_interaction_trade_keys_buildings)) then 
+	{
+		_index = _ctrl_list_keys_buildings lbAdd format["Clé (%1)", getText(configFile >> "CfgVehicles" >> (typeOf _x) >> "displayName")];
+		_ctrl_list_keys_buildings lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> (typeOf _x) >> "picture")];
+		_ctrl_list_keys_buildings lbSetValue [_index, _forEachIndex];
+	};
+} forEach g_houses;
+if ((lbSize _ctrl_list_keys_buildings) isEqualTo 0) then
+{
+	_ctrl_list_keys_buildings lbAdd "Aucune";
+	ctrlShow[10021, false];
+	ctrlShow[10022, false];
+} else {
+	ctrlShow[10021, true];
+	ctrlShow[10022, true];
 };
 
 if (g_cash isEqualTo 0) then {
@@ -97,11 +118,18 @@ if (g_interaction_trade_money > 0) then
 {
 	_index = _ctrl_list_trade lbAdd format["Clés (%1)", getText(configFile >> "CfgVehicles" >> typeOf(_x) >> "displayName")];
 	_ctrl_list_trade lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> typeOf(_x) >> "picture")];
-	_ctrl_list_trade lbSetData [_index, "key"];
+	_ctrl_list_trade lbSetData [_index, "key_vehicle"];
 	_ctrl_list_trade lbSetValue [_index, _forEachIndex];
-} forEach g_interaction_trade_keys;
+} forEach g_interaction_trade_keys_vehicles;
 
-if ((lbSize _ctrl_list_trade) isEqualTo 0) then 
+{
+	_index = _ctrl_list_trade lbAdd format["Clés (%1)", getText(configFile >> "CfgVehicles" >> typeOf(_x) >> "displayName")];
+	_ctrl_list_trade lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> typeOf(_x) >> "picture")];
+	_ctrl_list_trade lbSetData [_index, "key_building"];
+	_ctrl_list_trade lbSetValue [_index, _forEachIndex];
+} forEach g_interaction_trade_keys_buildings;
+
+if ((lbSize _ctrl_list_trade) isEqualTo 0) then
 {
 	_ctrl_list_trade lbAdd "Vide";
 	ctrlShow[10012, false];

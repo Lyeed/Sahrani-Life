@@ -2328,21 +2328,26 @@ _flag_south_3 = ["FlagPole_F","[10542.767578,9521.302734,0]",-460.076,-100,1,0,[
 
 // ATM - STATIONS markers
 {
-	if (typeOf(_x) in ["Land_Atm_01_F", "Land_Atm_02_F", "xcam_Atm_01_F", "xcam_Atm_02_F"]) then
+	if (isClass(missionConfigFile >> "ALYSIA_ATM" >> typeOf(_x))) then
 	{
-		_marker = createMarkerLocal [format["atm_marker_%1", _forEachIndex], (getPos _x)];
-	 	_marker setMarkerShapeLocal "ICON";
-		_marker setMarkerTypeLocal "Fett_flag";
-		_marker setMarkerColorLocal "ColorGreen";
-		_marker setMarkerSizeLocal [0.5, 0.5];
-	} else {
-		if (typeOf(_x) in ["Land_FuelStation_Feed_F", "Land_A_FuelStation_Feed"]) then
+		_config_ATM = missionConfigFile >> "ALYSIA_ATM" >> typeOf(_x);
+		if (isClass(_config_ATM >> "marker")) then
 		{
+			_marker = createMarkerLocal [format["atm_marker_%1", _forEachIndex], (getPos _x)];
+		 	_marker setMarkerShapeLocal getText(_config_ATM >> "marker" >> "ShapeLocal");
+			_marker setMarkerTypeLocal getText(_config_ATM >> "marker" >> "TypeLocal");
+			_marker setMarkerColorLocal getText(_config_ATM >> "marker" >> "ColorLocal");
+			_marker setMarkerSizeLocal getArray(_config_ATM >> "marker" >> "SizeLocal");
+		};
+	} else {
+		if (isClass(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_x))) then
+		{
+			_config_Stations = missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_x);
 			_marker = createMarkerLocal [format["station_%1", _forEachIndex], (getPos _x)];
-			_marker setMarkerShapeLocal "ICON";
-			_marker setMarkerTypeLocal "Fett_maptools";
-			_marker setMarkerColorLocal "ColorGreen";
-			_marker setMarkerSizeLocal [0.5, 0.5];
+			_marker setMarkerShapeLocal getText(_config_Stations >> "marker" >> "ShapeLocal");
+			_marker setMarkerTypeLocal getText(_config_Stations >> "marker" >> "TypeLocal");
+			_marker setMarkerColorLocal getText(_config_Stations >> "marker" >> "ColorLocal");
+			_marker setMarkerSizeLocal getArray(_config_Stations >> "marker" >> "SizeLocal");
 		};
 	};
 } forEach (allMissionObjects "All");

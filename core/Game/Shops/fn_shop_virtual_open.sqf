@@ -44,4 +44,4 @@ waitUntil {isNull _display};
 
 {
 	[true, (_x select 0), (_x select 1)] call AlysiaClient_fnc_handleInv;
-} forEach (g_shop_tmp_sell);
+} forEach g_shop_tmp_sell;

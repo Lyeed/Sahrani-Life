@@ -11,8 +11,9 @@ if (isNull g_interaction_target) exitWith {};
 
 g_interaction_trade_active = true;
 ["Echange proposé"] call AlysiaClient_fnc_info;
-[player, g_interaction_trade_inventory, g_interaction_trade_keys, g_interaction_trade_money] remoteExec ["AlysiaClient_fnc_interactionMenu_action_trade_receive", g_interaction_target];
+[player, g_interaction_trade_inventory, g_interaction_trade_keys_vehicles, g_interaction_trade_money, g_interaction_trade_keys_buildings] remoteExec ["AlysiaClient_fnc_interactionMenu_action_trade_receive", g_interaction_target];
 g_interaction_trade_inventory = [];
-g_interaction_trade_keys = [];
+g_interaction_trade_keys_vehicles = [];
+g_interaction_trade_keys_buildings = [];
 g_interaction_trade_money = 0;
 closeDialog 0;

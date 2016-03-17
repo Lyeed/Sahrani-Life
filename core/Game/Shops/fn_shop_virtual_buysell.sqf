@@ -25,7 +25,12 @@ if ((g_cash + g_shop_bill_dollar) < 0) exitWith
 g_shop_active = true;
 
 playSound "buy";
-[true, g_shop_bill_dollar] call AlysiaClient_fnc_handleCash;
+if (g_shop_bill_dollar < 0) then {
+	[false, g_shop_bill_dollar] call AlysiaClient_fnc_handleCash;
+} else {
+	[true, g_shop_bill_dollar] call AlysiaClient_fnc_handleCash;
+};
+
 if (g_shop_bill_illegal > 0) then {[true, "illegal_money", g_shop_bill_illegal] call AlysiaClient_fnc_handleInv};
 
 _market_buy = [];

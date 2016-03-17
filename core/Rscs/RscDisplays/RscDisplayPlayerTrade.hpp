@@ -10,14 +10,14 @@ class RscDisplayPlayerTrade: RscDisplayDefaultInteraction
 			x = 0.262812 * safezoneW + safezoneX;
 			y = 0.269 * safezoneH + safezoneY;
 			w = 0.474375 * safezoneW;
-			h = 0.550 * safezoneH;
+			h = 0.561 * safezoneH;
 		};
 		class FRAME: FRAME
 		{
 			x = 0.262812 * safezoneW + safezoneX;
 			y = 0.236 * safezoneH + safezoneY;
 			w = 0.474375 * safezoneW;
-			h = 0.583 * safezoneH;
+			h = 0.594 * safezoneH;
 		};
 	};
 
@@ -77,18 +77,18 @@ class RscDisplayPlayerTrade: RscDisplayDefaultInteraction
 
 		class PLAYER_FRAME: RscFrame
 		{
-			x = 0.273125 * safezoneW + safezoneX;
-			y = 0.302 * safezoneH + safezoneY;
+			x = 0.278281 * safezoneW + safezoneX;
+			y = 0.28 * safezoneH + safezoneY;
 			w = 0.216563 * safezoneW;
-			h = 0.506 * safezoneH;
+			h = 0.539 * safezoneH;
 		};
 		class PLAYER_HEADER: RscStructuredText
 		{
 			text = "<t align='center'>Vous</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
-			x = 0.273125 * safezoneW + safezoneX;
-			y = 0.302 * safezoneH + safezoneY;
+			x = 0.278281 * safezoneW + safezoneX;
+			y = 0.28 * safezoneH + safezoneY;
 			w = 0.216563 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
@@ -96,9 +96,9 @@ class RscDisplayPlayerTrade: RscDisplayDefaultInteraction
 		class PLAYER_INVENTORY_FRAME: RscFrame
 		{
 			x = 0.283437 * safezoneW + safezoneX;
-			y = 0.335 * safezoneH + safezoneY;
+			y = 0.313 * safezoneH + safezoneY;
 			w = 0.195937 * safezoneW;
-			h = 0.209 * safezoneH;
+			h = 0.198 * safezoneH;
 		};
 		class PLAYER_INVENTORY_HEADER: RscStructuredText
 		{
@@ -106,7 +106,7 @@ class RscDisplayPlayerTrade: RscDisplayDefaultInteraction
 			colorBackground[] = {0,0,0,0.8};
 			
 			x = 0.283437 * safezoneW + safezoneX;
-			y = 0.335 * safezoneH + safezoneY;
+			y = 0.313 * safezoneH + safezoneY;
 			w = 0.195937 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
@@ -115,9 +115,9 @@ class RscDisplayPlayerTrade: RscDisplayDefaultInteraction
 			idc = 10019;
 
 			x = 0.283437 * safezoneW + safezoneX;
-			y = 0.357 * safezoneH + safezoneY;
+			y = 0.335 * safezoneH + safezoneY;
 			w = 0.134062 * safezoneW;
-			h = 0.187 * safezoneH;
+			h = 0.176 * safezoneH;
 		};
 		class PLAYER_INVENTORY_ACTION_ADD_SINGLE_IMAGE: RscPicture
 		{
@@ -125,7 +125,7 @@ class RscDisplayPlayerTrade: RscDisplayDefaultInteraction
 			text = "lyeed_IMG\data\trade\inventory_add_single.paa";
 
 			x = 0.432969 * safezoneW + safezoneX;
-			y = 0.39 * safezoneH + safezoneY;
+			y = 0.368 * safezoneH + safezoneY;
 			w = 0.0257812 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
@@ -137,7 +137,7 @@ class RscDisplayPlayerTrade: RscDisplayDefaultInteraction
 			onMouseExit = "ctrlSetText[10001,""lyeed_IMG\data\trade\inventory_add_single.paa""];";
 
 			x = 0.432969 * safezoneW + safezoneX;
-			y = 0.39 * safezoneH + safezoneY;
+			y = 0.368 * safezoneH + safezoneY;
 			w = 0.0257812 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
@@ -147,7 +147,7 @@ class RscDisplayPlayerTrade: RscDisplayDefaultInteraction
 			text = "lyeed_IMG\data\trade\inventory_add_double.paa";
 
 			x = 0.432969 * safezoneW + safezoneX;
-			y = 0.467 * safezoneH + safezoneY;
+			y = 0.434 * safezoneH + safezoneY;
 			w = 0.0257812 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
@@ -159,56 +159,105 @@ class RscDisplayPlayerTrade: RscDisplayDefaultInteraction
 			onMouseExit = "ctrlSetText[10003,""lyeed_IMG\data\trade\inventory_add_double.paa""];";
 
 			x = 0.432969 * safezoneW + safezoneX;
-			y = 0.467 * safezoneH + safezoneY;
+			y = 0.434 * safezoneH + safezoneY;
 			w = 0.0257812 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
 
-		class PLAYER_KEY_FRAME: RscFrame
+		class PLAYER_KEY_BUILDING_FRAME: RscFrame
 		{
 			x = 0.283437 * safezoneW + safezoneX;
-			y = 0.566 * safezoneH + safezoneY;
+			y = 0.621 * safezoneH + safezoneY;
 			w = 0.195937 * safezoneW;
-			h = 0.143 * safezoneH;
+			h = 0.088 * safezoneH;
 		};
-		class PLAYER_KEY_HEADER: RscStructuredText
+		class PLAYER_KEY_BUILDING_HEADER: RscStructuredText
+		{
+			text = "<t align='center'>Clefs batiments</t>";
+			colorBackground[] = {0,0,0,0.8};
+			
+			x = 0.283437 * safezoneW + safezoneX;
+			y = 0.621 * safezoneH + safezoneY;
+			w = 0.195937 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class PLAYER_KEY_BUILDING_LIST: RscListbox
+		{
+			idc = 10020;
+
+			x = 0.283437 * safezoneW + safezoneX;
+			y = 0.643 * safezoneH + safezoneY;
+			w = 0.134062 * safezoneW;
+			h = 0.066 * safezoneH;
+		};
+		class PLAYER_KEY_BUILDING_ACTION_ADD_IMAGE: RscPicture
+		{
+			idc = 10021;
+			text = "lyeed_IMG\data\trade\add.paa";
+
+			x = 0.432969 * safezoneW + safezoneX;
+			y = 0.654 * safezoneH + safezoneY;
+			w = 0.0257812 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+		class PLAYER_KEY_BUILDING_ACTION_ADD_BUTTON: RscButtonSilent
+		{
+			idc = 10022;
+			action = "[] call AlysiaClient_fnc_interactionMenu_action_trade_add_key_buildings;";
+			onMouseEnter = "ctrlSetText[10022,'lyeed_IMG\data\trade\add_select.paa'];";
+			onMouseExit = "ctrlSetText[10022,'lyeed_IMG\data\trade\add.paa'];";
+
+			x = 0.432969 * safezoneW + safezoneX;
+			y = 0.654 * safezoneH + safezoneY;
+			w = 0.0257812 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
+
+		class PLAYER_KEY_VEHICLES_FRAME: RscFrame
+		{
+			x = 0.283437 * safezoneW + safezoneX;
+			y = 0.522 * safezoneH + safezoneY;
+			w = 0.195937 * safezoneW;
+			h = 0.088 * safezoneH;
+		};
+		class PLAYER_KEY_VEHICLES_HEADER: RscStructuredText
 		{
 			text = "<t align='center'>Clefs</t>";
 			colorBackground[] = {0,0,0,0.8};
 			
 			x = 0.283437 * safezoneW + safezoneX;
-			y = 0.566 * safezoneH + safezoneY;
+			y = 0.522 * safezoneH + safezoneY;
 			w = 0.195937 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-		class PLAYER_KEY_LIST: RscListbox
+		class PLAYER_KEY_VEHICLES_LIST: RscListbox
 		{
 			idc = 10005;
 
 			x = 0.283437 * safezoneW + safezoneX;
-			y = 0.588 * safezoneH + safezoneY;
+			y = 0.544 * safezoneH + safezoneY;
 			w = 0.134062 * safezoneW;
-			h = 0.121 * safezoneH;
+			h = 0.066 * safezoneH;
 		};
-		class PLAYER_KEY_ACTION_ADD_IMAGE: RscPicture
+		class PLAYER_KEY_VEHICLES_ACTION_ADD_IMAGE: RscPicture
 		{
 			idc = 10006;
 			text = "lyeed_IMG\data\trade\add.paa";
 
 			x = 0.432969 * safezoneW + safezoneX;
-			y = 0.621 * safezoneH + safezoneY;
+			y = 0.555 * safezoneH + safezoneY;
 			w = 0.0257812 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
-		class PLAYER_KEY_ACTION_ADD_BUTTON: RscButtonSilent
+		class PLAYER_KEY_VEHICLES_ACTION_ADD_BUTTON: RscButtonSilent
 		{
 			idc = 10007;
-			action = "[] call AlysiaClient_fnc_interactionMenu_action_trade_add_key;";
-			onMouseEnter = "ctrlSetText[10006,""lyeed_IMG\data\trade\add_select.paa""];";
-			onMouseExit = "ctrlSetText[10006,""lyeed_IMG\data\trade\add.paa""];";
+			action = "[] call AlysiaClient_fnc_interactionMenu_action_trade_add_key_vehicles;";
+			onMouseEnter = "ctrlSetText[10006,'lyeed_IMG\data\trade\add_select.paa'];";
+			onMouseExit = "ctrlSetText[10006,'lyeed_IMG\data\trade\add.paa'];";
 
 			x = 0.432969 * safezoneW + safezoneX;
-			y = 0.621 * safezoneH + safezoneY;
+			y = 0.555 * safezoneH + safezoneY;
 			w = 0.0257812 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
@@ -216,9 +265,9 @@ class RscDisplayPlayerTrade: RscDisplayDefaultInteraction
 		class PLAYER_MONEY_FRAME: RscFrame
 		{
 			x = 0.283437 * safezoneW + safezoneX;
-			y = 0.731 * safezoneH + safezoneY;
+			y = 0.72 * safezoneH + safezoneY;
 			w = 0.195937 * safezoneW;
-			h = 0.066 * safezoneH;
+			h = 0.088 * safezoneH;
 		};
 		class PLAYER_MONEY_HEADER: RscStructuredText
 		{
@@ -226,7 +275,7 @@ class RscDisplayPlayerTrade: RscDisplayDefaultInteraction
 			colorBackground[] = {0,0,0,0.8};
 			
 			x = 0.283437 * safezoneW + safezoneX;
-			y = 0.731 * safezoneH + safezoneY;
+			y = 0.72 * safezoneH + safezoneY;
 			w = 0.195937 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
@@ -245,10 +294,10 @@ class RscDisplayPlayerTrade: RscDisplayDefaultInteraction
 			idc = 10009;
 			text = "lyeed_IMG\data\trade\add.paa";
 
-			x = 0.433278 * safezoneW + safezoneX;
-			y = 0.75806 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.033 * safezoneH;
+			x = 0.432969 * safezoneW + safezoneX;
+			y = 0.753 * safezoneH + safezoneY;
+			w = 0.0257812 * safezoneW;
+			h = 0.044 * safezoneH;
 		};
 		class PLAYER_MONEY_ACTION_ADD_BUTTON: RscButtonSilent
 		{
@@ -257,10 +306,10 @@ class RscDisplayPlayerTrade: RscDisplayDefaultInteraction
 			onMouseEnter = "ctrlSetText[10009,""lyeed_IMG\data\trade\add_select.paa""];";
 			onMouseExit = "ctrlSetText[10009,""lyeed_IMG\data\trade\add.paa""];";
 
-			x = 0.433278 * safezoneW + safezoneX;
-			y = 0.75806 * safezoneH + safezoneY;
-			w = 0.020625 * safezoneW;
-			h = 0.033 * safezoneH;
+			x = 0.432969 * safezoneW + safezoneX;
+			y = 0.753 * safezoneH + safezoneY;
+			w = 0.0257812 * safezoneW;
+			h = 0.044 * safezoneH;
 		};
 
 		class TRADE_FRAME: RscFrame
@@ -268,7 +317,7 @@ class RscDisplayPlayerTrade: RscDisplayDefaultInteraction
 			x = 0.510312 * safezoneW + safezoneX;
 			y = 0.302 * safezoneH + safezoneY;
 			w = 0.216563 * safezoneW;
-			h = 0.506 * safezoneH;
+			h = 0.44 * safezoneH;
 		};
 		class TRADE_HEADER: RscStructuredText
 		{

@@ -13,11 +13,18 @@ class ALYSIA_ATM
 		launder_transfer = 0;
 		company = 0;
 		save = 1;
+		class marker
+		{
+		 	ShapeLocal = "ICON";
+			TypeLocal = "Fett_flag";
+			ColorLocal = "ColorGreen";
+			SizeLocal[] = {0.5, 0.5};
+		};
 	};
-	
-	class Land_Atm_02_F: Land_Atm_01_F {};
-	class xcam_Atm_01_F: Land_Atm_01_F {};
-	class xcam_Atm_02_F: Land_Atm_01_F {};
+	class Land_Atm_02_F: Land_Atm_01_F
+	{
+		class marker: marker {};
+	};
 
 	class ATM_Sarhani
 	{
