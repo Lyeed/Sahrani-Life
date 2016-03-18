@@ -28,7 +28,7 @@ if ((isNull _owner_player) || ((player distance _owner_player) > 10)) exitWith {
 	["Le propriétaire a besoin d'être à moins de 10 mètres de son bâtiment pour que vous puissiez changer les serrures."] call AlysiaClient_fnc_error;
 };
 
-if (!(_house getVariable ["house_update_lights", false])) exitWith {
+if (_house getVariable ["house_update_lights", false]) exitWith {
 	["Ce bâtiment possède déjà une installation électrique."] call AlysiaClient_fnc_error;
 };
 
@@ -37,6 +37,6 @@ if (!(["Installation du système électrique", 22, objNull, "", "AinvPknlMstpsno
 if ([false, "electric_system", 1] call AlysiaClient_fnc_handleInv) then
 {
 	_house setVariable ["house_update_lights", true, true];
-	["<t color='#FF8000'>Système électrique</t> installé<br/>."] call AlysiaClient_fnc_info;
+	["<t color='#FF8000'>Système électrique</t> installé."] call AlysiaClient_fnc_info;
 	[_house] remoteExec ["AlysiaServer_fnc_house_update_lights", 2];
 };

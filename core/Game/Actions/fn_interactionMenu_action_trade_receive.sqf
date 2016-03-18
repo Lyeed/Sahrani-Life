@@ -54,6 +54,11 @@ if (_action) then
 			if ((alive _x) && !(_x in g_houses)) then
 			{
 				g_houses pushBack _x;
+				_marker = createMarkerLocal [format["house_%1", (count g_houses)], (getPosATL _x)];
+				_marker setMarkerTextLocal "Chez vous";
+				_marker setMarkerColorLocal "ColorPink";
+				_marker setMarkerTypeLocal "Fett_house";
+				_marker setMarkerSizeLocal [0.6, 0.6];
 			};
 		} forEach _keys_buildings;
 		[_keys_buildings, (getPlayerUID player), playerSide] remoteExecCall ["AlysiaServer_fnc_house_tenants_add", 2];

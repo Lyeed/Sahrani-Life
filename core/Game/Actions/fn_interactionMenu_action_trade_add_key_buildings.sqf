@@ -12,7 +12,7 @@ if (g_interaction_trade_active) exitWith {};
 _sel = lbCurSel 10020;
 if (_sel isEqualTo -1) exitWith {};
 
-_vehicle = g_vehicles select (lbValue[10020, _sel]);
+_vehicle = g_houses select (lbValue[10020, _sel]);
 if (_vehicle in g_interaction_trade_keys_buildings) exitWith {};
 
 g_interaction_trade_active = true;

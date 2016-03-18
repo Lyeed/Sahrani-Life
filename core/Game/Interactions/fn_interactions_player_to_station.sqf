@@ -21,7 +21,8 @@ if ((player getVariable ["typeRefuel", ""]) != "") exitWith
 			"Véhicule",
 			"[g_interaction_target] call AlysiaClient_fnc_fuelStation_refuel_open;",
 			"
-				((player distance (g_interaction_target modelToWorld [7.80347,-2.56006,2.06092])) <= 2)
+				(count(getArray(missionConfigFile >> 'ALYSIA_FUEL_STATION' >> typeOf(g_interaction_target) >> 'pos_model_pomp')) > 0) &&
+				{((player distance (g_interaction_target modelToWorld getArray(missionConfigFile >> 'ALYSIA_FUEL_STATION' >> typeOf(g_interaction_target) >> 'pos_model_pomp'))) <= 2)}
 			"
 		],
 		[
@@ -29,15 +30,18 @@ if ((player getVariable ["typeRefuel", ""]) != "") exitWith
 			"Jerrycan",
 			"[g_interaction_target] spawn AlysiaClient_fnc_fuelStation_jerrycan_open;",
 			"
-				(('Alysia_jerrycan_empty' in (magazines player)) && ((player distance (g_interaction_target modelToWorld [7.80347,-2.56006,2.06092])) <= 2))
+				('Alysia_jerrycan_empty' in (magazines player)) &&
+				(count(getArray(missionConfigFile >> 'ALYSIA_FUEL_STATION' >> typeOf(g_interaction_target) >> 'pos_model_pomp')) > 0) &&
+				{((player distance (g_interaction_target modelToWorld getArray(missionConfigFile >> 'ALYSIA_FUEL_STATION' >> typeOf(g_interaction_target) >> 'pos_model_pomp'))) <= 2)}
 			"
 		],
 		[
 			"food",
 			"Restauration",
-			"[g_interaction_target, nil, nil, 'station_service'] call AlysiaClient_fnc_shop_virtual_open;",
+			"[g_interaction_target, nil, nil, 'station_service'] spawn AlysiaClient_fnc_shop_virtual_open;",
 			"
-				((player distance (g_interaction_target modelToWorld [5.64648,7.0752,2.06092])) <= 2)
+				(count(getArray(missionConfigFile >> 'ALYSIA_FUEL_STATION' >> typeOf(g_interaction_target) >> 'pos_model_store')) > 0) &&
+				{((player distance (g_interaction_target modelToWorld getArray(missionConfigFile >> 'ALYSIA_FUEL_STATION' >> typeOf(g_interaction_target) >> 'pos_model_store'))) <= 3)}
 			"
 		],
 		[
@@ -45,12 +49,13 @@ if ((player getVariable ["typeRefuel", ""]) != "") exitWith
 			"Outillage",
 			"[g_interaction_target, nil, nil, 'garagiste'] call AlysiaClient_fnc_shop_arma_open;",
 			"
-				((player distance (g_interaction_target modelToWorld [5.64648,7.0752,2.06092])) <= 2)
+				(count(getArray(missionConfigFile >> 'ALYSIA_FUEL_STATION' >> typeOf(g_interaction_target) >> 'pos_model_store')) > 0) &&
+				{((player distance (g_interaction_target modelToWorld getArray(missionConfigFile >> 'ALYSIA_FUEL_STATION' >> typeOf(g_interaction_target) >> 'pos_model_store'))) <= 3)}
 			"
 		]
 	],
 	"Station Essence",
 	"lyeed_IMG\data\vehicle\background.jpg",
-	true,
+	false,
 	false
 ] spawn AlysiaClient_fnc_interactions_create;

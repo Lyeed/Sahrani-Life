@@ -80,6 +80,6 @@ if (isNil "_info") exitWith {closeDialog 0};
 	((_info select 3) select 3) * 100
 ];
 
-// if (_info select 4) then {
-// 	[9703, true] call AlysiaClient_fnc_tabletShow;
-// };
+if (_info select 4) then {
+	[9703, true] call AlysiaClient_fnc_tabletShow;
+};

@@ -93,6 +93,10 @@ if ((lbSize _ctrl_list_keys_buildings) isEqualTo 0) then
 	ctrlShow[10022, true];
 };
 
+if ((lbCurSel _ctrl_list_keys_buildings) isEqualTo -1) then {
+	_ctrl_list_keys_buildings lbSetCurSel 0;
+};
+
 if (g_cash isEqualTo 0) then {
 	ctrlShow[10009, false];
 	ctrlShow[10010, false];

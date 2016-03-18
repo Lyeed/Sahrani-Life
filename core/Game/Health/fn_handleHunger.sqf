@@ -9,6 +9,7 @@ private["_type", "_value"];
 _value = round([_this, 0, 0, [0]] call BIS_fnc_param);
 
 if (_value isEqualTo 0) exitWith {};
+if (g_staff_god) exitWith {};
 
 g_hunger = g_hunger + _value;
 if (g_hunger > 100) then 

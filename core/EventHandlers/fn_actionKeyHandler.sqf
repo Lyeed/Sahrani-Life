@@ -107,6 +107,32 @@ if ((vehicle player) isEqualTo player) then
 			};
 		};
 
+		_station = (nearestObjects [player, (call g_stations), 11]) select 0;
+		if (!(isNil "_station")) then
+		{
+			_config = missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_station);
+			
+			_pos_pomp = getArray(_config >> "pos_model_pomp");
+			if (count(_pos_pomp) > 0) then
+			{
+				if ((player distance (_station modelToWorld _pos_pomp)) < 2) then
+				{
+					[_station] call AlysiaClient_fnc_interactions_player_to_station;
+					true breakOut "main";
+				};
+			};
+
+			_pos_store = getArray(_config >> "pos_model_store");
+			if (count(_pos_store) > 0) then
+			{
+				if ((player distance (_station modelToWorld _pos_store)) < 3) then
+				{
+					[_station] call AlysiaClient_fnc_interactions_player_to_station;
+					true breakOut "main";
+				};
+			};
+		};
+
 		{
 			if ((player distance (getMarkerPos _x)) < 20) then
 			{
@@ -317,15 +343,6 @@ if ((vehicle player) isEqualTo player) then
 			};
 		};
 
-		if (isClass(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_target))) then
-		{
-			if (((player distance (_target modelToWorld [7.80347,-2.56006,2.06092])) <= 2) || ((player distance (_target modelToWorld [5.64648,7.0752,2.06092])) <= 2)) then
-			{
-				[_target] call AlysiaClient_fnc_interactions_player_to_station;
-				true breakOut "main";
-			};
-		};
-		
 		if (((player distance _target) < 10) && (typeOf(_target) in (call g_houses_list))) then
 		{
 			[_target] call AlysiaClient_fnc_house_menu_handler;

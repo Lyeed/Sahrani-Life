@@ -9,6 +9,7 @@ if (isNull _house) exitWith {};
 if (_mode) then 
 {
 	_lightSource = "#lightpoint" createVehicleLocal [0,0,0];
+	_lightSource lightAttachObject [_house, [0, 0, 3]];
 	_lightSource setLightColor [250,150,50];
 	_lightSource setLightAmbient [1,1,0.2];
 	_lightSource setLightAttenuation [1,0,0,0];
@@ -19,7 +20,5 @@ if (_mode) then
 	_house setVariable["lightSource", _lightSource];
 } else {
 	_lightSource = _house getVariable["lightSource", objNull];
-	if (!(isNull _lightSource)) then {
-		deleteVehicle _lightSource;
-	};
+	if (!(isNull _lightSource)) then {deleteVehicle _lightSource};
 };

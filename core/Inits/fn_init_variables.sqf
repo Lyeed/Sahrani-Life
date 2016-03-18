@@ -91,6 +91,12 @@ with missionNamespace do
 		missionNamespace setVariable [format["drug_consume_%1", _x], 0];
 	} forEach (g_drugs);
 	/* =================[Plants]=================== */
+	g_stations = [];
+	{
+		g_stations pushBack (configName _x);
+	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL_STATION"));
+	g_stations = compileFinal str(g_stations);
+	/* =================[Plants]=================== */
 	g_plants = [];
 	"g_plants pushBack (configName _x);true" configClasses (missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS");
 	g_plants = compileFinal str(g_plants);

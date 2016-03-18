@@ -83,7 +83,7 @@ class GOV_TAXES_LIST: RscListbox
 {
 	idc = GOV_TAXES_LIST_IDC;
 	colorBackground[] = {0,0,0,0};
-	onLBSelChanged = "_this call AlysiaClient_fnc_APP_gov_taxes;";
+	onLBSelChanged = "_this call AlysiaClient_fnc_APP_gov_taxes_update;";
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.423 * safezoneH + safezoneY;
