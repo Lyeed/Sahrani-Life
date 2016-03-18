@@ -27,10 +27,15 @@ _ctrl_fuels = _display displayCtrl 9405;
 lbClear _ctrl_fuels;
 
 {
-	_index = _ctrl_fuels lbAdd getText(_x >> "name");
-	_ctrl_fuels lbSetPicture [_index, getText(_x >> "picture")];
-	_ctrl_fuels lbSetData [_index, configName _x];
-} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL"));
+	_fuel = configName _x;
+	_config = missionConfigFile >> "ALYSIA_FUEL" >> _fuel;
+	if (isClass(_config)) then
+	{
+		_index = _ctrl_fuels lbAdd getText(_config >> "name");
+		_ctrl_fuels lbSetPicture [_index, getText(_config >> "picture")];
+		_ctrl_fuels lbSetData [_index, _fuel];
+	};
+} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_station) >> "stock"));
 if ((lbSize _ctrl_fuels) isEqualTo 0) then {
 	_ctrl_fuels lbAdd "Aucune";
 };

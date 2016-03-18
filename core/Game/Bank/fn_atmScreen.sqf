@@ -91,8 +91,16 @@ switch (_action) do
 			_config_bank_faction = missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "bank_faction";
 			if (isClass(_config_bank_faction)) then
 			{
-				if (((player getVariable ["rank", 0]) >= getNumber(_config_bank_faction >> "rank")) || (["gov_money"] call AlysiaClient_fnc_hasLicense)) then
-				{
+				if (
+						(
+							(playerSide != civilian) && 
+							((player getVariable ["rank", 0]) >= getNumber(_config_bank_faction >> "rank"))
+						) ||
+						(
+							(playerSide isEqualTo civilian) &&
+							((["gov_money"] call AlysiaClient_fnc_hasLicense) || (["central_com"] call AlysiaClient_fnc_hasLicense))
+						)
+					) then {
 					_txtL4 ctrlSetStructuredText parseText "<t align='left'>Faction</t>";
 					_btnL4 buttonSetAction "[""home_faction"", g_interaction_target] call AlysiaClient_fnc_atmScreen";
 					_btnL4 ctrlShow true;

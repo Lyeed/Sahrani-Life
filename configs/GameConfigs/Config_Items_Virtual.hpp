@@ -139,7 +139,7 @@ class ALYSIA_ITEMS
 	class cone
 	{
 		name = "Cône";
-		weight = 3;
+		weight = 2;
 		price_buy = 10;
 		image = "alysia_items_virtual\data\cone.paa";
 		class use
@@ -150,7 +150,7 @@ class ALYSIA_ITEMS
 	class table_wood
 	{
 		name = "Table en bois";
-		weight = 30;
+		weight = 9;
 		image = "alysia_items_virtual\data\table_wood.paa";
 		class use
 		{
@@ -160,11 +160,21 @@ class ALYSIA_ITEMS
 	class chair_wood
 	{
 		name = "Chaise en bois";
-		weight = 10;
+		weight = 3;
 		image = "alysia_items_virtual\data\chair_wood.paa";
 		class use
 		{
 			action = "['chair_wood'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
+		};
+	};
+	class tribune_wood
+	{
+		name = "Tribune en bois";
+		weight = 20;
+		image = "";
+		class use
+		{
+			action = "['tribune_wood'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
 		};
 	};
 
@@ -194,7 +204,6 @@ class ALYSIA_ITEMS
 		illegal = 1;
 		image = "alysia_items_virtual\data\graine_tabac.paa";
 	};
-
 	class cigare
 	{
 		name = "Cigare";
@@ -204,7 +213,7 @@ class ALYSIA_ITEMS
 		license = "tabac";
 		class market
 		{
-			max = 506;
+			max = 726;
 			min = 98;
 			affect[] = {"cigarette","cocainep","cocainepc","heroinps","methp","marijuana"};
 		};
@@ -218,7 +227,7 @@ class ALYSIA_ITEMS
 		license = "tabac";
 		class market
 		{
-			max = 425;
+			max = 525;
 			min = 15;
 			affect[] = {"cigare","cocainep","cocainepc","heroinps","methp","marijuana"};
 		};
@@ -232,8 +241,8 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\objet_de_valeur.paa";
 		class market
 		{
-			max = 408;
-			min = 100;
+			max = 628;
+			min = 90;
 			affect[] = {"grozdova","slivovica","turtle","artefact","artefact_R"};
 		};
 	};
@@ -246,8 +255,8 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\artefact.paa";
 		class market
 		{
-			max = 950;
-			min = 200;
+			max = 925;
+			min = 120;
 			affect[] = {"grozdova","slivovica","turtle","objvaleur"};
 		};
 	};
@@ -383,8 +392,8 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\cocaine.paa";
 		class market
 		{
-			max = 930;
-			min = 350;
+			max = 1130;
+			min = 120;
 			affect[] = {"cigarette","cigare","heroinps","methp","marijuana"};
 		};
 		class use
@@ -401,7 +410,7 @@ class ALYSIA_ITEMS
 		class market
 		{
 			max = 720;
-			min = 210;
+			min = 50;
 			affect[] = {"cigarette","cigare","heroinps","methp","marijuana"};
 		};
 		class use
@@ -440,8 +449,8 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\seringue_heroine.paa";
 		class market
 		{
-			max = 910;
-			min = 250;
+			max = 1215;
+			min = 90;
 			affect[] = {"cigarette","cigare","cocainep","cocainepc","methp","marijuana"};
 		};
 		class use
@@ -454,7 +463,8 @@ class ALYSIA_ITEMS
 	{
 		name = "Seringue";
 		weight = 1;
-		price_buy = 60;
+		price_buy = 90;
+		price_sell = 10;
 		image = "alysia_items_virtual\data\seringue_vide.paa";
 	};
 
@@ -481,8 +491,8 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\methamphetamine.paa";
 		class market
 		{
-			max = 1320;
-			min = 550;
+			max = 1520;
+			min = 290;
 			affect[] = {"cigarette","cigare","cocainep","cocainepc","heroinps","marijuana"};
 		};
 		class use
@@ -514,8 +524,8 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\marijuana.paa";
 		class market
 		{
-			max = 885;
-			min = 300;
+			max = 1020;
+			min = 90;
 			affect[] = {"cigarette","cigare","cocainep","cocainepc","heroinps","methp"};
 		};
 		class use
@@ -624,12 +634,11 @@ class ALYSIA_ITEMS
 		};
 	};
 
-
 	class chips
 	{
 		name = "Paquet de chips";
 		weight = 1;
-		price_buy = 12;
+		price_buy = 41;
 		image = "alysia_items_virtual\data\chips.paa";
 		class food
 		{
@@ -642,7 +651,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Barre chocolaté";
 		weight = 1;
-		price_buy = 9;
+		price_buy = 14;
 		image = "alysia_items_virtual\data\chocolat.paa";
 		class food
 		{
@@ -655,20 +664,21 @@ class ALYSIA_ITEMS
 	{
 		name = "Villagoise";
 		weight = 1;
-		price_buy = 6;
+		price_buy = 71;
 		image = "alysia_items_virtual\data\villagoise.paa";
 		class food
 		{
 			hunger = -5;
 			thirst = 15;
 			sound = "eat";
+			alcool = 0.15;
 		};
 	};
 	class eau50
 	{
 		name = "Bouteille d'eau de 50cl";
 		weight = 1;
-		price_buy = 9;
+		price_buy = 23;
 		image = "alysia_items_virtual\data\bouteille_eau50.paa";
 		class food
 		{
@@ -745,7 +755,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Beignet";
 		weight = 1;
-		price_buy = 1;
+		price_buy = 2;
 		image = "alysia_items_virtual\data\beignet.paa";
 		class food
 		{
@@ -757,7 +767,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Soda";
 		weight = 1;
-		price_buy = 1;
+		price_buy = 3;
 		image = "alysia_items_virtual\data\soda.paa";
 		class food
 		{
@@ -781,7 +791,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Boite de ragout";
 		weight = 1;
-		price_buy = 2;
+		price_buy = 6;
 		image = "alysia_items_virtual\data\ragout.paa";
 		class food
 		{

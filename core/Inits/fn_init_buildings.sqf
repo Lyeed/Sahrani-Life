@@ -490,21 +490,6 @@ _cString =
 ["Land_ecke_075_025_300_clean_cnc","[14246.294922,12448.401367,0]",90.379,-100,0,0,[]] call _cString;
 ["Land_ecke_075_025_300_clean_cnc","[14246.297852,12448.183594,0]",270.379,-100,0,0,[]] call _cString;
 
-// Bank North
-["Land_boden_250_250_025_clean_cnc","[14304.931641,12588.600586,0.861111]",8.96902,-100,0,0,[]] call _cString;
-["xcam_Concrete_SmallWall_8m_F","[14302.0595703,12577.895508,-0.0892258]",8.96902,-100,0,0,[]] call _cString;
-["xcam_Concrete_SmallWall_8m_F","[14294.185547,12579.157227,-0.103535]",8.96902,-100,0,0,[]] call _cString;
-["xcam_Concrete_SmallWall_8m_F","[14289.0839844,12579.986328,-0.107742]",8.96902,-100,0,0,[]] call _cString;
-["xcam_Concrete_SmallWall_8m_F","[14285.898438,12584.306641,-0.113636]",278.24,-100,0,0,[]] call _cString;
-["xcam_Concrete_SmallWall_8m_F","[14286.868164,12590.600586,-0.109428]",278.745,-100,0,0,[]] call _cString;
-["xcam_Concrete_SmallWall_8m_F","[14291.183594,12593.777344,-0.098484]",8.7449,-100,0,0,[]] call _cString;
-["xcam_Concrete_SmallWall_8m_F","[14299.0966797,12592.527344,-0.10606]",8.7449,-100,0,0,[]] call _cString;
-["xcam_Concrete_SmallWall_8m_F","[14304.330078,12591.724609,-0.112793]",8.7449,-100,0,0,[]] call _cString;
-["xcam_Concrete_SmallWall_8m_F","[14307.553711,12587.439453,-0.115318]",278.745,-100,0,0,[]] call _cString;
-["xcam_Concrete_SmallWall_8m_F","[14306.540039,12580.984375,-0.0942764]",278.745,-100,0,0,[]] call _cString;
-["xcam_GH_Stairs_F","[14309.558594,12583.0693359,-3.38216]",98.7449,-100,0,0,[]] call _cString;
-["xcam_Laptop_unfolded_F","[14290.65332,12592.374023,4.62458]",188.388,-100,0,0,[]] call _cString;
-
 // Bank South
 ["Land_boden_250_250_025_clean_cnc","[10764.0869141,9323.0751953,0.803879]",341.62,-100,0,0,[]] call _cString;
 ["xcam_Concrete_SmallWall_8m_F","[10758.0605469,9318.302734,-0.133835]",341.62,-100,0,0,[]] call _cString;
@@ -2241,8 +2226,6 @@ _cString =
 ["Land_PowLines_ConcL","[10696.537109,9584.707031,0.625962]",364.735,-100,1,0,[]] call _cString;
 ["Land_PowLines_ConcL","[10694.833008,9540.862305,0.625962]",364.735,-100,1,0,[]] call _cString;
 ["Land_PowLines_ConcL","[10705.689453,9484.760742,0.625962]",314.735,-100,1,0,[]] call _cString;
-["Land_PowLines_ConcL","[10582.0654297,9577.673828,0]",0,-100,1,0,[]] call _cString;
-["Land_PowLines_ConcL","[10584.222656,9596.236328,0]",40,-100,1,0,[]] call _cString;
 ["Land_PowLines_ConcL","[10583.799805,9623.910156,0]",-45,-100,1,0,[]] call _cString;
 ["Land_PowLines_ConcL","[10473.0566406,9580.607422,0]",-200,-100,1,0,[]] call _cString;
 ["Land_PowLines_ConcL","[10326.518555,9600.291992,0]",-239.621,-100,1,0,[]] call _cString;

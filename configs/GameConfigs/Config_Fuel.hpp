@@ -1,6 +1,6 @@
 class ALYSIA_FUEL_STATION
 {
-	class Land_FuelStation_Feed_F
+	class GasStation_F
 	{
 		save = 0;
 		max_distance_allowed = 10;
@@ -15,19 +15,19 @@ class ALYSIA_FUEL_STATION
 		{
 			class Diesel
 			{
-				max = 800;
+				max = 600;
 			};
 			class SP95
 			{
-				max = 800;
+				max = 600;
 			};
 			class SP98
 			{
-				max = 800;
+				max = 600;
 			};
 			class GPL
 			{
-				max = 800;
+				max = 600;
 			};
 		};
 	};

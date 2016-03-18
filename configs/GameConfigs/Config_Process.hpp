@@ -54,6 +54,7 @@ class ALYSIA_PROCESS
 			{
 				licenses[] = {"sand"};
 			};
+			class GUER {};
 		};
 	};
 	class seringue
@@ -71,6 +72,7 @@ class ALYSIA_PROCESS
 			{
 				licenses[] = {"sand"};
 			};
+			class GUER {};
 		};
 	};
 	class iron
@@ -461,7 +463,7 @@ class ALYSIA_PROCESS
 	class chair_wood
 	{
 		name = "Fabrication de chaises (bois)";
-		require[] = {{"woodp",8}};
+		require[] = {{"woodp",5}};
 		receive[] = {{{"chair_wood",1}},{},0};
 		time_per_item = 5;
 		time_default = 5;
@@ -477,8 +479,24 @@ class ALYSIA_PROCESS
 	class table_wood
 	{
 		name = "Fabrication de tables (bois)";
-		require[] = {{"woodp",15}};
+		require[] = {{"woodp",11}};
 		receive[] = {{{"table_wood",1}},{},0};
+		time_per_item = 5;
+		time_default = 5;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				licenses[] = {"furniture"};
+			};
+		};
+	};
+	class tribune_wood
+	{
+		name = "Fabrication de tribune (bois)";
+		require[] = {{"woodp",30}};
+		receive[] = {{{"tribune_wood",1}},{},0};
 		time_per_item = 5;
 		time_default = 5;
 		class target {};

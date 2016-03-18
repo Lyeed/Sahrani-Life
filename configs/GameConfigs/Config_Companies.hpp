@@ -29,7 +29,6 @@
 
 class ALYSIA_COMPANIES
 {
-	giver_license_needed = "gov_company";
 	characters_allowed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-éè?!,.ù_à ";
 	characters_max = 30;
 	class types
@@ -171,7 +170,7 @@ class ALYSIA_COMPANIES
 			license = "company_money_tranfer";
 			image = "lyeed_IMG\data\companies\types\money_transfer.paa";
 			process[] = {};
-			members_max = 7;
+			members_max = 11;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -187,7 +186,7 @@ class ALYSIA_COMPANIES
 			};
 			class tax
 			{
-				price_per_employee = 140;
+				price_per_employee = 138;
 				price_building = 230;
 			};
 			class storage

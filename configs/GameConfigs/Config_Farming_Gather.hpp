@@ -46,7 +46,7 @@ class ALYSIA_FARMING_GATHER
 		receive[] = {{"sand", 4, 1}};
 		tool = "Skyline_Pelle_01";
 		sound = "shovel";
-		sides[] = {"CIV"};
+		sides[] = {"CIV", "GUER"};
 		area = 40;
 	};
 

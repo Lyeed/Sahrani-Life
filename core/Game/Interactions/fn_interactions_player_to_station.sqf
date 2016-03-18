@@ -16,8 +16,38 @@ if ((player getVariable ["typeRefuel", ""]) != "") exitWith
 	[_this, 0, objNull, [objNull]] call BIS_fnc_param,
 	"player_to_station",
 	[
-		["refuel_veh", "Véhicule", "[g_interaction_target] call AlysiaClient_fnc_fuelStation_refuel_open;", "true"],
-		["refuel_jerry", "Jerrycan", "[g_interaction_target] spawn AlysiaClient_fnc_fuelStation_jerrycan_open;", "('Alysia_jerrycan_empty' in (magazines player))"]
+		[
+			"refuel_veh",
+			"Véhicule",
+			"[g_interaction_target] call AlysiaClient_fnc_fuelStation_refuel_open;",
+			"
+				((player distance (g_interaction_target modelToWorld [7.80347,-2.56006,2.06092])) <= 2)
+			"
+		],
+		[
+			"refuel_jerry",
+			"Jerrycan",
+			"[g_interaction_target] spawn AlysiaClient_fnc_fuelStation_jerrycan_open;",
+			"
+				(('Alysia_jerrycan_empty' in (magazines player)) && ((player distance (g_interaction_target modelToWorld [7.80347,-2.56006,2.06092])) <= 2))
+			"
+		],
+		[
+			"food",
+			"Restauration",
+			"[g_interaction_target, nil, nil, 'station_service'] call AlysiaClient_fnc_shop_virtual_open;",
+			"
+				((player distance (g_interaction_target modelToWorld [5.64648,7.0752,2.06092])) <= 2)
+			"
+		],
+		[
+			"tool",
+			"Outillage",
+			"[g_interaction_target, nil, nil, 'garagiste'] call AlysiaClient_fnc_shop_arma_open;",
+			"
+				((player distance (g_interaction_target modelToWorld [5.64648,7.0752,2.06092])) <= 2)
+			"
+		]
 	],
 	"Station Essence",
 	"lyeed_IMG\data\vehicle\background.jpg",

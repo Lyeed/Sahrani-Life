@@ -261,12 +261,6 @@ if ((vehicle player) isEqualTo player) then
 					};
 				};
 
-				if (isClass(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_target))) then
-				{
-					[_target] call AlysiaClient_fnc_interactions_player_to_station;
-					true breakOut "main";
-				};
-
 				if (typeOf(_target) in (call g_plants)) then
 				{
 					[_target] call AlysiaClient_fnc_plantHarvest;
@@ -320,6 +314,15 @@ if ((vehicle player) isEqualTo player) then
 					[_target, "items", true, true, false, false, true] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
 					true breakOut "main";
 				};
+			};
+		};
+
+		if (isClass(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_target))) then
+		{
+			if (((player distance (_target modelToWorld [7.80347,-2.56006,2.06092])) <= 2) || ((player distance (_target modelToWorld [5.64648,7.0752,2.06092])) <= 2)) then
+			{
+				[_target] call AlysiaClient_fnc_interactions_player_to_station;
+				true breakOut "main";
 			};
 		};
 		

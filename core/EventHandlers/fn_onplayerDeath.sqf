@@ -32,7 +32,7 @@ if (g_cash > 0) then {
 	if (_var > 0) then {
 		_data pushBack ["virtual", [_x, _var]];
 	};
-} forEach (missionNamespace getVariable["g_inv_items", []]);
+} forEach (missionNamespace getVariable ["g_inv_items", []]);
 
 /* arma */
 if ((primaryWeapon player) != "") then {_data pushBack ["arma", (primaryWeapon player)]};
@@ -48,7 +48,7 @@ if ((binocular player) != "") then {_data pushBack ["arma", (binocular player)]}
 	if (_x != "") then {
 		_data pushBack ["arma", _x];
 	};
-} forEach ((primaryWeaponItems player) + (assignedItems player) + (uniformItems player) + (vestItems player));
+} forEach ((primaryWeaponItems player) + (assignedItems player) + (uniformItems player) + (vestItems player) + (backpackItems player));
 
 _skull setVariable ["inv", _data, true];
 

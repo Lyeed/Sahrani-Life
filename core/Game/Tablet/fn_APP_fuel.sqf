@@ -15,7 +15,7 @@ _list = _display displayCtrl 9400;
 lbClear _list;
 
 {
-	if (typeOf(_x) isEqualTo "Land_FuelStation_Feed_F") then
+	if (isClass(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeof(_x))) then
 	{
 		_index = _list lbAdd format["Station service - %1", (mapGridPosition _x)];
 		_list lbSetData [_index, str([typeOf(_x), (getPos _x)])];

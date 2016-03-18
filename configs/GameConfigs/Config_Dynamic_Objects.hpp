@@ -21,7 +21,6 @@ class ALYSIA_DYN_OBJECTS
 		direction = 90;
 		setDamage = 1;
 	};
-
 	class Land_ChairWood_F
 	{
 		item = "chair_wood";
@@ -29,12 +28,18 @@ class ALYSIA_DYN_OBJECTS
 		direction = 90;
 		setDamage = 0;
 	};
-
 	class Land_WoodenTable_large_F
 	{
 		item = "table_wood";
 		attachTo[] = {0, 3.5, 0};
 		direction = 90;
 		setDamage = 0;
+	};
+	class xcam_Tribune_F
+	{
+		item = "tribune_wood";
+		attachTo[] = {0, 4.5, 0};
+		direction = 90;
+		setDamage = 0;		
 	};
 };

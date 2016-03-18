@@ -454,6 +454,17 @@ class ALYSIA_FACTIONS
 		phone_send_global_message_rank = 0;
 		phone_send_to_faction_price = 0;
 
+		/* Licenses */
+		class licenses_give
+		{
+			class central
+			{
+				rank = 0;
+				same_side_only = 0;
+				license = "central_com";
+			};
+		};
+
 		/*** COMPANIES ***/
 		class companies
 		{
