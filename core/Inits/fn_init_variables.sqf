@@ -79,17 +79,6 @@ with missionNamespace do
 	g_adrenaline = 0;
 	g_regen_active = false;
 	g_dragingBody = ObjNull;
-	/* =================[Drugs]=================== */
-	g_drugs_patched = 0;// time before anti-addiction patch effect disappears (scale in seconds)
-	g_drugs_consuming = 0;// time before all drugs effects and after effects stop (scale in seconds)
-	g_drugs = [];
-
-	"g_drugs pushBack (configName _x);true" configClasses (missionConfigFile >> "ALYSIA_DRUG");
-
-	{
-		missionNamespace setVariable [format["drug_stats_%1", _x], 0];
-		missionNamespace setVariable [format["drug_consume_%1", _x], 0];
-	} forEach (g_drugs);
 	/* =================[Plants]=================== */
 	g_stations = [];
 	{

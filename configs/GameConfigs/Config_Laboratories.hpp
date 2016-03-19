@@ -29,11 +29,11 @@ class ALYSIA_LABORATORIES
 			"magazine_cz",
 			"weapon_sawed",
 			"magazine_sawed",
-			"magazine_tec",
 			"weapon_tec",
-			"magazine_tracker",
+			"magazine_tec",
 			"weapon_tracker",
-			"weapon_tracker_gold"
+			"weapon_tracker_gold",
+			"magazine_tracker"
 		};
 	};
 	class lab_clothing

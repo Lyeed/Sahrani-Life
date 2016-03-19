@@ -18,7 +18,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Engrais";
 		weight = 1;
-		price_buy = 8;
+		price_buy = 10;
 		image = "alysia_items_virtual\data\engrais.paa";
 	};
 
@@ -76,7 +76,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\patch_anti_addiction.paa";
 		class use
 		{
-			action = "[] call AlysiaClient_fnc_patch;";
+			action = "[] call AlysiaClient_fnc_item_patch;";
 		};
 	};
 
@@ -402,10 +402,6 @@ class ALYSIA_ITEMS
 			min = 120;
 			affect[] = AFFECT_DRUGS;
 		};
-		class use
-		{
-			action = "['cocainep'] call AlysiaClient_fnc_drugConsume;";
-		};
 	};
 	class cocainepc
 	{
@@ -418,10 +414,6 @@ class ALYSIA_ITEMS
 			max = 720;
 			min = 50;
 			affect[] = AFFECT_DRUGS;
-		};
-		class use
-		{
-			action = "['cocainepc'] call AlysiaClient_fnc_drugConsume;";
 		};
 	};
 
@@ -458,10 +450,6 @@ class ALYSIA_ITEMS
 			max = 1215;
 			min = 90;
 			affect[] = AFFECT_DRUGS;
-		};
-		class use
-		{
-			action = "['heroinps'] call AlysiaClient_fnc_drugConsume;";
 		};
 	};
 
@@ -501,10 +489,6 @@ class ALYSIA_ITEMS
 			min = 290;
 			affect[] = AFFECT_DRUGS;
 		};
-		class use
-		{
-			action = "['methp'] call AlysiaClient_fnc_drugConsume;";
-		};
 	};
 
 	class cannabis_seed
@@ -533,10 +517,6 @@ class ALYSIA_ITEMS
 			max = 1020;
 			min = 90;
 			affect[] = AFFECT_DRUGS;
-		};
-		class use
-		{
-			action = "['marijuana'] call AlysiaClient_fnc_drugConsume;";
 		};
 	};
 
@@ -593,6 +573,7 @@ class ALYSIA_ITEMS
 		name = "Graine (Tournesol)";
 		weight = 1;
 		price_buy = 5;
+		buy_license_CIV = "company_farming";
 		image = "";
 
 	};
@@ -626,6 +607,14 @@ class ALYSIA_ITEMS
 		};
 	};
 
+	class houblon
+	{
+		name = "Houblon";
+		weight = 1;
+		image = "";
+		price_sell = 13;
+	};
+
 	class pumpkin_seed
 	{
 		name = "Graine (citrouille)";
@@ -643,8 +632,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			hunger = 80;
-			thirst = 0;
-			sound = "eat";
+			sound = "eat_biscuit";
 		};
 	};
 
@@ -654,7 +642,6 @@ class ALYSIA_ITEMS
 		weight = 1;
 		price_buy = 5;
 		image = "alysia_items_virtual\data\graine_coton.paa";
-		buy_license_CIV = "company_farming";
 	};
 	class cotton
 	{
@@ -711,7 +698,7 @@ class ALYSIA_ITEMS
 		{
 			hunger = 30;
 			thirst = -10;
-			sound = "eat";
+			sound = "eat_biscuit";
 		};
 	};
 	class chocolat
@@ -723,8 +710,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			hunger = 10;
-			thirst = 0;
-			sound = "eat";
+			sound = "eat_biscuit";
 		};
 	};
 	class villagoise
@@ -737,7 +723,7 @@ class ALYSIA_ITEMS
 		{
 			hunger = -5;
 			thirst = 15;
-			sound = "eat";
+			sound = "drink";
 			alcool = 0.15;
 		};
 	};
@@ -749,9 +735,8 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\eau50.paa";
 		class food
 		{
-			hunger = 0;
 			thirst = 15;
-			sound = "eat";
+			sound = "drink";
 		};
 	};
 	class cerealbar
@@ -763,7 +748,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			hunger = 50;
-			sound = "eat";
+			sound = "eat_biscuit";
 		};
 	};
 	class raisin
@@ -777,7 +762,7 @@ class ALYSIA_ITEMS
 		{
 			hunger = 10;
 			thirst = 2;
-			sound = "eat";
+			sound = "eat_biscuit";
 		};
 	};
 	class sparklingwater
@@ -789,7 +774,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			thirst = 50;
-			sound = "eat";
+			sound = "drink";
 		};
 	};
 	class prune
@@ -803,7 +788,7 @@ class ALYSIA_ITEMS
 		{
 			hunger = 15;
 			thirst = 5;
-			sound = "eat";
+			sound = "eat_biscuit";
 		};
 	};
 	class sandwich
@@ -815,7 +800,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			hunger = 40;
-			sound = "eat";
+			sound = "eat_biscuit";
 		};
 	};
 	class donut
@@ -827,7 +812,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			hunger = 40;
-			sound = "eat";
+			sound = "eat_biscuit";
 		};
 	};
 	class soda
@@ -863,7 +848,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			hunger = 40;
-			sound = "eat";
+			sound = "eat_biscuit";
 		};
 	};
 	class kefir
@@ -1102,7 +1087,7 @@ class ALYSIA_ITEMS
 		{
 			alcool = 0.55;
 			thirst = 50;
-			sound = "drink";
+			sound = "drink_wine";
 		};
 	};
 	class slivovica
@@ -1121,7 +1106,7 @@ class ALYSIA_ITEMS
 		{
 			alcool = 0.50;
 			thirst = 40;
-			sound = "drink";
+			sound = "drink_wine";
 		};
 	};
 
@@ -1223,7 +1208,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			hunger = 40;
-			sound = "eat";
+			sound = "eat_biscuit";
 		};
 	};
 	class cookie
@@ -1235,7 +1220,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			hunger = 20;
-			sound = "eat";
+			sound = "eat_biscuit";
 		};
 	};
 	class petitbeurre
@@ -1247,7 +1232,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			hunger = 40;
-			sound = "eat";
+			sound = "eat_biscuit";
 		};
 	};
 	class croissant
@@ -1259,7 +1244,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			hunger = 20;
-			sound = "eat";
+			sound = "eat_biscuit";
 		};
 	};
 	class pizza
@@ -1271,7 +1256,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			hunger = 70;
-			sound = "eat";
+			sound = "eat_biscuit";
 		};
 	};
 

@@ -1473,12 +1473,6 @@ class ALYSIA_ITEMS_ARMA
 		buy_condition_WEST = 1;
 		buy_condition_EAST = 1;
 	};
-	class SkylineItems_RadarGun
-	{
-		buy_price = 400;
-		buy_condition_WEST = 1;
-		buy_condition_EAST = 1;
-	};
 	class SmokeShellGreen
 	{
 		buy_price = 80;

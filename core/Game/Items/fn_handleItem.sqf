@@ -14,38 +14,28 @@ _toUniform = [_this,5,false,[false]] call BIS_fnc_param;//Manual override to sen
 _toVest = [_this,6,false,[false]] call BIS_fnc_param;//Manual override to send items specifically to a vest
 _preview = [_this,7,false,[true]] call BIS_fnc_param;
 
-//Some checks
-if(_item == "") exitWith {};
-_isgun = false;
+if(_item isEqualTo "") exitWith {};
 
 _details = [_item] call AlysiaClient_fnc_fetchCfgDetails;
-if(count _details == 0) exitWith {};
+if (_details isEqualTo []) exitWith {};
+
+_isgun = false;
 	
 if(_bool) then
 {
-	switch((_details select 6)) do
+	switch ((_details select 6)) do
 	{
 		case "CfgGlasses":
 		{
-			if(_toUniform) exitWith {player addItemToUniform _item;};
-			if(_toVest) exitWith {player addItemToVest _item;};
-
-			if(_ispack) then
-			{
+			if (_toUniform) exitWith {player addItemToUniform _item;};
+			if (_toVest) exitWith {player addItemToVest _item;};
+			if (_ispack) then {
 				player addItemToBackpack _item;
-			}
-				else
-			{
-				if(_override) then
-				{
+			} else {
+				if (_override) then {
 					player addItem _item;
-				}
-					else
-				{
-					if(goggles player != "") then
-					{
-						removeGoggles player;
-					};
+				} else {
+					if (goggles player != "") then {removeGoggles player};
 					player addGoggles _item;
 				};
 			};
@@ -53,114 +43,87 @@ if(_bool) then
 
 		case "CfgVehicles":
 		{
-			if(backpack player != "") then
+			if (backpack player != "") then
 			{
-				_items = (backpackItems player);
+				_items = backpackItems player;
 				removeBackpack player;
 			};
 			player addBackpack _item;
 			clearAllItemsFromBackpack player;
-			if(!isNil {_items}) then 
+			if (!(isNil "_items")) then 
 			{
-				{[_x,true,true,false,true] spawn AlysiaClient_fnc_handleItem;} foreach _items;
+				{
+					[_x,true,true,false,true] spawn AlysiaClient_fnc_handleItem;
+				} forEach _items;
 			};
 		};
 
 		case "CfgMagazines":
 		{
-			if(_toUniform) exitWith {player addItemToUniform _item;};
-			if(_toVest) exitWith {player addItemToVest _item;};
-			if(_ispack) exitWith {player addItemToBackpack _item;};
-
+			if (_toUniform) exitWith {player addItemToUniform _item};
+			if (_toVest) exitWith {player addItemToVest _item};
+			if (_ispack) exitWith {player addItemToBackpack _item};
 			player addMagazine _item;
 		};
 
 		case "CfgWeapons":
 		{
-			//New addition
-			if(_toUniform) exitWith {player addItemToUniform _item;};
-			if(_toVest) exitWith {player addItemToVest _item;};
-			if(_ispack) exitWith {player addItemToBackpack _item;};
-
-			if((_details select 4) in [1,2,4,5,4096]) then
+			if (_toUniform) exitWith {player addItemToUniform _item;};
+			if (_toVest) exitWith {player addItemToVest _item;};
+			if (_ispack) exitWith {player addItemToBackpack _item;};
+			if ((_details select 4) in [1,2,4,5,4096]) then
 			{
-				if((_details select 4) == 4096) then
+				if ((_details select 4) isEqualTo 4096) then
 				{
-					if((_details select 5) == -1) then
-					{
-						_isgun = true;
-					};
-				}
-					else
-				{
+					if ((_details select 5) isEqualTo -1) then {_isgun = true};
+				} else {
 					_isgun = true;
 				};
 			};
 
-			if(_isgun) then
+			if (_isgun) then
 			{
-				if(!_ispack && _override) exitWith {};//It was in the vest/uniform, try to close to prevent it overriding stuff... (Actual weapon and not an item)
-				if(_item == "MineDetector") then
-				{
+				if(!_ispack && _override) exitWith {};
+				if (_item isEqualTo "MineDetector") then {
 					player addItem _item;
-				}
-					else
-				{
+				} else {
 					player addWeapon _item;
 				};
-			}
-				else
-			{
-				switch(_details select 5) do
+			} else {
+				switch (_details select 5) do
 				{
+					
 					case 0: 
 					{
-						if(_ispack) then
-						{
+						if (_ispack) then {
 							player addItemToBackpack _item;
-						}
-							else
-						{
-							if(_override) then
-							{
+						} else {
+							if (_override) then {
 								player addItem _item;
-							}
-								else
-							{
-								if(_item in (assignedItems  player)) then 
-								{
+							} else {
+								if (_item in (assignedItems player)) then  {
 									player addItem _item;
-								} 
-									else 
-								{
+								} else {
 									player addItem _item;
 									player assignItem _item;
 								};
 							};
 						};
 					};
+
 					case 605: 
 					{
-						if(_ispack) then
-						{
+						if (_ispack) then {
 							player addItemToBackpack _item;
-						}
-							else
-						{
-							if(_override) then
-							{
+						} else {
+							if (_override) then {
 								player addItem _item;
-							}
-								else
-							{
-								if(headGear player == _item) then
+							} else {
+								if ((headGear player) == _item) then
 								{
 									player addItem _item;
-								}
-									else
-								{
-									if(headGear player != "") then
-									{
+								} else {
+									if (headGear player != "") then {
 										removeHeadGear player;
 									};
 									player addHeadGear _item;
@@ -168,6 +131,7 @@ if(_bool) then
 							};
 						};
 					};
+
 					case 801: 
 					{
 						if(_ispack) then

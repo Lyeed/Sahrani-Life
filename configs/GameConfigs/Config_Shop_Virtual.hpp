@@ -5,14 +5,46 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Poissonnerie";
 		side = "CIV";
-		items[] = {{"fishingpoles"},{"moule","palourde","saintjacques","bigorneau","crabe","bulot","anchois","bar","daurade","maquereau","merlu","sardine"}};
+		items[] =
+		{
+			{
+				"fishingpoles"
+			},{
+				"moule",
+				"palourde",
+				"saintjacques",
+				"bigorneau",
+				"crabe",
+				"bulot",
+				"anchois",
+				"bar",
+				"daurade",
+				"maquereau",
+				"merlu",
+				"sardine"
+			}
+		};
 	};
 
 	class farmingmarket
 	{
 		name = "Commerçant agricole";
 		side = "CIV";
-		items[] = {{"corn_seed","bean_seed","cotton_seed","wheatseed","patate_seed","engrais"},{"pumpkin", "sunflower"}};
+		items[] =
+		{
+			{
+				"corn_seed",
+				"bean_seed",
+				"cotton_seed",
+				"wheatseed",
+				"patate_seed",
+				"engrais"
+			},{
+				"pumpkin",
+				"sunflower",
+				"houblon"
+			}
+		};
 	};
 
 	class station_service
@@ -41,8 +73,7 @@ class ALYSIA_SHOPS_VIRTUAL
 				"ravioli",
 				"raisin",
 				"prune"
-			},
-			{
+			},{
 				"raisin",
 				"prune",
 				"cotton",
@@ -140,8 +171,11 @@ class ALYSIA_SHOPS_VIRTUAL
 				"lab_weapon",
 				"lab_clothing",
 				"lab_cigare"
-			},
-			{"artefact_R","artefact","objvaleur"}
+			},{
+				"artefact_R",
+				"artefact",
+				"objvaleur"
+			}
 		};
 	};
 

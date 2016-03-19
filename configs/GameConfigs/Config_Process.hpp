@@ -1077,7 +1077,7 @@ class ALYSIA_PROCESS
 	class magazine_cz: weapon_thompson
 	{
 		name = "Munitions : Fusil CZ550";
-		require[] = {{"balle",5},{"magazine",1}};
+		require[] = {{"bullet",5},{"magazine",1}};
 		receive[] = {{},{"Trixie_CZ550_Mag"},0};
 		time_per_item = 5;
 		time_default = 3;
@@ -1098,7 +1098,7 @@ class ALYSIA_PROCESS
 	class magazine_sawed: weapon_thompson
 	{
 		name = "Munitions : Fusil scié";
-		require[] = {{"buckshot",10},{"chargeur",1}};
+		require[] = {{"buckshot",10},{"magazine",1}};
 		receive[] = {{},{"2Rnd_Sawed_Off_Shotgun_Pellets"},0};
 		time_per_item = 5;
 		time_default = 4;
@@ -1109,7 +1109,7 @@ class ALYSIA_PROCESS
 	class magazine_tec: weapon_thompson
 	{
 		name = "Munitions : Pistolet Tec9";
-		require[] = {{"balle",32},{"magazine",1}};
+		require[] = {{"bullet",32},{"magazine",1}};
 		receive[] = {{},{"RH_32Rnd_9x19_tec"},0};
 		time_per_item = 5;
 		time_default = 6;
@@ -1130,7 +1130,7 @@ class ALYSIA_PROCESS
 	class magazine_tracker: weapon_thompson
 	{
 		name = "Munitions : Revolver Tracker";
-		require[] = {{"balle",6},{"magazine",1}};
+		require[] = {{"bullet",6},{"magazine",1}};
 		receive[] = {{},{"RH_6Rnd_45ACP_Mag"},0};
 		time_per_item = 5;
 		time_default = 5;

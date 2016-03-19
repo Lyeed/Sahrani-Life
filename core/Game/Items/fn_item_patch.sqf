@@ -5,6 +5,3 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-player setVariable["bandeau", false, true];
-titleText["* Quelqu'un vous a enlevé votre bandeau *", "PLAIN DOWN"];

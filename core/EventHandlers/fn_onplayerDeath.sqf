@@ -81,16 +81,7 @@ g_thirst = 100;
 [] call AlysiaDB_fnc_query_update_usual;
 /* **** */
 
-/* DRUGS */
 resetCamShake;
-
-g_drugs_patched = 0;
-g_drugs_consuming = 0;
-
-{
-	missionNamespace setVariable [format["drug_consume_%1", _x], 0];
-} forEach (g_drugs);
-/* ****** */
 
 g_adrenaline = 0;
 g_morphine = 0;

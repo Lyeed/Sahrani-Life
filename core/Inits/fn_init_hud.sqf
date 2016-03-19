@@ -4,6 +4,8 @@
 	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
+
+	["lyeed_IMG\data\player_hud\drugs.paa", "(g_drugs_consuming > 0)"],
 */
 private "_move_ctrl";
 _move_ctrl =
@@ -156,7 +158,6 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 		([
 			["lyeed_IMG\data\player_hud\bleed.paa", "(g_bleed > 0)"],
 			["lyeed_IMG\data\player_hud\regen.paa", "(g_regen_active && (g_bleed isEqualTo 0) && (g_hunger > 0) && (g_thirst > 0))"],
-			["lyeed_IMG\data\player_hud\drugs.paa", "(g_drugs_consuming > 0)"],
 			["lyeed_IMG\data\player_hud\handcuffs.paa", "(player getVariable [""restrained"",false])"],
 			["lyeed_IMG\data\player_hud\blind.paa", "(player getVariable [""bandeau"",false])"],
 			["lyeed_IMG\data\player_hud\arrested.paa", "(player getVariable [""arrested"", false])"],

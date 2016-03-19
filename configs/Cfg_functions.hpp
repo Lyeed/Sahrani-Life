@@ -132,7 +132,6 @@ class CfgFunctions
 			class getInv {};
 			class accType {};
 			class calWeightDiff {};
-			class camShake {};
 			class createMarker {};
 			class endGame {};
 			class error {};
@@ -162,7 +161,6 @@ class CfgFunctions
 			class rankToStr {};
 			class sideToStr {};
 			class itemCount {};
-			class itemGetDrop {};
 			class itemGetImage {};
 			class itemGetName {};
 			class itemGetBuyPrice {};
@@ -176,27 +174,16 @@ class CfgFunctions
 			class moneyBag {};
 			class moneyBagHandle {};
 			class activateNitro {};
-			class applyBaillon {};
-			class applyBandeau {};
 			class sifflet {};
-			class getBaillon {};
-			class getBaillonSelf {};
-			class getBandeau {};
-			class getBandeauSelf {};
-			class getOffBaillon {};
-			class getOffBandeau {};
 			class handleItem {};
 			class nitro {};
-			class radar {};
 			class removeItem {};
 			class silence {};
-			class useBaillon {};
-			class useBandeau {};
 			class useItem {};
 			class item_chest {};
 			class item_serrure {};
 			class item_electricSystem {};
-			class patch {};
+			class item_patch {};
 		};
 
 		class Laboratories
@@ -433,14 +420,6 @@ class CfgFunctions
 			class launder_open {};
 			class launder_receive {};
 			class launder_reverse {};
-		};
-
-		class Drugs
-		{
-			file = "core\Game\Drugs";
-			class drugConsume {};
-			class saliveProcess {};
-			class saliveStart {};
 		};
 
 		class Bank

@@ -39,10 +39,7 @@ g_sexe = _basic select 6;
 };
 // alive
 g_is_alive = _basic select 15;
-// drugs
-{
-	missionNamespace setVariable [format["drug_stats_%1", (_x select 0)], (_x select 1)];
-} forEach (_basic select 16);
+// (_basic select 16)
 // hunger
 g_hunger = _basic select 17;
 // thirst

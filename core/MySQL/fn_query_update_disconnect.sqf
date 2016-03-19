@@ -8,7 +8,7 @@
 
 if (missionNamespace getVariable ["g_connected", false]) then
 {
-	private["_drugs_stats", "_msgs", "_allow"];
+	private["_msgs", "_allow"];
 
 	_msgs = missionNamespace getVariable ["g_phone_messages", []];
 	_allow = getText(missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "characters_allowed");
@@ -18,14 +18,6 @@ if (missionNamespace getVariable ["g_connected", false]) then
 		};
 	} forEach _msgs;
 
-	_drugs_stats = [];
-	{
-		_var = missionNamespace getVariable [_x, 0];
-		if (_var > 0) then {
-			_drugs_stats pushBack [_x, _var];
-		};
-	} forEach (missionNamespace getVariable ["g_drugs", []]);
-
 	[
 		(getPlayerUID player),
 		playerSide,
@@ -33,7 +25,7 @@ if (missionNamespace getVariable ["g_connected", false]) then
 		missionNamespace getVariable ["g_atm", 0],
 		([] call AlysiaClient_fnc_getInv),
 		missionNamespace getVariable ["g_is_alive", false],
-		_drugs_stats,
+		[],
 		round(time / 60),
 		missionNamespace getVariable ["g_blood", 4000],
 		missionNamespace getVariable ["g_bleed", 0],

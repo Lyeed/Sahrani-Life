@@ -14,8 +14,13 @@ if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then
 	if (isClass(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food")) then
 	{
 		_sound = getText(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food" >> "sound");
-		if (_sound != "") then {
-			[player, _sound, 10] call CBA_fnc_globalSay3d;
+		if (_sound != "") then
+		{
+			if ((missionNamespace getVariable ["last_sound_time", 0]) < time) then
+			{
+				[player, _sound, 10] call CBA_fnc_globalSay3d;
+				missionNamespace setVariable ["last_sound_time", (time + 2)];
+			};
 		};
 		[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food" >> "thirst")] call AlysiaClient_fnc_handleThirst;
 		[getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food" >> "hunger")] call AlysiaClient_fnc_handleHunger;

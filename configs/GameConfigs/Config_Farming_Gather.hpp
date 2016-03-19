@@ -167,12 +167,14 @@ class ALYSIA_FARMING_GATHER
 		sides[] = {"CIV", "GUER", "EAST", "WEST"};
 		area = 40;
 	};
-	class prison_farm_1
+	class prison_farm_1: prison_farm {};
+
+	class houblon_1
 	{
-		receive[] = {{"pierre", 1, 0}};
-		tool = "Skyline_Merlin_01";
-		sound = "mining";
-		sides[] = {"CIV", "GUER", "EAST", "WEST"};
+		receive[] = {{"houblon", 3, 1}};
+		tool = "";
+		sound = "gather2";
+		sides[] = {"CIV"};
 		area = 40;
 	};
 };

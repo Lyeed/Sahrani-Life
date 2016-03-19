@@ -132,14 +132,20 @@ if (count(g_houses) > 0) then
 			case "NORTH":
 			{
 				{
-					_price = _price + (getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(_x) >> "price") * (_percentage * gServer_tax_north_house_multiplier));
+					if (((_x getVariable ["house_owner", ["", ""]]) select 0) isEqualTo (getPlayerUID player)) then
+					{
+						_price = _price + (getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(_x) >> "price") * (_percentage * gServer_tax_north_house_multiplier));
+					};
 				} forEach g_houses;
 				_add_to_north = _add_to_north + _price;
 			};
 			case "SOUTH":
 			{
 				{
-					_price = _price + (getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(_x) >> "price") * (_percentage * gServer_tax_south_house_multiplier));
+					if (((_x getVariable ["house_owner", ["", ""]]) select 0) isEqualTo (getPlayerUID player)) then
+					{
+						_price = _price + (getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(_x) >> "price") * (_percentage * gServer_tax_south_house_multiplier));
+					};
 				} forEach g_houses;
 				_add_to_south = _add_to_south + _price;
 			};
