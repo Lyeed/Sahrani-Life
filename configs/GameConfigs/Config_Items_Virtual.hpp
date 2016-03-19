@@ -1,3 +1,9 @@
+#define AFFECT_FARM {"bean","corn","patate","wheat","cottonp","sunflower","cotton"}
+#define AFFECT_PROCESSED {"brique","soufre","saltp","coal","ciment","woodp","furniture","glass"}
+#define AFFECT_MINERAL {"steel","ironp","platinep","copperp","alu","sp98","sp95","gazole","gpl","kerosene","goldbar"}
+#define AFFECT_DRUGS {"cigarette","cigare","heroinps","methp","marijuana","cocainepc","cocainep"}
+#define AFFECT_ILLEGAL {"grozdova","slivovica","turtle","artefact","artefact_R","objvaleur"}
+
 class ALYSIA_ITEMS
 {
 	class illegal_money
@@ -32,7 +38,7 @@ class ALYSIA_ITEMS
 		{
 			max = 4900;
 			min = 2100;
-			affect[] = {"steel","ironp","platinep","copperp","alu","sp98","sp95","gazole","gpl","kerosene"};
+			affect[] = AFFECT_MINERAL;
 		};
 	};
 
@@ -215,7 +221,7 @@ class ALYSIA_ITEMS
 		{
 			max = 726;
 			min = 98;
-			affect[] = {"cigarette","cocainep","cocainepc","heroinps","methp","marijuana"};
+			affect[] = AFFECT_DRUGS;
 		};
 	};
 	class cigarette
@@ -229,7 +235,7 @@ class ALYSIA_ITEMS
 		{
 			max = 525;
 			min = 15;
-			affect[] = {"cigare","cocainep","cocainepc","heroinps","methp","marijuana"};
+			affect[] = AFFECT_DRUGS;
 		};
 	};
 
@@ -243,7 +249,7 @@ class ALYSIA_ITEMS
 		{
 			max = 628;
 			min = 90;
-			affect[] = {"grozdova","slivovica","turtle","artefact","artefact_R"};
+			affect[] = AFFECT_ILLEGAL;
 		};
 	};
 
@@ -257,7 +263,7 @@ class ALYSIA_ITEMS
 		{
 			max = 925;
 			min = 120;
-			affect[] = {"grozdova","slivovica","turtle","objvaleur"};
+			affect[] = AFFECT_ILLEGAL;
 		};
 	};
 	class artefact_R
@@ -271,7 +277,7 @@ class ALYSIA_ITEMS
 		{
 			max = 8032;
 			min = 2000;
-			affect[] = {"grozdova","slivovica","turtle","objvaleur"};
+			affect[] = AFFECT_ILLEGAL;
 		};
 	};
 
@@ -291,7 +297,7 @@ class ALYSIA_ITEMS
 		{
 			max = 56;
 			min = 15;
-			affect[] = {"brique","soufre","saltp","glass","coal","ciment","furniture"};
+			affect[] = AFFECT_PROCESSED;
 		};
 	};
 
@@ -305,7 +311,7 @@ class ALYSIA_ITEMS
 		{
 			max = 620;
 			min = 190;
-			affect[] = {"brique","soufre","saltp","glass","coal","ciment","woodp"};
+			affect[] = AFFECT_PROCESSED;
 		};
 	};
 
@@ -325,7 +331,7 @@ class ALYSIA_ITEMS
 		{
 			max = 350;
 			min = 125;
-			affect[] = {"steel","platinep","goldbar","copperp","alu","sp98","sp95","gazole","gpl","kerosene"};
+			affect[] = AFFECT_MINERAL;
 		};
 	};
 
@@ -338,7 +344,7 @@ class ALYSIA_ITEMS
 		{
 			max = 49;
 			min = 10;
-			affect[] = {"brique","saltp","glass","coal","ciment","woodp","furniture"};
+			affect[] = AFFECT_PROCESSED;
 		};
 	};
 	class hsoufre
@@ -365,7 +371,7 @@ class ALYSIA_ITEMS
 		{
 			max = 823;
 			min = 300;
-			affect[] = {"steel","ironp","goldbar","copperp","alu","sp98","sp95","gazole","gpl","kerosene"};
+			affect[] = AFFECT_MINERAL;
 		};
 	};
 
@@ -394,7 +400,7 @@ class ALYSIA_ITEMS
 		{
 			max = 1130;
 			min = 120;
-			affect[] = {"cigarette","cigare","heroinps","methp","marijuana"};
+			affect[] = AFFECT_DRUGS;
 		};
 		class use
 		{
@@ -411,7 +417,7 @@ class ALYSIA_ITEMS
 		{
 			max = 720;
 			min = 50;
-			affect[] = {"cigarette","cigare","heroinps","methp","marijuana"};
+			affect[] = AFFECT_DRUGS;
 		};
 		class use
 		{
@@ -451,7 +457,7 @@ class ALYSIA_ITEMS
 		{
 			max = 1215;
 			min = 90;
-			affect[] = {"cigarette","cigare","cocainep","cocainepc","methp","marijuana"};
+			affect[] = AFFECT_DRUGS;
 		};
 		class use
 		{
@@ -493,7 +499,7 @@ class ALYSIA_ITEMS
 		{
 			max = 1520;
 			min = 290;
-			affect[] = {"cigarette","cigare","cocainep","cocainepc","heroinps","marijuana"};
+			affect[] = AFFECT_DRUGS;
 		};
 		class use
 		{
@@ -526,7 +532,7 @@ class ALYSIA_ITEMS
 		{
 			max = 1020;
 			min = 90;
-			affect[] = {"cigarette","cigare","cocainep","cocainepc","heroinps","methp"};
+			affect[] = AFFECT_DRUGS;
 		};
 		class use
 		{
@@ -557,8 +563,8 @@ class ALYSIA_ITEMS
 		class market
 		{
 			max = 45;
-			min = 23;
-			affect[] = {"corn","cotton","patate","wheat","cottonp"};
+			min = 4;
+			affect[] = AFFECT_FARM;
 		};
 	};
 
@@ -577,8 +583,65 @@ class ALYSIA_ITEMS
 		class market
 		{
 			max = 47;
-			min = 26;
-			affect[] = {"bean","cotton","patate","wheat","cottonp"};
+			min = 6;
+			affect[] = AFFECT_FARM;
+		};
+	};
+
+	class sunflower_seed
+	{
+		name = "Graine (Tournesol)";
+		weight = 1;
+		price_buy = 5;
+		image = "";
+	};
+	class sunflower
+	{
+		name = "Fleur de tournesol";
+		weight = 2;
+		image = "";
+		class market
+		{
+			max = 90;
+			min = 9;
+			affect[] = AFFECT_FARM;
+		};
+	};
+	class huile
+	{
+		name = "Huile de tournesol";
+		weight = 2;
+		image = "";
+	};
+	class huile_bottle
+	{
+		name = "Bouteille d'huile de tournesol";
+		weight = 3;
+		image = "";
+		class market
+		{
+			max = 325;
+			min = 40;
+		};
+	};
+
+	class pumpkin_seed
+	{
+		name = "Graine (citrouille)";
+		weight = 1;
+		price_buy = 5;
+		image = "";
+	};
+	class pumpkin
+	{
+		name = "Citrouille";
+		weight = 4;
+		image = "";
+		class market
+		{
+			max = 110;
+			min = 15;
+			affect[] = AFFECT_FARM;
 		};
 	};
 
@@ -597,8 +660,8 @@ class ALYSIA_ITEMS
 		class market
 		{
 			max = 59;
-			min = 31;
-			affect[] = {"bean","corn","patate","wheat","cottonp"};
+			min = 8;
+			affect[] = AFFECT_FARM;
 		};
 	};
 	class cottonp
@@ -609,8 +672,8 @@ class ALYSIA_ITEMS
 		class market
 		{
 			max = 195;
-			min = 65;
-			affect[] = {"bean","corn","patate","wheat","cotton"};
+			min = 55;
+			affect[] = AFFECT_FARM;
 		};
 	};
 
@@ -630,7 +693,7 @@ class ALYSIA_ITEMS
 		{
 			max = 315;
 			min = 110;
-			affect[] = {"brique","soufre","saltp","coal","ciment","woodp","furniture"};
+			affect[] = AFFECT_PROCESSED;
 		};
 	};
 
@@ -828,7 +891,7 @@ class ALYSIA_ITEMS
 		{
 			max = 315;
 			min = 130;
-			affect[] = {"steel","ironp","platinep","goldbar","alu","sp98","sp95","gazole","gpl","kerosene"};
+			affect[] = AFFECT_MINERAL;
 		};
 	};
 
@@ -848,7 +911,7 @@ class ALYSIA_ITEMS
 		{
 			max = 282;
 			min = 70;
-			affect[] = {"soufre","saltp","glass","coal","ciment","woodp","furniture"};
+			affect[] = AFFECT_PROCESSED;
 		};
 	};
 
@@ -868,7 +931,7 @@ class ALYSIA_ITEMS
 		{
 			max = 352;
 			min = 120;
-			affect[] = {"steel","ironp","platinep","goldbar","copperp","sp98","sp95","gazole","gpl","kerosene"};
+			affect[] = AFFECT_MINERAL;
 		};
 	};
 
@@ -975,7 +1038,7 @@ class ALYSIA_ITEMS
 		{
 			max = 245;
 			min = 95;
-			affect[] = {"brique","soufre","glass","coal","ciment","woodp","furniture"};
+			affect[] = AFFECT_PROCESSED;
 		};
 	};
 
@@ -988,7 +1051,7 @@ class ALYSIA_ITEMS
 		{
 			max = 52;
 			min = 30;
-			affect[] = {"bean","corn","cotton","wheat"};
+			affect[] = AFFECT_FARM;
 		};
 	};
 	class patate_seed
@@ -1008,7 +1071,7 @@ class ALYSIA_ITEMS
 		{
 			max = 46;
 			min = 25;
-			affect[] = {"bean","corn","cotton","patate"};
+			affect[] = AFFECT_FARM;
 		};
 	};
 	class wheatseed
@@ -1029,7 +1092,7 @@ class ALYSIA_ITEMS
 		{
 			max = 580;
 			min = 220;
-			affect[] = {"slivovica","turtle","objvaleur","artefact","artefact_R"};
+			affect[] = AFFECT_ILLEGAL;
 		};
 		class food
 		{
@@ -1048,7 +1111,7 @@ class ALYSIA_ITEMS
 		{
 			max = 567;
 			min = 220;
-			affect[] = {"grozdova","turtle","objvaleur","artefact","artefact_R"};
+			affect[] = AFFECT_ILLEGAL;
 		};
 		class food
 		{
@@ -1067,7 +1130,7 @@ class ALYSIA_ITEMS
 		{
 			max = 72;
 			min = 20;
-			affect[] = {"brique","soufre","saltp","glass","ciment","woodp","furniture"};
+			affect[] = AFFECT_PROCESSED;
 		};
 	};
 
@@ -1102,7 +1165,7 @@ class ALYSIA_ITEMS
 		{
 			max = 305;
 			min = 115;
-			affect[] = {"brique","soufre","saltp","glass","coal","woodp","furniture"};
+			affect[] = AFFECT_PROCESSED;
 		};
 	};
 
@@ -1116,7 +1179,7 @@ class ALYSIA_ITEMS
 		{
 			max = 320;
 			min = 150;
-			affect[] = {"ironp","platinep","goldbar","copperp","alu","sp98","sp95","gazole","gpl","kerosene"};
+			affect[] = AFFECT_MINERAL;
 		};
 	};
 
@@ -1226,7 +1289,7 @@ class ALYSIA_ITEMS
 		{
 			max = 390;
 			min = 250;
-			affect[] = {"steel","ironp","platinep","goldbar","copperp","alu","sp95","gazole","gpl","kerosene"};
+			affect[] = AFFECT_MINERAL;
 		};
 	};
 	class sp95
@@ -1240,7 +1303,7 @@ class ALYSIA_ITEMS
 		{
 			max = 390;
 			min = 250;
-			affect[] = {"steel","ironp","platinep","goldbar","copperp","alu","sp98","gazole","gpl","kerosene"};
+			affect[] = AFFECT_MINERAL;
 		};
 	};
 	class gazole
@@ -1254,7 +1317,7 @@ class ALYSIA_ITEMS
 		{
 			max = 390;
 			min = 250;
-			affect[] = {"steel","ironp","platinep","goldbar","copperp","alu","sp98","sp95","gpl","kerosene"};
+			affect[] = AFFECT_MINERAL;
 		};
 	};
 	class gpl
@@ -1268,7 +1331,7 @@ class ALYSIA_ITEMS
 		{
 			max = 390;
 			min = 250;
-			affect[] = {"steel","ironp","platinep","goldbar","copperp","alu","sp98","sp95","gazole","kerosene"};
+			affect[] = AFFECT_MINERAL;
 		};
 	};
 	class kerosene
@@ -1282,7 +1345,7 @@ class ALYSIA_ITEMS
 		{
 			max = 390;
 			min = 250;
-			affect[] = {"steel","ironp","platinep","goldbar","copperp","alu","sp98","sp95","gazole","gpl"};
+			affect[] = AFFECT_MINERAL;
 		};
 	};
 	
@@ -1296,7 +1359,7 @@ class ALYSIA_ITEMS
 		{
 			max = 925;
 			min = 600;
-			affect[] = {"grozdova","slivovica","objvaleur","artefact","artefact_R"};
+			affect[] = AFFECT_ILLEGAL;
 		};
 	};
 

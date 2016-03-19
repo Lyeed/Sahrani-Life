@@ -349,12 +349,12 @@ class ALYSIA_PROCESS
 	};
 	class Distillerie_Grozdova
 	{
-		name = "Distillerie Grozdova";
+		name = "Mise en bouteille : Grozdova";
 		sound = "smelting";
 		require[] = {{"raisin",2},{"bouteillevide",1}};
 		receive[] = {{{"grozdova",1}},{},0};
-		time_per_item = 3;
-		time_default = 5;
+		time_per_item = 5;
+		time_default = 3;
 		class target {};
 		class factions
 		{
@@ -363,12 +363,12 @@ class ALYSIA_PROCESS
 	};
 	class Distillerie_Slivovica
 	{
-		name = "Distillerie Slivovica";
+		name = "Mise en bouteille : Slivovica";
 		sound = "smelting";
 		require[] = {{"Prune",2},{"bouteillevide",1}};
 		receive[] = {{{"slivovica",1}},{},0};
-		time_per_item = 3;
-		time_default = 5;
+		time_per_item = 5;
+		time_default = 3;
 		class target {};
 		class factions
 		{
@@ -453,6 +453,40 @@ class ALYSIA_PROCESS
 			class CIV
 			{
 				licenses[] = {"sand"};
+			};
+		};
+	};
+	class huile
+	{
+		name = "Traitement de fleur de tournesol";
+		sound = "salt_process";
+		require[] = {{"sunflower",2}};
+		receive[] = {{{"huile",1}},{},0};
+		time_per_item = 3;
+		time_default = 4;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				licenses[] = {"company_farming"};
+			};
+		};
+	};
+	class huile_bottle
+	{
+		name = "Mise en bouteille : huile de tournesol";
+		sound = "salt_process";
+		require[] = {{"huile",2}};
+		receive[] = {{{"huile_bottle",1}},{},0};
+		time_per_item = 1;
+		time_default = 3;
+		class target {};
+		class factions
+		{
+			class CIV
+			{
+				licenses[] = {"company_farming"};
 			};
 		};
 	};
@@ -713,6 +747,34 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 
+	class headgear_mask
+	{
+		name = "Fabrication de cagoule (otage)";
+		sound = "smelting";
+		require[] = {{"cottonp",5}};
+		receive[] = {{},{"mgsr_headbag"},0};
+		time_per_item = 10;
+		time_default = 5;
+		class target {};
+		class factions
+		{
+			class CIV {};
+		};
+	};
+	class google_mask
+	{
+		name = "Fabrication de baillon (otage)";
+		sound = "smelting";
+		require[] = {{"cottonp",4}};
+		receive[] = {{},{"G_Bandanna_blk"},0};
+		time_per_item = 8;
+		time_default = 4;
+		class target {};
+		class factions
+		{
+			class CIV {};
+		};
+	};
 	/*************                            ******************
 	**************  	MORCEAUX ARMES        ******************
 	**************                            *******************/

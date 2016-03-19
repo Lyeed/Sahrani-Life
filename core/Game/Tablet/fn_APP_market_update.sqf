@@ -59,8 +59,11 @@ _affect = _display displayCtrl 8807;
 lbClear _affect;
 
 {
-	_index = _affect lbAdd ([_x] call AlysiaClient_fnc_itemGetName);
-	_affect lbSetPicture [_index, ([_x] call AlysiaClient_fnc_itemGetImage)];
+	if (_x != _ressource) then
+	{
+		_index = _affect lbAdd ([_x] call AlysiaClient_fnc_itemGetName);
+		_affect lbSetPicture [_index, ([_x] call AlysiaClient_fnc_itemGetImage)];
+	};
 } forEach getArray(_config >> "market" >> "affect");
 if ((lbSize _affect) isEqualTo 0) then {
 	_affect lbAdd "Aucune";

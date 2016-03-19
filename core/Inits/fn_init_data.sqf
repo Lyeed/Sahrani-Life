@@ -74,22 +74,23 @@ g_phone_forfait = _basic select 33;
 g_phone_blacklist = _basic select 34;
 g_apps = _basic select 35;
 g_choice = _basic select 36;
+[(_basic select 38)] call AlysiaClient_fnc_handleAlcool;
 // Licenses
 {
 	missionNamespace setVariable [format["license_%1", _x], true];
-} forEach (_basic select 38);
+} forEach (_basic select 39);
 // cash
-g_cash = _basic select 39;
+g_cash = _basic select 40;
 // atm
-g_atm = _basic select 40;
+g_atm = _basic select 41;
 // inventory
 g_maxWeight = 100;
 {
     [true, (_x select 0), (_x select 1)] call AlysiaClient_fnc_handleInv;
-} forEach (_basic select 41);
+} forEach (_basic select 42);
 g_maxWeight = 24;
 // gear
-[(_basic select 42)] spawn AlysiaClient_fnc_loadGear;
+[(_basic select 43)] spawn AlysiaClient_fnc_loadGear;
 switch (playerSide) do
 {
 	case west: 
@@ -105,7 +106,7 @@ switch (playerSide) do
 	case civilian:
 	{
 		if ((call g_CIVLevel) > 0) then {player setVariable ["rank", (call g_CIVLevel), true]};
-		g_launder = _basic select 43;
+		g_launder = _basic select 44;
 		if (g_launder > 0) then
 		{
 			[] spawn

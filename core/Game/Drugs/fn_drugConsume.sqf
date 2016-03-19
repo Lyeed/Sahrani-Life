@@ -8,7 +8,7 @@
 private["_type"];
 _type = [_this, 0, "", [""]] call BIS_fnc_param;
 
-if (_type == "") exitWith {};
+if (_type isEqualTo "") exitWith {};
 if ((time - g_action_delay) < 5) exitWith {
 	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error;
 };

@@ -69,6 +69,7 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 	_hud = uiNameSpace getVariable ["RscTitlePlayer", displayNull];
 	if (isNull _hud) exitWith {};
 
+	_cagoule_active = false;
 	/*===========================
 	  ===       PERCENT       ===
 	  =========================== */
@@ -313,6 +314,18 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 				[(_hud displayCtrl 23540), "right", true, 0.4] spawn _move_ctrl;
 				[(_hud displayCtrl 23541), "right", true, 0.4] spawn _move_ctrl;
 				[(_hud displayCtrl 23542), "right", true, 0.4] spawn _move_ctrl;
+			};
+		};
+
+		if ((headgear player) isEqualTo "mgsr_headbag") then
+		{
+			25 cutText ["", "BLACK FADED"];
+			_cagoule_active = true;
+		} else {
+			if (_cagoule_active) then
+			{
+				25 cutText ["", "PLAIN"];
+				_cagoule_active = false;
 			};
 		};
 

@@ -128,6 +128,28 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 		upLevel = 0.5;
 		extraGrow = 50;
 	};
+
+	class xcam_pumpkin
+	{
+		receive[] = {{"pumpkin", 2, 0}};
+		seed = "pumpkin_seed";
+		distance = 4;
+		growingTime = 280;
+		groundLevel = 0.5;
+		upLevel = 0.5;
+		extraGrow = 50;
+	};
+
+	class xcam_p_Helianthus_summer
+	{
+		receive[] = {{"sunflower", 1, 0}};
+		seed = "sunflower_seed";
+		distance = 1;
+		growingTime = 150;
+		groundLevel = 1.2;
+		upLevel = 1.2;
+		extraGrow = 50;
+	};
 };
 
 class ALYSIA_FARMING_PLANT_MARKERS

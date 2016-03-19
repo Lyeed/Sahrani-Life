@@ -434,10 +434,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 15;
 	};
-	class G_Bandanna_blk
-	{
-		buy_price = 15;
-	};
 	class G_Bandanna_khk
 	{
 		buy_price = 15;

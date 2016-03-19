@@ -12,7 +12,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Commerçant agricole";
 		side = "CIV";
-		items[] = {{"corn_seed","bean_seed","cotton_seed","wheatseed","patate_seed","engrais"},{}};
+		items[] = {{"corn_seed","bean_seed","cotton_seed","wheatseed","patate_seed","engrais"},{"pumpkin", "sunflower"}};
 	};
 
 	class station_service
@@ -207,6 +207,6 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Réserve d'entreprises";
 		side = "CIV";
-		items[] = {{"money_transfer","serrure","electric_system"},{"ciment","brique","steel"}};
+		items[] = {{"money_transfer","serrure","electric_system","sunflower_seed","pumpkin_seed"},{"ciment","brique","steel"}};
 	};
 };

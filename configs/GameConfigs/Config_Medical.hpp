@@ -4,7 +4,7 @@ class ALYSIA_MEDICAL
 	{
 		regen_basic = 2;
 		regen_healthy = 6;
-		regen_morphine_multiplier = 1;
+		regen_morphine_multiplier = 3;
 	};
 
 	class morphine

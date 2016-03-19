@@ -142,17 +142,9 @@
 		uiSleep 60;
 		_totalSession = _totalSession + 1;
 		
-		if ((_totalSession % 4) isEqualTo 0) then {
-			[] call AlysiaDB_fnc_query_update_usual 
-		};
-
-		if ((_totalSession % 5) isEqualTo 0) then {
-			[(random(8) * -1)] call AlysiaClient_fnc_handleThirst;
-		};
-		if ((_totalSession % 6) isEqualTo 0) then {
-			[(random(8) * -1)] call AlysiaClient_fnc_handleHunger;
-		};
-		
+		if ((_totalSession % 4) isEqualTo 0) then {[] call AlysiaDB_fnc_query_update_usual};
+		if ((_totalSession % 5) isEqualTo 0) then {[(random(8) * -1)] call AlysiaClient_fnc_handleThirst};
+		if ((_totalSession % 6) isEqualTo 0) then {[(random(8) * -1)] call AlysiaClient_fnc_handleHunger};
 		if ((_totalSession % _salary_time) isEqualTo 0) then
 		{
 			[] call AlysiaClient_fnc_salaryProcess;
