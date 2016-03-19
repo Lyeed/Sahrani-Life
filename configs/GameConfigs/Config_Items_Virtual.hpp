@@ -594,6 +594,7 @@ class ALYSIA_ITEMS
 		weight = 1;
 		price_buy = 5;
 		image = "";
+
 	};
 	class sunflower
 	{
@@ -631,17 +632,19 @@ class ALYSIA_ITEMS
 		weight = 1;
 		price_buy = 5;
 		image = "";
+		buy_license_CIV = "company_farming";
 	};
 	class pumpkin
 	{
 		name = "Citrouille";
 		weight = 4;
 		image = "";
-		class market
+		price_sell = 90;
+		class food
 		{
-			max = 110;
-			min = 15;
-			affect[] = AFFECT_FARM;
+			hunger = 80;
+			thirst = 0;
+			sound = "eat";
 		};
 	};
 
@@ -651,6 +654,7 @@ class ALYSIA_ITEMS
 		weight = 1;
 		price_buy = 5;
 		image = "alysia_items_virtual\data\graine_coton.paa";
+		buy_license_CIV = "company_farming";
 	};
 	class cotton
 	{

@@ -135,9 +135,9 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 		seed = "pumpkin_seed";
 		distance = 4;
 		growingTime = 280;
-		groundLevel = 0.5;
-		upLevel = 0.5;
-		extraGrow = 50;
+		groundLevel = 0;
+		upLevel = 0;
+		extraGrow = 30;
 	};
 
 	class xcam_p_Helianthus_summer

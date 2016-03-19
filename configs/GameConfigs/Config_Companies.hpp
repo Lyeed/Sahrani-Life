@@ -126,7 +126,7 @@ class ALYSIA_COMPANIES
 			};
 			class storage
 			{
-				inventory = 150;
+				inventory = 175;
 			};
 		};
 

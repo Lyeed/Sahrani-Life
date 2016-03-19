@@ -763,7 +763,7 @@ class ALYSIA_PROCESS
 	};
 	class google_mask
 	{
-		name = "Fabrication de baillon (otage)";
+		name = "Fabrication de bâillon (otage)";
 		sound = "smelting";
 		require[] = {{"cottonp",4}};
 		receive[] = {{},{"G_Bandanna_blk"},0};
