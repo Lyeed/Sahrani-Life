@@ -53,7 +53,7 @@ _bill = 0;
 _liters = 0;
 _fuelmax = getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "fuelCapacity");
 _fill = false;
-_distanceBegin = player distance _veh;
+_distanceBegin = (player distance _veh) + 1;
 
 while {true} do
 {
@@ -116,6 +116,7 @@ if (_fill) then
 	[true, _veh, _liters, _type] call AlysiaClient_fnc_handleFuel;
 	[false, _bill, "Station Essence"] call AlysiaClient_fnc_handleATM;
 	[format["<t color='#8cff9b'>%1</t>kn ont été prélevés de votre compte en banque.", ([_bill] call AlysiaClient_fnc_numberText)], "buy"] call AlysiaClient_fnc_info;
+	[_station] call AlysiaClient_fnc_fuelStation_fuel_applyPrice;
 } else {
 	_station setVariable [_type, _currentLiters];
 };

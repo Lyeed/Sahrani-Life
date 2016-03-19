@@ -134,6 +134,13 @@ class ALYSIA_STAFF
 				condition = "!(isNull cursorTarget)";
 				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424"};
 			};
+			class target_trunkInUse
+			{
+				name = "Fix coffre";
+				statement = "cursorTarget setVariable ['trunk_in_use_ID', '', true];";
+				condition = "!(isNull cursorTarget) && ((cursorTarget getVariable ['trunk_in_use_ID', '']) != '')";
+				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424"};
+			};
 
 			class markers_ON
 			{

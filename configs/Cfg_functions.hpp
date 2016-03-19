@@ -340,6 +340,7 @@ class CfgFunctions
 			class fuelStation_fuel_getPrice {};
 			class fuelStation_fuel_getStock {};
 			class fuelStation_fuel_handle {};
+			class fuelStation_fuel_applyPrice {};
 		};
 
 		class Housing

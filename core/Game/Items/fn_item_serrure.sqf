@@ -30,4 +30,6 @@ if ((isNull _owner_player) || ((player distance _owner_player) > 10)) exitWith {
 
 if (!(["Changement de serrure", 10, objNull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {};
 
-if ([false, "serrure", 1] call AlysiaClient_fnc_handleInv) then {[] call AlysiaClient_fnc_house_menu_action_key_change};
+if ([false, "serrure", 1] call AlysiaClient_fnc_handleInv) then {
+	[_house] call AlysiaClient_fnc_house_menu_action_keys_change;
+};

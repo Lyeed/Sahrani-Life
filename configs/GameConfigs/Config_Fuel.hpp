@@ -4,7 +4,7 @@ class ALYSIA_FUEL_STATION
 	{
 		save = 0;
 		max_distance_allowed = 10;
-		pos_model_pomp[] = {7.80347,-2.56006,2.06092};
+		pos_model_pomp[] = {8.18457,-1.305664,2.21936};
 		pos_model_store[] = {5.64648,7.0752,2.06092};
 		class marker
 		{

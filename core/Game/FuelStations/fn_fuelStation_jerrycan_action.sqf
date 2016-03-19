@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_station", "_type", "_currentLiters", "_display", "_bill", "_liters", "_fill"];
+private["_station", "_type", "_currentLiters", "_display", "_bill", "_liters", "_fill", "_distanceBegin"];
 _station = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 
 if (isNull _station) exitWith {
@@ -50,6 +50,7 @@ if (isNull _display) exitWith {};
 _bill = 0;
 _liters = 0;
 _fill = false;
+_distanceBegin = (player distance _station) + 1;
 
 while {true} do
 {
@@ -59,7 +60,7 @@ while {true} do
 	if (_bill > g_atm) exitWith {
 		["Le transfert n'a pas pu aboutir.<br/>Vous n'avez pas assez d'argent sur votre compte pour payer le plein d'un jerrycan."] call AlysiaClient_fnc_error;
 	};
-	if ((player distance _station) > 4) exitWith {
+	if ((player distance _station) > _distanceBegin) exitWith {
 		["Le transfert n'a pas pu aboutir.<br/>Vous êtes trop loin de la station."] call AlysiaClient_fnc_error;
 	};
 
@@ -102,6 +103,7 @@ if (_fill) then
 		_station setVariable [_type, (_currentLiters - _liters), true];
 		[false, _bill, "Station Essence"] call AlysiaClient_fnc_handleATM;
 		[format["<t color='#8cff9b'>%1</t>kn ont été prélevés de votre compte en banque.", ([_bill] call AlysiaClient_fnc_numberText)], "buy"] call AlysiaClient_fnc_info;	
+		[_station] call AlysiaClient_fnc_fuelStation_fuel_applyPrice;
 	} else {
 		["Le transfert n'a pas pu aboutir.<br/>Vous n'avez pas de jerrycan vide."] call AlysiaClient_fnc_error;
 	};

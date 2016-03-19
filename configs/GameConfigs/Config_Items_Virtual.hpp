@@ -665,7 +665,7 @@ class ALYSIA_ITEMS
 		name = "Villagoise";
 		weight = 1;
 		price_buy = 71;
-		image = "alysia_items_virtual\data\villagoise.paa";
+		image = "alysia_items_virtual\data\villageoise.paa";
 		class food
 		{
 			hunger = -5;
@@ -679,7 +679,7 @@ class ALYSIA_ITEMS
 		name = "Bouteille d'eau de 50cl";
 		weight = 1;
 		price_buy = 23;
-		image = "alysia_items_virtual\data\bouteille_eau50.paa";
+		image = "alysia_items_virtual\data\eau50.paa";
 		class food
 		{
 			hunger = 0;
