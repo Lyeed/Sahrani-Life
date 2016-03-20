@@ -21,7 +21,7 @@ if ((animationState _target) isEqualTo "incapacitated") exitWith {};
 _weapon = currentWeapon player;
 if (_weapon isEqualTo "") exitWith {};
 if ((_weapon != primaryWeapon player) && (_weapon != handgunWeapon player)) exitWith {};
-if (getNumber(configFile >> "ALYSIA_ITEMS_ARMA" >> _weapon >> "disableKnockout") isEqualTo 1) exitWith {};
+if (getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _weapon >> "disableKnockout") isEqualTo 1) exitWith {};
 
 if ((getFatigue player) > 85) exitWith {["Vous êtes trop fatigué pour pouvoir effectuer cette action."] call AlysiaClient_fnc_error};
 

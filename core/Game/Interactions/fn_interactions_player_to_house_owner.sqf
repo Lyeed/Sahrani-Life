@@ -11,7 +11,7 @@
 	"player_to_house",
 	[
 		["sell", "Vendre", "[g_interaction_target] spawn AlysiaClient_fnc_house_menu_action_sell;", "(((g_interaction_target getVariable ['house_owner', ['', '']]) select 0) isEqualTo (getPlayerUID player))"],
-		["storage", "Coffre", "[g_interaction_target] call AlysiaClient_fnc_house_menu_action_storage;", "(!(isNil {(g_interaction_target getVariable 'house_storage_out')}) && (isNil 'gServer_soonReboot'))"],
+		["storage", "Coffre", "[g_interaction_target] spawn AlysiaClient_fnc_house_menu_action_storage;", "(!(isNil {(g_interaction_target getVariable 'house_storage_out')}) && (isNil 'gServer_soonReboot'))"],
 		["garage", "Garage", "[g_interaction_target] call AlysiaClient_fnc_house_menu_action_garage;", "isClass(missionConfigFile >> 'ALYSIA_HOUSES' >> typeOf(g_interaction_target) >> 'garage')"],
 		["store", "Rentrer", "[g_interaction_target] spawn AlysiaClient_fnc_house_menu_action_store;", "isClass(missionConfigFile >> 'ALYSIA_HOUSES' >> typeOf(g_interaction_target) >> 'garage')"],
 		["light", "Lumière", "[g_interaction_target] call AlysiaClient_fnc_house_menu_action_light;", "(g_interaction_target getVariable ['house_update_lights',false])"]

@@ -31,7 +31,7 @@ if (_action) then
 	if ([false, "illegal_money", _money] call AlysiaClient_fnc_handleInv) then
 	{
 		[format["<t color='#8cff9b'>%1</t>kn on été transféré sur le compte de votre faction."], "buy"] call AlysiaClient_fnc_info;
-		[playerSide, true, _receive] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
+		[playerSide, true, _receive, (getPlayerUID player)] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
 	} else {
 		["Impossible de trouver l'argent sale dans votre inventaire."] call AlysiaClient_fnc_error;
 	};

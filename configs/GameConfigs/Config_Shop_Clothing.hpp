@@ -769,7 +769,7 @@ class ALYSIA_SHOPS_CLOTHING
 		vests[] = {};
 		backpacks[] =
 		{
-			"B_Parachute" 
+			"B_Parachute"
 		};
 	};
 

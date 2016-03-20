@@ -10,7 +10,6 @@ with missionNamespace do
 	/* ===================[inUse/delay variables]======================= */
 	g_action_delay = time;
 	g_action_inUse = false;
-	g_knockout = false;
 	g_interrupted = false;
 	g_is_alive = false;
 	g_connected = false;
@@ -110,7 +109,6 @@ with missionNamespace do
 	} forEach g_inv_items;
 	/* =================[Sheeps]====================*/
 	g_sheeps = [];
-
 	/* =================[Chairs]====================*/
 	g_chairs = [];
 	

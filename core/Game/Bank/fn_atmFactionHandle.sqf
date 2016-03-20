@@ -18,7 +18,7 @@ switch (playerSide) do
 	{
 		if (_type || (!_type && (([playerSide] call AlysiaClient_fnc_atmFactionGet) >= _amount))) then
 		{
-			[east, _type, _amount] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
+			[east, _type, _amount, (getPlayerUID player)] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
 			_ret = true;
 		};
 	};
@@ -26,7 +26,7 @@ switch (playerSide) do
 	{
 		if (_type || (!_type && (([playerSide] call AlysiaClient_fnc_atmFactionGet) >= _amount))) then
 		{
-			[west, _type, _amount] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
+			[west, _type, _amount, (getPlayerUID player)] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
 			_ret = true;
 		};
 	};
@@ -34,7 +34,7 @@ switch (playerSide) do
 	{
 		if (_type || (!_type && (([playerSide] call AlysiaClient_fnc_atmFactionGet) >= _amount))) then
 		{
-			[independent, _type, _amount] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
+			[independent, _type, _amount, (getPlayerUID player)] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
 			_ret = true;
 		};
 	};
@@ -43,9 +43,9 @@ switch (playerSide) do
 		if (_type || (!_type && (([playerSide] call AlysiaClient_fnc_atmFactionGet) >= _amount))) then
 		{
 			if (g_choice isEqualTo "NORTH") then {
-				[civilian, _type, _amount] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
+				[civilian, _type, _amount, (getPlayerUID player)] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
 			} else {
-				[east, _type, _amount] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
+				[east, _type, _amount, (getPlayerUID player)] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
 			};
 
 			_ret = true;

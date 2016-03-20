@@ -50,9 +50,9 @@ if (_action) then
 		_side = side _from;
 		switch (_side) do
 		{
-			case west: {[civilian, true, _price] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2]};
-			case east: {[east, true, _price] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2]};
-			case independent: {[independent, true, _price] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2]};
+			case west: {[civilian, true, _price, (getPlayerUID player)] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2]};
+			case east: {[east, true, _price, (getPlayerUID player)] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2]};
+			case independent: {[independent, true, _price, (getPlayerUID player)] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2]};
 			case civilian: {[_company, true, _price] call AlysiaClient_fnc_company_bank_handle};
 		};
 	} else {

@@ -3954,7 +3954,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1616;
+		items=1619;
 		class Item0
 		{
 			position[]={12129.837,0,17612.104};
@@ -20326,6 +20326,39 @@ class Mission
 			vehicle="GasStation_F";
 			skill=0.60000002;
 			init="this allowDamage false;this enableSimulation true;this setdir 130.531;this setposATL [12469.416016,13694.0712891,0.115784];this setVectorUp [0,0,1]";
+		};
+		class Item1616
+		{
+			position[]={12266.325,49.98711,7247.9814};
+			azimut=-270;
+			offsetY=0.30218899;
+			id=1787;
+			side="EMPTY";
+			vehicle="xcam_Dum_mesto2";
+			skill=0.60000002;
+			init="this enableSimulation true;this setdir -270;this setposATL [12266.325195,7247.981445,0.302189];this setVectorUp [0,0,1]";
+		};
+		class Item1617
+		{
+			position[]={12259.577,49.281898,7266.3013};
+			azimut=-360;
+			offsetY=1.09596;
+			id=1788;
+			side="EMPTY";
+			vehicle="xcam_Dum_mesto2";
+			skill=0.60000002;
+			init="this enableSimulation true;this setdir -360;this setposATL [12259.577148,7266.30127,1.09596];this setVectorUp [0,0,1]";
+		};
+		class Item1618
+		{
+			position[]={12274.192,49.394833,7276.7715};
+			azimut=-360;
+			offsetY=0.91582501;
+			id=1789;
+			side="EMPTY";
+			vehicle="xcam_Dum_mesto2";
+			skill=0.60000002;
+			init="this enableSimulation true;this setdir -360;this setposATL [12274.192383,7276.771484,0.915825];this setVectorUp [0,0,1]";
 		};
 	};
 	class Markers

@@ -22,7 +22,7 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
-sleep((random(1)) + 0.5);
+uiSleep((random(1)) + 0.5);
 
 if ((_target getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
 	["Le coffre est déjà en cours d'utilisation."] call AlysiaClient_fnc_error;

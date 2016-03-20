@@ -35,7 +35,7 @@ if (player distance (_this select 0) > 5) exitWith {
 
 [format["Vous avez été soigné pour <t color='#8cff9b'>%1</t>", _price]] call AlysiaClient_fnc_info;
 [4000] call AlysiaClient_fnc_handleBlood;
-[independent, true, _price] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
+[independent, true, _price, (getPlayerUID player)] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
 
 g_bleed = 0;
 g_action_inUse = false;

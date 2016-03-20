@@ -34,10 +34,10 @@ if (g_alcool isEqualTo 0) then
 		{
 			if (!(player getVariable ["is_coma", false])) then
 			{
-				if (g_alcool > 7) then
+				if (g_alcool > 6) then
 				{
 					if ((animationState player) != "incapacitated") then {player PlayMove "incapacitated"};
-					if (random(100) <= 30) then {[player, "vomit", 30] call CBA_fnc_globalSay3d};
+					if (random(100) <= 70) then {[player, "vomit", 30] call CBA_fnc_globalSay3d};
 				} else {
 					if ((animationState player) isEqualTo "incapacitated") then {player playMoveNow "amovppnemstpsraswrfldnon"};
 				};

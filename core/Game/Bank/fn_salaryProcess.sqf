@@ -182,12 +182,12 @@ if (g_phone_forfait != "none") then
 
 if (_add_to_north > 0) then
 {
-	[civilian, true, _add_to_north] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
+	[civilian, true, _add_to_north, (getPlayerUID player)] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
 };
 
 if (_add_to_south > 0) then
 {
-	[east, true, _add_to_south] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
+	[east, true, _add_to_south, (getPlayerUID player)] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
 };
 
 if (profileNamespace getVariable ["ALYSIA_phone_salary", true]) then

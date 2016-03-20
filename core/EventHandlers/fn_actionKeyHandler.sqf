@@ -197,7 +197,7 @@ if ((vehicle player) isEqualTo player) then
 			};
 		};
 	} else {
-		if ((player distance _target) < ((((boundingBox _target) select 1) select 0) + 2)) then
+		if ((player distance _target) < ((((boundingBox _target) select 1) select 0) + 2.5)) then
 		{
 			if (isPlayer _target) then
 			{
