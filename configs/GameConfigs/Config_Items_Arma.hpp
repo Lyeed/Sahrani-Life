@@ -2758,7 +2758,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Bank_Bomb
 	{
-		buy_price = 65000;
+		buy_price = 40000;
 	};
 	class tf_anprc152
 	{

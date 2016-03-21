@@ -20334,7 +20334,7 @@ class Mission
 			offsetY=0.30218899;
 			id=1787;
 			side="EMPTY";
-			vehicle="xcam_Dum_mesto2";
+			vehicle="Land_Dum_mesto2";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir -270;this setposATL [12266.325195,7247.981445,0.302189];this setVectorUp [0,0,1]";
 		};
@@ -20345,7 +20345,7 @@ class Mission
 			offsetY=1.09596;
 			id=1788;
 			side="EMPTY";
-			vehicle="xcam_Dum_mesto2";
+			vehicle="Land_Dum_mesto2";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir -360;this setposATL [12259.577148,7266.30127,1.09596];this setVectorUp [0,0,1]";
 		};
@@ -20356,7 +20356,7 @@ class Mission
 			offsetY=0.91582501;
 			id=1789;
 			side="EMPTY";
-			vehicle="xcam_Dum_mesto2";
+			vehicle="Land_Dum_mesto2";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir -360;this setposATL [12274.192383,7276.771484,0.915825];this setVectorUp [0,0,1]";
 		};

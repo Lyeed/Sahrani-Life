@@ -228,6 +228,17 @@ class ALYSIA_HOUSES
 		class house {};
 		class factions: factions {};
 	};
+	class Land_Dum_mesto2: Land_Cihlovej_Dum_mini
+	{
+		price = 325000;
+		class storage
+		{
+			type = "Skyline_Coffre_Small";
+			building_index = 3;
+		};
+		class house {};
+		class factions: factions {};
+	};
 	
 	/* GARAGES */
 	class Land_smd_garaz_open

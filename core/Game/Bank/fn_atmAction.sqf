@@ -173,7 +173,6 @@ switch (_action) do
 			[format["Vous avez retiré <t color='#8cff9b'>%1</t>kn du compte votre faction.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
 			[true, _amount] call AlysiaClient_fnc_handleCash;
 			[g_interaction_target, false, _amount] call AlysiaClient_fnc_atmMoneyHandle;
-			[playerSide, false, _amount, (getPlayerUID player)] remoteExecCall ["AlysiaServer_fnc_factionBankHandle", 2];
 		} else {
 			["Solde insuffisant"] call AlysiaClient_fnc_error;
 		};
