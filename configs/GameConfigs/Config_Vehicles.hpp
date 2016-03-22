@@ -801,7 +801,7 @@ class ALYSIA_VEHICLES
 	{
 		realname = "Iveco";
 		buyPrice = 576000;
-		inventory = 600;
+		inventory = 750;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"truck","company_transport_goods"};

@@ -50,9 +50,11 @@ if ((vehicle player) != player) then {
 	player action ["Eject", (vehicle player)];
 };
 
-player setVariable ["tf_globalVolume", 0];
-player setVariable ["tf_voiceVolume", 0, true];
 player setVariable ["is_coma", true, true];
+player setVariable ["tf_globalVolume", 0];
+if ((player getVariable ["tf_voiceVolume", 0]) > 0) then {
+	player setVariable ["tf_voiceVolume", 0, true];
+};
 
 while {(_time > 0) && !g_coma_dead && (player getVariable ["is_coma", false])} do
 {
@@ -113,6 +115,10 @@ if (!g_coma_dead) then
 	player switchCamera "Internal";
 	player setFatigue 1;
 	cutText ["", "BLACK IN", 20, true];
+	if ((player getVariable ["tf_voiceVolume", 0]) isEqualTo 0) then {
+		player setVariable ["tf_voiceVolume", 1, true];
+	};
+
 	player setVariable ["tf_voiceVolume", 1, true];
 	player setVariable ["tf_globalVolume", 1];
 	[player, ""] remoteExecCall ["switchMove", -2];

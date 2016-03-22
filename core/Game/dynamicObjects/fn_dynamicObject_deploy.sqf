@@ -43,6 +43,10 @@ if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then
 {
 	_object setVariable ["isPackable", true, true];
 	_object setDamage getNumber(_config >> "setDamage");
+	if (typeOf(_object) isEqualTo "Land_Razorwire_F") then
+	{
+		[_object] remoteExec ["AlysiaServer_fnc_spikeStrip", 2];
+	};
 } else {
 	["Impossible de trouver l'objet dans votre inventaire"] call AlysiaClient_fnc_error;
 	deleteVehicle _object;

@@ -15,5 +15,5 @@ player addEventHandler ["Killed", "call AlysiaEvent_fnc_onplayerDeath"];
 player addEventHandler ["Respawn", "call AlysiaEvent_fnc_onPlayerRespawn"];
 
 /* TASK_FORCE_RADIO */
-["actionRadio", "OnTangent", {call AlysiaEvent_fnc_onPlayerSpeakRadio}, player] call TFAR_fnc_addEventHandler;
+// ["actionRadio", "OnTangent", {call AlysiaEvent_fnc_onPlayerSpeakRadio}, player] call TFAR_fnc_addEventHandler;
 ["actionSpeak", "OnSpeak", {(_this select 1) call AlysiaEvent_fnc_onPlayerSpeak}, player] call TFAR_fnc_addEventHandler;

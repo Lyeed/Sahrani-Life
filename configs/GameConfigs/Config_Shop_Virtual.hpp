@@ -51,7 +51,17 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Commerçant station";
 		side = "CIV";
-		items[] = {{"chips","chocolat","villagoise","eau50"},{}};
+		items[] =
+		{
+			{
+				"chips",
+				"chocolat",
+				"villagoise",
+				"eau50"
+			},{
+
+			}
+		};
 	};
 
 	class market
@@ -90,7 +100,17 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Hopital";
 		side = "";
-		items[] = {{"patch","seringue","water","sandwich"},{"seringue"}};
+		items[] =
+		{
+			{
+				"patch",
+				"seringue",
+				"water",
+				"sandwich"
+			},{
+				"seringue"
+			}
+		};
 	};
 
 	/* FACTIONS MARKET */
@@ -98,19 +118,68 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Milice";
 		side = "WEST";
-		items[] = {{"cone","barriere","cafe","donut","soda","handcuffkeys","handcuffs","spikeStrip","sifflet","storage_stock","storage_large","alcool_test"},{}};
+		items[] =
+		{
+			{
+				"cafe",
+				"donut",
+				"soda",
+				"cone",
+				"handcuffkeys",
+				"handcuffs",
+				"barriere",
+				"bargate",
+				"spikeStrip",
+				"sifflet",
+				"storage_stock",
+				"alcool_test",
+				"horn_milice",
+				"passepartout"
+			},{
+
+			}
+		};
 	};
 	class east
 	{
 		name = "Garde";
 		side = "EAST";
-		items[] = {{"ragout","medova","sifflet","handcuffs","handcuffkeys","barriere","cone","spikeStrip","storage_stock","storage_large"},{}};
+		items[] =
+		{
+			{
+				"ragout",
+				"medova",
+				"sifflet",
+				"handcuffs",
+				"handcuffkeys",
+				"barriere",
+				"cone",
+				"bargate",
+				"spikeStrip",
+				"storage_stock",
+				"horn_garde",
+				"passepartout"
+			},{
+
+			}
+		};
 	};
 	class guer
 	{
 		name = "Hopital";
 		side = "GUER";
-		items[] = {{"cerealbar","sparklingwater","cone","barriere"},{}};
+		items[] =
+		{
+			{
+				"cerealbar",
+				"sparklingwater",
+				"cone",
+				"barriere",
+				"horn_samu"
+			},{
+
+			}
+		};
 	};
 
 	/* RESSOURCES */
@@ -118,7 +187,18 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Dealer";
 		side = "CIV";
-		items[] = {{},{"cocainep","heroinps","marijuana","cocainepc","methp"}};
+		items[] =
+		{
+			{
+
+			},{
+				"cocainep",
+				"heroinps",
+				"marijuana",
+				"cocainepc",
+				"methp"
+			}
+		};
 	};
 
 	class oil

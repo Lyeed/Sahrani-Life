@@ -30,7 +30,7 @@ if (isNull _storage) then
 	_pos = _target buildingPos getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(_target) >> "storage_building_pos_index");
 	if (count(nearestObjects [_pos, [_type], 4]) isEqualTo 0) then
 	{
-		_storage = createVehicle [, [0, 0, 0], [], 0, "NONE"];
+		_storage = createVehicle [_type, [0, 0, 0], [], 0, "NONE"];
 		_storage setPosATL (_target buildingPos getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(_target) >> "storage_building_pos_index"));
 		_target setVariable ["house_storage_out", _storage, true];
 

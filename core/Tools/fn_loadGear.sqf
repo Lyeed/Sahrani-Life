@@ -92,7 +92,8 @@ if (_gear isEqualTo []) then
     if (_headgear != "") then {player addHeadgear _headgear};
 
     _assignedItems = [_gear, 5, [], [[]]] call BIS_fnc_param;
-    if (!(_assignedItems isEqualTo [])) then {
+    if (!(_assignedItems isEqualTo [])) then
+    {
         {
             if (player canAddItemToBackpack _x) then
             {

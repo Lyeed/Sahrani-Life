@@ -7,7 +7,9 @@
 */
 
 player setVariable ["tf_globalVolume", 0];
-player setVariable ["tf_voiceVolume", 0, true];
+if ((player getVariable ["tf_voiceVolume", 0]) > 0) then {
+	player setVariable ["tf_voiceVolume", 0, true];
+};
 
 0 cutText["Vous êtes en soin intensif ...", "BLACK FADED"];
 0 cutFadeOut 9999999;

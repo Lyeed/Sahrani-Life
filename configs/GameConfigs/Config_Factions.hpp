@@ -146,10 +146,6 @@ class ALYSIA_FACTIONS
 			};
 		};
 
-		/*** SIRENE ***/
-		sirene_sound = "sirene_west";
-		sirene_sleep = 5;
-
 		/*** SPAWN/RESPAWN ***/
 		respawn_marker = "west_spawn";
 		respawn_price = 0;
@@ -360,10 +356,6 @@ class ALYSIA_FACTIONS
 			type = "Mil_dot";
 			shape = "ICON";
 		};
-
-		/*** SIRENE ***/
-		sirene_sound = "sirene_east";
-		sirene_sleep = 3;
 
 		/*** SPAWN/RESPAWN ***/
 		respawn_marker = "east_spawn";
@@ -649,10 +641,6 @@ class ALYSIA_FACTIONS
 			type = "Mil_dot";
 			shape = "ICON";
 		};
-
-		/*** SIRENE ***/
-		sirene_sound = "sirene_guer";
-		sirene_sleep = 2;
 
 		/*** SPAWN/RESPAWN ***/
 		respawn_marker = "guer_spawn";

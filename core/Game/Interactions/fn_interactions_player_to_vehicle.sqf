@@ -65,7 +65,10 @@ if (isNull _target) exitWith {};
 					(g_interaction_target in g_vehicles) || 
 					(
 						(playerSide != civilian) &&
-						(str(playerSide) isEqualTo getText(missionConfigFile >> 'ALYSIA_VEHICLES' >> typeOf(g_interaction_target) >> 'side'))
+						(
+							(str(playerSide) isEqualTo getText(missionConfigFile >> 'ALYSIA_VEHICLES' >> typeOf(g_interaction_target) >> 'side')) ||
+							((['passepartout'] call AlysiaClient_fnc_itemCount) > 0)
+						)
 					)
 				)
 			"

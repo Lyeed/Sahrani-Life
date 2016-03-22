@@ -5,7 +5,3 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-if ((player getVariable ["restrained", false]) || (player getVariable ["surrender", false]) || !(alive player) || (player getVariable ["is_coma", false])) exitWith {
-	true;
-};

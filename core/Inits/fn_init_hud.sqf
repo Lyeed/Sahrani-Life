@@ -330,6 +330,22 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 			};
 		};
 
+		if (!(player getVariable ["is_coma", false]) && (alive player)) then
+		{
+			if ((goggles player) isEqualTo "G_Bandanna_blk") then
+			{
+				if ((player getVariable ["tf_voiceVolume", 0]) > 0) then
+				{
+					player setVariable ["tf_voiceVolume", 0, true];
+				};
+			} else {
+				if ((player getVariable ["tf_voiceVolume", 0]) isEqualTo 0) then
+				{
+					player setVariable ["tf_voiceVolume", 1, true];
+				};				
+			};
+		};
+
 		uiSleep 0.3;
 	};
 };

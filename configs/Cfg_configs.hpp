@@ -27,3 +27,4 @@
 #include "GameConfigs\Config_ATM.hpp"
 #include "GameConfigs\Config_Medical.hpp"
 #include "GameConfigs\Config_Dynamic_Objects.hpp"
+#include "GameConfigs\Config_Horns.hpp"
