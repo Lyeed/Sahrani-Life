@@ -679,6 +679,18 @@ class ALYSIA_ITEMS
 			affect[] = AFFECT_FARM;
 		};
 	};
+	class tissue
+	{
+		name = "Tissue neuf";
+		weight = 2;
+		image = "";
+		class market
+		{
+			max = 750;
+			min = 55;
+			affect[] = AFFECT_FARM;
+		};
+	};
 
 	class sand
 	{

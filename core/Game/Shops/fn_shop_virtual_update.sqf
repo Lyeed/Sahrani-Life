@@ -120,13 +120,11 @@ lbClear _ctrl_tmp;
 if ((lbSize _ctrl_tmp) isEqualTo 0) then
 {
 	_ctrl_tmp lbAdd "Vide";
-	
 	ctrlShow[2412, false];
 	ctrlShow[2413, false];
 	ctrlShow[2414, false];
 	ctrlShow[2415, false];
 	ctrlShow[2416, false];
-
 	g_shop_weight_actual = g_carryWeight;
 } else {
 	ctrlShow[2412, true];
@@ -134,7 +132,6 @@ if ((lbSize _ctrl_tmp) isEqualTo 0) then
 	ctrlShow[2414, true];
 	ctrlShow[2415, true];
 	ctrlShow[2416, true];
-
 	lbSort [_ctrl_tmp, "DESC"];
 };
 

@@ -20536,7 +20536,7 @@ class Mission
 		};
 		class Item18
 		{
-			position[]={10116.076,177.47064,13964.351};
+			position[]={10033.221,195.76033,13489.549};
 			name="iron_1";
 			text="Mine de Fer";
 			type="Fett_aamissile";
@@ -20626,7 +20626,7 @@ class Mission
 		};
 		class Item27
 		{
-			position[]={15140.998,155.48955,12316.778};
+			position[]={15180.788,165.95247,12284.738};
 			name="coal_1";
 			text="Mine de charbon";
 			type="Fett_aamissile";
@@ -20712,7 +20712,7 @@ class Mission
 		};
 		class Item36
 		{
-			position[]={10675.328,320.492,8389.918};
+			position[]={11047.741,182.72437,8067.8975};
 			name="plat_1";
 			text="Mine de platine";
 			type="Fett_aamissile";

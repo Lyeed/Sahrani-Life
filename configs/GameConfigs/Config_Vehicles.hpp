@@ -83,22 +83,22 @@ class ALYSIA_VEHICLES
 	class madsa_hummer_h2_white_F: madsa_hummer_h2 {};
 	class madsa_hummer_h2_yellow_F: madsa_hummer_h2 {};
 
-	class madsa_mtz_F
+	class RDS_Zetor6945_Base
 	{
-		realname = "Tracteur MTZ";
+		realname = "Tracteur Zetor6945";
 		buyPrice = 90000;
-		inventory = 140;
+		inventory = 155;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"driver","company_farming"};
 		fuel = "Diesel";
 		tractor = 1;
 	};
-	class RDS_Zetor6945_Base: madsa_mtz_F
+	class madsa_mtz_F: RDS_Zetor6945_Base
 	{
-		realname = "Tracteur Zetor6945";
+		realname = "Tracteur MTZ";
 		buyPrice = 85000;
-		inventory = 130;
+		inventory = 120;
 	};
 
 	class DAR_FusionCiv

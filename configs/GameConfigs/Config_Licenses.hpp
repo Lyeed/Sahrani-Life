@@ -317,6 +317,19 @@ class ALYSIA_LICENSES
 		};
 	};
 
+	class company_clothing
+	{
+		name = "Licence de d'industrie textile";
+		class factions
+		{
+			class CIV
+			{
+				price = 20000;
+				pad_store = 0;
+				illegal = 0;
+			};
+		};
+	};
 	class company_weapon
 	{
 		name = "Licence de manufacture d'armes";

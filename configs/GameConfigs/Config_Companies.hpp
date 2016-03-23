@@ -198,11 +198,12 @@ class ALYSIA_COMPANIES
 		class foundry
 		{
 			name = "Fonderie";
-			building = "Land_tovarna2";
+			building = "xcam_Ind_Pec_01";
 			license = "company_foundry";
 			image = "lyeed_IMG\data\companies\types\foundry.paa";
 			process[] = {"steel", "soufre"};
 			members_max = 9;
+			ticket = 1;
 			class construction
 			{
 				building = "Misc_palletsfoiled_heap";
@@ -501,7 +502,7 @@ class ALYSIA_COMPANIES
 		{
 			ready = 0;
 			name = "Exploitation du pétrole";
-			building = "";//?
+			building = "xcam_Ind_Oil_Tower_EP1";
 			license = "company_fuel";
 			image = "lyeed_IMG\data\companies\types\fuel.paa";
 			process[] = {"oil"};
@@ -530,5 +531,35 @@ class ALYSIA_COMPANIES
 			};
 		};
 
-
+		class clothing
+		{
+			name = "Industrie textile";
+			building = "Land_tovarna2";
+			license = "company_clothing";
+			image = "lyeed_IMG\data\companies\types\fuel.paa";
+			process[] = {"tissue"};
+			members_max = 8;
+			class construction
+			{
+				building = "Misc_palletsfoiled_heap";
+				require[] = {{"woodp", 40}, {"ciment", 250}, {"goldbar", 2}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 400}, {"copperp", 30}, {"alu", 25}, {"pierre", 150}};
+				price = 490000;
+			};
+			class marker
+			{
+				type = "Fett_company_clothing";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
+			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
+			};
+			class storage
+			{
+				inventory = 250;
+			};
+		};
 */

@@ -114,7 +114,7 @@ class ALYSIA_STAFF
 
 			class heal
 			{
-				name = "Soins";
+				name = "Soins personnel";
 				statement = "g_bleed = 0;[4000] call AlysiaClient_fnc_handleBlood;";
 				condition = "(true)";
 				allow[] = {"76561198007960495", "76561198099211957"};
@@ -155,6 +155,15 @@ class ALYSIA_STAFF
 				statement = "g_staff_markers = false;";
 				condition = "g_staff_markers";
 			};
+
+			class reboot
+			{
+				name = "Reboot";
+				statement = "[] remoteExec ['AlysiaServer_fnc_serverSave', 2];";
+				condition = "isNil 'gServer_soonReboot'";
+				allow[] = {"76561198007960495", "76561198099211957"};
+				verify = 1;
+			};
 		};
 
 		class target
@@ -193,6 +202,13 @@ class ALYSIA_STAFF
 				statement = "[player] remoteExecCall ['AlysiaClient_fnc_APP_staff_players_getData', (lbData[9000, lbCurSel 9000])];";
 				condition = "(true)";
 				allow[] = {"76561198007960495", "76561197977519424", "76561198026418521", "76561198099211957", "76561198089708821"};
+			};
+			class heal
+			{
+				name = "Soin";
+				statement = "[3999] remoteExecCall ['AlysiaClient_fnc_handleBlood', (call compile (lbData[9000, lbCurSel 9000]))];";
+				condition = "(call compile (lbData[9000, lbCurSel 9000])) getVariable ['is_coma',false]";
+				allow[] = {"76561198007960495", "76561198099211957"};
 			};
 		};
 	};

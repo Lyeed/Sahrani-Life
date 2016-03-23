@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private "_vehicle";
+private["_vehicle", "_plants"];
 _vehicle = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 if (isNull _vehicle) exitWith {};
@@ -34,6 +34,11 @@ _vehicle setVariable ["trunk_in_use_ID", "FARMING", true];
 ["Début de la procédure de récolte dans deux secondes..."] call AlysiaClient_fnc_info;
 uiSleep 2;
 
+_plants = [];
+{
+	_plants pushBack (configName _x);
+} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS"));
+
 while {(_vehicle getVariable ["farm_gather", false])} do
 {
 	scopeName "loop";
@@ -48,7 +53,7 @@ while {(_vehicle getVariable ["farm_gather", false])} do
 		["Récolte terminée<br/>Quelqu'un fouille le coffre"] call AlysiaClient_fnc_error;
 	};
 
-	_plant = (nearestObjects [player, (call g_plants), 2]) select 0;
+	_plant = (nearestObjects [player, _plants, 2]) select 0;
 	if (!(isNil "_plant")) then
 	{
 	 	if (_plant getVariable ["ready", false]) then
@@ -78,9 +83,5 @@ while {(_vehicle getVariable ["farm_gather", false])} do
 };
 
 _vehicle setVariable ["Trunk", (_vehicle getVariable ["Trunk", []]), true];
-
-if ((_vehicle getVariable ["trunk_in_use_ID", ""]) isEqualTo "FARMING") then {
-	_vehicle setVariable ["trunk_in_use_ID", "", true];
-};
-
+if ((_vehicle getVariable ["trunk_in_use_ID", ""]) isEqualTo "FARMING") then {_vehicle setVariable ["trunk_in_use_ID", "", true]};
 _vehicle setVariable ["farm_gather", false];

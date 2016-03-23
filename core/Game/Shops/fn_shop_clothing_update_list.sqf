@@ -148,16 +148,11 @@ if ((lbSize _list) isEqualTo 0) then
 	ctrlShow[3105, false];
 	ctrlShow[3104, false];
 } else {
-	_list lbSetCurSel 0;
 	lbSortByValue _list;
-	ctrlShow[3108, true];
-	ctrlShow[3109, true];
-	ctrlShow[3110, true];
-	ctrlShow[3111, true];
-	ctrlShow[3112, true];
 	ctrlShow[3106, true];
 	ctrlShow[3105, true];
 	ctrlShow[3104, true];
+	_list lbSetCurSel 0;
 };
 
 g_shop_clothing_active = false;

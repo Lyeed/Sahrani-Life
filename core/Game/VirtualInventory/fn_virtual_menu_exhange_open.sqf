@@ -15,6 +15,7 @@ _back_button = [_this, 5, true, [true]] call BIS_fnc_param;
 _delete_on_empty = [_this, 6, false, [false]] call BIS_fnc_param;
 
 if (isNull _target) exitWith {};
+if (g_action_inUse) exitWith {};
 
 if (dialog) then
 {
@@ -22,7 +23,9 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
+g_action_inUse = true;
 uiSleep((random(1)) + 0.5);
+g_action_inUse = false;
 
 if ((_target getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
 	["Le coffre est déjà en cours d'utilisation."] call AlysiaClient_fnc_error;

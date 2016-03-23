@@ -3,10 +3,13 @@ with missionNamespace do
 	/******************************
 	****** Backend Variables *****
 	******************************/
+	g_sheeps = [];
 	g_launder = 0;
+	g_curWep_h = "";
 	g_objPut = ObjNull;
 	g_killer = ObjNull;
-	g_curWep_h = "";
+	g_dog = objNull;
+	g_dragingBody = ObjNull;
 	/* ===================[inUse/delay variables]======================= */
 	g_action_delay = time;
 	g_action_inUse = false;
@@ -17,8 +20,6 @@ with missionNamespace do
 	g_speaking = false;
 	g_seatbelt = false;
 	g_garage_store = false;
-	/* ===================[dog]======================= */
-	g_dog = objNull;
 	/* ===================[roleplay info]======================= */
 	g_choice = "";
 	g_firstName = "";
@@ -77,70 +78,19 @@ with missionNamespace do
 	g_morphine = 0;
 	g_adrenaline = 0;
 	g_regen_active = false;
-	g_dragingBody = ObjNull;
-	/* =================[Plants]=================== */
-	g_stations = [];
-	{
-		g_stations pushBack (configName _x);
-	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL_STATION"));
-	g_stations = compileFinal str(g_stations);
-	/* =================[Plants]=================== */
-	g_plants = [];
-	"g_plants pushBack (configName _x);true" configClasses (missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS");
-	g_plants = compileFinal str(g_plants);
-	/* =================[Housing]=================== */
-	g_houses_list = [];
-	"g_houses_list pushBack (configName _x);true" configClasses (missionConfigFile >> "ALYSIA_HOUSES");
-	g_houses_list = compileFinal str(g_houses_list);
-
-	g_houses_storages = [];
-	"g_houses_storages pushBack (configName _x);true" configClasses (missionConfigFile >> "ALYSIA_STORAGES");
-	g_houses_storages = compileFinal str(g_houses_storages);
 	/* =================[Dynamic Markers]=================== */
 	g_dynamic_markers_discovered = [];
 	g_dynamic_markers = [];
-	"g_dynamic_markers pushBack (configName _x);true" configClasses (missionConfigFile >> "ALYSIA_DYN_MARKERS");
-	/* =================[Items]=================== */
-	g_inv_items = [];
-	"g_inv_items pushBack(configName _x);true" configClasses (missionConfigFile >> "ALYSIA_ITEMS");
-
-	{
-		missionNamespace setVariable[format["inv_%1", _x], 0];
-	} forEach g_inv_items;
-	/* =================[Sheeps]====================*/
-	g_sheeps = [];
-	/* =================[Chairs]====================*/
-	g_chairs = [];
 	
 	{
-		g_chairs pushBack configName(_x);
-	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_CHAIRS"));
-
-	g_chairs = compileFinal str(g_chairs);
-	/* =================[ATM]====================*/
-	g_atms = [];
+		g_dynamic_markers pushBack (configName _x);
+	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_DYN_MARKERS"));
+	/* =================[Items]=================== */
+	g_inv_items = [];
 
 	{
-		g_atms pushBack configName(_x);
-	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_ATM"));
-
-	g_atms = compileFinal str(g_atms);
-	/* =================[LABO]====================*/
-	g_laboratories = [];
-
-	{
-		if (!(getText(_x >> "object") in g_laboratories)) then {
-			g_laboratories pushBack getText(_x >> "object");
-		};
-	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_LABORATORIES"));
-
-	g_laboratories = compileFinal str(g_laboratories);
-	/* =================[Dynamic Objects]=================== */
-	g_dynamic_objects = [];
-
-	{
-		g_dynamic_objects pushBack configName(_x);
-	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_DYN_OBJECTS"));
-
-	g_dynamic_objects = compileFinal str(g_dynamic_objects);
+		_item = configName _x;
+		g_inv_items pushBack _item;
+		missionNamespace setVariable[format["inv_%1", _item], 0];
+	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_ITEMS"));
 };

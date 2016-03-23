@@ -872,14 +872,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 3000;
 	};
-	class Mask_M40
-	{
-		buy_price = 1500;
-	};
-	class Mask_M40_OD
-	{
-		buy_price = 1500;
-	};
 	class Masque_Alien1
 	{
 		buy_price = 500;

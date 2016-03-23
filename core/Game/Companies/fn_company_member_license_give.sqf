@@ -26,4 +26,16 @@ if (isNull _target) exitWith {
 	["La personne a besoin d'être présente sur l'île pour pouvoir lui payer la license d'entreprise."] call AlysiaClient_fnc_error;
 };
 
-[player, _license, _company] remoteExecCall ["AlysiaClient_fnc_company_member_license_receive", _target];
+_action =
+[
+	format
+	[
+		"Vous êtes sur le point de payer la licence : <t color='#FF4000'>%1</t>.<br/>Prix : <t color='#8cff9b'>%2</t>kn.<br/>Validez-vous ?", 
+		[_license] call AlysiaClient_fnc_licenseGetName,
+		[getNumber(missionConfigFile >> "ALYSIA_LICENSES" >> _license >> "factions" >> str(_target) >> "price")] call AlysiaClient_fnc_numberText
+	],
+	"Validation",
+	"Valider",
+	"Annuler"
+] call BIS_fnc_guiMessage;
+if (_action) then {[player, _license, _company] remoteExecCall ["AlysiaClient_fnc_company_member_license_receive", _target]};

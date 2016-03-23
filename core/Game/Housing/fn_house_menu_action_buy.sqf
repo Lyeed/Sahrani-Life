@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_maxHouse", "_price", "_action", "_item"];
+private["_maxHouse", "_price", "_action", "_item", "_actual"];
 
 if (isNull g_interaction_target) exitWith {};
 
@@ -26,9 +26,11 @@ if ((_item != "") && !(_item in (magazines player))) exitWith {
 };
 
 _maxHouse = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "house_max");
-if ((count g_houses) >= _maxHouse) exitWith {
-	[format["Vous possedez déjà %1 propriétés", _maxHouse]] call AlysiaClient_fnc_error;
-};
+_actual = 0;
+{
+	if (((_x getVariable ["house_owner", ["", ""]]) select 0) isEqualTo (getPlayerUID player)) then {_actual = _actual + 1};
+} forEach g_houses;
+if (_actual >= _maxHouse) exitWith {[format["Vous possedez %1 bâtiments. Vous êtes autorisé à en avoir %2.", _actual, _maxHouse]] call AlysiaClient_fnc_error};
 
 _price = getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> (typeOf g_interaction_target) >> "price");
 if (g_atm < _price) exitWith {};

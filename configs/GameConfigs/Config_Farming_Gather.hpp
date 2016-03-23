@@ -1,3 +1,37 @@
+class ALYSIA_FARMING_OBJECT
+{
+	class xcam_Kopa_kameni
+	{
+		receive[] = {{"coal", 2, 1}};
+		tool = "Skyline_Pioche_01";
+		sounds[] = {"mining_1", "mining_2", "mining_3", "mining_4", "mining_5"};
+		times = 2;
+	};
+	class xcam_Kopa_kameni2: xcam_Kopa_kameni {};
+	class xcam_R2_RockTower
+	{
+		receive[] = {{"iron", 3, 1}};
+		tool = "Skyline_Pioche_01";
+		sounds[] = {"mining_1", "mining_2", "mining_3", "mining_4", "mining_5"};
+		times = 3;
+	};
+	class xcam_R2_RockWall: xcam_R2_RockTower {};
+	class xcam_rockS_02
+	{
+		receive[] = {{"pierre", 4, 1}};
+		tool = "Skyline_Merlin_01";
+		sounds[] = {"mining_1", "mining_2", "mining_3", "mining_4", "mining_5"};
+		times = 3;
+	};
+	class xcam_Kamen1_piskovec2
+	{
+		receive[] = {{"platine", 1, 0}};
+		tool = "Skyline_Merlin_01";
+		sounds[] = {"mining_1", "mining_2", "mining_3", "mining_4", "mining_5"};
+		times = 4;
+	};
+};
+
 class ALYSIA_FARMING_GATHER
 {
 	// sounds = oil / mining / shovel / gather1 / gather2
@@ -28,15 +62,6 @@ class ALYSIA_FARMING_GATHER
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
 		extra_all = 1;
-		sides[] = {"CIV"};
-		area = 40;
-	};
-
-	class iron_1
-	{
-		receive[] = {{"iron", 4, 1}};
-		tool = "Skyline_Pioche_01";
-		sound = "mining";
 		sides[] = {"CIV"};
 		area = 40;
 	};
@@ -76,15 +101,6 @@ class ALYSIA_FARMING_GATHER
 		area = 40;
 	};
 
-	class plat_1
-	{
-		receive[] = {{"platine", 1, 0}};
-		tool = "Skyline_Merlin_01";
-		sound = "mining";
-		sides[] = {"CIV"};
-		area = 40;
-	};
-
 	class gold_1
 	{
 		receive[] = {{"goldnuggets", 3, 1}};
@@ -97,15 +113,6 @@ class ALYSIA_FARMING_GATHER
 	class clay_1
 	{
 		receive[] = {{"clay", 5, 1}};
-		tool = "Skyline_Pioche_01";
-		sound = "mining";
-		sides[] = {"CIV"};
-		area = 40;
-	};
-
-	class coal_1
-	{
-		receive[] = {{"coal", 6, 1}};
 		tool = "Skyline_Pioche_01";
 		sound = "mining";
 		sides[] = {"CIV"};
@@ -149,16 +156,7 @@ class ALYSIA_FARMING_GATHER
 		sides[] = {"CIV"};
 		area = 40;
 	};
-	
-	class pierre_1
-	{
-		receive[] = {{"pierre", 5, 1}};
-		tool = "Skyline_Merlin_01";
-		sound = "mining";
-		sides[] = {"CIV"};
-		area = 40;
-	};
-	
+
 	class prison_farm
 	{
 		receive[] = {{"pierre", 1, 0}};

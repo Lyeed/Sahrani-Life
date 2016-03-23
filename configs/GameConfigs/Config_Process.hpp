@@ -296,6 +296,19 @@ class ALYSIA_PROCESS
 			class CIV {};
 		};
 	};
+	class tissue
+	{
+		name = "Tissage";
+		sound = "salt_process";
+		require[] = {{"cottonp",5}};
+		receive[] = {{{"tissue",1}},{},0};
+		time_per_item = 5;
+		time_default = 4;
+		class factions
+		{
+			class CIV {};
+		};
+	};
 	class gold
 	{
 		name = "Fonte de l'or";

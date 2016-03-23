@@ -36,8 +36,10 @@ _getPlant =
 	_ret = [];
 
 	{
-		if (_vehicle distance (getMarkerPos (configName _x)) < getNumber(_x >> "area")) exitWith
-		{
+		if (
+				(_vehicle distance (getMarkerPos (configName _x)) < getNumber(_x >> "area")) &&
+				(([(_vehicle getVariable ["Trunk", []]), getText(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> getText(_x >> "plant") >> "seed")] call AlysiaClient_fnc_itemCount) > 0)
+			) exitWith {
 			_ret =
 			[
 				getText(_x >> "plant"),

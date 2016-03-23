@@ -19,14 +19,10 @@ _objects =
 	(nearestObjects [player, ["GroundWeaponHolder"], _distance]) +
 	(nearestObjects [player, ["WeaponHolderSimulated"], _distance])
 );
+
 _objCount = count _objects;
 
 {
 	deleteVehicle _x;
-} forEach (_objects);
-
-
-
-if (_display) then {
-	[format["Vous avez saisi %1 objet%2", _objCount, if (_objCount > 1) then {"s"} else {""}]] call AlysiaClient_fnc_info;
-};
+} forEach _objects;
+if (_display) then {[format["Vous avez saisi %1 objet%2", _objCount, if (_objCount > 1) then {"s"} else {""}]] call AlysiaClient_fnc_info};

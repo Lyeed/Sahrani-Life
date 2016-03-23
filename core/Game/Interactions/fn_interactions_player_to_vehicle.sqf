@@ -276,19 +276,6 @@ if (isNull _target) exitWith {};
 			"
 		],
 		[
-			"money_bomb",
-			"C4",
-			"[(attachedObjects g_interaction_target) select 0] spawn AlysiaClient_fnc_c4_open;",
-			"
-				(
-					(getNumber(missionConfigFile >> 'ALYSIA_VEHICLES' >> typeOf(g_interaction_target) >> 'money_transfer') isEqualTo 1) &&
-					((vehicle player) isEqualTo player) &&
-					((player distance (g_interaction_target modelToWorld [-0.041748,-4.21094,-1.90671])) <= 1) &&
-					!((attachedObjects g_interaction_target) isEqualTo [])
-				)
-			"
-		],
-		[
 			"speaker",
 			"Haut-parleurs",
 			"[g_interaction_target] spawn AlysiaClient_fnc_vehicleMenu_speaker;",

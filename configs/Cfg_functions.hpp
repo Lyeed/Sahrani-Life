@@ -17,6 +17,7 @@ class CfgFunctions
 			class onPlayerRespawn {};
 			class onPlayerSpeak {};
 			class onPlayerSpeakRadio {};
+			class onPlayerFire {};
 		};
 	};
 
@@ -480,6 +481,7 @@ class CfgFunctions
 			file = "core\Game\Interactions";
 			class interactions_create {};
 			class interactions_recall {};
+			class interactions_player_to_chair {};
 			class interactions_player_to_player_basics {};
 			class interactions_player_to_player_coma {};
 			class interactions_player_to_player_prison {};

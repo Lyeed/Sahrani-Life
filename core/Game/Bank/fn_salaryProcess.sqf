@@ -105,7 +105,7 @@ if (!(isNull g_company)) then
 				};
 
 				_price_remove = _price_remove + _price_building;
-				if (!([false, _price_building, "Taxe foncière"] call AlysiaClient_fnc_handleATM)) then
+				if (!([false, _price_building, "Taxe foncière (entreprise)"] call AlysiaClient_fnc_handleATM)) then
 				{
 					["Vous n'avez pas assez d'argent pour payer votre taxe foncière. Régularisez votre situation dans les plus brefs délais ou les autorités passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
 					switch (g_choice) do
@@ -152,7 +152,7 @@ if (count(g_houses) > 0) then
 		};
 
 		_price_remove = _price_remove + _price;
-		if (!([false, _price, "Taxe d'habitation"] call AlysiaClient_fnc_handleATM)) then
+		if (!([false, _price, "Taxe foncière (maison/stockage/garage)"] call AlysiaClient_fnc_handleATM)) then
 		{
 			["Vous n'avez pas assez d'argent pour payer votre taxe d'habitation. Régularisez votre situation dans les plus brefs délais ou les autorités passeront !", "BANQUE"] call AlysiaClient_fnc_phone_message_receive;
 			switch (g_choice) do

@@ -23,7 +23,7 @@ if (g_alcool isEqualTo 0) then
 		_i = 10;
 		while {_i > 1} do
 		{
-			_calc = 0.005 + (exp(g_alcool * 3) / (90 * _i));
+			_calc = 0.005 + ((g_alcool * 0.6) / _i);
 			_effect ppEffectAdjust [_calc, _calc, true];
 			_effect ppEffectCommit 5;
 			waitUntil {ppEffectCommitted _effect};
@@ -36,30 +36,25 @@ if (g_alcool isEqualTo 0) then
 			{
 				if (g_alcool > 6) then
 				{
-					if ((animationState player) != "incapacitated") then {player PlayMove "incapacitated"};
-					if (random(100) <= 70) then {[player, "vomit", 30] call CBA_fnc_globalSay3d};
+					if ((animationState player) != "incapacitated") then {player PlayMove "incapacitatedState"};
+					if (random(100) <= 70) then {[player, "vomit", 20] call CBA_fnc_globalSay3d};
 				} else {
 					if ((animationState player) isEqualTo "incapacitated") then {player playMoveNow "amovppnemstpsraswrfldnon"};
 				};
 			};
 
-			_calc = 0.005 + (exp(g_alcool * 3) / 90);
-			_effect ppEffectAdjust [_calc, _calc, true];
-			_effect ppEffectCommit ((round(random(3)) + 1) * 60);
+			_calc = 0.005 + (g_alcool * 0.6);
+			_effect ppEffectAdjust [(_calc * random(2)), (_calc * random(2)), true];
+			_effect ppEffectCommit 10;
 			waitUntil {ppEffectCommitted _effect};
-			g_alcool = g_alcool - 0.15;
+			g_alcool = g_alcool - 0.01;
 		};
 
-		if (g_alcool < 0) then {
-			g_alcool = 0;
-		};
-
+		if (g_alcool < 0) then {g_alcool = 0};
 		_effect ppEffectEnable false;
 		ppEffectDestroy _effect;
 	};
 } else {
 	g_alcool = g_alcool + _amount;
-	if (g_alcool < 0) then {
-		g_alcool = 0;
-	};
+	if (g_alcool < 0) then {g_alcool = 0};
 };
