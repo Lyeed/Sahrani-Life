@@ -605,62 +605,235 @@ class ALYSIA_PROCESS
 	};
 
 	/*************                   ******************
-	**************  	GILETS       ******************
+	**************  	TENUES       ******************
 	**************                   *******************/
-	class bulletproofvest_news
+	class clothing_suit_1
+	{
+		name = "Fabrication de costume (1)";
+		sound = "smelting";
+		require[] = {{"tissue",11},{"cottonp",10}};
+		receive[] = {{},{"rds_uniform_Functionary1"},0};
+		time_per_item = 20;
+		time_default = 10;
+		class factions
+		{
+			class CIV
+			{
+				licenses[] = {"company_clothing"};
+			};
+		};
+	};
+	class clothing_suit_2: clothing_suit_1
+	{
+		name = "Fabrication de costume (2)";
+		receive[] = {{},{"rds_uniform_Functionary2"},0};
+		class factions: factions {};
+	};
+	class clothing_suit_3: clothing_suit_1
+	{
+		name = "Fabrication de costume (3)";
+		receive[] = {{},{"TRYK_SUITS_BLK_F"},0};
+		class factions: factions {};
+	};
+	class clothing_suit_4: clothing_suit_1
+	{
+		name = "Fabrication de costume (4)";
+		receive[] = {{},{"TRYK_SUITS_BR_F"},0};
+		class factions: factions {};
+	};
+	class clothing_suit_5: clothing_suit_1
+	{
+		name = "Fabrication de costume (5)";
+		require[] = {{"tissue",8},{"cottonp",20}};
+		receive[] = {{},{"druglord_uniform_new"},0};
+		class factions: factions {};
+	};
+	class clothing_suit_6: clothing_suit_1
+	{
+		name = "Fabrication de costume (6)";
+		require[] = {{"tissue",8},{"cottonp",20}};
+		receive[] = {{},{"special_agent_uniform_new"},0};
+		class factions: factions {};
+	};
+	class clothing_suit_7: clothing_suit_1
+	{
+		name = "Fabrication de costume (7)";
+		require[] = {{"tissue",8},{"cottonp",20}};
+		receive[] = {{},{"Robber_uniform_new"},0};
+		class factions: factions {};
+	};
+	class clothing_suit_8: clothing_suit_1
+	{
+		name = "Fabrication de costume (8)";
+		require[] = {{"tissue",9},{"cottonp",20}};
+		receive[] = {{},{"Killer_uniform_new"},0};
+		class factions: factions {};
+	};
+	class clothing_suit_9: clothing_suit_1
+	{
+		name = "Fabrication de costume (9)";
+		require[] = {{"tissue",8},{"cottonp",20}};
+		receive[] = {{},{"mafiaboss_uniform_new"},0};
+		class factions: factions {};
+	};
+	class clothing_suit_10: clothing_suit_1
+	{
+		name = "Fabrication de costume (10)";
+		require[] = {{"tissue",8},{"cottonp",20}};
+		receive[] = {{},{"agent_uniform_new"},0};
+		class factions: factions {};
+	};
+	class clothing_suit_11: clothing_suit_1
+	{
+		name = "Fabrication de costume (11)";
+		require[] = {{"tissue",10},{"cottonp",10}};
+		receive[] = {{},{"vip1_uniform_new"},0};
+		class factions: factions {};
+	};
+	class clothing_suit_12: clothing_suit_11
+	{
+		name = "Fabrication de costume (12)";
+		receive[] = {{},{"vip2_uniform_new"},0};
+		class factions: factions {};
+	};
+	class clothing_suit_13: clothing_suit_11
+	{
+		name = "Fabrication de costume (13)";
+		receive[] = {{},{"vip3_uniform_new"},0};
+		class factions: factions {};
+	};
+	class clothing_suit_14: clothing_suit_1
+	{
+		name = "Fabrication de costume (9)";
+		require[] = {{"tissue",11},{"cottonp",11}};
+		receive[] = {{},{"president_uniform_new"},0};
+		class factions: factions {};
+	};
+
+	class headgear_news_1: clothing_suit_1
+	{
+		name = "Fabrication de casquette presse";
+		require[] = {{"tissue",1},{"cottonp",1}};
+		receive[] = {{},{"H_Cap_press"},0};
+		class factions: factions {};
+	};
+	class vest_news_1: clothing_suit_1
 	{
 		name = "Fabrication de gilet Presse";
-		sound = "smelting";
-		require[] = {{"cottonp",10},{"steel",4}};
+		require[] = {{"tissue",4},{"steel",4}};
 		receive[] = {{},{"V_Press_F"},0};
-		time_per_item = 30;
-		time_default = 30;
 		class factions
 		{
 			class CIV
 			{
 				licenses[] = {"company_weapon"};
 			};
-		};
-	};
-	class bulletproofvest_security: bulletproofvest_news
-	{
-		name = "Fabrication de gilet Sécurité";
-		receive[] = {{},{"TRYK_V_Bulletproof_BLK"},0};
-		class factions
-		{
-			class CIV
-			{
-				licenses[] = {"company_weapon"};
-			};
-		};
-	};
-	class bulletproofvest_transfer: bulletproofvest_news
-	{
-		name = "Fabrication de gilet Convoyeur";
-		receive[] = {{},{"TRYK_V_Bulletproof_BL"},0};
-		class factions
-		{
-			class CIV
-			{
-				licenses[] = {"company_weapon"};
-			};
-		};
-	};
-	class bulletproofvest_criminal: bulletproofvest_news
-	{
-		name = "Fabrication de gilet barre-balles";
-		receive[] = {{},{"TRYK_V_IOTV_BLK"},0};
-		class target {};
-		class factions
-		{
-			class CIV {};
 		};
 	};
 
-	/*************                   ******************
-	**************  	TENUES       ******************
-	**************                   *******************/
+	class headgear_construction_1: headgear_news_1
+	{
+		name = "Fabrication de casque de construction";
+		receive[] = {{},{"usm_helmet_safety"},0};
+		class factions: factions {};
+	};
+	class vest_construction_1: clothing_suit_1
+	{
+		name = "Fabrication de gilet de construction";
+		require[] = {{"tissue",2},{"cottonp",10}};
+		receive[] = {{},{"usm_vest_safety"},0};
+		class factions: factions {};
+	};
+
+	class clothing_moneyTransfert_1: clothing_suit_1
+	{
+		name = "Fabrication d'uniforme de convoyeur";
+		require[] = {{"tissue",2},{"cottonp",8}};
+		receive[] = {{},{"TRYK_U_B_BLK3CD"},0};
+		class factions: factions {};
+	};
+	class vest_moneyTransfert_1: vest_news_1
+	{
+		name = "Fabrication de gilet Convoyeur";
+		receive[] = {{},{"TRYK_V_Bulletproof_BL"},0};
+		class factions: factions {};
+	};
+	class goggles_moneyTransfert_1: clothing_suit_1
+	{
+		name = "Fabrication de cagoule de convoyeur";
+		require[] = {{"tissue",1},{"cottonp",1}};
+		receive[] = {{},{"TRYK_kio_balaclava_BLK"},0};
+		class factions: factions {};
+	};
+
+	class clothing_depann_1: clothing_suit_1
+	{
+		name = "Fabrication d'uniforme dépanneur (1)";
+		require[] = {{"cottonp",20}};
+		receive[] = {{},{"U_C_WorkerCoveralls"},0};
+		class factions: factions {};
+	};
+	class clothing_depann_2: clothing_suit_1
+	{
+		name = "Fabrication d'uniforme dépanneur (2)";
+		require[] = {{"tissue",2},{"cotténp",8}};
+		receive[] = {{},{"Skyline_Uniforme_Depanneur_01_F"},0};
+		class factions: factions {};
+	};
+	class clothing_depann_SDNS: clothing_suit_1
+	{
+		name = "Fabrication d'uniforme dépanneur (SDNS)";
+		require[] = {{"tissue",3},{"cottonp",10}};
+		receive[] = {{},{"SDNS_depannage"},0};
+		class factions: factions {};
+	};
+	class backpack_depann_1: clothing_suit_1
+	{
+		name = "Fabrication de sac à dos dépanneur";
+		require[] = {{"tissue",15},{"cottonp",10}};
+		receive[] = {{},{"Skyline_Sac_Depanneur_01_F"},0};
+		class factions: factions {};
+	};
+
+	class clothing_secu_1: clothing_suit_1
+	{
+		name = "Fabrication de costume sécurité";
+		require[] = {{"tissue",8},{"cottonp",20}};
+		receive[] = {{},{"bodyguard_uniform_new"},0};
+		class factions: factions {};
+	};
+	class clothing_secu_2: clothing_suit_1
+	{
+		name = "Fabrication d'uniforme sécurité (1)";
+		require[] = {{"tissue",2},{"cottonp",8}};
+		receive[] = {{},{"Skyline_Uniforme_Securite_01_F"},0};
+		class factions: factions {};
+	};
+	class clothing_secu_3: clothing_secu_2
+	{
+		name = "Fabrication d'uniforme sécurité (2)";
+		receive[] = {{},{"Skyline_Uniforme_Securite_02_F"},0};
+		class factions: factions {};
+	};
+	class clothing_secu_4: clothing_secu_2
+	{
+		name = "Fabrication d'uniforme sécurité (3)";
+		receive[] = {{},{"Skyline_Uniforme_Securite_03_F"},0};
+		class factions: factions {};
+	};
+	class vest_secu_1: vest_news_1
+	{
+		name = "Fabrication de gilet sécurité";
+		receive[] = {{},{"TRYK_V_Bulletproof_BLK"},0};
+		class factions: factions {};
+	};
+	class googles_secu_1: goggles_moneyTransfert_1
+	{
+		name = "Fabrication de cagoule sécurité";
+		receive[] = {{},{"TRYK_kio_balaclava_BLK"},0};
+		class factions: factions {};
+	};
+
 	class clothing_criminal_1
 	{
 		name = "Fabrication de tenue criminelle 1";
@@ -758,6 +931,16 @@ class ALYSIA_PROCESS
 		receive[] = {{},{"Masque_Solitaire"},0};
 		class target {};
 		class factions: factions {};
+	};
+	class vest_criminal_1: vest_news_1
+	{
+		name = "Fabrication de gilet barre-balles";
+		receive[] = {{},{"TRYK_V_IOTV_BLK"},0};
+		class target {};
+		class factions
+		{
+			class CIV {};
+		};
 	};
 
 	class headgear_mask

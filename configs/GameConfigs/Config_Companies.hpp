@@ -68,10 +68,7 @@ class ALYSIA_COMPANIES
 				"weapon_sdar",
 				"magazine_sdar",
 				"weapon_vermin",
-				"magazine_vermin",
-				"bulletproofvest_news",
-				"bulletproofvest_security",
-				"bulletproofvest_transfer"
+				"magazine_vermin"
 			};
 			members_max = 8;
 			class construction
@@ -392,6 +389,72 @@ class ALYSIA_COMPANIES
 				inventory = 50;
 			};
 		};
+
+		class clothing
+		{
+			name = "Industrie textile";
+			building = "Land_tovarna2";
+			license = "company_clothing";
+			image = "lyeed_IMG\data\companies\types\clothing.paa";
+			process[] =
+			{
+				"tissue",
+				"clothing_suit_1",
+				"clothing_suit_2",
+				"clothing_suit_3",
+				"clothing_suit_4",
+				"clothing_suit_5",
+				"clothing_suit_6",
+				"clothing_suit_7",
+				"clothing_suit_8",
+				"clothing_suit_9",
+				"clothing_suit_9",
+				"clothing_suit_10",
+				"clothing_suit_11",
+				"clothing_suit_12",
+				"clothing_suit_13",
+				"headgear_news_1",
+				"vest_news_1",
+				"headgear_construction_1",
+				"vest_construction_1",
+				"clothing_moneyTransfert_1",
+				"goggles_moneyTransfert_1",
+				"vest_moneyTransfert_1",
+				"clothing_depann_1",
+				"clothing_depann_2",
+				"clothing_depann_SDNS",
+				"backpack_depann_1",
+				"clothing_secu_1",
+				"clothing_secu_2",
+				"clothing_secu_3",
+				"clothing_secu_4",
+				"googles_secu_1",
+				"vest_secu_1"
+			};
+			members_max = 8;
+			class construction
+			{
+				building = "Misc_palletsfoiled_heap";
+				require[] = {{"woodp", 40}, {"ciment", 250}, {"goldbar", 2}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 400}, {"copperp", 30}, {"alu", 25}, {"pierre", 150}};
+				price = 490000;
+			};
+			class marker
+			{
+				type = "Fett_boat";
+				color = "ColorWhite";
+				shape = "ICON";
+				size = 0.4;
+			};
+			class tax
+			{
+				price_per_employee = 100;
+				price_building = 100;
+			};
+			class storage
+			{
+				inventory = 250;
+			};
+		};
 	};
 };
 
@@ -531,35 +594,4 @@ class ALYSIA_COMPANIES
 			};
 		};
 
-		class clothing
-		{
-			name = "Industrie textile";
-			building = "Land_tovarna2";
-			license = "company_clothing";
-			image = "lyeed_IMG\data\companies\types\fuel.paa";
-			process[] = {"tissue"};
-			members_max = 8;
-			class construction
-			{
-				building = "Misc_palletsfoiled_heap";
-				require[] = {{"woodp", 40}, {"ciment", 250}, {"goldbar", 2}, {"furniture", 10}, {"ironp", 75}, {"sand", 50}, {"glass", 400}, {"copperp", 30}, {"alu", 25}, {"pierre", 150}};
-				price = 490000;
-			};
-			class marker
-			{
-				type = "Fett_company_clothing";
-				color = "ColorWhite";
-				shape = "ICON";
-				size = 0.4;
-			};
-			class tax
-			{
-				price_per_employee = 100;
-				price_building = 100;
-			};
-			class storage
-			{
-				inventory = 250;
-			};
-		};
 */

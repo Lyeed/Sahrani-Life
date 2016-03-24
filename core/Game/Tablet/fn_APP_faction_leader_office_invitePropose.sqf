@@ -26,7 +26,12 @@ _action =
 ] call BIS_fnc_guiMessage;
 if (_action) then
 {
-	if (g_houses isEqualTo []) then
+	private "_actual";
+	_actual = 0;
+	{
+		if (((_x getVariable ["house_owner", ["", ""]]) select 0) isEqualTo (getPlayerUID player)) then {_actual = _actual + 1};
+	} forEach g_houses;
+	if (_actual isEqualTo 0) then
 	{
 		if (isNull g_company) then
 		{

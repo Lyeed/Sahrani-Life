@@ -25,19 +25,18 @@ _idc = 9020;
 				"
 					[] spawn
 					{
-						_action = 
-						[
-							'Vous êtes sur le point d'executer l'action : %2<br/>Validez-vous ?',
-							'Validation',
-							'Valider',
-							'Annuler'
+						_action = [
+							""Vous êtes sur le point d'executer l'action : %2<br/>Validez-vous ?"",
+							""Validation"",
+							""Valider"",
+							""Annuler""
 						] call BIS_fnc_guiMessage;
 						if (_action) then
 						{
 							%1
 							[] call AlysiaClient_fnc_APP_staff_player_actions_update;
 						} else {
-							['Action annulée'] call AlysiaClient_fnc_info;
+							[""Action annulée""] call AlysiaClient_fnc_info;
 						};
 					};
 				",

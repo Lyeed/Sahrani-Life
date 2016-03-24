@@ -188,7 +188,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Tribune en bois";
 		weight = 20;
-		image = "";
+		image = "alysia_items_virtual\data\tribune_wood.paa";
 		class use
 		{
 			action = "['tribune_wood'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
@@ -585,14 +585,13 @@ class ALYSIA_ITEMS
 		weight = 1;
 		price_buy = 5;
 		buy_license_CIV = "company_farming";
-		image = "";
-
+		image = "alysia_items_virtual\data\sunflower_seed.paa";
 	};
 	class sunflower
 	{
 		name = "Fleur de tournesol";
 		weight = 2;
-		image = "";
+		image = "alysia_items_virtual\data\sunflower.paa";
 		class market
 		{
 			max = 90;
@@ -604,13 +603,13 @@ class ALYSIA_ITEMS
 	{
 		name = "Huile de tournesol";
 		weight = 2;
-		image = "";
+		image = "alysia_items_virtual\data\huile.paa";
 	};
 	class huile_bottle
 	{
 		name = "Bouteille d'huile de tournesol";
 		weight = 3;
-		image = "";
+		image = "alysia_items_virtual\data\huile_bottle.paa";
 		class market
 		{
 			max = 605;
@@ -623,7 +622,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Houblon";
 		weight = 1;
-		image = "";
+		image = "alysia_items_virtual\data\houblon.paa";
 		price_sell = 13;
 	};
 
@@ -632,14 +631,14 @@ class ALYSIA_ITEMS
 		name = "Graine (citrouille)";
 		weight = 1;
 		price_buy = 5;
-		image = "";
+		image = "alysia_items_virtual\data\pumpkin_seed.paa";
 		buy_license_CIV = "company_farming";
 	};
 	class pumpkin
 	{
 		name = "Citrouille";
 		weight = 4;
-		image = "";
+		image = "alysia_items_virtual\data\pumpkin.paa";
 		price_sell = 90;
 		class food
 		{
@@ -681,9 +680,9 @@ class ALYSIA_ITEMS
 	};
 	class tissue
 	{
-		name = "Tissue neuf";
+		name = "Tissue";
 		weight = 2;
-		image = "";
+		image = "alysia_items_virtual\data\tissue.paa";
 		class market
 		{
 			max = 750;
@@ -1690,7 +1689,7 @@ class ALYSIA_ITEMS
 		name = "Sirène (Milice)";
 		weight = 5;
 		price_buy = 1000;
-		image = "";
+		image = "alysia_items_virtual\data\sirene.paa";
 	};
 	class horn_garde: horn_milice
 	{
@@ -1707,6 +1706,6 @@ class ALYSIA_ITEMS
 		name = "Passe-partout";
 		weight = 1;
 		price_buy = 2800;
-		image = "";
+		image = "alysia_items_virtual\data\passepartout.paa";
 	};
 };

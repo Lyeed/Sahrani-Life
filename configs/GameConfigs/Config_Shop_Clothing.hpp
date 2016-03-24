@@ -833,7 +833,7 @@ class ALYSIA_SHOPS_CLOTHING
 		{
 			"Respirateur_samu"
 		};
-		backpacks[] = 
+		backpacks[] =
 		{
 			"B_AssaultPack_blk",
 			"B_FieldPack_blk",
@@ -864,25 +864,10 @@ class ALYSIA_SHOPS_CLOTHING
 	{
 		name = "Réserve d'entreprises";
 		side = "CIV";
-		uniforms[] =
-		{
-			"U_C_WorkerCoveralls",
-			"Skyline_Uniforme_Depanneur_01_F",
-			"SDNS_depannage",
-			"U_C_Journalist",
-			"Skyline_Uniforme_Securite_01_F",
-			"Skyline_Uniforme_Securite_02_F",
-			"Skyline_Uniforme_Securite_03_F",
-			"TRYK_U_B_BLK3CD"
-		};
-		headgear[] =
-		{
-			"H_Cap_press",
-			"usm_helmet_safety",
-			"H_Cap_Securite_01"
-		};
-		goggles[] = {"TRYK_kio_balaclava_BLK"};
-		vests[] = {"usm_vest_safety"};
-		backpacks[] = {"Skyline_Sac_Depanneur_01_F"};
+		uniforms[] = {};
+		headgear[] = {};
+		goggles[] = {};
+		vests[] = {};
+		backpacks[] = {};
 	};
 };

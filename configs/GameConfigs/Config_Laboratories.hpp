@@ -41,7 +41,7 @@ class ALYSIA_LABORATORIES
 		object = "Land_DieselGroundPowerUnit_01_F";
 		process[] =
 		{
-			"bulletproofvest_criminal",
+			"vest_criminal_1",
 			"clothing_criminal_1",
 			"clothing_criminal_2",
 			"clothing_criminal_3",

@@ -72,6 +72,7 @@ class CfgFunctions
 			class border_south_speaker_destroy {};
 			class border_south_speaker_repair {};
 			class border_dog_get {};
+			class border_south_missile_light {};
 		};
 
 		class VirtualInventory

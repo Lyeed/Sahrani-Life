@@ -18,8 +18,8 @@ _bad = [_msg, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-é�
 if (!(_bad isEqualTo "")) exitWith {
 	["Vous utilisez un caractère interdit dans votre message<br/>Caractères autorisés :<br/>(ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789-éè)"] call AlysiaClient_fnc_error;
 };
-if (count(toArray(_msg)) > 160) exitWith {
-	["Votre message ne doit pas dépasser 160 caractères"] call AlysiaClient_fnc_error;
+if (count(toArray(_msg)) > 200) exitWith {
+	["Votre message ne doit pas dépasser 200 caractères"] call AlysiaClient_fnc_error;
 };
 if ((time - g_action_delay) < 2) exitWith {
 	["Veuillez ralentir dans vos actions"] call AlysiaClient_fnc_error;

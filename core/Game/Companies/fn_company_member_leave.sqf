@@ -25,7 +25,7 @@ if (_license != "") then {
 
 if (isNull _hired) then {
 	[format[
-		"Vous avez quitté l'entreprise : <t color='#74DF00'>%1</t>%2.",
+		"Vous avez quitté l'entreprise : <t color='#74DF00'>%1</t>%2",
 		(_info select 0),
 		if (_hasLicense) then {format["<br/>Votre licence %1 vous a été retirée.", ([_license] call AlysiaClient_fnc_licenseGetName)]} else {""}
 	]] call AlysiaClient_fnc_info;

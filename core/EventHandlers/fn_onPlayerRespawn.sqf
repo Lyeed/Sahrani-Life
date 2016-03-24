@@ -40,9 +40,7 @@ if (player getVariable ["arrested", false]) then {
 	private "_position";
 
 	{
-		if (isClass(missionConfigFile >> "ALYSIA_HOUSES" >> typeof(_x) >> "house")) exitWith {
-			_position = getPos _x;
-		};
+		if ((isClass(missionConfigFile >> "ALYSIA_HOUSES" >> typeof(_x) >> "house")) && (((_x getVariable ["house_owner", ["", ""]]) select 0) isEqualTo (getPlayerUID player))) exitWith {_position = getPos _x};
 	} forEach g_houses;
 	if (isNil "_position") then
 	{

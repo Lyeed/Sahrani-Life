@@ -242,7 +242,7 @@ class ALYSIA_FACTIONS
 		identity_item = "SkylineItems_PlaqueMilitaire";
 
 		/*** SALARY ***/
-		salary = 900;
+		salary = 800;
 		salary_tax = 0;
 		salary_apply_rank = 1;
 		salary_timer = 15;
@@ -253,7 +253,7 @@ class ALYSIA_FACTIONS
 		/*** PHONE ***/
 		phone_change_number_price = 5000;
 		phone_send_global_message = 1;
-		phone_send_global_message_rank = 4;
+		phone_send_global_message_rank = 5;
 		phone_send_to_faction_price = 0;
 
 		/*** COMPANIES ***/
@@ -273,11 +273,11 @@ class ALYSIA_FACTIONS
 
 		class launder_transfer
 		{
-			rank = 1;
+			rank = 2;
 		};
 		class bank_faction
 		{
-			rank = 5;
+			rank = 6;
 		};
 
 		/*** GEAR MISSION ***/
@@ -344,7 +344,7 @@ class ALYSIA_FACTIONS
 		{
 			class pilot
 			{
-				rank = 4;
+				rank = 5;
 				same_side_only = 1;
 			};
 		};
@@ -389,7 +389,7 @@ class ALYSIA_FACTIONS
 			};
 			class leader_board
 			{
-				access_rank = 4;
+				access_rank = 5;
 			};
 		};
 
@@ -416,21 +416,23 @@ class ALYSIA_FACTIONS
 			ranks_complet[] =
 			{
 				"Civil",
+				"Recrue",
 				"Garde",
 				"Caporal",
 				"Sergent",
 				"Lieutenant",
-				"Commandant"
+				"Capitaine"
 			};
 
 			ranks_short[] =
 			{
 				"Civ",
+				"Rec",
 				"Gar",
 				"Cap",
 				"Sgt",
 				"Ltn",
-				"Cdt"
+				"Cpt"
 			};
 		};
 	};

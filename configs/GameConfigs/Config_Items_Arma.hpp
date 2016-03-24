@@ -22,7 +22,7 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 550;
 		buy_condition_WEST = 4;
-		buy_condition_EAST = 2;
+		buy_condition_EAST = 3;
 	};
 	class Skyline_Hache_01
 	{
@@ -209,10 +209,6 @@ class ALYSIA_ITEMS_ARMA
 	class Binocular
 	{
 		buy_price = 50;
-	};
-	class bodyguard_uniform_new
-	{
-		buy_price = 3000;
 	};
 	class Casque_Moto
 	{
@@ -754,7 +750,7 @@ class ALYSIA_ITEMS_ARMA
 	class hlc_30Rnd_556x45_B_AUG
 	{
 		buy_price = 150;
-		buy_condition_EAST = 1;
+		buy_condition_EAST = 2;
 	};
 	class hlc_30Rnd_762x39_b_ak
 	{
@@ -778,7 +774,7 @@ class ALYSIA_ITEMS_ARMA
 	class hlc_rifle_auga3_b
 	{
 		buy_price = 5000;
-		buy_condition_EAST = 1;
+		buy_condition_EAST = 2;
 	};
 	class ItemCompass
 	{
@@ -1317,7 +1313,7 @@ class ALYSIA_ITEMS_ARMA
 	class RH_7Rnd_45cal_m1911
 	{
 		buy_price = 100;
-		buy_condition_EAST = 1;
+		buy_condition_EAST = 2;
 	};
 	class RH_cz75
 	{
@@ -1342,7 +1338,7 @@ class ALYSIA_ITEMS_ARMA
 	class RH_m1911
 	{
 		buy_price = 100;
-		buy_condition_EAST = 1;
+		buy_condition_EAST = 2;
 	};
 	class RH_p226
 	{
@@ -2790,7 +2786,7 @@ class ALYSIA_ITEMS_ARMA
     };
     class TRYK_kio_balaclava_BLK
     {
-    	name = "Masque Convoyeur";
+    	name = "Masque Convoyeur et securité";
     	buy_price = 90;
     	buy_license_CIV = "company_money_tranfer";
     };
