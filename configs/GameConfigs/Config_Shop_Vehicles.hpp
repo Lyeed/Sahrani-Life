@@ -83,7 +83,7 @@ class ALYSIA_SHOPS_VEHICLES
 	{
 		name = "Concessionaire SAMU";
 		side = "GUER";
-		stock[] = {"EC635_SAR", "dezkit_b206ems"};
+		stock[] = {"EC635_ADAC", "dezkit_b206ems"};
 	};
 	class GUER_vehicles_sea
 	{

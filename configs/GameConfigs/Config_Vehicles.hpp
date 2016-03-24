@@ -2928,7 +2928,7 @@ class ALYSIA_VEHICLES
 		realname = "Ford Explorer SAMU";
 	};
 
-	class EC635_SAR
+	class EC635_ADAC
 	{
 		buyPrice = 385000;
 		inventory = 70;
