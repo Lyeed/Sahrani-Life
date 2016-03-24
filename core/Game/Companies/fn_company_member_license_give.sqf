@@ -32,7 +32,7 @@ _action =
 	[
 		"Vous êtes sur le point de payer la licence : <t color='#FF4000'>%1</t>.<br/>Prix : <t color='#8cff9b'>%2</t>kn.<br/>Validez-vous ?", 
 		[_license] call AlysiaClient_fnc_licenseGetName,
-		[getNumber(missionConfigFile >> "ALYSIA_LICENSES" >> _license >> "factions" >> str(_target) >> "price")] call AlysiaClient_fnc_numberText
+		[getNumber(missionConfigFile >> "ALYSIA_LICENSES" >> _license >> "factions" >> str(side _target) >> "price")] call AlysiaClient_fnc_numberText
 	],
 	"Validation",
 	"Valider",

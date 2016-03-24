@@ -133,7 +133,7 @@ class ALYSIA_ITEMS
 	
 	class barriere
 	{
-		name = "Barrière";
+		name = "Barrière (fixe)";
 		weight = 6;
 		price_buy = 120;
 		image = "alysia_items_virtual\data\barriere.paa";
@@ -155,10 +155,10 @@ class ALYSIA_ITEMS
 	};
 	class bargate
 	{
-		name = "Barrière";
+		name = "Barrière (porte)";
 		weight = 11;
 		price_buy = 550;
-		image = "alysia_items_virtual\data\cone.paa";
+		image = "alysia_items_virtual\data\bargate.paa";
 		class use
 		{
 			action = "['bargate'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
@@ -286,7 +286,7 @@ class ALYSIA_ITEMS
 		license = "archeologie";
 		class market
 		{
-			max = 12032;
+			max = 9032;
 			min = 528;
 			affect[] = AFFECT_ILLEGAL;
 		};

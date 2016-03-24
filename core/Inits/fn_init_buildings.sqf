@@ -36,7 +36,33 @@ _cString =
 	_obj;
 };
 
-//Farming
+//Entrainement hopital Nord
+["xcam_Obstacle_Crawl_F","[13496.4375,10454.926758,0]",351.199,-100,1,0,[]] call _cString;
+["xcam_Obstacle_Crawl_F","[13487.849609,10463.392578,0]",301.199,-100,1,0,[]] call _cString;
+["xcam_Obstacle_Pass_F","[13494.482422,10459.0927734,-0.0841751]",122.235,-100,1,0,[]] call _cString;
+["xcam_Obstacle_Ramp_F","[13497.543945,10447.476563,-0.114478]",-189.848,-100,1,0,[]] call _cString;
+["xcam_Obstacle_RunAround_F","[13479.0693359,10482.0947266,0.18226]",-179.848,-100,1,0,[]] call _cString;
+["xcam_Obstacle_RunAround_F","[13483.558594,10491.69043,0.18226]",-144.747,-100,1,0,[]] call _cString;
+["xcam_prebehlavka","[13481.595703,10471.40625,-0.13468]",-205.416,-100,1,0,[]] call _cString;
+["xcam_Fort_EnvelopeBig","[13467.726563,10456,-0.0412464]",154.584,-100,1,0,[]] call _cString;
+["xcam_Fort_Barricade","[13482.139648,10427.413086,0.0345573]",155.783,-100,1,0,[]] call _cString;
+["xcam_Steel_Plate_L_F","[13485.107422,10429.65332,1.48191]",167.589,-100,1,0,[]] call _cString;
+["xcam_Steel_Plate_S_F","[13482.530273,10428.916992,0.927975]",167.589,-100,1,0,[]] call _cString;
+["xcam_Obstacle_RunAround_F","[13479.0693359,10482.0947266,0.182261]",180.152,-100,1,0,[]] call _cString;
+
+//Entrainement hopital Sud
+["xcam_Fort_Barricade","[12598.0625,7517.148438,-0.0151061]",162.664,-100,1,0,[]] call _cString;
+["xcam_Steel_Plate_F","[12601.600586,7517.378418,0.517993]",164.432,-100,1,0,[]] call _cString;
+["xcam_Steel_Plate_L_F","[12596.0292969,7516.413086,1.60578]",161.717,-100,1,0,[]] call _cString;
+["xcam_Obstacle_RunAround_F","[12647.00488281,7481.977539,-0.0488215]",66.7173,-100,1,0,[]] call _cString;
+["xcam_Obstacle_RunAround_F","[12633.374023,7475.324219,-0.0765993]",62.6138,-100,1,0,[]] call _cString;
+["xcam_ShootingPos_F","[12604.619141,7495.256836,0.0351673]",-13.3711,-100,1,0,[]] call _cString;
+["xcam_Obstacle_Ramp_F","[12640.233398,7478.758789,-0.111297]",61.6289,-100,1,0,[]] call _cString;
+["xcam_Obstacle_Pass_F","[12626.683594,7473.3125,-0.111297]",86.7552,-100,1,0,[]] call _cString;
+["xcam_Obstacle_Crawl_F","[12620.710938,7477.729492,-0.0254364]",326.452,-100,1,0,[]] call _cString;
+["xcam_Obstacle_Crawl_F","[12616.415039,7484.0410156,0.0722043]",-33.5478,-100,1,0,[]] call _cString;
+
+//Farming : Charbon
 ["xcam_Kopa_kameni","[15177.421875,12295.544922,0.128476]",0,-100,1,0,[]] call _cString;
 ["xcam_Kopa_kameni","[15196.380859,12291.505859,0.086388]",0,-100,1,0,[]] call _cString;
 ["xcam_Kopa_kameni","[15185.0908203,12302.414063,-0.0280901]",-40,-100,1,0,[]] call _cString;
@@ -55,11 +81,15 @@ _cString =
 ["xcam_Kopa_kameni2","[15188.730469,12291.12207,-0.507046]",-700,-100,1,0,[]] call _cString;
 ["xcam_Kopa_kameni2","[15186.556641,12283.834961,-0.507046]",-765,-100,1,0,[]] call _cString;
 ["xcam_Kopa_kameni2","[15178.914063,12280.616211,-0.373596]",-850,-100,1,0,[]] call _cString;
+
+//Farming : Fer
 ["xcam_R2_RockTower","[10064.0380859,13529.109375,-21.6966]",-850,-100,1,0,[]] call _cString;
 ["xcam_R2_RockTower","[10030.775391,13545.595703,-21.6966]",-740,-100,1,0,[]] call _cString;
 ["xcam_R2_RockTower","[10052.53125,13565.539063,-26.0359]",-835,-100,1,0,[]] call _cString;
 ["xcam_R2_Rock1","[10047.306641,13548.319336,-26.5047]",-915,-100,1,0,[]] call _cString;
 ["xcam_R2_RockWall","[10045.979492,13509.666016,-22.0897]",-1040,-100,1,0,[]] call _cString;
+
+//Farming : Platine
 ["xcam_Kamen1_piskovec2","[11048.49707,8089.0922852,-1.56559]",-1105,-100,1,0,[]] call _cString;
 ["xcam_Kamen1_piskovec2","[11040.956055,8096.027832,-1.56559]",-1165,-100,1,0,[]] call _cString;
 ["xcam_Kamen1_piskovec2","[11041.0126953,8084.0205078,-1.65229]",-1165,-100,1,0,[]] call _cString;
@@ -76,6 +106,8 @@ _cString =
 ["xcam_Kamen1_piskovec2","[11066.563477,8084.70459,-2.93508]",-1450,-100,1,0,[]] call _cString;
 ["xcam_Kamen1_piskovec2","[11059.736328,8075.759277,-2.98138]",-1385,-100,1,0,[]] call _cString;
 ["xcam_Kamen1_piskovec2","[11049.517578,8064.644531,-3.10427]",-1410,-100,1,0,[]] call _cString;
+
+//Farming : Pierre
 ["xcam_rockS_02","[13035.762695,7723.667969,-21.0962]",-1485,-100,1,0,[]] call _cString;
 ["xcam_rockS_02","[13009.651367,7737.991211,-10.6546]",-1520,-100,1,0,[]] call _cString;
 ["xcam_rockS_02","[13022.449219,7726.592285,-10.6546]",-1450,-100,1,0,[]] call _cString;
@@ -103,7 +135,7 @@ _cString =
 ["xcam_W_sharpStones_erosion","[14968.568359,7411.347656,0]",0,-100,0,0,[]] call _cString;
 ["xcam_W_sharpStones_erosion","[14957.985352,7410.351563,0]",0,-100,0,0,[]] call _cString;
 
-// Parlement
+//Parlement Nord
 ["xcam_podesta_10","[14263.605469,12439.649414,0.00856018]",0,-100,0,0,[]] call _cString;
 ["xcam_podesta_10","[14253.605469,12439.649414,0.00856018]",0,-100,0,0,[]] call _cString;
 ["xcam_podesta_10","[14253.605469,12429.649414,0.00856018]",0,-100,0,0,[]] call _cString;
@@ -537,7 +569,7 @@ _cString =
 ["Land_ecke_075_025_300_clean_cnc","[14246.294922,12448.401367,0]",90.379,-100,0,0,[]] call _cString;
 ["Land_ecke_075_025_300_clean_cnc","[14246.297852,12448.183594,0]",270.379,-100,0,0,[]] call _cString;
 
-// Bank South
+//Bank South
 ["Land_boden_250_250_025_clean_cnc","[10764.0869141,9323.0751953,0.803879]",341.62,-100,0,0,[]] call _cString;
 ["xcam_Concrete_SmallWall_8m_F","[10758.0605469,9318.302734,-0.133835]",341.62,-100,0,0,[]] call _cString;
 ["xcam_Concrete_SmallWall_8m_F","[10764.00585938,9320.295898,-0.00588989]",341.62,-100,0,0,[]] call _cString;
@@ -805,7 +837,7 @@ _cString =
 ["xcam_water_pipe_EP1","[7713.576172,15800.30957,0.29798]",627.803,-100,1,0,[]] call _cString;
 ["xcam_water_pipe_EP1","[7715.884277,15799.740234,0.297979]",267.803,-100,1,0,[]] call _cString;
 
-// Hopital Nord
+//Hopital Nord
 ["xcam_t_PopulusB2s_EP1","[13557.725586,10459.914063,0.511784]",178.043,-100,0,0,[]] call _cString;
 ["xcam_Bench_02_F","[13563.801758,10485.00585938,0]",260.858,-100,0,0,[]] call _cString;
 ["xcam_Bench_02_F","[13562.546875,10492.0664063,0.0345116]",260.164,-100,0,0,[]] call _cString;
@@ -1346,7 +1378,7 @@ _cString =
 ["Land_ecke_075_025_300_cnc","[13530.662109,10473.0185547,0.138046]",259.078,-100,0,0,[]] call _cString;
 ["Land_ecke_075_025_300_cnc","[13530.439453,10489.726563,0]",349.078,-100,0,0,[]] call _cString;
 
-// Commissaire
+//Commissaire
 ["xcam_vez","[12251.353516,7294.109863,4.37691]",-407.475,-100,1,0,[]] call _cString;
 ["xcam_vez","[12245.256836,7243.132813,4.37691]",-492.475,-100,1,0,[]] call _cString;
 ["Land_PowLines_Conc2L_EP1","[12249.960938,7286.372559,-1.5303]",179.053,-100,1,0,[]] call _cString;
@@ -1486,7 +1518,7 @@ _cString =
 ["xcam_SignM_WarningMilitaryArea_F","[12233.133789,7264.810547,-0.214646]",90,-100,0,0,[]] call _cString;
 ["xcam_SignM_WarningMilitaryArea_F","[12255.00878906,7297.719727,-0.214646]",182.146,-100,0,0,[]] call _cString;
 
-// Archéologie
+//Archéologie
 ["xcam_A_Mosque_small_2_dam_EP1","[10607.753906,7946.375977,1.61461]",0,-100,0,0,[]] call _cString;
 ["xcam_A_Mosque_big_wall_corner_EP1","[10619.420898,7953.761719,-0.972222]",0,-100,0,0,[]] call _cString;
 ["xcam_A_Mosque_big_wall_gate_dam_EP1","[10606.536133,7913.913574,-5.45926]",-141.288,-100,0,0,[]] call _cString;
@@ -1498,7 +1530,7 @@ _cString =
 ["xcam_Castle_01_wall_09_F","[7554.78125,14294.0810547,-0.807239]",-130.556,-100,0,0,[]] call _cString;
 ["xcam_Castle_01_tower_F","[7599.83252,14301.976563,-1.02755]",54.4443,-100,0,0,[]] call _cString;
 
-// PLACE NORD
+//PLACE NORD
 ["xcam_Tribune_F","[14185.703125,12522.542969,-0.559765]",270,-100,0,0,[]] call _cString;
 ["xcam_GarbageBarrel_01_F","[14189.262695,12517.291992,-0.0193596]",270,-100,0,0,[]] call _cString;
 ["xcam_podesta_10","[14193.424805,12522.269531,0]",270,-100,0,0,[]] call _cString;
@@ -1523,7 +1555,7 @@ _cString =
 ["Land_Lampa_sidl","[14219.450195,12506.512695,-1.79461]",450,-100,1,0,[]] call _cString;
 ["xcam_Bench_01_F","[14217.625,12520.802734,0.0420876]",90,-100,1,0,[]] call _cString;
 
-// BAR NORD
+//BAR NORD
 ["xcam_podesta_S10","[14115.912109,12500.0253906,0]",1.00179e-005,-100,0,0,[]] call _cString;
 ["xcam_podesta_S10","[14115.912109,12490.0253906,0]",360,-100,0,0,[]] call _cString;
 ["xcam_podesta_S10","[14115.912109,12480.0253906,0]",1.00179e-005,-100,0,0,[]] call _cString;
@@ -1723,7 +1755,7 @@ _cString =
 ["xcam_GarbageBin_01_F","[14108.975586,12517.202148,0]",271.54,-100,0,0,[]] call _cString;
 ["xcam_GarbageBin_01_F","[14071.701172,12503.96582,-0.0852966]",267.866,-100,0,0,[]] call _cString;
 
-// Parking NORD
+//Parking NORD
 ["xcam_podesta_10","[14300.447266,12536.12207,0]",90,-100,1,0,[]] call _cString;
 ["xcam_podesta_10","[14300.447266,12526.12207,0]",90,-100,0,0,[]] call _cString;
 ["xcam_podesta_10","[14300.447266,12516.12207,0]",90,-100,0,0,[]] call _cString;
@@ -1786,7 +1818,7 @@ _cString =
 ["xcam_lavicka_4bezroadwaye","[14246.3125,12527.78125,0]",-630,-100,0,0,[]] call _cString;
 ["xcam_lavicka_4bezroadwaye","[14246.3125,12524.96582,0]",-630,-100,0,0,[]] call _cString;
 
-// place & son parking
+//place & son parking
 ["Land_nav_pier_m_F","[10548.671875,9563.148438,-3.60858]",0,-100,0,0,[]] call _cString;
 ["Land_nav_pier_m_F","[10548.648438,9571.0322266,-3.60858]",0,-100,0,0,[]] call _cString;
 ["Land_nav_pier_m_F","[10548.672852,9578.931641,-3.60858]",0,-100,0,0,[]] call _cString;
@@ -2352,7 +2384,7 @@ _cString =
 ["xcam_HBarrier5","[10565.81543,9510.583984,-0.0513468]",-8.39646,-100,0,0,[]] call _cString;
 ["xcam_sign_stopProhibited_new","[10508.320313,9507.685547,-0.765993]",168.964,-100,0,0,[]] call _cString;
 ["xcam_sign_stopProhibited_new","[10502.0283203,9511.648438,-0.765993]",258.964,-100,0,0,[]] call _cString;
-// Bureau place parti central
+//Bureau place parti central
 ["xcam_WindowHall","[10511.783203,9611.709961,4.27887]",245,-100,0,0,[]] call _cString;
 ["xcam_flower_02","[10511.881836,9616.982422,3.3028]",-115,-100,0,0,[]] call _cString;
 ["xcam_ChairWood_F","[10512.509766,9615.873047,3.32886]",65,-100,0,0,[]] call _cString;
@@ -2441,7 +2473,7 @@ _cString =
 ["Land_PowLines_ConcL","[10575.59668,8992.710938,0.414382]",-2239.62,-100,1,0,[]] call _cString;
 ["Land_PowLines_ConcL","[10432.131836,8994.537109,0.414382]",-2094.62,-100,1,0,[]] call _cString;
 
-// Hopital Nord
+//Hopital Nord
 ["xcam_Concrete_SmallWall_8m_F","[13737.482422,10567.31543,-0.502525]",255,-100,0,0,[]] call _cString;
 ["xcam_Concrete_SmallWall_8m_F","[13738.660156,10562.920898,-0.505892]",255,-100,0,0,[]] call _cString;
 ["xcam_Concrete_SmallWall_8m_F","[13738.836914,10562.953125,-0.590067]",255,-100,0,0,[]] call _cString;
@@ -2480,7 +2512,7 @@ _signBoard_south_3 setObjectTexture [0, "lyeed_IMG\data\ads\propagande_sud_2.jpg
 _signBoard_south_4 setObjectTexture [0, "lyeed_IMG\data\ads\recrut_south.jpg"];
 _signBoard_south_5 setObjectTexture [0, "lyeed_IMG\data\ads\alysia_1.jpg"];
 
-// Flags
+//Flags
 _flag_north_1 = ["FlagPole_F","[13441.481445,8843.0429688,0]",0,-100,1,0,[]] call _cString;
 _flag_north_2 = ["FlagPole_F","[13466.235352,8842.84375,0]",0,-100,1,0,[]] call _cString;
 
@@ -2495,7 +2527,7 @@ _flag_south_3 = ["FlagPole_F","[10542.767578,9521.302734,0]",-460.076,-100,1,0,[
 	_x setFlagTexture "lyeed_IMG\data\faction\EAST_flag.jpg";
 } forEach ([_flag_south_1, _flag_south_2, _flag_south_3]);
 
-// ATM - STATIONS markers
+//ATM - STATIONS markers
 {
 	if (isClass(missionConfigFile >> "ALYSIA_ATM" >> typeOf(_x))) then
 	{

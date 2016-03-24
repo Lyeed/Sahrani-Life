@@ -17,7 +17,6 @@ class CfgFunctions
 			class onPlayerRespawn {};
 			class onPlayerSpeak {};
 			class onPlayerSpeakRadio {};
-			class onPlayerFire {};
 		};
 	};
 
@@ -407,6 +406,7 @@ class CfgFunctions
 			class plantGrow {};
 			class sheepStart {};
 			class sheepProcess {};
+			class farm_object {};
 		};
 
 		class Licenses

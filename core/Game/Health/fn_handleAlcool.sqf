@@ -36,7 +36,7 @@ if (g_alcool isEqualTo 0) then
 			{
 				if (g_alcool > 6) then
 				{
-					if ((animationState player) != "incapacitated") then {player PlayMove "incapacitatedState"};
+					if ((animationState player) != "incapacitated") then {player PlayMove "incapacitated"};
 					if (random(100) <= 70) then {[player, "vomit", 20] call CBA_fnc_globalSay3d};
 				} else {
 					if ((animationState player) isEqualTo "incapacitated") then {player playMoveNow "amovppnemstpsraswrfldnon"};

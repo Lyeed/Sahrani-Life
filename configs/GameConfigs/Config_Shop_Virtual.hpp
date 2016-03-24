@@ -133,8 +133,7 @@ class ALYSIA_SHOPS_VIRTUAL
 				"sifflet",
 				"storage_stock",
 				"alcool_test",
-				"horn_milice",
-				"passepartout"
+				"horn_milice"
 			},{
 
 			}
@@ -157,8 +156,7 @@ class ALYSIA_SHOPS_VIRTUAL
 				"bargate",
 				"spikeStrip",
 				"storage_stock",
-				"horn_garde",
-				"passepartout"
+				"horn_garde"
 			},{
 
 			}

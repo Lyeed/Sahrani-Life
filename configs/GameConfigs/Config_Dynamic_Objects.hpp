@@ -34,13 +34,13 @@ class ALYSIA_DYN_OBJECTS
 	class xcam_Tribune_F
 	{
 		item = "tribune_wood";
-		attachTo[] = {0, 4.5, 0};
+		attachTo[] = {0, 5, 2};
 		direction = 90;
 	};
 	class Land_BarGate_F
 	{
 		item = "bargate";
-		attachTo[] = {0, 3.5, 0};
+		attachTo[] = {0, 5.5, 4};
 		direction = 90;
 	};
 };

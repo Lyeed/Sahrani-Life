@@ -75,7 +75,7 @@ while {(g_action_inUse && !g_interrupted)} do
 			((speed player) > 1) ||
 			(player getVariable ["restrained", false]) ||
 			(player getVariable ["surrender", false]) ||
-			((_tool != "") && (primaryWeapon player != _tool))
+			((_tool != "") && ((secondaryWeapon player) != _tool))
 		) exitWith {titleText["* Récolte annulée *", "PLAIN DOWN"]};
 
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";

@@ -220,7 +220,7 @@ if ((vehicle player) isEqualTo player) then
 
 				if (isClass(missionConfigFile >> "ALYSIA_CHAIRS" >> _type)) then
 				{
-					[_target] call AlysiaClient_fnc_sitDown;
+					[_target] call AlysiaClient_fnc_interactions_player_to_chair;
 					true breakOut "main";
 				};
 
@@ -299,6 +299,14 @@ if ((vehicle player) isEqualTo player) then
 		{
 			[_target] call AlysiaClient_fnc_house_menu_handler;
 			true breakOut "main";
+		};
+
+		if ((player distance _target) < ((((boundingBox _target) select 1) select 0)) + 1.2) then
+		{
+			if (isClass(missionConfigFile >> "ALYSIA_FARMING_OBJECT" >> _type)) then
+			{
+				[_target] spawn AlysiaClient_fnc_farm_object;
+			};
 		};
 	};
 } else {
