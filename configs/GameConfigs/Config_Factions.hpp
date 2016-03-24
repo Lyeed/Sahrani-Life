@@ -347,6 +347,11 @@ class ALYSIA_FACTIONS
 				rank = 5;
 				same_side_only = 1;
 			};
+			class garde_inspector
+			{
+				rank = 5;
+				same_side_only = 1;
+			};
 		};
 
 		/*** MAP ***/

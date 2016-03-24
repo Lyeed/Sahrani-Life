@@ -71,8 +71,6 @@ class CfgRemoteExec
 		class AlysiaServer_fnc_laboratory_destroy {allowTargets = SERVER;};
 		//- C4
 		class AlysiaServer_fnc_c4_bomb {allowTargets = SERVER;};
-		//- Missile
-		class AlysiaServer_fnc_border_south_missile_launch {allowTargets = SERVER;};
 		
 		/*
 		**		CLIENT FUNCTIONS
@@ -103,7 +101,7 @@ class CfgRemoteExec
 		class AlysiaClient_fnc_restrain {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_sheepProcess {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_lightOn {allowTargets = CLIENT;};
-		class AlysiaClient_fnc_border_south_missile_light {allowTargets = CLIENT;};
+		class AlysiaClient_fnc_border_south_missile_effects {allowTargets = CLIENT;};
 		
 		//- AH
 		class AlysiaClient_fnc_auctionHouse_receive_money {allowTargets = CLIENT;};

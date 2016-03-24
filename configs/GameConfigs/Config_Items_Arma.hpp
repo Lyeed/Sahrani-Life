@@ -667,6 +667,7 @@ class ALYSIA_ITEMS_ARMA
 	class H_Hat_brown
 	{
 		buy_price = 15;
+		buy_license_EAST = "garde_inspector";
 	};
 	class H_Hat_camo
 	{
@@ -1132,6 +1133,7 @@ class ALYSIA_ITEMS_ARMA
 	class rds_uniform_Profiteer3
 	{
 		buy_price = 195;
+		buy_license_EAST = "garde_inspector";
 	};
 	class rds_uniform_Profiteer4
 	{

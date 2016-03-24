@@ -299,6 +299,15 @@ class ALYSIA_LICENSES
 		};
 	};
 	
+	class garde_inspector
+	{
+		name = "Inspecteur de la Garde";
+		class factions
+		{
+			class EAST {};
+		};
+	};
+
 	class central_com
 	{
 		name = "Commissaire au Parti Central";

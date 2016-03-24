@@ -568,6 +568,7 @@ class ALYSIA_SHOPS_CLOTHING
 			"tenue_de_garde_sergent",
 			"tenue_de_garde_caporal",
 			"tenue_de_garde_basique",
+			"rds_uniform_Profiteer3",
 			"U_B_Wetsuit"
 		};
 		headgear[] =
@@ -585,7 +586,8 @@ class ALYSIA_SHOPS_CLOTHING
 			"casquette_garde_tank",
 			"bonnet_garde_tank",
 			"casquette_garde_officier_tank",
-			"casquette_garde_officier"
+			"casquette_garde_officier",
+			"H_Hat_brown"
 		};
 		goggles[] =
 		{
@@ -635,34 +637,6 @@ class ALYSIA_SHOPS_CLOTHING
 			"TRYK_B_Carryall_blk",
 			"radio_longue_garde"
 		};
-	};
-
-	class civ_luxe
-	{
-		name = "Friperie de luxe";
-		side = "CIV";
-		uniforms[] =
-		{
-			"rds_uniform_Functionary1",
-			"rds_uniform_Functionary2",
-			"bodyguard_uniform_new",
-			"druglord_uniform_new",
-			"special_agent_uniform_new",
-			"Robber_uniform_new",
-			"Killer_uniform_new",
-			"mafiaboss_uniform_new",
-			"president_uniform_new",
-			"agent_uniform_new",
-			"vip1_uniform_new",
-			"vip2_uniform_new",
-			"vip3_uniform_new",
-			"TRYK_SUITS_BLK_F",
-			"TRYK_SUITS_BR_F"
-		};
-		headgear[] = {};
-		goggles[] = {};
-		vests[] = {};
-		backpacks[] = {};
 	};
 
 	class beard
