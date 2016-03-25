@@ -24,6 +24,11 @@ if ((vehicle player) isEqualTo player) then
 		[true] spawn AlysiaClient_fnc_action_body_drop;
 		true breakOut "main";
 	};
+	if (!(isNull (player getVariable ["escorted", objNull]))) then
+	{
+		[player] spawn AlysiaClient_fnc_stopescort;
+		true breakOut "main";
+	};
 
 	_target = cursorObject;
 	if (isNull _target) then 

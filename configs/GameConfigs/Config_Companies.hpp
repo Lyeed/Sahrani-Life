@@ -195,7 +195,7 @@ class ALYSIA_COMPANIES
 		class foundry
 		{
 			name = "Fonderie";
-			building = "xcam_Ind_Pec_01";
+			building = "Land_Ind_Pec_01";
 			license = "company_foundry";
 			image = "lyeed_IMG\data\companies\types\foundry.paa";
 			process[] = {"steel", "soufre"};

@@ -6,30 +6,31 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if (player getVariable ["surrender", false]) then
+if ((player getVariable ["surrender", false]) || ((animationState player) isEqualTo "incapacitated")) then
 {
-	[player, "handcuffs", 10] call CBA_fnc_globalSay3d;
-
-	player setVariable ["restrained", true, true];
-	player setVariable ["surrender", false, true];
-
-	while {(player getVariable ["restrained", false])} do
+	if (!(player getVariable ["restrained", false])) then
 	{
-		if ((vehicle player) isEqualTo player) then {
-			if ((animationState player) != "amovpercmstpsnonwnondnon_ease") then {
-				player playmove "amovpercmstpsnonwnondnon_ease";
-			};
-		} else {
-			if (((driver (vehicle player)) isEqualTo player)) then {
-				player action ["eject", (vehicle player)];
-			};
-		};
-
-		if (cameraView isEqualTo "EXTERNAL") then
+		[player, "handcuffs", 10] call CBA_fnc_globalSay3d;
+		player setVariable ["restrained", true, true];
+		if (player getVariable ["surrender", false]) then {player setVariable ["surrender", false, true]};
+		while {(player getVariable ["restrained", false])} do
 		{
-			player switchCamera "Internal";
+			if ((vehicle player) isEqualTo player) then {
+				if ((animationState player) != "amovpercmstpsnonwnondnon_ease") then {
+					player playmove "amovpercmstpsnonwnondnon_ease";
+				};
+			} else {
+				if (((driver (vehicle player)) isEqualTo player)) then {
+					player action ["eject", (vehicle player)];
+				};
+			};
+
+			if (cameraView isEqualTo "EXTERNAL") then
+			{
+				player switchCamera "Internal";
+			};
 		};
+		
+		player switchmove "AMOVPERCMSTPSNONWNONDNON_EASEOUT";
 	};
-	
-	player switchmove "AMOVPERCMSTPSNONWNONDNON_EASEOUT";
 };

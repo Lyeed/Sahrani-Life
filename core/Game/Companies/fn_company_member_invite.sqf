@@ -26,7 +26,8 @@ if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(side _who) >> "compa
 _item = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(side _who) >> "identity_item");
 if ((_item != "") && !(_item in (magazines _who))) exitWith {
 	[format[
-		"La personne que vous essayez de recruter dans l'entreprise <t color='#74DF00'>%1</t> n'a pas l'objet nécessaire pour prouver son identité (%1).",
+		"La personne que vous essayez de recruter dans l'entreprise <t color='#74DF00'>%1</t> n'a pas l'objet nécessaire pour prouver son identité (%2).",
+		(_info select 0),
 		(([_item] call AlysiaClient_fnc_fetchCfgDetails) select 1)
 	]] call AlysiaClient_fnc_error;
 };

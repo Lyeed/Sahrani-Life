@@ -394,7 +394,7 @@ class ALYSIA_PROCESS
 		sound = "smelting";
 		require[] = {{"ironp",1},{"coal",1}};
 		receive[] = {{{"steel",1}},{},0};
-		time_per_item = 12;
+		time_per_item = 8;
 		time_default = 8;
 		class factions
 		{

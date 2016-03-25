@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_text", "_time", "_ui", "_progress", "_ctrl_text", "_cP", "_inc", "_ret_status", "_curVeh", "_ret_reason", "_anim", "_sound"];
+private["_text", "_time", "_ui", "_progress", "_ctrl_text", "_cP", "_inc", "_ret_status", "_curVeh", "_ret_reason", "_anim", "_sound", "_distanceMax"];
 _text = [_this, 0, "", [""]] call BIS_fnc_param;
 _time = [_this, 1, 0, [0]] call BIS_fnc_param;
 _object = [_this, 2, objNull, [objNull]] call BIS_fnc_param;
@@ -16,7 +16,7 @@ if (g_action_inUse) exitWith {false};
 
 disableSerialization;
 5 cutRsc ["RscTitleProgress","PLAIN"];
-_ui = uiNameSpace getVariable["RscTitleProgress", displayNull];
+_ui = uiNameSpace getVariable ["RscTitleProgress", displayNull];
 if (isNull _ui) exitWith {false};
 
 g_interrupted = false;
@@ -37,6 +37,12 @@ _ctrl_text ctrlSetText _text;
 
 if (_sound != "") then {
 	playSound _sound;
+};
+
+if (isNull _object) then {
+	_distanceMax = 0;
+} else {
+	_distanceMax = (player distance _object) + 1;
 };
 
 while {g_action_inUse} do
@@ -64,7 +70,7 @@ while {g_action_inUse} do
 	if (g_interrupted) exitWith {_ret_reason = "Vous avez interrompu l'action"};
 	if (player getVariable ["restrained", false]) exitWith {_ret_reason = "Vous êtes menotté"};
 	if (player getVariable ["surrender", false]) exitWith {_ret_reason = "Vous avez les mains sur la tête"};
-	if (!(isNull _object) && ((player distance _object) > 10)) exitWith {_ret_reason = "Vous êtes trop loin"};
+	if (!(isNull _object) && {((player distance _object) > _distanceMax)}) exitWith {_ret_reason = "Vous êtes trop loin"};
 	if (_curVeh != (vehicle player)) exitWith {_ret_reason = "Vous êtes entré ou sorti de votre véhicule"};
 };
 
