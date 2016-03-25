@@ -237,42 +237,42 @@ class ALYSIA_ITEMS_ARMA
 	class casque_garde_camo
 	{
 		buy_price = 250;
-		buy_condition_EAST = 1;
+		buy_condition_EAST = 2;
 	};
 	class casquette_Basique
 	{
 		buy_price = 75;
-		buy_condition_EAST = 1;
+		buy_condition_EAST = 2;
 	};
 	class casquette_Caporal
 	{
 		buy_price = 75;
-		buy_condition_EAST = 2;
+		buy_condition_EAST = 3;
 	};
 	class casquette_garde_officier_tank
 	{
 		buy_price = 95;
-		buy_condition_EAST = 4;
+		buy_condition_EAST = 5;
 	};
 	class casquette_garde_officier
 	{
 		buy_price = 95;
-		buy_condition_EAST = 4;
+		buy_condition_EAST = 5;
 	};
 	class casquette_Commandant
 	{
 		buy_price = 75;
-		buy_condition_EAST = 5;
+		buy_condition_EAST = 6;
 	};
 	class casquette_Lieutenant
 	{
 		buy_price = 75;
-		buy_condition_EAST = 4;
+		buy_condition_EAST = 5;
 	};
 	class casquette_Sergent
 	{
 		buy_price = 75;
-		buy_condition_EAST = 3;
+		buy_condition_EAST = 4;
 	};
 	class Chemlight_blue
 	{
@@ -2517,7 +2517,7 @@ class ALYSIA_ITEMS_ARMA
 	class casque_garde_special
 	{
 		buy_price = 260;
-		buy_condition_EAST = 1;
+		buy_condition_EAST = 2;
 	};
 	class DemoCharge_Remote_Mag {};
 	class TRYK_V_Sheriff_BA_TB
@@ -2570,19 +2570,19 @@ class ALYSIA_ITEMS_ARMA
 	class tenue_de_garde_commandant
 	{
 		buy_price = 300;
-		buy_condition_EAST = 5;
+		buy_condition_EAST = 6;
 	};
 	class tenue_de_garde_lieutenant: tenue_de_garde_commandant
 	{
-		buy_condition_EAST = 4;
+		buy_condition_EAST = 5;
 	};
 	class tenue_de_garde_sergent: tenue_de_garde_commandant
 	{
-		buy_condition_EAST = 3;
+		buy_condition_EAST = 4;
 	};
 	class tenue_de_garde_caporal: tenue_de_garde_commandant
 	{
-		buy_condition_EAST = 2;
+		buy_condition_EAST = 3;
 	};
 	class tenue_de_garde_basique: tenue_de_garde_commandant
 	{

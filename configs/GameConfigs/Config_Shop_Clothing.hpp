@@ -573,7 +573,6 @@ class ALYSIA_SHOPS_CLOTHING
 		};
 		headgear[] =
 		{
-			"rds_Woodlander_cap3",
 			"casquette_Commandant",
 			"casquette_Lieutenant",
 			"casquette_Sergent",

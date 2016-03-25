@@ -37,7 +37,7 @@ class ALYSIA_ITEMS
 		class market
 		{
 			max = 4900;
-			min = 2100;
+			min = 1100;
 			affect[] = AFFECT_MINERAL;
 		};
 	};
