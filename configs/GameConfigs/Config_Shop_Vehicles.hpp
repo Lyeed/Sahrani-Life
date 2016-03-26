@@ -73,6 +73,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"Mrshounka_corbillard_c",
 			"Jonzie_Ambulance",
 			"DAR_TahoeEMS",
+			"Skyline_VW_TouaregR50_Samu_01_F",
 			"DAR_ExplorerMedic",
 			"Fett_zamak_repair_samu",
 			"Fett_zamak_covered_samu",
