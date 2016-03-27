@@ -617,14 +617,10 @@ class ALYSIA_SHOPS_CLOTHING
 			"EWK_Cig3",
 			"EWK_Cig4",
 			"EWK_Cig6",
-			"EWK_Cigar1",
-			"G_B_Diving"
+			"EWK_Cigar1"
 		};
 		vests[] =
 		{
-			"TRYK_V_Sheriff_BA_TB",
-			"police_belt_pistol",
-			"Garde_Veste",
 			"Garde_VesteCargo",
 			"gilet_garde_1",
 			"gilet_garde_2"

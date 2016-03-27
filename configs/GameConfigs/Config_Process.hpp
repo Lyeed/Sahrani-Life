@@ -948,6 +948,28 @@ class ALYSIA_PROCESS
 		};
 	};
 
+	class backpack_radio_1
+	{
+		name = "Fabrication de radio (1)";
+		sound = "smelting";
+		require[] = {{"steel",5},{"glass", 4},{"ironp",2},{"tissue",9}};
+		receive[] = {{},{"tf_rt1523g_bwmod"},0};
+		time_per_item = 30;
+		time_default = 5;
+		class target {};
+		class factions
+		{
+			class CIV {};
+		};
+	};
+	class backpack_radio_2: backpack_radio_1
+	{
+		name = "Fabrication de radio (2)";
+		receive[] = {{},{"tf_rt1523g"},0};
+		class target {};
+		class factions: factions {};
+	};
+
 	class googles_NVG
 	{
 		name = "Fabrication de vision nocturne";
@@ -967,7 +989,7 @@ class ALYSIA_PROCESS
 	{
 		name = "Confection de cagoule (otage)";
 		sound = "smelting";
-		require[] = {{"cottonp",5}};
+		require[] = {{"tissue",5}};
 		receive[] = {{},{"mgsr_headbag"},0};
 		time_per_item = 10;
 		time_default = 5;
@@ -981,7 +1003,7 @@ class ALYSIA_PROCESS
 	{
 		name = "Confection de bâillon (otage)";
 		sound = "smelting";
-		require[] = {{"cottonp",4}};
+		require[] = {{"tissue",4}};
 		receive[] = {{},{"G_Bandanna_blk"},0};
 		time_per_item = 8;
 		time_default = 4;
@@ -1404,6 +1426,44 @@ class ALYSIA_PROCESS
 		require[] = {{"canon",1},{"poignee",1},{"detente",1},{"marteau",1},{"barillet",1},{"ironp",2},{"goldbar",1}};
 		receive[] = {{},{"RH_ttracker_g"},0};
 		time_per_item = 50;
+		class target {};
+		class factions: factions {};
+	};
+
+	class board_1: weapon_ak_1
+	{
+		name = "Pancarte : Vive Brajva";
+		require[] = {{"woodp",5}};
+		receive[] = {{},{"Skyline_Pancarte_brajva"},0};
+		time_per_item = 5;
+		class target {};
+		class factions: factions {};
+	};
+	class board_2: board_1
+	{
+		name = "Pancarte : Clochard";
+		receive[] = {{},{"Skyline_Pancarte_clochard"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class board_3: board_1
+	{
+		name = "Pancarte : Vive la Garde";
+		receive[] = {{},{"Skyline_Pancarte_garde"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class board_4: board_1
+	{
+		name = "Pancarte : Marijuana";
+		receive[] = {{},{"Skyline_Pancarte_marijuana"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class board_5: board_1
+	{
+		name = "Pancarte : Vive Novak";
+		receive[] = {{},{"Skyline_Pancarte_novak"},0};
 		class target {};
 		class factions: factions {};
 	};

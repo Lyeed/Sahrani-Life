@@ -2511,16 +2511,6 @@ class ALYSIA_ITEMS_ARMA
 		buy_condition_EAST = 2;
 	};
 	class DemoCharge_Remote_Mag {};
-	class TRYK_V_Sheriff_BA_TB
-	{
-		buy_price = 2000;
-		buy_condition_EAST = 1;
-	};
-	class police_belt_pistol
-	{
-		buy_price = 500;
-		buy_condition_EAST = 1;
-	};
 	class TRYK_SPgear_PHC1_NV
 	{
 		buy_price = 200;
@@ -2538,11 +2528,6 @@ class ALYSIA_ITEMS_ARMA
 	};
 
 	class gilet_garde_2
-	{
-		buy_price = 2000;
-		buy_condition_EAST = 1;
-	};
-	class Garde_Veste
 	{
 		buy_price = 2000;
 		buy_condition_EAST = 1;

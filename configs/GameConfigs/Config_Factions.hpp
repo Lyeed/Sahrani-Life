@@ -77,7 +77,6 @@ class ALYSIA_FACTIONS
 						"hlc_rifle_rpk74n",
 						"hlc_rifle_RPK12",
 						"RH_g19",
-						"Fett_SDAR",
 						"RH_Deagle",
 						"srifle_EBR_F"
 					}
@@ -91,8 +90,8 @@ class ALYSIA_FACTIONS
 						"hlc_30Rnd_762x39_b_ak",
 						"hlc_75Rnd_762x39_m_rpk",
 						"hlc_45Rnd_545x39_t_rpk",
+						"hlc_45Rnd_762x39_m_rpk",
 						"RH_17Rnd_9x19_g17",
-						"Fett_20Rnd_556x45_UW_mag",
 						"RH_7Rnd_50_AE",
 						"20Rnd_762x51_Mag",
 						"Bank_DefuseKit"
@@ -294,20 +293,15 @@ class ALYSIA_FACTIONS
 			{
 				{"Weapons",
 					{
-						"hlc_rifle_M14_Bipod",
-						"hlc_rifle_M14_Bipod",
-						"hlc_rifle_m14dmr",
 						"hlc_rifle_m14sopmod",
 						"Trixie_Enfield_Rail",
 						"hlc_rifle_aughbar_B",
-						"Fett_SDAR",
 						"hlc_rifle_M14"
 					}
 				},
 				{"Magazines",
 					{
 						"Trixie_Enfield_Mag",
-						"Fett_20Rnd_556x45_UW_mag",
 						"hlc_20Rnd_762x51_B_M14",
 						"Bank_DefuseKit"
 					}

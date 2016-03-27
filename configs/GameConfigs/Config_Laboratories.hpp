@@ -41,7 +41,12 @@ class ALYSIA_LABORATORIES
 			"magazine_tec",
 			"weapon_tracker",
 			"weapon_tracker_gold",
-			"magazine_tracker"
+			"magazine_tracker",
+			"board_1",
+			"board_2",
+			"board_3",
+			"board_4",
+			"board_5"
 		};
 	};
 	class lab_clothing
@@ -65,7 +70,9 @@ class ALYSIA_LABORATORIES
 			"goggles_criminal_3",
 			"headgear_mask",
 			"google_mask",
-			"googles_NVG"
+			"googles_NVG",
+			"backpack_radio_1",
+			"backpack_radio_2"
 		};
 	};
 	class lab_cigare
