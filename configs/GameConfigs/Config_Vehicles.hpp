@@ -728,7 +728,6 @@ class ALYSIA_VEHICLES
 			"Skyline_GMC_Vandura_17_F"
 		};
 	};
-	class ADM_GMC_Vandura_red: Skyline_GMC_Vandura {};
 	class Skyline_GMC_Vandura_01_F: Skyline_GMC_Vandura {};
 	class Skyline_GMC_Vandura_02_F: Skyline_GMC_Vandura {};
 	class Skyline_GMC_Vandura_03_F: Skyline_GMC_Vandura {};
@@ -741,6 +740,11 @@ class ALYSIA_VEHICLES
 	class Skyline_GMC_Vandura_10_F: Skyline_GMC_Vandura {};
 	class Skyline_GMC_Vandura_11_F: Skyline_GMC_Vandura {};
 	class Skyline_GMC_Vandura_12_F: Skyline_GMC_Vandura {};
+	class Skyline_GMC_Vandura_13_F: Skyline_GMC_Vandura {};
+	class Skyline_GMC_Vandura_14_F: Skyline_GMC_Vandura {};
+	class Skyline_GMC_Vandura_15_F: Skyline_GMC_Vandura {};
+	class Skyline_GMC_Vandura_16_F: Skyline_GMC_Vandura {};
+	class Skyline_GMC_Vandura_17_F: Skyline_GMC_Vandura {};
 
 	class Mrshounka_golfvi_civ
 	{
