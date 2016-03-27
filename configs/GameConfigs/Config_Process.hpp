@@ -843,7 +843,7 @@ class ALYSIA_PROCESS
 	{
 		name = "Confection de tenue criminelle 1";
 		sound = "smelting";
-		require[] = {{"cottonp",10}};
+		require[] = {{"tissue",5}};
 		receive[] = {{},{"TRYK_ZARATAKI"},0};
 		time_per_item = 20;
 		time_default = 20;
