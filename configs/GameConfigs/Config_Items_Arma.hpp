@@ -757,21 +757,12 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class hlc_rifle_ak74
+	class hlc_rifle_aku12
 	{
 		buy_price = 5000;
 		buy_condition_WEST = 2;
 	};
-	class hlc_rifle_ak74_dirty
-	{
-		buy_price = 4300;
-		buy_condition_WEST = 2;
-	};
-	class hlc_rifle_ak74_dirty2
-	{
-		buy_price = 4300;
-		buy_condition_WEST = 2;
-	};
+	class hlc_rifle_ak12: hlc_rifle_aku12 {};
 	class hlc_rifle_auga3_b
 	{
 		buy_price = 5000;
@@ -2748,7 +2739,7 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Bank_Bomb
 	{
-		buy_price = 40000;
+		buy_price = 30000;
 	};
 	class tf_anprc152
 	{

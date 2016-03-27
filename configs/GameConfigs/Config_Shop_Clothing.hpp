@@ -717,7 +717,8 @@ class ALYSIA_SHOPS_CLOTHING
 			"Masque_Wolfv2",
 			"mgsr_eyepatch" 
 		};
-		goggles[] = {
+		goggles[] =
+		{
 			"Skyline_Skyrim",
 			"Skyline_Anonymous",
 			"Skyline_NioshFace",
@@ -726,23 +727,9 @@ class ALYSIA_SHOPS_CLOTHING
 			"Skyline_Hoxton",
 			"Skyline_Wolf",
 			"Masque_Solitaire"
-			};
+		};
 		vests[] = {};
 		backpacks[] = {};
-	};
-
-	class civ_para
-	{
-		name = "Vendeur de parachute";
-		side = "CIV";
-		uniforms[] = {};
-		headgear[] = {};
-		goggles[] = {};
-		vests[] = {};
-		backpacks[] =
-		{
-			"B_Parachute"
-		};
 	};
 
 	class GUER_clothing
@@ -827,17 +814,6 @@ class ALYSIA_SHOPS_CLOTHING
 		name = "Friperie prisonnier";
 		side = "CIV";
 		uniforms[] = {"U_C_Prisonnier_01"};
-		headgear[] = {};
-		goggles[] = {};
-		vests[] = {};
-		backpacks[] = {};
-	};
-
-	class companies
-	{
-		name = "Réserve d'entreprises";
-		side = "CIV";
-		uniforms[] = {};
 		headgear[] = {};
 		goggles[] = {};
 		vests[] = {};

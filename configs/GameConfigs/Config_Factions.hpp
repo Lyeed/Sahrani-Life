@@ -450,7 +450,7 @@ class ALYSIA_FACTIONS
 		identity_item = "SkylineItems_Passeport";
 
 		/*** SALARY ***/
-		salary = 600;
+		salary = 700;
 		salary_tax = 0.05;
 		salary_apply_rank = 0;
 		salary_timer = 15;
@@ -503,8 +503,8 @@ class ALYSIA_FACTIONS
 		/*** HOUSING ***/
 		house_search = 0;
 		house_max = 2;
-		house_tax_per_house_per_salary = 180;
-		house_tax_percentage_buyPrice_per_house = 0.003;
+		house_tax_per_house_per_salary = 150;
+		house_tax_percentage_buyPrice_per_house = 0.002;
 
 		/*** HEAL ***/
 		price_heal_hopital = 120;

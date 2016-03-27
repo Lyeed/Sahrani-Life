@@ -13,6 +13,7 @@ class ALYSIA_ATM
 		launder_transfer = 0;
 		company = 0;
 		save = 1;
+		tablet = 1;
 		class marker
 		{
 		 	ShapeLocal = "ICON";
@@ -39,5 +40,6 @@ class ALYSIA_ATM
 		launder_transfer = 1;
 		company = 1;
 		save = 0;
+		tablet = 0;
 	};
 };

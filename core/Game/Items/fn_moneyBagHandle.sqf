@@ -15,7 +15,7 @@ _atms = [];
 
 {
 	_atms pushBack configName(_x);
-} forEach ("getNumber(_x >> 'company_money_transfert') isEqualTo 1)" configClasses (missionConfigFile >> "ALYSIA_ATM"));
+} forEach ("(getNumber(_x >> 'company_money_transfert') isEqualTo 1)" configClasses (missionConfigFile >> "ALYSIA_ATM"));
 
 _obj attachTo [player, [0, 0.4, 0.7]];
 player setVariable ["money_transfer", _obj];

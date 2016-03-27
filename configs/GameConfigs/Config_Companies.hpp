@@ -68,7 +68,8 @@ class ALYSIA_COMPANIES
 				"weapon_sdar",
 				"magazine_sdar",
 				"weapon_vermin",
-				"magazine_vermin"
+				"magazine_vermin",
+				"scope_holosight"
 			};
 			members_max = 8;
 			class construction
@@ -87,7 +88,7 @@ class ALYSIA_COMPANIES
 			class tax
 			{
 				price_per_employee = 150;
-				price_building = 450;
+				price_building = 350;
 			};
 			class storage
 			{
@@ -123,7 +124,7 @@ class ALYSIA_COMPANIES
 			};
 			class storage
 			{
-				inventory = 175;
+				inventory = 200;
 			};
 		};
 
@@ -429,7 +430,8 @@ class ALYSIA_COMPANIES
 				"clothing_secu_3",
 				"clothing_secu_4",
 				"googles_secu_1",
-				"vest_secu_1"
+				"vest_secu_1",
+				"backpack_parachute"
 			};
 			members_max = 8;
 			class construction

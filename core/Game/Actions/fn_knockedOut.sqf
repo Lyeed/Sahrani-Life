@@ -10,21 +10,21 @@ if ((animationState player) != "incapacitated") then
 {
 	if (!g_staff_god) then
 	{
-		private "_inUse";
-		_inUse = false;
-		if (g_action_inUse) then {
-			_inUse = true
-		} else {
-			g_action_inUse = true;
-		};
-
 		[] call AlysiaEvent_fnc_onPlayerFireNear;
-		player playMoveNow "incapacitated";
-		sleep round(random(7) + 2);
-		player playMoveNow "amovppnemstpsraswrfldnon";
-
-		if (!_inUse) then {
-			g_action_inUse = false;
+		if (!(player getVariable ["restrained", false]) && !(player getVariable ["surrender", false])) then
+		{
+			private "_inUse";
+			_inUse = false;
+			if (g_action_inUse) then {
+				_inUse = true
+			} else {
+				g_action_inUse = true;
+			};
+	
+			player playMoveNow "incapacitated";
+			sleep round(random(7) + 2);
+			player playMoveNow "amovppnemstpsraswrfldnon";
+			if (!_inUse) then {g_action_inUse = false};
 		};
 	};
 };

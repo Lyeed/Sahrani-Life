@@ -1,4 +1,4 @@
-#define AFFECT_FARM {"bean","corn","patate","wheat","cottonp","sunflower","cotton","huile_bottle"}
+#define AFFECT_FARM {"bean","corn","patate","wheat","cottonp","sunflower","cotton","huile_bottle","tissue"}
 #define AFFECT_PROCESSED {"brique","soufre","saltp","coal","ciment","woodp","furniture","glass"}
 #define AFFECT_MINERAL {"steel","ironp","platinep","copperp","alu","sp98","sp95","gazole","gpl","kerosene","goldbar"}
 #define AFFECT_DRUGS {"cigarette","cigare","heroinps","methp","marijuana","cocainepc","cocainep"}
@@ -381,7 +381,7 @@ class ALYSIA_ITEMS
 		class market
 		{
 			max = 823;
-			min = 300;
+			min = 200;
 			affect[] = AFFECT_MINERAL;
 		};
 	};
@@ -409,7 +409,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\cocaine.paa";
 		class market
 		{
-			max = 1230;
+			max = 1830;
 			min = 120;
 			affect[] = AFFECT_DRUGS;
 		};
@@ -422,7 +422,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\cocaine_coupe.paa";
 		class market
 		{
-			max = 820;
+			max = 1120;
 			min = 50;
 			affect[] = AFFECT_DRUGS;
 		};
@@ -458,7 +458,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\seringue_heroine.paa";
 		class market
 		{
-			max = 1315;
+			max = 1915;
 			min = 90;
 			affect[] = AFFECT_DRUGS;
 		};
@@ -496,7 +496,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\methamphetamine.paa";
 		class market
 		{
-			max = 1620;
+			max = 2220;
 			min = 290;
 			affect[] = AFFECT_DRUGS;
 		};
@@ -525,7 +525,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\marijuana.paa";
 		class market
 		{
-			max = 1120;
+			max = 1720;
 			min = 90;
 			affect[] = AFFECT_DRUGS;
 		};

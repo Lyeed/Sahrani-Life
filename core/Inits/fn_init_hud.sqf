@@ -278,7 +278,7 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 		/*===========================
 		  ===         GPS         ===
 		  =========================== */
-		if ("ItemGPS" in (assignedItems player)) then
+		if (("ItemGPS" in (assignedItems player)) && !(player getVariable ["restrained", false]) && !(player getVariable ["surrender", false])) then
 		{
 			_ctrl_gps_text ctrlSetStructuredText parseText format["<t align='center' font='PuristaBold'>%1</t>", (mapGridPosition player)];
 

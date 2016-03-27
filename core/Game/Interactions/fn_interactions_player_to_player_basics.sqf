@@ -4,6 +4,11 @@
 	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
+
+	headbag_put
+	headbag_take
+	action_silence_take
+	action_silence_put
 */
 
 [

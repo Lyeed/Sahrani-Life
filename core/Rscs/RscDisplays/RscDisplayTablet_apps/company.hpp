@@ -131,7 +131,7 @@ class COMPANY_ACTION_LICENSE_IMAGE: RscPicture
 class COMPANY_ACTION_LICENSE_BUTTON: RscButtonSilent
 {
 	idc = COMPANY_ACTION_LICENSE_BUTTON_IDC;
-	action = "ctrlShow[9609,false];ctrlShow[9610,false];[g_company, lbData[9606, lbCurSel 9606]] call AlysiaClient_fnc_company_member_license_give;['COMPANY'] spawn AlysiaClient_fnc_tabletApp;";
+	action = "ctrlShow[9609,false];ctrlShow[9610,false];[g_company, lbData[9606, lbCurSel 9606]] spawn AlysiaClient_fnc_company_member_license_give;['COMPANY'] spawn AlysiaClient_fnc_tabletApp;";
 	onMouseEnter = "ctrlSetText[9609,'lyeed_IMG\data\tablet\company\action_license_select.paa'];";
 	onMouseExit = "ctrlSetText[9609,'lyeed_IMG\data\tablet\company\action_license.paa'];";
 	tooltip = "Payer la license d'entreprise";

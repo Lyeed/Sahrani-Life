@@ -10,11 +10,10 @@ private "_target";
 _target = cursorTarget;
 if (isNull _target) exitWith {};
 if (!(isPlayer _target)) exitWith {};
-if ((player distance _target) > 3) exitWith {};
+if ((player distance _target) > 2.5) exitWith {};
 if (speed _target > 1) exitWith {};
 if (((vehicle player) != player) || ((vehicle _target) != _target)) exitWith {};
 if ((_target getVariable ["surrender", false]) || (_target getVariable ["restrained", false]) || (_target getVariable ["is_coma", false])) exitWith {};
-if ((player getVariable ["surrender", false]) || (player getVariable ["restrained", false])) exitWith {};
 if ((animationState player) isEqualTo "incapacitated") exitWith {};
 if ((animationState _target) isEqualTo "incapacitated") exitWith {};
 

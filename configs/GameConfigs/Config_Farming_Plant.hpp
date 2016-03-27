@@ -144,7 +144,7 @@ class ALYSIA_FARMING_PLANT_OBJETCS
 	{
 		receive[] = {{"sunflower", 1, 0}};
 		seed = "sunflower_seed";
-		distance = 1;
+		distance = 3;
 		growingTime = 150;
 		groundLevel = 1.2;
 		upLevel = 1.2;

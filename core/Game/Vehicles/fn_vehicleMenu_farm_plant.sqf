@@ -37,8 +37,8 @@ _getPlant =
 
 	{
 		if (
-				(_vehicle distance (getMarkerPos (configName _x)) < getNumber(_x >> "area")) &&
-				(([(_vehicle getVariable ["Trunk", []]), getText(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> getText(_x >> "plant") >> "seed")] call AlysiaClient_fnc_itemCount) > 0)
+				(_vehicle distance (getMarkerPos (configName _x)) <= getNumber(_x >> "area")) &&
+				(([(_vehicle getVariable ["Trunk", []]), getText(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> getText(_x >> "plant") >> "seed")] call AlysiaClient_fnc_itemTrunk) > 0)
 			) exitWith {
 			_ret =
 			[
@@ -55,7 +55,7 @@ _getPlant =
 			if (((_info select 2) isEqualTo "farming") && ((_vehicle distance (getPos g_company)) < 40)) then
 			{
 				{
-					if (([(_vehicle getVariable ["Trunk", []]), getText(_x >> "seed")] call AlysiaClient_fnc_itemCount) > 0) exitWith
+					if (([(_vehicle getVariable ["Trunk", []]), getText(_x >> "seed")] call AlysiaClient_fnc_itemTrunk) > 0) exitWith
 					{
 						_ret =
 						[

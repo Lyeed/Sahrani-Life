@@ -2,9 +2,9 @@ class ALYSIA_HORN
 {
 	class milice
 	{
+		item = "horn_milice";
 		sound = "sirene_west";
 		sleep = 5;
-		item = "horn_milice";
 	};
 	class garde
 	{

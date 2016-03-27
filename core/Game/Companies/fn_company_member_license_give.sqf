@@ -38,4 +38,6 @@ _action =
 	"Valider",
 	"Annuler"
 ] call BIS_fnc_guiMessage;
-if (_action) then {[player, _license, _company] remoteExecCall ["AlysiaClient_fnc_company_member_license_receive", _target]};
+if (_action) then {
+	[player, _license, _company] remoteExecCall ["AlysiaClient_fnc_company_member_license_receive", _target];
+};

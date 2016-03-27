@@ -2717,7 +2717,7 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 1;
+		rank = 2;
 	};
 	class LandRover_TK_CIV_EP1: LandRover_ACR {};
 	class ACR_LandRover_AMB: LandRover_ACR
@@ -2725,7 +2725,7 @@ class ALYSIA_VEHICLES
 		realname = "Pickup Garde (box)";
 		buyPrice = 21600;
 		inventory = 98;
-		rank = 2;
+		rank = 3;
 	};
 	class ACR_Offroad_HMG: LandRover_ACR
 	{
@@ -2734,7 +2734,7 @@ class ALYSIA_VEHICLES
 		inventory = 30;
 		insurance = 0;
 		fuel = "SP95";
-		rank = 4;
+		rank = 5;
 	};
 	class Skyline_GMC_Vandura_Propagande_01_F
 	{
@@ -2758,14 +2758,14 @@ class ALYSIA_VEHICLES
 		insurance = 0;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 4;
+		rank = 5;
 		realname = "BTR60 Cuba Garde";
 	};
 	class Skyline_T34_01_F: Cha_BTR60_Cuba
 	{
 		buyPrice = 370000;
 		inventory = 90;
-		rank = 5;
+		rank = 6;
 		realname = "T34 Garde";
 	};
 	
@@ -2792,7 +2792,7 @@ class ALYSIA_VEHICLES
 	{
 		buyPrice = 280000;
 		inventory = 425;
-		rank = 4;
+		rank = 5;
 		realname = "HEMTT cargo Garde";
 	};
 
@@ -2888,7 +2888,7 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"truck"};
 		fuel = "Diesel";
-		rank = 2;
+		rank = 4;
 		realname = "Zamak Transport de médicament";
 	};
 
@@ -2900,7 +2900,7 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"truck"};
 		fuel = "Diesel";
-		rank = 3;
+		rank = 4;
 		realname = "Zamak Stand SAMU";
 	};
 

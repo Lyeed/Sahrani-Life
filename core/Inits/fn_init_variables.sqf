@@ -93,4 +93,11 @@ with missionNamespace do
 		g_inv_items pushBack _item;
 		missionNamespace setVariable[format["inv_%1", _item], 0];
 	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_ITEMS"));
+	/* =================[Plants]=================== */
+	g_plants = [];
+
+	{
+		g_plants pushBack (configName _x);
+	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS"));
+	g_plants = compileFinal str(g_plants);
 };

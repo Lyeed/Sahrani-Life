@@ -490,7 +490,7 @@ class ALYSIA_PROCESS
 	{
 		name = "Mise en bouteille : huile de tournesol";
 		sound = "salt_process";
-		require[] = {{"huile",2}};
+		require[] = {{"huile",2}, {"bouteillevide", 1}};
 		receive[] = {{{"huile_bottle",1}},{},0};
 		time_per_item = 1;
 		time_default = 3;
@@ -572,7 +572,7 @@ class ALYSIA_PROCESS
 		{
 			class GUER
 			{
-				rank = 2;
+				rank = 4;
 			};
 		};
 	};
@@ -609,12 +609,12 @@ class ALYSIA_PROCESS
 	**************                   *******************/
 	class clothing_suit_1
 	{
-		name = "Fabrication de costume (1)";
+		name = "Confection de costume (1)";
 		sound = "smelting";
 		require[] = {{"tissue",11},{"cottonp",10}};
 		receive[] = {{},{"rds_uniform_Functionary1"},0};
 		time_per_item = 20;
-		time_default = 10;
+		time_default = 5;
 		class factions
 		{
 			class CIV
@@ -625,86 +625,86 @@ class ALYSIA_PROCESS
 	};
 	class clothing_suit_2: clothing_suit_1
 	{
-		name = "Fabrication de costume (2)";
+		name = "Confection de costume (2)";
 		receive[] = {{},{"rds_uniform_Functionary2"},0};
 		class factions: factions {};
 	};
 	class clothing_suit_3: clothing_suit_1
 	{
-		name = "Fabrication de costume (3)";
+		name = "Confection de costume (3)";
 		receive[] = {{},{"TRYK_SUITS_BLK_F"},0};
 		class factions: factions {};
 	};
 	class clothing_suit_4: clothing_suit_1
 	{
-		name = "Fabrication de costume (4)";
+		name = "Confection de costume (4)";
 		receive[] = {{},{"TRYK_SUITS_BR_F"},0};
 		class factions: factions {};
 	};
 	class clothing_suit_5: clothing_suit_1
 	{
-		name = "Fabrication de costume (5)";
+		name = "Confection de costume (5)";
 		require[] = {{"tissue",8},{"cottonp",20}};
 		receive[] = {{},{"druglord_uniform_new"},0};
 		class factions: factions {};
 	};
 	class clothing_suit_6: clothing_suit_1
 	{
-		name = "Fabrication de costume (6)";
+		name = "Confection de costume (6)";
 		require[] = {{"tissue",8},{"cottonp",20}};
 		receive[] = {{},{"special_agent_uniform_new"},0};
 		class factions: factions {};
 	};
 	class clothing_suit_7: clothing_suit_1
 	{
-		name = "Fabrication de costume (7)";
+		name = "Confection de costume (7)";
 		require[] = {{"tissue",8},{"cottonp",20}};
 		receive[] = {{},{"Robber_uniform_new"},0};
 		class factions: factions {};
 	};
 	class clothing_suit_8: clothing_suit_1
 	{
-		name = "Fabrication de costume (8)";
+		name = "Confection de costume (8)";
 		require[] = {{"tissue",9},{"cottonp",20}};
 		receive[] = {{},{"Killer_uniform_new"},0};
 		class factions: factions {};
 	};
 	class clothing_suit_9: clothing_suit_1
 	{
-		name = "Fabrication de costume (9)";
+		name = "Confection de costume (9)";
 		require[] = {{"tissue",8},{"cottonp",20}};
 		receive[] = {{},{"mafiaboss_uniform_new"},0};
 		class factions: factions {};
 	};
 	class clothing_suit_10: clothing_suit_1
 	{
-		name = "Fabrication de costume (10)";
+		name = "Confection de costume (10)";
 		require[] = {{"tissue",8},{"cottonp",20}};
 		receive[] = {{},{"agent_uniform_new"},0};
 		class factions: factions {};
 	};
 	class clothing_suit_11: clothing_suit_1
 	{
-		name = "Fabrication de costume (11)";
+		name = "Confection de costume (11)";
 		require[] = {{"tissue",10},{"cottonp",10}};
 		receive[] = {{},{"vip1_uniform_new"},0};
 		class factions: factions {};
 	};
 	class clothing_suit_12: clothing_suit_11
 	{
-		name = "Fabrication de costume (12)";
+		name = "Confection de costume (12)";
 		receive[] = {{},{"vip2_uniform_new"},0};
 		class factions: factions {};
 	};
 	class clothing_suit_13: clothing_suit_11
 	{
-		name = "Fabrication de costume (13)";
+		name = "Confection de costume (13)";
 		receive[] = {{},{"vip3_uniform_new"},0};
 		class factions: factions {};
 	};
 	class clothing_suit_14: clothing_suit_1
 	{
-		name = "Fabrication de costume (9)";
+		name = "Confection de costume (9)";
 		require[] = {{"tissue",11},{"cottonp",11}};
 		receive[] = {{},{"president_uniform_new"},0};
 		class factions: factions {};
@@ -712,55 +712,60 @@ class ALYSIA_PROCESS
 
 	class headgear_news_1: clothing_suit_1
 	{
-		name = "Fabrication de casquette presse";
+		name = "Confection de casquette presse";
 		require[] = {{"tissue",1},{"cottonp",1}};
 		receive[] = {{},{"H_Cap_press"},0};
 		class factions: factions {};
 	};
 	class vest_news_1: clothing_suit_1
 	{
-		name = "Fabrication de gilet Presse";
+		name = "Confection de gilet Presse";
 		require[] = {{"tissue",4},{"steel",4}};
 		receive[] = {{},{"V_Press_F"},0};
-		class factions
-		{
-			class CIV
-			{
-				licenses[] = {"company_weapon"};
-			};
-		};
+		time_per_item = 30;
+		class factions: factions {};
+	};
+
+	class backpack_parachute: clothing_suit_1
+	{
+		name = "Confection de parachute";
+		require[] = {{"tissue",6}};
+		receive[] = {{},{"B_Parachute"},0};
+		time_per_item = 15;
+		class factions: factions {};
 	};
 
 	class headgear_construction_1: headgear_news_1
 	{
-		name = "Fabrication de casque de construction";
+		name = "Confection de casque de construction";
 		receive[] = {{},{"usm_helmet_safety"},0};
 		class factions: factions {};
 	};
 	class vest_construction_1: clothing_suit_1
 	{
-		name = "Fabrication de gilet de construction";
+		name = "Confection de gilet de construction";
 		require[] = {{"tissue",2},{"cottonp",10}};
 		receive[] = {{},{"usm_vest_safety"},0};
+		time_per_item = 30;
 		class factions: factions {};
 	};
 
 	class clothing_moneyTransfert_1: clothing_suit_1
 	{
-		name = "Fabrication d'uniforme de convoyeur";
+		name = "Confection d'uniforme de convoyeur";
 		require[] = {{"tissue",2},{"cottonp",8}};
 		receive[] = {{},{"TRYK_U_B_BLK3CD"},0};
 		class factions: factions {};
 	};
 	class vest_moneyTransfert_1: vest_news_1
 	{
-		name = "Fabrication de gilet Convoyeur";
+		name = "Confection de gilet Convoyeur";
 		receive[] = {{},{"TRYK_V_Bulletproof_BL"},0};
 		class factions: factions {};
 	};
 	class goggles_moneyTransfert_1: clothing_suit_1
 	{
-		name = "Fabrication de cagoule de convoyeur";
+		name = "Confection de cagoule de convoyeur";
 		require[] = {{"tissue",1},{"cottonp",1}};
 		receive[] = {{},{"TRYK_kio_balaclava_BLK"},0};
 		class factions: factions {};
@@ -768,28 +773,28 @@ class ALYSIA_PROCESS
 
 	class clothing_depann_1: clothing_suit_1
 	{
-		name = "Fabrication d'uniforme dépanneur (1)";
+		name = "Confection d'uniforme dépanneur (1)";
 		require[] = {{"cottonp",20}};
 		receive[] = {{},{"U_C_WorkerCoveralls"},0};
 		class factions: factions {};
 	};
 	class clothing_depann_2: clothing_suit_1
 	{
-		name = "Fabrication d'uniforme dépanneur (2)";
+		name = "Confection d'uniforme dépanneur (2)";
 		require[] = {{"tissue",2},{"cotténp",8}};
 		receive[] = {{},{"Skyline_Uniforme_Depanneur_01_F"},0};
 		class factions: factions {};
 	};
 	class clothing_depann_SDNS: clothing_suit_1
 	{
-		name = "Fabrication d'uniforme dépanneur (SDNS)";
+		name = "Confection d'uniforme dépanneur (SDNS)";
 		require[] = {{"tissue",3},{"cottonp",10}};
 		receive[] = {{},{"SDNS_depannage"},0};
 		class factions: factions {};
 	};
 	class backpack_depann_1: clothing_suit_1
 	{
-		name = "Fabrication de sac à dos dépanneur";
+		name = "Confection de sac à dos dépanneur";
 		require[] = {{"tissue",15},{"cottonp",10}};
 		receive[] = {{},{"Skyline_Sac_Depanneur_01_F"},0};
 		class factions: factions {};
@@ -797,46 +802,46 @@ class ALYSIA_PROCESS
 
 	class clothing_secu_1: clothing_suit_1
 	{
-		name = "Fabrication de costume sécurité";
+		name = "Confection de costume sécurité";
 		require[] = {{"tissue",8},{"cottonp",20}};
 		receive[] = {{},{"bodyguard_uniform_new"},0};
 		class factions: factions {};
 	};
 	class clothing_secu_2: clothing_suit_1
 	{
-		name = "Fabrication d'uniforme sécurité (1)";
+		name = "Confection d'uniforme sécurité (1)";
 		require[] = {{"tissue",2},{"cottonp",8}};
 		receive[] = {{},{"Skyline_Uniforme_Securite_01_F"},0};
 		class factions: factions {};
 	};
 	class clothing_secu_3: clothing_secu_2
 	{
-		name = "Fabrication d'uniforme sécurité (2)";
+		name = "Confection d'uniforme sécurité (2)";
 		receive[] = {{},{"Skyline_Uniforme_Securite_02_F"},0};
 		class factions: factions {};
 	};
 	class clothing_secu_4: clothing_secu_2
 	{
-		name = "Fabrication d'uniforme sécurité (3)";
+		name = "Confection d'uniforme sécurité (3)";
 		receive[] = {{},{"Skyline_Uniforme_Securite_03_F"},0};
 		class factions: factions {};
 	};
 	class vest_secu_1: vest_news_1
 	{
-		name = "Fabrication de gilet sécurité";
+		name = "Confection de gilet sécurité";
 		receive[] = {{},{"TRYK_V_Bulletproof_BLK"},0};
 		class factions: factions {};
 	};
 	class googles_secu_1: goggles_moneyTransfert_1
 	{
-		name = "Fabrication de cagoule sécurité";
+		name = "Confection de cagoule sécurité";
 		receive[] = {{},{"TRYK_kio_balaclava_BLK"},0};
 		class factions: factions {};
 	};
 
 	class clothing_criminal_1
 	{
-		name = "Fabrication de tenue criminelle 1";
+		name = "Confection de tenue criminelle 1";
 		sound = "smelting";
 		require[] = {{"cottonp",10}};
 		receive[] = {{},{"TRYK_ZARATAKI"},0};
@@ -850,92 +855,107 @@ class ALYSIA_PROCESS
 	};
 	class clothing_criminal_2: clothing_criminal_1
 	{
-		name = "Fabrication de tenue criminelle 2";
+		name = "Confection de tenue criminelle 2";
 		receive[] = {{},{"TRYK_ZARATAKI2"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_3: clothing_criminal_1
 	{
-		name = "Fabrication de tenue criminelle 3";
+		name = "Confection de tenue criminelle 3";
 		receive[] = {{},{"TRYK_ZARATAKI3"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_4: clothing_criminal_1
 	{
-		name = "Fabrication de tenue criminelle 4";
+		name = "Confection de tenue criminelle 4";
 		receive[] = {{},{"TRYK_U_taki_BL"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_5: clothing_criminal_1
 	{
-		name = "Fabrication de tenue criminelle 5";
+		name = "Confection de tenue criminelle 5";
 		receive[] = {{},{"TRYK_U_taki_COY"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_6: clothing_criminal_1
 	{
-		name = "Fabrication de tenue criminelle 6";
+		name = "Confection de tenue criminelle 6";
 		receive[] = {{},{"TRYK_U_taki_wh"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_7: clothing_criminal_1
 	{
-		name = "Fabrication de tenue criminelle 7";
+		name = "Confection de tenue criminelle 7";
 		receive[] = {{},{"TRYK_T_camo_3c_BG"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_8: clothing_criminal_1
 	{
-		name = "Fabrication de tenue criminelle 8";
+		name = "Confection de tenue criminelle 8";
 		receive[] = {{},{"TRYK_T_camo_desert_marpat_BG"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_9: clothing_criminal_1
 	{
-		name = "Fabrication de tenue criminelle 9";
+		name = "Confection de tenue criminelle 9";
 		receive[] = {{},{"TRYK_T_camo_Wood_BG"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_10: clothing_criminal_1
 	{
-		name = "Fabrication de tenue criminelle 10";
+		name = "Confection de tenue criminelle 10";
 		receive[] = {{},{"TRYK_U_B_PCUHsW3"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class goggles_criminal_1: clothing_criminal_1
 	{
-		name = "Fabrication cagoule criminelle 1";
+		name = "Confection cagoule criminelle 1";
 		receive[] = {{},{"G_Balaclava_blk"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class goggles_criminal_2: clothing_criminal_1
 	{
-		name = "Fabrication masque à gaz";
+		name = "Confection masque à gaz";
 		receive[] = {{},{"Mask_M40"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class goggles_criminal_3: clothing_criminal_1
 	{
-		name = "Fabrication masque de voleur";
+		name = "Confection masque de voleur";
 		receive[] = {{},{"Masque_Solitaire"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class vest_criminal_1: vest_news_1
 	{
-		name = "Fabrication de gilet barre-balles";
+		name = "Confection de gilet barre-balles";
 		receive[] = {{},{"TRYK_V_IOTV_BLK"},0};
+		class target {};
+		class factions
+		{
+			class CIV {};
+		};
+	};
+
+	class googles_NVG
+	{
+		name = "Fabrication de vision nocturne";
+		sound = "smelting";
+		require[] = {{"steel",8},{"glass", 4},{"ironp",2}};
+		receive[] = {{},{"Skyline_NVGoogle"},0};
+		time_per_item = 20;
+		time_default = 5;
 		class target {};
 		class factions
 		{
@@ -945,7 +965,7 @@ class ALYSIA_PROCESS
 
 	class headgear_mask
 	{
-		name = "Fabrication de cagoule (otage)";
+		name = "Confection de cagoule (otage)";
 		sound = "smelting";
 		require[] = {{"cottonp",5}};
 		receive[] = {{},{"mgsr_headbag"},0};
@@ -959,7 +979,7 @@ class ALYSIA_PROCESS
 	};
 	class google_mask
 	{
-		name = "Fabrication de bâillon (otage)";
+		name = "Confection de bâillon (otage)";
 		sound = "smelting";
 		require[] = {{"cottonp",4}};
 		receive[] = {{},{"G_Bandanna_blk"},0};
@@ -1235,125 +1255,158 @@ class ALYSIA_PROCESS
 	/*************                         ******************
 	**************  ARMES ILLEGALLES       ******************
 	**************                         *******************/
-	class weapon_thompson
+	class weapon_ak_1
 	{
-		name = "Arme : Fusil Thompson";
+		name = "Arme : AK74 (1)";
 		sound = "smelting";
-		require[] = {{"canon",1},{"crosse_wood",1},{"garde_main_wood",1},{"poignee",1},{"detente",1},{"percuteur",1},{"woodp",10},{"ironp",3},{"steel",5}};
-		receive[] = {{},{"wc_us_smg_m1a1"},0};
-		time_per_item = 50;
-		time_default = 10;
+		require[] = {{"canon",1},{"crosse_wood",1},{"garde_main_wood",1},{"poignee",1},{"detente",1},{"percuteur",1},{"woodp",7},{"steel",5},{"ironp",10}};
+		receive[] = {{},{"hlc_rifle_ak74_dirty"},0};
+		time_per_item = 40;
+		time_default = 5;
 		class target {};
-		class factions
+		class factions: factions
 		{
 			class CIV {};
 		};
 	};
-	class magazine_thompson: weapon_thompson
+	class weapon_ak_2: weapon_ak_1
 	{
-		name = "Munitions : Fusil Thompson";
+		name = "Arme : AK74 (2)";
+		receive[] = {{},{"hlc_rifle_ak74_dirty2"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class weapon_ak_3: weapon_ak_1
+	{
+		name = "Arme : AK74 (3)";
+		receive[] = {{},{"hlc_rifle_ak74"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class magazine_ak: weapon_ak_1
+	{
+		name = "Munitions : AK74";
 		require[] = {{"bullet",30},{"magazine",1}};
-		receive[] = {{},{"wc_30Rnd_45acp"},0};
-		time_per_item = 5;
-		time_default = 1;
+		receive[] = {{},{"hlc_30Rnd_545x39_B_AK"},0};
+		time_per_item = 8;
+		class target {};
+		class factions: factions {};
+	};
+	class scope_ak: weapon_ak_1
+	{
+		name = "Viseur : AK74";
+		require[] = {{"steel",5},{"glass",1},{"ironp",2}};
+		receive[] = {{},{"hlc_optic_kobra"},0};
+		time_per_item = 15;
 		class target {};
 		class factions: factions {};
 	};
 
-	class weapon_cz: weapon_thompson
+	class weapon_m21: weapon_ak_1
+	{
+		name = "Arme : M21";
+		require[] = {{"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"detente",1},{"percuteur",1},{"culasse",1},{"woodp",5},{"steel",11}};
+		receive[] = {{},{"hlc_rifle_M21"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class magazine_m21: magazine_ak
+	{
+		name = "Munitions : M21";
+		require[] = {{"bullet",20},{"magazine",1}};
+		receive[] = {{},{"hlc_20Rnd_762x51_B_M14"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class scope_m21: scope_ak
+	{
+		name = "Viseur : M21";
+		require[] = {{"steel",15},{"glass",5}};
+		receive[] = {{},{"hlc_optic_artel_m14"},0};
+		time_per_item = 30;
+		class target {};
+		class factions: factions {};
+	};
+
+	class weapon_cz: weapon_ak_1
 	{
 		name = "Arme : Fusil CZ550";
 		require[] = {{"canon",1},{"crosse_wood",1},{"garde_main_wood",1},{"detente",1},{"percuteur",1},{"culasse",1},{"woodp",15},{"ironp",2},{"steel",3}};
 		receive[] = {{},{"Trixie_CZ550"},0};
-		time_per_item = 50;
-		time_default = 10;
 		class target {};
 		class factions: factions {};
 	};
-	class magazine_cz: weapon_thompson
+	class magazine_cz: magazine_ak
 	{
 		name = "Munitions : Fusil CZ550";
 		require[] = {{"bullet",5},{"magazine",1}};
 		receive[] = {{},{"Trixie_CZ550_Mag"},0};
-		time_per_item = 5;
-		time_default = 3;
 		class target {};
 		class factions: factions {};
 	};
 
-	class weapon_sawed: weapon_thompson
+	class weapon_sawed: weapon_ak_1
 	{
 		name = "Arme : Fusil scié";
 		require[] = {{"canon",2},{"crosse_wood",1},{"detente",1},{"percuteur",1},{"woodp",8},{"ironp",1},{"steel",2}};
 		receive[] = {{},{"Sawed_Off_Shotgun"},0};
-		time_per_item = 30;
-		time_default = 10;
+		time_per_item = 25;
 		class target {};
 		class factions: factions {};
 	};
-	class magazine_sawed: weapon_thompson
+	class magazine_sawed: magazine_ak
 	{
 		name = "Munitions : Fusil scié";
 		require[] = {{"buckshot",10},{"magazine",1}};
 		receive[] = {{},{"2Rnd_Sawed_Off_Shotgun_Pellets"},0};
-		time_per_item = 5;
-		time_default = 4;
 		class target {};
 		class factions: factions {};
 	};
 
-	class magazine_tec: weapon_thompson
+	class weapon_tec: weapon_ak_1
 	{
-		name = "Munitions : Pistolet Tec9";
-		require[] = {{"bullet",32},{"magazine",1}};
-		receive[] = {{},{"RH_32Rnd_9x19_tec"},0};
-		time_per_item = 5;
-		time_default = 6;
-		class target {};
-		class factions: factions {};
-	};
-	class weapon_tec: weapon_thompson
-	{
-		name = "Arme : Pistolet Tec9";
+		name = "Arme : Pistolet TEC9";
 		require[] = {{"canon",1},{"poignee",1},{"detente",1},{"percuteur",1},{"carcasse",1},{"bloc_culasse",1},{"ironp",2},{"steel",3}};
 		receive[] = {{},{"RH_tec9"},0};
-		time_per_item = 30;
-		time_default = 10;
+		time_per_item = 15;
+		class target {};
+		class factions: factions {};
+	};
+	class magazine_tec: magazine_ak
+	{
+		name = "Munitions : Pistolet TEC9";
+		require[] = {{"bullet",32},{"magazine",1}};
+		receive[] = {{},{"RH_32Rnd_9x19_tec"},0};
 		class target {};
 		class factions: factions {};
 	};
 
-	class magazine_tracker: weapon_thompson
+	class magazine_tracker: magazine_ak
 	{
 		name = "Munitions : Revolver Tracker";
 		require[] = {{"bullet",6},{"magazine",1}};
 		receive[] = {{},{"RH_6Rnd_45ACP_Mag"},0};
-		time_per_item = 5;
-		time_default = 5;
 		class target {};
 		class factions: factions {};
 	};
-	class weapon_tracker: weapon_thompson
+	class weapon_tracker: weapon_ak_1
 	{
 		name = "Arme : Revolver Tracker";
 		require[] = {{"canon",1},{"poignee",1},{"detente",1},{"marteau",1},{"barillet",1},{"ironp",2},{"steel",3}};
 		receive[] = {{},{"RH_ttracker"},0};
-		time_per_item = 30;
-		time_default = 10;
+		time_per_item = 12;
 		class target {};
 		class factions: factions {};
 	};
-	class weapon_tracker_gold: weapon_thompson
+	class weapon_tracker_gold: weapon_ak_1
 	{
 		name = "Arme : Revolver Tracker or";
 		require[] = {{"canon",1},{"poignee",1},{"detente",1},{"marteau",1},{"barillet",1},{"ironp",2},{"goldbar",1}};
 		receive[] = {{},{"RH_ttracker_g"},0};
-		time_per_item = 30;
-		time_default = 20;
+		time_per_item = 50;
 		class target {};
 		class factions: factions {};
 	};
-	
 	/*************                        ******************
 	**************  	ARMES LEGALES     ******************
 	**************                        *******************/
@@ -1363,8 +1416,8 @@ class ALYSIA_PROCESS
 		sound = "smelting";
 		require[] = {{"canon",2},{"crosse_wood",1},{"garde_main_wood",1},{"detente",1},{"percuteur",2},{"woodp",10},{"ironp",2},{"steel",3}};
 		receive[] = {{},{"Skyline_B95"},0};
-		time_per_item = 50;
-		time_default = 10;
+		time_per_item = 40;
+		time_default = 5;
 		class factions
 		{
 			class CIV
@@ -1378,8 +1431,7 @@ class ALYSIA_PROCESS
 		name = "Munitions : Fusil B95";
 		require[] = {{"buckshot",10},{"magazine",1}};
 		receive[] = {{},{"2Rnd_762x51_Mag_B95"},0};
-		time_per_item = 5;
-		time_default = 4;
+		time_per_item = 8;
 		class factions: factions {};
 	};
 
@@ -1389,16 +1441,13 @@ class ALYSIA_PROCESS
 		require[] = {{"canon",1},{"poignee",1},{"detente",1},{"percuteur",1},{"carcasse",1},{"bloc_culasse",1},{"marteau",1},{"ironp",2},{"steel",3}};
 		receive[] = {{},{"RH_cz75"},0};
 		time_per_item = 30;
-		time_default = 10;
 		class factions: factions {};
 	};
-	class magazine_cz75: weapon_b95
+	class magazine_cz75: magazine_b95
 	{
 		name = "Munitions : Pistolet CZ 75";
 		require[] = {{"bullet",16},{"magazine",1}};
 		receive[] = {{},{"RH_16Rnd_9x19_CZ"},0};
-		time_per_item = 5;
-		time_default = 5;
 		class factions: factions {};
 	};
 
@@ -1406,15 +1455,14 @@ class ALYSIA_PROCESS
 	{
 		name = "Arme : Pistolet Sig-Sauer P226";
 		receive[] = {{},{"RH_p226"},0};
+		time_per_item = 20;
 		class factions: factions {};
 	};
-	class magazine_p226: weapon_b95
+	class magazine_p226: magazine_b95
 	{
 		name = "Munitions : Pistolet Sig-Sauer P226";
 		require[] = {{"bullet",15},{"magazine",1}};
 		receive[] = {{},{"RH_15Rnd_9x19_SIG"},0};
-		time_per_item = 5;
-		time_default = 5;
 		class factions: factions {};
 	};
 
@@ -1422,15 +1470,14 @@ class ALYSIA_PROCESS
 	{
 		name = "Arme : Pistolet GSh-18";
 		receive[] = {{},{"RH_gsh18"},0};
+		time_per_item = 15;
 		class factions: factions {};
 	};
-	class magazine_gsh18: weapon_b95
+	class magazine_gsh18: magazine_b95
 	{
 		name = "Munitions : Pistolet GSh-18";
 		require[] = {{"bullet",18},{"magazine",1}};
 		receive[] = {{},{"RH_18Rnd_9x19_gsh"},0};
-		time_per_item = 5;
-		time_default = 5;
 		class factions: factions {};
 	};
 
@@ -1439,17 +1486,14 @@ class ALYSIA_PROCESS
 		name = "Arme : SDAR";
 		require[] = { {"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"poignee",1},{"detente",1},{"percuteur",1},{"ironp",5},{"steel",5}};
 		receive[] = {{},{"Fett_SDAR"},0};
-		time_per_item = 50;
-		time_default = 10;
+		time_per_item = 30;
 		class factions: factions {};
 	};
-	class magazine_sdar: weapon_b95
+	class magazine_sdar: magazine_b95
 	{
 		name = "Munitions : SDAR";
 		require[] = {{"bullet",20},{"magazine",1}};
 		receive[] = {{},{"Fett_20Rnd_556x45_UW_mag"},0};
-		time_per_item = 5;
-		time_default = 5;
 		class factions: factions {};
 	};
 
@@ -1459,16 +1503,22 @@ class ALYSIA_PROCESS
 		require[] = { {"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"poignee",1},{"detente",1},{"percuteur",1},{"ironp",5},{"steel",5}};
 		receive[] = {{},{"SMG_01_F"},0};
 		time_per_item = 40;
-		time_default = 10;
 		class factions: factions {};
 	};
-	class magazine_vermin: weapon_b95
+	class magazine_vermin: magazine_b95
 	{
 		name = "Munitions : Vermin";
 		require[] = {{"bullet",30},{"magazine",1}};
 		receive[] = {{},{"30Rnd_45ACP_Mag_SMG_01"},0};
-		time_per_item = 6;
-		time_default = 5;
+		class factions: factions {};
+	};
+
+	class scope_holosight
+	{
+		name = "Munitions : Vermin";
+		require[] = {{"steel",5},{"glass",1},{"ironp",1}};
+		receive[] = {{},{"optic_Holosight"},0};
+		time_per_item = 30;
 		class factions: factions {};
 	};
 };

@@ -25,8 +25,7 @@ if (_veh != player) then
 
 			if (time > (_veh getVariable ["sireneTime", 0])) then
 			{
-				_veh setVariable ["sireneOn", true];
-				
+				_veh setVariable ["sireneOn", true];				
 				[_veh, getText(_config >> "sound"), getNumber(_config >> "sleep")] spawn
 				{
 					private["_veh", "_sirene", "_sleep"];

@@ -28,7 +28,15 @@ class ALYSIA_SHOP_APPLICATIONS
 	{
 		name = "Application : Annonces";
 		description = "Que vous cherchiez un compagnon, du travail ou des employés, cette application est faite pour vous !";
-		price = 7000;
+		price = 700;
+		sides[] = {"CIV", "WEST", "EAST", "GUER"};
+	};
+
+	class DAB
+	{
+		name = "Application : Distributeurs";
+		description = "Application vous permettant de consulter les stocks de tous les distributeurs de l'archipel";
+		price = 19000;
 		sides[] = {"CIV", "WEST", "EAST", "GUER"};
 	};
 };

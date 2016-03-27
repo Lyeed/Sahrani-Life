@@ -47,6 +47,13 @@ if ((vehicle player) isEqualTo player) then
 			true breakOut "main";
 		};
 
+		_plant = (nearestObjects [player, (call g_plants), 3]) select 0;
+		if (!(isNil "_plant")) then
+		{
+			[_plant] spawn AlysiaClient_fnc_plantHarvest;
+			true breakOut "main";
+		};
+
 		{
 			if ((player distance (getMarkerPos _x)) < 20) then
 			{
@@ -201,7 +208,7 @@ if ((vehicle player) isEqualTo player) then
 
 				if (isClass(missionConfigFile >> "ALYSIA_FARMING_PLANT_OBJETCS" >> _type)) then
 				{
-					[_target] call AlysiaClient_fnc_plantHarvest;
+					[_target] spawn AlysiaClient_fnc_plantHarvest;
 					true breakOut "main";
 				};
 

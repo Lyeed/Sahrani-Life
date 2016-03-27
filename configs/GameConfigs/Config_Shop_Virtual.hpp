@@ -49,8 +49,8 @@ class ALYSIA_SHOPS_VIRTUAL
 
 	class station_service
 	{
-		name = "Commerçant station";
-		side = "CIV";
+		name = "Station service";
+		side = "";
 		items[] =
 		{
 			{
@@ -173,7 +173,8 @@ class ALYSIA_SHOPS_VIRTUAL
 				"sparklingwater",
 				"cone",
 				"barriere",
-				"horn_samu"
+				"horn_samu",
+				"alcool_test"
 			},{
 
 			}
