@@ -720,7 +720,12 @@ class ALYSIA_VEHICLES
 			"Skyline_GMC_Vandura_09_F",
 			"Skyline_GMC_Vandura_10_F",
 			"Skyline_GMC_Vandura_11_F",
-			"Skyline_GMC_Vandura_12_F"
+			"Skyline_GMC_Vandura_12_F",
+			"Skyline_GMC_Vandura_13_F",
+			"Skyline_GMC_Vandura_14_F",
+			"Skyline_GMC_Vandura_15_F",
+			"Skyline_GMC_Vandura_16_F",
+			"Skyline_GMC_Vandura_17_F"
 		};
 	};
 	class ADM_GMC_Vandura_red: Skyline_GMC_Vandura {};
@@ -3833,4 +3838,16 @@ class ALYSIA_VEHICLES
 	class Skyline_Jeep_Wrangler_Rubicon_10_F: Skyline_Jeep_Wrangler_Rubicon {};
 	class Skyline_Jeep_Wrangler_Rubicon_11_F: Skyline_Jeep_Wrangler_Rubicon {};
 	class Skyline_Jeep_Wrangler_Rubicon_12_F: Skyline_Jeep_Wrangler_Rubicon {};
+
+	class Skyline_VW_TouaregR50_Samu_01_F
+	{
+		buyPrice = 57500;
+		inventory = 90;
+		side = "GUER";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "Diesel";
+		rank = 2;
+		realname = "VW Touareg R50 SAMU";
+	};
 };
