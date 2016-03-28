@@ -25,11 +25,12 @@ _dab = (nearestObjects [_data select 1, [_data select 0], 15]) select 0;
 
 if ("ItemGPS" in (assignedItems player)) then
 {
+	_config = missionConfigFile >> "ALYSIA_ATM" >> typeOf(_dab);
 	_marker = createMarkerLocal [format["dab_tablet_%1", _sel], (getPos _dab)];
-	_marker setMarkerShapeLocal "ICON";
-	_marker setMarkerTypeLocal "Fett_flag";
-	_marker setMarkerColorLocal "ColorGreen";
-	_marker setMarkerTextLocal "Distributeur";
+	_marker setMarkerShapeLocal getText(_config >> "marker" >> "ShapeLocal");
+	_marker setMarkerTypeLocal getText(_config >> "marker" >> "TypeLocal");
+	_marker setMarkerColorLocal getText(_config >> "marker" >> "ColorLocal");
+	_marker setMarkerSizeLocal getArray(_config >> "marker" >> "SizeLocal");
 
 	_ctrl_map = _display displayCtrl 9904;
 	_ctrl_map ctrlMapAnimAdd [0, 0.09, _dab];

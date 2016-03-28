@@ -160,26 +160,15 @@ class RscDisplayGarageAlysia: RscDisplayDefaultInteraction
 			w = 0.201094 * safezoneW;
 			h = 0.143 * safezoneH;
 		};
-		class SELECT_DESC_HEADER: RscStructuredText
-		{
-			idc = 2824;
-			text = "<t align='center'>Informations</t>";
-			colorBackground[] = {0,0,0,1};
-			
-			x = 0.54125 * safezoneW + safezoneX;
-			y = 0.28 * safezoneH + safezoneY;
-			w = 0.201094 * safezoneW;
-			h = 0.022 * safezoneH;
-		};
 		class SELECT_DESC_INFO: RscStructuredText
 		{
 			idc = 2825;
 			colorBackground[] = {0,0,0,0.8};
 
 			x = 0.54125 * safezoneW + safezoneX;
-			y = 0.302 * safezoneH + safezoneY;
+			y = 0.28 * safezoneH + safezoneY;
 			w = 0.201094 * safezoneW;
-			h = 0.22 * safezoneH;
+			h = 0.243852 * safezoneH;
 		};
 		class SELECT_ACTIONS_HEADER: RscStructuredText
 		{

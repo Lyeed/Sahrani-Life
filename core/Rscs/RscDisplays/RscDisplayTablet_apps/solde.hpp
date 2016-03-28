@@ -90,7 +90,6 @@ class SOLDE_SALARY_AMOUNT_FRAME: RscFrame
 class SOLDE_SALARY_AMOUNT_HEADER: RscStructuredText
 {
 	idc = SOLDE_SALARY_AMOUNT_HEADER_IDC;
-	text = "<t align='center'>Montant du salaire</t>";
 	colorBackground[] = {0,0,0,0.8};
 	
 	x = 0.567031 * safezoneW + safezoneX;

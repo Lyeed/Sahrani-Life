@@ -34,8 +34,6 @@ class Header
 joinUnassigned = 1;// By default a new player is not auto assigned a free playable slot in the mission lobby in Multiplayer. Set it to 0/false to make him auto assigned to the side with least players.
 briefing = 0;// Skip briefing screen for SP missions. If no briefing.html is present, it is skipped anyway.
 debriefing = 0;// Defines if the debriefing is shown or not at the end of the mission.
-showMap = 1;// Defines if the map is shown after the mission starts.
-showNotePad = 0;// In ArmA, defines if the NotePad is shown after the mission starts.
 //---------------------------------
 
 /********************************** 
@@ -139,19 +137,28 @@ enableDebugConsole = 1;// Allows access to the Debug Console outside of the edit
 scriptedPlayer = 1;// When scripted player is enabled, game no longer shows "No player select" error message upon mission start when no player unit is present.
 allowFunctionsLog = 1;// Allows functions to log to the RPT file. Set it to 1/true to allow RPT logging
 disableRandomization[] = {"All"};// Disables randomization on certain objects, object types or object kinds in the mission.
-showHUD = 0;
 allowFunctionsRecompile = 0;
-showGroupIndicator = 0;
-/*
-Enables/Disables the following IGUI elements:
 
-Vehicle and Unit Info
-Radar and Tactical Display
-Vehicle Compass
-Tank Direction Indicator
-Commanding Menu
-Group Info Bar
-*/
+/********************************** 
+*************** SHOW **************
+***********************************/
+showCompass = 1;// Defines if the compass is visible.
+showPad = 0;// Defines if the NotePad is shown after the mission starts.
+showWatch = 1;// Defines if the watch is visible.
+showGroupIndicator = 0;// When set to 1, changes default GPS mini map into a radar like display that indicates group members relative position to the player.
+showMap = 1;// Defines if the map is shown after the mission starts.
+showNotePad = 0;// In ArmA, defines if the NotePad is shown after the mission starts.
+showGPS = 0;// Enables/Disables the GPS.
+
+showHUD = 0;
+/*	Enables/Disables the following IGUI elements:
+
+	Vehicle and Unit Info
+	Radar and Tactical Display
+	Vehicle Compass
+	Tank Direction Indicator
+	Commanding Menu
+	Group Info Bar                 */
 //---------------------------------
 
 /********************************** 

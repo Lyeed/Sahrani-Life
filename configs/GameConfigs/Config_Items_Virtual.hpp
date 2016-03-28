@@ -1102,7 +1102,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\bouteille_eau_de_vie_raisin.paa";
 		class market
 		{
-			max = 580;
+			max = 1180;
 			min = 220;
 			affect[] = AFFECT_ILLEGAL;
 		};
@@ -1121,7 +1121,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\bouteille_eau_de_vie_prune.paa";
 		class market
 		{
-			max = 567;
+			max = 1310;
 			min = 220;
 			affect[] = AFFECT_ILLEGAL;
 		};

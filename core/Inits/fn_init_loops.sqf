@@ -136,7 +136,7 @@
 	};
 
 	_totalSession = 0;
-	_salary_time = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary_timer");
+	_salary_time = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary" >> "timer");
 	while {true} do
 	{
 		uiSleep 60;

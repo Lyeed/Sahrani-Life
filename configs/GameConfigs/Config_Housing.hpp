@@ -475,7 +475,7 @@ class ALYSIA_HOUSES
 		class storage
 		{
 			type = "R3F_WeaponStock";
-			building_index = 1;
+			building_index = 8;
 		};
 		class factions
 		{

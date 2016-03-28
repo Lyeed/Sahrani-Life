@@ -11,10 +11,14 @@ class ALYSIA_FACTIONS
 		laboratory_destroy = 1;
 
 		/*** SALARY ***/
-		salary = 500;
-		salary_tax = 0.05;
-		salary_apply_rank = 1;
-		salary_timer = 15;
+		class salary
+		{
+			name = "Salaire";
+			amount = 500;
+			taxes_rate = 0.05;
+			apply_rank = 1;
+			timer = 15;
+		};
 
 		/*** PHONE ***/
 		phone_change_number_price = -1;
@@ -108,7 +112,7 @@ class ALYSIA_FACTIONS
 						"optic_LRPS",
 						"optic_Holosight",
 						"TRYK_HRPIGEAR_NV",
-						"Skyline_NVGoogle"
+						"NVGoggles"
 					}
 				},
 				{"Backpacks",
@@ -241,10 +245,14 @@ class ALYSIA_FACTIONS
 		identity_item = "SkylineItems_PlaqueMilitaire";
 
 		/*** SALARY ***/
-		salary = 800;
-		salary_tax = 0;
-		salary_apply_rank = 1;
-		salary_timer = 15;
+		class salary
+		{
+			name = "Salaire";
+			amount = 800;
+			taxes_rate = 0;
+			apply_rank = 1;
+			timer = 15;
+		};
 
 		/*** LABORATORIES ***/
 		laboratory_destroy = 1;
@@ -313,7 +321,7 @@ class ALYSIA_FACTIONS
 						"SmokeShellWhite",
 						"Rangefinder",
 						"optic_ACO_grn_smg",
-						"Skyline_NVGoogle",
+						"NVGoggles_OPFOR",
 						"optic_MRCO"
 					}
 				},
@@ -444,10 +452,14 @@ class ALYSIA_FACTIONS
 		identity_item = "SkylineItems_Passeport";
 
 		/*** SALARY ***/
-		salary = 700;
-		salary_tax = 0.05;
-		salary_apply_rank = 0;
-		salary_timer = 15;
+		class salary
+		{
+			name = "Aides";
+			amount = 700;
+			taxes_rate = 0.05;
+			apply_rank = 0;
+			timer = 15;
+		};
 
 		/*** LABORATORIES ***/
 		laboratory_destroy = 0;
@@ -550,10 +562,14 @@ class ALYSIA_FACTIONS
 		identity_item = "SkylineItems_Passeport";
 
 		/*** SALARY ***/
-		salary = 50;
-		salary_tax = 0;
-		salary_apply_rank = 1;
-		salary_timer = 15;
+		class salary
+		{
+			name = "Salaire";
+			amount = 50;
+			taxes_rate = 0;
+			apply_rank = 1;
+			timer = 15;
+		};
 
 		/*** LABORATORIES ***/
 		laboratory_destroy = 0;

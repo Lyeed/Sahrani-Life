@@ -48,7 +48,7 @@ if ("VEHICLES" in g_apps) then
 	while {!(isNull _display) && ((lbCurSel _list) isEqualTo _sel) && (g_app isEqualTo "VEHICLES") && (alive _vehicle)} do
 	{
 		_marker setMarkerPosLocal (getPos _vehicle);
-		sleep 0.3;
+		uiSleep 0.3;
 	};
 
 	deleteMarkerLocal _marker;

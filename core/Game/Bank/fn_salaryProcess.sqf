@@ -15,36 +15,41 @@ _add_to_south = 0;
 // Salaire
 if (!(player getVariable ["arrested", false])) then
 {
-	private["_salary", "_taxe", "_price"];
-	_salary = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary");
-	if (_salary > 0) then
+	private["_amount", "_taxe", "_price", "_config"];
+	_config = missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary";
+	if (isClass(_config)) then
 	{
-		if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary_apply_rank") isEqualTo 1) then {
-			_salary = _salary * (player getVariable ["rank", 0]);
-		};
-		
-		[true, _salary, "Salaire"] call AlysiaClient_fnc_handleATM;
-		_price_add = _price_add + _salary;
-
-		_taxe = getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary_tax");
-		if (_taxe > 0) then
+		_amount = getNumber(_config >> "amount");
+		if (_amount > 0) then
 		{
-			switch (g_choice) do
+			if (getNumber(_config >> "apply_rank") isEqualTo 1) then
 			{
-				case "NORTH":
-				{
-					_price = _salary * (_taxe * gServer_tax_north_salary_multiplier);
-					_add_to_north = _add_to_north + _price;
-				};
-				case "SOUTH":
-				{
-					_price = _salary * (_taxe * gServer_tax_south_salary_multiplier);
-					_add_to_south = _add_to_south + _price;
-				};
+				_amount = _amount * (player getVariable ["rank", 0]);
 			};
 
-			_price_remove = _price_remove + _price;
-			[false, _price, "Cotisation salariale"] call AlysiaClient_fnc_handleATM;
+			[true, _amount, getText(_config >> "name")] call AlysiaClient_fnc_handleATM;
+			_price_add = _price_add + _amount;
+
+			_taxe = getNumber(_config >> "taxes_rate");
+			if (_taxe > 0) then
+			{
+				switch (g_choice) do
+				{
+					case "NORTH":
+					{
+						_price = _amount * (_taxe * gServer_tax_north_salary_multiplier);
+						_add_to_north = _add_to_north + _price;
+					};
+					case "SOUTH":
+					{
+						_price = _amount * (_taxe * gServer_tax_south_salary_multiplier);
+						_add_to_south = _add_to_south + _price;
+					};
+				};
+
+				_price_remove = _price_remove + _price;
+				[false, _price, "Cotisation salariale"] call AlysiaClient_fnc_handleATM;
+			};
 		};
 	};
 };
@@ -56,9 +61,9 @@ if (!(isNull g_company)) then
 	_info = g_company getVariable ["company_info", []];
 	if (!(g_company getVariable ['construction', false])) then
 	{
+		_price_employees = getNumber(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2) >> "tax" >> "price_per_employee");
 		if ((_info select 1) isEqualTo (getPlayerUID player)) then
 		{
-			_price_employees = getNumber(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2) >> "tax" >> "price_per_employee");
 			if (_price_employees > 0) then
 			{
 				switch (_info select 5) do
@@ -75,6 +80,7 @@ if (!(isNull g_company)) then
 					};
 				};
 
+				_price = round(_price * 0.5);
 				_price_remove = _price_remove + _price;
 				if (!([false, _price, "Taxe salariale"] call AlysiaClient_fnc_handleATM)) then
 				{
@@ -114,6 +120,13 @@ if (!(isNull g_company)) then
 						case "SOUTH": {[format["%1 n'a pas suffisamment d'argent pour payer sa taxe foncière.", (player getVariable ["realname", profileName])], "BANQUE", false] remoteExecCall ["AlysiaClient_fnc_phone_message_receive", east]};
 					};
 				};
+			};
+		} else {
+			if (_price_employees > 0) then
+			{
+				_amount = round(_price_employees * 0.5);
+				[true, _amount, "Salaire"] call AlysiaClient_fnc_handleATM;
+				_price_add = _price_add + _amount;
 			};
 		};
 	};

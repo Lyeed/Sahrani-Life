@@ -952,7 +952,7 @@ class ALYSIA_PROCESS
 	{
 		name = "Fabrication de radio (1)";
 		sound = "smelting";
-		require[] = {{"steel",5},{"glass", 4},{"ironp",2},{"tissue",9}};
+		require[] = {{"steel",5},{"glass", 4},{"ironp",2},{"tissue",9},{"goldbar", 1},{"alu",4}};
 		receive[] = {{},{"tf_rt1523g_bwmod"},0};
 		time_per_item = 30;
 		time_default = 5;
@@ -974,8 +974,8 @@ class ALYSIA_PROCESS
 	{
 		name = "Fabrication de vision nocturne";
 		sound = "smelting";
-		require[] = {{"steel",8},{"glass", 4},{"ironp",2}};
-		receive[] = {{},{"Skyline_NVGoogle"},0};
+		require[] = {{"steel",8},{"glass", 4},{"ironp",2},{"goldbar", 1},{"alu",10}};
+		receive[] = {{},{"NVGoggles_INDEP"},0};
 		time_per_item = 20;
 		time_default = 5;
 		class target {};
@@ -1281,12 +1281,12 @@ class ALYSIA_PROCESS
 	{
 		name = "Arme : AK74 (1)";
 		sound = "smelting";
-		require[] = {{"canon",1},{"crosse_wood",1},{"garde_main_wood",1},{"poignee",1},{"detente",1},{"percuteur",1},{"woodp",7},{"steel",5},{"ironp",10}};
+		require[] = {{"canon",1},{"crosse_wood",1},{"garde_main_wood",1},{"poignee",1},{"detente",1},{"percuteur",1},{"woodp",7},{"steel",5},{"ironp",8}};
 		receive[] = {{},{"hlc_rifle_ak74_dirty"},0};
 		time_per_item = 40;
 		time_default = 5;
 		class target {};
-		class factions: factions
+		class factions
 		{
 			class CIV {};
 		};
@@ -1327,7 +1327,7 @@ class ALYSIA_PROCESS
 	class weapon_m21: weapon_ak_1
 	{
 		name = "Arme : M21";
-		require[] = {{"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"detente",1},{"percuteur",1},{"culasse",1},{"woodp",5},{"steel",11}};
+		require[] = {{"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"detente",1},{"percuteur",1},{"culasse",1},{"woodp",5},{"steel",12}};
 		receive[] = {{},{"hlc_rifle_M21"},0};
 		class target {};
 		class factions: factions {};
@@ -1573,9 +1573,9 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 
-	class scope_holosight
+	class scope_holosight: magazine_b95
 	{
-		name = "Munitions : Vermin";
+		name = "Viseur : Holosight";
 		require[] = {{"steel",5},{"glass",1},{"ironp",1}};
 		receive[] = {{},{"optic_Holosight"},0};
 		time_per_item = 30;

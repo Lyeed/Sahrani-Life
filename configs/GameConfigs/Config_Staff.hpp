@@ -207,7 +207,7 @@ class ALYSIA_STAFF
 			{
 				name = "Soin";
 				statement = "[3999] remoteExecCall ['AlysiaClient_fnc_handleBlood', (call compile (lbData[9000, lbCurSel 9000]))];";
-				condition = "(call compile (lbData[9000, lbCurSel 9000])) getVariable ['is_coma',false]";
+				condition = "(true)";
 				allow[] = {"76561198007960495", "76561198099211957"};
 			};
 		};

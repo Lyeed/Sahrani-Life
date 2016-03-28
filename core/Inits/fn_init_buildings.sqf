@@ -115,7 +115,7 @@ _cString =
 ["xcam_rockS_02","[12997.30957,7699.906738,-10.6546]",-1469.81,-100,1,0,[]] call _cString;
 ["xcam_rockS_02","[13039.514648,7685.493164,-21.0962]",-1429.81,-100,1,0,[]] call _cString;
 
-//Coquillage
+//Farming : Coquillage
 ["xcam_StoneSharp_small","[14963.336914,7430.0458984,0]",0,-100,0,0,[]] call _cString;
 ["xcam_StoneSharp_big","[14976.415039,7420.0302734,0]",0,-100,0,0,[]] call _cString;
 ["xcam_StoneSharp_medium","[14959.420898,7415.436523,-1.90735e-006]",0,-100,0,0,[]] call _cString;
@@ -135,7 +135,7 @@ _cString =
 ["xcam_W_sharpStones_erosion","[14968.568359,7411.347656,0]",0,-100,0,0,[]] call _cString;
 ["xcam_W_sharpStones_erosion","[14957.985352,7410.351563,0]",0,-100,0,0,[]] call _cString;
 
-//Parlement Nord
+//Batiment : Parlement Nord
 ["xcam_podesta_10","[14263.605469,12439.649414,0.00856018]",0,-100,0,0,[]] call _cString;
 ["xcam_podesta_10","[14253.605469,12439.649414,0.00856018]",0,-100,0,0,[]] call _cString;
 ["xcam_podesta_10","[14253.605469,12429.649414,0.00856018]",0,-100,0,0,[]] call _cString;

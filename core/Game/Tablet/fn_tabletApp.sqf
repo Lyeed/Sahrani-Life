@@ -51,7 +51,7 @@ switch (_app) do
 	case "COMPANY": {[g_company] call AlysiaClient_fnc_APP_company};
 	case "GOV": {[] call AlysiaClient_fnc_APP_gov};
 	case "GOV_TAXES": {[] call AlysiaClient_fnc_APP_gov_taxes};
-	case "DAB": {[] spawn AlsyiaClient_fnc_APP_dab}
+	case "DAB": {[] spawn AlysiaClient_fnc_APP_dab}
 };
 
 g_CTRL_inUse = false;

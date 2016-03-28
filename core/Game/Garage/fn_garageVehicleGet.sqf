@@ -32,7 +32,7 @@ if (
 			((_vehicleGaragePosition distance (getMarkerPos "fourriere_SOUTH")) < 10)
 		)
 	) then {
-	private["_price_fourriere"];
+	private "_price_fourriere";
 	_price_fourriere = _price * 2.5;
 	_action =
 	[

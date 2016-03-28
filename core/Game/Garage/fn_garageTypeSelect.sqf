@@ -40,7 +40,6 @@ if ((lbSize _ctrl_vehicles) isEqualTo 0) then
 	ctrlShow[2806, false];
 	ctrlShow[2803, false];
 	ctrlShow[2804, false];
-	ctrlShow[2824, false];
 	ctrlShow[2825, false];
 	ctrlShow[2807, false];
 	ctrlshow[2808, false];
@@ -56,7 +55,6 @@ if ((lbSize _ctrl_vehicles) isEqualTo 0) then
 	ctrlShow[2806, true];
 	ctrlShow[2803, true];
 	ctrlShow[2804, true];
-	ctrlShow[2824, true];
 	ctrlShow[2825, true];
 	ctrlShow[2807, true];
 	ctrlshow[2808, true];

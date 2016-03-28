@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_veh", "_station", "_type", "_bill", "_display", "_fuelmax", "_liters", "_currentLiters", "_fill", "_maxDistance", "_distanceBegin"];
+private["_veh", "_station", "_type", "_bill", "_display", "_fuelmax", "_liters", "_currentLiters", "_fill", "_maxDistance", "_distanceBegin", "_progressLiters"];
 _veh = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 _station = [_this, 1, ObjNull, [ObjNull]] call BIS_fnc_param;
 
@@ -53,7 +53,13 @@ _bill = 0;
 _liters = 0;
 _fuelmax = getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "fuelCapacity");
 _fill = false;
-_distanceBegin = (player distance _veh) + 1;
+_distanceBegin = (player distance _veh) + 2;
+
+if (_veh isKindOf "Air") then {
+	_progressLiters = 20;
+} else {
+	_progressLiters = 1;
+};
 
 while {true} do
 {
@@ -63,7 +69,7 @@ while {true} do
 	if ((player distance _station) > _maxDistance) exitWith {
 		["Plein interrompu.<br/>Vous êtes trop loin de la station."] call AlysiaClient_fnc_error;
 	};
-	if ((player distance _veh) > (_distanceBegin + 2)) exitWith {
+	if ((player distance _veh) > _distanceBegin) exitWith {
 		["Plein interrompu.<br/>Vous êtes trop loin du véhicule."] call AlysiaClient_fnc_error;
 	};
 	if ((locked _veh) isEqualTo 2) exitWith {
@@ -81,7 +87,7 @@ while {true} do
 		["Plein interrompu.<br/>Fenêtre d'intéraction fermée."] call AlysiaClient_fnc_error;
 	};
 
-	_liters = _liters + 1;
+	_liters = _liters + _progressLiters;
 	_station setVariable [_type, (_currentLiters - _liters)];
 	_bill = _bill + ([_station, _type] call AlysiaClient_fnc_fuelStation_fuel_getPrice);
 	

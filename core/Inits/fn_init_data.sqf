@@ -74,7 +74,18 @@ g_choice = _basic select 36;
 [(_basic select 38)] call AlysiaClient_fnc_handleAlcool;
 // Licenses
 {
-	missionNamespace setVariable [format["license_%1", _x], true];
+	_config = missionConfigFile >> "ALYSIA_LICENSES" >> _x;
+	if (isClass(_config)) then
+	{
+		if (isClass(_config >> "factions" >> str(playerSide))) then
+		{
+			_condition = getText(_config >> "factions" >> str(playerSide) >> "condition");
+			if ((_condition isEqualTo "") || ((_condition != "") && {call compile _condition})) then
+			{
+				missionNamespace setVariable [format["license_%1", _x], true];
+			};
+		};
+	};
 } forEach (_basic select 39);
 // cash
 g_cash = _basic select 40;

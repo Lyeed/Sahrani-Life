@@ -5,7 +5,27 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_ctrl_trunk", "_ctrl_vehicles", "_sel", "_className", "_data", "_vehicleInfo", "_fuel", "_storePos", "_display", "_arrayIndex", "_idc"];
+private
+[
+    "_ctrl_trunk",
+    "_ctrl_vehicles",
+    "_sel",
+    "_className",
+    "_data",
+    "_vehicleInfo",
+    "_fuel",
+    "_storePos",
+    "_display",
+    "_arrayIndex",
+    "_idc",
+    "_price",
+    "_price_condition",
+    "_rank",
+    "_rank_condition",
+    "_licenses",
+    "_licenses_text",
+    "_license_condition"
+];
 
 disableSerialization;
 _ctrl_vehicles = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
@@ -46,13 +66,50 @@ _fuel = _data select 3;
 _vehicleInfo = [_className] call AlysiaClient_fnc_fetchVehInfo;
 _storePos = [_data select 6, _data select 7, _data select 8];
 
+_price = _vehicleInfo select 17;
+if ((g_atm >= _price) && (_price > 0)) then {
+    _price_condition = true;
+} else {
+    _price_condition = false;
+};
+
+_rank = _vehicleInfo select 15;
+if ((_rank isEqualTo 0) || ((_rank > 0) && ((player getVariable ["rank", 0]) >= _rank))) then {
+    _rank_condition = true;
+} else {
+    _rank_condition = false;
+};
+
+_licenses = _vehicleInfo select 13;
+if (count(_licenses) > 0) then
+{
+    _licenses_text = "";
+    _license_condition = true;
+
+    {
+        if ([_x] call AlysiaClient_fnc_hasLicense) then {
+            _licenses_text = _licenses_text + format["<t color='#31B404'>%1</t><br/>", [_x] call AlysiaClient_fnc_licenseGetName];
+        } else {
+            _licenses_text = _licenses_text + format["<t color='#DF0101'>%1</t><br/>", [_x] call AlysiaClient_fnc_licenseGetName];
+            _license_condition = false;
+        };
+    } forEach _licenses;
+} else {
+    _licenses_text = "<t color='#31B404'>Aucune</t>";
+    _license_condition = true;
+};
+
 (_display displayCtrl 2825) ctrlSetStructuredText parseText format
 [
-        "<t font='EtelkaMonospacePro' size='0.8'>"
+        "<t font='EtelkaMonospacePro' size='0.7'>"
+    +   "<t align='center'>- Prérequis de sortie de garage -</t><br/>"
+    +   "<t align='left'>Prix</t><t align='right' color='%13'>%4kn</t><br/>"
+    +   "<t align='left'>Rank</t><t align='right' color='%14'>%15</t><br/>"
+    +   "<t align='left'>Licence(s)</t><t align='right'>%16</t><br/>"
+    +   "<t align='center'>- Informations -</t><br/>"
 	+	"<t align='left'>Immatriculation</t><t align='right'>%1</t><br/>"
     +	"<t align='left'>Assuré</t><t align='right'>%2</t><br/>"
     +	"<t align='left'>Prix de l'assurance</t><t align='right'><t color='#8cff9b'>%3</t>kn</t><br/>"
-    +	"<t align='left'>Prix de sortie</t><t align='right'><t color='#8cff9b'>%4</t>kn</t><br/>"
     +	"<t align='left'>Prix de vente</t><t align='right'><t color='#8cff9b'>%5</t>kn</t><br/>"
     +	"<t align='left'>Vitesse max</t><t align='right'>%6 km/h</t><br/>"
     +	"<t align='left'>Puissance</t><t align='right'>%7 ch</t><br/>"
@@ -63,7 +120,7 @@ _storePos = [_data select 6, _data select 7, _data select 8];
     (_data select 1),
     if ((_data select 2) isEqualTo 1) then {"<t color='#8cff9b'>Oui</t>"} else {"<t color='#ff8c8c'>Non</t>"},
     [_vehicleInfo select 18] call AlysiaClient_fnc_numberText,
-    [_vehicleInfo select 17] call AlysiaClient_fnc_numberText,
+    [_price] call AlysiaClient_fnc_numberText,
   	[_vehicleInfo select 19] call AlysiaClient_fnc_numberText,
   	_vehicleInfo select 3,
   	_vehicleInfo select 6,
@@ -71,7 +128,11 @@ _storePos = [_data select 6, _data select 7, _data select 8];
   	_vehicleInfo select 10,
     (round(_fuel * (_vehicleInfo select 7))) / 100,
   	round(_vehicleInfo select 7),
-    getText(missionConfigFile >> "ALYSIA_FUEL" >> (_vehicleInfo select 14) >> "name")
+    getText(missionConfigFile >> "ALYSIA_FUEL" >> (_vehicleInfo select 14) >> "name"),
+    if (_price_condition) then {"#31B404"} else {"#DF0101"},
+    if (_rank_condition) then {"#31B404"} else {"#DF0101"},
+    ([playerSide, _rank] call AlysiaClient_fnc_rankToStr),
+    _licenses_text
 ];
 
 _idc = 2810;
@@ -100,10 +161,17 @@ _idc = 2810;
         "lyeed_IMG\data\garage\action_get.paa",
         "lyeed_IMG\data\garage\action_get_select.paa",
         "
-            (_storePos isEqualTo [0,0,0]) ||
             (
-                !(_storePos isEqualTo [0,0,0]) &&
-                ((player distance _storePos) < 20)
+                _license_condition &&
+                _rank_condition &&
+                _price_condition && 
+                (
+                    (_storePos isEqualTo [0,0,0]) ||
+                    (
+                        !(_storePos isEqualTo [0,0,0]) &&
+                        ((player distance _storePos) < 20)
+                    )
+                )
             )
         "
     ],
