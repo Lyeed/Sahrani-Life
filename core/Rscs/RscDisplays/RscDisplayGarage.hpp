@@ -146,19 +146,20 @@ class RscDisplayGarageAlysia: RscDisplayDefaultInteraction
 			colorBackground[] = {0,0,0,1};
 			
 			x = 0.54125 * safezoneW + safezoneX;
-			y = 0.522 * safezoneH + safezoneY;
+			y = 0.643 * safezoneH + safezoneY;
 			w = 0.201094 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-		class SELECT_INVENTORY_INFO: RscListBox
+
+		class SELECT_INVENTORY_INFO: RscCombo
 		{
 			idc = 2804;
 			colorBackground[] = {0,0,0,0.8};
 
-			x = 0.54125 * safezoneW + safezoneX;
-			y = 0.544 * safezoneH + safezoneY;
+			x = 0.541249 * safezoneW + safezoneX;
+			y = 0.665 * safezoneH + safezoneY;
 			w = 0.201094 * safezoneW;
-			h = 0.143 * safezoneH;
+			h = 0.022 * safezoneH;
 		};
 		class SELECT_DESC_INFO: RscStructuredText
 		{
@@ -168,7 +169,7 @@ class RscDisplayGarageAlysia: RscDisplayDefaultInteraction
 			x = 0.54125 * safezoneW + safezoneX;
 			y = 0.28 * safezoneH + safezoneY;
 			w = 0.201094 * safezoneW;
-			h = 0.243852 * safezoneH;
+			h = 0.363 * safezoneH;
 		};
 		class SELECT_ACTIONS_HEADER: RscStructuredText
 		{

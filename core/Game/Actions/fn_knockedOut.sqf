@@ -10,6 +10,7 @@ if ((animationState player) != "incapacitated") then
 {
 	if (!g_staff_god) then
 	{
+		cutText ["", "BLACK IN", 5, true];
 		[] call AlysiaEvent_fnc_onPlayerFireNear;
 		if (!(player getVariable ["restrained", false]) && !(player getVariable ["surrender", false])) then
 		{
@@ -22,7 +23,7 @@ if ((animationState player) != "incapacitated") then
 			};
 	
 			player playMoveNow "incapacitated";
-			sleep round(random(7) + 2);
+			sleep round(random(5) + 2);
 			player playMoveNow "amovppnemstpsraswrfldnon";
 			if (!_inUse) then {g_action_inUse = false};
 		};

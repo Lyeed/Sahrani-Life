@@ -32,8 +32,6 @@ if (_fuel isEqualTo "") exitWith {
 	([_station, _fuel] call AlysiaClient_fnc_fuelStation_fuel_getPrice)
 ];
 
-(_display displayCtrl 16015) ctrlSetText getText(missionConfigFile >> "ALYSIA_FUEL" >> _fuel >> "picture");
-
 _amount = [_station, _fuel] call AlysiaClient_fnc_fuelStation_fuel_getStock;
 (_display displayCtrl 16011) ctrlSetStructuredText parseText format
 [

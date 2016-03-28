@@ -4,6 +4,15 @@
 	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
+
+,
+    [
+        "Faire le plein",
+        "[] spawn AlysiaClient_fnc_garageVehicleRefuel;",
+        "lyeed_IMG\data\garage\action_fuel.paa",
+        "lyeed_IMG\data\garage\action_fuel_select.paa",
+        "(_fuel < 100)"
+    ]
 */
 private
 [
@@ -101,7 +110,7 @@ if (count(_licenses) > 0) then
 
 (_display displayCtrl 2825) ctrlSetStructuredText parseText format
 [
-        "<t font='EtelkaMonospacePro' size='0.7'>"
+        "<t font='EtelkaMonospacePro' size='0.8'>"
     +   "<t align='center'>- Prérequis de sortie de garage -</t><br/>"
     +   "<t align='left'>Prix</t><t align='right' color='%13'>%4kn</t><br/>"
     +   "<t align='left'>Rank</t><t align='right' color='%14'>%15</t><br/>"
@@ -188,13 +197,6 @@ _idc = 2810;
         "lyeed_IMG\data\garage\action_localize.paa",
         "lyeed_IMG\data\garage\action_localize_select.paa",
         "!(_storePos isEqualTo [0,0,0]) && ((player distance _storePos) > 20)"
-    ],
-    [
-        "Faire le plein",
-        "[] spawn AlysiaClient_fnc_garageVehicleRefuel;",
-        "lyeed_IMG\data\garage\action_fuel.paa",
-        "lyeed_IMG\data\garage\action_fuel_select.paa",
-        "(_fuel < 100)"
     ],
     [
         "Importer",

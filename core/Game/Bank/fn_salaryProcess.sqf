@@ -80,7 +80,6 @@ if (!(isNull g_company)) then
 					};
 				};
 
-				_price = round(_price * 0.5);
 				_price_remove = _price_remove + _price;
 				if (!([false, _price, "Taxe salariale"] call AlysiaClient_fnc_handleATM)) then
 				{
@@ -124,7 +123,7 @@ if (!(isNull g_company)) then
 		} else {
 			if (_price_employees > 0) then
 			{
-				_amount = round(_price_employees * 0.5);
+				_amount = round(_price_employees * 0.6);
 				[true, _amount, "Salaire"] call AlysiaClient_fnc_handleATM;
 				_price_add = _price_add + _amount;
 			};

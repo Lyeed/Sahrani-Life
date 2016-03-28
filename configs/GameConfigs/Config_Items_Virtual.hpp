@@ -230,7 +230,7 @@ class ALYSIA_ITEMS
 		license = "tabac";
 		class market
 		{
-			max = 726;
+			max = 1326;
 			min = 98;
 			affect[] = AFFECT_DRUGS;
 		};
@@ -244,7 +244,7 @@ class ALYSIA_ITEMS
 		license = "tabac";
 		class market
 		{
-			max = 525;
+			max = 825;
 			min = 15;
 			affect[] = AFFECT_DRUGS;
 		};
@@ -258,7 +258,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\objet_de_valeur.paa";
 		class market
 		{
-			max = 628;
+			max = 728;
 			min = 90;
 			affect[] = AFFECT_ILLEGAL;
 		};

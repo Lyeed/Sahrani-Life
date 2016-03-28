@@ -15,7 +15,8 @@ if (isNil "_info") exitWith {};
 
 _hasLicense = false;
 _license = getText(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2) >> "license");
-if (_license != "") then {
+if (_license != "") then
+{
 	if ([_license] call AlysiaClient_fnc_hasLicense) then
 	{
 		missionNamespace setVariable [format["license_%1", _license], false];

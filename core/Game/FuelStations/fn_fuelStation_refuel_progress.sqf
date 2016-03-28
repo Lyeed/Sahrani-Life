@@ -89,7 +89,7 @@ while {true} do
 
 	_liters = _liters + _progressLiters;
 	_station setVariable [_type, (_currentLiters - _liters)];
-	_bill = _bill + ([_station, _type] call AlysiaClient_fnc_fuelStation_fuel_getPrice);
+	_bill = _bill + (([_station, _type] call AlysiaClient_fnc_fuelStation_fuel_getPrice) * _progressLiters);
 	
 	(_display displayCtrl 17008) ctrlSetStructuredText parseText format
 	[
