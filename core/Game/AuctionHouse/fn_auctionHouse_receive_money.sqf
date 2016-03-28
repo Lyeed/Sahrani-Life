@@ -20,4 +20,4 @@ if ((_item isEqualTo "") || (_price isEqualTo 0) || (_type isEqualTo -1)) exitWi
 		([_price] call AlysiaClient_fnc_numberText)
 	], "buy"
 ] call AlysiaClient_fnc_info;
-[true, _price] call AlysiaClient_fnc_handleATM;
+[true, _price, "Hôtel des ventes"] call AlysiaClient_fnc_handleATM;

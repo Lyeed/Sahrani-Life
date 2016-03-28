@@ -41,7 +41,7 @@ switch (_selected) do
 			+	"Le Nord et le Sud ne partagent pas les même stocks, les prix peuvent donc varier d'une région à l'autre.<br/>"
 			+	"En tant que vendeur, vous n'avez pas besoin d'être présent sur l'île pour recevoir l'argent d'une transaction.<br/>"
 			+	"La commission d'une vente est de 5% à payer lors de la mise en vente.<br/>"
-			+	"Vous ne pouvez pas vendre votre sac à dos ou ce qu'il y a dedans."
+			+	"Vous ne pouvez pas vendre le contenu de votre sac à dos."
 			+	"</t>"
 		);
 

@@ -478,7 +478,7 @@ class RscDisplayAuctionHouse: RscDisplayDefault
 			
 			x = 0.386562 * safezoneW + safezoneX;
 			y = 0.577 * safezoneH + safezoneY;
-			w = 0.185625 * safezoneW;
+			w = 0.11 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 
@@ -509,7 +509,7 @@ class RscDisplayAuctionHouse: RscDisplayDefault
 			
 			x = 0.386562 * safezoneW + safezoneX;
 			y = 0.61 * safezoneH + safezoneY;
-			w = 0.0979687 * safezoneW;
+			w = 0.11 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 
@@ -540,7 +540,7 @@ class RscDisplayAuctionHouse: RscDisplayDefault
 			
 			x = 0.386562 * safezoneW + safezoneX;
 			y = 0.643 * safezoneH + safezoneY;
-			w = 0.0979687 * safezoneW;
+			w = 0.11 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 	};

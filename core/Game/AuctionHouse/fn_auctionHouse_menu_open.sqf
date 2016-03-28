@@ -21,8 +21,8 @@ if (!(isNil "gServer_soonReboot")) exitWith {
 	["Veuillez attendre le <t color='#B40404'>redémarrage</t> du serveur pour interagir avec l'hôtel des ventes."] call AlysiaClient_fnc_error;
 };
 
-if (count("getText(_x >> 'uid') isEqualTo (getPlayerUID player)" configClasses (missionConfigFile >> 'ALYSIA_STAFF' >> 'members')) isEqualTo 0) exitWith {
-	["L'hôtel des ventes ouvrira ses portes le <t color='#01DF01'>05/03</t> (date mondiale)."] call AlysiaClient_fnc_info;
+if ((count("getText(_x >> 'uid') isEqualTo (getPlayerUID player)" configClasses (missionConfigFile >> 'ALYSIA_STAFF' >> 'members')) isEqualTo 0) && (_type isEqualTo 2)) exitWith {
+	["La section véhicule de l'hôtel des ventes n'est pas encore disponible."] call AlysiaClient_fnc_info;
 };
 
 if (createDialog "RscDisplayAuctionHouse") then
