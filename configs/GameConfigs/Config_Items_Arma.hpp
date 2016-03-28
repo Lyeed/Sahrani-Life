@@ -150,6 +150,11 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 800;
 		buy_license_CIV = "company_garagist";
 	};
+	class Lectra_textile
+	{		
+		buy_price = 800;
+		buy_license_CIV = "company_clothing";
+	};
 	class B_Kitbag_mcamo
 	{
 		buy_price = 800;

@@ -792,6 +792,13 @@ class ALYSIA_PROCESS
 		receive[] = {{},{"SDNS_depannage"},0};
 		class factions: factions {};
 	};
+	class clothing_lectra_textile: clothing_suit_1
+	{
+		name = "Confection d'uniforme textile (Lectra)";
+		require[] = {{"tissue",3},{"cottonp",10}};
+		receive[] = {{},{"Lectra_textile"},0};
+		class factions: factions {};
+	};
 	class backpack_depann_1: clothing_suit_1
 	{
 		name = "Confection de sac à dos dépanneur";

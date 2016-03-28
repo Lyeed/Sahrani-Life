@@ -424,6 +424,7 @@ class ALYSIA_COMPANIES
 				"clothing_depann_1",
 				"clothing_depann_2",
 				"clothing_depann_SDNS",
+				"clothing_lectra_textile",
 				"backpack_depann_1",
 				"clothing_secu_1",
 				"clothing_secu_2",
