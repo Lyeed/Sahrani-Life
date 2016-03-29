@@ -5,20 +5,20 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_item", "_value", "_cWeight", "_mWeight", "_weight"];
-_item = [_this, 0, "", [""]] call BIS_fnc_param;
-_value = [_this, 1, -1, [0]] call BIS_fnc_param;
-_cWeight = [_this, 2, -1, [0]] call BIS_fnc_param;
-_mWeight = [_this, 3, -1, [0]] call BIS_fnc_param;
+private["_wd_item", "_wd_value", "_wd_current_weight", "_wd_max_weight", "_wd_tmp_weight"];
+_wd_item = [_this, 0, "", [""]] call BIS_fnc_param;
+_wd_value = [_this, 1, -1, [0]] call BIS_fnc_param;
+_wd_current_weight = [_this, 2, -1, [0]] call BIS_fnc_param;
+_wd_max_weight = [_this, 3, -1, [0]] call BIS_fnc_param;
 
-if ((_item isEqualTo "") || (_value isEqualTo -1) || (_cweight isEqualTo -1) || (_mWeight isEqualTo -1)) exitWith {0};
+if ((_wd_item isEqualTo "") || (_wd_value isEqualTo -1) || (_wd_current_weight isEqualTo -1) || (_wd_max_weight isEqualTo -1)) exitWith {0};
 
-_weight = ([_item] call AlysiaClient_fnc_itemGetWeight);
-_cWeight = _cweight + (_weight * _value);
-while {(_cweight > _mWeight)} do
+_wd_tmp_weight = ([_wd_item] call AlysiaClient_fnc_itemGetWeight);
+_wd_current_weight = _cweight + (_wd_tmp_weight * _wd_value);
+while {(_cweight > _wd_max_weight)} do
 {
-	_cweight = _cweight - _weight;
-	_value = _value - 1;
+	_cweight = _cweight - _wd_tmp_weight;
+	_wd_value = _wd_value - 1;
 };
 
-_value;
+_wd_value;

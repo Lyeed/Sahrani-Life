@@ -8,61 +8,6 @@
 	["lyeed_IMG\data\player_hud\drugs.paa", "(g_drugs_consuming > 0)"],
 	["lyeed_IMG\data\player_hud\blind.paa", "(player getVariable [""bandeau"",false])"],
 */
-private "_move_ctrl";
-_move_ctrl =
-{
-	private["_ctrl", "_type", "_distance", "_default_position", "_math", "_hide_end", "_position_end"];
-	
-	disableSerialization;
-	_ctrl = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
-
-	if (isNull _ctrl) exitWith {};
-
-	_type = [_this, 1, "", [""]] call BIS_fnc_param;
-	_hide_end = [_this, 2, true, [true]] call BIS_fnc_param;
-
-	_default_position = ctrlPosition _ctrl;
-	_distance = [_this, 3, (_default_position select 2), [0]] call BIS_fnc_param;
-	_math = _distance / 13;
-
-	if (!(ctrlShown _ctrl)) then {_ctrl ctrlShow true};
-	if (profileNamespace getVariable ["ALYSIA_hud_animation", true]) then
-	{
-		switch (_type) do
-		{
-			case "right":
-			{
-				_position_end = (_default_position select 0) + _distance;
-				while {((((ctrlPosition _ctrl) select 0) + _math) < _position_end)} do
-				{
-					_ctrl ctrlSetPosition [((ctrlPosition _ctrl) select 0) + _math, (_default_position select 1)];
-					_ctrl ctrlCommit 0;
-					uiSleep 0.1;
-				};
-			};
-			case "left":
-			{
-				_position_end = (_default_position select 0) - _distance;
-				while {((((ctrlPosition _ctrl) select 0) - _math) > _position_end)} do
-				{
-					_ctrl ctrlSetPosition [((ctrlPosition _ctrl) select 0) - _math, (_default_position select 1)];
-					_ctrl ctrlCommit 0;
-					uiSleep 0.1;
-				};
-			};
-		};
-	} else {
-		switch (_type) do
-		{
-			case "right": {_position_end = (_default_position select 0) + _distance};
-			case "left": {_position_end = (_default_position select 0) - _distance};
-		};
-	};
-
-	_ctrl ctrlSetPosition [_position_end, (_default_position select 1)];
-	_ctrl ctrlCommit 0;
-	if (_hide_end) then {_ctrl ctrlShow false};
-};
 
 if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 {
@@ -73,80 +18,57 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 	if (isNull _hud) exitWith {};
 
 	_cagoule_active = false;
-	/*===========================
-	  ===       PERCENT       ===
-	  =========================== */
+
 	_ctrl_blood = _hud displayCtrl 23500;
 	_ctrl_fatigue = _hud displayCtrl 23501;
 	_ctrl_hunger = _hud displayCtrl 23502;
 	_ctrl_thirst = _hud displayCtrl 23503;
 
-	/*===========================
-	  ===       WEAPONS       ===
-	  =========================== */
 	_ctrl_weapon_mod = _hud displayCtrl 23530;
 	_ctrl_weapon_ammo = _hud displayCtrl 23532;
-
-	{
-		(_hud displayCtrl _x) ctrlShow false;
-	} forEach ([23530, 23531, 23532, 23533]);
+	_ctrl_weapon_distance = _hud displayCtrl 23531;
+	_ctrl_weapon_mod ctrlShow false;
+	_ctrl_weapon_ammo ctrlShow false;
 	_ctrl_weapon_active = false;
-	_ctrl_weapon_first = true;
-	/*===========================
-	  ===         GPS         ===
-	  =========================== */
+
 	_ctrl_gps_map = _hud displayCtrl 23539;
 	_ctrl_gps_text = _hud displayCtrl 23542;
-
-	{
-		(_hud displayCtrl _x) ctrlShow false;
-	} forEach ([23538, 23539, 23540, 23541, 23542]);
+	_ctrl_gps_text ctrlShow false;
+	_ctrl_gps_map ctrlShow false;
 	_ctrl_gps_active = false;
-	_ctrl_gps_first = true;
-	/*===========================
-	  ===       VEHICLE       ===
-	  ===========================*/
+
 	_ctrl_vehicle_speed = _hud displayCtrl 23520;
 	_ctrl_vehicle_fuel = _hud displayCtrl 23522;
-
-	{
-		(_hud displayCtrl _x) ctrlShow false;
-	} forEach ([23520, 23521, 23522, 23523]);
+	_ctrl_vehicle_speed ctrlShow false;
+	_ctrl_vehicle_fuel ctrlShow false;
 	_ctrl_vehicle_active = false;
-	_ctrl_vehicle_first = true;
 
 	while {!(isNull _hud)} do
 	{
-		/*===========================
-		  ===       PERCENT       ===
-		  =========================== */
 		_ctrl_blood ctrlSetStructuredText parseText format
 		[
-			"<img size='1.4' image='lyeed_IMG\data\player_hud\blood.paa'/><t align='right' font='Impact'><t size='1.7'>%1</t><t size='1.3'>%2</t></t>",
+			"<t align='left' font='RobotoRegular' size='2'>%1</t><t size='1.3' align='right'></t></t><img size='1.4' align='right' image='lyeed_IMG\data\player_hud\blood.paa'/>",
 			round((g_blood / 4000) * 100), "%"
 		];
 
 		_ctrl_fatigue ctrlSetStructuredText parseText format
 		[
-			"<img size='1.4' image='lyeed_IMG\data\player_hud\fatigue.paa'/><t align='right' font='Impact'><t size='1.7'>%1</t><t size='1.3'>%2</t></t>",
+			"<t align='left' font='RobotoRegular' size='2'>%1</t><t size='1.3' align='right'></t></t><img size='1.4' align='right' image='lyeed_IMG\data\player_hud\fatigue.paa'/>",
 			round((1 - (getFatigue player)) * 100), "%"
 		];
 
 		_ctrl_hunger ctrlSetStructuredText parseText format
 		[
-			"<img size='1.4' image='lyeed_IMG\data\player_hud\hunger.paa'/><t align='right' font='Impact'><t size='1.7'>%1</t><t size='1.3'>%2</t></t>",
+			"<t align='left' font='RobotoRegular' size='2'>%1</t><t size='1.3' align='right'></t></t><img size='1.4' align='right' image='lyeed_IMG\data\player_hud\hunger.paa'/>",
 			g_hunger, "%"
 		];
 
 		_ctrl_thirst ctrlSetStructuredText parseText format
 		[
-			"<img size='1.4' image='lyeed_IMG\data\player_hud\thirst.paa'/><t align='right' font='Impact'><t size='1.7'>%1</t><t size='1.3'>%2</t></t>",
+			"<t align='left' font='RobotoRegular' size='2'>%1</t><t size='1.3' align='right'></t></t><img size='1.4' align='right' image='lyeed_IMG\data\player_hud\thirst.paa'/>",
 			g_thirst, "%"
 		];
 
-		/*===========================
-		  ===        ICONS        ===
-		  =========================== */
 		_idc = 23510;
 		{
 			if (call compile (_x select 1)) then
@@ -177,113 +99,88 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 			(_hud displayCtrl _i) ctrlShow false;
 		};
 
-		/*===========================
-		  ===       VEHICLE       ===
-		  =========================== */
 		if (((vehicle player) != player) && (driver (vehicle player) isEqualTo player)) then
 		{
 			_ctrl_vehicle_speed ctrlSetStructuredText parseText format
 			[
-				"<t align='center'><t size='1.3'>%1</t><t size='1'>km/h</t></t>",
+				"<t align='center' font='digital' size='3'>%1</t><t align='right' font='PuristaLight' size='1.8'>km/h</t>",
 				abs(round(speed player))
 			];
 
+			_fuel = "";
+			for "_i" from 0 to round(((fuel (vehicle player)) * 10) - 1) do {_fuel = _fuel + "-"};
 			_ctrl_vehicle_fuel ctrlSetStructuredText parseText format
 			[
-				"<img size='1.4' image='lyeed_IMG\data\player_hud\fuel.paa'/><t align='right' font='Impact'><t size='1.7'>%1</t><t size='1.3'>%2</t></t>",
-				round((fuel (vehicle player)) * 100), "%"
+				"<t align='left'><img size='1.2' image='lyeed_IMG\data\player_hud\fuel.paa'/>  <t font='digital' size='2.4'>%1</t></t><t align='right' font='digital' size='1.2'>|</t>",
+				_fuel
 			];
 
 			if (!_ctrl_vehicle_active) then
 			{
-				if (_ctrl_vehicle_first) then
-				{
-					_ctrl_vehicle_first = false;
-					{
-						(_hud displayCtrl _x) ctrlShow true;
-					} forEach ([23520, 23521, 23522, 23523]);
-				} else {
-					[(_hud displayCtrl 23520), "right", false] spawn _move_ctrl;
-					[(_hud displayCtrl 23521), "right", false] spawn _move_ctrl;
-					[(_hud displayCtrl 23522), "left", false] spawn _move_ctrl;
-					[(_hud displayCtrl 23523), "left", false] spawn _move_ctrl;
-				};
+				_ctrl_vehicle_speed ctrlShow true;
+				_ctrl_vehicle_fuel ctrlShow true;
 				_ctrl_vehicle_active = true;
 			};
 		} else {
 			if (_ctrl_vehicle_active) then
 			{
+				_ctrl_vehicle_speed ctrlShow false;
+				_ctrl_vehicle_fuel ctrlShow false;
 				_ctrl_vehicle_active = false;
-				[(_hud displayCtrl 23520), "left", true] spawn _move_ctrl;
-				[(_hud displayCtrl 23521), "left", true] spawn _move_ctrl;
-				[(_hud displayCtrl 23522), "right", true] spawn _move_ctrl;
-				[(_hud displayCtrl 23523), "right", true] spawn _move_ctrl;
 			};
 		};
 
-		/*===========================
-		  ===       WEAPONS       ===
-		  =========================== */
 		if (((currentWeapon player) isEqualTo "") || ((vehicle player) != player)) then
 		{
 			if (_ctrl_weapon_active) then
 			{
+				_ctrl_weapon_mod ctrlShow false;
+				_ctrl_weapon_ammo ctrlShow false;
+				_ctrl_weapon_distance ctrlShow false;
 				_ctrl_weapon_active = false;
-				[(_hud displayCtrl 23530), "right", true] spawn _move_ctrl;
-				[(_hud displayCtrl 23531), "right", true] spawn _move_ctrl;
-				[(_hud displayCtrl 23532), "right", true] spawn _move_ctrl;
-				[(_hud displayCtrl 23533), "right", true] spawn _move_ctrl;
 			};
 		} else {
 
-			_mod = switch (currentWeaponMode player) do
-			{
-				case "Single": {"Coup par coup"};
-				case "Burst": {"Rafale"};
-				case "FullAuto": {"Automatique"};
-				case "manual": {"Manuel"};
-				default {"Inconnu"};
-			};
-
 			_ctrl_weapon_mod ctrlSetStructuredText parseText format
 			[
-				"<img size='1.4' image='lyeed_IMG\data\player_hud\weapon_mod.paa'/><t align='right'><t size='1.3'>%1</t></t>",
-				_mod
+				"<t align='right' font='RobotoRegular'><t size='1.4'>%1  </t></t><img size='1.4' align='right' image='lyeed_IMG\data\player_hud\weapon_mod.paa'/>",
+				switch (currentWeaponMode player) do
+				{
+					case "Single": {"Coup par coup"};
+					case "Burst": {"Rafale"};
+					case "FullAuto": {"Automatique"};
+					case "manual": {"Manuel"};
+					default {"Inconnu"};
+				}
 			];
 
 			_ctrl_weapon_ammo ctrlSetStructuredText parseText format
 			[
-				"<img size='1.4' image='lyeed_IMG\data\player_hud\weapon_bullet_name.paa'/><t align='right'><t size='1.3'>%1</t></t>",
-				if ((((weaponState player) select 3)) isEqualTo "") then {"Aucune"} else {getText(configFile >> "CfgMagazines" >> ((weaponState player) select 3) >> "displayName")}
+				"<t align='right' font='RobotoRegular'><t size='1.4'>%1  </t></t><img size='1.4' align='right' image='lyeed_IMG\data\player_hud\weapon_bullet_name.paa'/>",
+				if ((((weaponState player) select 3)) isEqualTo "") then {"Aucun"} else {getText(configFile >> "CfgMagazines" >> ((weaponState player) select 3) >> "displayName")}
+			];
+
+			_ctrl_weapon_distance ctrlSetStructuredText parseText format
+			[
+				"<t align='right' font='RobotoRegular'><t size='1.4'>%1  </t></t><img size='1.4' align='right' image='lyeed_IMG\data\player_hud\target.paa'/>",
+				currentZeroing player
 			];
 
 			if (!_ctrl_weapon_active) then
 			{
-				if (_ctrl_weapon_first) then 
-				{
-					_ctrl_weapon_first = false;
-					{
-						(_hud displayCtrl _x) ctrlShow true;
-					} forEach ([23530, 23531, 23532, 23533]);
-				} else {
-					[(_hud displayCtrl 23530), "left", false] spawn _move_ctrl;
-					[(_hud displayCtrl 23531), "left", false] spawn _move_ctrl;
-					[(_hud displayCtrl 23532), "left", false] spawn _move_ctrl;
-					[(_hud displayCtrl 23533), "left", false] spawn _move_ctrl;
-				};
+				_ctrl_weapon_mod ctrlShow true;
+				_ctrl_weapon_ammo ctrlShow true;
+				_ctrl_weapon_distance ctrlShow true;
 				_ctrl_weapon_active = true;
 			};
 		};
 
-		/*===========================
-		  ===         GPS         ===
-		  =========================== */
 		if (("ItemGPS" in (assignedItems player)) && !(player getVariable ["restrained", false]) && !(player getVariable ["surrender", false])) then
 		{
 			_ctrl_gps_text ctrlSetStructuredText parseText format["<t align='center' font='PuristaBold'>%1</t>", (mapGridPosition player)];
 
 			if ((vehicle player) isEqualTo player) then {
-				_ctrl_gps_map ctrlMapAnimAdd [0, 0.05, player];
+				_ctrl_gps_map ctrlMapAnimAdd [0, 0.03, player];
 			} else {
 				_ctrl_gps_map ctrlMapAnimAdd [0, 0.09, (vehicle player)];
 			};
@@ -291,30 +188,16 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 
 			if (!_ctrl_gps_active) then
 			{
-				if (_ctrl_gps_first) then
-				{
-					_ctrl_gps_first = false;
-					{
-						(_hud displayCtrl _x) ctrlShow true;
-					} forEach ([23538, 23539, 23540, 23541, 23542]);
-				} else {
-					[(_hud displayCtrl 23538), "left", false, 0.4] spawn _move_ctrl;
-					[(_hud displayCtrl 23539), "left", false, 0.4] spawn _move_ctrl;
-					[(_hud displayCtrl 23540), "left", false, 0.4] spawn _move_ctrl;
-					[(_hud displayCtrl 23541), "left", false, 0.4] spawn _move_ctrl;
-					[(_hud displayCtrl 23542), "left", false, 0.4] spawn _move_ctrl;
-				};
+				_ctrl_gps_text ctrlShow true;
+				_ctrl_gps_map ctrlShow true;
 				_ctrl_gps_active = true;
 			};
 		} else {
 			if (_ctrl_gps_active) then
 			{
+				_ctrl_gps_text ctrlShow false;
+				_ctrl_gps_map ctrlShow false;
 				_ctrl_gps_active = false;
-				[(_hud displayCtrl 23538), "right", true, 0.4] spawn _move_ctrl;
-				[(_hud displayCtrl 23539), "right", true, 0.4] spawn _move_ctrl;
-				[(_hud displayCtrl 23540), "right", true, 0.4] spawn _move_ctrl;
-				[(_hud displayCtrl 23541), "right", true, 0.4] spawn _move_ctrl;
-				[(_hud displayCtrl 23542), "right", true, 0.4] spawn _move_ctrl;
 			};
 		};
 
@@ -332,17 +215,10 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 
 		if (!(player getVariable ["is_coma", false]) && (alive player)) then
 		{
-			if ((goggles player) isEqualTo "G_Bandanna_blk") then
-			{
-				if ((player getVariable ["tf_voiceVolume", 0]) > 0) then
-				{
-					player setVariable ["tf_voiceVolume", 0, true];
-				};
+			if ((goggles player) isEqualTo "G_Bandanna_blk") then {
+				if ((player getVariable ["tf_voiceVolume", 0]) > 0) then {player setVariable ["tf_voiceVolume", 0, true]};
 			} else {
-				if ((player getVariable ["tf_voiceVolume", 0]) isEqualTo 0) then
-				{
-					player setVariable ["tf_voiceVolume", 1, true];
-				};				
+				if ((player getVariable ["tf_voiceVolume", 0]) isEqualTo 0) then {player setVariable ["tf_voiceVolume", 1, true]};
 			};
 		};
 

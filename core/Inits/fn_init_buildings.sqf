@@ -920,7 +920,7 @@ _cString =
 ["xcam_Metal_rack_F","[13530.898438,10459.0722656,0.214645]",169.066,-100,0,0,[]] call _cString;
 ["xcam_Metal_rack_F","[13532.230469,10459.325195,0.214645]",169.066,-100,0,0,[]] call _cString;
 ["xcam_Sun_chair_green_F","[13519.625977,10492.644531,0.237374]",79.6593,-100,0,0,[]] call _cString;
-["xcam_PortableLight_double_F","[13517.681641,10492.261719,0.212964]",257.309,-100,0,0,[]] call _cString;
+["Land_PortableLight_double_F","[13517.681641,10492.261719,0.212964]",257.309,-100,0,0,[]] call _cString;
 ["xcam_SmallTable","[13517.989258,10491.102539,0.228114]",79.5843,-100,0,0,[]] call _cString;
 ["xcam_SmallTable","[13517.518555,10493.607422,0.228114]",79.5843,-100,0,0,[]] call _cString;
 ["xcam_Defibrillator_F","[13517.429688,10493.587891,1.03138]",169.658,-100,0,0,[]] call _cString;
@@ -1064,7 +1064,7 @@ _cString =
 ["xcam_b_ArundoD2s_F","[13580.850586,10445.285156,0.720598]",165.417,-100,0,0,[]] call _cString;
 ["xcam_b_ArundoD2s_F","[13580.360352,10443.451172,0.720598]",216.49,-100,0,0,[]] call _cString;
 ["xcam_Sun_chair_green_F","[13521.00488281,10485.389648,0.237374]",79.6593,-100,0,0,[]] call _cString;
-["xcam_PortableLight_double_F","[13519.0585938,10485.0078125,0.212964]",257.309,-100,0,0,[]] call _cString;
+["Land_PortableLight_double_F","[13519.0585938,10485.0078125,0.212964]",257.309,-100,0,0,[]] call _cString;
 ["xcam_Saw_F","[13519.325195,10484.0390625,1.0362]",84.6593,-100,0,0,[]] call _cString;
 ["xcam_SmallTable","[13518.897461,10486.353516,0.228114]",79.5843,-100,0,0,[]] call _cString;
 ["xcam_SmallTable","[13519.368164,10483.84668,0.228114]",79.5843,-100,0,0,[]] call _cString;
@@ -1519,9 +1519,9 @@ _cString =
 ["xcam_SignM_WarningMilitaryArea_F","[12255.00878906,7297.719727,-0.214646]",182.146,-100,0,0,[]] call _cString;
 
 //Archéologie
-["xcam_A_Mosque_small_2_dam_EP1","[10607.753906,7946.375977,1.61461]",0,-100,0,0,[]] call _cString;
+["Land_A_Mosque_small_2_dam_EP1","[10607.753906,7946.375977,1.61461]",0,-100,0,0,[]] call _cString;
 ["xcam_A_Mosque_big_wall_corner_EP1","[10619.420898,7953.761719,-0.972222]",0,-100,0,0,[]] call _cString;
-["xcam_A_Mosque_big_wall_gate_dam_EP1","[10606.536133,7913.913574,-5.45926]",-141.288,-100,0,0,[]] call _cString;
+["Land_A_Mosque_big_wall_gate_dam_EP1","[10606.536133,7913.913574,-5.45926]",-141.288,-100,0,0,[]] call _cString;
 ["xcam_A_Castle_Bergfrit","[5987.131348,7609.231445,-10.1012]",218.712,-100,0,0,[]] call _cString;
 ["xcam_A_Castle_Wall2_End_2_ruins","[5988.623047,7577.619629,-0.313973]",253.712,-100,0,0,[]] call _cString;
 ["xcam_A_Castle_Wall1_End_2_ruins","[6021.157715,7590.889648,-0.164141]",-146.288,-100,0,0,[]] call _cString;
@@ -2306,9 +2306,9 @@ _cString =
 ["xcam_c_GrassTall_summer","[10512.532227,9503.776367,0]",239.671,-100,0,0,[]] call _cString;
 ["xcam_c_GrassTall_summer","[10512.274414,9505.544922,0]",239.671,-100,0,0,[]] call _cString;
 ["xcam_c_GrassTall_summer","[10511.398438,9507.0429688,0]",239.671,-100,0,0,[]] call _cString;
-["xcam_Kontejner","[10492.789063,9546.0449219,0]",259.671,-100,0,0,[]] call _cString;
-["xcam_Kontejner","[10490.541016,9545.666016,0]",259.671,-100,0,0,[]] call _cString;
-["xcam_popelnice","[10488.874023,9545.0751953,0]",259.671,-100,0,0,[]] call _cString;
+["Land_Kontejner","[10492.789063,9546.0449219,0]",259.671,-100,0,0,[]] call _cString;
+["Land_Kontejner","[10490.541016,9545.666016,0]",259.671,-100,0,0,[]] call _cString;
+["Land_popelnice","[10488.874023,9545.0751953,0]",259.671,-100,0,0,[]] call _cString;
 ["xcam_stanek_1B","[10487.707031,9542.741211,0]",79.6714,-100,0,0,[]] call _cString;
 ["xcam_stanek_1C","[10492.0234375,9543.458984,0]",79.6714,-100,0,0,[]] call _cString;
 ["xcam_stanek_1","[10489.692383,9529.150391,0]",-10.3286,-100,0,0,[]] call _cString;

@@ -1,15 +1,13 @@
 /*
 	Author : Bryan "Tonic" Boardwine
 */
-private["_item", "_stack", "_return"];
-_item = _this select 0;
-_stack = _this select 1;
-_return = -1;
+private["_index_item", "_index_stack", "_index_return"];
+_index_item = _this select 0;
+_index_stack = _this select 1;
+_index_return = -1;
 
 {
-	if (_item in _x) exitWith {
-		_return = _forEachIndex;
-	};
-} forEach _stack;
+	if (_index_item in _x) exitWith {_index_return = _forEachIndex};
+} forEach _index_stack;
 
-_return;
+_index_return;

@@ -5,46 +5,46 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_trunk", "_type", "_item", "_amount", "_ret", "_index"];
-_type = [_this, 0, true, [true]] call BIS_fnc_param;
-_target = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
-_variable = [_this, 2, "", [""]] call BIS_fnc_param;
-_item = [_this, 3, "", [""]] call BIS_fnc_param;
-_amount = [_this, 4, 1, [1]] call BIS_fnc_param;
-_apply = [_this, 5, true, [true]] call BIS_fnc_param;
-_ret = false;
+private["_h_trunk", "_h_type", "_h_item", "_h_amount", "_h_ret", "_item_index"];
+_h_type = [_this, 0, true, [true]] call BIS_fnc_param;
+_h_target = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
+_h_variable = [_this, 2, "", [""]] call BIS_fnc_param;
+_h_item = [_this, 3, "", [""]] call BIS_fnc_param;
+_h_amount = [_this, 4, 1, [1]] call BIS_fnc_param;
+_h_apply = [_this, 5, true, [true]] call BIS_fnc_param;
+_h_ret = false;
 
-if (_variable isEqualTo "") exitWith {false};
-if (_item isEqualTo "") exitWith {false};
-if (isNull _target) exitWith {false};
+if (_h_variable isEqualTo "") exitWith {false};
+if (_h_item isEqualTo "") exitWith {false};
+if (isNull _h_target) exitWith {false};
 
-_trunk = _target getVariable [_variable, []];
-_index = [_item, _trunk] call AlysiaClient_fnc_index;
-if (_type) then
+_h_trunk = _h_target getVariable [_h_variable, []];
+_item_index = [_h_item, _h_trunk] call AlysiaClient_fnc_index;
+if (_h_type) then
 {
-	if (([_item, _amount, ([_trunk] call AlysiaClient_fnc_weightGenerate), ([_target] call AlysiaClient_fnc_getVehicleWeightMax)] call AlysiaClient_fnc_calWeightDiff) isEqualTo _amount) then
+	if (([_h_item, _h_amount, ([_h_trunk] call AlysiaClient_fnc_weightGenerate), ([_h_target] call AlysiaClient_fnc_getVehicleWeightMax)] call AlysiaClient_fnc_calWeightDiff) isEqualTo _h_amount) then
 	{
-		if (_index isEqualTo -1) then {
-			_trunk pushBack [_item, _amount];
+		if (_item_index isEqualTo -1) then {
+			_h_trunk pushBack [_h_item, _h_amount];
 		} else {
-			_trunk set [_index, [_item, (_amount + ((_trunk select _index) select 1))]];
+			_h_trunk set [_item_index, [_h_item, (_h_amount + ((_h_trunk select _item_index) select 1))]];
 		};
-		_ret = true;
+		_h_ret = true;
 	};
 } else {
-	if (_index != -1) then
+	if (_item_index != -1) then
 	{
-		if (_amount isEqualTo ((_trunk select _index) select 1)) then {
-			_trunk deleteAt _index;
+		if (_h_amount isEqualTo ((_h_trunk select _item_index) select 1)) then {
+			_h_trunk deleteAt _item_index;
 		} else {
-			_trunk set [_index, [_item, ((_trunk select _index) select 1) - _amount]];
+			_h_trunk set [_item_index, [_h_item, ((_h_trunk select _item_index) select 1) - _h_amount]];
 		};
-		_ret = true;
+		_h_ret = true;
 	};
 };
 
-if (_ret) then {
-	_target setVariable [_variable, _trunk, _apply];
+if (_h_ret) then {
+	_h_target setVariable [_h_variable, _h_trunk, _h_apply];
 };
 
-_ret;
+_h_ret;

@@ -5,11 +5,10 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_items", "_weight"];
-_items = [_this, 0, [], [[]]] call BIS_fnc_param;
+private "_weight_return";
 
-_weight = 0;
+_weight_return = 0;
 {
-	_weight = _weight + (([_x select 0] call AlysiaClient_fnc_itemGetWeight) * (_x select 1));
-} forEach (_items);
-_weight;
+	_weight_return = _weight_return + (([_x select 0] call AlysiaClient_fnc_itemGetWeight) * (_x select 1));
+} forEach ([_this, 0, [], [[]]] call BIS_fnc_param);
+_weight_return;
