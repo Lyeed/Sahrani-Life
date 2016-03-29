@@ -792,18 +792,19 @@ class ALYSIA_PROCESS
 		receive[] = {{},{"SDNS_depannage"},0};
 		class factions: factions {};
 	};
-	class clothing_lectra_textile: clothing_suit_1
-	{
-		name = "Confection d'uniforme textile (Lectra)";
-		require[] = {{"tissue",3},{"cottonp",10}};
-		receive[] = {{},{"Lectra_textile"},0};
-		class factions: factions {};
-	};
 	class backpack_depann_1: clothing_suit_1
 	{
 		name = "Confection de sac à dos dépanneur";
 		require[] = {{"tissue",15},{"cottonp",10}};
 		receive[] = {{},{"Skyline_Sac_Depanneur_01_F"},0};
+		class factions: factions {};
+	};
+
+	class clothing_clothing_lectra: clothing_suit_1
+	{
+		name = "Confection d'uniforme textile (Lectra)";
+		require[] = {{"tissue",3},{"cottonp",10}};
+		receive[] = {{},{"Lectra_textile"},0};
 		class factions: factions {};
 	};
 

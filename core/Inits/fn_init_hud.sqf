@@ -47,25 +47,25 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 	{
 		_ctrl_blood ctrlSetStructuredText parseText format
 		[
-			"<t align='left' font='RobotoRegular' size='2'>%1</t><t size='1.3' align='right'></t></t><img size='1.4' align='right' image='lyeed_IMG\data\player_hud\blood.paa'/>",
+			"<t align='right' font='RobotoRegular' size='2'>%1</t><t size='1.3' align='right'>%2</t><img size='1.4' align='right' image='lyeed_IMG\data\player_hud\blood.paa'/>",
 			round((g_blood / 4000) * 100), "%"
 		];
 
 		_ctrl_fatigue ctrlSetStructuredText parseText format
 		[
-			"<t align='left' font='RobotoRegular' size='2'>%1</t><t size='1.3' align='right'></t></t><img size='1.4' align='right' image='lyeed_IMG\data\player_hud\fatigue.paa'/>",
+			"<t align='right' font='RobotoRegular' size='2'>%1</t><t size='1.3' align='right'>%2</t><img size='1.4' align='right' image='lyeed_IMG\data\player_hud\fatigue.paa'/>",
 			round((1 - (getFatigue player)) * 100), "%"
 		];
 
 		_ctrl_hunger ctrlSetStructuredText parseText format
 		[
-			"<t align='left' font='RobotoRegular' size='2'>%1</t><t size='1.3' align='right'></t></t><img size='1.4' align='right' image='lyeed_IMG\data\player_hud\hunger.paa'/>",
+			"<t align='right' font='RobotoRegular' size='2'>%1</t><t size='1.3' align='right'>%2</t><img size='1.4' align='right' image='lyeed_IMG\data\player_hud\hunger.paa'/>",
 			g_hunger, "%"
 		];
 
 		_ctrl_thirst ctrlSetStructuredText parseText format
 		[
-			"<t align='left' font='RobotoRegular' size='2'>%1</t><t size='1.3' align='right'></t></t><img size='1.4' align='right' image='lyeed_IMG\data\player_hud\thirst.paa'/>",
+			"<t align='right' font='RobotoRegular' size='2'>%1</t><t size='1.3' align='right'>%2</t><img size='1.4' align='right' image='lyeed_IMG\data\player_hud\thirst.paa'/>",
 			g_thirst, "%"
 		];
 
@@ -177,7 +177,7 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 
 		if (("ItemGPS" in (assignedItems player)) && !(player getVariable ["restrained", false]) && !(player getVariable ["surrender", false])) then
 		{
-			_ctrl_gps_text ctrlSetStructuredText parseText format["<t align='center' font='PuristaBold'>%1</t>", (mapGridPosition player)];
+			_ctrl_gps_text ctrlSetStructuredText parseText format["<t align='left' font='PuristaBold'>%1</t><t align='right' font='PuristaBold'>%2</t>", (mapGridPosition player), round(getDir player)];
 
 			if ((vehicle player) isEqualTo player) then {
 				_ctrl_gps_map ctrlMapAnimAdd [0, 0.03, player];

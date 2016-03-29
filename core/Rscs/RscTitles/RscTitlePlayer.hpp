@@ -16,36 +16,36 @@ class RscTitlePlayer
 		{
 			idc = 23500;
 
-			x = 0.933125 * safezoneW + safezoneX;
+			x = 0.922813 * safezoneW + safezoneX;
 			y = 0.566 * safezoneH + safezoneY;
-			w = 0.0670312 * safezoneW;
+			w = 0.0773437 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
 		class PERCENT_FATIGUE: RscStructuredText
 		{
 			idc = 23501;
 
-			x = 0.933125 * safezoneW + safezoneX;
+			x = 0.922812 * safezoneW + safezoneX;
 			y = 0.621 * safezoneH + safezoneY;
-			w = 0.0670312 * safezoneW;
+			w = 0.0773437 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
 		class PERCENT_HUNGER: RscStructuredText
 		{
 			idc = 23502;
 
-			x = 0.933125 * safezoneW + safezoneX;
+			x = 0.922812 * safezoneW + safezoneX;
 			y = 0.676 * safezoneH + safezoneY;
-			w = 0.0670312 * safezoneW;
+			w = 0.0773437 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
 		class PERCENT_THIRST: RscStructuredText
 		{
 			idc = 23503;
 
-			x = 0.933125 * safezoneW + safezoneX;
+			x = 0.922812 * safezoneW + safezoneX;
 			y = 0.731 * safezoneH + safezoneY;
-			w = 0.0670312 * safezoneW;
+			w = 0.0773437 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
 

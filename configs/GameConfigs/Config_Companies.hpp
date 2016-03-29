@@ -431,6 +431,7 @@ class ALYSIA_COMPANIES
 				"clothing_secu_4",
 				"googles_secu_1",
 				"vest_secu_1",
+				"clothing_clothing_lectra",
 				"backpack_parachute"
 			};
 			members_max = 8;
