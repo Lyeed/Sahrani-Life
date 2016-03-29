@@ -351,7 +351,7 @@ class ALYSIA_LICENSES
 				price = 20000;
 				pad_store = 0;
 				illegal = 0;
-				condition = "!(isNull g_company) && {((g_company getVariable ['company_info',['','','']]) isEqualTo 'clothing')}";
+				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'clothing')}";
 			};
 		};
 	};
@@ -365,7 +365,7 @@ class ALYSIA_LICENSES
 				price = 65000;
 				pad_store = 0;
 				illegal = 0;
-				condition = "!(isNull g_company) && {((g_company getVariable ['company_info',['','','']]) isEqualTo 'weapon')}";
+				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'weapon')}";
 			};
 		};
 	};
@@ -379,7 +379,7 @@ class ALYSIA_LICENSES
 				price = 9000;
 				pad_store = 0;
 				illegal = 0;
-				condition = "!(isNull g_company) && {((g_company getVariable ['company_info',['','','']]) isEqualTo 'farming')}";
+				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'farming')}";
 			};
 		};
 	};
@@ -393,7 +393,7 @@ class ALYSIA_LICENSES
 				price = 13000;
 				pad_store = 0;
 				illegal = 0;
-				condition = "!(isNull g_company) && {((g_company getVariable ['company_info',['','','']]) isEqualTo 'garagist')}";
+				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'garagist')}";
 			};
 		};
 	};
@@ -407,7 +407,7 @@ class ALYSIA_LICENSES
 				price = 41000;
 				pad_store = 0;
 				illegal = 0;
-				condition = "!(isNull g_company) && {((g_company getVariable ['company_info',['','','']]) isEqualTo 'money_transfer')}";
+				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'money_transfer')}";
 			};
 		};
 	};
@@ -421,7 +421,7 @@ class ALYSIA_LICENSES
 				price = 39000;
 				pad_store = 0;
 				illegal = 0;
-				condition = "!(isNull g_company) && {((g_company getVariable ['company_info',['','','']]) isEqualTo 'foundry')}";
+				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'foundry')}";
 			};
 		};
 	};
@@ -435,7 +435,7 @@ class ALYSIA_LICENSES
 				price = 28500;
 				pad_store = 0;
 				illegal = 0;
-				condition = "!(isNull g_company) && {((g_company getVariable ['company_info',['','','']]) isEqualTo 'fuel')}";
+				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'fuel')}";
 			};
 		};
 	};
@@ -449,7 +449,7 @@ class ALYSIA_LICENSES
 				price = 16900;
 				pad_store = 0;
 				illegal = 0;
-				condition = "!(isNull g_company) && {((g_company getVariable ['company_info',['','','']]) isEqualTo 'construction')}";
+				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'construction')}";
 			};
 		};
 	};
@@ -463,7 +463,7 @@ class ALYSIA_LICENSES
 				price = 13500;
 				pad_store = 0;
 				illegal = 0;
-				condition = "!(isNull g_company) && {((g_company getVariable ['company_info',['','','']]) isEqualTo 'transport_goods')}";
+				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'transport_goods')}";
 			};
 		};
 	};
@@ -477,7 +477,7 @@ class ALYSIA_LICENSES
 				price = 7500;
 				pad_store = 0;
 				illegal = 0;
-				condition = "!(isNull g_company) && {((g_company getVariable ['company_info',['','','']]) isEqualTo 'transport_people')}";
+				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'transport_people')}";
 			};
 		};
 	};
@@ -491,7 +491,7 @@ class ALYSIA_LICENSES
 				price = 23500;
 				pad_store = 0;
 				illegal = 0;
-				condition = "!(isNull g_company) && {((g_company getVariable ['company_info',['','','']]) isEqualTo 'security')}";
+				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'security')}";
 			};
 		};
 	};
@@ -505,7 +505,7 @@ class ALYSIA_LICENSES
 				price = 13500;
 				pad_store = 0;
 				illegal = 0;
-				condition = "!(isNull g_company) && {((g_company getVariable ['company_info',['','','']]) isEqualTo 'service')}";
+				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'service')}";
 			};
 		};
 	};
@@ -519,7 +519,7 @@ class ALYSIA_LICENSES
 				price = 15000;
 				pad_store = 0;
 				illegal = 0;
-				condition = "!(isNull g_company) && {((g_company getVariable ['company_info',['','','']]) isEqualTo 'car_dealer')}";
+				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'car_dealer')}";
 			};
 		};
 	};
@@ -533,7 +533,7 @@ class ALYSIA_LICENSES
 				price = 9800;
 				pad_store = 0;
 				illegal = 0;
-				condition = "!(isNull g_company) && {((g_company getVariable ['company_info',['','','']]) isEqualTo 'shop')}";
+				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'shop')}";
 			};
 		};
 	};
@@ -547,7 +547,7 @@ class ALYSIA_LICENSES
 				price = 11000;
 				pad_store = 0;
 				illegal = 0;
-				condition = "!(isNull g_company) && {((g_company getVariable ['company_info',['','','']]) isEqualTo 'news')}";
+				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'news')}";
 			};
 		};
 	};
