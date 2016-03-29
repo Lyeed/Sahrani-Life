@@ -13,11 +13,11 @@ _wd_max_weight = [_this, 3, -1, [0]] call BIS_fnc_param;
 
 if ((_wd_item isEqualTo "") || (_wd_value isEqualTo -1) || (_wd_current_weight isEqualTo -1) || (_wd_max_weight isEqualTo -1)) exitWith {0};
 
-_wd_tmp_weight = ([_wd_item] call AlysiaClient_fnc_itemGetWeight);
-_wd_current_weight = _cweight + (_wd_tmp_weight * _wd_value);
-while {(_cweight > _wd_max_weight)} do
+_wd_item_weight = ([_wd_item] call AlysiaClient_fnc_itemGetWeight);
+_wd_current_weight = _wd_current_weight + (_wd_item_weight * _wd_value);
+while {(_wd_current_weight > _wd_max_weight)} do
 {
-	_cweight = _cweight - _wd_tmp_weight;
+	_wd_current_weight = _wd_current_weight - _wd_item_weight;
 	_wd_value = _wd_value - 1;
 };
 

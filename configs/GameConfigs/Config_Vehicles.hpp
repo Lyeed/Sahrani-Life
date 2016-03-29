@@ -3851,7 +3851,7 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver"};
 		fuel = "Diesel";
-		rank = 2;
+		rank = 4;
 		realname = "VW Touareg R50 SAMU";
 	};
 };
