@@ -71,6 +71,8 @@ class CfgRemoteExec
 		class AlysiaServer_fnc_laboratory_destroy {allowTargets = SERVER;};
 		//- C4
 		class AlysiaServer_fnc_c4_bomb {allowTargets = SERVER;};
+		//- Wipe
+		class AlysiaServer_fnc_query_delete_wipe {allowTargets = SERVER;};
 		
 		/*
 		**		CLIENT FUNCTIONS
@@ -127,7 +129,9 @@ class CfgRemoteExec
 		class AlysiaClient_fnc_knockedOut {allowTargets = CLIENT;};
 		// - missions
 		class AlysiaClient_fnc_mission_prevent {allowTargets = CLIENT;};
-
+		// - medical
+		class AlysiaClient_fnc_action_hospital_awake {allowTargets = CLIENT;};
+		
 		//- Arma
 		class setFuel {allowTargets = EVERYONE;};
 		class say3D {allowTargets = CLIENT;};

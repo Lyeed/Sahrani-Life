@@ -27,11 +27,11 @@ if (isNull _storage) then
 {
 	uiSleep(random(1) + 0.30);
 	_type = getText(missionConfigFile >> "ALYSIA_HOUSES" >> (typeOf _target) >> "storage" >> "type");
-	_pos = _target buildingPos getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(_target) >> "storage_building_pos_index");
+	_pos = _target buildingPos getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(_target) >> "storage" >> "building_index");
 	if (count(nearestObjects [_pos, [_type], 4]) isEqualTo 0) then
 	{
 		_storage = createVehicle [_type, [0, 0, 0], [], 0, "NONE"];
-		_storage setPosATL (_target buildingPos getNumber(missionConfigFile >> "ALYSIA_HOUSES" >> typeOf(_target) >> "storage_building_pos_index"));
+		_storage setPosATL _pos;
 		_target setVariable ["house_storage_out", _storage, true];
 
 		clearWeaponCargoGlobal _storage;
@@ -89,6 +89,11 @@ if (isNull _storage) then
 		};
 
 		["<t color='#FF8000'>Coffre</t> sortie."] call AlysiaClient_fnc_info;
+		while {!(isNull _storage)} do
+		{
+			if ((_target getVariable "house_storage_out") != _storage) then {deleteVehicle _storage};
+			uiSleep 0.5;
+		};
 	} else {
 		["Coffre déjà sortie."] call AlysiaClient_fnc_error;
 	};

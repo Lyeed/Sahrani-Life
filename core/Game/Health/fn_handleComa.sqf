@@ -5,18 +5,22 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_time", "_display", "_ctrl_left", "_id", "_ctrl_suicide"];
+private["_time", "_display", "_ctrl_left", "_id", "_ctrl_suicide", "_timer"];
 
 if (g_staff_god) exitWith {};
 if (player getVariable ["is_coma", false]) exitWith {};
+
+if (visibleMap) then
+{
+	openMap false;
+	waitUntil {!visibleMap};
+};
 
 if (dialog) then
 {
 	closeDialog 0;
 	waitUntil {!dialog};
 };
-
-showMap false;
 
 if (!(createDialog "RscDisplayComa")) exitWith {};
 
@@ -41,6 +45,7 @@ _id = _display displayAddEventHandler ["KeyDown", "if ((_this select 1) isEqualT
 _ctrl_left = _display displayCtrl 351;
 _ctrl_suicide = _display displayCtrl 355;
 _time = getNumber(missionConfigFile >> "ALYSIA_MEDICAL" >> "coma" >> "timer");
+_timer = _time;
 
 g_blood = 1;
 g_bleed = 0;
@@ -62,44 +67,75 @@ while {(_time > 0) && !g_coma_dead && (player getVariable ["is_coma", false])} d
 		[player, "acts_InjuredLookingRifle01"] remoteExecCall ["switchMove", -2];
 	};
 	
-	_ctrl_left ctrlSetStructuredText parseText format["<t align='center' size='2'>Il vous reste %1 secondes à vivre</t>", _time];
 	player setOxygenRemaining 1;
 	playSound "death";
 
-	if (g_adrenaline isEqualTo 0) then
+	_reduce = switch (true) do
 	{
-		if (_time > (getNumber(missionConfigFile >> "ALYSIA_MEDICAL" >> "coma" >> "timer") - (60 * 3))) then
+		case (player getVariable ["bullet_operation_inUse", false]):
 		{
-			_ctrl_suicide ctrlSetStructuredText parseText format["<t align='center' size='1.5'>Vous pouvez vous suicider dans %1 secondes</t>", (_time - (1000 - (60 * 3)))];
+			_ctrl_suicide ctrlSetStructuredText parseText "<t align='center' size='1.5'>Vous êtes en train d'être opéré</t>";
+			_ctrl_suicide ctrlShow true;
 			ctrlShow[352, false];
 			ctrlShow[353, false];
 			ctrlShow[354, false];
-			ctrlShow[355, true];
-		} else {
+			false;
+		};
+		case (player getVariable ["bed_awake", false]):
+		{
+			_ctrl_suicide ctrlSetStructuredText parseText "<t align='center' size='1.5'>Vous êtes en salle de réveil dans un centre hospitalier. Vous devriez vous réveiller très bientôt</t>";
+			_ctrl_suicide ctrlShow true;
+			ctrlShow[352, false];
+			ctrlShow[353, false];
+			ctrlShow[354, false];
+			false;
+		};
+		case (g_adrenaline > 0):
+		{
+			_ctrl_suicide ctrlSetStructuredText parseText "<t align='center' size='1.5'>Vous êtes sous l'effet de l'adrénaline</t>";
+			_ctrl_suicide ctrlShow true;
+			ctrlShow[352, false];
+			ctrlShow[353, false];
+			ctrlShow[354, false];
+			false;
+		};
+		case (_time > (_timer - (60 * 3))):
+		{
+			_ctrl_suicide ctrlSetStructuredText parseText format["<t align='center' size='1.5'>Vous pouvez vous suicider dans %1 secondes</t>", (_time - (_timer - (60 * 3)))];
+			_ctrl_suicide ctrlShow true;
+			ctrlShow[352, false];
+			ctrlShow[353, false];
+			ctrlShow[354, false];
+			true;
+		};
+		default
+		{
+			_ctrl_suicide ctrlShow false;
 			ctrlShow[352, true];
 			ctrlShow[353, true];
 			ctrlShow[354, true];
-			ctrlShow[355, false];
+			true;
 		};
-	} else {
-		_ctrl_suicide ctrlSetStructuredText parseText "<t align='center' size='1.5'>Vous êtes sous l'effet de l'adrénaline et êtes stabilisé</t>";
-		ctrlShow[352, false];
-		ctrlShow[353, false];
-		ctrlShow[354, false];
-		ctrlShow[355, true];
 	};
-	
-	sleep 1;
-	
-	if (g_adrenaline isEqualTo 0) then
+
+	if (_reduce) then
 	{
+		_ctrl_left ctrlSetStructuredText parseText format["<t align='center' size='2'>Il vous reste %1 secondes à vivre</t>", _time];
 		_time = _time - 1;
-		if (_time isEqualTo 1) then
+		if (_time isEqualTo 0) then
 		{
 			g_coma_dead = true;
 			player setDamage 1;
 		};
+	} else {
+		_ctrl_left ctrlSetStructuredText parseText "<t align='center'>Vous êtes stabilisé</t>";
 	};
+
+	uiSleep 1;
+};
+
+if (!(isNull (attachedTo player))) then {
+	detach player;
 };
 
 if (!g_coma_dead) then

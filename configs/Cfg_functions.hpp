@@ -365,10 +365,13 @@ class CfgFunctions
 		{
 			file = "core\Game\Health";
 			class action_hospital_heal {};
+			class action_hospital_awake {};
 			class action_body_drag {};
 			class action_body_drop {};
 			class action_stabilize {};
 			class action_suicide {};
+			class action_bed {};
+			class action_operation {};
 			class handleComa {};
 			class handleAlcool {};
 			class handleBleed {};
@@ -501,6 +504,7 @@ class CfgFunctions
 		class Actions
 		{
 			file = "core\Game\Actions";
+			class wipe {};
 			class identityOpen {};
 			class showIdentity {};
 			class escort {};

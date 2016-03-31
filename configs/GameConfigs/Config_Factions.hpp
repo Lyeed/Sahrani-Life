@@ -660,7 +660,7 @@ class ALYSIA_FACTIONS
 		};
 
 		/*** SPAWN/RESPAWN ***/
-		respawn_marker = "guer_spawn";
+		respawn_marker = "guer_spawn_1";
 		respawn_price = 0;
 
 		/*** HOUSING ***/

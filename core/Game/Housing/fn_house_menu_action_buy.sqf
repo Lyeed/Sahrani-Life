@@ -46,8 +46,8 @@ if (_action) then
 {
 	closeDialog 0;
 
-	[(getPlayerUID player), g_interaction_target, playerSide, g_atm] remoteExec ["AlysiaServer_fnc_house_add", 2];
-	g_interaction_target setVariable["house_owner", [(getPlayerUID player), profileName], true];
+	[player, g_interaction_target, g_atm] remoteExec ["AlysiaServer_fnc_house_add", 2];
+	g_interaction_target setVariable ["house_owner", [(getPlayerUID player), profileName], true];
 	g_houses pushBack g_interaction_target;
 	[false, _price, "Achat maison"] call AlysiaClient_fnc_handleATM;
 	playSound "buy";
@@ -56,5 +56,5 @@ if (_action) then
 	_marker setMarkerTextLocal "Chez vous";
 	_marker setMarkerColorLocal "ColorPink";
 	_marker setMarkerTypeLocal "Fett_house";
-	_marker setMarkerSizeLocal [0.6, 0.6];
+	_marker setMarkerSizeLocal [0.5, 0.5];
 };

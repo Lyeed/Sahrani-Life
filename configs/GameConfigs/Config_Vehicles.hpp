@@ -3142,7 +3142,7 @@ class ALYSIA_VEHICLES
 			"Skyline_Audi_RS4_04_F",
 			"Skyline_Audi_RS4_05_F",
 			"Skyline_Audi_RS4_06_F",
-			"Skyline_Audi_RS4_07_F", 
+			"Skyline_Audi_RS4_07_F",
 			"Skyline_Audi_RS4_08_F",
 			"Skyline_Audi_RS4_09_F",
 			"Skyline_Audi_RS4_10_F",

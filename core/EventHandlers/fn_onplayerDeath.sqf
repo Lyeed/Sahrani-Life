@@ -14,6 +14,8 @@ if ((player getVariable ["tf_voiceVolume", 0]) > 0) then {
 0 cutText["Vous êtes en soin intensif ...", "BLACK FADED"];
 0 cutFadeOut 9999999;
 
+detach player;
+
 /*
 **          SKULL
 */
@@ -30,7 +32,7 @@ if (g_cash > 0) then {
 
 /* virtual */
 {
-	_var = missionNamespace getVariable[format["inv_%1", _x], 0];
+	_var = missionNamespace getVariable [format["inv_%1", _x], 0];
 	if (_var > 0) then {
 		_data pushBack ["virtual", [_x, _var]];
 	};

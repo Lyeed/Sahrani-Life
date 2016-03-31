@@ -27,7 +27,8 @@ g_action_inUse = true;
 uiSleep((random(1)) + 0.5);
 g_action_inUse = false;
 
-if ((_target getVariable ["trunk_in_use_ID", ""]) != "") exitWith {
+_inUse = _target getVariable ["trunk_in_use_ID", ""];
+if ((_inUse != "") && !(_inUse isEqualTo (getPlayerUID player))) exitWith {
 	["Le coffre est déjà en cours d'utilisation."] call AlysiaClient_fnc_error;
 };
 
@@ -37,7 +38,7 @@ if (g_interaction_target_trunk_weight_max isEqualTo 0) exitWith {
 	["Impossible de déterminer l'inventaire maximum de la cible."] call AlysiaClient_fnc_error;
 };
 
-if (!(createDialog "RscDisplayVirtualExhange")) exitWith {};
+createDialog "RscDisplayVirtualExhange";
 
 disableSerialization;
 _display = findDisplay 500;

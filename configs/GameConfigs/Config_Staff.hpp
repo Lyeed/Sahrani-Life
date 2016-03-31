@@ -14,54 +14,66 @@ class ALYSIA_STAFF
 		{
 			name = "Support";
 		};
-		class dev
-		{
-			name = "Equipe de dev";
-		};
 	};
 
 	class members
 	{
+		// - Admin
 		class Lyeed
 		{
 			uid = "76561198007960495";
 			rank = "admin";
-			requests = 1;
-			teamspeak = 1;
-		};
-		class Brad_Dexter
-		{
-			uid = "76561197977519424";
-			rank = "modo";
-			requests = 1;
-			teamspeak = 1;
-		};
-		class Cesarion
-		{
-			uid = "76561198026418521";
-			rank = "modo";
-			requests = 1;
+			requests = 0;
 			teamspeak = 1;
 		};
 		class Ben_Ancona
 		{
 			uid = "76561198099211957";
 			rank = "admin";
-			requests = 1;
 			teamspeak = 1;
 		};
-		class Khaled
+		// - Modo
+		class Drago
 		{
-			uid = "76561198089708821";
+			uid = "76561198144182091";
 			rank = "modo";
-			requests = 1;
 			teamspeak = 1;
 		};
-		class Pandanym
+		class Brad_Dexter
 		{
-			uid = "76561198162606615";
+			uid = "76561197977519424";
+			rank = "modo";
+			teamspeak = 1;
+		};
+		class Cesarion
+		{
+			uid = "76561198026418521";
+			rank = "modo";
+			teamspeak = 1;
+		};
+		class Julia
+		{
+			uid = "76561198138202092";
+			rank = "modo";
+			teamspeak = 1;
+		};
+		// - Support
+		class Mael
+		{
+			uid = "76561197978122710";
 			rank = "support";
-			requests = 1;
+			teamspeak = 1;
+		};
+		class TheRealityTuto
+		{
+			uid = "76561198107987392";
+			rank = "support";
+			teamspeak = 1;
+		};
+		class Fabiote
+		{
+			uid = "76561198126279787";
+			rank = "support";
 			teamspeak = 1;
 		};
 	};
@@ -75,7 +87,7 @@ class ALYSIA_STAFF
 				name = "Invisible ON";
 				statement = "g_staff_invisible = true;[player, true] remoteExecCall ['hideObject', 0];";
 				condition = "!g_staff_invisible";
-				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424", "76561198144182091", "76561198138202092"};
 			};
 			class Invisible_OFF: Invisible_ON
 			{
@@ -89,7 +101,7 @@ class ALYSIA_STAFF
 				name = "TP ON";
 				statement = "g_staff_tp = true;onMapSingleClick '(vehicle player) setPos _pos';";
 				condition = "!g_staff_tp";
-				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424", "76561198144182091", "76561198138202092"};
 			};
 			class TP_OFF: TP_ON
 			{
@@ -103,7 +115,7 @@ class ALYSIA_STAFF
 				name = "God ON";
 				statement = "g_staff_god = true;";
 				condition = "!g_staff_god";
-				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424", "76561198144182091", "76561198138202092"};
 			};
 			class god_OFF: god_ON
 			{
@@ -125,21 +137,21 @@ class ALYSIA_STAFF
 				name = "Clef Cible";
 				statement = "g_vehicles pushBack cursorTarget;";
 				condition = "(!(isNull cursorTarget) && ((cursorTarget isKindOf 'Car') || (cursorTarget isKindOf 'Ship') || (cursorTarget isKindOf 'Air') || (cursorTarget isKindOf 'Tank') || (cursorTarget isKindOf 'Truck')))";
-				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424", "76561198144182091", "76561198138202092"};
 			};
 			class target_delete
 			{
 				name = "Supp Cible";
 				statement = "deleteVehicle cursorTarget;";
 				condition = "!(isNull cursorTarget)";
-				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424", "76561198144182091", "76561198138202092"};
 			};
 			class target_trunkInUse
 			{
 				name = "Fix coffre";
 				statement = "cursorTarget setVariable ['trunk_in_use_ID', '', true];";
 				condition = "!(isNull cursorTarget) && ((cursorTarget getVariable ['trunk_in_use_ID', '']) != '')";
-				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424", "76561198144182091", "76561198138202092"};
 			};
 
 			class markers_ON
@@ -147,7 +159,7 @@ class ALYSIA_STAFF
 				name = "Markers ON";
 				statement = "g_staff_markers = true;";
 				condition = "!g_staff_markers";
-				allow[] = {"76561198007960495", "76561197977519424", "76561198026418521", "76561198099211957", "76561198089708821"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424", "76561198144182091", "76561198138202092"};
 			};
 			class markers_OFF: markers_ON
 			{
@@ -173,21 +185,21 @@ class ALYSIA_STAFF
 				name = "TP à";
 				statement = "(vehicle player) setPosATL (getPosATL (call compile (lbData[9000, lbCurSel 9000])));";
 				condition = "(true)";
-				allow[] = {"76561198007960495", "76561198099211957", "76561197977519424", "76561198026418521"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561197977519424", "76561198026418521", "76561198144182091", "76561198138202092"};
 			};
 			class tphere
 			{
 				name = "TP ici";
 				statement = "(call compile (lbData[9000, lbCurSel 9000])) setPosATL (getPosATL player);";
 				condition = "(true)";
-				allow[] = {"76561198007960495", "76561198099211957", "76561197977519424", "76561198026418521"};
+				allow[] = {"76561198007960495", "76561198099211957", "76561197977519424", "76561198026418521", "76561198144182091", "76561198138202092"};
 			};
 			class spec
 			{
 				name = "Spec";
 				statement = "(call compile (lbData[9000, lbCurSel 9000])) switchCamera 'INTERNAL';g_staff_spec = true;closeDialog 0;";
 				condition = "(true)";
-				allow[] = {"76561198007960495", "76561197977519424", "76561198026418521", "76561198099211957", "76561198089708821"};
+				allow[] = {"76561198007960495", "76561197977519424", "76561198026418521", "76561198099211957", "76561198144182091", "76561198138202092"};
 			};
 			class res
 			{
@@ -201,7 +213,7 @@ class ALYSIA_STAFF
 				name = "Informations";
 				statement = "[player] remoteExecCall ['AlysiaClient_fnc_APP_staff_players_getData', (lbData[9000, lbCurSel 9000])];";
 				condition = "(true)";
-				allow[] = {"76561198007960495", "76561197977519424", "76561198026418521", "76561198099211957", "76561198089708821"};
+				allow[] = {"76561198007960495", "76561197977519424", "76561198026418521", "76561198099211957", "76561198144182091", "76561198138202092"};
 			};
 			class heal
 			{

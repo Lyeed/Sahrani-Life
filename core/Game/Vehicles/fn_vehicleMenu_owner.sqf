@@ -32,11 +32,16 @@ if (!(g_interaction_target in g_vehicles)) then
 
 if (_action) then
 {
-	if (!(createDialog "RscDisplayDefaultText")) exitWith {};
+	createDialog "RscDisplayDefaultText";
 
 	disableSerialization;
 	_display = findDisplay 68000;
 	if (isNull _display) exitWith {};
+
+    _licenses_text = "";
+    {
+		_licenses_text = _licenses_text + format["- %1<br/>", [_x] call AlysiaClient_fnc_licenseGetName];
+    } forEach getArray(missionConfigFile >> "ALYSIA_VEHICLES" >> typeof(g_interaction_target) >> "licenses");
 
 	(_display displayCtrl 68002) ctrlSetText "lyeed_IMG\data\vehicle\background.jpg";
 	
@@ -47,11 +52,14 @@ if (_action) then
 			"<t align='left'>Immatriculation</t><t align='right'>%1</t><br/>"
 		+	"<t align='left'>Propriétaire</t><t align='right'>%2</t><br/>"
 		+	"<t align='left'>Assuré</t><t align='right'>%3</t><br/>"
-		+	"<t align='left'>Carburant</t><t align='right'>%4</t>",
+		+	"<t align='left'>Carburant</t><t align='right'>%4</t><br/>"
+		+	"<t align='left'>Licence(s) requise(s) :</t><br/>"
+		+	"<t align='left'>%5</t>",
 		(_info select 2),
 		(_info select 1),
 		if ((_info select 3) isEqualTo 1) then {"<t color='#8cff9b'>Oui</t>"} else {"<t color='#ff8c8c'>Non</t>"},
-		getText(missionConfigFile >> "ALYSIA_FUEL" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf(g_interaction_target) >> "fuel") >> "name")
+		getText(missionConfigFile >> "ALYSIA_FUEL" >> getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf(g_interaction_target) >> "fuel") >> "name"),
+		_licenses_text
 	];
 
 	while {!(isNull _display)} do

@@ -306,7 +306,10 @@ class ALYSIA_PROCESS
 		time_default = 4;
 		class factions
 		{
-			class CIV {};
+			class CIV
+			{
+				licenses[] = {"company_clothing"};
+			};
 		};
 	};
 	class gold
@@ -477,7 +480,6 @@ class ALYSIA_PROCESS
 		receive[] = {{{"huile",1}},{},0};
 		time_per_item = 3;
 		time_default = 4;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -492,9 +494,8 @@ class ALYSIA_PROCESS
 		sound = "salt_process";
 		require[] = {{"huile",2}, {"bouteillevide", 1}};
 		receive[] = {{{"huile_bottle",1}},{},0};
-		time_per_item = 1;
+		time_per_item = 2;
 		time_default = 3;
-		class target {};
 		class factions
 		{
 			class CIV
@@ -503,7 +504,38 @@ class ALYSIA_PROCESS
 			};
 		};
 	};
-
+	class pumpkin_juice
+	{
+		name = "Extraction du jus de citrouille";
+		sound = "salt_process";
+		require[] = {{"pumpkin",1}};
+		receive[] = {{{"pumpkin_juice",2}},{},0};
+		time_per_item = 2;
+		time_default = 1;
+		class factions
+		{
+			class CIV
+			{
+				licenses[] = {"company_farming"};
+			};
+		};
+	};
+	class pumpkin_bottle
+	{
+		name = "Mise en bouteille : Jus de citrouille";
+		sound = "salt_process";
+		require[] = {{"pumpkin_juice",2}, {"bouteillevide", 1}};
+		receive[] = {{{"pumpkin_bottle",1}},{},0};
+		time_per_item = 2;
+		time_default = 3;
+		class factions
+		{
+			class CIV
+			{
+				licenses[] = {"company_farming"};
+			};
+		};
+	};
 	/*************                              ******************
 	**************  	 OBJETS DYNAMIC         ******************
 	**************                              *******************/
@@ -781,7 +813,7 @@ class ALYSIA_PROCESS
 	class clothing_depann_2: clothing_suit_1
 	{
 		name = "Confection d'uniforme dépanneur (2)";
-		require[] = {{"tissue",2},{"cotténp",8}};
+		require[] = {{"tissue",2},{"cottonp",8}};
 		receive[] = {{},{"Skyline_Uniforme_Depanneur_01_F"},0};
 		class factions: factions {};
 	};

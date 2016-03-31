@@ -44,6 +44,6 @@ if (_array isEqualTo []) then {
 	{
 		_index = _list lbAdd (_x select 0);
 		_list lbSetPicture [_index, (_x select 1)];	
-		sleep (count(_array) / 50);
+		sleep (count(_array) / 60);
 	} forEach _array;
 };

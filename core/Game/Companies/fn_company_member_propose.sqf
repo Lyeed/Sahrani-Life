@@ -15,7 +15,11 @@ _info = _company getVariable "company_info";
 if (isNil "_info") exitWith {};
 
 if (!(isNull g_company)) exitWith {
-	[format["<t color='#045FB4'>%1</t> est déjà employé d'une entreprise.", (player getVariable ["realname", profileName])]] remoteExecCall ["AlysiaClient_fnc_info", _from];
+	[format["<t color='#FFBF00'>%1</t> est déjà membre d'une entreprise.", (player getVariable "realname")]] remoteExecCall ["AlysiaClient_fnc_info", _from];
+};
+
+if (g_choice != (_info select 5)) exitWith {
+	[format["<t color='#FFBF00'>%1</t> doit avoir la nationalité de l'entreprise pour pouvoir être recruter.", (player getVariable "realname")]] remoteExecCall ["AlysiaClient_fnc_info", _from];
 };
 
 _action = 

@@ -102,7 +102,7 @@ class ALYSIA_COMPANIES
 			building = "Land_i_Windmill01_F";
 			license = "company_farming";
 			image = "lyeed_IMG\data\companies\types\farming.paa";
-			process[] = {"huile","huile_bottle"};
+			process[] = {"huile","huile_bottle","pumpkin_juice","pumpkin_bottle"};
 			members_max = 12;
 			class construction
 			{

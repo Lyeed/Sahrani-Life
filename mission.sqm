@@ -19194,7 +19194,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowdamage false;this setdir 180;this setposATL [10649.642578,9250.464844,1.40803];this setVectorUp [0,0,1];this addAction[""Administration Centrale"",AlysiaClient_fnc_shop_arma_open,""gov_south"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""SOUTH""'];";
+			init="this enableSimulation false;this allowdamage false;this setdir 180;this setposATL [10649.642578,9250.464844,1.40803];this setVectorUp [0,0,1];this addAction[""Administration Centrale"",AlysiaClient_fnc_shop_arma_open,""gov_south"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""SOUTH""'];this addAction[""Changer de personnage (wipe)"",AlysiaClient_fnc_wipe,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""SOUTH""'];";
 		};
 		class Item1511
 		{
@@ -19205,7 +19205,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowdamage false;this setdir 360;this setposATL [14264.655273,12437.116211,0.0479798];this setVectorUp [0,0,1];this addAction[""Parlement"",AlysiaClient_fnc_shop_arma_open,""gov_north"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""NORTH""'];";
+			init="this enableSimulation false;this allowdamage false;this setdir 360;this setposATL [14264.655273,12437.116211,0.0479798];this setVectorUp [0,0,1];this addAction[""Parlement"",AlysiaClient_fnc_shop_arma_open,""gov_north"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""NORTH""'];this addAction[""Changer de personnage (wipe)"",AlysiaClient_fnc_wipe,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""NORTH""'];";
 		};
 		class Item1512
 		{
@@ -19761,7 +19761,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this allowDamage false;this enableSimulation false;this addAction[""Administration Centrale"",AlysiaClient_fnc_shop_arma_open,""gov_south"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""SOUTH""'];";
+			init="this allowDamage false;this enableSimulation false;this addAction[""Administration Centrale"",AlysiaClient_fnc_shop_arma_open,""gov_south"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""SOUTH""'];this addAction[""Changer de personnage (wipe)"",AlysiaClient_fnc_wipe,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""SOUTH""'];";
 		};
 		class Item1564
 		{
@@ -20328,8 +20328,9 @@ class Mission
 		class Item5
 		{
 			position[]={13553.212,19.961962,10486.255};
-			name="guer_spawn";
+			name="guer_spawn_1";
 			type="Fett_hospitalA";
+			text="Centre hospitalier";
 			a=0.5;
 			b=0.5;
 		};
@@ -20522,7 +20523,7 @@ class Mission
 		{
 			position[]={11662.848,3.9813426,5562.0117};
 			name="sand_1";
-			text="Mine de sable";
+			text="Carrière de sable";
 			type="Fett_aamissile";
 			colorName="ColorBrown";
 			a=0.5;
@@ -20972,8 +20973,9 @@ class Mission
 		class Item73
 		{
 			position[]={12633.76,67.574966,7505.6475};
-			name="Centre médical";
+			name="guer_spawn_2";
 			type="Fett_hospitalA";
+			text="Centre hospitalier";
 			a=0.5;
 			b=0.5;
 		};

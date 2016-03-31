@@ -602,7 +602,7 @@ class ALYSIA_ITEMS
 	class huile
 	{
 		name = "Huile de tournesol";
-		weight = 2;
+		weight = 1;
 		image = "alysia_items_virtual\data\huile.paa";
 	};
 	class huile_bottle
@@ -644,6 +644,24 @@ class ALYSIA_ITEMS
 		{
 			hunger = 80;
 			sound = "eat_biscuit";
+		};
+	};
+	class pumpkin_juice
+	{
+		name = "Jus de citrouille";
+		weight = 1;
+		image = "";
+	};
+	class pumpkin_bottle
+	{
+		name = "Bouteille de jus de citrouille";
+		weight = 2;
+		image = "";
+		class food
+		{
+			thirst = 40;
+			sound = "drink";
+			unlimitedRun = 120;
 		};
 	};
 

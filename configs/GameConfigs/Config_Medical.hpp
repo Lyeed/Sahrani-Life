@@ -23,6 +23,6 @@ class ALYSIA_MEDICAL
 
 	class coma
 	{
-		timer = 1000;
+		timer = 1800;
 	};
 };

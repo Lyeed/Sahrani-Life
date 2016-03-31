@@ -29,4 +29,4 @@ if (!(isNull _owner)) then {
 	[playerSide, (_info select 2)] remoteExecCall ["AlysiaClient_fnc_labo_update", _owner];
 };
 
-[_info, player, _target] remoteExec ["AlysiaServer_fnc_laboratory_destroy", 2];
+[_target] remoteExec ["AlysiaServer_fnc_laboratory_destroy", 2];
