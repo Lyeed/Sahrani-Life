@@ -54,7 +54,7 @@ if (g_connected && !g_staff_god && (_damage > 0)) then
 	};
 
 	[(_damage * -1)] call AlysiaClient_fnc_handleBlood;
-	[(_damage / 10)] call AlysiaClient_fnc_handleBleed;
+	[(_damage / 11)] call AlysiaClient_fnc_handleBleed;
 };
 
 0;

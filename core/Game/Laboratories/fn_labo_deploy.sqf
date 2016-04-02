@@ -52,11 +52,11 @@ if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then
 	_object setPos [((getPos _object) select 0), ((getPos _object) select 1), 0];
 
 	_marker = createMarkerLocal ["laboratory", (getPosATL _object)];
-	_marker setMarkerTextLocal "Laboratoire";
+	_marker setMarkerTextLocal ([_item] call AlysiaClient_fnc_itemGetName);
 	_marker setMarkerColorLocal "ColorRed";
 	_marker setMarkerTypeLocal "loc_Bunker";
 
-	[(getPlayerUID player), _object, _item] remoteExec ["AlysiaServer_fnc_laboratory_insert", 2];	
+	[(getPlayerUID player), _object, _item] remoteExec ["AlysiaServer_fnc_laboratory_insert", 2];
 } else {
 	["Impossible de trouver l'objet dans votre inventaire"] call AlysiaClient_fnc_error;
 	deleteVehicle _object;

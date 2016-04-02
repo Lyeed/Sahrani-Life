@@ -30,7 +30,7 @@ if (_unit getVariable ["bullet_operation_inUse", false]) exitWith {
 
 _chance = switch (_type) do
 {
-	case "main": {3};
+	case "main": {1};
 	case "defib": {50};
 };
 if (isNil "_chance") exitWith {["Impossible de déterminer vos chances de réaminer"] call AlysiaClient_fnc_error};

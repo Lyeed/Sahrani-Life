@@ -224,8 +224,8 @@ class COMPANY_LEAVE_BUTTON: RscButtonSilent
 {
 	idc = COMPANY_LEAVE_BUTTON_IDC;
 	action = "[] spawn AlysiaClient_fnc_APP_company_leave;";
-	onMouseEnter = "ctrlSetText[9611,'lyeed_IMG\data\global\option_exit_select.paa'];";
-	onMouseExit = "ctrlSetText[9611,'lyeed_IMG\data\global\option_exit.paa'];";
+	onMouseEnter = "ctrlSetText[9617,'lyeed_IMG\data\global\option_exit_select.paa'];";
+	onMouseExit = "ctrlSetText[9617,'lyeed_IMG\data\global\option_exit.paa'];";
 
 	x = 0.649531 * safezoneW + safezoneX;
 	y = 0.643 * safezoneH + safezoneY;

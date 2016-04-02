@@ -34,4 +34,5 @@ _action =
 if (_action) then
 {
 	[] call AlysiaClient_fnc_company_member_leave;
+	["MAIN"] spawn AlysiaClient_fnc_tabletApp;
 };

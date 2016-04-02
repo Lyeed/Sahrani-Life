@@ -158,7 +158,7 @@ if (!(isNull g_laboratory)) then
 	_marker = createMarkerLocal ["laboratory", (getPosATL g_laboratory)];
 	_marker setMarkerColorLocal "ColorRed";
 	_marker setMarkerTypeLocal "loc_Bunker";
-	if (isNil "_config")) then {
+	if (isNil "_config") then {
 		_marker setMarkerTextLocal "Laboratoire";
 	} else {
 		_marker setMarkerTextLocal ([configName _config] call AlysiaClient_fnc_itemGetName);
