@@ -1,9 +1,15 @@
 class ALYSIA_HORN
 {
-	class milice
+	class milice_1
 	{
-		item = "horn_milice";
-		sound = "sirene_west";
+		item = "horn_milice_1";
+		sound = "sirene_west_1";
+		sleep = 5;
+	};
+	class milice_2
+	{
+		item = "horn_milice_2";
+		sound = "sirene_west_2";
 		sleep = 5;
 	};
 	class garde

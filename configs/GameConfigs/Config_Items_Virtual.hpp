@@ -1653,6 +1653,18 @@ class ALYSIA_ITEMS
 			action = "['lab_cigare'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
+	class lab_heal
+	{
+		name = "Table d'opération illégale";
+		price_buy = 110000;
+		weight = 20;
+		illegal = 1;
+		image = "";
+		class use
+		{
+			action = "['lab_heal'] spawn AlysiaClient_fnc_labo_deploy;";
+		};
+	};
 
 	class money_transfer
 	{
@@ -1702,18 +1714,22 @@ class ALYSIA_ITEMS
 		};
 	};
 
-	class horn_milice
+	class horn_milice_1
 	{
-		name = "Sirène (Milice)";
+		name = "Sirène 1 (Milice)";
 		weight = 5;
 		price_buy = 1000;
 		image = "alysia_items_virtual\data\sirene.paa";
 	};
-	class horn_garde: horn_milice
+	class horn_milice_2: horn_milice_1
+	{
+		name = "Sirène 2 (Milice)";
+	};
+	class horn_garde: horn_milice_1
 	{
 		name = "Sirène (Garde)";
 	};
-	class horn_samu: horn_milice
+	class horn_samu: horn_milice_1
 	{
 		name = "Sirène (Samu)";
 		price_buy = 100;

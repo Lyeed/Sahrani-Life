@@ -14,6 +14,9 @@
 #define COMPANY_CAPITAL_FRAME_IDC           9613
 #define COMPANY_CAPITAL_HEADER_IDC          9614
 #define COMPANY_CAPITAL_INFO_IDC            9615
+#define COMPANY_LEAVE_TEXT_IDC              9616
+#define COMPANY_LEAVE_IMAGE_IDC             9617
+#define COMPANY_LEAVE_BUTTON_IDC            9618
 
 COMPANY_BACKGROUND = "lyeed_IMG\data\tablet\backgrounds\back.jpg";
 COMPANY_IDCS[] = 
@@ -195,4 +198,37 @@ class COMPANY_CAPITAL_INFO: RscStructuredText
 	y = 0.467 * safezoneH + safezoneY;
 	w = 0.0825 * safezoneW;
 	h = 0.022 * safezoneH;
+};
+
+class COMPANY_LEAVE_TEXT: RscStructuredText
+{
+	idc = COMPANY_LEAVE_TEXT_IDC;
+	text = "Démissionner";
+
+	x = 0.592812 * safezoneW + safezoneX;
+	y = 0.654 * safezoneH + safezoneY;
+	w = 0.0567187 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class COMPANY_LEAVE_IMAGE: RscPicture
+{
+	idc = COMPANY_LEAVE_IMAGE_IDC;
+	text = "lyeed_IMG\data\global\option_exit.paa";
+
+	x = 0.649531 * safezoneW + safezoneX;
+	y = 0.643 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class COMPANY_LEAVE_BUTTON: RscButtonSilent
+{
+	idc = COMPANY_LEAVE_BUTTON_IDC;
+	action = "[] spawn AlysiaClient_fnc_APP_company_leave;";
+	onMouseEnter = "ctrlSetText[9611,'lyeed_IMG\data\global\option_exit_select.paa'];";
+	onMouseExit = "ctrlSetText[9611,'lyeed_IMG\data\global\option_exit.paa'];";
+
+	x = 0.649531 * safezoneW + safezoneX;
+	y = 0.643 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
 };

@@ -30,7 +30,7 @@ if (_money > 0) then
 } forEach _keys_vehicles;
 
 {
-	_text = _text + format["- Clef de bâtiment (%1)<br/>", getText(configFile >> "CfgVehicles" >> typeOf(_x) >> "displayName")];
+	_text = _text + format["- Clef de bâtiment (%1)<br/>", mapGridPosition _x];
 } forEach _keys_buildings;
 
 _action =
@@ -53,12 +53,12 @@ if (_action) then
 		{
 			if ((alive _x) && !(_x in g_houses)) then
 			{
-				g_houses pushBack _x;
 				_marker = createMarkerLocal [format["house_%1", (count g_houses)], (getPosATL _x)];
 				_marker setMarkerTextLocal "Chez vous";
 				_marker setMarkerColorLocal "ColorPink";
 				_marker setMarkerTypeLocal "Fett_house";
-				_marker setMarkerSizeLocal [0.6, 0.6];
+				_marker setMarkerSizeLocal [0.5, 0.5];
+				g_houses pushBack _x;
 			};
 		} forEach _keys_buildings;
 		[_keys_buildings, (getPlayerUID player), playerSide] remoteExecCall ["AlysiaServer_fnc_house_tenants_add", 2];
@@ -72,26 +72,26 @@ if (_action) then
 		};
 	} forEach _keys_vehicles;
 
+	_return = [];
+
 	{
 		_amount = [(_x select 0), (_x select 1), g_carryWeight, g_maxWeight] call AlysiaClient_fnc_calWeightDiff;
-		if (_amount isEqualTo (_x select 1)) then
+		[true, (_x select 0), _amount] call AlysiaClient_fnc_handleInv;
+		if (_amount != (_x select 1)) then
 		{
-			[true, (_x select 0), _amount] call AlysiaClient_fnc_handleInv;
-			_inv deleteAt _forEachIndex;
-		} else {
-			if (_amount > 0) then
-			{
-				[true, (_x select 0), _amount] call AlysiaClient_fnc_handleInv;
-				(_inv select _forEachIndex) set [1, (_x select 1) - _amount];
-			};
+			_return pushBack [(_x select 0), (_x select 1) - _amount];
 		};
 	} forEach _inv;
 	
-	if (_inv isEqualTo []) then {
+	if (_return isEqualTo []) then {
 		["L'échange a été <t color='#74DF00'>accepté</t>."] remoteExecCall ["AlysiaClient_fnc_info", _from];
 	} else {
-		["Vous n'avez pas assez de place pour tout récupérer."] call AlysiaClient_fnc_info;
-		[_inv] remoteExecCall ["AlysiaClient_fnc_interactionMenu_action_trade_space", _from];
+		_text = "";
+		{
+			_text = _text + format["- %1x %2<br/>", ([(_x select 1)] call AlysiaClient_fnc_numberText), ([(_x select 0)] call AlysiaClient_fnc_itemGetName)];
+		} forEach _return;
+		[format["Vous avez <t color='#74DF00'>accepté</t> l'échange cependant vous n'avez pas assez de place pour récupérer :<br/>%1", _text]] call AlysiaClient_fnc_info;
+		[_return] remoteExecCall ["AlysiaClient_fnc_interactionMenu_action_trade_space", _from];
 	};
 } else {
 	[_inv, _money] remoteExecCall ["AlysiaClient_fnc_interactionMenu_action_trade_refuse", _from];

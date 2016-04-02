@@ -120,22 +120,24 @@ _allowed = switch (playerSide) do
 
 if (!_allowed) exitWith {};
 
-g_houses = [_this, 1, [], [[]]] call BIS_fnc_param;
+g_houses = [];
 {
-	_marker = createMarkerLocal [format["house_%1", (_forEachIndex + 1)], (getPosATL _x)];
-	_marker setMarkerTextLocal "Chez vous";
-	_marker setMarkerColorLocal "ColorPink";
-	_marker setMarkerTypeLocal "Fett_house";
-	_marker setMarkerSizeLocal [0.6, 0.6];
-} forEach g_houses;
+	if (isClass(missionConfigFile >> "ALYSIA_HOUSES" >> (typeOf _x) >> "factions" >> str(playerSide))) then
+	{
+		_marker = createMarkerLocal [format["house_%1", count(g_houses)], (getPosATL _x)];
+		_marker setMarkerTextLocal "Chez vous";
+		_marker setMarkerColorLocal "ColorPink";
+		_marker setMarkerTypeLocal "Fett_house";
+		_marker setMarkerSizeLocal [0.5, 0.5];
+		g_houses pushBack _x;
+	};
+} forEach ([_this, 1, [], [[]]] call BIS_fnc_param);
 
 g_vehicles = [_this, 2, [], [[]]] call BIS_fnc_param;
 
 {
 	_message = _x select 0;
-	if (_x select 1) then {
-		_message set [0, "Numéro caché"];
-	};
+	if (_x select 1) then {_message set [0, "Numéro caché"]};
 	g_phone_messages pushBack _message;
 } forEach ([_this, 3, [], [[]]] call BIS_fnc_param);
 
@@ -152,10 +154,15 @@ g_company = [_this, 4, objNull, [objNull]] call BIS_fnc_param;
 g_laboratory = [_this, 5, objNull, [objNull]] call BIS_fnc_param;
 if (!(isNull g_laboratory)) then
 {
+	_config = ("getText(_x >> 'object') == typeOf(g_laboratory)" configClasses (missionConfigFile >> "ALYSIA_LABORATORIES")) select 0;
 	_marker = createMarkerLocal ["laboratory", (getPosATL g_laboratory)];
-	_marker setMarkerTextLocal "Laboratoire";
 	_marker setMarkerColorLocal "ColorRed";
 	_marker setMarkerTypeLocal "loc_Bunker";
+	if (isNil "_config")) then {
+		_marker setMarkerTextLocal "Laboratoire";
+	} else {
+		_marker setMarkerTextLocal ([configName _config] call AlysiaClient_fnc_itemGetName);
+	};
 };
 
 g_session_query = _basic;

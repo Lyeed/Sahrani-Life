@@ -366,6 +366,7 @@ class CfgFunctions
 			file = "core\Game\Health";
 			class action_hospital_heal {};
 			class action_hospital_awake {};
+			class action_hospital_heartReader {};
 			class action_body_drag {};
 			class action_body_drop {};
 			class action_stabilize {};
@@ -620,6 +621,7 @@ class CfgFunctions
 			class APP_announces_show_update {};
 			class APP_company {};
 			class APP_company_update {};
+			class APP_company_leave {};
 			class APP_gov {};
 			class APP_gov_taxes {};
 			class APP_gov_taxes_update {};

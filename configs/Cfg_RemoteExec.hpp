@@ -131,6 +131,7 @@ class CfgRemoteExec
 		class AlysiaClient_fnc_mission_prevent {allowTargets = CLIENT;};
 		// - medical
 		class AlysiaClient_fnc_action_hospital_awake {allowTargets = CLIENT;};
+		class AlysiaClient_fnc_action_hospital_heartReader {allowTargets = CLIENT;};
 		
 		//- Arma
 		class setFuel {allowTargets = EVERYONE;};

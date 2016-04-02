@@ -132,6 +132,7 @@ class ALYSIA_SHOPS_VIRTUAL
 				"spikeStrip",
 				"sifflet",
 				"storage_stock",
+				"storage_large",
 				"alcool_test",
 				"horn_milice"
 			},{
@@ -156,6 +157,7 @@ class ALYSIA_SHOPS_VIRTUAL
 				"bargate",
 				"spikeStrip",
 				"storage_stock",
+				"storage_large",
 				"horn_garde"
 			},{
 
@@ -249,7 +251,8 @@ class ALYSIA_SHOPS_VIRTUAL
 				"lab_heroin",
 				"lab_weapon",
 				"lab_clothing",
-				"lab_cigare"
+				"lab_cigare",
+				"lab_heal"
 			},{
 				"artefact_R",
 				"artefact",

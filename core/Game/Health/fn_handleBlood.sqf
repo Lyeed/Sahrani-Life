@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_value", "_regen"];
+private "_value";
 _value = round([_this, 0, 0, [0]] call BIS_fnc_param);
 
 if (_value isEqualTo 0) exitWith {};

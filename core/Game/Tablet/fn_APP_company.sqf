@@ -71,6 +71,9 @@ if ((_info select 1) isEqualTo (getPlayerUID player)) then
 	_list ctrlSetEventHandler ["LBSelChanged", "_this call AlysiaClient_fnc_APP_company_update;"];
 } else {
 	_list ctrlRemoveAllEventHandlers "LBSelChanged";
+	[9616, true] call AlysiaClient_fnc_tabletShow;
+	[9617, true] call AlysiaClient_fnc_tabletShow;
+	[9618, true] call AlysiaClient_fnc_tabletShow;
 };
 
 _list lbSetCurSel 0;

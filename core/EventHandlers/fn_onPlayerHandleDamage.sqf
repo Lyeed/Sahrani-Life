@@ -24,7 +24,7 @@ if (g_connected && !g_staff_god && (_damage > 0)) then
 		};
 	};
 
-	if (_source != player) then
+	if ((_source != player) && (_projectile != "")) then
 	{
 		if ((currentWeapon _source) isEqualTo "hgun_FlashBall_F") then
 		{
@@ -54,7 +54,7 @@ if (g_connected && !g_staff_god && (_damage > 0)) then
 	};
 
 	[(_damage * -1)] call AlysiaClient_fnc_handleBlood;
-	[(_damage / 8)] call AlysiaClient_fnc_handleBleed;
+	[(_damage / 10)] call AlysiaClient_fnc_handleBleed;
 };
 
 0;

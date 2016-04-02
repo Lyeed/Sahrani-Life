@@ -864,7 +864,6 @@ _cString =
 ["xcam_misc_videoprojector","[13542.879883,10482.0439453,3.1376]",156.415,-100,0,0,[]] call _cString;
 ["xcam_flower_01","[13539.130859,10500.130859,0.310606]",349.597,-100,0,0,[]] call _cString;
 ["xcam_ch_office_B","[13549.00683594,10486.214844,0.27862]",309.975,-100,0,0,[]] call _cString;
-["xcam_postel_manz_kov","[13521.90332,10477.611328,0.00925827]",259.597,-100,0,0,[]] call _cString;
 ["xcam_basin_a","[13529.398438,10495.0537109,0.824917]",78.8899,-100,0,0,[]] call _cString;
 ["xcam_bath","[13536.919922,10499.333984,0.22138]",79.168,-100,0,0,[]] call _cString;
 ["xcam_toilet_b_02","[13531.451172,10498.785156,0.219698]",169.408,-100,0,0,[]] call _cString;
@@ -911,15 +910,11 @@ _cString =
 ["xcam_ch_office_B","[13541.96875,10479.265625,0.240741]",152.526,-100,0,0,[]] call _cString;
 ["xcam_desk","[13541.612305,10480.142578,0.253367]",169.13,-100,0,0,[]] call _cString;
 ["Land_PCSet_01_screen_F","[13541.446289,10480.396484,1.07239]",-11.0975,-100,0,0,[]] call _cString;
-["xcam_postel_manz_kov","[13522.731445,10473.481445,0.00925827]",258.713,-100,0,0,[]] call _cString;
-["xcam_postel_manz_kov","[13528.0498047,10474.348633,0.0294612]",169.193,-100,0,0,[]] call _cString;
-["xcam_postel_manz_kov","[13526.730469,10481.789063,0.0294612]",169.193,-100,0,0,[]] call _cString;
 ["xcam_Metal_rack_F","[13529.498047,10458.802734,0.214645]",170.013,-100,0,0,[]] call _cString;
 ["xcam_Laptop_unfolded_F","[13550.84082,10483.260742,0.862576]",279.432,-100,0,0,[]] call _cString;
 ["xcam_flower_02","[13550.47168,10487.133789,0.856543]",259.597,-100,0,0,[]] call _cString;
 ["xcam_Metal_rack_F","[13530.898438,10459.0722656,0.214645]",169.066,-100,0,0,[]] call _cString;
 ["xcam_Metal_rack_F","[13532.230469,10459.325195,0.214645]",169.066,-100,0,0,[]] call _cString;
-["xcam_Sun_chair_green_F","[13519.625977,10492.644531,0.237374]",79.6593,-100,0,0,[]] call _cString;
 ["Land_PortableLight_double_F","[13517.681641,10492.261719,0.212964]",257.309,-100,0,0,[]] call _cString;
 ["xcam_SmallTable","[13517.989258,10491.102539,0.228114]",79.5843,-100,0,0,[]] call _cString;
 ["xcam_SmallTable","[13517.518555,10493.607422,0.228114]",79.5843,-100,0,0,[]] call _cString;
@@ -1063,7 +1058,6 @@ _cString =
 ["xcam_b_ArundoD2s_F","[13584.376953,10445.652344,0.720598]",165.417,-100,0,0,[]] call _cString;
 ["xcam_b_ArundoD2s_F","[13580.850586,10445.285156,0.720598]",165.417,-100,0,0,[]] call _cString;
 ["xcam_b_ArundoD2s_F","[13580.360352,10443.451172,0.720598]",216.49,-100,0,0,[]] call _cString;
-["xcam_Sun_chair_green_F","[13521.00488281,10485.389648,0.237374]",79.6593,-100,0,0,[]] call _cString;
 ["Land_PortableLight_double_F","[13519.0585938,10485.0078125,0.212964]",257.309,-100,0,0,[]] call _cString;
 ["xcam_Saw_F","[13519.325195,10484.0390625,1.0362]",84.6593,-100,0,0,[]] call _cString;
 ["xcam_SmallTable","[13518.897461,10486.353516,0.228114]",79.5843,-100,0,0,[]] call _cString;
@@ -1078,8 +1072,6 @@ _cString =
 ["Land_wand_500_025_300_clean_cnc","[13537.336914,10435.754883,0]",171.093,18.162,0,0,[]] call _cString;
 ["Land_wand_250_025_300_clean_cnc","[13535.887695,10436.899414,-1.80101]",441.093,-100,0,0,[]] call _cString;
 ["xcam_Fot_Cara","[13582.268555,10451.509766,0.0260944]",260.265,-100,0,0,[]] call _cString;
-["xcam_postel_manz_kov","[13541.414063,10465.540039,-0.0547139]",-100.617,-100,0,0,[]] call _cString;
-["xcam_postel_manz_kov","[13535.416992,10461.754883,-0.076601]",258.373,-100,0,0,[]] call _cString;
 ["xcam_flower_01","[13540.328125,10463.640625,0.246633]",79.4707,-100,0,0,[]] call _cString;
 ["xcam_flower_01","[13534.459961,10460.181641,0.224747]",258.903,-100,0,0,[]] call _cString;
 ["Land_FlatTV_01_F","[13544.672852,10467.124023,1.73755]",79.3948,-100,0,0,[]] call _cString;
@@ -1342,7 +1334,6 @@ _cString =
 ["Land_wand_500_025_300_clean_cnc","[13531.952148,10469.180664,0.159937]",169.078,20.1219,0,0,[]] call _cString;
 ["Land_ture_250_025_300_clean_cnc","[13528.138672,10468.444336,0.159933]",169.078,-100,0,0,[]] call _cString;
 ["Land_wand_125_025_300_clean_cnc","[13529.677734,10468.742188,0.146463]",169.078,-100,0,0,[]] call _cString;
-["xcam_postel_manz_kov","[13534.647461,10465.47168,-0.076601]",258.373,-100,0,0,[]] call _cString;
 ["xcam_podesta_10","[13553.137695,10487.946289,0.207039]",169.041,20.169,0,0,[]] call _cString;
 ["xcam_podesta_10","[13554.930664,10478.6875,0.203672]",169.041,20.1656,0,0,[]] call _cString;
 ["xcam_Obstacle_Cross_F","[13560.0185547,10506.708984,0]",170.177,-100,0,0,[]] call _cString;
@@ -2759,7 +2750,6 @@ _flag_south_3 = ["FlagPole_F","[10542.767578,9521.302734,0]",-460.076,-100,1,0,[
 		if ((border_plot_north_south_2 animationPhase "plot_1_translation") != 0) then {border_plot_north_south_2 animate ["plot_1_translation", 0]};
 		if ((border_plot_north_south_3 animationPhase "plot_1_translation") != 0) then {border_plot_north_south_3 animate ["plot_1_translation", 0]};
 		if ((border_plot_north_south_4 animationPhase "plot_1_translation") != 0) then {border_plot_north_south_4 animate ["plot_1_translation", 0]};
-
 	}, "", 9992, true, false, "", "(((player distance _target) < 2) && !(player getVariable ['surrender',false]) && !(player getVariable ['restrained',false]))"];
 
 	_x addAction ["<img image='lyeed_IMG\data\actions_menu\fence.paa'/> <t color='#FF0000'>Fermer</t>",

@@ -10,6 +10,8 @@ private["_time", "_display", "_ctrl_left", "_id", "_ctrl_suicide", "_timer"];
 if (g_staff_god) exitWith {};
 if (player getVariable ["is_coma", false]) exitWith {};
 
+1 fadeSound 0;
+
 if (visibleMap) then
 {
 	openMap false;
@@ -27,6 +29,7 @@ if (!(createDialog "RscDisplayComa")) exitWith {};
 if (player getVariable ["surrender", false]) then {player setVariable ["surrender", false, true]};
 if (player getVariable ["restrained", false]) then {player setVariable ["restrained", false, true]};
 if (!(isNull g_dragingBody)) then {[false] call AlysiaClient_fnc_action_body_drop};
+if (!(isNull g_objPut)) then {detach g_objPut};
 
 if (!(isNull (player getVariable ["escorted", objNull]))) then
 {
@@ -47,7 +50,7 @@ _ctrl_suicide = _display displayCtrl 355;
 _time = getNumber(missionConfigFile >> "ALYSIA_MEDICAL" >> "coma" >> "timer");
 _timer = _time;
 
-g_blood = 1;
+g_blood = 10;
 g_bleed = 0;
 g_coma_dead = false;
 
@@ -63,8 +66,19 @@ if ((player getVariable ["tf_voiceVolume", 0]) > 0) then {
 
 while {(_time > 0) && !g_coma_dead && (player getVariable ["is_coma", false])} do
 {
-	if ((animationState player) != "acts_InjuredLookingRifle01") then {
-		[player, "acts_InjuredLookingRifle01"] remoteExecCall ["switchMove", -2];
+	if ((vehicle player) isEqualTo player) then
+	{
+		_animation = switch (true) do
+		{
+			case (typeOf(attachedTo player) in ["HospitalTable_F","HealTable_F"]): {"ainjppnemstpsnonwrfldnon"};
+			case (typeOf(attachedTo player) isEqualTo "HospitalBed_F"): {"ainjppnemrunsnonwnondb_still"};
+			case (player getVariable ["heart_attack", false]): {"ainjppnemrunsnonwnondb"};
+			default {"acts_InjuredLookingRifle01"};
+		};
+		if ((animationState player) != _animation) then
+		{
+			[player, _animation] remoteExecCall ["switchMove", 0];
+		};
 	};
 	
 	player setOxygenRemaining 1;
@@ -74,7 +88,7 @@ while {(_time > 0) && !g_coma_dead && (player getVariable ["is_coma", false])} d
 	{
 		case (player getVariable ["bullet_operation_inUse", false]):
 		{
-			_ctrl_suicide ctrlSetStructuredText parseText "<t align='center' size='1.5'>Vous êtes en train d'être opéré</t>";
+			_ctrl_suicide ctrlSetStructuredText parseText "<t align='center' size='1.5'>Vous êtes en train d'être opéré. Croisez les doigts pour que l'opération se passe bien</t>";
 			_ctrl_suicide ctrlShow true;
 			ctrlShow[352, false];
 			ctrlShow[353, false];
@@ -134,9 +148,10 @@ while {(_time > 0) && !g_coma_dead && (player getVariable ["is_coma", false])} d
 	uiSleep 1;
 };
 
-if (!(isNull (attachedTo player))) then {
-	detach player;
-};
+_display displayRemoveEventHandler ["KeyDown", _id];
+closeDialog 0;
+if (player getVariable ["is_coma", false]) then {player setVariable ["is_coma", false, true]};
+if (player getVariable ["medic_request", false]) then {player setVariable ["medic_request", false, true]};
 
 if (!g_coma_dead) then
 {
@@ -146,22 +161,31 @@ if (!g_coma_dead) then
 	if (g_hunger < 10) then {
 		[15] call AlysiaClient_fnc_handleHunger;
 	};
-
-	[10] call AlysiaClient_fnc_handleBlood;
-	player switchCamera "Internal";
-	player setFatigue 1;
-	cutText ["", "BLACK IN", 20, true];
 	if ((player getVariable ["tf_voiceVolume", 0]) isEqualTo 0) then {
 		player setVariable ["tf_voiceVolume", 1, true];
 	};
 
-	player setVariable ["tf_voiceVolume", 1, true];
-	player setVariable ["tf_globalVolume", 1];
+	player switchCamera "Internal";
+	player setFatigue 1;
+	cutText ["", "BLACK IN", 20, true];
+
+	20 fadeSound 1;
+	for "_i" from 1 to 10 do
+	{
+		if (!(player getVariable ["is_coma", false])) then
+		{
+			if (player getVariable ["bed_awake", false]) then
+			{
+				[4000 / 10] call AlysiaClient_fnc_handleBlood;
+			};
+			player setVariable ["tf_globalVolume", (_i / 10)];
+			uiSleep 2;
+		};
+	};
 	[player, ""] remoteExecCall ["switchMove", -2];
+	if (player getVariable ["bed_awake", false]) then {
+		player setVariable ["bed_awake", false, true];
+	};
 };
 
-if (player getVariable ["is_coma", false]) then {player setVariable ["is_coma", false, true]};
-if (player getVariable ["medic_request", false]) then {player setVariable ["medic_request", false, true]};
-
-_display displayRemoveEventHandler ["KeyDown", _id];
-closeDialog 0;
+if (!(isNull (attachedTo player))) then {detach player};

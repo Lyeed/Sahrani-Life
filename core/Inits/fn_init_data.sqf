@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_basic"];
+private "_basic";
 _basic = [_this, 0, [], [[]]] call BIS_fnc_param;
 
 // firstName
@@ -72,6 +72,9 @@ g_phone_blacklist = _basic select 34;
 g_apps = _basic select 35;
 g_choice = _basic select 36;
 [(_basic select 38)] call AlysiaClient_fnc_handleAlcool;
+if ((_basic select 39) isEqualTo 1) then {
+	player setVariable ["bullet_check", true, true];
+};
 // Licenses
 {
 	_config = missionConfigFile >> "ALYSIA_LICENSES" >> _x;
@@ -86,19 +89,19 @@ g_choice = _basic select 36;
 			};
 		};
 	};
-} forEach (_basic select 39);
+} forEach (_basic select 40);
 // cash
-g_cash = _basic select 40;
+g_cash = _basic select 41;
 // atm
-g_atm = _basic select 41;
+g_atm = _basic select 42;
 // inventory
 g_maxWeight = 100;
 {
     [true, (_x select 0), (_x select 1)] call AlysiaClient_fnc_handleInv;
-} forEach (_basic select 42);
+} forEach (_basic select 43);
 g_maxWeight = 24;
 // gear
-[(_basic select 43)] spawn AlysiaClient_fnc_loadGear;
+[(_basic select 44)] spawn AlysiaClient_fnc_loadGear;
 switch (playerSide) do
 {
 	case west: 
@@ -114,12 +117,12 @@ switch (playerSide) do
 	case civilian:
 	{
 		if ((call g_CIVLevel) > 0) then {player setVariable ["rank", (call g_CIVLevel), true]};
-		g_launder = _basic select 44;
+		g_launder = _basic select 45;
 		if (g_launder > 0) then
 		{
 			[] spawn
 			{
-				waitUntil {missionNamespace getVariable ["g_connected", false]};
+				waitUntil {g_connected};
 				uiSleep ((round(random(15)) + 3) * 60);
 				[] call AlysiaClient_fnc_launderReceive;
 			};

@@ -24,11 +24,14 @@ if ((_type isEqualTo "debif") && (getNumber(missionConfigFile >> "ALYSIA_FACTION
 if (_unit getVariable ["bullet_check", false]) exitWith {
 	["Cette personne a été blessée par balle et doit être amenée à un centre hospitalier pour être opéré."] call AlysiaClient_fnc_error;
 };
+if (_unit getVariable ["bullet_operation_inUse", false]) exitWith {
+	["Cette personne est en train d'être opéré et ne peut pas être stabilisé pour le moment"] call AlysiaClient_fnc_error;
+};
 
 _chance = switch (_type) do
 {
 	case "main": {3};
-	case "debif": {50};
+	case "defib": {50};
 };
 if (isNil "_chance") exitWith {["Impossible de déterminer vos chances de réaminer"] call AlysiaClient_fnc_error};
 
@@ -38,18 +41,28 @@ _amount = 1;
 while {(!g_interrupted && (_unit getVariable ["is_coma", false]) && !(player getVariable ["is_coma", false]) && !(player getVariable ["restrained", false]) && (player distance _unit < 3))} do
 {
 	player playAction "medicStart";
-	sleep 6;
-	if (!g_interrupted) then
+	uiSleep 6;
+
+	if (g_interrupted) exitWith {};
+
+	if (_type isEqualTo "defib") then 
 	{
-		player playAction "medicStop";
-		if (random(100) <= _chance) exitWith
-		{
-			titleText["* Réussi *", "PLAIN DOWN"];
+		[player, "defib", 20] call CBA_fnc_globalSay3d;
+	};
+
+	player playAction "medicStop";
+	if (random(100) <= _chance) exitWith
+	{
+		titleText["* Réussi *", "PLAIN DOWN"];
+		if (player getVariable ["heart_attack", false]) then {
+			_unit setVariable ["heart_attack", false, true];
+		} else {
 			_unit setVariable ["is_coma", false, true];
 		};
-		titleText[format["* Tentative n°%1 *", _amount], "PLAIN DOWN", 2];
-		_amount = _amount + 1;
 	};
+
+	titleText[format["* Tentative n°%1 *", _amount], "PLAIN DOWN", 2];
+	_amount = _amount + 1;
 };
 
 if (g_interrupted) then 

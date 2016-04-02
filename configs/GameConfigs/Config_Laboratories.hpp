@@ -80,4 +80,9 @@ class ALYSIA_LABORATORIES
 		object = "Land_Factory_Conv1_End_F";
 		process[] = {"cigare"};
 	};
+	class lab_heal
+	{
+		object = "HealTable_F";
+		process[] = {};
+	};
 };

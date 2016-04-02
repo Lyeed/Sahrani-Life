@@ -95,7 +95,7 @@ if (_action) then
 	
 	if (_condition) then
 	{
-		[g_AH_type, g_AH_location, _item, _price, player, _vehicle] remoteExec ["AlysiaServer_fnc_auctionHouse_add", 2];
+		[g_AH_type, g_AH_location, _item, _price, player, _vehicle, ([] call AlysiaClient_fnc_getInv), ([] call AlysiaClient_fnc_getGear)] remoteExec ["AlysiaServer_fnc_auctionHouse_add", 2];
 		[false, _cost] call AlysiaClient_fnc_handleCash;
 		[format
 			[

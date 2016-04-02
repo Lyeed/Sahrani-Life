@@ -77,7 +77,7 @@ lbClear _ctrl_list_keys_buildings;
 	{
 		if (((_x getVariable ['house_owner', ['', '']]) select 0) isEqualTo (getPlayerUID player)) then
 		{
-			_index = _ctrl_list_keys_buildings lbAdd format["Clé (%1)", getText(configFile >> "CfgVehicles" >> (typeOf _x) >> "displayName")];
+			_index = _ctrl_list_keys_buildings lbAdd format["Clé (%1)", mapGridPosition _x];
 			_ctrl_list_keys_buildings lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> (typeOf _x) >> "picture")];
 			_ctrl_list_keys_buildings lbSetValue [_index, _forEachIndex];
 		};

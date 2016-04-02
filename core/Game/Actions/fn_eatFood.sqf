@@ -38,7 +38,7 @@ if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then
 				{
 					while {((missionNamespace getVariable ["unlimitedRun", 0]) > 0)} do
 					{
-						if ((getFatigue player) > 0) then {player setFatigue ((getFatigue player) - 0.1)}
+						if ((getFatigue player) > 0) then {player setFatigue ((getFatigue player) - 0.1)};
 						missionNamespace setVariable ["unlimitedRun", (missionNamespace getVariable ["unlimitedRun", 0]) - 1];
 						uiSleep 1;
 					};
