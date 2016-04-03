@@ -134,7 +134,8 @@ class ALYSIA_SHOPS_VIRTUAL
 				"storage_stock",
 				"storage_large",
 				"alcool_test",
-				"horn_milice"
+				"horn_milice_1",
+				"horn_milice_2"
 			},{
 
 			}

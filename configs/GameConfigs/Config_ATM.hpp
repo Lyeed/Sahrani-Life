@@ -12,7 +12,7 @@ class ALYSIA_ATM
 		deposit_min = 50;
 		launder_transfer = 0;
 		company = 0;
-		save = 1;
+		save = 0;
 		tablet = 1;
 		class marker
 		{

@@ -33,6 +33,11 @@ _action =
 ] call BIS_fnc_guiMessage;
 if (_action) then
 {
-	[] call AlysiaClient_fnc_company_member_leave;
-	["MAIN"] spawn AlysiaClient_fnc_tabletApp;
+	if ([g_company, false, (getPlayerUID player)] call AlysiaClient_fnc_company_member_handle) then
+	{
+		[] call AlysiaClient_fnc_company_member_leave;
+		["MAIN"] spawn AlysiaClient_fnc_tabletApp;
+	} else {
+		["Impossible de quitter l'entreprise.<br/>Vous n'en faites pas parti."] call AlysiaClient_fnc_info;
+	};
 };

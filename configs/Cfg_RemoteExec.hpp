@@ -42,6 +42,7 @@ class CfgRemoteExec
 		class AlysiaServer_fnc_phoneMessageHandler {allowTargets = SERVER;};
 		//- Log
 		class AlysiaServer_fnc_logDeath {allowTargets = SERVER;};
+		class AlysiaServer_fnc_logDupli {allowTargets = SERVER;};
 		//- dynamic
 		class AlysiaServer_fnc_dynamicMarkers_update {allowTargets = SERVER;};
 		class AlysiaServer_fnc_spikeStrip {allowTargets = SERVER;};
