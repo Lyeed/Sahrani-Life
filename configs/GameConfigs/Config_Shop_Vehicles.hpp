@@ -255,7 +255,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"shounka_a3_brinks_noir",
 			"madsa_mtz_F",
 			"RDS_Zetor6945_Base",
-			"Skyline_Vehicule_Shounka_Renault_Magnum",
+			"shounka_a3_renaultmagnum_f",
 			"Mrshounka_a3_iveco_f",
 			"B_G_Van_01_fuel_F",
 			"O_Truck_02_fuel_F",

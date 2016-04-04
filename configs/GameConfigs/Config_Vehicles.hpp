@@ -141,7 +141,7 @@ class ALYSIA_VEHICLES
   	class DAR_TaurusCivBlack: DAR_TaurusCiv {};
   	class DAR_TaurusCivBlue: DAR_TaurusCiv {};
 
-  	class Skyline_Vehicule_Shounka_Renault_Magnum
+  	class shounka_a3_renaultmagnum_f
 	{
 		realname = "Renault Magnum";
 		buyPrice = 415750;
@@ -167,19 +167,19 @@ class ALYSIA_VEHICLES
 			"Skyline_Vehicule_Shounka_Renault_Magnum_13_F"
 		};
 	};
-	class Skyline_Vehicule_Shounka_Renault_Magnum_01_F: Skyline_Vehicule_Shounka_Renault_Magnum{};
-	class Skyline_Vehicule_Shounka_Renault_Magnum_02_F: Skyline_Vehicule_Shounka_Renault_Magnum{};
-	class Skyline_Vehicule_Shounka_Renault_Magnum_03_F: Skyline_Vehicule_Shounka_Renault_Magnum{};
-	class Skyline_Vehicule_Shounka_Renault_Magnum_04_F: Skyline_Vehicule_Shounka_Renault_Magnum{};
-	class Skyline_Vehicule_Shounka_Renault_Magnum_05_F: Skyline_Vehicule_Shounka_Renault_Magnum{};
-	class Skyline_Vehicule_Shounka_Renault_Magnum_06_F: Skyline_Vehicule_Shounka_Renault_Magnum{};
-	class Skyline_Vehicule_Shounka_Renault_Magnum_07_F: Skyline_Vehicule_Shounka_Renault_Magnum{};
-	class Skyline_Vehicule_Shounka_Renault_Magnum_08_F: Skyline_Vehicule_Shounka_Renault_Magnum{};
-	class Skyline_Vehicule_Shounka_Renault_Magnum_09_F: Skyline_Vehicule_Shounka_Renault_Magnum{};
-	class Skyline_Vehicule_Shounka_Renault_Magnum_10_F: Skyline_Vehicule_Shounka_Renault_Magnum{};
-	class Skyline_Vehicule_Shounka_Renault_Magnum_11_F: Skyline_Vehicule_Shounka_Renault_Magnum{};
-	class Skyline_Vehicule_Shounka_Renault_Magnum_12_F: Skyline_Vehicule_Shounka_Renault_Magnum{};
-	class Skyline_Vehicule_Shounka_Renault_Magnum_13_F: Skyline_Vehicule_Shounka_Renault_Magnum{};
+	class Skyline_Vehicule_Shounka_Renault_Magnum_01_F: shounka_a3_renaultmagnum_f{};
+	class Skyline_Vehicule_Shounka_Renault_Magnum_02_F: shounka_a3_renaultmagnum_f{};
+	class Skyline_Vehicule_Shounka_Renault_Magnum_03_F: shounka_a3_renaultmagnum_f{};
+	class Skyline_Vehicule_Shounka_Renault_Magnum_04_F: shounka_a3_renaultmagnum_f{};
+	class Skyline_Vehicule_Shounka_Renault_Magnum_05_F: shounka_a3_renaultmagnum_f{};
+	class Skyline_Vehicule_Shounka_Renault_Magnum_06_F: shounka_a3_renaultmagnum_f{};
+	class Skyline_Vehicule_Shounka_Renault_Magnum_07_F: shounka_a3_renaultmagnum_f{};
+	class Skyline_Vehicule_Shounka_Renault_Magnum_08_F: shounka_a3_renaultmagnum_f{};
+	class Skyline_Vehicule_Shounka_Renault_Magnum_09_F: shounka_a3_renaultmagnum_f{};
+	class Skyline_Vehicule_Shounka_Renault_Magnum_10_F: shounka_a3_renaultmagnum_f{};
+	class Skyline_Vehicule_Shounka_Renault_Magnum_11_F: shounka_a3_renaultmagnum_f{};
+	class Skyline_Vehicule_Shounka_Renault_Magnum_12_F: shounka_a3_renaultmagnum_f{};
+	class Skyline_Vehicule_Shounka_Renault_Magnum_13_F: shounka_a3_renaultmagnum_f{};
 
 	class Mrshounka_Alfa_Romeo_civ
 	{
