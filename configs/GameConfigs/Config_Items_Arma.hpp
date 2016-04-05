@@ -2405,10 +2405,6 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 95;
 		buy_license_CIV = "company_news";
 	};
-	class U_C_Kick_Me_01
-	{
-		buy_price = 70;
-	};
 	class U_C_Poloshirt_blue
 	{
 		buy_price = 60;
