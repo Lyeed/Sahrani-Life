@@ -254,7 +254,13 @@ class ALYSIA_SHOPS_VIRTUAL
 				"lab_weapon",
 				"lab_clothing",
 				"lab_cigare",
-				"lab_heal"
+				"lab_heal",
+				"patron_AKM",
+				"patron_M21",
+				"patron_AK74",
+				"patron_mosin",
+				"patron_CZ",
+				"patron_sawed"
 			},{
 				"artefact_R",
 				"artefact",

@@ -25,18 +25,6 @@ class ALYSIA_LABORATORIES
 		object = "Land_Workbench_01_F";
 		process[] =
 		{
-			"weapon_ak_1",
-			"weapon_ak_2",
-			"weapon_ak_3",
-			"magazine_ak",
-			"scope_ak",
-			"weapon_m21",
-			"magazine_m21",
-			"scope_m21",
-			"weapon_cz",
-			"magazine_cz",
-			"weapon_sawed",
-			"magazine_sawed",
 			"weapon_tec",
 			"magazine_tec",
 			"weapon_tracker",

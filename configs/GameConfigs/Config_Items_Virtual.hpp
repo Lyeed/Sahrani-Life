@@ -1782,4 +1782,71 @@ class ALYSIA_ITEMS
 			action = "['SOUTH', 'perqui_south', east] spawn AlysiaClient_fnc_item_perquisition;";
 		};
 	};
+
+	class patron_AK74
+	{
+		name = "Patron arme (AK74)";
+		weight = 5;
+		price_buy = 575000;
+		image = "";
+		class use
+		{
+			action = "[['weapon_ak_1','weapon_ak_2','weapon_ak_3','magazine_ak','scope_ak'], 'lab_weapon', 'patron_AK74'] call AlysiaClient_fnc_item_patron;";
+		};
+	};
+	class patron_M21
+	{
+		name = "Patron arme (M21)";
+		weight = 5;
+		price_buy = 825000;
+		image = "";
+		class use
+		{
+			action = "[['weapon_m21','magazine_m21','scope_m21'], 'lab_weapon', 'patron_M21'] call AlysiaClient_fnc_item_patron;";
+		};
+	};
+	class patron_CZ
+	{
+		name = "Patron arme (CZ)";
+		weight = 5;
+		price_buy = 439000;
+		image = "";
+		class use
+		{
+			action = "[['weapon_cz','magazine_cz'], 'lab_weapon', 'patron_CZ'] call AlysiaClient_fnc_item_patron;";
+		};
+	};
+	class patron_sawed
+	{
+		name = "Patron arme (Fusil scié)";
+		weight = 5;
+		price_buy = 210000;
+		image = "";
+		class use
+		{
+			action = "[['weapon_sawed','magazine_sawed'], 'lab_weapon', 'patron_sawed'] call AlysiaClient_fnc_item_patron;";
+		};
+	};
+	class patron_AKM
+	{
+		name = "Patron arme (AKM)";
+		weight = 5;
+		price_buy = 995000;
+		image = "";
+		class use
+		{
+			action = "[['weapon_AKM_1','weapon_AKM_2','magazine_AKM'], 'lab_weapon', 'patron_AKM'] call AlysiaClient_fnc_item_patron;";
+		};
+	};
+	class patron_mosin
+	{
+		name = "Patron arme (Mosin)";
+		weight = 5;
+		price_buy = 260000;
+		image = "";
+		class use
+		{
+			action = "[['weapon_mosin_1','weapon_mosin_2','magazine_mosin'], 'lab_weapon', 'patron_mosin'] call AlysiaClient_fnc_item_patron;";
+		};
+	};
 };

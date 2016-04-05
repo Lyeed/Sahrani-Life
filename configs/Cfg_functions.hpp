@@ -187,6 +187,7 @@ class CfgFunctions
 			class item_electricSystem {};
 			class item_patch {};
 			class item_perquisition {};
+			class item_patron {};
 		};
 
 		class Laboratories

@@ -4,7 +4,7 @@ class ALYSIA_PRISONS
 	{
 		name = "Centre de réhabilitation";
 		sides[] = {"WEST"};
-		uniform = "U_C_Prisonnier_01";
+		uniform = "Skyline_Uniforme_Prisonnier_01_F";
 		exit[] = {12140.4,17777.6,0.00143814};
 		escape_distance = 70;
 
@@ -80,7 +80,7 @@ class ALYSIA_PRISONS
 	{
 		name = "Pénitencier";
 		sides[] = {"EAST"};
-		uniform = "U_C_Prisonnier_01";
+		uniform = "Skyline_Uniforme_Prisonnier_02_F";
 		exit[] = {8239.01,7830.56,0.00143433};
 		escape_distance = 90;
 

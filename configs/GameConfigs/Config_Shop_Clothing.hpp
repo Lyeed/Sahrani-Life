@@ -803,14 +803,14 @@ class ALYSIA_SHOPS_CLOTHING
 		};
 	};
 
-	class prisoner_shop_clothing
+	class prison_clothe_north
 	{
 		name = "Friperie prisonnier";
-		side = "CIV";
-		uniforms[] = {"U_C_Prisonnier_01"};
-		headgear[] = {};
-		goggles[] = {};
-		vests[] = {};
-		backpacks[] = {};
+		uniforms[] = {"Skyline_Uniforme_Prisonnier_01_F"};
+	};
+	class prison_clothe_south
+	{
+		name = "Friperie prisonnier";
+		uniforms[] = {"Skyline_Uniforme_Prisonnier_02_F"};
 	};
 };

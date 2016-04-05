@@ -1030,7 +1030,6 @@ class ALYSIA_ITEMS_ARMA
 	class optic_AMS_khk {};
 	class optic_AMS_snd {};
 	class optic_Arco {};
-	class optic_Holosight_smg {};
 	class optic_KHS_blk {};
 	class optic_KHS_hex {};
 	class optic_KHS_old {};
@@ -2779,4 +2778,10 @@ class ALYSIA_ITEMS_ARMA
 	class Skyline_Pancarte_garde: Skyline_Pancarte_01_F {};
 	class Skyline_Pancarte_marijuana: Skyline_Pancarte_01_F {};
 	class Skyline_Pancarte_novak: Skyline_Pancarte_01_F {};
+
+	class Skyline_Uniforme_Prisonnier_01_F
+	{
+		price = 1;
+	};
+	class Skyline_Uniforme_Prisonnier_02_F: Skyline_Uniforme_Prisonnier_01_F {};
 };

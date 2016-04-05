@@ -116,7 +116,11 @@ while {(_time > 0) && !g_coma_dead && (player getVariable ["is_coma", false])} d
 		};
 		case (_time > (_timer - (60 * 3))):
 		{
-			_ctrl_suicide ctrlSetStructuredText parseText format["<t align='center' size='1.5'>Vous pouvez vous suicider dans %1 secondes</t>", (_time - (_timer - (60 * 3)))];
+			_ctrl_suicide ctrlSetStructuredText parseText format
+			[
+				"<t align='center' size='1.5'>Vous pouvez vous suicider dans %1</t>",
+				[(_time - (_timer - (60 * 3))) , "H:MM:SS"] call CBA_fnc_formatElapsedTime
+			];
 			_ctrl_suicide ctrlShow true;
 			ctrlShow[352, false];
 			ctrlShow[353, false];
@@ -135,7 +139,12 @@ while {(_time > 0) && !g_coma_dead && (player getVariable ["is_coma", false])} d
 
 	if (_reduce) then
 	{
-		_ctrl_left ctrlSetStructuredText parseText format["<t align='center' size='2'>Il vous reste %1 secondes à vivre</t>", _time];
+		_ctrl_left ctrlSetStructuredText parseText format
+		[
+			"<t align='center' size='2'>Il vous reste %1 à vivre</t>",
+			[_time , "H:MM:SS"] call CBA_fnc_formatElapsedTime
+		];
+
 		_time = _time - 1;
 		if (_time isEqualTo 0) then
 		{

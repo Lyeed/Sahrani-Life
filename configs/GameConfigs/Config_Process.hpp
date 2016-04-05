@@ -852,7 +852,7 @@ class ALYSIA_PROCESS
 	{
 		name = "Confection d'uniforme textile (Lectra)";
 		require[] = {{"tissue",3},{"cottonp",10}};
-		receive[] = {{},{"Lectra_textile"},0};
+		receive[] = {{},{"Lectra_textile_uniform"},0};
 		class factions: factions {};
 	};
 
@@ -1380,6 +1380,55 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 
+	class weapon_AKM_1: weapon_ak_1
+	{
+		name = "Arme : AKM (1)";
+		require[] = {{"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"detente",1},{"percuteur",1},{"culasse",1},{"woodp",7},{"steel",11}};
+		receive[] = {{},{"Skyline_AKM_01_F"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class weapon_AKM_2: weapon_AKM_1
+	{
+		name = "Arme : AKM (2)";
+		receive[] = {{},{"Skyline_AKM_Compact_01_F"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class magazine_AKM: magazine_ak
+	{
+		name = "Munitions : AKM";
+		require[] = {{"bullet",30},{"magazine",1}};
+		receive[] = {{},{"30Rnd_762x39_AKM"},0};
+		class target {};
+		class factions: factions {};
+	};
+
+	class weapon_mosin_1: weapon_ak_1
+	{
+		name = "Arme : Mosin";
+		require[] = {{"canon",1},{"crosse_wood",1},{"garde_main_wood",1},{"detente",1},{"percuteur",1},{"culasse",1},{"woodp",9},{"steel",2}};
+		receive[] = {{},{"Skyline_Mosin9130_01_F"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class weapon_mosin_2: weapon_AKM_1
+	{
+		name = "Arme : Mosin baïonnette";
+		require[] = {{"canon",1},{"crosse_wood",1},{"garde_main_wood",1},{"detente",1},{"percuteur",1},{"culasse",1},{"woodp",9},{"steel",4}};
+		receive[] = {{},{"Skyline_Mosin9130_Bayonette_01_F"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class magazine_mosin: magazine_ak
+	{
+		name = "Munitions : Mosin";
+		require[] = {{"bullet",5},{"magazine",1}};
+		receive[] = {{},{"5Rnd_762x54_Mosin"},0};
+		class target {};
+		class factions: factions {};
+	};
+
 	class weapon_m21: weapon_ak_1
 	{
 		name = "Arme : M21";
@@ -1616,7 +1665,7 @@ class ALYSIA_PROCESS
 	class weapon_vermin: weapon_b95
 	{
 		name = "Arme : Vermin";
-		require[] = { {"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"poignee",1},{"detente",1},{"percuteur",1},{"ironp",5},{"steel",5}};
+		require[] = { {"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"poignee",1},{"detente",1},{"percuteur",1},{"ironp",2},{"steel",2}};
 		receive[] = {{},{"SMG_01_F"},0};
 		time_per_item = 40;
 		class factions: factions {};
@@ -1626,6 +1675,22 @@ class ALYSIA_PROCESS
 		name = "Munitions : Vermin";
 		require[] = {{"bullet",30},{"magazine",1}};
 		receive[] = {{},{"30Rnd_45ACP_Mag_SMG_01"},0};
+		class factions: factions {};
+	};
+
+	class weapon_ump: weapon_b95
+	{
+		name = "Arme : UMP45";
+		require[] = { {"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"poignee",1},{"detente",1},{"percuteur",1},{"ironp",1},{"steel",7}};
+		receive[] = {{},{"Skyline_UMP45_01_F"},0};
+		time_per_item = 40;
+		class factions: factions {};
+	};
+	class magazine_ump: magazine_b95
+	{
+		name = "Munitions : UMP45";
+		require[] = {{"bullet",25},{"magazine",1}};
+		receive[] = {{},{"25Rnd_45ACP_Mag"},0};
 		class factions: factions {};
 	};
 

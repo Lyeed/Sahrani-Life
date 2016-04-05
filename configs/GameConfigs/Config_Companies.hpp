@@ -69,6 +69,8 @@ class ALYSIA_COMPANIES
 				"magazine_sdar",
 				"weapon_vermin",
 				"magazine_vermin",
+				"weapon_ump",
+				"magazine_ump",
 				"scope_holosight"
 			};
 			members_max = 8;
@@ -431,7 +433,8 @@ class ALYSIA_COMPANIES
 				"clothing_secu_4",
 				"googles_secu_1",
 				"vest_secu_1",
-				"backpack_parachute"
+				"backpack_parachute",
+				"clothing_clothing_lectra"
 			};
 			members_max = 8;
 			class construction

@@ -37,7 +37,7 @@ switch (typeOf(_bed)) do
 	case "HospitalBed_F":
 	{
 		_unit attachTo [_bed, [0, 0.2, -0.2]];
-		if (_unit getVariable ["bullet_operation_inUse", false]) then {
+		if (_unit getVariable ["bullet_check", false]) then {
 			["Le patient a besoin d'être opéré d'urgence sur une table d'opération."] call AlysiaClient_fnc_info;
 		} else {
 			[_bed] remoteExec ["AlysiaClient_fnc_action_hospital_awake", _unit];
