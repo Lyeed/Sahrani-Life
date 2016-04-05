@@ -186,6 +186,7 @@ class CfgFunctions
 			class item_serrure {};
 			class item_electricSystem {};
 			class item_patch {};
+			class item_perquisition {};
 		};
 
 		class Laboratories

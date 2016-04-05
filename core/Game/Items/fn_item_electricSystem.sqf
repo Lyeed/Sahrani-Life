@@ -19,6 +19,10 @@ if (!_check) exitWith {
 	["Vous n'êtes près d'aucun bâtiment."] call AlysiaClient_fnc_error;
 };
 
+if ((player distance _target) > 30) exitWith {
+	["Vous êtes trop loin du bâtiment."] call AlysiaClient_fnc_error;
+};
+
 if (!(["company_construction"] call AlysiaClient_fnc_hasLicense)) exitWith {
 	["Vous ne savez pas utiliser cet objet."] call AlysiaClient_fnc_error;
 };

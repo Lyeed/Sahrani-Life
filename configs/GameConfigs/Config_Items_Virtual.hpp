@@ -1757,4 +1757,29 @@ class ALYSIA_ITEMS
 		weight = 1;
 		image = "";
 	};
+
+	class perqui_north
+	{
+		name = "Mandat de perquisition";
+		weight = 1;
+		image = "";
+		price_buy = 5000;
+		buy_license_CIV = "judge";
+		class use
+		{
+			action = "['NORTH', 'perqui_north', west] spawn AlysiaClient_fnc_item_perquisition;";
+		};
+	};
+	class perqui_south
+	{
+		name = "Ordonnance de fouille";
+		weight = 1;
+		image = "";
+		price_buy = 5000;
+		buy_license_CIV = "central_com";
+		class use
+		{
+			action = "['SOUTH', 'perqui_south', east] spawn AlysiaClient_fnc_item_perquisition;";
+		};
+	};
 };

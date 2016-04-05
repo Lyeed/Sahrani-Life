@@ -6,6 +6,7 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
+g_coma_suicide = true;
 g_coma_dead = true;
 g_killer = player;
 player setDamage 1;

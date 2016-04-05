@@ -5,16 +5,8 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_action"];
 
-_action = 
-[
-	"Vous êtes sur le point d'effectuer une perquisition.<br/>Un haut gradé DOIT être présent et valider chaque action faites durant la perquisition.<br/>Tout abus sera puni",
-	"Perquisition",
-	"Continuer",
-	"Quitter"
-] call BIS_fnc_guiMessage;
-if (_action) then
+if (_target getVariable ["perquisition", false]) then
 {
 	[
 		[_this, 0, objNull, [objNull]] call BIS_fnc_param,
@@ -25,5 +17,7 @@ if (_action) then
 			["light", "Lumière", "[g_interaction_target] call AlysiaClient_fnc_house_menu_action_light;", "true"]
 		],
 		"Perquisition"
-	] spawn AlysiaClient_fnc_interactions_create;
+	] spawn AlysiaClient_fnc_interactions_create;	
+} else {
+	["Ce bâtiment n'est pas en train d'être perquisitionné."] call AlysiaClient_fnc_error;
 };

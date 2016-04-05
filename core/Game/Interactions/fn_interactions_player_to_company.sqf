@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_object"];
+private "_object";
 _object = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 if (isNull _object) exitWith {};
@@ -17,7 +17,7 @@ if (isNull _object) exitWith {};
 		[
 			"info",
 			"Infos",
-			"[] spawn AlysiaClient_fnc_company_info_open;",
+			"[g_interaction_target] call AlysiaClient_fnc_company_info_open;",
 			"
 				!(g_interaction_target getVariable ['construction', false])
 			"

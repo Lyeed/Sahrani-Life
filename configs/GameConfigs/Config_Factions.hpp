@@ -151,8 +151,12 @@ class ALYSIA_FACTIONS
 		};
 
 		/*** SPAWN/RESPAWN ***/
-		respawn_marker = "west_spawn";
-		respawn_price = 0;
+		class respawn
+		{
+			marker = "west_spawn";
+			price = 2500;
+			suicide = 0.05;
+		};
 
 		/*** HOUSING ***/
 		house_search = 1;
@@ -366,8 +370,12 @@ class ALYSIA_FACTIONS
 		};
 
 		/*** SPAWN/RESPAWN ***/
-		respawn_marker = "east_spawn";
-		respawn_price = 0;
+		class respawn
+		{
+			marker = "east_spawn";
+			price = 2200;
+			suicide = 0.05;
+		};
 
 		/*** HOUSING ***/
 		house_search = 1;
@@ -480,6 +488,12 @@ class ALYSIA_FACTIONS
 				same_side_only = 0;
 				license = "central_com";
 			};
+			class judge
+			{
+				rank = 0;
+				same_side_only = 1;
+				license = "judge_supreme";
+			};
 		};
 
 		/*** COMPANIES ***/
@@ -504,8 +518,12 @@ class ALYSIA_FACTIONS
 		};
 
 		/*** SPAWN/RESPAWN ***/
-		respawn_marker = "civ_spawn";
-		respawn_price = 800;
+		class respawn
+		{
+			marker = "civ_spawn";
+			price = 1000;
+			suicide = 0.05;
+		};
 
 		/*** HOUSING ***/
 		house_search = 0;
@@ -661,8 +679,12 @@ class ALYSIA_FACTIONS
 		};
 
 		/*** SPAWN/RESPAWN ***/
-		respawn_marker = "guer_spawn_1";
-		respawn_price = 0;
+		class respawn
+		{
+			marker = "guer_spawn_1";
+			price = 0;
+			suicide = 0;
+		};
 
 		/*** HOUSING ***/
 		house_search = 0;

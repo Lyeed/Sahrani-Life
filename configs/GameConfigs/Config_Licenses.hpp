@@ -594,4 +594,31 @@ class ALYSIA_LICENSES
 			};
 		};
 	};
+
+	class judge
+	{
+		name = "Juge";
+		class factions
+		{
+			class CIV
+			{
+				price = 0;
+				pad_store = 0;
+				illegal = 0;
+			};
+		};
+	};
+	class judge_supreme
+	{
+		name = "Juge Suprême";
+		class factions
+		{
+			class CIV
+			{
+				price = 0;
+				pad_store = 0;
+				illegal = 0;
+			};
+		};
+	};
 };

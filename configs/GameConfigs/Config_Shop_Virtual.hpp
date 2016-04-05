@@ -371,4 +371,32 @@ class ALYSIA_SHOPS_VIRTUAL
 			}
 		};
 	};
+
+	class gov_north
+	{
+		name = "Parlement";
+		side = "CIV";
+		items[] =
+		{
+			{
+				"perqui_north"
+			},{
+
+			}
+		};
+	};
+
+	class gov_south
+	{
+		name = "Administration Centrale";
+		side = "CIV";
+		items[] =
+		{
+			{
+				"perqui_south"
+			},{
+
+			}
+		};
+	};
 };

@@ -53,6 +53,7 @@ _timer = _time;
 g_blood = 10;
 g_bleed = 0;
 g_coma_dead = false;
+g_coma_suicide = false;
 
 if ((vehicle player) != player) then {
 	player action ["Eject", (vehicle player)];
