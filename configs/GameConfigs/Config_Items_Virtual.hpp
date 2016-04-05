@@ -80,6 +80,14 @@ class ALYSIA_ITEMS
 		};
 	};
 
+	class adn
+	{
+		name = "Test ADN";
+		weight = 3;
+		price_buy = 24500;
+		image = "";
+	};
+
 	class nitro
 	{
 		name = "Nitro";
@@ -1741,5 +1749,12 @@ class ALYSIA_ITEMS
 		weight = 1;
 		price_buy = 2800;
 		image = "alysia_items_virtual\data\passepartout.paa";
+	};
+
+	class scalpel
+	{
+		name = "Scalpel chirurgical";
+		weight = 1;
+		image = "";
 	};
 };

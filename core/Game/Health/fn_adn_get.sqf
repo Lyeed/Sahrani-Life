@@ -5,11 +5,16 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private "_skull";
-_skull = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+private["_uid", "_res"];
+_uid = [_this, 0, "", [""]] call BIS_fnc_param;
 
-if (isNull _skull) exitWith {};
+if (_uid isEqualTo "") exitWith {"Inconnu"};
 
-if (!(["Récupération", 10, _skull, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {};
+_res = toArray(_uid);
+_res deleteRange [0, 7];
 
-deleteVehicle _skull;
+{
+	if ((_forEachIndex % 2) isEqualTo 0) then {_res set [_forEachIndex, (_x + 17)]};
+} forEach _res;
+
+toString(_res);

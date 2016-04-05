@@ -10,6 +10,6 @@ if (!(player getVariable ["medic_request", false])) then
 {
 	ctrlShow[356, false];
 	ctrlShow[357, false];
-	player setVariable ['medic_request', true, true];
+	player setVariable ["medic_request", true, true];
 	[format["Nouvelle demande de soin en <t color='#01DF01'>%1</t>.", (mapGridPosition player)], "CENTRAL", false] remoteExecCall ["AlysiaClient_fnc_phone_message_receive", independent];
 };

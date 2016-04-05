@@ -20,19 +20,16 @@ if (g_blood >= 4000) then
 		player setVariable ["bullet_check", false, true];
 	};
 } else {
-	if (g_blood < 1) then {
+	if (g_blood <= 1) then
+	{
 		g_blood = 1;
+		[] spawn AlysiaClient_fnc_handleComa;
 	};
 };
 
 g_hurt_effect ppEffectAdjust [1, 1, 0, [1, 1, 1, 0], [1, 1, 1, (g_blood / 4000)], [1, 1, 1, 1]];
 g_hurt_effect ppEffectCommit 0;
 player setDamage (100 - (100 / 4000 * g_blood)) / 100;
-
-if (g_blood isEqualTo 1) exitWith
-{
-	[] spawn AlysiaClient_fnc_handleComa;
-};
 
 if (!g_regen_active) then
 {

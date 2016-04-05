@@ -11469,7 +11469,7 @@ class Mission
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
 			text="launder";
-			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Blanchiment d'(<t color='#01DF3A'>argent sale</t>)"",AlysiaClient_fnc_launder_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Blanchiment d'<t color='#01DF3A'>argent sale</t>"",AlysiaClient_fnc_launder_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item772
 		{

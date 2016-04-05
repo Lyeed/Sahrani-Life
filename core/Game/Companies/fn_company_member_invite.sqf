@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_who", "_company", "_info", "_max", "_item"];
+private["_who", "_company", "_info", "_max", "_item_player", "_item_target"];
 _who = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _company = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
 
@@ -23,12 +23,23 @@ if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(side _who) >> "compa
 	["La personne que vous essayez de recruter n'est pas en mesure d'être employée d'une entreprise"] call AlysiaClient_fnc_error;
 };
 
-_item = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(side _who) >> "identity_item");
-if ((_item != "") && !(_item in (magazines _who))) exitWith {
+_item_player = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> playerSide >> "identity_item");
+if ((_item_player != "") && !(_item_player in (magazines player))) exitWith
+{
+	[format[
+		"Vous avez besoin de <t color='#74DF00'>%1</t> pour prouver votre identité et pouvoir recruter pour le compte de l'entreprise : %2.",
+		(([_item_player] call AlysiaClient_fnc_fetchCfgDetails) select 1),
+		(_info select 0)
+	]] call AlysiaClient_fnc_error;
+};
+
+_item_target = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(side _who) >> "identity_item");
+if ((_item_target != "") && !(_item_target in (magazines _who))) exitWith
+{
 	[format[
 		"La personne que vous essayez de recruter dans l'entreprise <t color='#74DF00'>%1</t> n'a pas l'objet nécessaire pour prouver son identité (%2).",
 		(_info select 0),
-		(([_item] call AlysiaClient_fnc_fetchCfgDetails) select 1)
+		(([_item_target] call AlysiaClient_fnc_fetchCfgDetails) select 1)
 	]] call AlysiaClient_fnc_error;
 };
 

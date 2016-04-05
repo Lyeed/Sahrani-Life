@@ -151,17 +151,17 @@ class ALYSIA_HOUSES
 		class house {};
 		class factions: factions {};
 	};
-	class Land_smd_dum_olez_istan2_maly_open: Land_Cihlovej_Dum_mini
-	{
-		price = 415000;
-		class storage
-		{
-			type = "Skyline_Coffre_medium";
-			building_index = 3;
-		};
-		class house {};
-		class factions: factions {};
-	};
+	// class Land_smd_dum_olez_istan2_maly_open: Land_Cihlovej_Dum_mini
+	// {
+	// 	price = 415000;
+	// 	class storage
+	// 	{
+	// 		type = "Skyline_Coffre_medium";
+	// 		building_index = 3;
+	// 	};
+	// 	class house {};
+	// 	class factions: factions {};
+	// };
 	class Land_smd_dum_olez_istan1_open: Land_Cihlovej_Dum_mini
 	{
 		price = 515000;

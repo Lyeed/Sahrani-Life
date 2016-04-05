@@ -146,6 +146,7 @@ class CfgRemoteExec
 		class switchMove {allowTargets = CLIENT;};
 		class hideObject {allowTargets = EVERYONE;};
 		class setVelocity {allowTargets = EVERYONE;};
+		class hideObjectGlobal {allowTargets = SERVER;};
 
 		class AlysiaClient_fnc_endGame {allowTargets = CLIENT;};
 	};

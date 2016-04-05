@@ -1,4 +1,3 @@
-
 /*
 		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
 	Code written by Lyeed
@@ -21,6 +20,7 @@ if (player getVariable ["bed_awake", false]) then {player setVariable ["bed_awak
 
 g_carryWeight = 0;
 g_is_alive = true;
+resetCamShake;
 
 if (player getVariable ["arrested", false]) then {
 

@@ -233,6 +233,7 @@ class CfgFunctions
 			class skullMenu_search_take {};
 			class skullMenu_take {};
 			class skullMenu_who {};
+			class skull_create {};
 		};
 
 		class dynamicMarkers
@@ -387,7 +388,9 @@ class CfgFunctions
 			class item_adrenaline_apply {};
 			class item_adrenaline_use {};
 			class item_bandage_use {};
+			class item_adn_use {};
 			class medic_request {};
+			class adn_get {};
 		};
 
 		class Process

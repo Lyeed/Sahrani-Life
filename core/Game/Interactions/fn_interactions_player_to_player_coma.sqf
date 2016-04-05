@@ -108,7 +108,8 @@
 			"
 				(typeOf(attachedTo g_interaction_target) in ['HospitalTable_F','HealTable_F']) &&
 				(g_interaction_target getVariable ['bullet_check',false]) &&
-				!(g_interaction_target getVariable ['bullet_operation_inUse', false])
+				!(g_interaction_target getVariable ['bullet_operation_inUse', false]) &&
+				!(g_interaction_target getVariable ['heart_attack', false])
 			"
 		]
 	],

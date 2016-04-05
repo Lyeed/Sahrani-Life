@@ -103,6 +103,7 @@ class ALYSIA_FACTIONS
 				},
 				{"Items",
 					{
+						"DemoCharge_Remote_Mag",
 						"SmokeShellWhite",
 						"Rangefinder",
 						"optic_Aco",
@@ -684,6 +685,22 @@ class ALYSIA_FACTIONS
 		class licenses_give
 		{
 			class pilot
+			{
+				rank = 6;
+				same_side_only = 1;
+			};
+			class medical
+			{
+				rank = 1;
+				same_side_only = 0;
+				license = "guer_medical";
+			};
+			class guer_medical
+			{
+				rank = 6;
+				same_side_only = 1;
+			};
+			class guer_gen
 			{
 				rank = 6;
 				same_side_only = 1;

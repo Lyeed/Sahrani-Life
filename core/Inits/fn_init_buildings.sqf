@@ -1540,7 +1540,6 @@ _cString =
 ["xcam_Concrete_SmallWall_8m_F","[14188.273438,12513.417969,-0.0126263]",630,-100,0,0,[]] call _cString;
 ["xcam_Concrete_SmallWall_4m_F","[14186.525391,12517.642578,-0.0126263]",720,-100,0,0,[]] call _cString;
 ["xcam_Concrete_SmallWall_4m_F","[14184.494141,12517.642578,-0.0126263]",720,-100,0,0,[]] call _cString;
-["xcam_Bilboard_Escape","[14187.943359,12513.447266,0]",270,-100,0,0,[]] call _cString;
 ["Land_Lampa_sidl","[14193.302734,12526.199219,0]",270,-100,1,0,[]] call _cString;
 ["Land_Lampa_sidl","[14213.357422,12526.198242,0]",270,-100,1,0,[]] call _cString;
 ["Land_Lampa_sidl","[14219.450195,12506.512695,-1.79461]",450,-100,1,0,[]] call _cString;
@@ -1787,8 +1786,6 @@ _cString =
 ["xcam_Concrete_SmallWall_4m_F","[14256.612305,12511.178711,-0.706229]",0,-100,0,0,[]] call _cString;
 ["xcam_Concrete_SmallWall_4m_F","[14252.595703,12511.178711,-0.706229]",0,-100,0,0,[]] call _cString;
 ["xcam_Concrete_SmallWall_4m_F","[14248.579102,12511.178711,-0.706229]",0,-100,0,0,[]] call _cString;
-["xcam_Bilboard_pizza_presto","[14298.125,12511.526367,0]",-180,-100,0,0,[]] call _cString;
-["xcam_Bilboard_strana_noveho_radu","[14276.551758,12511.526367,0]",180,-100,0,0,[]] call _cString;
 ["xcam_Concrete_SmallWall_4m_F","[14273.587891,12525.329102,0]",0,-100,0,0,[]] call _cString;
 ["xcam_Concrete_SmallWall_4m_F","[14290.629883,12525.329102,0]",0,-100,0,0,[]] call _cString;
 ["Land_Lampa_sidl_3","[14291.233398,12525.373047,0]",-180,-100,1,0,[]] call _cString;
@@ -2478,30 +2475,24 @@ _cString =
 ["Land_FurnitureD","[14276.964844,12561.913086,-0.989899]",0,-100,0,0,[]] call _cString;
 ["Land_FurnitureB","[14274.151367,12566.676758,-0.876263]",0,-100,0,0,[]] call _cString;
 
-//Panneaux
-_signBoard_north_1 = ["Land_Billboard_F","[14416.770508,12246.360352,0]",22.2853,-100,0,0,[]] call _cString;
-_signBoard_north_2 = ["Land_Billboard_F","[14327.142578,10626.0537109,0]",50.6944,-100,0,0,[]] call _cString;
-_signBoard_north_3 = ["Land_Billboard_F","[13537.243164,8898.43457,0]",59.2172,-100,0,0,[]] call _cString;
-_signBoard_north_4 = ["Land_Billboard_F","[17234.794922,14158.000976563,0]",338.788,-100,0,0,[]] call _cString;
-_signBoard_north_5 = ["Land_Billboard_F","[12439.231445,14836.75,0]",40.6566,-100,0,0,[]] call _cString;
+//Panneaux publicitaire Nord
+["Lyeed_Billboard_Alysia_1","[14416.770508,12246.360352,0]",22.2853,-100,0,0,[]] call _cString;
+["Lyeed_Billboard_Milice_1","[14327.142578,10626.0537109,0]",50.6944,-100,0,0,[]] call _cString;
+["Lyeed_Billboard_Alysia_2","[13537.243164,8898.43457,0]",59.2172,-100,0,0,[]] call _cString;
+["Lyeed_Billboard_Alysia_1","[17234.794922,14158.000976563,0]",338.788,-100,0,0,[]] call _cString;
+["Lyeed_Billboard_Milice_1","[12439.231445,14836.75,0]",40.6566,-100,0,0,[]] call _cString;
+// - Parking Nord
+["xcam_Bilboard_pizza_presto","[14298.125,12511.526367,0]",-180,-100,0,0,[]] call _cString;
+["Lyeed_Billboard_Alysia_3","[14276.551758,12511.526367,0]",180,-100,0,0,[]] call _cString;
+// - Place Nord
+["xcam_Bilboard_Escape","[14187.943359,12513.447266,0]",270,-100,0,0,[]] call _cString;
 
-_signBoard_north_1 setObjectTexture [0, "lyeed_IMG\data\ads\alysia_1.jpg"];
-_signBoard_north_2 setObjectTexture [0, "lyeed_IMG\data\ads\recrut_north.jpg"];
-_signBoard_north_3 setObjectTexture [0, "lyeed_IMG\data\ads\alysia_2.jpg"];
-_signBoard_north_4 setObjectTexture [0, "lyeed_IMG\data\ads\alysia_1.jpg"];
-_signBoard_north_5 setObjectTexture [0, "lyeed_IMG\data\ads\recrut_north.jpg"];
-
-_signBoard_south_1 = ["Land_Billboard_F","[12814.124023,8794.00195313,0]",91.6035,-100,0,0,[]] call _cString;
-_signBoard_south_2 = ["Land_Billboard_F","[12408.320313,7426.208984,0]",341.149,-100,0,0,[]] call _cString;
-_signBoard_south_3 = ["Land_Billboard_F","[10503.460938,9697.697266,0]",216.666,-100,0,0,[]] call _cString;
-_signBoard_south_4 = ["Land_Billboard_F","[9324.601563,8349.561523,0]",236.666,-100,0,0,[]] call _cString;
-_signBoard_south_5 = ["Land_Billboard_F","[11741.112305,6233.510254,0]",236.666,-100,0,0,[]] call _cString;
-
-_signBoard_south_1 setObjectTexture [0, "lyeed_IMG\data\ads\propagande_sud_1.jpg"];
-_signBoard_south_2 setObjectTexture [0, "lyeed_IMG\data\ads\alysia_2.jpg"];
-_signBoard_south_3 setObjectTexture [0, "lyeed_IMG\data\ads\propagande_sud_2.jpg"];
-_signBoard_south_4 setObjectTexture [0, "lyeed_IMG\data\ads\recrut_south.jpg"];
-_signBoard_south_5 setObjectTexture [0, "lyeed_IMG\data\ads\alysia_1.jpg"];
+//Panneaux publicitaire Sord
+["Lyeed_Billboard_South_1","[12814.124023,8794.00195313,0]",91.6035,-100,0,0,[]] call _cString;
+["Lyeed_Billboard_Alysia_2","[12408.320313,7426.208984,0]",341.149,-100,0,0,[]] call _cString;
+["Lyeed_Billboard_South_2","[10503.460938,9697.697266,0]",216.666,-100,0,0,[]] call _cString;
+["Lyeed_Billboard_Garde_1","[9324.601563,8349.561523,0]",236.666,-100,0,0,[]] call _cString;
+["Lyeed_Billboard_Alysia_1","[11741.112305,6233.510254,0]",236.666,-100,0,0,[]] call _cString;
 
 //Flags
 _flag_north_1 = ["FlagPole_F","[13441.481445,8843.0429688,0]",0,-100,1,0,[]] call _cString;

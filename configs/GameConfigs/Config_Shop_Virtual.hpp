@@ -177,7 +177,8 @@ class ALYSIA_SHOPS_VIRTUAL
 				"cone",
 				"barriere",
 				"horn_samu",
-				"alcool_test"
+				"alcool_test",
+				"adn"
 			},{
 
 			}
@@ -350,6 +351,24 @@ class ALYSIA_SHOPS_VIRTUAL
 	{
 		name = "Réserve d'entreprises";
 		side = "CIV";
-		items[] = {{"money_transfer","serrure","electric_system","sunflower_seed","pumpkin_seed"},{"ciment","brique","steel"}};
+		items[] =
+		{
+			{
+				"money_transfer",
+				"serrure",
+				"electric_system",
+				"sunflower_seed",
+				"pumpkin_seed"
+			},{
+				"ciment",
+				"brique",
+				"steel",
+				"sp98",
+				"sp95",
+				"gpl",
+				"kerosene",
+				"gazole"
+			}
+		};
 	};
 };

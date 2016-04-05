@@ -49,9 +49,7 @@ if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then
 {
 	g_laboratory = _object;
 
-	_object setPos [((getPos _object) select 0), ((getPos _object) select 1), 0];
-
-	_marker = createMarkerLocal ["laboratory", (getPosATL _object)];
+	_marker = createMarkerLocal ["laboratory", (getPos _object)];
 	_marker setMarkerTextLocal ([_item] call AlysiaClient_fnc_itemGetName);
 	_marker setMarkerColorLocal "ColorRed";
 	_marker setMarkerTypeLocal "loc_Bunker";

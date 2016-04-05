@@ -398,7 +398,23 @@ class ALYSIA_PROCESS
 		require[] = {{"ironp",1},{"coal",1}};
 		receive[] = {{{"steel",1}},{},0};
 		time_per_item = 8;
-		time_default = 8;
+		time_default = 5;
+		class factions
+		{
+			class CIV
+			{
+				licenses[] = {"company_foundry"};
+			};
+		};
+	};
+	class scalpel
+	{
+		name = "Création de scalpel chirurgical";
+		sound = "smelting";
+		require[] = {{"steel",2},};
+		receive[] = {{{"scalpel",1}},{},0};
+		time_per_item = 2;
+		time_default = 5;
 		class factions
 		{
 			class CIV
@@ -445,8 +461,8 @@ class ALYSIA_PROCESS
 		sound = "drug_process";
 		require[] = {{"oilu",1}};
 		receive[] = {{{"sp98",2},{"sp95",1},{"gpl",1},{"kerosene",1},{"gazole",3}},{},0};
-		time_per_item = 12;
-		time_default = 8;
+		time_per_item = 4;
+		time_default = 3;
 		class factions
 		{
 			class CIV

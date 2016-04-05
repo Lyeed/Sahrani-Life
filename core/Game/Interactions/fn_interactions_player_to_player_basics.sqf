@@ -251,6 +251,22 @@
 					) > 0
 				)
 			"
+		],
+		[
+			"dna",
+			"Test ADN",
+			"[g_interaction_target] spawn AlysiaClient_fnc_item_adn_use;",
+			"
+				(
+					(
+						(g_interaction_target getVariable ['surrender',false]) ||
+						(g_interaction_target getVariable ['restrained',false])
+					) && 
+					(isNull (g_interaction_target getVariable ['escorted',objNull])) &&
+					((['adn'] call AlysiaClient_fnc_itemCount) > 0) &&
+					(['guer_gen'] call AlysiaClient_fnc_hasLicense)
+				)
+			"
 		]
 	],
 	"Interactions"

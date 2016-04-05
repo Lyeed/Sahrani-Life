@@ -14,12 +14,22 @@ if ((isNull _company) || (isNull _from)) exitWith {};
 _info = _company getVariable "company_info";
 if (isNil "_info") exitWith {};
 
-if (!(isNull g_company)) exitWith {
+if (!(isNull g_company)) exitWith
+{
 	[format["<t color='#FFBF00'>%1</t> est déjà membre d'une entreprise.", (player getVariable "realname")]] remoteExecCall ["AlysiaClient_fnc_info", _from];
+	[format["<t color='#FFBF00'>%1</t> a essayé de vous embaucher dans son entreprise mais vous avez refusé automatiquement car vous travaillez déjà pour le compte d'une entreprise.", (_from getVariable "realname")]] call AlysiaClient_fnc_info;
 };
 
-if (g_choice != (_info select 5)) exitWith {
+if (!(['guer_medical'] call AlysiaClient_fnc_hasLicense)) exitWith
+{
+	[format["<t color='#FFBF00'>%1</t> ne possède pas de certificat médical.", (player getVariable "realname")]] remoteExecCall ["AlysiaClient_fnc_info", _from];
+	[format["<t color='#FFBF00'>%1</t> a essayé de vous embaucher dans son entreprise mais vous avez refusé automatiquement car vous n'avez pas de certificat médical.", (_from getVariable "realname")]] call AlysiaClient_fnc_info;
+};
+
+if (g_choice != (_info select 5)) exitWith
+{
 	[format["<t color='#FFBF00'>%1</t> doit avoir la nationalité de l'entreprise pour pouvoir être recruter.", (player getVariable "realname")]] remoteExecCall ["AlysiaClient_fnc_info", _from];
+	[format["<t color='#FFBF00'>%1</t> a essayé de vous embaucher dans son entreprise mais vous avez refusé automatiquement car vous n'avez pas la nationalité de l'entreprise.", (_from getVariable "realname")]] call AlysiaClient_fnc_info;
 };
 
 _action = 

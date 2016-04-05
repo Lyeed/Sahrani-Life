@@ -155,15 +155,9 @@ if (player getVariable ["medic_request", false]) then {player setVariable ["medi
 
 if (!g_coma_dead) then
 {
-	if (g_thirst < 10) then {
-		[15] call AlysiaClient_fnc_handleThirst;
-	};
-	if (g_hunger < 10) then {
-		[15] call AlysiaClient_fnc_handleHunger;
-	};
-	if ((player getVariable ["tf_voiceVolume", 0]) isEqualTo 0) then {
-		player setVariable ["tf_voiceVolume", 1, true];
-	};
+	if (g_thirst < 10) then {[15] call AlysiaClient_fnc_handleThirst};
+	if (g_hunger < 10) then {[15] call AlysiaClient_fnc_handleHunger};
+	if ((player getVariable ["tf_voiceVolume", 0]) isEqualTo 0) then {player setVariable ["tf_voiceVolume", 1, true]};
 
 	player switchCamera "Internal";
 	player setFatigue 1;
@@ -182,10 +176,8 @@ if (!g_coma_dead) then
 			uiSleep 2;
 		};
 	};
-	[player, ""] remoteExecCall ["switchMove", -2];
-	if (player getVariable ["bed_awake", false]) then {
-		player setVariable ["bed_awake", false, true];
-	};
+	[player, ""] remoteExecCall ["switchMove", 0];
+	if (player getVariable ["bed_awake", false]) then {player setVariable ["bed_awake", false, true]};
 };
 
 if (!(isNull (attachedTo player))) then {detach player};

@@ -36,10 +36,19 @@ if (!(["Opération", 15, _unit] call AlysiaClient_fnc_showProgress)) exitWith {
 	_unit setVariable ["bullet_operation_inUse", false, true];
 };
 
-if (playerSide isEqualTo independent) then {
-	_chance = 5;
+if (playerSide isEqualTo independent) then
+{
+	if ((["scalpel"] call AlysiaClient_fnc_itemCount) > 0) then {
+		_chance = 2;
+	} else {
+		_chance = 5;
+	};
 } else {
-	_chance = 30;
+	if ((["scalpel"] call AlysiaClient_fnc_itemCount) > 0) then {
+		_chance = 20;
+	} else {
+		_chance = 30;
+	};
 };
 
 _unit setVariable ["bullet_operation_inUse", false, true];
@@ -48,12 +57,12 @@ if (random(100) > _chance) then
 	_unit setVariable ["bullet_check", false, true];
 	["Opération <t color='#01DF01'>réussi</t>, les projectiles ont été extraits.<br/>Veuillez conduire le patient en salle de reveil si il y a."] call AlysiaClient_fnc_info;
 } else {
-	if (random(100) < 40) then
+	if (random(100) < 20) then
 	{
 		_unit setVariable ["heart_attack", true, true];
 		["Opération <t color='#DF0101'>raté</t>."] call AlysiaClient_fnc_info;
 		uiSleep 15;
-		if (_unit getVariable ["heart_attack"]) then
+		if (_unit getVariable ["heart_attack", false]) then
 		{
 			[player, _unit] remoteExecCall ["AlysiaServer_fnc_logDeath", 2];
 			[player] remoteExecCall ["AlysiaClient_fnc_item_knife_apply", _unit];

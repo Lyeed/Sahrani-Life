@@ -22,7 +22,11 @@ g_objPut = _object;
 
 _action_1 = player addAction [format["Placer <t color='#FFFF33'>%1</t>", [_item] call AlysiaClient_fnc_itemGetName],
 {
-	detach g_objPut;
+	if (count(nearestObjects [_object, ["Car", "Truck", "Tank", "Air"], 5]) isEqualTo 0) then {
+		detach g_objPut;
+	} else {
+		["Vous ne pouvez pas placer d'objet près d'un véhicule."] call AlysiaClient_fnc_error;
+	};
 }, "", 9999992, true, true, "",'!isNull g_objPut'];
 
 _action_2 = player addAction ["<t color='#ff8c8c'>Annuler</t> la pose", 

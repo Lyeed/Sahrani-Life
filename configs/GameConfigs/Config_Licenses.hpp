@@ -551,4 +551,47 @@ class ALYSIA_LICENSES
 			};
 		};
 	};
+
+	class medical
+	{
+		name = "Certificat médical";
+		class factions
+		{
+			class CIV
+			{
+				price = 0;
+				pad_store = 0;
+				illegal = 0;
+			};
+			class EAST: CIV {};
+			class WEST: CIV {};
+			class GUER: CIV {};
+		};
+	};
+	class guer_medical
+	{
+		name = "Docteur généraliste";
+		class factions
+		{
+			class GUER
+			{
+				price = 0;
+				pad_store = 0;
+				illegal = 0;
+			};
+		};
+	};
+	class guer_gen
+	{
+		name = "Généticien";
+		class factions
+		{
+			class GUER
+			{
+				price = 0;
+				pad_store = 0;
+				illegal = 0;
+			};
+		};
+	};
 };

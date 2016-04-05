@@ -6,7 +6,7 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-(findDisplay 46) displayAddEventHandler ["KeyDown", "_this call AlysiaEvent_fnc_onPlayerKeyPress"];
+(findDisplay 46) displayAddEventHandler ["KeyDown", "(_this select 1) call AlysiaEvent_fnc_onPlayerKeyPress"];
 
 player addEventHandler ["FiredNear", "_this call AlysiaEvent_fnc_onPlayerFireNear"];
 player addEventHandler ["handleDamage", "_this call AlysiaEvent_fnc_onPlayerHandleDamage"];

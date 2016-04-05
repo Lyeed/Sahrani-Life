@@ -85,14 +85,14 @@ class ALYSIA_STAFF
 			class Invisible_ON
 			{
 				name = "Invisible ON";
-				statement = "g_staff_invisible = true;[player, true] remoteExecCall ['hideObject', 0];";
+				statement = "g_staff_invisible = true;[player, true] remoteExecCall ['hideObjectGlobal', 2];";
 				condition = "!g_staff_invisible";
 				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424", "76561198144182091", "76561198138202092"};
 			};
 			class Invisible_OFF: Invisible_ON
 			{
 				name = "Invisible OFF";
-				statement = "g_staff_invisible = false;[player, false] remoteExecCall ['hideObject', 0];";
+				statement = "g_staff_invisible = false;[player, false] remoteExecCall ['hideObjectGlobal', 2];";
 				condition = "g_staff_invisible";
 			};
 

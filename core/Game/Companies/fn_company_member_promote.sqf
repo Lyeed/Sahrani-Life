@@ -13,7 +13,7 @@ if ((isNull _company) || (_uid isEqualTo "")) exitWith {};
 
 _info = _company getVariable "company_info";
 if (isNil "_info") exitWith {
-	["La cible n'est une entreprise."] call AlysiaClient_fnc_error;
+	["La cible n'est pas une entreprise."] call AlysiaClient_fnc_error;
 };
 if ((_info select 1) isEqualTo _uid) exitWith {
 	["Cette personne est déjà PDG de l'entreprise : <t color='#74DF00'>%1</t>.", (_info select 0)] call AlysiaClient_fnc_error;
