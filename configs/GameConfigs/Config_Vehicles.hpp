@@ -1918,11 +1918,11 @@ class ALYSIA_VEHICLES
   	class Skyline_G65_01_F
 	{
 		realname = "Mercedes G65 AMG";
-		buyPrice = 237000;
+		buyPrice = 67000;
 		inventory = 85;
 		side = "CIV";
 		insurance = 1;
-		licenses[] = {"driver"};
+		licenses[] = {"driver","company_security"};
 		fuel = "SP98";
 	};
 

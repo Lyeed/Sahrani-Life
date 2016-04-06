@@ -211,7 +211,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"max_charger",
 			"Mrshounka_Alfa_Romeo_civ",
 			"Tal_Maserati",
-			"Skyline_G65_01_F",
 			"DAR_ChallengerCiv",
 			"DAR_M3Civ",
 			"shounka_a3_rs5_civ",
@@ -250,20 +249,28 @@ class ALYSIA_SHOPS_VEHICLES
 			"max_CrownVic_taxi",
 			"Skyline_Bus",
 			"shounka_limo_civ",
+
 			/* company_garagist */
 			"max_towtruck",
 			"Jonzie_Tow_Truck",
 			"Skyline_Jeep_Wrangler_Rubicon_Depannage_01_F",
+
 			/* company_money_tranfer */
 			"shounka_a3_brinks_noir",
+
 			/* company_farming */
 			"madsa_mtz_F",
 			"RDS_Zetor6945_Base",
+
 			/* company_transport_goods */
 			"shounka_a3_renaultmagnum_f",
 			"Mrshounka_a3_iveco_f",
+
 			/* company_fuel */
-			"Jonzie_Tanker_Truck"
+			"Jonzie_Tanker_Truck",
+
+			/* company_security*/
+			"Skyline_G65_01_F"
 		};
 	};
 };
