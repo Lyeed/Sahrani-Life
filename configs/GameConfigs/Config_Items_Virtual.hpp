@@ -294,7 +294,7 @@ class ALYSIA_ITEMS
 		license = "archeologie";
 		class market
 		{
-			max = 9032;
+			max = 11032;
 			min = 528;
 			affect[] = AFFECT_ILLEGAL;
 		};
@@ -1314,7 +1314,7 @@ class ALYSIA_ITEMS
 		name = "Pétrole";
 		weight = 10;
 		image = "alysia_items_virtual\data\petrole.paa";
-		store[] = {"B_G_Van_01_fuel_F","B_Truck_01_fuel_F","O_Truck_02_fuel_F"};
+		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1"};
 	};
 	class sp98
 	{
@@ -1322,7 +1322,7 @@ class ALYSIA_ITEMS
 		weight = 1;
 		image = "alysia_items_virtual\data\sp98.paa";
 		license = "company_fuel";
-		store[] = {"B_G_Van_01_fuel_F","B_Truck_01_fuel_F","O_Truck_02_fuel_F"};
+		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1"};
 		class market
 		{
 			max = 390;
@@ -1336,7 +1336,7 @@ class ALYSIA_ITEMS
 		weight = 1;
 		image = "alysia_items_virtual\data\sp95.paa";
 		license = "company_fuel";
-		store[] = {"B_G_Van_01_fuel_F","B_Truck_01_fuel_F","O_Truck_02_fuel_F"};
+		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1"};
 		class market
 		{
 			max = 390;
@@ -1350,7 +1350,7 @@ class ALYSIA_ITEMS
 		weight = 1;
 		image = "alysia_items_virtual\data\gazole.paa";
 		license = "company_fuel";
-		store[] = {"B_G_Van_01_fuel_F","B_Truck_01_fuel_F","O_Truck_02_fuel_F"};
+		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1"};
 		class market
 		{
 			max = 390;
@@ -1364,7 +1364,7 @@ class ALYSIA_ITEMS
 		weight = 1;
 		image = "alysia_items_virtual\data\gpl.paa";
 		license = "company_fuel";
-		store[] = {"B_G_Van_01_fuel_F","B_Truck_01_fuel_F","O_Truck_02_fuel_F"};
+		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1"};
 		class market
 		{
 			max = 390;
@@ -1378,7 +1378,7 @@ class ALYSIA_ITEMS
 		weight = 3;
 		image = "alysia_items_virtual\data\kerosene.paa";
 		license = "company_fuel";
-		store[] = {"B_G_Van_01_fuel_F","B_Truck_01_fuel_F","O_Truck_02_fuel_F"};
+		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1"};
 		class market
 		{
 			max = 390;

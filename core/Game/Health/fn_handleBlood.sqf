@@ -24,14 +24,14 @@ if (g_blood >= 4000) then
 	{
 		g_blood = 1;
 		[] spawn AlysiaClient_fnc_handleComa;
+	} else {
+		if (!g_regen_active) then
+		{
+			[] spawn AlysiaClient_fnc_handleRegen;
+		};
 	};
 };
 
 g_hurt_effect ppEffectAdjust [1, 1, 0, [1, 1, 1, 0], [1, 1, 1, (g_blood / 4000)], [1, 1, 1, 1]];
 g_hurt_effect ppEffectCommit 0;
 player setDamage (100 - (100 / 4000 * g_blood)) / 100;
-
-if (!g_regen_active) then
-{
-	[] spawn AlysiaClient_fnc_handleRegen;
-};

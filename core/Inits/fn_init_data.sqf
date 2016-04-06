@@ -135,11 +135,12 @@ switch (playerSide) do
 	};
 };
 
-g_nextPay = time + (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary_timer") * 60);
+g_nextPay = time + (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "salary" >> "timer") * 60);
 
 if ((g_phone_forfait != "none") && (g_phone_forfait != "")) then
 {
-	if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> g_phone_forfait >> "sides"))) then {
+	if (!(str(playerSide) in getArray(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> g_phone_forfait >> "sides"))) then
+	{
 		["lite"] call AlysiaClient_fnc_phone_forfait_change;
 	};
 };

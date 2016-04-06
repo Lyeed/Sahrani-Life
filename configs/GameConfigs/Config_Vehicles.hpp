@@ -1970,38 +1970,6 @@ class ALYSIA_VEHICLES
 		fuel = "Diesel";
 	};
 
-	class B_G_Van_01_fuel_F
-	{
-		realname = "Camionette Fuel";
-		buyPrice = 28000;
-		inventory = 150;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck","company_fuel"};
-		fuel = "Diesel";
-	};
-
-	class B_Truck_01_fuel_F
-	{
-		realname = "HEMTT Fuel";
-		buyPrice = 25000;
-		inventory = 150;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck"};
-		fuel = "Diesel";
-	};
-
-	class O_Truck_02_fuel_F
-	{
-		realname = "Zamak Fuel";
-		buyPrice = 25000;
-		inventory = 150;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck","company_fuel"};
-	};
-
 	class max_impala_security
 	{
 		realname = "Impala Secu";
@@ -2553,7 +2521,7 @@ class ALYSIA_VEHICLES
 	
 	class Jonzie_Tanker_Truck
 	{
-		buyPrice = 25000;
+		buyPrice = 455000;
 		inventory = 150;
 		side = "CIV";
 		insurance = 1;

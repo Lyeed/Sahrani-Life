@@ -28,7 +28,11 @@ g_objPut = _object;
 
 _action_1 = player addAction [format["Placer <t color='#FFFF33'>%1</t>", [_item] call AlysiaClient_fnc_itemGetName],
 {
-	detach g_objPut;
+	if (surfaceIsWater (position g_objPut)) then {
+		["Vous ne pouvez pas placer d'objet sous ou au niveau de l'eau."] call AlysiaClient_fnc_error;
+	} else {
+		detach g_objPut;
+	};
 }, "", 9999992, true, true, "",'!isNull g_objPut'];
 
 _action_2 = player addAction ["<t color='#ff8c8c'>Annuler</t> la pose", 
@@ -56,6 +60,6 @@ if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then
 
 	[(getPlayerUID player), _object, _item] remoteExec ["AlysiaServer_fnc_laboratory_insert", 2];
 } else {
-	["Impossible de trouver l'objet dans votre inventaire"] call AlysiaClient_fnc_error;
+	["Impossible de trouver l'objet dans votre inventaire."] call AlysiaClient_fnc_error;
 	deleteVehicle _object;
 };

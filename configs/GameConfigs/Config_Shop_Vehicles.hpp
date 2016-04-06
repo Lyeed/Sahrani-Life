@@ -246,19 +246,23 @@ class ALYSIA_SHOPS_VEHICLES
 		side = "CIV";
 		stock[] =
 		{
+			/* company_transport_people */
 			"max_CrownVic_taxi",
 			"Skyline_Bus",
 			"shounka_limo_civ",
+			/* company_garagist */
 			"max_towtruck",
 			"Jonzie_Tow_Truck",
 			"Skyline_Jeep_Wrangler_Rubicon_Depannage_01_F",
+			/* company_money_tranfer */
 			"shounka_a3_brinks_noir",
+			/* company_farming */
 			"madsa_mtz_F",
 			"RDS_Zetor6945_Base",
+			/* company_transport_goods */
 			"shounka_a3_renaultmagnum_f",
 			"Mrshounka_a3_iveco_f",
-			"B_G_Van_01_fuel_F",
-			"O_Truck_02_fuel_F",
+			/* company_fuel */
 			"Jonzie_Tanker_Truck"
 		};
 	};

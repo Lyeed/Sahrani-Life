@@ -16,8 +16,15 @@ if (!g_interaction_target_trunk_store) exitWith {};
 
 _item = lbData[505, _sel];
 _storeType = getArray(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "store");
-if (!(_storeType isEqualTo []) && !(typeOf(g_interaction_target) in _storeType)) exitWith {
-	[format["%1 ne peut pas être entreposer dans %2", ([_item] call AlysiaClient_fnc_itemGetName), getText(configFile >> "CfgVehicles" >> typeOf(g_interaction_target) >> "displayName")]] call AlysiaClient_fnc_error;
+if (!(_storeType isEqualTo []) && !(typeOf(g_interaction_target) in _storeType)) exitWith
+{
+	[
+		format
+		[
+			"<t color='#FF8000'>%1 ne peut pas être entreposer ici.",
+			[_item] call AlysiaClient_fnc_itemGetName
+		]
+	] call AlysiaClient_fnc_error;
 };
 
 if (g_interaction_target_trunk_transfer) exitWith {};
