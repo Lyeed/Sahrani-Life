@@ -23,7 +23,7 @@ if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(side _who) >> "compa
 	["La personne que vous essayez de recruter n'est pas en mesure d'être employée d'une entreprise"] call AlysiaClient_fnc_error;
 };
 
-_item_player = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> playerSide >> "identity_item");
+_item_player = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "identity_item");
 if ((_item_player != "") && !(_item_player in (magazines player))) exitWith
 {
 	[format[

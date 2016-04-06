@@ -6,6 +6,7 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private["_target", "_display"];
+_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 if (isNull _target) exitWith {};
 

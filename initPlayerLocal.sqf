@@ -56,7 +56,10 @@ if (hasInterface) then
 	cutText ["Vérification de la résolution ...", "BLACK FADED"];
 	0 cutFadeOut 9999999;
 	if (((getResolution) select 5) != 0.55) exitWith {
-		["Vous devez règler la taille de votre interface sur 'Petit(e)' pour pouvoir vous connecter. L'option est disponible dans Configurer->Vidéo->Affichage->Taille d'interface. Un redémarrage de votre jeu est nécessaire après modification."] spawn AlysiaClient_fnc_errorExit;
+		["Vous devez régler la taille de votre interface sur 'Petit(e)' pour pouvoir vous connecter. L'option est disponible dans Configurer->Vidéo->Affichage->Taille d'interface. Un redémarrage de votre jeu est nécessaire après modification."] spawn AlysiaClient_fnc_errorExit;
+	};
+	if ((musicVolume) < 0.2) exitWith {
+		["Vous devez régler l'audio 'musique' à au moins 20% pour pouvoir vous connecter. Sans musique vous perdrez de l'immersion et risquez de rater les annonces de redémarrages."] spawn AlysiaClient_fnc_errorExit;
 	};
 	diag_log "<INIT> Vérification de la résolution terminée";
 

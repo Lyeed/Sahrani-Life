@@ -411,7 +411,7 @@ class ALYSIA_PROCESS
 	{
 		name = "Création de scalpel chirurgical";
 		sound = "smelting";
-		require[] = {{"steel",2},};
+		require[] = {{"steel",2}};
 		receive[] = {{{"scalpel",1}},{},0};
 		time_per_item = 2;
 		time_default = 5;

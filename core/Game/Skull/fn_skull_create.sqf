@@ -32,13 +32,13 @@ if (g_cash > 0) then {
 	(backpackItems player) +
 	[
 		(primaryWeapon player),
-		(secondaryWeapon player)
-		(handgunWeapon player)
-		(uniform player)
-		(vest player)
-		(backpack player)
-		(goggles player)
-		(headgear player)
+		(secondaryWeapon player),
+		(handgunWeapon player),
+		(uniform player),
+		(vest player),
+		(backpack player),
+		(goggles player),
+		(headgear player),
 		(binocular player)
 	]
 );

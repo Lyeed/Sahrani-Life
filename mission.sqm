@@ -85,7 +85,8 @@ class Mission
 		"CAStructuresLand_Nav_Boathouse",
 		"cup_castructuresland_nav_boathouse",
 		"StephDub_AlysiaRP_GasStation",
-		"StephDub_AlysiaRP_Hospital"
+		"StephDub_AlysiaRP_Hospital",
+		"skyline_fix_bargate"
 	};
 	addOnsAuto[]=
 	{
@@ -137,6 +138,7 @@ class Mission
 		"Barn_Metal",
 		"cup_barn_metal",
 		"a3_plants",
+		"skyline_fix_bargate",
 		"A3_Structures_F_Ind_AirPort",
 		"A3_Structures_F_Civ_Constructions",
 		"CAMisc",
@@ -11473,8 +11475,9 @@ class Mission
 		};
 		class Item772
 		{
-			position[]={11641.265,7.958899,5959.5229};
-			azimut=92.684799;
+			position[]={10698.572,7.9565392,4738.2861};
+			azimut=1.39976;
+			offsetY=0.1;
 			id=943;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
@@ -19669,8 +19672,9 @@ class Mission
 		};
 		class Item1555
 		{
-			position[]={8934.21,161.98238,8448.0283};
-			azimut=-90.055702;
+			position[]={8802.5557,123.64206,6986.521};
+			azimut=-372.33301;
+			offsetY=3.4000001;
 			id=1726;
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
@@ -21640,7 +21644,7 @@ class Mission
 		};
 		class Item130
 		{
-			position[]={11641.216,7.958899,5959.5229};
+			position[]={10698.537,7.9565392,4738.2964};
 			name="Commerçant de platine";
 			text="Commerçant de platine";
 			type="Fett_hardpoint";
@@ -21892,7 +21896,7 @@ class Mission
 		};
 		class Item159
 		{
-			position[]={10571.166,93.633186,7084.5063};
+			position[]={9605.9922,192.19205,7961.8438};
 			name="wood_2";
 			text="Camp de bucheron";
 			type="Fett_tree";
@@ -21922,7 +21926,7 @@ class Mission
 		};
 		class Item162
 		{
-			position[]={8934.1563,161.98238,8448.0303};
+			position[]={8802.5205,123.6405,6986.5474};
 			name="process_tabac_1";
 			text="Traitement du tabac";
 			type="Fett_industrial";

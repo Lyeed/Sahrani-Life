@@ -83,6 +83,7 @@ class ALYSIA_ITEMS
 	class adn
 	{
 		name = "Test ADN";
+		buy_license_GUER = "guer_gen";
 		weight = 3;
 		price_buy = 24500;
 		image = "";
@@ -294,7 +295,7 @@ class ALYSIA_ITEMS
 		license = "archeologie";
 		class market
 		{
-			max = 11032;
+			max = 13032;
 			min = 528;
 			affect[] = AFFECT_ILLEGAL;
 		};

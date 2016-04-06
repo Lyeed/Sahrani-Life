@@ -33,7 +33,7 @@ if (_type != (_info select 2)) exitWith {
 if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then
 {
 	[format["<t color='#FF8000'>%1</t> utilisé avec succès.", [_item] call AlysiaClient_fnc_itemGetName]] call AlysiaClient_fnc_info;
-	_target setVariable ["extra_process", (_target getVariable ["extra_process", []] + _process), true];
+	_target setVariable ["extra_process", ((_target getVariable ["extra_process", []]) + _process), true];
 } else {
 	[format["Vous avez besoin de <t color='#FF8000'>%1</t>.", [_item] call AlysiaClient_fnc_itemGetName]] call AlysiaClient_fnc_error;
 };

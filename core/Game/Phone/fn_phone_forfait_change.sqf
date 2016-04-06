@@ -13,19 +13,19 @@ if (g_phone_forfait != "none") then
 	_maxSMS = getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> _new >> "sms_max");
 	if (count(g_phone_messages) > _maxSMS) then
 	{
-		g_phone_messages deleteRange [_maxSMS, count((g_phone_messages) - _maxSMS)];
+		g_phone_messages = [];
 	};
 
 	_maxContacts = getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> _new >> "contacts_max");
 	if (count(g_phone_contacts) > _maxContacts) then
 	{
-		g_phone_contacts deleteRange [_maxContacts, count((g_phone_contacts) - _maxContacts)];	
+		g_phone_contacts = [];
 	};
 
 	_maxBlacklist = getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> _new >> "backlist_max");
 	if (count(g_phone_blacklist) > _maxBlacklist) then
 	{
-		g_phone_blacklist deleteRange [_maxBlacklist, count((g_phone_blacklist) - _maxBlacklist)];
+		g_phone_blacklist = [];
 	};
 } else {
 	[] call AlysiaClient_fnc_phone_numberChange;
