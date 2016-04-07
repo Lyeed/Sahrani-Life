@@ -3851,4 +3851,42 @@ class ALYSIA_VEHICLES
 		rank = 4;
 		realname = "VW Touareg R50 SAMU";
 	};
+
+	class Skyline_Lotus_Esprit
+	{
+		realname = "Lotus Esprit";
+		buyPrice = 275000;
+		inventory = 20;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "SP98";
+		colors[] =
+		{
+			"Skyline_Lotus_Esprit_01_F",
+			"Skyline_Lotus_Esprit_02_F",
+			"Skyline_Lotus_Esprit_03_F",
+			"Skyline_Lotus_Esprit_04_F",
+			"Skyline_Lotus_Esprit_05_F",
+			"Skyline_Lotus_Esprit_06_F",
+			"Skyline_Lotus_Esprit_07_F",
+			"Skyline_Lotus_Esprit_08_F",
+			"Skyline_Lotus_Esprit_09_F",
+			"Skyline_Lotus_Esprit_10_F",
+			"Skyline_Lotus_Esprit_11_F",
+			"Skyline_Lotus_Esprit_12_F"
+		};
+	};
+	class Skyline_Lotus_Esprit_01_F: Skyline_Lotus_Esprit {};
+	class Skyline_Lotus_Esprit_02_F: Skyline_Lotus_Esprit {};
+	class Skyline_Lotus_Esprit_03_F: Skyline_Lotus_Esprit {};
+	class Skyline_Lotus_Esprit_04_F: Skyline_Lotus_Esprit {};
+	class Skyline_Lotus_Esprit_05_F: Skyline_Lotus_Esprit {};
+	class Skyline_Lotus_Esprit_06_F: Skyline_Lotus_Esprit {};
+	class Skyline_Lotus_Esprit_07_F: Skyline_Lotus_Esprit {};
+	class Skyline_Lotus_Esprit_08_F: Skyline_Lotus_Esprit {};
+	class Skyline_Lotus_Esprit_09_F: Skyline_Lotus_Esprit {};
+	class Skyline_Lotus_Esprit_10_F: Skyline_Lotus_Esprit {};
+	class Skyline_Lotus_Esprit_11_F: Skyline_Lotus_Esprit {};
+	class Skyline_Lotus_Esprit_12_F: Skyline_Lotus_Esprit {};
 };

@@ -236,6 +236,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"Skyline_Vehicule_Jonzie_STI",
 			"Skyline_Vehicule_Jonzie_VE",
 			"Skyline_Vehicule_Jonzie_Viper",
+			"Skyline_Lotus_Esprit",
 			"Skyline_Jeep_Wrangler_Rubicon"
 		};
 	};
