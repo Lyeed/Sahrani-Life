@@ -51,6 +51,7 @@ _bill = 0;
 _liters = 0;
 _fill = false;
 _distanceBegin = (player distance _station) + 1;
+playSound "action_refuel";
 
 while {true} do
 {

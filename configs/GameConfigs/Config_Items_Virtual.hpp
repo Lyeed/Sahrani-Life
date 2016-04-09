@@ -203,6 +203,36 @@ class ALYSIA_ITEMS
 			action = "['tribune_wood'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
 		};
 	};
+	class bagfence_sand
+	{
+		name = "Sacs de sable";
+		weight = 10;
+		image = "";
+		class use
+		{
+			action = "['bagfence_sand'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
+		};
+	};
+	class antitank_steel
+	{
+		name = "Piège anti-chars";
+		weight = 19;
+		image = "";
+		class use
+		{
+			action = "['antitank_steel'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
+		};
+	};
+	class guardshed_wood
+	{
+		name = "Abri en bois";
+		weight = 13;
+		image = "";
+		class use
+		{
+			action = "['guardshed_wood'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
+		};
+	};
 
 	class spikeStrip
 	{
@@ -467,7 +497,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\seringue_heroine.paa";
 		class market
 		{
-			max = 1915;
+			max = 2420;
 			min = 90;
 			affect[] = AFFECT_DRUGS;
 		};
@@ -669,8 +699,8 @@ class ALYSIA_ITEMS
 		class food
 		{
 			thirst = 40;
-			sound = "drink";
-			unlimitedRun = 120;
+			sound = "drink_water";
+			unlimitedRun = 180;
 		};
 	};
 
@@ -773,7 +803,7 @@ class ALYSIA_ITEMS
 		{
 			hunger = -5;
 			thirst = 15;
-			sound = "drink";
+			sound = "drink_wine";
 			alcool = 0.15;
 		};
 	};
@@ -786,7 +816,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			thirst = 15;
-			sound = "drink";
+			sound = "drink_water";
 		};
 	};
 	class cerealbar
@@ -824,7 +854,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			thirst = 50;
-			sound = "drink";
+			sound = "drink_soda";
 		};
 	};
 	class prune
@@ -874,7 +904,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			thirst = 40;
-			sound = "drink";
+			sound = "drink_soda";
 		};
 	};
 	class water
@@ -886,7 +916,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			thirst = 40;
-			sound = "drink";
+			sound = "drink_water";
 		};
 	};
 	class ragout
@@ -910,7 +940,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			thirst = 40;
-			sound = "drink";
+			sound = "drink_water";
 		};
 	};
 
@@ -1233,7 +1263,7 @@ class ALYSIA_ITEMS
 		{
 			thirst = 40;
 			hunger = -10;
-			sound = "drink";
+			sound = "drink_wine";
 			alcool = 0.05;
 		};
 	};
@@ -1246,7 +1276,7 @@ class ALYSIA_ITEMS
 		class food
 		{
 			thirst = 40;
-			sound = "drink";
+			sound = "drink_water";
 		};
 	};
 	class ravioli
@@ -1674,6 +1704,18 @@ class ALYSIA_ITEMS
 			action = "['lab_heal'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
+	class lab_construction
+	{
+		name = "Usines de constructions illégales";
+		price_buy = 160000;
+		weight = 20;
+		illegal = 1;
+		image = "";
+		class use
+		{
+			action = "['lab_construction'] spawn AlysiaClient_fnc_labo_deploy;";
+		};
+	};
 
 	class money_transfer
 	{
@@ -1848,6 +1890,27 @@ class ALYSIA_ITEMS
 		class use
 		{
 			action = "[['weapon_mosin_1','weapon_mosin_2','magazine_mosin'], 'lab_weapon', 'patron_mosin'] call AlysiaClient_fnc_item_patron;";
+		};
+	};
+
+	class medoc_rhume
+	{
+		name = "Médicament anti-rhumes";
+		weight = 1;
+		image = "";
+		class food
+		{
+			sound = "painkiller_01";
+		};
+	};
+	class medoc_toux
+	{
+		name = "Sirop anti-toux";
+		weight = 1;
+		image = "";
+		class food
+		{
+			sound = "drink_water";
 		};
 	};
 };

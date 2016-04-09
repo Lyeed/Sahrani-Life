@@ -170,3 +170,7 @@
 		} forEach allGroups;
 	};
 };
+
+{
+	[(_x select 0)] spawn AlysiaClient_fnc_desease_start;
+} forEach g_deseases;

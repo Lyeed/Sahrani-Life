@@ -39,7 +39,8 @@ g_sexe = _basic select 6;
 };
 // alive
 g_is_alive = _basic select 15;
-// (_basic select 16)
+// deseases
+g_deseases = _basic select 16;
 // hunger
 g_hunger = _basic select 17;
 // thirst

@@ -163,9 +163,8 @@ if ((vehicle player) isEqualTo player) then
 					} else {
 						[_target] call AlysiaClient_fnc_interactions_player_to_player_basics;
 					};
+					true breakOut "main";
 				};
-				
-				true breakOut "main";
 			} else {
 				
 				if (

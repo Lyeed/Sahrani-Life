@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_firstname", "_lastName", "_birth", "_sexe", "_origin", "_action", "_bad", "_displayError"];
+private["_firstname", "_lastName", "_birth", "_sexe", "_action", "_bad", "_displayError"];
 _displayError =
 {
 	((findDisplay 1500) displayCtrl 1508) ctrlSetStructuredText parseText format["<t align='center' color='#DF0101'>%1</t>", _this];
@@ -45,7 +45,6 @@ if (format["%1 %2", _firstname, _lastName] != profileName) exitWith {
 
 // birth
 _birth = [lbValue[1510, (lbCurSel 1510)], lbValue[1509, (lbCurSel 1509)], lbValue[1503, (lbCurSel 1503)]];
-_origin = lbText[1504, (lbCurSel 1504)];
 _sexe = lbText[1505, (lbCurSel 1505)];
 _action = 
 [
@@ -55,7 +54,7 @@ _action =
 		_firstname,
 		_lastName,
 		(_birth call AlysiaClient_fnc_age),
-		_origin,
+		(lbText[1504, (lbCurSel 1504)]),
 		_sexe
 	],
 	"Validation",
@@ -67,7 +66,7 @@ if (_action) then
 	g_firstName = _firstname;
 	g_lastName = _lastName;
 	g_birth = _birth;
-	g_nationality = _origin;
+	g_nationality = lbData[1504, (lbCurSel 1504)];
 	g_sexe = _sexe;
 	closeDialog 0;
 };

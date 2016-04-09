@@ -288,8 +288,8 @@ class ALYSIA_PROCESS
 		sound = "smelting";
 		require[] = {{"cotton",1}};
 		receive[] = {{{"cottonp",1}},{},0};
-		time_per_item = 4;
-		time_default = 6;
+		time_per_item = 2;
+		time_default = 4;
 		class target {};
 		class factions
 		{
@@ -601,6 +601,42 @@ class ALYSIA_PROCESS
 			{
 				licenses[] = {"furniture"};
 			};
+		};
+	};
+	class bagfence_sand
+	{
+		name = "Fabrication de sacs de sable";
+		require[] = {{"sand",15},{"tissue",3}};
+		receive[] = {{{"bagfence_sand",1}},{},0};
+		time_per_item = 4;
+		time_default = 5;
+		class factions
+		{
+			class CIV {};
+		};
+	};
+	class antitank_steel
+	{
+		name = "Fabrication de piege anti-chars";
+		require[] = {{"steel",5}};
+		receive[] = {{{"antitank_steel",1}},{},0};
+		time_per_item = 8;
+		time_default = 5;
+		class factions
+		{
+			class CIV {};
+		};
+	};
+	class guardshed_wood
+	{
+		name = "Fabrication d'abri en bois'";
+		require[] = {{"woodp",20}};
+		receive[] = {{{"antitank_steel",1}},{},0};
+		time_per_item = 8;
+		time_default = 5;
+		class factions
+		{
+			class CIV {};
 		};
 	};
 

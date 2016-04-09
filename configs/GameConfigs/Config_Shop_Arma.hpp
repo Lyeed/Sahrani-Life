@@ -8,7 +8,7 @@ class ALYSIA_SHOPS_ARMA
 		{
 			"Bank_Key1_S",
 			"SkylineItems_TelephoneTactile",
-			"SkylineItems_PlaqueMilitaire",
+			"Alysia_Identity_Garde",
 			"hgun_FlashBall_F",
 			"1Rnd_FlashBall_Mag",
 			"ItemGPS",
@@ -47,7 +47,7 @@ class ALYSIA_SHOPS_ARMA
 		{
 			"Bank_Key1_N",
 			"SkylineItems_TelephoneTactile",
-			"SkylineItems_PlaqueMilitaire",
+			"Alysia_Identity_Milice",
 			"hgun_FlashBall_F",
 			"1Rnd_FlashBall_Mag",
 			"ItemGPS",

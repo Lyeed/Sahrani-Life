@@ -382,6 +382,7 @@ class CfgFunctions
 			class handleBlood {};
 			class handleHunger {};
 			class handleThirst {};
+			class handleMedecine {};
 			class handleRegen {};
 			class item_knife_apply {};
 			class item_knife_use {};
@@ -393,6 +394,7 @@ class CfgFunctions
 			class item_adn_use {};
 			class medic_request {};
 			class adn_get {};
+			class desease_start {};
 		};
 
 		class Process

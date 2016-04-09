@@ -43,14 +43,6 @@ if (isNull _object) exitWith {};
 			"
 		],
 		[
-			"search",
-			"Fouille",
-			"",
-			"
-				(getNumber(missionConfigFile >> 'ALYSIA_FACTIONS' >> str(playerSide) >> 'companies' >> 'search') isEqualTo 1)
-			"
-		],
-		[
 			"process",
 			"Traiter",
 			"[g_interaction_target, getArray(missionConfigFile >> 'ALYSIA_COMPANIES' >> 'types' >> ((g_interaction_target getVariable 'company_info') select 2) >> 'process')] call AlysiaClient_fnc_process_choice_open;",
@@ -68,9 +60,15 @@ if (isNull _object) exitWith {};
 			"[g_interaction_target, 'company_inventory', true, true, false, true, false] spawn AlysiaClient_fnc_virtual_menu_exhange_open;",
 			"
 				(
-					(g_company isEqualTo g_interaction_target) &&
 					isClass(missionConfigFile >> 'ALYSIA_COMPANIES' >> 'types' >> ((g_interaction_target getVariable 'company_info') select 2) >> 'storage') &&
-					!(g_interaction_target getVariable ['construction', false])
+					!(g_interaction_target getVariable ['construction', false]) &&
+					(
+						(g_company isEqualTo g_interaction_target) ||
+						(
+							(getNumber(missionConfigFile >> 'ALYSIA_FACTIONS' >> str(playerSide) >> 'companies' >> 'search') isEqualTo 1) &&
+							(g_interaction_target getVariable ['perquisition',false])
+						)
+					)
 				)
 			"
 		]

@@ -64,6 +64,7 @@ class CfgRemoteExec
 		//- Companies
 		class AlysiaServer_fnc_company_insert {allowTargets = SERVER;};
 		class AlysiaServer_fnc_company_build {allowTargets = SERVER;};
+		class AlysiaServer_fnc_company_perquisition {allowTargets = SERVER;};
 		//- Border
 		class AlysiaServer_fnc_border_alarm_south {allowTargets = SERVER;};
 		//- Tablet : announces

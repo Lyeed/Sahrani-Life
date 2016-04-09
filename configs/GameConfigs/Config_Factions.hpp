@@ -5,7 +5,7 @@ class ALYSIA_FACTIONS
 		/*** GLOBAL ***/
 		name = "Milice";
 		icon = "lyeed_IMG\data\faction\WEST_logo.paa";
-		identity_item = "SkylineItems_PlaqueMilitaire";
+		identity_item = "Alysia_Identity_Milice";
 
 		/*** LABORATORIES ***/
 		laboratory_destroy = 1;
@@ -247,7 +247,7 @@ class ALYSIA_FACTIONS
 		/*** GLOBAL ***/
 		name = "Garde";
 		icon = "lyeed_IMG\data\faction\EAST_logo.paa";
-		identity_item = "SkylineItems_PlaqueMilitaire";
+		identity_item = "Alysia_Identity_Garde";
 
 		/*** SALARY ***/
 		class salary
@@ -584,7 +584,7 @@ class ALYSIA_FACTIONS
 		class salary
 		{
 			name = "Salaire";
-			amount = 50;
+			amount = 250;
 			taxes_rate = 0;
 			apply_rank = 1;
 			timer = 15;

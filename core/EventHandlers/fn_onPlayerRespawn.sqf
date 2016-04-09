@@ -55,7 +55,7 @@ if (g_coma_suicide) then
 } forEach g_houses;
 if (isNil "_position") then
 {
-	_respawn = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "respawn_marker");
+	_respawn = getText(_config >> "marker");
 	if (playerSide isEqualTo civilian) then {_respawn = format["%1_%2", _respawn, g_choice]};
 	_position = getMarkerPos _respawn;
 };

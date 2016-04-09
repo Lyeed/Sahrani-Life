@@ -73,4 +73,14 @@ class ALYSIA_LABORATORIES
 		object = "HealTable_F";
 		process[] = {};
 	};
+	class lab_construction
+	{
+		object = "xcam_CinderBlocks_F";
+		process[] =
+		{
+			"bagfence_sand",
+			"antitank_steel",
+			"guardshed_wood"
+		};
+	};
 };

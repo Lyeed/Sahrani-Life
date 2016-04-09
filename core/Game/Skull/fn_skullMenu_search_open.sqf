@@ -18,7 +18,7 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
-if (!(createDialog "RscDisplayDefaultChoice")) exitWith {};
+createDialog "RscDisplayDefaultChoice";
 
 disableSerialization;
 _display = findDisplay 69000;
@@ -33,16 +33,16 @@ _button = _display displayCtrl 69007;
 _button buttonSetAction "[] call AlysiaClient_fnc_skullMenu_search_take;";
 
 _button ctrlSetEventHandler["MouseEnter",
-	"((findDisplay 69000) displayCtrl 69005) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Prendre</t>"";
+	"((findDisplay 69000) displayCtrl 69006) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Prendre</t>"";
 	((findDisplay 69000) displayCtrl 69004) ctrlSetBackgroundColor [1,1,1,1];
-	ctrlSetText[69008, ""lyeed_IMG\data\skull\take_select.paa""];
+	ctrlSetText[69005, ""lyeed_IMG\data\skull\take_select.paa""];
 	ctrlShow[69003, false];"
 ];
 
 _button ctrlSetEventHandler["MouseExit",
-	"((findDisplay 69000) displayCtrl 69005) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Prendre</t>"";
+	"((findDisplay 69000) displayCtrl 69006) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Prendre</t>"";
 	((findDisplay 69000) displayCtrl 69004) ctrlSetBackgroundColor [0,0,0,0.6];
-	ctrlSetText[69008, ""lyeed_IMG\data\skull\take.paa""];
+	ctrlSetText[69005, ""lyeed_IMG\data\skull\take.paa""];
 	ctrlShow[69003, true];"
 ];
 

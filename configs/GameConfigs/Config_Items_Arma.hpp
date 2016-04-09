@@ -1452,10 +1452,14 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 75;
 	};
-	class SkylineItems_PlaqueMilitaire
+	class Alysia_Identity_Milice
 	{
 		buy_price = 20;
 		buy_condition_WEST = 1;
+	};
+	class Alysia_Identity_Garde
+	{
+		buy_price = 20;
 		buy_condition_EAST = 1;
 	};
 	class SmokeShellGreen

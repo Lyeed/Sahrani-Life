@@ -58,7 +58,7 @@ class ALYSIA_STAFF
 			teamspeak = 1;
 		};
 		// - Support
-		class Mael
+		class Maels
 		{
 			uid = "76561197978122710";
 			rank = "support";

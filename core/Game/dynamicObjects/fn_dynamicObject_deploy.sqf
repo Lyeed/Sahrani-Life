@@ -16,7 +16,6 @@ if (isNil "_config") exitWith {["Cet objet ne peut pas être placé"] call Alysi
 
 _object = configName(_config) createVehicle [0, 0, 0];
 _object attachTo [player, getArray(_config >> "attachTo")];
-_object setDir getNumber(_config >> "direction");
 
 g_objPut = _object;
 

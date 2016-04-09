@@ -423,7 +423,7 @@ class ALYSIA_HOUSES
 	/* WEST HOUSES */
 	class CampEast_EP1
 	{
-		price = 295000;
+		price = 78000;
 		class storage
 		{
 			type = "Skyline_Coffre_Large";
@@ -439,7 +439,7 @@ class ALYSIA_HOUSES
 	};
 	class Barrack2
 	{
-		price = 245000;
+		price = 219000;
 		class storage
 		{
 			type = "Skyline_Coffre_Large";
@@ -455,7 +455,7 @@ class ALYSIA_HOUSES
 	};
 	class Land_smd_budova4_in
 	{
-		price = 415000;
+		price = 305000;
 		class storage
 		{
 			type = "Skyline_Coffre_Large";
@@ -471,7 +471,7 @@ class ALYSIA_HOUSES
 	};
 	class Fett_Land_Cihlovej_Dum_in_west
 	{
-		price = 515000;
+		price = 415000;
 		class storage
 		{
 			type = "R3F_WeaponStock";
@@ -489,7 +489,7 @@ class ALYSIA_HOUSES
 	/* EAST HOUSES */
 	class Land_tent_east
 	{
-		price = 515000;
+		price = 78000;
 		class storage
 		{
 			type = "Skyline_Coffre_Large";
@@ -505,7 +505,7 @@ class ALYSIA_HOUSES
 	};
 	class Land_Barrack2_EP1
 	{
-		price = 125000;
+		price = 219000;
 		class storage
 		{
 			type = "Skyline_Coffre_Large";
@@ -542,7 +542,7 @@ class ALYSIA_HOUSES
 	};
 	class Land_Army_hut3_long_int
 	{
-		price = 325000;
+		price = 385000;
 		class storage
 		{
 			type = "Skyline_Coffre_Large";
@@ -563,7 +563,7 @@ class ALYSIA_HOUSES
 	};
 	class Fett_Land_Dum_mesto_in_east
 	{
-		price = 325000;
+		price = 525000;
 		class storage
 		{
 			type = "R3F_WeaponStock";

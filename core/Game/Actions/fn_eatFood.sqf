@@ -9,6 +9,7 @@ private["_item", "_sound", "_config"];
 _item = [_this, 0, "", [""]] call BIS_fnc_param;
 
 if (_item isEqualTo "") exitWith {};
+
 if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then 
 {
 	_config = missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "food";
@@ -26,6 +27,9 @@ if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then
 		[getNumber(_config >> "thirst")] call AlysiaClient_fnc_handleThirst;
 		[getNumber(_config >> "hunger")] call AlysiaClient_fnc_handleHunger;
 		[getNumber(_config >> "alcool")] call AlysiaClient_fnc_handleAlcool;
+		if (isClass(missionConfigFile >> "ALYSIA_MEDECINE" >> _item)) then {
+			[_item] call AlysiaClient_fnc_handleMedecine;
+		};
 
 		_unlimitedRun = getNumber(_config >> "unlimitedRun");
 		if (_unlimitedRun > 0) then

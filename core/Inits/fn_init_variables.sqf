@@ -78,6 +78,7 @@ with missionNamespace do
 	g_morphine = 0;
 	g_adrenaline = 0;
 	g_regen_active = false;
+	g_deseases = [];
 	/* =================[Dynamic Markers]=================== */
 	g_dynamic_markers_discovered = [];
 	g_dynamic_markers = [];
