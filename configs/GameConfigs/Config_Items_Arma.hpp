@@ -2458,6 +2458,12 @@ class ALYSIA_ITEMS_ARMA
 	class Skyline_Uniforme_Securite_02_F: Skyline_Uniforme_Securite_01_F {};
 	class Skyline_Uniforme_Securite_03_F: Skyline_Uniforme_Securite_01_F {};
 
+	class Skyline_Veste_Securite_01_F
+	{
+		buy_price = 2250;
+		buy_license_CIV = "company_security";
+	};
+
 	class U_O_CombatUniform_ocamo
 	{
 		buy_price = 200;
