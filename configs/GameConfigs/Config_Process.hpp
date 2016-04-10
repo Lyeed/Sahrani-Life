@@ -921,7 +921,7 @@ class ALYSIA_PROCESS
 	class vest_secu_1: vest_news_1
 	{
 		name = "Confection de gilet sécurité";
-		receive[] = {{},{"TRYK_V_Bulletproof_BLK"},0};
+		receive[] = {{},{"Skyline_Veste_Securite_01_F"},0};
 		class factions: factions {};
 	};
 	class googles_secu_1: goggles_moneyTransfert_1
