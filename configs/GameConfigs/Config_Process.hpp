@@ -938,7 +938,7 @@ class ALYSIA_PROCESS
 		require[] = {{"tissue",5}};
 		receive[] = {{},{"TRYK_ZARATAKI"},0};
 		time_per_item = 20;
-		time_default = 20;
+		time_default = 5;
 		class target {};
 		class factions
 		{
@@ -1018,7 +1018,8 @@ class ALYSIA_PROCESS
 	class goggles_criminal_2: clothing_criminal_1
 	{
 		name = "Confection masque à gaz";
-		receive[] = {{},{"Mask_M40"},0};
+		require[] = {{"tissue",3},{"glass", 2},{"alu", 1}};
+		receive[] = {{},{"Skyline_GasMask"},0};
 		class target {};
 		class factions: factions {};
 	};

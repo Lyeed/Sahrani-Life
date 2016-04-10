@@ -1829,7 +1829,7 @@ class ALYSIA_ITEMS
 	class patron_AK74
 	{
 		name = "Patron arme (AK74)";
-		weight = 5;
+		weight = 0;
 		price_buy = 575000;
 		image = "";
 		class use
@@ -1840,7 +1840,7 @@ class ALYSIA_ITEMS
 	class patron_M21
 	{
 		name = "Patron arme (M21)";
-		weight = 5;
+		weight = 0;
 		price_buy = 825000;
 		image = "";
 		class use
@@ -1851,7 +1851,7 @@ class ALYSIA_ITEMS
 	class patron_CZ
 	{
 		name = "Patron arme (CZ)";
-		weight = 5;
+		weight = 0;
 		price_buy = 439000;
 		image = "";
 		class use
@@ -1862,7 +1862,7 @@ class ALYSIA_ITEMS
 	class patron_sawed
 	{
 		name = "Patron arme (Fusil scié)";
-		weight = 5;
+		weight = 0;
 		price_buy = 210000;
 		image = "";
 		class use
@@ -1873,7 +1873,7 @@ class ALYSIA_ITEMS
 	class patron_AKM
 	{
 		name = "Patron arme (AKM)";
-		weight = 5;
+		weight = 0;
 		price_buy = 995000;
 		image = "";
 		class use
@@ -1884,7 +1884,7 @@ class ALYSIA_ITEMS
 	class patron_mosin
 	{
 		name = "Patron arme (Mosin)";
-		weight = 5;
+		weight = 0;
 		price_buy = 260000;
 		image = "";
 		class use
@@ -1895,7 +1895,7 @@ class ALYSIA_ITEMS
 
 	class medoc_rhume
 	{
-		name = "Médicament anti-rhumes";
+		name = "Comprimé de Nurofex";
 		weight = 1;
 		image = "";
 		class food
@@ -1903,14 +1903,33 @@ class ALYSIA_ITEMS
 			sound = "painkiller_01";
 		};
 	};
-	class medoc_toux
+	class medoc_toux_1
 	{
-		name = "Sirop anti-toux";
+		name = "Bouteille de Sirop de Tussidax";
 		weight = 1;
 		image = "";
 		class food
 		{
+			thirst = 10;
 			sound = "drink_water";
 		};
+	};
+	class medoc_toux_2
+	{
+		name = "Comprimé de Padéryx";
+		weight = 1;
+		image = "";
+		class food
+		{
+			sound = "painkiller_01";
+		};
+	};
+
+	class stethoscope
+	{
+		name = "Stethoscope";
+		weight = 2;
+		image = "";
+		price_buy = 1600;
 	};
 };

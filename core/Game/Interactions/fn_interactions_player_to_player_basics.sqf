@@ -267,6 +267,18 @@
 					(['guer_gen'] call AlysiaClient_fnc_hasLicense)
 				)
 			"
+		],
+		[
+			"doctor",
+			"Diagnostic",
+			"[player, g_interaction_target] call AlysiaClient_fnc_doctor_start;",
+			"
+				(
+					(isNull (g_interaction_target getVariable ['escorted',objNull])) &&
+					(['guer_medical'] call AlysiaClient_fnc_hasLicense) &&
+					((['stethoscope'] call AlysiaClient_fnc_itemCount) > 0)
+				)
+			"
 		]
 	],
 	"Interactions"

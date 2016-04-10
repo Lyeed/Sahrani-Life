@@ -5,13 +5,16 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_type", "_config", "_index", "_reduiceFatigue", "_maxFatigue", "_nextSound", "_medecine"];
+private["_type", "_config", "_index", "_reduiceFatigue", "_maxFatigue", "_event_next", "_medecine", "_event_sounds", "_contagion_chance"];
 _type = [_this, 0, "", [""]] call BIS_fnc_param;
 
 if (_type isEqualTo "") exitWith {};
 
 _config = missionConfigFile >> "ALYSIA_DESEASES" >> _type;
 if (!isClass(_config)) exitWith {};
+
+if (missionNamespace getVariable [format["deases_%1_active", _type], false]) exitWith {};
+if (g_staff_god) exitWith {};
 
 _index = [_type, g_deseases] call AlysiaClient_fnc_index;
 if (_index isEqualTo -1) then
@@ -28,37 +31,57 @@ if (_index isEqualTo -1) then
 				round(random(getNumber(_config_med >> "max") - getNumber(_config_med >> "min"))) + getNumber(_config_med >> "min")
 			];
 		};
-	} forEach ("true" configFile (missionConfigFile >> "ALYSIA_MEDECINE"));
+	} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_MEDECINE"));
 	g_deseases pushBack [_type, _medecine];
 } else {
 	_medecine = (g_deseases select _index) select 1;
 };
 
-_maxFatigue = (1 - getNumber(_config >> "reduce_fatigue"));
-_nextSound = 0;
+missionNamespace setVariable [format["deases_%1_active", _type], true];
+_maxFatigue = 1 - getNumber(_config >> "reduce_fatigue");
+_event_sounds = getArray(_config >> "event_sounds");
+_contagion_chance = getNumber(_config >> "event_contagion_chance");
+_event_next = 0;
 
 while {count(_medecine) > 0} do
 {
-	if (time > _nextSound) then
+	if (time > _event_next) then
 	{
-		if (random(100) <= 20) then
+		if (count(_event_sounds) > 0) then
 		{
-			[player, getArray(_config >> "sounds") call BIS_fnc_selectRandom, 25] call CBA_fnc_globalSay3d;
-			_nextSound = time + round(random(100) + 10);
+			[player, (_event_sounds call BIS_fnc_selectRandom), 25] call CBA_fnc_globalSay3d;
 		};
+
+		if (_contagion_chance > 0) then
+		{
+			{
+				if ((alive _x) && (_x != player) && !(_x getVariable ["is_coma", false])) then
+				{
+					if (getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> (goggles _x) >> "protect_contamination_air") isEqualTo 0) then
+					{
+						if (random(100) <= _contagion_chance) then
+						{
+							[_type] remoteExec ["AlysiaClient_fnc_desease_start", _x];
+						};
+					};
+				};
+			} forEach ((getPos player) nearEntities ["Man", 6]);
+		};
+		
+		_event_next = time + round(random(100) + 10);
 	};
 
-	if (_maxFatigue != 1) then
-	{
+	if (_maxFatigue isEqualTo 1) then {
+		uiSleep 10;
+	} else {
 		if ((getFatigue player) > _maxFatigue) then
 		{
 			player setFatigue _maxFatigue;
 		};
 
 		uiSleep 1;
-	} else {
-		uiSleep 20;
 	};
 };
 
 g_deseases deleteAt ([_type, g_deseases] call AlysiaClient_fnc_index);
+missionNamespace setVariable [format["deases_%1_active", _type], false];

@@ -113,7 +113,8 @@ class ALYSIA_FACTIONS
 						"optic_LRPS",
 						"optic_Holosight",
 						"TRYK_HRPIGEAR_NV",
-						"NVGoggles"
+						"NVGoggles",
+						"Mask_M40_OD"
 					}
 				},
 				{"Backpacks",
@@ -327,7 +328,8 @@ class ALYSIA_FACTIONS
 						"Rangefinder",
 						"optic_ACO_grn_smg",
 						"NVGoggles_OPFOR",
-						"optic_MRCO"
+						"optic_MRCO",
+						"Mask_M40"
 					}
 				},
 				{"Backpacks",
@@ -633,7 +635,9 @@ class ALYSIA_FACTIONS
 				{"Magazines",
 					{
 						"SkylineItems_Adrenaline",
-						"SkylineItems_Morphine"
+						"SkylineItems_Morphine",
+						"SkylineItems_Defibrilateur",
+						"SkylineItems_Bandage"
 					}
 				},
 				{"Items",
@@ -648,7 +652,14 @@ class ALYSIA_FACTIONS
 				},
 				{"Virtual",
 					{
-						
+						"water",
+						"sandwich",
+						"medoc_rhume",
+						"medoc_toux_1",
+						"medoc_toux_2",
+						"scalpel",
+						"horn_samu",
+						"stethoscope"
 					}
 				}
 			};

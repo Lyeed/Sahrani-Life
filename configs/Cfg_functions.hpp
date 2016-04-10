@@ -395,6 +395,9 @@ class CfgFunctions
 			class medic_request {};
 			class adn_get {};
 			class desease_start {};
+			class doctor_start {};
+			class doctor_get {};
+			class doctor_return {};
 		};
 
 		class Process

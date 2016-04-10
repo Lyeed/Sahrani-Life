@@ -18,12 +18,11 @@ _idc = 0;
 	_price = [_station, _x] call AlysiaClient_fnc_fuelStation_fuel_getPrice;
 	if (_price > 9) then
 	{
-		_numberStr_1 = str(floor(_price / 10));
+		_numberStr_1 = format["stephdub_alysiarp_gasstation\textures\%1.paa", floor(_price / 10)];
 		if ((_textures select _idc) != _numberStr_1) then {_station setObjectTextureGlobal [_idc, _numberStr_1]};
 		
-		_numberStr_2 = str(_price % 10);
+		_numberStr_2 = format["stephdub_alysiarp_gasstation\textures\%1.paa", (_price % 10)];
 		if ((_textures select (_idc + 1)) != _numberStr_2) then {_station setObjectTextureGlobal [(_idc + 1), _numberStr_2]};
-
 	} else {
 		if ((_textures select _idc) != "stephdub_alysiarp_gasstation\textures\0.paa") then {_station setObjectTextureGlobal [_idc, "stephdub_alysiarp_gasstation\textures\0.paa"]};
 

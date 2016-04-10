@@ -40,7 +40,19 @@ g_sexe = _basic select 6;
 // alive
 g_is_alive = _basic select 15;
 // deseases
-g_deseases = _basic select 16;
+g_deseases = (_basic select 16) select 0;
+g_medecine = (_basic select 16) select 1;
+if (count(g_deseases) > 0) then
+{
+	[] spawn
+	{
+		waitUntil {g_connected};
+		{
+			[(_x select 0)] spawn AlysiaClient_fnc_desease_start;
+		} forEach g_deseases;
+	};
+};
+
 // hunger
 g_hunger = _basic select 17;
 // thirst

@@ -178,7 +178,8 @@ class ALYSIA_SHOPS_VIRTUAL
 				"barriere",
 				"horn_samu",
 				"alcool_test",
-				"adn"
+				"adn",
+				"stethoscope"
 			},{
 
 			}

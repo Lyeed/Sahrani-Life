@@ -897,10 +897,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 500;
 	};
-	class Masque_Chirurgical
-	{
-		buy_price = 20;
-	};
 	class Masque_Chuck
 	{
 		buy_price = 500;
@@ -1382,10 +1378,6 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 500;
 	};
 	class Skyline_Dallas
-	{
-		buy_price = 500;
-	};
-	class Skyline_GasMask
 	{
 		buy_price = 500;
 	};
@@ -2788,4 +2780,30 @@ class ALYSIA_ITEMS_ARMA
 		price = 1;
 	};
 	class Skyline_Uniforme_Prisonnier_02_F: Skyline_Uniforme_Prisonnier_01_F {};
+
+	class Mask_M40_OD
+	{
+		name = "Masque à gaz (Milice)";
+		protect_contamination_air = 1;
+	};
+	class Mask_M40
+	{
+		name = "Masque à gaz (Garde)";
+		protect_contamination_air = 1;
+	};
+	class Masque_Chirurgical
+	{
+		buy_price = 20;
+		buy_condition_GUER = 1;
+	};
+	class Skyline_GasMask
+	{
+		name = "Masque à gaz illégal";
+		protect_contamination_air = 1;
+	};
+	class Skyline_NioshFace
+	{
+		name = "Masque protecteur";
+		protect_contamination_air = 1;
+	};
 };

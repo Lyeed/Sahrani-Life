@@ -25,7 +25,7 @@ if (missionNamespace getVariable ["g_connected", false]) then
 		missionNamespace getVariable ["g_atm", 0],
 		([] call AlysiaClient_fnc_getInv),
 		missionNamespace getVariable ["g_is_alive", false],
-		[],
+		[g_deseases, g_medecine],
 		round(time / 60),
 		missionNamespace getVariable ["g_blood", 4000],
 		missionNamespace getVariable ["g_bleed", 0],

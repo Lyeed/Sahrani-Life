@@ -715,7 +715,6 @@ class ALYSIA_SHOPS_CLOTHING
 		{
 			"Skyline_Skyrim",
 			"Skyline_Anonymous",
-			"Skyline_NioshFace",
 			"Skyline_Corvo",
 			"Skyline_Dallas",
 			"Skyline_Hoxton",

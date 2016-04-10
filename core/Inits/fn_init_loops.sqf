@@ -155,22 +155,40 @@
 		{
 			if (["Alysia", (call TFAR_fnc_getTeamSpeakServerName)] call BIS_fnc_inString) then
 			{
-				if (!((call TFAR_fnc_getTeamSpeakChannelName) isEqualTo "TaskForceRadio")) then {
-					[] spawn _fnc_channel;
-				};
+				if (!((call TFAR_fnc_getTeamSpeakChannelName) isEqualTo "TaskForceRadio")) then {[] spawn _fnc_channel};
 			} else {
 				[] spawn _fnc_server;
 			};
 		};
 
 		{
-			if ((local _x) && ((units _x) isEqualTo [])) then {
-				deleteGroup _x;
-			};
+			if ((local _x) && ((units _x) isEqualTo [])) then {deleteGroup _x};
 		} forEach allGroups;
+
+		if ((rain > 0) && ((vehicle player) isEqualTo player)) then
+		{
+			if (getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> (currentWeapon player) >> "protect_rain") isEqualTo 0) then
+			{
+				if (random(100) < 3) then
+				{
+					["rhume"] spawn AlysiaClient_fnc_desease_start;
+				};
+			};
+		};
+
+		if (count(g_medecine) > 0) then
+		{
+			_del = 0;
+			{
+				_amount = _x select 1;
+				if (_amount <= 60) then
+				{
+					g_medecine = g_medecine - [_x];
+					_del = _del + 1;
+				} else {
+					(g_medecine select (_forEachIndex - _del)) set [1, (_amount - 60)];
+				};
+			} forEach g_medecine;
+		};
 	};
 };
-
-{
-	[(_x select 0)] spawn AlysiaClient_fnc_desease_start;
-} forEach g_deseases;

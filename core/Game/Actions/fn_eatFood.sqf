@@ -28,7 +28,7 @@ if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then
 		[getNumber(_config >> "hunger")] call AlysiaClient_fnc_handleHunger;
 		[getNumber(_config >> "alcool")] call AlysiaClient_fnc_handleAlcool;
 		if (isClass(missionConfigFile >> "ALYSIA_MEDECINE" >> _item)) then {
-			[_item] call AlysiaClient_fnc_handleMedecine;
+			[_item] spawn AlysiaClient_fnc_handleMedecine;
 		};
 
 		_unlimitedRun = getNumber(_config >> "unlimitedRun");

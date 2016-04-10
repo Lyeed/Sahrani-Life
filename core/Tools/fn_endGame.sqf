@@ -11,11 +11,14 @@ if (missionNamespace getVariable ["g_connected", false]) then
 {
 	systemChat "Sauvegarde des véhicules dans 2 minutes. VEUILLEZ DESCENDRE DE VOTRE VEHICULE et DECONNECTER";
 	playmusic "LeadTrack01_F";
-	sleep 94;
+	uiSleep 94;
+
 	closeDialog 0;
-	sleep 1;
-	[] call AlysiaDB_fnc_query_update_disconnect;
-	sleep 1;
+	uiSleep 1;
+	
+	[] call AlysiaDB_fnc_query_update_disconnect;	
+	uiSleep 1.5;
+
 	"Bye" call BIS_fnc_endMission;
 } else {
 	"Bye" call BIS_fnc_endMission;

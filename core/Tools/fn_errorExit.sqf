@@ -16,7 +16,7 @@ while {_time > 0} do
 {
 	cutText [format["%1 Déconnexion dans %2 seconde%3", _txt, _time, if (_time > 1) then {"s"} else {""}], "BLACK FADED", 0, true];
 	_time = _time - 1;
-	sleep 1;
+	uiSleep 1;
 };
 
 cutText [format["%1", _txt], "BLACK FADED", 0, true];

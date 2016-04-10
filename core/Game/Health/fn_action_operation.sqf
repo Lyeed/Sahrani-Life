@@ -39,9 +39,9 @@ if (!(["Opération", 15, _unit] call AlysiaClient_fnc_showProgress)) exitWith {
 if (playerSide isEqualTo independent) then
 {
 	if ((["scalpel"] call AlysiaClient_fnc_itemCount) > 0) then {
-		_chance = 2;
+		_chance = 4;
 	} else {
-		_chance = 5;
+		_chance = 8;
 	};
 } else {
 	if ((["scalpel"] call AlysiaClient_fnc_itemCount) > 0) then {
@@ -49,6 +49,10 @@ if (playerSide isEqualTo independent) then
 	} else {
 		_chance = 30;
 	};
+};
+
+if ((goggles player) isEqualTo "Masque_Chirurgical") then {
+	_chance = _chance - 2;
 };
 
 _unit setVariable ["bullet_operation_inUse", false, true];
