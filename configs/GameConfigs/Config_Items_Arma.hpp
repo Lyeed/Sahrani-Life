@@ -1021,7 +1021,6 @@ class ALYSIA_ITEMS_ARMA
 	class NVGoggles_OPFOR {};
 	class optic_ACO_grn {};
 	class optic_ACO_grn_smg {};
-	class optic_Aco_smg {};
 	class optic_AMS {};
 	class optic_AMS_khk {};
 	class optic_AMS_snd {};
@@ -1389,10 +1388,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 250;
 		disableKnockout = 1;
-	};
-	class Skyline_NioshFace
-	{
-		buy_price = 20;
 	};
 	class Skyline_NVGoogle
 	{
@@ -2811,5 +2806,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		name = "Masque protecteur";
 		protect_contamination_air = 1;
+		buy_price = 20;
 	};
 };

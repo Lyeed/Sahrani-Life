@@ -535,7 +535,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\methamphetamine.paa";
 		class market
 		{
-			max = 2220;
+			max = 2320;
 			min = 290;
 			affect[] = AFFECT_DRUGS;
 		};
@@ -1261,10 +1261,10 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\medova.paa";
 		class food
 		{
-			thirst = 40;
-			hunger = -10;
+			thirst = 65;
+			hunger = 0;
 			sound = "drink_wine";
-			alcool = 0.05;
+			alcool = 0.01;
 		};
 	};
 	class cafe
@@ -1878,7 +1878,7 @@ class ALYSIA_ITEMS
 		image = "";
 		class use
 		{
-			action = "[['weapon_AKM_1','weapon_AKM_2','magazine_AKM'], 'lab_weapon', 'patron_AKM'] call AlysiaClient_fnc_item_patron;";
+			action = "[['weapon_AKM_1','weapon_AKM_2','magazine_AKM','scope_AKM'], 'lab_weapon', 'patron_AKM'] call AlysiaClient_fnc_item_patron;";
 		};
 	};
 	class patron_mosin

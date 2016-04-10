@@ -3958,7 +3958,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=1631;
+		items=1632;
 		class Item0
 		{
 			position[]={12129.837,0,17612.104};
@@ -20498,6 +20498,16 @@ class Mission
 			vehicle="HospitalReader_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this allowDamage false;this setdir -475.43;this setposATL [12638.141602,7504.513672,0.469796];this setVectorUp [0,0,1];this addAction [""<img image='lyeed_IMG\data\player_hud\blood.paa'/> <t color='#01DF01'>Allumer</t> le monitor"", {(_this select 0) say3D ""tv_bip"";(_this select 0) setVariable [""monitor_on"", true, true];}, """", 9991, true, false, """", ""((player distance _target) < 3) && !(_target getVariable ['monitor_on', false])""];this addAction [""<img image='lyeed_IMG\data\player_hud\blood.paa'/> <t color='#FF0000'>Eteindre</t> le monitor"", {(_this select 0) say3D ""tv_bip"";(_this select 0) setVariable [""monitor_on"", false, true];}, """", 9991, true, false, """", ""((player distance _target) < 3) && (_target getVariable ['monitor_on', false])""];";
+		};
+		class Item1631
+		{
+			position[]={13515.844,20.076487,10473.004};
+			azimut=80;
+			id=1802;
+			side="EMPTY";
+			vehicle="Land_i_Addon_02_V1_F";
+			skill=0.60000002;
+			init="this enableSimulation true;this allowDamage false;this setdir 80;this setposATL [13515.84375,10473.00390625,0];this setVectorUp [0,0,1]";
 		};
 	};
 	class Markers

@@ -51,7 +51,7 @@ _bill = 0;
 _liters = 0;
 _fill = false;
 _distanceBegin = (player distance _station) + 1;
-playSound "action_refuel";
+[player, "action_refuel", 20] call CBA_fnc_globalSay3d;
 
 while {true} do
 {

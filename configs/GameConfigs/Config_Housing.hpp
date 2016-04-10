@@ -1,16 +1,16 @@
 class ALYSIA_STORAGES
 {
-	class Skyline_Coffre_Small 
+	class Skyline_Coffre_Small
 	{
 		inventory = 450;
 		item = "storage_small";
 	};
-	class Skyline_Coffre_Medium 
+	class Skyline_Coffre_Medium
 	{
 		inventory = 1200;
 		item = "storage_medium";
 	};
-	class Skyline_Coffre_Large 
+	class Skyline_Coffre_Large
 	{
 		inventory = 3000;
 		item = "storage_large";
@@ -485,7 +485,23 @@ class ALYSIA_HOUSES
 			};
 		};
 	};
-	
+	/* GUER HOUSES */
+	class Land_i_Addon_02_V1_F
+	{
+		price = 105000;
+		class storage
+		{
+			type = "R3F_WeaponStock";
+			building_index = 0;
+		};
+		class factions
+		{
+			class GUER
+			{
+				rank = 6;
+			};
+		};
+	};
 	/* EAST HOUSES */
 	class Land_tent_east
 	{

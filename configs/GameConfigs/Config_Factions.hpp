@@ -310,14 +310,15 @@ class ALYSIA_FACTIONS
 						"hlc_rifle_m14sopmod",
 						"Trixie_Enfield_Rail",
 						"hlc_rifle_aughbar_B",
-						"hlc_rifle_M14"
+						"hlc_rifle_auga2lsw_b"
 					}
 				},
 				{"Magazines",
 					{
 						"Trixie_Enfield_Mag",
 						"hlc_20Rnd_762x51_B_M14",
-						"Bank_DefuseKit"
+						"Bank_DefuseKit",
+						"hlc_40Rnd_556x45_SPR_AUG"
 					}
 				},
 				{"Items",
@@ -329,7 +330,8 @@ class ALYSIA_FACTIONS
 						"optic_ACO_grn_smg",
 						"NVGoggles_OPFOR",
 						"optic_MRCO",
-						"Mask_M40"
+						"Mask_M40",
+						"optic_LRPS"
 					}
 				},
 				{"Backpacks",

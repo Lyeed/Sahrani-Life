@@ -1440,6 +1440,15 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions: factions {};
 	};
+	class scope_AKM: scope_ak
+	{
+		name = "Viseur : AKM";
+		require[] = {{"steel",3},{"glass",2}};
+		receive[] = {{},{"optic_Aco_smg"},0};
+		time_per_item = 15;
+		class target {};
+		class factions: factions {};
+	};
 
 	class weapon_mosin_1: weapon_ak_1
 	{
