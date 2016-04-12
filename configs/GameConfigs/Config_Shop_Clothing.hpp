@@ -773,7 +773,6 @@ class ALYSIA_SHOPS_CLOTHING
 			"Bear_RoundGlasses_blk",
 			"Bear_RoundGlasses_gold",
 			"Skyline_NioshFace",
-			"Mask_M40",
 			"Masque_Chirurgical",
 			"EWK_Cig1",
 			"EWK_Cig2",

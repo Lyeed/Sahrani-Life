@@ -26,7 +26,7 @@ _global_apps =
 	["lyeed_IMG\data\tablet\app_main\app_server.paa", "lyeed_IMG\data\tablet\app_main\app_server_select.paa", "['server'] spawn AlysiaClient_fnc_tabletApp;", "Serveur", "true"],
 	["lyeed_IMG\data\tablet\app_main\app_store.paa", "lyeed_IMG\data\tablet\app_main\app_store_select.paa", "['store'] spawn AlysiaClient_fnc_tabletApp;", "Boutique", "true"],
 	["lyeed_IMG\data\tablet\app_main\app_help.paa", "lyeed_IMG\data\tablet\app_main\app_help_select.paa", "['help'] spawn AlysiaClient_fnc_tabletApp;", "Aide", "true"],
-	["lyeed_IMG\data\tablet\app_main\app_phone.paa", "lyeed_IMG\data\tablet\app_main\app_phone_select.paa", "['PHONE_CATEGORY'] spawn AlysiaClient_fnc_tabletApp;", "Téléphone", "(((player getVariable ['number', '']) != '') && ('SkylineItems_TelephoneTactile' in (magazines player)))"],
+	["lyeed_IMG\data\tablet\app_main\app_phone.paa", "lyeed_IMG\data\tablet\app_main\app_phone_select.paa", "['PHONE_CATEGORY'] spawn AlysiaClient_fnc_tabletApp;", "Téléphone", "(((player getVariable ['number', '']) != '') && ([] call AlysiaClient_fnc_hasPhone))"],
 	[getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "icon"), "", "['faction'] spawn AlysiaClient_fnc_tabletApp;", getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "name"), "isClass(missionConfigFile >> 'ALYSIA_FACTIONS' >> str(playerSide) >> 'board')"],
 	["lyeed_IMG\data\tablet\app_main\app_licences.paa", "lyeed_IMG\data\tablet\app_main\app_licences_select.paa", "['LICENSES'] spawn AlysiaClient_fnc_tabletApp;", "Licenses", "true"],
 	["lyeed_IMG\data\tablet\app_main\app_market.paa", "lyeed_IMG\data\tablet\app_main\app_market_select.paa", "['MARKET'] spawn AlysiaClient_fnc_tabletApp;","Bourse","(('MARKET' in g_apps) || ((player distance (getMarkerPos 'HV_1') < 20) || (player distance (getMarkerPos 'HV_2') < 20)))"],
@@ -101,7 +101,8 @@ if (_apps_more || (_status > 0)) then
 };
 
 _newSMS = 0;
-if ("SkylineItems_TelephoneTactile" in (magazines player)) then
+
+if ([] call AlysiaClient_fnc_hasPhone) then
 {
 	{
 		if ((_x select 2) isEqualTo 0) then {

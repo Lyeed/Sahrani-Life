@@ -87,9 +87,13 @@ class CfgRemoteExec
 		class AlysiaClient_fnc_leaderMenuHistory {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_leaderInvitePropose {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_info {allowTargets = CLIENT;};
-		class AlysiaClient_fnc_phone_message_receive {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_item_knife_apply {allowTargets = CLIENT;};
 		class AlysiaClient_fnc_welcomeInit {allowTargets = CLIENT;};
+		//- Phone
+		class AlysiaClient_fnc_phone_message_receive {allowTargets = CLIENT;};
+		class AlysiaClient_fnc_phone_call_receive {allowTargets = CLIENT;};
+		class AlysiaClient_fnc_phone_call_loop {allowTargets = CLIENT;};
+		class AlysiaClient_fnc_phone_call_end {allowTargets = CLIENT;};
 
 		//- INTERACTION MENU
 		class AlysiaClient_fnc_interactionMenu_action_trade_receive {allowTargets = CLIENT;};

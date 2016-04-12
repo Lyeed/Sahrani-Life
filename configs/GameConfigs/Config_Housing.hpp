@@ -219,7 +219,7 @@ class ALYSIA_HOUSES
 	};
 	class Land_smd_dum_mesto_in_open: Land_Cihlovej_Dum_mini
 	{
-		price = 325000;
+		price = 925000;
 		class storage
 		{
 			type = "Skyline_Coffre_Small";

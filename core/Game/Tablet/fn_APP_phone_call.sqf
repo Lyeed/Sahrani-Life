@@ -5,7 +5,11 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+private["_display"];
 
-if (playerSide isEqualTo civilian) exitWith {
-	["PHONE_CATEGORY"] spawn AlysiaClient_fnc_tabletApp;
-};
+disableSerialization;
+_display = uiNamespace getVariable ["tablet", displayNull];
+if (isNull _display) exitWith {};
+
+uiNamespace setVariable ["phone_call_number", ""];
+(_display displayCtrl 8920) ctrlSetStructuredText parseText "";

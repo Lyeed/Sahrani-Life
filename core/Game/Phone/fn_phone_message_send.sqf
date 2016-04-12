@@ -29,8 +29,33 @@ _sent = 0;
 {
 	private["_number"];
 	_number= [_x ] call CBA_fnc_trim;
+	
 	switch (_number) do
 	{
+		case "CIV":
+		{
+			if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "phone_send_global_message") isEqualTo 1) then
+			{
+				if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "phone_send_global_message_rank") <= (player getVariable ["rank", 0])) then
+				{
+					_sent = _sent + 1;
+					[_msg, str(playerSide), false] remoteExecCall ["AlysiaClient_fnc_phone_message_receive", civilian];
+				} else {
+					_error = _error + format
+					[
+						"<t align='left'>Numéro</t><t align='right'>[%1]</t><br/>Vous n'avez pas le <t color='#FF4000'>grade</t> suffisant<br/><t align='center'>----------</t><br/>",
+						_number
+					];
+				};
+			} else {
+				_error = _error + format
+				[
+					"<t align='left'>Numéro</t><t align='right'>[%1]</t><br/>Vous n'avez pas les <t color='#FF4000'>autorisations</t> suffisante<br/><t align='center'>----------</t><br/>",
+					_number
+				];
+			};
+		};
+
 		case "GUER":
 		{
 			if ((independent countSide allPlayers) isEqualTo 0) then

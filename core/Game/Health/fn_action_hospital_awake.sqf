@@ -19,3 +19,4 @@ while {((player getVariable ["is_coma", false]) && ((attachedTo player) isEqualT
 	if (random(100) <= 15) exitWith {player setVariable ["is_coma", false, true]};
 	uiSleep 10;
 };
+

@@ -7,7 +7,7 @@ class ALYSIA_SHOPS_ARMA
 		stocks[] =
 		{
 			"Bank_Key1_S",
-			"SkylineItems_TelephoneTactile",
+			"Lyeed_Phone",
 			"Alysia_Identity_Garde",
 			"hgun_FlashBall_F",
 			"1Rnd_FlashBall_Mag",
@@ -46,7 +46,7 @@ class ALYSIA_SHOPS_ARMA
 		stocks[] =
 		{
 			"Bank_Key1_N",
-			"SkylineItems_TelephoneTactile",
+			"Lyeed_Phone",
 			"Alysia_Identity_Milice",
 			"hgun_FlashBall_F",
 			"1Rnd_FlashBall_Mag",
@@ -98,7 +98,7 @@ class ALYSIA_SHOPS_ARMA
 		side = "CIV";
 		stocks[] =
 		{
-			"SkylineItems_TelephoneTactile",
+			"Lyeed_Phone",
 			"Skyline_Hache_01",
 			"Skyline_Pioche_01",
 			"Skyline_Pelle_01",
@@ -127,7 +127,7 @@ class ALYSIA_SHOPS_ARMA
 		stocks[] =
 		{
 			"SkylineItems_Bandage",
-			"SkylineItems_TelephoneTactile",
+			"Lyeed_Phone",
 			"ItemMap",
 			"ItemGPS",
 			"Binocular",

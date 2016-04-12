@@ -1,4 +1,4 @@
-#define PHONE_BACKGROUND                      "lyeed_IMG\data\phone\background.jpg"
+#define PHONE_BACKGROUND                      "lyeed_IMG\data\phone\background_1.jpg"
 
 #define PHONE_RETURN_IMAGE_IDC                8520
 #define PHONE_RETURN_BUTTON_IDC               8521
@@ -51,21 +51,7 @@ PHONE_CATEGORY_BACKGROUND = PHONE_BACKGROUND;
 PHONE_CATEGORY_IDCS[] =
 {
 	PHONE_CATEGORY_NUMBER_IDC,
-	PHONE_CATEGORY_FORFAIT_IDC, 
-	PHONE_CATEGORY_APP_1_PICTURE_IDC,
-	PHONE_CATEGORY_APP_1_BUTTON_IDC,
-	PHONE_CATEGORY_APP_2_PICTURE_IDC,
-	PHONE_CATEGORY_APP_2_BUTTON_IDC,
-	PHONE_CATEGORY_APP_3_PICTURE_IDC,
-	PHONE_CATEGORY_APP_3_BUTTON_IDC,
-	PHONE_CATEGORY_APP_4_PICTURE_IDC,
-	PHONE_CATEGORY_APP_4_BUTTON_IDC,
-	PHONE_CATEGORY_APP_5_PICTURE_IDC,
-	PHONE_CATEGORY_APP_5_BUTTON_IDC,
-	PHONE_CATEGORY_APP_6_PICTURE_IDC,
-	PHONE_CATEGORY_APP_6_BUTTON_IDC,
-	PHONE_CATEGORY_APP_7_PICTURE_IDC,
-	PHONE_CATEGORY_APP_7_BUTTON_IDC
+	PHONE_CATEGORY_FORFAIT_IDC
 };
 
 class PHONE_CATEGORY_NUMBER: RscStructuredText
@@ -90,7 +76,6 @@ class PHONE_CATEGORY_FORFAIT: RscStructuredText
 class PHONE_CATEGORY_APP_1_PICTURE: RscPicture
 {
 	idc = PHONE_CATEGORY_APP_1_PICTURE_IDC;
-	text = "lyeed_IMG\data\phone\main\sms.paa";
 
 	x = 0.355625 * safezoneW + safezoneX;
 	y = 0.434 * safezoneH + safezoneY;
@@ -100,10 +85,6 @@ class PHONE_CATEGORY_APP_1_PICTURE: RscPicture
 class PHONE_CATEGORY_APP_1_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CATEGORY_APP_1_BUTTON_IDC;
-	action = "[""phone_messages_read""] spawn AlysiaClient_fnc_tabletApp;";
-	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\sms_select.paa""];";
-	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\sms.paa""];";
-	tooltip = "Messages reçus";
 
 	x = 0.355625 * safezoneW + safezoneX;
 	y = 0.434 * safezoneH + safezoneY;
@@ -114,7 +95,6 @@ class PHONE_CATEGORY_APP_1_BUTTON: RscButtonSilent
 class PHONE_CATEGORY_APP_2_PICTURE: RscPicture
 {
 	idc = PHONE_CATEGORY_APP_2_PICTURE_IDC;
-	text = "lyeed_IMG\data\phone\main\contact.paa";
 
 	x = 0.443281 * safezoneW + safezoneX;
 	y = 0.434 * safezoneH + safezoneY;
@@ -124,10 +104,6 @@ class PHONE_CATEGORY_APP_2_PICTURE: RscPicture
 class PHONE_CATEGORY_APP_2_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CATEGORY_APP_2_BUTTON_IDC;
-	action = "[""phone_contacts""] spawn AlysiaClient_fnc_tabletApp;";
-	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\contact_select.paa""];";
-	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\contact.paa""];";
-	tooltip = "Contacts";
 
 	x = 0.443281 * safezoneW + safezoneX;
 	y = 0.434 * safezoneH + safezoneY;
@@ -138,7 +114,6 @@ class PHONE_CATEGORY_APP_2_BUTTON: RscButtonSilent
 class PHONE_CATEGORY_APP_3_PICTURE: RscPicture
 {
 	idc = PHONE_CATEGORY_APP_3_PICTURE_IDC;
-	text = "lyeed_IMG\data\phone\main\send.paa";
 
 	x = 0.520625 * safezoneW + safezoneX;
 	y = 0.434 * safezoneH + safezoneY;
@@ -148,10 +123,6 @@ class PHONE_CATEGORY_APP_3_PICTURE: RscPicture
 class PHONE_CATEGORY_APP_3_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CATEGORY_APP_3_BUTTON_IDC;
-	action = "[""phone_messages_send""] spawn AlysiaClient_fnc_tabletApp;";
-	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\send_select.paa""];";
-	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\send.paa""];";
-	tooltip = "Envoyer un message";
 
 	x = 0.520625 * safezoneW + safezoneX;
 	y = 0.434 * safezoneH + safezoneY;
@@ -162,7 +133,6 @@ class PHONE_CATEGORY_APP_3_BUTTON: RscButtonSilent
 class PHONE_CATEGORY_APP_4_PICTURE: RscPicture
 {
 	idc = PHONE_CATEGORY_APP_4_PICTURE_IDC;
-	text = "lyeed_IMG\data\phone\main\forfait.paa";
 
 	x = 0.597969 * safezoneW + safezoneX;
 	y = 0.434 * safezoneH + safezoneY;
@@ -172,10 +142,6 @@ class PHONE_CATEGORY_APP_4_PICTURE: RscPicture
 class PHONE_CATEGORY_APP_4_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CATEGORY_APP_4_BUTTON_IDC;
-	action = "[""store_forfait""] spawn AlysiaClient_fnc_tabletApp;";
-	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\forfait_select.paa""];";
-	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\forfait.paa""];";
-	tooltip = "Changer de forfait";
 
 	x = 0.597969 * safezoneW + safezoneX;
 	y = 0.434 * safezoneH + safezoneY;
@@ -186,7 +152,6 @@ class PHONE_CATEGORY_APP_4_BUTTON: RscButtonSilent
 class PHONE_CATEGORY_APP_5_PICTURE: RscPicture
 {
 	idc = PHONE_CATEGORY_APP_5_PICTURE_IDC;
-	text = "lyeed_IMG\data\phone\main\number.paa";
 
 	x = 0.355625 * safezoneW + safezoneX;
 	y = 0.555 * safezoneH + safezoneY;
@@ -196,10 +161,6 @@ class PHONE_CATEGORY_APP_5_PICTURE: RscPicture
 class PHONE_CATEGORY_APP_5_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CATEGORY_APP_5_BUTTON_IDC;
-	action = "[] spawn AlysiaClient_fnc_APP_phone_change;";
-	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\number_select.paa""];";
-	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\number.paa""];";
-	tooltip = "Changer de numéro";
 
 	x = 0.355625 * safezoneW + safezoneX;
 	y = 0.555 * safezoneH + safezoneY;
@@ -210,7 +171,6 @@ class PHONE_CATEGORY_APP_5_BUTTON: RscButtonSilent
 class PHONE_CATEGORY_APP_6_PICTURE: RscPicture
 {
 	idc = PHONE_CATEGORY_APP_6_PICTURE_IDC;
-	text = "lyeed_IMG\data\phone\main\blacklist.paa";
 
 	x = 0.443281 * safezoneW + safezoneX;
 	y = 0.555 * safezoneH + safezoneY;
@@ -220,10 +180,6 @@ class PHONE_CATEGORY_APP_6_PICTURE: RscPicture
 class PHONE_CATEGORY_APP_6_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CATEGORY_APP_6_BUTTON_IDC;
-	action = "[""phone_blacklist""] spawn AlysiaClient_fnc_tabletApp;";
-	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\blacklist_select.paa""];";
-	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\blacklist.paa""];";
-	tooltip = "Bloquer un numéro";
 
 	x = 0.443281 * safezoneW + safezoneX;
 	y = 0.555 * safezoneH + safezoneY;
@@ -234,7 +190,6 @@ class PHONE_CATEGORY_APP_6_BUTTON: RscButtonSilent
 class PHONE_CATEGORY_APP_7_PICTURE: RscPicture
 {
 	idc = PHONE_CATEGORY_APP_7_PICTURE_IDC;
-	text = "lyeed_IMG\data\phone\main\config.paa";
 
 	x = 0.520625 * safezoneW + safezoneX;
 	y = 0.555 * safezoneH + safezoneY;
@@ -244,10 +199,6 @@ class PHONE_CATEGORY_APP_7_PICTURE: RscPicture
 class PHONE_CATEGORY_APP_7_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CATEGORY_APP_7_BUTTON_IDC;
-	action = "[""phone_settings""] spawn AlysiaClient_fnc_tabletApp;";
-	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\config_select.paa""];";
-	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\config.paa""];";
-	tooltip = "Réglages";
 
 	x = 0.520625 * safezoneW + safezoneX;
 	y = 0.555 * safezoneH + safezoneY;
@@ -258,7 +209,6 @@ class PHONE_CATEGORY_APP_7_BUTTON: RscButtonSilent
 class PHONE_CATEGORY_APP_8_PICTURE: RscPicture
 {
 	idc = PHONE_CATEGORY_APP_8_PICTURE_IDC;
-	text = "lyeed_IMG\data\phone\main\faction.paa";
 
 	x = 0.597969 * safezoneW + safezoneX;
 	y = 0.555 * safezoneH + safezoneY;
@@ -268,10 +218,6 @@ class PHONE_CATEGORY_APP_8_PICTURE: RscPicture
 class PHONE_CATEGORY_APP_8_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CATEGORY_APP_8_BUTTON_IDC;
-	action = "[""phone_faction""] spawn AlysiaClient_fnc_tabletApp;";
-	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\faction_select.paa""];";
-	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\main\faction.paa""];";
-	tooltip = "Envoyer un message faction";
 
 	x = 0.597969 * safezoneW + safezoneX;
 	y = 0.555 * safezoneH + safezoneY;
@@ -1012,70 +958,6 @@ class PHONE_CONTACTS_ADD_NAME_INFO : RscEdit
 };
 /* ===================================================================================================================== */
 
-// =======================================[Faction]=======================================
-#define PHONE_FACTION_MESSAGE_HEADER_IDC 		8392
-#define PHONE_FACTION_MESSAGE_INFO_IDC 			8393
-#define PHONE_FACTION_MESSAGE_SEND_IMAGE_IDC 	8394
-#define PHONE_FACTION_MESSAGE_SEND_BUTTON_IDC	8395
-
-PHONE_FACTION_BACKGROUND = PHONE_BACKGROUND;
-PHONE_FACTION_IDCS[] =
-{
-	PHONE_RETURN_IMAGE_IDC,
-	PHONE_RETURN_BUTTON_IDC,
-	PHONE_FACTION_MESSAGE_HEADER_IDC,
-	PHONE_FACTION_MESSAGE_INFO_IDC,
-	PHONE_FACTION_MESSAGE_SEND_IMAGE_IDC,
-	PHONE_FACTION_MESSAGE_SEND_BUTTON_IDC
-};
-
-class PHONE_FACTION_MESSAGE_HEADER: RscStructuredText
-{
-	idc = PHONE_FACTION_MESSAGE_HEADER_IDC;
-	text = "<t align='center'>Message</t>";
-	colorBackground[] = {0,0,0,1};
-
-	x = 0.381406 * safezoneW + safezoneX;
-	y = 0.412 * safezoneH + safezoneY;
-	w = 0.252656 * safezoneW;
-	h = 0.022 * safezoneH;
-};
-class PHONE_FACTION_MESSAGE_INFO: RscEdit
-{
-	idc = PHONE_FACTION_MESSAGE_INFO_IDC;
-	style = 16;
-
-	x = 0.381406 * safezoneW + safezoneX;
-	y = 0.434 * safezoneH + safezoneY;
-	w = 0.252656 * safezoneW;
-	h = 0.242 * safezoneH;
-};
-
-class PHONE_FACTION_MESSAGE_SEND_IMAGE: RscPicture
-{
-	idc = PHONE_FACTION_MESSAGE_SEND_IMAGE_IDC;
-	text = "lyeed_IMG\data\phone\send.paa";
-
-	x = 0.484531 * safezoneW + safezoneX;
-	y = 0.346 * safezoneH + safezoneY;
-	w = 0.0360937 * safezoneW;
-	h = 0.055 * safezoneH;
-};
-class PHONE_FACTION_MESSAGE_SEND_BUTTON: RscButtonSilent
-{
-	idc = PHONE_FACTION_MESSAGE_SEND_BUTTON_IDC;
-	action = "[ctrlText 8393, playerSide] call AlysiaClient_fnc_APP_phone_faction_send;";
-	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\send_select.paa""];";
-	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1, ""lyeed_IMG\data\phone\send.paa""];";
-	tooltip = "Envoyer";
-
-	x = 0.484531 * safezoneW + safezoneX;
-	y = 0.346 * safezoneH + safezoneY;
-	w = 0.0360937 * safezoneW;
-	h = 0.055 * safezoneH;
-};
-/* ===================================================================================================================== */
-
 // =======================================[Blacklist]=======================================
 #define PHONE_BLACKLIST_LIST_FRAME_IDC         8530
 #define PHONE_BLACKLIST_LIST_HEADER_IDC        8531
@@ -1217,4 +1099,457 @@ class PHONE_BLACKLIST_ADD_NUMBER_INFO : RscEdit
 	y = 0.599 * safezoneH + safezoneY;
 	w = 0.0721875 * safezoneW;
 	h = 0.022 * safezoneH;
+};
+/* ===================================================================================================================== */
+
+// =======================================[Call]=======================================
+#define PHONE_CALL_DIGIT_0_IMAGE_IDC        8900
+#define PHONE_CALL_DIGIT_0_BUTTON_IDC       8901
+#define PHONE_CALL_DIGIT_7_IMAGE_IDC        8902
+#define PHONE_CALL_DIGIT_7_BUTTON_IDC       8903
+#define PHONE_CALL_DIGIT_8_IMAGE_IDC        8904
+#define PHONE_CALL_DIGIT_8_BUTTON_IDC       8905
+#define PHONE_CALL_DIGIT_9_IMAGE_IDC        8906
+#define PHONE_CALL_DIGIT_9_BUTTON_IDC       8907
+#define PHONE_CALL_DIGIT_6_IMAGE_IDC        8908
+#define PHONE_CALL_DIGIT_6_BUTTON_IDC       8909
+#define PHONE_CALL_DIGIT_5_IMAGE_IDC        8910
+#define PHONE_CALL_DIGIT_5_BUTTON_IDC       8911
+#define PHONE_CALL_DIGIT_4_IMAGE_IDC        8912
+#define PHONE_CALL_DIGIT_4_BUTTON_IDC       8913
+#define PHONE_CALL_DIGIT_3_IMAGE_IDC        8914
+#define PHONE_CALL_DIGIT_3_BUTTON_IDC       8915
+#define PHONE_CALL_DIGIT_2_IMAGE_IDC        8916
+#define PHONE_CALL_DIGIT_2_BUTTON_IDC       8917
+#define PHONE_CALL_DIGIT_1_IMAGE_IDC        8918
+#define PHONE_CALL_DIGIT_1_BUTTON_IDC       8919
+#define PHONE_CALL_NUMBER_IDC               8920
+#define PHONE_CALL_ACTION_CALL_IMAGE_IDC    8921
+#define PHONE_CALL_ACTION_CALL_BUTTON_IDC   8922
+#define PHONE_CALL_ACTION_BACK_IMAGE_IDC    8923
+#define PHONE_CALL_ACTION_BACK_BUTTON_IDC   8924
+#define PHONE_CALL_ACTION_SUPPR_IMAGE_IDC   8925
+#define PHONE_CALL_ACTION_SUPPR_BUTTON_IDC  8926
+
+PHONE_CALL_BACKGROUND = "lyeed_IMG\data\phone\background_2.jpg";
+PHONE_CALL_IDCS[] =
+{
+	PHONE_RETURN_IMAGE_IDC,
+	PHONE_RETURN_BUTTON_IDC,
+	PHONE_CALL_DIGIT_0_IMAGE_IDC,
+	PHONE_CALL_DIGIT_0_BUTTON_IDC,
+	PHONE_CALL_DIGIT_7_IMAGE_IDC,
+	PHONE_CALL_DIGIT_7_BUTTON_IDC,
+	PHONE_CALL_DIGIT_8_IMAGE_IDC,
+	PHONE_CALL_DIGIT_8_BUTTON_IDC,
+	PHONE_CALL_DIGIT_9_IMAGE_IDC,
+	PHONE_CALL_DIGIT_9_BUTTON_IDC,
+	PHONE_CALL_DIGIT_6_IMAGE_IDC,
+	PHONE_CALL_DIGIT_6_BUTTON_IDC,
+	PHONE_CALL_DIGIT_5_IMAGE_IDC,
+	PHONE_CALL_DIGIT_5_BUTTON_IDC,
+	PHONE_CALL_DIGIT_4_IMAGE_IDC,
+	PHONE_CALL_DIGIT_4_BUTTON_IDC,
+	PHONE_CALL_DIGIT_3_IMAGE_IDC,
+	PHONE_CALL_DIGIT_3_BUTTON_IDC,
+	PHONE_CALL_DIGIT_2_IMAGE_IDC,
+	PHONE_CALL_DIGIT_2_BUTTON_IDC,
+	PHONE_CALL_DIGIT_1_IMAGE_IDC,
+	PHONE_CALL_DIGIT_1_BUTTON_IDC,
+	PHONE_CALL_NUMBER_IDC,
+	PHONE_CALL_ACTION_CALL_IMAGE_IDC,
+	PHONE_CALL_ACTION_CALL_BUTTON_IDC,
+	PHONE_CALL_ACTION_BACK_IMAGE_IDC,
+	PHONE_CALL_ACTION_BACK_BUTTON_IDC,
+	PHONE_CALL_ACTION_SUPPR_IMAGE_IDC,
+	PHONE_CALL_ACTION_SUPPR_BUTTON_IDC
+};
+
+class PHONE_CALL_DIGIT_0_IMAGE: RscPicture
+{
+	idc = PHONE_CALL_DIGIT_0_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\call\digit_0.paa";
+
+	x = 0.484531 * safezoneW + safezoneX;
+	y = 0.588 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class PHONE_CALL_DIGIT_0_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALL_DIGIT_0_BUTTON_IDC;
+	soundClick[] = {"lyeed_Sounds\data\click_phone.ogg",0.7,1};
+	action = "[0] call AlysiaClient_fnc_APP_phone_call_addDigit;";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_0_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_0.paa""];";
+
+	x = 0.484531 * safezoneW + safezoneX;
+	y = 0.588 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+
+class PHONE_CALL_DIGIT_7_IMAGE: RscPicture
+{
+	idc = PHONE_CALL_DIGIT_7_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\call\digit_7.paa";
+
+	x = 0.448438 * safezoneW + safezoneX;
+	y = 0.533 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class PHONE_CALL_DIGIT_7_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALL_DIGIT_7_BUTTON_IDC;
+	soundClick[] = {"lyeed_Sounds\data\click_phone.ogg",0.7,1};
+	action = "[7] call AlysiaClient_fnc_APP_phone_call_addDigit;";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_7_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_7.paa""];";
+
+	x = 0.448438 * safezoneW + safezoneX;
+	y = 0.533 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+
+class PHONE_CALL_DIGIT_8_IMAGE: RscPicture
+{
+	idc = PHONE_CALL_DIGIT_8_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\call\digit_8.paa";
+
+	x = 0.484531 * safezoneW + safezoneX;
+	y = 0.533 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class PHONE_CALL_DIGIT_8_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALL_DIGIT_8_BUTTON_IDC;
+	soundClick[] = {"lyeed_Sounds\data\click_phone.ogg",0.7,1};
+	action = "[8] call AlysiaClient_fnc_APP_phone_call_addDigit;";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_8_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_8.paa""];";
+
+	x = 0.484531 * safezoneW + safezoneX;
+	y = 0.533 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+
+class PHONE_CALL_DIGIT_9_IMAGE: RscPicture
+{
+	idc = PHONE_CALL_DIGIT_9_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\call\digit_9.paa";
+
+	x = 0.520625 * safezoneW + safezoneX;
+	y = 0.533 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class PHONE_CALL_DIGIT_9_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALL_DIGIT_9_BUTTON_IDC;
+	soundClick[] = {"lyeed_Sounds\data\click_phone.ogg",0.7,1};
+	action = "[9] call AlysiaClient_fnc_APP_phone_call_addDigit;";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_9_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_9.paa""];";
+
+	x = 0.520625 * safezoneW + safezoneX;
+	y = 0.533 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+
+class PHONE_CALL_DIGIT_6_IMAGE: RscPicture
+{
+	idc = PHONE_CALL_DIGIT_6_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\call\digit_6.paa";
+
+	x = 0.520625 * safezoneW + safezoneX;
+	y = 0.478 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class PHONE_CALL_DIGIT_6_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALL_DIGIT_6_BUTTON_IDC;
+	soundClick[] = {"lyeed_Sounds\data\click_phone.ogg",0.7,1};
+	action = "[6] call AlysiaClient_fnc_APP_phone_call_addDigit;";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_6_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_6.paa""];";
+
+	x = 0.520625 * safezoneW + safezoneX;
+	y = 0.478 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+
+class PHONE_CALL_DIGIT_5_IMAGE: RscPicture
+{
+	idc = PHONE_CALL_DIGIT_5_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\call\digit_5.paa";
+
+	x = 0.484531 * safezoneW + safezoneX;
+	y = 0.478 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class PHONE_CALL_DIGIT_5_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALL_DIGIT_5_BUTTON_IDC;
+	soundClick[] = {"lyeed_Sounds\data\click_phone.ogg",0.7,1};
+	action = "[5] call AlysiaClient_fnc_APP_phone_call_addDigit;";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_5_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_5.paa""];";
+
+	x = 0.484531 * safezoneW + safezoneX;
+	y = 0.478 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+
+class PHONE_CALL_DIGIT_4_IMAGE: RscPicture
+{
+	idc = PHONE_CALL_DIGIT_4_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\call\digit_4.paa";
+
+	x = 0.448438 * safezoneW + safezoneX;
+	y = 0.478 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class PHONE_CALL_DIGIT_4_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALL_DIGIT_4_BUTTON_IDC;
+	soundClick[] = {"lyeed_Sounds\data\click_phone.ogg",0.7,1};
+	action = "[4] call AlysiaClient_fnc_APP_phone_call_addDigit;";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_4_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_4.paa""];";
+
+	x = 0.448438 * safezoneW + safezoneX;
+	y = 0.478 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+
+class PHONE_CALL_DIGIT_3_IMAGE: RscPicture
+{
+	idc = PHONE_CALL_DIGIT_3_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\call\digit_3.paa";
+
+	x = 0.520625 * safezoneW + safezoneX;
+	y = 0.423 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class PHONE_CALL_DIGIT_3_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALL_DIGIT_3_BUTTON_IDC;
+	soundClick[] = {"lyeed_Sounds\data\click_phone.ogg",0.7,1};
+	action = "[3] call AlysiaClient_fnc_APP_phone_call_addDigit;";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_3_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_3.paa""];";
+
+	x = 0.520625 * safezoneW + safezoneX;
+	y = 0.423 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+
+class PHONE_CALL_DIGIT_2_IMAGE: RscPicture
+{
+	idc = PHONE_CALL_DIGIT_2_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\call\digit_2.paa";
+
+	x = 0.484531 * safezoneW + safezoneX;
+	y = 0.423 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class PHONE_CALL_DIGIT_2_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALL_DIGIT_2_BUTTON_IDC;
+	soundClick[] = {"lyeed_Sounds\data\click_phone.ogg",0.7,1};
+	action = "[2] call AlysiaClient_fnc_APP_phone_call_addDigit;";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_2_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_2.paa""];";
+
+	x = 0.484531 * safezoneW + safezoneX;
+	y = 0.423 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+
+class PHONE_CALL_DIGIT_1_IMAGE: RscPicture
+{
+	idc = PHONE_CALL_DIGIT_1_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\call\digit_1.paa";
+
+	x = 0.448438 * safezoneW + safezoneX;
+	y = 0.423 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class PHONE_CALL_DIGIT_1_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALL_DIGIT_1_BUTTON_IDC;
+	soundClick[] = {"lyeed_Sounds\data\click_phone.ogg",0.7,1};
+	action = "[1] call AlysiaClient_fnc_APP_phone_call_addDigit;";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_1_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\digit_1.paa""];";
+
+	x = 0.448438 * safezoneW + safezoneX;
+	y = 0.423 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+
+class PHONE_CALL_NUMBER: RscStructuredText
+{
+	idc = PHONE_CALL_NUMBER_IDC;
+
+	x = 0.402031 * safezoneW + safezoneX;
+	y = 0.357 * safezoneH + safezoneY;
+	w = 0.190781 * safezoneW;
+	h = 0.055 * safezoneH;
+};
+
+class PHONE_CALL_ACTION_CALL_IMAGE: RscPicture
+{
+	idc = PHONE_CALL_ACTION_CALL_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\call\call.paa";
+
+	x = 0.484531 * safezoneW + safezoneX;
+	y = 0.643 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class PHONE_CALL_ACTION_CALL_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALL_ACTION_CALL_BUTTON_IDC;
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\call_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\call.paa""];";
+	action = "[] spawn AlysiaClient_fnc_APP_phone_call_action;";
+
+	x = 0.484531 * safezoneW + safezoneX;
+	y = 0.643 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+
+class PHONE_CALL_ACTION_BACK_IMAGE: RscPicture
+{
+	idc = PHONE_CALL_ACTION_BACK_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\call\action_back.paa";
+
+	x = 0.448438 * safezoneW + safezoneX;
+	y = 0.588 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class PHONE_CALL_ACTION_BACK_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALL_ACTION_BACK_BUTTON_IDC;
+	action = "[] call AlysiaClient_fnc_APP_phone_call_back;";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\action_back_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\action_back.paa""];";
+
+	x = 0.448438 * safezoneW + safezoneX;
+	y = 0.588 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+
+class PHONE_CALL_ACTION_SUPPR_IMAGE: RscPicture
+{
+	idc = PHONE_CALL_ACTION_SUPPR_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\call\action_delete.paa";
+
+	x = 0.520625 * safezoneW + safezoneX;
+	y = 0.588 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class PHONE_CALL_ACTION_SUPPR_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALL_ACTION_SUPPR_BUTTON_IDC;
+	action = "[] call AlysiaClient_fnc_APP_phone_call_suppr;";
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\action_delete_select.paa""];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\action_delete.paa""];";
+
+	x = 0.520625 * safezoneW + safezoneX;
+	y = 0.588 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+/* ===================================================================================================================== */
+
+// =======================================[Calling]=======================================
+#define PHONE_CALLING_ACTION_CALL_IMAGE_IDC   11000
+#define PHONE_CALLING_ACTION_CALL_BUTTON_IDC  11001        
+#define PHONE_CALLING_FRAME_IDC               11002
+#define PHONE_CALLING_NUMBER_IDC              11003
+#define PHONE_CALLING_TIMER_IDC               11004
+
+PHONE_CALLING_BACKGROUND = "lyeed_IMG\data\phone\background_2.jpg";
+PHONE_CALLING_IDCS[] =
+{
+	PHONE_CALLING_ACTION_CALL_IMAGE_IDC,
+	PHONE_CALLING_ACTION_CALL_BUTTON_IDC,
+	PHONE_CALLING_FRAME_IDC,
+	PHONE_CALLING_NUMBER_IDC,
+	PHONE_CALLING_TIMER_IDC
+};
+
+class PHONE_CALLING_ACTION_CALL_IMAGE: RscPicture
+{
+	idc = PHONE_CALLING_ACTION_CALL_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\call\call_stop.paa";
+
+	x = 0.484531 * safezoneW + safezoneX;
+	y = 0.643 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class PHONE_CALLING_ACTION_CALL_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALLING_ACTION_CALL_BUTTON_IDC;
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,'lyeed_IMG\data\phone\call\call_stop_select.paa'];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,'lyeed_IMG\data\phone\call\call_stop.paa'];";
+	action = "player setVariable ['calling', false];";
+
+	x = 0.484531 * safezoneW + safezoneX;
+	y = 0.643 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+
+class PHONE_CALLING_FRAME: RscText
+{
+	idc = PHONE_CALLING_FRAME_IDC;
+	colorBackground[] = {0,0,0,0.6};
+	
+	x = 0.391719 * safezoneW + safezoneX;
+	y = 0.379 * safezoneH + safezoneY;
+	w = 0.211406 * safezoneW;
+	h = 0.253 * safezoneH;
+};
+class PHONE_CALLING_NUMBER: RscStructuredText
+{
+	idc = PHONE_CALLING_NUMBER_IDC;
+
+	x = 0.396875 * safezoneW + safezoneX;
+	y = 0.412 * safezoneH + safezoneY;
+	w = 0.201094 * safezoneW;
+	h = 0.066 * safezoneH;
+};
+class PHONE_CALLING_TIMER: RscStructuredText
+{
+	idc = PHONE_CALLING_TIMER_IDC;
+
+	x = 0.391719 * safezoneW + safezoneX;
+	y = 0.522 * safezoneH + safezoneY;
+	w = 0.211406 * safezoneW;
+	h = 0.033 * safezoneH;
 };

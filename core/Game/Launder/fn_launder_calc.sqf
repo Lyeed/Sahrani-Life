@@ -13,6 +13,7 @@ switch (true) do
 	case (_amount > 0 && _amount < 30000): {_amount * 0.6};
 	case (_amount >= 30000 && _amount < 100000): {_amount * 0.7};
 	case (_amount >= 100000 && _amount < 500000): {_amount * 0.8};
-	case (_amount >= 500000): {_amount * 0.9};
+	case (_amount >= 500000 && _amount < 1000000): {_amount * 0.9};
+	case (_amount >= 1000000): {_amount * 0.95};
 	default {_amount};
 };

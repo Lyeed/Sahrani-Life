@@ -96,7 +96,13 @@
 		[
 			"bed",
 			"Sortir",
-			"detach g_interaction_target;",
+			"
+				detach g_interaction_target;
+				if (g_interaction_target getVariable ['bed_awake', false]) then
+				{
+					g_interaction_target setVariable ['bed_awake', false, true];
+				};
+			",
 			"
 				(typeOf(attachedTo g_interaction_target) in ['HospitalTable_F','HealTable_F','HospitalBed_F'])
 			"

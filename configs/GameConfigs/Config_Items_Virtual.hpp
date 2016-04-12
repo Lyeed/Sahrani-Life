@@ -86,7 +86,7 @@ class ALYSIA_ITEMS
 		buy_license_GUER = "guer_gen";
 		weight = 3;
 		price_buy = 24500;
-		image = "";
+		image = "alysia_items_virtual\data\adn.paa";
 	};
 
 	class nitro
@@ -207,7 +207,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Sacs de sable";
 		weight = 10;
-		image = "";
+		image = "alysia_items_virtual\data\bagfence_sand.paa";
 		class use
 		{
 			action = "['bagfence_sand'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
@@ -217,7 +217,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Piège anti-chars";
 		weight = 19;
-		image = "";
+		image = "alysia_items_virtual\data\antitank_steel.paa";
 		class use
 		{
 			action = "['antitank_steel'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
@@ -227,7 +227,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Abri en bois";
 		weight = 13;
-		image = "";
+		image = "alysia_items_virtual\data\guardshed_wood.paa";
 		class use
 		{
 			action = "['guardshed_wood'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
@@ -689,13 +689,13 @@ class ALYSIA_ITEMS
 	{
 		name = "Jus de citrouille";
 		weight = 1;
-		image = "";
+		image = "alysia_items_virtual\data\pumpkin_juice.paa";
 	};
 	class pumpkin_bottle
 	{
 		name = "Bouteille de jus de citrouille";
 		weight = 2;
-		image = "";
+		image = "alysia_items_virtual\data\pumpkin_bottle.paa";
 		class food
 		{
 			thirst = 40;
@@ -1798,16 +1798,16 @@ class ALYSIA_ITEMS
 	{
 		name = "Scalpel chirurgical";
 		weight = 1;
-		image = "";
+		image = "alysia_items_virtual\data\scalpel.paa";
 	};
 
 	class perqui_north
 	{
 		name = "Mandat de perquisition";
 		weight = 1;
-		image = "";
 		price_buy = 5000;
 		buy_license_CIV = "judge";
+		image = "alysia_items_virtual\data\perqui_north.paa";
 		class use
 		{
 			action = "['NORTH', 'perqui_north', west] spawn AlysiaClient_fnc_item_perquisition;";
@@ -1817,7 +1817,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Ordonnance de fouille";
 		weight = 1;
-		image = "";
+		image = "alysia_items_virtual\data\perqui_south.paa";
 		price_buy = 5000;
 		buy_license_CIV = "central_com";
 		class use
@@ -1831,7 +1831,7 @@ class ALYSIA_ITEMS
 		name = "Patron arme (AK74)";
 		weight = 0;
 		price_buy = 575000;
-		image = "";
+		image = "alysia_items_virtual\data\patron.paa";
 		class use
 		{
 			action = "[['weapon_ak_1','weapon_ak_2','weapon_ak_3','magazine_ak','scope_ak'], 'lab_weapon', 'patron_AK74'] call AlysiaClient_fnc_item_patron;";
@@ -1842,7 +1842,7 @@ class ALYSIA_ITEMS
 		name = "Patron arme (M21)";
 		weight = 0;
 		price_buy = 825000;
-		image = "";
+		image = "alysia_items_virtual\data\patron.paa";
 		class use
 		{
 			action = "[['weapon_m21','magazine_m21','scope_m21'], 'lab_weapon', 'patron_M21'] call AlysiaClient_fnc_item_patron;";
@@ -1853,7 +1853,7 @@ class ALYSIA_ITEMS
 		name = "Patron arme (CZ)";
 		weight = 0;
 		price_buy = 439000;
-		image = "";
+		image = "alysia_items_virtual\data\patron.paa";
 		class use
 		{
 			action = "[['weapon_cz','magazine_cz'], 'lab_weapon', 'patron_CZ'] call AlysiaClient_fnc_item_patron;";
@@ -1864,7 +1864,7 @@ class ALYSIA_ITEMS
 		name = "Patron arme (Fusil scié)";
 		weight = 0;
 		price_buy = 210000;
-		image = "";
+		image = "alysia_items_virtual\data\patron.paa";
 		class use
 		{
 			action = "[['weapon_sawed','magazine_sawed'], 'lab_weapon', 'patron_sawed'] call AlysiaClient_fnc_item_patron;";
@@ -1875,7 +1875,7 @@ class ALYSIA_ITEMS
 		name = "Patron arme (AKM)";
 		weight = 0;
 		price_buy = 995000;
-		image = "";
+		image = "alysia_items_virtual\data\patron.paa";
 		class use
 		{
 			action = "[['weapon_AKM_1','weapon_AKM_2','magazine_AKM','scope_AKM'], 'lab_weapon', 'patron_AKM'] call AlysiaClient_fnc_item_patron;";
@@ -1886,7 +1886,7 @@ class ALYSIA_ITEMS
 		name = "Patron arme (Mosin)";
 		weight = 0;
 		price_buy = 260000;
-		image = "";
+		image = "alysia_items_virtual\data\patron.paa";
 		class use
 		{
 			action = "[['weapon_mosin_1','weapon_mosin_2','magazine_mosin'], 'lab_weapon', 'patron_mosin'] call AlysiaClient_fnc_item_patron;";
@@ -1897,7 +1897,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Comprimé de Nurofex";
 		weight = 1;
-		image = "";
+		image = "alysia_items_virtual\data\medoc_rhume.paa";
 		class food
 		{
 			sound = "painkiller_01";
@@ -1907,7 +1907,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Bouteille de Sirop de Tussidax";
 		weight = 1;
-		image = "";
+		image = "alysia_items_virtual\data\medoc_toux_1.paa";
 		class food
 		{
 			thirst = 10;
@@ -1918,7 +1918,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Comprimé de Padéryx";
 		weight = 1;
-		image = "";
+		image = "alysia_items_virtual\data\medoc_toux_2.paa";
 		class food
 		{
 			sound = "painkiller_01";
@@ -1929,7 +1929,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Stethoscope";
 		weight = 2;
-		image = "";
+		image = "alysia_items_virtual\data\stethoscope.paa";
 		price_buy = 1600;
 	};
 };

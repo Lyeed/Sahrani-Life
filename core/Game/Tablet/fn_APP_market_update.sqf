@@ -52,7 +52,7 @@ _diff = _price - _sync;
 	if (getNumber(_config >> "illegal") isEqualTo 1) then {"Non"} else {"Oui"},
 	if (_diff >= 0) then {"+"} else {"-"},
 	if (_diff >= 0) then {"#3ADF00"} else {"#DF0101"},
-	[_diff] call AlysiaClient_fnc_numberText
+	[abs _diff] call AlysiaClient_fnc_numberText
 ];
 
 _affect = _display displayCtrl 8807;

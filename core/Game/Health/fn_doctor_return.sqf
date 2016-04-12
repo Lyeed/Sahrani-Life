@@ -5,9 +5,10 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_medecines", "_deseases", "_other", "_pouls", "_maxPouls", "_temp"];
+private["_medecines", "_deseases", "_other", "_pouls", "_maxPouls", "_temp", "_target"];
 _medecines = [_this, 0, [], [[]]] call BIS_fnc_param;
 _deseases = [_this, 1, [], [[]]] call BIS_fnc_param;
+_target = [_this, 2, objNull, [objNull]] call BIS_fnc_param;
 
 if (["Diagnostic médical", 15, _target] call AlysiaClient_fnc_showProgress) then
 {

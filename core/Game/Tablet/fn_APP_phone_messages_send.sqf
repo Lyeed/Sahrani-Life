@@ -32,9 +32,19 @@ _list lbAdd getText(missionConfigFile >> "ALYSIA_FACTIONS" >> "EAST" >> "name");
 _list lbSetData [2, "EAST"];
 _list lbSetPicture [2, getText(missionConfigFile >> "ALYSIA_FACTIONS" >> "EAST" >> "icon")];
 
+if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "phone_send_global_message") isEqualTo 1) then
+{
+	if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "phone_send_global_message_rank") <= (player getVariable ["rank", 0])) then
+	{
+		_list lbAdd getText(missionConfigFile >> "ALYSIA_FACTIONS" >> "CIV" >> "name");
+		_list lbSetData [2, "CIV"];
+		_list lbSetPicture [2, getText(missionConfigFile >> "ALYSIA_FACTIONS" >> "CIV" >> "icon")];
+	};
+};
+
 {
 	_index = _list lbAdd (_x select 0);
 	_list lbSetData [_index, (_x select 1)];
 	_list lbSetPicture [_index, "lyeed_IMG\data\phone\contact.paa"];
-} forEach (g_phone_contacts);
+} forEach g_phone_contacts;
 _list lbSetCurSel -1;

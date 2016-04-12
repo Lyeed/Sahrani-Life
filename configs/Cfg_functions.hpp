@@ -115,6 +115,7 @@ class CfgFunctions
 		class Tools
 		{
 			file = "core\Tools";
+			class hasPhone {};
 			class getAllHitPointsDamage {};
 			class getVehicleWeightMax {};
 			class transfertVirtualItem {};
@@ -360,8 +361,12 @@ class CfgFunctions
 			class phone_message_receive {};
 			class phone_forfait_change {};
 			class phone_number_to_name {};
+			class phone_number_to_unit {};
 			class phone_get_rings {};
 			class phone_get_ring {};
+			class phone_call_receive {};
+			class phone_call_loop {};
+			class phone_call_end {};
 		};
 
 		class Health
@@ -593,6 +598,11 @@ class CfgFunctions
 			class APP_store_forfait_buy {};
 			class APP_help {};
 			class APP_phone {};
+			class APP_phone_call {};
+			class APP_phone_call_addDigit {};
+			class APP_phone_call_back {};
+			class APP_phone_call_suppr {};
+			class APP_phone_call_action {};
 			class APP_phone_contacts {};
 			class APP_phone_contacts_add {};
 			class APP_phone_messages_read {};
@@ -602,8 +612,6 @@ class CfgFunctions
 			class APP_phone_messages_send_action {};
 			class APP_phone_messages_receive {};
 			class APP_phone_settings {};
-			class APP_phone_faction {};
-			class APP_phone_faction_send {};
 			class APP_phone_change {};
 			class APP_phone_blacklist {};
 			class APP_phone_blacklist_add {};

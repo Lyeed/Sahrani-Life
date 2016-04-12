@@ -1924,11 +1924,6 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver","company_security"};
 		fuel = "SP98";
-
-		//Ajoute la radio longue portée
-		tf_hasLRradio = 1;
-		tf_isolatedAmount = 1;
-		tf_range = 500000;
 	};
 
 	class B_Truck_01_transport_F

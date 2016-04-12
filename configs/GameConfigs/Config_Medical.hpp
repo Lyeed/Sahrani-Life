@@ -33,7 +33,7 @@ class ALYSIA_DESEASES
 	{
 		name = "Rhume";
 		event_sounds[] = {"rhume_1","rhume_2"};
-		event_contagion_chance = 35;
+		event_contagion_chance = 6;
 		reduce_fatigue = 0;
 		pouls = 0;
 		temperature = 0.3;
@@ -48,7 +48,7 @@ class ALYSIA_DESEASES
 	{
 		name = "Toux";
 		event_sounds[] = {"cough_0","cough_1","cough_2"};
-		event_contagion_chance = 10;
+		event_contagion_chance = 2;
 		reduce_fatigue = 0.20;
 		pouls = 40;
 		temperature = 0.6;

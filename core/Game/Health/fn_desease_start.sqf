@@ -54,21 +54,24 @@ while {count(_medecine) > 0} do
 
 		if (_contagion_chance > 0) then
 		{
+			if (getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> (goggles player) >> "protect_contamination_air") isEqualTo 0) then
 			{
-				if ((alive _x) && (_x != player) && !(_x getVariable ["is_coma", false])) then
 				{
-					if (getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> (goggles _x) >> "protect_contamination_air") isEqualTo 0) then
+					if ((alive _x) && (_x != player) && !(_x getVariable ["is_coma", false])) then
 					{
-						if (random(100) <= _contagion_chance) then
+						if (getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> (goggles _x) >> "protect_contamination_air") isEqualTo 0) then
 						{
-							[_type] remoteExec ["AlysiaClient_fnc_desease_start", _x];
+							if (random(100) <= _contagion_chance) then
+							{
+								[_type] remoteExec ["AlysiaClient_fnc_desease_start", _x];
+							};
 						};
 					};
-				};
-			} forEach ((getPos player) nearEntities ["Man", 6]);
+				} forEach ((getPos player) nearEntities ["Man", 5]);
+			};
 		};
 		
-		_event_next = time + round(random(100) + 10);
+		_event_next = time + round(random(100) + 20);
 	};
 
 	if (_maxFatigue isEqualTo 1) then {

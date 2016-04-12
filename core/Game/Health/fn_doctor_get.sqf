@@ -25,7 +25,7 @@ if ((player getVariable ["restrained", false]) || (player getVariable ["surrende
 };
 
 if (_action) then {
-	[g_medecine, g_deseases] remoteExec ["AlysiaClient_fnc_doctor_return", _from];
+	[g_medecine, g_deseases, player] remoteExec ["AlysiaClient_fnc_doctor_return", _from];
 } else {
 	["La cible a <t color='#FF0000'>refusé</t> de se laisser examiner."] remoteExecCall ["AlysiaClient_fnc_info", _from];
 };

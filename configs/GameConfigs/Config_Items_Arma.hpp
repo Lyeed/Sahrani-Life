@@ -2732,9 +2732,9 @@ class ALYSIA_ITEMS_ARMA
         buy_price = 250;
         buy_condition_GUER = 1;
     };
-    class SkylineItems_TelephoneTactile
+    class Lyeed_Phone
     {
-    	buy_price = 350;
+    	buy_price = 450;
     };
     class tf_rt1523g_black
     {
@@ -2796,6 +2796,7 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 		buy_condition_GUER = 1;
+		protect_contamination_air = 1;
 	};
 	class Skyline_GasMask
 	{
