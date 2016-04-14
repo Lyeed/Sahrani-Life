@@ -9,7 +9,7 @@ private["_number", "_ret"];
 _number = [_this, 0, "", [""]] call BIS_fnc_param;
 
 _ret = _number;
-if (_number in ["GUER", "WEST", "EAST"]) then {
+if (_number in ["GUER", "WEST", "EAST", "CIV"]) then {
 	_ret = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> _number >> "name");
 } else {
 	{

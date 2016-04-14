@@ -51,4 +51,10 @@ class ALYSIA_DYN_OBJECTS
 		item = "guardshed_wood";
 		attachTo[] = {0, 3.5, 0.6};
 	};
+	class Siuuz_Brancard_01_F
+	{
+		item = "brancard";
+		attachTo[] = {0, 2, 0.38};
+		escort = 1;
+	};
 };

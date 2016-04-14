@@ -93,7 +93,8 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 			["lyeed_IMG\data\player_hud\weight.paa", "(g_carryWeight > g_maxWeight)"],
 			["lyeed_IMG\data\player_hud\alcohol.paa", "(g_alcool > 0)"],
 			["lyeed_IMG\data\player_hud\fatigue.paa", "((missionNamespace getVariable ['unlimitedRun', 0]) > 0)"],
-			["lyeed_IMG\data\player_hud\bullet_touched.paa","(player getVariable ['bullet_check', false])"]
+			["lyeed_IMG\data\player_hud\bullet_touched.paa", "(player getVariable ['bullet_check', false])"],
+			["lyeed_IMG\data\phone\main\sms.paa", "(([] call AlysiaClient_fnc_hasPhone) && ((count ([] call AlysiaClient_fnc_phone_get_messages_new)) > 0))"]
 		]);
 
 		for "_i" from _idc to 23516 do

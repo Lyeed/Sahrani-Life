@@ -95,9 +95,13 @@ class ALYSIA_SHOPS_ARMA
 	class genstore
 	{
 		name = "Magasin général";
-		side = "CIV";
+		side = "";
 		stocks[] =
 		{
+			"Skyline_Alysia_Parapluie_01_F",
+			"Skyline_Alysia_Parapluie_02_F",
+			"Skyline_Alysia_Parapluie_03_F",
+			"Skyline_Alysia_Parapluie_04_F",
 			"Lyeed_Phone",
 			"Skyline_Hache_01",
 			"Skyline_Pioche_01",

@@ -2809,4 +2809,27 @@ class ALYSIA_ITEMS_ARMA
 		protect_contamination_air = 1;
 		buy_price = 20;
 	};
+
+	class Skyline_Alysia_Parapluie_01_F
+	{
+		buy_price = 160;
+		protect_rain = 1;
+		disableKnockout = 1;
+	};
+	class Skyline_Alysia_Parapluie_02_F: Skyline_Alysia_Parapluie_01_F {};
+	class Skyline_Alysia_Parapluie_03_F: Skyline_Alysia_Parapluie_01_F {};
+	class Skyline_Alysia_Parapluie_04_F: Skyline_Alysia_Parapluie_01_F {};
+
+	class rds_uniform_Policeman
+	{
+		name = "Uniforme du Parti Central";
+		price = 350;
+		buy_license_CIV = "central_com";
+	};
+	class rds_police_cap
+	{
+		name = "Casquette du Parti Central";
+		price = 75;
+		buy_license_CIV = "central_com";
+	};
 };

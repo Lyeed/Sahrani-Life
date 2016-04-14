@@ -12,23 +12,29 @@ scopeName "main";
 
 if ((vehicle player) isEqualTo player) then
 {
-	private "_target";	
+	private "_target";
 
 	if (player getVariable ["sit", false]) then
 	{
 		[] call AlysiaClient_fnc_standUp;
 		true breakOut "main";
 	};
-	if (!(isNull g_dragingBody)) then
+
 	{
-		[true] spawn AlysiaClient_fnc_action_body_drop;
-		true breakOut "main";
-	};
-	if (!(isNull (player getVariable ["escorted", objNull]))) then
-	{
-		[player] spawn AlysiaClient_fnc_stopescort;
-		true breakOut "main";
-	};
+		if (isPlayer _x) then
+		{
+			if (_x getVariable ["is_coma", false]) then {
+				[_x, true] spawn AlysiaClient_fnc_action_body_drop;
+			} else {
+				[_x, true] spawn AlysiaClient_fnc_stopescort;
+			};
+			true breakOut "main";
+		} else {
+			if (isClass(missionConfigFile >> "ALYSIA_DYN_OBJECTS" >> typeOf(_x))) then {
+				detach _x;
+			};
+		};
+	} forEach attachedObjects player;
 
 	_target = cursorObject;
 	if (isNull _target) then 

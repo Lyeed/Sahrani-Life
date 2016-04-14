@@ -23,7 +23,7 @@ _action =
 ] call BIS_fnc_guiMessage;
 if (_action) then
 {
-	[] call AlysiaClient_fnc_phone_numberChange;
+	[] call AlysiaClient_fnc_phone_number_change;
 	[format["Vous avez changé de numéro<br/>Nouveau : <t color='#FF4000'>%1</t>", (player getVariable ["number", ""])]] call AlysiaClient_fnc_info;
 	playSound "buy";
 	[false, 10000, "Changement numéro"] call AlysiaClient_fnc_handleATM;

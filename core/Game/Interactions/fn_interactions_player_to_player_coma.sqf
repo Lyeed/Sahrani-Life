@@ -89,7 +89,7 @@
 			"Installer",
 			"[g_interaction_target] spawn AlysiaClient_fnc_action_bed;",
 			"
-				(count(nearestObjects [g_interaction_target, ['HospitalTable_F','HospitalBed_F','HealTable_F'], 4]) > 0) &&
+				(count(nearestObjects [g_interaction_target, ['HospitalTable_F','HospitalBed_F','HealTable_F','Siuuz_Brancard_01_F'], 4]) > 0) &&
 				(isNull (attachedTo g_interaction_target))
 			"
 		],
@@ -104,7 +104,7 @@
 				};
 			",
 			"
-				(typeOf(attachedTo g_interaction_target) in ['HospitalTable_F','HealTable_F','HospitalBed_F'])
+				(typeOf(attachedTo g_interaction_target) in ['HospitalTable_F','HealTable_F','HospitalBed_F','Siuuz_Brancard_01_F'])
 			"
 		],
 		[

@@ -28,7 +28,7 @@ if (g_phone_forfait != "none") then
 		g_phone_blacklist = [];
 	};
 } else {
-	[] call AlysiaClient_fnc_phone_numberChange;
+	[] call AlysiaClient_fnc_phone_number_change;
 };
 
 g_phone_forfait = _new;

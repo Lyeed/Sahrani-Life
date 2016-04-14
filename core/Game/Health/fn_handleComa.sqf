@@ -9,6 +9,7 @@ private["_time", "_display", "_ctrl_left", "_id", "_ctrl_suicide", "_timer"];
 
 if (g_staff_god) exitWith {};
 if (player getVariable ["is_coma", false]) exitWith {};
+if (!(isNull (findDisplay 350))) exitWith {};
 
 1 fadeSound 0;
 
@@ -24,20 +25,25 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
-if (!(createDialog "RscDisplayComa")) exitWith {};
+createDialog "RscDisplayComa";
 
 if (player getVariable ["surrender", false]) then {player setVariable ["surrender", false, true]};
 if (player getVariable ["restrained", false]) then {player setVariable ["restrained", false, true]};
-if (!(isNull g_dragingBody)) then {[false] call AlysiaClient_fnc_action_body_drop};
-if (!(isNull g_objPut)) then {detach g_objPut};
 
-if (!(isNull (player getVariable ["escorted", objNull]))) then
 {
-	_target = player getVariable ["escorted", objNull];
-	detach player;
-	_target setVariable ["escorting", objNull, true];
-	_target setVariable ["escorted", objNull, true];
-};
+	if (isPlayer _x) then
+	{
+		if (_x getVariable ["is_coma", false]) then {
+			[_x, false] spawn AlysiaClient_fnc_action_body_drop;
+		} else {
+			[_x, false] spawn AlysiaClient_fnc_stopescort;
+		};
+	} else {
+		if (isClass(missionConfigFile >> "ALYSIA_DYN_OBJECTS" >> typeOf(_x))) then {
+			detach _x;
+		};
+	};
+} forEach attachedObjects player;
 
 disableSerialization;
 _display = findDisplay 350;
@@ -71,7 +77,7 @@ while {(_time > 0) && !g_coma_dead && (player getVariable ["is_coma", false])} d
 	{
 		_animation = switch (true) do
 		{
-			case (typeOf(attachedTo player) in ["HospitalTable_F","HealTable_F"]): {"ainjppnemstpsnonwrfldnon"};
+			case (typeOf(attachedTo player) in ["HospitalTable_F","HealTable_F","Siuuz_Brancard_01_F"]): {"ainjppnemstpsnonwrfldnon"};
 			case (typeOf(attachedTo player) isEqualTo "HospitalBed_F"): {"ainjppnemrunsnonwnondb_still"};
 			case (player getVariable ["heart_attack", false]): {"ainjppnemrunsnonwnondb"};
 			default {"acts_InjuredLookingRifle01"};

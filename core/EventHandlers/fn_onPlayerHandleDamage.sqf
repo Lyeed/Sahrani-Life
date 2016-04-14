@@ -44,19 +44,21 @@ if (g_connected && !g_staff_god && (_damage > 0)) then
 		};
 	};
 
-	if (!(isNull g_dragingBody)) then {
-		[false] call AlysiaClient_fnc_action_body_drop;
-	};
-
-	if (!(isNull (player getVariable ["escorting", objNull]))) then
 	{
-		_target = player getVariable ["escorting", objNull];
-		detach _target;
-		_target setVariable ["escorted", objNull, true];
-		player setVariable ["escorting", objNull, true];
-	};
+		if (isPlayer _x) then
+		{
+			if (_x getVariable ["is_coma", false]) then
+			{
+				[_x, false] spawn AlysiaClient_fnc_action_body_drop;
+				true breakOut "main";
+			} else {
+				[_x] spawn AlysiaClient_fnc_stopescort;
+				true breakOut "main";
+			};
+		};
+	} forEach attachedObjects player;
 
-	[(_damage * -1)] call AlysiaClient_fnc_handleBlood;
+	[(abs _damage)] call AlysiaClient_fnc_handleBlood;
 	[(_damage / 11)] call AlysiaClient_fnc_handleBleed;
 };
 

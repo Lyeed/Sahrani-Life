@@ -10,7 +10,7 @@ private["_month"];
 _month = switch(date select 1) do
 {
 	case 1: {"Janvier"};
-	case 2: {"Févier"};
+	case 2: {"Février"};
 	case 3: {"Mars"};
 	case 4: {"Avril"};
 	case 5: {"Mai"};

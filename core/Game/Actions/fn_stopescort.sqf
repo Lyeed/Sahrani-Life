@@ -5,20 +5,24 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_target", "_escorter", "_escorting"];
+private["_target", "_escorter", "_escorting", "_action"];
 _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+_action = [this, 1, true, [true]] call BIS_fnc_param;
 
-if (g_action_inUse) exitWith {
-	["Vous êtes déjà en train d'effectuer une action."] call AlysiaClient_fnc_error;
-};
 if (isNull _target) exitWith {
 	["Cible invalide."] call AlysiaClient_fnc_error;
 };
+if (g_action_inUse) exitWith {
+	["Vous êtes déjà en train d'effectuer une action."] call AlysiaClient_fnc_error;
+};
 
-g_action_inUse = true;
-
-player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-waitUntil {animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
+if (_action) then
+{
+	g_action_inUse = true;
+	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+	waitUntil {animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};	
+	g_action_inUse = false;
+};
 
 _escorter = _target getVariable ["escorted", objNull];
 if (!(isNull _escorter)) then
@@ -35,5 +39,3 @@ if (!(isNull _escorting)) then
 	_escorting setVariable ["escorted", objNull, true];
 	_target setVariable ["escorting", objNull, true];
 };
-
-g_action_inUse = false;

@@ -88,7 +88,7 @@ class ALYSIA_MEDECINE
 	};
 	class medoc_toux_2
 	{
-		interval = 700;
+		interval = 600;
 		class heal
 		{
 			class toux

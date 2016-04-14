@@ -29,7 +29,7 @@ _message = ctrlText 9525;
 if (_message isEqualTo "") exitWith {["Vous n'avez pas entré de message à votre annonce"] call AlysiaClient_fnc_error};
 _bad = [_message, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-éè?!,'/():;!.ù_à *"] call AlysiaClient_fnc_TextAllowed;
 if (_bad != "") exitWith {[format["Vous utilisez un caractère interdit dans le message de votre annonce (%1)", _bad]] call AlysiaClient_fnc_error};
-if (([_message] call CBA_fnc_strLen) > 120) exitWith {["Le message de votre annonce ne doit pas dépasser 80 caractères"] call AlysiaClient_fnc_error};
+if (([_message] call CBA_fnc_strLen) > 120) exitWith {["Le message de votre annonce ne doit pas dépasser 120 caractères"] call AlysiaClient_fnc_error};
 
 if ([false, 40, "Annonce (application)"] call AlysiaClient_fnc_handleATM) then
 {

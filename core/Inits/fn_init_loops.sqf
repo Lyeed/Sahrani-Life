@@ -50,31 +50,32 @@
 
 		g_seatbelt = false;
 		_veh = vehicle player;
-		_fuel = getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf(_veh) >> "fuel");
 
-		if (!(isNull (player getVariable ["escorting", objNull]))) then
 		{
-			_target = player getVariable ["escorting", objNull];
-			detach _target;
-			_target action ["getInCargo", _veh];
-			_target setVariable ["escorted", objNull, true];
-			player setVariable ["escorting", objNull, true];
-		};
+			if (isPlayer _x) then
+			{
+				if (_x getVariable ["is_coma", false]) then {
+					_handle = [_x, false] spawn AlysiaClient_fnc_action_body_drop;
+				} else {
+					_handle = [_x, false] spawn AlysiaClient_fnc_stopescort;
+				};
 
-		if (!(isNull g_dragingBody)) then
-		{
-			detach g_dragingBody;
-			g_dragingBody setVariable ["transporting", false, true];
-			g_dragingBody action ["getInCargo", _veh];
-			g_dragingBody = ObjNull;
-		};
+				waitUntil {scriptDone _handle};
+				_x action ["getInCargo", _veh];
+			} else {
+				if (isClass(missionConfigFile >> "ALYSIA_DYN_OBJECTS" >> typeOf(_x))) then {
+					detach _x;
+				};
+			};
+		} forEach attachedObjects player;
 
 		if (_veh isKindOf "LandVehicle") then {
 			setViewDistance tawvd_car;
 		} else {
-			setViewDistance tawvd_air
+			setViewDistance tawvd_air;
 		};
 
+		_fuel = getText(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf(_veh) >> "fuel");
 		while {((vehicle player) isEqualTo _veh)} do
 		{
 			if (((driver _veh) isEqualTo player) && (isEngineOn _veh)) then
@@ -169,7 +170,7 @@
 		{
 			if (getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> (currentWeapon player) >> "protect_rain") isEqualTo 0) then
 			{
-				if (random(150) < (1 + rain)) then
+				if (random(150) < (1 + (rain * 10))) then
 				{
 					["rhume"] spawn AlysiaClient_fnc_desease_start;
 				};

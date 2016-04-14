@@ -299,7 +299,8 @@ class ALYSIA_SHOPS_CLOTHING
 			"TRYK_U_B_BLK_T_BG_WH",
 			"TRYK_U_B_BLK_T_BK",
 			"TRYK_U_B_RED_T_BR",
-			"TRYK_U_B_BLK_T_WH"
+			"TRYK_U_B_BLK_T_WH",
+			"rds_uniform_Policeman"
 		};
 		headgear[] =
 		{
@@ -386,7 +387,8 @@ class ALYSIA_SHOPS_CLOTHING
 			"rds_worker_cap4",
 			"rds_worker_cap1",
 			"Casque_Moto",
-			"H_LIB_SOV_PilotHelmet"
+			"H_LIB_SOV_PilotHelmet",
+			"rds_police_cap"
 		};
 		goggles[] =
 		{

@@ -9,7 +9,6 @@ with missionNamespace do
 	g_objPut = ObjNull;
 	g_killer = ObjNull;
 	g_dog = objNull;
-	g_dragingBody = ObjNull;
 	/* ===================[inUse/delay variables]======================= */
 	g_action_delay = time;
 	g_action_inUse = false;

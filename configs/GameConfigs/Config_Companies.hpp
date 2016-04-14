@@ -14,17 +14,17 @@
 		"Transport de matériaux"
 		"Sécurité"
 		"Service"
+		"Usine de textile"
 	PAS FINI:
-		"Concesionnaire"
-		"Magasin"
-		"Journaliste"
 		"Exploitation du pétrole"
 	PREVU:
+		"Journaliste"
+		"Magasin"
+		"Concesionnaire"
 		"Assurance"
 		"Agence immobilière"
 		"Restauration"
 		"Trader"
-		"Usine de textile"
 */
 
 class ALYSIA_COMPANIES

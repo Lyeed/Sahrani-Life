@@ -15,7 +15,7 @@ _players = false;
 {
 	if ((isPlayer _x) && (_x != player)) exitWith {_players = true};
 } forEach (_chair nearEntities 1);
-if (_players) exitWith {["Quelqu'un est déjà assis ici"] call AlysiaClient_fnc_error};
+if (_players) exitWith {["Quelqu'un est déjà installé ici."] call AlysiaClient_fnc_error};
 
 _config = missionConfigFile >> "ALYSIA_CHAIRS" >> typeOf(_chair);
 

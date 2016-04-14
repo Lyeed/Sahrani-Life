@@ -276,4 +276,10 @@ class ALYSIA_CHAIRS
 		anim = "ainjppnemstpsnonwrfldnon";
 		dir = 0;
 	};
+	class Siuuz_Brancard_01_F
+	{
+		height = 0;
+		anim = "ainjppnemstpsnonwrfldnon";
+		dir = 0;
+	};
 };

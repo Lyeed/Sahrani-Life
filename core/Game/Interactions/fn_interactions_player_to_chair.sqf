@@ -5,13 +5,9 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_target"];
-_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-
-if (isNull _target) exitWith {};
 
 [
-	_target,
+	[_this, 0, objNull, [objNull]] call BIS_fnc_param,
 	"player_to_chair",
 	[
 		[
@@ -25,6 +21,12 @@ if (isNull _target) exitWith {};
 			"Prendre",
 			"[g_interaction_target] spawn AlysiaClient_fnc_dynamicObject_packup;",
 			"(g_interaction_target getVariable ['isPackable', false])"
+		],
+		[
+			"take",
+			"Escorter",
+			"[g_interaction_target] call AlysiaClient_fnc_dynamicObject_escort;",
+			"(getNumber(missionConfigFile >> 'ALYSIA_DYN_OBJECTS' >> typeOf(g_interaction_target) >> 'escort') isEqualTo 1)"
 		]
 	],
 	"Chaise",

@@ -297,8 +297,8 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\objet_de_valeur.paa";
 		class market
 		{
-			max = 728;
-			min = 90;
+			max = 828;
+			min = 190;
 			affect[] = AFFECT_ILLEGAL;
 		};
 	};
@@ -1418,7 +1418,7 @@ class ALYSIA_ITEMS
 		};
 	};
 	
-	class turtle 
+	class turtle
 	{
 		name = "Viande de tortue";
 		weight = 4;
@@ -1446,39 +1446,29 @@ class ALYSIA_ITEMS
 		illegal = 1;
 		image = "alysia_items_virtual\data\frag_1.paa";
 	};
-	class frag_2
+	class frag_2: frag_1
 	{
 		name = "Fragment (2)";
-		weight = 1;
-		illegal = 1;
 		image = "alysia_items_virtual\data\frag_2.paa";
 	};
-	class frag_3
+	class frag_3: frag_1
 	{
 		name = "Fragment (3)";
-		weight = 1;
-		illegal = 1;
 		image = "alysia_items_virtual\data\frag_3.paa";
 	};
-	class frag_4
+	class frag_4: frag_1
 	{
 		name = "Fragment (4)";
-		weight = 1;
-		illegal = 1;
 		image = "alysia_items_virtual\data\frag_4.paa";
 	};
-	class frag_5
+	class frag_5: frag_1
 	{
 		name = "Fragment (5)";
-		weight = 1;
-		illegal = 1;
 		image = "alysia_items_virtual\data\frag_5.paa";
 	};
-	class frag_6
+	class frag_6: frag_1
 	{
 		name = "Fragment (6)";
-		weight = 1;
-		illegal = 1;
 		image = "alysia_items_virtual\data\frag_6.paa";
 	};
 
@@ -1489,25 +1479,19 @@ class ALYSIA_ITEMS
 		illegal = 1;
 		image = "alysia_items_virtual\data\boite1.paa";
 	};
-	class destroy_stand
+	class destroy_stand: destroy_archeo
 	{
 		name = "Kit (Infrastructure)";
-		weight = 6;
-		illegal = 1;
 		image = "alysia_items_virtual\data\boite3.paa";
 	};
-	class destroy_field
+	class destroy_field: destroy_archeo
 	{
 		name = "Kit (Champs)";
-		weight = 6;
-		illegal = 1;
 		image = "alysia_items_virtual\data\boite4.paa";
 	};
-	class destroy_labo
+	class destroy_labo: destroy_archeo
 	{
 		name = "Kit (Laboratoire)";
-		weight = 6;
-		illegal = 1;
 		image = "alysia_items_virtual\data\boite2.paa";
 	};
 
@@ -1698,7 +1682,7 @@ class ALYSIA_ITEMS
 		price_buy = 110000;
 		weight = 20;
 		illegal = 1;
-		image = "";
+		image = "alysia_items_virtual\data\lab_heal.paa";
 		class use
 		{
 			action = "['lab_heal'] spawn AlysiaClient_fnc_labo_deploy;";
@@ -1710,7 +1694,7 @@ class ALYSIA_ITEMS
 		price_buy = 160000;
 		weight = 20;
 		illegal = 1;
-		image = "";
+		image = "alysia_items_virtual\data\lab_construction.paa";
 		class use
 		{
 			action = "['lab_construction'] spawn AlysiaClient_fnc_labo_deploy;";
@@ -1786,14 +1770,6 @@ class ALYSIA_ITEMS
 		price_buy = 100;
 	};
 
-	class passepartout
-	{
-		name = "Passe-partout";
-		weight = 1;
-		price_buy = 2800;
-		image = "alysia_items_virtual\data\passepartout.paa";
-	};
-
 	class scalpel
 	{
 		name = "Scalpel chirurgical";
@@ -1837,56 +1813,46 @@ class ALYSIA_ITEMS
 			action = "[['weapon_ak_1','weapon_ak_2','weapon_ak_3','magazine_ak','scope_ak'], 'lab_weapon', 'patron_AK74'] call AlysiaClient_fnc_item_patron;";
 		};
 	};
-	class patron_M21
+	class patron_M21: patron_AK74
 	{
 		name = "Patron arme (M21)";
-		weight = 0;
 		price_buy = 825000;
-		image = "alysia_items_virtual\data\patron.paa";
 		class use
 		{
 			action = "[['weapon_m21','magazine_m21','scope_m21'], 'lab_weapon', 'patron_M21'] call AlysiaClient_fnc_item_patron;";
 		};
 	};
-	class patron_CZ
+	class patron_CZ: patron_AK74
 	{
 		name = "Patron arme (CZ)";
-		weight = 0;
 		price_buy = 439000;
-		image = "alysia_items_virtual\data\patron.paa";
 		class use
 		{
 			action = "[['weapon_cz','magazine_cz'], 'lab_weapon', 'patron_CZ'] call AlysiaClient_fnc_item_patron;";
 		};
 	};
-	class patron_sawed
+	class patron_sawed: patron_AK74
 	{
 		name = "Patron arme (Fusil scié)";
-		weight = 0;
 		price_buy = 210000;
-		image = "alysia_items_virtual\data\patron.paa";
 		class use
 		{
 			action = "[['weapon_sawed','magazine_sawed'], 'lab_weapon', 'patron_sawed'] call AlysiaClient_fnc_item_patron;";
 		};
 	};
-	class patron_AKM
+	class patron_AKM: patron_AK74
 	{
 		name = "Patron arme (AKM)";
-		weight = 0;
 		price_buy = 995000;
-		image = "alysia_items_virtual\data\patron.paa";
 		class use
 		{
 			action = "[['weapon_AKM_1','weapon_AKM_2','magazine_AKM','scope_AKM'], 'lab_weapon', 'patron_AKM'] call AlysiaClient_fnc_item_patron;";
 		};
 	};
-	class patron_mosin
+	class patron_mosin: patron_AK74
 	{
 		name = "Patron arme (Mosin)";
-		weight = 0;
 		price_buy = 260000;
-		image = "alysia_items_virtual\data\patron.paa";
 		class use
 		{
 			action = "[['weapon_mosin_1','weapon_mosin_2','magazine_mosin'], 'lab_weapon', 'patron_mosin'] call AlysiaClient_fnc_item_patron;";
@@ -1931,5 +1897,13 @@ class ALYSIA_ITEMS
 		weight = 2;
 		image = "alysia_items_virtual\data\stethoscope.paa";
 		price_buy = 1600;
+	};
+
+	class brancard
+	{
+		name = "Brancard";
+		weight = 7;
+		image = "alysia_items_virtual\data\brancard.paa";
+		price_buy = 250;
 	};
 };

@@ -252,6 +252,7 @@ class CfgFunctions
 			file = "core\Game\dynamicObjects";
 			class dynamicObject_packup {};
 			class dynamicObject_deploy {};
+			class dynamicObject_escort {};
 		};
 
 		class Garage
@@ -356,7 +357,7 @@ class CfgFunctions
 		class Phone
 		{
 			file = "core\Game\Phone";
-			class phone_numberChange;
+			class phone_number_change;
 			class phone_message_send {};
 			class phone_message_receive {};
 			class phone_forfait_change {};
@@ -364,6 +365,7 @@ class CfgFunctions
 			class phone_number_to_unit {};
 			class phone_get_rings {};
 			class phone_get_ring {};
+			class phone_get_messages_new {};
 			class phone_call_receive {};
 			class phone_call_loop {};
 			class phone_call_end {};

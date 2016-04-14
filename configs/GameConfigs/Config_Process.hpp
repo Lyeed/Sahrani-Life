@@ -1494,8 +1494,8 @@ class ALYSIA_PROCESS
 	class scope_m21: scope_ak
 	{
 		name = "Viseur : M21";
-		require[] = {{"steel",15},{"glass",5}};
-		receive[] = {{},{"hlc_optic_artel_m14"},0};
+		require[] = {{"steel",10},{"glass",3}};
+		receive[] = {{},{"hlc_optic_LRT_m14"},0};
 		time_per_item = 30;
 		class target {};
 		class factions: factions {};

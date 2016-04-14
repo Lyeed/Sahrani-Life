@@ -33,12 +33,6 @@ class ALYSIA_STAFF
 			teamspeak = 1;
 		};
 		// - Modo
-		class Drago
-		{
-			uid = "76561198144182091";
-			rank = "modo";
-			teamspeak = 1;
-		};
 		class Brad_Dexter
 		{
 			uid = "76561197977519424";

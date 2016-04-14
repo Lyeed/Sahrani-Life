@@ -5,17 +5,26 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_action"];
-_action = [_this, 0, true, [true]] call BIS_fnc_param;
+private["_action", "_target"];
+_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+_action = [_this, 1, true, [true]] call BIS_fnc_param;
 
-if (isNull g_dragingBody) exitWith {};
+if (isNull _target) exitWith {
+	["Cible invalide."] call AlysiaClient_fnc_error;
+};
+if (g_action_inUse) exitWith {
+	["Vous êtes déjà en train d'effectuer une action."] call AlysiaClient_fnc_error;
+};
 
 if (_action) then
 {
+	g_action_inUse = true;
 	player playAction "released";
-	sleep 2;
+	uiSleep 2;
+	g_action_inUse = false;
 };
 
-detach g_dragingBody;
-g_dragingBody setVariable ["transporting", false, true];
-g_dragingBody = ObjNull;
+detach _target;
+if (_target getVariable ["transporting", false]) then {
+	_target setVariable ["transporting", false, true];
+};

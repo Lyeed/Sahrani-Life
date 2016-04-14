@@ -179,7 +179,8 @@ class ALYSIA_SHOPS_VIRTUAL
 				"horn_samu",
 				"alcool_test",
 				"adn",
-				"stethoscope"
+				"stethoscope",
+				"brancard"
 			},{
 
 			}
@@ -256,6 +257,7 @@ class ALYSIA_SHOPS_VIRTUAL
 				"lab_clothing",
 				"lab_cigare",
 				"lab_heal",
+				"lab_construction",
 				"patron_AKM",
 				"patron_M21",
 				"patron_AK74",
@@ -265,7 +267,8 @@ class ALYSIA_SHOPS_VIRTUAL
 			},{
 				"artefact_R",
 				"artefact",
-				"objvaleur"
+				"objvaleur",
+				"turtle"
 			}
 		};
 	};

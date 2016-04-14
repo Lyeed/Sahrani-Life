@@ -100,22 +100,20 @@ if (_apps_more || (_status > 0)) then
 	};
 };
 
-_newSMS = 0;
-
-if ([] call AlysiaClient_fnc_hasPhone) then
+_newSMS = [] call AlysiaClient_fnc_phone_get_messages_new;
+if (([] call AlysiaClient_fnc_hasPhone) && ((count _newSMS) > 0)) then
 {
-	{
-		if ((_x select 2) isEqualTo 0) then {
-			_newSMS = _newSMS + 1;
-		};
-	} forEach g_phone_messages;
-};
+	(_display displayCtrl 7505) ctrlSetStructuredText parseText format
+	[
+		"<t align='center' size='1.2' font='PuristaSemiBold'>%1</t>",
+		count(_newSMS)
+	];
 
-if (_newSMS isEqualTo 0) then {
-	[[7503, 7504, 7505], false] call AlysiaClient_fnc_tabletShow;
-} else {
-	(_display displayCtrl 7505) ctrlSetStructuredText parseText format["<t align='center' size='1.2' font='PuristaSemiBold'>%1</t>", _newSMS];
 	[7503, true] call AlysiaClient_fnc_tabletShow;
 	[7504, true] call AlysiaClient_fnc_tabletShow;
 	[7505, true] call AlysiaClient_fnc_tabletShow;
+} else {
+	[7503, false] call AlysiaClient_fnc_tabletShow;
+	[7504, false] call AlysiaClient_fnc_tabletShow;
+	[7505, false] call AlysiaClient_fnc_tabletShow;
 };
