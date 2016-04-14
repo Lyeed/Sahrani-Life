@@ -357,7 +357,7 @@ class CfgFunctions
 		class Phone
 		{
 			file = "core\Game\Phone";
-			class phone_number_change;
+			class phone_number_change {};
 			class phone_message_send {};
 			class phone_message_receive {};
 			class phone_forfait_change {};
