@@ -15,7 +15,7 @@
 		waitUntil {backpack player != ""};
 		_bp = backpack player;
 		g_maxWeight = _default + round(getNumber(configFile >> "CfgVehicles" >> (backpack player) >> "maximumload") / 8);
-		waitUntil {backpack player != _bp};
+		waitUntil {((backpack player) != _bp)};
 		if ((backpack player) isEqualTo "") then {g_maxWeight = _default};
 	};
 };
@@ -52,22 +52,39 @@
 		_veh = vehicle player;
 
 		{
-			if (isPlayer _x) then
+			_unit_1 = _x;
+			if (isPlayer _unit_1) then
 			{
-				if (_x getVariable ["is_coma", false]) then {
-					_handle = [_x, false] spawn AlysiaClient_fnc_action_body_drop;
+				private "_handle";
+				if (_unit_1 getVariable ["is_coma", false]) then {
+					_handle = [_unit_1, false] spawn AlysiaClient_fnc_action_body_drop;
 				} else {
-					_handle = [_x, false] spawn AlysiaClient_fnc_stopescort;
+					_handle = [_unit_1, false] spawn AlysiaClient_fnc_stopescort;
 				};
 
 				waitUntil {scriptDone _handle};
-				_x action ["getInCargo", _veh];
+				_unit_1 action ["getInCargo", _veh];
 			} else {
-				if (isClass(missionConfigFile >> "ALYSIA_DYN_OBJECTS" >> typeOf(_x))) then {
-					detach _x;
+				_config = missionConfigFile >> "ALYSIA_DYN_OBJECTS" >> typeOf(_unit_1);
+				if (isClass(_config)) then
+				{
+					{
+						_unit_2 = _x;
+						if ((isPlayer _unit_2) && (_unit_2 getVariable ["is_coma", false])) then
+						{
+							detach _unit_2;
+							_unit_2 action ["getInCargo", _veh];
+						};
+					} forEach (attachedObjects _unit_2);
+					if ((_veh getVariable ["trunk_in_use_ID", ""]) isEqualTo "") then
+					{
+						[true, _veh, "Trunk", getText(_config >> "item"), 1, true] call AlysiaClient_fnc_handleTrunk;
+					};
+
+					deleteVehicle _unit_1;
 				};
 			};
-		} forEach attachedObjects player;
+		} forEach (attachedObjects player);
 
 		if (_veh isKindOf "LandVehicle") then {
 			setViewDistance tawvd_car;

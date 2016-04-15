@@ -1905,5 +1905,9 @@ class ALYSIA_ITEMS
 		weight = 7;
 		image = "alysia_items_virtual\data\brancard.paa";
 		price_buy = 250;
+		class use
+		{
+			action = "['brancard'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
+		};
 	};
 };

@@ -12,7 +12,7 @@ if (isNull _object) exitWith {
 	["Cible invalide."] call AlysiaClient_fnc_error;
 };
 if (g_action_inUse) exitWith {
-	["Vous êtes déja en train d'effectuer une action"] call AlysiaClient_fnc_info;
+	["Vous êtes déja en train d'effectuer une action."] call AlysiaClient_fnc_info;
 };
 
 _item = getText(missionConfigFile >> "ALYSIA_DYN_OBJECTS" >> typeOf(_object) >> "item");
@@ -25,5 +25,5 @@ if ([true, _item, 1] call AlysiaClient_fnc_handleInv) then
 	[format["* Vous avez récuperé 1x %1 *", [_item] call AlysiaClient_fnc_itemGetName]] call AlysiaClient_fnc_info;
 	g_action_inUse = false;
 } else {
-	["Vous n'avez pas assez de place"] call AlysiaClient_fnc_error;
+	["Vous n'avez pas assez de place."] call AlysiaClient_fnc_error;
 };

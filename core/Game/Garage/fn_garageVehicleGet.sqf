@@ -41,7 +41,7 @@ if (
 				"Votre véhicule se trouve à la <t color='#FF8000'>fourrière</t>.<br/>"
 			+	"Vous devez payer <t color='#8cff9b'>%1</t>kn pour le récupérer.<br/>"
 			+	"Details :<br/>"
-			+	"Price de garage initial - <t color='#8cff9b'>%2</t>kn<br/>"
+			+	"Prix de garage initial - <t color='#8cff9b'>%2</t>kn<br/>"
 			+	"Supplément de la fourrière - <t color='#8cff9b'>%3</t>kn",
 			[_price + _price_fourriere] call AlysiaClient_fnc_numberText,
 			[_price] call AlysiaClient_fnc_numberText,

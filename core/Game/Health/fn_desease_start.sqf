@@ -38,7 +38,7 @@ if (_index isEqualTo -1) then
 };
 
 missionNamespace setVariable [format["deases_%1_active", _type], true];
-_maxFatigue = 1 - getNumber(_config >> "reduce_fatigue");
+_maxFatigue = getNumber(_config >> "reduce_fatigue");
 _event_sounds = getArray(_config >> "event_sounds");
 _contagion_chance = getNumber(_config >> "event_contagion_chance");
 _event_next = 0;
@@ -77,7 +77,7 @@ while {count(_medecine) > 0} do
 	if (_maxFatigue isEqualTo 1) then {
 		uiSleep 10;
 	} else {
-		if ((getFatigue player) > _maxFatigue) then
+		if ((getFatigue player) < _maxFatigue) then
 		{
 			player setFatigue _maxFatigue;
 		};
