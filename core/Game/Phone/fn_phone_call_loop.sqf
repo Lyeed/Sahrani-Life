@@ -11,19 +11,6 @@ _from = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
 
 if ((_freq isEqualTo "") || (isNull _from)) exitWith {};
 
-_freq_old = [(call TFAR_fnc_activeSwRadio), 1] call TFAR_fnc_GetChannelFrequency;
-_freq = str(round(random(499999) + 500000));
+player setVariable ["calling_target", _from];
+player setVariable ["calling_freq_old", ([(call TFAR_fnc_activeSwRadio), 1] call TFAR_fnc_GetChannelFrequency)];
 [(call TFAR_fnc_activeSwRadio), 1, _freq] call TFAR_fnc_SetChannelFrequency;
-player setVariable ["call_accepted", true];
-
-while {((player getVariable ["call_accepted", false]) && (player getVariable ["calling", false]))} do
-{
-	call TFAR_fnc_onSwTangentPressed;
-	call TFAR_fnc_HideHint;
-	uiSleep 0.5;
-};
-
-[] remoteExecCall ["AlysiaClient_fnc_phone_call_end", _from];
-call TFAR_fnc_onSwTangentReleased;
-[(call TFAR_fnc_activeSwRadio), 1, _freq_old] call TFAR_fnc_SetChannelFrequency;
-player setVariable ["call_accepted", false];

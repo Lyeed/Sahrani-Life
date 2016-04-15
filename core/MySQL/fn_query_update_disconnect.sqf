@@ -38,7 +38,8 @@ if (missionNamespace getVariable ["g_connected", false]) then
 		missionNamespace getVariable ["g_apps", []],
 		([] call AlysiaClient_fnc_getLicenses),
 		g_dynamic_markers_discovered,
-		g_alcool
+		g_alcool,
+		profileNamespace getVariable ["ALYSIA_phone_annuaire", false]
 	] remoteExec ["AlysiaServer_fnc_query_update_disconnect", 2];
 	saveProfileNamespace;
 };

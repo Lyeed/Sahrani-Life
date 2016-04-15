@@ -28,10 +28,11 @@ if (alive player) then
 {
 	if ([] call AlysiaClient_fnc_hasPhone) then
 	{
-		if (profileNamespace getVariable ["ALYSIA_phone_SILENT", false]) then {
+		_sound = profileNamespace getVariable ["ALYSIA_phone_sms_ring", ""];
+		if (_sound isEqualTo "") then {
 			playSound "message_rcv_silent";
 		} else {
-			[player, ([] call AlysiaClient_fnc_phone_get_ring), 20] call CBA_fnc_globalSay3d;
+			[player, _sound, 20] call CBA_fnc_globalSay3d;
 		};
 	};
 };

@@ -39,4 +39,12 @@ class ALYSIA_SHOP_APPLICATIONS
 		price = 19000;
 		sides[] = {"CIV", "WEST", "EAST", "GUER"};
 	};
+
+	class ANNUAIRE
+	{
+		name = "Application : Annuaire téléphonique";
+		description = "Répertorie les numéros publique de l'Archipel";
+		price = 1200;
+		sides[] = {"CIV", "WEST", "EAST", "GUER"};
+	};
 };

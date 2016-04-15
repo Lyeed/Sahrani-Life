@@ -37,10 +37,12 @@ _camera camSetTarget _targetPos;
 _camera camCommit 0;
 cutText ["", "PLAIN"];
 
-profileNamespace setVariable ["ALYSIA_phone_recv", "message_rcv_1"];
-profileNamespace setVariable ["ALYSIA_phone_SILENT", false];
+profileNamespace setVariable ["ALYSIA_phone_sms_ring", ""];
+profileNamespace setVariable ["ALYSIA_phone_call_ring", ""];
 profileNamespace setVariable ["ALYSIA_tablet_animation", true];
 profileNamespace setVariable ["ALYSIA_hud_animation", true];
+profileNamespace setVariable ["ALYSIA_phone_annuaire", false];
+
 saveProfileNamespace;
 
 _action = 

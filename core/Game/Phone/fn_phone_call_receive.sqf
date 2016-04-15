@@ -18,7 +18,7 @@ if ([] call AlysiaClient_fnc_hasPhone) then
 	_freq = str(round(random(499999) + 500000));
 	[(call TFAR_fnc_activeSwRadio), 1, _freq] call TFAR_fnc_SetChannelFrequency;
 	player setVariable ["calling", _from];
-	[_freq, player] remoteExec ["AlysiaClient_fnc_phone_call_loop", _from];
+	[_freq, player] remoteExecCall ["AlysiaClient_fnc_phone_call_loop", _from];
 	while {((player getVariable ["calling", objNull]) isEqualTo _from)} do
 	{
 		call TFAR_fnc_onSwTangentPressed;

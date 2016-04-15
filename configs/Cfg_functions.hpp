@@ -363,12 +363,13 @@ class CfgFunctions
 			class phone_forfait_change {};
 			class phone_number_to_name {};
 			class phone_number_to_unit {};
-			class phone_get_rings {};
-			class phone_get_ring {};
 			class phone_get_messages_new {};
 			class phone_call_receive {};
 			class phone_call_loop {};
 			class phone_call_end {};
+			class phone_annuaire {};
+			class phone_ring_call {};
+			class phone_ring_message {};
 		};
 
 		class Health
@@ -605,6 +606,7 @@ class CfgFunctions
 			class APP_phone_call_back {};
 			class APP_phone_call_suppr {};
 			class APP_phone_call_action {};
+			class APP_phone_call_hangup {};
 			class APP_phone_contacts {};
 			class APP_phone_contacts_add {};
 			class APP_phone_messages_read {};
@@ -612,7 +614,6 @@ class CfgFunctions
 			class APP_phone_messages_read_delete {};
 			class APP_phone_messages_send {};
 			class APP_phone_messages_send_action {};
-			class APP_phone_messages_receive {};
 			class APP_phone_settings {};
 			class APP_phone_change {};
 			class APP_phone_blacklist {};
@@ -648,6 +649,7 @@ class CfgFunctions
 			class APP_gov_taxes_modify {};
 			class APP_dab {};
 			class APP_dab_update {};
+			class APP_annuaire {};
 		};
 	};
 };

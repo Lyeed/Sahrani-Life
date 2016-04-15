@@ -628,141 +628,88 @@ class PHONE_MESSAGE_SEND_PRICE_INFO: RscStructuredText
 /* ===================================================================================================================== */
 
 // =======================================[Settings]=======================================
-#define PHONE_SETTING_RING_HEADER_IDC 			8350
-#define PHONE_SETTING_RING_LIST_IDC 			8351
-#define PHONE_SETTING_RING_FRAME_IDC 			8352
-#define PHONE_SETTINGS_RING_VALIDATE_IMAGE_IDC 	8353
-#define PHONE_SETTINGS_RING_VALIDATE_BUTTON_IDC 8354
-#define PHONE_SETTINGS_RING_LISTEN_IMAGE_IDC 	8355
-#define PHONE_SETTINGS_RING_LISTEN_BUTTON_IDC 	8356
-#define PHONE_SETTINGS_SILENT_HEADER_IDC 		8359
-#define PHONE_SETTINGS_SILENT_CHECK_IDC 		8360
-#define PHONE_SETTINGS_SILENT_FRAME_IDC 		8361
+#define PHONE_SETTING_SMS_HEADER_IDC           8350
+#define PHONE_SETTING_SMS_LIST_IDC             8351
+#define PHONE_SETTING_CALL_HEADER_IDC          8352
+#define PHONE_SETTING_CALL_LIST_IDC            8353
+#define PHONE_SETTING_ANNUAIRE_TEXT_IDC        8354
+#define PHONE_SETTING_ANNUAIRE_CHECKBOX_IDC    8355
 
 PHONE_SETTINGS_BACKGROUND = PHONE_BACKGROUND;
 PHONE_SETTINGS_IDCS[] =
 {
 	PHONE_RETURN_IMAGE_IDC,
 	PHONE_RETURN_BUTTON_IDC,
-	PHONE_SETTING_RING_HEADER_IDC,
-	PHONE_SETTING_RING_LIST_IDC,
-	PHONE_SETTING_RING_FRAME_IDC,
-	PHONE_SETTINGS_RING_VALIDATE_IMAGE_IDC,
-	PHONE_SETTINGS_RING_VALIDATE_BUTTON_IDC,
-	PHONE_SETTINGS_RING_LISTEN_IMAGE_IDC,
-	PHONE_SETTINGS_RING_LISTEN_BUTTON_IDC,
-	PHONE_SETTINGS_SILENT_HEADER_IDC,
-	PHONE_SETTINGS_SILENT_CHECK_IDC,
-	PHONE_SETTINGS_SILENT_FRAME_IDC
+	PHONE_SETTING_SMS_HEADER_IDC,
+	PHONE_SETTING_ANNUAIRE_TEXT_IDC,
+	PHONE_SETTING_SMS_LIST_IDC,
+	PHONE_SETTING_CALL_LIST_IDC,
+	PHONE_SETTING_CALL_HEADER_IDC,
+	PHONE_SETTING_ANNUAIRE_CHECKBOX_IDC
 };
 
-class PHONE_SETTING_RING_HEADER: RscStructuredText
+class PHONE_SETTING_SMS_HEADER: RscStructuredText
 {
-	idc = PHONE_SETTING_RING_HEADER_IDC;
-	text = "Sonneries SMS";
-	colorBackground[] = {0,0,0,0.8};
-
-	x = 0.335 * safezoneW + safezoneX;
-	y = 0.445 * safezoneH + safezoneY;
-	w = 0.195937 * safezoneW;
-	h = 0.022 * safezoneH;
-};
-class PHONE_SETTING_RING_LIST: RscListBox
-{
-	idc = PHONE_SETTING_RING_LIST_IDC;
-
-	x = 0.335 * safezoneW + safezoneX;
-	y = 0.467 * safezoneH + safezoneY;
-	w = 0.195937 * safezoneW;
-	h = 0.209 * safezoneH;
-};
-class PHONE_SETTING_RING_FRAME: RscFrame
-{
-	idc = PHONE_SETTING_RING_FRAME_IDC;
-
-	x = 0.335 * safezoneW + safezoneX;
-	y = 0.445 * safezoneH + safezoneY;
-	w = 0.195937 * safezoneW;
-	h = 0.231 * safezoneH;
-};
-class PHONE_SETTINGS_RING_VALIDATE_IMAGE: RscPicture
-{
-	idc = PHONE_SETTINGS_RING_VALIDATE_IMAGE_IDC;
-	text = "lyeed_IMG\data\phone\settings\validate.paa";
-
-	x = 0.54125 * safezoneW + safezoneX;
-	y = 0.5 * safezoneH + safezoneY;
-	w = 0.0257812 * safezoneW;
-	h = 0.044 * safezoneH;
-};
-class PHONE_SETTINGS_RING_VALIDATE_BUTTON : RscButtonSilent
-{
-	idc = PHONE_SETTINGS_RING_VALIDATE_BUTTON_IDC;
-	action = "profileNamespace setVariable ['ALYSIA_phone_recv', (lbData[8351, lbCurSel 8351])];[] call AlysiaClient_fnc_APP_phone_settings;";
-	tooltip = "Sauvegarder la sonnerie";
-	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\settings\validate_select.paa""];";
-	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\settings\validate.paa""];";
-
-	x = 0.54125 * safezoneW + safezoneX;
-	y = 0.5 * safezoneH + safezoneY;
-	w = 0.0257812 * safezoneW;
-	h = 0.044 * safezoneH;
-};
-
-class PHONE_SETTINGS_RING_LISTEN_IMAGE: RscPicture
-{
-	idc = PHONE_SETTINGS_RING_LISTEN_IMAGE_IDC;
-	text = "lyeed_IMG\data\phone\settings\listen.paa";
-
-	x = 0.54125 * safezoneW + safezoneX;
-	y = 0.588 * safezoneH + safezoneY;
-	w = 0.0257812 * safezoneW;
-	h = 0.044 * safezoneH;
-};
-class PHONE_SETTINGS_RING_LISTEN_BUTTON : RscButtonSilent
-{
-	idc = PHONE_SETTINGS_RING_LISTEN_BUTTON_IDC;
-	action = "playSound (lbData[8351, lbCurSel 8351]);";
-	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\settings\listen_select.paa""];";
-	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\settings\listen.paa""];";
-	tooltip = "Ecouter la sonnerie";
-
-	x = 0.54125 * safezoneW + safezoneX;
-	y = 0.588 * safezoneH + safezoneY;
-	w = 0.0257812 * safezoneW;
-	h = 0.044 * safezoneH;
-};
-
-class PHONE_SETTINGS_SILENT_HEADER: RscStructuredText
-{
-	idc = PHONE_SETTINGS_SILENT_HEADER_IDC;
-	text = "Mode silencieux";
-	colorBackground[] = {0,0,0,0.8};
-
-	x = 0.597969 * safezoneW + safezoneX;
-	y = 0.368 * safezoneH + safezoneY;
-	w = 0.0721875 * safezoneW;
-	h = 0.022 * safezoneH;
-};
-class PHONE_SETTINGS_SILENT_CHECK: RscCheckBox
-{
-	idc = PHONE_SETTINGS_SILENT_CHECK_IDC;
-	onCheckedChanged = "if ((_this select 1) isEqualTo 0) then {profileNamespace setVariable[""ALYSIA_phone_SILENT"", false]} else {profileNamespace setVariable[""ALYSIA_phone_SILENT"", true];playSound ""message_rcv_silent"";};";
-
-	x = 0.62375 * safezoneW + safezoneX;
-	y = 0.39 * safezoneH + safezoneY;
-	w = 0.020625 * safezoneW;
+	idc = PHONE_SETTING_SMS_HEADER_IDC;
+	text = "<t size='1.3'>Alerte SMS</t>";
+	
+	x = 0.324687 * safezoneW + safezoneX;
+	y = 0.478 * safezoneH + safezoneY;
+	w = 0.165 * safezoneW;
 	h = 0.033 * safezoneH;
 };
-class PHONE_SETTINGS_SILENT_FRAME: RscFrame
+class PHONE_SETTING_SMS_LIST: RscListbox
 {
-	idc = PHONE_SETTINGS_SILENT_FRAME_IDC;
+	idc = PHONE_SETTING_SMS_LIST_IDC;
+	colorBackground[] = {0,0,0,0};
 
-	x = 0.597969 * safezoneW + safezoneX;
-	y = 0.368 * safezoneH + safezoneY;
-	w = 0.0721875 * safezoneW;
-	h = 0.055 * safezoneH;
+	x = 0.324687 * safezoneW + safezoneX;
+	y = 0.511 * safezoneH + safezoneY;
+	w = 0.165 * safezoneW;
+	h = 0.165 * safezoneH;
 };
+
+class PHONE_SETTING_CALL_HEADER: RscStructuredText
+{
+	idc = PHONE_SETTING_CALL_HEADER_IDC;
+	text = "<t size='1.3'>Sonnerie APPEL</t>";
+
+	x = 0.510312 * safezoneW + safezoneX;
+	y = 0.478 * safezoneH + safezoneY;
+	w = 0.165 * safezoneW;
+	h = 0.033 * safezoneH;
+};
+class PHONE_SETTING_CALL_LIST: RscListbox
+{
+	idc = PHONE_SETTING_CALL_LIST_IDC;
+	colorBackground[] = {0,0,0,0};
+
+	x = 0.510312 * safezoneW + safezoneX;
+	y = 0.511 * safezoneH + safezoneY;
+	w = 0.165 * safezoneW;
+	h = 0.165 * safezoneH;
+};
+
+class PHONE_SETTING_ANNUAIRE_TEXT: RscStructuredText
+{
+	idc = PHONE_SETTING_ANNUAIRE_TEXT_IDC;
+	text = "Apparaître dans l'annuaire";
+
+	x = 0.345312 * safezoneW + safezoneX;
+	y = 0.434 * safezoneH + safezoneY;
+	w = 0.134062 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class PHONE_SETTING_ANNUAIRE_CHECKBOX: RscCheckbox
+{
+	idc = PHONE_SETTING_ANNUAIRE_CHECKBOX_IDC;
+
+	x = 0.329844 * safezoneW + safezoneX;
+	y = 0.434 * safezoneH + safezoneY;
+	w = 0.0154688 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+
 /* ===================================================================================================================== */
 
 // =======================================[Contacts]=======================================
@@ -1517,7 +1464,7 @@ class PHONE_CALLING_ACTION_CALL_BUTTON: RscButtonSilent
 	idc = PHONE_CALLING_ACTION_CALL_BUTTON_IDC;
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,'lyeed_IMG\data\phone\call\call_stop_select.paa'];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,'lyeed_IMG\data\phone\call\call_stop.paa'];";
-	action = "player setVariable ['calling', false];";
+	action = "[] call AlysiaClient_fnc_APP_phone_call_hangup;";
 
 	x = 0.484531 * safezoneW + safezoneX;
 	y = 0.643 * safezoneH + safezoneY;
