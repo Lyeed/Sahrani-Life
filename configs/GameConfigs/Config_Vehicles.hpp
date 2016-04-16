@@ -3309,7 +3309,7 @@ class ALYSIA_VEHICLES
 			"Skyline_Vehicule_Jonzie_Escalade_11_F",
 			"Skyline_Vehicule_Jonzie_Escalade_12_F"
 		};
-		realname = "Ford Escalade";
+		realname = "Cadillac Escalade ESV";
 	};
 	class Skyline_Vehicule_Jonzie_Escalade_01_F: Skyline_Vehicule_Jonzie_Escalade {};
 	class Skyline_Vehicule_Jonzie_Escalade_02_F: Skyline_Vehicule_Jonzie_Escalade {};
