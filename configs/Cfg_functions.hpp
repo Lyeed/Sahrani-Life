@@ -584,6 +584,7 @@ class CfgFunctions
 			class tabletShow {};
 			class APP_main {};
 			class APP_solde {};
+			class APP_solde_bills {};
 			class APP_vehicles {};
 			class APP_vehicles_update {};
 			class APP_settings {};
@@ -650,6 +651,8 @@ class CfgFunctions
 			class APP_dab {};
 			class APP_dab_update {};
 			class APP_annuaire {};
+			class APP_compagnies {};
+			class APP_compagnies_update {};
 		};
 	};
 };

@@ -631,7 +631,7 @@ class ALYSIA_PROCESS
 	{
 		name = "Fabrication d'abri en bois'";
 		require[] = {{"woodp",20}};
-		receive[] = {{{"antitank_steel",1}},{},0};
+		receive[] = {{{"guardshed_wood",1}},{},0};
 		time_per_item = 8;
 		time_default = 5;
 		class factions
@@ -1032,7 +1032,7 @@ class ALYSIA_PROCESS
 	};
 	class vest_criminal_1: vest_news_1
 	{
-		name = "Confection de gilet barre-balles";
+		name = "Confection de gilet pare balles";
 		receive[] = {{},{"TRYK_V_IOTV_BLK"},0};
 		class target {};
 		class factions
@@ -1067,7 +1067,7 @@ class ALYSIA_PROCESS
 	{
 		name = "Fabrication de vision nocturne";
 		sound = "smelting";
-		require[] = {{"steel",8},{"glass", 4},{"ironp",2},{"goldbar", 1},{"alu",10}};
+		require[] = {{"steel",4},{"glass", 2},{"ironp",1},{"goldbar", 1},{"alu",3}};
 		receive[] = {{},{"NVGoggles_INDEP"},0};
 		time_per_item = 20;
 		time_default = 5;

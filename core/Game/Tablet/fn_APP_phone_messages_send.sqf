@@ -37,8 +37,8 @@ if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "phon
 	if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "phone_send_global_message_rank") <= (player getVariable ["rank", 0])) then
 	{
 		_list lbAdd getText(missionConfigFile >> "ALYSIA_FACTIONS" >> "CIV" >> "name");
-		_list lbSetData [2, "CIV"];
-		_list lbSetPicture [2, getText(missionConfigFile >> "ALYSIA_FACTIONS" >> "CIV" >> "icon")];
+		_list lbSetData [3, "CIV"];
+		_list lbSetPicture [3, getText(missionConfigFile >> "ALYSIA_FACTIONS" >> "CIV" >> "icon")];
 	};
 };
 
@@ -48,3 +48,10 @@ if (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "phon
 	_list lbSetPicture [_index, "lyeed_IMG\data\phone\contact.paa"];
 } forEach g_phone_contacts;
 _list lbSetCurSel -1;
+
+if (getNumber(missionConfigFile >> "ALYSIA_PHONE" >> "FORFAITS" >> g_phone_forfait >> "hide_number") isEqualTo 1) then
+{
+	[8337, true] call AlysiaClient_fnc_tabletShow;
+	[8338, true] call AlysiaClient_fnc_tabletShow;
+	[8341, true] call AlysiaClient_fnc_tabletShow;
+};

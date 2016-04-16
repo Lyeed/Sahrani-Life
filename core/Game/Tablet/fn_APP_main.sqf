@@ -32,7 +32,7 @@ _global_apps =
 	["lyeed_IMG\data\tablet\app_main\app_market.paa", "lyeed_IMG\data\tablet\app_main\app_market_select.paa", "['MARKET'] spawn AlysiaClient_fnc_tabletApp;","Bourse","(('MARKET' in g_apps) || ((player distance (getMarkerPos 'HV_1') < 20) || (player distance (getMarkerPos 'HV_2') < 20)))"],
 	["lyeed_IMG\data\tablet\app_main\app_fuel.paa", "lyeed_IMG\data\tablet\app_main\app_fuel_select.paa", "['FUEL'] spawn AlysiaClient_fnc_tabletApp;", "Stations service", "'FUEL' in g_apps"],
 	["lyeed_IMG\data\tablet\app_main\app_announces.paa", "lyeed_IMG\data\tablet\app_main\app_announces_select.paa", "['ANNOUNCES'] spawn AlysiaClient_fnc_tabletApp;", "Annonces", "'ANNOUNCES' in g_apps"],
-	["lyeed_IMG\data\tablet\app_main\app_company.paa", "lyeed_IMG\data\tablet\app_main\app_company_select.paa", "['COMPANY'] spawn AlysiaClient_fnc_tabletApp;", "Entreprise", "!(isNull g_company)"],
+	["lyeed_IMG\data\tablet\app_main\app_company.paa", "lyeed_IMG\data\tablet\app_main\app_company_select.paa", "['COMPAGNIES'] spawn AlysiaClient_fnc_tabletApp;", "Entreprises", "true"],
 	["lyeed_IMG\data\tablet\app_main\app_dab.paa", "lyeed_IMG\data\tablet\app_main\app_dab_select.paa", "['DAB'] spawn AlysiaClient_fnc_tabletApp;", "DAB", "'DAB' in g_apps"],
 	["lyeed_IMG\data\tablet\app_main\app_annuaire.paa", "lyeed_IMG\data\tablet\app_main\app_annuaire_select.paa", "['ANNUAIRE'] spawn AlysiaClient_fnc_tabletApp;", "Annuaire", "'ANNUAIRE' in g_apps"]
 ];

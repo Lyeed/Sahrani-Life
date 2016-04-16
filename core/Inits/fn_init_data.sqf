@@ -82,12 +82,22 @@ g_phone_contacts = _basic select 31;
 [g_phone_messages, (_basic select 32)] call BIS_fnc_arrayPushStack;
 g_phone_forfait = _basic select 33;
 g_phone_blacklist = _basic select 34;
-g_apps = _basic select 35;
+{
+	_config = missionConfigFile >> "ALYSIA_SHOP_APPLICATIONS" >> _x;
+	if (isClass(_config)) then
+	{
+		if (str(playerSide) in getArray(_config >> "sides")) then
+		{
+			g_apps pushBack _x;
+		};
+	};
+} forEach (_basic select 35);
 g_choice = _basic select 36;
 [(_basic select 38)] call AlysiaClient_fnc_handleAlcool;
 if ((_basic select 39) isEqualTo 1) then {
 	player setVariable ["bullet_check", true, true];
 };
+g_phone_annuaire = _basic select 40;
 // Licenses
 {
 	_config = missionConfigFile >> "ALYSIA_LICENSES" >> _x;
@@ -102,19 +112,19 @@ if ((_basic select 39) isEqualTo 1) then {
 			};
 		};
 	};
-} forEach (_basic select 40);
+} forEach (_basic select 41);
 // cash
-g_cash = _basic select 41;
+g_cash = _basic select 42;
 // atm
-g_atm = _basic select 42;
+g_atm = _basic select 43;
 // inventory
 g_maxWeight = 100;
 {
     [true, (_x select 0), (_x select 1)] call AlysiaClient_fnc_handleInv;
-} forEach (_basic select 43);
+} forEach (_basic select 44);
 g_maxWeight = 24;
 // gear
-[(_basic select 44)] spawn AlysiaClient_fnc_loadGear;
+[(_basic select 45)] spawn AlysiaClient_fnc_loadGear;
 switch (playerSide) do
 {
 	case west: 
@@ -130,7 +140,7 @@ switch (playerSide) do
 	case civilian:
 	{
 		if ((call g_CIVLevel) > 0) then {player setVariable ["rank", (call g_CIVLevel), true]};
-		g_launder = _basic select 45;
+		g_launder = _basic select 46;
 		if (g_launder > 0) then
 		{
 			[] spawn

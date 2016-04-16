@@ -1,3 +1,106 @@
+#define COMPAGNIES_LIST_IDC           13000
+#define COMPAGNIES_HEADER_IDC         13001
+#define COMPAGNIES_MAP_IMAGE_IDC      13002
+#define COMPAGNIES_MAP_FRAME_IDC      13003
+#define COMPAGNIES_MAP_IDC            13004
+#define COMPAGNIES_SELECT_HEADER_IDC  13005
+#define COMPAGNIES_SELECT_INFO_IDC    13006
+#define COMPAGNIES_MYCOMPANY_IDC      13007
+
+COMPAGNIES_BACKGROUND = "lyeed_IMG\data\tablet\backgrounds\back.jpg";
+COMPAGNIES_IDCS[] = 
+{
+	COMPAGNIES_LIST_IDC,
+	COMPAGNIES_HEADER_IDC
+};
+
+class COMPAGNIES_LIST: RscCombo
+{
+	idc = COMPAGNIES_LIST_IDC;
+	onLBSelChanged = "_this spawn AlysiaClient_fnc_APP_compagnies_update;";
+	colorBackground[] = {0,0,0,1};
+
+	x = 0.324687 * safezoneW + safezoneX;
+	y = 0.379 * safezoneH + safezoneY;
+	w = 0.185625 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class COMPAGNIES_HEADER: RscStructuredText
+{
+	idc = COMPAGNIES_HEADER_IDC;
+	text = "<t align='center'>Entreprises</t>";
+	colorBackground[] = {0,0,0,0.8};
+	
+	x = 0.324687 * safezoneW + safezoneX;
+	y = 0.357 * safezoneH + safezoneY;
+	w = 0.185625 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+
+class COMPAGNIES_MAP_IMAGE: RscPicture
+{
+	idc = COMPAGNIES_MAP_IMAGE_IDC;
+	text = "lyeed_IMG\data\tablet\backgrounds\vehicles_noSignal.jpg";
+
+	x = 0.324687 * safezoneW + safezoneX;
+	y = 0.412 * safezoneH + safezoneY;
+	w = 0.185625 * safezoneW;
+	h = 0.264 * safezoneH;
+};
+class COMPAGNIES_MAP_FRAME: RscFrame
+{
+	idc = COMPAGNIES_MAP_FRAME_IDC;
+
+	x = 0.324687 * safezoneW + safezoneX;
+	y = 0.412 * safezoneH + safezoneY;
+	w = 0.185625 * safezoneW;
+	h = 0.264 * safezoneH;
+};
+class COMPAGNIES_MAP: RscMapControl
+{
+	idc = COMPAGNIES_MAP_IDC;
+	maxSatelliteAlpha = 0.75;
+	alphaFadeStartScale = "STRTSCALE";
+	alphaFadeEndScale = 1.29;
+
+	x = 0.324687 * safezoneW + safezoneX;
+	y = 0.412 * safezoneH + safezoneY;
+	w = 0.185625 * safezoneW;
+	h = 0.264 * safezoneH;
+};
+
+class COMPAGNIES_SELECT_HEADER: RscStructuredText
+{
+	idc = COMPAGNIES_SELECT_HEADER_IDC;
+	colorBackground[] = {0,0,0,0.8};
+
+	x = 0.515469 * safezoneW + safezoneX;
+	y = 0.357 * safezoneH + safezoneY;
+	w = 0.159844 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class COMPAGNIES_SELECT_INFO: RscStructuredText
+{
+	idc = COMPAGNIES_SELECT_INFO_IDC;
+	colorBackground[] = {0,0,0,0.6};
+
+	x = 0.515469 * safezoneW + safezoneX;
+	y = 0.379 * safezoneH + safezoneY;
+	w = 0.159844 * safezoneW;
+	h = 0.253 * safezoneH;
+};
+class COMPAGNIES_MYCOMPANY: RscButtonMenu
+{
+	idc = COMPAGNIES_MYCOMPANY_IDC;
+	text = "Mon entreprise";
+	action = "['COMPANY'] spawn AlysiaClient_fnc_tabletApp;";
+
+	x = 0.546406 * safezoneW + safezoneX;
+	y = 0.654 * safezoneH + safezoneY;
+	w = 0.0979687 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+
 #define COMPANY_HEADER_FRAME_IDC            9600
 #define COMPANY_HEADER_BACKGROUND_IDC       9601
 #define COMPANY_HEADER_IMAGE_IDC            9602

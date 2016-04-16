@@ -23,6 +23,7 @@ class ALYSIA_PHONE
 			sms_max = 3;
 			contacts_max = 5;
 			backlist_max = 0;
+			hide_number = 0;
 			sides[] = {"CIV", "EAST", "WEST", "GUER"};
 		};
 
@@ -32,6 +33,7 @@ class ALYSIA_PHONE
 			bill = 200;
 			sms_price = 8;
 			sms_max = 10;
+			hide_number = 1;
 			contacts_max = 20;
 			backlist_max = 5;
 			sides[] = {"CIV"};
@@ -43,6 +45,7 @@ class ALYSIA_PHONE
 			bill = 500;
 			sms_price = 0;
 			sms_max = 20;
+			hide_number = 1;
 			contacts_max = 45;
 			backlist_max = 10;
 			sides[] = {"CIV"};
@@ -53,6 +56,7 @@ class ALYSIA_PHONE
 			name = "Faction";
 			bill = 25;
 			sms_price = 0;
+			hide_number = 1;
 			sms_max = 10;
 			contacts_max = 15;
 			backlist_max = 5;

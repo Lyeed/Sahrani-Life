@@ -88,7 +88,7 @@ if (_actual_call isEqualTo "") then {
 _ctrl_call ctrlSetEventHandler ["LBSelChanged", "[((_this select 0) lbData (_this select 1)), true] call AlysiaClient_fnc_phone_ring_call;"];
 
 _ctrl_checkbox = _display displayCtrl 8355;
-if (profileNamespace getVariable ["ALYSIA_phone_annuaire", false]) then {
+if (g_phone_annuaire) then {
 	_ctrl_checkbox cbSetChecked true;
 } else {
 	_ctrl_checkbox cbSetChecked true;

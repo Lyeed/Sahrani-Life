@@ -69,8 +69,8 @@ class ALYSIA_MEDECINE
 		{
 			class rhume
 			{
-				min = 5;
-				max = 10;
+				min = 1;
+				max = 6;
 			};
 		};
 	};
@@ -93,8 +93,8 @@ class ALYSIA_MEDECINE
 		{
 			class toux
 			{
-				max = 8;
-				min = 3;
+				max = 5;
+				min = 1;
 			};
 		};
 	};

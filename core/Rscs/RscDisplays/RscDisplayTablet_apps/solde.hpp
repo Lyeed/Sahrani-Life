@@ -1,233 +1,106 @@
-#define SOLDE_ATM_BACKGROUND_IDC       7600
-#define SOLDE_ATM_FRAME_IDC            7601
-#define SOLDE_ATM_PICTURE_IDC          7602
-#define SOLDE_ATM_INFO_IDC             7603
-#define SOLDE_SALARY_AMOUNT_FRAME_IDC  7604
-#define SOLDE_SALARY_AMOUNT_HEADER_IDC 7605
-#define SOLDE_SALARY_AMOUNT_INFO_IDC   7606
-#define SOLDE_SALARY_EACH_FRAME_IDC    7607
-#define SOLDE_SALARY_EACH_HEADER_IDC   7608
-#define SOLDE_SALARY_EACH_INFO_IDC     7609
-#define SOLDE_SALARY_NEXT_FRAME_IDC    7610
-#define SOLDE_SALARY_NEXT_HEADER_IDC   7611
-#define SOLDE_SALARY_NEXT_INFO_IDC     7612
-#define SOLDE_BILLS_HEADER_IDC         7613
-#define SOLDE_BILLS_FRAME_IDC          7614
-#define SOLDE_BILLS_INFO_IDC           7615
-#define SOLDE_SMS_HEADER_IDC           7616
-#define SOLDE_SMS_CHECKBOX_IDC         7617
-#define SOLDE_SMS_FRAME_IDC            7618
+#define SOLDE_TITLE_IDC        7600
+#define SOLDE_INFO_IDC         7601
+#define SOLDE_SMS_CHECKBOX_IDC 7602
+#define SOLDE_SMS_TITLE_IDC    7603
+#define SOLDE_ACTION_BILLS_IDC 7604
 
 SOLDE_BACKGROUND = "lyeed_IMG\data\tablet\backgrounds\back_bank.jpg";
 SOLDE_IDCS[] =
 {
-	SOLDE_ATM_BACKGROUND_IDC,
-	SOLDE_ATM_FRAME_IDC,
-	SOLDE_ATM_PICTURE_IDC,
-	SOLDE_ATM_INFO_IDC,
-	SOLDE_SALARY_AMOUNT_FRAME_IDC,
-	SOLDE_SALARY_AMOUNT_HEADER_IDC,
-	SOLDE_SALARY_AMOUNT_INFO_IDC,
-	SOLDE_SALARY_EACH_FRAME_IDC,
-	SOLDE_SALARY_EACH_HEADER_IDC,
-	SOLDE_SALARY_EACH_INFO_IDC,
-	SOLDE_SALARY_NEXT_FRAME_IDC,
-	SOLDE_SALARY_NEXT_HEADER_IDC,
-	SOLDE_SALARY_NEXT_INFO_IDC,
-	SOLDE_BILLS_HEADER_IDC,
-	SOLDE_BILLS_FRAME_IDC,
-	SOLDE_BILLS_INFO_IDC
+	SOLDE_TITLE_IDC,
+	SOLDE_INFO_IDC,
+	SOLDE_ACTION_BILLS_IDC
 };
 
-class SOLDE_ATM_BACKGROUND: RscText
+class SOLDE_TITLE: RscStructuredText
 {
-	idc = SOLDE_ATM_BACKGROUND_IDC;
-	colorBackground[] = {0,0,0,0.6};
-	
-	x = 0.556719 * safezoneW + safezoneX;
-	y = 0.379 * safezoneH + safezoneY;
-	w = 0.118594 * safezoneW;
-	h = 0.055 * safezoneH;
-};
-class SOLDE_ATM_FRAME: RscFrame
-{
-	idc = SOLDE_ATM_FRAME_IDC;
-	
-	x = 0.556719 * safezoneW + safezoneX;
-	y = 0.379 * safezoneH + safezoneY;
-	w = 0.118594 * safezoneW;
-	h = 0.055 * safezoneH;
-};
-class SOLDE_ATM_PICTURE: RscPicture
-{
-	idc = SOLDE_ATM_PICTURE_IDC;
-	text = "lyeed_IMG\data\tablet\solde\atm.paa";
-	
-	x = 0.55925 * safezoneW + safezoneX;
-	y = 0.383073 * safezoneH + safezoneY;
-	w = 0.0309375 * safezoneW;
-	h = 0.044 * safezoneH;
-};
-class SOLDE_ATM_INFO: RscStructuredText
-{
-	idc = SOLDE_ATM_INFO_IDC;
-	
-	x = 0.5825 * safezoneW + safezoneX;
-	y = 0.39 * safezoneH + safezoneY;
-	w = 0.0928125 * safezoneW;
-	h = 0.022 * safezoneH;
-};
-
-class SOLDE_SALARY_AMOUNT_FRAME: RscFrame
-{
-	idc = SOLDE_SALARY_AMOUNT_FRAME_IDC;
-
-	x = 0.567031 * safezoneW + safezoneX;
-	y = 0.5 * safezoneH + safezoneY;
-	w = 0.0979687 * safezoneW;
-	h = 0.044 * safezoneH;
-};
-class SOLDE_SALARY_AMOUNT_HEADER: RscStructuredText
-{
-	idc = SOLDE_SALARY_AMOUNT_HEADER_IDC;
-	colorBackground[] = {0,0,0,0.8};
-	
-	x = 0.567031 * safezoneW + safezoneX;
-	y = 0.5 * safezoneH + safezoneY;
-	w = 0.0979687 * safezoneW;
-	h = 0.022 * safezoneH;
-};
-class SOLDE_SALARY_AMOUNT_INFO: RscStructuredText
-{
-	idc = SOLDE_SALARY_AMOUNT_INFO_IDC;
-	colorBackground[] = {0,0,0,0.6};
-	
-	x = 0.567031 * safezoneW + safezoneX;
-	y = 0.522 * safezoneH + safezoneY;
-	w = 0.0979687 * safezoneW;
-	h = 0.022 * safezoneH;
-};
-
-class SOLDE_SALARY_EACH_FRAME: RscFrame
-{
-	idc = SOLDE_SALARY_EACH_FRAME_IDC;
-
-	x = 0.567031 * safezoneW + safezoneX;
-	y = 0.566 * safezoneH + safezoneY;
-	w = 0.0979687 * safezoneW;
-	h = 0.044 * safezoneH;
-};
-class SOLDE_SALARY_EACH_HEADER: RscStructuredText
-{
-	idc = SOLDE_SALARY_EACH_HEADER_IDC;
-	text = "<t align='center'>Temps entre salaire</t>";
-	colorBackground[] = {0,0,0,0.8};
-	
-	x = 0.567031 * safezoneW + safezoneX;
-	y = 0.566 * safezoneH + safezoneY;
-	w = 0.0979687 * safezoneW;
-	h = 0.022 * safezoneH;
-};
-class SOLDE_SALARY_EACH_INFO: RscStructuredText
-{
-	idc = SOLDE_SALARY_EACH_INFO_IDC;
-	colorBackground[] = {0,0,0,0.6};
-
-	x = 0.567031 * safezoneW + safezoneX;
-	y = 0.588 * safezoneH + safezoneY;
-	w = 0.0979687 * safezoneW;
-	h = 0.022 * safezoneH;
-};
-
-class SOLDE_SALARY_NEXT_FRAME: RscFrame
-{
-	idc = SOLDE_SALARY_NEXT_FRAME_IDC;
-
-	x = 0.567031 * safezoneW + safezoneX;
-	y = 0.632 * safezoneH + safezoneY;
-	w = 0.0979687 * safezoneW;
-	h = 0.044 * safezoneH;
-};
-class SOLDE_SALARY_NEXT_HEADER: RscStructuredText
-{
-	idc = SOLDE_SALARY_NEXT_HEADER_IDC;
-	text = "<t align='center'>Prochain salaire</t>";
-	colorBackground[] = {0,0,0,0.8};
-
-	x = 0.567031 * safezoneW + safezoneX;
-	y = 0.632 * safezoneH + safezoneY;
-	w = 0.0979687 * safezoneW;
-	h = 0.022 * safezoneH;
-};
-class SOLDE_SALARY_NEXT_INFO: RscStructuredText
-{
-	idc = SOLDE_SALARY_NEXT_INFO_IDC;
-	colorBackground[] = {0,0,0,0.6};
-
-	x = 0.567031 * safezoneW + safezoneX;
-	y = 0.654 * safezoneH + safezoneY;
-	w = 0.0979687 * safezoneW;
-	h = 0.022 * safezoneH;
-};
-
-class SOLDE_BILLS_HEADER: RscStructuredText
-{
-	idc = SOLDE_BILLS_HEADER_IDC;
-	text = "<t align='center'>Relevé</t>";
-	colorBackground[] = {0,0,0,0.8};
+	idc = SOLDE_TITLE_IDC;
+	text = "<t font='RobotoRegular' size='1.9'>Mes informations banquaires</t>";
 
 	x = 0.324687 * safezoneW + safezoneX;
-	y = 0.346 * safezoneH + safezoneY;
-	w = 0.221719 * safezoneW;
-	h = 0.022 * safezoneH;
+	y = 0.357 * safezoneH + safezoneY;
+	w = 0.262969 * safezoneW;
+	h = 0.044 * safezoneH;
 };
-class SOLDE_BILLS_FRAME: RscFrame
+class SOLDE_INFO: RscStructuredText
 {
-	idc = SOLDE_BILLS_FRAME_IDC;
-
-	x = 0.324687 * safezoneW + safezoneX;
-	y = 0.346 * safezoneH + safezoneY;
-	w = 0.221719 * safezoneW;
-	h = 0.187 * safezoneH;
-};
-class SOLDE_BILLS_INFO: RscListbox
-{
-	idc = SOLDE_BILLS_INFO_IDC;
+	idc = SOLDE_INFO_IDC;
 	
 	x = 0.324687 * safezoneW + safezoneX;
-	y = 0.368 * safezoneH + safezoneY;
-	w = 0.221719 * safezoneW;
-	h = 0.165 * safezoneH;
-};
-
-class SOLDE_SMS_HEADER: RscStructuredText
-{
-	idc = SOLDE_SMS_HEADER_IDC;
-	text = "<t align='center'>Envoie SMS</t>";
-	colorBackground[] = {0,0,0,0.8};
-
-	x = 0.381406 * safezoneW + safezoneX;
-	y = 0.588 * safezoneH + safezoneY;
-	w = 0.0979687 * safezoneW;
-	h = 0.022 * safezoneH;
+	y = 0.423 * safezoneH + safezoneY;
+	w = 0.350625 * safezoneW;
+	h = 0.209 * safezoneH;
 };
 class SOLDE_SMS_CHECKBOX: RscCheckbox
 {
 	idc = SOLDE_SMS_CHECKBOX_IDC;
-	tooltip = "Recevoir un SMS lors du salaire";
 	onCheckedChanged = "if ((_this select 1) isEqualTo 0) then {profileNamespace setVariable [""ALYSIA_phone_salary"", false]} else {profileNamespace setVariable [""ALYSIA_phone_salary"", true]};";
+	
+	x = 0.329844 * safezoneW + safezoneX;
+	y = 0.643 * safezoneH + safezoneY;
+	w = 0.0154688 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class SOLDE_SMS_TITLE: RscStructuredText
+{
+	idc = SOLDE_SMS_TITLE_IDC;
+	text = "Recevoir un SMS lors du salaire";
+	
+	x = 0.343749 * safezoneW + safezoneX;
+	y = 0.642074 * safezoneH + safezoneY;
+	w = 0.138594 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class SOLDE_ACTION_BILLS: RscButtonMenu
+{
+	idc = SOLDE_ACTION_BILLS_IDC;
+	text = "Relevé";
+	action = "['SOLDE_BILLS'] spawn AlysiaClient_fnc_tabletApp;";
+	
+	x = 0.536094 * safezoneW + safezoneX;
+	y = 0.643 * safezoneH + safezoneY;
+	w = 0.0773437 * safezoneW;
+	h = 0.022 * safezoneH;
+};
 
-	x = 0.4175 * safezoneW + safezoneX;
-	y = 0.61 * safezoneH + safezoneY;
-	w = 0.020625 * safezoneW;
+#define SOLDE_BILLS_ICONE_IDC  7650
+#define SOLDE_BILLS_TITLE_IDC  7651
+#define SOLDE_BILLS_LIST_IDC   7652
+
+SOLDE_BILLS_BACKGROUND = "lyeed_IMG\data\tablet\backgrounds\back_bank.jpg";
+SOLDE_BILLS_IDCS[] =
+{
+	SOLDE_BILLS_ICONE_IDC,
+	SOLDE_BILLS_TITLE_IDC,
+	SOLDE_BILLS_LIST_IDC
+};
+
+class SOLDE_BILLS_ICONE: RscPicture
+{
+	idc = SOLDE_BILLS_ICONE_IDC;
+	text = "lyeed_IMG\data\tablet\solde\bills.paa";
+
+	x = 0.324687 * safezoneW + safezoneX;
+	y = 0.357 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class SOLDE_BILLS_TITLE: RscStructuredText
+{
+	idc = SOLDE_BILLS_TITLE_IDC;
+	text = "<t size='1.5'>Relevé bancaire</t>";
+
+	x = 0.352969 * safezoneW + safezoneX;
+	y = 0.361519 * safezoneH + safezoneY;
+	w = 0.319688 * safezoneW;
 	h = 0.033 * safezoneH;
 };
-class SOLDE_SMS_FRAME: RscFrame
+class SOLDE_BILLS_LIST: RscListbox
 {
-	idc = SOLDE_SMS_FRAME_IDC;
+	idc = SOLDE_BILLS_LIST_IDC;
 
-	x = 0.381406 * safezoneW + safezoneX;
-	y = 0.588 * safezoneH + safezoneY;
-	w = 0.0979687 * safezoneW;
-	h = 0.055 * safezoneH;
+	x = 0.324687 * safezoneW + safezoneX;
+	y = 0.412 * safezoneH + safezoneY;
+	w = 0.350625 * safezoneW;
+	h = 0.275 * safezoneH;
 };

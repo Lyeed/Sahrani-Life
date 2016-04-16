@@ -11206,7 +11206,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""Intendant"",AlysiaClient_fnc_shop_arma_open,""prison_clothe_south"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Contremaitre"",AlysiaClient_fnc_shop_virtual_open,""prisoner_pierre"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""Matériel de travaux"",AlysiaClient_fnc_shop_arma_open,""prisoner_shop_store"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Contremaitre"",AlysiaClient_fnc_shop_virtual_open,""prisoner_pierre"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item745
 		{
@@ -11238,7 +11238,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this addAction[""Mineur"",AlysiaClient_fnc_shop_arma_open,""prisoner_shop_store"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Contremaitre"",AlysiaClient_fnc_shop_virtual_open,""prisoner_pierre"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this addAction[""Matériel de travaux"",AlysiaClient_fnc_shop_arma_open,""prisoner_shop_store"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Contremaitre"",AlysiaClient_fnc_shop_virtual_open,""prisoner_pierre"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item748
 		{
@@ -11451,7 +11451,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_InfoStand_V2_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setdir 90;this setposATL [12111.860352,17701.734375,0];this setVectorUp [0,0,1];this addAction[""Intendant"",AlysiaClient_fnc_shop_clothing_open,""prisoner_shop_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setdir 90;this setposATL [12111.860352,17701.734375,0];this setVectorUp [0,0,1];this addAction[""Intendant"",AlysiaClient_fnc_shop_clothing_open,""prison_clothe_south"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
 		class Item770
 		{

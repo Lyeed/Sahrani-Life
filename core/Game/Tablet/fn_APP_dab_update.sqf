@@ -23,6 +23,14 @@ if (_data isEqualTo "") exitWith {};
 _data = call compile _data;
 _dab = (nearestObjects [_data select 1, [_data select 0], 15]) select 0;
 
+(_display displayCtrl 9907) ctrlSetStructuredText parseText format
+[
+		"<t font='EtelkaMonospacePro' size='1'>"
+	+	"<t align='left'>Liquidité</t><t align='right'><t color='#8cff9b'>%1</t>kn</t><br/>"
+	+	"</t>",
+	[_dab getVariable ["money", getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(_dab) >> "money_stock")]] call AlysiaClient_fnc_numberText
+];
+
 if ("ItemGPS" in (assignedItems player)) then
 {
 	_config = missionConfigFile >> "ALYSIA_ATM" >> typeOf(_dab);
@@ -42,14 +50,6 @@ if ("ItemGPS" in (assignedItems player)) then
 		"<t align='center'>%1 mètre%2</t>",
 		_distance,
 		if (_distance > 1) then {"s"} else {""}
-	];
-
-	(_display displayCtrl 9907) ctrlSetStructuredText parseText format
-	[
-			"<t font='EtelkaMonospacePro' size='1'>"
-		+	"<t align='left'>Liquidité</t><t align='right'><t color='#8cff9b'>%1</t>kn</t><br/>"
-		+	"</t>",
-		[_dab getVariable ["money", getNumber(missionConfigFile >> "ALYSIA_ATM" >> typeOf(_dab) >> "money_stock")]] call AlysiaClient_fnc_numberText
 	];
 
 	[9904, true] call AlysiaClient_fnc_tabletShow;
