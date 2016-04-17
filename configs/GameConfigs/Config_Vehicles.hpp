@@ -3423,7 +3423,7 @@ class ALYSIA_VEHICLES
 			"Skyline_Vehicule_Jonzie_Quattroporte_11_F",
 			"Skyline_Vehicule_Jonzie_Quattroporte_12_F"
 		};
-		realname = "Maserati Quattroporte";
+		realname = "Mini Cooper";
 	};
 	class Skyline_Vehicule_Jonzie_Quattroporte_01_F: Skyline_Vehicule_Jonzie_Quattroporte {};
 	class Skyline_Vehicule_Jonzie_Quattroporte_02_F: Skyline_Vehicule_Jonzie_Quattroporte {};
