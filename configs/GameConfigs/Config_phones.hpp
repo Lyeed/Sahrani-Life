@@ -11,6 +11,65 @@ class ALYSIA_PHONE
 		characters_allowed = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-*éè?!,.ù_à ";
 		characters_max = 125;
 		send_max = 5;
+		class sounds
+		{
+			class message_rcv_1
+			{
+				name = "Alerte 1";
+				donator = 0;
+				distance = 20;
+			};
+			class message_rcv_2: message_rcv_1
+			{
+				name = "Alerte 2";
+			};
+			class message_rcv_3: message_rcv_1
+			{
+				name = "Alerte 3";
+				donator = 1;
+			};
+			class message_rcv_4: message_rcv_3
+			{
+				name = "Alerte 4";
+			};
+			class message_rcv_5: message_rcv_3
+			{
+				name = "Alerte 5";
+			};
+			class message_rcv_6: message_rcv_3
+			{
+				name = "Alerte 6";
+			};
+			class message_rcv_7: message_rcv_3
+			{
+				name = "Alerte 7";
+			};
+			class message_rcv_8: message_rcv_3
+			{
+				name = "Alerte 8";
+			};
+			class message_rcv_9: message_rcv_3
+			{
+				name = "Alerte 9";
+			};
+			class message_rcv_10: message_rcv_3
+			{
+				name = "Alerte 10";
+			};
+		};
+	};
+
+	class CALL
+	{
+		class sounds
+		{
+			class message_rcv_1
+			{
+				name = "Sonnerie 1";
+				donator = 0;
+				distance = 20;
+			};
+		};
 	};
 
 	class FORFAITS

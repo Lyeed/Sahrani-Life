@@ -49,7 +49,7 @@ while {count(_medecine) > 0} do
 	{
 		if (count(_event_sounds) > 0) then
 		{
-			[player, (_event_sounds call BIS_fnc_selectRandom), 25] call CBA_fnc_globalSay3d;
+			[player, (_event_sounds call BIS_fnc_selectRandom), 12] call CBA_fnc_globalSay3d;
 		};
 
 		if (_contagion_chance > 0) then
@@ -71,7 +71,7 @@ while {count(_medecine) > 0} do
 			};
 		};
 		
-		_event_next = time + round(random(100) + 20);
+		_event_next = time + round(random(100) + 30);
 	};
 
 	if (_maxFatigue isEqualTo 1) then {

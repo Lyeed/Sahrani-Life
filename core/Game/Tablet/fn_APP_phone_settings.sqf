@@ -5,85 +5,43 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display", "_ctrl_sms", "_rings_sms", "_rings_call", "_ctrl_call", "_actual_sms", "_actual_call", "_ctrl_checkbox"];
+private["_display", "_ctrl_sms", "_ctrl_call", "_actual_sms", "_actual_call", "_ctrl_checkbox"];
 
 disableSerialization;
 _display = uiNamespace getVariable ["tablet", displayNull];
 if (isNull _display) exitWith {};
-
-_rings_sms =
-[
-	"message_rcv_1",
-	"message_rcv_2"
-];
-
-if ((call g_donator) isEqualTo 1) then
-{
-	_rings_sms = _rings_sms +
-	[
-		"message_rcv_3",
-		"message_rcv_4",
-		"message_rcv_5",
-		"message_rcv_6",
-		"message_rcv_7",
-		"message_rcv_8",
-		"message_rcv_9",
-		"message_rcv_10"
-	];
-};
 
 _actual_sms = profileNamespace getVariable ["ALYSIA_phone_sms_ring", ""];
 _ctrl_sms = _display displayCtrl 8351;
 lbClear _ctrl_sms;
 
 _ctrl_sms lbAdd "Silencieux";
-if (_actual_sms isEqualTo "") then {
-	_ctrl_sms lbSetCurSel 0;
-};
+if (_actual_sms isEqualTo "") then {_ctrl_sms lbSetCurSel 0};
+_ctrl_sms lbSetPicture [0, "lyeed_IMG\data\phone\settings\sound.paa"];
 
 {
-	_index = _ctrl_sms lbAdd format["Alerte %1 %2", _forEachIndex];
-	if (_actual_sms isEqualTo _x) then {_ctrl_sms lbSetCurSel _index};
-	_ctrl_sms lbSetData [_index, _x];
-} forEach _rings_sms;
+	_index = _ctrl_sms lbAdd getText(_x >> "name");
+	if (_actual_sms isEqualTo (configName _x)) then {_ctrl_sms lbSetCurSel _index};
+	_ctrl_sms lbSetPicture [_index, "lyeed_IMG\data\phone\settings\sound.paa"];
+	_ctrl_sms lbSetData [_index, (configName _x)];
+} forEach ("getNumber(_x >> 'donator') <= (call g_donator)" configClasses (missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "sounds"));
 
 _ctrl_sms ctrlSetEventHandler ["LBSelChanged", "[((_this select 0) lbData (_this select 1)), true] call AlysiaClient_fnc_phone_ring_message;"];
-
-_rings_call =
-[
-	"message_rcv_1",
-	"message_rcv_2"
-];
-
-if ((call g_donator) isEqualTo 1) then
-{
-	_rings_call = _rings_call +
-	[
-		"message_rcv_3",
-		"message_rcv_4",
-		"message_rcv_5",
-		"message_rcv_6",
-		"message_rcv_7",
-		"message_rcv_8",
-		"message_rcv_9",
-		"message_rcv_10"
-	];
-};
 
 _actual_call = profileNamespace getVariable ["ALYSIA_phone_call_ring", ""];
 _ctrl_call = _display displayCtrl 8353;
 lbClear _ctrl_call;
 
 _ctrl_call lbAdd "Silencieux";
-if (_actual_call isEqualTo "") then {
-	_ctrl_call lbSetCurSel 0;
-};
+if (_actual_call isEqualTo "") then {_ctrl_call lbSetCurSel 0};
+_ctrl_call lbSetPicture [0, "lyeed_IMG\data\phone\settings\sound.paa"];
 
 {
-	_index = _ctrl_call lbAdd format["Sonnerie %1", _forEachIndex];
-	if (_actual_call isEqualTo _x) then {_ctrl_call lbSetCurSel _index};
-	_ctrl_call lbSetData [_index, _x];
-} forEach _rings_call;
+	_index = _ctrl_call lbAdd getText(_x >> "name");
+	if (_actual_call isEqualTo (configName _x)) then {_ctrl_call lbSetCurSel _index};
+	_ctrl_call lbSetPicture [_index, "lyeed_IMG\data\phone\settings\sound.paa"];
+	_ctrl_call lbSetData [_index, (configName _x)];
+} forEach ("getNumber(_x >> 'donator') <= (call g_donator)" configClasses (missionConfigFile >> "ALYSIA_PHONE" >> "CALL" >> "sounds"));
 
 _ctrl_call ctrlSetEventHandler ["LBSelChanged", "[((_this select 0) lbData (_this select 1)), true] call AlysiaClient_fnc_phone_ring_call;"];
 

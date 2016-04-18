@@ -24,7 +24,7 @@ if (_hide) then {
 };
 
 g_phone_messages pushBack [_from, (format["Le %1 à %2", ([] call AlysiaClient_fnc_strDate), ([] call AlysiaClient_fnc_strTime)]), 0, _msg];
-if (alive player) then
+if (g_is_alive) then
 {
 	if ([] call AlysiaClient_fnc_hasPhone) then
 	{
@@ -32,7 +32,12 @@ if (alive player) then
 		if (_sound isEqualTo "") then {
 			playSound "message_rcv_silent";
 		} else {
-			[player, _sound, 20] call CBA_fnc_globalSay3d;
+			_config = missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "sounds" >> _sound;
+			if (isClass(_config)) then {
+				[player, _sound, getNumber(_config >> "distance")] call CBA_fnc_globalSay3d;
+			} else {
+				profileNamespace setVariable ["ALYSIA_phone_sms_ring", ""];
+			};
 		};
 	};
 };

@@ -48,7 +48,7 @@ class SOLDE_SMS_TITLE: RscStructuredText
 	
 	x = 0.343749 * safezoneW + safezoneX;
 	y = 0.642074 * safezoneH + safezoneY;
-	w = 0.138594 * safezoneW;
+	w = 0.158594 * safezoneW;
 	h = 0.022 * safezoneH;
 };
 class SOLDE_ACTION_BILLS: RscButtonMenu

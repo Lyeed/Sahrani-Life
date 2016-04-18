@@ -1810,7 +1810,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\patron.paa";
 		class use
 		{
-			action = "[['weapon_ak_1','weapon_ak_2','weapon_ak_3','magazine_ak','scope_ak'], 'lab_weapon', 'patron_AK74'] call AlysiaClient_fnc_item_patron;";
+			action = "['patron_AK74'] call AlysiaClient_fnc_item_patron;";
 		};
 	};
 	class patron_M21: patron_AK74
@@ -1819,7 +1819,7 @@ class ALYSIA_ITEMS
 		price_buy = 825000;
 		class use
 		{
-			action = "[['weapon_m21','magazine_m21','scope_m21'], 'lab_weapon', 'patron_M21'] call AlysiaClient_fnc_item_patron;";
+			action = "['patron_M21'] call AlysiaClient_fnc_item_patron;";
 		};
 	};
 	class patron_CZ: patron_AK74
@@ -1828,7 +1828,7 @@ class ALYSIA_ITEMS
 		price_buy = 439000;
 		class use
 		{
-			action = "[['weapon_cz','magazine_cz'], 'lab_weapon', 'patron_CZ'] call AlysiaClient_fnc_item_patron;";
+			action = "['patron_CZ'] call AlysiaClient_fnc_item_patron;";
 		};
 	};
 	class patron_sawed: patron_AK74
@@ -1837,7 +1837,7 @@ class ALYSIA_ITEMS
 		price_buy = 210000;
 		class use
 		{
-			action = "[['weapon_sawed','magazine_sawed'], 'lab_weapon', 'patron_sawed'] call AlysiaClient_fnc_item_patron;";
+			action = "['patron_sawed'] call AlysiaClient_fnc_item_patron;";
 		};
 	};
 	class patron_AKM: patron_AK74
@@ -1846,7 +1846,7 @@ class ALYSIA_ITEMS
 		price_buy = 995000;
 		class use
 		{
-			action = "[['weapon_AKM_1','weapon_AKM_2','magazine_AKM','scope_AKM'], 'lab_weapon', 'patron_AKM'] call AlysiaClient_fnc_item_patron;";
+			action = "['patron_AKM'] call AlysiaClient_fnc_item_patron;";
 		};
 	};
 	class patron_mosin: patron_AK74
@@ -1855,7 +1855,7 @@ class ALYSIA_ITEMS
 		price_buy = 260000;
 		class use
 		{
-			action = "[['weapon_mosin_1','weapon_mosin_2','magazine_mosin'], 'lab_weapon', 'patron_mosin'] call AlysiaClient_fnc_item_patron;";
+			action = "['patron_mosin'] call AlysiaClient_fnc_item_patron;";
 		};
 	};
 

@@ -64,31 +64,31 @@ class ALYSIA_MEDECINE
 {
 	class medoc_rhume
 	{
-		interval = 600;
+		interval = 300;
 		class heal
 		{
 			class rhume
 			{
-				min = 1;
 				max = 6;
+				min = 1;
 			};
 		};
 	};
 	class medoc_toux_1
 	{
-		interval = 1800;
+		interval = 600;
 		class heal
 		{
 			class toux
 			{
-				min = 1;
 				max = 3;
+				min = 1;
 			};
 		};
 	};
 	class medoc_toux_2
 	{
-		interval = 600;
+		interval = 300;
 		class heal
 		{
 			class toux

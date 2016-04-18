@@ -2823,13 +2823,13 @@ class ALYSIA_ITEMS_ARMA
 	class rds_uniform_Policeman
 	{
 		name = "Uniforme du Parti Central";
-		price = 350;
+		buy_price = 350;
 		buy_license_CIV = "central_com";
 	};
 	class rds_police_cap
 	{
 		name = "Casquette du Parti Central";
-		price = 75;
+		buy_price = 75;
 		buy_license_CIV = "central_com";
 	};
 };

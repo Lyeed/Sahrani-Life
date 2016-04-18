@@ -13,7 +13,7 @@ ANNUAIRE_IDCS[] =
 class ANNUAIRE_ICONE: RscPicture
 {
 	idc = ANNUAIRE_ICONE_IDC;
-	text = "lyeed_IMG\data\tablet\app_main\app_annuaire.paa";
+	text = "lyeed_IMG\data\tablet\annuaire\annuaire.paa";
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.357 * safezoneH + safezoneY;
