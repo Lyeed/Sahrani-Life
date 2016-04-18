@@ -3309,7 +3309,7 @@ class ALYSIA_VEHICLES
 			"Skyline_Vehicule_Jonzie_Escalade_11_F",
 			"Skyline_Vehicule_Jonzie_Escalade_12_F"
 		};
-		realname = "Ford Escalade";
+		realname = "Cadillac Escalade ESV";
 	};
 	class Skyline_Vehicule_Jonzie_Escalade_01_F: Skyline_Vehicule_Jonzie_Escalade {};
 	class Skyline_Vehicule_Jonzie_Escalade_02_F: Skyline_Vehicule_Jonzie_Escalade {};
@@ -3423,7 +3423,7 @@ class ALYSIA_VEHICLES
 			"Skyline_Vehicule_Jonzie_Quattroporte_11_F",
 			"Skyline_Vehicule_Jonzie_Quattroporte_12_F"
 		};
-		realname = "Maserati Quattroporte";
+		realname = "Mini Cooper";
 	};
 	class Skyline_Vehicule_Jonzie_Quattroporte_01_F: Skyline_Vehicule_Jonzie_Quattroporte {};
 	class Skyline_Vehicule_Jonzie_Quattroporte_02_F: Skyline_Vehicule_Jonzie_Quattroporte {};
