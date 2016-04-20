@@ -30,11 +30,11 @@ _config = missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2)
 (_display displayCtrl 13006) ctrlSetStructuredText parseText format
 [
 		"<t align='center'>"
-	+	"Type<br/>"
+	+	"<t color='#FACC2E'>Type</t><br/>"
 	+	"%1<br/><br/>"
-	+	"PDG<br/>"
-	+	"%2"
-	+	"Position GPS<br/>"
+	+	"<t color='#FACC2E'>PDG</t><br/>"
+	+	"%2<br/><br/>"
+	+	"<t color='#FACC2E'>Position GPS</t><br/>"
 	+	"%3",
 	getText(missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2) >> "name"),
 	(_info select 4),

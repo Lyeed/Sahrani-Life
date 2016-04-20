@@ -38,7 +38,7 @@ class SERVER_SERVER_HEADER: RscStructuredText
 {
 	idc = SERVER_SERVER_HEADER_IDC;
 	text = "<t align='center'>SERVEUR</t>";
-	colorBackground[] = {0,0,0,1};
+	colorBackground[] = {0,0,0,0.8};
 
 	x = 0.381406 * safezoneW + safezoneX;
 	y = 0.357 * safezoneH + safezoneY;
@@ -48,7 +48,6 @@ class SERVER_SERVER_HEADER: RscStructuredText
 class SERVER_SERVER_FRAME: RscFrame
 {
 	idc = SERVER_SERVER_FRAME_IDC;
-	colorText[] = {0,0,0,1};
 
 	x = 0.381406 * safezoneW + safezoneX;
 	y = 0.357 * safezoneH + safezoneY;
@@ -58,7 +57,7 @@ class SERVER_SERVER_FRAME: RscFrame
 class SERVER_SERVER_BACKGROUND: RscText
 {
 	idc = SERVER_SERVER_BACKGROUND_IDC;
-	colorBackground[] = {0,0,0,0.9};
+	colorBackground[] = {0,0,0,0.6};
 
 	x = 0.381406 * safezoneW + safezoneX;
 	y = 0.379 * safezoneH + safezoneY;
@@ -150,7 +149,7 @@ class SERVER_PLAYER_HEADER: RscStructuredText
 {
 	idc = SERVER_PLAYER_HEADER_IDC;
 	text = "<t align='center'>VOUS</t>";
-	colorBackground[] = {0,0,0,1};
+	colorBackground[] = {0,0,0,0.8};
 
 	x = 0.4175 * safezoneW + safezoneX;
 	y = 0.61 * safezoneH + safezoneY;
@@ -160,7 +159,6 @@ class SERVER_PLAYER_HEADER: RscStructuredText
 class SERVER_PLAYER_FRAME: RscFrame
 {
 	idc = SERVER_PLAYER_FRAME_IDC;
-	colorText[] = {0,0,0,1};
 
 	x = 0.4175 * safezoneW + safezoneX;
 	y = 0.61 * safezoneH + safezoneY;
@@ -172,7 +170,7 @@ class SERVER_PLAYER_CONNECTED_HEADER: RscStructuredText
 {
 	idc = SERVER_PLAYER_CONNECTED_HEADER_IDC;
 	text = "<t align='center'>Connecté depuis</t>";
-	colorBackground[] = {0,0,0,1};
+	colorBackground[] = {0,0,0,0.6};
 
 	x = 0.4175 * safezoneW + safezoneX;
 	y = 0.632 * safezoneH + safezoneY;
@@ -182,7 +180,7 @@ class SERVER_PLAYER_CONNECTED_HEADER: RscStructuredText
 class SERVER_PLAYER_CONNECTED_INFO: RscStructuredText
 {
 	idc = SERVER_PLAYER_CONNECTED_INFO_IDC;
-	colorBackground[] = {0,0,0,0.9};
+	colorBackground[] = {0,0,0,0.6};
 
 	x = 0.505156 * safezoneW + safezoneX;
 	y = 0.632 * safezoneH + safezoneY;

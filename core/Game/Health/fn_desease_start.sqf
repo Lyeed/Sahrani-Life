@@ -71,7 +71,7 @@ while {count(_medecine) > 0} do
 			};
 		};
 		
-		_event_next = time + round(random(100) + 30);
+		_event_next = time + round(random(100) + 60);
 	};
 
 	if (_maxFatigue isEqualTo 1) then {

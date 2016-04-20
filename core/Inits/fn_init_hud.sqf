@@ -178,7 +178,7 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 			};
 		};
 
-		if (("ItemGPS" in (assignedItems player)) && !(player getVariable ["restrained", false]) && !(player getVariable ["surrender", false])) then
+		if (("ItemGPS" in (assignedItems player)) && !(player getVariable ["restrained", false]) && !(player getVariable ["surrender", false]) && !(player getVariable ["is_coma", false])) then
 		{
 			_ctrl_gps_text ctrlSetStructuredText parseText format["<t align='left' font='PuristaBold'>%1</t><t align='right' font='PuristaBold'>%2</t>", (mapGridPosition player), round(getDir player)];
 

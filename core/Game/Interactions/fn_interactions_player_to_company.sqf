@@ -56,8 +56,8 @@ if (isNull _object) exitWith {};
 		],
 		[
 			"inventory",
-			"Stockage",
-			"[g_interaction_target, 'company_inventory', true, true, false, true, false] spawn AlysiaClient_fnc_virtual_menu_exhange_open;",
+			"Coffre",
+			"[g_interaction_target] spawn AlysiaClient_fnc_company_storage;",
 			"
 				(
 					isClass(missionConfigFile >> 'ALYSIA_COMPANIES' >> 'types' >> ((g_interaction_target getVariable 'company_info') select 2) >> 'storage') &&
@@ -68,7 +68,8 @@ if (isNull _object) exitWith {};
 							(getNumber(missionConfigFile >> 'ALYSIA_FACTIONS' >> str(playerSide) >> 'companies' >> 'search') isEqualTo 1) &&
 							(g_interaction_target getVariable ['perquisition',false])
 						)
-					)
+					) &&
+					(isNil 'gServer_soonReboot')
 				)
 			"
 		]

@@ -110,6 +110,7 @@ class CfgFunctions
 			class company_member_promote {};
 			class company_member_license_give {};
 			class company_member_license_receive {};
+			class company_storage {};
 		};
 
 		class Tools

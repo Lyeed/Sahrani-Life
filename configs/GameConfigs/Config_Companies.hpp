@@ -15,7 +15,6 @@
 		"Sécurité"
 		"Service"
 		"Usine de textile"
-	PAS FINI:
 		"Exploitation du pétrole"
 	PREVU:
 		"Journaliste"
@@ -94,7 +93,8 @@ class ALYSIA_COMPANIES
 			};
 			class storage
 			{
-				inventory = 220;
+				modelPos[] = {-6.31641,2.78394,-6.1919};
+				type "Skyline_Coffre_Medium";
 			};
 		};
 
@@ -126,7 +126,8 @@ class ALYSIA_COMPANIES
 			};
 			class storage
 			{
-				inventory = 200;
+				modelPos[] = {5.09766,-0.333252,-3.78896};
+				type "Skyline_Coffre_Medium";
 			};
 		};
 
@@ -159,7 +160,8 @@ class ALYSIA_COMPANIES
 			};
 			class storage
 			{
-				inventory = 50;
+				modelPos[] = {2.90869,3.22266,-1.78606};
+				type "Skyline_Coffre_Medium";
 			};
 		};
 
@@ -191,7 +193,8 @@ class ALYSIA_COMPANIES
 			};
 			class storage
 			{
-				inventory = 150;
+				modelPos[] = {-6.2876,0.670654,-1.52587};
+				type "Skyline_Coffre_Medium";
 			};
 		};
 
@@ -224,7 +227,8 @@ class ALYSIA_COMPANIES
 			};
 			class storage
 			{
-				inventory = 250;
+				modelPos[] = {-5.375,-6.43286,-23.1227};
+				type "Skyline_Coffre_Medium";
 			};
 		};
 
@@ -257,7 +261,8 @@ class ALYSIA_COMPANIES
 			};
 			class storage
 			{
-				inventory = 250;
+				modelPos[] = {8.90723,-0.138916,0.00143051};
+				type "Skyline_Coffre_Medium";
 			};
 		};
 
@@ -290,7 +295,8 @@ class ALYSIA_COMPANIES
 			};
 			class storage
 			{
-				inventory = 250;
+				modelPos[] = {-0.689941,12.0483,-5.46202};
+				type "Skyline_Coffre_Medium";
 			};
 		};
 
@@ -323,7 +329,8 @@ class ALYSIA_COMPANIES
 			};
 			class storage
 			{
-				inventory = 250;
+				modelPos[] = {4.56738,3.73999,-4.77142};
+				type "Skyline_Coffre_Medium";
 			};
 		};
 
@@ -356,7 +363,8 @@ class ALYSIA_COMPANIES
 			};
 			class storage
 			{
-				inventory = 50;
+				modelPos[] = {4.56055,1.86938,-3.87396};
+				type "Skyline_Coffre_Medium";
 			};
 		};
 
@@ -389,7 +397,8 @@ class ALYSIA_COMPANIES
 			};
 			class storage
 			{
-				inventory = 50;
+				modelPos[] = {0.45752,-6.34937,-1.92512};
+				type "Skyline_Coffre_Small";
 			};
 		};
 
@@ -457,7 +466,8 @@ class ALYSIA_COMPANIES
 			};
 			class storage
 			{
-				inventory = 250;
+				modelPos[] = {-5.11377,6.68115,-5.6257};
+				type "Skyline_Coffre_Medium";
 			};
 		};
 
@@ -489,7 +499,8 @@ class ALYSIA_COMPANIES
 			};
 			class storage
 			{
-				inventory = 250;
+				modelPos[] = {4.0498,-6.11279,-13.286};
+				type "Skyline_Coffre_Medium";
 			};
 		};
 	};

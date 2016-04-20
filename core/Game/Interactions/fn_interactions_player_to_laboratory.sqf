@@ -23,8 +23,13 @@
 			"Détruire",
 			"[g_interaction_target] spawn AlysiaClient_fnc_labo_destroy;",
 			"
-				((['destroy_labo'] call AlysiaClient_fnc_itemCount) > 0) &&
-				(getNumber(missionConfigFile >> 'ALYSIA_FACTIONS' >> str(playerSide) >> 'laboratory_destroy') isEqualTo 1)
+				(
+					((['destroy_labo'] call AlysiaClient_fnc_itemCount) > 0) &&
+					(getNumber(missionConfigFile >> 'ALYSIA_FACTIONS' >> str(playerSide) >> 'laboratory_destroy') isEqualTo 1)
+				) ||
+				(
+					((g_interaction_target getVariable 'laboratory_info') select 1) isEqualTo (getPlayerUID player)
+				)
 			"
 		],
 		[
@@ -32,7 +37,7 @@
 			"Saboter",
 			"[g_interaction_target] spawn AlysiaClient_fnc_labo_sabotage;",
 			"
-				(g_interaction_target getVariable ['sabotage',0] < time)
+				((g_interaction_target getVariable ['sabotage',0]) < serverTime)
 			"
 		]
 	],

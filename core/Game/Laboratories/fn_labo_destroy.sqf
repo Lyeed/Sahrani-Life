@@ -23,15 +23,22 @@ if (_target getVariable ["inUse", false]) exitWith {
 
 _target setVariable ["inUse", true, true];
 
-if (!(["Destruction", 6, _target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {
+if (!(["Destruction", 10, _target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {
 	_target setVariable ["inUse", false, true];
 };
 
-if ([false, "destroy_labo", 1] call AlysiaClient_fnc_handleInv) then
+if (((_info select 1) isEqualTo (getPlayerUID player)) && (g_laboratory isEqualTo _targett)) then
 {
-	_owner = [_info select 1] call AlysiaClient_fnc_getPlayerFromUID;
-	if (!(isNull _owner)) then {
-		[playerSide, (_info select 2)] remoteExecCall ["AlysiaClient_fnc_labo_update", _owner];
-	};
+	deleteMarkerLocal "laboratory";
 	[_target] remoteExec ["AlysiaServer_fnc_laboratory_destroy", 2];
+	["Vous avez détruit votre <t color='#FFBF00'>laboratoire</t>."] call AlysiaClient_fnc_info;
+} else {
+	if ([false, "destroy_labo", 1] call AlysiaClient_fnc_handleInv) then
+	{
+		_owner = [_info select 1] call AlysiaClient_fnc_getPlayerFromUID;
+		if (!(isNull _owner)) then {[playerSide, (_info select 2)] remoteExecCall ["AlysiaClient_fnc_labo_update", _owner]};
+		[_target] remoteExec ["AlysiaServer_fnc_laboratory_destroy", 2];
+	} else {
+		[format["Vous avez besoin de 1x <t color='#FFBF00'>%1</t>.", ["destroy_labo"] call AlysiaClient_fnc_itemGetName]] call AlysiaClient_fnc_error;
+	};
 };

@@ -17,6 +17,7 @@ if (player getVariable ["bullet_check", false]) then {player setVariable ["bulle
 if (player getVariable ["bed_awake", false]) then {player setVariable ["bed_awake", false, true]};
 if (player getVariable ["is_coma", false]) then {player setVariable ["is_coma", false, true]};
 if (player getVariable ["medic_request", false]) then {player setVariable ["medic_request", false, true]};
+if (player getVariable ["heart_attack", false]) then {player setVariable ["heart_attack", false, true]};
 
 [4000] call AlysiaClient_fnc_handleBlood;
 [] call AlysiaClient_fnc_init_actions;
