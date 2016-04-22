@@ -37,10 +37,14 @@ _action =
 [
 	format
 	[
-		"<t align='center'><img size='7' image='lyeed_IMG\data\interactions\player_to_player_basics\action_trade.paa'/><br/><t color='#DA81F5'>ECHANGE</t><br/><br/>Un échange vous a été proposé. En acceptant vous recevrez :</t><br/><br/>%1", 
+			"<t align='center'>"
+		+	"<img size='7' image='lyeed_IMG\data\interactions\player_to_player_basics\action_trade.paa'/><br/>"
+		+	"<t color='#DA81F5'>ECHANGE</t><br/><br/></t>"
+		+	"Un échange vous a été proposé.<br/>"
+		+	"En acceptant vous recevrez :<br/>%1",
 		_text
 	],
-	"Echange reçu",
+	"Echange",
 	"Accepter",
 	"Refuser"
 ] call BIS_fnc_guiMessage;
@@ -91,7 +95,7 @@ if (_action) then
 			_text = _text + format["- %1x %2<br/>", ([(_x select 1)] call AlysiaClient_fnc_numberText), ([(_x select 0)] call AlysiaClient_fnc_itemGetName)];
 		} forEach _return;
 		[format["Vous avez <t color='#74DF00'>accepté</t> l'échange cependant vous n'avez pas assez de place pour récupérer :<br/>%1", _text]] call AlysiaClient_fnc_info;
-		[_return] remoteExecCall ["AlysiaClient_fnc_interactionMenu_action_trade_space", _from];
+		[_return, _text] remoteExecCall ["AlysiaClient_fnc_interactionMenu_action_trade_space", _from];
 	};
 } else {
 	[_inv, _money] remoteExecCall ["AlysiaClient_fnc_interactionMenu_action_trade_refuse", _from];

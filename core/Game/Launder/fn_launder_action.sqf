@@ -8,16 +8,15 @@
 private["_amount", "_receive", "_action"];
 
 if (!(isNil "gServer_soonReboot")) exitWith {
-	["Veuillez attendre le <t color='#B40404'>redémarrage</t> du serveur pour blanchir votre argent"] call AlysiaClient_fnc_error;
+	["Veuillez attendre le <t color='#B40404'>redémarrage</t> du serveur pour blanchir votre argent."] call AlysiaClient_fnc_error;
 };
 
 _amount = ["illegal_money"] call AlysiaClient_fnc_itemCount;
 if (_amount isEqualTo 0) exitWith {
-	["Vous n'avez pas d'argent à blanchir"] call AlysiaClient_fnc_error;
+	["Vous n'avez pas d'argent à blanchir."] call AlysiaClient_fnc_error;
 };
-
-if (g_launder != 0) exitWith {
-	["Vous êtes déjà en train de blanchir de l'argent<br/>Attendez d'avoir reçu la somme avant de blanchir de nouveau"] call AlysiaClient_fnc_error;
+if (g_launder > 0) exitWith {
+	["Vous êtes déjà en train de blanchir de l'argent<br/>Attendez d'avoir reçu la somme avant de blanchir de nouveau."] call AlysiaClient_fnc_error;
 };
 
 closeDialog 0;
@@ -38,8 +37,9 @@ if (_action) then
 {
 	if ([false, "illegal_money", _amount] call AlysiaClient_fnc_handleInv) then
 	{
-		[format["Vous recevrez <t color='#8cff9b'>%1</t>kn sur votre compte bancaire dans quelques minutes", ([_receive] call AlysiaClient_fnc_numberText)]] call AlysiaClient_fnc_info;
 		g_launder = _receive;
+		[(getPlayerUID player), (player getVariable "realname"), g_launder] remoteExecCall ["AlysiaServer_fnc_logLaunder", 2];
+		[format["Vous recevrez <t color='#8cff9b'>%1</t>kn sur votre compte bancaire dans quelques minutes.", ([_receive] call AlysiaClient_fnc_numberText)]] call AlysiaClient_fnc_info;
 		[13] call AlysiaDB_fnc_query_update_partial;
 		uiSleep ((round(random(15)) + 3) * 60);
 		[] call AlysiaClient_fnc_launder_receive;
