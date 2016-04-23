@@ -1011,126 +1011,126 @@ class ALYSIA_PROCESS
 	class clothing_criminal_11: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (11)";
-		receive[] = {{},"digital_uniform"},0};
+		receive[] = {{},{"digital_uniform"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_12: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (12)";
-		receive[] = {{},"surpat_uniform"},0};
+		receive[] = {{},{"surpat_uniform"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_13: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (13)";
-		receive[] = {{},"camorra_uniform"},0};
+		receive[] = {{},{"camorra_uniform"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_14: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (14)";
-		receive[] = {{},"TRYK_U_B_wood_CombatUniform"},0};
+		receive[] = {{},{"TRYK_U_B_wood_CombatUniform"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_15: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (15)";
-		receive[] = {{},"TRYK_B_USMC_R"},0};
+		receive[] = {{},{"TRYK_B_USMC_R"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_16: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (16)";
-		receive[] = {{},"TRYK_U_B_TANTAN_CombatUniform"},0};
+		receive[] = {{},{"TRYK_U_B_TANTAN_CombatUniform"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_17: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (17)";
-		receive[] = {{},"TRYK_U_B_TANOCP_CombatUniform"},0};
+		receive[] = {{},{"TRYK_U_B_TANOCP_CombatUniform"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_18: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (18)";
-		receive[] = {{},"TRYK_U_B_woodtanR_CombatUniformTshirt"},0};
+		receive[] = {{},{"TRYK_U_B_woodtanR_CombatUniformTshirt"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_19: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (19)";
-		receive[] = {{},"TRYK_U_B_OD_OD_R_CombatUniform"},0};
+		receive[] = {{},{"TRYK_U_B_OD_OD_R_CombatUniform"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_20: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (20)";
-		receive[] = {{},"TRYK_U_B_MTP_BLK_CombatUniform"},0};
+		receive[] = {{},{"TRYK_U_B_MTP_BLK_CombatUniform"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_21: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (21)";
-		receive[] = {{},"TRYK_U_B_MTP_CombatUniform"},0};
+		receive[] = {{},{"TRYK_U_B_MTP_CombatUniform"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_22: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (22)";
-		receive[] = {{},"TRYK_U_B_MARPAT_Wood_Tshirt"},0};
+		receive[] = {{},{"TRYK_U_B_MARPAT_Wood_Tshirt"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_23: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (23)";
-		receive[] = {{},"TRYK_U_B_BLK"},0};
+		receive[] = {{},{"TRYK_U_B_BLK"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_24: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (24)";
-		receive[] = {{},"TRYK_U_B_BLKBLK_CombatUniform"},0};
+		receive[] = {{},{"TRYK_U_B_BLKBLK_CombatUniform"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_25: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (25)";
-		receive[] = {{},"TRYK_U_B_AOR2_OD_CombatUniform"},0};
+		receive[] = {{},{"TRYK_U_B_AOR2_OD_CombatUniform"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_26: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (26)";
-		receive[] = {{},"TRYK_U_B_AOR2_BLK_CombatUniform"},0};
+		receive[] = {{},{"TRYK_U_B_AOR2_BLK_CombatUniform"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_27: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (27)";
-		receive[] = {{},"TRYK_U_B_ARO2_CombatUniform"},0};
+		receive[] = {{},{"TRYK_U_B_ARO2_CombatUniform"},0};
 		class target {};
 		class factions: factions {};
 	};
 	class clothing_criminal_28: clothing_criminal_1
 	{
 		name = "Confection de tenue criminelle (28)";
-		receive[] = {{},"TRYK_U_B_ARO2R_CombatUniform"},0};
+		receive[] = {{},{"TRYK_U_B_ARO2R_CombatUniform"},0};
 		class target {};
 		class factions: factions {};
 	};
@@ -1933,7 +1933,7 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions: factions {};
 	};
-	
+
 	class board_1: weapon_ak_1
 	{
 		name = "Pancarte : Vive Brajva";

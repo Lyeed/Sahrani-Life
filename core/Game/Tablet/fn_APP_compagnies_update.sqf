@@ -21,7 +21,8 @@ _data = _list lbData _sel;
 if (_data isEqualTo "") exitWith {};
 
 _data = call compile _data;
-_object = (nearestObjects [_data select 1, [_data select 0], 15]) select 0;
+
+_object = nearestObject [(_data select 1), (_data select 0)];
 _info = _object getVariable "company_info";
 _config = missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2);
 

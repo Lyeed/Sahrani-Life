@@ -18,7 +18,7 @@ if (!(isNil "gServer_soonReboot") && hasInterface) exitWith {
 
 uiSleep((random(1)) + 0.5);
 
-_storage = _target getVariable "company_storage";
+_storage = _target getVariable ["company_storage", objNull];
 if (isNull _storage) then
 {
 	_config = missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> ((_target getVariable "company_info") select 2) >> "storage";

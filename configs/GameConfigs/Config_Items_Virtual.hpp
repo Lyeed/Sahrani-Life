@@ -1804,7 +1804,7 @@ class ALYSIA_ITEMS
 
 	class patron_AK74
 	{
-		name = "Patron arme (AK74)";
+		name = "Patron (AK74)";
 		weight = 0;
 		price_buy = 575000;
 		image = "alysia_items_virtual\data\patron.paa";
@@ -1815,7 +1815,7 @@ class ALYSIA_ITEMS
 	};
 	class patron_M21: patron_AK74
 	{
-		name = "Patron arme (M21)";
+		name = "Patron (M21)";
 		price_buy = 825000;
 		class use
 		{
@@ -1824,7 +1824,7 @@ class ALYSIA_ITEMS
 	};
 	class patron_CZ: patron_AK74
 	{
-		name = "Patron arme (CZ)";
+		name = "Patron (CZ)";
 		price_buy = 439000;
 		class use
 		{
@@ -1833,7 +1833,7 @@ class ALYSIA_ITEMS
 	};
 	class patron_sawed: patron_AK74
 	{
-		name = "Patron arme (Fusil scié)";
+		name = "Patron (Fusil scié)";
 		price_buy = 210000;
 		class use
 		{
@@ -1842,7 +1842,7 @@ class ALYSIA_ITEMS
 	};
 	class patron_AKM: patron_AK74
 	{
-		name = "Patron arme (AKM)";
+		name = "Patron (AKM)";
 		price_buy = 995000;
 		class use
 		{
@@ -1851,7 +1851,7 @@ class ALYSIA_ITEMS
 	};
 	class patron_mosin: patron_AK74
 	{
-		name = "Patron arme (Mosin)";
+		name = "Patron (Mosin)";
 		price_buy = 260000;
 		class use
 		{

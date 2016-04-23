@@ -33,7 +33,7 @@ _process = getArray(missionConfigFile >> "ALYSIA_LABORATORIES" >> (_info select 
 		{
 			_proc = _x;
 			if (!(_proc in _process)) then {_process pushBack _proc};
-		} forEach (_data select 1);
+		} forEach getArray(_config >> "process");
 	};
 } forEach ((format["'%1' in getArray(_x >> 'labos')", (_data select 2)]) configClasses (missionConfigFile >> "ALYSIA_BLUEPRINTS"));
 
