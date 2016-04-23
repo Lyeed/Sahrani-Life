@@ -20,12 +20,12 @@ if (_action) then
 {
 	g_action_inUse = true;
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-	waitUntil {animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};	
+	waitUntil {((animationState player) != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon")};	
 	g_action_inUse = false;
 };
 
 _escorter = _target getVariable ["escorted", objNull];
-if (!(isNull _escorter)) then
+if (!(isNull _escorter)) exitWith
 {
 	detach _target;
 	_escorter setVariable ["escorting", objNull, true];
@@ -33,7 +33,7 @@ if (!(isNull _escorter)) then
 };
 
 _escorting = _target getVariable ["escorting", objNull];
-if (!(isNull _escorting)) then
+if (!(isNull _escorting)) exitWith
 {
 	detach _escorting;
 	_escorting setVariable ["escorted", objNull, true];

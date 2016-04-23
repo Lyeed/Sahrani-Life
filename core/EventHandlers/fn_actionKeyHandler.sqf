@@ -34,7 +34,7 @@ if ((vehicle player) isEqualTo player) then
 				detach _x;
 			};
 		};
-	} forEach attachedObjects player;
+	} forEach (attachedObjects player);
 
 	_target = cursorObject;
 	if (isNull _target) then 

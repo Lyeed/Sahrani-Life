@@ -47,7 +47,7 @@ if (_door isEqualTo "") then
 	_item = ((getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "item")) createVehicle [0, 0, 0]);
 	_item attachTo [_bank, (getArray(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "pos"))];
 	_item setDir (getNumber(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "rot"));
-	_item animateSource [(getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "anim")), 1];
+	_item animate [(getText(missionConfigFile >> "ALYSIA_BANK" >> typeOf (_item) >> "anim")), 1];
 	
 	_item setVariable ["owner", player, true];
 	_item setVariable ["bank", _bank, true];

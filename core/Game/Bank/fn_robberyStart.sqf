@@ -42,13 +42,13 @@ if ([getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "name"), 
 
 switch (getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "open")) do
 {
-	case "Simple": {_bank animateSource [getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "door"), 1]};
+	case "Simple": {_bank animate [getText(missionConfigFile >> "ALYSIA_BANK" >> "doors" >> _door >> "door"), 1]};
 	case "Drill": {[_bank, _door] spawn AlysiaClient_fnc_robberyProcess};
 	case "Vault": {[_bank, _door] spawn AlysiaClient_fnc_robberyProcess};
 	case "Sliding":
 	{
-		_bank animateSource ["LeftSlideDoor", 0];
-		_bank animateSource ["RightLeftSlideDoor", 0];
+		_bank animate ["LeftSlideDoor", 0];
+		_bank animate ["RightLeftSlideDoor", 0];
 	};
 	case "Security":
 	{

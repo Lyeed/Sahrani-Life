@@ -629,7 +629,7 @@ class ALYSIA_PROCESS
 	};
 	class guardshed_wood
 	{
-		name = "Fabrication d'abri en bois'";
+		name = "Fabrication d'abri en bois";
 		require[] = {{"woodp",20}};
 		receive[] = {{{"guardshed_wood",1}},{},0};
 		time_per_item = 8;

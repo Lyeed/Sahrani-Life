@@ -39,10 +39,10 @@ if ((typeOf _item) isEqualTo "Bank_Drill") then
 	"M_PG_AT" createVehicle (getPosATL _item);
 	deleteVehicle _item;
 
-	(_item getVariable ["bank", ObjNull]) animateSource ["Door_5", 1];
+	(_item getVariable ["bank", ObjNull]) animate ["Door_5", 1];
 } else {
 	"M_PG_AT" createVehicle (getPosATL _item);
 	deleteVehicle _item;
 
-	(_item getVariable ["bank", ObjNull]) animateSource ["Vault_Door", 1];
+	(_item getVariable ["bank", ObjNull]) animate ["Vault_Door", 1];
 };
