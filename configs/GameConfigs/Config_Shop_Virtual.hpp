@@ -248,7 +248,6 @@ class ALYSIA_SHOPS_VIRTUAL
 				"heroin_seed",
 				"cocaine_seed",
 				"meth_seed",
-				"nitro",
 				"lab_marijuana",
 				"lab_meth",
 				"lab_cocaine",
@@ -263,7 +262,8 @@ class ALYSIA_SHOPS_VIRTUAL
 				"patron_AK74",
 				"patron_mosin",
 				"patron_CZ",
-				"patron_sawed"
+				"patron_sawed",
+				"patron_NVG"
 			},{
 				"artefact_R",
 				"artefact",

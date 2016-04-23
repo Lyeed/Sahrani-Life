@@ -30,4 +30,9 @@ class ALYSIA_BLUEPRINTS
 		process[] = {"weapon_mosin_1","weapon_mosin_2","magazine_mosin"};
 		labos[] = {"lab_weapon"};
 	};
+	class patron_NVG
+	{
+		process[] = {"googles_NVG"};
+		labos[] = {"lab_clothing"};
+	};
 };

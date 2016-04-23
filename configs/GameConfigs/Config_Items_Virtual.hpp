@@ -1858,6 +1858,15 @@ class ALYSIA_ITEMS
 			action = "['patron_mosin'] call AlysiaClient_fnc_item_patron;";
 		};
 	};
+	class patron_NVG: patron_AK74
+	{
+		name = "Patron (NVG)";
+		price_buy = 115000;
+		class use
+		{
+			action = "['patron_NVG'] call AlysiaClient_fnc_item_patron;";
+		};
+	};
 
 	class medoc_rhume
 	{

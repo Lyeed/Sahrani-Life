@@ -331,10 +331,6 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 200;
 		buy_condition_GUER = 3;
 	};
-	class digital_uniform
-	{
-		buy_price = 120;
-	};
 	class druglord_uniform_new
 	{
 		buy_price = 3000;

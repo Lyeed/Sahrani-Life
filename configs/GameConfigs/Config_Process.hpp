@@ -1008,14 +1008,134 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions: factions {};
 	};
-	class goggles_criminal_1: clothing_criminal_1
+	class clothing_criminal_11: clothing_criminal_1
 	{
-		name = "Confection cagoule criminelle 1";
-		receive[] = {{},{"G_Balaclava_blk"},0};
+		name = "Confection de tenue criminelle (11)";
+		receive[] = {{},"digital_uniform"},0};
 		class target {};
 		class factions: factions {};
 	};
-	class goggles_criminal_2: clothing_criminal_1
+	class clothing_criminal_12: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (12)";
+		receive[] = {{},"surpat_uniform"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class clothing_criminal_13: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (13)";
+		receive[] = {{},"camorra_uniform"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class clothing_criminal_14: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (14)";
+		receive[] = {{},"TRYK_U_B_wood_CombatUniform"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class clothing_criminal_15: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (15)";
+		receive[] = {{},"TRYK_B_USMC_R"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class clothing_criminal_16: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (16)";
+		receive[] = {{},"TRYK_U_B_TANTAN_CombatUniform"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class clothing_criminal_17: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (17)";
+		receive[] = {{},"TRYK_U_B_TANOCP_CombatUniform"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class clothing_criminal_18: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (18)";
+		receive[] = {{},"TRYK_U_B_woodtanR_CombatUniformTshirt"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class clothing_criminal_19: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (19)";
+		receive[] = {{},"TRYK_U_B_OD_OD_R_CombatUniform"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class clothing_criminal_20: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (20)";
+		receive[] = {{},"TRYK_U_B_MTP_BLK_CombatUniform"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class clothing_criminal_21: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (21)";
+		receive[] = {{},"TRYK_U_B_MTP_CombatUniform"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class clothing_criminal_22: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (22)";
+		receive[] = {{},"TRYK_U_B_MARPAT_Wood_Tshirt"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class clothing_criminal_23: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (23)";
+		receive[] = {{},"TRYK_U_B_BLK"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class clothing_criminal_24: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (24)";
+		receive[] = {{},"TRYK_U_B_BLKBLK_CombatUniform"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class clothing_criminal_25: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (25)";
+		receive[] = {{},"TRYK_U_B_AOR2_OD_CombatUniform"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class clothing_criminal_26: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (26)";
+		receive[] = {{},"TRYK_U_B_AOR2_BLK_CombatUniform"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class clothing_criminal_27: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (27)";
+		receive[] = {{},"TRYK_U_B_ARO2_CombatUniform"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class clothing_criminal_28: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (28)";
+		receive[] = {{},"TRYK_U_B_ARO2R_CombatUniform"},0};
+		class target {};
+		class factions: factions {};
+	};
+
+	class goggles_criminal_gas: clothing_criminal_1
 	{
 		name = "Confection masque à gaz";
 		require[] = {{"tissue",3},{"glass", 2},{"alu", 1}};
@@ -1023,13 +1143,7 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions: factions {};
 	};
-	class goggles_criminal_3: clothing_criminal_1
-	{
-		name = "Confection masque de voleur";
-		receive[] = {{},{"Masque_Solitaire"},0};
-		class target {};
-		class factions: factions {};
-	};
+
 	class vest_criminal_1: vest_news_1
 	{
 		name = "Confection de gilet pare balles";
@@ -1076,6 +1190,218 @@ class ALYSIA_PROCESS
 		{
 			class CIV {};
 		};
+	};
+
+	class google_criminal_1
+	{
+		name = "Confection de lunette criminel 1";
+		sound = "smelting";
+		require[] = {{"tissue",2}};
+		receive[] = {{},{"TRYK_Shemagh_ESS_G"},0};
+		time_per_item = 5;
+		time_default = 5;
+		class target {};
+		class factions
+		{
+			class CIV {};
+		};
+	};
+	class google_criminal_2: google_criminal_1
+	{
+		name = "Confection de lunette criminel 2";
+		receive[] = {{}, {"TRYK_Shemagh"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class google_criminal_3: google_criminal_1
+	{
+		name = "Confection de lunette criminel 3";
+		receive[] = {{}, {"TRYK_Shemagh_mesh"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class google_criminal_4: google_criminal_1
+	{
+		name = "Confection de lunette criminel 4";
+		receive[] = {{}, {"mgsr_eyepatch_goggles"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class google_criminal_5: google_criminal_1
+	{
+		name = "Confection de lunette criminel 5";
+		receive[] = {{}, {"shemagh_faceD"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class google_criminal_6: google_criminal_1
+	{
+		name = "Confection de lunette criminel 6";
+		receive[] = {{}, {"shemagh_faceOD"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class google_criminal_7: google_criminal_1
+	{
+		name = "Confection de lunette criminel 7";
+		receive[] = {{}, {"Recon_MskullBLK"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class google_criminal_8: google_criminal_1
+	{
+		name = "Confection de lunette criminel 8";
+		receive[] = {{}, {"Payday_Cagoule"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class google_criminal_9: google_criminal_1
+	{
+		name = "Confection de lunette criminel 9";
+		receive[] = {{}, {"G_Balaclava_Whitehand"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class google_criminal_10: google_criminal_1
+	{
+		name = "Confection de lunette criminel 10";
+		receive[] = {{}, {"G_Balaclava_whitecross"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class google_criminal_11: google_criminal_1
+	{
+		name = "Confection de lunette criminel 11";
+		receive[] = {{}, {"G_Balaclava_oli"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class google_criminal_12: google_criminal_1
+	{
+		name = "Confection de lunette criminel 12";
+		receive[] = {{}, {"G_Balaclava_lowprofile"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class google_criminal_13: google_criminal_1
+	{
+		name = "Confection de lunette criminel 13";
+		receive[] = {{},{"G_Balaclava_blk"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class google_criminal_14: google_criminal_1
+	{
+		name = "Confection de lunette criminel 14";
+		receive[] = {{},{"Masque_Solitaire"},0};
+		class target {};
+		class factions: factions {};
+	};
+
+	class headgear_criminal_1
+	{
+		name = "Confection de chapeau criminel 1";
+		sound = "smelting";
+		require[] = {{"tissue",2}};
+		receive[] = {{},{"TRYK_H_Bandana_H"},0};
+		time_per_item = 5;
+		time_default = 5;
+		class target {};
+		class factions
+		{
+			class CIV {};
+		};
+	};
+	class headgear_criminal_2: headgear_criminal_1
+	{
+		name = "Confection de chapeau criminel 2";
+		receive[] = {{}, {"TRYK_H_Booniehat_AOR2"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class headgear_criminal_3: headgear_criminal_1
+	{
+		name = "Confection de chapeau criminel 3";
+		receive[] = {{}, {"TRYK_H_Booniehat_3CD"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class headgear_criminal_4: headgear_criminal_1
+	{
+		name = "Confection de chapeau criminel 4";
+		receive[] = {{}, {"TRYK_H_Booniehat_AOR1"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class headgear_criminal_5: headgear_criminal_1
+	{
+		name = "Confection de chapeau criminel 5";
+		receive[] = {{}, {"TRYK_H_Booniehat_WOOD"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class headgear_criminal_6: headgear_criminal_1
+	{
+		name = "Confection de chapeau criminel 6";
+		receive[] = {{}, {"TRYK_H_Booniehat_MARPAT_WOOD"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class headgear_criminal_7: headgear_criminal_1
+	{
+		name = "Confection de chapeau criminel 7";
+		receive[] = {{}, {"H_Cap_blk_Raven"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class headgear_criminal_8: headgear_criminal_1
+	{
+		name = "Confection de chapeau criminel 8";
+		receive[] = {{}, {"H_Cap_brn_SPECOPS"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class headgear_criminal_9: headgear_criminal_1
+	{
+		name = "Confection de chapeau criminel 9";
+		receive[] = {{}, {"H_LIB_SOV_RA_PrivateCap"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class headgear_criminal_10: headgear_criminal_1
+	{
+		name = "Confection de chapeau criminel 10";
+		receive[] = {{}, {"H_LIB_SOV_RA_OfficerCap"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class headgear_criminal_11: headgear_criminal_1
+	{
+		name = "Confection de chapeau criminel 11";
+		receive[] = {{}, {"H_ShemagOpen_khk"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class headgear_criminal_12: headgear_criminal_1
+	{
+		name = "Confection de chapeau criminel 12";
+		receive[] = {{}, {"Head_Wrap"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class headgear_criminal_13: headgear_criminal_1
+	{
+		name = "Confection de chapeau criminel 13";
+		receive[] = {{}, {"Head_WrapTAN"}, 0};
+		class target {};
+		class factions: factions {};
+	};
+	class headgear_criminal_14: headgear_criminal_1
+	{
+		name = "Confection de chapeau criminel 14";
+		receive[] = {{}, {"TRYK_Kio_Balaclava"}, 0};
+		class target {};
+		class factions: factions {};
 	};
 
 	class headgear_mask
