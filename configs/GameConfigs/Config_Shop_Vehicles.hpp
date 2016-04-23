@@ -14,7 +14,8 @@ class ALYSIA_SHOPS_VEHICLES
 			"DAR_CVPIAux",
 			"DAR_ImpalaPolice",
 			"Fett_truck_milice",
-			"Fett_Audi_RS4_12_milice_F"
+			"Fett_Audi_RS4_12_milice_F",
+			"Gurkha_f5"
 		};
 	};
 	class WEST_vehicles_air

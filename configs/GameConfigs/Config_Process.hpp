@@ -1880,14 +1880,33 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 
-	class magazine_tracker: magazine_ak
+	class weapon_deagle_normal: weapon_ak_1
 	{
-		name = "Munitions : Revolver Tracker";
-		require[] = {{"bullet",6},{"magazine",1}};
-		receive[] = {{},{"RH_6Rnd_45ACP_Mag"},0};
+		name = "Arme : Deagle";
+		require[] = {{"canon",1},{"poignee",1},{"detente",1},{"marteau",1},{"barillet",1},{"ironp",5},{"steel",6},{"alu",2}};
+		receive[] = {{},{"RH_deagle"},0};
+		time_per_item = 20;
 		class target {};
 		class factions: factions {};
 	};
+	class weapon_deagle_gold: weapon_deagle_normal
+	{
+		name = "Arme : Deagle plaqué Or";
+		require[] = {{"canon",1},{"poignee",1},{"detente",1},{"marteau",1},{"barillet",1},{"ironp",5},{"steel",2},{"gold",1}};
+		receive[] = {{},{"RH_Deagleg"},0};
+		time_per_item = 60;
+		class target {};
+		class factions: factions {};
+	};
+	class magazine_deagle: magazine_ak
+	{
+		name = "Munitions : Deagle";
+		require[] = {{"bullet",7},{"magazine",1}};
+		receive[] = {{},{"RH_7Rnd_50_AE"},0};
+		class target {};
+		class factions: factions {};
+	};
+
 	class weapon_tracker: weapon_ak_1
 	{
 		name = "Arme : Revolver Tracker";
@@ -1906,7 +1925,15 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions: factions {};
 	};
-
+	class magazine_tracker: magazine_ak
+	{
+		name = "Munitions : Revolver Tracker";
+		require[] = {{"bullet",6},{"magazine",1}};
+		receive[] = {{},{"RH_6Rnd_45ACP_Mag"},0};
+		class target {};
+		class factions: factions {};
+	};
+	
 	class board_1: weapon_ak_1
 	{
 		name = "Pancarte : Vive Brajva";

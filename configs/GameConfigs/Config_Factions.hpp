@@ -81,7 +81,6 @@ class ALYSIA_FACTIONS
 						"hlc_rifle_rpk74n",
 						"hlc_rifle_RPK12",
 						"RH_g19",
-						"RH_Deagle",
 						"srifle_EBR_F"
 					}
 				},

@@ -2640,6 +2640,17 @@ class ALYSIA_VEHICLES
 		rank = 5;
 		realname = "Ford Explorer Milice";
 	};
+	class Gurkha_f5
+	{
+		buyPrice = 520000;
+		inventory = 60;
+		side = "WEST";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "Diesel";
+		rank = 7;
+		realname = "Gurkha Milice";
+	};
 
 	/* TRUCKS */
 	class Fett_truck_milice

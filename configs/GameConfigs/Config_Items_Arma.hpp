@@ -1308,11 +1308,6 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 3000;
 		buy_license_CIV = "gun";
 	};
-	class RH_Deaglem
-	{
-		buy_price = 200;
-		buy_condition_WEST = 9;
-	};
 	class RH_fn57
 	{
 		buy_price = 1500;

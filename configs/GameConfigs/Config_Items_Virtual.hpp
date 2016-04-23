@@ -1867,6 +1867,15 @@ class ALYSIA_ITEMS
 			action = "['patron_NVG'] call AlysiaClient_fnc_item_patron;";
 		};
 	};
+	class patron_deagle: patron_AK74
+	{
+		name = "Patron (Deagle)";
+		price_buy = 165000;
+		class use
+		{
+			action = "['patron_deagle'] call AlysiaClient_fnc_item_patron;";
+		};
+	};
 
 	class medoc_rhume
 	{

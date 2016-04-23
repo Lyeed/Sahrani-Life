@@ -263,7 +263,8 @@ class ALYSIA_SHOPS_VIRTUAL
 				"patron_mosin",
 				"patron_CZ",
 				"patron_sawed",
-				"patron_NVG"
+				"patron_NVG",
+				"patron_deagle"
 			},{
 				"artefact_R",
 				"artefact",
