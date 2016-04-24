@@ -2708,6 +2708,22 @@ class ALYSIA_VEHICLES
 	};
 	class dezkit_b206_police: dezkit_b206mi {};
 	class dezkit_b206_fbi: dezkit_b206mi {};
+	
+	class Skyline_LittleBird_Milice
+	{
+		buyPrice = 275000;
+		inventory = 45;
+		side = "WEST";
+		insurance = 1;
+		licenses[] = {"pilot"};
+		fuel = "Kerosene";
+		rank = 6;
+		colors[] =
+		{
+			"Skyline_LittleBird_Milice_01_F"
+		};
+		realname = "LittleBird de la Milice";
+	};
 
   	/*
 	**				EAST VEHICLES
@@ -2824,6 +2840,21 @@ class ALYSIA_VEHICLES
 		fuel = "Kerosene";
 		rank = 3;
 		realname = "bo105";
+	};
+	class Skyline_LittleBird_Garde
+	{
+		buyPrice = 275000;
+		inventory = 45;
+		side = "EAST";
+		insurance = 1;
+		licenses[] = {"pilot"};
+		fuel = "Kerosene";
+		rank = 6;
+		colors[] =
+		{
+			"Skyline_LittleBird_Garde_01_F"
+		};
+		realname = "LittleBird de la Garde";
 	};
 
   	/*
