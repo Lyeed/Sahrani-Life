@@ -21,7 +21,7 @@ class ALYSIA_SHOPS_VEHICLES
 	{
 		name = "Concessionnaire de la Milice";
 		side = "WEST";
-		stock[] = {"EC635_Unarmed", "dezkit_b206mi"};
+		stock[] = {"EC635_Unarmed","dezkit_b206mi","Skyline_LittleBird_Milice"};
 	};
 	class WEST_vehicles_sea
 	{
@@ -54,7 +54,7 @@ class ALYSIA_SHOPS_VEHICLES
 	{
 		name = "Concessionnaire de la Garde";
 		side = "EAST";
-		stock[] = {"sfp_bo105_unarmed"};
+		stock[] = {"sfp_bo105_unarmed","Skyline_LittleBird_Garde"};
 	};
 	class EAST_vehicles_sea
 	{
