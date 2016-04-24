@@ -17,7 +17,7 @@ class ALYSIA_STORAGES
 	};
 	class R3F_WeaponStock
 	{
-		inventory = 1000;
+		inventory = 10000;
 		item = "storage_stock";
 	};
 };

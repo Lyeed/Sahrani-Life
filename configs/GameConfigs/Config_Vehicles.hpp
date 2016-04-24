@@ -2811,6 +2811,7 @@ class ALYSIA_VEHICLES
 		inventory = 425;
 		rank = 5;
 		realname = "HEMTT cargo Garde";
+		colors[] = {};
 	};
 
 	/* AIRS */

@@ -35,6 +35,6 @@ _process = getArray(missionConfigFile >> "ALYSIA_LABORATORIES" >> (_info select 
 			if (!(_proc in _process)) then {_process pushBack _proc};
 		} forEach getArray(_config >> "process");
 	};
-} forEach ((format["'%1' in getArray(_x >> 'labos')", (_data select 2)]) configClasses (missionConfigFile >> "ALYSIA_BLUEPRINTS"));
+} forEach ((format["'%1' in getArray(_x >> 'labos')", (_info select 2)]) configClasses (missionConfigFile >> "ALYSIA_BLUEPRINTS"));
 
 [_target, _process] call AlysiaClient_fnc_process_choice_open;

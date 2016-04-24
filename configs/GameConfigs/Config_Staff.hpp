@@ -51,13 +51,13 @@ class ALYSIA_STAFF
 			rank = "modo";
 			teamspeak = 1;
 		};
-		// - Support
 		class Maels
 		{
 			uid = "76561197978122710";
-			rank = "support";
+			rank = "modo";
 			teamspeak = 1;
 		};
+		// - Support
 		class TheRealityTuto
 		{
 			uid = "76561198107987392";
@@ -79,14 +79,14 @@ class ALYSIA_STAFF
 			class Invisible_ON
 			{
 				name = "Invisible ON";
-				statement = "g_staff_invisible = true;[player, true] remoteExecCall ['hideObjectGlobal', 2];";
+				statement = "g_staff_invisible = true;[player,true] remoteExecCall ['hideObjectGlobal',2];";
 				condition = "!g_staff_invisible";
-				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424", "76561198144182091", "76561198138202092"};
+				allow[] = {"76561198007960495","76561198099211957","76561198026418521","76561197977519424","76561198144182091","76561198138202092","76561197978122710"};
 			};
 			class Invisible_OFF: Invisible_ON
 			{
 				name = "Invisible OFF";
-				statement = "g_staff_invisible = false;[player, false] remoteExecCall ['hideObjectGlobal', 2];";
+				statement = "g_staff_invisible = false;[player,false] remoteExecCall ['hideObjectGlobal',2];";
 				condition = "g_staff_invisible";
 			};
 
@@ -95,7 +95,7 @@ class ALYSIA_STAFF
 				name = "TP ON";
 				statement = "g_staff_tp = true;onMapSingleClick '(vehicle player) setPos _pos';";
 				condition = "!g_staff_tp";
-				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424", "76561198144182091", "76561198138202092"};
+				allow[] = {"76561198007960495","76561198099211957","76561198026418521","76561197977519424","76561198144182091","76561198138202092","76561197978122710"};
 			};
 			class TP_OFF: TP_ON
 			{
@@ -109,7 +109,7 @@ class ALYSIA_STAFF
 				name = "God ON";
 				statement = "g_staff_god = true;";
 				condition = "!g_staff_god";
-				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424", "76561198144182091", "76561198138202092"};
+				allow[] = {"76561198007960495","76561198099211957","76561198026418521","76561197977519424","76561198144182091","76561198138202092","76561197978122710"};
 			};
 			class god_OFF: god_ON
 			{
@@ -123,7 +123,7 @@ class ALYSIA_STAFF
 				name = "Soins personnel";
 				statement = "g_bleed = 0;[4000] call AlysiaClient_fnc_handleBlood;";
 				condition = "(true)";
-				allow[] = {"76561198007960495", "76561198099211957"};
+				allow[] = {"76561198007960495","76561198099211957"};
 			};
 
 			class target_getKey
@@ -131,21 +131,21 @@ class ALYSIA_STAFF
 				name = "Clef Cible";
 				statement = "g_vehicles pushBack cursorTarget;";
 				condition = "(!(isNull cursorTarget) && ((cursorTarget isKindOf 'Car') || (cursorTarget isKindOf 'Ship') || (cursorTarget isKindOf 'Air') || (cursorTarget isKindOf 'Tank') || (cursorTarget isKindOf 'Truck')))";
-				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424", "76561198144182091", "76561198138202092"};
+				allow[] = {"76561198007960495","76561198099211957","76561198026418521","76561197977519424","76561198144182091","76561198138202092","76561197978122710"};
 			};
 			class target_delete
 			{
 				name = "Supp Cible";
 				statement = "deleteVehicle cursorTarget;";
 				condition = "!(isNull cursorTarget)";
-				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424", "76561198144182091", "76561198138202092"};
+				allow[] = {"76561198007960495","76561198099211957","76561198026418521","76561197977519424","76561198144182091","76561198138202092","76561197978122710"};
 			};
 			class target_trunkInUse
 			{
 				name = "Fix coffre";
-				statement = "cursorTarget setVariable ['trunk_in_use_ID', '', true];";
-				condition = "!(isNull cursorTarget) && ((cursorTarget getVariable ['trunk_in_use_ID', '']) != '')";
-				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424", "76561198144182091", "76561198138202092"};
+				statement = "cursorTarget setVariable ['trunk_in_use_ID','',true];";
+				condition = "!(isNull cursorTarget) && ((cursorTarget getVariable ['trunk_in_use_ID','']) != '')";
+				allow[] = {"76561198007960495","76561198099211957","76561198026418521","76561197977519424","76561198144182091","76561198138202092","76561197978122710"};
 			};
 
 			class markers_ON
@@ -153,7 +153,7 @@ class ALYSIA_STAFF
 				name = "Markers ON";
 				statement = "g_staff_markers = true;";
 				condition = "!g_staff_markers";
-				allow[] = {"76561198007960495", "76561198099211957", "76561198026418521", "76561197977519424", "76561198144182091", "76561198138202092"};
+				allow[] = {"76561198007960495","76561198099211957","76561198026418521","76561197977519424","76561198144182091","76561198138202092","76561197978122710"};
 			};
 			class markers_OFF: markers_ON
 			{
@@ -165,9 +165,9 @@ class ALYSIA_STAFF
 			class reboot
 			{
 				name = "Reboot";
-				statement = "[] remoteExec ['AlysiaServer_fnc_serverSave', 2];";
+				statement = "[] remoteExec ['AlysiaServer_fnc_serverSave',2];";
 				condition = "isNil 'gServer_soonReboot'";
-				allow[] = {"76561198007960495", "76561198099211957"};
+				allow[] = {"76561198007960495","76561198099211957"};
 				verify = 1;
 			};
 		};
@@ -177,44 +177,38 @@ class ALYSIA_STAFF
 			class goto
 			{
 				name = "TP à";
-				statement = "(vehicle player) setPosATL (getPosATL (call compile (lbData[9000, lbCurSel 9000])));";
+				statement = "(vehicle player) setPosATL (getPosATL (call compile (lbData[9000,lbCurSel 9000])));";
 				condition = "(true)";
-				allow[] = {"76561198007960495", "76561198099211957", "76561197977519424", "76561198026418521", "76561198144182091", "76561198138202092"};
+				allow[] = {"76561198007960495","76561198099211957","76561197977519424","76561198026418521","76561198144182091","76561198138202092","76561197978122710"};
 			};
-			class tphere
+			class tphere: goto
 			{
 				name = "TP ici";
-				statement = "(call compile (lbData[9000, lbCurSel 9000])) setPosATL (getPosATL player);";
-				condition = "(true)";
-				allow[] = {"76561198007960495", "76561198099211957", "76561197977519424", "76561198026418521", "76561198144182091", "76561198138202092"};
+				statement = "(call compile (lbData[9000,lbCurSel 9000])) setPosATL (getPosATL player);";
 			};
-			class spec
+			class spec: goto
 			{
 				name = "Spec";
-				statement = "(call compile (lbData[9000, lbCurSel 9000])) switchCamera 'INTERNAL';g_staff_spec = true;closeDialog 0;";
-				condition = "(true)";
-				allow[] = {"76561198007960495", "76561197977519424", "76561198026418521", "76561198099211957", "76561198144182091", "76561198138202092"};
+				statement = "(call compile (lbData[9000,lbCurSel 9000])) switchCamera 'INTERNAL';g_staff_spec = true;closeDialog 0;";
 			};
-			class res
-			{
-				name = "Rez";
-				statement = "((call compile (lbData[9000, lbCurSel 9000])) setVariable ['is_bleeding',false,true]);((call compile (lbData[9000, lbCurSel 9000])) setVariable ['is_coma',false,true]);";
-				condition = "(call compile (lbData[9000, lbCurSel 9000])) getVariable ['is_coma',false]";
-				allow[] = {"76561198007960495", "76561198099211957"};
-			};
-			class data
+			class data: goto
 			{
 				name = "Informations";
-				statement = "[player] remoteExecCall ['AlysiaClient_fnc_APP_staff_players_getData', (lbData[9000, lbCurSel 9000])];";
-				condition = "(true)";
-				allow[] = {"76561198007960495", "76561197977519424", "76561198026418521", "76561198099211957", "76561198144182091", "76561198138202092"};
+				statement = "[player] remoteExecCall ['AlysiaClient_fnc_APP_staff_players_getData',(lbData[9000,lbCurSel 9000])];";
 			};
+
 			class heal
 			{
 				name = "Soin";
-				statement = "[3999] remoteExecCall ['AlysiaClient_fnc_handleBlood', (call compile (lbData[9000, lbCurSel 9000]))];";
+				statement = "[3999] remoteExecCall ['AlysiaClient_fnc_handleBlood',(call compile (lbData[9000,lbCurSel 9000]))];";
 				condition = "(true)";
-				allow[] = {"76561198007960495", "76561198099211957"};
+				allow[] = {"76561198007960495","76561198099211957"};
+			};
+			class res: heal
+			{
+				name = "Rez";
+				statement = "((call compile (lbData[9000,lbCurSel 9000])) setVariable ['is_bleeding',false,true]);((call compile (lbData[9000,lbCurSel 9000])) setVariable ['is_coma',false,true]);";
+				condition = "(call compile (lbData[9000,lbCurSel 9000])) getVariable ['is_coma',false]";
 			};
 		};
 	};

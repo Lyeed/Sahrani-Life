@@ -27,7 +27,7 @@ if (!(["Destruction", 10, _target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call 
 	_target setVariable ["inUse", false, true];
 };
 
-if (((_info select 1) isEqualTo (getPlayerUID player)) && (g_laboratory isEqualTo _targett)) then
+if (((_info select 1) isEqualTo (getPlayerUID player)) && (g_laboratory isEqualTo _target)) then
 {
 	deleteMarkerLocal "laboratory";
 	[_target] remoteExec ["AlysiaServer_fnc_laboratory_destroy", 2];
