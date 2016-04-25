@@ -21,7 +21,7 @@ if (!(_storeType isEqualTo []) && !(typeOf(g_interaction_target) in _storeType))
 	[
 		format
 		[
-			"<t color='#FF8000'>%1 ne peut pas être entreposer ici.",
+			"<t color='#FF8000'>%1</t> ne peut pas être entreposer ici.",
 			[_item] call AlysiaClient_fnc_itemGetName
 		]
 	] call AlysiaClient_fnc_error;

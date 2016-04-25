@@ -22,7 +22,7 @@ if (isNull _target) exitWith {
 };
 
 player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
+waitUntil {((animationState player) isEqualTo "ainvpercmstpsnonwnondnon_putdown_amovpercmstpsnonwnondnon")};
 
 if (!(isNull (player getVariable ["escorting", objNull]))) exitWith {
 	["Vous escortez déjà quelqu'un"] call AlysiaClient_fnc_error;

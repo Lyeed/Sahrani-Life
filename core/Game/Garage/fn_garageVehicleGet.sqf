@@ -80,7 +80,7 @@ if ((g_garage_info select 2) isEqualTo []) then
 		if (count(_position) > 0) then
 		{
 			if ((nearestObjects [_position, ["Car", "Air", "Ship", "Truck", "Tank"], 7]) isEqualTo []) then {
-				_validSpawn = _x;
+				_validSpawn = _position;
 			};
 		};
 	};

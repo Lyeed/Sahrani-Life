@@ -19,57 +19,59 @@ class ALYSIA_STAFF
 	class members
 	{
 		// - Admin
-		class Lyeed
+		class admin
+		{
+			rank = "admin";
+			teamspeak = 1;
+		};
+		class Lyeed: admin
 		{
 			uid = "76561198007960495";
-			rank = "admin";
-			requests = 0;
-			teamspeak = 1;
 		};
-		class Ben_Ancona
+		class Ben_Ancona: admin
 		{
 			uid = "76561198099211957";
-			rank = "admin";
-			teamspeak = 1;
 		};
 		// - Modo
-		class Brad_Dexter
+		class modo
+		{
+			rank = "modo";
+			teamspeak = 1;
+		};
+		class Brad_Dexter: modo
 		{
 			uid = "76561197977519424";
-			rank = "modo";
-			teamspeak = 1;
 		};
-		class Cesarion
+		class Cesarion: modo
 		{
 			uid = "76561198026418521";
-			rank = "modo";
-			teamspeak = 1;
 		};
-		class Julia
+		class Julia: modo
 		{
 			uid = "76561198138202092";
-			rank = "modo";
-			teamspeak = 1;
 		};
-		class Maels
+		class Maels: modo
 		{
 			uid = "76561197978122710";
-			rank = "modo";
-			teamspeak = 1;
 		};
 		// - Support
-		class TheRealityTuto
+		class support
+		{
+			rank = "support";
+			teamspeak = 1;
+		};
+		class TheRealityTuto: support
 		{
 			uid = "76561198107987392";
-			rank = "support";
-			teamspeak = 1;
 		};
-		class Fabiote
+		class Fabiote: support
 		{
 			uid = "76561198126279787";
-			rank = "support";
-			teamspeak = 1;
 		};
+		// class Special_K: support
+		// {
+		// 	uid = "76561197989894579";
+		// };
 	};
 
 	class commands

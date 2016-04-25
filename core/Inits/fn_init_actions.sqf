@@ -43,7 +43,7 @@ player addAction
 	{
 		g_seatbelt = true;
 		playSound "seatbelt_on";
-	}, "", 0, false, false, "", '(!g_action_inUse && (vehicle player) != player && !g_seatbelt)'
+	}, "", 99999, false, false, "", '(!g_action_inUse && (vehicle player) != player && !g_seatbelt)'
 ];
 
 player addAction 
@@ -52,6 +52,6 @@ player addAction
 	{
 		g_seatbelt = false;
 		playSound "seatbelt_off";
-	}, "", 0, false, false, "", '!g_action_inUse && (vehicle player) != player && g_seatbelt'
+	}, "", 99999, false, false, "", '!g_action_inUse && (vehicle player) != player && g_seatbelt'
 ];
 //---------------

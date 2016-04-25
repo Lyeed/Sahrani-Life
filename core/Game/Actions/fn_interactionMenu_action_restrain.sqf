@@ -17,8 +17,9 @@ if (!(g_interaction_target getVariable ["surrender", false]) && ((animationState
 
 closeDialog 0;
 g_action_inUse = true;
+
 player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
+waitUntil {((animationState player) isEqualTo "ainvpercmstpsnonwnondnon_putdown_amovpercmstpsnonwnondnon")};
 
 g_action_inUse = false;
 

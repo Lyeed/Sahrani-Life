@@ -20,7 +20,7 @@ if (_action) then
 {
 	g_action_inUse = true;
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-	waitUntil {((animationState player) != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon")};	
+	waitUntil {((animationState player) isEqualTo "ainvpercmstpsnonwnondnon_putdown_amovpercmstpsnonwnondnon")};
 	g_action_inUse = false;
 };
 

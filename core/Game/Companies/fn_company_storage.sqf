@@ -31,7 +31,7 @@ if (isNull _storage) then
 		if (count(nearestObjects [_pos, [_type], 4]) isEqualTo 0) then
 		{
 			_storage = createVehicle [_type, [0, 0, 0], [], 0, "NONE"];
-			_storage setPosATL _pos;
+			_storage setPos _pos;
 			_target setVariable ["company_storage", _storage, true];
 
 			clearWeaponCargoGlobal _storage;

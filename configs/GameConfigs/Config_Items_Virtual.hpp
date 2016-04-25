@@ -1345,7 +1345,7 @@ class ALYSIA_ITEMS
 		name = "Pétrole";
 		weight = 10;
 		image = "alysia_items_virtual\data\petrole.paa";
-		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1"};
+		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1","Skyline_Coffre_Small","Skyline_Coffre_Medium","Skyline_Coffre_Large","R3F_WeaponStock"};
 	};
 	class sp98
 	{
@@ -1353,7 +1353,7 @@ class ALYSIA_ITEMS
 		weight = 1;
 		image = "alysia_items_virtual\data\sp98.paa";
 		license = "company_fuel";
-		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1"};
+		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1","Skyline_Coffre_Small","Skyline_Coffre_Medium","Skyline_Coffre_Large","R3F_WeaponStock"};
 		class market
 		{
 			max = 390;
@@ -1367,7 +1367,7 @@ class ALYSIA_ITEMS
 		weight = 1;
 		image = "alysia_items_virtual\data\sp95.paa";
 		license = "company_fuel";
-		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1"};
+		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1","Skyline_Coffre_Small","Skyline_Coffre_Medium","Skyline_Coffre_Large","R3F_WeaponStock"};
 		class market
 		{
 			max = 390;
@@ -1381,7 +1381,7 @@ class ALYSIA_ITEMS
 		weight = 1;
 		image = "alysia_items_virtual\data\gazole.paa";
 		license = "company_fuel";
-		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1"};
+		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1","Skyline_Coffre_Small","Skyline_Coffre_Medium","Skyline_Coffre_Large","R3F_WeaponStock"};
 		class market
 		{
 			max = 390;
@@ -1395,7 +1395,7 @@ class ALYSIA_ITEMS
 		weight = 1;
 		image = "alysia_items_virtual\data\gpl.paa";
 		license = "company_fuel";
-		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1"};
+		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1","Skyline_Coffre_Small","Skyline_Coffre_Medium","Skyline_Coffre_Large","R3F_WeaponStock"};
 		class market
 		{
 			max = 390;
@@ -1409,7 +1409,7 @@ class ALYSIA_ITEMS
 		weight = 3;
 		image = "alysia_items_virtual\data\kerosene.paa";
 		license = "company_fuel";
-		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1"};
+		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1","Skyline_Coffre_Small","Skyline_Coffre_Medium","Skyline_Coffre_Large","R3F_WeaponStock"};
 		class market
 		{
 			max = 390;
