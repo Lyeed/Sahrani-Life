@@ -2724,6 +2724,7 @@ class ALYSIA_VEHICLES
 		};
 		realname = "LittleBird de la Milice";
 	};
+	class Skyline_LittleBird_Milice : Skyline_LittleBird_Milice_01_F{};
 
   	/*
 	**				EAST VEHICLES
@@ -2857,6 +2858,7 @@ class ALYSIA_VEHICLES
 		};
 		realname = "LittleBird de la Garde";
 	};
+	class Skyline_LittleBird_Garde : Skyline_LittleBird_Garde_01_F{};
 
   	/*
 	**				GUER VEHICLES
