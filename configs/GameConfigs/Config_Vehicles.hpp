@@ -2711,6 +2711,7 @@ class ALYSIA_VEHICLES
 	
 	class Skyline_LittleBird_Milice
 	{
+		realname = "LittleBird de la Milice";
 		buyPrice = 275000;
 		inventory = 45;
 		side = "WEST";
@@ -2722,9 +2723,8 @@ class ALYSIA_VEHICLES
 		{
 			"Skyline_LittleBird_Milice_01_F"
 		};
-		realname = "LittleBird de la Milice";
 	};
-	class Skyline_LittleBird_Milice : Skyline_LittleBird_Milice_01_F{};
+	class Skyline_LittleBird_Milice: Skyline_LittleBird_Milice_01_F {};
 
   	/*
 	**				EAST VEHICLES
@@ -2845,6 +2845,7 @@ class ALYSIA_VEHICLES
 	};
 	class Skyline_LittleBird_Garde
 	{
+		realname = "LittleBird de la Garde";
 		buyPrice = 275000;
 		inventory = 45;
 		side = "EAST";
@@ -2856,9 +2857,8 @@ class ALYSIA_VEHICLES
 		{
 			"Skyline_LittleBird_Garde_01_F"
 		};
-		realname = "LittleBird de la Garde";
 	};
-	class Skyline_LittleBird_Garde : Skyline_LittleBird_Garde_01_F{};
+	class Skyline_LittleBird_Garde: Skyline_LittleBird_Garde_01_F {};
 
   	/*
 	**				GUER VEHICLES

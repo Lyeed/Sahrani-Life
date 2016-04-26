@@ -20,7 +20,8 @@ if ((isNull _target) || !(alive _target)) then {
         (assignedItems _target),
         [(primaryWeapon _target), (primaryWeaponMagazine _target), (primaryWeaponItems _target), (_target ammo (primaryWeapon _target))],
         [(secondaryWeapon _target), (secondaryWeaponMagazine _target), (secondaryWeaponItems _target)],
-        [(handgunWeapon _target), (handgunMagazine _target), (handGunItems _target), (_target ammo (handgunWeapon _target))]
+        [(handgunWeapon _target), (handgunMagazine _target), (handGunItems _target), (_target ammo (handgunWeapon _target))],
+        (magazinesAmmoFull _target)
     ];
 };
 

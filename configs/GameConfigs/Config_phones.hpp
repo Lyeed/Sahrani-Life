@@ -16,7 +16,6 @@ class ALYSIA_PHONE
 			class message_rcv_1
 			{
 				name = "Alerte 1";
-				donator = 0;
 				distance = 20;
 			};
 			class message_rcv_2: message_rcv_1
@@ -63,11 +62,27 @@ class ALYSIA_PHONE
 	{
 		class sounds
 		{
-			class message_rcv_1
+			class call_rcv_1
 			{
 				name = "Sonnerie 1";
-				donator = 0;
-				distance = 20;
+				distance = 15;
+				sleep = 3.4;
+			};
+			class call_rcv_2: call_rcv_1
+			{
+				name = "Sonnerie 2";
+				donator = 1;
+				sleep = 3.5;
+			};
+			class call_rcv_3: call_rcv_2
+			{
+				name = "Sonnerie 3";
+				sleep = 3;
+			};
+			class call_rcv_4: call_rcv_2
+			{
+				name = "Sonnerie 4";
+				sleep = 3;
 			};
 		};
 	};

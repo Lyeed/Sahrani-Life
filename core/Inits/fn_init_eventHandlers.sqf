@@ -17,3 +17,18 @@ player addEventHandler ["Respawn", "call AlysiaEvent_fnc_onPlayerRespawn"];
 /* TASK_FORCE_RADIO */
 // ["actionRadio", "OnTangent", {call AlysiaEvent_fnc_onPlayerSpeakRadio}, player] call TFAR_fnc_addEventHandler;
 ["actionSpeak", "OnSpeak", {(_this select 1) call AlysiaEvent_fnc_onPlayerSpeak}, player] call TFAR_fnc_addEventHandler;
+
+"gServer_tablet_announces" addPublicVariableEventHandler
+{
+	if (missionNamespace getVariable ["g_connected", false]) then
+	{
+		if ("ANNOUNCES" in (missionNamespace getVariable ["g_apps", []])) then
+		{
+			if ((missionNamespace getVariable ["g_app", ""]) isEqualTo "ANNOUNCES_SHOW") then
+			{
+				["ANNOUNCES"] spawn AlysiaClient_fnc_tabletApp;
+			};
+			playSound "tablet_app_announces";
+		};
+	};
+};

@@ -5,8 +5,7 @@
     YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
     More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
-private["_gear", "_handle", "_uniformGear", "_vestGear", "_backpackGear", "_goggles", "_headgear", "_assignedItems", "_primaryWeaponGear", "_secondaryWeaponGear", "_handgunWeaponGear", "_assignedItems"];
+private["_gear", "_handle", "_uniformGear", "_vestGear", "_backpackGear", "_goggles", "_headgear", "_primaryWeaponGear", "_secondaryWeaponGear", "_handgunWeaponGear", "_oldVersion"];
 _gear = [_this, 0, [], [[]]] call BIS_fnc_param;
 
 _handle = [] spawn AlysiaClient_fnc_stripDownPlayer;
@@ -44,7 +43,8 @@ if (_gear isEqualTo []) then
     };
 
     _handgunWeaponGear = [_gear, 8, [], [["", [], [], 0]]] call BIS_fnc_param;
-    if ((_handgunWeaponGear select 0) != "") then {
+    if ((_handgunWeaponGear select 0) != "") then
+    {
         player addWeapon (_handgunWeaponGear select 0);
         
         {
@@ -58,20 +58,12 @@ if (_gear isEqualTo []) then
     if ((_uniformGear select 0) != "") then
     {
         player forceAddUniform (_uniformGear select 0);
-        
-        {
-            player addItemToUniform _x;
-        } forEach (_uniformGear select 1);
     };
 
     _vestGear = [_gear, 1, [], [["", []]]] call BIS_fnc_param;
     if ((_vestGear select 0) != "") then
     {
         player addVest (_vestGear select 0);
-        
-        {
-            player addItemToVest _x;
-        } forEach (_vestGear select 1);
     };
 
     _backpackGear = [_gear, 2, [], [["", []]]] call BIS_fnc_param;
@@ -79,10 +71,6 @@ if (_gear isEqualTo []) then
     {
         player addBackpack (_backpackGear select 0);
         clearAllItemsFromBackpack player;
-        
-        {
-            player addItemToBackpack _x;
-        } forEach (_backpackGear select 1);
     };
 
     _goggles = [_gear, 3, "", [""]] call BIS_fnc_param;
@@ -91,29 +79,62 @@ if (_gear isEqualTo []) then
     _headgear = [_gear, 4, "", [""]] call BIS_fnc_param;
     if (_headgear != "") then {player addHeadgear _headgear};
 
-    _assignedItems = [_gear, 5, [], [[]]] call BIS_fnc_param;
-    if (!(_assignedItems isEqualTo [])) then
     {
+        switch (true) do
         {
-            if (player canAddItemToBackpack _x) then
+            case (player canAddItemToBackpack _x):
             {
                 player addItemToBackpack _x;
                 player assignItem _x;
-            } else {
-                if (player canAddItemToUniform _x) then
-                {
-                    player addItemToUniform _x;
-                    player assignItem _x;
-                } else {
-                    if (player canAddItemToVest _x) then
-                    {
-                        player addItemToVest _x;
-                        player assignItem _x;
-                    } else {
-                        diag_log format["[ALYSIA:ERROR] Could not add assigned item [%1] to inventory : not enough place", _x];
-                    };
-                };
             };
-        } forEach _assignedItems;
+            case (player canAddItemToUniform _x):
+            {
+                player addItemToUniform _x;
+                player assignItem _x;
+            };
+            case (player canAddItemToVest _x):
+            {
+                player addItemToVest _x;
+                player assignItem _x;
+            };
+        };
+    } forEach ([_gear, 5, [], [[]]] call BIS_fnc_param);
+
+    _magazines = _gear select 9;
+    if (isNil "_magazines") then {
+        _oldVersion = true;
+    } else {
+        _oldVersion = false;
+    };
+
+    {
+        if (!isClass(configFile >> "CfgMagazines" >> _x) || _oldVersion) then
+        {
+            player addItemToUniform _x;
+        };
+    } forEach (_uniformGear select 1);
+
+    {
+        if (!isClass(configFile >> "CfgMagazines" >> _x) || _oldVersion) then
+        {
+            player addItemToVest _x;
+        };        
+    } forEach (_vestGear select 1);
+        
+    {
+        if (!isClass(configFile >> "CfgMagazines" >> _x) || _oldVersion) then
+        {
+            player addItemToBackpack _x;
+        };
+    } forEach (_backpackGear select 1);
+
+    if (!_oldVersion) then
+    {
+        {
+            if ((_x select 4) != "") then
+            {
+                player addMagazine [(_x select 0), (_x select 1)];
+            };
+        } forEach _magazines;
     };
 };

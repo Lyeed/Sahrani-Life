@@ -44,6 +44,7 @@ class CfgRemoteExec
 		class AlysiaServer_fnc_logDeath {allowTargets = SERVER;};
 		class AlysiaServer_fnc_logDupli {allowTargets = SERVER;};
 		class AlysiaServer_fnc_logLaunder {allowTargets = SERVER;};
+		class AlysiaServer_fnc_logMoney {allowTargets = SERVER;};
 		//- dynamic
 		class AlysiaServer_fnc_dynamicMarkers_update {allowTargets = SERVER;};
 		class AlysiaServer_fnc_spikeStrip {allowTargets = SERVER;};
@@ -68,8 +69,6 @@ class CfgRemoteExec
 		class AlysiaServer_fnc_company_perquisition {allowTargets = SERVER;};
 		//- Border
 		class AlysiaServer_fnc_border_alarm_south {allowTargets = SERVER;};
-		//- Tablet : announces
-		class AlysiaServer_fnc_announces_add {allowTargets = SERVER;};
 		//- Laboratories
 		class AlysiaServer_fnc_laboratory_insert {allowTargets = SERVER;};
 		class AlysiaServer_fnc_laboratory_destroy {allowTargets = SERVER;};

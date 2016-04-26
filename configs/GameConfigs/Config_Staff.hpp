@@ -64,14 +64,10 @@ class ALYSIA_STAFF
 		{
 			uid = "76561198107987392";
 		};
-		class Fabiote: support
+		class Special_K: support
 		{
-			uid = "76561198126279787";
+			uid = "76561197989894579";
 		};
-		// class Special_K: support
-		// {
-		// 	uid = "76561197989894579";
-		// };
 	};
 
 	class commands

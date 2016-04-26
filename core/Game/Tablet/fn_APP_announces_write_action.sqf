@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display", "_title", "_pseudo", "_message"];
+private["_display", "_title", "_pseudo", "_message", "_bad"];
 
 disableSerialization;
 _display = uiNamespace getVariable ["tablet", displayNull];
@@ -31,11 +31,19 @@ _bad = [_message, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345678
 if (_bad != "") exitWith {[format["Vous utilisez un caractère interdit dans le message de votre annonce (%1)", _bad]] call AlysiaClient_fnc_error};
 if (([_message] call CBA_fnc_strLen) > 120) exitWith {["Le message de votre annonce ne doit pas dépasser 120 caractères"] call AlysiaClient_fnc_error};
 
-if ([false, 40, "Annonce (application)"] call AlysiaClient_fnc_handleATM) then
+if ([false, 250, "Annonce (application)"] call AlysiaClient_fnc_handleATM) then
 {
-	playSound "buy";
+	missionNamespace setVariable
+	[
+		"gServer_tablet_announces",
+		(missionNamespace getVariable ["gServer_tablet_announces", []]) + [[[_pseudo, _title, _message], serverTime + (45 * 60)]],
+		true
+	];
+
 	(_display displayCtrl 9530) ctrlSetText "";
 	(_display displayCtrl 9523) ctrlSetText "";
 	(_display displayCtrl 9525) ctrlSetText "";
-	[_pseudo, _title, _message] remoteExec ["AlysiaServer_fnc_announces_add", 2];
-} else {[format["Vous n'avez pas assez d'argent.<br/>Prix : <t color='#8cff9b'>%1</t>kn", [40] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error};
+	playSound "buy";
+} else {
+	[format["Vous n'avez pas assez d'argent.<br/>Prix : <t color='#8cff9b'>%1</t>kn", [250] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
+};

@@ -149,7 +149,6 @@ class ANNOUNCES_WRITE_TITLE: RscStructuredText
 class ANNOUNCES_WRITE_INFOS: RscStructuredText
 {
 	idc = ANNOUNCES_WRITE_INFOS_IDC;
-	text = "<t font='EtelkaMonospacePro'>Votre message restera en ligne 45 minutes<br/>Prix par message <t color='#8cff9b'>40</t>kn</t>";
 
 	x = 0.396875 * safezoneW + safezoneX;
 	y = 0.423 * safezoneH + safezoneY;

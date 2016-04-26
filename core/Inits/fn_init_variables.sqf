@@ -34,6 +34,7 @@ with missionNamespace do
 	g_staff_invisible = false;
 	/* ===================[Tablet]==========================*/
 	g_apps = [];
+	g_app = "";
 	/* ===================[Phone]======================= */
 	g_phone_contacts = [];
 	g_phone_messages = [];

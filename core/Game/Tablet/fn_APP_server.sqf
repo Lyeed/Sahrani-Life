@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display"];
+private "_display";
 
 disableSerialization;
 _display = uiNamespace getVariable ["tablet", displayNull];
@@ -19,5 +19,5 @@ while {((ctrlVisible 7903) && !(isNull _display))} do
 	(_display displayCtrl 7903) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", [(gServer_rebootHour * 60) - serverTime, "H:MM:SS"] call CBA_fnc_formatElapsedTime];
 	(_display displayCtrl 7907) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", [time, "H:MM:SS"] call CBA_fnc_formatElapsedTime];
 	(_display displayCtrl 7909) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", count(allPlayers)];
-	sleep 0.5;
+	uiSleep 0.5;
 };
