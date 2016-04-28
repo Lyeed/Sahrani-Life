@@ -3,6 +3,7 @@
 		"Land_a_stationhouse"
 		"Land_i_Shop_01_V1_F"
 		"Land_i_House_Small_03_V1_F"
+		"Skyline_Vehicule_Pack_Structures_Garage_01" (Pour les entreprises de dépannage ou de transport de marchandise)
 	FINI:
 		"Industrie d'armement"
 		"Ferme agricole"
