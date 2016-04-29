@@ -5290,7 +5290,7 @@ class Mission
 			azimut=89.999298;
 			id=306;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Hôtel des ventes (<t color='#01DF3A'>véhicules</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""SOUTH"",2],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -5300,7 +5300,7 @@ class Mission
 			azimut=182.095;
 			id=307;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Hôtel des ventes (<t color='#01DF3A'>équipements</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""SOUTH"",1],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -5310,7 +5310,7 @@ class Mission
 			azimut=-1.54713;
 			id=308;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Hôtel des ventes (<t color='#01DF3A'>objets</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""SOUTH"",0],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -5329,7 +5329,7 @@ class Mission
 			offsetY=0.154881;
 			id=310;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""market"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -5340,7 +5340,7 @@ class Mission
 			offsetY=-0.00168228;
 			id=311;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de meuble"",AlysiaClient_fnc_process_open,""furniture"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de chaises (bois)"",AlysiaClient_fnc_process_open,""chair_wood"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de tables (bois)"",AlysiaClient_fnc_process_open,""table_wood"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de tribune (bois)"",AlysiaClient_fnc_process_open,""tribune_wood"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -5350,7 +5350,7 @@ class Mission
 			azimut=343.45099;
 			id=312;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""Marché agricole"",AlysiaClient_fnc_shop_virtual_open,""farmingmarket"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -5361,7 +5361,7 @@ class Mission
 			offsetY=0.44999999;
 			id=313;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""Vendeur de masque"",AlysiaClient_fnc_shop_clothing_open,""civ_masque"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -5371,7 +5371,7 @@ class Mission
 			azimut=90.0028;
 			id=314;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this addAction[""Commerçant de planche"",AlysiaClient_fnc_shop_virtual_open,""woodp"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -5381,7 +5381,7 @@ class Mission
 			azimut=1.78521;
 			id=315;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir 1.78521;this setposATL [12519.96875,14952.645508,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de luxe"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_land_luxe"",[""CIV_vehicles_land_luxe_marker_1"",""CIV_vehicles_land_luxe_marker_2"",""CIV_vehicles_land_luxe_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_epiona"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck"",""Tank""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -5391,7 +5391,7 @@ class Mission
 			azimut=76.6548;
 			id=316;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir 76.6548;this setposATL [10245.015625,9307.206055,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_land_normal"",[""CIV_vehicles_land_normal_marker_3"",""CIV_vehicles_land_normal_marker_4"",""CIV_vehicles_land_normal_marker_6""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -5401,7 +5401,7 @@ class Mission
 			azimut=181.836;
 			id=317;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_air"",[""garage_air_sud_1_1"",""garage_air_sud_1_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage aérien"",AlysiaClient_fnc_garageGet,""garage_air_sud_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Air"",""Truck"",""Car""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -5411,7 +5411,7 @@ class Mission
 			azimut=196.519;
 			id=318;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir 196.519;this setposATL [19223.0957031,13924.3125,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_air"",[""garage_air_nord_1_1"",""CIV_vehicles_air_marker_4""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage aérien"",AlysiaClient_fnc_garageGet,""garage_air_nord_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Air"",""Truck"",""Car""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -5421,7 +5421,7 @@ class Mission
 			azimut=3.84515;
 			id=319;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Traitement du fer"",AlysiaClient_fnc_process_open,""iron"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -5431,7 +5431,7 @@ class Mission
 			azimut=92.019699;
 			id=320;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Traitement du sel"",AlysiaClient_fnc_process_open,""salt"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -5441,7 +5441,7 @@ class Mission
 			azimut=268.47;
 			id=321;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Traitement du cuivre"",AlysiaClient_fnc_process_open,""copper"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -5451,7 +5451,7 @@ class Mission
 			azimut=80.587196;
 			id=322;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Traitement du sable"",AlysiaClient_fnc_process_open,""sand"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de seringue"",AlysiaClient_fnc_process_open,""seringue"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de bouteilles"",AlysiaClient_fnc_process_open,""bouteille"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -5471,7 +5471,7 @@ class Mission
 			azimut=355.42801;
 			id=324;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de d'occasion"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_land_occasion"",[""CIV_vehicles_land_occasion_marker_2"",""CIV_vehicles_land_occasion_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -5482,7 +5482,7 @@ class Mission
 			offsetY=-0.0029048901;
 			id=325;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir 181.883;this setposATL [13544.765625,8683.416992,-0.00290489];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_sea"",[""garage_sea_1_1"",""garage_sea_1_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Milice"",AlysiaClient_fnc_shop_vehicles_open,[""WEST_vehicles_sea"",[""garage_sea_1_1"",""garage_sea_1_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Samu"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_sea"",[""garage_sea_1_1"",""garage_sea_1_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -5492,7 +5492,7 @@ class Mission
 			azimut=349.64099;
 			id=326;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Traitement du cotton"",AlysiaClient_fnc_process_open,""cotton"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -5502,7 +5502,7 @@ class Mission
 			azimut=34.640999;
 			id=327;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fonte de l'or"",AlysiaClient_fnc_process_open,""gold"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -5512,7 +5512,7 @@ class Mission
 			azimut=138.054;
 			id=328;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Traitement du bauxite"",AlysiaClient_fnc_process_open,""bauxite"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -5522,7 +5522,7 @@ class Mission
 			azimut=340.05618;
 			id=329;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this addAction[""Commerçant d'aluminium"",AlysiaClient_fnc_shop_virtual_open,""baux"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -5533,7 +5533,7 @@ class Mission
 			offsetY=-0.016534399;
 			id=330;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_west_6";
 			init="this enableSimulation false;this allowDamage false;this setdir -170;this setposATL [11987.179688,15412.923828,-0.0165344];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",AlysiaClient_fnc_shop_vehicles_open,[""WEST_vehicles_land"",[""garage_west_1_1"",""garage_west_1_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_west_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck"",""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",AlysiaClient_fnc_shop_vehicles_open,[""WEST_vehicles_air"",[""garage_west_1_1"",""garage_west_1_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -5545,7 +5545,7 @@ class Mission
 			offsetY=-0.0079366704;
 			id=331;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_west_1";
 			init="this enableSimulation false;this allowDamage false;this setdir -350;this setposATL [11872.87207,15404.18457,-0.00793667];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""west"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""WEST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\gun.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""West_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -5556,7 +5556,7 @@ class Mission
 			azimut=-700;
 			id=332;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_west_3";
 			init="this enableSimulation false;this allowDamage false;this setdir -700;this setposATL [14666.589844,10557.626953,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""WEST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\gun.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""West_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""west"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -5567,7 +5567,7 @@ class Mission
 			azimut=-1045;
 			id=333;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_west_4";
 			init="this enableSimulation false;this allowDamage false;this setdir -1045;this setposATL [14630.254883,10575.623047,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",AlysiaClient_fnc_shop_vehicles_open,[""WEST_vehicles_land"",[""garage_west_2_1"",""garage_west_2_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_west_2"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck"",""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",AlysiaClient_fnc_shop_vehicles_open,[""WEST_vehicles_air"",[""garage_west_2_1"",""garage_west_2_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -5578,7 +5578,7 @@ class Mission
 			azimut=-1170;
 			id=334;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_east_7";
 			init="this enableSimulation false;this allowDamage false;this setdir -1170;this setposATL [12345.352539,8443.299805,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""east"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\gun.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""EAST_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""EAST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -5589,7 +5589,7 @@ class Mission
 			azimut=-1170;
 			id=335;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_east_3";
 			init="this enableSimulation false;this allowDamage false;this setdir -1170;this setposATL [9546.411133,9870.323242,0];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_east_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -5600,7 +5600,7 @@ class Mission
 			azimut=-1260;
 			id=336;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_east_1";
 			init="this enableSimulation false;this allowDamage false;this setdir -1260;this setposATL [9555.845703,9825.814453,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""east"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\gun.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""EAST_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""EAST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -5611,7 +5611,7 @@ class Mission
 			azimut=-1345;
 			id=337;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_east_5";
 			init="this enableSimulation false;this allowDamage false;this setdir -1345;this setposATL [9659.520508,9988.935547,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",AlysiaClient_fnc_shop_vehicles_open,[""EAST_vehicles_air"",[""garage_east_3_1"",""garage_east_3_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_east_3"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -5622,7 +5622,7 @@ class Mission
 			azimut=-1440;
 			id=338;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_east_2";
 			init="this enableSimulation false;this allowDamage false;this setdir -1440;this setposATL [8179.799316,7849.764648,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""east"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\gun.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""EAST_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""EAST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -5633,7 +5633,7 @@ class Mission
 			azimut=-1530;
 			id=339;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_east_4";
 			init="this enableSimulation false;this allowDamage false;this setdir -1530;this setposATL [8175.8125,7772.532227,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire terrestre"",AlysiaClient_fnc_shop_vehicles_open,[""EAST_vehicles_land"",[""garage_east_2_1"",""garage_east_2_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",AlysiaClient_fnc_shop_vehicles_open,[""EAST_vehicles_air"",[""garage_east_2_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck"",""Air"",""Tank""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_east_2"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -10257,7 +10257,7 @@ class Mission
 			azimut=335.522;
 			id=819;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fonte du platine"",AlysiaClient_fnc_process_open,""platine"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -10267,7 +10267,7 @@ class Mission
 			azimut=357.66431;
 			id=820;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Distillerie du raisin"",AlysiaClient_fnc_process_open,""Distillerie_Grozdova"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Distillerie de prune"",AlysiaClient_fnc_process_open,""Distillerie_Slivovica"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -10278,7 +10278,7 @@ class Mission
 			offsetY=2.3499999;
 			id=821;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_sea"",[""garage_sea_2_1"",""garage_sea_2_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_2"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Garde"",AlysiaClient_fnc_shop_vehicles_open,[""EAST_vehicles_sea"",[""garage_sea_2_1"",""garage_sea_2_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];  this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Samu"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_sea"",[""garage_sea_2_1"",""garage_sea_2_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; ";
 		};
@@ -10288,7 +10288,7 @@ class Mission
 			azimut=541.21899;
 			id=822;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire moto"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_land_moto"",[""CIV_vehicles_land_moto_marker_1"",""CIV_vehicles_land_moto_marker_2"",""CIV_vehicles_land_moto_marker_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -10983,7 +10983,7 @@ class Mission
 			offsetY=0.1;
 			id=893;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""Garagiste"",AlysiaClient_fnc_shop_arma_open,""garagiste"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -10994,7 +10994,7 @@ class Mission
 			offsetY=0.1;
 			id=894;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""Garagiste"",AlysiaClient_fnc_shop_arma_open,""garagiste"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -11204,7 +11204,7 @@ class Mission
 			azimut=-88.637001;
 			id=915;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""Matériel de travaux"",AlysiaClient_fnc_shop_arma_open,""prisoner_shop_store"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Contremaitre"",AlysiaClient_fnc_shop_virtual_open,""prisoner_pierre"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -11215,7 +11215,7 @@ class Mission
 			offsetY=0.5;
 			id=916;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""market"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -11226,7 +11226,7 @@ class Mission
 			offsetY=0.5;
 			id=917;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this addAction[""Intendant"",AlysiaClient_fnc_shop_clothing_open,""prison_clothe_north"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -11236,7 +11236,7 @@ class Mission
 			azimut=175.793;
 			id=918;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this addAction[""Matériel de travaux"",AlysiaClient_fnc_shop_arma_open,""prisoner_shop_store"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Contremaitre"",AlysiaClient_fnc_shop_virtual_open,""prisoner_pierre"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -11245,7 +11245,7 @@ class Mission
 			position[]={2305.7227,12.706591,18867.293};
 			id=919;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="black_market_1";
 			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Acheter des positions <t color='#01DF3A'>illégales</t>"",AlysiaClient_fnc_shop_dynamicMarkers_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Marché illégal"",AlysiaClient_fnc_shop_virtual_open,""black_market"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Marché illégal équipements"",AlysiaClient_fnc_shop_arma_open,""black_market"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -11255,7 +11255,7 @@ class Mission
 			position[]={2309.5188,12.241582,18867.188};
 			id=920;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="black_market_2";
 			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Acheter des positions <t color='#01DF3A'>illégales</t>"",AlysiaClient_fnc_shop_dynamicMarkers_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""Marché illégal"",AlysiaClient_fnc_shop_virtual_open,""black_market"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Marché illégal objet"",AlysiaClient_fnc_shop_arma_open,""black_market"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -11318,7 +11318,7 @@ class Mission
 			position[]={12102.142,25.951591,17717.955};
 			id=927;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir 0;this setposATL [12102.141602,17717.955078,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""market"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -11449,7 +11449,7 @@ class Mission
 			azimut=90;
 			id=940;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir 90;this setposATL [12111.860352,17701.734375,0];this setVectorUp [0,0,1];this addAction[""Intendant"",AlysiaClient_fnc_shop_clothing_open,""prison_clothe_south"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -11458,7 +11458,7 @@ class Mission
 			position[]={2316.824,11.090607,18867.15};
 			id=941;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="dealer_alcool";
 			init="this enableSimulation false;this allowDamage false;this addAction[""Commerçant d'alcool"",AlysiaClient_fnc_shop_virtual_open,""alcool"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -11468,7 +11468,7 @@ class Mission
 			position[]={2313.2388,11.60297,18867.152};
 			id=942;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="launder";
 			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Blanchiment d'<t color='#01DF3A'>argent sale</t>"",AlysiaClient_fnc_launder_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -11480,7 +11480,7 @@ class Mission
 			offsetY=0.1;
 			id=943;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this addAction[""Commerçant de platine"",AlysiaClient_fnc_shop_virtual_open,""platine"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -12414,7 +12414,7 @@ class Mission
 			position[]={2320.2947,10.626215,18866.955};
 			id=1034;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="cardealer_1";
 			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Receleur"",AlysiaClient_fnc_steal_vehicle_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 3'];";
@@ -12424,7 +12424,7 @@ class Mission
 			position[]={2323.6772,10.046185,18866.836};
 			id=1035;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="cardealer_2";
 			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Receleur"",AlysiaClient_fnc_steal_vehicle_open,"""",0,false,false,"""",'vehicle player == player && player distance _target < 3'];";
@@ -15429,7 +15429,7 @@ class Mission
 			offsetY=0.70117998;
 			id=1321;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir 64.297;this setposATL [14012.84375,16570.912109,0.70118];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Traitement du bois"",AlysiaClient_fnc_process_open,""wood"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -15461,7 +15461,7 @@ class Mission
 			azimut=269.297;
 			id=1324;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir 269.297;this setposATL [12345.132813,15011.679688,0];this setVectorUp [0,0,1];this addAction[""Commerçant de cuivre"",AlysiaClient_fnc_shop_virtual_open,""copper"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -15472,7 +15472,7 @@ class Mission
 			offsetY=0.74503303;
 			id=1325;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir 180;this setposATL [14420.949219,12495.526367,0.745033];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""civ_clothing_nord"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -15516,7 +15516,7 @@ class Mission
 			offsetY=0.25972;
 			id=1329;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir 201.364;this setposATL [14062.771484,12502.665039,0.25972];this setVectorUp [0,0,1];this addAction[""Quincaillerie"",AlysiaClient_fnc_shop_arma_open,""genstore"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -15976,7 +15976,7 @@ class Mission
 			offsetY=0.25421;
 			id=1372;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir 266.364;this setposATL [13706.149414,9016.129883,0.25421];this setVectorUp [0,0,1];this addAction[""Commerçant de verre"",AlysiaClient_fnc_shop_virtual_open,""glass"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -16009,7 +16009,7 @@ class Mission
 			offsetY=0.084175102;
 			id=1375;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir 146.604;this setposATL [16530.509766,9300.886719,0.0841751];this setVectorUp [0,0,1];this addAction[""Commerçant de textile"",AlysiaClient_fnc_shop_virtual_open,""textile"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -16139,7 +16139,7 @@ class Mission
 			azimut=270.13901;
 			id=1387;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir 270.139;this setposATL [17165.34375,14296.370117,0];this setVectorUp [0,0,1];this addAction[""Commerçant de charbon"",AlysiaClient_fnc_shop_virtual_open,""coal"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -16150,7 +16150,7 @@ class Mission
 			offsetY=0.51346898;
 			id=1388;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir 310.139;this setposATL [19126.160156,14008.632813,0.513469];this setVectorUp [0,0,1];this addAction[""Magasin de parachute"",AlysiaClient_fnc_shop_arma_open,""parachute"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -16232,7 +16232,7 @@ class Mission
 			position[]={2305.781,13.51352,18864.254};
 			id=1396;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="drugs_dealer_1";
 			init="this enableSimulation false;this allowDamage false;this addAction[""Dealer"",AlysiaClient_fnc_shop_virtual_open,""dealer"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -16242,7 +16242,7 @@ class Mission
 			position[]={2309.4602,13.005826,18864.363};
 			id=1397;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="drugs_dealer_2";
 			init="this enableSimulation false;this allowDamage false;this addAction[""Dealer"",AlysiaClient_fnc_shop_virtual_open,""dealer"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -18722,7 +18722,7 @@ class Mission
 			offsetY=0.49158299;
 			id=1637;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""Commerçant de meuble"",AlysiaClient_fnc_shop_virtual_open,""furniture"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -18732,7 +18732,7 @@ class Mission
 			azimut=118.434;
 			id=1638;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""Commerçant de fer"",AlysiaClient_fnc_shop_virtual_open,""iron"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -18742,7 +18742,7 @@ class Mission
 			azimut=-130.968;
 			id=1639;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""Bijoutier"",AlysiaClient_fnc_shop_virtual_open,""bijoutier"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -18752,7 +18752,7 @@ class Mission
 			azimut=182.058;
 			id=1640;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir 182.058;this setposATL [10438.894531,9436.380859,0];this setVectorUp [0,0,1];this addAction[""Commerçant du sel"",AlysiaClient_fnc_shop_virtual_open,""salt"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -18763,7 +18763,7 @@ class Mission
 			offsetY=0.49663401;
 			id=1641;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this setVectorUp [0,0,1];this allowDamage false;this addAction[""Barbier"",AlysiaClient_fnc_shop_clothing_open,""beard"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -18772,7 +18772,7 @@ class Mission
 			position[]={2313.1135,12.42366,18864.113};
 			id=1642;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="renovation";
 			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Rénovation"",AlysiaClient_fnc_process_open,""archeologue"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='lyeed_IMG\data\actions_menu\license.paa'> Licence d'archéologie (<t color='#8cff9b'>35 000</t>kn)"",AlysiaClient_fnc_buyLicense,""archeologie"",0,false,false,"""",""vehicle player == player && player distance _target < 4 && !g_action_inUse && playerSide == civilian && !(['archeologie'] call AlysiaClient_fnc_hasLicense)""];";
@@ -18784,7 +18784,7 @@ class Mission
 			offsetY=0.74495;
 			id=1643;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""Boutique de plongé"",AlysiaClient_fnc_shop_clothing_open,""civ_dive"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -18795,7 +18795,7 @@ class Mission
 			offsetY=0.73821402;
 			id=1644;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""Boutique de plongé"",AlysiaClient_fnc_shop_clothing_open,""civ_dive"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -18806,7 +18806,7 @@ class Mission
 			offsetY=0.78535497;
 			id=1645;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir 155.682;this setposATL [9788.246094,8664.566406,0.785355];this setVectorUp [0,0,1];this addAction[""Marché agricole"",AlysiaClient_fnc_shop_virtual_open,""farmingmarket"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -18817,7 +18817,7 @@ class Mission
 			offsetY=1.1279401;
 			id=1646;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir 93.4086;this setposATL [14103.235352,12486.0976563,1.12794];this setVectorUp [0,0,1]";
 		};
@@ -18995,7 +18995,7 @@ class Mission
 			offsetY=0.29086599;
 			id=1663;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_west_7";
 			init="this enableSimulation false;this allowDamage false;this setdir 180;this setposATL [13484.416016,8840.993164,0.290866];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""WEST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\gun.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""West_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""west"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -19006,7 +19006,7 @@ class Mission
 			azimut=255;
 			id=1664;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_west_8";
 			init="this enableSimulation false;this allowDamage false;this setdir 255;this setposATL [13479.295898,8869.330078,0];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_west_3"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck"",""Tank""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -19018,7 +19018,7 @@ class Mission
 			offsetY=-0.0164553;
 			id=1665;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_west_9";
 			init="this enableSimulation false;this allowDamage false;this setdir 270;this setposATL [13501.386719,8799.558594,-0.0164553];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_west_4"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -19030,7 +19030,7 @@ class Mission
 			offsetY=0.27441099;
 			id=1666;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_east_8";
 			init="this enableSimulation false;this allowDamage false;this setdir 450;this setposATL [13256.250977,8871.951172,0.274411];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""east"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\gun.paa'/> Armurerie"",AlysiaClient_fnc_shop_arma_open,""EAST_gun"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""EAST_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -19042,7 +19042,7 @@ class Mission
 			offsetY=-0.0164547;
 			id=1667;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_east_9";
 			init="this enableSimulation false;this allowDamage false;this setdir 180;this setposATL [13213.544922,8861.283203,-0.0164547];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_east_4"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck"",""Tank""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -19054,7 +19054,7 @@ class Mission
 			offsetY=-0.0164553;
 			id=1668;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_east_10";
 			init="this enableSimulation false;this allowDamage false;this setdir 720;this setposATL [13225.881836,8840.103516,-0.0164553];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage aérien"",AlysiaClient_fnc_garageGet,""garage_east_5"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -19098,7 +19098,7 @@ class Mission
 			offsetY=0.021043601;
 			id=1672;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowdamage false;this setdir -95;this setposATL [14089.617188,12526.408203,0.0210436];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Hôtel des ventes (<t color='#01DF3A'>objets</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""NORTH"",0],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -19108,7 +19108,7 @@ class Mission
 			offsetY=0.021043601;
 			id=1673;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowdamage false;this setdir 0;this setposATL [14101.831055,12538.620117,0.0210436];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Hôtel des ventes (<t color='#01DF3A'>véhicules</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""NORTH"",2],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -19119,7 +19119,7 @@ class Mission
 			offsetY=0.021043601;
 			id=1674;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowdamage false;this setdir 90;this setposATL [14114.15332,12526.332031,0.0210436];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\launder.paa'/> Hôtel des ventes (<t color='#01DF3A'>équipements</t>)"",AlysiaClient_fnc_auctionHouse_menu_open,[""NORTH"",1],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -19130,7 +19130,7 @@ class Mission
 			offsetY=1.40803;
 			id=1675;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowdamage false;this setdir 180;this setposATL [10649.642578,9250.464844,1.40803];this setVectorUp [0,0,1];this addAction[""Administration Centrale"",AlysiaClient_fnc_shop_arma_open,""gov_south"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""SOUTH""'];this addAction[""Changer de personnage (wipe)"",AlysiaClient_fnc_wipe,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""SOUTH""'];this addAction[""Administration Centrale"",AlysiaClient_fnc_shop_virtual_open,""gov_south"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""SOUTH""'];";
 		};
@@ -19141,7 +19141,7 @@ class Mission
 			offsetY=0.047979798;
 			id=1676;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowdamage false;this setdir 360;this setposATL [14264.655273,12437.116211,0.0479798];this setVectorUp [0,0,1];this addAction[""Parlement"",AlysiaClient_fnc_shop_arma_open,""gov_north"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""NORTH""'];this addAction[""Changer de personnage (wipe)"",AlysiaClient_fnc_wipe,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""NORTH""'];this addAction[""Parlement"",AlysiaClient_fnc_shop_virtual_open,""gov_north"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""NORTH""'];";
 		};
@@ -19163,7 +19163,7 @@ class Mission
 			offsetY=0.48156399;
 			id=1678;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowdamage false;this setdir -180;this setposATL [14248.518555,12517.600586,0.481564];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_land_normal"",[""garage_bagongo_1"",""garage_bagongo_2"",""garage_bagongo_3""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_bagongo"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19194,7 +19194,7 @@ class Mission
 			offsetY=0.24962001;
 			id=1681;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowdamage false;this setdir 132.955;this setposATL [13988.893555,12286.486328,0.24962];this setVectorUp [0,0,1];this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Fourrière"",AlysiaClient_fnc_garageGet,""fourriere_NORTH"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19205,7 +19205,7 @@ class Mission
 			offsetY=0.48569;
 			id=1682;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowdamage false;this setdir 37.9545;this setposATL [10398.633789,8938.5,0.48569];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Fourrière"",AlysiaClient_fnc_garageGet,""fourriere_SOUTH"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19583,7 +19583,7 @@ class Mission
 			offsetY=-1.7881401e-007;
 			id=1717;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowdamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de d'occasion"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_land_occasion"",[""CIV_vehicles_land_occasion_marker_1"",""CIV_vehicles_land_occasion_marker_4""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_paraiso"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19594,7 +19594,7 @@ class Mission
 			offsetY=2.88257;
 			id=1718;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowdamage false;this setdir 180;this setposATL [10504.504883,9568.118164,2.88257];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Poisonnerie"",AlysiaClient_fnc_shop_virtual_open,""fishmarket"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19605,7 +19605,7 @@ class Mission
 			offsetY=2.45365;
 			id=1719;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this setdir 90;this setposATL [10557.102539,9567.272461,2.45365];this setVectorUp [0,0,1];this allowDamage false;this enableSimulation false;";
 		};
@@ -19616,7 +19616,7 @@ class Mission
 			offsetY=2.77613;
 			id=1720;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this allowDamage false;this enableSimulation false;this setdir 30;this setposATL [10558.998047,9609.791016,2.77613];this setVectorUp [0,0,1];this allowDamage false;this addAction[""Quincaillerie"",AlysiaClient_fnc_shop_arma_open,""genstore"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19627,7 +19627,7 @@ class Mission
 			offsetY=2.94326;
 			id=1721;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setdir -95;this setposATL [10498.49707,9581.624023,2.94326];this setVectorUp [0,0,1];this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""market"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19636,7 +19636,7 @@ class Mission
 			position[]={2316.917,11.761157,18864.111};
 			id=1722;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="hydration_soufre";
 			init="this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Hydratation du soufre"",AlysiaClient_fnc_process_open,""soufre"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this allowDamage false;this enableSimulation false;";
@@ -19656,7 +19656,7 @@ class Mission
 			azimut=62.277302;
 			id=1724;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this allowDamage false;this enableSimulation false;this addAction[""Commerçant de planche"",AlysiaClient_fnc_shop_virtual_open,""woodp"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19666,7 +19666,7 @@ class Mission
 			azimut=-29.5413;
 			id=1725;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this allowDamage false;this enableSimulation false;this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Traitement du bois"",AlysiaClient_fnc_process_open,""wood"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -19677,7 +19677,7 @@ class Mission
 			offsetY=3.4000001;
 			id=1726;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this allowDamage false;this enableSimulation false;this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Tubage de cigarettes"",AlysiaClient_fnc_process_open,""tabac"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='lyeed_IMG\data\actions_menu\license.paa'> Traitement du tabac (<t color='#8cff9b'>15 000</t>kn)"",AlysiaClient_fnc_buyLicense,""tabac"",0,false,false,"""",""vehicle player == player && player distance _target < 4 && !g_action_inUse && playerSide == civilian && !(['tabac'] call AlysiaClient_fnc_hasLicense)""];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Marchand de graines"",AlysiaClient_fnc_shop_virtual_open,""tabac_seed"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19686,7 +19686,7 @@ class Mission
 			position[]={2320.4185,11.234528,18864.15};
 			id=1727;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="dealer_tabac";
 			init="this allowDamage false;this enableSimulation false;this addAction[""Commerçant de tabac"",AlysiaClient_fnc_shop_virtual_open,""tabac"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -19698,7 +19698,7 @@ class Mission
 			offsetY=1.40803;
 			id=1728;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this allowDamage false;this enableSimulation false;this addAction[""Administration Centrale"",AlysiaClient_fnc_shop_arma_open,""gov_south"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""SOUTH""'];this addAction[""Changer de personnage (wipe)"",AlysiaClient_fnc_wipe,"""",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""SOUTH""'];this addAction[""Administration Centrale"",AlysiaClient_fnc_shop_virtual_open,""gov_south"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && g_choice isEqualTo ""SOUTH""'];";
 		};
@@ -19709,7 +19709,7 @@ class Mission
 			offsetY=-0.00168228;
 			id=1729;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this allowDamage false;this enableSimulation false;this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de meuble"",AlysiaClient_fnc_process_open,""furniture"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de chaises (bois)"",AlysiaClient_fnc_process_open,""chair_wood"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Fabrication de tables (bois)"",AlysiaClient_fnc_process_open,""table_wood"",0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
 		};
@@ -19740,7 +19740,7 @@ class Mission
 			offsetY=0.71632999;
 			id=1732;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_guer_1";
 			init="this allowDamage false;this enableSimulation false;this setdir -27.0202;this setposATL [12657.888672,7496.283203,0.71633];this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire terrestre"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_land"",[""garage_guer_2_1"",""garage_guer_2_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_air"",[""garage_guer_2_2"",""garage_guer_2_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_guer_2"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck"",""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""guer"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""hopital"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Magasin Général"",AlysiaClient_fnc_shop_arma_open,""GUER_genstore"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""GUER_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Usine pharmaceutique"",{[_this select 0,_this select 3] call AlysiaClient_fnc_process_choice_open},[""opium"",""morphine"",""phenylalanine"",""epinephrine""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
@@ -19752,7 +19752,7 @@ class Mission
 			offsetY=-1.7881401e-007;
 			id=1733;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowdamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_Brajdovi"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19763,7 +19763,7 @@ class Mission
 			offsetY=-1.7881401e-007;
 			id=1734;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowdamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_Cabovi"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19773,7 +19773,7 @@ class Mission
 			azimut=-450.57101;
 			id=1735;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowdamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_Promajna"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19783,7 +19783,7 @@ class Mission
 			azimut=-539.70001;
 			id=1736;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowdamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_Eponia"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19794,7 +19794,7 @@ class Mission
 			offsetY=2.76;
 			id=1737;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this allowDamage false;this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""civ_clothing_sud"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19816,7 +19816,7 @@ class Mission
 			offsetY=0.224747;
 			id=1739;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_guer_2";
 			init="this enableSimulation false;this allowDamage false;this setdir 170;this setposATL [13542.494141,10492.581055,0.224747];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""guer"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Supérette"",AlysiaClient_fnc_shop_virtual_open,""hopital"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Magasin Général"",AlysiaClient_fnc_shop_arma_open,""GUER_genstore"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""GUER_clothing"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\process.paa'/> Usine pharmaceutique"",{[_this select 0,_this select 3] call AlysiaClient_fnc_process_choice_open},[""opium"",""morphine"",""phenylalanine"",""epinephrine""],0,false,false,"""",'vehicle player == player && player distance _target < 4 && !g_action_inUse'];";
@@ -19828,7 +19828,7 @@ class Mission
 			offsetY=-0.020202599;
 			id=1740;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_guer_3";
 			init="this enableSimulation false;this allowDamage false;this setdir 260;this setposATL [13519.429688,10527.56543,-0.0202026];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire aérien"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_air"",[""garage_guer_3_1""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_guer_3"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Air""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -19840,7 +19840,7 @@ class Mission
 			offsetY=-0.019360401;
 			id=1741;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			text="stand_info_guer_4";
 			init="this enableSimulation false;this allowDamage false;this setdir -190;this setposATL [13554.305664,10440.311523,-0.0193604];this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire terrestre"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_land"",[""garage_guer_1_1"",""garage_guer_1_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_guer_1"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Car"",""Truck""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
@@ -19881,7 +19881,7 @@ class Mission
 			azimut=178.94501;
 			id=1745;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Concessionnaire entreprises"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicules_job"",[""CIV_vehicules_job_1_1"",""CIV_vehicules_job_1_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Réserve d'entreprises (équipements)"",AlysiaClient_fnc_shop_arma_open,""companies"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Réserve d'entreprises (matériaux)"",AlysiaClient_fnc_shop_virtual_open,""companies"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19891,7 +19891,7 @@ class Mission
 			azimut=137.44299;
 			id=1746;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation false;this allowDamage false;this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Concessionnaire entreprises"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicules_job"",[""CIV_vehicules_job_2_1"",""CIV_vehicules_job_2_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Réserve d'entreprises (équipements)"",AlysiaClient_fnc_shop_arma_open,""companies"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""Réserve d'entreprises (matériaux)"",AlysiaClient_fnc_shop_virtual_open,""companies"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19912,7 +19912,7 @@ class Mission
 			offsetY=4.48277;
 			id=1748;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 72.2853;this setposATL [11396.439453,5196.875,4.48277];this setVectorUp [0,0,1]; this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_sucuraj"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Garde"",AlysiaClient_fnc_shop_vehicles_open,[""EAST_vehicles_sea"",[""garage_sea_sucuraj_1"",""garage_sea_sucuraj_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Samu"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_sea"",[""garage_sea_sucuraj_1"",""garage_sea_sucuraj_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_sea"",[""garage_sea_sucuraj_1"",""garage_sea_sucuraj_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19945,7 +19945,7 @@ class Mission
 			offsetY=5.7616301;
 			id=1751;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 272.916;this setposASL [11087.932617,17614.638672,2.11202];this setVectorUp [0,0,1]; this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_Prison_north"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Milice"",AlysiaClient_fnc_shop_vehicles_open,[""WEST_vehicles_sea"",[""garage_sea_Prison_north_1"",""garage_sea_Prison_north_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Samu"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_sea"",[""garage_sea_Prison_north_1"",""garage_sea_Prison_north_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_sea"",[""garage_sea_Prison_north_1"",""garage_sea_Prison_north_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
@@ -19978,7 +19978,7 @@ class Mission
 			offsetY=2.8105199;
 			id=1754;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 308.307;this setposASL [17770.753906,14581.775391,1.18925];this setVectorUp [0,0,1]; this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_Promajna"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Milice"",AlysiaClient_fnc_shop_vehicles_open,[""WEST_vehicles_sea"",[""garage_sea_Promajna_1"",""garage_sea_Promajna_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Samu"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_sea"",[""garage_sea_Promajna_1"",""garage_sea_Promajna_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];  this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_sea"",[""garage_sea_Promajna_1"",""garage_sea_Promajna_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; ";
 		};
@@ -20055,7 +20055,7 @@ class Mission
 			offsetY=6.9251499;
 			id=1761;
 			side="EMPTY";
-			vehicle="Land_InfoStand_V2_F";
+			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 224.832;this setposATL [7285.459961,6177.0390625,6.92515];this setVectorUp [0,0,1]; this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_store.paa'/> Ranger son véhicule"",AlysiaClient_fnc_garageStoreOpen,[""Ship""],0,false,false,"""",'vehicle player == player && player distance _target < 4'];this addAction[""<img image='lyeed_IMG\data\actions_menu\garage_open.paa'/> Garage"",AlysiaClient_fnc_garageGet,""garage_sea_hvarenoj"",0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Garde"",AlysiaClient_fnc_shop_vehicles_open,[""EAST_vehicles_sea"",[""garage_sea_hvarenoj_1"",""garage_sea_hvarenoj_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau Samu"",AlysiaClient_fnc_shop_vehicles_open,[""GUER_vehicles_sea"",[""garage_sea_hvarenoj_1"",""garage_sea_hvarenoj_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4']; this addAction[""<img image='lyeed_IMG\data\actions_menu\shop_car.paa'/> Concessionnaire de bateau"",AlysiaClient_fnc_shop_vehicles_open,[""CIV_vehicles_sea"",[""garage_sea_hvarenoj_1"",""garage_sea_hvarenoj_2""]],0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
 		};
