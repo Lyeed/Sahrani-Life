@@ -37,94 +37,8 @@ if ((vehicle player) isEqualTo player) then
 	} forEach (attachedObjects player);
 
 	_target = cursorObject;
-	if (isNull _target) then 
+	if (!(isNull _target)) then 
 	{
-		_suit = (nearestObjects [player, ["Land_Suitcase_F"], 1.5]) select 0;
-		if (!(isNil "_suit")) then
-		{
-			[_suit, "items", true, true, false, false, true] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
-			true breakOut "main";
-		};
-
-		_skull = (nearestObjects [player, ["Land_HumanSkull_F"], 2]) select 0;
-		if (!(isNil "_skull")) then
-		{
-			[_skull] call AlysiaClient_fnc_interactions_player_to_skull;
-			true breakOut "main";
-		};
-
-		_plant = (nearestObjects [player, (call g_plants), 3]) select 0;
-		if (!(isNil "_plant")) then
-		{
-			[_plant] spawn AlysiaClient_fnc_plantHarvest;
-			true breakOut "main";
-		};
-
-		{
-			if ((player distance (getMarkerPos _x)) < 20) then
-			{
-				if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "destroy")) then
-				{
-					if ((player distance (getMarkerPos _x)) < 10) then
-					{
-						[_x] spawn AlysiaClient_fnc_dynamicMarkers_destroy;
-						true breakOut "main";
-					};
-				} else {
-					if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "discover")) then
-					{
-						if ((markerAlpha _x) != 1) then
-						{
-							[format["Vous avez découvert <t color='#74DF00'>%1</t>", (markerText _x)]] call AlysiaClient_fnc_info;
-							[_x] call AlysiaClient_fnc_dynamicMarkers_reveal;
-							true breakOut "main";
-						};
-					};
-				};
-			};
-		} forEach g_dynamic_markers;
-
-		{
-			_marker = configName _x;
-			if (player distance (getMarkerPos _marker) < getNumber(_x >> "area")) then
-			{
-				[_marker] spawn AlysiaClient_fnc_plantSeed;
-				true breakOut "main";
-			};
-		} forEach ("str(playerSide) in getArray(_x >> 'sides')" configClasses (missionConfigFile >> "ALYSIA_FARMING_PLANT_MARKERS"));
-
-		{
-			_marker = configName _x;
-			if (getNumber(_x >> "water") isEqualTo 0) then
-			{
-				if (player distance (getMarkerPos _marker) < getNumber(_x >> "area")) then
-				{
-					[_marker] spawn AlysiaClient_fnc_pickGather;
-					true breakOut "main";
-				};
-			} else {
-				if (player distance (getMarkerPos _marker) < (getNumber(_x >> "area") + getNumber(_x >> "water_depth"))) then
-				{
-					[_marker] spawn AlysiaClient_fnc_pickGather;
-					true breakOut "main";
-				};
-			};
-		} forEach ("str(playerSide) in getArray(_x >> 'sides')" configClasses (missionConfigFile >> "ALYSIA_FARMING_GATHER"));
-
-		if (!(isNull g_company)) then
-		{
-			_info = g_company getVariable "company_info";
-			if ((_info select 2) isEqualTo "farming") then
-			{
-				if ((player distance g_company) < 30) then
-				{
-					[] spawn AlysiaClient_fnc_plantSeed;
-					true breakOut "main";
-				};
-			};
-		};
-	} else {
-
 		_type = typeOf(_target);
 
 		if (isClass(missionConfigFile >> "ALYSIA_FUEL_STATION" >> _type)) then
@@ -323,6 +237,174 @@ if ((vehicle player) isEqualTo player) then
 			if (isClass(missionConfigFile >> "ALYSIA_FARMING_OBJECT" >> _type)) then
 			{
 				[_target] spawn AlysiaClient_fnc_farm_object;
+			};
+		};
+	};
+
+	_suit = (nearestObjects [player, ["Land_Suitcase_F"], 1.5]) select 0;
+	if (!(isNil "_suit")) then
+	{
+		[_suit, "items", true, true, false, false, true] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
+		true breakOut "main";
+	};
+
+	_skull = (nearestObjects [player, ["Land_HumanSkull_F"], 2]) select 0;
+	if (!(isNil "_skull")) then
+	{
+		[_skull] call AlysiaClient_fnc_interactions_player_to_skull;
+		true breakOut "main";
+	};
+
+	_plant = (nearestObjects [player, (call g_plants), 3]) select 0;
+	if (!(isNil "_plant")) then
+	{
+		[_plant] spawn AlysiaClient_fnc_plantHarvest;
+		true breakOut "main";
+	};
+
+	{
+		if ((player distance (getMarkerPos _x)) < 20) then
+		{
+			if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "destroy")) then
+			{
+				if ((player distance (getMarkerPos _x)) < 10) then
+				{
+					[_x] spawn AlysiaClient_fnc_dynamicMarkers_destroy;
+					true breakOut "main";
+				};
+			} else {
+				if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "discover")) then
+				{
+					if ((markerAlpha _x) != 1) then
+					{
+						[format["Vous avez découvert <t color='#74DF00'>%1</t>", (markerText _x)]] call AlysiaClient_fnc_info;
+						[_x] call AlysiaClient_fnc_dynamicMarkers_reveal;
+						true breakOut "main";
+					};
+				};
+			};
+		};
+	} forEach g_dynamic_markers;
+
+	{
+		_marker = configName _x;
+		if (player distance (getMarkerPos _marker) < getNumber(_x >> "area")) then
+		{
+			[_marker] spawn AlysiaClient_fnc_plantSeed;
+			true breakOut "main";
+		};
+	} forEach ("str(playerSide) in getArray(_x >> 'sides')" configClasses (missionConfigFile >> "ALYSIA_FARMING_PLANT_MARKERS"));
+
+	{
+		_marker = configName _x;
+		if (getNumber(_x >> "water") isEqualTo 0) then
+		{
+			if (player distance (getMarkerPos _marker) < getNumber(_x >> "area")) then
+			{
+				[_marker] spawn AlysiaClient_fnc_pickGather;
+				true breakOut "main";
+			};
+		} else {
+			if (player distance (getMarkerPos _marker) < (getNumber(_x >> "area") + getNumber(_x >> "water_depth"))) then
+			{
+				[_marker] spawn AlysiaClient_fnc_pickGather;
+				true breakOut "main";
+			};
+		};
+	} forEach ("str(playerSide) in getArray(_x >> 'sides')" configClasses (missionConfigFile >> "ALYSIA_FARMING_GATHER"));
+
+	if (!(isNull g_company)) then
+	{
+		_info = g_company getVariable "company_info";
+		if ((_info select 2) isEqualTo "farming") then
+		{
+			if ((player distance g_company) < 30) then
+			{
+				[] spawn AlysiaClient_fnc_plantSeed;
+				true breakOut "main";
+			};
+		};
+	};		_suit = (nearestObjects [player, ["Land_Suitcase_F"], 1.5]) select 0;
+	if (!(isNil "_suit")) then
+	{
+		[_suit, "items", true, true, false, false, true] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
+		true breakOut "main";
+	};
+
+	_skull = (nearestObjects [player, ["Land_HumanSkull_F"], 2]) select 0;
+	if (!(isNil "_skull")) then
+	{
+		[_skull] call AlysiaClient_fnc_interactions_player_to_skull;
+		true breakOut "main";
+	};
+
+	_plant = (nearestObjects [player, (call g_plants), 3]) select 0;
+	if (!(isNil "_plant")) then
+	{
+		[_plant] spawn AlysiaClient_fnc_plantHarvest;
+		true breakOut "main";
+	};
+
+	{
+		if ((player distance (getMarkerPos _x)) < 20) then
+		{
+			if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "destroy")) then
+			{
+				if ((player distance (getMarkerPos _x)) < 10) then
+				{
+					[_x] spawn AlysiaClient_fnc_dynamicMarkers_destroy;
+					true breakOut "main";
+				};
+			} else {
+				if (str(playerSide) in getArray(missionConfigFile >> "ALYSIA_DYN_MARKERS" >> _x >> "discover")) then
+				{
+					if ((markerAlpha _x) != 1) then
+					{
+						[format["Vous avez découvert <t color='#74DF00'>%1</t>", (markerText _x)]] call AlysiaClient_fnc_info;
+						[_x] call AlysiaClient_fnc_dynamicMarkers_reveal;
+						true breakOut "main";
+					};
+				};
+			};
+		};
+	} forEach g_dynamic_markers;
+
+	{
+		_marker = configName _x;
+		if (player distance (getMarkerPos _marker) < getNumber(_x >> "area")) then
+		{
+			[_marker] spawn AlysiaClient_fnc_plantSeed;
+			true breakOut "main";
+		};
+	} forEach ("str(playerSide) in getArray(_x >> 'sides')" configClasses (missionConfigFile >> "ALYSIA_FARMING_PLANT_MARKERS"));
+
+	{
+		_marker = configName _x;
+		if (getNumber(_x >> "water") isEqualTo 0) then
+		{
+			if (player distance (getMarkerPos _marker) < getNumber(_x >> "area")) then
+			{
+				[_marker] spawn AlysiaClient_fnc_pickGather;
+				true breakOut "main";
+			};
+		} else {
+			if (player distance (getMarkerPos _marker) < (getNumber(_x >> "area") + getNumber(_x >> "water_depth"))) then
+			{
+				[_marker] spawn AlysiaClient_fnc_pickGather;
+				true breakOut "main";
+			};
+		};
+	} forEach ("str(playerSide) in getArray(_x >> 'sides')" configClasses (missionConfigFile >> "ALYSIA_FARMING_GATHER"));
+
+	if (!(isNull g_company)) then
+	{
+		_info = g_company getVariable "company_info";
+		if ((_info select 2) isEqualTo "farming") then
+		{
+			if ((player distance g_company) < 30) then
+			{
+				[] spawn AlysiaClient_fnc_plantSeed;
+				true breakOut "main";
 			};
 		};
 	};

@@ -10,15 +10,12 @@ _position = [_this, 0, [], [[]]] call BIS_fnc_param;
 
 [] call AlysiaClient_fnc_init_actions;
 
-if (player getVariable ["arrested", false]) then {
-	_position = getArray (missionConfigFile >> "ALYSIA_PRISONS" >> g_arrest_Prison >> "cells" >> g_arrest_Cellule >> "position");
-	_dir = getNumber (missionConfigFile >> "ALYSIA_PRISONS" >> g_arrest_Prison >> "cells" >> g_arrest_Cellule >> "dir");
-	player setPosATL _position;
-	player setDir _dir;
+if ((player getVariable ["arrested", false]) && !(isNull g_arrest_Prison)) then {
+	[] spawn AlysiaClient_fnc_prison_loop;
 } else {
 	if (!g_is_alive || ((count _position) != 3)) then
 	{
-		private["_pos", "_randPos"];
+		private "_pos";
 		if (playerSide isEqualTo civilian) then {
 			_pos = getMarkerPos (format["civ_spawn_%1", g_choice]);
 		} else {

@@ -5,10 +5,15 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_skull", "_data"];
+private["_skull", "_data", "_pos"];
+
+_pos = getPosATL player;
+if (count (nearestObjects [_pos, ["Car","Tank","Air","Truck"], 5]) > 0) then {
+	_pos = [_pos, 10] call CBA_fnc_randPos;
+};
 
 _skull = createVehicle ["Land_HumanSkull_F", [0,0,0], [], 0, "CAN_COLLIDE"];
-_skull setPosATL (getPosATL player);
+_skull setPosATL _pos;
 _skull setDir random(360);
 
 _data = [];

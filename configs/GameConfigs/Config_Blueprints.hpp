@@ -38,6 +38,6 @@ class ALYSIA_BLUEPRINTS
 	class patron_deagle
 	{
 		process[] = {"weapon_deagle_normal","weapon_deagle_gold","magazine_deagle"};
-		labos[] = {"googles_NVG"};
+		labos[] = {"lab_weapon"};
 	};
 };

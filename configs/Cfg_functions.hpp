@@ -486,19 +486,11 @@ class CfgFunctions
 		class Prisons
 		{
 			file = "core\game\Prisons";
-			class prisonNearest {};
-			class prisonRelease {};
-			class prisonPutInJail {};
-			class prisonWorkReward {};
-			class prisonTimer {};
-			class prisonMenu_open {};
-			class prisonMenu_use_validate {};
-			class prisonModifyMenu_informations_get {};
-			class prisonModifyMenu_informations_return {};
-			class prisonModifyMenu_open {};
-			class prisonModifyMenu_use_validate {};
-			class prisonModifyMenu_use_validate_send {};
-			class prisonModifyMenu_use_release {};
+			class prison_near {};
+			class prison_prepare {};
+			class prison_loop {};
+			class prison_arrest_open {};
+			class prison_arrest_action {};
 		};
 
 		class Interactions

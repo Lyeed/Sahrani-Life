@@ -14,7 +14,7 @@ if (g_garage_store) exitWith {
 	["Vous êtes déjà en train de ranger un véhicule<br/>Veuillez patienter"] call AlysiaClient_fnc_error;
 };
 
-if (!(createDialog "RscDisplayGarageStore")) exitWith {};
+createDialog "RscDisplayGarageStore";
 
 disableSerialization;
 _display = findDisplay 35000;

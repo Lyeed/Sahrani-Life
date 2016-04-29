@@ -20,6 +20,7 @@ detach player;
 	deleteVehicle _x;
 } forEach (nearestObjects [player, ["WeaponHolderSimulated", "GroundWeaponHolder"], 5]);
 [] call AlysiaClient_fnc_stripDownPlayer;
+
 hideBody player;
 
 {

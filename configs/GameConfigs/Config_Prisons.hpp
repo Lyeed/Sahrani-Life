@@ -1,40 +1,25 @@
 class ALYSIA_PRISONS
 {
-	class prison_n
+	class Land_Gaol_Main
 	{
 		name = "Centre de réhabilitation";
 		sides[] = {"WEST"};
 		uniform = "Skyline_Uniforme_Prisonnier_01_F";
 		exit[] = {12140.4,17777.6,0.00143814};
 		escape_distance = 70;
-
+		arrest_pos[] = {};
+		
 		class time
 		{
 			min = 600;
 			max = 7200;
 		};
-
+		
 		class bail
 		{
 			min = 0;
 			max = 0;
 			enable = 0;
-		};
-
-		class works
-		{
-			class item_1
-			{
-				name = "Traitement de la Pierre";
-				time = 0;
-				money = 0;
-			};
-			class item_2
-			{
-				name = "Trafic de Tabac";
-				time = 0;
-				money = 0;
-			};
 		};
 
 		class cells
@@ -76,7 +61,7 @@ class ALYSIA_PRISONS
 		};
 	};
 
-	class prison_s
+	class Land_MainSection
 	{
 		name = "Pénitencier";
 		sides[] = {"EAST"};
@@ -92,15 +77,11 @@ class ALYSIA_PRISONS
 
 		class bail
 		{
-			min = 20000;
-			max = 1000000;
-			enable = 1;
+			min = 0;
+			max = 0;
+			enable = 0;
 		};
 
-		class works
-		{
-
-		};
 		class cells
 		{
 			class A_01

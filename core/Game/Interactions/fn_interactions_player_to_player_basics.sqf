@@ -146,29 +146,15 @@
 		],
 		[
 			"arrest",
-			"Prison",
-			"[] spawn AlysiaClient_fnc_prisonMenu_open;",
+			"Emprisonner",
+			"[g_interaction_target] call AlysiaClient_fnc_prison_arrest_open;",
 			"
 				(
-					!(isNull ([g_interaction_target] call AlysiaClient_fnc_prisonNearest)) &&
+					!(isNull ([g_interaction_target] call AlysiaClient_fnc_prison_near)) &&
 					!(g_interaction_target getVariable ['arrested',false]) &&
-					(isNull (g_interaction_target getVariable ['escorted',objNull])) && 
+					(isNull (g_interaction_target getVariable ['escorted',objNull])) &&
 					{
-						str(playerSide) in getArray(missionConfigFile >> 'ALYSIA_PRISONS' >> vehicleVarName([g_interaction_target] call AlysiaClient_fnc_prisonNearest) >> 'sides')
-					}
-				)
-			"
-		],
-		[
-			"arrest",
-			"Peine",
-			"[] spawn AlysiaClient_fnc_prisonModifyMenu_informations_get;",
-			"
-				(
-					!(isNull ([g_interaction_target] call AlysiaClient_fnc_prisonNearest)) &&
-					(g_interaction_target getVariable ['arrested',false]) &&
-					{
-						str(playerSide) in getArray(missionConfigFile >> 'ALYSIA_PRISONS' >> vehicleVarName([g_interaction_target] call AlysiaClient_fnc_prisonNearest) >> 'sides')
+						str(playerSide) in getArray(missionConfigFile >> 'ALYSIA_PRISONS' >> typeOf([g_interaction_target] call AlysiaClient_fnc_prison_near) >> 'sides')
 					}
 				)
 			"

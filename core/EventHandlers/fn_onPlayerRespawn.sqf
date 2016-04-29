@@ -28,42 +28,49 @@ resetCamShake;
 
 [] spawn AlysiaClient_fnc_init_loadout;
 
-_config = missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "respawn";
-
-_price = getNumber(_config >> "price");
-if (_price > 0) then
+if ((player getVariable ["arrested", false]) && !(isNull g_arrest_Prison) && !(g_arrest_Cellule isEqualTo "")) then
 {
-	if (g_atm < _price) then {
-		["Vous n'avez pas assez d'argent pour payer vos frais d'hospitalisation<br/>Ces derniers on été payé par l'Etat", "buy"] call AlysiaClient_fnc_info;
-	} else {
-		[format["Vos frais d'<t color='#FE2EF7'>hospitalisation</t> s'élèvent à <t color='#8cff9b'>%1kn</t>.", ([_price] call AlysiaClient_fnc_numberText)], "buy"] call AlysiaClient_fnc_info;
-		[false, _price, "Soins hôpital"] call AlysiaClient_fnc_handleATM;
-	};
-};
+	_config_cell = missionConfigFile >> "ALYSIA_PRISONS" >> typeof(g_arrest_Prison) >> "cells" >> g_arrest_Cellule;
+	player setPosATL (g_arrest_Prison modelToWorld getArray(_config_cell >> "pos"));
+	player setDir getNumber(_config_cell >> "dir");
+} else {
+	_config = missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "respawn";
 
-if (g_coma_suicide) then
-{
-	_percent = getNumber(_config >> "suicide");
-	if (_percente > 0) then
+	_price = getNumber(_config >> "price");
+	if (_price > 0) then
 	{
-		[false, round(g_atm * _percent), "Suicide"] call AlysiaClient_fnc_handleATM;
+		if (g_atm < _price) then {
+			["Vous n'avez pas assez d'argent pour payer vos frais d'hospitalisation<br/>Ces derniers on été payé par l'Etat", "buy"] call AlysiaClient_fnc_info;
+		} else {
+			[format["Vos frais d'<t color='#FE2EF7'>hospitalisation</t> s'élèvent à <t color='#8cff9b'>%1kn</t>.", ([_price] call AlysiaClient_fnc_numberText)], "buy"] call AlysiaClient_fnc_info;
+			[false, _price, "Soins hôpital"] call AlysiaClient_fnc_handleATM;
+		};
 	};
-};
 
-{
-	if (
-			(isClass(missionConfigFile >> "ALYSIA_HOUSES" >> typeof(_x) >> "house")) && 
-			(((_x getVariable ["house_owner", ["", ""]]) select 0) isEqualTo (getPlayerUID player))
-		) exitWith {_position = getPos _x};
-} forEach g_houses;
-if (isNil "_position") then
-{
-	_respawn = getText(_config >> "marker");
-	if (playerSide isEqualTo civilian) then {_respawn = format["%1_%2", _respawn, g_choice]};
-	_position = getMarkerPos _respawn;
-};
+	if (g_coma_suicide) then
+	{
+		_percent = getNumber(_config >> "suicide");
+		if (_percente > 0) then
+		{
+			[false, round(g_atm * _percent), "Suicide"] call AlysiaClient_fnc_handleATM;
+		};
+	};
 
-player setPos _position;
+	{
+		if (
+				(isClass(missionConfigFile >> "ALYSIA_HOUSES" >> typeof(_x) >> "house")) && 
+				(((_x getVariable ["house_owner", ["", ""]]) select 0) isEqualTo (getPlayerUID player))
+			) exitWith {_position = getPos _x};
+	} forEach g_houses;
+	if (isNil "_position") then
+	{
+		_respawn = getText(_config >> "marker");
+		if (playerSide isEqualTo civilian) then {_respawn = format["%1_%2", _respawn, g_choice]};
+		_position = getMarkerPos _respawn;
+	};
+
+	player setPos _position;
+};
 
 cutText ["", "BLACK IN", 8, false];
 

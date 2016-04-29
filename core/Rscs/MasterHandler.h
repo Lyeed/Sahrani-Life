@@ -40,4 +40,5 @@ class RscTitles
 	#include "RscTitles\RscTitleLoot.hpp"
 	#include "RscTitles\RscTitleMessage.hpp"
 	#include "RscTitles\RscTitleIdentities.hpp"
+	#include "RscTitles\RscTitleArrest.hpp"
 };
