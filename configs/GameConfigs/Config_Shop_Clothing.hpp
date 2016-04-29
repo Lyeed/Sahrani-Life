@@ -240,7 +240,20 @@ class ALYSIA_SHOPS_CLOTHING
 			"TRYK_B_Carryall_wh",
 			"TRYK_B_Carryall_wood",
 			"TRYK_B_FieldPack_Wood",
-			"TRYK_B_Kitbag_Base" 
+			"TRYK_B_Kitbag_Base" ,
+			"Skyline_Backpack_Improvise_01_F",
+			"Skyline_Backpack_Ecole_01_F",
+			"Skyline_Backpack_Ecole_02_F",
+			"Skyline_Backpack_Ecole_03_F",
+			"Skyline_Backpack_Chasse_01_F",
+			"Skyline_Backpack_Sac_a_dos_01_F",
+			"Skyline_Backpack_Sac_a_dos_02_F",
+			"Skyline_Backpack_Sac_a_dos_03_F",
+			"Skyline_Backpack_Sac_a_dos_04_F",
+			"Skyline_Backpack_Montagne_01_F",
+			"Skyline_Backpack_Montagne_02_F",
+			"Skyline_Backpack_Montagne_03_F",
+			"Skyline_Backpack_Montagne_04_F"
 		};		
 	};
 
@@ -462,7 +475,20 @@ class ALYSIA_SHOPS_CLOTHING
 			"TRYK_B_Carryall_wh",
 			"TRYK_B_Carryall_wood",
 			"TRYK_B_FieldPack_Wood",
-			"TRYK_B_Kitbag_Base" 
+			"TRYK_B_Kitbag_Base" ,
+			"Skyline_Backpack_Improvise_01_F",
+			"Skyline_Backpack_Ecole_01_F",
+			"Skyline_Backpack_Ecole_02_F",
+			"Skyline_Backpack_Ecole_03_F",
+			"Skyline_Backpack_Chasse_01_F",
+			"Skyline_Backpack_Sac_a_dos_01_F",
+			"Skyline_Backpack_Sac_a_dos_02_F",
+			"Skyline_Backpack_Sac_a_dos_03_F",
+			"Skyline_Backpack_Sac_a_dos_04_F",
+			"Skyline_Backpack_Montagne_01_F",
+			"Skyline_Backpack_Montagne_02_F",
+			"Skyline_Backpack_Montagne_03_F",
+			"Skyline_Backpack_Montagne_04_F"
 		};		
 	};
 

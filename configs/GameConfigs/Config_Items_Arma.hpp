@@ -2823,4 +2823,42 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 75;
 		buy_license_CIV = "central_com";
 	};
+
+	class Skyline_Backpack_Montagne_01_F
+	{
+		buy_price = 1560;
+		//Taille inventaire "I" = 350
+	};
+	class Skyline_Backpack_Montagne_02_F: Skyline_Backpack_Montagne_01_F {};
+	class Skyline_Backpack_Montagne_03_F: Skyline_Backpack_Montagne_01_F {};
+	class Skyline_Backpack_Montagne_04_F: Skyline_Backpack_Montagne_01_F {};
+
+	class Skyline_Backpack_Sac_a_dos_01_F
+	{
+		buy_price = 1250;
+		//Taille inventaire "I" = 280
+	};
+	class Skyline_Backpack_Sac_a_dos_02_F: Skyline_Backpack_Sac_a_dos_01_F {};
+	class Skyline_Backpack_Sac_a_dos_03_F: Skyline_Backpack_Sac_a_dos_01_F {};
+	class Skyline_Backpack_Sac_a_dos_04_F: Skyline_Backpack_Sac_a_dos_01_F {};
+
+	class Skyline_Backpack_Chasse_01_F
+	{
+		buy_price = 1100;
+		//Taille inventaire "I" = 200
+	};
+
+	class Skyline_Backpack_Ecole_01_F
+	{
+		buy_price = 850;
+		//Taille inventaire "I" = 160
+	};
+	class Skyline_Backpack_Ecole_02_F: Skyline_Backpack_Ecole_01_F {};
+	class Skyline_Backpack_Ecole_03_F: Skyline_Backpack_Ecole_01_F {};
+
+	class Skyline_Backpack_Improvise_01_F
+	{
+		buy_price = 210;
+		//Taille inventaire "I" = 100
+	};
 };

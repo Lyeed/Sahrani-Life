@@ -3151,7 +3151,8 @@ class ALYSIA_VEHICLES
 			"Skyline_VW_TouaregR50_09_F",
 			"Skyline_VW_TouaregR50_10_F",
 			"Skyline_VW_TouaregR50_11_F",
-			"Skyline_VW_TouaregR50_12_F"
+			"Skyline_VW_TouaregR50_12_F",
+			"Skyline_VW_TouaregR50_13_F"
 		};
 	};
 	class Skyline_VW_TouaregR50_01_F: Skyline_VW_Touareg {};
@@ -3166,6 +3167,7 @@ class ALYSIA_VEHICLES
 	class Skyline_VW_TouaregR50_10_F: Skyline_VW_Touareg {};
 	class Skyline_VW_TouaregR50_11_F: Skyline_VW_Touareg {};
 	class Skyline_VW_TouaregR50_12_F: Skyline_VW_Touareg {};
+	class Skyline_VW_TouaregR50_13_F: Skyline_VW_Touareg {};
 
 	class Skyline_Audi_RS4
 	{
@@ -3189,7 +3191,8 @@ class ALYSIA_VEHICLES
 			"Skyline_Audi_RS4_09_F",
 			"Skyline_Audi_RS4_10_F",
 			"Skyline_Audi_RS4_11_F",
-			"Skyline_Audi_RS4_12_F"
+			"Skyline_Audi_RS4_12_F",
+			"Skyline_Audi_RS4_13_F"
 		};
 	};
 	class Skyline_Audi_RS4_01_F: Skyline_Audi_RS4 {};
@@ -3204,6 +3207,7 @@ class ALYSIA_VEHICLES
 	class Skyline_Audi_RS4_10_F: Skyline_Audi_RS4 {};
 	class Skyline_Audi_RS4_11_F: Skyline_Audi_RS4 {};
 	class Skyline_Audi_RS4_12_F: Skyline_Audi_RS4 {};
+	class Skyline_Audi_RS4_13_F: Skyline_Audi_RS4 {};
 
 	class Skyline_Ford_Transit
 	{
@@ -3227,7 +3231,8 @@ class ALYSIA_VEHICLES
 			"Skyline_Ford_Transit_09_F",
 			"Skyline_Ford_Transit_10_F",
 			"Skyline_Ford_Transit_11_F",
-			"Skyline_Ford_Transit_12_F"
+			"Skyline_Ford_Transit_12_F",
+			"Skyline_Ford_Transit_13_F"
 		};
 	};
 	class Skyline_Ford_Transit_01_F: Skyline_Ford_Transit {};
@@ -3242,6 +3247,7 @@ class ALYSIA_VEHICLES
 	class Skyline_Ford_Transit_10_F: Skyline_Ford_Transit {};
 	class Skyline_Ford_Transit_11_F: Skyline_Ford_Transit {};
 	class Skyline_Ford_Transit_12_F: Skyline_Ford_Transit {};
+	class Skyline_Ford_Transit_13_F: Skyline_Ford_Transit {};
 
 	class Skyline_Peugeot_308
 	{
@@ -3265,7 +3271,8 @@ class ALYSIA_VEHICLES
 			"Skyline_Peugeot_308_09_F",
 			"Skyline_Peugeot_308_10_F",
 			"Skyline_Peugeot_308_11_F",
-			"Skyline_Peugeot_308_12_F"
+			"Skyline_Peugeot_308_12_F",
+			"Skyline_Peugeot_308_13_F"
 		};
 	};
 	class Skyline_Peugeot_308_01_F: Skyline_Peugeot_308 {};
@@ -3280,6 +3287,7 @@ class ALYSIA_VEHICLES
 	class Skyline_Peugeot_308_10_F: Skyline_Peugeot_308 {};
 	class Skyline_Peugeot_308_11_F: Skyline_Peugeot_308 {};
 	class Skyline_Peugeot_308_12_F: Skyline_Peugeot_308 {};
+	class Skyline_Peugeot_308_13_F: Skyline_Peugeot_308 {};
 
 	class shounka_a3_brinks_noir
 	{
@@ -3869,7 +3877,8 @@ class ALYSIA_VEHICLES
 			"Skyline_Jeep_Wrangler_Rubicon_09_F",
 			"Skyline_Jeep_Wrangler_Rubicon_10_F",
 			"Skyline_Jeep_Wrangler_Rubicon_11_F",
-			"Skyline_Jeep_Wrangler_Rubicon_12_F"
+			"Skyline_Jeep_Wrangler_Rubicon_12_F",
+			"Skyline_Jeep_Wrangler_Rubicon_13_F"
 		};
 	};
 	class Skyline_Jeep_Wrangler_Rubicon_01_F: Skyline_Jeep_Wrangler_Rubicon {};
@@ -3884,6 +3893,7 @@ class ALYSIA_VEHICLES
 	class Skyline_Jeep_Wrangler_Rubicon_10_F: Skyline_Jeep_Wrangler_Rubicon {};
 	class Skyline_Jeep_Wrangler_Rubicon_11_F: Skyline_Jeep_Wrangler_Rubicon {};
 	class Skyline_Jeep_Wrangler_Rubicon_12_F: Skyline_Jeep_Wrangler_Rubicon {};
+	class Skyline_Jeep_Wrangler_Rubicon_13_F: Skyline_Jeep_Wrangler_Rubicon {};
 
 	class Skyline_VW_TouaregR50_Samu_01_F
 	{
@@ -3919,7 +3929,8 @@ class ALYSIA_VEHICLES
 			"Skyline_Lotus_Esprit_09_F",
 			"Skyline_Lotus_Esprit_10_F",
 			"Skyline_Lotus_Esprit_11_F",
-			"Skyline_Lotus_Esprit_12_F"
+			"Skyline_Lotus_Esprit_12_F",
+			"Skyline_Lotus_Esprit_13_F"
 		};
 	};
 	class Skyline_Lotus_Esprit_01_F: Skyline_Lotus_Esprit {};
@@ -3934,4 +3945,5 @@ class ALYSIA_VEHICLES
 	class Skyline_Lotus_Esprit_10_F: Skyline_Lotus_Esprit {};
 	class Skyline_Lotus_Esprit_11_F: Skyline_Lotus_Esprit {};
 	class Skyline_Lotus_Esprit_12_F: Skyline_Lotus_Esprit {};
+	class Skyline_Lotus_Esprit_13_F: Skyline_Lotus_Esprit {};
 };
