@@ -20,7 +20,7 @@ class ALYSIA_VEHICLES
 		virtual inventory	    -NUMBER-	(virtual inventory space)
     Ex: inventory = 45;
     ----------------------------
-		side 					-TXT- (allow vehicles defined as WEST,EAST,GUER to be opened by faction member without having keys) 
+		side 					-TXT- (allow vehicles defined as WEST,EAST,GUER to be opened by faction member without having keys)
     possible: [WEST,EAST,GUER,CIV]
     Ex: side = "WEST";
     ----------------------------
@@ -1637,7 +1637,7 @@ class ALYSIA_VEHICLES
   	class max_impala_white: max_impala {};
   	class max_impala_red: max_impala {};
 	class max_impala_blue: max_impala {};
-	
+
 	class DAR_TahoeCiv
 	{
 		realname = "Chevrolet Tahoe";
@@ -2223,7 +2223,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 	};
-	
+
   	class Skyline_Bus
 	{
 		realname = "Bus";
@@ -2353,7 +2353,7 @@ class ALYSIA_VEHICLES
   	class C_Heli_light_01_wasp_F: C_Heli_light {};
   	class C_Heli_light_01_wave_F: C_Heli_light {};
   	class C_Heli_light_01_stripped_F: C_Heli_light {};
-  	class C_Heli_light_01_luxe_F: C_Heli_light {};	
+  	class C_Heli_light_01_luxe_F: C_Heli_light {};
 
   	class Fett_orca
 	{
@@ -2458,7 +2458,7 @@ class ALYSIA_VEHICLES
 		fuel = "SP95";
 		realname = "Agera";
 	};
-	
+
 	class Jonzie_Tow_Truck
 	{
 		buyPrice = 229500;
@@ -2496,7 +2496,47 @@ class ALYSIA_VEHICLES
 	class Skyline_Depanneuse_Jonzie_10_F: Jonzie_Tow_Truck {};
 	class Skyline_Depanneuse_Jonzie_11_F: Jonzie_Tow_Truck {};
 	class Skyline_Depanneuse_Jonzie_12_F: Jonzie_Tow_Truck {};
-	
+
+	class Skyline_Scania_G420_Depanneuse
+	{
+		buyPrice = 229500;
+		inventory = 120;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"truck","company_garagist"};
+		fuel = "Diesel";
+		colors[] =
+		{
+			"Skyline_Scania_G420_Depanneuse_01_F",
+			"Skyline_Scania_G420_Depanneuse_02_F",
+			"Skyline_Scania_G420_Depanneuse_03_F",
+			"Skyline_Scania_G420_Depanneuse_04_F",
+			"Skyline_Scania_G420_Depanneuse_05_F",
+			"Skyline_Scania_G420_Depanneuse_06_F",
+			"Skyline_Scania_G420_Depanneuse_07_F",
+			"Skyline_Scania_G420_Depanneuse_08_F",
+			"Skyline_Scania_G420_Depanneuse_09_F",
+			"Skyline_Scania_G420_Depanneuse_10_F",
+			"Skyline_Scania_G420_Depanneuse_11_F",
+			"Skyline_Scania_G420_Depanneuse_12_F",
+			"Skyline_Scania_G420_Depanneuse_13_F"
+		};
+		realname = "Scania G420 (Dépanneuse)";
+	};
+	class Skyline_Scania_G420_Depanneuse_01_F: Skyline_Scania_G420_Depanneuse{};
+	class Skyline_Scania_G420_Depanneuse_02_F: Skyline_Scania_G420_Depanneuse{};
+	class Skyline_Scania_G420_Depanneuse_03_F: Skyline_Scania_G420_Depanneuse{};
+	class Skyline_Scania_G420_Depanneuse_04_F: Skyline_Scania_G420_Depanneuse{};
+	class Skyline_Scania_G420_Depanneuse_05_F: Skyline_Scania_G420_Depanneuse{};
+	class Skyline_Scania_G420_Depanneuse_06_F: Skyline_Scania_G420_Depanneuse{};
+	class Skyline_Scania_G420_Depanneuse_07_F: Skyline_Scania_G420_Depanneuse{};
+	class Skyline_Scania_G420_Depanneuse_08_F: Skyline_Scania_G420_Depanneuse{};
+	class Skyline_Scania_G420_Depanneuse_09_F: Skyline_Scania_G420_Depanneuse{};
+	class Skyline_Scania_G420_Depanneuse_10_F: Skyline_Scania_G420_Depanneuse{};
+	class Skyline_Scania_G420_Depanneuse_11_F: Skyline_Scania_G420_Depanneuse{};
+	class Skyline_Scania_G420_Depanneuse_12_F: Skyline_Scania_G420_Depanneuse{};
+	class Skyline_Scania_G420_Depanneuse_13_F: Skyline_Scania_G420_Depanneuse{};
+
 	class Jonzie_Flat_Bed
 	{
 		buyPrice = 25000;
@@ -2507,7 +2547,7 @@ class ALYSIA_VEHICLES
 		fuel = "Diesel";
 		realname = "Man TGX Flat Bed Truck";
 	};
-	
+
 	class Jonzie_Log_Truck
 	{
 		buyPrice = 25000;
@@ -2518,7 +2558,7 @@ class ALYSIA_VEHICLES
 		fuel = "Diesel";
 		realname = "Man TGX Log Truck";
 	};
-	
+
 	class Jonzie_Tanker_Truck
 	{
 		buyPrice = 455000;
@@ -2664,7 +2704,7 @@ class ALYSIA_VEHICLES
 		rank = 6;
 		realname = "Camion Milice";
 	};
-	
+
 	/* SEA */
 	class Fett_boat_milice
 	{
@@ -2708,7 +2748,7 @@ class ALYSIA_VEHICLES
 	};
 	class dezkit_b206_police: dezkit_b206mi {};
 	class dezkit_b206_fbi: dezkit_b206mi {};
-	
+
 	class Skyline_LittleBird_Milice
 	{
 		realname = "LittleBird de la Milice";
@@ -2729,7 +2769,7 @@ class ALYSIA_VEHICLES
   	/*
 	**				EAST VEHICLES
 	*/
-	
+
 	/* CARS */
 	class RDS_Lada_Civ_05
 	{
@@ -2802,7 +2842,7 @@ class ALYSIA_VEHICLES
 		rank = 6;
 		realname = "T34 Garde";
 	};
-	
+
 	/* TRUCKS */
 	class RDS_Ikarus_Civ
 	{
@@ -2874,7 +2914,7 @@ class ALYSIA_VEHICLES
 		rank = 1;
 		realname = "Ambulance avec civière";
 	};
-	
+
 	class Mrshounka_corbillard_base_p
 	{
 		buyPrice = 65000;
@@ -3009,8 +3049,8 @@ class ALYSIA_VEHICLES
 	};
 	class dezkit_b206_ems: dezkit_b206ems {};
 	class dezkit_b206_rescue: dezkit_b206ems {};
-	
-	
+
+
 	/***motos***/
 	class Mrshounka_ducati_p_base
 	{
@@ -3043,7 +3083,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_ducati_p_g: Mrshounka_ducati_p_base {};
 	class Mrshounka_ducati_p_v: Mrshounka_ducati_p_base {};
 	class Mrshounka_ducati_p_o: Mrshounka_ducati_p_base {};
-	
+
 	class Mrshounka_yamaha_p_base
 	{
 		buyPrice = 275000;
@@ -3075,7 +3115,7 @@ class ALYSIA_VEHICLES
 	class Mrshounka_yamaha_p_g: Mrshounka_yamaha_p_base {};
 	class Mrshounka_yamaha_p_v: Mrshounka_yamaha_p_base {};
 	class Mrshounka_yamaha_p_o: Mrshounka_yamaha_p_base {};
-	
+
 	class max_bike_base
 	{
 		buyPrice = 12000;
@@ -3099,7 +3139,7 @@ class ALYSIA_VEHICLES
 	class max_bike2: max_bike_base {};
 	class max_bike3: max_bike_base {};
 	class max_bike4: max_bike_base {};
-	
+
 	class ADM_Ford_F100
 	{
 		buyPrice = 4500;
@@ -3376,7 +3416,7 @@ class ALYSIA_VEHICLES
 	class Skyline_Vehicule_Jonzie_Escalade_10_F: Skyline_Vehicule_Jonzie_Escalade {};
 	class Skyline_Vehicule_Jonzie_Escalade_11_F: Skyline_Vehicule_Jonzie_Escalade {};
 	class Skyline_Vehicule_Jonzie_Escalade_12_F: Skyline_Vehicule_Jonzie_Escalade {};
-  
+
   	class Skyline_Vehicule_Jonzie_Galant
 	{
 		buyPrice = 10000;
@@ -3414,7 +3454,7 @@ class ALYSIA_VEHICLES
 	class Skyline_Vehicule_Jonzie_Galant_10_F: Skyline_Vehicule_Jonzie_Galant {};
 	class Skyline_Vehicule_Jonzie_Galant_11_F: Skyline_Vehicule_Jonzie_Galant {};
 	class Skyline_Vehicule_Jonzie_Galant_12_F: Skyline_Vehicule_Jonzie_Galant {};
-  
+
   	class Skyline_Vehicule_Jonzie_Mini_Cooper
 	{
 		buyPrice = 7500;
@@ -3490,7 +3530,7 @@ class ALYSIA_VEHICLES
 	class Skyline_Vehicule_Jonzie_Quattroporte_10_F: Skyline_Vehicule_Jonzie_Quattroporte {};
 	class Skyline_Vehicule_Jonzie_Quattroporte_11_F: Skyline_Vehicule_Jonzie_Quattroporte {};
 	class Skyline_Vehicule_Jonzie_Quattroporte_12_F: Skyline_Vehicule_Jonzie_Quattroporte {};
-  
+
   	class Skyline_Vehicule_Jonzie_Datsun_510
 	{
 		buyPrice = 7500;
@@ -3528,7 +3568,7 @@ class ALYSIA_VEHICLES
 	class Skyline_Vehicule_Jonzie_Datsun_510_10_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
 	class Skyline_Vehicule_Jonzie_Datsun_510_11_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
 	class Skyline_Vehicule_Jonzie_Datsun_510_12_F: Skyline_Vehicule_Jonzie_Datsun_510 {};
-  
+
   	class Skyline_Vehicule_Jonzie_Corolla
 	{
 		buyPrice = 6000;
@@ -3566,7 +3606,7 @@ class ALYSIA_VEHICLES
 	class Skyline_Vehicule_Jonzie_Corolla_10_F: Skyline_Vehicule_Jonzie_Corolla {};
 	class Skyline_Vehicule_Jonzie_Corolla_11_F: Skyline_Vehicule_Jonzie_Corolla {};
 	class Skyline_Vehicule_Jonzie_Corolla_12_F: Skyline_Vehicule_Jonzie_Corolla {};
-  
+
   	class Skyline_Vehicule_Jonzie_Datsun_Z432
 	{
 		buyPrice = 22000;
@@ -3604,7 +3644,7 @@ class ALYSIA_VEHICLES
 	class Skyline_Vehicule_Jonzie_Datsun_Z432_10_F: Skyline_Vehicule_Jonzie_Datsun_Z432 {};
 	class Skyline_Vehicule_Jonzie_Datsun_Z432_11_F: Skyline_Vehicule_Jonzie_Datsun_Z432 {};
 	class Skyline_Vehicule_Jonzie_Datsun_Z432_12_F: Skyline_Vehicule_Jonzie_Datsun_Z432 {};
-  
+
   	class Skyline_Vehicule_Jonzie_Raptor
 	{
 		buyPrice = 63500;
@@ -3642,7 +3682,7 @@ class ALYSIA_VEHICLES
 	class Skyline_Vehicule_Jonzie_Raptor_10_F: Skyline_Vehicule_Jonzie_Raptor {};
 	class Skyline_Vehicule_Jonzie_Raptor_11_F: Skyline_Vehicule_Jonzie_Raptor {};
 	class Skyline_Vehicule_Jonzie_Raptor_12_F: Skyline_Vehicule_Jonzie_Raptor {};
-  
+
   	class Skyline_Vehicule_Jonzie_STI
 	{
 		buyPrice = 47500;
@@ -3680,7 +3720,7 @@ class ALYSIA_VEHICLES
 	class Skyline_Vehicule_Jonzie_STI_10_F: Skyline_Vehicule_Jonzie_STI {};
 	class Skyline_Vehicule_Jonzie_STI_11_F: Skyline_Vehicule_Jonzie_STI {};
 	class Skyline_Vehicule_Jonzie_STI_12_F: Skyline_Vehicule_Jonzie_STI {};
-  
+
   	class Skyline_Vehicule_Jonzie_VE
 	{
 		buyPrice = 29500;
@@ -3718,7 +3758,7 @@ class ALYSIA_VEHICLES
 	class Skyline_Vehicule_Jonzie_VE_10_F: Skyline_Vehicule_Jonzie_VE {};
 	class Skyline_Vehicule_Jonzie_VE_11_F: Skyline_Vehicule_Jonzie_VE {};
 	class Skyline_Vehicule_Jonzie_VE_12_F: Skyline_Vehicule_Jonzie_VE {};
-  
+
   	class Skyline_Vehicule_Jonzie_Ceed
 	{
 		buyPrice = 12500;
@@ -3756,7 +3796,7 @@ class ALYSIA_VEHICLES
 	class Skyline_Vehicule_Jonzie_Ceed_10_F: Skyline_Vehicule_Jonzie_Ceed {};
 	class Skyline_Vehicule_Jonzie_Ceed_11_F: Skyline_Vehicule_Jonzie_Ceed {};
 	class Skyline_Vehicule_Jonzie_Ceed_12_F: Skyline_Vehicule_Jonzie_Ceed {};
-  
+
   	class Skyline_Vehicule_Jonzie_30CSL
 	{
 		buyPrice = 22500;
@@ -3794,7 +3834,7 @@ class ALYSIA_VEHICLES
 	class Skyline_Vehicule_Jonzie_30CSL_10_F: Skyline_Vehicule_Jonzie_30CSL {};
 	class Skyline_Vehicule_Jonzie_30CSL_11_F: Skyline_Vehicule_Jonzie_30CSL {};
 	class Skyline_Vehicule_Jonzie_30CSL_12_F: Skyline_Vehicule_Jonzie_30CSL {};
-  
+
   	class Skyline_Vehicule_Jonzie_XB
 	{
 		buyPrice = 59250;
@@ -3833,7 +3873,7 @@ class ALYSIA_VEHICLES
 	class Skyline_Vehicule_Jonzie_XB_11_F: Skyline_Vehicule_Jonzie_XB {};
 	class Skyline_Vehicule_Jonzie_XB_12_F: Skyline_Vehicule_Jonzie_XB {};
 
-	class Skyline_Jeep_Wrangler_Rubicon_Depannage_01_F
+	class Skyline_Jeep_Wrangler_Rubicon_Depannage
 	{
 		realname = "Jeep Wrangler Depannage";
 		buyPrice = 63299;
@@ -3842,7 +3882,14 @@ class ALYSIA_VEHICLES
 		insurance = 1;
 		licenses[] = {"driver","company_garagist"};
 		fuel = "Diesel";
+		colors[] =
+		{
+			"Skyline_Jeep_Wrangler_Rubicon_01_F",
+			"Skyline_Jeep_Wrangler_Rubicon_02_F"
+		};
 	};
+	class Skyline_Jeep_Wrangler_Rubicon_01_F: Skyline_Jeep_Wrangler_Rubicon_Depannage {};
+	class Skyline_Jeep_Wrangler_Rubicon_02_F: Skyline_Jeep_Wrangler_Rubicon_Depannage {};
 
 	class D41_Trawler
 	{

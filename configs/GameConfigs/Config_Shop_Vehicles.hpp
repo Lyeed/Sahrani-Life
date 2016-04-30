@@ -252,9 +252,8 @@ class ALYSIA_SHOPS_VEHICLES
 			"shounka_limo_civ",
 
 			/* company_garagist */
-			"max_towtruck",
-			"Jonzie_Tow_Truck",
-			"Skyline_Jeep_Wrangler_Rubicon_Depannage_01_F",
+			"Skyline_Scania_G420_Depanneuse",
+			"Skyline_Jeep_Wrangler_Rubicon_Depannage",
 
 			/* company_money_tranfer */
 			"shounka_a3_brinks_noir",
