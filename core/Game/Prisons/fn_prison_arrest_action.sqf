@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display", "_config", "_timeMin", "_timeMax", "_time", "_bailMin", "_bailMax", "_bailEnable", "_bail"];
+private["_config", "_timeMin", "_timeMax", "_time", "_bailMin", "_bailMax", "_bail"];
 
 if (isNull g_interaction_target) exitWith {
 	["Cible invalide."] call AlysiaClient_fnc_error;
@@ -16,10 +16,6 @@ if (g_interaction_target getVariable ["arrested", false]) exitWith {
 if (isNull g_interaction_prison) exitWith {
 	["Prison invalide."] call AlysiaClient_fnc_error;
 };
-
-disableSerialization;
-_display = findDisplay 20000;
-if (isNull _display) exitWith {};
 
 _config = missionConfigFile >> "ALYSIA_PRISONS" >> typeOf(g_interaction_prison);
 
@@ -39,7 +35,6 @@ if (_time > _timeMax) exitWith {
 
 _bailMin = getNumber(_config >> "bail" >> "min");
 _bailMax = getNumber(_config >> "bail" >> "max");
-_bailEnable = getNumber(_config >> "bail" >> "enable");
 _bail = ctrlText 20011;
 if (!([_bail] call AlysiaClient_fnc_isNumber)) exitWith {
 	["Le bail doit être un nombre valide."] call AlysiaClient_fnc_error;

@@ -106,12 +106,7 @@
 			"
 				(
 					(
-						(playerSide in [independent,east,west]) || 
-						(
-							(playerSide isEqualTo civilian) &&
-							!(isNull g_company) &&
-							{getNumber(missionConfigFile >> 'ALYSIA_COMPANIES' >> 'types' >> ((g_company getVariable ['company_info', ['','']]) select 2) >> 'ticket') isEqualTo 1}
-						)
+						(playerSide in [independent,east,west]) || !(isNull g_company)
 					) &&
 					(isNull (g_interaction_target getVariable ['escorted',objNull]))
 				)
@@ -146,7 +141,7 @@
 		],
 		[
 			"arrest",
-			"Emprisonner",
+			"Arrêter",
 			"[g_interaction_target] call AlysiaClient_fnc_prison_arrest_open;",
 			"
 				(

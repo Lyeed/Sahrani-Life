@@ -31,7 +31,7 @@ resetCamShake;
 if ((player getVariable ["arrested", false]) && !(isNull g_arrest_Prison) && !(g_arrest_Cellule isEqualTo "")) then
 {
 	_config_cell = missionConfigFile >> "ALYSIA_PRISONS" >> typeof(g_arrest_Prison) >> "cells" >> g_arrest_Cellule;
-	player setPosATL (g_arrest_Prison modelToWorld getArray(_config_cell >> "pos"));
+	player setPos (g_arrest_Prison modelToWorld getArray(_config_cell >> "pos"));
 	player setDir getNumber(_config_cell >> "dir");
 } else {
 	_config = missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "respawn";
@@ -60,16 +60,16 @@ if ((player getVariable ["arrested", false]) && !(isNull g_arrest_Prison) && !(g
 		if (
 				(isClass(missionConfigFile >> "ALYSIA_HOUSES" >> typeof(_x) >> "house")) && 
 				(((_x getVariable ["house_owner", ["", ""]]) select 0) isEqualTo (getPlayerUID player))
-			) exitWith {_position = getPos _x};
+			) exitWith {_position = getPosATL _x};
 	} forEach g_houses;
 	if (isNil "_position") then
 	{
 		_respawn = getText(_config >> "marker");
 		if (playerSide isEqualTo civilian) then {_respawn = format["%1_%2", _respawn, g_choice]};
-		_position = getMarkerPos _respawn;
+		player setPos (getMarkerPos _respawn);
+	} else {
+		player setPosATL _position;
 	};
-
-	player setPos _position;
 };
 
 cutText ["", "BLACK IN", 8, false];

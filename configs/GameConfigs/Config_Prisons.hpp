@@ -11,15 +11,14 @@ class ALYSIA_PRISONS
 		
 		class time
 		{
-			min = 600;
-			max = 7200;
-		};
-		
+			min = 5;
+			max = 90;
+		};		
+
 		class bail
 		{
-			min = 0;
-			max = 0;
-			enable = 0;
+			min = 1000;
+			max = 350000;
 		};
 
 		class cells
@@ -71,15 +70,14 @@ class ALYSIA_PRISONS
 
 		class time
 		{
-			min = 600;
-			max = 72000;
+			min = 5;
+			max = 90;
 		};
 
 		class bail
 		{
-			min = 0;
-			max = 0;
-			enable = 0;
+			min = 1000;
+			max = 350000;
 		};
 
 		class cells

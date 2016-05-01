@@ -44,12 +44,12 @@ _config = missionConfigFile >> "ALYSIA_COMPANIES" >> "types" >> (_info select 2)
 
 if (("ItemGPS" in (assignedItems player)) && isClass(_config >> "marker")) then
 {
-	_marker = createmarker ["COMPANY_TABLET_APP", (getPos _object)];
- 	_marker setMarkerShape getText(_config >> "marker" >> "shape");
-	_marker setMarkerType getText(_config >> "marker" >> "type");
-	_marker setMarkerColor getText(_config >> "marker" >> "color");
-	_marker setMarkerSize [getNumber(_config >> "marker" >> "size"), getNumber(_config >> "marker" >> "size")];
-	_marker setMarkerText (_info select 0);
+	_marker = createMarkerLocal ["COMPANY_TABLET_APP", (getPos _object)];
+ 	_marker setMarkerShapeLocal getText(_config >> "marker" >> "shape");
+	_marker setMarkerTypeLocal getText(_config >> "marker" >> "type");
+	_marker setMarkerColorLocal getText(_config >> "marker" >> "color");
+	_marker setMarkerSizeLocal [getNumber(_config >> "marker" >> "size"), getNumber(_config >> "marker" >> "size")];
+	_marker setMarkerTextLocal (_info select 0);
 
 	_ctrl_map = _display displayCtrl 13004;
 	_ctrl_map ctrlMapAnimAdd [0, 0.09, _object];

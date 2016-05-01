@@ -187,7 +187,7 @@ class RscDisplayArrest: RscDisplayDefaultInteraction
 		class REASON_EDIT: RscEdit
 		{
 			idc = 20012;
-			text = "0";
+			text = "Aucune";
 
 			x = 0.402031 * safezoneW + safezoneX;
 			y = 0.544 * safezoneH + safezoneY;

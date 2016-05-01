@@ -75,21 +75,11 @@ for "_i" from 0 to (round(random(30)) + 10) do
 		_item = (_type select 1) call BIS_fnc_selectRandom;
 		switch (_type select 0) do
 		{
-			case "Weapons": {
-				_vehicle addWeaponCargoGlobal [_item, 1];
-			};
-			case "Magazines": {
-				_vehicle addMagazineCargoGlobal [_item, round(random(6)) + 1];
-			};
-			case "Backpacks": {
-				_vehicle addBackpackCargoGlobal [_item, 1];
-			};
-			case "Items": {
-				_vehicle addItemCargoGlobal [_item, 1];
-			};
-			case "Virtual": {
-				[true, _vehicle, "Trunk", _item, round(random(2)) + 1] call AlysiaClient_fnc_handleTrunk;
-			};
+			case "Weapons": {_vehicle addWeaponCargoGlobal [_item, 1]};
+			case "Magazines": {_vehicle addMagazineCargoGlobal [_item, round(random(6)) + 1]};
+			case "Backpacks": {_vehicle addBackpackCargoGlobal [_item, 1]};
+			case "Items": {_vehicle addItemCargoGlobal [_item, 1]};
+			case "Virtual": {[true, _vehicle, "Trunk", _item, round(random(2)) + 1] call AlysiaClient_fnc_handleTrunk};
 		};
 	};
 };

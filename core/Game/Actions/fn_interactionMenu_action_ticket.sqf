@@ -5,17 +5,11 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display"];
+private "_display";
 
 if (isNull g_interaction_target) exitWith {};
 
-if (dialog) then
-{
-	closeDialog 0;
-	waitUntil {!dialog};
-};
-
-if (!(createDialog "RscDisplayPlayerTicket")) exitWith {};
+createDialog "RscDisplayPlayerTicket";
 
 disableSerialization;
 _display = findDisplay 17000;

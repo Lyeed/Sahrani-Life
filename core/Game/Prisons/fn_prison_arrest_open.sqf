@@ -8,9 +8,11 @@
 private["_prison","_list", "_target", "_display"];
 _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if (isNull _target) exitWith {};
+if (isNull _target) exitWith {
+	["Cible invalide."] call AlysiaClient_fnc_error;
+};
 if (_target getVariable ["arrested", false]) exitWith {
-	["Cette personne est déjà en prison."] call AlysiaClient_fnc_error;
+	["Cette personne est déjà en train de purger une peine."] call AlysiaClient_fnc_error;
 };
 
 _prison = [_target] call AlysiaClient_fnc_prison_near;
@@ -45,12 +47,3 @@ _list lbSetCurSel 0;
 	"<t align='center' size='1.2'>%1</t>",
 	(_target getVariable "realname")
 ];
-
-(_display displayCtrl 20010) ctrlSetText str(getNumber(_config >> "time" >> "min"));
-(_display displayCtrl 20011) ctrlSetText str(getNumber(_config >> "bail" >> "min"));
-(_display displayCtrl 20012) ctrlSetText "Aucune";
-
-if (getNumber(_config >> "bail" >> "enable") isEqualTo 0) then
-{
-	(_display displayCtrl 20011) ctrlEnable false;
-};
