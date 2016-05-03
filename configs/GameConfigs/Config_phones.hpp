@@ -71,18 +71,22 @@ class ALYSIA_PHONE
 			class call_rcv_2: call_rcv_1
 			{
 				name = "Sonnerie 2";
-				donator = 1;
 				sleep = 3.5;
 			};
-			class call_rcv_3: call_rcv_2
+			class call_rcv_3: call_rcv_1
 			{
 				name = "Sonnerie 3";
 				sleep = 3;
 			};
-			class call_rcv_4: call_rcv_2
+			class call_rcv_4: call_rcv_1
 			{
 				name = "Sonnerie 4";
 				sleep = 3;
+			};
+			class call_rcv_5: call_rcv_1
+			{
+				name = "Sonnerie 5";
+				sleep = 4.36;
 			};
 		};
 	};

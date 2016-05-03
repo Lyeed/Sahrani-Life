@@ -33,6 +33,7 @@ switch (_app) do
 	case "PHONE_CATEGORY": {[] call AlysiaClient_fnc_APP_phone};
 	case "PHONE_CONTACTS": {[] call AlysiaClient_fnc_APP_phone_contacts};
 	case "PHONE_CALL": {[] call AlysiaClient_fnc_APP_phone_call};
+	case "PHONE_CALLING": {[] call AlysiaClient_fnc_APP_phone_calling};
 	case "PHONE_MESSAGES_READ": {[] call AlysiaClient_fnc_APP_phone_messages_read};
 	case "PHONE_MESSAGES_SEND": {[] call AlysiaClient_fnc_APP_phone_messages_send};
 	case "PHONE_SETTINGS": {[] call AlysiaClient_fnc_APP_phone_settings};

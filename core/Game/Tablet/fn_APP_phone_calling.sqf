@@ -6,4 +6,10 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-[(uiNamespace getVariable ["phone_call_number", ""])] spawn AlysiaClient_fnc_phone_call_start;
+if (player getVariable ["tf_sw_speakers", false]) then {
+	[(call TFAR_fnc_activeSwRadio)] call TFAR_fnc_setSwSpeakers;
+};
+
+missionNamespace setVariable ["phone_call_micro_on", true];
+
+[] call AlysiaClient_fnc_APP_phone_calling_update;

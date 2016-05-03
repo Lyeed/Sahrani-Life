@@ -294,7 +294,7 @@ class ALYSIA_HOUSES
 	};
 	class Land_Hangar_2: Land_smd_army_hut_storrage
 	{
-		price = 650000;
+		price = 730000;
 		class storage
 		{
 			type = "Skyline_Coffre_Large";
@@ -304,10 +304,10 @@ class ALYSIA_HOUSES
 	};
 	class Land_Hut_old02: Land_smd_army_hut_storrage
 	{
-		price = 325000;
+		price = 615000;
 		class storage
 		{
-			type = "Skyline_Coffre_Medium";
+			type = "Skyline_Coffre_Large";
 			building_index = 7;
 		};
 		class factions: factions {};

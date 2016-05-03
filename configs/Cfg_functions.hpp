@@ -366,8 +366,10 @@ class CfgFunctions
 			class phone_number_to_unit {};
 			class phone_get_messages_new {};
 			class phone_call_receive {};
+			class phone_call_start {};
 			class phone_call_loop {};
 			class phone_call_end {};
+			class phone_call_busy {};
 			class phone_annuaire {};
 			class phone_ring_call {};
 			class phone_ring_message {};
@@ -595,6 +597,8 @@ class CfgFunctions
 			class APP_store_forfait_buy {};
 			class APP_help {};
 			class APP_phone {};
+			class APP_phone_calling {};
+			class APP_phone_calling_update {};
 			class APP_phone_call {};
 			class APP_phone_call_addDigit {};
 			class APP_phone_call_back {};

@@ -45,6 +45,11 @@ if (player getVariable ["restrained", false]) then {player setVariable ["restrai
 	};
 } forEach attachedObjects player;
 
+if (missionNamespace getVariable ["calling", false]) then
+{
+	[true, false] call AlysiaClient_fnc_APP_phone_call_hangup;
+};
+
 disableSerialization;
 _display = findDisplay 350;
 if (isNull _display) exitWith {};

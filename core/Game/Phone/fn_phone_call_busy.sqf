@@ -6,4 +6,4 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-[(uiNamespace getVariable ["phone_call_number", ""])] spawn AlysiaClient_fnc_phone_call_start;
+missionNamespace setVariable ["calling_target", objNull];

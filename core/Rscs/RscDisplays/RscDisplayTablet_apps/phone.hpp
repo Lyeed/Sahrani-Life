@@ -1374,7 +1374,7 @@ class PHONE_CALL_ACTION_CALL_BUTTON: RscButtonSilent
 	idc = PHONE_CALL_ACTION_CALL_BUTTON_IDC;
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\call_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\call\call.paa""];";
-	action = "[] spawn AlysiaClient_fnc_APP_phone_call_action;";
+	action = "[] call AlysiaClient_fnc_APP_phone_call_action;";
 
 	x = 0.484531 * safezoneW + safezoneX;
 	y = 0.643 * safezoneH + safezoneY;
@@ -1430,25 +1430,33 @@ class PHONE_CALL_ACTION_SUPPR_BUTTON: RscButtonSilent
 /* ===================================================================================================================== */
 
 // =======================================[Calling]=======================================
-#define PHONE_CALLING_ACTION_CALL_IMAGE_IDC   11000
-#define PHONE_CALLING_ACTION_CALL_BUTTON_IDC  11001        
-#define PHONE_CALLING_FRAME_IDC               11002
-#define PHONE_CALLING_NUMBER_IDC              11003
-#define PHONE_CALLING_TIMER_IDC               11004
+#define PHONE_CALLING_ACTION_HANGUP_IMAGE_IDC      11000
+#define PHONE_CALLING_ACTION_HANGUP_BUTTON_IDC     11001        
+#define PHONE_CALLING_FRAME_IDC                    11002
+#define PHONE_CALLING_NUMBER_IDC                   11003
+#define PHONE_CALLING_TIMER_IDC                    11004
+#define PHONE_CALLING_ACTION_MICROPHONE_IMAGE_IDC  11005
+#define PHONE_CALLING_ACTION_MICROPHONE_BUTTON_IDC 11006
+#define PHONE_CALLING_ACTION_SPEAKER_IMAGE_IDC     11007
+#define PHONE_CALLING_ACTION_SPEAKER_BUTTON_IDC    11008
 
 PHONE_CALLING_BACKGROUND = "lyeed_IMG\data\phone\background_2.jpg";
 PHONE_CALLING_IDCS[] =
 {
-	PHONE_CALLING_ACTION_CALL_IMAGE_IDC,
-	PHONE_CALLING_ACTION_CALL_BUTTON_IDC,
+	PHONE_CALLING_ACTION_HANGUP_IMAGE_IDC,
+	PHONE_CALLING_ACTION_HANGUP_BUTTON_IDC,
 	PHONE_CALLING_FRAME_IDC,
 	PHONE_CALLING_NUMBER_IDC,
-	PHONE_CALLING_TIMER_IDC
+	PHONE_CALLING_TIMER_IDC,
+	PHONE_CALLING_ACTION_MICROPHONE_IMAGE_IDC,
+	PHONE_CALLING_ACTION_MICROPHONE_BUTTON_IDC,
+	PHONE_CALLING_ACTION_SPEAKER_IMAGE_IDC,
+	PHONE_CALLING_ACTION_SPEAKER_BUTTON_IDC
 };
 
-class PHONE_CALLING_ACTION_CALL_IMAGE: RscPicture
+class PHONE_CALLING_ACTION_HANGUP_IMAGE: RscPicture
 {
-	idc = PHONE_CALLING_ACTION_CALL_IMAGE_IDC;
+	idc = PHONE_CALLING_ACTION_HANGUP_IMAGE_IDC;
 	text = "lyeed_IMG\data\phone\call\call_stop.paa";
 
 	x = 0.484531 * safezoneW + safezoneX;
@@ -1456,12 +1464,12 @@ class PHONE_CALLING_ACTION_CALL_IMAGE: RscPicture
 	w = 0.0257812 * safezoneW;
 	h = 0.044 * safezoneH;
 };
-class PHONE_CALLING_ACTION_CALL_BUTTON: RscButtonSilent
+class PHONE_CALLING_ACTION_HANGUP_BUTTON: RscButtonSilent
 {
-	idc = PHONE_CALLING_ACTION_CALL_BUTTON_IDC;
+	idc = PHONE_CALLING_ACTION_HANGUP_BUTTON_IDC;
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,'lyeed_IMG\data\phone\call\call_stop_select.paa'];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,'lyeed_IMG\data\phone\call\call_stop.paa'];";
-	action = "[] call AlysiaClient_fnc_APP_phone_call_hangup;";
+	action = "[false, true] call AlysiaClient_fnc_APP_phone_call_hangup;";
 
 	x = 0.484531 * safezoneW + safezoneX;
 	y = 0.643 * safezoneH + safezoneY;
@@ -1496,4 +1504,44 @@ class PHONE_CALLING_TIMER: RscStructuredText
 	y = 0.522 * safezoneH + safezoneY;
 	w = 0.211406 * safezoneW;
 	h = 0.033 * safezoneH;
+};
+
+class PHONE_CALLING_ACTION_MICROPHONE_IMAGE: RscPicture
+{
+	idc = PHONE_CALLING_ACTION_MICROPHONE_IMAGE_IDC;
+
+	x = 0.520625 * safezoneW + safezoneX;
+	y = 0.654 * safezoneH + safezoneY;
+	w = 0.0154688 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class PHONE_CALLING_ACTION_MICROPHONE_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALLING_ACTION_MICROPHONE_BUTTON_IDC;
+	action = "missionNamespace setVariable ['phone_call_micro_on', !(missionNamespace getVariable ['phone_call_micro_on', false])];[] call AlysiaClient_fnc_APP_phone_calling_update;";
+
+	x = 0.520625 * safezoneW + safezoneX;
+	y = 0.654 * safezoneH + safezoneY;
+	w = 0.0154688 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+
+class PHONE_CALLING_ACTION_SPEAKER_IMAGE: RscPicture
+{
+	idc = PHONE_CALLING_ACTION_SPEAKER_IMAGE_IDC;
+
+	x = 0.45875 * safezoneW + safezoneX;
+	y = 0.654 * safezoneH + safezoneY;
+	w = 0.0154688 * safezoneW;
+	h = 0.022 * safezoneH;
+};
+class PHONE_CALLING_ACTION_SPEAKER_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALLING_ACTION_SPEAKER_BUTTON_IDC;
+	action = "[(call TFAR_fnc_activeSwRadio)] call TFAR_fnc_setSwSpeakers;[] call AlysiaClient_fnc_APP_phone_calling_update;";
+
+	x = 0.45875 * safezoneW + safezoneX;
+	y = 0.654 * safezoneH + safezoneY;
+	w = 0.0154688 * safezoneW;
+	h = 0.022 * safezoneH;
 };

@@ -5,12 +5,25 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+private["_apply_busy_to_target", "_apply_end_to_target", "_apply_target"];
+_apply_busy_to_target = [_this, 0, false, [false]] call BIS_fnc_param;
+_apply_end_to_target = [_this, 1, false, [false]] call BIS_fnc_param;
 
-if (player getVariable ["calling", false]) then
+if (missionNamespace getVariable ["calling", false]) then
 {
-	player setVariable ["calling", false];
-	if (!(isNull (player getVariable ["calling_target", objNull]))) then
+	_apply_target = missionNamespace getVariable ["calling_target", objNull];
+	if (!(isNull _apply_target)) then
 	{
-		[] remoteExecCall ["AlysiaClient_fnc_phone_call_end", (player getVariable ["calling_target", objNull])];
+		if (_apply_busy_to_target) then
+		{
+			[] remoteExecCall ["AlysiaClient_fnc_phone_call_busy", _apply_target];
+		};
+
+		if (_apply_end_to_target) then
+		{
+			[false, false] remoteExecCall ["AlysiaClient_fnc_APP_phone_call_hangup", _apply_target];
+		};
 	};
+
+	missionNamespace setVariable ["calling", false];
 };
