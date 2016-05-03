@@ -135,7 +135,7 @@ class ALYSIA_COMPANIES
 		class garagist
 		{
 			name = "Garagiste";
-			building = "Land_CarService_F";
+			building = "Skyline_Vehicule_Pack_Structures_Garage_01";
 			license = "company_garagist";
 			image = "lyeed_IMG\data\companies\types\garagist.paa";
 			process[] = {};
@@ -161,7 +161,7 @@ class ALYSIA_COMPANIES
 			};
 			class storage
 			{
-				modelPos[] = {2.90869,3.22266,-1.78606};
+				modelPos[] = {-3.33008,-6.60083,-4.61539};
 				type = "Skyline_Coffre_Medium";
 			};
 		};
