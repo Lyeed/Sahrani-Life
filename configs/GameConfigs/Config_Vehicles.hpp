@@ -3139,6 +3139,28 @@ class ALYSIA_VEHICLES
 	class max_bike2: max_bike_base {};
 	class max_bike3: max_bike_base {};
 	class max_bike4: max_bike_base {};
+	
+	class shounka_harley_a3
+	{
+		buyPrice = 45000;
+		inventory = 5;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"moto"};
+		fuel = "SP95";
+		colors[] =
+		{
+			"shounka_harley_a3_noir",
+			"shounka_harley_a3_bleu",
+			"shounka_harley_a3_rouge",
+			"shounka_harley_a3_lolz"
+		};
+		realname = "Harley-Davidson";
+	};
+	class shounka_harley_a3_noir: shounka_harley_a3 {};
+	class shounka_harley_a3_bleu: shounka_harley_a3 {};
+	class shounka_harley_a3_rouge: shounka_harley_a3 {};
+	class shounka_harley_a3_lolz: shounka_harley_a3 {};
 
 	class ADM_Ford_F100
 	{
