@@ -24,6 +24,13 @@ if (_number isEqualTo (player getVariable ["number", ""])) exitWith {
 _handle = ["PHONE_CALLING"] spawn AlysiaClient_fnc_tabletApp;
 waitUntil {scriptDone _handle};
 
+if (TF_tangent_sw_pressed) then {
+	call TFAR_fnc_onSwTangentReleased;
+};
+if (!(isNull (uiNamespace getVariable ["TFAR_Hint_Display", displayNull]))) then {
+	call TFAR_fnc_HideHint;
+};
+
 missionNamespace setVariable ["calling", true];
 missionNamespace setVariable ["calling_target", objNull];
 missionNamespace setVariable ["calling_freq_old", ([(call TFAR_fnc_activeSwRadio), 1] call TFAR_fnc_GetChannelFrequency)];
@@ -31,5 +38,12 @@ missionNamespace setVariable ["calling_freq", str(round(random(499999) + 500000)
 missionNamespace setVariable ["calling_time", 0];
 missionNamespace setVariable ["calling_number", _number];
 missionNamespace setVariable ["calling_hide", false];
+
+g_phone_call_history pushBack
+[
+	1,
+	_number,
+	true
+];
 
 [] spawn AlysiaClient_fnc_phone_call_loop;

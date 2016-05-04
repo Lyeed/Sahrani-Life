@@ -124,7 +124,7 @@ g_maxWeight = 100;
 } forEach (_basic select 44);
 g_maxWeight = 24;
 // gear
-[(_basic select 45)] spawn AlysiaClient_fnc_loadGear;
+[(_basic select 45)] call AlysiaClient_fnc_loadGear;
 switch (playerSide) do
 {
 	case west: 

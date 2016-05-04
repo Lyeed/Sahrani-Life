@@ -18,6 +18,12 @@ waitUntil {([] call AlysiaClient_fnc_hasPhone)};
 if (missionNamespace getVariable ["calling", false]) exitWith 
 {
 	[] remoteExecCall ["AlysiaClient_fnc_phone_call_busy", _from];
+	g_phone_call_history pushBack
+	[
+		0,
+		if (_hide) then {"Inconnu"} else {_from getVariable "number"},
+		false
+	];
 };
 
 missionNamespace setVariable ["calling_answer", nil];
@@ -51,12 +57,26 @@ if (!(missionNamespace getVariable ["calling_answer", false])) exitWith
 _handle = ["PHONE_CALLING"] spawn AlysiaClient_fnc_tabletApp;
 waitUntil {scriptDone _handle};
 
+if (TF_tangent_sw_pressed) then {
+	call TFAR_fnc_onSwTangentReleased;
+};
+if (!(isNull (uiNamespace getVariable ["TFAR_Hint_Display", displayNull]))) then {
+	call TFAR_fnc_HideHint;
+};
+
 missionNamespace setVariable ["calling", true];
 missionNamespace setVariable ["calling_time", 0];
 missionNamespace setVariable ["calling_freq_old", ([(call TFAR_fnc_activeSwRadio), 1] call TFAR_fnc_GetChannelFrequency)];
 missionNamespace setVariable ["calling_freq", _freq];
 missionNamespace setVariable ["calling_target", _from];
 missionNamespace setVariable ["calling_hide", _hide];
+
+g_phone_call_history pushBack
+[
+	0,
+	if (_hide) then {"Inconnu"} else {_from getVariable "number"},
+	true
+];
 
 [(call TFAR_fnc_activeSwRadio), 1, _freq] call TFAR_fnc_SetChannelFrequency;
 

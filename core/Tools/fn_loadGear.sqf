@@ -5,11 +5,10 @@
     YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
     More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_gear", "_handle", "_uniformGear", "_vestGear", "_backpackGear", "_goggles", "_headgear", "_primaryWeaponGear", "_secondaryWeaponGear", "_handgunWeaponGear", "_oldVersion"];
+private["_gear", "_uniformGear", "_vestGear", "_backpackGear", "_goggles", "_headgear", "_primaryWeaponGear", "_secondaryWeaponGear", "_handgunWeaponGear", "_oldVersion"];
 _gear = [_this, 0, [], [[]]] call BIS_fnc_param;
 
-_handle = [] spawn AlysiaClient_fnc_stripDownPlayer;
-waitUntil {scriptDone _handle};
+[] call AlysiaClient_fnc_stripDownPlayer;
 
 if (_gear isEqualTo []) then
 {
@@ -131,7 +130,7 @@ if (_gear isEqualTo []) then
     if (!_oldVersion) then
     {
         {
-            if ((_x select 4) != "") then
+            if ((_x select 4) in ["Uniform", "Vest", "Backpack"]) then
             {
                 player addMagazine [(_x select 0), (_x select 1)];
             };

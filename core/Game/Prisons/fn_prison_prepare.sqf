@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private ["_prison", "_data", "_handle", "_config_prison", "_config_cell"];
+private ["_prison", "_data", "_config_prison", "_config_cell"];
 _prison = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _data = [_this, 1, [], [[]]] call BIS_fnc_param;
 
@@ -24,14 +24,9 @@ if (g_arrest_Gear isEqualTo []) then {
 
 [13] call AlysiaDB_fnc_query_update_partial;	
 
-{
-    missionNamespace setVariable [format["inv_%1", (_x select 0)], 0];
-} forEach ([] call AlysiaClient_fnc_getInv);
-
 g_cash = 0;
 
-_handle = [] spawn AlysiaClient_fnc_stripDownPlayer;
-waitUntil {scriptDone _handle};
+[] call AlysiaClient_fnc_stripDownPlayer;
 
 _config_prison = missionConfigFile >> "ALYSIA_PRISONS" >> typeof(_prison);
 _config_cell = _config_prison >> "cells" >> g_arrest_Cellule;

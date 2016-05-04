@@ -26,8 +26,12 @@ while {((missionNamespace getVariable "calling") && !(player getVariable ["is_co
 			};
 		};
 
-		call TFAR_fnc_onSwTangentPressed;
-		call TFAR_fnc_HideHint;
+		if (!TF_tangent_sw_pressed) then {
+			call TFAR_fnc_onSwTangentPressed;
+		};
+		if (!(isNull (uiNamespace getVariable ["TFAR_Hint_Display", displayNull]))) then {
+			call TFAR_fnc_HideHint;
+		};
 	} else {
 		if (((missionNamespace getVariable "calling_time") % 5) isEqualTo 0) then	
 		{
@@ -50,17 +54,7 @@ while {((missionNamespace getVariable "calling") && !(player getVariable ["is_co
 
 	if (g_app isEqualTo "PHONE_CALL") then
 	{
-		((uiNamespace getVariable ["tablet", displayNull]) displayCtrl 11004) ctrlSetStructuredText parseText format
-		[
-			"<t size='1.5' align='center'>%1</t>",
-			[(missionNamespace getVariable "calling_time"), "M:SS"] call CBA_fnc_formatElapsedTime
-		];
-
-		((uiNamespace getVariable ["tablet", displayNull]) displayCtrl 11003) ctrlSetStructuredText parseText format
-		[
-			"<t size='3.5' align='center'>%1</t>",
-			if (missionNamespace getVariable "calling_hide") then {"Inconnu"} else {(missionNamespace getVariable "calling_number")}
-		];
+		[] call AlysiaClient_fnc_APP_phone_calling_update;
 	};
 
 	uiSleep 1;

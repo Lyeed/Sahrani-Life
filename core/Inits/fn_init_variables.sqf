@@ -41,6 +41,7 @@ with missionNamespace do
 	g_phone_forfait = "none";
 	g_phone_blacklist = [];
 	g_phone_annuaire = false;
+	g_phone_call_history = [];
 	/* ===================[First Person View]======================= */
 	g_firstCombatActive = false;
 	/* ===================[Weight system]======================= */

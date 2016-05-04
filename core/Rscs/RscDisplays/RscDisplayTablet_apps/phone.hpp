@@ -273,7 +273,7 @@ class PHONE_MESSAGE_READ_MESSAGES_FRAME: RscFrame
 	h = 0.154 * safezoneH;
 };
 
-class PHONE_MESSAGE_READ_LIST_HEADER : RscStructuredText
+class PHONE_MESSAGE_READ_LIST_HEADER: RscStructuredText
 {
 	idc = PHONE_MESSAGE_READ_LIST_HEADER_IDC;
 	colorBackground[] = {0,0,0,0.8};
@@ -283,7 +283,7 @@ class PHONE_MESSAGE_READ_LIST_HEADER : RscStructuredText
 	w = 0.355781 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_MESSAGE_READ_LIST_INFO : RscListBox
+class PHONE_MESSAGE_READ_LIST_INFO: RscListBox
 {
 	idc = PHONE_MESSAGE_READ_LIST_INFO_IDC;
 	onLBSelChanged = "[_this select 0, _this select 1] call AlysiaClient_fnc_APP_phone_messages_read_open;";
@@ -294,7 +294,7 @@ class PHONE_MESSAGE_READ_LIST_INFO : RscListBox
 	h = 0.132 * safezoneH;
 };
 
-class PHONE_MESSAGE_READ_MESSAGE_HEADER : RscStructuredText
+class PHONE_MESSAGE_READ_MESSAGE_HEADER: RscStructuredText
 {
 	idc = PHONE_MESSAGE_READ_MESSAGE_HEADER_IDC;
 	colorBackground[] = {0,0,0,0.8};
@@ -304,7 +304,7 @@ class PHONE_MESSAGE_READ_MESSAGE_HEADER : RscStructuredText
 	w = 0.201094 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_MESSAGE_READ_MESSAGE_INFO : RscStructuredText
+class PHONE_MESSAGE_READ_MESSAGE_INFO: RscStructuredText
 {
 	idc = PHONE_MESSAGE_READ_MESSAGE_INFO_IDC;
 	colorBackground[] = {0,0,0,0.6};
@@ -315,7 +315,7 @@ class PHONE_MESSAGE_READ_MESSAGE_INFO : RscStructuredText
 	h = 0.154 * safezoneH;
 };
 
-class PHONE_MESSAGE_READ_DELETE_MESSAGE_IMAGE : RscPicture
+class PHONE_MESSAGE_READ_DELETE_MESSAGE_IMAGE: RscPicture
 {
 	idc = PHONE_MESSAGE_READ_DELETE_MESSAGE_IMAGE_IDC;
 	text = "lyeed_IMG\data\phone\read\remove.paa";
@@ -325,7 +325,7 @@ class PHONE_MESSAGE_READ_DELETE_MESSAGE_IMAGE : RscPicture
 	w = 0.0309375 * safezoneW;
 	h = 0.055 * safezoneH;
 };
-class PHONE_MESSAGE_READ_DELETE_MESSAGE_BUTTON : RscButtonSilent
+class PHONE_MESSAGE_READ_DELETE_MESSAGE_BUTTON: RscButtonSilent
 {
 	idc = PHONE_MESSAGE_READ_DELETE_MESSAGE_BUTTON_IDC;
 	action = "[0] call AlysiaClient_fnc_APP_phone_messages_read_delete;";
@@ -339,7 +339,7 @@ class PHONE_MESSAGE_READ_DELETE_MESSAGE_BUTTON : RscButtonSilent
 	h = 0.055 * safezoneH;
 };
 
-class PHONE_MESSAGE_READ_DELETE_ALL_IMAGE : RscPicture
+class PHONE_MESSAGE_READ_DELETE_ALL_IMAGE: RscPicture
 {
 	idc = PHONE_MESSAGE_READ_DELETE_ALL_IMAGE_IDC;
 	text = "lyeed_IMG\data\phone\read\remove_all.paa";
@@ -349,7 +349,7 @@ class PHONE_MESSAGE_READ_DELETE_ALL_IMAGE : RscPicture
 	w = 0.0309375 * safezoneW;
 	h = 0.055 * safezoneH;
 };
-class PHONE_MESSAGE_READ_DELETE_ALL_BUTTON : RscButtonSilent
+class PHONE_MESSAGE_READ_DELETE_ALL_BUTTON: RscButtonSilent
 {
 	idc = PHONE_MESSAGE_READ_DELETE_ALL_BUTTON_IDC;
 	action = "[1] call AlysiaClient_fnc_APP_phone_messages_read_delete;";
@@ -387,7 +387,7 @@ class PHONE_MESSAGE_READ_ANSWER_BUTTON: RscButtonSilent
 	h = 0.055 * safezoneH;
 };
 
-class PHONE_MESSAGE_READ_ADD_IMAGE : RscPicture
+class PHONE_MESSAGE_READ_ADD_IMAGE: RscPicture
 {
 	idc = PHONE_MESSAGE_READ_ADD_IMAGE_IDC;
 	text = "lyeed_IMG\data\phone\contacts\add.paa";
@@ -397,7 +397,7 @@ class PHONE_MESSAGE_READ_ADD_IMAGE : RscPicture
 	w = 0.0309375 * safezoneW;
 	h = 0.055 * safezoneH;
 };
-class PHONE_MESSAGE_READ_ADD_BUTTON : RscButtonSilent
+class PHONE_MESSAGE_READ_ADD_BUTTON: RscButtonSilent
 {
 	idc = PHONE_MESSAGE_READ_ADD_BUTTON_IDC;
 	action = "		private[""_index""];		_index = lbCurSel 8320;		if (_index isEqualTo -1) exitWith {};		[""phone_contacts""] spawn AlysiaClient_fnc_tabletApp;		ctrlSetText[8384, (g_phone_messages select _index) select 0];	";
@@ -450,7 +450,7 @@ PHONE_MESSAGES_SEND_IDCS[] =
 	PHONE_MESSAGE_SEND_PRICE_INFO_IDC
 };
 
-class PHONE_MESSAGE_SEND_CONTACTS_HEADER : RscStructuredText
+class PHONE_MESSAGE_SEND_CONTACTS_HEADER: RscStructuredText
 {
 	idc = PHONE_MESSAGE_SEND_CONTACTS_HEADER_IDC;
 	text = "<t align='center'>Contacts</t>";
@@ -461,7 +461,7 @@ class PHONE_MESSAGE_SEND_CONTACTS_HEADER : RscStructuredText
 	w = 0.0979687 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_MESSAGE_SEND_CONTACTS_LIST : RscListBox
+class PHONE_MESSAGE_SEND_CONTACTS_LIST: RscListBox
 {
 	idc = PHONE_MESSAGE_SEND_CONTACTS_LIST_IDC;
 	onLBSelChanged ="		private[""_txt"", ""_index""];		_index = _this select 1;		if (_index isEqualTo -1) exitWith {};		_txt = ctrlText 8336;		if (_txt isEqualTo """") then {			ctrlSetText[8336, (_this select 0) lbData _index];		} else {			ctrlSetText[8336, format[""%1,%2"", _txt, (_this select 0) lbData _index]];		};";
@@ -481,7 +481,7 @@ class PHONE_MESSAGE_SEND_CONTACTS_FRAME: RscFrame
 	h = 0.286 * safezoneH;
 };
 
-class PHONE_MESSAGE_SEND_MESSAGE_HEADER : RscStructuredText
+class PHONE_MESSAGE_SEND_MESSAGE_HEADER: RscStructuredText
 {
 	idc = PHONE_MESSAGE_SEND_MESSAGE_HEADER_IDC;
 	text = "<t align='center'>Message</t>";
@@ -492,7 +492,7 @@ class PHONE_MESSAGE_SEND_MESSAGE_HEADER : RscStructuredText
 	w = 0.252656 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_MESSAGE_SEND_MESSAGE_INFO : RscEdit
+class PHONE_MESSAGE_SEND_MESSAGE_INFO: RscEdit
 {
 	idc = PHONE_MESSAGE_SEND_MESSAGE_INFO_IDC;
 	style = 16;
@@ -503,7 +503,7 @@ class PHONE_MESSAGE_SEND_MESSAGE_INFO : RscEdit
 	h = 0.165 * safezoneH;
 };
 
-class PHONE_MESSAGE_SEND_NUMBER_HEADER : RscStructuredText
+class PHONE_MESSAGE_SEND_NUMBER_HEADER: RscStructuredText
 {
 	idc = PHONE_MESSAGE_SEND_NUMBER_HEADER_IDC;
 	text = "<t align='center'>Numéro(s)</t>";
@@ -514,7 +514,7 @@ class PHONE_MESSAGE_SEND_NUMBER_HEADER : RscStructuredText
 	w = 0.252656 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_MESSAGE_SEND_NUMBER_INFO : RscEdit
+class PHONE_MESSAGE_SEND_NUMBER_INFO: RscEdit
 {
 	idc = PHONE_MESSAGE_SEND_NUMBER_INFO_IDC;
 	tooltip = "Vous pouvez envoyer votre message jusqu'a cinq personnes en séparant vos numéros par des ',' (ex: 0000,0001,0002...)";
@@ -536,7 +536,7 @@ class PHONE_MESSAGE_SEND_NUMBER_FRAME: RscFrame
 	h = 0.231 * safezoneH;
 };
 
-class PHONE_MESSAGE_SEND_HIDE_HEADER : RscStructuredText
+class PHONE_MESSAGE_SEND_HIDE_HEADER: RscStructuredText
 {
 	idc = PHONE_MESSAGE_SEND_HIDE_HEADER_IDC;
 	text = "<t align='center'>Masquer son numéro</t>";
@@ -547,7 +547,7 @@ class PHONE_MESSAGE_SEND_HIDE_HEADER : RscStructuredText
 	w = 0.0979687 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_MESSAGE_SEND_HIDE_INFO : RscCheckBox
+class PHONE_MESSAGE_SEND_HIDE_INFO: RscCheckBox
 {
 	idc = PHONE_MESSAGE_SEND_HIDE_INFO_IDC;
 	tooltip = "Votre numéro sera caché à votre destinataire";
@@ -568,7 +568,7 @@ class PHONE_MESSAGE_SEND_HIDE_FRAME: RscFrame
 	h = 0.066 * safezoneH;
 };
 
-class PHONE_MESSAGE_SEND_IMAGE : RscPicture
+class PHONE_MESSAGE_SEND_IMAGE: RscPicture
 {
 	idc = PHONE_MESSAGE_SEND_IMAGE_IDC;
 	text = "lyeed_IMG\data\phone\send.paa";
@@ -578,7 +578,7 @@ class PHONE_MESSAGE_SEND_IMAGE : RscPicture
 	w = 0.04125 * safezoneW;
 	h = 0.055 * safezoneH;
 };
-class PHONE_MESSAGE_SEND_BUTTON : RscButtonSilent
+class PHONE_MESSAGE_SEND_BUTTON: RscButtonSilent
 {
 	idc = PHONE_MESSAGE_SEND_BUTTON_IDC;
 	action = "[] call AlysiaClient_fnc_APP_phone_messages_send_action;";
@@ -745,7 +745,7 @@ class PHONE_CONTACTS_LIST_FRAME: RscFrame
 	w = 0.216563 * safezoneW;
 	h = 0.297 * safezoneH;
 };
-class PHONE_CONTACTS_LIST_HEADER : RscStructuredText
+class PHONE_CONTACTS_LIST_HEADER: RscStructuredText
 {
 	idc = PHONE_CONTACTS_LIST_HEADER_IDC;
 	text = "<t align='center'>Contacts</t>";
@@ -756,7 +756,7 @@ class PHONE_CONTACTS_LIST_HEADER : RscStructuredText
 	w = 0.216563 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_CONTACTS_LIST_INFO : RscListBox
+class PHONE_CONTACTS_LIST_INFO: RscListBox
 {
 	idc = PHONE_CONTACTS_LIST_INFO_IDC;
 
@@ -766,7 +766,7 @@ class PHONE_CONTACTS_LIST_INFO : RscListBox
 	h = 0.275 * safezoneH;
 };
 
-class PHONE_CONTACTS_REMOVE_IMAGE : RscPicture
+class PHONE_CONTACTS_REMOVE_IMAGE: RscPicture
 {
 	idc = PHONE_CONTACTS_REMOVE_IMAGE_IDC;
 	text = "lyeed_IMG\data\phone\contacts\remove.paa";
@@ -776,7 +776,7 @@ class PHONE_CONTACTS_REMOVE_IMAGE : RscPicture
 	w = 0.0257812 * safezoneW;
 	h = 0.044 * safezoneH;
 };
-class PHONE_CONTACTS_REMOVE_BUTTON : RscButtonSilent
+class PHONE_CONTACTS_REMOVE_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CONTACTS_REMOVE_BUTTON_IDC;
 	action = "		private[""_sel""];		_sel = lbCurSel 8374;		if (_sel isEqualTo -1) exitWith {};		g_phone_contacts deleteAt _sel;		[""phone_contacts""] spawn AlysiaClient_fnc_tabletApp;	";
@@ -800,7 +800,7 @@ class PHONE_CONTACTS_SEND_IMAGE: RscPicture
 	w = 0.0257812 * safezoneW;
 	h = 0.044 * safezoneH;
 };
-class PHONE_CONTACTS_SEND_BUTTON : RscButtonSilent
+class PHONE_CONTACTS_SEND_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CONTACTS_SEND_BUTTON_IDC;
 	action = "		private[""_index""];		_index = lbCurSel 8374;		if (_index isEqualTo -1) exitWith {};		[""phone_messages_send""] spawn AlysiaClient_fnc_tabletApp;		ctrlSetText[8336, (g_phone_contacts select _index) select 1];	";
@@ -814,7 +814,7 @@ class PHONE_CONTACTS_SEND_BUTTON : RscButtonSilent
 	h = 0.044 * safezoneH;
 };
 
-class PHONE_CONTACTS_ADD_HEADER : RscStructuredText
+class PHONE_CONTACTS_ADD_HEADER: RscStructuredText
 {
 	idc = PHONE_CONTACTS_ADD_HEADER_IDC;
 	text = "<t align='center'>Ajouter un contact</t>";
@@ -835,7 +835,7 @@ class PHONE_CONTACTS_ADD_FRAME: RscFrame
 	h = 0.209 * safezoneH;
 };
 
-class PHONE_CONTACTS_ADD_IMAGE : RscPicture
+class PHONE_CONTACTS_ADD_IMAGE: RscPicture
 {
 	idc = PHONE_CONTACTS_ADD_IMAGE_IDC;
 	text = "lyeed_IMG\data\phone\contacts\add.paa";
@@ -845,7 +845,7 @@ class PHONE_CONTACTS_ADD_IMAGE : RscPicture
 	w = 0.04125 * safezoneW;
 	h = 0.066 * safezoneH;
 };
-class PHONE_CONTACTS_ADD_BUTTON : RscButtonSilent
+class PHONE_CONTACTS_ADD_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CONTACTS_ADD_BUTTON_IDC;
 	action = "[ctrlText 8386, ctrlText 8384] call AlysiaClient_fnc_APP_phone_contacts_add;";
@@ -859,7 +859,7 @@ class PHONE_CONTACTS_ADD_BUTTON : RscButtonSilent
 	h = 0.066 * safezoneH;
 };
 
-class PHONE_CONTACTS_ADD_NUMBER_HEADER : RscStructuredText
+class PHONE_CONTACTS_ADD_NUMBER_HEADER: RscStructuredText
 {
 	idc = PHONE_CONTACTS_ADD_NUMBER_HEADER_IDC;
 	text = "<t align='center'>Numéro</t>";
@@ -870,7 +870,7 @@ class PHONE_CONTACTS_ADD_NUMBER_HEADER : RscStructuredText
 	w = 0.0721875 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_CONTACTS_ADD_NUMBER_INFO : RscEdit
+class PHONE_CONTACTS_ADD_NUMBER_INFO: RscEdit
 {
 	idc = PHONE_CONTACTS_ADD_NUMBER_INFO_IDC;
 
@@ -880,7 +880,7 @@ class PHONE_CONTACTS_ADD_NUMBER_INFO : RscEdit
 	h = 0.022 * safezoneH;
 };
 
-class PHONE_CONTACTS_ADD_NAME_HEADER : RscStructuredText
+class PHONE_CONTACTS_ADD_NAME_HEADER: RscStructuredText
 {
 	idc = PHONE_CONTACTS_ADD_NAME_HEADER_IDC;
 	text = "<t align='center'>Nom</t>";
@@ -891,7 +891,7 @@ class PHONE_CONTACTS_ADD_NAME_HEADER : RscStructuredText
 	w = 0.0721875 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_CONTACTS_ADD_NAME_INFO : RscEdit
+class PHONE_CONTACTS_ADD_NAME_INFO: RscEdit
 {
 	idc = PHONE_CONTACTS_ADD_NAME_INFO_IDC;
 
@@ -934,7 +934,7 @@ class PHONE_BLACKLIST_LIST_FRAME: RscFrame
 	w = 0.216563 * safezoneW;
 	h = 0.297 * safezoneH;
 };
-class PHONE_BLACKLIST_LIST_HEADER : RscStructuredText
+class PHONE_BLACKLIST_LIST_HEADER: RscStructuredText
 {
 	idc = PHONE_BLACKLIST_LIST_HEADER_IDC;
 	text = "<t align='center'>Blacklists</t>";
@@ -945,7 +945,7 @@ class PHONE_BLACKLIST_LIST_HEADER : RscStructuredText
 	w = 0.216563 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_BLACKLIST_LIST_INFO : RscListBox
+class PHONE_BLACKLIST_LIST_INFO: RscListBox
 {
 	idc = PHONE_BLACKLIST_LIST_INFO_IDC;
 
@@ -955,7 +955,7 @@ class PHONE_BLACKLIST_LIST_INFO : RscListBox
 	h = 0.275 * safezoneH;
 };
 
-class PHONE_BLACKLIST_REMOVE_IMAGE : RscPicture
+class PHONE_BLACKLIST_REMOVE_IMAGE: RscPicture
 {
 	idc = PHONE_BLACKLIST_REMOVE_IMAGE_IDC;
 	text = "lyeed_IMG\data\phone\blacklist\remove.paa";
@@ -965,7 +965,7 @@ class PHONE_BLACKLIST_REMOVE_IMAGE : RscPicture
 	w = 0.0257812 * safezoneW;
 	h = 0.044 * safezoneH;
 };
-class PHONE_BLACKLIST_REMOVE_BUTTON : RscButtonSilent
+class PHONE_BLACKLIST_REMOVE_BUTTON: RscButtonSilent
 {
 	idc = PHONE_BLACKLIST_REMOVE_BUTTON_IDC;
 	action = "		private[""_sel""];		_sel = lbCurSel 8532;		if (_sel isEqualTo -1) exitWith {};		g_phone_blacklist deleteAt _sel;		[""PHONE_BLACKLIST""] spawn AlysiaClient_fnc_tabletApp;	";
@@ -979,7 +979,7 @@ class PHONE_BLACKLIST_REMOVE_BUTTON : RscButtonSilent
 	h = 0.044 * safezoneH;
 };
 
-class PHONE_BLACKLIST_ADD_HEADER : RscStructuredText
+class PHONE_BLACKLIST_ADD_HEADER: RscStructuredText
 {
 	idc = PHONE_BLACKLIST_ADD_HEADER_IDC;
 	text = "<t align='center'>Ajouter un numéro</t>";
@@ -1000,7 +1000,7 @@ class PHONE_BLACKLIST_ADD_FRAME: RscFrame
 	h = 0.209 * safezoneH;
 };
 
-class PHONE_BLACKLIST_ADD_IMAGE : RscPicture
+class PHONE_BLACKLIST_ADD_IMAGE: RscPicture
 {
 	idc = PHONE_BLACKLIST_ADD_IMAGE_IDC;
 	text = "lyeed_IMG\data\phone\blacklist\add.paa";
@@ -1010,7 +1010,7 @@ class PHONE_BLACKLIST_ADD_IMAGE : RscPicture
 	w = 0.04125 * safezoneW;
 	h = 0.066 * safezoneH;
 };
-class PHONE_BLACKLIST_ADD_BUTTON : RscButtonSilent
+class PHONE_BLACKLIST_ADD_BUTTON: RscButtonSilent
 {
 	idc = PHONE_BLACKLIST_ADD_BUTTON_IDC;
 	action = "[ctrlText 8540] call AlysiaClient_fnc_APP_phone_BLACKLIST_add;";
@@ -1024,7 +1024,7 @@ class PHONE_BLACKLIST_ADD_BUTTON : RscButtonSilent
 	h = 0.066 * safezoneH;
 };
 
-class PHONE_BLACKLIST_ADD_NUMBER_HEADER : RscStructuredText
+class PHONE_BLACKLIST_ADD_NUMBER_HEADER: RscStructuredText
 {
 	idc = PHONE_BLACKLIST_ADD_NUMBER_HEADER_IDC;
 	text = "<t align='center'>Numéro</t>";
@@ -1035,7 +1035,7 @@ class PHONE_BLACKLIST_ADD_NUMBER_HEADER : RscStructuredText
 	w = 0.0721875 * safezoneW;
 	h = 0.022 * safezoneH;
 };
-class PHONE_BLACKLIST_ADD_NUMBER_INFO : RscEdit
+class PHONE_BLACKLIST_ADD_NUMBER_INFO: RscEdit
 {
 	idc = PHONE_BLACKLIST_ADD_NUMBER_INFO_IDC;
 
@@ -1074,6 +1074,7 @@ class PHONE_BLACKLIST_ADD_NUMBER_INFO : RscEdit
 #define PHONE_CALL_ACTION_BACK_BUTTON_IDC   8924
 #define PHONE_CALL_ACTION_SUPPR_IMAGE_IDC   8925
 #define PHONE_CALL_ACTION_SUPPR_BUTTON_IDC  8926
+#define PHONE_CALL_HISTORY_IDC              8927
 
 PHONE_CALL_BACKGROUND = "lyeed_IMG\data\phone\background_2.jpg";
 PHONE_CALL_IDCS[] =
@@ -1427,6 +1428,18 @@ class PHONE_CALL_ACTION_SUPPR_BUTTON: RscButtonSilent
 	w = 0.0257812 * safezoneW;
 	h = 0.044 * safezoneH;
 };
+
+class PHONE_CALL_HISTORY: RscListBox
+{
+	idc = PHONE_CALL_HISTORY_IDC;
+	colorBackground[] = {0,0,0,0};
+
+	x = 0.329844 * safezoneW + safezoneX;
+	y = 0.423 * safezoneH + safezoneY;
+	w = 0.103125 * safezoneW;
+	h = 0.253 * safezoneH;
+};
+
 /* ===================================================================================================================== */
 
 // =======================================[Calling]=======================================

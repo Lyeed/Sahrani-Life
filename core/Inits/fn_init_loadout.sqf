@@ -5,10 +5,8 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private "_handle";
 
-_handle = [] spawn AlysiaClient_fnc_stripDownPlayer;
-waitUntil {scriptDone _handle};
+[] call AlysiaClient_fnc_stripDownPlayer;
 
 if ((player getVariable ["arrested", false]) && !(isNull g_arrest_Prison)) then {
 	player forceAddUniform getText(missionConfigFile >> "ALYSIA_PRISONS" >> typeof(g_arrest_Prison) >> "uniform");

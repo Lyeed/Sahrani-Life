@@ -1,23 +1,27 @@
 /*
-	File: fn_stripDownPlayer.sqf
-	Author: Tobias 'Xetoxyc' Sittenauer
+		ArmA 3 N'Ziwasogo Life RPG - ALYSIA
+	Code written by Lyeed
+	@Copyright ALYSIA - N'Ziwasogo (http://alysiarp.fr)
+	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
+	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-RemoveAllWeapons player;
+if ((hmd player) != "") then
+{
+	player unlinkItem (hmd player);
+};
 
 {
-	player removeMagazine _x;
-} forEach (magazines player);
+	player unassignItem _x;
+} foreach (assignedItems player);
 
 removeUniform player;
 removeVest player;
 removeBackpack player;
 removeGoggles player;
 removeHeadGear player;
+RemoveAllWeapons player;
 
 {
-	player unassignItem _x;
-	player removeItem _x;
-} foreach (assignedItems player);
-
-if (hmd player != "") then {player unlinkItem (hmd player)};
+    missionNamespace setVariable [format["inv_%1", (_x select 0)], 0];
+} forEach ([] call AlysiaClient_fnc_getInv);

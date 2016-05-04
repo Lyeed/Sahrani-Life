@@ -22,3 +22,15 @@ if (player getVariable ["tf_sw_speakers", false]) then {
 } else {
 	(_display displayCtrl 11007) ctrlSetText "lyeed_IMG\data\phone\call\action_speaker_on.paa";
 };
+
+(_display displayCtrl 11004) ctrlSetStructuredText parseText format
+[
+	"<t size='1.5' align='center'>%1</t>",
+	[(missionNamespace getVariable ["calling_time", 0]), "M:SS"] call CBA_fnc_formatElapsedTime
+];
+
+(_display displayCtrl 11003) ctrlSetStructuredText parseText format
+[
+	"<t size='3.5' align='center'>%1</t>",
+	if (missionNamespace getVariable ["calling_hide", false]) then {"Inconnu"} else {(missionNamespace getVariable ["calling_number", ""])}
+];

@@ -31,6 +31,24 @@ if (
 		!(_this isEqualTo (((["TFAR", "ChangeSpeakingVolume"] call CBA_fnc_getKeybind) select 5) select 0))
 ) exitWith {true};
 
+if (
+		(missionNamespace getVariable ["calling", false]) &&
+		{(
+			(_this isEqualTo (((["TFAR", "OpenSWRadioMenu"] call CBA_fnc_getKeybind) select 5) select 0)) ||
+			(_this isEqualTo (((["TFAR", "SWTransmit"] call CBA_fnc_getKeybind) select 5) select 0)) ||
+			(_this isEqualTo (((["TFAR", "SWTransmitAlt"] call CBA_fnc_getKeybind) select 5) select 0)) ||
+			(_this isEqualTo (((["TFAR", "SWTransmitAdditional"] call CBA_fnc_getKeybind) select 5) select 0)) ||
+			(_this isEqualTo (((["TFAR", "SWChannel1"] call CBA_fnc_getKeybind) select 5) select 0)) ||
+			(_this isEqualTo (((["TFAR", "SWChannel2"] call CBA_fnc_getKeybind) select 5) select 0)) ||
+			(_this isEqualTo (((["TFAR", "SWChannel3"] call CBA_fnc_getKeybind) select 5) select 0)) ||
+			(_this isEqualTo (((["TFAR", "SWChannel4"] call CBA_fnc_getKeybind) select 5) select 0)) ||
+			(_this isEqualTo (((["TFAR", "SWChannel5"] call CBA_fnc_getKeybind) select 5) select 0)) ||
+			(_this isEqualTo (((["TFAR", "SWChannel6"] call CBA_fnc_getKeybind) select 5) select 0)) ||
+			(_this isEqualTo (((["TFAR", "SWChannel7"] call CBA_fnc_getKeybind) select 5) select 0)) ||
+			(_this isEqualTo (((["TFAR", "SWChannel8"] call CBA_fnc_getKeybind) select 5) select 0))
+		)}
+) exitWith {true};
+
 if (player getVariable ["is_coma", false]) exitWith {true};
 if (!(alive player)) exitWith {true};
 

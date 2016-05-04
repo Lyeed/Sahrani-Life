@@ -74,15 +74,10 @@ if (g_arrest_Escape) then
 	] spawn BIS_fnc_typeText;
 } else {
 
-	{
-	    missionNamespace setVariable [format["inv_%1", (_x select 0)], 0];
-	} forEach ([] call AlysiaClient_fnc_getInv);
-
-	_handle = [] spawn AlysiaClient_fnc_stripDownPlayer;
-	waitUntil {scriptDone _handle};
+	[] call AlysiaClient_fnc_stripDownPlayer;
 
 	[true, (g_arrest_Gear select 0)] call AlysiaClient_fnc_handleCash;
-	[(g_arrest_Gear select 1)] spawn AlysiaClient_fnc_loadGear;
+	[(g_arrest_Gear select 1)] call AlysiaClient_fnc_loadGear;
 
 	{
 		[true, (_x select 0), (_x select 1)] call AlysiaClient_fnc_handleInv;

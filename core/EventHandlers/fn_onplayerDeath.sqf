@@ -19,13 +19,10 @@ detach player;
 {
 	deleteVehicle _x;
 } forEach (nearestObjects [player, ["WeaponHolderSimulated", "GroundWeaponHolder"], 5]);
+
 [] call AlysiaClient_fnc_stripDownPlayer;
 
 hideBody player;
-
-{
-	missionNamespace setVariable [(format["inv_%1", _x]), 0];
-} forEach g_inv_items;
 
 g_is_alive = false;
 g_cash = 0;
