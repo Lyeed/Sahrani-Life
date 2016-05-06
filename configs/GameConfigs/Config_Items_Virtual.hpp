@@ -368,7 +368,7 @@ class ALYSIA_ITEMS
 	class iron
 	{
 		name = "Minerai de fer";
-		weight = 5;
+		weight = 3;
 		image = "alysia_items_virtual\data\minerai_fer.paa";
 	};
 	class ironp
@@ -408,13 +408,13 @@ class ALYSIA_ITEMS
 	class platine
 	{
 		name = "Minerai de platine";
-		weight = 6;
+		weight = 4;
 		image = "alysia_items_virtual\data\minerai_platine.paa";
 	};
 	class platinep
 	{
 		name = "Lingot de platine";
-		weight = 4;
+		weight = 3;
 		image = "alysia_items_virtual\data\lingot_platine.paa";
 		license = "platine";
 		class market
@@ -1241,7 +1241,7 @@ class ALYSIA_ITEMS
 	class steel
 	{
 		name = "Acier";
-		weight = 4;
+		weight = 3;
 		image = "alysia_items_virtual\data\steel.paa";
 		license = "company_foundry";
 		class market
