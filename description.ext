@@ -177,7 +177,6 @@ showHUD = 0;
 ******** mission functions ********
 ***********************************/
 #include "configs\Cfg_Functions.hpp"
-#include "configs\Cfg_RemoteExec.hpp"
 //---------------------------------
 
 /********************************** 

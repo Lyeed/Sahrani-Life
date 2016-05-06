@@ -257,6 +257,8 @@ class ALYSIA_SHOPS_VIRTUAL
 				"lab_cigare",
 				"lab_heal",
 				"lab_construction",
+				"lab_steel",
+				"lab_tissue",
 				"patron_AKM",
 				"patron_M21",
 				"patron_AK74",

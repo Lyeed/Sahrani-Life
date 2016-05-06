@@ -2764,7 +2764,7 @@ class ALYSIA_VEHICLES
 			"Skyline_LittleBird_Milice_01_F"
 		};
 	};
-	class Skyline_LittleBird_Milice: Skyline_LittleBird_Milice_01_F {};
+	class Skyline_LittleBird_Milice_01_F: Skyline_LittleBird_Milice {};
 
   	/*
 	**				EAST VEHICLES
@@ -2898,7 +2898,7 @@ class ALYSIA_VEHICLES
 			"Skyline_LittleBird_Garde_01_F"
 		};
 	};
-	class Skyline_LittleBird_Garde: Skyline_LittleBird_Garde_01_F {};
+	class Skyline_LittleBird_Garde_01_F: Skyline_LittleBird_Garde {};
 
   	/*
 	**				GUER VEHICLES
@@ -3906,12 +3906,10 @@ class ALYSIA_VEHICLES
 		fuel = "Diesel";
 		colors[] =
 		{
-			"Skyline_Jeep_Wrangler_Rubicon_01_F",
-			"Skyline_Jeep_Wrangler_Rubicon_02_F"
+			"Skyline_Jeep_Wrangler_Rubicon_Depannage_01_F"
 		};
 	};
-	class Skyline_Jeep_Wrangler_Rubicon_01_F: Skyline_Jeep_Wrangler_Rubicon_Depannage {};
-	class Skyline_Jeep_Wrangler_Rubicon_02_F: Skyline_Jeep_Wrangler_Rubicon_Depannage {};
+	class Skyline_Jeep_Wrangler_Rubicon_Depannage_01_F: Skyline_Jeep_Wrangler_Rubicon_Depannage {};
 
 	class D41_Trawler
 	{

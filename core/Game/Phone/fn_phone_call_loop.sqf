@@ -6,7 +6,7 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-while {((missionNamespace getVariable "calling") && !(player getVariable ["is_coma", false]))} do
+while {((missionNamespace getVariable "calling") && (call AlysiaClient_fnc_hasPhone))} do
 {
 	if (([(call TFAR_fnc_activeSwRadio), 1] call TFAR_fnc_GetChannelFrequency) isEqualTo (missionNamespace getVariable "calling_freq")) then
 	{
@@ -52,13 +52,18 @@ while {((missionNamespace getVariable "calling") && !(player getVariable ["is_co
 		};
 	};
 
-	if (g_app isEqualTo "PHONE_CALL") then
+	if (g_app isEqualTo "PHONE_CALLING") then
 	{
 		[] call AlysiaClient_fnc_APP_phone_calling_update;
 	};
 
 	uiSleep 1;
 	missionNamespace setVariable ["calling_time", (missionNamespace getVariable "calling_time") + 1];
+};
+
+if (!(call AlysiaClient_fnc_hasPhone)) then
+{
+	[true, false] call AlysiaClient_fnc_APP_phone_call_hangup;
 };
 
 [] call AlysiaClient_fnc_phone_call_end;

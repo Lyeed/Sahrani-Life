@@ -1107,7 +1107,8 @@ PHONE_CALL_IDCS[] =
 	PHONE_CALL_ACTION_BACK_IMAGE_IDC,
 	PHONE_CALL_ACTION_BACK_BUTTON_IDC,
 	PHONE_CALL_ACTION_SUPPR_IMAGE_IDC,
-	PHONE_CALL_ACTION_SUPPR_BUTTON_IDC
+	PHONE_CALL_ACTION_SUPPR_BUTTON_IDC,
+	PHONE_CALL_HISTORY_IDC
 };
 
 class PHONE_CALL_DIGIT_0_IMAGE: RscPicture
@@ -1557,4 +1558,91 @@ class PHONE_CALLING_ACTION_SPEAKER_BUTTON: RscButtonSilent
 	y = 0.654 * safezoneH + safezoneY;
 	w = 0.0154688 * safezoneW;
 	h = 0.022 * safezoneH;
+};
+
+/* ===================================================================================================================== */
+
+// =======================================[Calling receive]=======================================
+#define PHONE_CALLRECEIVING_ACTION_ACCEPT_BUTTON_IDC 14000
+#define PHONE_CALLRECEIVING_ACTION_ACCEPT_IMAGE_IDC  14001
+#define PHONE_CALLRECEIVING_ACTION_REFUSE_IMAGE_IDC  14002
+#define PHONE_CALLRECEIVING_ACTION_REFUSE_BUTTON_IDC 14003
+#define PHONE_CALLRECEIVING_FRAME_IDC                14004
+#define PHONE_CALLRECEIVING_NUMBER_IDC               14006
+
+PHONE_CALLRECEIVING_BACKGROUND = "lyeed_IMG\data\phone\background_2.jpg";
+PHONE_CALLRECEIVING_IDCS[] =
+{
+	PHONE_CALLRECEIVING_ACTION_ACCEPT_BUTTON_IDC,
+	PHONE_CALLRECEIVING_ACTION_ACCEPT_IMAGE_IDC,
+	PHONE_CALLRECEIVING_ACTION_REFUSE_IMAGE_IDC,
+	PHONE_CALLRECEIVING_ACTION_REFUSE_BUTTON_IDC,
+	PHONE_CALLRECEIVING_FRAME_IDC,
+	PHONE_CALLRECEIVING_NUMBER_IDC
+};
+
+class PHONE_CALLRECEIVING_FRAME: RscText
+{
+	idc = PHONE_CALLRECEIVING_FRAME_IDC;
+	colorBackground[] = {0,0,0,0.6};
+	
+	x = 0.391719 * safezoneW + safezoneX;
+	y = 0.379 * safezoneH + safezoneY;
+	w = 0.211406 * safezoneW;
+	h = 0.253 * safezoneH;
+};
+class PHONE_CALLRECEIVING_NUMBER: RscStructuredText
+{
+	idc = PHONE_CALLRECEIVING_NUMBER_IDC;
+
+	x = 0.396875 * safezoneW + safezoneX;
+	y = 0.412 * safezoneH + safezoneY;
+	w = 0.201094 * safezoneW;
+	h = 0.066 * safezoneH;
+};
+
+class PHONE_CALLRECEIVING_ACTION_ACCEPT_IMAGE: RscPicture
+{
+	idc = PHONE_CALLRECEIVING_ACTION_ACCEPT_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\call\call.paa";
+
+	x = 0.453594 * safezoneW + safezoneX;
+	y = 0.511 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class PHONE_CALLRECEIVING_ACTION_ACCEPT_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALLRECEIVING_ACTION_ACCEPT_BUTTON_IDC;
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,'lyeed_IMG\data\phone\call\call_select.paa'];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,'lyeed_IMG\data\phone\call\call.paa'];";
+	action = "missionNamespace setVariable ['calling_answer', true];";
+
+	x = 0.453594 * safezoneW + safezoneX;
+	y = 0.511 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+
+class PHONE_CALLRECEIVING_ACTION_REFUSE_IMAGE: RscPicture
+{
+	idc = PHONE_CALLRECEIVING_ACTION_REFUSE_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\call\call_stop.paa";
+
+	x = 0.515469 * safezoneW + safezoneX;
+	y = 0.511 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
+};
+class PHONE_CALLRECEIVING_ACTION_REFUSE_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CALLRECEIVING_ACTION_REFUSE_BUTTON_IDC;
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,'lyeed_IMG\data\phone\call\call_stop_select.paa'];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,'lyeed_IMG\data\phone\call\call_stop.paa'];";
+	action = "missionNamespace setVariable ['calling_answer', false];";
+
+	x = 0.515469 * safezoneW + safezoneX;
+	y = 0.511 * safezoneH + safezoneY;
+	w = 0.0257812 * safezoneW;
+	h = 0.044 * safezoneH;
 };

@@ -58,13 +58,17 @@ g_hunger = _basic select 17;
 // thirst
 g_thirst = _basic select 18;
 // Prison
-g_arrest_Prison = _basic select 23;
-g_arrest_Cellule = _basic select 24;
-g_arrest_Time = _basic select 25;
-g_arrest_Caution = _basic select 26;
-g_arrest_Reason = _basic select 27;
-g_arrest_Escape = _basic select 28;
-g_arrest_Gear = _basic select 29;
+if ((_basic select 23) isEqualTo "") then {
+	g_arrest_Escape = _basic select 28;
+} else {
+	g_arrest_Prison = call compile (_basic select 23);
+	g_arrest_Cellule = _basic select 24;
+	g_arrest_Time = _basic select 25;
+	g_arrest_Caution = _basic select 26;
+	g_arrest_Reason = _basic select 27;
+	g_arrest_Gear = _basic select 29;	
+};
+
 if (g_arrest_Time > 0) then
 {
 	if (g_arrest_Time isEqualTo -1) then {

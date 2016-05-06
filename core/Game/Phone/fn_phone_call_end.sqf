@@ -27,6 +27,6 @@ missionNamespace setVariable ["calling_time", 0];
 missionNamespace setVariable ["calling_number", ""];
 missionNamespace setVariable ["calling_answer", nil];
 
-if (g_app isEqualTo "PHONE_CALL") then {
+if (g_app isEqualTo "PHONE_CALLING") then {
 	["PHONE_CALL"] spawn AlysiaClient_fnc_tabletApp;
 };

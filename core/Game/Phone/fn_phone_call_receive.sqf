@@ -15,7 +15,7 @@ if (_from in g_phone_blacklist) exitWith {};
 
 waitUntil {([] call AlysiaClient_fnc_hasPhone)};
 
-if (missionNamespace getVariable ["calling", false]) exitWith 
+if ((missionNamespace getVariable ["calling", false]) || ((missionNamespace getVariable ["calling_number", ""]) != "")) exitWith 
 {
 	[] remoteExecCall ["AlysiaClient_fnc_phone_call_busy", _from];
 	g_phone_call_history pushBack
@@ -28,8 +28,9 @@ if (missionNamespace getVariable ["calling", false]) exitWith
 
 missionNamespace setVariable ["calling_answer", nil];
 missionNamespace setVariable ["calling_number", (_from getVariable "number")];
+missionNamespace setVariable ["calling_hide", _hide];
 
-while {isNil {missionNamespace getVariable "calling_answer"}} do
+while {(isNil {(missionNamespace getVariable "calling_answer")}) && ([] call AlysiaClient_fnc_hasPhone) && g_is_alive && ((missionNamespace getVariable ["calling_number", ""]) isEqualTo (_from getVariable "number"))} do
 {
 	_sound = profileNamespace getVariable ["ALYSIA_phone_call_ring", ""];
 	if (_sound isEqualTo "") then
@@ -54,9 +55,6 @@ if (!(missionNamespace getVariable ["calling_answer", false])) exitWith
 	missionNamespace setVariable ["calling_answer", nil];
 };
 
-_handle = ["PHONE_CALLING"] spawn AlysiaClient_fnc_tabletApp;
-waitUntil {scriptDone _handle};
-
 if (TF_tangent_sw_pressed) then {
 	call TFAR_fnc_onSwTangentReleased;
 };
@@ -69,7 +67,6 @@ missionNamespace setVariable ["calling_time", 0];
 missionNamespace setVariable ["calling_freq_old", ([(call TFAR_fnc_activeSwRadio), 1] call TFAR_fnc_GetChannelFrequency)];
 missionNamespace setVariable ["calling_freq", _freq];
 missionNamespace setVariable ["calling_target", _from];
-missionNamespace setVariable ["calling_hide", _hide];
 
 g_phone_call_history pushBack
 [
@@ -79,5 +76,10 @@ g_phone_call_history pushBack
 ];
 
 [(call TFAR_fnc_activeSwRadio), 1, _freq] call TFAR_fnc_SetChannelFrequency;
+
+_handle = ["PHONE_CALLING"] spawn AlysiaClient_fnc_tabletApp;
+waitUntil {scriptDone _handle};
+
+[player, _freq] remoteExecCall ["AlysiaClient_fnc_phone_call_etablish", _from];
 
 [] spawn AlysiaClient_fnc_phone_call_loop;

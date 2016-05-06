@@ -235,13 +235,19 @@ _actual_idc = 7560;
 	[
 		"lyeed_IMG\data\tablet\app_main\bonus_call.paa",
 		"['PHONE_CALLING'] spawn AlysiaClient_fnc_tabletApp;",
-		"(missionNamespace getVariable ['calling', false])",
+		"(call AlysiaClient_fnc_hasPhone) && (missionNamespace getVariable ['calling', false])",
 		"Appel en cours"
+	],
+	[
+		"lyeed_IMG\data\tablet\app_main\bonus_call.paa",
+		"['PHONE_CALLRECEIVING'] spawn AlysiaClient_fnc_tabletApp;",
+		"(call AlysiaClient_fnc_hasPhone) && !(missionNamespace getVariable ['calling', false]) && ((missionNamespace getVariable ['calling_number', '']) != '')",
+		"Vous recevez un appel"
 	],
 	[
 		"lyeed_IMG\data\tablet\app_main\bonus_sms.paa",
 		"[""phone_messages_read""] spawn AlysiaClient_fnc_tabletApp;",
-		"([] call AlysiaClient_fnc_hasPhone) && ((count ([] call AlysiaClient_fnc_phone_get_messages_new)) > 0)",
+		"(call AlysiaClient_fnc_hasPhone) && ((count ([] call AlysiaClient_fnc_phone_get_messages_new)) > 0)",
 		"Vous avez des nouveaux messages"
 	],
 	[

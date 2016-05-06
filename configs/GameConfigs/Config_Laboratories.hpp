@@ -126,4 +126,14 @@ class ALYSIA_LABORATORIES
 			"guardshed_wood"
 		};
 	};
+	class lab_steel
+	{
+		object = "";
+		process[] = {"steel_illegal"};
+	};
+	class lab_tissue
+	{
+		object = "";
+		process[] = {"tissue_illegal"};
+	};
 };

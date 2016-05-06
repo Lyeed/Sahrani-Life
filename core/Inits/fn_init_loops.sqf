@@ -186,7 +186,7 @@
 		{
 			if (getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> (currentWeapon player) >> "protect_rain") isEqualTo 0) then
 			{
-				if (random(200) < (1 + (rain * 10))) then
+				if (random(230) < (1 + (rain * 10))) then
 				{
 					["rhume"] spawn AlysiaClient_fnc_desease_start;
 				};

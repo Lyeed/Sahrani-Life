@@ -7,8 +7,8 @@ class ALYSIA_PRISONS
 		uniform = "Skyline_Uniforme_Prisonnier_01_F";
 		exit[] = {12140.4,17777.6,0.00143814};
 		escape_distance = 70;
-		arrest_pos[] = {};
-		
+		arrest_pos[] = {20.5313,6.58008,0.00143814};
+
 		class time
 		{
 			min = 5;
@@ -67,6 +67,7 @@ class ALYSIA_PRISONS
 		uniform = "Skyline_Uniforme_Prisonnier_02_F";
 		exit[] = {8239.01,7830.56,0.00143433};
 		escape_distance = 90;
+		arrest_pos[] = {4.80957,-3.73242,0.00143433};
 
 		class time
 		{

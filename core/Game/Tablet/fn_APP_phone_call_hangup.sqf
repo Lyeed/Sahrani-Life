@@ -14,16 +14,20 @@ if (missionNamespace getVariable ["calling", false]) then
 	_apply_target = missionNamespace getVariable ["calling_target", objNull];
 	if (!(isNull _apply_target)) then
 	{
-		if (_apply_busy_to_target) then
+		if (([(call TFAR_fnc_activeSwRadio), 1] call TFAR_fnc_GetChannelFrequency) isEqualTo (missionNamespace getVariable ["calling_freq", ""])) then
 		{
-			[] remoteExecCall ["AlysiaClient_fnc_phone_call_busy", _apply_target];
-		};
+			if (_apply_busy_to_target) then
+			{
+				[] remoteExecCall ["AlysiaClient_fnc_phone_call_busy", _apply_target];
+			};
 
-		if (_apply_end_to_target) then
-		{
-			[false, false] remoteExecCall ["AlysiaClient_fnc_APP_phone_call_hangup", _apply_target];
+			if (_apply_end_to_target) then
+			{
+				[false, false] remoteExecCall ["AlysiaClient_fnc_APP_phone_call_hangup", _apply_target];
+			};
 		};
 	};
 
 	missionNamespace setVariable ["calling", false];
+	missionNamespace setVariable ["calling_number", ""];
 };

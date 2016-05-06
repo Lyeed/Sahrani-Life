@@ -57,7 +57,7 @@ if ([] call AlysiaClient_fnc_hasPhone) then
 				"lyeed_IMG\data\phone\main\call.paa",
 				"lyeed_IMG\data\phone\main\call_select.paa",
 				"['phone_call'] spawn AlysiaClient_fnc_tabletApp;",
-				"false",
+				"true",
 				"Appeler"
 			],
 			[

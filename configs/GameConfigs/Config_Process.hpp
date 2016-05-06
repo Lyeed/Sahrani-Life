@@ -312,6 +312,17 @@ class ALYSIA_PROCESS
 			};
 		};
 	};
+	class tissue_illegal: tissue
+	{
+		require[] = {{"cottonp",7}};
+		time_per_item = 6;
+		time_default = 5;
+		class factions
+		{
+			class CIV {};
+		};
+	};
+
 	class gold
 	{
 		name = "Fonte de l'or";
@@ -397,7 +408,7 @@ class ALYSIA_PROCESS
 		sound = "smelting";
 		require[] = {{"ironp",1},{"coal",1}};
 		receive[] = {{{"steel",1}},{},0};
-		time_per_item = 8;
+		time_per_item = 6;
 		time_default = 5;
 		class factions
 		{
@@ -405,6 +416,16 @@ class ALYSIA_PROCESS
 			{
 				licenses[] = {"company_foundry"};
 			};
+		};
+	};
+	class steel_illegal: steel
+	{
+		require[] = {{"ironp",2},{"coal",1}};
+		time_per_item = 8;
+		time_default = 5;
+		class factions
+		{
+			class CIV {};
 		};
 	};
 	class scalpel

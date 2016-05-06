@@ -1596,7 +1596,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Laboratoire de marijuana";
 		price_buy = 185000;
-		weight = 15;
+		weight = 40;
 		illegal = 1;
 		image = "alysia_items_virtual\data\lab_marijuana.paa";
 		class use
@@ -1604,67 +1604,57 @@ class ALYSIA_ITEMS
 			action = "['lab_marijuana'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
-	class lab_meth
+	class lab_meth: lab_marijuana
 	{
 		name = "Laboratoire de methamphetamine";
 		price_buy = 226000;
-		weight = 40;
-		illegal = 1;
 		image = "alysia_items_virtual\data\lab_meth.paa";
 		class use
 		{
 			action = "['lab_meth'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
-	class lab_cocaine
+	class lab_cocaine: lab_marijuana
 	{
 		name = "Laboratoire de cocaïne";
 		price_buy = 209000;
-		weight = 30;
-		illegal = 1;
 		image = "alysia_items_virtual\data\lab_cocaine.paa";
 		class use
 		{
 			action = "['lab_cocaine'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
-	class lab_heroin
+	class lab_heroin: lab_marijuana
 	{
 		name = "Laboratoire d'héroïne";
 		price_buy = 192000;
-		weight = 30;
-		illegal = 1;
 		image = "alysia_items_virtual\data\lab_heroin.paa";
 		class use
 		{
 			action = "['lab_heroin'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
-	class lab_weapon
+	class lab_weapon: lab_marijuana
 	{
-		name = "Usine d'armes illégales";
-		price_buy = 325000;
-		weight = 40;
-		illegal = 1;
+		name = "Usine illégale d'armes";
+		price_buy = 425000;
 		image = "alysia_items_virtual\data\lab_weapon.paa";
 		class use
 		{
 			action = "['lab_weapon'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
-	class lab_clothing
+	class lab_clothing: lab_marijuana
 	{
-		name = "Usine de vêtements illégaux";
+		name = "Usine illégale d'équipements'";
 		price_buy = 185000;
-		weight = 35;
-		illegal = 1;
 		image = "alysia_items_virtual\data\lab_clothing.paa";
 		class use
 		{
 			action = "['lab_clothing'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
-	class lab_cigare
+	class lab_cigare: lab_marijuana
 	{
 		name = "Usine à cigares";
 		price_buy = 90000;
@@ -1676,7 +1666,7 @@ class ALYSIA_ITEMS
 			action = "['lab_cigare'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
-	class lab_heal
+	class lab_heal: lab_marijuana
 	{
 		name = "Table d'opération illégale";
 		price_buy = 110000;
@@ -1688,9 +1678,9 @@ class ALYSIA_ITEMS
 			action = "['lab_heal'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
-	class lab_construction
+	class lab_construction: lab_marijuana
 	{
-		name = "Usines de constructions illégales";
+		name = "Usine illégale de constructions";
 		price_buy = 160000;
 		weight = 20;
 		illegal = 1;
@@ -1698,6 +1688,26 @@ class ALYSIA_ITEMS
 		class use
 		{
 			action = "['lab_construction'] spawn AlysiaClient_fnc_labo_deploy;";
+		};
+	};
+	class lab_steel: lab_marijuana
+	{
+		name = "Usine illégale d'acier";
+		price_buy = 310000;
+		image = "alysia_items_virtual\data\lab_steel.paa";
+		class use
+		{
+			action = "['lab_steel'] spawn AlysiaClient_fnc_labo_deploy;";
+		};
+	};
+	class lab_tissue: lab_marijuana
+	{
+		name = "Usine illégale de tissue";
+		price_buy = 280000;
+		image = "alysia_items_virtual\data\lab_tissue.paa";
+		class use
+		{
+			action = "['lab_tissue'] spawn AlysiaClient_fnc_labo_deploy;";
 		};
 	};
 

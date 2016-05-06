@@ -21,16 +21,6 @@ if (_number isEqualTo (player getVariable ["number", ""])) exitWith {
 	["Vous ne pouvez pas vous appeler vous même."] call AlysiaClient_fnc_error;
 };
 
-_handle = ["PHONE_CALLING"] spawn AlysiaClient_fnc_tabletApp;
-waitUntil {scriptDone _handle};
-
-if (TF_tangent_sw_pressed) then {
-	call TFAR_fnc_onSwTangentReleased;
-};
-if (!(isNull (uiNamespace getVariable ["TFAR_Hint_Display", displayNull]))) then {
-	call TFAR_fnc_HideHint;
-};
-
 missionNamespace setVariable ["calling", true];
 missionNamespace setVariable ["calling_target", objNull];
 missionNamespace setVariable ["calling_freq_old", ([(call TFAR_fnc_activeSwRadio), 1] call TFAR_fnc_GetChannelFrequency)];
@@ -45,5 +35,15 @@ g_phone_call_history pushBack
 	_number,
 	true
 ];
+
+if (TF_tangent_sw_pressed) then {
+	call TFAR_fnc_onSwTangentReleased;
+};
+if (!(isNull (uiNamespace getVariable ["TFAR_Hint_Display", displayNull]))) then {
+	call TFAR_fnc_HideHint;
+};
+
+_handle = ["PHONE_CALLING"] spawn AlysiaClient_fnc_tabletApp;
+waitUntil {scriptDone _handle};
 
 [] spawn AlysiaClient_fnc_phone_call_loop;
