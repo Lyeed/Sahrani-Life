@@ -18,7 +18,8 @@ if (!isNil {(g_interaction_target getVariable "house_sold")}) exitWith {
 };
 
 _item = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "identity_item");
-if ((_item != "") && !(_item in (magazines player))) exitWith {
+if ((_item != "") && !(_item in (magazines player))) exitWith
+{
 	[format[
 		"Vous n'avez pas l'objet nécessaire pour prouver votre identité (%1).",
 		(([_item] call AlysiaClient_fnc_fetchCfgDetails) select 1)
@@ -53,8 +54,8 @@ if (_action) then
 
 	_marker = createMarkerLocal [format["house_%1", (count g_houses)], (getPosATL g_interaction_target)];
 	_marker setMarkerTextLocal "Chez vous";
-	_marker setMarkerColorLocal "ColorPink";
-	_marker setMarkerTypeLocal "Fett_house";
-	_marker setMarkerSizeLocal [0.5, 0.5];
+	_marker setMarkerColorLocal "ColorWhite";
+	_marker setMarkerTypeLocal "Maels_housing";
+	_marker setMarkerSizeLocal [0.55, 0.55];
 	g_houses pushBack g_interaction_target;
 };

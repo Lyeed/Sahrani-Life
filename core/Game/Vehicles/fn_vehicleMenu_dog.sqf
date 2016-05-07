@@ -52,7 +52,9 @@ _find = false;
 		"methp",
 		"cannabis",
 		"marijuana",
-		"sandwich"
+		"sandwich",
+		"cocainep_bag",
+		"cocainepc_bag"
 	]
 );
 

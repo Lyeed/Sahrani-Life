@@ -4,10 +4,10 @@ class ALYSIA_DYN_MARKERS
 	class cocaine_1
 	{
 		text        = "Champ de coca";
-		type        = "Fett_canteen";
+		type        = "Maels_illegal_field";
 		color       = "ColorRed";
 		shape       = "ICON";
-		size        = 0.5;
+		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 24000;
 		discover[]  = {"CIV"};
@@ -19,10 +19,10 @@ class ALYSIA_DYN_MARKERS
 	class cannabis_1
 	{
 		text        = "Champ de cannabis";
-		type        = "Fett_canteen";
+		type        = "Maels_illegal_field";
 		color       = "ColorRed";
 		shape       = "ICON";
-		size        = 0.5;
+		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 21000;
 		discover[]  = {"CIV"};
@@ -34,10 +34,10 @@ class ALYSIA_DYN_MARKERS
 	class meth_1
 	{
 		text        = "Champ d'ephedra";
-		type        = "Fett_canteen";
+		type        = "Maels_illegal_field";
 		color       = "ColorRed";
 		shape       = "ICON";
-		size        = 0.5;
+		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 35000;
 		discover[]  = {"CIV"};
@@ -49,10 +49,10 @@ class ALYSIA_DYN_MARKERS
 	class heroin_1
 	{
 		text        = "Champ de pavot";
-		type        = "Fett_canteen";
+		type        = "Maels_illegal_field";
 		color       = "ColorRed";
 		shape       = "ICON";
-		size        = 0.5;
+		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 26000;
 		discover[]  = {"CIV", "GUER"};
@@ -66,10 +66,10 @@ class ALYSIA_DYN_MARKERS
 	class black_market_1_marker
 	{
 		text        = "Marché noir";
-		type        = "Fett_campingsite";
+		type        = "Maels_sell";
 		color       = "ColorRed";
 		shape       = "ICON";
-		size        = 0.5;
+		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 35000;
 		linked      = "black_market_1";
@@ -82,10 +82,10 @@ class ALYSIA_DYN_MARKERS
 	class black_market_2_marker
 	{
 		text        = "Marché noir";
-		type        = "Fett_campingsite";
+		type        = "Maels_sell";
 		color       = "ColorRed";
 		shape       = "ICON";
-		size        = 0.5;
+		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 35000;
 		linked      = "black_market_2";
@@ -100,10 +100,10 @@ class ALYSIA_DYN_MARKERS
 	class dealer_alcool_marker
 	{
 		text        = "Commerçant d'alcool";
-		type        = "Fett_hardpoint";
+		type        = "Maels_shop";
 		color       = "ColorRed";
 		shape       = "ICON";
-		size        = 0.5;
+		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 25000;
 		linked      = "dealer_alcool";
@@ -118,10 +118,10 @@ class ALYSIA_DYN_MARKERS
 	class launder_marker
 	{
 		text        = "Blanchiment d'argent";
-		type        = "Fett_hardpoint";
+		type        = "Maels_illegal_blanchiment";
 		color       = "ColorRed";
 		shape       = "ICON";
-		size        = 0.5;
+		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 50000;
 		linked      = "launder";
@@ -136,10 +136,10 @@ class ALYSIA_DYN_MARKERS
 	class cardealer_1_marker
 	{
 		text        = "Receleur de véhicules";
-		type        = "Fett_bicycle";
+		type        = "Maels_luxe_car";
 		color       = "ColorRed";
 		shape       = "ICON";
-		size        = 0.5;
+		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 32500;
 		linked      = "cardealer_1";
@@ -152,10 +152,10 @@ class ALYSIA_DYN_MARKERS
 	class cardealer_2_marker
 	{
 		text        = "Receleur de véhicules";
-		type        = "Fett_bicycle";
+		type        = "Maels_luxe_car";
 		color       = "ColorRed";
 		shape       = "ICON";
-		size        = 0.5;
+		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 32500;
 		linked      = "cardealer_2";
@@ -170,10 +170,10 @@ class ALYSIA_DYN_MARKERS
 	class drugs_dealer_1_marker
 	{
 		text        = "Dealeur";
-		type        = "Fett_campingsite";
+		type        = "Maels_sell";
 		color       = "ColorRed";
 		shape       = "ICON";
-		size        = 0.5;
+		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 33000;
 		linked      = "drugs_dealer_1";
@@ -186,10 +186,10 @@ class ALYSIA_DYN_MARKERS
 	class drugs_dealer_2_marker
 	{
 		text        = "Dealeur";
-		type        = "Fett_campingsite";
+		type        = "Maels_sell";
 		color       = "ColorRed";
 		shape       = "ICON";
-		size        = 0.5;
+		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 33000;
 		linked      = "drugs_dealer_2";
@@ -203,10 +203,10 @@ class ALYSIA_DYN_MARKERS
 	class archeologie_1
 	{
 		text        = "Site archéologique";
-		type        = "Fett_ruins";
+		type        = "Maels_archeo";
 		color       = "ColorRed";
 		shape       = "ICON";
-		size        = 0.5;
+		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 22500;
 		linked      = "";
@@ -220,10 +220,10 @@ class ALYSIA_DYN_MARKERS
 	class pillage_1
 	{
 		text        = "Pillage";
-		type        = "Fett_ruins";
+		type        = "Maels_archeo";
 		color       = "ColorRed";
 		shape       = "ICON";
-		size        = 0.5;
+		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 17500;
 		discover[]  = {"CIV"};
@@ -233,10 +233,10 @@ class ALYSIA_DYN_MARKERS
 	class renovation_marker
 	{
 		text        = "Rénovation d'artefacts";
-		type        = "Fett_ruins";
+		type        = "Maels_archeo_renove";
 		color       = "ColorRed";
 		shape       = "ICON";
-		size        = 0.5;
+		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 20000;
 		linked      = "renovation";
@@ -250,10 +250,10 @@ class ALYSIA_DYN_MARKERS
 	class hydration_soufre_marker
 	{
 		text        = "Hydratation du soufre";
-		type        = "Fett_campingsite";
+		type        = "Maels_sell";
 		color       = "ColorRed";
 		shape       = "ICON";
-		size        = 0.5;
+		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 17500;
 		linked      = "hydration_soufre";
@@ -267,10 +267,10 @@ class ALYSIA_DYN_MARKERS
 	class dealer_tabac_marker
 	{
 		text        = "Commerçant de tabac";
-		type        = "Fett_hardpoint";
+		type        = "Maels_sell";
 		color       = "ColorRed";
 		shape       = "ICON";
-		size        = 0.5;
+		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 9000;
 		linked      = "dealer_tabac";

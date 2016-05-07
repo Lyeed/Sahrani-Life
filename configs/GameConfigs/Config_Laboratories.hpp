@@ -2,29 +2,91 @@ class ALYSIA_LABORATORIES
 {
 	class lab_marijuana
 	{
-		object = "xcam_crates_EP1";
-		process[] = {"marijuana"};
+		object = "Skyline_Alysia_WorkBench_Marijuana_01_F";
+		process[] =
+		{
+			"marijuana",
+			"marijuana_bag"
+		};
+		class marker
+		{
+		 	ShapeLocal = "ICON";
+			TypeLocal = "Maels_illegal_labo_weed";
+			ColorLocal = "ColorRed";
+			SizeLocal[] = {0.55, 0.55};
+		};
 	};
 	class lab_meth
 	{
-		object = "CargoNet_01_barrels_F";
-		process[] = {"meth"};
+		object = "Skyline_Alysia_WorkBench_Methamphetamine_01_F";
+		process[] =
+		{
+			"meth",
+			"meth_bag"
+		};
+		class marker
+		{
+		 	ShapeLocal = "ICON";
+			TypeLocal = "Maels_illegal_labo_meth";
+			ColorLocal = "ColorRed";
+			SizeLocal[] = {0.55, 0.55};
+		};
 	};
 	class lab_cocaine
 	{
-		object = "xcam_stand_water_EP1";
-		process[] = {"cocaine","cocainec"};
+		object = "Skyline_Alysia_WorkBench_Cocaine_01_F";
+		process[] =
+		{
+			"cocaine",
+			"cocainec",
+			"cocainep_bag",
+			"cocainepc_bag"
+		};
+		class marker
+		{
+		 	ShapeLocal = "ICON";
+			TypeLocal = "Maels_illegal_labo_coca";
+			ColorLocal = "ColorRed";
+			SizeLocal[] = {0.55, 0.55};
+		};
 	};
 	class lab_heroin
 	{
-		object = "Land_Reservoir_EP1";
-		process[] = {"heroin","seringueheroin"};
+		object = "Skyline_Alysia_WorkBench_Heroine_01_F";
+		process[] =
+		{
+			"heroin",
+			"seringueheroin"
+		};
+		class marker
+		{
+		 	ShapeLocal = "ICON";
+			TypeLocal = "Maels_illegal_hero_labo";
+			ColorLocal = "ColorRed";
+			SizeLocal[] = {0.55, 0.55};
+		};
 	};
 	class lab_weapon
 	{
-		object = "Land_Workbench_01_F";
+		object = "Skyline_Alysia_WorkBench_Weapon_01_F";
 		process[] =
 		{
+			"bullet_illegal",
+			"buckshot_illegal",
+			"magazine_illegal",
+			"barillet_illegal",
+			"canon_illegal",
+			"crosse_wood_illegal",
+			"crosse_steel_illegal",
+			"garde_main_wood_illegal",
+			"garde_main_steel_illegal",
+			"poignee_illegal",
+			"detente_illegal",
+			"percuteur_illegal",
+			"carcasse_illegal",
+			"bloc_culasse_illegal",
+			"marteau_illegal",
+			"culasse_illegal",
 			"weapon_tec",
 			"magazine_tec",
 			"weapon_tracker",
@@ -36,10 +98,17 @@ class ALYSIA_LABORATORIES
 			"board_4",
 			"board_5"
 		};
+		class marker
+		{
+		 	ShapeLocal = "ICON";
+			TypeLocal = "Maels_factory";
+			ColorLocal = "ColorRed";
+			SizeLocal[] = {0.55, 0.55};
+		};
 	};
 	class lab_clothing
 	{
-		object = "Land_DieselGroundPowerUnit_01_F";
+		object = "Skyline_Alysia_WorkBench_Equipement_01_F";
 		process[] =
 		{
 			"vest_criminal_1",
@@ -105,35 +174,77 @@ class ALYSIA_LABORATORIES
 			"backpack_radio_1",
 			"backpack_radio_2"
 		};
+		class marker
+		{
+		 	ShapeLocal = "ICON";
+			TypeLocal = "Maels_friperie";
+			ColorLocal = "ColorRed";
+			SizeLocal[] = {0.55, 0.55};
+		};
 	};
 	class lab_cigare
 	{
 		object = "Land_Factory_Conv1_End_F";
 		process[] = {"cigare"};
+		class marker
+		{
+		 	ShapeLocal = "ICON";
+			TypeLocal = "Maels_labo_tabac";
+			ColorLocal = "ColorRed";
+			SizeLocal[] = {0.55, 0.55};
+		};
 	};
 	class lab_heal
 	{
 		object = "HealTable_F";
 		process[] = {};
+		class marker
+		{
+		 	ShapeLocal = "ICON";
+			TypeLocal = "Maels_hospital";
+			ColorLocal = "ColorRed";
+			SizeLocal[] = {0.55, 0.55};
+		};
 	};
 	class lab_construction
 	{
-		object = "xcam_CinderBlocks_F";
+		object = "Skyline_Alysia_WorkBench_Construction_01_F";
 		process[] =
 		{
 			"bagfence_sand",
 			"antitank_steel",
 			"guardshed_wood"
 		};
+		class marker
+		{
+		 	ShapeLocal = "ICON";
+			TypeLocal = "Maels_factory";
+			ColorLocal = "ColorRed";
+			SizeLocal[] = {0.55, 0.55};
+		};
 	};
 	class lab_steel
 	{
-		object = "";
+		object = "Skyline_Alysia_WorkBench_Acier_01_F";
 		process[] = {"steel_illegal"};
+		class marker
+		{
+		 	ShapeLocal = "ICON";
+			TypeLocal = "Maels_factory";
+			ColorLocal = "ColorRed";
+			SizeLocal[] = {0.55, 0.55};
+		};
 	};
 	class lab_tissue
 	{
-		object = "";
+		object = "Skyline_Alysia_WorkBench_Vetement_01_F";
 		process[] = {"tissue_illegal"};
+		class marker
+		{
+		 	ShapeLocal = "ICON";
+			TypeLocal = "Maels_factory";
+			ColorLocal = "ColorRed";
+			SizeLocal[] = {0.55, 0.55};
+		};
 	};
 };

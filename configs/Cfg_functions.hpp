@@ -17,6 +17,7 @@ class CfgFunctions
 			class onPlayerRespawn {};
 			class onPlayerSpeak {};
 			class onPlayerSpeakRadio {};
+			class onPlayerReload {};
 		};
 	};
 

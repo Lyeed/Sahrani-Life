@@ -46,7 +46,7 @@ if ("ItemGPS" in (assignedItems player)) then
 {
 	_marker = createMarkerLocal [format["station_tablet_%1", _sel], (getPos _station)];
 	_marker setMarkerShapeLocal "ICON";
-	_marker setMarkerTypeLocal "Fett_maptools";
+	_marker setMarkerTypeLocal "Maels_station_essence";
 	_marker setMarkerColorLocal "ColorGreen";
 	_marker setMarkerTextLocal "Station service";
 

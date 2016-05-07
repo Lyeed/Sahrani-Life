@@ -25,33 +25,32 @@ class ALYSIA_PHONE
 			class message_rcv_3: message_rcv_1
 			{
 				name = "Alerte 3";
-				donator = 1;
 			};
-			class message_rcv_4: message_rcv_3
+			class message_rcv_4: message_rcv_1
 			{
 				name = "Alerte 4";
 			};
-			class message_rcv_5: message_rcv_3
+			class message_rcv_5: message_rcv_1
 			{
 				name = "Alerte 5";
 			};
-			class message_rcv_6: message_rcv_3
+			class message_rcv_6: message_rcv_1
 			{
 				name = "Alerte 6";
 			};
-			class message_rcv_7: message_rcv_3
+			class message_rcv_7: message_rcv_1
 			{
 				name = "Alerte 7";
 			};
-			class message_rcv_8: message_rcv_3
+			class message_rcv_8: message_rcv_1
 			{
 				name = "Alerte 8";
 			};
-			class message_rcv_9: message_rcv_3
+			class message_rcv_9: message_rcv_1
 			{
 				name = "Alerte 9";
 			};
-			class message_rcv_10: message_rcv_3
+			class message_rcv_10: message_rcv_1
 			{
 				name = "Alerte 10";
 			};
@@ -124,7 +123,7 @@ class ALYSIA_PHONE
 			sms_price = 0;
 			sms_max = 20;
 			hide_number = 1;
-			contacts_max = 45;
+			contacts_max = 50;
 			backlist_max = 10;
 			sides[] = {"CIV"};
 		};

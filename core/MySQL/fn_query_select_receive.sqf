@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_basic"];
+private "_basic";
 _basic = [_this, 0, [], [[]]] call BIS_fnc_param;
 
 if ((_basic isEqualTo []) || {!((getPlayerUID player) isEqualTo (_basic select 0))}) exitWith
@@ -126,9 +126,9 @@ g_houses = [];
 	{
 		_marker = createMarkerLocal [format["house_%1", count(g_houses)], (getPosATL _x)];
 		_marker setMarkerTextLocal "Chez vous";
-		_marker setMarkerColorLocal "ColorPink";
-		_marker setMarkerTypeLocal "Fett_house";
-		_marker setMarkerSizeLocal [0.5, 0.5];
+		_marker setMarkerColorLocal "ColorWhite";
+		_marker setMarkerTypeLocal "Maels_housing";
+		_marker setMarkerSizeLocal [0.55, 0.55];
 		g_houses pushBack _x;
 	};
 } forEach ([_this, 1, [], [[]]] call BIS_fnc_param);
@@ -155,12 +155,15 @@ g_laboratory = [_this, 5, objNull, [objNull]] call BIS_fnc_param;
 if (!(isNull g_laboratory)) then
 {
 	_config = ("getText(_x >> 'object') == typeOf(g_laboratory)" configClasses (missionConfigFile >> "ALYSIA_LABORATORIES")) select 0;
-	_marker = createMarkerLocal ["laboratory", (getPosATL g_laboratory)];
-	_marker setMarkerColorLocal "ColorRed";
-	_marker setMarkerTypeLocal "loc_Bunker";
-	if (isNil "_config") then {
-		_marker setMarkerTextLocal "Laboratoire";
-	} else {
+
+	_config_marker = _config >> "marker";
+	if (isClass _config_marker) then
+	{
+		_marker = createMarkerLocal ["laboratory", (getPosATL g_laboratory)];
+		_marker setMarkerShapeLocal getText(_config_marker >> "ShapeLocal");
+		_marker setMarkerColorLocal getText(_config_marker >> "ColorLocal");
+		_marker setMarkerTypeLocal getText(_config_marker >> "TypeLocal");
+		_marker setMarkerSizeLocal getArray(_config_marker >> "SizeLocal");
 		_marker setMarkerTextLocal ([configName _config] call AlysiaClient_fnc_itemGetName);
 	};
 };

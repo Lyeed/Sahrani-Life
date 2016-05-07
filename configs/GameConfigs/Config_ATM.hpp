@@ -17,9 +17,9 @@ class ALYSIA_ATM
 		class marker
 		{
 		 	ShapeLocal = "ICON";
-			TypeLocal = "Fett_flag";
-			ColorLocal = "ColorGreen";
-			SizeLocal[] = {0.5, 0.5};
+			TypeLocal = "Maels_dab";
+			ColorLocal = "ColorWhite";
+			SizeLocal[] = {0.55, 0.55};
 		};
 	};
 	class Land_Atm_02_F: Land_Atm_01_F

@@ -9,9 +9,9 @@ class ALYSIA_FUEL_STATION
 		class marker
 		{
 			ShapeLocal = "ICON";
-			TypeLocal = "Fett_maptools";
+			TypeLocal = "Maels_station_essence";
 			ColorLocal = "ColorGreen";
-			SizeLocal[] = {0.5, 0.5};
+			SizeLocal[] = {0.55, 0.55};
 		};
 		class stock
 		{
@@ -43,9 +43,9 @@ class ALYSIA_FUEL_STATION
 		class marker
 		{
 			ShapeLocal = "ICON";
-			TypeLocal = "Fett_maptools";
+			TypeLocal = "Maels_station_essence";
 			ColorLocal = "ColorGreen";
-			SizeLocal[] = {0.5, 0.5};
+			SizeLocal[] = {0.55, 0.55};
 		};
 		class stock
 		{

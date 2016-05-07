@@ -59,9 +59,9 @@ if (_action) then
 			{
 				_marker = createMarkerLocal [format["house_%1", (count g_houses)], (getPosATL _x)];
 				_marker setMarkerTextLocal "Chez vous";
-				_marker setMarkerColorLocal "ColorPink";
-				_marker setMarkerTypeLocal "Fett_house";
-				_marker setMarkerSizeLocal [0.5, 0.5];
+				_marker setMarkerColorLocal "ColorWhite";
+				_marker setMarkerTypeLocal "Maels_housing";
+				_marker setMarkerSizeLocal [0.55, 0.55];
 				g_houses pushBack _x;
 			};
 		} forEach _keys_buildings;

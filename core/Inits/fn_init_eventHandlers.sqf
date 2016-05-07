@@ -13,6 +13,7 @@ player addEventHandler ["handleDamage", "_this call AlysiaEvent_fnc_onPlayerHand
 player addEventHandler ["InventoryOpened", "[_this select 1] spawn AlysiaEvent_fnc_onPlayerInventoryOpen"];
 player addEventHandler ["Killed", "call AlysiaEvent_fnc_onplayerDeath"];
 player addEventHandler ["Respawn", "call AlysiaEvent_fnc_onPlayerRespawn"];
+player addEventHandler ["Reloaded", "_this call AlysiaEvent_fnc_onPlayerReload"];
 
 /* TASK_FORCE_RADIO */
 // ["actionRadio", "OnTangent", {call AlysiaEvent_fnc_onPlayerSpeakRadio}, player] call TFAR_fnc_addEventHandler;
