@@ -49,7 +49,7 @@ _ctrl_checkbox = _display displayCtrl 8355;
 if (g_phone_annuaire) then {
 	_ctrl_checkbox cbSetChecked true;
 } else {
-	_ctrl_checkbox cbSetChecked true;
+	_ctrl_checkbox cbSetChecked false;
 };
 
 _ctrl_checkbox ctrlSetEventHandler ["CheckedChanged", "[(_this select 1)] call AlysiaClient_fnc_phone_annuaire;"];

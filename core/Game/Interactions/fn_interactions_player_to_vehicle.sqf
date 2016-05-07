@@ -147,12 +147,9 @@ if (isNull _target) exitWith {};
 		[
 			"pullout",
 			"Sortir",
-			"[] call AlysiaClient_fnc_vehicleMenu_pullout;",
+			"[g_interaction_target] call AlysiaClient_fnc_vehicleMenu_pullout;",
 			"
-				(
-					(count (crew g_interaction_target) > 0) &&
-					((vehicle player) isEqualTo player)
-				)
+				((vehicle player) isEqualTo player)
 			"
 		],
 		[

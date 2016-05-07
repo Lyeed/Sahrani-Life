@@ -40,7 +40,7 @@ if ("Alysia_jerrycan_empty" in (magazines player)) then
 		case "GPL": {"Alysia_jerrycan_gpl"};
 	};
 
-	_count = floor(((fuel _target) * getNumber(configFile >> "CfgVehicles" >> typeof(_target) >> "fuelCapacity")) / 20);
+	_count = floor(((fuel _target) * getNumber(missionConfigFile >> "CfgVehicles" >> typeof(_target) >> "fuelCapacity")) / 20);
 	if (_count >= 1) then
 	{
 		for "_i" from 1 to _count do

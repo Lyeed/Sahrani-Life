@@ -13,7 +13,7 @@ if (isNull _display) exitWith {};
 
 (_display displayCtrl 7905) ctrlSetStructuredText parseText format["<t align='center'>%1", gServer_rebootHour_txt];
 
-while {((ctrlVisible 7903) && !(isNull _display))} do
+while {(g_app isEqualTo "SERVER")} do
 {
 	(_display displayCtrl 7901) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", [serverTime, "H:MM:SS"] call CBA_fnc_formatElapsedTime];
 	(_display displayCtrl 7903) ctrlSetStructuredText parseText format["<t align='center'>%1</t>", [(gServer_rebootHour * 60) - serverTime, "H:MM:SS"] call CBA_fnc_formatElapsedTime];

@@ -3,7 +3,6 @@
 		"Land_a_stationhouse"
 		"Land_i_Shop_01_V1_F"
 		"Land_i_House_Small_03_V1_F"
-		"Skyline_Vehicule_Pack_Structures_Garage_01" (Pour les entreprises de dépannage ou de transport de marchandise)
 	FINI:
 		"Industrie d'armement"
 		"Ferme agricole"
@@ -94,7 +93,7 @@ class ALYSIA_COMPANIES
 			};
 			class storage
 			{
-				modelPos[] = {-6.31641,2.78394,-6.1919};
+				modelPos[] = {-6.31641,2.78394,-4.8};
 				type = "Skyline_Coffre_Medium";
 			};
 		};

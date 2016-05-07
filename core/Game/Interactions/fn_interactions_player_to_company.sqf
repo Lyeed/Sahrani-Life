@@ -57,7 +57,7 @@ if (isNull _object) exitWith {};
 		[
 			"inventory",
 			"Coffre",
-			"[g_interaction_target] spawn AlysiaClient_fnc_company_storage;",
+			"[g_interaction_target] call AlysiaClient_fnc_company_storage;",
 			"
 				(
 					isClass(missionConfigFile >> 'ALYSIA_COMPANIES' >> 'types' >> ((g_interaction_target getVariable 'company_info') select 2) >> 'storage') &&

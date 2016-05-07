@@ -9,6 +9,7 @@
 [] spawn
 {
 	private["_bp", "_default"];
+	scriptName "Alysia_Weight_Loop";
 	_default = 24;
 	while {true} do
 	{
@@ -23,6 +24,7 @@
 [] spawn
 {
 	private["_veh", "_fuel", "_curentfuel", "_conso"];
+	scriptName "Alysia_Vehicle_Loop";
 	while {true} do
 	{
 		waitUntil {((vehicle player) isEqualTo player)};
@@ -129,6 +131,8 @@
 {
 	private["_totalSession", "_fnc_channel", "_fnc_server", "_salary_time"];
 
+	scriptName "Alysia_Global_Loop";
+
 	_fnc_channel =
 	{
 		["Vous devez être dans le channel TaskForceRadio pour pouvoir jouer sur le serveur. Vous allez être expulsé dans 20 secondes"] call AlysiaClient_fnc_error;
@@ -212,6 +216,7 @@
 
 [] spawn
 {
+	scriptName "Alysia_ATM_CheckUp_Loop";
 	while {true} do
 	{
 		_actual = g_cash + g_atm;
@@ -220,5 +225,15 @@
 		{
 			[(getPlayerUID player), (player getVariable "realname"), _actual, (g_cash + g_atm), time] remoteExecCall ["AlysiaServer_fnc_logMoney", 2];
 		};
+	};
+};
+
+if (g_launder > 0) then
+{
+	[] spawn
+	{
+		scriptName "Alysia_Launder_Loop";
+		uiSleep ((round(random(10)) + 3) * 60);
+		[] call AlysiaClient_fnc_launderReceive;
 	};
 };

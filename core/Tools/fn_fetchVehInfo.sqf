@@ -62,7 +62,7 @@ if (!isClass(_missionConfigFile_Vehicles)) exitWith
 	getNumber(_configFile >> "armor"),
 	getNumber(_configFile >> "transportSoldier"),
 	getNumber(_configFile >> "enginePower"),
-	getNumber(_configFile >> "fuelCapacity"),
+	getNumber(_missionConfigFile_Vehicles >> "fuelCapacity"),
 	getText(_missionConfigFile_Vehicles >> "realname"),
 	getNumber(_missionConfigFile_Vehicles >> "buyPrice"),
 	getNumber(_missionConfigFile_Vehicles >> "inventory"),

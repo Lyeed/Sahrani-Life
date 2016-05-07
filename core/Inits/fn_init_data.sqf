@@ -29,7 +29,7 @@ g_sexe = _basic select 6;
 // blood/bleed/coma
 [(_basic select 9), (_basic select 10), (_basic select 11)] spawn
 {
-	waitUntil {g_connected};
+	waitUntil {(missionNamespace getVariable ["g_connected", false])};
 	if (_this select 2) then {
 		[] spawn AlysiaClient_fnc_handleComa;
 	} else {
@@ -46,7 +46,7 @@ if (count(g_deseases) > 0) then
 {
 	[] spawn
 	{
-		waitUntil {g_connected};
+		waitUntil {(missionNamespace getVariable ["g_connected", false])};
 		{
 			[(_x select 0)] spawn AlysiaClient_fnc_desease_start;
 		} forEach g_deseases;
@@ -145,15 +145,6 @@ switch (playerSide) do
 	{
 		if ((call g_CIVLevel) > 0) then {player setVariable ["rank", (call g_CIVLevel), true]};
 		g_launder = _basic select 46;
-		if (g_launder > 0) then
-		{
-			[] spawn
-			{
-				waitUntil {g_connected};
-				uiSleep ((round(random(15)) + 3) * 60);
-				[] call AlysiaClient_fnc_launderReceive;
-			};
-		};
 	};
 
 	case independent:

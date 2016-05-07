@@ -51,7 +51,7 @@ _veh setVariable ["refueling", true, true];
 
 _bill = 0;
 _liters = 0;
-_fuelmax = getNumber(configFile >> "CfgVehicles" >> (typeOf _veh) >> "fuelCapacity");
+_fuelmax = getNumber(missionConfigFile >> "CfgVehicles" >> (typeOf _veh) >> "fuelCapacity");
 _fill = false;
 _distanceBegin = (player distance _veh) + 2;
 

@@ -39,9 +39,9 @@ if (_action) then
 	{
 		g_launder = _receive;
 		[(getPlayerUID player), (player getVariable "realname"), g_launder] remoteExecCall ["AlysiaServer_fnc_logLaunder", 2];
-		[format["Vous recevrez <t color='#8cff9b'>%1</t>kn sur votre compte bancaire dans quelques minutes. Ne vous déconnectez pas !", ([_receive] call AlysiaClient_fnc_numberText)]] call AlysiaClient_fnc_info;
+		[format["Vous recevrez <t color='#8cff9b'>%1</t>kn sur votre compte bancaire dans quelques minutes.", ([_receive] call AlysiaClient_fnc_numberText)]] call AlysiaClient_fnc_info;
 		[13] call AlysiaDB_fnc_query_update_partial;
-		uiSleep ((round(random(15)) + 3) * 60);
+		uiSleep ((round(random(10)) + 3) * 60);
 		[] call AlysiaClient_fnc_launder_receive;
 	};
 };
