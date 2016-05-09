@@ -11,7 +11,7 @@
 
 if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 {
-	8 cutRsc ["RscTitlePlayer", "PLAIN"];
+	("hudLayer" call BIS_fnc_rscLayer) cutRsc ["RscTitlePlayer", "PLAIN"];
 
 	disableSerialization;
 	_hud = uiNameSpace getVariable ["RscTitlePlayer", displayNull];

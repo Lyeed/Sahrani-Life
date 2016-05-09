@@ -234,6 +234,6 @@ if (g_launder > 0) then
 	{
 		scriptName "Alysia_Launder_Loop";
 		uiSleep ((round(random(10)) + 3) * 60);
-		[] call AlysiaClient_fnc_launderReceive;
+		[] call AlysiaClient_fnc_launder_receive;
 	};
 };

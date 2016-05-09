@@ -376,7 +376,7 @@ class PHONE_MESSAGE_READ_ANSWER_IMAGE: RscPicture
 class PHONE_MESSAGE_READ_ANSWER_BUTTON: RscButtonSilent
 {
 	idc = PHONE_MESSAGE_READ_ANSWER_BUTTON_IDC;
-	action = "		private[""_index""];		_index = lbCurSel 8320;		if (_index isEqualTo -1) exitWith {};		[""phone_messages_send""] spawn AlysiaClient_fnc_tabletApp;		ctrlSetText[8336, (g_phone_messages select _index) select 0];	";
+	action = "private[""_index""];_index = lbCurSel 8320;if (_index isEqualTo -1) exitWith {};[""phone_messages_send""] spawn AlysiaClient_fnc_tabletApp;ctrlSetText[8336, (g_phone_messages select _index) select 0];";
 	tooltip = "Répondre";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\send_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\send.paa""];";
@@ -400,7 +400,7 @@ class PHONE_MESSAGE_READ_ADD_IMAGE: RscPicture
 class PHONE_MESSAGE_READ_ADD_BUTTON: RscButtonSilent
 {
 	idc = PHONE_MESSAGE_READ_ADD_BUTTON_IDC;
-	action = "		private[""_index""];		_index = lbCurSel 8320;		if (_index isEqualTo -1) exitWith {};		[""phone_contacts""] spawn AlysiaClient_fnc_tabletApp;		ctrlSetText[8384, (g_phone_messages select _index) select 0];	";
+	action = "private[""_index""];_index = lbCurSel 8320;if (_index isEqualTo -1) exitWith {};[""phone_contacts""] spawn AlysiaClient_fnc_tabletApp;ctrlSetText[8384, (g_phone_messages select _index) select 0];";
 	tooltip = "Ajouter aux contacts";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\add_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\add.paa""];";
@@ -419,7 +419,7 @@ class PHONE_MESSAGE_READ_ADD_BUTTON: RscButtonSilent
 #define PHONE_MESSAGE_SEND_MESSAGE_HEADER_IDC 	8333
 #define PHONE_MESSAGE_SEND_MESSAGE_INFO_IDC 	8334
 #define PHONE_MESSAGE_SEND_NUMBER_HEADER_IDC 	8335
-#define PHONE_MESSAGE_SEND_NUMBER_INFO_IDC 		8336
+#define PHONE_MESSAGE_SEND_NUMBER_INFO_IDC      8336
 #define PHONE_MESSAGE_SEND_NUMBER_FRAME_IDC 	8342
 #define PHONE_MESSAGE_SEND_HIDE_HEADER_IDC 		8337
 #define PHONE_MESSAGE_SEND_HIDE_INFO_IDC 		8338
@@ -464,7 +464,7 @@ class PHONE_MESSAGE_SEND_CONTACTS_HEADER: RscStructuredText
 class PHONE_MESSAGE_SEND_CONTACTS_LIST: RscListBox
 {
 	idc = PHONE_MESSAGE_SEND_CONTACTS_LIST_IDC;
-	onLBSelChanged ="		private[""_txt"", ""_index""];		_index = _this select 1;		if (_index isEqualTo -1) exitWith {};		_txt = ctrlText 8336;		if (_txt isEqualTo """") then {			ctrlSetText[8336, (_this select 0) lbData _index];		} else {			ctrlSetText[8336, format[""%1,%2"", _txt, (_this select 0) lbData _index]];		};";
+	onLBSelChanged ="private[""_txt"", ""_index""];_index = _this select 1;if (_index isEqualTo -1) exitWith {};_txt = ctrlText 8336;if (_txt isEqualTo """") then {ctrlSetText[8336, (_this select 0) lbData _index];		} else {ctrlSetText[8336, format[""%1,%2"", _txt, (_this select 0) lbData _index]];		};";
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.412 * safezoneH + safezoneY;
@@ -710,7 +710,7 @@ class PHONE_SETTING_ANNUAIRE_CHECKBOX: RscCheckbox
 /* ===================================================================================================================== */
 
 // =======================================[Contacts]=======================================
-#define PHONE_CONTACTS_LIST_FRAME_IDC 			8372
+#define PHONE_CONTACTS_LIST_FRAME_IDC           8372
 #define PHONE_CONTACTS_LIST_HEADER_IDC 			8373
 #define PHONE_CONTACTS_LIST_INFO_IDC 			8374
 #define PHONE_CONTACTS_REMOVE_IMAGE_IDC 		8375
@@ -725,6 +725,8 @@ class PHONE_SETTING_ANNUAIRE_CHECKBOX: RscCheckbox
 #define PHONE_CONTACTS_ADD_NUMBER_INFO_IDC 		8384
 #define PHONE_CONTACTS_ADD_NAME_HEADER_IDC 		8385
 #define PHONE_CONTACTS_ADD_NAME_INFO_IDC 		8386
+#define PHONE_CONTACTS_CALL_IMAGE_IDC           8387
+#define PHONE_CONTACTS_CALL_BUTTON_IDC          8388
 
 PHONE_CONTACTS_BACKGROUND = PHONE_BACKGROUND;
 PHONE_CONTACTS_IDCS[] =
@@ -772,22 +774,22 @@ class PHONE_CONTACTS_REMOVE_IMAGE: RscPicture
 	text = "lyeed_IMG\data\phone\contacts\remove.paa";
 
 	x = 0.546406 * safezoneW + safezoneX;
-	y = 0.379 * safezoneH + safezoneY;
-	w = 0.0257812 * safezoneW;
-	h = 0.044 * safezoneH;
+	y = 0.346 * safezoneH + safezoneY;
+	w = 0.0216667 * safezoneW;
+	h = 0.033 * safezoneH;
 };
 class PHONE_CONTACTS_REMOVE_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CONTACTS_REMOVE_BUTTON_IDC;
-	action = "		private[""_sel""];		_sel = lbCurSel 8374;		if (_sel isEqualTo -1) exitWith {};		g_phone_contacts deleteAt _sel;		[""phone_contacts""] spawn AlysiaClient_fnc_tabletApp;	";
+	action = "private[""_sel""];_sel = lbCurSel 8374;if (_sel isEqualTo -1) exitWith {};g_phone_contacts deleteAt _sel;[""phone_contacts""] spawn AlysiaClient_fnc_tabletApp;";
 	tooltip = "Supprimer";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\remove_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\remove.paa""];";
 
 	x = 0.546406 * safezoneW + safezoneX;
-	y = 0.379 * safezoneH + safezoneY;
-	w = 0.0257812 * safezoneW;
-	h = 0.044 * safezoneH;
+	y = 0.346 * safezoneH + safezoneY;
+	w = 0.0216667 * safezoneW;
+	h = 0.033 * safezoneH;
 };
 
 class PHONE_CONTACTS_SEND_IMAGE: RscPicture
@@ -796,22 +798,46 @@ class PHONE_CONTACTS_SEND_IMAGE: RscPicture
 	text = "lyeed_IMG\data\phone\contacts\send.paa";
 
 	x = 0.546406 * safezoneW + safezoneX;
-	y = 0.434 * safezoneH + safezoneY;
-	w = 0.0257812 * safezoneW;
-	h = 0.044 * safezoneH;
+	y = 0.39 * safezoneH + safezoneY;
+	w = 0.020625 * safezoneW;
+	h = 0.033 * safezoneH;
 };
 class PHONE_CONTACTS_SEND_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CONTACTS_SEND_BUTTON_IDC;
-	action = "		private[""_index""];		_index = lbCurSel 8374;		if (_index isEqualTo -1) exitWith {};		[""phone_messages_send""] spawn AlysiaClient_fnc_tabletApp;		ctrlSetText[8336, (g_phone_contacts select _index) select 1];	";
+	action = "private[""_index""];_index = lbCurSel 8374;if (_index isEqualTo -1) exitWith {};[""phone_messages_send""] spawn AlysiaClient_fnc_tabletApp;ctrlSetText[8336, (g_phone_contacts select _index) select 1];";
 	tooltip = "Envoyer un message";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\send_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\contacts\send.paa""];";
 
 	x = 0.546406 * safezoneW + safezoneX;
+	y = 0.39 * safezoneH + safezoneY;
+	w = 0.020625 * safezoneW;
+	h = 0.033 * safezoneH;
+};
+
+class PHONE_CONTACTS_CALL_IMAGE: RscPicture
+{
+	idc = PHONE_CONTACTS_CALL_IMAGE_IDC;
+	text = "lyeed_IMG\data\phone\contacts\call.paa";
+
+	x = 0.546406 * safezoneW + safezoneX;
 	y = 0.434 * safezoneH + safezoneY;
-	w = 0.0257812 * safezoneW;
-	h = 0.044 * safezoneH;
+	w = 0.020625 * safezoneW;
+	h = 0.033 * safezoneH;
+};
+class PHONE_CONTACTS_CALL_BUTTON: RscButtonSilent
+{
+	idc = PHONE_CONTACTS_CALL_BUTTON_IDC;
+	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,'lyeed_IMG\data\phone\contacts\call_select.paa'];";
+	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,'lyeed_IMG\data\phone\contacts\call.paa'];";
+	action = "[] spawn AlysiaClient_fnc_APP_phone_contacts_call;";
+	tooltip = "Appeler";
+
+	x = 0.546406 * safezoneW + safezoneX;
+	y = 0.434 * safezoneH + safezoneY;
+	w = 0.020625 * safezoneW;
+	h = 0.033 * safezoneH;
 };
 
 class PHONE_CONTACTS_ADD_HEADER: RscStructuredText
@@ -900,6 +926,7 @@ class PHONE_CONTACTS_ADD_NAME_INFO: RscEdit
 	w = 0.0721875 * safezoneW;
 	h = 0.022 * safezoneH;
 };
+
 /* ===================================================================================================================== */
 
 // =======================================[Blacklist]=======================================
@@ -968,7 +995,7 @@ class PHONE_BLACKLIST_REMOVE_IMAGE: RscPicture
 class PHONE_BLACKLIST_REMOVE_BUTTON: RscButtonSilent
 {
 	idc = PHONE_BLACKLIST_REMOVE_BUTTON_IDC;
-	action = "		private[""_sel""];		_sel = lbCurSel 8532;		if (_sel isEqualTo -1) exitWith {};		g_phone_blacklist deleteAt _sel;		[""PHONE_BLACKLIST""] spawn AlysiaClient_fnc_tabletApp;	";
+	action = "private[""_sel""];_sel = lbCurSel 8532;if (_sel isEqualTo -1) exitWith {};g_phone_blacklist deleteAt _sel;[""PHONE_BLACKLIST""] spawn AlysiaClient_fnc_tabletApp;";
 	tooltip = "Supprimer";
 	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\blacklist\remove_select.paa""];";
 	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,""lyeed_IMG\data\phone\blacklist\remove.paa""];";
@@ -1434,6 +1461,10 @@ class PHONE_CALL_HISTORY: RscListBox
 {
 	idc = PHONE_CALL_HISTORY_IDC;
 	colorBackground[] = {0,0,0,0};
+	colorSelectBackground[] = {0,0,0,0};
+	colorSelectBackground2[] = {0,0,0,0};
+	colorSelect[] = {0,0,0,1};
+	colorSelect2[] = {0,0,0,1};
 
 	x = 0.329844 * safezoneW + safezoneX;
 	y = 0.423 * safezoneH + safezoneY;
@@ -1614,9 +1645,7 @@ class PHONE_CALLRECEIVING_ACTION_ACCEPT_IMAGE: RscPicture
 class PHONE_CALLRECEIVING_ACTION_ACCEPT_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CALLRECEIVING_ACTION_ACCEPT_BUTTON_IDC;
-	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,'lyeed_IMG\data\phone\call\call_select.paa'];";
-	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,'lyeed_IMG\data\phone\call\call.paa'];";
-	action = "missionNamespace setVariable ['calling_answer', true];";
+	action = "[] spawn AlysiaClient_fnc_phone_call_receive_accept;";
 
 	x = 0.453594 * safezoneW + safezoneX;
 	y = 0.511 * safezoneH + safezoneY;
@@ -1637,9 +1666,7 @@ class PHONE_CALLRECEIVING_ACTION_REFUSE_IMAGE: RscPicture
 class PHONE_CALLRECEIVING_ACTION_REFUSE_BUTTON: RscButtonSilent
 {
 	idc = PHONE_CALLRECEIVING_ACTION_REFUSE_BUTTON_IDC;
-	onMouseEnter = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,'lyeed_IMG\data\phone\call\call_stop_select.paa'];";
-	onMouseExit = "ctrlSetText[(ctrlIDC (_this select 0)) - 1,'lyeed_IMG\data\phone\call\call_stop.paa'];";
-	action = "missionNamespace setVariable ['calling_answer', false];";
+	action = "[] spawn AlysiaClient_fnc_phone_call_receive_refuse;";
 
 	x = 0.515469 * safezoneW + safezoneX;
 	y = 0.511 * safezoneH + safezoneY;

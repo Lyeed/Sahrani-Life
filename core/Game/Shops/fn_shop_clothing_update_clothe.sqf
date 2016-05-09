@@ -52,7 +52,7 @@ switch (lbData[3102, (lbCurSel 3102)]) do
 };
 
 _price = _list lbValue _sel;
-if ((_price > 0) && (g_cash >= _price)) then {
+if (g_cash >= _price) then {
 	_price_condition = true;
 } else {
 	_price_condition = false;	

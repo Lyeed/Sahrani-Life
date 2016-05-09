@@ -5,7 +5,6 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-
 private["_math", "_item", "_num", "_weight", "_value", "_return"];
 _math = [_this, 0, false, [false]] call BIS_fnc_param;
 _item = [_this, 1, "", [""]] call BIS_fnc_param;
@@ -48,7 +47,7 @@ if (_return) then
 
 	if (isNull _display) then 
 	{
-		3 cutRsc ["RscTitleLoot", "PLAIN"];
+		("lootLayer" call BIS_fnc_rscLayer) cutRsc ["RscTitleLoot", "PLAIN"];
 		_display = uiNamespace getVariable ["RscTitleLoot", displayNull];
 		(_display displayCtrl 900) ctrlEnable false;
 		_loop = true;
@@ -73,7 +72,7 @@ if (_return) then
 				sleep 1;
 			};
 
-			3 cutText ["", "PLAIN"];
+			("lootLayer" call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 		};
 	};
 };

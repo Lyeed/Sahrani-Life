@@ -10,7 +10,7 @@ private ["_config_prison", "_display"];
 if (!(player getVariable ["arrested", false]) || (isNull g_arrest_Prison) || (g_arrest_Cellule isEqualTo "")) exitWith {};
 if (!(isNull (uiNameSpace getVariable ["RscTitleArrest", displayNull]))) exitWith {};
 
-6 cutRsc ["RscTitleArrest", "PLAIN"];
+("prisonLayer" call BIS_fnc_rscLayer) cutRsc ["RscTitleArrest", "PLAIN"];
 
 _config_prison = missionConfigFile >> "ALYSIA_PRISONS" >> typeof(g_arrest_Prison);
 
@@ -32,7 +32,7 @@ while {(g_arrest_Time >= 1)} do
 		getText(_config_prison >> "name"),
 		g_arrest_Reason,
 		[g_arrest_Time, "M:SS"] call CBA_fnc_formatElapsedTime,
-		if (g_arrest_Caution) isEqualTo 0 then {"Aucun"} else {[g_arrest_Caution] call AlysiaClient_fnc_numberText}
+		if (g_arrest_Caution isEqualTo 0) then {"Aucune"} else {[g_arrest_Caution] call AlysiaClient_fnc_numberText}
 	];
 
 	if ((player distance g_arrest_Prison) > getNumber(_config_prison >> "escape_distance")) exitWith
@@ -45,7 +45,7 @@ while {(g_arrest_Time >= 1)} do
 	uiSleep 1;
 };
 
-6 cutText ["", "BLACK IN", 5, true];
+("prisonLayer" call BIS_fnc_rscLayer) cutText ["", "BLACK IN", 5, true];
 
 if (g_arrest_Escape) then
 {
@@ -99,6 +99,6 @@ g_arrest_Cellule = 0;
 g_arrest_Caution = 0;
 g_arrest_Reason = "";
 g_arrest_Gear = [];
-[13] call AlysiaDB_fnc_query_update_partial;
+[3] call AlysiaDB_fnc_query_update_partial;
 
 player setVariable ["arrested", false, true];

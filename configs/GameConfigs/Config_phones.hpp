@@ -66,26 +66,37 @@ class ALYSIA_PHONE
 				name = "Sonnerie 1";
 				distance = 15;
 				sleep = 3.4;
+				duration = 1.4;
 			};
 			class call_rcv_2: call_rcv_1
 			{
 				name = "Sonnerie 2";
 				sleep = 3.5;
+				duration = 1.3;
 			};
 			class call_rcv_3: call_rcv_1
 			{
 				name = "Sonnerie 3";
 				sleep = 3;
+				duration = 1.2;
 			};
 			class call_rcv_4: call_rcv_1
 			{
 				name = "Sonnerie 4";
 				sleep = 3;
+				duration = 0.9;
 			};
 			class call_rcv_5: call_rcv_1
 			{
 				name = "Sonnerie 5";
-				sleep = 4.36;
+				sleep = 4.1;
+				duration = 2.2;
+			};
+			class call_rcv_6: call_rcv_1
+			{
+				name = "Sonnerie 6";
+				sleep = 2.6;
+				duration = 1.6;
 			};
 		};
 	};

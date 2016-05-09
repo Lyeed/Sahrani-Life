@@ -61,8 +61,7 @@ while {((missionNamespace getVariable "calling") && (call AlysiaClient_fnc_hasPh
 	missionNamespace setVariable ["calling_time", (missionNamespace getVariable "calling_time") + 1];
 };
 
-if (!(call AlysiaClient_fnc_hasPhone)) then
-{
+if (!(call AlysiaClient_fnc_hasPhone)) then {
 	[true, false] call AlysiaClient_fnc_APP_phone_call_hangup;
 };
 

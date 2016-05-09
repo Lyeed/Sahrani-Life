@@ -9,10 +9,9 @@ class RscTitleArrest
 	onLoad = "uiNamespace setVariable ['RscTitleArrest', (_this select 0)]";
 	class controlsBackground
 	{
-		class RscStructuredText_1100: RscStructuredText
+		class ARREST_INFOS: RscStructuredText
 		{
 			idc = 13500;
-			colorBackground[] = {0,0,0,0};
 			
 			x = 0.190625 * safezoneW + safezoneX;
 			y = 0.06 * safezoneH + safezoneY;

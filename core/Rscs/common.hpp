@@ -226,6 +226,7 @@ class RscButtonMenu
 	idc = -1;
 	type = 16;
 	style = "0x02 + 0xC0";
+	text = "";
 	default = 0;
 	shadow = 0;
 	x = 0;
@@ -315,6 +316,13 @@ class RscButtonMenu
 		0,
 		0,
 		0.65
+	};
+	class HitZone
+	{
+		left = 0;
+		top = 0;
+		right = 0;
+		bottom = 0;
 	};
 	class TextPos
 	{

@@ -37,7 +37,8 @@ if ((lbSize _list) isEqualTo 0) then
 	};
 };
 
-if (_select) then {
+if (_select) then
+{
 	if ((lbCurSel _list) isEqualTo -1) then {
 		_list lbSetCurSel 0;
 	} else {

@@ -345,7 +345,7 @@ class ALYSIA_ITEMS
 		license = "wood";
 		class market
 		{
-			max = 160;
+			max = 135;
 			min = 15;
 			affect[] = AFFECT_PROCESSED;
 		};
@@ -1963,6 +1963,20 @@ class ALYSIA_ITEMS
 		class use
 		{
 			action = "['brancard'] spawn AlysiaClient_fnc_dynamicObject_deploy;";
+		};
+	};
+
+	class prison_food
+	{
+		name = "Plateau repas de prison";
+		weight = 4;
+		image = "alysia_items_virtual\data\prison_food.paa";
+		price_buy = 0;
+		class food
+		{
+			hunger = 100;
+			thirst = 80;
+			sound = "eat_biscuit";
 		};
 	};
 };

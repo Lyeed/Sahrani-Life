@@ -2769,7 +2769,7 @@ class ALYSIA_ITEMS_ARMA
 
 	class Skyline_Uniforme_Prisonnier_01_F
 	{
-		price = 1;
+		price = 0;
 	};
 	class Skyline_Uniforme_Prisonnier_02_F: Skyline_Uniforme_Prisonnier_01_F {};
 

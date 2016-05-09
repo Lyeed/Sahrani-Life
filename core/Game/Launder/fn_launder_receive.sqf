@@ -19,5 +19,5 @@ if (g_launder > 0) then
 	] call AlysiaClient_fnc_phone_message_receive;
 	[true, g_launder, "Transfert argent sale"] call AlysiaClient_fnc_handleATM;
 	g_launder = 0;
-	[13] call AlysiaDB_fnc_query_update_partial;
+	[2] call AlysiaDB_fnc_query_update_partial;
 };

@@ -22,7 +22,7 @@ if (g_arrest_Gear isEqualTo []) then {
 	g_arrest_Gear = [g_cash, ([player] call AlysiaClient_fnc_getGear), ([player] call AlysiaClient_fnc_getInv)];
 };
 
-[13] call AlysiaDB_fnc_query_update_partial;	
+[3] call AlysiaDB_fnc_query_update_partial;
 
 g_cash = 0;
 
@@ -34,5 +34,6 @@ _config_cell = _config_prison >> "cells" >> g_arrest_Cellule;
 player setPosATL (g_arrest_Prison modelToWorld getArray(_config_cell >> "pos"));
 player setDir getNumber(_config_cell >> "dir");
 player forceAddUniform getText(_config_prison >> "uniform");
+[true, "prison_food", 3] call AlysiaClient_fnc_handleinv;
 
 [] spawn AlysiaClient_fnc_prison_loop;

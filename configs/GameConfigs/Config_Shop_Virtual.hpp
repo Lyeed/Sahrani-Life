@@ -346,13 +346,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		items[] = {{},{"grozdova","slivovica"}};
 	};
 	
-	class prisoner_pierre
-	{
-		name = "Contremaitre";
-		side = "CIV";
-		items[] = {{},{"pierre"}};
-	};
-
 	class tabac_seed
 	{
 		name = "Marchand de graines";
@@ -407,6 +400,20 @@ class ALYSIA_SHOPS_VIRTUAL
 		{
 			{
 				"perqui_south"
+			},{
+
+			}
+		};
+	};
+
+	class market_prison
+	{
+		name = "Cantine";
+		side = "";
+		items[] =
+		{
+			{
+				"prison_food"
 			},{
 
 			}

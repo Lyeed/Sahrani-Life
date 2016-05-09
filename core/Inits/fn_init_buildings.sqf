@@ -2513,14 +2513,17 @@ _flag_south_3 = ["FlagPole_F","[10542.767578,9521.302734,0]",-460.076,-100,1,0,[
 {
 	if (isClass(missionConfigFile >> "ALYSIA_ATM" >> typeOf(_x))) then
 	{
-		_config_ATM = missionConfigFile >> "ALYSIA_ATM" >> typeOf(_x);
-		if (isClass(_config_ATM >> "marker")) then
+		if (((_x distance (getMarkerPos "guer_spawn_1")) > 60) && ((_x distance (getMarkerPos "guer_spawn_2")) > 60)) then
 		{
-			_marker = createMarkerLocal [format["atm_marker_%1", _forEachIndex], (getPos _x)];
-		 	_marker setMarkerShapeLocal getText(_config_ATM >> "marker" >> "ShapeLocal");
-			_marker setMarkerTypeLocal getText(_config_ATM >> "marker" >> "TypeLocal");
-			_marker setMarkerColorLocal getText(_config_ATM >> "marker" >> "ColorLocal");
-			_marker setMarkerSizeLocal getArray(_config_ATM >> "marker" >> "SizeLocal");
+			_config_ATM = missionConfigFile >> "ALYSIA_ATM" >> typeOf(_x);
+			if (isClass(_config_ATM >> "marker")) then
+			{
+				_marker = createMarkerLocal [format["atm_marker_%1", _forEachIndex], (getPos _x)];
+			 	_marker setMarkerShapeLocal getText(_config_ATM >> "marker" >> "ShapeLocal");
+				_marker setMarkerTypeLocal getText(_config_ATM >> "marker" >> "TypeLocal");
+				_marker setMarkerColorLocal getText(_config_ATM >> "marker" >> "ColorLocal");
+				_marker setMarkerSizeLocal getArray(_config_ATM >> "marker" >> "SizeLocal");
+			};
 		};
 	} else {
 		if (isClass(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_x))) then

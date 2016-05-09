@@ -10,7 +10,7 @@ class ALYSIA_PROCESS
 		name = "Scierie";
 		sound = "smelting";
 		require[] = {{"wood",1}};
-		receive[] = {{{"woodp",1}},{},0};
+		receive[] = {{{"woodp",2}},{},0};
 		time_per_item = 2;
 		time_default = 4;
 		class target {};
@@ -449,7 +449,7 @@ class ALYSIA_PROCESS
 	{
 		name = "Fonte de l'acier";
 		sound = "smelting";
-		require[] = {{"ironp",16,{"coal",1}};
+		require[] = {{"ironp",1},{"coal",1}};
 		receive[] = {{{"steel",2}},{},0};
 		time_per_item = 4;
 		time_default = 4;
@@ -1504,8 +1504,8 @@ class ALYSIA_PROCESS
 	{
 		name = "Moulage de balles";
 		sound = "smelting";
-		require[] = {{"steel",1}6;
-		receive[] = {{{"bullet",20}},{},0};
+		require[] = {{"steel",1}};
+		receive[] = {{{"bullet",50}},{},0};
 		time_per_item = 3;
 		time_default = 2;
 		class factions
@@ -1518,7 +1518,9 @@ class ALYSIA_PROCESS
 	};
 	class bullet_illegal: bullet
 	{
-		receive[] = {{{"bullet",10}},{},0};
+		receive[] = {{{"bullet",25}},{},0};
+		time_default = 4;
+		time_per_item = 4;
 		class target {};
 		class factions
 		{
@@ -1530,8 +1532,9 @@ class ALYSIA_PROCESS
 	{
 		name = "Moulage de la chevrotine";
 		sound = "smelting";
-		require[] = {{"steel",1}};6		receive[] = {{{"buckshot",10}},{},0};
-		time_per_item = 82
+		require[] = {{"steel",1}};
+		receive[] = {{{"buckshot",10}},{},0};
+		time_per_item = 4;
 		time_default = 2;
 		class factions
 		{
@@ -1544,7 +1547,9 @@ class ALYSIA_PROCESS
 	class buckshot_illegal: buckshot
 	{
 		require[] = {{"steel",2}};
-		1ime_per_item = 82
+		time_per_item = 6;
+		time_default = 4;
+		class target {};
 		class factions
 		{
 			class CIV {};
@@ -1555,9 +1560,10 @@ class ALYSIA_PROCESS
 	{
 		name = "Moulage de chargeurs";
 		sound = "smelting";
-		require[] = {{"steel",1}};6		receive[] = {{{"magazine",3}},{},0};
-		time_per_item = 122
-		time_default = 8;
+		require[] = {{"steel",1}};
+		receive[] = {{{"magazine",3}},{},0};
+		time_per_item = 4;
+		time_default = 2;
 		class factions
 		{
 			class CIV
@@ -1569,7 +1575,9 @@ class ALYSIA_PROCESS
 	class magazine_illegal: magazine
 	{
 		receive[] = {{{"magazine",1}},{},0};
-		1ime_per_item = 122
+		time_per_item = 6;
+		time_default = 4;
+		class target {};
 		class factions
 		{
 			class CIV {};
@@ -1580,8 +1588,9 @@ class ALYSIA_PROCESS
 	{
 		name = "Moulage de barillets";
 		sound = "smelting";
-		require[] = {{"steel",1}};6		receive[] = {{{"barillet",3}},{},0};
-		time_per_item = 82
+		require[] = {{"steel",1}};
+		receive[] = {{{"barillet",3}},{},0};
+		time_per_item = 3;
 		time_default = 2;
 		class factions
 		{
@@ -1594,7 +1603,9 @@ class ALYSIA_PROCESS
 	class barillet_illegal: barillet
 	{
 		receive[] = {{{"barillet",1}},{},0};
-		1ime_per_item = 82
+		time_per_item = 5;
+		time_default = 4;
+		class target {};
 		class factions
 		{
 			class CIV {};
@@ -1605,9 +1616,9 @@ class ALYSIA_PROCESS
 	{
 		name = "Moulage de canons";
 		sound = "smelting";
-		require[] = {{"steel",16};
+		require[] = {{"steel",1}};
 		receive[] = {{{"canon",2}},{},0};
-		time_per_item = 8;
+		time_per_item = 3;
 		time_default = 2;
 		class factions
 		{
@@ -1620,6 +1631,8 @@ class ALYSIA_PROCESS
 	class canon_illegal: canon
 	{
 		receive[] = {{{"canon",1}},{},0};
+		time_per_item = 5;
+		time_default = 4;
 		class target {};
 		class factions
 		{
@@ -1631,8 +1644,9 @@ class ALYSIA_PROCESS
 	{
 		name = "Fabrication de crosses (bois)";
 		sound = "smelting";
-		require[] = {{"woodp",2}};6		receive[] = {{{"crosse_wood",3}},{},0};
-		time_per_item = 82
+		require[] = {{"woodp",2}};
+		receive[] = {{{"crosse_wood",3}},{},0};
+		time_per_item = 2;
 		time_default = 2;
 		class factions
 		{
@@ -1645,7 +1659,9 @@ class ALYSIA_PROCESS
 	class crosse_wood_illegal: crosse_wood
 	{
 		receive[] = {{{"crosse_wood",1}},{},0};
-		1ime_per_item = 82
+		time_per_item = 4;
+		time_default = 4;
+		class target {};
 		class factions
 		{
 			class CIV {};
@@ -1656,8 +1672,9 @@ class ALYSIA_PROCESS
 	{
 		name = "Fabrication de crosses (acier)";
 		sound = "smelting";
-		require[] = {{"steel",1}};6		receive[] = {{{"crosse_steel",3}},{},0};
-		time_per_item = 82
+		require[] = {{"steel",1}};
+		receive[] = {{{"crosse_steel",3}},{},0};
+		time_per_item = 4;
 		time_default = 2;
 		class factions
 		{
@@ -1670,7 +1687,9 @@ class ALYSIA_PROCESS
 	class crosse_steel_illegal: crosse_steel
 	{
 		receive[] = {{{"crosse_steel",1}},{},0};
-		1ime_per_item = 82
+		time_per_item = 6;
+		time_default = 4;
+		class target {};
 		class factions
 		{
 			class CIV {};
@@ -1681,8 +1700,9 @@ class ALYSIA_PROCESS
 	{
 		name = "Fabrication de gardes-mains (bois)";
 		sound = "smelting";
-		require[] = {{"woodp",2}};6		receive[] = {{{"garde_main_wood",3}},{},0};
-		time_per_item = 82
+		require[] = {{"woodp",2}};
+		receive[] = {{{"garde_main_wood",3}},{},0};
+		time_per_item = 2;
 		time_default = 2;
 		class factions
 		{
@@ -1695,7 +1715,9 @@ class ALYSIA_PROCESS
 	class garde_main_wood_illegal: garde_main_wood
 	{
 		receive[] = {{{"garde_main_wood",1}},{},0};
-		1ime_per_item = 82
+		time_per_item = 4;
+		time_default = 4;
+		class target {};
 		class factions
 		{
 			class CIV {};
@@ -1706,8 +1728,9 @@ class ALYSIA_PROCESS
 	{
 		name = "Fabrication de gardes-mains (acier)";
 		sound = "smelting";
-		require[] = {{"steel",2}};6		receive[] = {{{"garde_main_steel",3}},{},0};
-		time_per_item = 82
+		require[] = {{"steel",2}};
+		receive[] = {{{"garde_main_steel",3}},{},0};
+		time_per_item = 5;
 		time_default = 2;
 		class factions
 		{
@@ -1720,7 +1743,9 @@ class ALYSIA_PROCESS
 	class garde_main_steel_illegal: garde_main_steel
 	{
 		receive[] = {{{"garde_main_steel",1}},{},0};
-		1ime_per_item = 82
+		time_per_item = 7;
+		time_default = 4;
+		class target {};
 		class factions
 		{
 			class CIV {};
@@ -1731,9 +1756,9 @@ class ALYSIA_PROCESS
 	{
 		name = "Fabrication de poignées";
 		sound = "smelting";
-		require[] = {{"steel",1},6"woodp",1}};
+		require[] = {{"steel",1},{"woodp",1}};
 		receive[] = {{{"poignee",2}},{},0};
-		time_per_item = 8;
+		time_per_item = 2;
 		time_default = 2;
 		class factions
 		{
@@ -1746,6 +1771,8 @@ class ALYSIA_PROCESS
 	class poignee_illegal: poignee
 	{
 		receive[] = {{{"poignee",1}},{},0};
+		time_per_item = 4;
+		time_default = 4;
 		class target {};
 		class factions
 		{
@@ -1757,9 +1784,9 @@ class ALYSIA_PROCESS
 	{
 		name = "Moulage de détentes";
 		sound = "smelting";
-		require[] = {{"steel",1}}6
-		receive[] = {{{"detente",2}},{},0};
-		time_per_item = 8;
+		require[] = {{"steel",1}};
+		receive[] = {{{"detente",5}},{},0};
+		time_per_item = 1;
 		time_default = 2;
 		class factions
 		{
@@ -1771,7 +1798,9 @@ class ALYSIA_PROCESS
 	};
 	class detente_illegal: detente
 	{
-		receive[] = {{{"detente",1}},{},0};
+		receive[] = {{{"detente",2}},{},0};
+		time_per_item = 3;
+		time_default = 4;
 		class target {};
 		class factions
 		{
@@ -1783,8 +1812,9 @@ class ALYSIA_PROCESS
 	{
 		name = "Moulage de percuteurs";
 		sound = "smelting";
-		require[] = {{"steel",1}};6		receive[] = {{{"percuteur",3}},{},0};
-		time_per_item = 82
+		require[] = {{"steel",1}};
+		receive[] = {{{"percuteur",6}},{},0};
+		time_per_item = 1;
 		time_default = 2;
 		class factions
 		{
@@ -1796,8 +1826,10 @@ class ALYSIA_PROCESS
 	};
 	class percuteur_illegal: percuteur
 	{
-		receive[] = {{{"percuteur",1}},{},0};
-		1ime_per_item = 82
+		receive[] = {{{"percuteur",2}},{},0};
+		time_per_item = 3;
+		time_default = 4;
+		class target {};
 		class factions
 		{
 			class CIV {};
@@ -1808,8 +1840,9 @@ class ALYSIA_PROCESS
 	{
 		name = "Moulage de carcasses";
 		sound = "smelting";
-		require[] = {{"steel",1}};6		receive[] = {{{"carcasse",3}},{},0};
-		time_per_item = 82
+		require[] = {{"steel",1}};
+		receive[] = {{{"carcasse",3}},{},0};
+		time_per_item = 4;
 		time_default = 2;
 		class factions
 		{
@@ -1822,7 +1855,9 @@ class ALYSIA_PROCESS
 	class carcasse_illegal: carcasse
 	{
 		receive[] = {{{"carcasse",1}},{},0};
-		1ime_per_item = 82
+		time_per_item = 6;
+		time_default = 4;
+		class target {};
 		class factions
 		{
 			class CIV {};
@@ -1833,8 +1868,9 @@ class ALYSIA_PROCESS
 	{
 		name = "Moulage de blocs culasse";
 		sound = "smelting";
-		require[] = {{"steel",1}};6		receive[] = {{{"bloc_culasse",3}},{},0};
-		time_per_item = 82
+		require[] = {{"steel",1}};
+		receive[] = {{{"bloc_culasse",4}},{},0};
+		time_per_item = 4;
 		time_default = 2;
 		class factions
 		{
@@ -1847,7 +1883,9 @@ class ALYSIA_PROCESS
 	class bloc_culasse_illegal: bloc_culasse
 	{
 		receive[] = {{{"bloc_culasse",1}},{},0};
-		1ime_per_item = 82
+		time_per_item = 6;
+		time_default = 4;
+		class target {};
 		class factions
 		{
 			class CIV {};
@@ -1858,9 +1896,9 @@ class ALYSIA_PROCESS
 	{
 		name = "Moulage de marteaux";
 		sound = "smelting";
-		require[] = {{"steel",1}}6
+		require[] = {{"steel",1}};
 		receive[] = {{{"marteau",2}},{},0};
-		time_per_item = 8;
+		time_per_item = 3;
 		time_default = 2;
 		class factions
 		{
@@ -1873,6 +1911,8 @@ class ALYSIA_PROCESS
 	class marteau_illegal: marteau
 	{
 		receive[] = {{{"marteau",1}},{},0};
+		time_per_item = 5;
+		time_default = 4;
 		class target {};
 		class factions
 		{
@@ -1884,9 +1924,9 @@ class ALYSIA_PROCESS
 	{
 		name = "Moulage de culasses";
 		sound = "smelting";
-		require[] = {{"steel",1}}6
+		require[] = {{"steel",1}};
 		receive[] = {{{"culasse",2}},{},0};
-		time_per_item = 8;
+		time_per_item = 3;
 		time_default = 2;
 		class factions
 		{
@@ -1899,6 +1939,8 @@ class ALYSIA_PROCESS
 	class culasse_illegal: culasse
 	{
 		receive[] = {{{"culasse",1}},{},0};
+		time_per_item = 5;
+		time_default = 4;
 		class target {};
 		class factions
 		{

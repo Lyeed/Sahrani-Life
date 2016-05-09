@@ -367,6 +367,8 @@ class CfgFunctions
 			class phone_number_to_unit {};
 			class phone_get_messages_new {};
 			class phone_call_receive {};
+			class phone_call_receive_accept {};
+			class phone_call_receive_refuse {};
 			class phone_call_start {};
 			class phone_call_loop {};
 			class phone_call_end {};
@@ -610,6 +612,7 @@ class CfgFunctions
 			class APP_phone_call_hangup {};
 			class APP_phone_contacts {};
 			class APP_phone_contacts_add {};
+			class APP_phone_contacts_call {};
 			class APP_phone_messages_read {};
 			class APP_phone_messages_read_open {};
 			class APP_phone_messages_read_delete {};
