@@ -197,11 +197,11 @@ class ALYSIA_SHOPS_VIRTUAL
 			{
 
 			},{
-				"cocainep",
+				"cocainep_bag",
 				"heroinps",
-				"marijuana",
-				"cocainepc",
-				"methp"
+				"marijuana_bag",
+				"cocainepc_bag",
+				"meth_bag"
 			}
 		};
 	};

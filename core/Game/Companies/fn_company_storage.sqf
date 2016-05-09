@@ -30,7 +30,8 @@ if (count(attachedObjects _target) isEqualTo 0) then
 	clearMagazineCargoGlobal _storage;
 	clearBackpackCargoGlobal _storage;
 
-	_storage attachTo [_target,  getArray(_config >> "modelPos")];
+	_array = getArray(_config >> "modelPos");
+	_storage attachTo [_target, [(_array select 0), (_array select 1), (_array select 2) + 0.6]];
 
 	_virtual = _target getVariable ["company_inv_virtual", []];
 	if (count(_virtual) > 0) then {
@@ -88,7 +89,17 @@ if (count(attachedObjects _target) isEqualTo 0) then
 	{
 		while {!(isNull _this)} do
 		{
-			if (count(attachedObjects _this) > 1) then {deleteVehicle ((attachedObjects _this) select 1)};
+			if (count(attachedObjects _this) > 1) then
+			{
+				{
+					if (_forEachIndex > 0) then
+					{
+						detach _x;
+						deleteVehicle _x;
+					};
+				} forEach (attachedObjects _this);
+			};
+
 			uiSleep 0.5;
 		};
 	};
@@ -98,6 +109,7 @@ if (count(attachedObjects _target) isEqualTo 0) then
 	{
 		_target setVariable ["company_inv_virtual", (_storage getVariable ["Trunk", []]), true];
 		_target setVariable ["company_inv_arma", ([getWeaponCargo _storage, getMagazineCargo _storage, getItemCargo _storage, getBackpackCargo _storage]), true];
+		detach _storage;
 		deleteVehicle _storage;
 		["<t color='#FF8000'>Coffre</t> rangé."] call AlysiaClient_fnc_info;
 	} else {
