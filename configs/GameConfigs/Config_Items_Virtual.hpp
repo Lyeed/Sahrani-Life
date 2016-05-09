@@ -533,14 +533,14 @@ class ALYSIA_ITEMS
 	};
 	class methp
 	{
-		name = "Méthamphétamine";
+		name = "Cristal de Méthamphétamine";
 		weight = 1;
 		illegal = 1;
 		image = "alysia_items_virtual\data\methamphetamine.paa";
 	};
 	class meth_bag
 	{
-		name = "Sac de Méthamphétamine";
+		name = "Sac de cristaux de Méthamphétamine";
 		weight = 5;
 		illegal = 1;
 		image = "alysia_items_virtual\data\drug_bag.paa";
