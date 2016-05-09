@@ -13,10 +13,13 @@ if (([(call TFAR_fnc_activeSwRadio), 1] call TFAR_fnc_GetChannelFrequency) isEqu
 };
 
 if ((player getVariable ["tf_sendingDistanceMultiplicator", 1]) != 1) then {
-	player setVariable ["tf_sendingDistanceMultiplicator", 1];
+	player setVariable ["tf_sendingDistanceMultiplicator", 1, true];
 };
 if ((player getVariable ["tf_receivingDistanceMultiplicator", 1]) != 1) then {
-	player setVariable ["tf_receivingDistanceMultiplicator", 1];
+	player setVariable ["tf_receivingDistanceMultiplicator", 1, true];
+};
+if ((player getVariable ["tf_terrain_interception_coefficient", 7]) != 7) then {
+	player setVariable ["tf_terrain_interception_coefficient", 7, true];
 };
 
 missionNamespace setVariable ["calling", false];

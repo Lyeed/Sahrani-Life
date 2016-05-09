@@ -18,11 +18,14 @@ while {((missionNamespace getVariable "calling") && (call AlysiaClient_fnc_hasPh
 				playSound "phone_busy";
 			};
 		} else {
-			if ((player getVariable ["tf_sendingDistanceMultiplicator", 1]) != 0.1) then {
-				player setVariable ["tf_sendingDistanceMultiplicator", 0.1];
+			if ((player getVariable ["tf_sendingDistanceMultiplicator", 1]) != 20) then {
+				player setVariable ["tf_sendingDistanceMultiplicator", 20, true];
 			};
-			if ((player getVariable ["tf_receivingDistanceMultiplicator", 1]) != 0.1) then {
-				player setVariable ["tf_receivingDistanceMultiplicator", 0.1];
+			if ((player getVariable ["tf_receivingDistanceMultiplicator", 1]) != 1) then {
+				player setVariable ["tf_receivingDistanceMultiplicator", 1, true];
+			};
+			if ((player getVariable ["tf_terrain_interception_coefficient", 7]) != 5) then {
+				player setVariable ["tf_terrain_interception_coefficient", 5, true];
 			};
 		};
 

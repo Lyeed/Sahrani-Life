@@ -27,8 +27,9 @@ if (count(g_phone_contacts) > 0) then
 {
 	{
 		_index = _list lbAdd format["%1 - %2", (_x select 0), (_x select 1)];
+		_list lbSetData [_index, (_x select 1)];
 		_list lbSetPicture [_index, "lyeed_IMG\data\phone\contact.paa"];
-	} forEach (g_phone_contacts);
+	} forEach g_phone_contacts;
 	_list lbSetCurSel 0;
 
 	[[8375, 8378], true] call AlysiaClient_fnc_tabletShow;

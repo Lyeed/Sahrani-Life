@@ -1729,7 +1729,7 @@ class ALYSIA_ITEMS
 	};
 	class lab_tissue: lab_marijuana
 	{
-		name = "Usine illégale de tissue";
+		name = "Usine illégale de textile";
 		price_buy = 280000;
 		image = "alysia_items_virtual\data\lab_tissue.paa";
 		class use

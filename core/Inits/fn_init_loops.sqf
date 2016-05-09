@@ -214,20 +214,6 @@
 	};
 };
 
-[] spawn
-{
-	scriptName "Alysia_ATM_CheckUp_Loop";
-	while {true} do
-	{
-		_actual = g_cash + g_atm;
-		uiSleep (60 * 1);
-		if ((g_cash + g_atm) > (_actual + 500000)) then
-		{
-			[(getPlayerUID player), (player getVariable "realname"), _actual, (g_cash + g_atm), time] remoteExecCall ["AlysiaServer_fnc_logMoney", 2];
-		};
-	};
-};
-
 if (g_launder > 0) then
 {
 	[] spawn

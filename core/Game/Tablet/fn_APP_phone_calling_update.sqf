@@ -17,10 +17,10 @@ if (missionNamespace getVariable ["phone_call_micro_on", false]) then {
 	(_display displayCtrl 11005) ctrlSetText "lyeed_IMG\data\phone\call\action_micro_on.paa";
 };
 
-if (player getVariable ["tf_sw_speakers", false]) then {
-	(_display displayCtrl 11007) ctrlSetText "lyeed_IMG\data\phone\call\action_speaker_off.paa";
-} else {
+if (((call TFAR_fnc_activeSwRadio) call TFAR_fnc_getSwSettings) select TF_SW_SPEAKER_OFFSET) then {
 	(_display displayCtrl 11007) ctrlSetText "lyeed_IMG\data\phone\call\action_speaker_on.paa";
+} else {
+	(_display displayCtrl 11007) ctrlSetText "lyeed_IMG\data\phone\call\action_speaker_off.paa";
 };
 
 (_display displayCtrl 11004) ctrlSetStructuredText parseText format
