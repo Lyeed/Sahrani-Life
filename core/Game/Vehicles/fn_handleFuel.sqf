@@ -19,7 +19,7 @@ if (!isClass(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf(_vehicle))) exitWi
 	[format["%1 n'est pas fini dans ALYSIA_VEHICLES.", typeOf(_vehicle)]] call AlysiaClient_fnc_error;
 };
 
-_max = getNumber(missionConfigFile >> "CfgVehicles" >> typeof(_vehicle) >> "fuelCapacity");
+_max = getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> typeof(_vehicle) >> "fuelCapacity");
 if (_type) then
 {
 	_actual = ((fuel _vehicle) * _max) + _litres;

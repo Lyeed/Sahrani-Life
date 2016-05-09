@@ -121,14 +121,14 @@ g_phone_annuaire = _basic select 40;
 g_cash = _basic select 42;
 // atm
 g_atm = _basic select 43;
+// gear
+[(_basic select 45)] call AlysiaClient_fnc_loadGear;
 // inventory
 g_maxWeight = 100;
 {
     [true, (_x select 0), (_x select 1)] call AlysiaClient_fnc_handleInv;
 } forEach (_basic select 44);
 g_maxWeight = 24;
-// gear
-[(_basic select 45)] call AlysiaClient_fnc_loadGear;
 switch (playerSide) do
 {
 	case west: 

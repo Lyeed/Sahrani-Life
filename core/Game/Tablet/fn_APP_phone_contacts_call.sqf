@@ -24,4 +24,4 @@ _handle = ['PHONE_CALL'] spawn AlysiaClient_fnc_tabletApp;
 waitUntil {(scriptDone _handle)};
 
 uiNamespace setVariable ["phone_call_number", _number];
-((uiNamespace getVariable ["tablet", displayNull]) displayCtrl 8920) ctrlSetStructuredText parseText _number;
+((uiNamespace getVariable ["tablet", displayNull]) displayCtrl 8920) ctrlSetStructuredText parseText format["<t size='2.5' align='center'>%1</t>", _number];
