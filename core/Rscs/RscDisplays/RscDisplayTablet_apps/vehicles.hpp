@@ -38,9 +38,6 @@ class VEHICLES_DATA_FRAME: RscFrame
 class VEHICLES_DATA_MAP: RscMapControl
 {
 	idc = VEHICLES_DATA_MAP_IDC;
-	maxSatelliteAlpha = 0.75;
-	alphaFadeStartScale = "STRTSCALE";
-	alphaFadeEndScale = 1.29;
 
 	x = 0.494844 * safezoneW + safezoneX;
 	y = 0.456 * safezoneH + safezoneY;

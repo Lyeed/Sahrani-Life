@@ -381,10 +381,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 120;
 	};
-	class flora_uniform
-	{
-		buy_price = 120;
-	};
 	class G_Aviator
 	{
 		buy_price = 120;
@@ -1025,10 +1021,6 @@ class ALYSIA_ITEMS_ARMA
 	class optic_KHS_hex {};
 	class optic_KHS_old {};
 	class optic_KHS_tan {};
-	class oreh_uniform
-	{
-		buy_price = 120;
-	};
 	class pilot_black_helmet
 	{
 		buy_price = 20;
@@ -2589,6 +2581,30 @@ class ALYSIA_ITEMS_ARMA
 	class tenue_de_milice_cadet: tenue_de_milice_commandant
 	{
 		buy_condition_WEST = 1;
+	};
+	class TRYK_U_B_OD_OD_CombatUniform
+	{
+		name = "Tenue d'intervention de la Milice";
+		buy_condition_WEST = 2;
+		buy_price = 950;
+	};
+	class TRYK_V_ArmorVest_coyo2
+	{
+		name = "Gilet d'intervention de la Milice";
+		buy_condition_WEST = 2;
+		buy_price = 3500;
+	};
+	class TRYK_H_PASGT_COYO
+	{
+		name = "Casque d'intervention de la Milice";
+		buy_condition_WEST = 2;
+		buy_price = 1090;
+	};
+	class TRYK_shoulder_armor_OD
+	{
+		name = "Armure d'épaules d'intervention de la Milice";
+		buy_condition_WEST = 2;
+		buy_price = 1200;
 	};
 
 	class Fett_tf_mr3000_milice

@@ -6,7 +6,7 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 private["_growtime", "_growup", "_growprcnt", "_object"];
-_growtime = [_this, 0, 0, [0]] call BIS_fnc_param;
+_growtime = round([_this, 0, 0, [0]] call BIS_fnc_param);
 _growup = [_this, 1, 0, [0]] call BIS_fnc_param;
 _object = [_this, 2, objNull, [objNull]] call BIS_fnc_param;
 
@@ -17,7 +17,7 @@ publicVariableServer format["%1_PLANTS", (getPlayerUID player)];
 _growprcnt = 0;
 while {_growprcnt < 100} do
 {
-	sleep _growtime;
+	uiSleep _growtime;
 	if (!(alive _object)) exitWith {
 		deleteVehicle _object;
 	};

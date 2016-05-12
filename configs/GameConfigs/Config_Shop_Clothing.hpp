@@ -507,11 +507,13 @@ class ALYSIA_SHOPS_CLOTHING
 			"tenue_de_milice_caporal",
 			"tenue_de_milice_milicien",
 			"tenue_de_milice_cadet",
-			"combi_plonge_milice"
+			"combi_plonge_milice",
+			"TRYK_U_B_OD_OD_CombatUniform"
 		};
 		headgear[] =
 		{
-			"H_Beret_blk"
+			"H_Beret_blk",
+			"TRYK_H_PASGT_COYO"
 		};
 		goggles[] =
 		{
@@ -541,12 +543,14 @@ class ALYSIA_SHOPS_CLOTHING
 			"EWK_Cig4",
 			"EWK_Cig6",
 			"EWK_Cigar1",
-			"G_B_Diving"
+			"G_B_Diving",
+			"TRYK_shoulder_armor_OD"
 		};
 		vests[] =
 		{
 			"Respirateur_milice",
-			"rhs_6b23_sniper"
+			"rhs_6b23_sniper",
+			"TRYK_V_ArmorVest_coyo2"
 		};
 		backpacks[] =
 		{

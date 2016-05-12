@@ -2910,15 +2910,15 @@ class ALYSIA_VEHICLES
 	/* AIRS */
 	class sfp_bo105_unarmed
 	{
-		realname = "bo105";
-		buyPrice = 395000;
+		realname = "bo105 de la Garde";
+		buyPrice = 375000;
 		inventory = 90;
 		side = "EAST";
 		insurance = 1;
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		fuelCapacity = 575;
-		rank = 3;
+		rank = 5;
 	};
 	class Skyline_LittleBird_Garde
 	{
@@ -2930,7 +2930,7 @@ class ALYSIA_VEHICLES
 		licenses[] = {"pilot"};
 		fuel = "Kerosene";
 		fuelCapacity = 242;
-		rank = 6;
+		rank = 3;
 		colors[] =
 		{
 			"Skyline_LittleBird_Garde_01_F"

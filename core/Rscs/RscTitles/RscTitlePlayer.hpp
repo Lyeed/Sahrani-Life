@@ -17,7 +17,7 @@ class RscTitlePlayer
 			idc = 23500;
 
 			x = 0.922813 * safezoneW + safezoneX;
-			y = 0.566 * safezoneH + safezoneY;
+			y = 0.511 * safezoneH + safezoneY;
 			w = 0.0773437 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
@@ -25,8 +25,8 @@ class RscTitlePlayer
 		{
 			idc = 23501;
 
-			x = 0.922812 * safezoneW + safezoneX;
-			y = 0.621 * safezoneH + safezoneY;
+			x = 0.922813 * safezoneW + safezoneX;
+			y = 0.566 * safezoneH + safezoneY;
 			w = 0.0773437 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
@@ -34,8 +34,8 @@ class RscTitlePlayer
 		{
 			idc = 23502;
 
-			x = 0.922812 * safezoneW + safezoneX;
-			y = 0.676 * safezoneH + safezoneY;
+			x = 0.922813 * safezoneW + safezoneX;
+			y = 0.621 * safezoneH + safezoneY;
 			w = 0.0773437 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
@@ -43,8 +43,8 @@ class RscTitlePlayer
 		{
 			idc = 23503;
 
-			x = 0.922812 * safezoneW + safezoneX;
-			y = 0.731 * safezoneH + safezoneY;
+			x = 0.922813 * safezoneW + safezoneX;
+			y = 0.676 * safezoneH + safezoneY;
 			w = 0.0773437 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
@@ -170,26 +170,34 @@ class RscTitlePlayer
 		/*===========================
 		  ===         GPS         ===
 		  =========================== */
-		class MAP_INFO: RscStructuredText
+		class GPS_FRAME: RscPicture
+		{
+			idc = 23540;
+			text = "lyeed_IMG\data\player_hud\gps.paa";
+
+			x = 0.773281 * safezoneW + safezoneX;
+			y = 0.665 * safezoneH + safezoneY;
+			w = 0.252656 * safezoneW;
+			h = 0.451 * safezoneH;
+		};
+		class GPS_INFOS: RscStructuredText
 		{
 			idc = 23542;
+			colorBackground[] = {0.2,0.188,0.188,1};
 			
-			x = 0.886719 * safezoneW + safezoneX;
-			y = 0.786 * safezoneH + safezoneY;
-			w = 0.0979687 * safezoneW;
+			x = 0.82276 * safezoneW + safezoneX;
+			y = 0.808 * safezoneH + safezoneY;
+			w = 0.154219 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-		class MAP: RscMapControl
+		class GPS_MAP: RscMapControl
 		{
 			idc = 23539;
-			maxSatelliteAlpha = 0.75;
-			alphaFadeStartScale = "STRTSCALE";
-			alphaFadeEndScale = 1.29;
 
-			x = 0.881562 * safezoneW + safezoneX;
-			y = 0.808 * safezoneH + safezoneY;
-			w = 0.108281 * safezoneW;
-			h = 0.176 * safezoneH;
+			x = 0.82276 * safezoneW + safezoneX;
+			y = 0.83 * safezoneH + safezoneY;
+			w = 0.154219 * safezoneW;
+			h = 0.136 * safezoneH;
 		};
 	};
 

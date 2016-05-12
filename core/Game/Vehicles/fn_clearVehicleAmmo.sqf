@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_vehicle"];
+private "_vehicle";
 _vehicle = [_this, 0, Objnull, [Objnull]] call BIS_fnc_param;
 
 if (isNull _vehicle) exitWith {};
@@ -17,7 +17,6 @@ clearBackpackCargoGlobal _vehicle;
 
 _vehicle disableTIEquipment true;
 _vehicle disableNVGEquipment true;
-
 _vehicle enableRopeAttach false;
 
 switch (typeOf _vehicle) do

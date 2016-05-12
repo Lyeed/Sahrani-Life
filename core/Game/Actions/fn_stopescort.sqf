@@ -7,7 +7,7 @@
 */
 private["_target", "_escorter", "_escorting", "_action"];
 _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-_action = [this, 1, true, [true]] call BIS_fnc_param;
+_action = [_this, 1, true, [true]] call BIS_fnc_param;
 
 if (isNull _target) exitWith {
 	["Cible invalide."] call AlysiaClient_fnc_error;

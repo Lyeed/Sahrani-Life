@@ -8,19 +8,23 @@
 private["_vehicle", "_data", "_position", "_time", "_try"];
 
 _config = missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "mission";
-if (!(isClass _config)) exitWith {};
+if (!isClass(_config)) exitWith {};
 
 if (call compile format["!(isNil ""gServer_faction_%1_mission"")", str(playerSide)]) exitWith {
 	["Votre faction a déja effectuée une mission"] call AlysiaClient_fnc_error;
 };
 
 _time = round(random(20) * 60) + (4 * 60);
-if (((gServer_rebootHour * 60) - serverTime) < _time) exitWith {
-	[format[
-		"Le serveur redémarre dans %1<br/>Le temps de livraison est de %2<br/>Impossible de démarrer la mission",
-		[(gServer_rebootHour * 60) - serverTime, "H:MM:SS"] call CBA_fnc_formatElapsedTime,
-		[_time, "H:MM:SS"] call CBA_fnc_formatElapsedTime
-	]] call AlysiaClient_fnc_error;
+if (((gServer_rebootHour * 60) - serverTime) < _time) exitWith
+{
+	[
+		format
+		[
+			"Le serveur redémarre dans %1<br/>Le temps de livraison est de %2<br/>Impossible de démarrer la mission",
+			[(gServer_rebootHour * 60) - serverTime, "H:MM:SS"] call CBA_fnc_formatElapsedTime,
+			[_time, "H:MM:SS"] call CBA_fnc_formatElapsedTime
+		]
+	] call AlysiaClient_fnc_error;
 };
 
 [playerSide] remoteExecCall ["AlysiaClient_fnc_mission_prevent", civilian];
@@ -39,13 +43,14 @@ call compile format["gServer_faction_%1_mission=true;publicVariable""gServer_fac
 	"LIVRAISON"
 ] call AlysiaClient_fnc_phone_message_receive;
 
-sleep _time;
+uiSleep _time;
 
 _try = 1;
 while {(count(nearestObjects[_position, ["Car", "Air", "Ship", "Truck", "Tank"], 10]) > 0)} do
 {
 	[format["Un véhicule bloque l'apparition du camion.<br/>Tentative n°%1<br/>Essaie dans 10 secondes...", _try]] call AlysiaClient_fnc_error;
-	sleep 10;
+	uiSleep 10;
+	_try = _try + 1;
 };
 
 [
@@ -64,7 +69,7 @@ _vehicle setDir (_data select 1);
 if (local _vehicle) then {
 	_vehicle lock 2;
 } else {
-	[_vehicle, 2] remoteExecCall ["lock", _vehicle];	
+	[_vehicle, 2] remoteExecCall ["lock", _vehicle];
 };
 
 for "_i" from 0 to (round(random(30)) + 10) do

@@ -26,10 +26,10 @@ if ((face player) != (_basic select 37)) exitWith
 
 g_donator = compileFinal (_basic select 8);
 
-g_WESTLevel = compileFinal(_basic select 19);
-g_GUERLevel = compileFinal(_basic select 20);
-g_EASTLevel = compileFinal(_basic select 21);
-g_CIVLevel = compileFinal(_basic select 22);
+g_WESTLevel = compileFinal (_basic select 19);
+g_GUERLevel = compileFinal (_basic select 20);
+g_EASTLevel = compileFinal (_basic select 21);
+g_CIVLevel = compileFinal (_basic select 22);
 
 _allowed = switch (playerSide) do
 {

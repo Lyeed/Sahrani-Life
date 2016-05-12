@@ -1,6 +1,6 @@
 #define AFFECT_FARM {"bean","corn","patate","wheat","cottonp","sunflower","cotton","huile_bottle","tissue"}
 #define AFFECT_PROCESSED {"brique","soufre","saltp","coal","ciment","woodp","furniture","glass"}
-#define AFFECT_MINERAL {"steel","ironp","platinep","copperp","alu","sp98","sp95","gazole","gpl","kerosene","goldbar"}
+#define AFFECT_MINERAL {"ironp","platinep","copperp","alu","sp98","sp95","gazole","gpl","kerosene","goldbar"}
 #define AFFECT_DRUGS {"cigarette","cigare","heroinps","meth_bag","marijuana_bag","cocainepc_bag","cocainep_bag"}
 #define AFFECT_ILLEGAL {"grozdova","slivovica","turtle","artefact","artefact_R","objvaleur"}
 
@@ -373,7 +373,7 @@ class ALYSIA_ITEMS
 	class ironp
 	{
 		name = "Lingot de fer";
-		weight = 3;
+		weight = 2;
 		image = "alysia_items_virtual\data\lingot_fer.paa";
 		license = "iron";
 		class market
@@ -736,7 +736,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\coton.paa";
 		class market
 		{
-			max = 79;
+			max = 59;
 			min = 8;
 			affect[] = AFFECT_FARM;
 		};
@@ -748,7 +748,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\boule_coton.paa";
 		class market
 		{
-			max = 295;
+			max = 185;
 			min = 55;
 			affect[] = AFFECT_FARM;
 		};
@@ -758,12 +758,7 @@ class ALYSIA_ITEMS
 		name = "Tissue";
 		weight = 2;
 		image = "alysia_items_virtual\data\tissue.paa";
-		class market
-		{
-			max = 750;
-			min = 55;
-			affect[] = AFFECT_FARM;
-		};
+		license = "company_clothing";
 	};
 
 	class sand
@@ -1271,12 +1266,6 @@ class ALYSIA_ITEMS
 		weight = 3;
 		image = "alysia_items_virtual\data\steel.paa";
 		license = "company_foundry";
-		class market
-		{
-			max = 320;
-			min = 150;
-			affect[] = AFFECT_MINERAL;
-		};
 	};
 
 	class medova

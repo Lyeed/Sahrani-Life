@@ -108,25 +108,6 @@ class RscDisplayArrest: RscDisplayDefaultInteraction
 			w = 0.0928125 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
-		class SUSPECT_TXT: RscStructuredText
-		{
-			idc = 20004;
-			colorBackground[] = {0,0,0,0.8};
-
-			x = 0.402031 * safezoneW + safezoneX;
-			y = 0.368 * safezoneH + safezoneY;
-			w = 0.195937 * safezoneW;
-			h = 0.033 * safezoneH;
-		};
-		class SUSPECT_FRAME: RscFrame
-		{
-			idc = 20005;
-
-			x = 0.402031 * safezoneW + safezoneX;
-			y = 0.368 * safezoneH + safezoneY;
-			w = 0.195937 * safezoneW;
-			h = 0.033 * safezoneH;
-		};
 		class CELLULE_LISTBOX: RscCombo
 		{
 			idc = 20006;

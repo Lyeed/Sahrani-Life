@@ -368,7 +368,6 @@ class ALYSIA_SHOPS_VIRTUAL
 			},{
 				"ciment",
 				"brique",
-				"steel",
 				"sp98",
 				"sp95",
 				"gpl",

@@ -59,9 +59,6 @@ class COMPAGNIES_MAP_FRAME: RscFrame
 class COMPAGNIES_MAP: RscMapControl
 {
 	idc = COMPAGNIES_MAP_IDC;
-	maxSatelliteAlpha = 0.75;
-	alphaFadeStartScale = "STRTSCALE";
-	alphaFadeEndScale = 1.29;
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.412 * safezoneH + safezoneY;

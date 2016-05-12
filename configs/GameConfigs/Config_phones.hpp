@@ -16,42 +16,33 @@ class ALYSIA_PHONE
 			class message_rcv_1
 			{
 				name = "Alerte 1";
-				distance = 20;
+				distance = 15;
 			};
-			class message_rcv_2: message_rcv_1
-			{
+			class message_rcv_2: message_rcv_1 {
 				name = "Alerte 2";
 			};
-			class message_rcv_3: message_rcv_1
-			{
+			class message_rcv_3: message_rcv_1 {
 				name = "Alerte 3";
 			};
-			class message_rcv_4: message_rcv_1
-			{
+			class message_rcv_4: message_rcv_1 {
 				name = "Alerte 4";
 			};
-			class message_rcv_5: message_rcv_1
-			{
+			class message_rcv_5: message_rcv_1 {
 				name = "Alerte 5";
 			};
-			class message_rcv_6: message_rcv_1
-			{
+			class message_rcv_6: message_rcv_1 {
 				name = "Alerte 6";
 			};
-			class message_rcv_7: message_rcv_1
-			{
+			class message_rcv_7: message_rcv_1 {
 				name = "Alerte 7";
 			};
-			class message_rcv_8: message_rcv_1
-			{
+			class message_rcv_8: message_rcv_1 {
 				name = "Alerte 8";
 			};
-			class message_rcv_9: message_rcv_1
-			{
+			class message_rcv_9: message_rcv_1 {
 				name = "Alerte 9";
 			};
-			class message_rcv_10: message_rcv_1
-			{
+			class message_rcv_10: message_rcv_1 {
 				name = "Alerte 10";
 			};
 		};
@@ -63,40 +54,76 @@ class ALYSIA_PHONE
 		{
 			class call_rcv_1
 			{
-				name = "Sonnerie 1";
+				name = "Classique (1)";
 				distance = 15;
 				sleep = 3.4;
 				duration = 1.4;
 			};
 			class call_rcv_2: call_rcv_1
 			{
-				name = "Sonnerie 2";
+				name = "Rétro";
 				sleep = 3.5;
 				duration = 1.3;
 			};
 			class call_rcv_3: call_rcv_1
 			{
-				name = "Sonnerie 3";
+				name = "Bureau (1)";
 				sleep = 3;
 				duration = 1.2;
 			};
 			class call_rcv_4: call_rcv_1
 			{
-				name = "Sonnerie 4";
+				name = "Bureau (2)";
 				sleep = 3;
 				duration = 0.9;
 			};
 			class call_rcv_5: call_rcv_1
 			{
-				name = "Sonnerie 5";
+				name = "Classique (2)";
 				sleep = 4.1;
 				duration = 2.2;
 			};
 			class call_rcv_6: call_rcv_1
 			{
-				name = "Sonnerie 6";
-				sleep = 2.6;
-				duration = 1.6;
+				name = "Décroche putain";
+				sleep = 1.6;
+				duration = 2.7;
+			};
+			class call_rcv_7: call_rcv_1
+			{
+				name = "Brajva le cul-térré";
+				sleep = 2;
+				duration = 2.85;
+			};
+			class call_rcv_8: call_rcv_1
+			{
+				name = "Hmm Césarion";
+				sleep = 2;
+				duration = 3.90;
+			};
+			class call_rcv_9: call_rcv_1
+			{
+				name = "La Puissante Garde";
+				sleep = 1.8;
+				duration = 4.30;
+			};
+			class call_rcv_10: call_rcv_1
+			{
+				name = "Vive le Colonel (1)";
+				sleep = 1.5;
+				duration = 3.6;
+			};
+			class call_rcv_11: call_rcv_1
+			{
+				name = "Vive le Colonel (2)";
+				sleep = 1.5;
+				duration = 3.2;
+			};
+			class call_rcv_12: call_rcv_1
+			{
+				name = "La corruption du Nord";
+				sleep = 1.5;
+				duration = 3.2;
 			};
 		};
 	};

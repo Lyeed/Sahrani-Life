@@ -63,9 +63,6 @@ class FUEL_MAP_FRAME: RscFrame
 class FUEL_MAP: RscMapControl
 {
 	idc = FUEL_MAP_IDC;
-	maxSatelliteAlpha = 0.75;
-	alphaFadeStartScale = "STRTSCALE";
-	alphaFadeEndScale = 1.29;
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.412 * safezoneH + safezoneY;

@@ -27,6 +27,7 @@ createDialog "RscDisplayArrest";
 
 disableSerialization;
 _display = findDisplay 20000;
+
 _config = missionConfigFile >> "ALYSIA_PRISONS" >> typeOf(_prison);
 
 _list = _display displayCtrl 20006;
@@ -41,9 +42,3 @@ if ((lbSize _list) isEqualTo 0) then {
 };
 
 _list lbSetCurSel 0;
-
-(_display displayCtrl 20004) ctrlSetStructuredText parseText format
-[
-	"<t align='center' size='1.2'>%1</t>",
-	(_target getVariable "realname")
-];

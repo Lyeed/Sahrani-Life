@@ -49,8 +49,7 @@ if (
 		)}
 ) exitWith {true};
 
-if (player getVariable ["is_coma", false]) exitWith {true};
-if (!(alive player)) exitWith {true};
+if ((player getVariable ["is_coma", false]) || !(alive player)) exitWith {true};
 
 if (g_action_inUse) exitWith 
 {

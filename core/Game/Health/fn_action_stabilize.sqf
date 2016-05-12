@@ -15,10 +15,10 @@ if (isNull _unit) exitWith {
 if (g_action_inUse) exitWith {
 	["Vous êtes déjà en train d'effectuer une action."] call AlysiaClient_fnc_error;
 };
-if ((_type isEqualTo "debif") && !("SkylineItems_Defibrilateur" in (magazines player))) exitWith {
+if ((_type isEqualTo "defib") && !("SkylineItems_Defibrilateur" in (magazines player))) exitWith {
 	["Vous n'avez pas de défibrilateur."] call AlysiaClient_fnc_error;
 };
-if ((_type isEqualTo "debif") && (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "can_use_debrif") isEqualTo 0)) exitWith {
+if ((_type isEqualTo "defib") && (getNumber(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "can_use_debrif") isEqualTo 0)) exitWith {
 	["Vous n'êtes pas abilité à manier ce type de défibrilateur."] call AlysiaClient_fnc_error;
 };
 if (_unit getVariable ["bullet_check", false]) exitWith {

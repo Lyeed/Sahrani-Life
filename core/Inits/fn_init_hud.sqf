@@ -36,12 +36,19 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 	_ctrl_gps_text ctrlShow false;
 	_ctrl_gps_map ctrlShow false;
 	_ctrl_gps_active = false;
+	_gps_old_pos = [0,0,0];
 
 	_ctrl_vehicle_speed = _hud displayCtrl 23520;
 	_ctrl_vehicle_fuel = _hud displayCtrl 23522;
 	_ctrl_vehicle_speed ctrlShow false;
 	_ctrl_vehicle_fuel ctrlShow false;
 	_ctrl_vehicle_active = false;
+
+	createMarkerLocal ["myGPS", (getPos player)];
+	"myGPS" setMarkerShapeLocal "ICON";
+	"myGPS" setMarkerTypeLocal "Lyeed_GPS";
+	"myGPS" setMarkerColorLocal "ColorBlue";
+	"myGPS" setMarkerSizeLocal [0.7, 0.7];
 
 	while {!(isNull _hud)} do
 	{
@@ -178,19 +185,40 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 			};
 		};
 
-		if (("ItemGPS" in (assignedItems player)) && !(player getVariable ["restrained", false]) && !(player getVariable ["surrender", false]) && !(player getVariable ["is_coma", false])) then
-		{
-			_ctrl_gps_text ctrlSetStructuredText parseText format["<t align='left' font='PuristaBold'>%1</t><t align='right' font='PuristaBold'>%2</t>", (mapGridPosition player), round(getDir player)];
+		if (
+				("ItemGPS" in (assignedItems player)) &&
+				!(player getVariable ["restrained", false]) &&
+				!(player getVariable ["surrender", false]) &&
+				!(player getVariable ["is_coma", false]) &&
+				(g_app isEqualTo "") &&
+				!(shownMap)
+			) then {
+			
+			if (((vehicle player) distance _gps_old_pos) > 2) then
+			{
+				"myGPS" setMarkerPosLocal (getPos (vehicle player));
+				_gps_old_pos = getPos (vehicle player);
+			};
+			"myGPS" setMarkerDirLocal floor((getDir (vehicle player)) - 40);
+			
+			_ctrl_gps_text ctrlSetStructuredText parseText format
+			[
+				"<t font='PuristaBold' size='0.9'><t align='left'>Coord:%1</t><t align='center'>H:%3</t><t align='right'>Dir:%2</t></t>",
+				(mapGridPosition player),
+				round(getDir player),
+				round((getPosASL (vehicle player)) select 2)
+			];
 
 			if ((vehicle player) isEqualTo player) then {
-				_ctrl_gps_map ctrlMapAnimAdd [0, 0.03, player];
+				_ctrl_gps_map ctrlMapAnimAdd [0, 0.05, player];
 			} else {
-				_ctrl_gps_map ctrlMapAnimAdd [0, 0.09, (vehicle player)];
+				_ctrl_gps_map ctrlMapAnimAdd [0, 0.15, (vehicle player)];
 			};
 			ctrlMapAnimCommit _ctrl_gps_map;
 
 			if (!_ctrl_gps_active) then
 			{
+				"myGPS" setMarkerAlphaLocal 1;
 				_ctrl_gps_text ctrlShow true;
 				_ctrl_gps_map ctrlShow true;
 				_ctrl_gps_active = true;
@@ -198,6 +226,7 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 		} else {
 			if (_ctrl_gps_active) then
 			{
+				"myGPS" setMarkerAlphaLocal 0;
 				_ctrl_gps_text ctrlShow false;
 				_ctrl_gps_map ctrlShow false;
 				_ctrl_gps_active = false;

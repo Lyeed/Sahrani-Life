@@ -61,9 +61,6 @@ class DAB_MAP_FRAME: RscFrame
 class DAB_MAP: RscMapControl
 {
 	idc = DAB_MAP_IDC;
-	maxSatelliteAlpha = 0.75;
-	alphaFadeStartScale = "STRTSCALE";
-	alphaFadeEndScale = 1.29;
 
 	x = 0.324687 * safezoneW + safezoneX;
 	y = 0.412 * safezoneH + safezoneY;

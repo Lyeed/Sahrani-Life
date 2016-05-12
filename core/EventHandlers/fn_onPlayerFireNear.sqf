@@ -6,6 +6,8 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
+if (g_staff_god) exitWith {};
+
 g_combatTime = time;
 if (!g_firstCombatActive) then
 {
@@ -18,6 +20,7 @@ if (!g_firstCombatActive) then
 			{
 				player switchCamera "Internal";
 			};
+
 			uiSleep 0.2;
 		};
 		g_firstCombatActive = false;
