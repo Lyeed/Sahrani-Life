@@ -72,6 +72,7 @@ class ALYSIA_SHOPS_VEHICLES
 		{
 			"Mrshounka_corbillard_c",
 			"Jonzie_Ambulance",
+			"Skyline_Mercedes_Sprinter_Samu",
 			"DAR_TahoeEMS",
 			"Skyline_VW_TouaregR50_Samu_01_F",
 			"DAR_ExplorerMedic",
@@ -181,7 +182,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"shounka_nemo",
 			"Skyline_VW_Touareg",
 			"Skyline_GMC_Vandura",
-			"shounka_a3_spr_civ",
+			"Skyline_Mercedes_Sprinter",
 			"Mrshounka_207_civ",
 			"Skyline_Peugeot_308",
 			"Mrshounka_a3_308_rcz",
@@ -255,6 +256,7 @@ class ALYSIA_SHOPS_VEHICLES
 			/* company_garagist */
 			"Skyline_Scania_G420_Depanneuse",
 			"Skyline_Jeep_Wrangler_Rubicon_Depannage",
+			"Skyline_Mercedes_Sprinter_Depannage",
 
 			/* company_money_tranfer */
 			"Skyline_Brinks_01_F",
