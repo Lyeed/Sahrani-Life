@@ -11,15 +11,15 @@ _item = [_this, 0, "", [""]] call BIS_fnc_param;
 if (_item isEqualTo "") exitWith {};
 if (!(isClass(missionConfigFile >> "ALYSIA_LABORATORIES" >> _item))) exitWith {};
 if (playerSide != civilian) exitWith {
-	["Vous ne pouvez pas utiliser cet objet"] call AlysiaClient_fnc_error;
+	["Vous ne pouvez pas utiliser cet objet."] call AlysiaClient_fnc_error;
 };
 
 if (!(isNull g_objPut)) exitWith {
-	["Vous deployez déjà un élèment"] call AlysiaClient_fnc_error;
+	["Vous deployez déjà un élèment."] call AlysiaClient_fnc_error;
 };
 
 if (!(isNull g_laboratory)) exitWith {
-	["Vous possédez déjà un laboratoire"] call AlysiaClient_fnc_error;
+	["Vous possédez déjà un laboratoire."] call AlysiaClient_fnc_error;
 };
 
 _object = getText(missionConfigFile >> "ALYSIA_LABORATORIES" >> _item >> "object") createVehicle [0, 0, 0];
@@ -53,12 +53,18 @@ if ([false, _item, 1] call AlysiaClient_fnc_handleInv) then
 {
 	g_laboratory = _object;
 
-	_marker = createMarkerLocal ["laboratory", (getPos _object)];
-	_marker setMarkerTextLocal ([_item] call AlysiaClient_fnc_itemGetName);
-	_marker setMarkerColorLocal "ColorRed";
-	_marker setMarkerTypeLocal "loc_Bunker";
+	_config_marker = missionConfigFile >> "ALYSIA_LABORATORIES" >> _item >> "marker";
+	if (isClass _config_marker) then
+	{
+		_marker = createMarkerLocal ["laboratory", (getPosATL g_laboratory)];
+		_marker setMarkerShapeLocal getText(_config_marker >> "ShapeLocal");
+		_marker setMarkerColorLocal getText(_config_marker >> "ColorLocal");
+		_marker setMarkerTypeLocal getText(_config_marker >> "TypeLocal");
+		_marker setMarkerSizeLocal getArray(_config_marker >> "SizeLocal");
+		_marker setMarkerTextLocal ([_item] call AlysiaClient_fnc_itemGetName);
+	};
 
-	[(getPlayerUID player), _object, _item] remoteExec ["AlysiaServer_fnc_laboratory_insert", 2];
+	[getPlayerUID player, _object, _item] remoteExec ["AlysiaServer_fnc_laboratory_insert", 2];
 } else {
 	["Impossible de trouver l'objet dans votre inventaire."] call AlysiaClient_fnc_error;
 	deleteVehicle _object;

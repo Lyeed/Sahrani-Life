@@ -13,12 +13,12 @@ class ALYSIA_LABORATORIES
 		 	ShapeLocal = "ICON";
 			TypeLocal = "Maels_illegal_labo_weed";
 			ColorLocal = "ColorRed";
-			SizeLocal[] = {0.55, 0.55};
+			SizeLocal[] = {0.55,0.55};
 		};
 		class construction
 		{
-			object = "";
-			require[] = {};
+			object = "Land_Bricks_V3_F";
+			require[] = {{"steel",40},{"glass",15},{"alu",5},{"furniture",2}};
 		};
 	};
 	class lab_meth
@@ -34,7 +34,12 @@ class ALYSIA_LABORATORIES
 		 	ShapeLocal = "ICON";
 			TypeLocal = "Maels_illegal_labo_meth";
 			ColorLocal = "ColorRed";
-			SizeLocal[] = {0.55, 0.55};
+			SizeLocal[] = {0.55,0.55};
+		};
+		class construction
+		{
+			object = "Land_Bricks_V3_F";
+			require[] = {{"steel",40},{"glass",15},{"alu",5},{"furniture",2}};
 		};
 	};
 	class lab_cocaine
@@ -52,7 +57,12 @@ class ALYSIA_LABORATORIES
 		 	ShapeLocal = "ICON";
 			TypeLocal = "Maels_illegal_labo_coca";
 			ColorLocal = "ColorRed";
-			SizeLocal[] = {0.55, 0.55};
+			SizeLocal[] = {0.55,0.55};
+		};
+		class construction
+		{
+			object = "Land_Bricks_V3_F";
+			require[] = {{"steel",40},{"glass",15},{"alu",5},{"furniture",2}};
 		};
 	};
 	class lab_heroin
@@ -68,7 +78,12 @@ class ALYSIA_LABORATORIES
 		 	ShapeLocal = "ICON";
 			TypeLocal = "Maels_illegal_hero_labo";
 			ColorLocal = "ColorRed";
-			SizeLocal[] = {0.55, 0.55};
+			SizeLocal[] = {0.55,0.55};
+		};
+		class construction
+		{
+			object = "Land_Bricks_V3_F";
+			require[] = {{"steel",40},{"glass",15},{"alu",5},{"furniture",2}};
 		};
 	};
 	class lab_weapon
@@ -108,7 +123,12 @@ class ALYSIA_LABORATORIES
 		 	ShapeLocal = "ICON";
 			TypeLocal = "Maels_factory";
 			ColorLocal = "ColorRed";
-			SizeLocal[] = {0.55, 0.55};
+			SizeLocal[] = {0.55,0.55};
+		};
+		class construction
+		{
+			object = "Land_Bricks_V3_F";
+			require[] = {{"steel",65},{"glass",5},{"alu",20},{"furniture",4}};
 		};
 	};
 	class lab_clothing
@@ -184,7 +204,12 @@ class ALYSIA_LABORATORIES
 		 	ShapeLocal = "ICON";
 			TypeLocal = "Maels_friperie";
 			ColorLocal = "ColorRed";
-			SizeLocal[] = {0.55, 0.55};
+			SizeLocal[] = {0.55,0.55};
+		};
+		class construction
+		{
+			object = "Land_Bricks_V3_F";
+			require[] = {{"steel",65},{"glass",5},{"alu",20},{"furniture",1},{"woodp",15}};
 		};
 	};
 	class lab_cigare
@@ -196,7 +221,12 @@ class ALYSIA_LABORATORIES
 		 	ShapeLocal = "ICON";
 			TypeLocal = "Maels_labo_tabac";
 			ColorLocal = "ColorRed";
-			SizeLocal[] = {0.55, 0.55};
+			SizeLocal[] = {0.55,0.55};
+		};
+		class construction
+		{
+			object = "Land_Bricks_V3_F";
+			require[] = {{"steel",15},{"ciment",20}};
 		};
 	};
 	class lab_heal
@@ -208,7 +238,12 @@ class ALYSIA_LABORATORIES
 		 	ShapeLocal = "ICON";
 			TypeLocal = "Maels_hospital";
 			ColorLocal = "ColorRed";
-			SizeLocal[] = {0.55, 0.55};
+			SizeLocal[] = {0.55,0.55};
+		};
+		class construction
+		{
+			object = "Land_Bricks_V3_F";
+			require[] = {{"woodp",15},{"tissue",9}};
 		};
 	};
 	class lab_construction
@@ -225,7 +260,12 @@ class ALYSIA_LABORATORIES
 		 	ShapeLocal = "ICON";
 			TypeLocal = "Maels_factory";
 			ColorLocal = "ColorRed";
-			SizeLocal[] = {0.55, 0.55};
+			SizeLocal[] = {0.55,0.55};
+		};
+		class construction
+		{
+			object = "Land_Bricks_V3_F";
+			require[] = {{"steel",40},{"glass",3},{"woodp",10},{"furniture",3}};
 		};
 	};
 	class lab_steel
@@ -237,7 +277,12 @@ class ALYSIA_LABORATORIES
 		 	ShapeLocal = "ICON";
 			TypeLocal = "Maels_factory";
 			ColorLocal = "ColorRed";
-			SizeLocal[] = {0.55, 0.55};
+			SizeLocal[] = {0.55,0.55};
+		};
+		class construction
+		{
+			object = "Land_Bricks_V3_F";
+			require[] = {{"steel",40},{"ironp",10},{"alu",10},{"furniture",2},{"woodp",10}};
 		};
 	};
 	class lab_tissue
@@ -249,7 +294,12 @@ class ALYSIA_LABORATORIES
 		 	ShapeLocal = "ICON";
 			TypeLocal = "Maels_factory";
 			ColorLocal = "ColorRed";
-			SizeLocal[] = {0.55, 0.55};
+			SizeLocal[] = {0.55,0.55};
+		};
+		class construction
+		{
+			object = "Land_Bricks_V3_F";
+			require[] = {{"steel",65},{"glass",5},{"alu",20},{"furniture",1},{"woodp",15}};
 		};
 	};
 };

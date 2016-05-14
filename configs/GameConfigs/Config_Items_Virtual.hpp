@@ -1614,7 +1614,7 @@ class ALYSIA_ITEMS
 		price_buy = 185000;
 		weight = 40;
 		illegal = 1;
-		image = "alysia_items_virtual\data\lab_marijuana.paa";
+		image = "alysia_items_virtual\data\drogue.paa";
 		class use
 		{
 			action = "['lab_marijuana'] spawn AlysiaClient_fnc_labo_deploy;";
@@ -1624,7 +1624,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Laboratoire de methamphetamine";
 		price_buy = 226000;
-		image = "alysia_items_virtual\data\lab_meth.paa";
+		image = "alysia_items_virtual\data\drogue.paa";
 		class use
 		{
 			action = "['lab_meth'] spawn AlysiaClient_fnc_labo_deploy;";
@@ -1634,7 +1634,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Laboratoire de cocaïne";
 		price_buy = 209000;
-		image = "alysia_items_virtual\data\lab_cocaine.paa";
+		image = "alysia_items_virtual\data\drogue.paa";
 		class use
 		{
 			action = "['lab_cocaine'] spawn AlysiaClient_fnc_labo_deploy;";
@@ -1644,7 +1644,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Laboratoire d'héroïne";
 		price_buy = 192000;
-		image = "alysia_items_virtual\data\lab_heroin.paa";
+		image = "alysia_items_virtual\data\drogue.paa";
 		class use
 		{
 			action = "['lab_heroin'] spawn AlysiaClient_fnc_labo_deploy;";
@@ -1654,7 +1654,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Usine illégale d'armes";
 		price_buy = 425000;
-		image = "alysia_items_virtual\data\lab_weapon.paa";
+		image = "alysia_items_virtual\data\Arme.paa";
 		class use
 		{
 			action = "['lab_weapon'] spawn AlysiaClient_fnc_labo_deploy;";
@@ -1664,7 +1664,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Usine illégale d'équipements'";
 		price_buy = 185000;
-		image = "alysia_items_virtual\data\lab_clothing.paa";
+		image = "alysia_items_virtual\data\Equipement.paa";
 		class use
 		{
 			action = "['lab_clothing'] spawn AlysiaClient_fnc_labo_deploy;";
@@ -1700,7 +1700,7 @@ class ALYSIA_ITEMS
 		price_buy = 160000;
 		weight = 20;
 		illegal = 1;
-		image = "alysia_items_virtual\data\lab_construction.paa";
+		image = "alysia_items_virtual\data\construction.paa";
 		class use
 		{
 			action = "['lab_construction'] spawn AlysiaClient_fnc_labo_deploy;";
@@ -1710,7 +1710,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Usine illégale d'acier";
 		price_buy = 310000;
-		image = "alysia_items_virtual\data\lab_steel.paa";
+		image = "alysia_items_virtual\data\Acier.paa";
 		class use
 		{
 			action = "['lab_steel'] spawn AlysiaClient_fnc_labo_deploy;";
@@ -1720,7 +1720,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Usine illégale de textile";
 		price_buy = 280000;
-		image = "alysia_items_virtual\data\lab_tissue.paa";
+		image = "alysia_items_virtual\data\Equipement.paa";
 		class use
 		{
 			action = "['lab_tissue'] spawn AlysiaClient_fnc_labo_deploy;";
