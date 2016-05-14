@@ -199,7 +199,8 @@ class CfgFunctions
 			class labo_deploy {};
 			class labo_destroy {};
 			class labo_process {};
-			class labo_update {};
+			class labo_update_destroy {};
+			class labo_update_build {};
 			class labo_sabotage {};
 			class labo_build {};
 		};

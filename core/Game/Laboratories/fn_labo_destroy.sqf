@@ -36,7 +36,7 @@ if (((_info select 1) isEqualTo (getPlayerUID player)) && (g_laboratory isEqualT
 	if ([false, "destroy_labo", 1] call AlysiaClient_fnc_handleInv) then
 	{
 		_owner = [_info select 1] call AlysiaClient_fnc_getPlayerFromUID;
-		if (!(isNull _owner)) then {[playerSide, (_info select 2)] remoteExecCall ["AlysiaClient_fnc_labo_update", _owner]};
+		if (!(isNull _owner)) then {[playerSide, (_info select 2)] remoteExecCall ["AlysiaClient_fnc_labo_update_destroy", _owner]};
 		[_target] remoteExec ["AlysiaServer_fnc_laboratory_destroy", 2];
 	} else {
 		[format["Vous avez besoin de 1x <t color='#FFBF00'>%1</t>.", ["destroy_labo"] call AlysiaClient_fnc_itemGetName]] call AlysiaClient_fnc_error;

@@ -183,8 +183,8 @@ class RscTitlePlayer
 		{
 			idc = 23542;
 			
-			x = 0.836927 * safezoneW + safezoneX;
-			y = 0.834445 * safezoneH + safezoneY;
+			x = 0.835156 * safezoneW + safezoneX;
+			y = 0.83 * safezoneH + safezoneY;
 			w = 0.0360937 * safezoneW;
 			h = 0.011 * safezoneH;
 		};
@@ -192,8 +192,8 @@ class RscTitlePlayer
 		{
 			idc = 23543;
 			
-			x = 0.836979 * safezoneW + safezoneX;
-			y = 0.865741 * safezoneH + safezoneY;
+			x = 0.835156 * safezoneW + safezoneX;
+			y = 0.862074 * safezoneH + safezoneY;
 			w = 0.0360937 * safezoneW;
 			h = 0.011 * safezoneH;
 		};
@@ -201,8 +201,8 @@ class RscTitlePlayer
 		{
 			idc = 23544;
 			
-			x = 0.836979 * safezoneW + safezoneX;
-			y = 0.898148 * safezoneH + safezoneY;
+			x = 0.834895 * safezoneW + safezoneX;
+			y = 0.894444 * safezoneH + safezoneY;
 			w = 0.0360937 * safezoneW;
 			h = 0.011 * safezoneH;
 		};
@@ -210,9 +210,9 @@ class RscTitlePlayer
 		{
 			idc = 23539;
 
-			x = 0.877344 * safezoneW + safezoneX;
-			y = 0.83 * safezoneH + safezoneY;
-			w = 0.110469 * safezoneW;
+			x = 0.877292 * safezoneW + safezoneX;
+			y = 0.826296 * safezoneH + safezoneY;
+			w = 0.111563 * safezoneW;
 			h = 0.148556 * safezoneH;
 		};
 	};
