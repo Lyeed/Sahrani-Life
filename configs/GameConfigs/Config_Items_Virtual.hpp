@@ -1902,6 +1902,14 @@ class ALYSIA_ITEMS
 			action = "['patron_deagle'] call AlysiaClient_fnc_item_patron;";
 		};
 	};
+	class patron_reb_coa: patron_AK74
+	{
+		name = "Patron (Coalition)";
+		class use
+		{
+			action = "['patron_reb_coa'] call AlysiaClient_fnc_item_patron;";
+		};
+	};
 
 	class medoc_rhume
 	{

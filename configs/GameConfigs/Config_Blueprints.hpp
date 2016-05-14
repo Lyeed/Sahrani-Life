@@ -40,4 +40,9 @@ class ALYSIA_BLUEPRINTS
 		process[] = {"weapon_deagle_normal","weapon_deagle_gold","magazine_deagle"};
 		labos[] = {"lab_weapon"};
 	};
+	class patron_reb_coa
+	{
+		process[] = {"clothing_reb_coa"};
+		labos[] = {"lab_clothing"};
+	};
 };

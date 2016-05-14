@@ -1202,6 +1202,14 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 
+	class clothing_reb_coa: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (Coalition)";
+		receive[] = {{},{"Skyline_Uniforme_Coalition_01_F"},0};
+		class target {};
+		class factions: factions {};
+	};
+
 	class goggles_criminal_gas: clothing_criminal_1
 	{
 		name = "Confection masque à gaz";
