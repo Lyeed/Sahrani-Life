@@ -1201,6 +1201,89 @@ class ALYSIA_VEHICLES
 	class shounka_a3_spr_civ_rouge: shounka_a3_spr_civ {};
 	class shounka_a3_spr_civ_violet: shounka_a3_spr_civ {};
 
+	class Skyline_Mercedes_Sprinter
+	{
+		realname = "Mercedes Sprinter";
+		buyPrice = 51500;
+		inventory = 200;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "Diesel";
+		fuelCapacity = 100;
+		colors[] =
+		{
+			"Skyline_Mercedes_Sprinter_01_F",
+			"Skyline_Mercedes_Sprinter_02_F",
+			"Skyline_Mercedes_Sprinter_03_F",
+			"Skyline_Mercedes_Sprinter_04_F",
+			"Skyline_Mercedes_Sprinter_05_F",
+			"Skyline_Mercedes_Sprinter_06_F",
+			"Skyline_Mercedes_Sprinter_07_F",
+			"Skyline_Mercedes_Sprinter_08_F",
+			"Skyline_Mercedes_Sprinter_09_F",
+			"Skyline_Mercedes_Sprinter_10_F",
+			"Skyline_Mercedes_Sprinter_11_F",
+			"Skyline_Mercedes_Sprinter_12_F",
+			"Skyline_Mercedes_Sprinter_13_F",
+			"Skyline_Mercedes_Sprinter_14_F",
+			"Skyline_Mercedes_Sprinter_15_F",
+			"Skyline_Mercedes_Sprinter_16_F"
+		};
+	};
+	class Skyline_Mercedes_Sprinter_01_F: Skyline_Mercedes_Sprinter {};
+	class Skyline_Mercedes_Sprinter_02_F: Skyline_Mercedes_Sprinter {};
+	class Skyline_Mercedes_Sprinter_03_F: Skyline_Mercedes_Sprinter {};
+	class Skyline_Mercedes_Sprinter_04_F: Skyline_Mercedes_Sprinter {};
+	class Skyline_Mercedes_Sprinter_05_F: Skyline_Mercedes_Sprinter {};
+	class Skyline_Mercedes_Sprinter_06_F: Skyline_Mercedes_Sprinter {};
+	class Skyline_Mercedes_Sprinter_07_F: Skyline_Mercedes_Sprinter {};
+	class Skyline_Mercedes_Sprinter_08_F: Skyline_Mercedes_Sprinter {};
+	class Skyline_Mercedes_Sprinter_09_F: Skyline_Mercedes_Sprinter {};
+	class Skyline_Mercedes_Sprinter_10_F: Skyline_Mercedes_Sprinter {};
+	class Skyline_Mercedes_Sprinter_11_F: Skyline_Mercedes_Sprinter {};
+	class Skyline_Mercedes_Sprinter_12_F: Skyline_Mercedes_Sprinter {};
+	class Skyline_Mercedes_Sprinter_13_F: Skyline_Mercedes_Sprinter {};
+	class Skyline_Mercedes_Sprinter_14_F: Skyline_Mercedes_Sprinter {};
+	class Skyline_Mercedes_Sprinter_15_F: Skyline_Mercedes_Sprinter {};
+	class Skyline_Mercedes_Sprinter_16_F: Skyline_Mercedes_Sprinter {};
+	
+	class Skyline_Mercedes_Sprinter_Samu
+	{
+		realname = "Mercedes Sprinter Samu";
+		buyPrice = 47500;
+		inventory = 110;
+		side = "GUER";
+		insurance = 1;
+		licenses[] = {"driver"};
+		fuel = "Diesel";
+		fuelCapacity = 100;
+		colors[] =
+		{
+			"Skyline_Mercedes_Sprinter_Samu_01_F"
+		};
+	};
+	class Skyline_Mercedes_Sprinter_Samu_01_F: Skyline_Mercedes_Sprinter_Samu {};
+
+	class Skyline_Mercedes_Sprinter_Depannage
+	{
+		realname = "Mercedes Sprinter Dépanneur";
+		buyPrice = 51500;
+		inventory = 200;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"driver","company_garagist"};
+		fuel = "Diesel";
+		fuelCapacity = 100;
+		colors[] =
+		{
+			"Skyline_Mercedes_Sprinter_Depannage_01_F",
+			"Skyline_Mercedes_Sprinter_Depannage_02_F"
+		};
+	};
+	class Skyline_Mercedes_Sprinter_Depannage_01_F: Skyline_Mercedes_Sprinter_Depannage {};
+	class Skyline_Mercedes_Sprinter_Depannage_02_F: Skyline_Mercedes_Sprinter_Depannage {};
+
 	class Mrshounka_a3_gtr_civ
 	{
 		realname = "Nissan GTR";
