@@ -15,6 +15,11 @@ class ALYSIA_LABORATORIES
 			ColorLocal = "ColorRed";
 			SizeLocal[] = {0.55, 0.55};
 		};
+		class construction
+		{
+			object = "";
+			require[] = {};
+		};
 	};
 	class lab_meth
 	{

@@ -3417,6 +3417,18 @@ class ALYSIA_VEHICLES
 		fuelCapacity = 70;
 		money_transfer = 1;
 	};
+	class Skyline_Brinks_01_F
+	{
+		realname = "Camion de transport de fond";
+		buyPrice = 185000;
+		inventory = 200;
+		side = "CIV";
+		insurance = 1;
+		licenses[] = {"truck","company_money_tranfer"};
+		fuel = "Diesel";
+		fuelCapacity = 70;
+		money_transfer = 1;
+	};
 
 	class Skyline_Vehicule_Jonzie_Viper
 	{

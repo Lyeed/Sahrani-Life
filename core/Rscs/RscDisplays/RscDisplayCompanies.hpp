@@ -99,8 +99,8 @@ class RscDisplayCompanyCreate: RscDisplayDefaultInteraction
 		{
 			idc = 90005;
 			action = "[] spawn AlysiaClient_fnc_company_create_action;";
-			onMouseEnter = "			ctrlSetText[90004,""lyeed_IMG\data\companies\action_company_select.paa""];			ctrlShow[90002, false];			((findDisplay 90000) displayCtrl 90001) ctrlSetBackgroundColor [1,1,1,1];			((findDisplay 90000) displayCtrl 90003) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Créer</t>"";";
-			onMouseExit = "			ctrlSetText[90004,""lyeed_IMG\data\companies\action_company.paa""];			if (ctrlVisible 90004) then {				ctrlShow[90002, true];			};			((findDisplay 90000) displayCtrl 90001) ctrlSetBackgroundColor [0,0,0,0.6];			((findDisplay 90000) displayCtrl 90003) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Créer</t>"";";
+			onMouseEnter = "ctrlSetText[90004,""lyeed_IMG\data\companies\action_company_select.paa""];ctrlShow[90002, false];((findDisplay 90000) displayCtrl 90001) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 90000) displayCtrl 90003) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Créer</t>"";";
+			onMouseExit = "ctrlSetText[90004,""lyeed_IMG\data\companies\action_company.paa""];if (ctrlVisible 90004) then {ctrlShow[90002, true];};((findDisplay 90000) displayCtrl 90001) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 90000) displayCtrl 90003) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Créer</t>"";";
 
 			x = 0.530937 * safezoneW + safezoneX;
 			y = 0.643 * safezoneH + safezoneY;
@@ -186,144 +186,6 @@ class RscDisplayCompanyCreate: RscDisplayDefaultInteraction
 			y = 0.599 * safezoneH + safezoneY;
 			w = 0.180469 * safezoneW;
 			h = 0.022 * safezoneH;
-		};
-	};
-};
-
-class RscDisplayCompanyConstruction: RscDisplayDefaultInteraction
-{
-	idd = 91000;
-	name = "RscDisplayCompanyConstruction";
-	
-	class controlsBackground: DEFAULT_controlsBackground
-	{
-		class BACKGROUND: BACKGROUND
-		{
-			text = "lyeed_IMG\data\companies\background.jpg";
-
-			x = 0.314375 * safezoneW + safezoneX;
-			y = 0.335 * safezoneH + safezoneY;
-			w = 0.360937 * safezoneW;
-			h = 0.396 * safezoneH;
-		};
-		class FRAME: FRAME
-		{
-			x = 0.314375 * safezoneW + safezoneX;
-			y = 0.302 * safezoneH + safezoneY;
-			w = 0.360937 * safezoneW;
-			h = 0.429 * safezoneH;
-		};
-	};
-	
-	class controls: DEFAULT_controls
-	{
-		class TITLE: TITLE
-		{
-			text = "<t align='center' size='1.5'>Matériaux</t>";
-
-			x = 0.314375 * safezoneW + safezoneX;
-			y = 0.302 * safezoneH + safezoneY;
-			w = 0.360937 * safezoneW;
-			h = 0.033 * safezoneH;
-		};
-
-		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME
-		{
-			x = 0.283437 * safezoneW + safezoneX;
-			y = 0.324 * safezoneH + safezoneY;
-		};
-		class OPTION_EXIT_BACKGROUND: OPTION_EXIT_BACKGROUND
-		{
-			x = 0.283437 * safezoneW + safezoneX;
-			y = 0.324 * safezoneH + safezoneY;
-		};
-		class OPTION_EXIT_IMAGE: OPTION_EXIT_IMAGE
-		{
-			x = 0.290656 * safezoneW + safezoneX;
-			y = 0.3361 * safezoneH + safezoneY;
-		};
-		class OPTION_EXIT_BUTTON: OPTION_EXIT_BUTTON
-		{
-			x = 0.283437 * safezoneW + safezoneX;
-			y = 0.324 * safezoneH + safezoneY;
-		};
-
-		class REQUIRE_FRAME: RscFrame
-		{
-			x = 0.329844 * safezoneW + safezoneX;
-			y = 0.346 * safezoneH + safezoneY;
-			w = 0.139219 * safezoneW;
-			h = 0.363 * safezoneH;
-		};
-		class REQUIRE_HEADER: RscStructuredText
-		{
-			text = "<t align='center'>Types</t>";
-			colorBackground[] = {0,0,0,0.8};
-
-			x = 0.329844 * safezoneW + safezoneX;
-			y = 0.346 * safezoneH + safezoneY;
-			w = 0.139219 * safezoneW;
-			h = 0.022 * safezoneH;
-		};
-		class REQUIRE_LIST: RscListbox
-		{
-			idc = 91001;
-
-			x = 0.329844 * safezoneW + safezoneX;
-			y = 0.368 * safezoneH + safezoneY;
-			w = 0.139219 * safezoneW;
-			h = 0.341 * safezoneH;
-		};
-
-		class INVENTORY_FRAME: RscFrame
-		{
-			x = 0.520625 * safezoneW + safezoneX;
-			y = 0.346 * safezoneH + safezoneY;
-			w = 0.139219 * safezoneW;
-			h = 0.363 * safezoneH;
-		};
-		class INVENTORY_HEADER: RscStructuredText
-		{
-			text = "<t align='center'>Inventaire</t>";
-			colorBackground[] = {0,0,0,0.8};
-
-			x = 0.520625 * safezoneW + safezoneX;
-			y = 0.346 * safezoneH + safezoneY;
-			w = 0.139219 * safezoneW;
-			h = 0.022 * safezoneH;
-		};
-		class INVENTORY_LIST: RscListbox
-		{
-			idc = 91002;
-			onLBSelChanged = "_this call AlysiaClient_fnc_company_construction_update_select;";
-
-			x = 0.520625 * safezoneW + safezoneX;
-			y = 0.368 * safezoneH + safezoneY;
-			w = 0.139219 * safezoneW;
-			h = 0.341 * safezoneH;
-		};
-
-		class ACTION_IMAGE: RscPicture
-		{
-			idc = 91003;
-			text = "lyeed_IMG\data\companies\create\arrow_left.paa";
-
-			x = 0.479375 * safezoneW + safezoneX;
-			y = 0.489 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
-			h = 0.044 * safezoneH;
-		};
-		class ACTION_BUTTON: RscButtonSilent
-		{
-			idc = 91004;
-			action = "[] spawn AlysiaClient_fnc_company_construction_action;";
-			onMouseEnter = "ctrlSetText[91003,""lyeed_IMG\data\companies\create\arrow_left_select.paa""];";
-			onMouseExit = "ctrlSetText[91003,""lyeed_IMG\data\companies\create\arrow_left.paa""];";
-
-			x = 0.479375 * safezoneW + safezoneX;
-			y = 0.489 * safezoneH + safezoneY;
-			w = 0.0257812 * safezoneW;
-			h = 0.044 * safezoneH;
 		};
 	};
 };

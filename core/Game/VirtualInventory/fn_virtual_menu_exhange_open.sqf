@@ -16,12 +16,7 @@ _delete_on_empty = [_this, 6, false, [false]] call BIS_fnc_param;
 
 if (isNull _target) exitWith {};
 if (g_action_inUse) exitWith {};
-
-if (dialog) then
-{
-	closeDialog 0;
-	waitUntil {!dialog};
-};
+if (dialog) then {closeDialog 0};
 
 g_action_inUse = true;
 uiSleep((random(1)) + 0.5);
@@ -106,7 +101,8 @@ while {!(isNull _display)} do
 	if (!(alive g_interaction_target)) exitWith {
 		closeDialog 0;
 	};
-	sleep 0.5;
+
+	uiSleep 0.5;
 };
 
 g_interaction_target setVariable [g_interaction_target_trunk_type, (g_interaction_target getVariable [g_interaction_target_trunk_type, []]), true];

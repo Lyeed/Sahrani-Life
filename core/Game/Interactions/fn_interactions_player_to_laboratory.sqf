@@ -11,11 +11,29 @@
 	"player_to_laboratory",
 	[
 		[
+			"construction",
+			"Matériaux",
+			"[g_interaction_target,'construction_require'] spawn AlysiaClient_fnc_virtual_menu_reduce_open;",
+			"(g_interaction_target getVariable ['construction', false])"
+		],
+		[
+			"finish",
+			"Construire",
+			"[g_interaction_target] spawn AlysiaClient_fnc_labo_build;",
+			"
+				(
+					(g_interaction_target getVariable ['construction', false]) && 
+					((g_interaction_target getVariable ['construction_require', []]) isEqualTo [])
+				)
+			"
+		],
+		[
 			"process",
 			"Traiter",
 			"[g_interaction_target] call AlysiaClient_fnc_labo_process;",
 			"
-				(count getArray(missionConfigFile >> 'ALYSIA_LABORATORIES' >> ((g_interaction_target getVariable ['laboratory_info',['','','']]) select 2) >> 'process') > 0)
+				(count getArray(missionConfigFile >> 'ALYSIA_LABORATORIES' >> ((g_interaction_target getVariable ['laboratory_info',['','','']]) select 2) >> 'process') > 0) &&
+				!(g_interaction_target getVariable ['construction', false])
 			"
 		],
 		[
@@ -37,7 +55,8 @@
 			"Saboter",
 			"[g_interaction_target] spawn AlysiaClient_fnc_labo_sabotage;",
 			"
-				((g_interaction_target getVariable ['sabotage',0]) < serverTime)
+				((g_interaction_target getVariable ['sabotage',0]) < serverTime) &&
+				!(g_interaction_target getVariable ['construction', false])
 			"
 		]
 	],

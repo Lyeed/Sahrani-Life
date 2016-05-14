@@ -55,10 +55,11 @@ _fuelmax = getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> (typeOf _veh) >> 
 _fill = false;
 _distanceBegin = (player distance _veh) + 2;
 
-if (_veh isKindOf "Air") then {
-	_progressLiters = 20;
-} else {
-	_progressLiters = 1;
+_progressLiters = switch (true) do
+{
+	case (_veh isKindOf "Air"): {20};
+	case (_veh isKindOf "Truck"): {5};
+	default {1};
 };
 
 while {true} do

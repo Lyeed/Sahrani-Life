@@ -87,6 +87,9 @@ class CfgFunctions
 			class virtual_menu_exhange_take {};
 			class virtual_menu_update_list {};
 			class virtual_menu_update_buttons {};
+			class virtual_menu_reduce_open {};
+			class virtual_menu_reduce_update {};
+			class virtual_menu_reduce_action {};
 		};
 
 		class Companies
@@ -95,9 +98,6 @@ class CfgFunctions
 			class company_create_open {};
 			class company_create_action {};
 			class company_create_update {};
-			class company_construction_open {};
-			class company_construction_update {};
-			class company_construction_action {};
 			class company_construction_build {};
 			class company_info_open {};
 			class company_bank_handle {};
@@ -201,6 +201,7 @@ class CfgFunctions
 			class labo_process {};
 			class labo_update {};
 			class labo_sabotage {};
+			class labo_build {};
 		};
 
 		class Shops

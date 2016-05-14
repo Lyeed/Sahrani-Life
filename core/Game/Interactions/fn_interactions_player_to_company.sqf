@@ -18,17 +18,13 @@ if (isNull _object) exitWith {};
 			"info",
 			"Infos",
 			"[g_interaction_target] call AlysiaClient_fnc_company_info_open;",
-			"
-				!(g_interaction_target getVariable ['construction', false])
-			"
+			"!(g_interaction_target getVariable ['construction', false])"
 		],
 		[
 			"construction",
 			"Matériaux",
-			"[] spawn AlysiaClient_fnc_company_construction_open;",
-			"
-				(g_interaction_target getVariable ['construction', false])
-			"
+			"[g_interaction_target,'construction_require'] spawn AlysiaClient_fnc_virtual_menu_reduce_open;",
+			"(g_interaction_target getVariable ['construction', false])"
 		],
 		[
 			"finish",

@@ -7,13 +7,17 @@
 */
 private["_display", "_list_player", "_list_construction", "_require"];
 
-if (isNull g_interaction_target) exitWith {closeDialog 0};
+if (isNull g_interaction_target) exitWith
+{
+	["Transfert annulé : Cible invalide."] call AlysiaClient_fnc_error;
+	closeDialog 0;
+};
 
 disableSerialization;
 _display = findDisplay 91000;
 if (isNull _display) exitWith {};
 
-_require = g_interaction_target getVariable ["construction_require", []];
+_require = g_interaction_target getVariable [g_interaction_reduce_var, []];
 
 _list_construction = _display displayCtrl 91001;
 lbClear _list_construction;

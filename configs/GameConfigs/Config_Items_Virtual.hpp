@@ -333,8 +333,8 @@ class ALYSIA_ITEMS
 
 	class wood
 	{
-		name = "Bois";
-		weight = 2;
+		name = "Buche de bois";
+		weight = 4;
 		image = "alysia_items_virtual\data\tas_bois.paa";
 	};
 	class woodp
@@ -1960,7 +1960,6 @@ class ALYSIA_ITEMS
 		name = "Plateau repas de prison";
 		weight = 4;
 		image = "alysia_items_virtual\data\prison_food.paa";
-		price_buy = 0;
 		class food
 		{
 			hunger = 100;

@@ -257,7 +257,7 @@ class ALYSIA_SHOPS_VEHICLES
 			"Skyline_Jeep_Wrangler_Rubicon_Depannage",
 
 			/* company_money_tranfer */
-			"shounka_a3_brinks_noir",
+			"Skyline_Brinks_01_F",
 
 			/* company_farming */
 			"madsa_mtz_F",

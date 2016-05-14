@@ -173,31 +173,47 @@ class RscTitlePlayer
 		class GPS_FRAME: RscPicture
 		{
 			idc = 23540;
-			text = "lyeed_IMG\data\player_hud\gps.paa";
 
-			x = 0.773281 * safezoneW + safezoneX;
-			y = 0.665 * safezoneH + safezoneY;
-			w = 0.252656 * safezoneW;
-			h = 0.451 * safezoneH;
+			x = 0.768125 * safezoneW + safezoneX;
+			y = 0.694 * safezoneH + safezoneY;
+			w = 0.257813 * safezoneW;
+			h = 0.429 * safezoneH;
 		};
-		class GPS_INFOS: RscStructuredText
+		class GPS_AZIMUT_INFO: RscStructuredText
 		{
 			idc = 23542;
-			colorBackground[] = {0.2,0.188,0.188,1};
 			
-			x = 0.82276 * safezoneW + safezoneX;
-			y = 0.808 * safezoneH + safezoneY;
-			w = 0.154219 * safezoneW;
-			h = 0.022 * safezoneH;
+			x = 0.836927 * safezoneW + safezoneX;
+			y = 0.834445 * safezoneH + safezoneY;
+			w = 0.0360937 * safezoneW;
+			h = 0.011 * safezoneH;
+		};
+		class GPS_ALTITUDE_INFO: RscStructuredText
+		{
+			idc = 23543;
+			
+			x = 0.836979 * safezoneW + safezoneX;
+			y = 0.865741 * safezoneH + safezoneY;
+			w = 0.0360937 * safezoneW;
+			h = 0.011 * safezoneH;
+		};
+		class GPS_POSITION_INFO: RscStructuredText
+		{
+			idc = 23544;
+			
+			x = 0.836979 * safezoneW + safezoneX;
+			y = 0.898148 * safezoneH + safezoneY;
+			w = 0.0360937 * safezoneW;
+			h = 0.011 * safezoneH;
 		};
 		class GPS_MAP: RscMapControl
 		{
 			idc = 23539;
 
-			x = 0.82276 * safezoneW + safezoneX;
+			x = 0.877344 * safezoneW + safezoneX;
 			y = 0.83 * safezoneH + safezoneY;
-			w = 0.154219 * safezoneW;
-			h = 0.136 * safezoneH;
+			w = 0.110469 * safezoneW;
+			h = 0.148556 * safezoneH;
 		};
 	};
 

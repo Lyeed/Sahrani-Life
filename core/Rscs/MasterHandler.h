@@ -25,6 +25,7 @@
 #include "RscDisplays\RscDisplayAtm.hpp"
 #include "RscDisplays\RscDisplayHousing.hpp"
 #include "RscDisplays\RscDisplayVirtualExhange.hpp"
+#include "RscDisplays\RscDisplayVirtualReduce.hpp"
 #include "RscDisplays\RscDisplayFuel.hpp"
 #include "RscDisplays\RscDisplayProcess.hpp"
 #include "RscDisplays\RscDisplayLaunder.hpp"

@@ -31,10 +31,17 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 	_ctrl_weapon_ammo ctrlShow false;
 	_ctrl_weapon_active = false;
 
+	_ctrl_gps_image = _hud displayCtrl 23540;
 	_ctrl_gps_map = _hud displayCtrl 23539;
-	_ctrl_gps_text = _hud displayCtrl 23542;
-	_ctrl_gps_text ctrlShow false;
+	_ctrl_gps_azimut = _hud displayCtrl 23542;
+	_ctrl_gps_altitude = _hud displayCtrl 23543;
+	_ctrl_gps_position = _hud displayCtrl 23544;
+
+	_ctrl_gps_position ctrlShow false;
+	_ctrl_gps_altitude ctrlShow false;
+	_ctrl_gps_azimut ctrlShow false;
 	_ctrl_gps_map ctrlShow false;
+
 	_ctrl_gps_active = false;
 	_gps_old_pos = [0,0,0];
 
@@ -193,7 +200,13 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 				(g_app isEqualTo "") &&
 				!(shownMap)
 			) then {
-			
+
+			if (sunOrMoon < 0.2) then {
+				_ctrl_gps_image ctrlSetText "lyeed_IMG\data\player_hud\gps_night.paa";
+			} else {
+				_ctrl_gps_image ctrlSetText "lyeed_IMG\data\player_hud\gps_day.paa";
+			};
+
 			if (((vehicle player) distance _gps_old_pos) > 2) then
 			{
 				"myGPS" setMarkerPosLocal (getPos (vehicle player));
@@ -201,12 +214,22 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 			};
 			"myGPS" setMarkerDirLocal floor((getDir (vehicle player)) - 40);
 			
-			_ctrl_gps_text ctrlSetStructuredText parseText format
+			_ctrl_gps_azimut ctrlSetStructuredText parseText format
 			[
-				"<t font='PuristaBold' size='0.9'><t align='left'>Coord:%1</t><t align='center'>H:%3</t><t align='right'>Dir:%2</t></t>",
-				(mapGridPosition player),
-				round(getDir player),
+				"<t size='0.7' font='tf_font_segments' color='#000000' align='right'>%1</t>",
+				round(getDir player)
+			];
+
+			_ctrl_gps_altitude ctrlSetStructuredText parseText format
+			[
+				"<t size='0.7' font='tf_font_segments' color='#000000' align='right'>%1</t>",
 				round((getPosASL (vehicle player)) select 2)
+			];
+
+			_ctrl_gps_position ctrlSetStructuredText parseText format
+			[
+				"<t size='0.7' font='tf_font_segments' color='#000000' align='right'>%1</t>",
+				(mapGridPosition player)
 			];
 
 			if ((vehicle player) isEqualTo player) then {
@@ -219,7 +242,9 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 			if (!_ctrl_gps_active) then
 			{
 				"myGPS" setMarkerAlphaLocal 1;
-				_ctrl_gps_text ctrlShow true;
+				_ctrl_gps_azimut ctrlShow true;
+				_ctrl_gps_position ctrlShow true;
+				_ctrl_gps_altitude ctrlShow true;
 				_ctrl_gps_map ctrlShow true;
 				_ctrl_gps_active = true;
 			};
@@ -227,7 +252,9 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 			if (_ctrl_gps_active) then
 			{
 				"myGPS" setMarkerAlphaLocal 0;
-				_ctrl_gps_text ctrlShow false;
+				_ctrl_gps_azimut ctrlShow false;
+				_ctrl_gps_position ctrlShow false;
+				_ctrl_gps_altitude ctrlShow false;
 				_ctrl_gps_map ctrlShow false;
 				_ctrl_gps_active = false;
 			};
