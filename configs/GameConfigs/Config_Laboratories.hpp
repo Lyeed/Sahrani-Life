@@ -214,7 +214,7 @@ class ALYSIA_LABORATORIES
 	};
 	class lab_cigare
 	{
-		object = "Land_Factory_Conv1_End_F";
+		object = "Skyline_Alysia_WorkBench_Cigare_01_F";
 		process[] = {"cigare"};
 		class marker
 		{

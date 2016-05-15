@@ -133,7 +133,7 @@ class ALYSIA_PHONE
 			};
 			class call_rcv_14: call_rcv_1
 			{
-				name = "Vocal (Jesus)";
+				name = "Vocal (Monsieur G)";
 				sleep = 2.5;
 				duration = 1.1;
 			};
