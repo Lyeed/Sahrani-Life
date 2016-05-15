@@ -154,17 +154,26 @@ g_company = [_this, 4, objNull, [objNull]] call BIS_fnc_param;
 g_laboratory = [_this, 5, objNull, [objNull]] call BIS_fnc_param;
 if (!(isNull g_laboratory)) then
 {
-	_config = ("getText(_x >> 'object') == typeOf(g_laboratory)" configClasses (missionConfigFile >> "ALYSIA_LABORATORIES")) select 0;
-
-	_config_marker = _config >> "marker";
-	if (isClass _config_marker) then
+	if (g_laboratory getVariable ["construction", false]) then
 	{
 		_marker = createMarkerLocal ["laboratory", (getPosATL g_laboratory)];
-		_marker setMarkerShapeLocal getText(_config_marker >> "ShapeLocal");
-		_marker setMarkerColorLocal getText(_config_marker >> "ColorLocal");
-		_marker setMarkerTypeLocal getText(_config_marker >> "TypeLocal");
-		_marker setMarkerSizeLocal getArray(_config_marker >> "SizeLocal");
-		_marker setMarkerTextLocal ([configName _config] call AlysiaClient_fnc_itemGetName);
+		_marker setMarkerShapeLocal "ICON";
+		_marker setMarkerColorLocal "ColorRed";
+		_marker setMarkerTypeLocal "mil_box";
+		_marker setMarkerSizeLocal [0.5, 0.5];
+		_marker setMarkerTextLocal "Laboratoire en construction";
+	} else {
+		_config = ("getText(_x >> 'object') == typeOf(g_laboratory)" configClasses (missionConfigFile >> "ALYSIA_LABORATORIES")) select 0;
+		_config_marker = _config >> "marker";
+		if (isClass _config_marker) then
+		{
+			_marker = createMarkerLocal ["laboratory", (getPosATL g_laboratory)];
+			_marker setMarkerShapeLocal getText(_config_marker >> "ShapeLocal");
+			_marker setMarkerColorLocal getText(_config_marker >> "ColorLocal");
+			_marker setMarkerTypeLocal getText(_config_marker >> "TypeLocal");
+			_marker setMarkerSizeLocal getArray(_config_marker >> "SizeLocal");
+			_marker setMarkerTextLocal ([configName _config] call AlysiaClient_fnc_itemGetName);
+		};
 	};
 };
 

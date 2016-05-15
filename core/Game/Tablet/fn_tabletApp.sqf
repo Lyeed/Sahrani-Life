@@ -37,7 +37,7 @@ switch (_app) do
 	case "PHONE_CALLRECEIVING": {[] call AlysiaClient_fnc_APP_phone_callreceiving};
 	case "PHONE_MESSAGES_READ": {[] call AlysiaClient_fnc_APP_phone_messages_read};
 	case "PHONE_MESSAGES_SEND": {[] call AlysiaClient_fnc_APP_phone_messages_send};
-	case "PHONE_SETTINGS": {[] call AlysiaClient_fnc_APP_phone_settings};
+	case "PHONE_SETTINGS": {[] spawn AlysiaClient_fnc_APP_phone_settings};
 	case "PHONE_BLACKLIST": {[] call AlysiaClient_fnc_APP_phone_blacklist};
 	case "LICENSES": {[] call AlysiaClient_fnc_APP_licenses};
 	case "FACTION": {[] call AlysiaClient_fnc_APP_faction};

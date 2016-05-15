@@ -36,7 +36,9 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 	_ctrl_gps_azimut = _hud displayCtrl 23542;
 	_ctrl_gps_altitude = _hud displayCtrl 23543;
 	_ctrl_gps_position = _hud displayCtrl 23544;
+	_ctrl_gps_frame = _hud displayCtrl 23540;
 
+	_ctrl_gps_frame ctrlShow false;
 	_ctrl_gps_position ctrlShow false;
 	_ctrl_gps_altitude ctrlShow false;
 	_ctrl_gps_azimut ctrlShow false;
@@ -197,8 +199,7 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 				!(player getVariable ["restrained", false]) &&
 				!(player getVariable ["surrender", false]) &&
 				!(player getVariable ["is_coma", false]) &&
-				(g_app isEqualTo "") &&
-				!(shownMap)
+				(g_app isEqualTo "")
 			) then {
 
 			if (sunOrMoon < 0.2) then {
@@ -246,6 +247,7 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 				_ctrl_gps_position ctrlShow true;
 				_ctrl_gps_altitude ctrlShow true;
 				_ctrl_gps_map ctrlShow true;
+				_ctrl_gps_frame ctrlShow true;
 				_ctrl_gps_active = true;
 			};
 		} else {
@@ -256,6 +258,7 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 				_ctrl_gps_position ctrlShow false;
 				_ctrl_gps_altitude ctrlShow false;
 				_ctrl_gps_map ctrlShow false;
+				_ctrl_gps_frame ctrlShow false;
 				_ctrl_gps_active = false;
 			};
 		};

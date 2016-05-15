@@ -86,43 +86,43 @@ class ALYSIA_PHONE
 			class call_rcv_6: call_rcv_1
 			{
 				name = "Décroche putain";
-				sleep = 1.6;
+				sleep = 4.5;
 				duration = 2.7;
 			};
 			class call_rcv_7: call_rcv_1
 			{
 				name = "Brajva le cul-térré";
-				sleep = 2;
+				sleep = 5;
 				duration = 2.85;
 			};
 			class call_rcv_8: call_rcv_1
 			{
 				name = "Hmm Césarion";
-				sleep = 2;
+				sleep = 5.90;
 				duration = 3.90;
 			};
 			class call_rcv_9: call_rcv_1
 			{
 				name = "La Puissante Garde";
-				sleep = 1.8;
+				sleep = 6;
 				duration = 4.30;
 			};
 			class call_rcv_10: call_rcv_1
 			{
 				name = "Vive le Colonel (1)";
-				sleep = 1.5;
+				sleep = 5.6;
 				duration = 3.6;
 			};
 			class call_rcv_11: call_rcv_1
 			{
 				name = "Vive le Colonel (2)";
-				sleep = 1.5;
+				sleep = 5.2;
 				duration = 3.2;
 			};
 			class call_rcv_12: call_rcv_1
 			{
 				name = "La corruption du Nord";
-				sleep = 1.5;
+				sleep = 5;
 				duration = 3.2;
 			};
 			class call_rcv_13: call_rcv_1

@@ -49,7 +49,7 @@ if ((player getVariable ["arrested", false]) && !(isNull g_arrest_Prison) && !(g
 	if (g_coma_suicide) then
 	{
 		_percent = getNumber(_config >> "suicide");
-		if (_percente > 0) then
+		if (_percent > 0) then
 		{
 			[false, round(g_atm * _percent), "Suicide"] call AlysiaClient_fnc_handleATM;
 		};
@@ -57,7 +57,7 @@ if ((player getVariable ["arrested", false]) && !(isNull g_arrest_Prison) && !(g
 
 	{
 		if (
-				(isClass(missionConfigFile >> "ALYSIA_HOUSES" >> typeof(_x) >> "house")) && 
+				(isClass(missionConfigFile >> "ALYSIA_HOUSES" >> typeof(_x) >> "house")) &&
 				(((_x getVariable ["house_owner", ["", ""]]) select 0) isEqualTo (getPlayerUID player))
 			) exitWith {_position = getPosATL _x};
 	} forEach g_houses;

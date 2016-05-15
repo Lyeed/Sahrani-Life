@@ -17,6 +17,7 @@ lbClear _ctrl_sms;
 
 _ctrl_sms lbAdd "Silencieux";
 if (_actual_sms isEqualTo "") then {_ctrl_sms lbSetCurSel 0};
+
 _ctrl_sms lbSetPicture [0, "lyeed_IMG\data\phone\settings\sound.paa"];
 
 {
@@ -26,7 +27,6 @@ _ctrl_sms lbSetPicture [0, "lyeed_IMG\data\phone\settings\sound.paa"];
 	_ctrl_sms lbSetData [_index, (configName _x)];
 } forEach ("getNumber(_x >> 'donator') <= (call g_donator)" configClasses (missionConfigFile >> "ALYSIA_PHONE" >> "SMS" >> "sounds"));
 
-lbSort [_ctrl_sms, "DESC"];
 _ctrl_sms ctrlSetEventHandler ["LBSelChanged", "[((_this select 0) lbData (_this select 1)), true] call AlysiaClient_fnc_phone_ring_message;"];
 
 _actual_call = profileNamespace getVariable ["ALYSIA_phone_call_ring", ""];
@@ -44,7 +44,6 @@ _ctrl_call lbSetPicture [0, "lyeed_IMG\data\phone\settings\sound.paa"];
 	_ctrl_call lbSetData [_index, (configName _x)];
 } forEach ("getNumber(_x >> 'donator') <= (call g_donator)" configClasses (missionConfigFile >> "ALYSIA_PHONE" >> "CALL" >> "sounds"));
 
-lbSort [_ctrl_call, "DESC"];
 _ctrl_call ctrlSetEventHandler ["LBSelChanged", "[((_this select 0) lbData (_this select 1)), true] call AlysiaClient_fnc_phone_ring_call;"];
 
 _ctrl_checkbox = _display displayCtrl 8355;
@@ -55,3 +54,9 @@ if (g_phone_annuaire) then {
 };
 
 _ctrl_checkbox ctrlSetEventHandler ["CheckedChanged", "[(_this select 1)] call AlysiaClient_fnc_phone_annuaire;"];
+
+waitUntil {g_app != "PHONE_SETTINGS"};
+
+_ctrl_sms ctrlRemoveAllEventHandlers "LBSelChanged";
+_ctrl_call ctrlRemoveAllEventHandlers "LBSelChanged";
+_ctrl_checkbox ctrlRemoveAllEventHandlers "CheckedChanged";
