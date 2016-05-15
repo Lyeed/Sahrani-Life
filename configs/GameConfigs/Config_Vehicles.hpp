@@ -1256,6 +1256,7 @@ class ALYSIA_VEHICLES
 		side = "GUER";
 		insurance = 1;
 		licenses[] = {"driver"};
+		rank = 1;
 		fuel = "Diesel";
 		fuelCapacity = 100;
 		colors[] =

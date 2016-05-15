@@ -20,7 +20,7 @@ _count = 0;
 {
 	if ((_x getVariable ["restrained", false]) || !(alive _x) || (_x getVariable ["is_coma", false])) then
 	{
-		_x action ["Eject", (vehicle _x)];
+		_x action ["Eject", _target];
 		_count = _count + 1;
 	};
 } forEach (crew _target);

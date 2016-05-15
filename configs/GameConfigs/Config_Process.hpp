@@ -356,9 +356,8 @@ class ALYSIA_PROCESS
 	};
 	class tissue_illegal: tissue
 	{
-		require[] = {{"cottonp",7}};
 		receive[] = {{{"tissue",1}},{},0};
-		time_per_item = 8;
+		time_per_item = 6;
 		time_default = 5;
 		class target {};
 		class factions
@@ -464,9 +463,8 @@ class ALYSIA_PROCESS
 	};
 	class steel_illegal: steel
 	{
-		require[] = {{"ironp",1},{"coal",3}};
 		receive[] = {{{"steel",1}},{},0};
-		time_per_item = 8;
+		time_per_item = 6;
 		time_default = 5;
 		class target {};
 		class factions

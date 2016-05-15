@@ -20409,17 +20409,17 @@ class Mission
 		};
 		class Item168
 		{
-			position[]={12516.822,179.99561,15073.472};
+			position[]={12538.918,179.99561,15092.243};
 			name="garage_Eponia_1";
 			type="Empty";
-			angle=-0.60457706;
+			angle=323.26096;
 		};
 		class Item169
 		{
-			position[]={12529.078,179.99561,15083.387};
+			position[]={12527.74,179.99561,15082.158};
 			name="garage_Eponia_2";
 			type="Empty";
-			angle=-4.5252414;
+			angle=-43.048073;
 		};
 		class Item170
 		{
