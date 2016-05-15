@@ -491,7 +491,7 @@ class ALYSIA_ITEMS
 	class heroin
 	{
 		name = "Fleur de pavot";
-		weight = 4;
+		weight = 3;
 		illegal = 1;
 		image = "alysia_items_virtual\data\pavot.paa";
 	};
@@ -510,7 +510,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\seringue_heroine.paa";
 		class market
 		{
-			max = 2520;
+			max = 3320;
 			min = 200;
 			affect[] = AFFECT_DRUGS;
 		};

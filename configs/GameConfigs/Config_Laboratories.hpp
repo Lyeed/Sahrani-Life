@@ -18,7 +18,7 @@ class ALYSIA_LABORATORIES
 		class construction
 		{
 			object = "Land_Bricks_V3_F";
-			require[] = {{"steel",40},{"glass",15},{"alu",5},{"furniture",2}};
+			require[] = {{"steel",40},{"glass",15},{"alu",5},{"furniture",2},{"copperp",15}};
 		};
 	};
 	class lab_meth

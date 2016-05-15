@@ -125,6 +125,18 @@ class ALYSIA_PHONE
 				sleep = 1.5;
 				duration = 3.2;
 			};
+			class call_rcv_13: call_rcv_1
+			{
+				name = "Vocal (Nikita)";
+				sleep = 2.5;
+				duration = 0.6;
+			};
+			class call_rcv_14: call_rcv_1
+			{
+				name = "Vocal (Jesus)";
+				sleep = 2.5;
+				duration = 1.1;
+			};
 		};
 	};
 
