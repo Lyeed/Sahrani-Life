@@ -4072,10 +4072,12 @@ class ALYSIA_VEHICLES
 		fuelCapacity = 67;
 		colors[] =
 		{
-			"Skyline_Jeep_Wrangler_Rubicon_Depannage_01_F"
+			"Skyline_Jeep_Wrangler_Rubicon_Depannage_01_F",
+			"Skyline_Jeep_Wrangler_Rubicon_Depannage_02_F"
 		};
 	};
 	class Skyline_Jeep_Wrangler_Rubicon_Depannage_01_F: Skyline_Jeep_Wrangler_Rubicon_Depannage {};
+	class Skyline_Jeep_Wrangler_Rubicon_Depannage_02_F: Skyline_Jeep_Wrangler_Rubicon_Depannage {};
 
 	class D41_Trawler
 	{
