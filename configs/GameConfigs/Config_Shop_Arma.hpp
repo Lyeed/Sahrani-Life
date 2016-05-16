@@ -216,6 +216,7 @@ class ALYSIA_SHOPS_ARMA
 			"Alysia_repair_engine",
 			"Alysia_repair_body",
 			"Alysia_repair_track",
+			"Alysia_repair_tire",
 			"Alysia_siphon"
 		};
 	};
