@@ -23,6 +23,7 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 	_ctrl_fatigue = _hud displayCtrl 23501;
 	_ctrl_hunger = _hud displayCtrl 23502;
 	_ctrl_thirst = _hud displayCtrl 23503;
+	_ctrl_volume = _hud displayCtrl 23504;
 
 	_ctrl_weapon_mod = _hud displayCtrl 23530;
 	_ctrl_weapon_ammo = _hud displayCtrl 23532;
@@ -83,6 +84,18 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 		[
 			"<t align='right' font='RobotoRegular' size='2'>%1</t><t size='1.3' align='right'>%2</t><img size='1.4' align='right' image='lyeed_IMG\data\player_hud\thirst.paa'/>",
 			g_thirst, "%"
+		];
+
+		_ctrl_volume ctrlSetStructuredText parseText format
+		[
+			"<t align='right' font='RobotoRegular' size='2'>%1</t><t size='1.3' align='right'>%2</t><img size='1.4' align='right' image='lyeed_IMG\data\player_hud\speak.paa'/>",
+			switch (TF_speak_volume_level) do
+			{
+				case "whispering": {50};
+				case "normal": {100};
+				case "yelling": {200};
+			},
+			"%"
 		];
 
 		_idc = 23510;

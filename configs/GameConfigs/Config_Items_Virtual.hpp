@@ -395,8 +395,6 @@ class ALYSIA_ITEMS
 	{
 		name = "Sel";
 		weight = 4;
-		price_buy = 60;
-		price_sell  = 30;
 		image = "alysia_items_virtual\data\sel.paa";
 	};
 	class saltp

@@ -48,7 +48,15 @@ class RscTitlePlayer
 			w = 0.0773437 * safezoneW;
 			h = 0.044 * safezoneH;
 		};
+		class PERCENT_VOLUME: RscStructuredText
+		{
+			idc = 23504;
 
+			x = 0.922813 * safezoneW + safezoneX;
+			y = 0.731 * safezoneH + safezoneY;
+			w = 0.0773437 * safezoneW;
+			h = 0.044 * safezoneH;
+		};
 		/*===========================
 		  ===        ICONS        ===
 		  =========================== */

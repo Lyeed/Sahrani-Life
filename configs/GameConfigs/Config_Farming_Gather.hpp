@@ -28,7 +28,7 @@ class ALYSIA_FARMING_OBJECT
 		receive[] = {{"platine", 1, 0}};
 		tool = "Skyline_Merlin_01";
 		sounds[] = {"mining_1", "mining_2", "mining_3", "mining_4", "mining_5"};
-		times = 5;
+		times = 4;
 	};
 };
 
