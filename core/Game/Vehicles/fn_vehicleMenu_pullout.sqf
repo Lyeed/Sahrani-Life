@@ -28,5 +28,5 @@ _count = 0;
 if (_count isEqualTo 0) then {
 	["Il n'y a personne de menotté ou dans le coma dans le véhicule."] call AlysiaClient_fnc_error;
 } else {
-	["Vous avez sorti %1 personne%2 du véhicule.", _count, if (_count > 1) then {"s"} else {""}] call AlysiaClient_fnc_error;
+	[format["Vous avez sorti %1 personne%2 du véhicule.", _count, if (_count > 1) then {"s"} else {""}]] call AlysiaClient_fnc_error;
 };

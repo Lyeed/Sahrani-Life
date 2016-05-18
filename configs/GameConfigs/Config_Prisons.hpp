@@ -77,8 +77,8 @@ class ALYSIA_PRISONS
 
 		class bail
 		{
-			min = 1000;
 			max = 350000;
+			min = 1000;
 		};
 
 		class cells

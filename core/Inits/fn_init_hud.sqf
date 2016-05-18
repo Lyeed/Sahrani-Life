@@ -199,7 +199,8 @@ if (isNull (uiNameSpace getVariable ["RscTitlePlayer", displayNull])) then
 				!(player getVariable ["restrained", false]) &&
 				!(player getVariable ["surrender", false]) &&
 				!(player getVariable ["is_coma", false]) &&
-				(g_app isEqualTo "")
+				(g_app isEqualTo "") &&
+				!visibleMap
 			) then {
 
 			if (sunOrMoon < 0.2) then {

@@ -11,8 +11,8 @@ class ALYSIA_PROCESS
 		sound = "smelting";
 		require[] = {{"wood",1}};
 		receive[] = {{{"woodp",2}},{},0};
-		time_per_item = 2;
-		time_default = 4;
+		time_per_item = 1;
+		time_default = 5;
 		class target {};
 		class factions
 		{
@@ -28,8 +28,8 @@ class ALYSIA_PROCESS
 		sound = "smelting";
 		require[] = {{"woodp",5}};
 		receive[] = {{{"furniture",1}},{},0};
-		time_per_item = 2;
-		time_default = 4;
+		time_per_item = 1;
+		time_default = 3;
 		class target {};
 		class factions
 		{
@@ -99,8 +99,8 @@ class ALYSIA_PROCESS
 		sound = "smelting";
 		require[] = {{"platine",1}};
 		receive[] = {{{"platinep",1}},{},0};
-		time_per_item = 5;
-		time_default = 4;
+		time_per_item = 2;
+		time_default = 3;
 		class target {};
 		class factions
 		{
@@ -117,8 +117,8 @@ class ALYSIA_PROCESS
 		sound = "drug_process";
 		require[] = {{"heroin",1}};
 		receive[] = {{{"heroinp",1}},{},0};
-		time_per_item = 3;
-		time_default = 5;
+		time_per_item = 2;
+		time_default = 3;
 		class target
 		{
 			smoke_type = "SmokeShellYellow";
@@ -135,7 +135,7 @@ class ALYSIA_PROCESS
 		require[] = {{"heroinp",1},{"seringue",1}};
 		receive[] = {{{"heroinps",1}},{},0};
 		time_per_item = 2;
-		time_default = 4;
+		time_default = 3;
 		class target {};
 		class factions
 		{
@@ -149,8 +149,8 @@ class ALYSIA_PROCESS
 		sound = "collectoil";
 		require[] = {{"cocaine",1}};
 		receive[] = {{{"cocainep",1}},{},0};
-		time_per_item = 3;
-		time_default = 5;
+		time_per_item = 2;
+		time_default = 3;
 		class target
 		{
 			smoke_type = "SmokeShellGreen";
@@ -165,8 +165,8 @@ class ALYSIA_PROCESS
 		name = "Coupe de la cocaine";
 		sound = "cooking";
 		require[] = {{"cocainep",1},{"glass",1}};
-		receive[] = {{{"cocainepc",2}},{},0};
-		time_per_item = 2;
+		receive[] = {{{"cocainepc",3}},{},0};
+		time_per_item = 1;
 		time_default = 3;
 		class target
 		{
@@ -233,7 +233,7 @@ class ALYSIA_PROCESS
 		require[] = {{"cannabis",1}};
 		receive[] = {{{"marijuana",1}},{},0};
 		time_per_item = 2;
-		time_default = 4;
+		time_default = 3;
 		class target {};
 		class factions
 		{
@@ -269,7 +269,7 @@ class ALYSIA_PROCESS
 		require[] = {{"frag_1",1},{"frag_2",1},{"frag_3",1},{"frag_4",1},{"frag_5",1},{"frag_6",1}};
 		receive[] = {{{"artefact_R",1}},{},0};
 		time_per_item = 3;
-		time_default = 5;
+		time_default = 3;
 		class target {};
 		class factions
 		{
@@ -300,7 +300,7 @@ class ALYSIA_PROCESS
 		require[] = {{"tabac",2}};
 		receive[] = {{{"cigare",1}},{},0};
 		time_per_item = 3;
-		time_default = 5;
+		time_default = 2;
 		class target {};
 		class factions
 		{
@@ -313,8 +313,8 @@ class ALYSIA_PROCESS
 		sound = "smelting";
 		require[] = {{"copper",1}};
 		receive[] = {{{"copperp",1}},{},0};
-		time_per_item = 4;
-		time_default = 6;
+		time_per_item = 2;
+		time_default = 3;
 		class target {};
 		class factions
 		{
@@ -330,22 +330,25 @@ class ALYSIA_PROCESS
 		sound = "smelting";
 		require[] = {{"cotton",1}};
 		receive[] = {{{"cottonp",2}},{},0};
-		time_per_item = 2;
+		time_per_item = 1;
 		time_default = 4;
 		class target {};
 		class factions
 		{
-			class CIV {};
+			class CIV
+			{
+				licenses[] = {"cotton"};
+			};
 		};
 	};
 	class tissue
 	{
 		name = "Tissage";
 		sound = "salt_process";
-		require[] = {{"cottonp",6}};
-		receive[] = {{{"tissue",2}},{},0};
-		time_per_item = 3;
-		time_default = 4;
+		require[] = {{"cottonp",5}};
+		receive[] = {{{"tissue",3}},{},0};
+		time_per_item = 2;
+		time_default = 3;
 		class factions
 		{
 			class CIV
@@ -356,9 +359,24 @@ class ALYSIA_PROCESS
 	};
 	class tissue_illegal: tissue
 	{
+		require[] = {{"cottonp",3}};
 		receive[] = {{{"tissue",1}},{},0};
-		time_per_item = 6;
+		time_per_item = 3;
 		time_default = 5;
+		class target {};
+		class factions
+		{
+			class CIV {};
+		};
+	};
+	class lockpick
+	{
+		name = "Fabrication de kit de crochetage";
+		sound = "smelting";
+		require[] = {{"ironp", 1},{"alu",1}};
+		receive[] = {{{"lockpick",1}},{},0};
+		time_per_item = 2;
+		time_default = 4;
 		class target {};
 		class factions
 		{
@@ -372,8 +390,8 @@ class ALYSIA_PROCESS
 		sound = "salt_process";
 		require[] = {{"goldnuggets",40}};
 		receive[] = {{{"goldbar",1}},{},0};
-		time_per_item = 3;
-		time_default = 5;
+		time_per_item = 4;
+		time_default = 1;
 		class target {};
 		class factions
 		{
@@ -389,8 +407,8 @@ class ALYSIA_PROCESS
 		sound = "salt_process";
 		require[] = {{"salt",1}};
 		receive[] = {{{"saltp",1}},{},0};
-		time_per_item = 2;
-		time_default = 6;
+		time_per_item = 1;
+		time_default = 5;
 		class target {};
 		class factions
 		{
@@ -406,7 +424,7 @@ class ALYSIA_PROCESS
 		sound = "salt_process";
 		require[] = {{"baux",1}};
 		receive[] = {{{"alu",1}},{},0};
-		time_per_item = 2;
+		time_per_item = 1;
 		time_default = 3;
 		class target {};
 		class factions
@@ -423,7 +441,7 @@ class ALYSIA_PROCESS
 		sound = "smelting";
 		require[] = {{"raisin",3},{"bouteillevide",1}};
 		receive[] = {{{"grozdova",1}},{},0};
-		time_per_item = 5;
+		time_per_item = 3;
 		time_default = 3;
 		class target {};
 		class factions
@@ -437,7 +455,7 @@ class ALYSIA_PROCESS
 		sound = "smelting";
 		require[] = {{"Prune",3},{"bouteillevide",1}};
 		receive[] = {{{"slivovica",1}},{},0};
-		time_per_item = 5;
+		time_per_item = 3;
 		time_default = 3;
 		class target {};
 		class factions
@@ -510,8 +528,8 @@ class ALYSIA_PROCESS
 		sound = "salt_process";
 		require[] = {{"pierre",1}};
 		receive[] = {{{"ciment",1}},{},0};
-		time_per_item = 4;
-		time_default = 5;
+		time_per_item = 1;
+		time_default = 4;
 		class factions
 		{
 			class CIV

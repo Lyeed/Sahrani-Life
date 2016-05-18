@@ -733,6 +733,11 @@ class ALYSIA_FACTIONS
 				rank = 6;
 				same_side_only = 1;
 			};
+			class guer_chirurgien
+			{
+				rank = 6;
+				same_side_only = 1;
+			};
 		};
 
 		/*** LEADER BOARD ***/

@@ -18,7 +18,7 @@ class ALYSIA_LABORATORIES
 		class construction
 		{
 			object = "Land_Bricks_V3_F";
-			require[] = {{"steel",40},{"glass",15},{"alu",5},{"furniture",2},{"copperp",15}};
+			require[] = {{"steel",30},{"glass",5},{"alu",10},{"furniture",2},{"copperp",15}};
 		};
 	};
 	class lab_meth
@@ -39,7 +39,7 @@ class ALYSIA_LABORATORIES
 		class construction
 		{
 			object = "Land_Bricks_V3_F";
-			require[] = {{"steel",40},{"glass",15},{"alu",5},{"furniture",2}};
+			require[] = {{"steel",30},{"glass",5},{"alu",10},{"furniture",2},{"copperp",15}};
 		};
 	};
 	class lab_cocaine
@@ -62,7 +62,7 @@ class ALYSIA_LABORATORIES
 		class construction
 		{
 			object = "Land_Bricks_V3_F";
-			require[] = {{"steel",40},{"glass",15},{"alu",5},{"furniture",2}};
+			require[] = {{"steel",30},{"glass",5},{"alu",10},{"furniture",2},{"copperp",15}};
 		};
 	};
 	class lab_heroin
@@ -83,7 +83,7 @@ class ALYSIA_LABORATORIES
 		class construction
 		{
 			object = "Land_Bricks_V3_F";
-			require[] = {{"steel",40},{"glass",15},{"alu",5},{"furniture",2}};
+			require[] = {{"steel",30},{"glass",5},{"alu",10},{"furniture",2},{"copperp",15}};
 		};
 	};
 	class lab_weapon
@@ -128,7 +128,7 @@ class ALYSIA_LABORATORIES
 		class construction
 		{
 			object = "Land_Bricks_V3_F";
-			require[] = {{"steel",65},{"glass",5},{"alu",20},{"furniture",4}};
+			require[] = {{"steel",40},{"glass",5},{"alu",15},{"furniture",4}};
 		};
 	};
 	class lab_clothing
@@ -136,6 +136,7 @@ class ALYSIA_LABORATORIES
 		object = "Skyline_Alysia_WorkBench_Equipement_01_F";
 		process[] =
 		{
+			"lockpick",
 			"vest_criminal_1",
 			"clothing_criminal_1",
 			"clothing_criminal_2",
@@ -209,7 +210,7 @@ class ALYSIA_LABORATORIES
 		class construction
 		{
 			object = "Land_Bricks_V3_F";
-			require[] = {{"steel",65},{"glass",5},{"alu",20},{"furniture",1},{"woodp",15}};
+			require[] = {{"steel",40},{"glass",5},{"alu",20},{"furniture",1},{"woodp",15}};
 		};
 	};
 	class lab_cigare
@@ -265,7 +266,7 @@ class ALYSIA_LABORATORIES
 		class construction
 		{
 			object = "Land_Bricks_V3_F";
-			require[] = {{"steel",40},{"glass",3},{"woodp",10},{"furniture",3}};
+			require[] = {{"steel",20},{"glass",3},{"woodp",10},{"furniture",3}};
 		};
 	};
 	class lab_steel
@@ -299,7 +300,7 @@ class ALYSIA_LABORATORIES
 		class construction
 		{
 			object = "Land_Bricks_V3_F";
-			require[] = {{"steel",65},{"glass",5},{"alu",20},{"furniture",1},{"woodp",15}};
+			require[] = {{"steel",40},{"glass",5},{"alu",20},{"furniture",1},{"woodp",15}};
 		};
 	};
 };

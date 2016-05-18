@@ -55,7 +55,7 @@ while {((isNil {(missionNamespace getVariable "calling_answer")}) && g_is_alive 
 			if (_sound isEqualTo "") then {
 				playSound "message_rcv_silent";
 			} else {
-				[player, _sound, getNumber(_config >> "distance")] call CBA_fnc_globalSay3d;	
+				[player, _sound, getNumber(_config >> "distance")] call CBA_fnc_globalSay3d;
 			};
 			missionNamespace setVariable ["message_sound_end_time", (time + _duration)];
 			_time = 0;

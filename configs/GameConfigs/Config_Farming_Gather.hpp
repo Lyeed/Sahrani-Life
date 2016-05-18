@@ -5,7 +5,7 @@ class ALYSIA_FARMING_OBJECT
 		receive[] = {{"coal", 2, 1}};
 		tool = "Skyline_Pioche_01";
 		sounds[] = {"mining_1", "mining_2", "mining_3", "mining_4", "mining_5"};
-		times = 3;
+		times = 2;
 	};
 	class xcam_Kopa_kameni2: xcam_Kopa_kameni {};
 	class xcam_R2_RockTower
@@ -13,7 +13,7 @@ class ALYSIA_FARMING_OBJECT
 		receive[] = {{"iron", 3, 1}};
 		tool = "Skyline_Pioche_01";
 		sounds[] = {"mining_1", "mining_2", "mining_3", "mining_4", "mining_5"};
-		times = 4;
+		times = 3;
 	};
 	class xcam_R2_RockWall: xcam_R2_RockTower {};
 	class xcam_rockS_02
@@ -28,7 +28,7 @@ class ALYSIA_FARMING_OBJECT
 		receive[] = {{"platine", 1, 0}};
 		tool = "Skyline_Merlin_01";
 		sounds[] = {"mining_1", "mining_2", "mining_3", "mining_4", "mining_5"};
-		times = 4;
+		times = 5;
 	};
 };
 

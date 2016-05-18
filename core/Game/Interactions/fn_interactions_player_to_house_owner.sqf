@@ -16,5 +16,5 @@
 		["store", "Rentrer", "[g_interaction_target] spawn AlysiaClient_fnc_house_menu_action_store;", "isClass(missionConfigFile >> 'ALYSIA_HOUSES' >> typeOf(g_interaction_target) >> 'garage')"],
 		["light", "Lumière", "[g_interaction_target] call AlysiaClient_fnc_house_menu_action_light;", "(g_interaction_target getVariable ['house_update_lights',false])"]
 	],
-	"Chez vous"
+	"Bâtiment"
 ] spawn AlysiaClient_fnc_interactions_create;

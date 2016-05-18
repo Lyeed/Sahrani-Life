@@ -29,7 +29,7 @@ if (isNull _object) exitWith {};
 		[
 			"finish",
 			"Construire",
-			"[] spawn AlysiaClient_fnc_company_construction_build;",
+			"[g_interaction_target] spawn AlysiaClient_fnc_company_construction_build;",
 			"
 				(
 					(g_interaction_target getVariable ['construction', false]) && 

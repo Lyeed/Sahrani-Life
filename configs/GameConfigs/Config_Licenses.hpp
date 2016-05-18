@@ -23,7 +23,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 12000;
+				price = 1100;
 				pad_store = 1;
 				illegal = 0;
 			};
@@ -60,7 +60,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 1000;
+				price = 1500;
 				pad_store = 1;
 				illegal = 0;
 			};
@@ -85,6 +85,7 @@ class ALYSIA_LICENSES
 			class GUER: CIV {};
 		};
 	};
+
 	class dive
 	{
 		name = "Licence de plongée";
@@ -101,7 +102,6 @@ class ALYSIA_LICENSES
 			class GUER: CIV {};
 		};
 	};
-
 	class home
 	{
 		name = "Licence de propriété";
@@ -115,7 +115,6 @@ class ALYSIA_LICENSES
 			};
 		};
 	};
-
 	class gun
 	{
 		name = "Licence d'armes à feu";
@@ -130,45 +129,6 @@ class ALYSIA_LICENSES
 		};
 	};
 
-	class archeologie
-	{
-		name = "Licence d'archéologie";
-		class factions
-		{
-			class CIV
-			{
-				price = 35000;
-				pad_store = 0;
-				illegal = 1;
-			};
-		};
-	};
-	class platine
-	{
-		name = "Traitement du platine";
-		class factions
-		{
-			class CIV
-			{
-				price = 20000;
-				pad_store = 1;
-				illegal = 0;
-			};
-		};
-	};
-	class copper
-	{
-		name = "Traitement du cuivre";
-		class factions
-		{
-			class CIV
-			{
-				price = 6500;
-				pad_store = 1;
-				illegal = 0;
-			};
-		};
-	};
 	class wood
 	{
 		name = "Traitement du bois";
@@ -182,27 +142,14 @@ class ALYSIA_LICENSES
 			};
 		};
 	};
-	class furniture
+	class cotton
 	{
-		name = "Traitement des planches";
+		name = "Traitement du coton";
 		class factions
 		{
 			class CIV
 			{
-				price = 11000;
-				pad_store = 1;
-				illegal = 0;
-			};
-		};
-	};
-	class iron
-	{
-		name = "Traitement du fer";
-		class factions
-		{
-			class CIV
-			{
-				price = 8000;
+				price = 3100;
 				pad_store = 1;
 				illegal = 0;
 			};
@@ -215,33 +162,20 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 5000;
+				price = 4800;
 				pad_store = 1;
 				illegal = 0;
 			};
 		};
 	};
-	class tabac
+	class copper
 	{
-		name = "Traitement du tabac";
+		name = "Traitement du cuivre";
 		class factions
 		{
 			class CIV
 			{
-				price = 15000;
-				pad_store = 0;
-				illegal = 0;
-			};
-		};
-	};
-	class gold
-	{
-		name = "Fonte de l'or";
-		class factions
-		{
-			class CIV
-			{
-				price = 25000;
+				price = 5800;
 				pad_store = 1;
 				illegal = 0;
 			};
@@ -260,6 +194,32 @@ class ALYSIA_LICENSES
 			};
 		};
 	};
+	class iron
+	{
+		name = "Traitement du fer";
+		class factions
+		{
+			class CIV
+			{
+				price = 6500;
+				pad_store = 1;
+				illegal = 0;
+			};
+		};
+	};
+	class furniture
+	{
+		name = "Fabrication de meubles";
+		class factions
+		{
+			class CIV
+			{
+				price = 9000;
+				pad_store = 1;
+				illegal = 0;
+			};
+		};
+	};
 	class bauxite
 	{
 		name = "Traitement du bauxite";
@@ -267,9 +227,62 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 5000;
+				price = 13600;
 				pad_store = 1;
 				illegal = 0;
+			};
+		};
+	};
+	class tabac
+	{
+		name = "Traitement du tabac";
+		class factions
+		{
+			class CIV
+			{
+				price = 16000;
+				pad_store = 0;
+				illegal = 0;
+			};
+		};
+	};
+	class platine
+	{
+		name = "Traitement du platine";
+		class factions
+		{
+			class CIV
+			{
+				price = 28000;
+				pad_store = 1;
+				illegal = 0;
+			};
+		};
+	};
+	class gold
+	{
+		name = "Fonte de l'or";
+		class factions
+		{
+			class CIV
+			{
+				price = 50000;
+				pad_store = 1;
+				illegal = 0;
+			};
+		};
+	};
+
+	class archeologie
+	{
+		name = "Licence d'archéologie";
+		class factions
+		{
+			class CIV
+			{
+				price = 35000;
+				pad_store = 0;
+				illegal = 1;
 			};
 		};
 	};
@@ -573,12 +586,7 @@ class ALYSIA_LICENSES
 		name = "Docteur généraliste";
 		class factions
 		{
-			class GUER
-			{
-				price = 0;
-				pad_store = 0;
-				illegal = 0;
-			};
+			class GUER {};
 		};
 	};
 	class guer_gen
@@ -586,12 +594,15 @@ class ALYSIA_LICENSES
 		name = "Généticien";
 		class factions
 		{
-			class GUER
-			{
-				price = 0;
-				pad_store = 0;
-				illegal = 0;
-			};
+			class GUER {};
+		};
+	};
+	class guer_chirurgien
+	{
+		name = "Chirurgien";
+		class factions
+		{
+			class GUER {};
 		};
 	};
 
