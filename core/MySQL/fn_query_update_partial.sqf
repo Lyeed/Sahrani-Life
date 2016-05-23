@@ -10,7 +10,7 @@ _mode = [_this, 0, -1, [0]] call BIS_fnc_param;
 
 _data = switch (_mode) do
 {
-	case 2: {[g_launder, (call AlysiaClient_fnc_getInv)]};
+	case 1: {[(call AlysiaClient_fnc_getInv), ([player] call AlysiaClient_fnc_getGear)]};
 	case 3: {[g_arrest_Time, (vehicleVarName g_arrest_Prison), g_arrest_Cellule, g_arrest_Caution, g_arrest_Gear, g_arrest_Reason, g_arrest_Escape]};
 	default {[]};
 };

@@ -4,7 +4,6 @@ with missionNamespace do
 	****** Backend Variables *****
 	******************************/
 	g_sheeps = [];
-	g_launder = 0;
 	g_curWep_h = "";
 	g_objPut = ObjNull;
 	g_killer = ObjNull;
@@ -27,11 +26,10 @@ with missionNamespace do
 	g_nationality = "";
 	g_sexe = "";
 	/* ===================[Staff]==========================*/
+	g_staff_on = false;
 	g_staff_god = false;
 	g_staff_markers = false;
 	g_staff_spec = false;
-	g_staff_tp = false;
-	g_staff_invisible = false;
 	/* ===================[Tablet]==========================*/
 	g_apps = [];
 	g_app = "";

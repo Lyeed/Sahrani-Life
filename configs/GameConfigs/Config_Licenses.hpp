@@ -294,7 +294,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				condition = "(g_choice isEqualTo 'NORTH')";
+				condition = "((g_choice isEqualTo 'NORTH') && (isNull g_company))";
 			};
 		};
 	};
@@ -305,18 +305,18 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				condition = "(g_choice isEqualTo 'NORTH')";
+				condition = "((g_choice isEqualTo 'NORTH') && (isNull g_company))";
 			};
 		};
 	};
-	class gov_justice
+	class gov_internal
 	{
-		name = "Député chargé de la Justice";
+		name = "Député chargé des affaires internes";
 		class factions
 		{
 			class CIV
 			{
-				condition = "(g_choice isEqualTo 'NORTH')";
+				condition = "((g_choice isEqualTo 'NORTH') && (isNull g_company))";
 			};
 		};
 	};

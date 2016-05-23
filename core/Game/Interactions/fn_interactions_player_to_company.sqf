@@ -68,6 +68,15 @@ if (isNull _object) exitWith {};
 					(isNil 'gServer_soonReboot')
 				)
 			"
+		],
+		[
+			"launder"
+			"Blanchiment",
+			"[g_interaction_target] spawn AlysiaClient_fnc_company_launder_open;",
+			"
+				((g_company isEqualTo g_interaction_target) &&
+				((['illegal_money'] call AlysiaClient_fnc_itemCount) > 0)
+			"
 		]
 	],
 	(_object getVariable "company_info") select 0,

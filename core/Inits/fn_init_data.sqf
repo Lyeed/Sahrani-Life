@@ -144,7 +144,6 @@ switch (playerSide) do
 	case civilian:
 	{
 		if ((call g_CIVLevel) > 0) then {player setVariable ["rank", (call g_CIVLevel), true]};
-		g_launder = _basic select 46;
 	};
 
 	case independent:

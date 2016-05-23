@@ -197,7 +197,7 @@ if ((vehicle player) isEqualTo player) then
 						_pos = _target modelToWorld (_target selectionPosition (configName _x));
 						if ((player distance [_pos select 0, _pos select 1, (_pos select 2) - 1.5]) < 3) then
 						{
-							[_target, (configName _x)] spawn AlysiaClient_fnc_bank_door_force;
+							[_target, (configName _x)] spawn AlysiaClient_fnc_bank_door;
 							true breakOut "main";
 						};
 					} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_BANK" >> _type >> "doors"));

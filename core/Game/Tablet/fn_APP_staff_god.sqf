@@ -1,4 +1,6 @@
-private["_keyForward", "_keyLeft", "_keyBackward", "_keyRight", "_keyUp", "_keyDown"];
+
+_config = ("getText(_x >> 'uid') isEqualTo (getPlayerUID player)" configClasses (missionConfigFile >> "ALYSIA_STAFF" >> "members")) select 0;
+if (isNil "_config") exitWith {};
 
 AlysiaAdmin_fnc_fly_forward =
 {

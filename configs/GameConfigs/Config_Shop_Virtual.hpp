@@ -188,7 +188,7 @@ class ALYSIA_SHOPS_VIRTUAL
 	};
 
 	/* RESSOURCES */
-	class dealer
+	class dealer_north
 	{
 		name = "Dealer";
 		side = "CIV";
@@ -197,11 +197,21 @@ class ALYSIA_SHOPS_VIRTUAL
 			{
 
 			},{
+				"marijuana_bag",
+				"meth_bag"
+			}
+		};
+	};
+	class dealer_south: dealer_north
+	{
+		items[] =
+		{
+			{
+
+			},{
 				"cocainep_bag",
 				"heroinps",
-				"marijuana_bag",
-				"cocainepc_bag",
-				"meth_bag"
+				"cocainepc_bag"
 			}
 		};
 	};
@@ -367,12 +377,7 @@ class ALYSIA_SHOPS_VIRTUAL
 				"pumpkin_seed"
 			},{
 				"ciment",
-				"brique",
-				"sp98",
-				"sp95",
-				"gpl",
-				"kerosene",
-				"gazole"
+				"brique"
 			}
 		};
 	};

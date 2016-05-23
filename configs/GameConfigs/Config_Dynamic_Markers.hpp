@@ -14,7 +14,7 @@ class ALYSIA_DYN_MARKERS
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
 		destroy_item = "destroy_field";
-		positions = "field";
+		positions = "field_north";
 	};
 	class cannabis_1
 	{
@@ -29,7 +29,7 @@ class ALYSIA_DYN_MARKERS
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
 		destroy_item = "destroy_field";
-		positions = "field";
+		positions = "field_south";
 	};
 	class meth_1
 	{
@@ -44,7 +44,7 @@ class ALYSIA_DYN_MARKERS
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
 		destroy_item = "destroy_field";
-		positions = "field";
+		positions = "field_south";
 	};
 	class heroin_1
 	{
@@ -59,7 +59,7 @@ class ALYSIA_DYN_MARKERS
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
 		destroy_item = "destroy_field";
-		positions = "field";
+		positions = "field_north";
 	};
 
 	//- BLACKMARKETS
@@ -77,7 +77,7 @@ class ALYSIA_DYN_MARKERS
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
 		destroy_item = "destroy_stand";
-		positions = "general";
+		positions = "stands_general";
 	};
 	class black_market_2_marker
 	{
@@ -93,7 +93,7 @@ class ALYSIA_DYN_MARKERS
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
 		destroy_item = "destroy_stand";
-		positions = "general";
+		positions = "stands_general";
 	};
 
 	//- ALCOOL
@@ -111,25 +111,7 @@ class ALYSIA_DYN_MARKERS
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
 		destroy_item = "destroy_stand";
-		positions = "north";
-	};
-
-	//- LAUNDER
-	class launder_marker
-	{
-		text        = "Blanchiment d'argent";
-		type        = "Maels_illegal_blanchiment";
-		color       = "ColorRed";
-		shape       = "ICON";
-		size        = 0.55;
-		shop_appear = 1;
-		shop_price  = 50000;
-		linked      = "launder";
-		discover[]  = {"CIV"};
-		shown[]     = {};
-		destroy[]   = {"WEST", "EAST"};
-		destroy_item = "destroy_stand";
-		positions = "general";
+		positions = "stands_north";
 	};
 
 	//- RECELEURS
@@ -147,7 +129,7 @@ class ALYSIA_DYN_MARKERS
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
 		destroy_item = "destroy_stand";
-		positions = "general";
+		positions = "stands_general";
 	};
 	class cardealer_2_marker
 	{
@@ -163,11 +145,11 @@ class ALYSIA_DYN_MARKERS
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
 		destroy_item = "destroy_stand";
-		positions = "general";
+		positions = "stands_general";
 	};
 
 	//- DEALERS
-	class drugs_dealer_1_marker
+	class drugs_dealer_north_marker
 	{
 		text        = "Dealeur";
 		type        = "Maels_sell";
@@ -176,14 +158,14 @@ class ALYSIA_DYN_MARKERS
 		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 33000;
-		linked      = "drugs_dealer_1";
+		linked      = "drugs_dealer_north";
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
 		destroy_item = "destroy_stand";
-		positions = "general";
+		positions = "stands_north";
 	};
-	class drugs_dealer_2_marker
+	class drugs_dealer_south_marker
 	{
 		text        = "Dealeur";
 		type        = "Maels_sell";
@@ -192,12 +174,12 @@ class ALYSIA_DYN_MARKERS
 		size        = 0.55;
 		shop_appear = 1;
 		shop_price  = 33000;
-		linked      = "drugs_dealer_2";
+		linked      = "drugs_dealer_south";
 		discover[]  = {"CIV"};
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
 		destroy_item = "destroy_stand";
-		positions = "general";
+		positions = "stands_south";
 	};
 
 	class archeologie_1
@@ -244,7 +226,7 @@ class ALYSIA_DYN_MARKERS
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
 		destroy_item = "destroy_stand";
-		positions = "general";
+		positions = "stands_general";
 	};
 
 	class hydration_soufre_marker
@@ -261,7 +243,7 @@ class ALYSIA_DYN_MARKERS
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
 		destroy_item = "destroy_stand";
-		positions = "general";
+		positions = "stands_general";
 	};
 
 	class dealer_tabac_marker
@@ -278,6 +260,6 @@ class ALYSIA_DYN_MARKERS
 		shown[]     = {};
 		destroy[]   = {"WEST", "EAST"};
 		destroy_item = "destroy_stand";
-		positions = "north";
+		positions = "stands_north";
 	};
 };

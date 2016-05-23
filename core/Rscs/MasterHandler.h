@@ -5,6 +5,7 @@
 #include "RscDisplays\RscDisplayDefaultInteraction.hpp"
 #include "RscDisplays\RscDisplayDefaultText.hpp"
 #include "RscDisplays\RscDisplayDefaultChoice.hpp"
+#include "RscDisplays\RscDisplayDefaultEdit.hpp"
 
 #include "RscDisplays\RscDisplayAuctionHouse.hpp"
 #include "RscDisplays\RscDisplayShopClothing.hpp"
@@ -28,7 +29,6 @@
 #include "RscDisplays\RscDisplayVirtualReduce.hpp"
 #include "RscDisplays\RscDisplayFuel.hpp"
 #include "RscDisplays\RscDisplayProcess.hpp"
-#include "RscDisplays\RscDisplayLaunder.hpp"
 #include "RscDisplays\RscDisplayArrest.hpp"
 #include "RscDisplays\RscDisplayCompanies.hpp"
 #include "RscDisplays\RscDisplayStealVehicle.hpp"

@@ -508,7 +508,6 @@ class ALYSIA_FACTIONS
 			can_search = 0;
 		};
 
-		class launder {};
 		class bank_faction
 		{
 			rank = 1;

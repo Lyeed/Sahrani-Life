@@ -113,6 +113,8 @@ class CfgFunctions
 			class company_member_license_receive {};
 			class company_storage {};
 			class company_process {};
+			class company_launder_open {};
+			class company_launder_action {};
 		};
 
 		class Tools
@@ -462,10 +464,6 @@ class CfgFunctions
 		class Launder
 		{
 			file = "core\Game\Launder";
-			class launder_calc {};
-			class launder_action {};
-			class launder_open {};
-			class launder_receive {};
 			class launder_reverse {};
 		};
 
@@ -477,7 +475,7 @@ class CfgFunctions
 			class atmFactionGet {};
 			class atmFactionHandle {};
 			class atmMoneyHandle {};
-			class bank_door_force {};
+			class bank_door {};
 			class salaryProcess {};
 			class handleATM {};
 			class handleCash {};
