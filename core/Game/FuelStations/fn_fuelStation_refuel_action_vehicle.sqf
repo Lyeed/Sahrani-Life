@@ -17,7 +17,7 @@ if ((player getVariable ["typeRefuel", ""]) isEqualTo "") then
 	if (_station getVariable ["fuel_inUse", false]) exitWith {["Quelqu'un est déjà en train d'utiliser la pompe."] call AlysiaClient_fnc_error};
 
 	player setVariable ["typeRefuel", (lbData[16004, lbCurSel 16004])];
-	["Veuillez maintenant insérer le pistolet dans le réservoir de votre véhicule<br/>Pour annuler rangez le pistolet dans la pompe."] call AlysiaClient_fnc_info;
+	["Veuillez maintenant insérer le pistolet dans le réservoir de votre véhicule<br/>Pour annuler l'action, interagissez avec la station."] call AlysiaClient_fnc_info;
 	closeDialog 0;
 
 	_distance = getNumber(missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_station) >> "max_distance_allowed");

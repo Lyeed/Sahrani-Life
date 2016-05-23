@@ -2649,7 +2649,7 @@ class ALYSIA_VEHICLES
 	{
 		realname = "Man TGX Flat Bed Truck";
 		buyPrice = 350000;
-		inventory = 150;
+		inventory = 200;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"truck"};

@@ -199,6 +199,10 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 1200;
 	};
+	class TRYK_H_wig
+	{
+		buy_price = 150;
+	};
 	class Bear_RoundGlasses
 	{
 		buy_price = 20;

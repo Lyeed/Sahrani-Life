@@ -21,15 +21,13 @@
 			"Construire",
 			"[g_interaction_target] spawn AlysiaClient_fnc_labo_build;",
 			"
-				(
-					(g_interaction_target getVariable ['construction', false]) && 
-					((g_interaction_target getVariable ['construction_require', []]) isEqualTo [])
-				)
+				(g_interaction_target getVariable ['construction', false]) && 
+				((g_interaction_target getVariable ['construction_require', []]) isEqualTo [])
 			"
 		],
 		[
 			"process",
-			"Traiter",
+			"Traitements",
 			"[g_interaction_target] call AlysiaClient_fnc_labo_process;",
 			"
 				(count getArray(missionConfigFile >> 'ALYSIA_LABORATORIES' >> ((g_interaction_target getVariable ['laboratory_info',['','','']]) select 2) >> 'process') > 0) &&

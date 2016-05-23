@@ -18,7 +18,7 @@ _oldPrice = [_item] call AlysiaClient_fnc_market_getPrice;
 if (_type) then
 {
 	private "_maxPrice";
-	_newprice = _oldPrice + ((_oldPrice * ((_amount * _weight) * 0.08)) / 100);
+	_newprice = _oldPrice + ((_oldPrice * ((_amount * _weight) * 0.1)) / 100);
 	_maxPrice = getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market" >> "max");
 	if (_newPrice > _maxPrice) then {_newPrice = _maxPrice};
 } else
@@ -26,7 +26,7 @@ if (_type) then
 	private["_affect", "_minPrice"];
 	_affect = [_this, 3, false, [false]] call BIS_fnc_param;
 
-	_newprice = _oldPrice - ((_oldPrice * ((_amount * _weight) * 0.05)) / 100);
+	_newprice = _oldPrice - ((_oldPrice * ((_amount * _weight) * 0.08)) / 100);
 	_minPrice = getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market" >> "min");
 	if (_newPrice < _minPrice) then {_newPrice = _minPrice};
 

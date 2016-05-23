@@ -12,6 +12,12 @@ if ((player getVariable ["typeRefuel", ""]) != "") exitWith
 	player setVariable ["typeRefuel", ""];
 };
 
+if ((player getVariable ["stock_station_type", ""]) != "") exitWith
+{
+	["Plein annulé."] call AlysiaClient_fnc_info;
+	player setVariable ["stock_station_type", ""];
+};
+
 [
 	[_this, 0, objNull, [objNull]] call BIS_fnc_param,
 	"player_to_station",
@@ -19,10 +25,20 @@ if ((player getVariable ["typeRefuel", ""]) != "") exitWith
 		[
 			"refuel_veh",
 			"Véhicule",
-			"[g_interaction_target] call AlysiaClient_fnc_fuelStation_refuel_open;",
+			"[g_interaction_target,0] call AlysiaClient_fnc_fuelStation_refuel_open;",
 			"
 				(count(getArray(missionConfigFile >> 'ALYSIA_FUEL_STATION' >> typeOf(g_interaction_target) >> 'pos_model_pomp')) > 0) &&
 				{((player distance (g_interaction_target modelToWorld getArray(missionConfigFile >> 'ALYSIA_FUEL_STATION' >> typeOf(g_interaction_target) >> 'pos_model_pomp'))) <= 2)}
+			"
+		],
+		[
+			"stock_refuel",
+			"Stock",
+			"[g_interaction_target,1] call AlysiaClient_fnc_fuelStation_refuel_open;",
+			"
+				(count(getArray(missionConfigFile >> 'ALYSIA_FUEL_STATION' >> typeOf(g_interaction_target) >> 'pos_model_pomp')) > 0) &&
+				{((player distance (g_interaction_target modelToWorld getArray(missionConfigFile >> 'ALYSIA_FUEL_STATION' >> typeOf(g_interaction_target) >> 'pos_model_pomp'))) <= 2)} &&
+				(['company_fuel'] call AlysiaClient_fnc_hasLicense)
 			"
 		],
 		[

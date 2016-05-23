@@ -2,16 +2,13 @@ class ALYSIA_STAFF
 {
 	class ranks
 	{
-		class admin
-		{
+		class admin {
 			name = "Administrateur";
 		};
-		class modo
-		{
+		class modo {
 			name = "Modérateur";
 		};
-		class support
-		{
+		class support {
 			name = "Support";
 		};
 	};
@@ -74,54 +71,18 @@ class ALYSIA_STAFF
 	{
 		class buttons
 		{
-			class Invisible_ON
+			class god_on
 			{
-				name = "Invisible ON";
-				statement = "g_staff_invisible = true;[player,true] remoteExecCall ['hideObjectGlobal',2];";
-				condition = "!g_staff_invisible";
+				name = "Dieu ON";
+				statement = "[] spawn AlysiaClient_fnc_staff_god;";
+				condition = "!g_staff_on";
 				allow[] = {"76561198007960495","76561198099211957","76561198026418521","76561197977519424","76561198144182091","76561198138202092","76561197978122710"};
 			};
-			class Invisible_OFF: Invisible_ON
+			class god_off: god_on
 			{
-				name = "Invisible OFF";
-				statement = "g_staff_invisible = false;[player,false] remoteExecCall ['hideObjectGlobal',2];";
-				condition = "g_staff_invisible";
-			};
-
-			class TP_ON
-			{
-				name = "TP ON";
-				statement = "g_staff_tp = true;onMapSingleClick '(vehicle player) setPos _pos';";
-				condition = "!g_staff_tp";
-				allow[] = {"76561198007960495","76561198099211957","76561198026418521","76561197977519424","76561198144182091","76561198138202092","76561197978122710"};
-			};
-			class TP_OFF: TP_ON
-			{
-				name = "TP OFF";
-				statement = "g_staff_tp = false;onMapSingleClick '';";
-				condition = "g_staff_tp";
-			};
-
-			class god_ON
-			{
-				name = "God ON";
-				statement = "g_staff_god = true;";
-				condition = "!g_staff_god";
-				allow[] = {"76561198007960495","76561198099211957","76561198026418521","76561197977519424","76561198144182091","76561198138202092","76561197978122710"};
-			};
-			class god_OFF: god_ON
-			{
-				name = "God OFF";
-				statement = "g_staff_god = false;";
-				condition = "g_staff_god";
-			};
-
-			class heal
-			{
-				name = "Soins personnel";
-				statement = "g_bleed = 0;[4000] call AlysiaClient_fnc_handleBlood;";
-				condition = "(true)";
-				allow[] = {"76561198007960495","76561198099211957"};
+				name = "Dieu OFF";
+				statement = "g_staff_on = false;";
+				condition = "g_staff_on";
 			};
 
 			class target_getKey
@@ -137,6 +98,7 @@ class ALYSIA_STAFF
 				statement = "deleteVehicle cursorTarget;";
 				condition = "!(isNull cursorTarget)";
 				allow[] = {"76561198007960495","76561198099211957","76561198026418521","76561197977519424","76561198144182091","76561198138202092","76561197978122710"};
+				verify = 1;
 			};
 			class target_trunkInUse
 			{
@@ -145,21 +107,6 @@ class ALYSIA_STAFF
 				condition = "!(isNull cursorTarget) && ((cursorTarget getVariable ['trunk_in_use_ID','']) != '')";
 				allow[] = {"76561198007960495","76561198099211957","76561198026418521","76561197977519424","76561198144182091","76561198138202092","76561197978122710"};
 			};
-
-			class markers_ON
-			{
-				name = "Markers ON";
-				statement = "g_staff_markers = true;";
-				condition = "!g_staff_markers";
-				allow[] = {"76561198007960495","76561198099211957","76561198026418521","76561197977519424","76561198144182091","76561198138202092","76561197978122710"};
-			};
-			class markers_OFF: markers_ON
-			{
-				name = "Markers OFF";
-				statement = "g_staff_markers = false;";
-				condition = "g_staff_markers";
-			};
-
 			class reboot
 			{
 				name = "Reboot";
@@ -194,7 +141,6 @@ class ALYSIA_STAFF
 				name = "Informations";
 				statement = "[player] remoteExecCall ['AlysiaClient_fnc_APP_staff_players_getData',(lbData[9000,lbCurSel 9000])];";
 			};
-
 			class heal
 			{
 				name = "Soin";

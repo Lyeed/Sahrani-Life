@@ -605,6 +605,14 @@ class ALYSIA_LICENSES
 			class GUER {};
 		};
 	};
+	class guer_inspector
+	{
+		name = "Inspecteur de la médecine du travail";
+		class factions
+		{
+			class GUER {};
+		};
+	};
 
 	class judge
 	{

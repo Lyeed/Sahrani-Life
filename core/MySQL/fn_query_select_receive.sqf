@@ -5,7 +5,9 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private "_basic";
+
+if (isDedicated) exitWith {};
+
 _basic = [_this, 0, [], [[]]] call BIS_fnc_param;
 
 if ((_basic isEqualTo []) || {!((getPlayerUID player) isEqualTo (_basic select 0))}) exitWith

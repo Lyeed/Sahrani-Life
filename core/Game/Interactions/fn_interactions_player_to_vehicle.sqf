@@ -27,6 +27,21 @@ if (isNull _target) exitWith {};
 			"
 		],
 		[
+			"stock_refuel",
+			"Stock",
+			"[g_interaction_target, (missionNamespace getVariable ['refuel_station_inUse', objNull])] spawn AlysiaClient_fnc_fuelStation_stock_progress;",
+			"
+				(
+					((player getVariable ['stock_station_type', '']) != '') &&
+					!(isNull (missionNamespace getVariable ['refuel_station_inUse', objNull])) &&
+					((vehicle player) isEqualTo player) &&
+					(['company_fuel'] call AlysiaClient_fnc_hasLicense) &&
+					{([(g_interaction_target getVariable ['Trunk', []]), getText(missionConfigFile >> 'ALYSIA_FUEL' >> (player getVariable ['stock_station_type', '']) >> 'item_refuel')] call AlysiaClient_fnc_itemTrunk) > 0} &&
+					!(isNull g_company)
+				)
+			"
+		],
+		[
 			"refuel",
 			"Jerrican",
 			"[g_interaction_target] spawn AlysiaClient_fnc_vehicleMenu_refuel_open;",

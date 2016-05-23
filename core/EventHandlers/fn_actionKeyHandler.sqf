@@ -179,49 +179,28 @@ if ((vehicle player) isEqualTo player) then
 					true breakOut "main";
 				};
 
+				if (_type isEqualTo "Bank_Drill") then
+				{
+					[_target] call AlysiaClient_fnc_interactions_player_to_drill;
+					true breakOut "main";
+				};
+
 				if (_type isEqualTo "Land_Suitcase_F") then
 				{
 					[_target, "items", true, true, false, false, true] spawn AlysiaClient_fnc_virtual_menu_exhange_open;
 					true breakOut "main";
 				};
 
-				if (_type in ["Bank_Sahrani_N", "Bank_Sahrani_S"]) then
+				if (isClass(missionConfigFile >> "ALYSIA_BANK" >> _type)) then
 				{
-					if (player distance (nearestObject [player, "xcam_Laptop_unfolded_F"]) <= 2) then
 					{
-						[_target, "Security"] spawn AlysiaClient_fnc_robberyStart;
-						true breakOut "main";
-					};
-
-					if (player distance (nearestObject [player, "Bank_Drill"]) < 3) then
-					{
-						[((nearestObject [player, "Bank_Bomb"]) getVariable ["bank", ObjNull]), "", nearestObject [player, "Bank_Drill"]] spawn AlysiaClient_fnc_robberyProcess;
-						true breakOut "main";
-					};
-
-					if (player distance (nearestObject [player, "Bank_Bomb"]) < 3) then
-					{
-						[((nearestObject [player, "Bank_Bomb"]) getVariable ["bank", ObjNull]), "", (nearestObject [player, "Bank_Bomb"])] spawn AlysiaClient_fnc_robberyProcess;
-						true breakOut "main";
-					};
-
-					if (_target getVariable ["robbed", false]) then
-					{
-						if ((player distance (_target modelToWorld (_target selectionPosition "Interact5"))) < 5) then
+						_pos = _target modelToWorld (_target selectionPosition (configName _x));
+						if ((player distance [_pos select 0, _pos select 1, (_pos select 2) - 1.5]) < 3) then
 						{
-							[_target] spawn AlysiaClient_fnc_virtuel_menu_exhange_open;
+							[_target, (configName _x)] spawn AlysiaClient_fnc_bank_door_force;
 							true breakOut "main";
 						};
-					} else {
-						{
-							_pos = _target modelToWorld (_target selectionPosition _x);
-							if ((player distance [_pos select 0, _pos select 1, (_pos select 2) - 1.5]) < 3) then
-							{
-								[_target, _x] spawn AlysiaClient_fnc_robberyStart;
-								true breakOut "main";
-							};
-						} forEach (["AutoDoor_trigger", "Interact1", "Interact2", "Interact3", "Interact4", "Interact5", "Interact6", "Vault_Door"]);
-					};
+					} forEach ("true" configClasses (missionConfigFile >> "ALYSIA_BANK" >> _type >> "doors"));
 				};
 			};
 		};

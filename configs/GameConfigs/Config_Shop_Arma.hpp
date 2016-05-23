@@ -96,6 +96,10 @@ class ALYSIA_SHOPS_ARMA
 		side = "";
 		stocks[] =
 		{
+			"Chemlight_red",
+			"Chemlight_yellow",
+			"Chemlight_green",
+			"Chemlight_blue",
 			"Skyline_Alysia_Parapluie_01_F",
 			"Skyline_Alysia_Parapluie_02_F",
 			"Skyline_Alysia_Parapluie_03_F",

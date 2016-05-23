@@ -5,10 +5,8 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_amount"];
+private "_amount";
 _amount = [_this, 0, 0, [0]] call BIS_fnc_param;
-
-if (_amount <= 0) exitWith {};
 
 if (g_alcool isEqualTo 0) then
 {

@@ -21,5 +21,5 @@ _marker setMarkerTypeLocal "mil_dot";
 _marker setMarkerColorLocal "ColorRed";
 _marker setMarkerTextLocal (format["%2 %1", _name, _message]);
 
-sleep _seconds;
+uiSleep _seconds;
 deleteMarkerLocal _name;

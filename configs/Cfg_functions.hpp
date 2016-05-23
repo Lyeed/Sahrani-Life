@@ -112,11 +112,13 @@ class CfgFunctions
 			class company_member_license_give {};
 			class company_member_license_receive {};
 			class company_storage {};
+			class company_process {};
 		};
 
 		class Tools
 		{
 			file = "core\Tools";
+			class velocity {};
 			class hasPhone {};
 			class getAllHitPointsDamage {};
 			class getVehicleWeightMax {};
@@ -317,6 +319,15 @@ class CfgFunctions
 			class handleFuel {};
 		};
 
+		class Drill
+		{
+			file = "core\Game\Drill";
+			class drill_create {};
+			class drill_activate {};
+			class drill_desactivate {};
+			class drill_take {};
+		};
+		
 		class C4
 		{
 			file = "core\Game\C4";
@@ -331,8 +342,10 @@ class CfgFunctions
 			file = "core\Game\FuelStations";
 			class fuelStation_refuel_open {};
 			class fuelStation_refuel_update {};
-			class fuelStation_refuel_action {};
+			class fuelStation_refuel_action_vehicle {};
+			class fuelStation_refuel_action_stock {};
 			class fuelStation_refuel_progress {};
+			class fuelStation_stock_progress {};
 			class fuelStation_jerrycan_open {};
 			class fuelStation_jerrycan_action {};
 			class fuelStation_fuel_getPrice {};
@@ -464,9 +477,7 @@ class CfgFunctions
 			class atmFactionGet {};
 			class atmFactionHandle {};
 			class atmMoneyHandle {};
-			class robberyStart {};
-			class robberyProcess {};
-			class robberyTools {};
+			class bank_door_force {};
 			class salaryProcess {};
 			class handleATM {};
 			class handleCash {};
@@ -507,6 +518,7 @@ class CfgFunctions
 			class interactions_create {};
 			class interactions_recall {};
 			class interactions_player_to_chair {};
+			class interactions_player_to_drill {};
 			class interactions_player_to_player_basics {};
 			class interactions_player_to_player_coma {};
 			class interactions_player_to_player_prison {};
@@ -639,6 +651,7 @@ class CfgFunctions
 			class APP_staff_players_actions_update {};
 			class APP_staff_players_getData {};
 			class APP_staff_players_returnData {};
+			class APP_staff_god {};
 			class APP_fuel {};
 			class APP_fuel_update {};
 			class APP_fuel_update_info {};

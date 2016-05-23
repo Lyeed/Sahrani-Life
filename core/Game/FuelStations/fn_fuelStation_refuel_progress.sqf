@@ -9,8 +9,6 @@ private["_veh", "_station", "_type", "_bill", "_display", "_fuelmax", "_liters",
 _veh = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
 _station = [_this, 1, ObjNull, [ObjNull]] call BIS_fnc_param;
 
-closeDialog 0;
-
 _type = player getVariable ["typeRefuel", ""];
 if ((isNull _station) || (isNull _veh)) exitWith {["Plein impossible.<br/>Cible invalide"] call AlysiaClient_fnc_error};
 if (_type isEqualTo "") exitWith {["Plein impossible.<br/>Impossible de trouver l'essence que vous avez selectionné."] call AlysiaClient_fnc_error};

@@ -5,16 +5,15 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_station", "_display", "_list"];
+private["_station", "_display", "_list", "_type", "_action"];
 _station = [_this, 0, ObjNull, [ObjNull]] call BIS_fnc_param;
-
-closeDialog 0;
+_type = [_this, 1, 0, [0]] call BIS_fnc_param;
 
 if (isNull _station) exitWith {
 	["Cible invalide."] call AlysiaClient_fnc_error;
 };
 
-if (!(createDialog "RscDisplayFuelStation")) exitWith {};
+createDialog "RscDisplayFuelStation";
 
 disableSerialization;
 _display = findDisplay 16000;
@@ -32,3 +31,10 @@ lbClear _list;
 } foreach ("true" configClasses (missionConfigFile >> "ALYSIA_FUEL_STATION" >> typeOf(_station) >> "stock"));
 
 _list lbSetCurSel 0;
+
+_action = switch (_type) do
+{
+	case 0: {"[] spawn AlysiaClient_fnc_fuelStation_refuel_action_vehicle;"};
+	case 1: {"[] spawn AlysiaClient_fnc_fuelStation_refuel_action_stock;"};
+};
+(_display displayCtrl 16017) buttonSetAction _action;

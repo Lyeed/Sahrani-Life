@@ -40,8 +40,8 @@ if (isNull _object) exitWith {};
 		],
 		[
 			"process",
-			"Traiter",
-			"[g_interaction_target, getArray(missionConfigFile >> 'ALYSIA_COMPANIES' >> 'types' >> ((g_interaction_target getVariable 'company_info') select 2) >> 'process')] call AlysiaClient_fnc_process_choice_open;",
+			"Traitements",
+			"[g_interaction_target] call AlysiaClient_fnc_company_process;",
 			"
 				(
 					(g_company isEqualTo g_interaction_target) &&

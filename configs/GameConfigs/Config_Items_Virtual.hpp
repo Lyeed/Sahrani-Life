@@ -1,6 +1,6 @@
 #define AFFECT_FARM {"bean","corn","patate","wheat","cottonp","sunflower","cotton","huile_bottle","tissue"}
 #define AFFECT_PROCESSED {"brique","soufre","saltp","coal","ciment","woodp","furniture","glass"}
-#define AFFECT_MINERAL {"ironp","platinep","copperp","alu","sp98","sp95","gazole","gpl","kerosene","goldbar"}
+#define AFFECT_MINERAL {"ironp","platinep","copperp","alu","goldbar"}
 #define AFFECT_DRUGS {"cigarette","cigare","heroinps","meth_bag","marijuana_bag","cocainepc_bag","cocainep_bag"}
 #define AFFECT_ILLEGAL {"grozdova","slivovica","turtle","artefact","artefact_R","objvaleur"}
 
@@ -1365,12 +1365,6 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\sp98.paa";
 		license = "company_fuel";
 		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1","Skyline_Coffre_Small","Skyline_Coffre_Medium","Skyline_Coffre_Large","R3F_WeaponStock"};
-		class market
-		{
-			max = 300;
-			min = 100;
-			affect[] = AFFECT_MINERAL;
-		};
 	};
 	class sp95
 	{
@@ -1379,12 +1373,6 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\sp95.paa";
 		license = "company_fuel";
 		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1","Skyline_Coffre_Small","Skyline_Coffre_Medium","Skyline_Coffre_Large","R3F_WeaponStock"};
-		class market
-		{
-			max = 300;
-			min = 100;
-			affect[] = AFFECT_MINERAL;
-		};
 	};
 	class gazole
 	{
@@ -1393,12 +1381,6 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\gazole.paa";
 		license = "company_fuel";
 		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1","Skyline_Coffre_Small","Skyline_Coffre_Medium","Skyline_Coffre_Large","R3F_WeaponStock"};
-		class market
-		{
-			max = 300;
-			min = 100;
-			affect[] = AFFECT_MINERAL;
-		};
 	};
 	class gpl
 	{
@@ -1407,12 +1389,6 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\gpl.paa";
 		license = "company_fuel";
 		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1","Skyline_Coffre_Small","Skyline_Coffre_Medium","Skyline_Coffre_Large","R3F_WeaponStock"};
-		class market
-		{
-			max = 300;
-			min = 100;
-			affect[] = AFFECT_MINERAL;
-		};
 	};
 	class kerosene
 	{
@@ -1421,12 +1397,6 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\kerosene.paa";
 		license = "company_fuel";
 		store[] = {"Jonzie_Tanker_Truck","xcam_Ind_Oil_Tower_EP1","Skyline_Coffre_Small","Skyline_Coffre_Medium","Skyline_Coffre_Large","R3F_WeaponStock"};
-		class market
-		{
-			max = 300;
-			min = 100;
-			affect[] = AFFECT_MINERAL;
-		};
 	};
 	
 	class turtle
@@ -1516,6 +1486,7 @@ class ALYSIA_ITEMS
 	{
 		name = "Balle";
 		image = "alysia_items_virtual\data\bullet.paa";
+		weight = 0;
 	};
 	class magazine: buckshot
 	{

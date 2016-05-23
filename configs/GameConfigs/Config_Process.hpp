@@ -1532,7 +1532,7 @@ class ALYSIA_PROCESS
 		sound = "smelting";
 		require[] = {{"steel",1}};
 		receive[] = {{{"bullet",50}},{},0};
-		time_per_item = 3;
+		time_per_item = 1;
 		time_default = 2;
 		class factions
 		{
@@ -1545,7 +1545,7 @@ class ALYSIA_PROCESS
 	class bullet_illegal: bullet
 	{
 		receive[] = {{{"bullet",25}},{},0};
-		time_default = 4;
+		time_default = 2;
 		time_per_item = 4;
 		class target {};
 		class factions

@@ -2,7 +2,7 @@ class ALYSIA_FUEL_STATION
 {
 	class GasStation_F
 	{
-		save = 0;
+		save = 1;
 		max_distance_allowed = 10;
 		pos_model_pomp[] = {8.18457,-1.305664,2.21936};
 		pos_model_store[] = {5.64648,7.0752,2.06092};
@@ -15,28 +15,24 @@ class ALYSIA_FUEL_STATION
 		};
 		class stock
 		{
-			class Diesel
-			{
-				max = 1500;
+			class Diesel {
+				max = 2000;
 			};
-			class SP95
-			{
-				max = 1500;
+			class SP95 {
+				max = 2000;
 			};
-			class SP98
-			{
-				max = 1500;
+			class SP98 {
+				max = 2000;
 			};
-			class GPL
-			{
-				max = 1500;
+			class GPL {
+				max = 2000;
 			};
 		};
 	};
 
 	class Land_A_FuelStation_Feed
 	{
-		save = 0;
+		save = 1;
 		max_distance_allowed = 75;
 		pos_model_pomp[] = {0.293945,-0.860352,-0.692078};
 		pos_model_store[] = {};
@@ -49,9 +45,8 @@ class ALYSIA_FUEL_STATION
 		};
 		class stock
 		{
-			class Kerosene
-			{
-				max = 3500;
+			class Kerosene {
+				max = 4000;
 			};
 		};
 	};
@@ -65,6 +60,7 @@ class ALYSIA_FUEL
 		picture = "Devilz80_Images\Data\Menu\fuelStations\Diesel.paa";
 		conso = 0.8;
 		jerrycan = "Alysia_jerrycan_diesel";
+		item_refuel = "gazole";
 	};	
 	class SP95
 	{
@@ -72,6 +68,7 @@ class ALYSIA_FUEL
 		picture = "Devilz80_Images\Data\Menu\fuelStations\SP95.paa";
 		conso = 1.2;
 		jerrycan = "Alysia_jerrycan_sp95";
+		item_refuel = "sp95";
 	};
 	class SP98
 	{
@@ -79,6 +76,7 @@ class ALYSIA_FUEL
 		picture = "Devilz80_Images\Data\Menu\fuelStations\SP98.paa";
 		conso = 1;
 		jerrycan = "Alysia_jerrycan_sp98";
+		item_refuel = "sp98";
 	};
 	class Kerosene
 	{
@@ -93,5 +91,6 @@ class ALYSIA_FUEL
 		picture = "Devilz80_Images\Data\Menu\fuelStations\GPL.paa";
 		conso = 1;
 		jerrycan = "Alysia_jerrycan_gpl";
+		item_refuel = "gpl";
 	};
 };
