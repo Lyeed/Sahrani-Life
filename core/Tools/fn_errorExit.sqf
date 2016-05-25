@@ -7,6 +7,7 @@
 */
 
 if (isDedicated) exitWith {};
+if (dialog) then {closeDialog 0};
 
 private["_txt", "_time"];
 _txt = [_this, 0, "", [""]] call BIS_fnc_param;

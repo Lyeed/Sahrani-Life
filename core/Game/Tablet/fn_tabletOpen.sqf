@@ -12,6 +12,7 @@ if (missionNamespace getVariable ["g_action_inUse", false]) exitWith {};
 if (player getVariable ["arrested", false]) exitWith {["Vous n'avez pas accès à votre tablette en prison."] call AlysiaClient_fnc_error};
 if ((player getVariable ["restrained", false]) || (player getVariable ["knockedOut", false])) exitWith {};
 if (dialog) exitWith {if (!(isNull (uiNamespace getVariable ["tablet", displayNull]))) then {closeDialog 0};};
+if ((headgear player) isEqualTo "mgsr_headbag") exitWith {};
 
 if ((vehicle player) isEqualTo player) then {
 	player playAction "Gear";

@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_amount", "_target", "_info"];
+private["_amount", "_target", "_info", "_min"];
 _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 if (isNull _target) exitWith {
@@ -21,8 +21,9 @@ if (isNil "_info") exitWith {
 };
 
 _amount = ctrlText 70002;
-if (_amount < 20000) exitWith {
-	["Vous devez blanchir au minimum <t color='#8cff9b'>%1</t>kn."] call AlysiaClient_fnc_error;
+_min = 20000;
+if (_amount < _min) exitWith {
+	[format["Vous devez blanchir au minimum <t color='#8cff9b'>%1</t>kn.", _min]] call AlysiaClient_fnc_error;
 };
 
 if (((gServer_rebootHour * 60) - serverTime) < (30 * 60)) exitWith

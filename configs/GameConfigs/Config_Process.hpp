@@ -2360,7 +2360,7 @@ class ALYSIA_PROCESS
 	class weapon_ump: weapon_b95
 	{
 		name = "Arme : UMP45";
-		require[] = { {"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"poignee",1},{"detente",1},{"percuteur",1},{"ironp",1},{"steel",7}};
+		require[] = {{"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"poignee",1},{"detente",1},{"percuteur",1},{"ironp",1},{"steel",7}};
 		receive[] = {{},{"Skyline_UMP45_01_F"},0};
 		time_per_item = 40;
 		class factions: factions {};

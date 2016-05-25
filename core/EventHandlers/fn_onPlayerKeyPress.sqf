@@ -32,7 +32,7 @@ if (
 ) exitWith {true};
 
 if (
-		(missionNamespace getVariable ["calling", false]) &&
+		((missionNamespace getVariable ["calling", false]) || ((headgear player) isEqualTo "mgsr_headbag")) &&
 		{(
 			(_this isEqualTo (((["TFAR", "OpenSWRadioMenu"] call CBA_fnc_getKeybind) select 5) select 0)) ||
 			(_this isEqualTo (((["TFAR", "SWTransmit"] call CBA_fnc_getKeybind) select 5) select 0)) ||
@@ -66,8 +66,6 @@ if (g_staff_spec) exitWith
 	true;
 };
 
-if (_this in (actionKeys "ShowMap")) then {
-	[] spawn AlysiaEvent_fnc_onPlayerMapOpen;
-};
+if (_this in (actionKeys "ShowMap")) then {[] spawn AlysiaEvent_fnc_onPlayerMapOpen};
 
 false;
