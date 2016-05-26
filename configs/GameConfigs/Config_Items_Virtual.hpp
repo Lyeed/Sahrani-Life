@@ -36,7 +36,7 @@ class ALYSIA_ITEMS
 		license = "gold";
 		class market
 		{
-			max = 11500;
+			max = 11000;
 			min = 1100;
 			affect[] = AFFECT_MINERAL;
 		};
@@ -604,7 +604,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\seringue_heroine.paa";
 		class market
 		{
-			max = 4600;
+			max = 3900;
 			min = 200;
 			affect[] = AFFECT_DRUGS;
 		};

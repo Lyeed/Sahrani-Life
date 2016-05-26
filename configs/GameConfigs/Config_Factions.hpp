@@ -120,7 +120,10 @@ class ALYSIA_FACTIONS
 						"destroy_archeo",
 						"destroy_stand",
 						"destroy_field",
-						"destroy_labo"
+						"destroy_labo",
+						"bagfence_sand",
+						"antitank_steel",
+						"guardshed_wood"
 					}
 				}
 			};
@@ -337,7 +340,10 @@ class ALYSIA_FACTIONS
 						"destroy_archeo",
 						"destroy_stand",
 						"destroy_field",
-						"destroy_labo"
+						"destroy_labo",
+						"bagfence_sand",
+						"antitank_steel",
+						"guardshed_wood"
 					}
 				}
 			};

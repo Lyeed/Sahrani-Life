@@ -199,7 +199,7 @@ class RscDisplayCompanyLaunder: RscDisplayDefaultInteraction
 	{
 		class BACKGROUND: BACKGROUND
 		{
-			idc = 70008;
+			text = "lyeed_IMG\data\companies\background.jpg";
 		};
 		class FRAME: FRAME {};
 	};
@@ -208,8 +208,7 @@ class RscDisplayCompanyLaunder: RscDisplayDefaultInteraction
 	{
 		class TITLE: TITLE
 		{
-			idc = 70001;
-			text = "<t size='1.5' align='center'>Montant</t>";
+			text = "<t size='1.5' align='center'>Blanchiment</t>";
 		};
 
 		class OPTION_EXIT_FRAME: OPTION_EXIT_FRAME {};
@@ -221,20 +220,54 @@ class RscDisplayCompanyLaunder: RscDisplayDefaultInteraction
 		class OPTION_BACK_IMAGE: OPTION_BACK_IMAGE {};
 		class OPTION_BACK_BUTTON: OPTION_BACK_BUTTON {};
 
-		class FRAME: RscFrame	
+		class AMOUNT_HEADER: RscStructuredText
 		{
-			x = 0.381406 * safezoneW + safezoneX;
-			y = 0.401 * safezoneH + safezoneY;
-			w = 0.237187 * safezoneW;
-			h = 0.165 * safezoneH;
+			text = "<t align='center'>Montant</t>";
+			colorBackground[] = {0,0,0,0.8};
+
+			x = 0.396875 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.0515625 * safezoneW;
+			h = 0.022 * safezoneH;
 		};
-		class EDIT: RscEdit
+		class AMOUNT_EDIT: RscEdit
 		{
 			idc = 70002;
+			text = "0";
 
-			x = 0.453594 * safezoneW + safezoneX;
-			y = 0.467 * safezoneH + safezoneY;
+			x = 0.448438 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
 			w = 0.0979687 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class AMOUNT_KN: RscStructuredText
+		{
+			colorBackground[] = {0,0,0,0.8};
+			text = "<t align='center'>kn</t>";
+
+			x = 0.546406 * safezoneW + safezoneX;
+			y = 0.423 * safezoneH + safezoneY;
+			w = 0.020625 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+
+		class REASON_LIST: RscCombo
+		{
+			idc = 70001;
+
+			x = 0.432969 * safezoneW + safezoneX;
+			y = 0.511 * safezoneH + safezoneY;
+			w = 0.139219 * safezoneW;
+			h = 0.022 * safezoneH;
+		};
+		class REASON_HEADER: RscStructuredText
+		{
+			colorBackground[] = {0,0,0,0.8};
+			text = "<t align='center'>Raison</t>";
+
+			x = 0.432969 * safezoneW + safezoneX;
+			y = 0.489 * safezoneH + safezoneY;
+			w = 0.139219 * safezoneW;
 			h = 0.022 * safezoneH;
 		};
 
@@ -270,7 +303,7 @@ class RscDisplayCompanyLaunder: RscDisplayDefaultInteraction
 		class ACTION_TEXT: RscStructuredText
 		{
 			idc = 70006;
-			text = "<t align='left' size='1.3'>Valider</t>";
+			text = "<t align='left' size='1.3'>Blanchir</t>";
 
 			x = 0.482448 * safezoneW + safezoneX;
 			y = 0.576889 * safezoneH + safezoneY;
@@ -280,8 +313,8 @@ class RscDisplayCompanyLaunder: RscDisplayDefaultInteraction
 		class ACTION_BUTTON: RscButtonSilent
 		{
 			idc = 70007;
-			onMouseEnter = "ctrlSetText[70005,""lyeed_IMG\data\global\validate_select.paa""];ctrlShow[70003, false];((findDisplay 70000) displayCtrl 70004) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 70000) displayCtrl 70006) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Valider</t>"";";
-			onMouseExit = "ctrlSetText[70005,""lyeed_IMG\data\global\validate.paa""];ctrlShow[70003, true];((findDisplay 70000) displayCtrl 70004) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 70000) displayCtrl 70006) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Valider</t>"";";
+			onMouseEnter = "ctrlSetText[70005,""lyeed_IMG\data\global\validate_select.paa""];ctrlShow[70003, false];((findDisplay 70000) displayCtrl 70004) ctrlSetBackgroundColor [1,1,1,1];((findDisplay 70000) displayCtrl 70006) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#000000'>Blanchir</t>"";";
+			onMouseExit = "ctrlSetText[70005,""lyeed_IMG\data\global\validate.paa""];ctrlShow[70003, true];((findDisplay 70000) displayCtrl 70004) ctrlSetBackgroundColor [0,0,0,0.6];((findDisplay 70000) displayCtrl 70006) ctrlSetStructuredText parseText ""<t align='left' size='1.3' color='#FFFFFF'>Blanchir</t>"";";
 
 			x = 0.448438 * safezoneW + safezoneX;
 			y = 0.566 * safezoneH + safezoneY;

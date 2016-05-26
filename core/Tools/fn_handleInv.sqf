@@ -8,13 +8,13 @@
 private["_math", "_item", "_num", "_weight", "_value", "_return"];
 _math = [_this, 0, false, [false]] call BIS_fnc_param;
 _item = [_this, 1, "", [""]] call BIS_fnc_param;
-_num = [_this, 2, 0, [0]] call BIS_fnc_param;
+_num = [[_this, 2, 0, [0]] call BIS_fnc_param] call AlysiaClient_fnc_powerRemove;
 
 if ((_item isEqualTo "") || (_num isEqualTo 0)) exitWith {false};
 
 _return = false;
 _weight = ([_item] call AlysiaClient_fnc_itemGetWeight) * _num;
-_value = missionNamespace getVariable[format["inv_%1", _item], 0];
+_value = missionNamespace getVariable [format["inv_%1", _item], 0];
 
 if (_math) then
 {
@@ -23,7 +23,7 @@ if (_math) then
 	{
 		if ((g_carryWeight + _weight) <= g_maxWeight) then
 		{
-			missionNamespace setVariable[format["inv_%1", _item], (_value + _num)];
+			missionNamespace setVariable [format["inv_%1", _item], (_value + _num)];
 			g_carryWeight = g_carryWeight + _weight;
 			_return = true;
 		};
@@ -31,7 +31,7 @@ if (_math) then
 } else {
 	if (_value - _num >= 0) then
 	{
-		missionNamespace setVariable[format["inv_%1", _item], (_value - _num)];
+		missionNamespace setVariable [format["inv_%1", _item], (_value - _num)];
 		g_carryWeight = g_carryWeight - _weight;
 		_return = true;
 	};
@@ -55,7 +55,7 @@ if (_return) then
 
 	_list = _display displayCtrl 900;
 
-	_index = _list lbAdd format["%1 %2 x %3", if (_math) then {"+"} else {"-"}, _num, ([_item] call AlysiaClient_fnc_itemGetName)];
+	_index = _list lbAdd format["%1 %2 x %3", if (_math) then {"+"} else {"-"}, ([_num] call AlysiaClient_fnc_numberText), ([_item] call AlysiaClient_fnc_itemGetName)];
 	_list lbSetPicture [_index, ([_item] call AlysiaClient_fnc_itemGetImage)];
 	_list lbSetValue [_index, (time + 4)];
 	

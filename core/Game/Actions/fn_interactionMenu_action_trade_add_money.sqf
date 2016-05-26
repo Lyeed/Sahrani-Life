@@ -14,7 +14,6 @@ if (!([_val] call AlysiaClient_fnc_isNumber)) exitWith {["La somme d'argent à d
 
 _val = parseNumber(_val);
 if (_val < 0) exitWith {["La somme d'argent à donner doit être supérieur à zéro"] call AlysiaClient_fnc_error};
-if (_val > 999999) exitWith {["Vous ne pouvez pas donner plus de <t color='8cff9b'>999.999kn</t> d'un coup"] call AlysiaClient_fnc_error};
 if (g_cash < _val) exitWith {["Vous n'avez pas autant d'argent"] call AlysiaClient_fnc_error};
 
 g_interaction_trade_active = true;

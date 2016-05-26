@@ -21,8 +21,7 @@ if (g_alcool isEqualTo 0) then
 		_i = 10;
 		while {_i > 1} do
 		{
-			_calc = 0.005 + ((g_alcool * 0.6) / _i);
-			_effect ppEffectAdjust [_calc, _calc, true];
+			_effect ppEffectAdjust [g_alcool, g_alcool, true];
 			_effect ppEffectCommit 5;
 			waitUntil {ppEffectCommitted _effect};
 			_i = _i - 1;
@@ -41,8 +40,7 @@ if (g_alcool isEqualTo 0) then
 				};
 			};
 
-			_calc = 0.005 + (g_alcool * 0.6);
-			_effect ppEffectAdjust [(_calc * random(2)), (_calc * random(2)), true];
+			_effect ppEffectAdjust [g_alcool, g_alcool, true];
 			_effect ppEffectCommit 10;
 			waitUntil {ppEffectCommitted _effect};
 			g_alcool = g_alcool - 0.01;

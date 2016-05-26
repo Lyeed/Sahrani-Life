@@ -10,7 +10,7 @@ _h_type = [_this, 0, true, [true]] call BIS_fnc_param;
 _h_target = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
 _h_variable = [_this, 2, "", [""]] call BIS_fnc_param;
 _h_item = [_this, 3, "", [""]] call BIS_fnc_param;
-_h_amount = [_this, 4, 1, [1]] call BIS_fnc_param;
+_h_amount = [[_this, 4, 1, [1]] call BIS_fnc_param] call AlysiaClient_fnc_powerRemove;
 _h_apply = [_this, 5, true, [true]] call BIS_fnc_param;
 _h_ret = false;
 

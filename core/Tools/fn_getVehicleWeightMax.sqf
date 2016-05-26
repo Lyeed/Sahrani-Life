@@ -22,5 +22,6 @@ switch (true) do
 		_members = count((g_company getVariable "company_members") select 0) - 1;
 		_amount + (_members * 15);
 	};
+	case (isClass(missionConfigFile >> "ALYSIA_LABORATORIES" >> typeOf(_wm_target))): {280};
 	default {0};
 };

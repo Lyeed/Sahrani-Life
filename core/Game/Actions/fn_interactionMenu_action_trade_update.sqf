@@ -11,7 +11,7 @@ disableSerialization;
 _display = findDisplay 10000;
 if (isNull _display) exitWith {};
 
-ctrlSetText[10008, str(g_cash)];
+ctrlSetText[10008, ([g_cash] call AlysiaClient_fnc_powerRemove)];
 
 _ctrl_list_inventory = _display displayCtrl 10019;
 lbClear _ctrl_list_inventory;

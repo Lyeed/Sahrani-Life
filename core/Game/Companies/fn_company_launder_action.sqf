@@ -20,7 +20,7 @@ if (isNil "_info") exitWith {
 	["Impossible de récupérer les informations de l'entreprise."] call AlysiaClient_fnc_error;
 };
 
-_amount = ctrlText 70002;
+_amount = parseNumber(ctrlText 70002);
 _min = 20000;
 if (_amount < _min) exitWith {
 	[format["Vous devez blanchir au minimum <t color='#8cff9b'>%1</t>kn.", _min]] call AlysiaClient_fnc_error;
@@ -39,7 +39,7 @@ if (((gServer_rebootHour * 60) - serverTime) < (30 * 60)) exitWith
 };
 
 if (_target getVariable ["launder", false]) exitWith {
-	["Votre entreprise est déjà en train de blanchir de l'argent."] call AlysiaClient_fnc_error;
+	["Cette entreprise est déjà en train de blanchir de l'argent."] call AlysiaClient_fnc_error;
 };
 
 if ([false, "illegal_money", _amount] call AlysiaClient_fnc_handleInv) then

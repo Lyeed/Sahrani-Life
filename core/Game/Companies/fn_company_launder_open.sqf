@@ -19,11 +19,10 @@ createDialog "RscDisplayCompanyLaunder";
 disableSerialization;
 _display = findDisplay 70000;
 
-(_display displayCtrl 70001) ctrlSetStructuredText parseText "<t align='center' size='1.5'>Blanchiment</t>";
-(_display displayCtrl 70002) ctrlSetText str(['illegal_money'] call AlysiaClient_fnc_itemCount);
+(_display displayCtrl 70002) ctrlSetText str(["illegal_money"] call AlysiaClient_fnc_itemCount);
 (_display displayCtrl 70007) buttonAction "[g_interaction_target] spawn AlysiaClient_fnc_company_launder_action;";
 
-_reasons = _display displayCtrl 70008;
+_reasons = _display displayCtrl 70001;
 _reason lbAdd "Demande de paiement";
 _reason lbAdd "Activité professionnelle";
 _reasons lbSetCurSel 0;

@@ -16,16 +16,16 @@ class ALYSIA_FUEL_STATION
 		class stock
 		{
 			class Diesel {
-				max = 2000;
+				max = 3000;
 			};
 			class SP95 {
-				max = 2000;
+				max = 3000;
 			};
 			class SP98 {
-				max = 2000;
+				max = 3000;
 			};
 			class GPL {
-				max = 2000;
+				max = 3000;
 			};
 		};
 	};
@@ -46,7 +46,7 @@ class ALYSIA_FUEL_STATION
 		class stock
 		{
 			class Kerosene {
-				max = 4000;
+				max = 10000;
 			};
 		};
 	};

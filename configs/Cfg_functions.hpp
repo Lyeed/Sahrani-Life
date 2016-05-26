@@ -120,6 +120,7 @@ class CfgFunctions
 		class Tools
 		{
 			file = "core\Tools";
+			class powerRemove {};
 			class velocity {};
 			class hasPhone {};
 			class getAllHitPointsDamage {};

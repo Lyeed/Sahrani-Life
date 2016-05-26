@@ -61,7 +61,7 @@ class ALYSIA_PHONE
 			};
 			class call_rcv_2: call_rcv_1
 			{
-				name = "Rétro";
+				name = "Rétro (1)";
 				sleep = 3.5;
 				duration = 1.3;
 			};
@@ -136,6 +136,90 @@ class ALYSIA_PHONE
 				name = "Vocal (Monsieur G)";
 				sleep = 2.5;
 				duration = 1.1;
+			};
+			class call_rcv_15: call_rcv_1
+			{
+				name = "Bailar";
+				duration = 3;
+				sleep = 5;
+			};
+			class call_rcv_16: call_rcv_1
+			{
+				name = "Hu Waa Waa";
+				duration = 2;
+				sleep = 4;
+			};
+			class call_rcv_17: call_rcv_1
+			{
+				name = "Wilhelm";
+				duration = 2;
+				sleep = 4;
+			};
+			class call_rcv_18: call_rcv_1
+			{
+				name = "WOW";
+				duration = 2;
+				sleep = 4;
+			};
+			class call_rcv_19: call_rcv_1
+			{
+				name = "Vocal (Vassiv)";
+				duration = 1;
+				sleep = 3;
+			};
+			class call_rcv_20: call_rcv_1
+			{
+				name = "Den Den Mushi";
+				duration = 3;
+				sleep = 5;
+			};
+			class call_rcv_21: call_rcv_1
+			{
+				name = "Careless Whisper";
+				duration = 3;
+				sleep = 5;
+			};
+			class call_rcv_22: call_rcv_1
+			{
+				name = "Wouap";
+				duration = 3;
+				sleep = 5;
+			};
+			class call_rcv_23: call_rcv_1
+			{
+				name = "Retro (2)";
+				duration = 3;
+				sleep = 5;
+			};
+			class call_rcv_24: call_rcv_1
+			{
+				name = "Turn Down for What";
+				duration = 3;
+				sleep = 5;
+			};
+			class call_rcv_25: call_rcv_1
+			{
+				name = "Corporate World";
+				duration = 3;
+				sleep = 5;
+			};
+			class call_rcv_26: call_rcv_1
+			{
+				name = "Whoop";
+				duration = 2;
+				sleep = 4;
+			};
+			class call_rcv_27: call_rcv_1
+			{
+				name = "Nokia";
+				duration = 3;
+				sleep = 5;
+			};
+			class call_rcv_28: call_rcv_1
+			{
+				name = "Ballec";
+				duration = 4;
+				sleep = 6;
 			};
 		};
 	};

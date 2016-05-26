@@ -927,7 +927,7 @@ class ALYSIA_PROCESS
 	class vest_moneyTransfert_1: vest_news_1
 	{
 		name = "Confection de gilet Convoyeur";
-		receive[] = {{},{"TRYK_V_Bulletproof_BL"},0};
+		receive[] = {{},{"TRYK_V_Bulletproof_BLK"},0};
 		class factions: factions {};
 	};
 	class goggles_moneyTransfert_1: clothing_suit_1

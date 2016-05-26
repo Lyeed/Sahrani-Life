@@ -22,7 +22,6 @@ _item = _list lbData _sel;
 if (_item isEqualTo "") exitWith {};
 
 _amount = _list lbValue _sel;
-
 if (g_interaction_target_trunk_take) then
 {
 	_count = [_item, 2, g_carryWeight, g_maxWeight] call AlysiaClient_fnc_calWeightDiff;
