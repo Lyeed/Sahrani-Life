@@ -137,7 +137,6 @@
         "AlysiaClient_fnc_company_create_update",
         "AlysiaClient_fnc_company_construction_build",
         "AlysiaClient_fnc_company_info_open",
-        "AlysiaClient_fnc_company_bank_handle",
         "AlysiaClient_fnc_company_member_handle",
         "AlysiaClient_fnc_company_member_join",
         "AlysiaClient_fnc_company_member_propose",

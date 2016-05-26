@@ -1,7 +1,7 @@
-class RscDisplayPlayerSearch: RscDisplayDefaultInteraction
+class RscDisplayDefaultList: RscDisplayDefaultInteraction
 {
 	idd = 16000;
-	name = "RscDisplayPlayerSearch";
+	name = "RscDisplayDefaultList";
 	
 	class controlsBackground: DEFAULT_controlsBackground
 	{

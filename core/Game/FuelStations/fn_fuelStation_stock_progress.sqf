@@ -106,7 +106,7 @@ if ((_liters > 0) && (_receive > 0)) then
 {
 	_vehicle setVariable ["Trunk", (_vehicle getVariable ["Trunk", []]), true];
 	_station setVariable [_type, (_currentLiters - _liters), true];
-	[g_company, true, _receive] call AlysiaClient_fnc_company_bank_handle;
+	[g_company, true, _receive, (player getVariable "realname"), "Activité professionnelle"] remoteExec ["AlysiaServer_fnc_company_bank_handle", 2];
 	[format["Votre entreprise à reçu <t color='#8cff9b'>%1</t>kn pour le remplissage de la station.", ([_receive] call AlysiaClient_fnc_numberText)], "buy"] call AlysiaClient_fnc_info;
 	[_station] call AlysiaClient_fnc_fuelStation_fuel_applyPrice;
 };

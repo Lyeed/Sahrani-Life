@@ -150,7 +150,7 @@ switch (_action) do
 		
 		[g_interaction_target, true, _amount] call AlysiaClient_fnc_atmMoneyHandle;
 		[false, _amount] call AlysiaClient_fnc_handleCash;
-		[g_company, true, _amount] call AlysiaClient_fnc_company_bank_handle;
+		[g_company, true, _amount, (player getVariable "realname"), "Dépot"] remoteExec ["AlysiaServer_fnc_company_bank_handle", 2];
 	};
 
 	case "withdraw_company":
@@ -167,12 +167,13 @@ switch (_action) do
 			[format["Il n'y à pas assez d'argent dans le DAB pour retirer <t color='#8cff9b'>%1</t>kn.<br/>Max : <t color='#8cff9b'>%2</t>kn", [_amount] call AlysiaClient_fnc_numberText, [_atm_money] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_error;
 		};
 
-		if ([g_company, false, _amount] call AlysiaClient_fnc_company_bank_handle) then
+		if ((g_company getVariable ["company_bank", 0]) >= _amount) then
 		{
 			closeDialog 0;
-			[format["Vous avez retiré <t color='#8cff9b'>%1</t>kn du compte votre faction.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
+			[g_company, false, _amount, (player getVariable "realname"), "Retrait"] remoteExec ["AlysiaServer_fnc_company_bank_handle", 2];
 			[true, _amount] call AlysiaClient_fnc_handleCash;
 			[g_interaction_target, false, _amount] call AlysiaClient_fnc_atmMoneyHandle;
+			[format["Vous avez retiré <t color='#8cff9b'>%1</t>kn du compte votre faction.", [_amount] call AlysiaClient_fnc_numberText]] call AlysiaClient_fnc_info;
 		} else {
 			["Solde insuffisant"] call AlysiaClient_fnc_error;
 		};

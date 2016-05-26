@@ -21,8 +21,9 @@ if (!isClass(_config)) exitWith {
 	[format["Cette personne n'est pas autorisé à recevoir la license : <t color='#DF3A01'>%1</t>.", [_license] call AlysiaClient_fnc_licenseGetName]] remoteExecCall ["AlysiaClient_fnc_info", _from];
 };
 
-if ([_company, false, getNumber(_config >> "price")] call AlysiaClient_fnc_company_bank_handle) then
+if ((_company getVariable ["company_bank", 0]) >= getNumber(_config >> "price")) then
 {
+	[g_company, false, getNumber(_config >> "price"), (_from getVariable "realname"), "Licence"] remoteExec ["AlysiaServer_fnc_company_bank_handle", 2];
 	missionNamespace setVariable [format["license_%1", _license], true];
 
 	[

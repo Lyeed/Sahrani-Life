@@ -21,6 +21,20 @@ if (isNull _object) exitWith {};
 			"!(g_interaction_target getVariable ['construction', false])"
 		],
 		[
+			"book",
+			"Livre Comptes",
+			"[g_interaction_target] remoteExecCall ['AlysiaServer_fnc_company_history_get', 2];",
+			"
+				((g_company isEqualTo g_interaction_target) &&
+				!(g_interaction_target getVariable ['construction', false]) &&
+				(
+					((getPlayerUID player) isEqualTo ((g_interaction_target getVariable 'company_info') select 1)) ||
+					(['central_com'] call AlysiaClient_fnc_hasLicense) ||
+					(['gov_money'] call AlysiaClient_fnc_hasLicense)
+				)
+			"
+		],
+		[
 			"construction",
 			"Matériaux",
 			"[g_interaction_target,'construction_require'] spawn AlysiaClient_fnc_virtual_menu_reduce_open;",
@@ -75,7 +89,8 @@ if (isNull _object) exitWith {};
 			"[g_interaction_target] spawn AlysiaClient_fnc_company_launder_open;",
 			"
 				((g_company isEqualTo g_interaction_target) &&
-				((['illegal_money'] call AlysiaClient_fnc_itemCount) > 0)
+				((['illegal_money'] call AlysiaClient_fnc_itemCount) > 0) &&
+				!(g_interaction_target getVariable ['construction', false])
 			"
 		]
 	],

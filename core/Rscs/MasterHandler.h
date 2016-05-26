@@ -4,8 +4,8 @@
 #include "RscDisplays\RscDisplayDefault.hpp"
 #include "RscDisplays\RscDisplayDefaultInteraction.hpp"
 #include "RscDisplays\RscDisplayDefaultText.hpp"
-#include "RscDisplays\RscDisplayDefaultChoice.hpp"
-#include "RscDisplays\RscDisplayDefaultEdit.hpp"
+#include "RscDisplays\RscDisplayDefaultList.hpp"
+#include "RscDisplays\RscDisplayDefaultListChoice.hpp"
 
 #include "RscDisplays\RscDisplayAuctionHouse.hpp"
 #include "RscDisplays\RscDisplayShopClothing.hpp"
@@ -20,7 +20,6 @@
 #include "RscDisplays\RscDisplayComa.hpp"
 #include "RscDisplays\RscDisplayInteraction.hpp"
 #include "RscDisplays\RscDisplayPlayerTrade.hpp"
-#include "RscDisplays\RscDisplayPlayerSearch.hpp"
 #include "RscDisplays\RscDisplayPlayerTicket.hpp"
 #include "RscDisplays\RscDisplayPlayerRevokeLicense.hpp"
 #include "RscDisplays\RscDisplayAtm.hpp"

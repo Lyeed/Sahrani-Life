@@ -14,7 +14,7 @@ if (dialog) then
 };
 
 if (isNull g_interaction_target) exitWith {};
-if (!(createDialog "RscDisplayDefaultChoice")) exitWith {};
+if (!(createDialog "RscDisplayDefaultListChoice")) exitWith {};
 
 disableSerialization;
 _display = findDisplay 69000;

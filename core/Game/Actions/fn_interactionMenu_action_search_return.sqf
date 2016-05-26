@@ -10,17 +10,10 @@ _inv_virtual = [_this, 0, [], [[]]] call BIS_fnc_param;
 _inv_arma = [_this, 1, [], [[]]] call BIS_fnc_param;
 _money = [_this, 2, 0, [0]] call BIS_fnc_param;
 
-if (dialog) then
-{
-	closeDialog 0;
-	waitUntil {!dialog};
-};
-
-if (!(createDialog "RscDisplayPlayerSearch")) exitWith {};
+createDialog "RscDisplayDefaultList";
 
 disableSerialization;
 _display = findDisplay 16000;
-if (isNull _display) exitWith {};
 
 _array = [];
 
@@ -44,6 +37,6 @@ if (_array isEqualTo []) then {
 	{
 		_index = _list lbAdd (_x select 0);
 		_list lbSetPicture [_index, (_x select 1)];	
-		sleep (count(_array) / 60);
+		uiSleep (count(_array) / 60);
 	} forEach _array;
 };

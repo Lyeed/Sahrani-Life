@@ -18,7 +18,7 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
-createDialog "RscDisplayDefaultChoice";
+createDialog "RscDisplayDefaultListChoice";
 
 disableSerialization;
 _display = findDisplay 69000;

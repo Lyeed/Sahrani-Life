@@ -1,7 +1,7 @@
-class RscDisplayDefaultChoice: RscDisplayDefaultInteraction
+class RscDisplayDefaultListChoice: RscDisplayDefaultInteraction
 {
 	idd = 69000;
-	name = "RscDisplayDefaultChoice";
+	name = "RscDisplayDefaultListChoice";
 
 	class controlsBackground: DEFAULT_controlsBackground
 	{

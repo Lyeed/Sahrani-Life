@@ -100,7 +100,6 @@ class CfgFunctions
 			class company_create_update {};
 			class company_construction_build {};
 			class company_info_open {};
-			class company_bank_handle {};
 			class company_member_handle {};
 			class company_member_join {};
 			class company_member_propose {};
@@ -115,6 +114,7 @@ class CfgFunctions
 			class company_process {};
 			class company_launder_open {};
 			class company_launder_action {};
+			class company_bank_history_open {};
 		};
 
 		class Tools
