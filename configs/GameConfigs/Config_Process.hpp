@@ -1225,6 +1225,14 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions: factions {};
 	};
+	
+	class clothing_reb_ace: clothing_criminal_1
+	{
+		name = "Confection de tenue criminelle (Ace)";
+		receive[] = {{},{"Skyline_Uniforme_ACE_01_F"},0};
+		class target {};
+		class factions: factions {};
+	};
 
 	class goggles_criminal_gas: clothing_criminal_1
 	{

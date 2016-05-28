@@ -54,4 +54,10 @@ class ALYSIA_BLUEPRINTS
 		labos[] = {"lab_clothing"};
 		compagnies[] = {"clothing"};
 	};
+	class patron_reb_ace
+	{
+		process[] = {"clothing_reb_ace"};
+		labos[] = {"lab_clothing"};
+		compagnies[] = {"clothing"};
+	};
 };

@@ -1852,6 +1852,14 @@ class ALYSIA_ITEMS
 			action = "['patron_reb_coa'] call AlysiaClient_fnc_item_patron;";
 		};
 	};
+	class patron_reb_ace: patron_AK74
+	{
+		name = "Patron (ACE)";
+		class use
+		{
+			action = "['patron_reb_ace'] call AlysiaClient_fnc_item_patron;";
+		};
+	};
 
 	class medoc_rhume
 	{
