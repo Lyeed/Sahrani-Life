@@ -51,4 +51,5 @@ _plate = round(random(1000000));
 _vehicle setVariable ["info", [(getPlayerUID player), (player getVariable ["realname", profileName]), _plate, 1], true];
 _vehicle allowDamage true;
 
-[player, _vehicle, _plate, g_cash] remoteExec ["AlysiaServer_fnc_vehicleCreate", 2];
+[player, _vehicle, _plate] remoteExec ["AlysiaServer_fnc_vehicleCreate", 2];
+[0] call AlysiaDB_fnc_query_update_partial;

@@ -251,7 +251,6 @@ class ALYSIA_SHOPS_VIRTUAL
 		items[] = 
 		{
 			{
-				"lockpick",
 				"handcuffs",
 				"handcuffkeys",
 				"cannabis_seed",

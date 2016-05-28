@@ -32,6 +32,7 @@ class ALYSIA_BANK
 			{
 				name = "Porte Coulisante";
 				item = "Alysia_Lockpick";
+				owners_require = 0;
 				progress_time = 10;
 				progress_anim = "AinvPknlMstpsnonWnonDnon_medic_1";
 				progress_sound = "";
@@ -62,6 +63,7 @@ class ALYSIA_BANK
 				name = "Porte Comptoirs";
 				item = "Alysia_Lockpick";
 				progress_time = 15;
+				owners_require = 0;
 				progress_anim = "AinvPknlMstpsnonWnonDnon_medic_1";
 				progress_sound = "";
 				class states
@@ -84,6 +86,7 @@ class ALYSIA_BANK
 			{
 				name = "Porte Partie Interne";
 				item = "Bank_Hacker";
+				owners_require = 6;
 				progress_time = 45;
 				progress_anim = "AinvPknlMstpsnonWnonDnon_medic_1";
 				progress_sound = "";
@@ -107,6 +110,7 @@ class ALYSIA_BANK
 			{
 				name = "Porte Bureau Directeur";
 				item = "Alysia_Lockpick";
+				owners_require = 0;
 				progress_time = 10;
 				progress_anim = "AinvPknlMstpsnonWnonDnon_medic_1";
 				progress_sound = "";
@@ -130,6 +134,7 @@ class ALYSIA_BANK
 			{
 				name = "Porte Poste Surveillance";
 				item = "Bank_Hacker";
+				owners_require = 6;
 				progress_time = 45;
 				progress_anim = "AinvPknlMstpsnonWnonDnon_medic_1";
 				progress_sound = "";
@@ -152,7 +157,8 @@ class ALYSIA_BANK
 			class Interact5
 			{
 				name = "Porte Interne Coffre";
-				item = "Bank_Drill";
+				item = "Bank_Bomb";
+				owners_require = 6;
 				progress_time = 2;
 				progress_anim = "AinvPknlMstpsnonWnonDnon_medic_1";
 				progress_sound = "";
@@ -171,6 +177,7 @@ class ALYSIA_BANK
 			{
 				name = "Porte Toit";
 				item = "Alysia_Lockpick";
+				owners_require = 6;
 				progress_time = 30;
 				progress_anim = "AinvPknlMstpsnonWnonDnon_medic_1";
 				progress_sound = "";
@@ -193,7 +200,8 @@ class ALYSIA_BANK
 			class Vault_Door
 			{
 				name = "Porte Coffre Fort";
-				item = "Bank_Bomb";
+				item = "Bank_Drill";
+				owners_require = 6;
 				progress_time = 2;
 				progress_anim = "AinvPknlMstpsnonWnonDnon_medic_1";
 				progress_sound = "";

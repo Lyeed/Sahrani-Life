@@ -2924,6 +2924,7 @@ class ALYSIA_VEHICLES
 		insurance = 0;
 		fuel = "SP95";
 		rank = 5;
+		disableLockpick = 1;
 	};
 	class Skyline_GMC_Vandura_Propagande_01_F
 	{
@@ -2951,6 +2952,7 @@ class ALYSIA_VEHICLES
 		fuel = "Diesel";
 		fuelCapacity = 290;
 		rank = 5;
+		disableLockpick = 1;
 	};
 	class Skyline_T34_01_F: Cha_BTR60_Cuba
 	{
@@ -2959,6 +2961,7 @@ class ALYSIA_VEHICLES
 		inventory = 90;
 		rank = 6;
 		fuelCapacity = 540;
+		disableLockpick = 1;
 	};
 
 	/* TRUCKS */

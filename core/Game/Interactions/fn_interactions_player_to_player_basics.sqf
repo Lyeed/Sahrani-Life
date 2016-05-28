@@ -90,11 +90,11 @@
 		[
 			"lockpick",
 			"Crochetter",
-			"[] spawn AlysiaClient_fnc_interactionMenu_action_lockpick;",
+			"[g_interaction_target] spawn AlysiaClient_fnc_interactionMenu_action_lockpick;",
 			"
 				(
 					(g_interaction_target getVariable['restrained',false]) &&
-					((['lockpick'] call AlysiaClient_fnc_itemCount) > 0) &&
+					('Alysia_Lockpick' in (magazines player)) &&
 					(isNull (g_interaction_target getVariable ['escorted',objNull]))
 				)
 			"
@@ -215,7 +215,7 @@
 		[
 			"license",
 			"Donner licence",
-			"[] spawn AlysiaClient_fnc_interactionMenu_action_license_give_open;",
+			"[g_interaction_target] spawn AlysiaClient_fnc_interactionMenu_action_license_give_open;",
 			"
 				(
 					count

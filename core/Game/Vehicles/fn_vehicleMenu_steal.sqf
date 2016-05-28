@@ -5,28 +5,38 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+private "_target";
+_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if (isNull g_interaction_target) exitWith {};
-
+if ((isNull _target) || (!(_target isKindOf "Car") && !(_target isKindOf "Ship") && !(_target isKindOf "Air") && !(_target isKindOf "Tank") && !(_target isKindOf "Truck"))) exitWith {
+	["Cible invalde."] call AlysiaClient_fnc_error;
+};
+if (!("Alysia_Lockpick" in (magazines player))) exitWith {
+	["Vous n'avez pas de kit de crochetage."] call AlysiaClient_fnc_error;
+};
 if (serverTime < 600) exitWith {
 	[format["Vous <t color='#FF0000'>ne pouvez pas</t> crocheter de véhicule juste après le démarrage du serveur. Veuillez attendre <t color='#2E64FE'>%1 secondes</t>", 600 - serverTime]] call AlysiaClient_fnc_error;
 };
-
-if (dialog) then
-{
-	closeDialog 0;
-	waitUntil {!dialog};
+if (_target in g_vehicles) exitWith {
+	["Vous possédez déjà les clefs de ce véhicule."] call AlysiaClient_fnc_error;
+};
+if (getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> typeOf(_target) >> "disableLockpick") isEqualTo 1) exitWith {
+	["Ce type de véhicule ne peut pas être crocheté."] call AlysiaClient_fnc_error;
 };
 
-if (!(["Crochetage", 12, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {};
-if (!([false, "lockpick", 1] call AlysiaClient_fnc_handleInv)) exitWith {};
+if (!(["Crochetage de véhicule", 12, _target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {};
 
-[g_interaction_target, "lockpick", 100] call CBA_fnc_globalSay3d;
+if (!("Alysia_Lockpick" in (magazines player))) exitWith {
+	["Vous n'avez pas de kit de crochetage."] call AlysiaClient_fnc_error;
+};
+
+player removeMagazine "Alysia_Lockpick";
+[_target, "lockpick", 100] call CBA_fnc_globalSay3d;
 if ((random(100)) < 25) then 
 {
-	g_vehicles pushBack g_interaction_target;
-	[(getPlayerUID player), playerSide, g_interaction_target] remoteExecCall ["AlysiaServer_fnc_keyManagement", 2];
-	titleText["Réussi !", "PLAIN DOWN"];
+	g_vehicles pushBack _target;
+	[(getPlayerUID player), playerSide, _target] remoteExecCall ["AlysiaServer_fnc_keyManagement", 2];
+	[format["Crochetage <t color='#3ADF00'>réussi</t> !<br/>Vous avez maintenant les clefs de <t color='#FE642E'>%1</t>.", getText(configFile >> "CfgVehicles" >> typeOf(_target) >> "displayName")]] call AlysiaClient_fnc_info;
 } else {
-	titleText["Echoué !", "PLAIN DOWN"];	
+	["Crochetage <t color='#FF0000'>raté</t> !"] call AlysiaClient_fnc_info;
 };

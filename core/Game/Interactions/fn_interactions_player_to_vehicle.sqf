@@ -149,10 +149,10 @@ if (isNull _target) exitWith {};
 		[
 			"lockpick",
 			"Crochetter",
-			"[] spawn AlysiaClient_fnc_vehicleMenu_steal;",
+			"[g_interaction_target] spawn AlysiaClient_fnc_vehicleMenu_steal;",
 			"
 				(
-					((['lockpick'] call AlysiaClient_fnc_itemCount) > 0) &&
+					('Alysia_Lockpick' in (magazines player)) &&
 					!(g_interaction_target in g_vehicles) &&
 					!(g_interaction_target isKindOf 'Tank') &&
 					((vehicle player) isEqualTo player)

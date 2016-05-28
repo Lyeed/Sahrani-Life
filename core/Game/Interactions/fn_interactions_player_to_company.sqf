@@ -23,7 +23,7 @@ if (isNull _object) exitWith {};
 		[
 			"book",
 			"Livre Comptes",
-			"[g_interaction_target] remoteExecCall ['AlysiaServer_fnc_company_history_get', 2];",
+			"[g_interaction_target, player] remoteExecCall ['AlysiaServer_fnc_company_history_get', 2];",
 			"
 				((g_company isEqualTo g_interaction_target) &&
 				!(g_interaction_target getVariable ['construction', false]) &&

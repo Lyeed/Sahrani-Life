@@ -2732,7 +2732,19 @@ class ALYSIA_ITEMS_ARMA
 	};
 	class Bank_Bomb
 	{
-		buy_price = 30000;
+		buy_price = 48000;
+	};
+	class Bank_Drill
+	{
+		buy_price = 115000;
+	};
+	class Bank_Hacker
+	{
+		buy_price = 78000;
+	};
+	class Alysia_Lockpick
+	{
+		buy_price = 600;
 	};
 	class tf_anprc152
 	{

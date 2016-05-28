@@ -42,15 +42,6 @@ class ALYSIA_ITEMS
 		};
 	};
 
-	class lockpick
-	{
-		name = "Kit de crochetage";
-		weight = 4;
-		price_buy = 600;
-		illegal = 1;
-		image = "alysia_items_virtual\data\kit_crochetage.paa";
-	};
-
 	class handcuffs
 	{
 		name = "Menottes";
@@ -604,7 +595,7 @@ class ALYSIA_ITEMS
 		image = "alysia_items_virtual\data\seringue_heroine.paa";
 		class market
 		{
-			max = 3900;
+			max = 3200;
 			min = 200;
 			affect[] = AFFECT_DRUGS;
 		};

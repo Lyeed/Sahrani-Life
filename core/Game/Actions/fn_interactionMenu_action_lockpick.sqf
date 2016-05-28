@@ -5,21 +5,34 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+private "_target";
+_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if (isNull g_interaction_target) exitWith {};
-if (!(g_interaction_target getVariable ["restrained", false])) exitWith {
-	["La cible doit être menotté"] call AlysiaClient_fnc_error;
+if ((isNull _target) || !(isPlayer _target)) exitWith {
+	["Cible invalide."] call AlysiaClient_fnc_error;
+};
+if (!(_target getVariable ["restrained", false])) exitWith {
+	["La cible n'est pas menottée."] call AlysiaClient_fnc_error;
+};
+if (!("Alysia_Lockpick" in (magazines player))) exitWith {
+	["Vous n'avez pas de kit de crochetage."] call AlysiaClient_fnc_error;
 };
 
-closeDialog 0;
+if (!(["Crochetage de menottes", 7, _target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {};
 
-if (!(["Crochetage", 7, g_interaction_target, "", "AinvPknlMstpsnonWnonDnon_medic_1"] call AlysiaClient_fnc_showProgress)) exitWith {};
-if (!([false, "lockpick", 1] call AlysiaClient_fnc_handleInv)) exitWith {};
+if (!(_target getVariable ["restrained", false])) exitWith {
+	["La cible n'est pas menottée."] call AlysiaClient_fnc_error;
+};
+if (!("Alysia_Lockpick" in (magazines player))) exitWith {
+	["Vous n'avez pas de kit de crochetage."] call AlysiaClient_fnc_error;
+};
 
-if ((random(100)) < 35) then {
-	g_interaction_target setVariable ["restrained", false, true];
+player removeMagazine "Alysia_Lockpick";
+if ((random(100)) < 35) then
+{
+	_target setVariable ["restrained", false, true];
 	[player, "cuffout", 10] call CBA_fnc_globalSay3d;
-	titleText["Réussi !", "PLAIN DOWN"];
+	["Crochetage <t color='#3ADF00'>réussi</t> !<br/>La cible n'est maintenant plus menottée."] call AlysiaClient_fnc_info;
 } else {
-	titleText["Echoué !", "PLAIN DOWN"];	
+	["Crochetage <t color='#FF0000'>raté</t> !"] call AlysiaClient_fnc_info;
 };

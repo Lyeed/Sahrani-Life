@@ -374,7 +374,7 @@ class ALYSIA_PROCESS
 		name = "Fabrication de kit de crochetage";
 		sound = "smelting";
 		require[] = {{"ironp", 1},{"alu",1}};
-		receive[] = {{{"lockpick",1}},{},0};
+		receive[] = {{},{"Alysia_Lockpick"},0};
 		time_per_item = 2;
 		time_default = 4;
 		class target {};
@@ -1531,7 +1531,7 @@ class ALYSIA_PROCESS
 		name = "Moulage de balles";
 		sound = "smelting";
 		require[] = {{"steel",1}};
-		receive[] = {{{"bullet",50}},{},0};
+		receive[] = {{{"bullet",60}},{},0};
 		time_per_item = 1;
 		time_default = 2;
 		class factions
@@ -1544,7 +1544,7 @@ class ALYSIA_PROCESS
 	};
 	class bullet_illegal: bullet
 	{
-		receive[] = {{{"bullet",25}},{},0};
+		receive[] = {{{"bullet",30}},{},0};
 		time_default = 2;
 		time_per_item = 4;
 		class target {};

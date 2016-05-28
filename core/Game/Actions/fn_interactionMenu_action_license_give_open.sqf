@@ -5,26 +5,26 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_list", "_display", "_button"];
+private["_list", "_display", "_button", "_target"];
+_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if (dialog) then
-{
-	closeDialog 0;
-	waitUntil {!dialog};
+if (isNull _target) exitWith {
+	["Cible invalide."] call AlysiaClient_fnc_error;
 };
 
-if (isNull g_interaction_target) exitWith {};
-if (!(createDialog "RscDisplayDefaultListChoice")) exitWith {};
+g_interaction_target = _target;
+
+createDialog "RscDisplayDefaultListChoice";
 
 disableSerialization;
 _display = findDisplay 69000;
-if (isNull _display) exitWith {};
 
 _list = _display displayCtrl 69002;
 lbClear _list;
 
 (_display displayCtrl 69001) ctrlSetStructuredText parseText "<t size='1.5' align='center'>Licenses</t>";
-						
+(_display displayCtrl 69008) ctrlSetText "lyeed_IMG\data\companies\background.jpg";
+
 {
 	_license = configName _x;
 	_index = _list lbAdd ([_license] call AlysiaClient_fnc_licenseGetName);
@@ -38,8 +38,7 @@ lbClear _list;
 			((getNumber(_x >> 'same_side_only') isEqualTo 0) || ((getNumber(_x >> 'same_side_only') isEqualTo 1) && ((side g_interaction_target) isEqualTo playerSide))) &&
 			(isClass(missionConfigFile >> 'ALYSIA_LICENSES' >> (configName _x) >> 'factions' >> str(side g_interaction_target)))
 		)
-	"
-	configClasses (missionConfigFile >> 'ALYSIA_FACTIONS' >> str(playerSide) >> 'licenses_give')
+	" configClasses (missionConfigFile >> 'ALYSIA_FACTIONS' >> str(playerSide) >> 'licenses_give')
 );
 
 if ((lbSize _list) isEqualTo 0) then

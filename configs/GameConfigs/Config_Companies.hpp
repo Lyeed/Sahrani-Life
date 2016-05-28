@@ -238,7 +238,7 @@ class ALYSIA_COMPANIES
 			building = "Land_WIP_F";
 			license = "company_construction";
 			image = "lyeed_IMG\data\companies\types\construction.paa";
-			process[] = {"brique","Cimenttr"};
+			process[] = {"brique","Cimenttr","antitank_steel","bagfence_sand","guardshed_wood","tribune_wood","table_wood","chair_wood"};
 			members_max = 15;
 			ticket = 1;
 			class construction
