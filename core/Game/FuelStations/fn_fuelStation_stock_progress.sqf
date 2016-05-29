@@ -65,7 +65,7 @@ while {true} do
 	if (isNull _display) exitWith {
 		["Remplissage de la station interrompu.<br/>La fenêtre d'intéractions a été fermée."] call AlysiaClient_fnc_error;
 	};
-	if (!([true, _veh, "Trunk", _item, 1, false] call AlysiaClient_fnc_handleTrunk)) exitWith {
+	if (!([false, _veh, "Trunk", _item, 1, false] call AlysiaClient_fnc_handleTrunk)) exitWith {
 		[format["Remplissage de la station interrompu.<br/>Il n'y a plus de <t color='#FF8000'>%1</t> dans le véhicule.", getText(_config >> "name")]] call AlysiaClient_fnc_error;
 	};
 	if ((_currentLiters + _liters) >= _litersMax) exitWith {
@@ -104,8 +104,8 @@ if (dialog) then {closeDialog 0};
 
 if ((_liters > 0) && (_receive > 0)) then
 {
-	_vehicle setVariable ["Trunk", (_vehicle getVariable ["Trunk", []]), true];
-	_station setVariable [_type, (_currentLiters - _liters), true];
+	_veh setVariable ["Trunk", (_veh getVariable ["Trunk", []]), true];
+	_station setVariable [_type, (_currentLiters + _liters), true];
 	[g_company, true, _receive, (player getVariable "realname"), "Activité professionnelle"] remoteExec ["AlysiaServer_fnc_company_bank_handle", 2];
 	[format["Votre entreprise à reçu <t color='#8cff9b'>%1</t>kn pour le remplissage de la station.", ([_receive] call AlysiaClient_fnc_numberText)], "buy"] call AlysiaClient_fnc_info;
 	[_station] call AlysiaClient_fnc_fuelStation_fuel_applyPrice;

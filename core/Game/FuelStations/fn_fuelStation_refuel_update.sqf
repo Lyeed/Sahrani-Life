@@ -39,7 +39,7 @@ _amount = [_station, _fuel] call AlysiaClient_fnc_fuelStation_fuel_getStock;
 	_amount
 ];
 
-if (_amount <= 0) then
+if ((_amount <= 0) && ((buttonAction 16017) isEqualTo "[] spawn AlysiaClient_fnc_fuelStation_refuel_action_vehicle;")) then
 {
 	ctrlShow[16013, false];
 	ctrlShow[16014, false];

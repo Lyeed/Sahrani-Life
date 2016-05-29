@@ -50,8 +50,8 @@
 		],
 		[
 			"inventory",
-			"Stockage"
-			"[g_interaction_target,'laboratory_inv_virtual',true,true,false,true,false] spawn AlysiaClient_fnc_virtual_menu_exhange_open;"
+			"Stockage",
+			"[g_interaction_target,'laboratory_inv_virtual',true,true,false,true,false] spawn AlysiaClient_fnc_virtual_menu_exhange_open;",
 			"!(g_interaction_target getVariable ['construction', false])"
 		],
 		[

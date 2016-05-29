@@ -25,7 +25,7 @@ if (isNull _object) exitWith {};
 			"Livre Comptes",
 			"[g_interaction_target, player] remoteExecCall ['AlysiaServer_fnc_company_history_get', 2];",
 			"
-				((g_company isEqualTo g_interaction_target) &&
+				(g_company isEqualTo g_interaction_target) &&
 				!(g_interaction_target getVariable ['construction', false]) &&
 				(
 					((getPlayerUID player) isEqualTo ((g_interaction_target getVariable 'company_info') select 1)) ||

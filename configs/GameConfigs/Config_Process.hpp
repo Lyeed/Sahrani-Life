@@ -1988,7 +1988,7 @@ class ALYSIA_PROCESS
 	{
 		name = "Arme : AK74 (1)";
 		sound = "smelting";
-		require[] = {{"canon",1},{"crosse_wood",1},{"garde_main_wood",1},{"poignee",1},{"detente",1},{"percuteur",1},{"woodp",7},{"steel",5},{"ironp",8}};
+		require[] = {{"canon",1},{"crosse_wood",1},{"garde_main_wood",1},{"poignee",1},{"detente",1},{"percuteur",1},{"woodp",3},{"steel",2}};
 		receive[] = {{},{"hlc_rifle_ak74_dirty"},0};
 		time_per_item = 40;
 		time_default = 5;
@@ -2034,7 +2034,7 @@ class ALYSIA_PROCESS
 	class weapon_AKM_1: weapon_ak_1
 	{
 		name = "Arme : AKM (1)";
-		require[] = {{"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"detente",1},{"percuteur",1},{"culasse",1},{"woodp",7},{"steel",11}};
+		require[] = {{"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"detente",1},{"percuteur",1},{"culasse",1},{"woodp",4},{"steel",10}};
 		receive[] = {{},{"Skyline_AKM_01_F"},0};
 		class target {};
 		class factions: factions {};
@@ -2067,7 +2067,7 @@ class ALYSIA_PROCESS
 	class weapon_mosin_1: weapon_ak_1
 	{
 		name = "Arme : Mosin";
-		require[] = {{"canon",1},{"crosse_wood",1},{"garde_main_wood",1},{"detente",1},{"percuteur",1},{"culasse",1},{"woodp",9},{"steel",2}};
+		require[] = {{"canon",1},{"crosse_wood",1},{"garde_main_wood",1},{"detente",1},{"percuteur",1},{"culasse",1},{"woodp",6},{"steel",1}};
 		receive[] = {{},{"Skyline_Mosin9130_01_F"},0};
 		class target {};
 		class factions: factions {};
@@ -2075,7 +2075,7 @@ class ALYSIA_PROCESS
 	class weapon_mosin_2: weapon_AKM_1
 	{
 		name = "Arme : Mosin baïonnette";
-		require[] = {{"canon",1},{"crosse_wood",1},{"garde_main_wood",1},{"detente",1},{"percuteur",1},{"culasse",1},{"woodp",9},{"steel",4}};
+		require[] = {{"canon",1},{"crosse_wood",1},{"garde_main_wood",1},{"detente",1},{"percuteur",1},{"culasse",1},{"woodp",6},{"steel",2}};
 		receive[] = {{},{"Skyline_Mosin9130_Bayonette_01_F"},0};
 		class target {};
 		class factions: factions {};
@@ -2092,7 +2092,7 @@ class ALYSIA_PROCESS
 	class weapon_m21: weapon_ak_1
 	{
 		name = "Arme : M21";
-		require[] = {{"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"detente",1},{"percuteur",1},{"culasse",1},{"woodp",5},{"steel",12}};
+		require[] = {{"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"detente",1},{"percuteur",1},{"culasse",1},{"woodp",4},{"steel",12}};
 		receive[] = {{},{"hlc_rifle_M21"},0};
 		class target {};
 		class factions: factions {};
@@ -2118,7 +2118,7 @@ class ALYSIA_PROCESS
 	class weapon_cz: weapon_ak_1
 	{
 		name = "Arme : Fusil CZ550";
-		require[] = {{"canon",1},{"crosse_wood",1},{"garde_main_wood",1},{"detente",1},{"percuteur",1},{"culasse",1},{"woodp",15},{"ironp",2},{"steel",3}};
+		require[] = {{"canon",1},{"crosse_wood",1},{"garde_main_wood",1},{"detente",1},{"percuteur",1},{"culasse",1},{"woodp",6},{"steel",1}};
 		receive[] = {{},{"Trixie_CZ550"},0};
 		class target {};
 		class factions: factions {};
@@ -2153,7 +2153,7 @@ class ALYSIA_PROCESS
 	class weapon_tec: weapon_ak_1
 	{
 		name = "Arme : Pistolet TEC9";
-		require[] = {{"canon",1},{"poignee",1},{"detente",1},{"percuteur",1},{"carcasse",1},{"bloc_culasse",1},{"ironp",2},{"steel",3}};
+		require[] = {{"canon",1},{"poignee",1},{"detente",1},{"percuteur",1},{"carcasse",1},{"bloc_culasse",1},{"steel",1}};
 		receive[] = {{},{"RH_tec9"},0};
 		time_per_item = 15;
 		class target {};
@@ -2198,7 +2198,7 @@ class ALYSIA_PROCESS
 	class weapon_tracker: weapon_ak_1
 	{
 		name = "Arme : Revolver Tracker";
-		require[] = {{"canon",1},{"poignee",1},{"detente",1},{"marteau",1},{"barillet",1},{"ironp",2},{"steel",3}};
+		require[] = {{"canon",1},{"poignee",1},{"detente",1},{"marteau",1},{"barillet",1},{"ironp",2}};
 		receive[] = {{},{"RH_ttracker"},0};
 		time_per_item = 12;
 		class target {};
@@ -2266,7 +2266,7 @@ class ALYSIA_PROCESS
 	{
 		name = "Arme : Fusil B95";
 		sound = "smelting";
-		require[] = {{"canon",2},{"crosse_wood",1},{"garde_main_wood",1},{"detente",1},{"percuteur",2},{"woodp",10},{"ironp",2},{"steel",3}};
+		require[] = {{"canon",2},{"crosse_wood",1},{"garde_main_wood",1},{"detente",1},{"percuteur",2},{"woodp",5},{"steel",2}};
 		receive[] = {{},{"Skyline_B95"},0};
 		time_per_item = 40;
 		time_default = 5;
@@ -2290,7 +2290,7 @@ class ALYSIA_PROCESS
 	class weapon_cz75: weapon_b95
 	{
 		name = "Arme : Pistolet CZ 75";
-		require[] = {{"canon",1},{"poignee",1},{"detente",1},{"percuteur",1},{"carcasse",1},{"bloc_culasse",1},{"marteau",1},{"ironp",2},{"steel",3}};
+		require[] = {{"canon",1},{"poignee",1},{"detente",1},{"percuteur",1},{"carcasse",1},{"bloc_culasse",1},{"marteau",1},{"ironp",2}};
 		receive[] = {{},{"RH_cz75"},0};
 		time_per_item = 30;
 		class factions: factions {};
@@ -2336,7 +2336,7 @@ class ALYSIA_PROCESS
 	class weapon_sdar: weapon_b95
 	{
 		name = "Arme : SDAR";
-		require[] = { {"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"poignee",1},{"detente",1},{"percuteur",1},{"ironp",5},{"steel",5}};
+		require[] = { {"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"poignee",1},{"detente",1},{"percuteur",1},{"steel",2}};
 		receive[] = {{},{"Fett_SDAR"},0};
 		time_per_item = 30;
 		class factions: factions {};
@@ -2352,7 +2352,7 @@ class ALYSIA_PROCESS
 	class weapon_vermin: weapon_b95
 	{
 		name = "Arme : Vermin";
-		require[] = { {"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"poignee",1},{"detente",1},{"percuteur",1},{"ironp",2},{"steel",2}};
+		require[] = { {"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"poignee",1},{"detente",1},{"percuteur",1},{"steel",3}};
 		receive[] = {{},{"SMG_01_F"},0};
 		time_per_item = 40;
 		class factions: factions {};
@@ -2368,7 +2368,7 @@ class ALYSIA_PROCESS
 	class weapon_ump: weapon_b95
 	{
 		name = "Arme : UMP45";
-		require[] = {{"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"poignee",1},{"detente",1},{"percuteur",1},{"ironp",1},{"steel",7}};
+		require[] = {{"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"poignee",1},{"detente",1},{"percuteur",1},{"steel",5}};
 		receive[] = {{},{"Skyline_UMP45_01_F"},0};
 		time_per_item = 40;
 		class factions: factions {};

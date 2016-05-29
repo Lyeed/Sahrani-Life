@@ -27,11 +27,12 @@ if ((_inUse != "") && !(_inUse isEqualTo (getPlayerUID player))) exitWith {
 	["Le coffre est déjà en cours d'utilisation."] call AlysiaClient_fnc_error;
 };
 
-g_interaction_target = _target;
-g_interaction_target_trunk_weight_max = [g_interaction_target] call AlysiaClient_fnc_getVehicleWeightMax;
+g_interaction_target_trunk_weight_max = [_target] call AlysiaClient_fnc_getVehicleWeightMax;
 if (g_interaction_target_trunk_weight_max isEqualTo 0) exitWith {
 	["Impossible de déterminer l'inventaire maximum de la cible."] call AlysiaClient_fnc_error;
 };
+
+g_interaction_target = _target;
 
 createDialog "RscDisplayVirtualExhange";
 

@@ -12,7 +12,7 @@ if (isNull _target) exitWith {
 	["Cible invalide."] call AlysiaClient_fnc_error;
 };
 if (g_company != _target) exitWith {
-	["Vous devez blanchir l'argent dans votre entreprise."] call AlysiaClient_fnc_error;
+	["Vous ne faites pas parti de cette entreprise."] call AlysiaClient_fnc_error;
 };
 
 _info = _target getVariable "company_info";

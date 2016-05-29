@@ -23,7 +23,6 @@ _list = _display displayCtrl 69002;
 lbClear _list;
 
 (_display displayCtrl 69001) ctrlSetStructuredText parseText "<t size='1.5' align='center'>Licenses</t>";
-(_display displayCtrl 69008) ctrlSetText "lyeed_IMG\data\companies\background.jpg";
 
 {
 	_license = configName _x;

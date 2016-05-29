@@ -53,14 +53,7 @@ g_staff_markers = true;
 [player, true] remoteExecCall ['hideObjectGlobal', 2];
 onMapSingleClick "(vehicle player) setPos _pos";
 
-while {g_staff_on} do
-{
-	if (((getPosATL player) select 2) < 2.5) then {
-		call AlysiaAdmin_fnc_fly_up;
-	} else {
-		sleep 1;
-	};
-};
+waitUntil {!g_staff_on};
 
 g_staff_markers = false;
 g_staff_god = false;

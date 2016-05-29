@@ -175,10 +175,10 @@ class ALYSIA_SHOPS_ARMA
 		stocks[] =
 		{
 			"SkylineItems_Couteau",
-			"Alysia_Lockpick",
+			"Alysia_Lockpick"/*,
 			"Bank_Bomb",
 			"Bank_Drill",
-			"Bank_Hacker"
+			"Bank_Hacker"*/
 		};
 	};
 	

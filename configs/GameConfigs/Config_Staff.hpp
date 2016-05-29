@@ -74,7 +74,7 @@ class ALYSIA_STAFF
 			class god_on
 			{
 				name = "Dieu ON";
-				statement = "[] spawn AlysiaClient_fnc_staff_god;";
+				statement = "[] spawn AlysiaClient_fnc_APP_staff_god;";
 				condition = "!g_staff_on";
 				allow[] = {"76561198007960495","76561198099211957","76561198026418521","76561197977519424","76561198144182091","76561198138202092","76561197978122710"};
 			};

@@ -15,11 +15,10 @@ if (dialog) then
 	waitUntil {!dialog};
 };
 
-if (!(createDialog "RscDisplayPlayerTrade")) exitWith {};
+createDialog "RscDisplayPlayerTrade";
 
 disableSerialization;
 _display = findDisplay 10000;
-if (isNull _display) exitWith {};
 
 g_interaction_trade_inventory = [];
 g_interaction_trade_keys_vehicles = [];

@@ -18,7 +18,7 @@ lbClear _ctrl_list_inventory;
 
 {
 	_amount = [_x] call AlysiaClient_fnc_itemCount;
-	if (_amount > 0) then
+	if ((_amount > 0) && (_amount < 999999)) then
 	{
 		_index = _ctrl_list_inventory lbAdd format["%1x %2", ([_amount] call AlysiaClient_fnc_numberText), ([_x] call AlysiaClient_fnc_itemGetName)];
 		_ctrl_list_inventory lbSetData [_index, _x];
