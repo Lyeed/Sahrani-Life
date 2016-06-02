@@ -5,17 +5,19 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+private "_target";
+_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if (isNull g_interaction_target) exitWith {};
-
-if (g_interaction_target getVariable ["restrained", false]) exitWith {
+if (isNull _target) exitWith {
+	["Cible invalide."] call AlysiaClient_fnc_error;
+};
+if (_target getVariable ["restrained", false]) exitWith {
 	["La cible est déjà menottée."] call AlysiaClient_fnc_error;
 };
-if (!(g_interaction_target getVariable ["surrender", false]) && ((animationState g_interaction_target) != "incapacitated")) exitWith {
-	["La cible ne peut pas être menottéee."] call AlysiaClient_fnc_error;
+if (!(_target getVariable ["surrender", false]) && ((animationState _target) != "incapacitated")) exitWith {
+	["La cible ne peut pas être menottée."] call AlysiaClient_fnc_error;
 };
 
-closeDialog 0;
 g_action_inUse = true;
 
 player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
@@ -23,15 +25,15 @@ waitUntil {((animationState player) isEqualTo "ainvpercmstpsnonwnondnon_putdown_
 
 g_action_inUse = false;
 
-if (g_interaction_target getVariable ["restrained", false]) exitWith {
+if (_target getVariable ["restrained", false]) exitWith {
 	["La cible est déjà menottée."] call AlysiaClient_fnc_error;
 };
-if (!(g_interaction_target getVariable ["surrender", false]) && ((animationState g_interaction_target) != "incapacitated")) exitWith {
+if (!(_target getVariable ["surrender", false]) && ((animationState _target) != "incapacitated")) exitWith {
 	["La cible ne peut pas être menottée."] call AlysiaClient_fnc_error;
 };
 
 if ([false, "handcuffs", 1] call AlysiaClient_fnc_handleInv) then {
-	remoteExec ["AlysiaClient_fnc_restrain", g_interaction_target];	
+	remoteExec ["AlysiaClient_fnc_restrain", _target];
 } else {
-	["Vous n'avez pas de menottes."] call AlysiaClient_fnc_error;	
+	["Vous n'avez pas de menottes."] call AlysiaClient_fnc_error;
 };

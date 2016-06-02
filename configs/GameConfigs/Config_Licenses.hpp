@@ -295,6 +295,7 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				condition = "((g_choice isEqualTo 'NORTH') && (isNull g_company))";
+				illegal = 1;
 			};
 		};
 	};
@@ -306,6 +307,7 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				condition = "((g_choice isEqualTo 'NORTH') && (isNull g_company))";
+				illegal = 1;
 			};
 		};
 	};
@@ -317,6 +319,7 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				condition = "((g_choice isEqualTo 'NORTH') && (isNull g_company))";
+				illegal = 1;
 			};
 		};
 	};
@@ -338,6 +341,7 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				condition = "(g_choice isEqualTo 'SOUTH')";
+				illegal = 1;
 			};
 		};		
 	};
@@ -346,11 +350,12 @@ class ALYSIA_LICENSES
 		name = "Membre du Parti Central";
 		class factions
 		{
+			class EAST {};
 			class CIV
 			{
 				condition = "(g_choice isEqualTo 'SOUTH')";
+				illegal = 1;
 			};
-			class EAST {};
 		};
 	};
 

@@ -227,7 +227,7 @@ class ALYSIA_COMPANIES
 			};
 			class storage
 			{
-				modelPos[] = {-5.375,-6.43286,-23.1227};
+				modelPos[] = {5.48535,-6.93164,-17.5751};
 				type = "Skyline_Coffre_Medium";
 			};
 		};

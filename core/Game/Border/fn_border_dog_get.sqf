@@ -22,6 +22,7 @@ if (isNil "_dog") exitWith {};
 g_dog = _dog;
 g_dog setSpeedMode "FULL";
 g_dog setVariable ["follow", true];
+g_dog setVariable ["BIS_fnc_animalBehaviour_disable", true];
 
 [] spawn
 {
@@ -46,3 +47,33 @@ g_dog setVariable ["follow", true];
 	deleteVehicle g_dog;
 	g_dog = objNull;
 };
+
+// Spawn dog
+[] spawn
+{
+	g_dog = createAgent ["Alsatian_Sandblack_F", getPos player, [], 5, "CAN_COLLIDE"];
+	g_dog setVariable ["BIS_fnc_animalBehaviour_disable", true];
+	g_dog playMove "Dog_Walk";
+	g_dog setVariable ["follow", true];
+	while {alive g_dog} do 
+	{
+			if (g_dog getVariable ["follow", false]) then
+			{
+				if ((g_dog distance player) > 3) then
+				{
+					g_dog moveTo (getPos player);
+				};
+			};
+			if (!(isNull (g_dog getVariable ["search", objNull]))) then
+			{
+				g_dog moveTo (getPos (g_dog getVariable ["search", objNull]));
+			};
+
+		uiSleep 0.5;
+	};
+};
+
+g_dog setPos (getPos player);
+g_dog playMove "Dog_Sit";
+
+g_dog playMove "Dog_Walk";

@@ -45,6 +45,7 @@ if ("Alysia_jerrycan_empty" in (magazines player)) then
 	{
 		for "_i" from 1 to _count do
 		{
+			player removeMagazine "Alysia_jerrycan_empty";
 			player addMagazine _item;
 		};
 	};
@@ -59,3 +60,5 @@ if (local g_interaction_target) then {
 if (_type != "") then {
 	_target setVariable ["typeRefuel", "", true];
 };
+
+[cursorObject] spawn AlysiaClient_fnc_vehicleMenu_siphon;

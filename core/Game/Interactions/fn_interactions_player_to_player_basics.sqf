@@ -29,11 +29,12 @@
 		[
 			"trade",
 			"Echanger",
-			"[] spawn AlysiaClient_fnc_interactionMenu_action_trade_open;",
+			"[g_interaction_target] spawn AlysiaClient_fnc_interactionMenu_action_trade_open;",
 			"
 				(
 					!(g_interaction_target getVariable ['restrained',false]) &&
-					!(g_interaction_target getVariable ['surrender',false])
+					!(g_interaction_target getVariable ['surrender',false]) &&
+					!(g_interaction_target getVariable ['is_coma',false])
 				)
 			"
 		],

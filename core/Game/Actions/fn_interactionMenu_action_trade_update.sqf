@@ -18,12 +18,11 @@ lbClear _ctrl_list_inventory;
 
 {
 	_amount = [_x] call AlysiaClient_fnc_itemCount;
-	if ((_amount > 0) && (_amount < 999999)) then
+	if (_amount > 0) then
 	{
 		_index = _ctrl_list_inventory lbAdd format["%1x %2", ([_amount] call AlysiaClient_fnc_numberText), ([_x] call AlysiaClient_fnc_itemGetName)];
 		_ctrl_list_inventory lbSetData [_index, _x];
 		_ctrl_list_inventory lbSetPicture [_index, ([_x] call AlysiaClient_fnc_itemGetImage)];
-		_ctrl_list_inventory lbSetValue [_index, _amount];
 	};
 } forEach g_inv_items;
 if ((lbSize _ctrl_list_inventory) isEqualTo 0) then
@@ -110,7 +109,7 @@ lbClear _ctrl_list_trade;
 
 if (g_interaction_trade_money > 0) then
 {
-	_index = _ctrl_list_trade lbAdd format["%1kn", g_interaction_trade_money];
+	_index = _ctrl_list_trade lbAdd format["%1kn", [g_interaction_trade_money] call AlysiaClient_fnc_numberText];
 	_ctrl_list_trade lbSetPicture [_index, "alysia_items_virtual\data\money.paa"];
 	_ctrl_list_trade lbSetData [_index, "money"];
 };

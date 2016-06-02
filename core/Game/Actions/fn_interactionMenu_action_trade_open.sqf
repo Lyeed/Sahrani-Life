@@ -5,21 +5,19 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display"];
+private "_target";
+_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if (isNull g_interaction_target) exitWith {};
-
-if (dialog) then
-{
+if (isNull _target) exitWith {
+	["Cible invalide."] call AlysiaClient_fnc_error;
+};
+if (dialog) then {
 	closeDialog 0;
-	waitUntil {!dialog};
 };
 
 createDialog "RscDisplayPlayerTrade";
 
-disableSerialization;
-_display = findDisplay 10000;
-
+g_interaction_target = _target;
 g_interaction_trade_inventory = [];
 g_interaction_trade_keys_vehicles = [];
 g_interaction_trade_keys_buildings = [];
@@ -28,14 +26,49 @@ g_interaction_trade_active = false;
 
 [] call AlysiaClient_fnc_interactionMenu_action_trade_update;
 
-while {!(isNull _display)} do
+while {!(isNull (findDisplay 10000))} do
 {
-	if (player getVariable ["is_coma", false]) exitWith {closeDialog 0};
-	if ((player distance g_interaction_target) > ((((boundingBox g_interaction_target) select 1) select 0) + 2.5)) exitWith {closeDialog 0};
-	if (player getVariable ["restrained", false]) exitWith {closeDialog 0};
-	if (player getVariable ["surrender", false]) exitWith {closeDialog 0};
-	if (isNull g_interaction_target) exitWith {closeDialog 0};
-	if (g_interaction_target getVariable ["is_coma", false]) exitWith {closeDialog 0};
+	if (isNull g_interaction_target) exitWith
+	{
+		["Echange <t color='#FFBF00'>interrompu</t>.<br/>Cible invalide."] call AlysiaClient_fnc_info;
+		closeDialog 0;
+	};
+	if (player getVariable ["is_coma", false]) exitWith
+	{
+		["Echange <t color='#FFBF00'>interrompu</t>.<br/>Vous êtes dans le coma."] call AlysiaClient_fnc_info;
+		closeDialog 0;
+	};
+	if ((player distance _target) > ((((boundingBox _target) select 1) select 0) + 2.5)) exitWith
+	{
+		["Echange <t color='#FFBF00'>interrompu</t>.<br/>Vous êtes trop loin de la cible."] call AlysiaClient_fnc_info;
+		closeDialog 0;
+	};
+	if (player getVariable ["restrained", false]) exitWith
+	{
+		["Echange <t color='#FFBF00'>interrompu</t>.<br/>Vous êtes menotté."] call AlysiaClient_fnc_info;
+		closeDialog 0;
+	};
+	if (player getVariable ["surrender", false]) exitWith
+	{
+		["Echange <t color='#FFBF00'>interrompu</t>.<br/>Vous avez les mains sur la tête."] call AlysiaClient_fnc_info;
+		closeDialog 0;
+	};
+	if (_target getVariable ["is_coma", false]) exitWith
+	{
+		["Echange <t color='#FFBF00'>interrompu</t>.<br/>La cible est dans le coma."] call AlysiaClient_fnc_info;
+		closeDialog 0;
+	};
+	if (_target getVariable ["restrained", false]) exitWith
+	{
+		["Echange <t color='#FFBF00'>interrompu</t>.<br/>La cible est menotté."] call AlysiaClient_fnc_info;
+		closeDialog 0;
+	};
+	if (_target getVariable ["surrender", false]) exitWith
+	{
+		["Echange <t color='#FFBF00'>interrompu</t>.<br/>La cible a les mains sur la tête."] call AlysiaClient_fnc_info;
+		closeDialog 0;
+	};
+
 	uiSleep 0.5;
 };
 

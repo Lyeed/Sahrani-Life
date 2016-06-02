@@ -3,99 +3,7 @@ class Mission
 {
 	addOns[]=
 	{
-		"A3_Characters_F_Civil",
-		"a3_characters_f",
-		"A3_Characters_F_INDEP",
-		"A3_Characters_F_BLUFOR",
-		"A3_Characters_F_OPFOR",
-		"cba_main",
-		"gaol_mapobject",
-		"xCam_EU",
-		"entreprise01",
-		"A3_Structures_F_Civ_InfoBoards",
-		"cup_misc_e_config",
-		"A3_Structures_F_Walls",
-		"A3_Structures_F_Ind_FuelStation",
-		"A3_Structures_F_Heli_Furniture",
-		"CAStructures_E_Misc_Misc_Interier",
-		"cup_castructures_e_misc_misc_interier",
-		"A3_Structures_F_Civ_Lamps",
-		"CABuildings_Misc",
-		"cup_cabuildings_misc",
-		"CAStructures_Misc_Powerlines",
-		"cup_castructures_misc_powerlines",
-		"CAStructures_E_Misc_Misc_Lamp",
-		"cup_castructures_e_misc_misc_lamp",
-		"mm_buildings",
-		"mainsection",
-		"cup_misc3_config",
-		"CABuildings",
-		"cup_buildings_config",
-		"A3_Structures_F_EPA_Walls",
-		"cup_ca_config",
-		"A3_Structures_F_EPC_Walls",
-		"A3_Structures_F_Ind_CarService",
-		"rds_A2_Civilians",
-		"A3_Structures_F_Wrecks",
-		"A3_Structures_F_Civ_Garbage",
-		"A3_Structures_F_Bootcamp_Items_Sport",
-		"A3_Structures_F_EPA_Mil_Scrapyard",
-		"A3_Weapons_F",
-		"fdett_buildings",
-		"helipad_mapobject",
-		"xCam_Pipe",
-		"gate_c",
-		"A3_Structures_F_Mil_Barracks",
-		"A3_Structures_F_Mil_Cargo",
-		"CAMisc",
-		"cup_camisc",
-		"Barn_Metal",
-		"cup_barn_metal",
-		"a3_plants",
-		"A3_Structures_F_Ind_AirPort",
-		"A3_Structures_F_Civ_Constructions",
-		"CAMisc_ACR_Shooting_range",
-		"cup_camisc_acr_shooting_range",
-		"A3_Structures_F_Households_House_Small03",
-		"A3_Structures_F_System",
-		"Sign_Frontiere",
-		"Plot",
-		"pub_c",
-		"A3_Structures_F_Households_House_Shop01",
-		"CAStructuresBarn_W",
-		"cup_castructuresbarn_w",
-		"A3_Structures_F_Ind_ConcreteMixingPlant",
-		"A3_Structures_F_Ind_Shed",
-		"A3_Structures_F_Households_House_Shop02",
-		"A3_Structures_F_Households_Addons",
-		"CAStructures_E_HouseC",
-		"cup_castructures_e_housec",
-		"A3_Structures_F_Furniture",
-		"A3_Structures_F_EPC_Civ_Accessories",
-		"Gym_F",
-		"A3_Structures_F_Ind_Windmill",
-		"mm_bank",
-		"Buildings",
-		"A3_Structures_F_Households_House_Small02",
-		"A3_Structures_F_Households_House_Big01",
-		"A3_Structures_F_Households_House_Big02",
-		"fett_map",
-		"cup_castructureshouse_a_fuelstation",
-		"A3_Structures_F_Naval_Piers",
-		"CAStructuresLand_Nav_Boathouse",
-		"cup_castructuresland_nav_boathouse",
-		"StephDub_AlysiaRP_GasStation",
-		"StephDub_AlysiaRP_Hospital",
-		"skyline_fix_bargate",
-		"skyline_alysia_assets_1"
-	};
-	addOnsAuto[]=
-	{
-		"A3_Characters_F_Civil",
-		"a3_characters_f",
-		"A3_Characters_F_INDEP",
-		"A3_Characters_F_BLUFOR",
-		"A3_Characters_F_OPFOR",
+		"A3_Characters_F",
 		"cba_main",
 		"gaol_mapobject",
 		"xCam_EU",
@@ -139,7 +47,6 @@ class Mission
 		"Barn_Metal",
 		"cup_barn_metal",
 		"a3_plants",
-		"skyline_fix_bargate",
 		"A3_Structures_F_Ind_AirPort",
 		"A3_Structures_F_Civ_Constructions",
 		"CAMisc",
@@ -174,7 +81,89 @@ class Mission
 		"cup_castructuresland_nav_boathouse",
 		"StephDub_AlysiaRP_GasStation",
 		"StephDub_AlysiaRP_Hospital",
-		"fett_map"
+		"alysia_sibranak"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Characters_F",
+		"cba_main",
+		"gaol_mapobject",
+		"xCam_EU",
+		"entreprise01",
+		"skyline_alysia_assets_1",
+		"cup_misc_e_config",
+		"A3_Structures_F_EPC_Civ_Accessories",
+		"CABuildings_Misc",
+		"cup_cabuildings_misc",
+		"A3_Structures_F_Civ_Lamps",
+		"CAStructures_Misc_Powerlines",
+		"cup_castructures_misc_powerlines",
+		"CAStructures_E_Misc_Misc_Lamp",
+		"cup_castructures_e_misc_misc_lamp",
+		"mm_buildings",
+		"mainsection",
+		"cup_misc3_config",
+		"CABuildings",
+		"cup_buildings_config",
+		"A3_Structures_F_EPA_Walls",
+		"A3_Structures_F_Walls",
+		"cup_ca_config",
+		"A3_Structures_F_EPC_Walls",
+		"A3_Structures_F_Ind_CarService",
+		"A3_Structures_F_Heli_Furniture",
+		"rds_A2_Civilians",
+		"A3_Structures_F_Wrecks",
+		"A3_Structures_F_Civ_Garbage",
+		"CAStructures_E_Misc_Misc_Interier",
+		"cup_castructures_e_misc_misc_interier",
+		"A3_Structures_F_Bootcamp_Items_Sport",
+		"A3_Structures_F_EPA_Mil_Scrapyard",
+		"A3_Weapons_F",
+		"A3_Structures_F_Ind_FuelStation",
+		"fdett_buildings",
+		"helipad_mapobject",
+		"xCam_Pipe",
+		"gate_c",
+		"A3_Structures_F_Mil_Barracks",
+		"A3_Structures_F_Mil_Cargo",
+		"Barn_Metal",
+		"cup_barn_metal",
+		"a3_plants",
+		"A3_Structures_F_Ind_AirPort",
+		"A3_Structures_F_Civ_Constructions",
+		"CAMisc",
+		"cup_camisc",
+		"CAMisc_ACR_Shooting_range",
+		"cup_camisc_acr_shooting_range",
+		"A3_Structures_F_Households_House_Small03",
+		"A3_Structures_F_System",
+		"Sign_Frontiere",
+		"Plot",
+		"pub_c",
+		"CAStructuresBarn_W",
+		"cup_castructuresbarn_w",
+		"A3_Structures_F_Ind_ConcreteMixingPlant",
+		"A3_Structures_F_Ind_Shed",
+		"A3_Structures_F_Households_House_Shop02",
+		"A3_Structures_F_Households_Addons",
+		"A3_Structures_F_Households_House_Shop01",
+		"CAStructures_E_HouseC",
+		"cup_castructures_e_housec",
+		"A3_Structures_F_Furniture",
+		"Gym_F",
+		"A3_Structures_F_Ind_Windmill",
+		"mm_bank",
+		"Buildings",
+		"A3_Structures_F_Households_House_Small02",
+		"A3_Structures_F_Households_House_Big01",
+		"A3_Structures_F_Households_House_Big02",
+		"cup_castructureshouse_a_fuelstation",
+		"A3_Structures_F_Naval_Piers",
+		"CAStructuresLand_Nav_Boathouse",
+		"cup_castructuresland_nav_boathouse",
+		"StephDub_AlysiaRP_GasStation",
+		"StephDub_AlysiaRP_Hospital",
+		"alysia_sibranak"
 	};
 	randomSeed=13763187;
 	class Intel
@@ -20747,11 +20736,11 @@ class Intro
 {
 	addOns[]=
 	{
-		"fett_map"
+		"alysia_sibranak"
 	};
 	addOnsAuto[]=
 	{
-		"fett_map"
+		"alysia_sibranak"
 	};
 	randomSeed=13763187;
 	class Intel
@@ -20774,11 +20763,11 @@ class OutroWin
 {
 	addOns[]=
 	{
-		"fett_map"
+		"alysia_sibranak"
 	};
 	addOnsAuto[]=
 	{
-		"fett_map"
+		"alysia_sibranak"
 	};
 	randomSeed=13763187;
 	class Intel
@@ -20801,11 +20790,11 @@ class OutroLoose
 {
 	addOns[]=
 	{
-		"fett_map"
+		"alysia_sibranak"
 	};
 	addOnsAuto[]=
 	{
-		"fett_map"
+		"alysia_sibranak"
 	};
 	randomSeed=13763187;
 	class Intel

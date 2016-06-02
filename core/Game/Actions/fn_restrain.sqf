@@ -6,7 +6,7 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-if ((player getVariable ["surrender", false]) || ((animationState player) isEqualTo "incapacitated")) then
+if ((player getVariable ["surrender", false]) || ((animationState player) == "incapacitated")) then
 {
 	if (!(player getVariable ["restrained", false])) then
 	{

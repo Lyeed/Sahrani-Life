@@ -6,4 +6,4 @@
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
 
-missionNamespace getVariable[(format["license_%1", ([_this, 0, "", [""]] call BIS_fnc_param)]), false];
+missionNamespace getVariable [(format["license_%1", ([_this, 0, "", [""]] call BIS_fnc_param)]), false];
