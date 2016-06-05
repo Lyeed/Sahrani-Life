@@ -68,7 +68,6 @@ switch (_cfg) do
 		_scope = getNumber(_config >> "scope");
 		_type = getNumber(_config >> "type");
 		
-		//Compatible attachments
 		if(isClass (_config >> "WeaponSlotsInfo")) then
 		{
 			_acc_p = getArray(_config >> "WeaponSlotsInfo" >> "PointerSlot" >> "compatibleItems");
@@ -98,7 +97,6 @@ switch (_cfg) do
 		if(!isNil {_muzzles}) then
 		{
 			private["_tmp"];
-		//	_base = inheritsFrom (configFile >> "CfgWeapons" >> _entity);
 			{
 				if(_x != "this") then
 				{

@@ -9,7 +9,7 @@ class ALYSIA_LICENSES
 			{
 				price = 900;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 			class EAST: CIV {};
 			class WEST: CIV {};
@@ -25,7 +25,7 @@ class ALYSIA_LICENSES
 			{
 				price = 1100;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 			class EAST: CIV {};
 			class WEST: CIV {};
@@ -41,13 +41,12 @@ class ALYSIA_LICENSES
 			{
 				price = 250000;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 			class EAST
 			{
 				price = 0;
 				pad_store = 0;
-				illegal = 0;
 			};
 			class WEST: EAST {};
 			class GUER: EAST {};
@@ -62,7 +61,7 @@ class ALYSIA_LICENSES
 			{
 				price = 1500;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 			class EAST: CIV {};
 			class WEST: CIV {};
@@ -78,7 +77,7 @@ class ALYSIA_LICENSES
 			{
 				price = 50000;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 			class EAST: CIV {};
 			class WEST: CIV {};
@@ -95,7 +94,7 @@ class ALYSIA_LICENSES
 			{
 				price = 400;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 			class EAST: CIV {};
 			class WEST: CIV {};
@@ -111,7 +110,7 @@ class ALYSIA_LICENSES
 			{
 				price = 150000;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -124,7 +123,7 @@ class ALYSIA_LICENSES
 			{
 				price = 75000;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -138,7 +137,7 @@ class ALYSIA_LICENSES
 			{
 				price = 2000;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -151,7 +150,7 @@ class ALYSIA_LICENSES
 			{
 				price = 3100;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -164,7 +163,7 @@ class ALYSIA_LICENSES
 			{
 				price = 4800;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -177,7 +176,7 @@ class ALYSIA_LICENSES
 			{
 				price = 5800;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -190,7 +189,7 @@ class ALYSIA_LICENSES
 			{
 				price = 6000;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -203,7 +202,7 @@ class ALYSIA_LICENSES
 			{
 				price = 6500;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -216,7 +215,7 @@ class ALYSIA_LICENSES
 			{
 				price = 9000;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -229,7 +228,7 @@ class ALYSIA_LICENSES
 			{
 				price = 13600;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -242,7 +241,7 @@ class ALYSIA_LICENSES
 			{
 				price = 16000;
 				pad_store = 0;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -255,7 +254,7 @@ class ALYSIA_LICENSES
 			{
 				price = 28000;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -268,7 +267,7 @@ class ALYSIA_LICENSES
 			{
 				price = 50000;
 				pad_store = 1;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -281,8 +280,6 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				price = 35000;
-				pad_store = 0;
-				illegal = 1;
 			};
 		};
 	};
@@ -295,7 +292,7 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				condition = "((g_choice isEqualTo 'NORTH') && (isNull g_company))";
-				illegal = 1;
+				search_shown[] = {"WEST"};
 			};
 		};
 	};
@@ -307,7 +304,7 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				condition = "((g_choice isEqualTo 'NORTH') && (isNull g_company))";
-				illegal = 1;
+				search_shown[] = {"WEST"};
 			};
 		};
 	};
@@ -319,7 +316,7 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				condition = "((g_choice isEqualTo 'NORTH') && (isNull g_company))";
-				illegal = 1;
+				search_shown[] = {"WEST"};
 			};
 		};
 	};
@@ -329,7 +326,10 @@ class ALYSIA_LICENSES
 		name = "Inspecteur de la Garde";
 		class factions
 		{
-			class EAST {};
+			class EAST
+			{
+				search_shown[] = {"EAST"};
+			};
 		};
 	};
 
@@ -341,7 +341,7 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				condition = "(g_choice isEqualTo 'SOUTH')";
-				illegal = 1;
+				search_shown[] = {"EAST"};
 			};
 		};		
 	};
@@ -354,7 +354,7 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				condition = "(g_choice isEqualTo 'SOUTH')";
-				illegal = 1;
+				search_shown[] = {"EAST"};
 			};
 		};
 	};
@@ -367,9 +367,8 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				price = 20000;
-				pad_store = 0;
-				illegal = 0;
 				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'clothing')}";
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -381,9 +380,8 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				price = 65000;
-				pad_store = 0;
-				illegal = 0;
 				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'weapon')}";
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -395,9 +393,8 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				price = 9000;
-				pad_store = 0;
-				illegal = 0;
 				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'farming')}";
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -409,9 +406,8 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				price = 13000;
-				pad_store = 0;
-				illegal = 0;
 				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'garagist')}";
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -423,9 +419,8 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				price = 41000;
-				pad_store = 0;
-				illegal = 0;
 				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'money_transfer')}";
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -437,9 +432,8 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				price = 39000;
-				pad_store = 0;
-				illegal = 0;
 				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'foundry')}";
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -451,9 +445,8 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				price = 28500;
-				pad_store = 0;
-				illegal = 0;
 				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'fuel')}";
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -465,9 +458,8 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				price = 16900;
-				pad_store = 0;
-				illegal = 0;
 				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'construction')}";
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -479,9 +471,8 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				price = 13500;
-				pad_store = 0;
-				illegal = 0;
 				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'transport_goods')}";
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -493,9 +484,8 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				price = 7500;
-				pad_store = 0;
-				illegal = 0;
 				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'transport_people')}";
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -507,9 +497,8 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				price = 23500;
-				pad_store = 0;
-				illegal = 0;
 				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'security')}";
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -521,9 +510,8 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				price = 13500;
-				pad_store = 0;
-				illegal = 0;
 				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'service')}";
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -535,9 +523,8 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				price = 15000;
-				pad_store = 0;
-				illegal = 0;
 				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'car_dealer')}";
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -549,9 +536,8 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				price = 9800;
-				pad_store = 0;
-				illegal = 0;
 				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'shop')}";
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -563,9 +549,8 @@ class ALYSIA_LICENSES
 			class CIV
 			{
 				price = 11000;
-				pad_store = 0;
-				illegal = 0;
 				condition = "!(isNull g_company) && {(((g_company getVariable ['company_info',['','','']]) select 2) isEqualTo 'news')}";
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 		};
 	};
@@ -577,9 +562,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 0;
-				pad_store = 0;
-				illegal = 0;
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
 			};
 			class EAST: CIV {};
 			class WEST: CIV {};
@@ -591,7 +574,10 @@ class ALYSIA_LICENSES
 		name = "Docteur généraliste";
 		class factions
 		{
-			class GUER {};
+			class GUER
+			{
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
+			};
 		};
 	};
 	class guer_gen
@@ -599,7 +585,10 @@ class ALYSIA_LICENSES
 		name = "Généticien";
 		class factions
 		{
-			class GUER {};
+			class GUER
+			{
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
+			};
 		};
 	};
 	class guer_chirurgien
@@ -607,7 +596,10 @@ class ALYSIA_LICENSES
 		name = "Chirurgien";
 		class factions
 		{
-			class GUER {};
+			class GUER
+			{
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
+			};
 		};
 	};
 	class guer_inspector
@@ -615,7 +607,10 @@ class ALYSIA_LICENSES
 		name = "Inspecteur de la médecine du travail";
 		class factions
 		{
-			class GUER {};
+			class GUER
+			{
+				search_shown[] = {"WEST","EAST","GUER","CIV"};
+			};
 		};
 	};
 
@@ -626,9 +621,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 0;
-				pad_store = 0;
-				illegal = 0;
+				search_shown[] = {"WEST"};
 			};
 		};
 	};
@@ -639,9 +632,7 @@ class ALYSIA_LICENSES
 		{
 			class CIV
 			{
-				price = 0;
-				pad_store = 0;
-				illegal = 0;
+				search_shown[] = {"WEST"};
 			};
 		};
 	};

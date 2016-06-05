@@ -28,7 +28,7 @@ _data = call compile format["%1", _data];
 _className = _data select 0;
 _vehicleInfo = [_className] call AlysiaClient_fnc_fetchVehInfo;
 
-_price = _list_vehicles lbValue _sel_vehicles;
+_price = _vehicleInfo select 9;
 if ((g_cash >= _price) && (_price > 0)) then {
 	_price_condition = true;
 } else {

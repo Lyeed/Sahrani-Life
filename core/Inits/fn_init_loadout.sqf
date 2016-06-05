@@ -24,6 +24,6 @@ if ((player getVariable ["arrested", false]) && !(isNull g_arrest_Prison)) then 
 	if (_backpack != "") then {player addVest _backpack};
 
 	{
-		[_x, true] call AlysiaClient_fnc_handleItem;
+		[_x, true, true] call AlysiaClient_fnc_handleItem;
 	} forEach (getArray(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "Loadout" >> "items"));	
 };

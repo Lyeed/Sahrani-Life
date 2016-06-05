@@ -76,7 +76,7 @@ _receive = getArray(missionConfigFile >> "ALYSIA_PROCESS" >> g_interaction_proce
 {
 	for "_i" from 1 to _maxAmount do
 	{
-		[_x, true] call AlysiaClient_fnc_handleItem;
+		[_x, true, true] call AlysiaClient_fnc_handleItem;
 	};
 } forEach (_receive select 1);
 

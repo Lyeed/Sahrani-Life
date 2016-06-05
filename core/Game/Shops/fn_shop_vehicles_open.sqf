@@ -17,7 +17,8 @@ if (!isClass(missionConfigFile >> "ALYSIA_SHOPS_VEHICLES" >> _shop)) exitWith
 };
 
 _side = getText(missionConfigFile >> "ALYSIA_SHOPS_VEHICLES" >> _shop >> "side");
-if ((_side != "") && (str(playerSide) != _side)) exitWith {
+if ((_side != "") && (str(playerSide) != _side)) exitWith
+{
 	[format[
 		"Votre faction <t color='#04B404'>%1</t> n'est pas autorisé à acheter ici.<br/>Ce magasin <t color='#2EFE9A'>%2</t> est <t color='#FF0000'>réservé</t>.",
 		([playerSide] call AlysiaClient_fnc_sideToStr),
@@ -25,13 +26,14 @@ if ((_side != "") && (str(playerSide) != _side)) exitWith {
 	]] call AlysiaClient_fnc_error;
 };
 
-if (!(createDialog "RscDisplayShopVehicles")) exitWith {};
+createDialog "RscDisplayShopVehicles";
 
 disableSerialization;
 _display = findDisplay 2300;
-if (isNull _display) exitWith {};
 
+g_shop_active = false;
 g_veh_shop = _spawnPoints;
+
 (_display displayCtrl 2301) ctrlSetStructuredText parseText format["<t align='center' size='1.5'>%1</t>", getText(missionConfigFile >> "ALYSIA_SHOPS_VEHICLES" >> _shop >> "name")];
 
 _list = _display displayCtrl 2302;
@@ -45,14 +47,13 @@ lbClear _list;
 			_index = _list lbAdd getText(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "realname");
 			_vList = getArray(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "colors");
 			_vList append getArray(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "colors_donator");
-			if (_vList isEqualTo []) then {
+			if (_vList isEqualTo []) then
+			{
 				_list lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> _x >> "picture")];
 				_list lbSetData [_index, str([_x])];
-				_list lbSetValue [_index, getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> _x >> "buyPrice")];
 			} else {
 				_list lbSetPicture [_index, getText(configFile >> "CfgVehicles" >> (_vList select 0) >> "picture")];
 				_list lbSetData [_index, str(_vList)];
-				_list lbSetValue [_index, getNumber(missionConfigFile >> "ALYSIA_VEHICLES" >> (_vList select 0) >> "buyPrice")];
 			};
 			_list lbSetTooltip [_index, (_list lbText _index)];
 		} else {

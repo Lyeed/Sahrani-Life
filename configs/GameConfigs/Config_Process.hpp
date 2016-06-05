@@ -374,7 +374,7 @@ class ALYSIA_PROCESS
 		name = "Fabrication de kit de crochetage";
 		sound = "smelting";
 		require[] = {{"ironp", 1},{"alu",1}};
-		receive[] = {{},{"Alysia_Lockpick"},0};
+		receive[] = {{},{"Alysia_Lockpick"},4};
 		time_per_item = 2;
 		time_default = 4;
 		class target {};

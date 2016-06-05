@@ -16,7 +16,8 @@ if (!isClass(missionConfigFile >> "ALYSIA_SHOPS_ARMA" >> _type)) exitWith
 };
 
 _side = getText(missionConfigFile >> "ALYSIA_SHOPS_ARMA" >> _type >> "side");
-if ((_side != "") && (str(playerSide) != _side)) exitWith {
+if ((_side != "") && (str(playerSide) != _side)) exitWith
+{
 	[format[
 		"Votre faction <t color='#04B404'>%1</t> n'est pas autorisé à acheter ici.<br/>Ce magasin <t color='#2EFE9A'>%2</t> est <t color='#FF0000'>réservé</t>.",
 		([playerSide] call AlysiaClient_fnc_sideToStr),
@@ -24,13 +25,17 @@ if ((_side != "") && (str(playerSide) != _side)) exitWith {
 	]] call AlysiaClient_fnc_error;
 };
 
-if (!(createDialog "RscDisplayShopArma")) exitWith {};
+createDialog "RscDisplayShopArma";
 
 disableSerialization;
 _display = findDisplay 38400;
-if (isNull _display) exitWith {};
+g_shop_active = false;
 
-(_display displayCtrl 38401) ctrlSetStructuredText parseText format["<t align='center' size='1.5'>%1</t>", getText(missionConfigFile >> "ALYSIA_SHOPS_ARMA" >> _type >> "name")];
+(_display displayCtrl 38401) ctrlSetStructuredText parseText format
+[
+	"<t align='center' size='1.5'>%1</t>",
+	getText(missionConfigFile >> "ALYSIA_SHOPS_ARMA" >> _type >> "name")
+];
 
 _list = _display displayCtrl 38402;
 lbClear _list;
@@ -45,13 +50,10 @@ lbClear _list;
 			systemChat format["ERROR: %1 does not exist in Arma", _x];
 		} else {
 			_displayName = getText(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "name");
-			if (_displayName isEqualTo "") then {
-				_displayName = _details select 1;
-			};
-			
+			if (_displayName isEqualTo "") then {_displayName = _details select 1};
+
 			_index = _list lbAdd _displayName;
 			_list lbSetData [_index, _x];
-			_list lbSetValue [_index, getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _x >> "buy_price")];
 			_list lbSetPicture [_index, (_details select 2)];
 			_list lbSetTooltip [_index, (_list lbText _index)];
 		};

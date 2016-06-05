@@ -45,13 +45,16 @@ switch (_data select 0) do
 				((g_interaction_target_inv select _sel) select 1) set [1, (_itemInfo select 1) - _amount];
 			};
 		} else {
-			["Vous n'avez pas assez de place"] call AlysiaClient_fnc_error;
+			["Vous n'avez pas assez de place dans votre inventaire"] call AlysiaClient_fnc_error;
 		};
 	};
 	case "arma":
 	{
-		[(_data select 1), true] call AlysiaClient_fnc_handleItem;
-		g_interaction_target_inv deleteAt _sel;
+		if ([(_data select 1), true, false] call AlysiaClient_fnc_handleItem) then {
+			g_interaction_target_inv deleteAt _sel;
+		} else {
+			["Récupérattion <t color='#FF4000'>impossible</t>.<br/>Vous n'avez pas assez de place dans votre inventaire ou avez déjà un objet de ce type équipé."] call AlysiaClient_fnc_error;
+		};
 	};
 };
 

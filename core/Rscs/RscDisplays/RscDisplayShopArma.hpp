@@ -2,6 +2,7 @@ class RscDisplayShopArma: RscDisplayDefaultInteraction
 {
 	idd = 38400;
 	name = "RscDisplayShopArma";
+	onUnload = "g_shop_active = false;";
 	
 	class controlsBackground: DEFAULT_controlsBackground
 	{

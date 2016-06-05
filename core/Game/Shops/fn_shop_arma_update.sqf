@@ -11,8 +11,6 @@ disableSerialization;
 _list = [_this, 0, controlNull, [controlNull]] call BIS_fnc_param;
 _sel = [_this, 1, -1, [-1]] call BIS_fnc_param;
 
-if (_sel isEqualTo -1) exitWith {};
-
 _item = _list lbData _sel;
 if (_item isEqualTo "") exitWith
 {
@@ -24,7 +22,9 @@ if (_item isEqualTo "") exitWith
 _display = findDisplay 38400;
 if (isNull _display) exitWith {};
 
-_price = _list lbValue _sel;
+g_shop_active = true;
+
+_price = getNumber(missionConfigFile >> "ALYSIA_ITEMS_ARMA" >> _item >> "buy_price");
 if ((_price > 0) && (g_cash >= _price)) then {
 	_price_condition = true;
 } else {
@@ -85,3 +85,5 @@ if (_price_condition && _rank_condition && _license_condition) then {
 	ctrlShow[38409, false];
 	ctrlShow[38410, false];
 };
+
+g_shop_active = false;

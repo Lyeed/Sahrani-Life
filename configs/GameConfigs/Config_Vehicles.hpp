@@ -150,7 +150,7 @@ class ALYSIA_VEHICLES
 	{
 		realname = "Renault Magnum";
 		buyPrice = 415750;
-		inventory = 500;
+		inventory = 650;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"truck","company_transport_goods"};
@@ -866,7 +866,7 @@ class ALYSIA_VEHICLES
 	{
 		realname = "Iveco";
 		buyPrice = 576000;
-		inventory = 750;
+		inventory = 950;
 		side = "CIV";
 		insurance = 1;
 		licenses[] = {"truck","company_transport_goods"};
