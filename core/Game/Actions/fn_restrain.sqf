@@ -29,6 +29,8 @@ if ((player getVariable ["surrender", false]) || ((animationState player) == "in
 			{
 				player switchCamera "Internal";
 			};
+
+			uiSleep 0.5;
 		};
 		
 		player switchmove "AMOVPERCMSTPSNONWNONDNON_EASEOUT";

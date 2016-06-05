@@ -33,7 +33,7 @@ if (!(_target getVariable ["surrender", false]) && ((animationState _target) != 
 };
 
 if ([false, "handcuffs", 1] call AlysiaClient_fnc_handleInv) then {
-	remoteExec ["AlysiaClient_fnc_restrain", _target];
+	[] remoteExec ["AlysiaClient_fnc_restrain", _target];
 } else {
 	["Vous n'avez pas de menottes."] call AlysiaClient_fnc_error;
 };

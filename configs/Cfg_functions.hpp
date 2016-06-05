@@ -92,6 +92,12 @@ class CfgFunctions
 			class virtual_menu_reduce_action {};
 		};
 
+		class Fireworks
+		{
+			file = "core\Game\Fireworks";
+			class fireworks_effects {};
+		};
+
 		class Companies
 		{
 			file = "core\Game\Companies";

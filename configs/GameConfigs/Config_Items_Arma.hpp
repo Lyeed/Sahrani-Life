@@ -744,11 +744,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 1500;
 	};
-	class hlc_30Rnd_545x39_B_AK
-	{
-		buy_price = 300;
-		buy_condition_WEST = 2;
-	};
 	class hlc_30Rnd_556x45_B_AUG
 	{
 		buy_price = 150;
@@ -758,12 +753,26 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class hlc_rifle_aku12
+	class RH_m9
+	{
+		buy_price = 700;
+		buy_condition_WEST = 1;
+	};
+	class RH_g17
+	{
+		buy_price = 2100;
+		buy_condition_WEST = 5;
+	};
+	class SMG_03_black
 	{
 		buy_price = 5000;
 		buy_condition_WEST = 2;
 	};
-	class hlc_rifle_ak12: hlc_rifle_aku12 {};
+	class 50Rnd_570x28_SMG_03
+	{
+		buy_price = 300;
+		buy_condition_WEST = 2;
+	};
 	class hlc_rifle_auga3_b
 	{
 		buy_price = 5000;
@@ -2709,16 +2718,6 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 95;
 		buy_license_CIV = "gun";
-	};
-	class RH_m9
-	{
-		buy_price = 700;
-		buy_condition_WEST = 1;
-	};
-	class RH_g17
-	{
-		buy_price = 2100;
-		buy_condition_WEST = 5;
 	};
 	class usm_helmet_safety
 	{

@@ -47,8 +47,7 @@ class ALYSIA_SHOPS_ARMA
 			"Bank_Key1_N",
 			"Lyeed_Phone",
 			"Alysia_Identity_Milice",
-			"hgun_FlashBall_F",
-			"1Rnd_FlashBall_Mag",
+			"SkylineItems_Bandage",
 			"ItemGPS",
 			"ItemMap",
 			"ItemWatch",
@@ -65,15 +64,14 @@ class ALYSIA_SHOPS_ARMA
 			"Chemlight_yellow",
 			"Chemlight_green",
 			"Chemlight_blue",
-			"SkylineItems_Bandage",
-			"SkylineItems_Couteau",
-			"hlc_rifle_aku12",
-			"hlc_rifle_ak12",
-			"hlc_30Rnd_545x39_B_AK",
+			"hgun_FlashBall_F",
+			"1Rnd_FlashBall_Mag",
 			"RH_g17",
 			"RH_17Rnd_9x19_g17",
 			"RH_m9",
-			"RH_15Rnd_9x19_M9"
+			"RH_15Rnd_9x19_M9",
+			"SMG_03_black",
+			"50Rnd_570x28_SMG_03"
 		};
 	};
 

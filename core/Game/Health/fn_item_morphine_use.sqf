@@ -33,7 +33,7 @@ player removeMagazine "SkylineItems_Morphine";
 if (_target isEqualTo player) then {
 	[] call AlysiaClient_fnc_item_morphine_apply;
 } else {
-	remoteExecCall ["AlysiaClient_fnc_item_morphine_apply", _target];
+	[] remoteExecCall ["AlysiaClient_fnc_item_morphine_apply", _target];
 };
 
 g_action_inUse = false;

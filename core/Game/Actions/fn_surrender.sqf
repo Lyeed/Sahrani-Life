@@ -18,7 +18,7 @@ if ((vehicle player) isEqualTo player) then
 			while {(player getVariable ["surrender", false])} do
 			{
 				player playActionNow "Surrender";
-				sleep 0.8;
+				uiSleep 0.8;
 			};
 			[player, "amovpercmstpssurwnondnon_amovpercmstpsnonwnondnon"] remoteExecCall ["switchMove", -2];
 			player playMove "amovpercmstpssurwnondnon_amovpercmstpsnonwnondnon";

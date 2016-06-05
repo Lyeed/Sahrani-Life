@@ -33,7 +33,7 @@ player removeMagazine "SkylineItems_Adrenaline";
 if (_target isEqualTo player) then {
 	[] call AlysiaClient_fnc_item_adrenaline_apply;
 } else {
-	remoteExecCall ["AlysiaClient_fnc_item_adrenaline_apply", _target];
+	[] remoteExecCall ["AlysiaClient_fnc_item_adrenaline_apply", _target];
 };
 
 g_action_inUse = false;

@@ -66,46 +66,19 @@ class ALYSIA_FACTIONS
 			{
 				{"Weapons",
 					{
-						"SMG_01_F",
-						"RH_fnp45",
-						"Skyline_HK_SL8",
-						"hlc_rifle_aks74u",
-						"hlc_rifle_akm",
-						"hlc_rifle_rpk",
-						"hlc_rifle_rpk74n",
-						"hlc_rifle_RPK12",
 						"RH_g19",
-						"srifle_EBR_F"
+						"Skyline_HK_SL8"
 					}
 				},
 				{"Magazines",
 					{
-						"30Rnd_45ACP_Mag_SMG_01_Tracer_Red",
-						"hlc_30Rnd_545x39_B_AK",
-						"RH_15Rnd_45cal_fnp",
-						"30Rnd_556x45_Stanag",
-						"hlc_30Rnd_762x39_b_ak",
-						"hlc_75Rnd_762x39_m_rpk",
-						"hlc_45Rnd_545x39_t_rpk",
-						"hlc_45Rnd_762x39_m_rpk",
-						"RH_17Rnd_9x19_g17",
-						"RH_7Rnd_50_AE",
-						"20Rnd_762x51_Mag",
-						"Bank_DefuseKit"
+						"30Rnd_556x45_Stanag_Tracer_Red"
 					}
 				},
 				{"Items",
 					{
-						"DemoCharge_Remote_Mag",
-						"SmokeShellWhite",
 						"Rangefinder",
 						"optic_Aco",
-						"optic_Hamr",
-						"hlc_optic_kobra",
-						"optic_DMS",
-						"optic_LRPS",
-						"optic_Holosight",
-						"TRYK_HRPIGEAR_NV",
 						"NVGoggles",
 						"Mask_M40_OD"
 					}

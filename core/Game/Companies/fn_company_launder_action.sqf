@@ -52,7 +52,7 @@ if ([false, "illegal_money", _amount] call AlysiaClient_fnc_handleInv) then
 			[_amount] call AlysiaClient_fnc_numberText
 		]
 	] call AlysiaClient_fnc_info;
-	[_target, _amount, (player getVariable "realname"), (lbText[70008, lbCurSel 70008])] remoteExec ["AlysiaServer_fnc_company_launder", 2];
+	[_target, _amount, (player getVariable "realname"), (lbText[70001, lbCurSel 70001])] remoteExec ["AlysiaServer_fnc_company_launder", 2];
 	[1] call AlysiaDB_fnc_query_update_partial;
 } else {
 	["Vous n'avez pas autant d'argent sale sur vous."] call AlysiaClient_fnc_error;
