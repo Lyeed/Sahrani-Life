@@ -554,7 +554,7 @@ class ALYSIA_ITEMS
     class cocainepc_bag
     {
         name="Sac de cocaïne coupée";
-        weight=5;
+        weight=3;
         illegal=1;
         image="alysia_items_virtual\data\drug_bag.paa";
         class market
