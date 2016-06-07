@@ -16,7 +16,8 @@ if (isNull _target) exitWith {
 };
 
 _item = getText(missionConfigFile >> "ALYSIA_FACTIONS" >> str(playerSide) >> "identity_item");
-if ((_item != "") && !(_item in (magazines player))) exitWith {
+if ((_item != "") && !(_item in (magazines player))) exitWith 
+{
 	[format[
 		"Vous n'avez pas l'objet nécessaire pour prouver votre identité<br/><br/>Requis : %1",
 		(([_item] call AlysiaClient_fnc_fetchCfgDetails) select 1)
@@ -26,13 +27,12 @@ if ((_item != "") && !(_item in (magazines player))) exitWith {
 g_action_inUse = true;
 
 player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
+waitUntil {((animationState player) isEqualTo "ainvpercmstpsnonwnondnon_putdown_amovpercmstpsnonwnondnon")};
 
-if ((player distance _target) > 3) exitWith
-{
+if ((player distance _target) > 3) then {
 	["Vous êtes trop loin."] call AlysiaClient_fnc_error;
-	g_action_inUse = false;
+} else {
+	[player, [g_choice, g_birth, g_nationality, g_sexe]] remoteExecCall ["AlysiaClient_fnc_identityOpen", _target];	
 };
 
-[player, [g_choice, g_birth, g_nationality, g_sexe]] remoteExecCall ["AlysiaClient_fnc_identityOpen", _target];
 g_action_inUse = false;

@@ -174,8 +174,6 @@ class ALYSIA_LABORATORIES
 			"headgear_criminal_6",
 			"headgear_criminal_7",
 			"headgear_criminal_8",
-			"headgear_criminal_9",
-			"headgear_criminal_10",
 			"headgear_criminal_11",
 			"headgear_criminal_12",
 			"headgear_criminal_13",

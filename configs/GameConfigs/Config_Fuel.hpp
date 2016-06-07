@@ -84,6 +84,7 @@ class ALYSIA_FUEL
 		picture = "Devilz80_Images\Data\Menu\fuelStations\Kerosene.paa";
 		conso = 0.5;
 		jerrycan = "Alysia_jerrycan_kerosene";
+		item_refuel = "kerosene";
 	};
 	class GPL
 	{

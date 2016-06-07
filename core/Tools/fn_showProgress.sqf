@@ -43,7 +43,7 @@ if (_sound != "") then {
 if (isNull _object) then {
 	_distanceMax = 0;
 } else {
-	_distanceMax = (player distance _object) + 1;
+	_distanceMax = (player distance _object) + 1.5;
 };
 
 while {g_action_inUse} do

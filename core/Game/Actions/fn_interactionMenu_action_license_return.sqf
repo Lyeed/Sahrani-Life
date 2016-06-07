@@ -5,53 +5,72 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_display", "_ctrl", "_licenses"];
-_licenses = [_this, 0, [], [[]]] call BIS_fnc_param;
+private["_display", "_list", "_from"];
+_from = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
 
-if (!(createDialog "RscDisplayPlayerRevokeLicense")) exitWith {};
+if (isNull _from) exitWith {};
+
+g_action_inUse = true;
+
+player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+waitUntil {((animationState player) isEqualTo "ainvpercmstpsnonwnondnon_putdown_amovpercmstpsnonwnondnon")};
+
+g_action_inUse = false;
+
+createDialog "RscDisplayPlayerRevokeLicense";
 
 disableSerialization;
 _display = findDisplay 18000;
 if (isNull _display) exitWith {};
 
-_ctrl = _display displayCtrl 18001;
-lbClear _ctrl;
+_list = _display displayCtrl 18001;
+lbClear _list;
 
 {
-	_index = _ctrl lbAdd ([_x] call AlysiaClient_fnc_licenseGetName);
-	_ctrl lbSetData [_index, _x];
-} forEach (_licenses);
-if ((lbSize _ctrl) isEqualTo 0) then
+	_index = _list lbAdd ([_x] call AlysiaClient_fnc_licenseGetName);
+	_list lbSetData [_index, _x];
+} forEach ([_this, 0, [], [[]]] call BIS_fnc_param);
+if ((lbSize _list) isEqualTo 0) then
 {
-	_ctrl lbAdd "Aucune";
+	_list lbAdd "Aucune";
 	ctrlShow[18002, false];
 	ctrlShow[18003, false];
 };
 
-_ctrl lbSetCurSel 0;
+_list lbSetCurSel 0;
 
 while {!(isNull _display)} do
 {
-	if (player getVariable ["is_coma", false]) exitWith {
+	if (isNull _from) exitWith
+	{
+		["Fouille <t color='#FFBF00'>interrompu</t>.<br/>Cible invalide."] call AlysiaClient_fnc_info;
 		closeDialog 0;
 	};
-	if ((player distance g_interaction_target) > ((((boundingBox g_interaction_target) select 1) select 0) + 2)) exitWith {
+	if (player getVariable ["is_coma", false]) exitWith
+	{
+		["Fouille <t color='#FFBF00'>interrompu</t>.<br/>Vous êtes dans le coma."] call AlysiaClient_fnc_info;
 		closeDialog 0;
 	};
-	if (player getVariable ["restrained", false]) exitWith {
+	if ((player distance _from) > ((((boundingBox _from) select 1) select 0) + 2.5)) exitWith
+	{
+		["Fouille <t color='#FFBF00'>interrompu</t>.<br/>Vous êtes trop loin de la cible."] call AlysiaClient_fnc_info;
 		closeDialog 0;
 	};
-	if (player getVariable ["surrender", false]) exitWith {
+	if (player getVariable ["restrained", false]) exitWith
+	{
+		["Fouille <t color='#FFBF00'>interrompu</t>.<br/>Vous êtes menotté."] call AlysiaClient_fnc_info;
 		closeDialog 0;
 	};
-	if (isNull g_interaction_target) exitWith {
+	if (player getVariable ["surrender", false]) exitWith
+	{
+		["Fouille <t color='#FFBF00'>interrompu</t>.<br/>Vous avez les mains sur la tête."] call AlysiaClient_fnc_info;
 		closeDialog 0;
 	};
-	if (g_interaction_target getVariable ["is_coma", false]) exitWith {
+	if (_from getVariable ["is_coma", false]) exitWith
+	{
+		["Fouille <t color='#FFBF00'>interrompu</t>.<br/>La cible est dans le coma."] call AlysiaClient_fnc_info;
 		closeDialog 0;
 	};
-	if (!(g_interaction_target getVariable ["restrained", false]) && !(g_interaction_target getVariable ["surrender", false])) exitWith {
-		closeDialog 0;
-	};
-	sleep 0.5;
+
+	uiSleep 0.5;
 };

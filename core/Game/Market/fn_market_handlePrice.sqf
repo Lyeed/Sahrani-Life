@@ -15,13 +15,13 @@ if ((_item isEqualTo "") ||(_amount isEqualTo 0)) exitWith {};
 _oldPrice = [_item] call AlysiaClient_fnc_market_getPrice;
 if (_type) then
 {
-	_newprice = _oldPrice + ((_oldPrice * ((_amount * ([_item] call AlysiaClient_fnc_itemGetWeight)) * 0.1)) / 100);
+	_newprice = _oldPrice + ((_oldPrice * ((_amount * ([_item] call AlysiaClient_fnc_itemGetWeight)) * 0.09)) / 100);
 	if (_newPrice > getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market" >> "max")) then {
 		_newPrice = getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market" >> "max");
 	};
 } else
 {
-	_newprice = _oldPrice - ((_oldPrice * ((_amount * ([_item] call AlysiaClient_fnc_itemGetWeight)) * 0.08)) / 100);
+	_newprice = _oldPrice - ((_oldPrice * ((_amount * ([_item] call AlysiaClient_fnc_itemGetWeight)) * 0.05)) / 100);
 	if (_newPrice < getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market" >> "min")) then {
 		_newPrice = getNumber(missionConfigFile >> "ALYSIA_ITEMS" >> _item >> "market" >> "min");
 	};

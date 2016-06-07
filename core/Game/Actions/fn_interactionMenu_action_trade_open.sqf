@@ -28,7 +28,7 @@ g_interaction_trade_active = false;
 
 while {!(isNull (findDisplay 10000))} do
 {
-	if (isNull g_interaction_target) exitWith
+	if (isNull _target) exitWith
 	{
 		["Echange <t color='#FFBF00'>interrompu</t>.<br/>Cible invalide."] call AlysiaClient_fnc_info;
 		closeDialog 0;

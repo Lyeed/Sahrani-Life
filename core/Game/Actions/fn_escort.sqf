@@ -5,7 +5,7 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
-private["_target"];
+private "_target";
 _target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 if (!(isNull (player getVariable ["escorting", objNull]))) exitWith {
@@ -21,8 +21,12 @@ if (isNull _target) exitWith {
 	["Cible invalide"] call AlysiaClient_fnc_error;
 };
 
+g_action_inUse = true;
+
 player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
 waitUntil {((animationState player) isEqualTo "ainvpercmstpsnonwnondnon_putdown_amovpercmstpsnonwnondnon")};
+
+g_action_inUse = false;
 
 if (!(isNull (player getVariable ["escorting", objNull]))) exitWith {
 	["Vous escortez déjà quelqu'un"] call AlysiaClient_fnc_error;

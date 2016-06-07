@@ -129,7 +129,7 @@
 		[
 			"license",
 			"Licences",
-			"[] spawn AlysiaClient_fnc_interactionMenu_action_license;",
+			"[g_interaction_target] spawn AlysiaClient_fnc_interactionMenu_action_license;",
 			"
 				(
 					(playerSide in [east,west]) &&

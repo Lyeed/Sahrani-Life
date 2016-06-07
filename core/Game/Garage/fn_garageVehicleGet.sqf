@@ -95,7 +95,6 @@ if (isNil "_validSpawn") exitWith {["Aucun emplacement de sortie de véhicule n'
 
 _spawnPos = getMarkerPos _validSpawn;
 _vehicle = createVehicle [_vehicleClassname, _spawnPos, [], 0, "NONE"];
-waitUntil {!isNil "_vehicle" && {!isNull _vehicle}};
 [_vehicle] call AlysiaClient_fnc_clearVehicleAmmo;
 
 _vehicle setPos _spawnPos;
@@ -106,7 +105,7 @@ _vehicle lock 2;
 _hitpoints = ([_vehicle] call AlysiaClient_fnc_getAllHitPointsDamage) select 0;
 
 {
-	if ((_x > 0) && ((_hitpoints select _forEachIndex) != "")) then
+	if ((_x > 0) && !(isNil {(_hitpoints select _forEachIndex)}) && {(_hitpoints select _forEachIndex) != ""}) then
 	{
 		if (local _vehicle) then {
 			_vehicle setHitIndex [_forEachIndex, _x];
@@ -119,13 +118,8 @@ _hitpoints = ([_vehicle] call AlysiaClient_fnc_getAllHitPointsDamage) select 0;
 [format["Vous avez récupéré : <t color='#FF8000'>%1</t>.", (lbText[2802, (lbCurSel 2802)])]] call AlysiaClient_fnc_info;
 [(_data select 1), _vehicle, player] remoteExec ["AlysiaServer_fnc_garageVehicleSpawn", 2];
 
-if (!((_data select 4) isEqualTo [])) then {
-	_vehicle setVariable ["Trunk", (_data select 4), true];
-};
-
-if ((_data select 11) != "") then {
-	_vehicle setVariable ["typeRefuel", (_data select 11), true];
-};
+if (!((_data select 4) isEqualTo [])) then {_vehicle setVariable ["Trunk", (_data select 4), true]};
+if ((_data select 11) != "") then {_vehicle setVariable ["typeRefuel", (_data select 11), true]};
 
 _vehicle setVariable ["info", [(getPlayerUID player), (player getVariable ["realname", profileName]), (_data select 1), (_data select 2)], true];
 _vehicle setFuel ((_data select 3) / 100);

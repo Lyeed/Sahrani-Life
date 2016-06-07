@@ -5,28 +5,26 @@
 	YOU ARE NOT ALLOWED TO COPY OR DISTRIBUTE THE CONTENT OF THIS FILE WITHOUT AUTHOR AGREEMENT
 	More informations : https://www.bistudio.com/community/game-content-usage-rules
 */
+private "_target";
+_target = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
-if (isNull g_interaction_target) exitWith {};
-
-if (!(g_interaction_target getVariable ["restrained", false]) && !(g_interaction_target getVariable ["surrender", false])) exitWith {
-	["La cible doit avoir les mains sur la tête ou être menottée pour pouvoir effecter un alcootest"] call AlysiaClient_fnc_error;
+if (isNull _target) exitWith {
+	["Cible invalide."] call AlysiaClient_fnc_error;
 };
-
-if (dialog) then
-{
-	closeDialog 0;
-	waitUntil {!dialog};
+if (!(_target getVariable ["restrained", false]) && !(_target getVariable ["surrender", false])) exitWith {
+	["La cible doit avoir les mains sur la tête ou être menottée pour pouvoir effecter un alcootest."] call AlysiaClient_fnc_error;
 };
 
 if ([false, "alcool_test", 1] call AlysiaClient_fnc_handleInv) then
 {
-	if (!(["Alcootest", 10, g_interaction_target] call AlysiaClient_fnc_showProgress)) exitWith {};
-
-	if (!(g_interaction_target getVariable ["restrained", false]) && !(g_interaction_target getVariable ["surrender", false])) exitWith {
-		["La cible doit avoir les mains sur la tête ou être menottée pour pouvoir effecter un alcootest"] call AlysiaClient_fnc_error;
+	if (["Alcootest", 10, _target] call AlysiaClient_fnc_showProgress) then
+	{
+		if ((_target getVariable ["restrained", false]) || (_target getVariable ["surrender", false])) then {
+			[player] remoteExecCall ["AlysiaClient_fnc_alcootest_get", _target];		
+		} else {
+			["La cible doit avoir les mains sur la tête ou être menottée pour pouvoir effecter un alcootest"] call AlysiaClient_fnc_error;
+		};
 	};
-
-	[player] remoteExecCall ["AlysiaClient_fnc_alcootest_get", g_interaction_target];
 } else {
-	["Vous n'avez pas d'alcootest"]	call AlysiaClient_fnc_error;
+	["Vous n'avez pas d'alcootest."] call AlysiaClient_fnc_error;
 };

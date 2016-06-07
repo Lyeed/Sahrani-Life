@@ -164,7 +164,6 @@
         "AlysiaClient_fnc_strToSide",
         "AlysiaClient_fnc_errorExit",
         "AlysiaClient_fnc_getInv",
-        "AlysiaClient_fnc_accType",
         "AlysiaClient_fnc_calWeightDiff",
         "AlysiaClient_fnc_createMarker",
         "AlysiaClient_fnc_endGame",

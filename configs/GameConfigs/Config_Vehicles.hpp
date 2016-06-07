@@ -2895,37 +2895,6 @@ class ALYSIA_VEHICLES
 		fuelCapacity = 43;
 		rank = 1;
 	};
-	class LandRover_ACR
-	{
-		realname = "Pickup Garde";
-		buyPrice = 16800;
-		inventory = 50;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 48;
-		rank = 2;
-	};
-	class LandRover_TK_CIV_EP1: LandRover_ACR {};
-	class ACR_LandRover_AMB: LandRover_ACR
-	{
-		realname = "Pickup Garde (box)";
-		buyPrice = 21600;
-		inventory = 98;
-		rank = 3;
-		fuelCapacity = 60;
-	};
-	class ACR_Offroad_HMG: LandRover_ACR
-	{
-		realname = "Pickup Garde (armé)";
-		buyPrice = 95500;
-		inventory = 30;
-		insurance = 0;
-		fuel = "SP95";
-		rank = 5;
-		disableLockpick = 1;
-	};
 	class Skyline_GMC_Vandura_Propagande_01_F
 	{
 		realname = "GMC haut parleurs";
@@ -2941,27 +2910,18 @@ class ALYSIA_VEHICLES
 	};
 
 	/* TANKS */
-	class Cha_BTR60_Cuba
-	{
-		realname = "BTR60 Cuba Garde";
-		buyPrice = 360000;
-		inventory = 30;
-		side = "EAST";
-		insurance = 0;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 290;
-		rank = 5;
-		disableLockpick = 1;
-	};
-	class Skyline_T34_01_F: Cha_BTR60_Cuba
+	class Skyline_T34_01_F
 	{
 		realname = "T34 Garde";
 		buyPrice = 370000;
 		inventory = 90;
 		rank = 6;
+		side = "EAST";
+		insurance = 0;
 		fuelCapacity = 540;
 		disableLockpick = 1;
+		licenses[] = {"driver"};
+		fuel = "Diesel";
 	};
 
 	/* TRUCKS */

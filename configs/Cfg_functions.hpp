@@ -146,7 +146,6 @@ class CfgFunctions
 			class strToSide {};
 			class errorExit {};
 			class getInv {};
-			class accType {};
 			class calWeightDiff {};
 			class createMarker {};
 			class endGame {};

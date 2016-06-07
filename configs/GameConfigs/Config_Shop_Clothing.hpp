@@ -165,8 +165,7 @@ class ALYSIA_SHOPS_CLOTHING
 			"rds_worker_cap3",
 			"rds_worker_cap4",
 			"rds_worker_cap1",
-			"Casque_Moto",
-			"H_LIB_WP_Cap"
+			"Casque_Moto"
 		};
 		goggles[] =
 		{
@@ -400,7 +399,6 @@ class ALYSIA_SHOPS_CLOTHING
 			"rds_worker_cap4",
 			"rds_worker_cap1",
 			"Casque_Moto",
-			"H_LIB_SOV_PilotHelmet",
 			"rds_police_cap"
 		};
 		goggles[] =

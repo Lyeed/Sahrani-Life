@@ -45,7 +45,6 @@ class ALYSIA_SHOPS_VEHICLES
 			"Skyline_GMC_Vandura_Propagande_01_F",
 			"RDS_Ikarus_Civ",
 			"Fett_truck_army",
-			"Cha_BTR60_Cuba",
 			"Skyline_T34_01_F"
 		};
 	};

@@ -16,4 +16,4 @@ _licenses = [];
 	if (str(side _from) in getArray(missionConfigFile >> "ALYSIA_LICENSES" >> _x >> "factions" >> str(playerSide) >> "search_shown")) then {_licenses pushBack _x};
 } forEach ([] call AlysiaClient_fnc_getLicenses);
 
-[_licenses] remoteExec ["AlysiaClient_fnc_interactionMenu_action_license_return", _from];
+[_licenses, player] remoteExec ["AlysiaClient_fnc_interactionMenu_action_license_return", _from];
