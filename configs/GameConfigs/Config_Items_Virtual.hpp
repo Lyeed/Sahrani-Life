@@ -260,8 +260,8 @@ class ALYSIA_ITEMS
         license="tabac";
         class market
         {
-            max=2800;
-            min=137;
+            max=3640;
+            min=178;
             affect[]=AFFECT_DRUGS;
         };
     };
@@ -274,8 +274,8 @@ class ALYSIA_ITEMS
         license="tabac";
         class market
         {
-            max=980;
-            min=21;
+            max=1274;
+            min=27;
             affect[]=AFFECT_DRUGS;
         };
     };
@@ -302,7 +302,7 @@ class ALYSIA_ITEMS
         image="alysia_items_virtual\data\artefact.paa";
         class market
         {
-            max=1295;
+            max=1683;
             min=112;
             affect[]=AFFECT_ILLEGAL;
         };
@@ -316,7 +316,7 @@ class ALYSIA_ITEMS
         license="archeologie";
         class market
         {
-            max=18244;
+            max=23717;
             min=739;
             affect[]=AFFECT_ILLEGAL;
         };
@@ -415,8 +415,8 @@ class ALYSIA_ITEMS
         license="sand";
         class market
         {
-            max=441;
-            min=11;
+            max=573;
+            min=14;
             affect[]=AFFECT_PROCESSED;
         };
     };
@@ -463,7 +463,7 @@ class ALYSIA_ITEMS
         license="bauxite";
         class market
         {
-            max=714;
+            max=928;
             min=84;
             affect[]=AFFECT_MINERAL;
         };
@@ -546,21 +546,21 @@ class ALYSIA_ITEMS
         image="alysia_items_virtual\data\drug_bag.paa";
         class market
         {
-            max=8400;
-            min=588;
+            max=10920;
+            min=764;
             affect[]=AFFECT_DRUGS;
         };
     };
     class cocainepc_bag
     {
         name="Sac de cocaïne coupée";
-        weight=5;
+        weight=3;
         illegal=1;
         image="alysia_items_virtual\data\drug_bag.paa";
         class market
         {
-            max=4216;
-            min=406;
+            max=5480;
+            min=528;
             affect[]=AFFECT_DRUGS;
         };
     };
@@ -631,8 +631,8 @@ class ALYSIA_ITEMS
         image="alysia_items_virtual\data\drug_bag.paa";
         class market
         {
-            max=14840;
-            min=406;
+            max=19292;
+            min=528;
             affect[]=AFFECT_DRUGS;
         };
     };
@@ -667,8 +667,8 @@ class ALYSIA_ITEMS
         image="alysia_items_virtual\data\drug_bag.paa";
         class market
         {
-            max=7000;
-            min=266;
+            max=9100;
+            min=346;
             affect[]=AFFECT_DRUGS;
         };
     };
@@ -1398,8 +1398,8 @@ class ALYSIA_ITEMS
         image="alysia_items_virtual\data\tortue.paa";
         class market
         {
-            max=4060;
-            min=560;
+            max=5278;
+            min=728;
             affect[]=AFFECT_ILLEGAL;
         };
     };
