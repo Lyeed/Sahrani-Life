@@ -29,6 +29,14 @@ _info = switch (true) do
 			["Taxe salariale", "Taxe foncière", "Cotisation salariale", "Taxe d'habitation"]
 		]
 	};
+	case (["central_com_gen"] call AlysiaClient_fnc_hasLicense):
+	{
+		[
+			[gServer_tax_south_companies_employee_multiplier, gServer_tax_south_companies_building_multiplier, gServer_tax_south_salary_multiplier, gServer_tax_south_house_multiplier],
+			["gServer_tax_south_companies_employee_multiplier", "gServer_tax_south_companies_building_multiplier", "gServer_tax_south_salary_multiplier", "gServer_tax_south_house_multiplier"],
+			["Taxe salariale", "Taxe foncière", "Cotisation salariale", "Taxe d'habitation"]
+		]
+	};
 };
 
 if (isNil "_info") exitWith {closeDialog 0};

@@ -180,7 +180,8 @@
 				(
 					(
 						(['gov_company'] call AlysiaClient_fnc_hasLicense) ||
-						(['central_com'] call AlysiaClient_fnc_hasLicense)
+						(['central_com'] call AlysiaClient_fnc_hasLicense) ||
+						(['central_com_gen'] call AlysiaClient_fnc_hasLicense)
 					) &&
 					(getNumber(missionConfigFile >> 'ALYSIA_FACTIONS' >> str(side(g_interaction_target)) >> 'companies' >> 'owner') isEqualTo 1)
 				)

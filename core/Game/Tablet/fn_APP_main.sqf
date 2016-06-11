@@ -47,7 +47,8 @@ _global_apps =
 			(['gov_company'] call AlysiaClient_fnc_hasLicense) ||
 			(['gov_money'] call AlysiaClient_fnc_hasLicense) ||
 			(['gov_justice'] call AlysiaClient_fnc_hasLicense) ||
-			(['central_com'] call AlysiaClient_fnc_hasLicense)
+			(['central_com'] call AlysiaClient_fnc_hasLicense) ||
+			(['central_com_gen'] call AlysiaClient_fnc_hasLicense)
 		"
 	],
 	[

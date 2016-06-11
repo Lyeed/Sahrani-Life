@@ -54,6 +54,16 @@ _info = switch (true) do
 			true
 		]
 	};
+	case (["central_com_gen"] call AlysiaClient_fnc_hasLicense):
+	{
+		[
+			["central_com_gen"] call AlysiaClient_fnc_licenseGetName,
+			"<t align='left' size='2' font='PuristaMedium'>République Populaire de Sibranak</t>",
+			"lyeed_IMG\data\faction\EAST_logo.paa",
+			[gServer_tax_south_companies_employee_multiplier, gServer_tax_south_companies_building_multiplier, gServer_tax_south_salary_multiplier, gServer_tax_south_house_multiplier],
+			true
+		]
+	};
 };
 
 if (isNil "_info") exitWith {closeDialog 0};

@@ -3,9 +3,9 @@ class ALYSIA_SHOPS_VEHICLES
 	/*** WEST SHOPS ***/
 	class WEST_vehicles_land
 	{
-		name = "Concessionnaire de la Milice";
-		side = "WEST";
-		stock[] =
+		name="Concessionnaire de la Milice";
+		side="WEST";
+		stock[]=
 		{
 			"DAR_TahoePolice",
 			"DAR_ChargerPoliceState",
@@ -19,29 +19,26 @@ class ALYSIA_SHOPS_VEHICLES
 	};
 	class WEST_vehicles_air
 	{
-		name = "Concessionnaire de la Milice";
-		side = "WEST";
-		stock[] = {"EC635_Unarmed","dezkit_b206mi","Skyline_LittleBird_Milice"};
+		name="Concessionnaire de la Milice";
+		side="WEST";
+		stock[]={"EC635_Unarmed","dezkit_b206mi","Skyline_LittleBird_Milice"};
 	};
 	class WEST_vehicles_sea
 	{
-		name = "Concessionnaire de la Milice";
-		side = "WEST";
-		stock[] = {"Fett_boat_milice"};
+		name="Concessionnaire de la Milice";
+		side="WEST";
+		stock[]={"Fett_boat_milice"};
 	};
 
 	/*** EAST SHOPS ***/
 	class EAST_vehicles_land
 	{
-		name = "Concessionnaire de la Garde";
-		side = "EAST";
-		stock[] =
+		name="Concessionnaire de la Garde";
+		side="EAST";
+		stock[]=
 		{
 			"RDS_Lada_Civ_05",
-			"LandRover_ACR",
-			"LandRover_TK_CIV_EP1",
-			"ACR_LandRover_AMB",
-			"ACR_Offroad_HMG",
+			"Alysia_Kubelwagen_Garde",
 			"Skyline_GMC_Vandura_Propagande_01_F",
 			"RDS_Ikarus_Civ",
 			"Fett_truck_army",
@@ -51,23 +48,23 @@ class ALYSIA_SHOPS_VEHICLES
 
 	class EAST_vehicles_air
 	{
-		name = "Concessionnaire de la Garde";
-		side = "EAST";
-		stock[] = {"sfp_bo105_unarmed","Skyline_LittleBird_Garde"};
+		name="Concessionnaire de la Garde";
+		side="EAST";
+		stock[]={"sfp_bo105_unarmed","Skyline_LittleBird_Garde"};
 	};
 	class EAST_vehicles_sea
 	{
-		name = "Concessionnaire de la Garde";
-		side = "EAST";
-		stock[] = {"Fett_boat_Garde"};
+		name="Concessionnaire de la Garde";
+		side="EAST";
+		stock[]={};
 	};
 
 	/*** GUER SHOPS ***/
 	class GUER_vehicles_land
 	{
-		name = "Concessionnaire SAMU";
-		side = "GUER";
-		stock[] =
+		name="Concessionnaire SAMU";
+		side="GUER";
+		stock[]=
 		{
 			"Mrshounka_corbillard_c",
 			"Jonzie_Ambulance",
@@ -82,23 +79,23 @@ class ALYSIA_SHOPS_VEHICLES
 	};
 	class GUER_vehicles_air
 	{
-		name = "Concessionaire SAMU";
-		side = "GUER";
-		stock[] = {"EC635_ADAC", "dezkit_b206ems"};
+		name="Concessionaire SAMU";
+		side="GUER";
+		stock[]={"EC635_ADAC","dezkit_b206ems"};
 	};
 	class GUER_vehicles_sea
 	{
-		name = "Concessionnaire SAMU";
-		side = "GUER";
-		stock[] = {"Fett_boat_samu"};
+		name="Concessionnaire SAMU";
+		side="GUER";
+		stock[]={"Fett_boat_samu"};
 	};
 
 	/*** CIV SHOPS ***/
 	class CIV_vehicles_sea
 	{
-		name = "Concessionnaire maritime civil";
-		side = "CIV";
-		stock[] =
+		name="Concessionnaire maritime civil";
+		side="CIV";
+		stock[]=
 		{
 			"CUP_C_Fishing_Boat_Chernarus",
 			"B_Boat_Transport_01_F",
@@ -108,9 +105,9 @@ class ALYSIA_SHOPS_VEHICLES
 	};
 	class CIV_vehicles_air
 	{
-		name = "Concessionnaire aérien civil";
-		side = "CIV";
-		stock[] =
+		name="Concessionnaire aérien civil";
+		side="CIV";
+		stock[]=
 		{
 			"C_Heli_light",
 			"dezkit_b206",
@@ -123,9 +120,9 @@ class ALYSIA_SHOPS_VEHICLES
 	};
 	class CIV_vehicles_land_occasion
 	{
-		name = "Concessionnaire d'occassions civil";
-		side = "CIV";
-		stock[] =
+		name="Concessionnaire d'occassions civil";
+		side="CIV";
+		stock[]=
 		{
 			"RDS_Gaz24_Civ",
 			"RDS_Golf4_Civ_01",
@@ -144,9 +141,9 @@ class ALYSIA_SHOPS_VEHICLES
 	};
 	class CIV_vehicles_land_moto
 	{
-		name = "Concessionnaire moto";
-		side = "CIV";
-		stock[] =
+		name="Concessionnaire moto";
+		side="CIV";
+		stock[]=
 		{
 			"max_bike_base",
 			"Mrshounka_ducati_p_base",
@@ -156,9 +153,9 @@ class ALYSIA_SHOPS_VEHICLES
 	};
 	class CIV_vehicles_land_normal
 	{
-		name = "Concessionnaire automobiles civil";
-		side = "CIV";
-		stock[] =
+		name="Concessionnaire automobiles civil";
+		side="CIV";
+		stock[]=
 		{
 			"Skyline_Audi_RS4",
 			"C_Quadbike_01_F",
@@ -202,9 +199,9 @@ class ALYSIA_SHOPS_VEHICLES
 	};
 	class CIV_vehicles_land_luxe
 	{
-		name = "Concessionnaire de voiture de luxes civil";
-		side = "CIV";
-		stock[] =
+		name="Concessionnaire de voiture de luxes civil";
+		side="CIV";
+		stock[]=
 		{
 			"madsa_hummer_h2",
 			"max_H3",
@@ -243,34 +240,28 @@ class ALYSIA_SHOPS_VEHICLES
 	};
 	class CIV_vehicules_job
 	{
-		name = "Concessionnaire entreprises";
-		side = "CIV";
-		stock[] =
+		name="Concessionnaire entreprises";
+		side="CIV";
+		stock[]=
 		{
 			/* company_transport_people */
 			"max_CrownVic_taxi",
 			"Skyline_Bus",
 			"shounka_limo_civ",
-
 			/* company_garagist */
 			"Skyline_Scania_G420_Depanneuse",
 			"Skyline_Jeep_Wrangler_Rubicon_Depannage",
 			"Skyline_Mercedes_Sprinter_Depannage",
-
 			/* company_money_tranfer */
 			"Skyline_Brinks_01_F",
-
 			/* company_farming */
 			"madsa_mtz_F",
 			"RDS_Zetor6945_Base",
-
 			/* company_transport_goods */
 			"shounka_a3_renaultmagnum_f",
 			"Mrshounka_a3_iveco_f",
-
 			/* company_fuel */
 			"Jonzie_Tanker_Truck",
-
 			/* company_security*/
 			"Skyline_G65_01_F"
 		};

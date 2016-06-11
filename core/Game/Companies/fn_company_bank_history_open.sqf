@@ -45,7 +45,7 @@ if ((lbSize _list) isEqualTo 1) then {
 	_list lbAdd "Historique vide";
 };
 
-if ((["central_com"] call AlysiaClient_fnc_hasLicense) || (["gov_money"] call AlysiaClient_fnc_hasLicense)) then
+if ((["central_com"] call AlysiaClient_fnc_hasLicense) || (["gov_money"] call AlysiaClient_fnc_hasLicense) || (["central_com_gen"] call AlysiaClient_fnc_hasLicense)) then
 {
 	(_display displayCtrl 69006) ctrlSetStructuredText parseText "<t align='left' size='1.3'>Vider</t>";
 

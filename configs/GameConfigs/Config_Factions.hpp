@@ -3,55 +3,55 @@ class ALYSIA_FACTIONS
 	class WEST
 	{
 		/*** GLOBAL ***/
-		name = "Milice";
-		icon = "lyeed_IMG\data\faction\WEST_logo.paa";
-		identity_item = "Alysia_Identity_Milice";
+		name="Milice";
+		icon="lyeed_IMG\data\faction\WEST_logo.paa";
+		identity_item="Alysia_Identity_Milice";
 
 		/*** LABORATORIES ***/
-		laboratory_destroy = 1;
+		laboratory_destroy=1;
 
 		/*** SALARY ***/
 		class salary
 		{
-			name = "Salaire";
-			amount = 500;
-			taxes_rate = 0.05;
-			apply_rank = 1;
-			timer = 15;
+			name="Salaire";
+			amount=500;
+			taxes_rate=0.05;
+			apply_rank=1;
+			timer=15;
 		};
 
 		/*** PHONE ***/
-		phone_change_number_price = -1;
-		phone_send_global_message = 1;
-		phone_send_global_message_rank = 7;
-		phone_send_to_faction_price = 0;
+		phone_change_number_price=-1;
+		phone_send_global_message=1;
+		phone_send_global_message_rank=7;
+		phone_send_to_faction_price=0;
 		
 		/*** COMPANIES ***/
 		class companies
 		{
-			search = 1;
-			owner = 0;
-			employee = 0;
+			search=1;
+			owner=0;
+			employee=0;
 		};
 
 		class auction_house
 		{
-			can_buy = 1;
-			can_sell = 0;
-			can_search = 1;
+			can_buy=1;
+			can_sell=0;
+			can_search=1;
 		};
 
 		class launder_transfer
 		{
-			rank = 9;
+			rank=9;
 		};
 		class bank_faction: launder_transfer {};
 
 		/*** GEAR MISSION ***/
 		class mission
 		{
-			vehicle = "Fett_truck_milice";
-			positions[] =
+			vehicle="Fett_truck_milice";
+			positions[]=
 			{
 				{{11163.3,16942.5,0.00135565}, 183.454},
 				{{8184.01,17042.1,0.00143814}, 28.3948},
@@ -62,7 +62,7 @@ class ALYSIA_FACTIONS
 				{{13974.8,15738.8,0.0015564}, 281.457},
 				{{17197.4,13586,0.00151062}, 58.9541}
 			};
-			items[] =
+			items[]=
 			{
 				{"Weapons",
 					{
@@ -102,9 +102,9 @@ class ALYSIA_FACTIONS
 		/*** MAP ***/
 		class map_team_markers
 		{
-			color = "ColorWEST";
-			type = "Mil_dot";
-			shape = "ICON";
+			color="ColorWEST";
+			type="Mil_dot";
+			shape="ICON";
 		};
 
 		/* Licenses */
@@ -112,40 +112,40 @@ class ALYSIA_FACTIONS
 		{
 			class pilot
 			{
-				rank = 9;
-				same_side_only = 1;
+				rank=9;
+				same_side_only=1;
 			};
 		};
 
 		/*** SPAWN/RESPAWN ***/
 		class respawn
 		{
-			marker = "west_spawn";
-			price = 2500;
-			suicide = 0.05;
+			marker="west_spawn";
+			price=2500;
+			suicide=0.05;
 		};
 
 		/*** HOUSING ***/
-		house_search = 1;
-		house_max = 2;
-		house_tax_per_house_per_salary = 0;
-		house_tax_percentage_buyPrice_per_house = 0;
+		house_search=1;
+		house_max=2;
+		house_tax_per_house_per_salary=0;
+		house_tax_percentage_buyPrice_per_house=0;
 
 		/*** HEAL ***/
-		price_heal_hopital = 0;
-		can_use_debrif = 0;
+		price_heal_hopital=0;
+		can_use_debrif=0;
 
 		/*** SKULL ***/
-		skull_who = 0;// can check skull owner's identity
-		skull_take = 0;// can pack-up skull
+		skull_who=0;// can check skull owner's identity
+		skull_take=0;// can pack-up skull
 
 		/*** INTERACTIONS ***/
-		interaction_seize_gear = 1;// can size near gear
+		interaction_seize_gear=1;// can size near gear
 
 		/*** LEADER BOARD ***/
 		class board
 		{
-			history_items[] =
+			history_items[]=
 			{
 				"hlc_rifle_ak74_dirty2",
 				"hlc_rifle_ak74_dirty",
@@ -155,18 +155,18 @@ class ALYSIA_FACTIONS
 			};
 			class leader_board
 			{
-				access_rank = 8;
+				access_rank=8;
 			};
 		};
 
 		/*** LOADOUT ***/
 		class Loadout
 		{
-			uniform = "tenue_de_milice_cadet";
-			headgear = "";
-			vest = "";
-			backpack = "";
-			items[] =
+			uniform="tenue_de_milice_cadet";
+			headgear="";
+			vest="";
+			backpack="";
+			items[]=
 			{
 				"ItemMap",
 				"ItemCompass",
@@ -179,7 +179,7 @@ class ALYSIA_FACTIONS
 		/*** RANKS ***/
 		class Ranks
 		{
-			ranks_complet[] =
+			ranks_complet[]=
 			{
 				"Civil",
 				"Cadet",
@@ -193,7 +193,7 @@ class ALYSIA_FACTIONS
 				"Commandant"
 			};
 
-			ranks_short[] =
+			ranks_short[]=
 			{
 				"Civ",
 				"Cdt",
@@ -212,79 +212,80 @@ class ALYSIA_FACTIONS
 	class EAST
 	{
 		/*** GLOBAL ***/
-		name = "Garde";
-		icon = "lyeed_IMG\data\faction\EAST_logo.paa";
-		identity_item = "Alysia_Identity_Garde";
+		name="Garde";
+		icon="lyeed_IMG\data\faction\EAST_logo.paa";
+		identity_item="Alysia_Identity_Garde";
 
 		/*** SALARY ***/
 		class salary
 		{
-			name = "Salaire";
-			amount = 800;
-			taxes_rate = 0;
-			apply_rank = 1;
-			timer = 15;
+			name="Salaire";
+			amount=800;
+			taxes_rate=0;
+			apply_rank=1;
+			timer=15;
 		};
 
 		/*** LABORATORIES ***/
-		laboratory_destroy = 1;
+		laboratory_destroy=1;
 
 		/*** PHONE ***/
-		phone_change_number_price = 5000;
-		phone_send_global_message = 1;
-		phone_send_global_message_rank = 5;
-		phone_send_to_faction_price = 0;
+		phone_change_number_price=5000;
+		phone_send_global_message=1;
+		phone_send_global_message_rank=5;
+		phone_send_to_faction_price=0;
 
 		/*** COMPANIES ***/
 		class companies
 		{
-			search = 1;
-			owner = 0;
-			employee = 0;
+			search=1;
+			owner=0;
+			employee=0;
 		};
 
 		class auction_house
 		{
-			can_buy = 0;
-			can_sell = 0;
-			can_search = 1;
+			can_buy=0;
+			can_sell=0;
+			can_search=1;
 		};
 
 		class launder_transfer
 		{
-			rank = 2;
+			rank=2;
 		};
 		class bank_faction
 		{
-			rank = 6;
+			rank=6;
 		};
 
 		/*** GEAR MISSION ***/
 		class mission
 		{
-			vehicle = "Fett_truck_army";
-			positions[] =
+			vehicle="Fett_truck_army";
+			positions[]=
 			{
 				{{6354.66,7456.13,0.00125122}, 39.8453},
 				{{10400.8,5252.98,0.00162888}, 0.137371},
 				{{13366.3,6887.15,0.00107718}, 264.853}
 			};
-			items[] =
+			items[]=
 			{
 				{"Weapons",
 					{
 						"hlc_rifle_m14sopmod",
 						"Trixie_Enfield_Rail",
 						"hlc_rifle_aughbar_B",
-						"hlc_rifle_auga2lsw_b"
+						"hlc_rifle_auga2lsw_b",
+						"hlc_rifle_auga3_b"
 					}
 				},
 				{"Magazines",
 					{
 						"Trixie_Enfield_Mag",
 						"hlc_20Rnd_762x51_B_M14",
-						"Bank_DefuseKit",
-						"hlc_40Rnd_556x45_SPR_AUG"
+						"hlc_40Rnd_556x45_SPR_AUG",
+						"hlc_30Rnd_556x45_B_AUG"
 					}
 				},
 				{"Items",
@@ -321,48 +322,48 @@ class ALYSIA_FACTIONS
 		{
 			class pilot
 			{
-				rank = 5;
-				same_side_only = 1;
+				rank=5;
+				same_side_only=1;
 			};
 		};
 
 		/*** MAP ***/
 		class map_team_markers
 		{
-			color = "ColorEAST";
-			type = "Mil_dot";
-			shape = "ICON";
+			color="ColorEAST";
+			type="Mil_dot";
+			shape="ICON";
 		};
 
 		/*** SPAWN/RESPAWN ***/
 		class respawn
 		{
-			marker = "east_spawn";
-			price = 2200;
-			suicide = 0.05;
+			marker="east_spawn";
+			price=2200;
+			suicide=0.05;
 		};
 
 		/*** HOUSING ***/
-		house_search = 1;
-		house_max = 2;
-		house_tax_per_house_per_salary = 0;
-		house_tax_percentage_buyPrice_per_house = 0;
+		house_search=1;
+		house_max=2;
+		house_tax_per_house_per_salary=0;
+		house_tax_percentage_buyPrice_per_house=0;
 
 		/*** HEAL ***/
-		price_heal_hopital = 0;
-		can_use_debrif = 0;
+		price_heal_hopital=0;
+		can_use_debrif=0;
 
 		/*** SKULL ***/
-		skull_who = 0;
-		skull_take = 1;
+		skull_who=0;
+		skull_take=1;
 
 		/*** INTERACTIONS ***/
-		interaction_seize_gear = 1;
+		interaction_seize_gear=1;
 
 		/*** LEADER BOARD ***/
 		class board
 		{
-			history_items[] =
+			history_items[]=
 			{
 				"RH_fn57",
 				"RH_m1911",
@@ -370,18 +371,18 @@ class ALYSIA_FACTIONS
 			};
 			class leader_board
 			{
-				access_rank = 5;
+				access_rank=5;
 			};
 		};
 
 		/*** LOADOUT ***/
 		class Loadout
 		{
-			uniform = "tenue_de_garde_basique";
-			headgear = "";
-			vest = "";
-			backpack = "";
-			items[] =
+			uniform="tenue_de_garde_basique";
+			headgear="";
+			vest="";
+			backpack="";
+			items[]=
 			{
 				"ItemMap",
 				"ItemCompass",
@@ -394,7 +395,7 @@ class ALYSIA_FACTIONS
 		/*** RANKS ***/
 		class Ranks
 		{
-			ranks_complet[] =
+			ranks_complet[]=
 			{
 				"Civil",
 				"Recrue",
@@ -405,7 +406,7 @@ class ALYSIA_FACTIONS
 				"Capitaine"
 			};
 
-			ranks_short[] =
+			ranks_short[]=
 			{
 				"Civ",
 				"Rec",
@@ -421,99 +422,105 @@ class ALYSIA_FACTIONS
 	class CIV
 	{
 		/*** GLOBAL ***/
-		name = "Civil";
-		icon = "lyeed_IMG\data\faction\CIV_logo.paa";
-		identity_item = "SkylineItems_Passeport";
+		name="Civil";
+		icon="lyeed_IMG\data\faction\CIV_logo.paa";
+		identity_item="SkylineItems_Passeport";
 
 		/*** SALARY ***/
 		class salary
 		{
-			name = "Aides";
-			amount = 900;
-			taxes_rate = 0.05;
-			apply_rank = 0;
-			timer = 15;
+			name="Aides";
+			amount=900;
+			taxes_rate=0.05;
+			apply_rank=0;
+			timer=15;
 		};
 
 		/*** LABORATORIES ***/
-		laboratory_destroy = 0;
+		laboratory_destroy=0;
 
 		/*** PHONE ***/
-		phone_change_number_price = 1000;
-		phone_send_global_message = 0;
-		phone_send_global_message_rank = 0;
-		phone_send_to_faction_price = 0;
+		phone_change_number_price=1000;
+		phone_send_global_message=0;
+		phone_send_global_message_rank=0;
+		phone_send_to_faction_price=0;
 
 		/* Licenses */
 		class licenses_give
 		{
+			class central_com
+			{
+				rank=0;
+				same_side_only=1;
+				license="central_com_gen";
+			};
 			class central
 			{
-				rank = 0;
-				same_side_only = 0;
-				license = "central_com";
+				rank=0;
+				same_side_only=0;
+				license="central_com";
 			};
 			class judge
 			{
-				rank = 0;
-				same_side_only = 1;
-				license = "judge_supreme";
+				rank=0;
+				same_side_only=1;
+				license="judge_supreme";
 			};
 		};
 
 		/*** COMPANIES ***/
 		class companies
 		{
-			search = 0;
-			owner = 1;
-			employee = 1;
+			search=0;
+			owner=1;
+			employee=1;
 		};
 
 		class auction_house
 		{
-			can_buy = 1;
-			can_sell = 1;
-			can_search = 0;
+			can_buy=1;
+			can_sell=1;
+			can_search=0;
 		};
 
 		class bank_faction
 		{
-			rank = 1;
+			rank=1;
 		};
 
 		/*** SPAWN/RESPAWN ***/
 		class respawn
 		{
-			marker = "civ_spawn";
-			price = 1000;
-			suicide = 0.05;
+			marker="civ_spawn";
+			price=1000;
+			suicide=0.05;
 		};
 
 		/*** HOUSING ***/
-		house_search = 0;
-		house_max = 2;
-		house_tax_per_house_per_salary = 150;
-		house_tax_percentage_buyPrice_per_house = 0.002;
+		house_search=0;
+		house_max=2;
+		house_tax_per_house_per_salary=150;
+		house_tax_percentage_buyPrice_per_house=0.002;
 
 		/*** HEAL ***/
-		price_heal_hopital = 120;
-		can_use_debrif = 0;
+		price_heal_hopital=120;
+		can_use_debrif=0;
 
 		/*** SKULL ***/
-		skull_who = 0;
-		skull_take = 0;
+		skull_who=0;
+		skull_take=0;
 
 		/*** INTERACTIONS ***/
-		interaction_seize_gear = 0;
+		interaction_seize_gear=0;
 
 		/*** LOADOUT ***/
 		class Loadout
 		{
-			uniform = "Skyline_Uniforme_Alysia_01_F";
-			headgear = "";
-			vest = "";
-			backpack = "";
-			items[] =
+			uniform="Skyline_Uniforme_Alysia_01_F";
+			headgear="";
+			vest="";
+			backpack="";
+			items[]=
 			{
 				"ItemMap",
 				"ItemCompass",
@@ -524,12 +531,12 @@ class ALYSIA_FACTIONS
 		/*** RANKS ***/
 		class Ranks
 		{
-			ranks_complet[] =
+			ranks_complet[]=
 			{
 				"Civil",
 				"Parlementaire"
 			};
-			ranks_short[] =
+			ranks_short[]=
 			{
 				"Civ",
 				"Parlm"
@@ -540,54 +547,54 @@ class ALYSIA_FACTIONS
 	class GUER
 	{
 		/*** GLOBAL ***/
-		name = "SAMU";
-		icon = "lyeed_IMG\data\faction\GUER_logo.paa";
-		identity_item = "SkylineItems_Passeport";
+		name="SAMU";
+		icon="lyeed_IMG\data\faction\GUER_logo.paa";
+		identity_item="SkylineItems_Passeport";
 
 		/*** SALARY ***/
 		class salary
 		{
-			name = "Salaire";
-			amount = 250;
-			taxes_rate = 0;
-			apply_rank = 1;
-			timer = 15;
+			name="Salaire";
+			amount=250;
+			taxes_rate=0;
+			apply_rank=1;
+			timer=15;
 		};
 
 		/*** LABORATORIES ***/
-		laboratory_destroy = 0;
+		laboratory_destroy=0;
 
 		/*** PHONE ***/
-		phone_change_number_price = 1000;
-		phone_send_global_message = 1;
-		phone_send_global_message_rank = 5;
-		phone_send_to_faction_price = 0;
+		phone_change_number_price=1000;
+		phone_send_global_message=1;
+		phone_send_global_message_rank=5;
+		phone_send_to_faction_price=0;
 
 		/*** COMPANIES ***/
 		class companies
 		{
-			search = 0;
-			owner = 0;
-			employee = 0;
+			search=0;
+			owner=0;
+			employee=0;
 		};
 
 		class auction_house
 		{
-			can_buy = 1;
-			can_sell = 0;
-			can_search = 0;
+			can_buy=1;
+			can_sell=0;
+			can_search=0;
 		};
 		
 		class bank_faction
 		{
-			rank = 6;
+			rank=6;
 		};
 
 		/*** GEAR MISSION ***/
 		class mission
 		{
-			vehicle = "Fett_zamak_repair_samu";
-			items[] = 
+			vehicle="Fett_zamak_repair_samu";
+			items[]=
 			{
 				{"Weapons",
 					{
@@ -625,7 +632,7 @@ class ALYSIA_FACTIONS
 					}
 				}
 			};
-			positions[] =
+			positions[]=
 			{
 				{{9736.77,14400.3,0.00168991}, 150.65},
 				{{11170.7,14605.9,0.00143433}, 240.656},
@@ -646,90 +653,90 @@ class ALYSIA_FACTIONS
 		class map_coma_markers {};
 		class map_team_markers
 		{
-			color = "ColorPink";
-			type = "Mil_dot";
-			shape = "ICON";
+			color="ColorPink";
+			type="Mil_dot";
+			shape="ICON";
 		};
 
 		/*** SPAWN/RESPAWN ***/
 		class respawn
 		{
-			marker = "guer_spawn_1";
-			price = 0;
-			suicide = 0;
+			marker="guer_spawn_1";
+			price=0;
+			suicide=0;
 		};
 
 		/*** HOUSING ***/
-		house_search = 0;
-		house_max = 2;
-		house_tax_per_house_per_salary = 0;
-		house_tax_percentage_buyPrice_per_house = 0.003;
+		house_search=0;
+		house_max=2;
+		house_tax_per_house_per_salary=0;
+		house_tax_percentage_buyPrice_per_house=0.003;
 
 		/*** HEAL ***/
-		price_heal_hopital = 0;
-		can_use_debrif = 1;
+		price_heal_hopital=0;
+		can_use_debrif=1;
 
 		/*** SKULL ***/
-		skull_who = 1;
-		skull_take = 1;
+		skull_who=1;
+		skull_take=1;
 
 		/*** INTERACTIONS ***/
-		interaction_seize_gear = 0;
+		interaction_seize_gear=0;
 
 		/* Licenses */
 		class licenses_give
 		{
 			class pilot
 			{
-				rank = 6;
-				same_side_only = 1;
+				rank=6;
+				same_side_only=1;
 			};
 			class medical
 			{
-				rank = 1;
-				same_side_only = 0;
-				license = "guer_medical";
+				rank=1;
+				same_side_only=0;
+				license="guer_medical";
 			};
 			class guer_medical
 			{
-				rank = 6;
-				same_side_only = 1;
+				rank=6;
+				same_side_only=1;
 			};
 			class guer_gen
 			{
-				rank = 6;
-				same_side_only = 1;
+				rank=6;
+				same_side_only=1;
 			};
 			class guer_chirurgien
 			{
-				rank = 6;
-				same_side_only = 1;
+				rank=6;
+				same_side_only=1;
 			};
 			class guer_inspector
 			{
-				rank = 6;
-				same_side_only = 1;
+				rank=6;
+				same_side_only=1;
 			};
 		};
 
 		/*** LEADER BOARD ***/
 		class board
 		{
-			history_items[] = {};
+			history_items[]={};
 			class leader_board
 			{
-				access_rank = 5;
+				access_rank=5;
 			};
 		};
 
 		/*** LOADOUT ***/
 		class Loadout
 		{
-			uniform = "rds_uniform_assistant";
-			headgear = "";
-			vest = "";
-			backpack = "";
-			items[] =
+			uniform="rds_uniform_assistant";
+			headgear="";
+			vest="";
+			backpack="";
+			items[]=
 			{
 				"ItemMap",
 				"ItemCompass",
@@ -743,7 +750,7 @@ class ALYSIA_FACTIONS
 		/*** RANKS ***/
 		class Ranks
 		{
-			ranks_complet[] =
+			ranks_complet[]=
 			{
 				"Civil",
 				"Stagiaire",
@@ -754,7 +761,7 @@ class ALYSIA_FACTIONS
 				"Médecin Chef"
 			};
 
-			ranks_short[] =
+			ranks_short[]=
 			{
 				"Civ",
 				"Stg",

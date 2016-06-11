@@ -18242,7 +18242,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Skyline_Alysia_Stand_01_F";
 			skill=0.60000002;
-			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this allowDamage false;this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie"",AlysiaClient_fnc_shop_clothing_open,""civ_clothing_sud"",0,false,false,"""",'vehicle player == player && player distance _target < 4'];";
+			init="this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this allowDamage false;this enableSimulation false;this allowDamage false;this setVectorUp [0,0,1];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie Civile"",AlysiaClient_fnc_shop_clothing_open,""civ_clothing_sud"",0,false,false,"""",""vehicle player == player && player distance _target < 4""];this addAction[""<img image='lyeed_IMG\data\actions_menu\shop.paa'/> Friperie Parti Central"",AlysiaClient_fnc_shop_clothing_open,""central"",0,false,false,"""",""vehicle player == player && player distance _target < 4 && ((['central'] call AlysiaClient_fnc_hasLicense) || (['central_com'] call AlysiaClient_fnc_hasLicense) || (['central_com_gen'] call AlysiaClient_fnc_hasLicense))""];";
 		};
 		class Item1416
 		{

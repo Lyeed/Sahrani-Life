@@ -2,13 +2,14 @@ class ALYSIA_SHOPS_ARMA
 {
 	class EAST_gun
 	{
-		name = "Armurerie de la Garde";
-		side = "EAST";
-		stocks[] =
+		name="Armurerie de la Garde";
+		side="EAST";
+		stocks[]=
 		{
+			"Alysia_Identity_Garde",
+			"SkylineItems_Bandage",
 			"Bank_Key1_S",
 			"Lyeed_Phone",
-			"Alysia_Identity_Garde",
 			"hgun_FlashBall_F",
 			"1Rnd_FlashBall_Mag",
 			"ItemGPS",
@@ -27,27 +28,28 @@ class ALYSIA_SHOPS_ARMA
 			"Chemlight_yellow",
 			"Chemlight_green",
 			"Chemlight_blue",
-			"SkylineItems_Bandage",
 			"SkylineItems_Couteau",
 			"RH_fn57",
 			"RH_20Rnd_57x28_FN",
 			"RH_m1911",
 			"RH_7Rnd_45cal_m1911",
-			"hlc_rifle_auga3_b",
-			"hlc_30Rnd_556x45_B_AUG"
+			"Alysia_MP44",
+			"Alysia_MP44_magazine"
 		};
 	};
 
 	class West_gun
 	{
-		name = "Armurerie de la Milice";
-		side = "WEST";
-		stocks[] =
+		name="Armurerie de la Milice";
+		side="WEST";
+		stocks[]=
 		{
-			"Bank_Key1_N",
-			"Lyeed_Phone",
 			"Alysia_Identity_Milice",
 			"SkylineItems_Bandage",
+			"Bank_Key1_N",
+			"Lyeed_Phone",
+			"hgun_FlashBall_F",
+			"1Rnd_FlashBall_Mag",
 			"ItemGPS",
 			"ItemMap",
 			"ItemWatch",
@@ -64,8 +66,6 @@ class ALYSIA_SHOPS_ARMA
 			"Chemlight_yellow",
 			"Chemlight_green",
 			"Chemlight_blue",
-			"hgun_FlashBall_F",
-			"1Rnd_FlashBall_Mag",
 			"RH_g17",
 			"RH_17Rnd_9x19_g17",
 			"RH_m9",
@@ -77,9 +77,9 @@ class ALYSIA_SHOPS_ARMA
 
 	class garagiste
 	{
-		name = "Garagiste";
-		side = "";
-		stocks[] =
+		name="Garagiste";
+		side="";
+		stocks[]=
 		{
 			"Alysia_repair_toolbox",
 			"Alysia_repair_tireLever",
@@ -90,9 +90,9 @@ class ALYSIA_SHOPS_ARMA
 
 	class genstore
 	{
-		name = "Magasin général";
-		side = "";
-		stocks[] =
+		name="Magasin général";
+		side="";
+		stocks[]=
 		{
 			"Chemlight_red",
 			"Chemlight_yellow",
@@ -125,9 +125,9 @@ class ALYSIA_SHOPS_ARMA
 
 	class GUER_genstore
 	{
-		name = "Magasin général Samu";
-		side = "GUER";
-		stocks[] =
+		name="Magasin général Samu";
+		side="GUER";
+		stocks[]=
 		{
 			"SkylineItems_Bandage",
 			"Lyeed_Phone",
@@ -158,19 +158,16 @@ class ALYSIA_SHOPS_ARMA
 
 	class parachute
 	{
-		name = "Magasin de parachute";
-		side = "";
-		stocks[] =
-		{
-			"B_Parachute"
-		};
+		name="Magasin de parachute";
+		side="";
+		stocks[]={"B_Parachute"};
 	};
 	
 	class black_market
 	{
-		name = "Marché illégal";
-		side = "CIV";
-		stocks[] =
+		name="Marché illégal";
+		side="CIV";
+		stocks[]=
 		{
 			"SkylineItems_Couteau",
 			"Alysia_Lockpick"/*,
@@ -182,38 +179,29 @@ class ALYSIA_SHOPS_ARMA
 	
 	class prisoner_shop_store
 	{
-		name = "Atelier";
-		side = "CIV";
-		stocks[] =
-		{
-			"Skyline_Merlin_01"
-		};
+		name="Atelier";
+		side="CIV";
+		stocks[]={"Skyline_Merlin_01"};
 	};
 
 	class gov_north
 	{
-		name = "Parlement";
-		side = "CIV";
-		stocks[] =
-		{
-			"SkylineItems_Passeport"
-		};
+		name="Parlement";
+		side="CIV";
+		stocks[]={"SkylineItems_Passeport"};
 	};
 	class gov_south
 	{
-		name = "Administration Centrale";
-		side = "CIV";
-		stocks[] =
-		{
-			"SkylineItems_Passeport"
-		};
+		name="Administration Centrale";
+		side="CIV";
+		stocks[]={"SkylineItems_Passeport"};
 	};
 
 	class companies
 	{
-		name = "Réserve d'entreprises";
-		side = "CIV";
-		stocks[] =
+		name="Réserve d'entreprises";
+		side="CIV";
+		stocks[]=
 		{
 			"Alysia_repair_glass",
 			"Alysia_repair_rotor",

@@ -98,7 +98,7 @@ switch (_action) do
 						) ||
 						(
 							(playerSide isEqualTo civilian) &&
-							((["gov_money"] call AlysiaClient_fnc_hasLicense) || (["central_com"] call AlysiaClient_fnc_hasLicense))
+							((["gov_money"] call AlysiaClient_fnc_hasLicense) || (["central_com"] call AlysiaClient_fnc_hasLicense) || (["central_com_gen"] call AlysiaClient_fnc_hasLicense))
 						)
 					) then {
 					_txtL4 ctrlSetStructuredText parseText "<t align='left'>Faction</t>";

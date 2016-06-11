@@ -1,11 +1,11 @@
 class ALYSIA_VEHICLES_INFO
 {
 	/* MASTER VEHICLES CONFIG */
-	insurance_percentage = 0.29;
-	garage_percentage = 0.02;
-	steal_percentage = 0.20;
-	sell_percentage = 0.40;
-	transfert_percentage = 0.05;
+	insurance_percentage=0.29;
+	garage_percentage=0.02;
+	steal_percentage=0.20;
+	sell_percentage=0.40;
+	transfert_percentage=0.05;
 	// based on vehicle's buyPrice
 };
 
@@ -15,30 +15,30 @@ class ALYSIA_VEHICLES
 	class master_vehicleClassname
 	{
 		buy price 				-NUMBER-	(vehicle shop buy price)
-    Ex: buyPrice = 1910000;
+    Ex: buyPrice=1910000;
     ----------------------------
 		virtual inventory	    -NUMBER-	(virtual inventory space)
-    Ex: inventory = 45;
+    Ex: inventory=45;
     ----------------------------
 		side 					-TXT- (allow vehicles defined as WEST,EAST,GUER to be opened by faction member without having keys)
     possible: [WEST,EAST,GUER,CIV]
-    Ex: side = "WEST";
+    Ex: side="WEST";
     ----------------------------
 		insurance 				-NUMBER-	(can be insured)
     possible [0(no),1(yes]
-    Ex: insurance = 1;
+    Ex: insurance=1;
 	----------------------------
 		license						-TXT-			(license name/empty if no need: player needs to have license x to buy vehicle. Eg: CONFIG_licenses)
-    Ex: licenses[] = {"truck"};
+    Ex: licenses[]={"truck"};
     ----------------------------
 		rank 							-NUMBER-	(use in WEST,EAST,GUER factions: player needs to have alteast rank x to buy vehicle. Must be 0 for civilian. Eg: CONFIG_factions)
-    Ex: rank = 4;
+    Ex: rank=4;
     ----------------------------
 		colors 						-ARRAT-		(vehicle's color classnames)
-    Ex: colors[] = {"className_color1","className_color2",...};
+    Ex: colors[]={"className_color1","className_color2",...};
     ----------------------------
 		realname 					-TXT-			(vehicle name in shop)
-    Ex: realname = "Camion Ben";
+    Ex: realname="Camion Ben";
     ----------------------------
 	};
 
@@ -51,15 +51,15 @@ class ALYSIA_VEHICLES
 	*/
 	class madsa_hummer_h2
 	{
-		realname = "Hummer H2";
-		buyPrice = 134000;
-		inventory = 85;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		fuelCapacity = 121;
-		colors[] =
+		realname="Hummer H2";
+		buyPrice=134000;
+		inventory=85;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP95";
+		fuelCapacity=121;
+		colors[]=
 		{
 			"madsa_hummer_h2_black_F",
 			"madsa_hummer_h2_blue_F",
@@ -86,35 +86,35 @@ class ALYSIA_VEHICLES
 
 	class RDS_Zetor6945_Base
 	{
-		realname = "Tracteur Zetor6945";
-		buyPrice = 90000;
-		inventory = 155;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver","company_farming"};
-		fuel = "Diesel";
-		fuelCapacity = 67;
-		tractor = 1;
+		realname="Tracteur Zetor6945";
+		buyPrice=90000;
+		inventory=155;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver","company_farming"};
+		fuel="Diesel";
+		fuelCapacity=67;
+		tractor=1;
 	};
 	class madsa_mtz_F: RDS_Zetor6945_Base
 	{
-		realname = "Tracteur MTZ";
-		buyPrice = 85000;
-		inventory = 120;
-		fuelCapacity = 162;
+		realname="Tracteur MTZ";
+		buyPrice=85000;
+		inventory=120;
+		fuelCapacity=162;
 	};
 
 	class DAR_FusionCiv
 	{
-		realname = "Ford Fusion";
-		buyPrice = 22500;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 45;
-		colors[] =
+		realname="Ford Fusion";
+		buyPrice=22500;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=45;
+		colors[]=
 		{
 			"DAR_FusionCiv",
 			"DAR_FusionCivBlack",
@@ -128,15 +128,15 @@ class ALYSIA_VEHICLES
 
   	class DAR_TaurusCiv
 	{
-		realname = "Ford Taurus";
-		buyPrice = 30000;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 72;
-		colors[] =
+		realname="Ford Taurus";
+		buyPrice=30000;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=72;
+		colors[]=
 		{
 			"DAR_TaurusCiv",
 			"DAR_TaurusCivBlack",
@@ -148,15 +148,15 @@ class ALYSIA_VEHICLES
 
   	class shounka_a3_renaultmagnum_f
 	{
-		realname = "Renault Magnum";
-		buyPrice = 415750;
-		inventory = 650;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck","company_transport_goods"};
-		fuel = "Diesel";
-		fuelCapacity = 1455;
-		colors[] =
+		realname="Renault Magnum";
+		buyPrice=415750;
+		inventory=650;
+		side="CIV";
+		insurance=1;
+		licenses[]={"truck","company_transport_goods"};
+		fuel="Diesel";
+		fuelCapacity=1455;
+		colors[]=
 		{
 			"Skyline_Vehicule_Shounka_Renault_Magnum_01_F",
 			"Skyline_Vehicule_Shounka_Renault_Magnum_02_F",
@@ -189,15 +189,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_Alfa_Romeo_civ
 	{
-		realname = "Alfa Romeo";
-		buyPrice = 22500;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 60;
-		colors[] =
+		realname="Alfa Romeo";
+		buyPrice=22500;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=60;
+		colors[]=
 		{
 			"Mrshounka_Alfa_Romeo_noir",
 			"Mrshounka_Alfa_Romeo_bleufonce",
@@ -220,15 +220,15 @@ class ALYSIA_VEHICLES
 
 	class shounka_a3_rs5_civ
 	{
-		realname = "Audi RS5";
-		buyPrice = 105000;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 64;
-		colors[] =
+		realname="Audi RS5";
+		buyPrice=105000;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=64;
+		colors[]=
 		{
 			"shounka_a3_rs5_civ_noir",
 			"shounka_a3_rs5_civ_bleufonce",
@@ -251,15 +251,15 @@ class ALYSIA_VEHICLES
 
 	class shounka_rs6
 	{
-		realname = "Audi RS6";
-		buyPrice = 96000;
-		inventory = 60;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 75;
-		colors[] =
+		realname="Audi RS6";
+		buyPrice=96000;
+		inventory=60;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=75;
+		colors[]=
 		{
 			"shounka_rs6_noir",
 			"shounka_rs6_bleufonce",
@@ -282,15 +282,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_bmwm1_civ
 	{
-		realname = "BMW 1";
-		buyPrice = 75300;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 51;
-		colors[] =
+		realname="BMW 1";
+		buyPrice=75300;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=51;
+		colors[]=
 		{
 			"Mrshounka_bmwm1_civ_noir",
 			"Mrshounka_bmwm1_civ_bleufonce",
@@ -313,15 +313,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_bmwm6_civ
 	{
-		realname = "BMW M6";
-		buyPrice = 145000;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 70;
-		colors[] =
+		realname="BMW M6";
+		buyPrice=145000;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=70;
+		colors[]=
 		{
 			"Mrshounka_bmwm6_noir",
 			"Mrshounka_bmwm6_bleufonce",
@@ -344,15 +344,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_Bowler_c
 	{
-		realname = "Bowler";
-		buyPrice = 195000;
-		inventory = 85;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 140;
-		colors[] =
+		realname="Bowler";
+		buyPrice=195000;
+		inventory=85;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=140;
+		colors[]=
 		{
 			"Mrshounka_Bowler_c_noir",
 			"Mrshounka_Bowler_c_bleufonce",
@@ -375,15 +375,15 @@ class ALYSIA_VEHICLES
 
 	class shounka_buggy
 	{
-		realname = "Buggy";
-		buyPrice = 2150000;
-		inventory = 5;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 30;
-		colors[] =
+		realname="Buggy";
+		buyPrice=2150000;
+		inventory=5;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=30;
+		colors[]=
 		{
 			"shounka_buggy_noir",
 			"shounka_buggy_bleufonce",
@@ -406,15 +406,15 @@ class ALYSIA_VEHICLES
 
 	class shounka_avalanche
 	{
-		realname = "Chevrolet Avalanche";
-		buyPrice = 47500;
-		inventory = 90;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 117;
-		colors[] =
+		realname="Chevrolet Avalanche";
+		buyPrice=47500;
+		inventory=90;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=117;
+		colors[]=
 		{
 			"shounka_avalanche_noir",
 			"shounka_avalanche_bleufonce",
@@ -437,15 +437,15 @@ class ALYSIA_VEHICLES
 
 	class shounka_monsteur
 	{
-		realname = "Chevrolet Monster";
-		buyPrice = 3152000;
-		inventory = 10;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		fuelCapacity = 131;
-		colors[] =
+		realname="Chevrolet Monster";
+		buyPrice=3152000;
+		inventory=10;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP95";
+		fuelCapacity=131;
+		colors[]=
 		{
 			"shounka_monsteur_noir",
 			"shounka_monsteur_bleufonce",
@@ -468,15 +468,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_a3_ds3_civ
 	{
-		realname = "Citroen DS3";
-		buyPrice = 15950;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 50;
-		colors[] =
+		realname="Citroen DS3";
+		buyPrice=15950;
+		inventory=38;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=50;
+		colors[]=
 		{
 			"Mrshounka_a3_ds3_civ_noir",
 			"Mrshounka_a3_ds3_civ_bleufonce",
@@ -499,15 +499,15 @@ class ALYSIA_VEHICLES
 
 	class shounka_a3_ds4_civ
 	{
-		realname = "Citroen DS4";
-		buyPrice = 23700;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 60;
-		colors[] =
+		realname="Citroen DS4";
+		buyPrice=23700;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=60;
+		colors[]=
 		{
 			"shounka_a3_ds4_noir",
 			"shounka_a3_ds4_bleufonce",
@@ -530,15 +530,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_c4_p_civ
 	{
-		realname = "Citroen C4";
-		buyPrice = 19900;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 60;
-		colors[] =
+		realname="Citroen C4";
+		buyPrice=19900;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=60;
+		colors[]=
 		{
 			"Mrshounka_c4_p_bleufonce",
 			"Mrshounka_c4_p_grise",
@@ -561,15 +561,15 @@ class ALYSIA_VEHICLES
 
 	class shounka_nemo
 	{
-		realname = "Citroen Nemo";
-		buyPrice = 16000;
-		inventory = 125;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 45;
-		colors[] =
+		realname="Citroen Nemo";
+		buyPrice=16000;
+		inventory=125;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=45;
+		colors[]=
 		{
 			"shounka_nemo_bleufonce",
 			"shounka_nemo_grise",
@@ -592,15 +592,15 @@ class ALYSIA_VEHICLES
 
 	class shounka_a3_cliors_civ
 	{
-		realname = "Renault Clio";
-		buyPrice = 13500;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 45;
-		colors[] =
+		realname="Renault Clio";
+		buyPrice=13500;
+		inventory=38;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=45;
+		colors[]=
 		{
 			"shounka_a3_cliors_civ_bleufonce",
 			"shounka_a3_cliors_civ_grise",
@@ -623,15 +623,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_a3_dodge15_civ
 	{
-		realname = "Dodge Charger";
-		buyPrice = 38500;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 68;
-		colors[] =
+		realname="Dodge Charger";
+		buyPrice=38500;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=68;
+		colors[]=
 		{
 			"Mrshounka_a3_dodge15_civ_bleufonce",
 			"Mrshounka_a3_dodge15_civ_grise",
@@ -654,15 +654,15 @@ class ALYSIA_VEHICLES
 
 	class shounka_f430_spider
 	{
-		realname = "Ferrari 430 Spider";
-		buyPrice = 685000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 95;
-		colors[] =
+		realname="Ferrari 430 Spider";
+		buyPrice=685000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=95;
+		colors[]=
 		{
 			"shounka_f430_spider_bleufonce",
 			"shounka_f430_spider_grise",
@@ -685,15 +685,15 @@ class ALYSIA_VEHICLES
 
 	class shounka_gt
 	{
-		realname = "Ford GT";
-		buyPrice = 450000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 66;
-		colors[] =
+		realname="Ford GT";
+		buyPrice=450000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=66;
+		colors[]=
 		{
 			"shounka_gt_bleufonce",
 			"shounka_gt_grise",
@@ -716,15 +716,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_mustang_civ
 	{
-		realname = "Ford Mustang";
-		buyPrice = 63500;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 59;
-		colors[] =
+		realname="Ford Mustang";
+		buyPrice=63500;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=59;
+		colors[]=
 		{
 			"Mrshounka_mustang_mat",
 			"Mrshounka_mustang_noir",
@@ -753,15 +753,15 @@ class ALYSIA_VEHICLES
 
 	class Skyline_GMC_Vandura
 	{
-		realname = "GMC Vendura";
-		buyPrice = 26000;
-		inventory = 165;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 83;
-		colors[] =
+		realname="GMC Vendura";
+		buyPrice=26000;
+		inventory=165;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=83;
+		colors[]=
 		{
 			"Skyline_GMC_Vandura_01_F",
 			"Skyline_GMC_Vandura_02_F",
@@ -802,15 +802,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_golfvi_civ
 	{
-		realname = "Golf VI";
-		buyPrice = 12500;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 55;
-		colors[] =
+		realname="Golf VI";
+		buyPrice=12500;
+		inventory=38;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=55;
+		colors[]=
 		{
 			"Mrshounka_golfvi_bleufonce",
 			"Mrshounka_golfvi_grise",
@@ -833,15 +833,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_hummer_civ
 	{
-		realname = "Hummer H1";
-		buyPrice = 145000;
-		inventory = 85;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 95;
-		colors[] =
+		realname="Hummer H1";
+		buyPrice=145000;
+		inventory=85;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=95;
+		colors[]=
 		{
 			"Mrshounka_hummer_civ_bleufonce",
 			"Mrshounka_hummer_civ_grise",
@@ -864,15 +864,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_a3_iveco_f
 	{
-		realname = "Iveco";
-		buyPrice = 576000;
-		inventory = 950;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck","company_transport_goods"};
-		fuel = "Diesel";
-		fuelCapacity = 400;
-		colors[] =
+		realname="Iveco";
+		buyPrice=576000;
+		inventory=950;
+		side="CIV";
+		insurance=1;
+		licenses[]={"truck","company_transport_goods"};
+		fuel="Diesel";
+		fuelCapacity=400;
+		colors[]=
 		{
 			"shounka_ivceco_bleufonce",
 			"shounka_ivceco_grise",
@@ -895,15 +895,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_cherokee_noir
 	{
-		realname = "Jeep Cherokee";
-		buyPrice = 43000;
-		inventory = 85;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 60;
-		colors[] =
+		realname="Jeep Cherokee";
+		buyPrice=43000;
+		inventory=85;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=60;
+		colors[]=
 		{
 			"Mrshounka_cherokee_noir_mat",
 			"Mrshounka_cherokee_noir_bleu",
@@ -928,15 +928,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_veneno_c
 	{
-		realname = "Lamborgini Veneno";
-		buyPrice = 535000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 90;
-		colors[] =
+		realname="Lamborgini Veneno";
+		buyPrice=535000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=90;
+		colors[]=
 		{
 			"Mrshounka_veneno_c_noir",
 			"Mrshounka_veneno_c_bleu",
@@ -949,15 +949,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_evox_civ
 	{
-		realname = "Lancer Evolution";
-		buyPrice = 23400;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 55;
-		colors[] =
+		realname="Lancer Evolution";
+		buyPrice=23400;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=55;
+		colors[]=
 		{
 			"Mrshounka_evox_bleufonce",
 			"Mrshounka_evox_grise",
@@ -980,15 +980,15 @@ class ALYSIA_VEHICLES
 
 	class shounka_limo_civ
 	{
-		realname = "Limousine";
-		buyPrice = 180000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver","company_transport_people"};
-		fuel = "Diesel";
-		fuelCapacity = 88;
-		colors[] =
+		realname="Limousine";
+		buyPrice=180000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver","company_transport_people"};
+		fuel="Diesel";
+		fuelCapacity=88;
+		colors[]=
 		{
 			"shounka_limo_civ_bleufonce",
 			"shounka_limo_civ_grise",
@@ -1011,15 +1011,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_lykan_c
 	{
-		realname = "Lykan Hypersport";
-		buyPrice = 875000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 79;
-		colors[] =
+		realname="Lykan Hypersport";
+		buyPrice=875000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=79;
+		colors[]=
 		{
 			"Mrshounka_lykan_c_bleufonce",
 			"Mrshounka_lykan_c_grise",
@@ -1042,15 +1042,15 @@ class ALYSIA_VEHICLES
 
 	class shounka_mp4
 	{
-		realname = "McLaren MP4";
-		buyPrice = 915000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 72;
-		colors[] =
+		realname="McLaren MP4";
+		buyPrice=915000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=72;
+		colors[]=
 		{
 			"shounka_mp4_bleufonce",
 			"shounka_mp4_grise",
@@ -1073,15 +1073,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_mercedes_190_p_civ
 	{
-		realname = "Mercedes 190";
-		buyPrice = 45250;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		fuelCapacity = 55;
-		colors[] =
+		realname="Mercedes 190";
+		buyPrice=45250;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP95";
+		fuelCapacity=55;
+		colors[]=
 		{
 			"Mrshounka_mercedes_190_p_bleufonce",
 			"Mrshounka_mercedes_190_p_grise",
@@ -1104,15 +1104,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_c63_2015_civ
 	{
-		realname = "Mercedes C63";
-		buyPrice = 96000;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 66;
-		colors[] =
+		realname="Mercedes C63";
+		buyPrice=96000;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=66;
+		colors[]=
 		{
 			"Mrshounka_c63_2015_mat",
 			"Mrshounka_c63_2015_noir",
@@ -1141,15 +1141,15 @@ class ALYSIA_VEHICLES
 
 	class shounka_clk
 	{
-		realname = "Mercedes CLK";
-		buyPrice = 67500;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 62;
-		colors[] =
+		realname="Mercedes CLK";
+		buyPrice=67500;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=62;
+		colors[]=
 		{
 			"shounka_clk_bleufonce",
 			"shounka_clk_grise",
@@ -1172,15 +1172,15 @@ class ALYSIA_VEHICLES
 
 	class shounka_a3_spr_civ
 	{
-		realname = "Mercedes Sprinter";
-		buyPrice = 51500;
-		inventory = 200;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 100;
-		colors[] =
+		realname="Mercedes Sprinter";
+		buyPrice=51500;
+		inventory=200;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=100;
+		colors[]=
 		{
 			"shounka_a3_spr_civ_bleufonce",
 			"shounka_a3_spr_civ_grise",
@@ -1203,15 +1203,15 @@ class ALYSIA_VEHICLES
 
 	class Skyline_Mercedes_Sprinter
 	{
-		realname = "Mercedes Sprinter";
-		buyPrice = 51500;
-		inventory = 200;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 100;
-		colors[] =
+		realname="Mercedes Sprinter";
+		buyPrice=51500;
+		inventory=200;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=100;
+		colors[]=
 		{
 			"Skyline_Mercedes_Sprinter_01_F",
 			"Skyline_Mercedes_Sprinter_02_F",
@@ -1250,16 +1250,16 @@ class ALYSIA_VEHICLES
 	
 	class Skyline_Mercedes_Sprinter_Samu
 	{
-		realname = "Mercedes Sprinter Samu";
-		buyPrice = 47500;
-		inventory = 110;
-		side = "GUER";
-		insurance = 1;
-		licenses[] = {"driver"};
-		rank = 1;
-		fuel = "Diesel";
-		fuelCapacity = 100;
-		colors[] =
+		realname="Mercedes Sprinter Samu";
+		buyPrice=47500;
+		inventory=110;
+		side="GUER";
+		insurance=1;
+		licenses[]={"driver"};
+		rank=1;
+		fuel="Diesel";
+		fuelCapacity=100;
+		colors[]=
 		{
 			"Skyline_Mercedes_Sprinter_Samu_01_F"
 		};
@@ -1268,15 +1268,15 @@ class ALYSIA_VEHICLES
 
 	class Skyline_Mercedes_Sprinter_Depannage
 	{
-		realname = "Mercedes Sprinter Dépanneur";
-		buyPrice = 51500;
-		inventory = 200;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver","company_garagist"};
-		fuel = "Diesel";
-		fuelCapacity = 100;
-		colors[] =
+		realname="Mercedes Sprinter Dépanneur";
+		buyPrice=51500;
+		inventory=200;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver","company_garagist"};
+		fuel="Diesel";
+		fuelCapacity=100;
+		colors[]=
 		{
 			"Skyline_Mercedes_Sprinter_Depannage_01_F",
 			"Skyline_Mercedes_Sprinter_Depannage_02_F"
@@ -1287,15 +1287,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_a3_gtr_civ
 	{
-		realname = "Nissan GTR";
-		buyPrice = 95300;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 74;
-		colors[] =
+		realname="Nissan GTR";
+		buyPrice=95300;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=74;
+		colors[]=
 		{
 			"Mrshounka_a3_gtr_civ_noir",
 			"Mrshounka_a3_gtr_civ_bleu"
@@ -1306,15 +1306,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_pagani_c
 	{
-		realname = "Pagani Huayra";
-		buyPrice = 845000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 100;
-		colors[] =
+		realname="Pagani Huayra";
+		buyPrice=845000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=100;
+		colors[]=
 		{
 			"Mrshounka_pagani_c_bleufonce",
 			"Mrshounka_pagani_c_grise",
@@ -1337,15 +1337,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_207_civ
 	{
-		realname = "Peugeot 207";
-		buyPrice = 12000;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 50;
-		colors[] =
+		realname="Peugeot 207";
+		buyPrice=12000;
+		inventory=38;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=50;
+		colors[]=
 		{
 			"Mrshounka_207_bleufonce",
 			"Mrshounka_207_grise",
@@ -1368,15 +1368,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_a3_308_rcz
 	{
-		realname = "Peugeot 308 RCZ";
-		buyPrice = 36100;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 55;
-		colors[] =
+		realname="Peugeot 308 RCZ";
+		buyPrice=36100;
+		inventory=38;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=55;
+		colors[]=
 		{
 			"Mrshounka_a3_308_rcz_bleufonce",
 			"Mrshounka_a3_308_rcz_grise",
@@ -1399,15 +1399,15 @@ class ALYSIA_VEHICLES
 
 	class shounka_a3_peugeot508_civ
 	{
-		realname = "Peugeot 508";
-		buyPrice = 28000;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 72;
-		colors[] =
+		realname="Peugeot 508";
+		buyPrice=28000;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=72;
+		colors[]=
 		{
 			"shounka_a3_peugeot508_civ_bleufonce",
 			"shounka_a3_peugeot508_civ_grise",
@@ -1430,15 +1430,15 @@ class ALYSIA_VEHICLES
 
 	class shounka_porsche911
 	{
-		realname = "Porshe 911";
-		buyPrice = 215000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 64;
-		colors[] =
+		realname="Porshe 911";
+		buyPrice=215000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=64;
+		colors[]=
 		{
 			"shounka_porsche911_bleufonce",
 			"shounka_porsche911_grise",
@@ -1461,15 +1461,15 @@ class ALYSIA_VEHICLES
 
 	class mrshounka_92_civ
 	{
-		realname = "Porshe 92";
-		buyPrice = 325000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		fuelCapacity = 68;
-		colors[] =
+		realname="Porshe 92";
+		buyPrice=325000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP95";
+		fuelCapacity=68;
+		colors[]=
 		{
 			"mrshounka_92_civ_bleufonce",
 			"mrshounka_92_civ_grise",
@@ -1492,15 +1492,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_cayenne_p_civ
 	{
-		realname = "Porshe Cayenne";
-		buyPrice = 85000;
-		inventory = 60;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 80;
-		colors[] =
+		realname="Porshe Cayenne";
+		buyPrice=85000;
+		inventory=60;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=80;
+		colors[]=
 		{
 			"Mrshounka_cayenne_p_bleufonce",
 			"Mrshounka_cayenne_p_grise",
@@ -1523,15 +1523,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_r5_civ
 	{
-		realname = "Renault 5";
-		buyPrice = 8000;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		fuelCapacity = 93;
-		colors[] =
+		realname="Renault 5";
+		buyPrice=8000;
+		inventory=38;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP95";
+		fuelCapacity=93;
+		colors[]=
 		{
 			"Mrshounka_r5_bleufonce",
 			"Mrshounka_r5_grise",
@@ -1554,15 +1554,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_megane_rs_2015_civ
 	{
-		realname = "Renault Megane RS";
-		buyPrice = 28000;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 60;
-		colors[] =
+		realname="Renault Megane RS";
+		buyPrice=28000;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=60;
+		colors[]=
 		{
 			"Mrshounka_megane_rs_2015_bleufonce",
 			"Mrshounka_megane_rs_2015_grise",
@@ -1585,15 +1585,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_twingo_p
 	{
-		realname = "Renault Twingo";
-		buyPrice = 10900;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 40;
-		colors[] =
+		realname="Renault Twingo";
+		buyPrice=10900;
+		inventory=38;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=40;
+		colors[]=
 		{
 			"Mrshounka_twingo_p_noir",
 			"Mrshounka_twingo_p_bf",
@@ -1616,15 +1616,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_a3_smart_civ
 	{
-		realname = "Smart";
-		buyPrice = 18000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 33;
-		colors[] =
+		realname="Smart";
+		buyPrice=18000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=33;
+		colors[]=
 		{
 			"Mrshounka_a3_smart_civ_noir",
 			"Mrshounka_a3_smart_civ_bleu"
@@ -1635,15 +1635,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_subaru08_civ
 	{
-		realname = "Subaru Impreza";
-		buyPrice = 37000;
-		inventory = 60;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 60;
-		colors[] =
+		realname="Subaru Impreza";
+		buyPrice=37000;
+		inventory=60;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=60;
+		colors[]=
 		{
 			"Mrshounka_subaru08_bleufonce",
 			"Mrshounka_subaru08_grise",
@@ -1666,15 +1666,15 @@ class ALYSIA_VEHICLES
 
 	class shounka_transam
 	{
-		realname = "Transam";
-		buyPrice = 325000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 59;
-		colors[] =
+		realname="Transam";
+		buyPrice=325000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=59;
+		colors[]=
 		{
 			"shounka_transam_bleufonce",
 			"shounka_transam_grise",
@@ -1697,51 +1697,51 @@ class ALYSIA_VEHICLES
 
 	class shounka_a3_dafxf_euro6_f
 	{
-		realname = "Daf euro 6";
-		buyPrice = 25000;
-		inventory = 150;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck"};
-		fuel = "Diesel";
-		fuelCapacity = 400;
+		realname="Daf euro 6";
+		buyPrice=25000;
+		inventory=150;
+		side="CIV";
+		insurance=1;
+		licenses[]={"truck"};
+		fuel="Diesel";
+		fuelCapacity=400;
 	};
 
 	class shounka_a3_tgs
 	{
-		realname = "Man TGS dépannage";
-		buyPrice = 25000;
-		inventory = 150;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck","company_garagist"};
-		fuel = "Diesel";
-		fuelCapacity = 400;
+		realname="Man TGS dépannage";
+		buyPrice=25000;
+		inventory=150;
+		side="CIV";
+		insurance=1;
+		licenses[]={"truck","company_garagist"};
+		fuel="Diesel";
+		fuelCapacity=400;
 	};
 
   	class SAL_77TRANSAMCiv
 	{
-		realname = "Pontiak";
-		buyPrice = 350000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		fuelCapacity = 76;
+		realname="Pontiak";
+		buyPrice=350000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP95";
+		fuelCapacity=76;
 	};
 
 	class max_H3
 	{
-		realname = "Hummer H3";
-		buyPrice = 135000;
-		inventory = 85;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 87;
-		colors[] =
+		realname="Hummer H3";
+		buyPrice=135000;
+		inventory=85;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=87;
+		colors[]=
 		{
 			"max_H3_red",
 			"max_H3_black",
@@ -1758,15 +1758,15 @@ class ALYSIA_VEHICLES
 
 	class max_impala
 	{
-		realname = "Impala";
-		buyPrice = 44500;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		fuelCapacity = 70;
-		colors[] =
+		realname="Impala";
+		buyPrice=44500;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP95";
+		fuelCapacity=70;
+		colors[]=
 		{
 			"max_impala_black",
 			"max_impala_white",
@@ -1781,15 +1781,15 @@ class ALYSIA_VEHICLES
 
 	class DAR_TahoeCiv
 	{
-		realname = "Chevrolet Tahoe";
-		buyPrice = 51300;
-		inventory = 85;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 98;
-		colors[] =
+		realname="Chevrolet Tahoe";
+		buyPrice=51300;
+		inventory=85;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=98;
+		colors[]=
 		{
 			"DAR_TahoeCiv",
 			"DAR_TahoeCivBlack",
@@ -1805,15 +1805,15 @@ class ALYSIA_VEHICLES
 
 	class Tal_Murci
 	{
-		realname = "Lamborgini Murcielago";
-		buyPrice = 725000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 100;
-		colors[] =
+		realname="Lamborgini Murcielago";
+		buyPrice=725000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=100;
+		colors[]=
 		{
 			"Tal_Murci_Red",
 			"Tal_Murci_Pink",
@@ -1846,15 +1846,15 @@ class ALYSIA_VEHICLES
 
 	class SAL_AudiCiv
 	{
-		realname = "Audi A4";
-		buyPrice = 60000;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 54;
-		colors[] =
+		realname="Audi A4";
+		buyPrice=60000;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=54;
+		colors[]=
 		{
 			"SAL_AudiCiv",
 			"SAL_AudiCivRed",
@@ -1868,15 +1868,15 @@ class ALYSIA_VEHICLES
 
   	class max_BMW
 	{
-		realname = "BMW M3";
-		buyPrice = 45000;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 60;
-		colors[] =
+		realname="BMW M3";
+		buyPrice=45000;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=60;
+		colors[]=
 		{
 			"max_BMW",
 			"max_BMW1",
@@ -1888,15 +1888,15 @@ class ALYSIA_VEHICLES
 
   	class max_charger
 	{
-		realname = "Dodge Charger";
-		buyPrice = 95000;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 68;
-		colors[] =
+		realname="Dodge Charger";
+		buyPrice=95000;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=68;
+		colors[]=
 		{
 			"max_charger_black",
 			"max_charger_blue",
@@ -1911,15 +1911,15 @@ class ALYSIA_VEHICLES
 
     class max_CrownVic
 	{
-		realname = "Crown Victoria";
-		buyPrice = 10000;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		fuelCapacity = 72;
-		colors[] =
+		realname="Crown Victoria";
+		buyPrice=10000;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP95";
+		fuelCapacity=72;
+		colors[]=
 		{
 			"max_CrownVic_blue",
 			"max_CrownVic_red",
@@ -1932,15 +1932,15 @@ class ALYSIA_VEHICLES
 
   	class max_jeep
 	{
-		realname = "Jeep";
-		buyPrice = 85000;
-		inventory = 85;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 60;
-		colors[] =
+		realname="Jeep";
+		buyPrice=85000;
+		inventory=85;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=60;
+		colors[]=
 		{
 			"max_jeep_green",
 			"max_jeep_blue",
@@ -1955,15 +1955,15 @@ class ALYSIA_VEHICLES
 
     class max_suv
 	{
-		realname = "SUV";
-		buyPrice = 45000;
-		inventory = 85;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 80;
-		colors[] =
+		realname="SUV";
+		buyPrice=45000;
+		inventory=85;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=80;
+		colors[]=
 		{
 			"max_suv_black",
 			"max_suv_red",
@@ -1980,15 +1980,15 @@ class ALYSIA_VEHICLES
 
     class max_van
 	{
-		realname = "Van";
-		buyPrice = 21000;
-		inventory = 165;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 132;
-		colors[] =
+		realname="Van";
+		buyPrice=21000;
+		inventory=165;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=132;
+		colors[]=
 		{
 			"max_van_white",
 			"max_van_cola",
@@ -2007,15 +2007,15 @@ class ALYSIA_VEHICLES
 
     class Tal_Maserati
 	{
-		realname = "Maserati";
-		buyPrice = 325000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 86;
-		colors[] =
+		realname="Maserati";
+		buyPrice=325000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=86;
+		colors[]=
 		{
 			"Tal_Maserati_Red",
 			"Tal_Maserati_Pink",
@@ -2046,15 +2046,15 @@ class ALYSIA_VEHICLES
 
   	class DAR_ChallengerCiv
 	{
-		realname = "Dodge Challenger";
-		buyPrice = 35350;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 70;
-		colors[] =
+		realname="Dodge Challenger";
+		buyPrice=35350;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=70;
+		colors[]=
 		{
 			"DAR_ChallengerCivWhite",
 			"DAR_ChallengerCivRed",
@@ -2069,75 +2069,75 @@ class ALYSIA_VEHICLES
 
   	class Skyline_G65_01_F
 	{
-		realname = "Mercedes G65 AMG";
-		buyPrice = 67000;
-		inventory = 85;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver","company_security"};
-		fuel = "SP98";
-		fuelCapacity = 96;
+		realname="Mercedes G65 AMG";
+		buyPrice=67000;
+		inventory=85;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver","company_security"};
+		fuel="SP98";
+		fuelCapacity=96;
 	};
 
 	class B_Truck_01_transport_F
 	{
-		realname = "HEMTT Transport";
-		buyPrice = 25000;
-		inventory = 150;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck"};
-		fuel = "Diesel";
-		fuelCapacity = 587;
+		realname="HEMTT Transport";
+		buyPrice=25000;
+		inventory=150;
+		side="CIV";
+		insurance=1;
+		licenses[]={"truck"};
+		fuel="Diesel";
+		fuelCapacity=587;
 	};
 
 	class B_Truck_01_covered_F
 	{
-		realname = "HEMTT Couvert";
-		buyPrice = 25000;
-		inventory = 150;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck"};
-		fuel = "Diesel";
-		fuelCapacity = 587;
+		realname="HEMTT Couvert";
+		buyPrice=25000;
+		inventory=150;
+		side="CIV";
+		insurance=1;
+		licenses[]={"truck"};
+		fuel="Diesel";
+		fuelCapacity=587;
 	};
 
 	class B_Truck_01_box_F
 	{
-		realname = "HEMTT Box";
-		buyPrice = 25000;
-		inventory = 150;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck"};
-		fuel = "Diesel";
-		fuelCapacity = 587;
+		realname="HEMTT Box";
+		buyPrice=25000;
+		inventory=150;
+		side="CIV";
+		insurance=1;
+		licenses[]={"truck"};
+		fuel="Diesel";
+		fuelCapacity=587;
 	};
 
 	class max_impala_security
 	{
-		realname = "Impala Secu";
-		buyPrice = 12000;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver","company_security"};
-		fuel = "SP95";
-		fuelCapacity = 70;
+		realname="Impala Secu";
+		buyPrice=12000;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver","company_security"};
+		fuel="SP95";
+		fuelCapacity=70;
 	};
 
 	class max_BMW_M3_GTR
 	{
-		realname = "BMW M3 Rally";
-		buyPrice = 93000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 60;
-		colors[] =
+		realname="BMW M3 Rally";
+		buyPrice=93000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=60;
+		colors[]=
 		{
 			"max_BMW_M3_GTR",
 			"max_BMW_M3_GTR1",
@@ -2153,27 +2153,27 @@ class ALYSIA_VEHICLES
 
 	class max_CrownVic_taxi
 	{
-		realname = "Crown Victoria Taxi";
-		buyPrice = 12500;
-		inventory = 50;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver","company_transport_people"};
-		fuel = "SP95";
-		fuelCapacity = 72;
+		realname="Crown Victoria Taxi";
+		buyPrice=12500;
+		inventory=50;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver","company_transport_people"};
+		fuel="SP95";
+		fuelCapacity=72;
 	};
 
   	class DAR_M3Civ
 	{
-		realname = "BMW M3";
-		buyPrice = 48000;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 60;
-		colors[] =
+		realname="BMW M3";
+		buyPrice=48000;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=60;
+		colors[]=
 		{
 			"DAR_M3CivBlack",
 			"DAR_M3CivWhite",
@@ -2186,39 +2186,39 @@ class ALYSIA_VEHICLES
 
     class C_Van_01_transport_F
 	{
-		realname = "Camionnette transport";
-		buyPrice = 46000;
-		inventory = 175;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 100;
+		realname="Camionnette transport";
+		buyPrice=46000;
+		inventory=175;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=100;
 	};
 
     class C_Van_01_box_F
 	{
-		realname = "Camionnette caisse";
-		buyPrice = 49250;
-		inventory = 185;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 100;
+		realname="Camionnette caisse";
+		buyPrice=49250;
+		inventory=185;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=100;
 	};
 
     class RDS_Gaz24_Civ
 	{
-		realname = "Gaz";
-		buyPrice = 800;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "GPL";
-		fuelCapacity = 55;
-		colors[] =
+		realname="Gaz";
+		buyPrice=800;
+		inventory=38;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="GPL";
+		fuelCapacity=55;
+		colors[]=
 		{
 			"RDS_Gaz24_Civ_01",
 			"RDS_Gaz24_Civ_02",
@@ -2231,27 +2231,27 @@ class ALYSIA_VEHICLES
 
   	class RDS_Golf4_Civ_01
 	{
-		realname = "Golf IV";
-		buyPrice = 1800;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 55;
+		realname="Golf IV";
+		buyPrice=1800;
+		inventory=38;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=55;
 	};
 
 	class C_Quadbike_01_F
 	{
-		realname = "Quad";
-		buyPrice = 800;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {};
-		fuel = "SP95";
-		fuelCapacity = 8;
-		colors[] =
+		realname="Quad";
+		buyPrice=800;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={};
+		fuel="SP95";
+		fuelCapacity=8;
+		colors[]=
 		{
 			"C_Quadbike_01_black_F",
 			"C_Quadbike_01_blue_F",
@@ -2266,39 +2266,39 @@ class ALYSIA_VEHICLES
 
 	class RDS_S1203_Civ_01
 	{
-		realname = "Skoda 1203";
-		buyPrice = 900;
-		inventory = 60;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 40;
+		realname="Skoda 1203";
+		buyPrice=900;
+		inventory=60;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=40;
 	};
 
 	class RDS_Octavia_Civ_01
 	{
-		realname = "Skoda Octavia";
-		buyPrice = 1800;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 50;
+		realname="Skoda Octavia";
+		buyPrice=1800;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=50;
 	};
 
 	class RDS_Lada_Civ
 	{
-		realname = "Vaz 2103";
-		buyPrice = 800;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "GPL";
-		fuelCapacity = 39;
-		colors[] =
+		realname="Vaz 2103";
+		buyPrice=800;
+		inventory=38;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="GPL";
+		fuelCapacity=39;
+		colors[]=
 		{
 			"RDS_Lada_Civ_01",
 			"RDS_Lada_Civ_02",
@@ -2313,15 +2313,15 @@ class ALYSIA_VEHICLES
 
 	class sab_a2
 	{
-		realname = "Sab An2";
-		buyPrice = 325000;
-		inventory = 150;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"pilot"};
-		fuel = "Kerosene";
-		fuelCapacity = 90;
-		colors[] =
+		realname="Sab An2";
+		buyPrice=325000;
+		inventory=150;
+		side="CIV";
+		insurance=1;
+		licenses[]={"pilot"};
+		fuel="Kerosene";
+		fuelCapacity=90;
+		colors[]=
 		{
 			"sab_BI_An2",
 			"Sab_cz_An2",
@@ -2352,38 +2352,38 @@ class ALYSIA_VEHICLES
 
 	class CUP_C_DC3_CIV
 	{
-		realname = "DC3";
-		buyPrice = 145000;
-		inventory = 220;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"pilot"};
-		fuel = "Kerosene";
-		fuelCapacity = 3338;
+		realname="DC3";
+		buyPrice=145000;
+		inventory=220;
+		side="CIV";
+		insurance=1;
+		licenses[]={"pilot"};
+		fuel="Kerosene";
+		fuelCapacity=3338;
 	};
 	class CUP_C_C47_CIV
 	{
-		realname = "DC3 long-courrier";
-		buyPrice = 145000;
-		inventory = 150;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"pilot"};
-		fuel = "Kerosene";
-		fuelCapacity = 3736;
+		realname="DC3 long-courrier";
+		buyPrice=145000;
+		inventory=150;
+		side="CIV";
+		insurance=1;
+		licenses[]={"pilot"};
+		fuel="Kerosene";
+		fuelCapacity=3736;
 	};
 
   	class Skyline_Bus
 	{
-		realname = "Bus";
-		buyPrice = 25000;
-		inventory = 80;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck","company_transport_people"};
-		fuel = "Diesel";
-		fuelCapacity = 215;
-		colors[] =
+		realname="Bus";
+		buyPrice=25000;
+		inventory=80;
+		side="CIV";
+		insurance=1;
+		licenses[]={"truck","company_transport_people"};
+		fuel="Diesel";
+		fuelCapacity=215;
+		colors[]=
 		{
 			"Skyline_Bus_11_F",
 			"Skyline_Bus_02_F",
@@ -2410,15 +2410,15 @@ class ALYSIA_VEHICLES
 
   	class B_Boat_Transport_01_F
 	{
-		realname = "Zodiac";
-		buyPrice = 3000;
-		inventory = 70;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"boat"};
-		fuel = "SP95";
-		fuelCapacity = 83;
-		colors[] =
+		realname="Zodiac";
+		buyPrice=3000;
+		inventory=70;
+		side="CIV";
+		insurance=1;
+		licenses[]={"boat"};
+		fuel="SP95";
+		fuelCapacity=83;
+		colors[]=
 		{
 			"B_Boat_Transport_01_F",
 			"O_Boat_Transport_01_F",
@@ -2434,39 +2434,39 @@ class ALYSIA_VEHICLES
 
   	class C_Boat_Civil_01_F
 	{
-		realname = "Bateau à moteur civil";
-		buyPrice = 8000;
-		inventory = 120;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"boat"};
-		fuel = "SP95";
-		fuelCapacity = 160;
+		realname="Bateau à moteur civil";
+		buyPrice=8000;
+		inventory=120;
+		side="CIV";
+		insurance=1;
+		licenses[]={"boat"};
+		fuel="SP95";
+		fuelCapacity=160;
 	};
 
 	class CUP_C_Fishing_Boat_Chernarus
 	{
-		buyPrice = 48500;
-		inventory = 300;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"boat"};
-		fuel = "Diesel";
-		fuelCapacity = 410;
-		realname = "Bateau de pêche";
+		buyPrice=48500;
+		inventory=300;
+		side="CIV";
+		insurance=1;
+		licenses[]={"boat"};
+		fuel="Diesel";
+		fuelCapacity=410;
+		realname="Bateau de pêche";
 	};
 
   	class C_Heli_light
 	{
-		realname = "Little Bird";
-		buyPrice = 750000;
-		inventory = 15;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"pilot"};
-		fuel = "Kerosene";
-		fuelCapacity = 242;
-		colors[] =
+		realname="Little Bird";
+		buyPrice=750000;
+		inventory=15;
+		side="CIV";
+		insurance=1;
+		licenses[]={"pilot"};
+		fuel="Kerosene";
+		fuelCapacity=242;
+		colors[]=
 		{
 			"C_Heli_light_01_blue_F",
 			"C_Heli_light_01_red_F",
@@ -2511,15 +2511,15 @@ class ALYSIA_VEHICLES
 
   	class Fett_orca
 	{
-		realname = "Orca";
-		buyPrice = 925000;
-		inventory = 30;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"pilot"};
-		fuel = "Kerosene";
-		fuelCapacity = 720;
-		colors[] =
+		realname="Orca";
+		buyPrice=925000;
+		inventory=30;
+		side="CIV";
+		insurance=1;
+		licenses[]={"pilot"};
+		fuel="Kerosene";
+		fuelCapacity=720;
+		colors[]=
 		{
 			"Fett_orca_white",
 			"Fett_orca_blue",
@@ -2548,15 +2548,15 @@ class ALYSIA_VEHICLES
 
   	class Fett_mohawk
 	{
-		realname = "Mohawk";
-		buyPrice = 2125000;
-		inventory = 40;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"pilot"};
-		fuel = "Kerosene";
-		fuelCapacity = 1500;
-		colors[] =
+		realname="Mohawk";
+		buyPrice=2125000;
+		inventory=40;
+		side="CIV";
+		insurance=1;
+		licenses[]={"pilot"};
+		fuel="Kerosene";
+		fuelCapacity=1500;
+		colors[]=
 		{
 			"Fett_mohawk_matrix",
 			"Fett_mohawk_jungle",
@@ -2587,15 +2587,15 @@ class ALYSIA_VEHICLES
 
   	class dezkit_b206
 	{
-		realname = "B206";
-		buyPrice = 825000;
-		inventory = 60;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"pilot"};
-		fuel = "Kerosene";
-		fuelCapacity = 344;
-		colors[] =
+		realname="B206";
+		buyPrice=825000;
+		inventory=60;
+		side="CIV";
+		insurance=1;
+		licenses[]={"pilot"};
+		fuel="Kerosene";
+		fuelCapacity=344;
+		colors[]=
 		{
 			"dezkit_b206_ls",
 			"dezkit_b206_hs"
@@ -2606,14 +2606,14 @@ class ALYSIA_VEHICLES
 
 	class Skyline_Scania_G420_Depanneuse
 	{
-		buyPrice = 229500;
-		inventory = 120;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck","company_garagist"};
-		fuel = "Diesel";
-		fuelCapacity = 150;
-		colors[] =
+		buyPrice=229500;
+		inventory=120;
+		side="CIV";
+		insurance=1;
+		licenses[]={"truck","company_garagist"};
+		fuel="Diesel";
+		fuelCapacity=150;
+		colors[]=
 		{
 			"Skyline_Scania_G420_Depanneuse_01_F",
 			"Skyline_Scania_G420_Depanneuse_02_F",
@@ -2629,7 +2629,7 @@ class ALYSIA_VEHICLES
 			"Skyline_Scania_G420_Depanneuse_12_F",
 			"Skyline_Scania_G420_Depanneuse_13_F"
 		};
-		realname = "Scania G420 (Dépanneuse)";
+		realname="Scania G420 (Dépanneuse)";
 	};
 	class Skyline_Scania_G420_Depanneuse_01_F: Skyline_Scania_G420_Depanneuse{};
 	class Skyline_Scania_G420_Depanneuse_02_F: Skyline_Scania_G420_Depanneuse{};
@@ -2647,38 +2647,38 @@ class ALYSIA_VEHICLES
 
 	class Jonzie_Flat_Bed
 	{
-		realname = "Man TGX Flat Bed Truck";
-		buyPrice = 350000;
-		inventory = 200;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck"};
-		fuel = "Diesel";
-		fuelCapacity = 400;
+		realname="Man TGX Flat Bed Truck";
+		buyPrice=350000;
+		inventory=200;
+		side="CIV";
+		insurance=1;
+		licenses[]={"truck"};
+		fuel="Diesel";
+		fuelCapacity=400;
 	};
 	class Jonzie_Log_Truck: Jonzie_Flat_Bed
 	{
-		realname = "Man TGX Log Truck";
-		buyPrice = 350000;
+		realname="Man TGX Log Truck";
+		buyPrice=350000;
 	};
 	class Jonzie_Tanker_Truck: Jonzie_Flat_Bed
 	{
-		realname = "Man TGX Tanker Truck";
-		buyPrice = 455000;
-		licenses[] = {"truck","company_fuel"};
+		realname="Man TGX Tanker Truck";
+		buyPrice=455000;
+		licenses[]={"truck","company_fuel"};
 	};
 
 	class Jonzie_Ute
 	{
-		realname = "Holden Commodore Ute";
-		buyPrice = 27500;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 71;
-		colors[] =
+		realname="Holden Commodore Ute";
+		buyPrice=27500;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=71;
+		colors[]=
 		{
 			"Fett_Ute_red",
 			"Fett_Ute_yellow",
@@ -2704,154 +2704,154 @@ class ALYSIA_VEHICLES
 	/* CARS */
 	class Fett_Audi_RS4_12_milice_F
 	{
-		realname = "Audi RS4";
-		buyPrice = 75000;
-		inventory = 25;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 61;
-		rank = 7;
+		realname="Audi RS4";
+		buyPrice=75000;
+		inventory=25;
+		side="WEST";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=61;
+		rank=7;
 	};
 	class DAR_TaurusPolice
 	{
-		realname = "Ford Taurus Milice";
-		buyPrice = 70000;
-		inventory = 45;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 72;
-		rank = 6;
+		realname="Ford Taurus Milice";
+		buyPrice=70000;
+		inventory=45;
+		side="WEST";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=72;
+		rank=6;
 	};
 	class DAR_CVPIAux
 	{
-		realname = "Crown Victoria Milice";
-		buyPrice = 16000;
-		inventory = 45;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 72;
-		rank = 2;
+		realname="Crown Victoria Milice";
+		buyPrice=16000;
+		inventory=45;
+		side="WEST";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=72;
+		rank=2;
 	};
 	class DAR_TahoePolice
 	{
-		realname = "Chevrolet Tahoe Milice";
-		buyPrice = 40000;
-		inventory = 90;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		fuelCapacity = 98;
-		rank = 4;
+		realname="Chevrolet Tahoe Milice";
+		buyPrice=40000;
+		inventory=90;
+		side="WEST";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP95";
+		fuelCapacity=98;
+		rank=4;
 	};
 	class DAR_ImpalaPolice
 	{
-		realname = "Impala Milice";
-		buyPrice = 20500;
-		inventory = 15;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		fuelCapacity = 70;
-		rank = 3;
+		realname="Impala Milice";
+		buyPrice=20500;
+		inventory=15;
+		side="WEST";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP95";
+		fuelCapacity=70;
+		rank=3;
 	};
 	class DAR_ChargerPoliceState
 	{
-		realname = "Dodge Charger Milice";
-		buyPrice = 85000;
-		inventory = 45;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		fuelCapacity = 68;
-		rank = 7;
+		realname="Dodge Charger Milice";
+		buyPrice=85000;
+		inventory=45;
+		side="WEST";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP95";
+		fuelCapacity=68;
+		rank=7;
 	};
 	class DAR_ExplorerPolice
 	{
-		realname = "Ford Explorer Milice";
-		buyPrice = 60000;
-		inventory = 90;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		fuelCapacity = 80;
-		rank = 5;
+		realname="Ford Explorer Milice";
+		buyPrice=60000;
+		inventory=90;
+		side="WEST";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP95";
+		fuelCapacity=80;
+		rank=5;
 	};
 	class Gurkha_f5
 	{
-		realname = "Gurkha Milice";
-		buyPrice = 520000;
-		inventory = 60;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 110;
-		rank = 7;
+		realname="Gurkha Milice";
+		buyPrice=520000;
+		inventory=60;
+		side="WEST";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=110;
+		rank=7;
 	};
 
 	/* TRUCKS */
 	class Fett_truck_milice
 	{
-		realname = "Camion Milice";
-		buyPrice = 280000;
-		inventory = 300;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"truck"};
-		fuel = "Diesel";
-		fuelCapacity = 587;
-		rank = 6;
+		realname="Camion Milice";
+		buyPrice=280000;
+		inventory=300;
+		side="WEST";
+		insurance=1;
+		licenses[]={"truck"};
+		fuel="Diesel";
+		fuelCapacity=587;
+		rank=6;
 	};
 
 	/* SEA */
 	class Fett_boat_milice
 	{
-		realname = "Bateau à moteur";
-		buyPrice = 65000;
-		inventory = 30;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"boat"};
-		fuel = "SP95";
-		fuelCapacity = 160;
-		rank = 4;
+		realname="Bateau à moteur";
+		buyPrice=65000;
+		inventory=30;
+		side="WEST";
+		insurance=1;
+		licenses[]={"boat"};
+		fuel="SP95";
+		fuelCapacity=160;
+		rank=4;
 	};
 
 	/* AIRS */
 	class EC635_Unarmed
 	{
-		buyPrice = 800000;
-		inventory = 38;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"pilot"};
-		fuel = "Kerosene";
-		fuelCapacity = 867;
-		rank = 8;
-		realname = "EC635 Milice";
+		buyPrice=800000;
+		inventory=38;
+		side="WEST";
+		insurance=1;
+		licenses[]={"pilot"};
+		fuel="Kerosene";
+		fuelCapacity=867;
+		rank=8;
+		realname="EC635 Milice";
 	};
 	class dezkit_b206mi
 	{
-		realname = "B206 Milice";
-		buyPrice = 450000;
-		inventory = 70;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"pilot"};
-		fuel = "Kerosene";
-		fuelCapacity = 540;
-		rank = 6;
-		colors[] =
+		realname="B206 Milice";
+		buyPrice=450000;
+		inventory=70;
+		side="WEST";
+		insurance=1;
+		licenses[]={"pilot"};
+		fuel="Kerosene";
+		fuelCapacity=540;
+		rank=6;
+		colors[]=
 		{
 			"dezkit_b206_police",
 			"dezkit_b206_fbi"
@@ -2862,16 +2862,16 @@ class ALYSIA_VEHICLES
 
 	class Skyline_LittleBird_Milice
 	{
-		realname = "LittleBird de la Milice";
-		buyPrice = 275000;
-		inventory = 45;
-		side = "WEST";
-		insurance = 1;
-		licenses[] = {"pilot"};
-		fuel = "Kerosene";
-		fuelCapacity = 242;
-		rank = 6;
-		colors[] =
+		realname="LittleBird de la Milice";
+		buyPrice=275000;
+		inventory=45;
+		side="WEST";
+		insurance=1;
+		licenses[]={"pilot"};
+		fuel="Kerosene";
+		fuelCapacity=242;
+		rank=6;
+		colors[]=
 		{
 			"Skyline_LittleBird_Milice_01_F"
 		};
@@ -2885,58 +2885,57 @@ class ALYSIA_VEHICLES
 	/* CARS */
 	class RDS_Lada_Civ_05
 	{
-		realname = "Lada Garde";
-		buyPrice = 2000;
-		inventory = 30;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 43;
-		rank = 1;
+		realname="Lada";
+		buyPrice=2000;
+		inventory=30;
+		side="EAST";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=43;
+		rank=1;
+		colors[]={};
 	};
-	class Skyline_GMC_Vandura_Propagande_01_F
+	class Alysia_Kubelwagen_Garde: RDS_Lada_Civ_05
 	{
-		realname = "GMC haut parleurs";
-		buyPrice = 13500;
-		inventory = 70;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 83;
-		rank = 4;
-		speaker = 1;
+		realname="Kubelwagen";
+		buyPrice=8700;
+		fuelCapacity=46;
+		rank=2;
+	};
+	class Skyline_GMC_Vandura_Propagande_01_F: RDS_Lada_Civ_05
+	{
+		realname="GMC haut parleurs";
+		buyPrice=13500;
+		inventory=70;
+		fuelCapacity=83;
+		rank=4;
+		speaker=1;
 	};
 
 	/* TANKS */
-	class Skyline_T34_01_F
+	class Skyline_T34_01_F: RDS_Lada_Civ_05
 	{
-		realname = "T34 Garde";
-		buyPrice = 370000;
-		inventory = 90;
-		rank = 6;
-		side = "EAST";
-		insurance = 0;
-		fuelCapacity = 540;
-		disableLockpick = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
+		realname="T34";
+		buyPrice=370000;
+		rank=6;
+		insurance=0;
+		fuelCapacity=540;
+		disableLockpick=1;
+		fuel="Diesel";
 	};
 
 	/* TRUCKS */
-	class RDS_Ikarus_Civ
+	class RDS_Ikarus_Civ: RDS_Lada_Civ_05
 	{
-		realname = "Bus Ikarus";
-		buyPrice = 38000;
-		inventory = 80;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"truck"};
-		fuel = "Diesel";
-		fuelCapacity = 250;
-		rank = 3;
-		colors[] =
+		realname="Bus Ikarus";
+		buyPrice=38000;
+		inventory=80;
+		licenses[]={"truck"};
+		fuel="Diesel";
+		fuelCapacity=250;
+		rank=3;
+		colors[]=
 		{
 			"RDS_Ikarus_Civ_01",
 			"RDS_Ikarus_Civ_02"
@@ -2946,42 +2945,34 @@ class ALYSIA_VEHICLES
   	class RDS_Ikarus_Civ_02: RDS_Ikarus_Civ {};
 	class Fett_truck_army: RDS_Ikarus_Civ
 	{
-		realname = "HEMTT cargo Garde";
-		buyPrice = 280000;
-		inventory = 425;
-		rank = 5;
-		colors[] = {};
-		fuelCapacity = 587;
+		realname="HEMTT cargo";
+		buyPrice=280000;
+		inventory=425;
+		rank=5;
+		fuelCapacity=587;
 	};
 
 	/* AIRS */
-	class sfp_bo105_unarmed
+	class sfp_bo105_unarmed: RDS_Lada_Civ_05
 	{
-		realname = "bo105 de la Garde";
-		buyPrice = 375000;
-		inventory = 90;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"pilot"};
-		fuel = "Kerosene";
-		fuelCapacity = 575;
-		rank = 5;
+		realname="bo105";
+		buyPrice=375000;
+		inventory=90;
+		licenses[]={"pilot"};
+		fuel="Kerosene";
+		fuelCapacity=575;
+		rank=5;
 	};
-	class Skyline_LittleBird_Garde
+	class Skyline_LittleBird_Garde: RDS_Lada_Civ_05
 	{
-		realname = "LittleBird de la Garde";
-		buyPrice = 275000;
-		inventory = 45;
-		side = "EAST";
-		insurance = 1;
-		licenses[] = {"pilot"};
-		fuel = "Kerosene";
-		fuelCapacity = 242;
-		rank = 3;
-		colors[] =
-		{
-			"Skyline_LittleBird_Garde_01_F"
-		};
+		realname="LittleBird";
+		buyPrice=275000;
+		inventory=45;
+		licenses[]={"pilot"};
+		fuel="Kerosene";
+		fuelCapacity=242;
+		rank=3;
+		colors[]={"Skyline_LittleBird_Garde_01_F"};
 	};
 	class Skyline_LittleBird_Garde_01_F: Skyline_LittleBird_Garde {};
 
@@ -2990,29 +2981,29 @@ class ALYSIA_VEHICLES
 	*/
 	class Jonzie_Ambulance
 	{
-		realname = "Ambulance avec civière";
-		buyPrice = 45000;
-		inventory = 100;
-		side = "GUER";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "diesel";
-		fuelCapacity = 112;
-		rank = 1;
+		realname="Ambulance avec civière";
+		buyPrice=45000;
+		inventory=100;
+		side="GUER";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="diesel";
+		fuelCapacity=112;
+		rank=1;
 	};
 
 	class Mrshounka_corbillard_base_p
 	{
-		realname = "Corbillard";
-		buyPrice = 65000;
-		inventory = 45;
-		side = "GUER";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "diesel";
-		fuelCapacity = 96;
-		rank = 6;
-		colors[] =
+		realname="Corbillard";
+		buyPrice=65000;
+		inventory=45;
+		side="GUER";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="diesel";
+		fuelCapacity=96;
+		rank=6;
+		colors[]=
 		{
 			"Mrshounka_corbillard_c_noir",
 			"Mrshounka_corbillard_c_bleufonce",
@@ -3036,107 +3027,107 @@ class ALYSIA_VEHICLES
 
 	class Fett_boat_samu
 	{
-		realname = "Bateau à moteur";
-		buyPrice = 5000;
-		inventory = 50;
-		side = "GUER";
-		insurance = 1;
-		licenses[] = {"boat"};
-		fuel = "Diesel";
-		fuelCapacity = 160;
-		rank = 1;
+		realname="Bateau à moteur";
+		buyPrice=5000;
+		inventory=50;
+		side="GUER";
+		insurance=1;
+		licenses[]={"boat"};
+		fuel="Diesel";
+		fuelCapacity=160;
+		rank=1;
 	};
 
 	class DAR_TaurusPoliceState
 	{
-		realname = "Ford Taurus SAMU";
-		buyPrice = 75250;
-		inventory = 45;
-		side = "GUER";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "diesel";
-		fuelCapacity = 72;
-		rank = 5;
+		realname="Ford Taurus SAMU";
+		buyPrice=75250;
+		inventory=45;
+		side="GUER";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="diesel";
+		fuelCapacity=72;
+		rank=5;
 	};
 
 	class Fett_zamak_repair_samu
 	{
-		realname = "Zamak Transport de médicament";
-		buyPrice = 120000;
-		inventory = 450;
-		side = "GUER";
-		insurance = 1;
-		licenses[] = {"truck"};
-		fuel = "Diesel";
-		fuelCapacity = 410;
-		rank = 4;
+		realname="Zamak Transport de médicament";
+		buyPrice=120000;
+		inventory=450;
+		side="GUER";
+		insurance=1;
+		licenses[]={"truck"};
+		fuel="Diesel";
+		fuelCapacity=410;
+		rank=4;
 	};
 
 	class Fett_zamak_covered_samu
 	{
-		realname = "Zamak Stand SAMU";
-		buyPrice = 120000;
-		inventory = 150;
-		side = "GUER";
-		insurance = 1;
-		licenses[] = {"truck"};
-		fuel = "Diesel";
-		fuelCapacity = 410;
-		rank = 4;
+		realname="Zamak Stand SAMU";
+		buyPrice=120000;
+		inventory=150;
+		side="GUER";
+		insurance=1;
+		licenses[]={"truck"};
+		fuel="Diesel";
+		fuelCapacity=410;
+		rank=4;
 	};
 
 	class DAR_TahoeEMS
 	{
-		realname = "Chevrolet Tahoe SAMU";
-		buyPrice = 52520;
-		inventory = 90;
-		side = "GUER";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 98;
-		rank = 2;
+		realname="Chevrolet Tahoe SAMU";
+		buyPrice=52520;
+		inventory=90;
+		side="GUER";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=98;
+		rank=2;
 	};
 
 	class DAR_ExplorerMedic
 	{
-		realname = "Ford Explorer SAMU";
-		buyPrice = 62500;
-		inventory = 90;
-		side = "GUER";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 80;
-		rank = 3;
+		realname="Ford Explorer SAMU";
+		buyPrice=62500;
+		inventory=90;
+		side="GUER";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=80;
+		rank=3;
 	};
 
 	class EC635_ADAC
 	{
-		realname = "EC635 SAMU";
-		buyPrice = 385000;
-		inventory = 70;
-		side = "GUER";
-		insurance = 1;
-		licenses[] = {"pilot"};
-		fuel = "Kerosene";
-		fuelCapacity = 867;
-		rank = 3;
+		realname="EC635 SAMU";
+		buyPrice=385000;
+		inventory=70;
+		side="GUER";
+		insurance=1;
+		licenses[]={"pilot"};
+		fuel="Kerosene";
+		fuelCapacity=867;
+		rank=3;
 	};
 
 	class dezkit_b206ems
 	{
-		realname = "B206 SAMU";
-		buyPrice = 425000;
-		inventory = 70;
-		side = "GUER";
-		insurance = 1;
-		licenses[] = {"pilot"};
-		fuel = "Kerosene";
-		fuelCapacity = 540;
-		rank = 3;
-		colors[] =
+		realname="B206 SAMU";
+		buyPrice=425000;
+		inventory=70;
+		side="GUER";
+		insurance=1;
+		licenses[]={"pilot"};
+		fuel="Kerosene";
+		fuelCapacity=540;
+		rank=3;
+		colors[]=
 		{
 			"dezkit_b206_ems",
 			"dezkit_b206_rescue"
@@ -3147,15 +3138,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_ducati_p_base
 	{
-		realname = "Moto Ducati";
-		buyPrice = 350000;
-		inventory = 5;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"moto"};
-		fuel = "SP95";
-		fuelCapacity = 15;
-		colors[] =
+		realname="Moto Ducati";
+		buyPrice=350000;
+		inventory=5;
+		side="CIV";
+		insurance=1;
+		licenses[]={"moto"};
+		fuel="SP95";
+		fuelCapacity=15;
+		colors[]=
 		{
 			"Mrshounka_ducati_p",
 			"Mrshounka_ducati_p_noir",
@@ -3180,15 +3171,15 @@ class ALYSIA_VEHICLES
 
 	class Mrshounka_yamaha_p_base
 	{
-		realname = "Moto Yamaha";
-		buyPrice = 275000;
-		inventory = 5;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"moto"};
-		fuel = "SP95";
-		fuelCapacity = 14;
-		colors[] =
+		realname="Moto Yamaha";
+		buyPrice=275000;
+		inventory=5;
+		side="CIV";
+		insurance=1;
+		licenses[]={"moto"};
+		fuel="SP95";
+		fuelCapacity=14;
+		colors[]=
 		{
 			"Mrshounka_yamaha_p",
 			"Mrshounka_yamaha_p_noir",
@@ -3213,15 +3204,15 @@ class ALYSIA_VEHICLES
 
 	class max_bike_base
 	{
-		realname = "Vieille Moto";
-		buyPrice = 12000;
-		inventory = 5;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"moto"};
-		fuel = "SP95";
-		fuelCapacity = 8;
-		colors[] =
+		realname="Vieille Moto";
+		buyPrice=12000;
+		inventory=5;
+		side="CIV";
+		insurance=1;
+		licenses[]={"moto"};
+		fuel="SP95";
+		fuelCapacity=8;
+		colors[]=
 		{
 			"max_bike",
 			"max_bike1",
@@ -3238,15 +3229,15 @@ class ALYSIA_VEHICLES
 	
 	class shounka_harley_a3
 	{
-		realname = "Harley-Davidson";
-		buyPrice = 45000;
-		inventory = 5;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"moto"};
-		fuel = "SP95";
-		fuelCapacity = 9;
-		colors[] =
+		realname="Harley-Davidson";
+		buyPrice=45000;
+		inventory=5;
+		side="CIV";
+		insurance=1;
+		licenses[]={"moto"};
+		fuel="SP95";
+		fuelCapacity=9;
+		colors[]=
 		{
 			"shounka_harley_a3_noir",
 			"shounka_harley_a3_bleu",
@@ -3261,15 +3252,15 @@ class ALYSIA_VEHICLES
 
 	class ADM_Ford_F100
 	{
-		realname = "Ford F100";
-		buyPrice = 4500;
-		inventory = 65;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "GPL";
-		fuelCapacity = 46;
-		colors[] =
+		realname="Ford F100";
+		buyPrice=4500;
+		inventory=65;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="GPL";
+		fuelCapacity=46;
+		colors[]=
 		{
 			"ADM_Ford_F100_red",
 			"ADM_Ford_F100_yellow",
@@ -3290,15 +3281,15 @@ class ALYSIA_VEHICLES
 
 	class Skyline_VW_Touareg
 	{
-		realname = "VW Touareg";
-		buyPrice = 36500;
-		inventory = 85;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 84;
-		colors[] =
+		realname="VW Touareg";
+		buyPrice=36500;
+		inventory=85;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=84;
+		colors[]=
 		{
 			"Skyline_VW_TouaregR50_01_F",
 			"Skyline_VW_TouaregR50_02_F",
@@ -3331,15 +3322,15 @@ class ALYSIA_VEHICLES
 
 	class Skyline_Audi_RS4
 	{
-		realname = "Audi RS4";
-		buyPrice = 123000;
-		inventory = 25;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 61;
-		colors[] =
+		realname="Audi RS4";
+		buyPrice=123000;
+		inventory=25;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=61;
+		colors[]=
 		{
 			"Skyline_Audi_RS4_01_F",
 			"Skyline_Audi_RS4_02_F",
@@ -3372,15 +3363,15 @@ class ALYSIA_VEHICLES
 
 	class Skyline_Ford_Transit
 	{
-		realname = "Ford Transit";
-		buyPrice = 34200;
-		inventory = 180;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 60;
-		colors[] =
+		realname="Ford Transit";
+		buyPrice=34200;
+		inventory=180;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=60;
+		colors[]=
 		{
 			"Skyline_Ford_Transit_01_F",
 			"Skyline_Ford_Transit_02_F",
@@ -3413,15 +3404,15 @@ class ALYSIA_VEHICLES
 
 	class Skyline_Peugeot_308
 	{
-		realname = "Peugeot 308";
-		buyPrice = 25250;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 55;
-		colors[] =
+		realname="Peugeot 308";
+		buyPrice=25250;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=55;
+		colors[]=
 		{
 			"Skyline_Peugeot_308_01_F",
 			"Skyline_Peugeot_308_02_F",
@@ -3454,40 +3445,40 @@ class ALYSIA_VEHICLES
 
 	class shounka_a3_brinks_noir
 	{
-		realname = "Camion de transport de fond";
-		buyPrice = 160000;
-		inventory = 230;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck","company_money_tranfer"};
-		fuel = "Diesel";
-		fuelCapacity = 70;
-		money_transfer = 1;
+		realname="Camion de transport de fond";
+		buyPrice=160000;
+		inventory=230;
+		side="CIV";
+		insurance=1;
+		licenses[]={"truck","company_money_tranfer"};
+		fuel="Diesel";
+		fuelCapacity=70;
+		money_transfer=1;
 	};
 	class Skyline_Brinks_01_F
 	{
-		realname = "Camion de transport de fond";
-		buyPrice = 185000;
-		inventory = 200;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"truck","company_money_tranfer"};
-		fuel = "Diesel";
-		fuelCapacity = 70;
-		money_transfer = 1;
+		realname="Camion de transport de fond";
+		buyPrice=185000;
+		inventory=200;
+		side="CIV";
+		insurance=1;
+		licenses[]={"truck","company_money_tranfer"};
+		fuel="Diesel";
+		fuelCapacity=70;
+		money_transfer=1;
 	};
 
 	class Skyline_Vehicule_Jonzie_Viper
 	{
-		realname = "Dodge Viper";
-		buyPrice = 815000;
-		inventory = 25;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 70;
-		colors[] =
+		realname="Dodge Viper";
+		buyPrice=815000;
+		inventory=25;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=70;
+		colors[]=
 		{
 			"Skyline_Vehicule_Jonzie_Viper_01_F",
 			"Skyline_Vehicule_Jonzie_Viper_02_F",
@@ -3518,15 +3509,15 @@ class ALYSIA_VEHICLES
 
 	class Skyline_Vehicule_Jonzie_Escalade
 	{
-		realname = "Cadillac Escalade ESV";
-		buyPrice = 97500;
-		inventory = 85;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 117;
-		colors[] =
+		realname="Cadillac Escalade ESV";
+		buyPrice=97500;
+		inventory=85;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=117;
+		colors[]=
 		{
 			"Skyline_Vehicule_Jonzie_Escalade_01_F",
 			"Skyline_Vehicule_Jonzie_Escalade_02_F",
@@ -3557,15 +3548,15 @@ class ALYSIA_VEHICLES
 
   	class Skyline_Vehicule_Jonzie_Galant
 	{
-		realname = "Mitsubishi Galant";
-		buyPrice = 10000;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		fuelCapacity = 60;
-		colors[] =
+		realname="Mitsubishi Galant";
+		buyPrice=10000;
+		inventory=38;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP95";
+		fuelCapacity=60;
+		colors[]=
 		{
 			"Skyline_Vehicule_Jonzie_Galant_01_F",
 			"Skyline_Vehicule_Jonzie_Galant_02_F",
@@ -3596,15 +3587,15 @@ class ALYSIA_VEHICLES
 
   	class Skyline_Vehicule_Jonzie_Mini_Cooper
 	{
-		realname = "Mini Cooper";
-		buyPrice = 7500;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		fuelCapacity = 50;
-		colors[] =
+		realname="Mini Cooper";
+		buyPrice=7500;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP95";
+		fuelCapacity=50;
+		colors[]=
 		{
 			"Skyline_Vehicule_Jonzie_Mini_Cooper_01_F",
 			"Skyline_Vehicule_Jonzie_Mini_Cooper_02_F",
@@ -3635,15 +3626,15 @@ class ALYSIA_VEHICLES
 
   	class Skyline_Vehicule_Jonzie_Quattroporte
 	{
-		realname = "Mini Cooper";
-		buyPrice = 325000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 120;
-		colors[] =
+		realname="Mini Cooper";
+		buyPrice=325000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=120;
+		colors[]=
 		{
 			"Skyline_Vehicule_Jonzie_Quattroporte_01_F",
 			"Skyline_Vehicule_Jonzie_Quattroporte_02_F",
@@ -3674,15 +3665,15 @@ class ALYSIA_VEHICLES
 
   	class Skyline_Vehicule_Jonzie_Datsun_510
 	{
-		realname = "Datsun 510";
-		buyPrice = 7500;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		fuelCapacity = 650;
-		colors[] =
+		realname="Datsun 510";
+		buyPrice=7500;
+		inventory=38;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP95";
+		fuelCapacity=650;
+		colors[]=
 		{
 			"Skyline_Vehicule_Jonzie_Datsun_510_01_F",
 			"Skyline_Vehicule_Jonzie_Datsun_510_02_F",
@@ -3713,15 +3704,15 @@ class ALYSIA_VEHICLES
 
   	class Skyline_Vehicule_Jonzie_Corolla
 	{
-		realname = "Toyota Corolla";
-		buyPrice = 6000;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 55;
-		colors[] =
+		realname="Toyota Corolla";
+		buyPrice=6000;
+		inventory=38;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=55;
+		colors[]=
 		{
 			"Skyline_Vehicule_Jonzie_Corolla_01_F",
 			"Skyline_Vehicule_Jonzie_Corolla_02_F",
@@ -3752,15 +3743,15 @@ class ALYSIA_VEHICLES
 
   	class Skyline_Vehicule_Jonzie_Datsun_Z432
 	{
-		realname = "Datsun Z432";
-		buyPrice = 22000;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		fuelCapacity = 60;
-		colors[] =
+		realname="Datsun Z432";
+		buyPrice=22000;
+		inventory=38;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP95";
+		fuelCapacity=60;
+		colors[]=
 		{
 			"Skyline_Vehicule_Jonzie_Datsun_Z432_01_F",
 			"Skyline_Vehicule_Jonzie_Datsun_Z432_02_F",
@@ -3791,15 +3782,15 @@ class ALYSIA_VEHICLES
 
   	class Skyline_Vehicule_Jonzie_Raptor
 	{
-		realname = "Ford Raptor";
-		buyPrice = 63500;
-		inventory = 90;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 98;
-		colors[] =
+		realname="Ford Raptor";
+		buyPrice=63500;
+		inventory=90;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=98;
+		colors[]=
 		{
 			"Skyline_Vehicule_Jonzie_Raptor_01_F",
 			"Skyline_Vehicule_Jonzie_Raptor_02_F",
@@ -3830,15 +3821,15 @@ class ALYSIA_VEHICLES
 
   	class Skyline_Vehicule_Jonzie_STI
 	{
-		realname = "Subaru STI";
-		buyPrice = 47500;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 60;
-		colors[] =
+		realname="Subaru STI";
+		buyPrice=47500;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=60;
+		colors[]=
 		{
 			"Skyline_Vehicule_Jonzie_STI_01_F",
 			"Skyline_Vehicule_Jonzie_STI_02_F",
@@ -3869,15 +3860,15 @@ class ALYSIA_VEHICLES
 
   	class Skyline_Vehicule_Jonzie_VE
 	{
-		realname = "Holden Commodore";
-		buyPrice = 29500;
-		inventory = 45;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 71;
-		colors[] =
+		realname="Holden Commodore";
+		buyPrice=29500;
+		inventory=45;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=71;
+		colors[]=
 		{
 			"Skyline_Vehicule_Jonzie_VE_01_F",
 			"Skyline_Vehicule_Jonzie_VE_02_F",
@@ -3908,15 +3899,15 @@ class ALYSIA_VEHICLES
 
   	class Skyline_Vehicule_Jonzie_Ceed
 	{
-		realname = "Kia cee'd";
-		buyPrice = 12500;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 53;
-		colors[] =
+		realname="Kia cee'd";
+		buyPrice=12500;
+		inventory=38;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=53;
+		colors[]=
 		{
 		  "Skyline_Vehicule_Jonzie_Ceed_01_F",
 		  "Skyline_Vehicule_Jonzie_Ceed_02_F",
@@ -3947,15 +3938,15 @@ class ALYSIA_VEHICLES
 
   	class Skyline_Vehicule_Jonzie_30CSL
 	{
-		realname = "BMW 3.0 CSL";
-		buyPrice = 22500;
-		inventory = 38;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 60;
-		colors[] =
+		realname="BMW 3.0 CSL";
+		buyPrice=22500;
+		inventory=38;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=60;
+		colors[]=
 		{
 			"Skyline_Vehicule_Jonzie_30CSL_01_F",
 			"Skyline_Vehicule_Jonzie_30CSL_02_F",
@@ -3986,15 +3977,15 @@ class ALYSIA_VEHICLES
 
   	class Skyline_Vehicule_Jonzie_XB
 	{
-		realname = "Ford Falcon XB";
-		buyPrice = 59250;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 79;
-		colors[] =
+		realname="Ford Falcon XB";
+		buyPrice=59250;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=79;
+		colors[]=
 		{
 			"Skyline_Vehicule_Jonzie_XB_01_F",
 			"Skyline_Vehicule_Jonzie_XB_02_F",
@@ -4025,15 +4016,15 @@ class ALYSIA_VEHICLES
 
 	class Skyline_Jeep_Wrangler_Rubicon_Depannage
 	{
-		realname = "Jeep Wrangler Depannage";
-		buyPrice = 63299;
-		inventory = 30;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver","company_garagist"};
-		fuel = "Diesel";
-		fuelCapacity = 67;
-		colors[] =
+		realname="Jeep Wrangler Depannage";
+		buyPrice=63299;
+		inventory=30;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver","company_garagist"};
+		fuel="Diesel";
+		fuelCapacity=67;
+		colors[]=
 		{
 			"Skyline_Jeep_Wrangler_Rubicon_Depannage_01_F",
 			"Skyline_Jeep_Wrangler_Rubicon_Depannage_02_F"
@@ -4044,27 +4035,27 @@ class ALYSIA_VEHICLES
 
 	class D41_Trawler
 	{
-		realname = "D41 Trawler";
-		buyPrice = 145000;
-		inventory = 520;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"boat"};
-		fuel = "Diesel";
-		fuelCapacity = 650;
+		realname="D41 Trawler";
+		buyPrice=145000;
+		inventory=520;
+		side="CIV";
+		insurance=1;
+		licenses[]={"boat"};
+		fuel="Diesel";
+		fuelCapacity=650;
 	};
 
 	class Skyline_Jeep_Wrangler_Rubicon
 	{
-		realname = "Jeep Wrangler";
-		buyPrice = 53299;
-		inventory = 80;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 67;
-		colors[] =
+		realname="Jeep Wrangler";
+		buyPrice=53299;
+		inventory=80;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=67;
+		colors[]=
 		{
 			"Skyline_Jeep_Wrangler_Rubicon_01_F",
 			"Skyline_Jeep_Wrangler_Rubicon_02_F",
@@ -4097,28 +4088,28 @@ class ALYSIA_VEHICLES
 
 	class Skyline_VW_TouaregR50_Samu_01_F
 	{
-		realname = "VW Touareg R50 SAMU";
-		buyPrice = 57500;
-		inventory = 90;
-		side = "GUER";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "Diesel";
-		fuelCapacity = 84;
-		rank = 4;
+		realname="VW Touareg R50 SAMU";
+		buyPrice=57500;
+		inventory=90;
+		side="GUER";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="Diesel";
+		fuelCapacity=84;
+		rank=4;
 	};
 
 	class Skyline_Lotus_Esprit
 	{
-		realname = "Lotus Esprit";
-		buyPrice = 275000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP98";
-		fuelCapacity = 70;
-		colors[] =
+		realname="Lotus Esprit";
+		buyPrice=275000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP98";
+		fuelCapacity=70;
+		colors[]=
 		{
 			"Skyline_Lotus_Esprit_01_F",
 			"Skyline_Lotus_Esprit_02_F",
@@ -4151,15 +4142,15 @@ class ALYSIA_VEHICLES
 
 	class Skyline_Renault_Alpine
 	{
-		realname = "Renault Alpine A110";
-		buy_price = 120000;
-		inventory = 20;
-		side = "CIV";
-		insurance = 1;
-		licenses[] = {"driver"};
-		fuel = "SP95";
-		fuelCapacity = 38;
-		colors[] =
+		realname="Renault Alpine A110";
+		buy_price=120000;
+		inventory=20;
+		side="CIV";
+		insurance=1;
+		licenses[]={"driver"};
+		fuel="SP95";
+		fuelCapacity=38;
+		colors[]=
 		{
 			"Skyline_Renault_Alpine_01_F",
 			"Skyline_Renault_Alpine_02_F",
