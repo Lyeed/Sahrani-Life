@@ -223,50 +223,10 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price = 20;
 	};
-	class bonnet_garde_tank
-	{
-		buy_price = 55;
-		buy_condition_EAST = 2;
-	};
-	class casquette_garde_tank
-	{
-		buy_price = 50;
-		buy_condition_EAST = 1;
-	};
-	class casquette_garde
-	{
-		buy_price = 50;
-		buy_condition_EAST = 1;
-	};
-	class casque_garde_basic
-	{
-		buy_price = 200;
-		buy_condition_EAST = 1;
-	};
-	class casque_garde_camo
-	{
-		buy_price = 250;
-		buy_condition_EAST = 2;
-	};
-	class casquette_Basique
-	{
-		buy_price = 75;
-		buy_condition_EAST = 2;
-	};
 	class casquette_Caporal
 	{
 		buy_price = 75;
 		buy_condition_EAST = 3;
-	};
-	class casquette_garde_officier_tank
-	{
-		buy_price = 95;
-		buy_condition_EAST = 5;
-	};
-	class casquette_garde_officier
-	{
-		buy_price = 95;
-		buy_condition_EAST = 5;
 	};
 	class casquette_Commandant
 	{
@@ -668,7 +628,6 @@ class ALYSIA_ITEMS_ARMA
 	class H_Hat_brown
 	{
 		buy_price = 15;
-		buy_license_EAST = "garde_inspector";
 	};
 	class H_Hat_camo
 	{
@@ -1124,7 +1083,6 @@ class ALYSIA_ITEMS_ARMA
 	class rds_uniform_Profiteer3
 	{
 		buy_price = 195;
-		buy_license_EAST = "garde_inspector";
 	};
 	class rds_uniform_Profiteer4
 	{
@@ -2498,11 +2456,6 @@ class ALYSIA_ITEMS_ARMA
 		buy_price = 800;
 		buy_condition_EAST = 1;
 	};
-	class casque_garde_special
-	{
-		buy_price = 260;
-		buy_condition_EAST = 2;
-	};
 	class DemoCharge_Remote_Mag {};
 	class TRYK_SPgear_PHC1_NV
 	{
@@ -2521,11 +2474,6 @@ class ALYSIA_ITEMS_ARMA
 	};
 
 	class gilet_garde_2
-	{
-		buy_price = 2000;
-		buy_condition_EAST = 1;
-	};
-	class Garde_VesteCargo
 	{
 		buy_price = 2000;
 		buy_condition_EAST = 1;

@@ -778,7 +778,7 @@ class ALYSIA_PROCESS
 	{
 		name="Confection de costume (1)";
 		sound="smelting";
-		require[]={{"tissue",11},{"cottonp",10}};
+		require[]={{"tissue",6},{"cottonp",3}};
 		receive[]={{},{"rds_uniform_Functionary1"},0};
 		time_per_item=20;
 		time_default=5;
@@ -811,21 +811,18 @@ class ALYSIA_PROCESS
 	class clothing_suit_5: clothing_suit_1
 	{
 		name="Confection de costume (5)";
-		require[]={{"tissue",8},{"cottonp",20}};
 		receive[]={{},{"druglord_uniform_new"},0};
 		class factions: factions {};
 	};
 	class clothing_suit_6: clothing_suit_1
 	{
 		name="Confection de costume (6)";
-		require[]={{"tissue",8},{"cottonp",20}};
 		receive[]={{},{"special_agent_uniform_new"},0};
 		class factions: factions {};
 	};
 	class clothing_suit_7: clothing_suit_1
 	{
 		name="Confection de costume (7)";
-		require[]={{"tissue",8},{"cottonp",20}};
 		receive[]={{},{"Robber_uniform_new"},0};
 		class factions: factions {};
 	};
@@ -839,14 +836,12 @@ class ALYSIA_PROCESS
 	class clothing_suit_9: clothing_suit_1
 	{
 		name="Confection de costume (9)";
-		require[]={{"tissue",8},{"cottonp",20}};
 		receive[]={{},{"mafiaboss_uniform_new"},0};
 		class factions: factions {};
 	};
 	class clothing_suit_10: clothing_suit_1
 	{
 		name="Confection de costume (10)";
-		require[]={{"tissue",8},{"cottonp",20}};
 		receive[]={{},{"agent_uniform_new"},0};
 		class factions: factions {};
 	};
@@ -978,7 +973,6 @@ class ALYSIA_PROCESS
 	class clothing_secu_1: clothing_suit_1
 	{
 		name="Confection de costume sécurité";
-		require[]={{"tissue",8},{"cottonp",20}};
 		receive[]={{},{"bodyguard_uniform_new"},0};
 		class factions: factions {};
 	};
@@ -1018,7 +1012,7 @@ class ALYSIA_PROCESS
 	{
 		name="Confection de tenue criminelle 1";
 		sound="smelting";
-		require[]={{"tissue",5}};
+		require[]={{"tissue",3}};
 		receive[]={{},{"TRYK_ZARATAKI"},0};
 		time_per_item=20;
 		time_default=5;

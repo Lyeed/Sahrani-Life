@@ -595,7 +595,6 @@ class ALYSIA_SHOPS_CLOTHING
 			"tenue_de_garde_sergent",
 			"tenue_de_garde_caporal",
 			"tenue_de_garde_basique",
-			"rds_uniform_Profiteer3",
 			"U_B_Wetsuit"
 		};
 		headgear[] =
@@ -604,16 +603,7 @@ class ALYSIA_SHOPS_CLOTHING
 			"casquette_Lieutenant",
 			"casquette_Sergent",
 			"casquette_Caporal",
-			"casquette_Basique",
-			"casque_garde_basic",
-			"casque_garde_camo",
-			"casque_garde_special",
-			"casquette_garde",
-			"casquette_garde_tank",
-			"bonnet_garde_tank",
-			"casquette_garde_officier_tank",
-			"casquette_garde_officier",
-			"H_Hat_brown"
+			"casquette_Basique"
 		};
 		goggles[] =
 		{
@@ -648,7 +638,6 @@ class ALYSIA_SHOPS_CLOTHING
 		};
 		vests[] =
 		{
-			"Garde_VesteCargo",
 			"gilet_garde_1",
 			"gilet_garde_2"
 		};

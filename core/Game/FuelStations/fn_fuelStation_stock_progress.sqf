@@ -74,7 +74,7 @@ while {true} do
 
 	_liters = _liters + _processLiters;
 	_station setVariable [_type, (_currentLiters + _liters)];
-	_receive = _receive + (([_station, _type] call AlysiaClient_fnc_fuelStation_fuel_getPrice) * _processLiters);
+	_receive = _receive + ((([_station, _type] call AlysiaClient_fnc_fuelStation_fuel_getPrice) * _processLiters) * 1.8);
 	
 	(_display displayCtrl 17008) ctrlSetStructuredText parseText format
 	[

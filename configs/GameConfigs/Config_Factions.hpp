@@ -324,11 +324,6 @@ class ALYSIA_FACTIONS
 				rank = 5;
 				same_side_only = 1;
 			};
-			class garde_inspector
-			{
-				rank = 5;
-				same_side_only = 1;
-			};
 		};
 
 		/*** MAP ***/
@@ -434,7 +429,7 @@ class ALYSIA_FACTIONS
 		class salary
 		{
 			name = "Aides";
-			amount = 700;
+			amount = 900;
 			taxes_rate = 0.05;
 			apply_rank = 0;
 			timer = 15;

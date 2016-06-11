@@ -59,7 +59,7 @@ while {!(isNull _obj) && !(isNull (attachedTo _obj))} do
 				waitUntil{animationState player != "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";};
 				playSound "buy";
 				deleteVehicle _obj;
-				[g_company, true, 5000 + ((_max - _amount) / 14), (player getVariable "realname"), "Activité professionnelle"] remoteExec ["AlysiaServer_fnc_company_bank_handle", 2];
+				[g_company, true, 5000 + ((_max - _amount) / 10), (player getVariable "realname"), "Activité professionnelle"] remoteExec ["AlysiaServer_fnc_company_bank_handle", 2];
 				[_atm, true, 5000] call AlysiaClient_fnc_atmMoneyHandle;
 				g_action_inUse = false;
 				_atm setVariable ["inUse", false, false];
