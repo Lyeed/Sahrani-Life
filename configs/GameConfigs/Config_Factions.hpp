@@ -66,21 +66,29 @@ class ALYSIA_FACTIONS
 			{
 				{"Weapons",
 					{
+						"RH_g17",
 						"RH_g19",
-						"Skyline_HK_SL8"
+						"Skyline_HK_SL8",
+						"Skyline_M4A1_01_F",
+						"Skyline_M4A1_02_F"
 					}
 				},
 				{"Magazines",
-					{
-						"30Rnd_556x45_Stanag_Tracer_Red"
+					
+						"30Rnd_556x45_Stanag_Tracer_Red",
+						"RH_17Rnd_9x19_g17"
 					}
 				},
 				{"Items",
 					{
 						"Rangefinder",
 						"optic_Aco",
+						"optic_Arco",
+						"optic_Hamr",
 						"NVGoggles",
-						"Mask_M40_OD"
+						"Mask_M40_OD",
+						"bipod_01_F_blk",
+						"bipod_02_F_blk"
 					}
 				},
 				{"Backpacks",
@@ -147,10 +155,12 @@ class ALYSIA_FACTIONS
 		{
 			history_items[]=
 			{
-				"hlc_rifle_ak74_dirty2",
-				"hlc_rifle_ak74_dirty",
-				"hlc_rifle_ak74",
-				"RH_g17",
+				"SMG_03C_black",
+				"SMG_03C_camo",
+				"SMG_03C_khaki",
+				"SMG_03_khaki",
+				"SMG_03_camo",
+				"SMG_03_black",
 				"RH_m9"
 			};
 			class leader_board
@@ -273,11 +283,21 @@ class ALYSIA_FACTIONS
 			{
 				{"Weapons",
 					{
-						"hlc_rifle_m14sopmod",
 						"Trixie_Enfield_Rail",
-						"hlc_rifle_aughbar_B",
+						"hlc_rifle_m14sopmod",
+						"hlc_rifle_auga3_b",
+						"hlc_rifle_auga2_b",
 						"hlc_rifle_auga2lsw_b",
-						"hlc_rifle_auga3_b"
+						"hlc_rifle_auga2carb_b",
+						"hlc_rifle_auga2para_b",
+						"hlc_rifle_auga1_b",
+						"hlc_rifle_aughbar_B",
+						"hlc_rifle_auga1carb_B",
+						"hlc_rifle_augpara_b",
+						"hlc_rifle_augsr_b",
+						"hlc_rifle_augsrhbar_b",
+						"hlc_rifle_augsrcarb_b",
+						"RH_fn57"
 					}
 				},
 				{"Magazines",
@@ -285,20 +305,21 @@ class ALYSIA_FACTIONS
 						"Trixie_Enfield_Mag",
 						"hlc_20Rnd_762x51_B_M14",
 						"hlc_40Rnd_556x45_SPR_AUG",
-						"hlc_30Rnd_556x45_B_AUG"
+						"hlc_30Rnd_556x45_B_AUG",
+						"RH_20Rnd_57x28_FN"
 					}
 				},
 				{"Items",
 					{
 						"DemoCharge_Remote_Mag",
-						"optic_DMS",
 						"SmokeShellWhite",
 						"Rangefinder",
-						"optic_ACO_grn_smg",
 						"NVGoggles_OPFOR",
+						"optic_DMS",
+						"optic_ACO_grn_smg",
 						"optic_MRCO",
-						"Mask_M40",
-						"optic_LRPS"
+						"optic_LRPS",
+						"Mask_M40"
 					}
 				},
 				{"Backpacks",
@@ -365,9 +386,8 @@ class ALYSIA_FACTIONS
 		{
 			history_items[]=
 			{
-				"RH_fn57",
-				"RH_m1911",
-				"hlc_rifle_auga3_b"
+				"Alysia_MP44",
+				"RH_m1911"
 			};
 			class leader_board
 			{

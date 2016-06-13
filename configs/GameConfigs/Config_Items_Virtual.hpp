@@ -1772,7 +1772,7 @@ class ALYSIA_ITEMS
 
     class patron_AK74
     {
-        name="Patron (AK74)";
+        name="Patron AK (5.56/4.45)";
         weight=0;
         price_buy=575000;
         image="alysia_items_virtual\data\patron.paa";
@@ -1783,7 +1783,7 @@ class ALYSIA_ITEMS
     };
     class patron_M21: patron_AK74
     {
-        name="Patron (M21)";
+        name="Patron (M14/M21)";
         price_buy=825000;
         class use
         {
@@ -1810,7 +1810,7 @@ class ALYSIA_ITEMS
     };
     class patron_AKM: patron_AK74
     {
-        name="Patron (AKM)";
+        name="Patron AK (7.62)";
         price_buy=995000;
         class use
         {

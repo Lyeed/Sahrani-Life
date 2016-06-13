@@ -1234,25 +1234,19 @@ class ALYSIA_ITEMS_ARMA
 		buy_price=100;
 		buy_condition_WEST=1;
 	};
-	class RH_g17
-	{
-		buy_price=2100;
-		buy_condition_WEST=5;
-	};
-	class RH_17Rnd_9x19_g17
-	{
-		buy_price=150;
-		buy_condition_WEST=5;
-	};
 	class SMG_03_black
 	{
 		buy_price=5000;
 		buy_condition_WEST=2;
 	};
-	class 50Rnd_570x28_SMG_03
+	class SMG_03C_black: SMG_03_black {};
+	class SMG_03C_camo: SMG_03_black {};
+	class SMG_03C_khaki: SMG_03_black {};
+	class SMG_03_khaki: SMG_03_black {};
+	class SMG_03_camo: SMG_03_black {};
+	class 50Rnd_570x28_SMG_03: SMG_03_black
 	{
 		buy_price=300;
-		buy_condition_WEST=2;
 	};
 
 	class rhs_6b23_sniper
@@ -1368,35 +1362,23 @@ class ALYSIA_ITEMS_ARMA
     	buy_condition_EAST=4;
     };
 
-	class RH_fn57
-	{
-		buy_price=1500;
-		buy_condition_EAST=1;
-	};
-	class RH_20Rnd_57x28_FN
-	{
-		buy_price=120;
-		buy_condition_EAST=1;
-	};
 	class RH_m1911
 	{
-		buy_price=100;
+		buy_price=930;
 		buy_condition_EAST=2;
 	};
-	class RH_7Rnd_45cal_m1911
+	class RH_7Rnd_45cal_m1911: RH_m1911
 	{
 		buy_price=100;
-		buy_condition_EAST=2;
 	};
 	class Alysia_MP44
 	{
-		buy_price=5000;
+		buy_price=4780;
 		buy_condition_EAST=2;
 	};
-	class Alysia_MP44_magazine
+	class Alysia_MP44_magazine: Alysia_MP44
 	{
-		buy_price=150;
-		buy_condition_EAST=2;
+		buy_price=225;
 	};
 
 	class Alysia_Vest_Garde_01
@@ -1404,8 +1386,9 @@ class ALYSIA_ITEMS_ARMA
 		buy_price=3600;
 		buy_condition_EAST=1;
 	};
-	class Alysia_Vest_Garde_02: Alysia_Vest_Garde_01
+	class Alysia_Vest_Garde_02
 	{
+		buy_price=5900;
 		buy_condition_EAST=2;
 	};
 	class Alysia_Belt_PC

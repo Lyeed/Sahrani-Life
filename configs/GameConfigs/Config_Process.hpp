@@ -1974,6 +1974,42 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions: factions {};
 	};
+	class weapon_ak_4: weapon_ak_1
+	{
+		name="Arme : AEK971";
+		receive[]={{},{"hlc_rifle_aek971worn"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class weapon_ak_5: weapon_ak_1
+	{
+		name="Arme : AKS74U";
+		receive[]={{},{"hlc_rifle_aks74u"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class weapon_ak_6: weapon_ak_1
+	{
+		name="Arme : AKS74";
+		receive[]={{},{"hlc_rifle_aks74"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class weapon_ak_7: weapon_ak_1
+	{
+		name="Arme : AK12";
+		receive[]={{},{"hlc_rifle_ak12"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class weapon_ak_8: weapon_ak_1
+	{
+		name="Arme : AKU12";
+		receive[]={{},{"hlc_rifle_aku12"},0};
+		class target {};
+		class factions: factions {};
+	};
+
 	class magazine_ak: weapon_ak_1
 	{
 		name="Munitions : AK74";
@@ -1983,12 +2019,27 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions: factions {};
 	};
-	class scope_ak: weapon_ak_1
+	class scope_ak_1: weapon_ak_1
 	{
-		name="Viseur : AK74";
-		require[]={{"steel",5},{"glass",1},{"ironp",2}};
+		name="Viseur : AK (Kobra)";
+		require[]={{"steel",2},{"glass",1}};
 		receive[]={{},{"hlc_optic_kobra"},0};
 		time_per_item=15;
+		class target {};
+		class factions: factions {};
+	};
+	class scope_ak_2: scope_ak_1
+	{
+		name="Viseur : AK (PSO)";
+		require[]={{"steel",4},{"glass",1}};
+		receive[]={{},{"HLC_Optic_PSO1"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class scope_ak_3: scope_ak_2
+	{
+		name="Viseur : AK (1P29)";
+		receive[]={{},{"HLC_Optic_1p29"},0};
 		class target {};
 		class factions: factions {};
 	};
@@ -2003,25 +2054,56 @@ class ALYSIA_PROCESS
 	};
 	class weapon_AKM_2: weapon_AKM_1
 	{
-		name="Arme : AKM (2)";
+		name="Arme : AKM Compact";
 		receive[]={{},{"Skyline_AKM_Compact_01_F"},0};
 		class target {};
 		class factions: factions {};
 	};
+	class weapon_AKM_3: weapon_AKM_1
+	{
+		name="Arme : AKM (2)";
+		receive[]={{},{"hlc_rifle_akm"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class weapon_AK47: weapon_AKM_1
+	{
+		name="Arme : AK47";
+		receive[]={{},{"hlc_rifle_ak47"},0};
+		class target {};
+		class factions: factions {};
+	};
+
 	class magazine_AKM: magazine_ak
 	{
-		name="Munitions : AKM";
+		name="Munitions : AKM(1)/AKM Compact";
 		require[]={{"bullet",30},{"magazine",1}};
 		receive[]={{},{"30Rnd_762x39_AKM"},0};
 		class target {};
 		class factions: factions {};
 	};
-	class scope_AKM: scope_ak
+	class magazine_AK47: magazine_AKM
 	{
-		name="Viseur : AKM";
-		require[]={{"steel",3},{"glass",2}};
+		name="Munitions : AK47/AKM(2)";
+		receive[]={{},{"hlc_30Rnd_762x39_b_ak"},0};
+		class target {};
+		class factions: factions {};
+	};
+
+	class scope_AKM_1: scope_ak
+	{
+		name="Viseur : AKM (Aco)";
+		require[]={{"steel",2},{"glass",2}};
 		receive[]={{},{"optic_Aco_smg"},0};
 		time_per_item=15;
+		class target {};
+		class factions: factions {};
+	};
+	class scope_AKM_2: scope_AKM_1
+	{
+		name="Viseur : AKM (Rco)";
+		require[]={{"steel",3},{"glass",2}};
+		receive[]={{},{"optic_Hamr"},0};
 		class target {};
 		class factions: factions {};
 	};
@@ -2051,7 +2133,7 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 
-	class weapon_m21: weapon_ak_1
+	class weapon_m21_1: weapon_ak_1
 	{
 		name="Arme : M21";
 		require[]={{"canon",1},{"crosse_steel",1},{"garde_main_steel",1},{"detente",1},{"percuteur",1},{"culasse",1}};
@@ -2059,9 +2141,38 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions: factions {};
 	};
+	class weapon_m14_1: weapon_m21_1
+	{
+		name="Arme : M14";
+		receive[]={{},{"hlc_rifle_M14"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class weapon_m14_2: weapon_m21_1
+	{
+		name="Arme : M14 (Bipod)";
+		receive[]={{},{"hlc_rifle_M14_Bipod"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class weapon_m14_3: weapon_m21_1
+	{
+		name="Arme : M21 (Rail)";
+		receive[]={{},{"hlc_rifle_M14_Rail"},0};
+		class target {};
+		class factions: factions {};
+	};
+	class weapon_m14_4: weapon_m21_1
+	{
+		name="Arme : M21 (DMR)";
+		receive[]={{},{"hlc_rifle_m14dmr"},0};
+		class target {};
+		class factions: factions {};
+	};
+
 	class magazine_m21: magazine_ak
 	{
-		name="Munitions : M21";
+		name="Munitions : M14/M21";
 		require[]={{"bullet",20},{"magazine",1}};
 		receive[]={{},{"hlc_20Rnd_762x51_B_M14"},0};
 		class target {};
@@ -2069,7 +2180,7 @@ class ALYSIA_PROCESS
 	};
 	class scope_m21: scope_ak
 	{
-		name="Viseur : M21";
+		name="Viseur : M14/M21 (3-9x)";
 		require[]={{"steel",10},{"glass",3}};
 		receive[]={{},{"hlc_optic_LRT_m14"},0};
 		time_per_item=30;
