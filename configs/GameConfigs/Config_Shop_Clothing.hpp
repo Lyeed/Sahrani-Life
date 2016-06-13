@@ -813,5 +813,9 @@ class ALYSIA_SHOPS_CLOTHING
 			"Alysia_Casquette_PC_02",
 			"Alysia_Casquette_PC_01"
 		};
+		vests[]=
+		{
+			"Alysia_Belt_PC"
+		};
 	};
 };

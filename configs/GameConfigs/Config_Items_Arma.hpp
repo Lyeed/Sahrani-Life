@@ -698,6 +698,10 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price=200;
 	};
+	class G_B_Diving
+	{
+		buy_price=50;
+	};
 	class Kio_Balaclava_des
 	{
 		buy_price=200;
@@ -1407,7 +1411,7 @@ class ALYSIA_ITEMS_ARMA
 	class Alysia_Belt_PC
 	{
 		buy_price=600;
-		buy_condition_EAST=4;
+		buy_condition_EAST=5;
 	};
 
 	class U_O_Wetsuit

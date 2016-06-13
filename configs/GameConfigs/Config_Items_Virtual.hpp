@@ -1672,7 +1672,7 @@ class ALYSIA_ITEMS
     class money_transfer
     {
         name="Sac de billets de banque";
-        weight=8;
+        weight=5;
         image="alysia_items_virtual\data\money_transfer.paa";
         buy_license_CIV="company_money_tranfer";
         price_buy=5000;
