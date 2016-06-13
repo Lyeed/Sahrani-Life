@@ -1412,6 +1412,7 @@ class ALYSIA_ITEMS_ARMA
 	{
 		buy_price=600;
 		buy_condition_EAST=5;
+		buy_license_CIV="central";
 	};
 
 	class U_O_Wetsuit
