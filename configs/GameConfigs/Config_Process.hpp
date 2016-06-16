@@ -290,7 +290,10 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions
 		{
-			class CIV {};
+			class CIV
+			{
+				licenses[]={"tabac"};
+			};
 		};
 	};
 	class cigare
@@ -2090,7 +2093,7 @@ class ALYSIA_PROCESS
 		class factions: factions {};
 	};
 
-	class scope_AKM_1: scope_ak
+	class scope_AKM_1: scope_ak_1
 	{
 		name="Viseur : AKM (Aco)";
 		require[]={{"steel",2},{"glass",2}};
@@ -2178,7 +2181,7 @@ class ALYSIA_PROCESS
 		class target {};
 		class factions: factions {};
 	};
-	class scope_m21: scope_ak
+	class scope_m21: scope_ak_1
 	{
 		name="Viseur : M14/M21 (3-9x)";
 		require[]={{"steel",10},{"glass",3}};

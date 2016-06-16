@@ -1365,7 +1365,7 @@ class ALYSIA_ITEMS_ARMA
 	class RH_m1911
 	{
 		buy_price=930;
-		buy_condition_EAST=2;
+		buy_condition_EAST=1;
 	};
 	class RH_7Rnd_45cal_m1911: RH_m1911
 	{

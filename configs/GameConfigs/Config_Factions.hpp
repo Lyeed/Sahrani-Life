@@ -74,7 +74,7 @@ class ALYSIA_FACTIONS
 					}
 				},
 				{"Magazines",
-					
+					{
 						"30Rnd_556x45_Stanag_Tracer_Red",
 						"RH_17Rnd_9x19_g17"
 					}
